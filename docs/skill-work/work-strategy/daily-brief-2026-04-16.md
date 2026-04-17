@@ -1,11 +1,11 @@
 # Daily brief — work-politics & work-strategy
 
 **Date:** 2026-04-16  
-**Assembled:** _(operator partial — Grok overlay integrated; run generator + §1d–§1h watch passes to complete.)_  
+**Assembled:** _(operator partial — §1f strategic digest merged; run generator + §1d–§1h watch passes to complete.)_  
 **Recency window (RSS):** _(not run on this pass)_  
 **Config:** `docs/skill-work/work-strategy/daily-brief-config.json`
 
-_Operator WORK product. **§1f Grok block is NOT verified** — cite primaries before public or weave Judgment._
+_Operator WORK product. **§1f** lines without wire primaries — cite before public or weave Judgment (same rule as any unsubstantiated brief stub)._
 
 ## 1. Work-politics snapshot
 
@@ -31,7 +31,7 @@ _See [daily-brief-jiang-layer.md](daily-brief-jiang-layer.md) and prior brief §
 
 ## 1d. Putin — last 48 hours
 
-_Stub — fill per [daily-brief-putin-watch.md](daily-brief-putin-watch.md); do not treat **§1f Grok** lines as Kremlin-primary._
+_Stub — fill per [daily-brief-putin-watch.md](daily-brief-putin-watch.md); do not treat **§1f** digest lines as Kremlin-primary._
 
 ## 1e. JD Vance — last 48 hours
 
@@ -39,11 +39,11 @@ _Stub — fill per [daily-brief-jd-vance-watch.md](daily-brief-jd-vance-watch.md
 
 ## 1f. Weak signal worth watching
 
-_Operator block per [weak-signal-template.md](weak-signal-template.md). **§1f** also carries **external model overlays** when pasted — same discipline as [daily-brief-2026-04-15.md](daily-brief-2026-04-15.md) §1f._
+_Operator block per [weak-signal-template.md](weak-signal-template.md). **§1f** holds weak signals and pasted strategic digests — **same** maintenance as [daily-brief-2026-04-15.md](daily-brief-2026-04-15.md) §1f._
 
-**Confidence:** **low** (external digest — model-generated).
+**Confidence:** **low** (strategic digest — model-assisted until wire-backed).
 
-**External model overlay (Grok “Daily Strategic Brief” — 2026-04-16 operator paste) — NOT verified, not Voice knowledge:** Synthetic narrative tying **Hungary / Tisza coalition execution**, **G7 SPR + secondary sanctions**, **Ukraine deep-strike / Russian MoD sortie adjustment**, **US PPI energy pass-through**, **US–Iran technical talks (Oman)**, **IMF fiscal asymmetry (Russia revenue vs Ukraine gap)**, and cross-domain “compression” framing. **Numbers, times (UTC), institutional votes, and inventory volumes** in the paste are **LLM-precision risk** until matched to **primary documents, official readouts, or twin independent wires**.
+**§1f Strategic digest (LLM-assisted daily brief — 2026-04-16 operator paste; same `daily-brief` artifact as generator output):** Synthetic narrative tying **Hungary / Tisza coalition execution**, **G7 SPR + secondary sanctions**, **Ukraine deep-strike / Russian MoD sortie adjustment**, **US PPI energy pass-through**, **US–Iran technical talks (Oman)**, **IMF fiscal asymmetry (Russia revenue vs Ukraine gap)**, and cross-domain “compression” framing. **Numbers, times (UTC), institutional votes, and inventory volumes** in the paste are **LLM-precision risk** until matched to **primary documents, official readouts, or twin independent wires**.
 
 **Operator triage (falsify or confirm before weave / public copy):**
 
@@ -136,7 +136,7 @@ G7 tender awards for diversification contracts.
 The 96-hour arc since the Hungarian election has produced operational coalition commitments, multilateral reserve action, and the first visible Russian battlefield adjustment under sustained precision pressure. Diffusion dynamics and fiscal fatigue are now driving institutional and operational timelines rather than following them. The weekend ahead will test whether G7 SPR releases stabilize supply before Russian regrouping restores tempo, or whether the Oman technical track collapses under the same unbridgeable gaps that ended Islamabad. Highest-signal variables remain the falsifiable quantities: sortie reductions, SPR release schedules, PPI components, depot losses, and negotiation scoping language. Narratives will continue to chase the physics, the barrels, and the arithmetic.
 ```
 
-**Relation to 2026-04-15 §1f:** Same **single-arc “diffusion / compression”** family as the prior Grok overlay; this paste **extends the timeline** and adds **Hungary execution**, **G7 SPR quantities**, **MoD tempo language**, **PPI**, and **Oman schedule**. Treat as **successor hypothesis set**, not confirmation of the earlier digest.
+**Relation to 2026-04-15 §1f:** Same **single-arc “diffusion / compression”** family as the prior §1f digest; this paste **extends the timeline** and adds **Hungary execution**, **G7 SPR quantities**, **MoD tempo language**, **PPI**, and **Oman schedule**. Treat as **successor hypothesis set**, not confirmation of the earlier digest.
 
 ## 1g. PRC — last 48 hours (People’s Republic of China)
 
@@ -156,4 +156,4 @@ Populate **§3–§7** after full `generate_work_politics_daily_brief.py` run or
 
 ---
 
-_Partial file: **Grok supplemental integrated 2026-04-16** under §1f; complete watches + RSS via standard brief pipeline._
+_Partial file: **§1f strategic digest merged 2026-04-16**; complete watches + RSS via standard brief pipeline._

@@ -867,7 +867,23 @@ def run_auto_dream(
     return summary
 
 
+def _dream_headline_line(summary: dict[str, Any]) -> str:
+    """Single skimmable stdout line; full detail follows in legacy block below."""
+    phase_label = summary.get("phase", "both")
+    int_ok = bool((summary.get("integrity") or {}).get("ok"))
+    gov_ok = bool((summary.get("governance") or {}).get("ok"))
+    ig = f"integrity={'pass' if int_ok else 'fail'}"
+    gg = f"governance={'pass' if gov_ok else 'fail'}"
+    if summary.get("halted"):
+        return f"Dream: HALTED phase={phase_label} {ig} {gg} handoff=no"
+    ok = bool(summary.get("ok"))
+    label = "ok" if ok else "not_ok"
+    handoff = "yes" if summary.get("handoff_path") else "no"
+    return f"Dream: {label} phase={phase_label} {ig} {gg} handoff={handoff}"
+
+
 def format_auto_dream_summary(summary: dict[str, Any]) -> str:
+    headline = _dream_headline_line(summary)
     memory = summary.get("self_memory") or {}
     digest = summary.get("contradiction_digest") or {}
     counts = digest.get("relation_counts") or {}
@@ -909,7 +925,7 @@ def format_auto_dream_summary(summary: dict[str, Any]) -> str:
             )
             if miss:
                 lines.append(f"  strategy-notebook missing ## headers: {', '.join(miss)}")
-        return "\n".join(lines)
+        return headline + "\n" + "\n".join(lines)
 
     lines = [
         "autoDream status",
@@ -978,7 +994,7 @@ def format_auto_dream_summary(summary: dict[str, Any]) -> str:
         )
         if miss:
             lines.append(f"  strategy-notebook missing ## headers: {', '.join(miss)}")
-    return "\n".join(lines)
+    return headline + "\n" + "\n".join(lines)
 
 
 def main() -> int:

@@ -6,7 +6,7 @@ Contract: [docs/EXPORT-CLI.md](../docs/EXPORT-CLI.md) and README (Unified export
 Export classes: [docs/portable-record/export-contract.md](../docs/portable-record/export-contract.md).
 
   python scripts/export.py [-u USER] {fork|prp|identity|manifest|bundle|all} [-- EXTRA...]
-  python scripts/export.py [-u USER] --export-class {tool_bootstrap|full|task_limited} [-- EXTRA...]
+  python scripts/export.py [-u USER] --export-class {tool_bootstrap|full|task_limited|capability} [-- EXTRA...]
 
 When EXTRA omits -u/--user, this CLI prepends -u <resolved> (env GRACE_MAR_USER_ID, else
 repo default: grace-mar when users/grace-mar exists, else _template).
@@ -38,10 +38,10 @@ EXPORT_CLASS_ROUTES: dict[str, tuple[str, list[str]]] = {
     "tool_bootstrap": ("export_prp.py", []),
     "full": ("export_runtime_bundle.py", ["--mode", "portable_bundle_only"]),
     "task_limited": ("export_fork.py", ["--format", "coach-handoff"]),
+    "capability": ("export_capability.py", []),
 }
 
 EXPORT_CLASS_UNSUPPORTED: dict[str, str] = {
-    "capability": "not yet wired — rationale format exists but dedicated export filtering is future",
     "internal": "not exportable by definition — internal-only content stays in the governed Record",
 }
 
@@ -128,7 +128,7 @@ def _print_help() -> None:
     classes = ", ".join(ALL_EXPORT_CLASSES)
     print(
         f"""usage: python scripts/export.py [-u USER] {{fork|prp|identity|manifest|bundle|all}} [-- EXTRA...]
-       python scripts/export.py [-u USER] --export-class {{tool_bootstrap|full|task_limited}} [-- EXTRA...]
+       python scripts/export.py [-u USER] --export-class {{tool_bootstrap|full|task_limited|capability}} [-- EXTRA...]
 
 Unified export CLI — runs the existing script under scripts/ via subprocess.
 Resolved default user when the child argv has no -u: GRACE_MAR_USER_ID, else {du!r} (repo heuristic).
@@ -145,7 +145,7 @@ Export classes (--export-class):
   tool_bootstrap  -> export_prp.py (compact prompt for bootstrapping a new tool)
   full            -> export_runtime_bundle.py --mode portable_bundle_only (broad governed profile)
   task_limited    -> export_fork.py --format coach-handoff (filtered for a specific role)
-  capability      -> not yet wired
+  capability      -> export_capability.py (SKILLS + EVIDENCE portfolio with rationale companions)
   internal        -> not exportable by definition
 
 Known classes: {classes}

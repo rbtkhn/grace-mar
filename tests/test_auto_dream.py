@@ -284,3 +284,50 @@ def test_score_bundle_strict_maintenance_hard_gates_low_readiness():
     assert bundle["ok"] is False
     assert bundle["hard_gates"]["maintenance_ready"] is False
     assert bundle["scalar"] == 0.0
+
+
+def test_format_auto_dream_summary_headline_prefix():
+    summary = {
+        "ok": True,
+        "user_id": "grace-mar",
+        "phase": "both",
+        "strict_mode": False,
+        "halted": False,
+        "self_memory": {
+            "changed": False,
+            "added_sections": [],
+            "deduped_lines": 0,
+            "blank_lines_collapsed": 0,
+        },
+        "integrity": {"ok": True},
+        "governance": {"ok": True},
+        "contradiction_digest": {"relation_counts": {}, "reviewable_count": 0},
+        "handoff_path": str(ROOT / "users" / "grace-mar" / "last-dream.json"),
+    }
+    out = auto_dream.format_auto_dream_summary(summary)
+    first = out.split("\n", 1)[0]
+    assert first.startswith("Dream: ok ")
+    assert "handoff=yes" in first
+    assert "autoDream status" in out
+
+
+def test_format_auto_dream_summary_strict_headline_halted():
+    summary = {
+        "ok": False,
+        "user_id": "grace-mar",
+        "phase": "both",
+        "strict_mode": True,
+        "halted": True,
+        "self_memory": {"changed": False},
+        "integrity": {"ok": False},
+        "governance": {"ok": True},
+        "contradiction_digest": {
+            "reviewable_count": 0,
+            "relation_counts": {},
+            "skipped": True,
+            "skip_reason": "strict maintenance halted after integrity/governance failure",
+        },
+    }
+    out = auto_dream.format_auto_dream_summary(summary)
+    assert out.startswith("Dream: HALTED ")
+    assert "strict autoDream" in out

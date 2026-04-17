@@ -21,13 +21,17 @@
 
 ## Relationship to `dream`
 
-- **`dream` skill** = executable ritual contract, trigger behavior, script commands, return shape, guardrails.
-- **`work-dream` territory** = prose home for rationale, boundaries, history, and evolution of the ritual.
+| Layer | Role |
+|-------|------|
+| **[`.cursor/skills/dream/SKILL.md`](../../../.cursor/skills/dream/SKILL.md)** | Executable contract: triggers, Step 0 rhythm depth, `auto_dream.py`, night-close reply shape, guardrails. |
+| **`work-dream/` (this doc)** | Doctrine, boundaries, history — read when evolving the ritual, not for every run. |
+| **Scripts** | `scripts/auto_dream.py`, `users/<id>/last-dream.json` — machine handoff; not Record. |
 
-This split mirrors `work-coffee`:
+**Cadence alignment:** Step 0 line counts for dream live in [work-cadence README — Step 0 recent rhythm](../work-cadence/README.md#step-0-recent-rhythm-companion-facing) (dream = **4 default / 8 full closeout**).
 
-- the skill should stay optimized for invocation and agent behavior
-- the territory should hold the longer-form doctrine and lane-specific history
+**Simplified return contract:** Night-close chat uses a **short default brief** (Recent rhythm, run status, closing sentence) plus optional **Details** only when load-bearing. **`tomorrow_inherits`** is the primary human “tomorrow” hint; execution-path / coffee letter is secondary. See the skill — *Step 0*, *What to return*, *Five-second closeout*, *When `--strict` halts*.
+
+This split mirrors `work-coffee`: the skill stays optimized for invocation; this territory holds longer-form doctrine and history.
 
 ---
 

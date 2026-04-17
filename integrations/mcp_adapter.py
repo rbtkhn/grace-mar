@@ -2,9 +2,9 @@
 """
 Read-only MCP adapter over Grace-Mar's governed export surface.
 
-Exposes operational export classes (tool_bootstrap, full, task_limited) as MCP
-tools so external AI systems can retrieve governed views of the Record without
-bypassing the gate or touching raw files.
+Exposes operational export classes (tool_bootstrap, full, task_limited,
+capability) as MCP tools so external AI systems can retrieve governed views
+of the Record without bypassing the gate or touching raw files.
 
 This adapter wraps the existing export machinery — it does not create a second
 export stack.  Policy comes from scripts/export.py and the child exporters.
@@ -48,16 +48,21 @@ try:
 except ImportError:
     from scripts.export_fork import export_fork  # type: ignore[no-redef]
 
+try:
+    from export_capability import export_capability
+except ImportError:
+    from scripts.export_capability import export_capability  # type: ignore[no-redef]
+
 # --- Constants (derived from scripts/export.py to stay in sync) ----------
 
 SUPPORTED_CLASSES: dict[str, str] = {
     "tool_bootstrap": "Compact prompt encoding the Record for bootstrapping a new tool session",
     "full": "Broad governed profile across all approved surfaces (portable bundle)",
     "task_limited": "Filtered fork export for a specific task or role (coach handoff)",
+    "capability": "SKILLS + EVIDENCE portfolio with artifact-rationale companions",
 }
 
 UNSUPPORTED_CLASSES: dict[str, str] = {
-    "capability": "not yet wired — rationale format exists but dedicated export filtering is future",
     "internal": "not exportable by definition — internal-only content stays in the governed Record",
 }
 
@@ -160,10 +165,23 @@ def _retrieve_task_limited(user_id: str) -> dict:
     }
 
 
+def _retrieve_capability(user_id: str) -> dict:
+    content = export_capability(user_id=user_id)
+    return {
+        "user": user_id,
+        "export_class": "capability",
+        "content_type": "application/json",
+        "content": content,
+        "generated_via": "export_capability",
+        "warnings": [],
+    }
+
+
 _RETRIEVERS: dict[str, object] = {
     "tool_bootstrap": _retrieve_tool_bootstrap,
     "full": _retrieve_full,
     "task_limited": _retrieve_task_limited,
+    "capability": _retrieve_capability,
 }
 
 
@@ -219,7 +237,7 @@ def _build_mcp_server():  # noqa: ANN202
     def mcp_get_export(user_id: str = "grace-mar", export_class: str = "tool_bootstrap") -> str:
         """Retrieve a governed export view by export class.
 
-        Supported classes: tool_bootstrap, full, task_limited.
+        Supported classes: tool_bootstrap, full, task_limited, capability.
         Returns JSON with the export content or an error explanation.
         """
         result = retrieve_export(user_id=user_id, export_class=export_class)

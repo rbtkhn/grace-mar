@@ -1,4 +1,4 @@
-# Historical expert context — `jeffrey-sachs` — `2026-04`
+# Historical expert context — `jeffrey-sachs`
 
 WORK only; not Record.
 Source thread: `docs/skill-work/work-strategy/strategy-notebook/strategy-expert-jeffrey-sachs-thread.md`

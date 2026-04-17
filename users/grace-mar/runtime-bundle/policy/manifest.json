@@ -2,9 +2,9 @@
   "version": "1.2",
   "grace_mar": true,
   "user_id": "grace-mar",
-  "generated_at": "2026-04-17T10:15:31.295396",
+  "generated_at": "2026-04-17T10:15:49.608352",
   "checksum": "8492a604d260330df1292b33160fccdf2fba3ee1768bea9c11e7cb7abb984727",
-  "runtime_mode": "adjunct_runtime",
+  "runtime_mode": "portable_bundle_only",
   "runtime_modes": {
     "adjunct_runtime": "Assistive runtime alongside the canonical repo.",
     "primary_runtime": "Primary live runtime while the repo remains canonical.",
@@ -110,7 +110,7 @@
     "manifest": "python scripts/export_manifest.py -u grace-mar",
     "fork_json": "python scripts/export_fork.py -o fork-export.json",
     "intent_snapshot": "python scripts/export_intent_snapshot.py -u grace-mar",
-    "runtime_bundle": "python scripts/export_runtime_bundle.py -u grace-mar --mode adjunct_runtime"
+    "runtime_bundle": "python scripts/export_runtime_bundle.py -u grace-mar --mode portable_bundle_only"
   },
   "derived_exports": [
     "manifest.json",
@@ -122,7 +122,7 @@
   "intent_snapshot": {
     "ok": true,
     "user_id": "grace-mar",
-    "generated_at": "2026-04-17T10:15:31.291572",
+    "generated_at": "2026-04-17T10:15:49.605330",
     "source": "users/grace-mar/intent.md",
     "goals": {
       "primary": "Protect companion authority over the Record and Voice; keep identity changes gated and evidence-linked",

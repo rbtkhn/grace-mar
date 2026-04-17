@@ -41,8 +41,12 @@ def test_task_limited_routes_to_fork():
     assert "coach-handoff" in args
 
 
+def test_capability_routes_to_export_capability():
+    script, _args = EXPORT_CLASS_ROUTES["capability"]
+    assert script == "export_capability.py"
+
+
 def test_unsupported_classes_defined():
-    assert "capability" in EXPORT_CLASS_UNSUPPORTED
     assert "internal" in EXPORT_CLASS_UNSUPPORTED
 
 
@@ -72,10 +76,10 @@ def test_tool_bootstrap_smoke():
     assert len(r.stdout) > 100, "PRP output should be non-trivial"
 
 
-def test_capability_rejects_clearly():
+def test_capability_exports_successfully():
     r = _run(["--export-class", "capability"])
-    assert r.returncode == 2
-    assert "not yet wired" in r.stderr
+    assert r.returncode == 0, f"stderr: {r.stderr}"
+    assert "grace-mar-capability-export" in r.stdout
 
 
 def test_internal_rejects_clearly():

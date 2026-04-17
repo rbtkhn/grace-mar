@@ -61,7 +61,7 @@ These are all valuable. None are required on every pass.
 | **Promotion to STRATEGY.md** | Arc has stabilized (weekly or less) |
 | **Current-events analysis pipeline** | Live event needs the full 11-section workflow |
 | **Condense-to-target (Full path)** | Draft mixes notebook + DEMO + lens walls |
-| **External LLM digest triage** | Grok-class paste needs §1f overlay + falsifiable table |
+| **LLM / pasted strategic digest triage** | Dense §1f paste uses the **same** falsifiable-table + verify-before-weave discipline as generator stubs ([NOTEBOOK-PREFERENCES — daily brief supplements](strategy-notebook/NOTEBOOK-PREFERENCES.md#daily-brief-supplements)) |
 
 Each optional feature has its own section in [SKILL.md](../../.cursor/skills/skill-strategy/SKILL.md) and the architecture docs. Consult them when the operator triggers them — not before.
 

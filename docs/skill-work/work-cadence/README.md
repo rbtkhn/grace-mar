@@ -107,7 +107,7 @@ Skills may ask the agent to **read** `work-cadence-events.md` **before** running
 | **thanks** | **2** | Minimal pause — just enough “what just happened” to anchor the bookmark |
 | **coffee** | **4** | Reorientation — roughly half a day of mixed beats at typical spacing |
 | **bridge** | **4** | Same depth as **coffee** — the next session almost always pastes the bridge packet and ends with **`coffee`** on its own line; matching window length keeps seal → sip symmetric |
-| **dream** | **8** | Day-close — wider window to see coffee/bridge/thanks/dream mix before consolidation |
+| **dream** | **4** (default) / **8** (full day-close) | Default matches coffee/bridge depth; use **8** when the operator asks for full rhythm (`dream full`, `deep rhythm`, `wide rhythm`, or explicit wider window) — see [.cursor/skills/dream/SKILL.md](../../../.cursor/skills/dream/SKILL.md) Step 0 |
 | **harvest** | **none** | The **Harvest Packet** is already dense context for a midstream receiver; prepending the same rhythm strip would duplicate info without clear load-bearing value. Optional **`harvest`** cadence **telemetry** (`--log`) does not require synthesis in the reply |
 
 ### Cadence voice principle (all rituals)
@@ -155,7 +155,7 @@ Choreography operates in **Maintenance / operational** territory. It does **not*
 
 - [.cursor/skills/coffee/SKILL.md](../../../.cursor/skills/coffee/SKILL.md) — Step 0 recent rhythm, Step 1 scripts, A–E menu
 - [.cursor/skills/thanks/SKILL.md](../../../.cursor/skills/thanks/SKILL.md) — pause beat + recent rhythm (2 lines)
-- [.cursor/skills/dream/SKILL.md](../../../.cursor/skills/dream/SKILL.md) — Step 0 recent rhythm (8), `auto_dream.py`, handoff
+- [.cursor/skills/dream/SKILL.md](../../../.cursor/skills/dream/SKILL.md) — Step 0 recent rhythm (4 default / 8 full closeout), `auto_dream.py`, handoff
 - [.cursor/skills/bridge/SKILL.md](../../../.cursor/skills/bridge/SKILL.md) — Step 0 recent rhythm (4), seal + transfer prompt
 - [.cursor/skills/harvest/SKILL.md](../../../.cursor/skills/harvest/SKILL.md) — packet contract (no trailing `coffee`; no Step 0 rhythm synthesis in reply)
 

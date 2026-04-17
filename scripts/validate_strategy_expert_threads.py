@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Validate strategy-expert-*-thread.md Segment 1 month blocks (WORK only).
+"""Validate strategy-expert-*-thread.md journal-layer month blocks (WORK only).
 
-Segment 1 is a **narrative journal** (see ``strategy-expert-template.md``): default
+The **journal layer** (above ``<!-- strategy-expert-thread:start -->``) is a **narrative journal** (see ``strategy-expert-template.md``): default
 expectation is **readable prose**, with optional ``## YYYY-MM`` sections. Month-scale
 **bullet ledgers** (strength-tagged hooks) are allowed as *compressed* material, but
 they must not be treated as a substitute for prose without operator intent.
@@ -19,6 +19,9 @@ This script **warns** (stderr) when:
     <!-- strategy-expert-thread:segment-1-month-bullets-ledger-ok -->
 
 Exit 0 by default (warnings do not fail). Use ``--strict`` to exit 1 if any warning.
+
+**Month filter:** ``--month MM`` (``01``–``12``) checks only ``## YYYY-MM`` blocks whose month
+matches **MM** (any year). Omit ``--month`` to validate **all** month segments (default).
 """
 
 from __future__ import annotations
@@ -126,8 +129,11 @@ def prose_word_count(body: str) -> int:
     return n
 
 
-def validate_thread_file(path: Path) -> list[str]:
-    """Return warning strings for one thread file."""
+def validate_thread_file(path: Path, month_mm: str | None = None) -> list[str]:
+    """Return warning strings for one thread file.
+
+    If ``month_mm`` is set (``01``–``12``), only ``## YYYY-MM`` blocks with that month are checked.
+    """
     warnings: list[str] = []
     text = path.read_text(encoding="utf-8")
     eid = expert_id_from_thread_name(path.name)
@@ -141,6 +147,10 @@ def validate_thread_file(path: Path) -> list[str]:
     human = strip_backfill_block(human, eid)
 
     for month_id, body in iter_month_h2_bodies(human):
+        if month_mm is not None:
+            parts = month_id.split("-", 2)
+            if len(parts) < 2 or parts[1] != month_mm:
+                continue
         bullets, prose_lines = analyze_month_body(body)
         words = prose_word_count(body)
         if bullets >= 3 and prose_lines == 0:
@@ -148,7 +158,7 @@ def validate_thread_file(path: Path) -> list[str]:
                 f"{path.name}: ## {month_id} — bullet-led month with no prose lines "
                 f"({bullets} list lines). Add a short prose lede or "
                 f"{OPT_OUT_BULLETS_LEDGER} if ledger-only is intentional "
-                f"(see strategy-expert-template.md — Segment 1 narrative journal)."
+                f"(see strategy-expert-template.md — journal layer narrative)."
             )
         elif words < MIN_PROSE_WORDS:
             warnings.append(
@@ -172,7 +182,22 @@ def main() -> int:
         action="store_true",
         help="Exit with status 1 if any warning is emitted.",
     )
+    ap.add_argument(
+        "--month",
+        metavar="MM",
+        default=None,
+        help="Only validate ## YYYY-MM segments for this month (01–12), any year.",
+    )
     args = ap.parse_args()
+
+    month_mm: str | None = args.month
+    if month_mm is not None:
+        if not re.fullmatch(r"(0[1-9]|1[0-2])", month_mm):
+            print(
+                "error: --month must be two digits 01–12 (e.g. --month 04)",
+                file=sys.stderr,
+            )
+            return 1
 
     paths = sorted(args.dir.glob("strategy-expert-*-thread.md"))
     if not paths:
@@ -181,21 +206,26 @@ def main() -> int:
 
     all_warnings: list[str] = []
     for path in paths:
-        all_warnings.extend(validate_thread_file(path))
+        all_warnings.extend(validate_thread_file(path, month_mm=month_mm))
 
     for w in all_warnings:
         print(f"warning: {w}", file=sys.stderr)
 
     if all_warnings:
+        scope = f"month {month_mm}" if month_mm else "all months"
         print(
-            f"strategy expert threads: {len(all_warnings)} Segment 1 month warning(s) "
-            f"in {len(paths)} file(s) — see stderr",
+            f"strategy expert threads: {len(all_warnings)} journal-layer month warning(s) "
+            f"({scope}) in {len(paths)} file(s) — see stderr",
             file=sys.stderr,
         )
         if args.strict:
             return 1
     else:
-        print(f"ok: {len(paths)} strategy expert thread file(s) — no Segment 1 month warnings")
+        scope = f" (month {month_mm} only)" if month_mm else ""
+        print(
+            f"ok: {len(paths)} strategy expert thread file(s) — "
+            f"no journal-layer month warnings{scope}"
+        )
 
     return 0
 

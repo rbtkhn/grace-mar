@@ -1,0 +1,39 @@
+---
+description: strategy inbox — Accumulator for must match operator local today (simple verify)
+globs: docs/skill-work/work-strategy/strategy-notebook/daily-strategy-inbox.md
+alwaysApply: false
+---
+
+# Daily strategy inbox — `Accumulator for:` date
+
+**File:** [`docs/skill-work/work-strategy/strategy-notebook/daily-strategy-inbox.md`](../../docs/skill-work/work-strategy/strategy-notebook/daily-strategy-inbox.md)
+
+## Invariant
+
+The line **`**Accumulator for:** YYYY-MM-DD`** must be the operator’s **local calendar today** — the same notion as session **Today’s date** / host clock for “what day is it,” not:
+
+- the date in a **`daily-brief-YYYY-MM-DD.md`** filename you edited in the same session  
+- a **Grok “tomorrow / watchlist”** date  
+- a deferred scratch label such as **`Expert X … YYYY-MM-DD`** (subsection grep key; may be a future day on purpose)
+
+See the **Footgun** paragraph in the inbox file.
+
+## Simple verification (before save or in PR)
+
+From repo root:
+
+```bash
+python3 scripts/verify_strategy_inbox_accumulator.py
+```
+
+If the machine’s “today” differs from the operator’s (e.g. UTC runner vs US evening), pass the operator day explicitly:
+
+```bash
+python3 scripts/verify_strategy_inbox_accumulator.py --date YYYY-MM-DD
+```
+
+Exit **0** = `Accumulator for` matches; **1** = mismatch or parse error; **2** = file missing.
+
+## When editing this file
+
+After changing **`**Accumulator for:**`**, run the script (or mentally compare the line to **today**). Do not bump the accumulator to “tomorrow” to match briefs or deferred-batch row dates.

@@ -1,4 +1,4 @@
-# grok-daily-brief — post-process layer (headings only)
+# grok-daily-brief — narrative post-process map (headings only; not a separate “overlay” product)
 
 **Purpose:** After `generate_work_politics_daily_brief.py` produces `daily-brief-YYYY-MM-DD.md`, use this **headings-only** skeleton for the **magazine-style** pass (single spine, structured developments, explicit signal/noise, forward watch). **Cite only** what §2 / §1d–§1h / inbox / wires support; do **not** invent precise battle or market numbers.
 
@@ -6,7 +6,7 @@
 
 ---
 
-## Map — Grok-style shape → generated brief §§
+## Map — magazine-style narrative shape → generated brief §§
 
 | Narrative block (below) | Fills or extends |
 |-------------------------|------------------|
@@ -23,7 +23,7 @@
 | Three-mind layer | **§4** / **§5** (short bullets — optional; not default tri-frame unless invoked) |
 | Watchlist for tomorrow | **§6** as **data/event** forward watch (complements KY-4 bullets) |
 | Bottom line | **§5** closing paragraph |
-| *(no Grok twin in generator)* | **§7** context efficiency — keep generator footer; unchanged by this pass |
+| *(no duplicate narrative spine in generator)* | **§7** context efficiency — keep generator footer; unchanged by this pass |
 
 ---
 

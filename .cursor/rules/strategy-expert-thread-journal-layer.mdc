@@ -1,17 +1,19 @@
 ---
-description: Expert thread Segment 1 — prose-first narrative journal (not bullet-default)
+description: Expert thread journal layer — prose-first narrative (not bullet-default)
 globs:
   - docs/skill-work/work-strategy/strategy-notebook/strategy-expert-*-thread.md
 alwaysApply: false
 ---
 
-# Strategy notebook — `strategy-expert-*-thread.md` Segment 1
+# Strategy notebook — `strategy-expert-*-thread.md` journal layer
 
 Applies when **editing or drafting** the human layer **above** `<!-- strategy-expert-thread:start -->`.
 
+**Naming:** **Journal layer** = file-level human narrative (not overwritten by **`thread`**). **Segment 1–4** (2026) = month index — **January** (`## 2026-01`) through **April** (`## 2026-04`, ongoing). **Machine layer** = script block between HTML markers — **not** “Segment 2” in the month sense. Full spec: `docs/skill-work/work-strategy/strategy-notebook/STRATEGY-NOTEBOOK-ARCHITECTURE.md` § Thread.
+
 ## Default (do not invert)
 
-- **Segment 1** is the **narrative journal**: **readable prose in full sentences** first (`strategy-expert-template.md` — thread section). The **`thread`** script only maintains the machine block **between** the markers; it does **not** write Segment 1.
+- The **journal layer** is the **narrative journal**: **readable prose in full sentences** first (`strategy-expert-template.md` — thread section). The **`thread`** script only maintains the **machine layer** **between** the markers; it does **not** write the journal layer.
 - **`## YYYY-MM` month headings** may use **bullets** for strength-tagged lattice / receipt hooks — that is **operator shorthand or ledger work**, not a license to **replace** the template’s prose default unless the operator chose that format.
 - Each **`## YYYY-MM` segment** should carry **at least ~500 words of prose** (words on non-bullet substantive lines; see `validate_strategy_expert_threads.py`). Bullets do **not** count toward that minimum. Scaffold: `python3 scripts/expand_strategy_expert_segment_prose.py --apply`.
 - When you add or extend month material: prefer **substantive prose** (topic + arc + notebook discipline) **before** a bullet stack, or a tight prose block **instead of** bullets-only — unless the operator explicitly wants ledger-only months.
@@ -19,7 +21,7 @@ Applies when **editing or drafting** the human layer **above** `<!-- strategy-ex
 ## Machine check
 
 - Run `python3 scripts/validate_strategy_expert_threads.py` — it **warns** when a `## YYYY-MM` block has many list lines and **no** prose lines, or when prose word count is **below 500**.
-- **Opt-out (whole file, transitional):** `<!-- strategy-expert-thread:segment-1-month-bullets-ledger-ok -->` in the human layer (documented in the template).
+- **Opt-out (whole file, transitional):** `<!-- strategy-expert-thread:segment-1-month-bullets-ledger-ok -->` in the journal layer (documented in the template). Legacy rule filename may still say `segment-1`; meaning = **journal-layer** bullets-OK.
 
 ## Do not
 

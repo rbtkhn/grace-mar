@@ -40,7 +40,7 @@ Sensitivity filtering: entries with `sensitivity_class: non_portable` or `portab
 
 ## Current export entry points
 
-Each export class maps to existing scripts. Three classes are operational via `--export-class`; two remain unwired. No second export system is needed.
+Each export class maps to existing scripts. Four classes are operational via `--export-class`; one is not exported by definition. No second export system is needed.
 
 | Class | Status | Script | `--export-class` | Subcommand equivalent |
 |---|---|---|---|---|
@@ -48,7 +48,7 @@ Each export class maps to existing scripts. Three classes are operational via `-
 | **Full governed profile** | Operational | [`export_runtime_bundle.py`](../../scripts/export_runtime_bundle.py) | `export.py --export-class full` | `export.py bundle -- --mode portable_bundle_only` |
 | **Full governed profile (with runtime)** | Operational | [`export_runtime_bundle.py`](../../scripts/export_runtime_bundle.py) | — | `export.py bundle -- --mode adjunct_runtime` |
 | **Task-limited profile** | Operational | [`export_fork.py`](../../scripts/export_fork.py) | `export.py --export-class task_limited` | `export.py fork -- --format coach-handoff` |
-| **Demonstrated capability profile** | Not yet wired | Rationale format and schema exist ([artifact-rationale.md](artifact-rationale.md)); dedicated export filtering is future | Rejects with explanation | — |
+| **Demonstrated capability profile** | Operational | [`export_capability.py`](../../scripts/export_capability.py) | `export.py --export-class capability` | — |
 | **Internal-only** | Not exported | Content stays in governed Record | Rejects with explanation | — |
 
 Additional exporters: `export_user_identity.py` (identity sections), `export_manifest.py` (policy manifest), `export_view.py` (audience views: `school`, `public`).
@@ -74,15 +74,16 @@ The `--export-class` flag on `export.py` routes to the correct child script with
 python scripts/export.py --export-class tool_bootstrap -- -o prompt.txt
 python scripts/export.py --export-class full -- -o /tmp/bundle
 python scripts/export.py -u grace-mar --export-class task_limited -- -o handoff.json
+python scripts/export.py --export-class capability -- -o capability.json
 ```
 
-Three classes are operational: `tool_bootstrap`, `full`, `task_limited`. Unsupported classes (`capability`, `internal`) exit with code 2 and an explanation. Existing subcommand invocations (`export.py fork`, `export.py prp`, etc.) continue to work unchanged.
+Four classes are operational: `tool_bootstrap`, `full`, `task_limited`, `capability`. The only non-exportable class (`internal`) exits with code 2 and an explanation. Existing subcommand invocations (`export.py fork`, `export.py prp`, etc.) continue to work unchanged.
 
 ---
 
 ## MCP adapter
 
-The same export classes are available programmatically via a read-only MCP server at [`integrations/mcp_adapter.py`](../../integrations/mcp_adapter.py). It wraps the existing export machinery over stdio transport — no second export stack, no write-back. Three operational classes (`tool_bootstrap`, `full`, `task_limited`) are retrievable; unsupported classes reject with explanation. See [mcp-adapter.md](../integrations/mcp-adapter.md) for configuration and response shapes.
+The same export classes are available programmatically via a read-only MCP server at [`integrations/mcp_adapter.py`](../../integrations/mcp_adapter.py). It wraps the existing export machinery over stdio transport — no second export stack, no write-back. Four operational classes (`tool_bootstrap`, `full`, `task_limited`, `capability`) are retrievable; `internal` rejects with explanation. See [mcp-adapter.md](../integrations/mcp-adapter.md) for configuration and response shapes.
 
 ---
 

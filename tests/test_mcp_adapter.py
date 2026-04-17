@@ -48,12 +48,17 @@ def test_list_classes_includes_supported():
         assert result["supported"][cls]["operational"] is True
 
 
+def test_list_classes_includes_capability_as_supported():
+    result = list_export_classes()
+    assert "capability" in result["supported"]
+    assert result["supported"]["capability"]["operational"] is True
+
+
 def test_list_classes_includes_unsupported():
     result = list_export_classes()
-    for cls in ("capability", "internal"):
-        assert cls in result["unsupported"]
-        assert result["unsupported"][cls]["operational"] is False
-        assert result["unsupported"][cls]["description"]
+    assert "internal" in result["unsupported"]
+    assert result["unsupported"]["internal"]["operational"] is False
+    assert result["unsupported"]["internal"]["description"]
 
 
 # ── retrieve_export — successful paths ──────────────────────────────────
@@ -93,11 +98,13 @@ def test_retrieve_task_limited():
 
 # ── retrieve_export — rejection paths ───────────────────────────────────
 
-def test_unsupported_class_rejects_clearly():
+def test_retrieve_capability():
     result = retrieve_export(user_id="grace-mar", export_class="capability")
-    assert "error" in result
-    assert "not yet wired" in result["error"]
-    assert "supported_classes" in result
+    assert "error" not in result
+    assert result["export_class"] == "capability"
+    assert result["content_type"] == "application/json"
+    assert isinstance(result["content"], dict)
+    assert result["generated_via"] == "export_capability"
 
 
 def test_internal_class_not_exposed():

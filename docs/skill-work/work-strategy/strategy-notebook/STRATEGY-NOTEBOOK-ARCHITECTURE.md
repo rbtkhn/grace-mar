@@ -32,26 +32,28 @@
 1. **Triage** (internal, not operator-facing) — routes **`thread:<expert_id>`** lines from **`daily-strategy-inbox.md`** to per-expert **`strategy-expert-<expert_id>-transcript.md`** files (append-only, 7-day rolling window, auto-pruned). Operator may lightly edit transcripts for clarity; edits are preserved across runs.
 2. **Extraction** — reads each expert's **`-transcript.md`** (what the expert said recently) and relevant **knot files** (where that material was used), writes **machine-maintained** material to **`strategy-expert-<expert_id>-thread.md`** **between** the HTML comment markers (see below). **Human narrative** lives **outside** that block.
 
-**`-thread.md` is segmented (in order top to bottom):**
+**`-thread.md` is layered (in order top to bottom).** **Do not** overload the word **Segment** for these layers — reserve **Segment 1–4** for the **2026 month index** (below).
 
-| Segment | Location in file | Who maintains | Purpose |
-|---------|------------------|----------------|---------|
-| **Segment 1 — Narrative journal** | **Above** `<!-- strategy-expert-thread:start -->` | Operator / assistant | **Human-readable first:** heading **`## Segment 1 — Narrative journal (operator)`** (or legacy **`## Narrative journal`** until migrated). Dated prose — arc, what changed for this voice, how recent ingests relate to **knots** and **Judgment**, tensions, open pins. The **`thread`** script **never overwrites** this segment. If empty, a one-line stub is fine. |
-| **Segment 2 — Machine extraction** | **Between** `<!-- strategy-expert-thread:start -->` and `<!-- strategy-expert-thread:end -->` | `strategy_expert_corpus.py` on each **`thread`** run | **`## Segment 2 — Machine extraction (script-maintained)`** with **`### Segment 2a — Recent transcript material`** and **`### Segment 2b — Knot references`** — transcript echoes + knot index rows. Overwritten each run. |
-| **Segment 3 — Optional ledger** (optional) | **After** `<!-- strategy-expert-thread:end -->` | Operator or future tooling | Optional fenced **`thread-ledger`** YAML/JSON — **not** touched by the default extractor unless a future script is added. |
+| Layer | Location in file | Who maintains | Purpose |
+|-------|------------------|----------------|---------|
+| **Journal layer — Narrative** | **Above** `<!-- strategy-expert-thread:start -->` | Operator / assistant | **Human-readable first:** heading **`## Journal layer — Narrative (operator)`**. Dated prose — arc, what changed for this voice, how recent ingests relate to **knots** and **Judgment**, tensions, open pins. The **`thread`** script **never overwrites** this layer. If empty, a one-line stub is fine. |
+| **Machine layer — Extraction** | **Between** `<!-- strategy-expert-thread:start -->` and `<!-- strategy-expert-thread:end -->` | `strategy_expert_corpus.py` on each **`thread`** run | **`## Machine layer — Extraction (script-maintained)`** with **`### Recent transcript material`** and **`### Knot references`** — transcript echoes + knot index rows. Overwritten each run. |
+| **Optional ledger** | **After** `<!-- strategy-expert-thread:end -->` | Operator or future tooling | Optional fenced **`thread-ledger`** YAML/JSON — **not** touched by the default extractor unless a future script is added. |
+
+**2026 month segments (operator index — inside the journal layer):** **`Segment 1`** = **January 2026** (`## 2026-01`); **`Segment 2`** = **February 2026** (`## 2026-02`); **`Segment 3`** = **March 2026** (`## 2026-03`); **`Segment 4`** = **April 2026** (`## 2026-04`, **ongoing**). Later months continue as **`## YYYY-MM`** headings in order. These **month segments** are **not** the machine layer.
 
 <a id="expert-thread-month-segments"></a>
 
 ### Expert-thread month segments (parse contract + scripts)
 
-Within **Segment 1**, each **`## YYYY-MM`** heading opens **one month-segment** of the narrative journal (see [strategy-expert-template.md](strategy-expert-template.md)). Treat boundaries as a **parse contract** for validators and batch-analysis handoff — not decorative.
+Within the **journal layer**, each **`## YYYY-MM`** heading opens **one month-segment** of the narrative (see [strategy-expert-template.md](strategy-expert-template.md)). Treat boundaries as a **parse contract** for validators and batch-analysis handoff — not decorative.
 
 - **Where a month body ends:** tooling stops the segment at the **next** `## YYYY-MM` **or** at the first line matching `<!-- backfill:` (start of the HTML backfill block). A month segment must **not** include the backfill region; otherwise word counts and segment text for that month are wrong.
 - **Backfill placement:** prefer listing **all** calendar `## YYYY-MM` segments **before** `<!-- backfill:<expert_id>:start -->`, with **`## YYYY-MM`** for the partial current month **after** the backfill block if you use one — or keep a single consistent order in-repo; the terminator rule above stays the source of truth.
 - **Prose minimum:** default expectation is **≥ ~500 words of prose per `## YYYY-MM` block** (words on non-bullet substantive lines only; list lines do not count). `python3 scripts/validate_strategy_expert_threads.py` warns when below threshold or when a month is bullets-only without prose. To scaffold from roster **Role** / **Typical pairings** (WORK-only; not Record): `python3 scripts/expand_strategy_expert_segment_prose.py --apply` from repo root.
-- **After you edit Segment 1 month prose materially:** re-run **`python3 scripts/strategy_historical_expert_context.py --expert-id <id> --start-segment … --end-segment … --apply`** when you rely on `artifacts/skill-work/work-strategy/historical-expert-context/` per-month or rollup files for that window — so batch-analysis and prompts see updated stance text.
+- **After you edit journal-layer month prose materially:** re-run **`python3 scripts/strategy_historical_expert_context.py --expert-id <id> --start-segment … --end-segment … --apply`** when you rely on `artifacts/skill-work/work-strategy/historical-expert-context/` per-month or rollup files for that window — so batch-analysis and prompts see updated stance text.
 
-**Legacy:** “Two layers” meant the same split (human above markers / machine inside). **Segments** name that split explicitly for navigation and tooling.
+**Legacy:** Older docs called the split **Segment 1** (journal) vs **Segment 2** (machine). That collided with **month** “segments.” Current wording: **journal layer** / **machine layer** for file structure; **Segment 1–4** = **2026-01–04** month index only.
 
 **Assistant default after `thread`:** Refine the **narrative journal** (above markers) into **continuous readable prose** where the operator wants it; keep **machine extraction** as-is or summarize it in the journal by reference — **do not** replace the journal with bullets-only stubs unless the operator asks.
 

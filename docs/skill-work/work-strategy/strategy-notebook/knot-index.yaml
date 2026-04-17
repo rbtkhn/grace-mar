@@ -111,5 +111,12 @@ knots:
     date: "2026-04-16"
     knot_label: pape-janssen-escalation-blockade
     clusters: [robert-pape, hormuz, escalation-trap, blockade, lebanon]
-    patterns: [pape-lattice, janssen-studio, third-player-spoiler]
-    note: "Pape Janssen escalation trap + staged blockade calendar + Israel spoiler; lattice vs Mearsheimer/Davis; Lebanon X + AP seam"
+    patterns: [pape-lattice, janssen-studio, third-player-spoiler, weave-d]
+    note: "Weave D: Pape-primary Janssen trap + blockade calendar + spoiler; same-day Marandi+Blumenthal evidence streams → sister weave C; lattice vs Mearsheimer/Davis"
+
+  - path: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/knots/strategy-notebook-knot-2026-04-16-marandi-blumenthal-jf-primary.md
+    date: "2026-04-16"
+    knot_label: marandi-blumenthal-jf-primary
+    clusters: [seyed-marandi, max-blumenthal, islamabad, hormuz]
+    patterns: [weave-c, marandi-primary, blumenthal-amplifier]
+    note: "Weave C: Marandi BP primary + Blumenthal JF amplifier; Pape validate fork → sister pape-janssen (weave D)"

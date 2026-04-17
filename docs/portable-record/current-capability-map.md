@@ -1,6 +1,6 @@
 # Portability — current-state capability map
 
-What Grace-Mar already solves, what remains incomplete, and what must not be duplicated.
+What Grace-Mar already solves and what must not be duplicated. All documented export classes are operational.
 
 ---
 
@@ -23,16 +23,9 @@ These capabilities are live in the grace-mar instance.
 | **External-AI extraction prompt pack** | Structured prompt + import script for extracting portable working-identity from other AI systems into governed candidate objects. | Live — [extraction-prompt-pack.md](extraction-prompt-pack.md), [`scripts/import_working_identity_candidates.py`](../../scripts/import_working_identity_candidates.py) |
 | **Working-identity candidate schema** | Normalized JSON Schema for imported context that enters gate review before promotion to Record. | Live — [`schema-registry/working-identity-candidate.v1.json`](../../schema-registry/working-identity-candidate.v1.json), [working-identity-candidates.md](working-identity-candidates.md) |
 | **Artifact-rationale format** | Structured format for demonstrated capability with provenance (why it was built, not just that it exists). | Live — [artifact-rationale.md](artifact-rationale.md), [`schema-registry/artifact-rationale.v1.json`](../../schema-registry/artifact-rationale.v1.json) |
-| **Export-class CLI wiring** | `export.py --export-class` flag routes `tool_bootstrap`, `full`, and `task_limited` to existing child exporters. Unsupported classes reject clearly. | Live — [`scripts/export.py`](../../scripts/export.py), [export-contract.md](export-contract.md) |
+| **Export-class CLI wiring** | `export.py --export-class` flag routes `tool_bootstrap`, `full`, `task_limited`, and `capability` to existing child exporters. `internal` rejects clearly. | Live — [`scripts/export.py`](../../scripts/export.py), [export-contract.md](export-contract.md) |
 | **Thin MCP adapter** | Read-only MCP server over governed export classes for tool-using agents. Wraps existing export machinery; stdio transport; no write-back. | Live — [`integrations/mcp_adapter.py`](../../integrations/mcp_adapter.py), [mcp-adapter.md](../integrations/mcp-adapter.md) |
-
----
-
-## Still incomplete
-
-| Gap | Description | Priority |
-|---|---|---|
-| **Demonstrated-capability export filter** | The `capability` export class is documented and the rationale format exists, but `export.py` does not yet have a dedicated capability-focused exporter. | Future |
+| **Demonstrated-capability export** | Dedicated exporter filtering SKILLS + EVIDENCE into a portfolio view with artifact-rationale companions. Five seed rationales authored. | Live — [`scripts/export_capability.py`](../../scripts/export_capability.py), [`artifacts/rationales/`](../../artifacts/rationales/) |
 
 ---
 

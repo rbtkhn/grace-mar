@@ -1,7 +1,7 @@
 ---
 name: dream
 preferred_activation: dream
-description: "Grace-Mar night-close maintenance ritual. Primary trigger: dream. Dream is the end-of-day consolidation pass: a bounded maintenance ritual that settles continuity, checks integrity and governance, refreshes contradiction visibility, and prepares governed follow-up without merge authority. Agent steps also cover strategy-notebook closeout and Xavier journal day-file generation (see skill body). Before auto_dream.py runs, synthesize the previous eight events from work-cadence-events.md into **Recent rhythm** prose (no internal ops jargon or timestamps in chat). Usually one dream session per day."
+description: "Grace-Mar night-close maintenance ritual. Primary trigger: dream. Dream is the end-of-day consolidation pass: a bounded maintenance ritual that settles continuity, checks integrity and governance, refreshes contradiction visibility, and prepares governed follow-up without merge authority. Agent steps also cover strategy-notebook closeout and Xavier journal day-file generation (see skill body). Before auto_dream.py runs, synthesize the last four cadence lines (eight when the operator asks for full day-close rhythm) from work-cadence-events.md into **Recent rhythm** prose (no internal ops jargon or timestamps in chat). Usually one dream session per day."
 ---
 
 # Dream
@@ -47,19 +47,19 @@ But the default pattern is:
 
 Optional but high-leverage before leaving the dream thread after a **successful** `auto_dream.py` (writes `last-dream.json`):
 
-1. **One sentence** — what tomorrow should pick up (mirror `tomorrow_inherits` in the JSON or say it in plain language).
-2. **One letter** — the coffee menu lean from the handoff: **C** = Strategy / daily brief (`today_field`), **A** = Build (`build`), **B** = Steward / gate (`steward`) — from `execution_paths[suggested_execution_path_index]`. The next **`coffee`** Step 1 (`operator_daily_warmup.py`) prints a single line **`Dream → coffee menu:`** with the same mapping.
+1. **Primary** — **one** sentence for tomorrow: mirror **`tomorrow_inherits`** from `last-dream.json` (or the same idea in plain language). That field is the main human-facing hint; do not stack it with unrelated “do next” lists.
+2. **Secondary** — the coffee menu letter (**A** / **B** / **C**) from `execution_paths[suggested_execution_path_index]` only if it **adds** something beyond the inherits line, or if you need to align with **`Dream → coffee menu:`** on the next **`coffee`** Step 1 (`operator_daily_warmup.py`). If the letter and `tomorrow_inherits` **conflict**, say so in **one** clarifying sentence—do not present three parallel “tomorrow” signals without priority.
 
-If **`auto_dream.py --strict`** halted, **`last-dream.json` was not updated** — yesterday’s file may still be on disk; do not treat the handoff as fresh until the next successful dream; fix integrity/governance first.
+If **`auto_dream.py --strict`** halted, **`last-dream.json` was not updated** — yesterday’s file may still be on disk; do not treat the handoff as fresh until the next successful dream; fix integrity/governance first (see **When `--strict` halts** below).
 
 ## Step 0 — Recent rhythm (before Step 1 scripts)
 
 **Read first** — `auto_dream.py` (and `operator_end_of_day.py`) append a new **`dream`** line when the pass completes successfully, so the log must be read **before** those commands if the rhythm read is to exclude this run.
 
 1. Open **`docs/skill-work/work-cadence/work-cadence-events.md`**. Below `_(Append below this line.)_`, collect lines matching `- **YYYY-MM-DD HH:MM UTC** — kind (user) …`.
-2. Take the **last 8** such lines already in the file. If there are fewer than eight, use what exists; if none, **Recent rhythm:** _(no prior events)_ in the reply.
-3. **Synthesize in a short paragraph** using the **cadence voice principle** ([work-cadence README](../../../docs/skill-work/work-cadence/README.md#cadence-voice-principle-all-rituals)): acknowledge the day's arc in *felt* terms (what was productive, what was settled, what was a good call), then name what **tomorrow inherits** — where the energy naturally goes next. Use **"we"** framing. The operator should feel **settled and ready to rest**, not debriefed. **Do not** put dates, clock times, commit hashes, or process names in this prose. Anchored in the actual eight log lines (no generic filler), but the day is *felt and closed forward*, not recapped. Script output below still carries the full machine snapshot.
-4. Hold this synthesis for **What to return** — it belongs **at the top** of the night-close brief, before `self-memory` / integrity lines.
+2. **How many lines:** **Default: last 4** (lighter, aligned with coffee/bridge depth). **Full day-close: last 8** when the operator signals a wider rhythm window—e.g. **`dream full`**, **`deep rhythm`**, **`wide rhythm`**, or explicit ask for the full cadence tail. If fewer lines exist than requested, use what exists; if none, **Recent rhythm:** _(no prior events)_ in the reply.
+3. **Synthesize in a short paragraph** using the **cadence voice principle** ([work-cadence README](../../../docs/skill-work/work-cadence/README.md#cadence-voice-principle-all-rituals)): acknowledge the day's arc in *felt* terms (what was productive, what was settled, what was a good call), then name what **tomorrow inherits** — where the energy naturally goes next. Use **"we"** framing. The operator should feel **settled and ready to rest**, not debriefed. **Do not** put dates, clock times, commit hashes, or process names in this prose. Anchor in the **actual** log lines you read (no generic filler); the day is *felt and closed forward*, not recapped. Script output below still carries the full machine snapshot.
+4. Hold this synthesis for **What to return** — it belongs **at the top** of the night-close brief, before run status / integrity lines.
 
 If the file is missing or empty below the anchor, note that under **Recent rhythm** and continue.
 
@@ -118,57 +118,56 @@ This is a maintenance pass, not a merge pass.
 
 ## What to return
 
-Return a short night-close brief with:
+Use a **short default brief** every time. Add **Details** only when load-bearing (failure, noteworthy counts, operator asked) — do not fill every optional slot on a quiet run.
 
-- **Recent rhythm:** (synthesis from Step 0 — always first)
-- **Phase:** which phase ran (`both`, `recent`, or `structural`)
-- `self-memory` changed: yes/no *(recent phase)*
-- integrity: pass/fail *(structural phase)*
-- governance: pass/fail *(structural phase)*
-- contradiction digest: total counts, plus **recent entries** (today's candidates) vs **structural entries** (older candidates) when phase=both
-- artifact drafts: none / count
-- **`dream_catchup` (since previous dream):** `local_calendar_dates`, `strategy_notebook_missing_day_headers`, `timezone`, `previous_dream_generated_at` — from `auto_dream.py` / `last-dream.json`; **optional FYI** for calendar coverage (strategy-notebook); **drives** Xavier `--catch-up-from-last-dream` (operational; not Record).
-- **When present in `last-dream.json`:** coffee **24h rollup** (runs, mode mix, optional **menu picks** from `coffee_pick` cadence lines), **three execution paths** with **suggested index**: Steward when this run’s **integrity or governance failed**, else Steward when **gate pending > `max_pending_candidates`** (from `config/fork-config.json`), else **calendar mod-3** on tomorrow’s yearday; **`tomorrow_inherits`** one-liner (operational hint only); **civ-mem echoes** (default **one** hit above overlap threshold — each carries **“Analogy candidate only — not evidence, not recommendation, not Record”**; cite the disclaimer)
-- **capability shift** (model category): sources checked / total, REVIEW alerts, monitor alerts — or "no alerts" if quiet
-- one sentence on what tomorrow inherits from this run
-- **Strategy notebook** / **Xavier journal:** one line each when relevant — strategy-notebook is **deferred** unless the operator asked to **weave** / **`weave`** in-thread; Xavier per § below
+### Default brief (always)
+
+- **Recent rhythm:** Step 0 synthesis — **first**.
+- **Run status:** phase (`both` | `recent` | `structural`), whether the run **ok** / quiet; **self-memory** changed yes/no; integrity / governance **pass | fail | skipped** (when a phase skips those checks, say so).
+- **One closing sentence** — e.g. quiet run is success, or what needs attention tomorrow (no merge authority).
+
+### Primary tomorrow hint
+
+- Prefer **one** line from **`tomorrow_inherits`** (script stdout / `last-dream.json`) when present. The coffee **execution path** letter (**A** / **B** / **C**) and **`Dream → coffee menu:`** are **derived** hints—see **Five-second closeout**. Do **not** stack **`tomorrow_inherits` + path letter + civ-mem + rollup** as separate “do tomorrow” orders without stating priority; **tomorrow_inherits wins** unless you note a direct conflict.
+
+### Details — expand when load-bearing
+
+Include only what matters this run:
+
+- Contradiction digest totals; **recent vs structural** entry counts when `phase=both`
+- Artifact drafts: none / count
+- **`dream_catchup`:** local dates, `strategy_notebook_missing_day_headers`, timezone, `previous_dream_generated_at` — FYI for calendar coverage; drives Xavier `--catch-up-from-last-dream` (operational; not Record)
+- Coffee **24h rollup**, **execution paths** + suggested index, **civ-mem echoes** (with **“Analogy candidate only — not evidence, not recommendation, not Record”** when cited)
+- **Capability shift** (sources, REVIEW / monitor alerts)
+- **Strategy notebook** / **Xavier journal** / **Dev journal:** one line each when relevant (strategy-notebook **deferred** unless operator asked **weave** in-thread; Xavier per § below)
 
 If nothing important changed, say so plainly. A quiet run is success.
 
-**Done when:** The night-close brief is returned with all fields populated (or explicitly noted as unchanged), and the operator knows what tomorrow inherits.
+**Done when:** The operator sees **Recent rhythm**, **run status**, and **what tomorrow inherits** (or explicit “unchanged / quiet”); Details are optional unless something failed or stands out.
 
 ## Example return shape
 
+**Quiet run:**
+
 ```md
 ## Dream
 
-- Recent rhythm: (e.g. two work-start coffees, a thanks pause with a short park line, then bridge with two short commit refs)
-- self-memory changed: yes
-- integrity: pass
-- governance: pass
-- contradiction digest: reviewable 0, contradiction 0
-- artifact drafts: none
+- Recent rhythm: (short felt closeout from Step 0 — no timestamps)
+- Run status: phase=both; ok; self-memory changed: no; integrity: pass; governance: pass
 
-- capability shift [model]: 6/6 sources — no alerts
-
-Tonight's pass cleaned continuity and left no governed follow-up items.
+Tonight's pass was quiet; handoff is fresh for tomorrow's coffee.
 ```
 
-Or, when something needs attention:
+**Something to review:**
 
 ```md
 ## Dream
 
-- Recent rhythm: (compressed rhythm from Step 0, no timestamps in chat)
-- self-memory changed: yes
-- integrity: pass
-- governance: pass
-- contradiction digest: reviewable 2, contradiction 1
-- artifact drafts: 1 prepared
+- Recent rhythm: (short felt closeout from Step 0)
+- Run status: phase=both; self-memory changed: yes; integrity: pass; governance: pass
+- Details: contradiction digest — reviewable 2, contradiction 1; artifact drafts: 1 prepared; capability shift: 1 REVIEW (ASSUME-007)
 
-- capability shift [model]: 5/6 sources — 1 REVIEW (ASSUME-007), 2 monitor
-
-Tonight's pass surfaced one contradiction worth governed review tomorrow; nothing was merged automatically.
+Tomorrow: skim reviewable digest rows; nothing was merged automatically.
 ```
 
 ## Two-phase substrate separation
@@ -190,6 +189,12 @@ The `last-dream.json` handoff includes a `phases` object that separates results 
 ## Strict halt and `last-dream.json`
 
 When **`auto_dream.py --strict`** halts because integrity or governance failed, a **new** `last-dream.json` is **not** written (the previous file, if any, is left unchanged). Morning pickup may show an **older** handoff until the next successful dream. Rotation overrides, civ-mem echoes, and rollup fields apply to **successful** writes only.
+
+### When `--strict` halts — recovery (three steps)
+
+1. **Read the failure** — stderr and the **`auto_dream.py` stdout** (headline line first, then the rest). Identify whether integrity, governance, or another check failed.
+2. **Fix operationally** — stale derived exports: [work-cadence README](../../../docs/skill-work/work-cadence/README.md) § *When integrity reports stale derived exports* and **Guardrails** below; governance / integrity per script messages; config or parity issues. **Do not** merge **RECURSION-GATE** candidates to “fix” integrity or governance.
+3. **Re-run** — `python3 scripts/auto_dream.py --strict` after the fix; treat handoff as fresh only after **exit 0**.
 
 ---
 

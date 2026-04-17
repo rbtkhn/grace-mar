@@ -5,21 +5,29 @@ Re-entry context for work-strategy: synthesize notebook day + inbox + brief + in
 Read-only by default. Optional --log appends a WORK-choice receipt to session-transcript.md
 via scripts/log_operator_choice.py (same mechanism as work-menu-conventions).
 
+Optional --recent N (or --history for N=20) appends a lightweight **recent strategy activity**
+section after state: merges strategy-fold-events.jsonl, filtered WORK-choice blocks from
+session-transcript.md, and optional git commits under docs/skill-work/work-strategy.
+
 Usage:
   python3 scripts/strategy_context.py -u grace-mar
   python3 scripts/strategy_context.py -u grace-mar --date 2026-04-13 --compact
   python3 scripts/strategy_context.py -u grace-mar --meta --minds
   python3 scripts/strategy_context.py -u grace-mar --max-words 120 --log
+  python3 scripts/strategy_context.py -u grace-mar --recent 20
+  python3 scripts/strategy_context.py -u grace-mar --history --recent-git 5
 """
 
 from __future__ import annotations
 
 import argparse
+import json
 import os
 import re
 import subprocess
 import sys
-from datetime import date
+from dataclasses import dataclass
+from datetime import date, datetime, timezone
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
@@ -27,7 +35,7 @@ _SCRIPTS = Path(__file__).resolve().parent
 if str(_SCRIPTS) not in sys.path:
     sys.path.insert(0, str(_SCRIPTS))
 
-from repo_io import DEFAULT_USER_ID  # noqa: E402
+from repo_io import DEFAULT_USER_ID, profile_dir, read_path  # noqa: E402
 
 STRATEGY_DIR = REPO_ROOT / "docs" / "skill-work" / "work-strategy"
 NOTEBOOK = STRATEGY_DIR / "strategy-notebook"
@@ -35,6 +43,195 @@ DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 ACCUM_RE = re.compile(
     r"^\*\*Accumulator for:\*\*\s*(\d{4}-\d{2}-\d{2})\b", re.MULTILINE
 )
+
+# --- Lightweight history (session-transcript WORK-choice + fold JSONL + optional git) ---
+WORK_CHOICE_BLOCK_RE = re.compile(
+    r"### \[WORK-choice\]\s+(\S+).*?(?=### \[WORK-choice\]|\Z)",
+    re.DOTALL,
+)
+WC_CONTEXT_RE = re.compile(r"^-\s*context:\s*(\S+)\s*$", re.MULTILINE)
+WC_PICKED_RE = re.compile(r"^-\s*picked:\s*(.+)$", re.MULTILINE)
+WC_TAGS_RE = re.compile(r"^-\s*tags:\s*(.+)$", re.MULTILINE)
+WC_NOTE_RE = re.compile(r"^-\s*note:\s*(.+)$", re.MULTILINE)
+
+STRATEGY_KEYWORDS = (
+    "strategy",
+    "strategy-context",
+    "weave",
+    "knot",
+    "batch-analysis",
+    "thread",
+    "inbox",
+    "work-strategy",
+)
+
+
+@dataclass(frozen=True)
+class HistoryEvent:
+    ts: datetime
+    kind: str
+    summary: str
+
+
+def _parse_iso_ts(ts_raw: str) -> datetime | None:
+    ts_raw = ts_raw.strip()
+    try:
+        return datetime.strptime(ts_raw, "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=timezone.utc)
+    except ValueError:
+        pass
+    try:
+        return datetime.fromisoformat(ts_raw.replace("Z", "+00:00"))
+    except ValueError:
+        return None
+
+
+def work_choice_is_strategy_adjacent(
+    context: str, picked: str, tags: str | None, note: str | None
+) -> bool:
+    c = (context or "").strip().upper()
+    if c == "WORK":
+        return True
+    blob = f"{picked} {tags or ''} {note or ''}".lower()
+    return any(k in blob for k in STRATEGY_KEYWORDS)
+
+
+def parse_work_choice_strategy_events(transcript_text: str) -> list[HistoryEvent]:
+    """Parse session-transcript WORK-choice blocks; keep strategy-adjacent rows only."""
+    out: list[HistoryEvent] = []
+    for m in WORK_CHOICE_BLOCK_RE.finditer(transcript_text):
+        ts_raw = m.group(1).strip()
+        block = m.group(0)
+        ts = _parse_iso_ts(ts_raw)
+        if ts is None:
+            continue
+        pm = WC_PICKED_RE.search(block)
+        if not pm:
+            continue
+        picked = pm.group(1).strip()
+        cm = WC_CONTEXT_RE.search(block)
+        context = cm.group(1).strip() if cm else ""
+        tm = WC_TAGS_RE.search(block)
+        tags = tm.group(1).strip() if tm else None
+        nm = WC_NOTE_RE.search(block)
+        note = nm.group(1).strip() if nm else None
+        if not work_choice_is_strategy_adjacent(context, picked, tags, note):
+            continue
+        parts = [f"context={context}", f"picked={picked}"]
+        if tags:
+            parts.append(f"tags={tags[:120]}{'…' if len(tags) > 120 else ''}")
+        if note:
+            n = note.replace("\n", " ")[:200]
+            parts.append(f"note={n}{'…' if len(note) > 200 else ''}")
+        out.append(HistoryEvent(ts=ts, kind="WORK-choice", summary=" — ".join(parts)))
+    return out
+
+
+def parse_fold_jsonl_events(path: Path) -> list[HistoryEvent]:
+    """Load strategy-fold-events.jsonl; one event per valid JSON line."""
+    out: list[HistoryEvent] = []
+    raw = read_path(path)
+    if not raw.strip():
+        return out
+    for line in raw.splitlines():
+        line = line.strip()
+        if not line:
+            continue
+        try:
+            row = json.loads(line)
+        except json.JSONDecodeError:
+            continue
+        ts_s = row.get("ts") or ""
+        ts = _parse_iso_ts(ts_s) if isinstance(ts_s, str) else None
+        if ts is None:
+            continue
+        nb = row.get("notebook_date", "")
+        fk = row.get("fold_kind", "")
+        note = (row.get("note") or "").replace("\n", " ")[:240]
+        gref = row.get("git_ref", "")
+        tail = f" — {note}" if note else ""
+        gbit = f" git={gref[:8]}…" if isinstance(gref, str) and len(gref) >= 8 else ""
+        summary = f"fold {fk} — {nb}{tail}{gbit}"
+        out.append(HistoryEvent(ts=ts, kind="fold", summary=summary))
+    return out
+
+
+def git_strategy_lane_events(repo_root: Path, limit: int) -> list[HistoryEvent]:
+    """Last `limit` commits touching docs/skill-work/work-strategy; empty if git fails."""
+    if limit <= 0:
+        return []
+    try:
+        r = subprocess.run(
+            [
+                "git",
+                "-C",
+                str(repo_root),
+                "log",
+                f"-n{limit}",
+                "--format=%cI%x09%s",
+                "--",
+                "docs/skill-work/work-strategy",
+            ],
+            capture_output=True,
+            text=True,
+            timeout=30,
+        )
+    except (OSError, subprocess.TimeoutExpired) as e:
+        print(f"strategy-context: git log skipped ({e})", file=sys.stderr)
+        return []
+    if r.returncode != 0:
+        print("strategy-context: git log failed (non-fatal)", file=sys.stderr)
+        return []
+    out: list[HistoryEvent] = []
+    for line in r.stdout.splitlines():
+        line = line.strip()
+        if "\t" not in line:
+            continue
+        iso, subj = line.split("\t", 1)
+        try:
+            ts = datetime.fromisoformat(iso.replace("Z", "+00:00"))
+        except ValueError:
+            ts = _parse_iso_ts(iso)
+            if ts is None:
+                continue
+        subj = subj.strip()[:200]
+        out.append(
+            HistoryEvent(ts=ts, kind="git", summary=f"git — {subj}")
+        )
+    return out
+
+
+def merge_history_events(
+    *,
+    fold_events: list[HistoryEvent],
+    wc_events: list[HistoryEvent],
+    git_events: list[HistoryEvent],
+    take: int,
+) -> list[HistoryEvent]:
+    merged = fold_events + wc_events + git_events
+    merged.sort(key=lambda e: e.ts, reverse=True)
+    return merged[:take]
+
+
+def format_history_section(events: list[HistoryEvent]) -> str:
+    """Markdown block for stdout; empty string if no events."""
+    if not events:
+        return ""
+    lines = [
+        "",
+        "### Recent strategy activity (lightweight)",
+        "",
+    ]
+    for i, ev in enumerate(events, start=1):
+        ts_s = ev.ts.strftime("%Y-%m-%dT%H:%M:%SZ")
+        lines.append(f"{i}. {ts_s} — {ev.kind} — {ev.summary}")
+    lines.extend(
+        [
+            "",
+            "_Indicative only; canonical state remains days.md, knots, and git._",
+            "",
+        ]
+    )
+    return "\n".join(lines)
 
 
 def _month_path(d: str) -> Path:
@@ -388,6 +585,25 @@ def main() -> int:
         action="store_true",
         help="Append lane health summary from observability v2 JSON (run build_strategy_observability.py first)",
     )
+    ap.add_argument(
+        "--recent",
+        type=int,
+        default=0,
+        metavar="N",
+        help="After state, append last N merged lightweight events (fold JSONL + WORK-choice + optional git). 0=off.",
+    )
+    ap.add_argument(
+        "--history",
+        action="store_true",
+        help="Same as --recent 20 (ignored if --recent > 0)",
+    )
+    ap.add_argument(
+        "--recent-git",
+        type=int,
+        default=0,
+        metavar="K",
+        help="Include up to K latest git commits touching docs/skill-work/work-strategy in the merge pool",
+    )
     args = ap.parse_args()
     uid = args.user.strip()
     d = (args.date or "").strip()
@@ -480,12 +696,31 @@ def main() -> int:
         else:
             out = out.rstrip("\n") + "\n\n(observability JSON not found — run: python3 scripts/build_strategy_observability.py)\n"
 
+    recent_n = args.recent if args.recent > 0 else (20 if args.history else 0)
+    if recent_n > 0:
+        user_dir = profile_dir(uid)
+        fold_path = user_dir / "strategy-fold-events.jsonl"
+        transcript_path = user_dir / "session-transcript.md"
+        fold_events = parse_fold_jsonl_events(fold_path)
+        wc_events = parse_work_choice_strategy_events(read_path(transcript_path))
+        git_events = git_strategy_lane_events(REPO_ROOT, max(0, args.recent_git))
+        merged = merge_history_events(
+            fold_events=fold_events,
+            wc_events=wc_events,
+            git_events=git_events,
+            take=recent_n,
+        )
+        hist = format_history_section(merged)
+        if hist:
+            out = out.rstrip("\n") + hist
+
     sys.stdout.write(out)
 
     if args.log:
         note = (
             f"strategy-context date={d} compact={bool(args.compact)} max_words={args.max_words}; "
             f"meta={bool(args.meta)} minds={bool(args.minds)}; "
+            f"recent={recent_n if recent_n else 'off'} recent_git={args.recent_git}; "
             f"open_bullets={len(open_bullets)} expert_rows={expert_rows}"
         )
         log_script = REPO_ROOT / "scripts" / "log_operator_choice.py"

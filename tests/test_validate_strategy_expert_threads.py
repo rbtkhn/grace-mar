@@ -7,11 +7,15 @@ import textwrap
 from pathlib import Path
 
 from scripts.validate_strategy_expert_threads import (
+    MIN_PROSE_WORDS,
     OPT_OUT_BULLETS_LEDGER,
     analyze_month_body,
     iter_month_h2_bodies,
     validate_thread_file,
 )
+
+# Single prose line meeting the Segment 1 prose floor (validator counts words on prose lines only).
+_PROSE_FLOOR_LINE = " ".join(["word"] * MIN_PROSE_WORDS)
 
 
 def test_iter_month_h2_bodies_splits_months(tmp_path: Path) -> None:
@@ -97,11 +101,11 @@ def test_validate_thread_file_prose_mixed_ok(tmp_path: Path) -> None:
     p = tmp_path / "strategy-expert-test-expert-thread.md"
     p.write_text(
         textwrap.dedent(
-            """\
+            f"""\
             # Expert thread
 
             ## 2026-01
-            This month opened with a clear arc in the Gulf narrative space.
+            {_PROSE_FLOOR_LINE}
 
             - [strength: high] a
             - [strength: high] b
@@ -115,3 +119,31 @@ def test_validate_thread_file_prose_mixed_ok(tmp_path: Path) -> None:
         encoding="utf-8",
     )
     assert validate_thread_file(p) == []
+
+
+def test_validate_thread_file_month_filter_skips_other_months(tmp_path: Path) -> None:
+    """--month only evaluates matching ## YYYY-MM blocks."""
+    p = tmp_path / "strategy-expert-test-expert-thread.md"
+    p.write_text(
+        textwrap.dedent(
+            f"""\
+            # Expert thread
+
+            ## 2026-01
+            - [strength: high] a
+            - [strength: high] b
+            - [strength: high] c
+
+            ## 2026-02
+            {_PROSE_FLOOR_LINE}
+
+            <!-- strategy-expert-thread:start -->
+            x
+            <!-- strategy-expert-thread:end -->
+            """
+        ),
+        encoding="utf-8",
+    )
+    assert len(validate_thread_file(p)) == 1  # January bullet-only; February ok
+    assert validate_thread_file(p, month_mm="02") == []
+    assert len(validate_thread_file(p, month_mm="01")) == 1

@@ -22,7 +22,7 @@
 
 ## Expert-thread month segments (skill-strategy pointer)
 
-Calendar **`## YYYY-MM`** blocks in **`strategy-expert-*-thread.md`** Segment 1 follow a **parse contract** (terminators, prose minimum, scripts). Spec: [STRATEGY-NOTEBOOK-ARCHITECTURE.md § Expert-thread month segments (parse contract + scripts)](STRATEGY-NOTEBOOK-ARCHITECTURE.md#expert-thread-month-segments). Validate: `python3 scripts/validate_strategy_expert_threads.py`.
+Calendar **`## YYYY-MM`** blocks in **`strategy-expert-*-thread.md`** (inside the **journal layer**) follow a **parse contract** (terminators, prose minimum, scripts). For **2026**, **Segment 1–4** = Jan–Apr month headings — not the machine layer. Spec: [STRATEGY-NOTEBOOK-ARCHITECTURE.md § Expert-thread month segments (parse contract + scripts)](STRATEGY-NOTEBOOK-ARCHITECTURE.md#expert-thread-month-segments). Validate: `python3 scripts/validate_strategy_expert_threads.py`.
 
 ## Next actions
 

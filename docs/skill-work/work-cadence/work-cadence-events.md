@@ -210,3 +210,14 @@ _(Append below this line.)_
 - **2026-04-17 00:00 UTC** — coffee (grace-mar) ok=true mode=work-start cursor_model=unknown model_tier=unknown
 - **2026-04-17 01:16 UTC** — bridge (grace-mar) ok=true cursor_model=unknown model_tier=unknown refs=84980712,20f58ae
 - **2026-04-17 01:21 UTC** — coffee (grace-mar) ok=true mode=work-start cursor_model=unknown model_tier=unknown
+- **2026-04-17 05:23 UTC** — dream (demo) ok=true mode=default cursor_model=unknown model_tier=unknown phase=both integrity=pass governance=pass mem_changed=true reviewable=0 contradictions=0 civmem_echo_count=0 civmem_suppressed=false handoff_written=true
+- **2026-04-17 05:25 UTC** — dream (grace-mar) ok=true mode=default cursor_model=unknown model_tier=unknown phase=both integrity=pass governance=pass mem_changed=true reviewable=0 contradictions=0 civmem_echo_count=0 civmem_suppressed=false handoff_written=true
+- **2026-04-17 12:26 UTC** — coffee (grace-mar) ok=true mode=work-start cursor_model=unknown model_tier=unknown
+- **2026-04-17 15:04 UTC** — coffee (grace-mar) ok=true mode=work-start cursor_model=unknown model_tier=unknown
+- **2026-04-17 15:16 UTC** — coffee_pick (grace-mar) ok=true cursor_model=unknown model_tier=unknown picked=B steward=template
+- **2026-04-17 16:22 UTC** — thanks (grace-mar) ok=true cursor_model=unknown model_tier=unknown park=mcp-adapter-wave-4b-shipped-portability-live
+- **2026-04-17 19:19 UTC** — coffee (grace-mar) ok=true mode=work-start cursor_model=unknown model_tier=unknown
+- **2026-04-17 20:21 UTC** — coffee (grace-mar) ok=true mode=work-start cursor_model=unknown model_tier=unknown
+- **2026-04-17 22:11 UTC** — coffee (grace-mar) ok=true mode=work-start cursor_model=unknown model_tier=unknown
+- **2026-04-17 22:24 UTC** — coffee_pick (grace-mar) ok=true cursor_model=unknown model_tier=unknown picked=B steward=template
+- **2026-04-17 22:26 UTC** — coffee_pick (grace-mar) ok=true cursor_model=unknown model_tier=unknown picked=C

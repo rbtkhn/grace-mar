@@ -37,13 +37,9 @@ New portability work must extend the existing PRP / export / prepared-context ar
 
 ---
 
-## What remains
+## Completeness
 
-The core content formats, intake path, export contract, export-class CLI wiring, and MCP adapter are implemented. The remaining gap is a single unwired export class:
-
-- **Demonstrated-capability export filter** — the `capability` export class is documented and the rationale format exists, but a dedicated exporter is future
-
-See [docs/portable-record/current-capability-map.md](portable-record/current-capability-map.md) for the full inventory.
+All documented export classes are operational. The portability stack — content formats, intake path, export contract, CLI wiring, MCP adapter, and demonstrated-capability export — is complete. See [docs/portable-record/current-capability-map.md](portable-record/current-capability-map.md) for the full inventory.
 
 ---
 

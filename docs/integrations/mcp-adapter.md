@@ -24,10 +24,10 @@ A thin MCP server that lets external AI tools (Cursor, Claude Desktop, etc.) ret
 | `tool_bootstrap` | Operational | Compact PRP string for bootstrapping a new tool session |
 | `full` | Operational | Broad governed profile bundle (metadata + primary artifact + file manifest) |
 | `task_limited` | Operational | Filtered fork export for a specific task or role |
-| `capability` | Not yet wired | Rationale format exists; dedicated exporter is future |
+| `capability` | Operational | SKILLS + EVIDENCE portfolio with artifact-rationale companions |
 | `internal` | Not exportable | Internal-only content stays in the governed Record |
 
-Unsupported classes return a clear error with explanation.
+The only non-exportable class (`internal`) returns a clear error with explanation.
 
 ---
 

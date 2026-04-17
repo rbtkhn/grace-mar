@@ -147,8 +147,8 @@ def template_pool(ctx: dict[str, str]) -> list[str]:
             f"disagreed on any particular day unless a dated bullet below says so explicitly."
         ),
         (
-            f"Segment discipline here follows the strategy-notebook contract: Segment 1 is human "
-            f"journal prose; Segment 2 is machine extraction. For {mid}, the point of a long prose "
+            f"Journal-layer discipline follows the strategy-notebook contract: the **journal layer** "
+            f"is human prose; the **machine layer** is script-maintained extraction. For {mid}, the point of a long prose "
             f"block is to prevent the month from collapsing into a **compressed ledger** that *looks* "
             f"like analysis but is really a hook list. Hooks are valuable; they are also incomplete "
             f"without the surrounding sentences that say **why** the hook matters for knots, for "
@@ -189,7 +189,7 @@ def template_pool(ctx: dict[str, str]) -> list[str]:
             f"knot** and **what job** the voice did (pressure, validate, narrate) in plain English. "
             f"If knot index lines are still empty, say that plainly too—absence matters for pipeline "
             f"honesty. The machine block below the marker will populate knot references when the "
-            f"index points here; Segment 1 should still record what the operator noticed at human "
+            f"index points here; the journal layer should still record what the operator noticed at human "
             f"speed before automation catches up."
         ),
         (

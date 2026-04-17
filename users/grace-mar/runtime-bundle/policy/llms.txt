@@ -2,8 +2,8 @@
 
 User: grace-mar
 Checksum: 8492a604d260330df1292b33160fccdf2fba3ee1768bea9c11e7cb7abb984727
-Generated: 2026-04-17T10:15:31.295396
-Runtime mode: adjunct_runtime
+Generated: 2026-04-17T10:15:49.608352
+Runtime mode: portable_bundle_only
 
 ## Readable
 Agents may read (for personalization, session continuity):
@@ -48,4 +48,4 @@ Agents may stage candidates only. Merge requires user approval.
   manifest: python scripts/export_manifest.py -u grace-mar
   fork_json: python scripts/export_fork.py -o fork-export.json
   intent_snapshot: python scripts/export_intent_snapshot.py -u grace-mar
-  runtime_bundle: python scripts/export_runtime_bundle.py -u grace-mar --mode adjunct_runtime
+  runtime_bundle: python scripts/export_runtime_bundle.py -u grace-mar --mode portable_bundle_only

@@ -1,4 +1,4 @@
-# Historical expert context — `alastair-crooke` — `2026-04`
+# Historical expert context — `alastair-crooke`
 
 WORK only; not Record.
 Source thread: `docs/skill-work/work-strategy/strategy-notebook/strategy-expert-alastair-crooke-thread.md`

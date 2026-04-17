@@ -7,6 +7,7 @@ WORK only; not Record.
 | **Date** | 2026-04-16 |
 | **knot_label** (machine slug) | `pape-janssen-escalation-blockade` — matches basename and [`knot-index.yaml`](../../../knot-index.yaml) |
 | **Day block** | [`days.md` § 2026-04-16](../days.md#2026-04-16) |
+| **Primary expert (`thread:`)** | `robert-pape` — **escalation trap / staged blockade / spoiler** mechanism; **not** Tehran process register (see [weave C](strategy-notebook-knot-2026-04-16-marandi-blumenthal-jf-primary.md)). |
 
 ### Page type
 
@@ -48,6 +49,8 @@ Pape stacks four public claims in one appearance:
 
 **Falsifier:** If **White House / State** readouts show **sustained** Islamabad rounds **without** Rubio-attributed Israeli spoiler behavior **and** commodity checkpoints **miss** Pape’s calendar, downgrade the **spoiler + calendar** spine for this knot (keep escalation-trap vocabulary if demand structure still ratchets).
 
+**Weave D — same-day evidence streams (do not merge registers):** **[Marandi — Breaking Points](strategy-notebook-knot-2026-04-16-marandi-blumenthal-jf-primary.md)** (Tehran **process** / **delegation authority** / **Hormuz leverage** — `thread:seyed-marandi`) and **[Blumenthal — Judging Freedom](strategy-notebook-knot-2026-04-16-marandi-blumenthal-jf-primary.md)** (US **domestic** / **media** **amplifier** on **Vance**, **Islamabad optics**, **delegation targeting** — `thread:max-blumenthal`, operator session) feed **stress-test** **questions** for this **trap** page: *does the room failure look like **ratchet + audience lock-in** (Pape) rather than only **Tehran framing** (Marandi) or **DC humiliation** (Blumenthal)?* **Three lanes** — **three falsifiers**; cite **sister** [weave C](strategy-notebook-knot-2026-04-16-marandi-blumenthal-jf-primary.md) for **non-Pape** **primary** **Judgment**.
+
 ---
 
 ### Links
@@ -57,6 +60,7 @@ Pape stacks four public claims in one appearance:
 - **YT (channel until pin):** [Cyrus Janssen — videos](https://www.youtube.com/@CyrusJanssen/videos)
 - **X (Lebanon map):** [ProfessorPape](https://x.com/ProfessorPape) — `verify:pin-exact-status-URL` in inbox
 - **Wire:** [AP — Israel–Lebanon talks Washington (14 Apr)](https://apnews.com/article/lebanon-israel-negotiations-hezbollah-rubio-washington-88f5123bfcf4c00625e98ea14a16eef9)
+- **Weave C (same day):** [marandi-blumenthal-jf-primary](strategy-notebook-knot-2026-04-16-marandi-blumenthal-jf-primary.md) — Marandi-primary + Blumenthal amplifier; **this** knot is **weave D** (Pape-primary).
 - **Sister knots:** [2026-04-12 islamabad-hormuz-thesis-weave](strategy-notebook-knot-2026-04-12-islamabad-hormuz-thesis-weave.md) · [2026-04-15 kremlin-iri-uranium-dual-register](strategy-notebook-knot-2026-04-15-kremlin-iri-uranium-dual-register.md) · [2026-04-14 mercouris-mearsheimer-lebanon-split](strategy-notebook-knot-2026-04-14-mercouris-mearsheimer-lebanon-split.md)
 
 ---
