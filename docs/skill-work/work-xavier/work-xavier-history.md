@@ -12,6 +12,10 @@
 
 ## Log
 
+### 2026-04-17
+
+- **Cici RTF ingests (governed steward + daily ship):** [evidence/cici-rtf-sessions-ingest-2026-04-17.md](evidence/cici-rtf-sessions-ingest-2026-04-17.md) + RTFs — transcript: approve **prop-20260413-001** + **prop-20260414-001**, merge `claude/brewmind-governed-steward-IE4RH` → **`main`** [`d2358ce`](https://github.com/Xavier-x01/Cici/commit/d2358ce); daily ship journal [`a602e3a`](https://github.com/Xavier-x01/Cici/commit/a602e3a). API chain verified.
+
 ### 2026-04-16
 
 - **Cici handoff — BrewMind governed steward:** [handoffs/cici-brewmind-governed-steward.md](handoffs/cici-brewmind-governed-steward.md) — paste-ready body for **`docs/skills/brewmind-governed-steward.md`** in [Cici](https://github.com/Xavier-x01/Cici); optional `CLAUDE.md` one-liner; canonical Cursor skill [.cursor/skills/brewmind-governed-steward/SKILL.md](../../../.cursor/skills/brewmind-governed-steward/SKILL.md).
