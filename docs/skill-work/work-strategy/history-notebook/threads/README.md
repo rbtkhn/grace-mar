@@ -6,7 +6,7 @@
 
 **Reservoir:** Read and distill from `users/grace-mar/SELF-LIBRARY/civilization_memory` (upstream `rbtkhn/civilization_memory`) — **pointers and patterns only**, no bulk copy.
 
-**Downstream:** Mechanism candidates feed [../knots/](../knots/) (`hn-knot-*.md`); finished prose lives in [../chapters/](../chapters/) under ids from [../book-architecture.yaml](../book-architecture.yaml).
+**Downstream:** Threads inform **chapter** drafting only; finished prose lives in [../chapters/](../chapters/) under ids from [../book-architecture.yaml](../book-architecture.yaml). (No separate HN knot file layer — see [../knots/README.md](../knots/README.md).)
 
 | File | Arc (short) |
 |------|-------------|

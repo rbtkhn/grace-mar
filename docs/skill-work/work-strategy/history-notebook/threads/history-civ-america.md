@@ -45,7 +45,7 @@ Prefer:
 - `MC-01:`
 - `MC-02:`
 - `MC-03:`
-- `MC-04:` Sea roads / circulation — when Vol I work needs maritime-comparative contrast, wire [hn-knot-sea-roads-circulation.md](../knots/hn-knot-sea-roads-circulation.md) for `hn-i-v1-06` (ancient cases first; folded Anglia material mainly `hn-iii-anglia`, `hn-iv-anglia-imperial`).
+- `MC-04:` Sea roads / circulation — when drafting `hn-i-v1-06`, use ancient comparative cases first; folded Anglia material mainly for `hn-iii-anglia`, `hn-iv-anglia-imperial`.
 
 Write short, portable mechanism statements here.
 
