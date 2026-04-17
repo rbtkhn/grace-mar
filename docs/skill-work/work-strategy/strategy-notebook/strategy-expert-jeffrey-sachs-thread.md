@@ -159,7 +159,7 @@ Typical pairings on file for `jeffrey-sachs` emphasize contrast surfaces: × gle
 <!-- strategy-expert-thread:start -->
 ## Machine layer — Extraction (script-maintained)
 
-_Auto-generated from `-transcript.md` + knot index. **Journal layer** (narrative) lives **above** the `<!-- strategy-expert-thread:start -->` marker._
+_Auto-generated from `-transcript.md` + knot index. **Journal layer** (narrative) lives **above** the **strategy-expert-thread** start HTML comment. The machine-layer HTML block is replaced on each `thread` run._
 
 ### Knot references
 

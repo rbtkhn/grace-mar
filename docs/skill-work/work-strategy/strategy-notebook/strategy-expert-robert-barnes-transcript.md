@@ -12,6 +12,5 @@ WORK only; not Record.
 
 <!-- Triage appends new date sections below. Do not add content above this line. -->
 
-
 ## 2026-04-12
 - `X | cold: @barnes_law — “Trump doubles down on dumb”; QT Disclose.tv summarizing executive TS post (Hormuz blockade in/out, toll interdiction in international waters, mine clearing, escalation rhetoric) // hook: third **domestic** pole on Hormuz lever vs Solomon “card” / Martenson spiral; aligns §1e + notebook domestic-fork Judgment | https://x.com/barnes_law | verify:pin-exact-status-URL+archive-Truth-Social-primary | thread:robert-barnes`

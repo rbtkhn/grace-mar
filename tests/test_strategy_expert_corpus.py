@@ -72,7 +72,7 @@ def test_render_thread_extraction_includes_transcript_and_knots() -> None:
             }
         ],
     )
-    assert "Segment 2" in text
+    assert "start HTML comment" in text
     assert "transcript line" in text
     assert "k.md" in text
 

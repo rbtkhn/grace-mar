@@ -145,7 +145,7 @@ Canonical knot paths and raw ingest lines live in **Segment 2** below (regenerat
 <!-- strategy-expert-thread:start -->
 ## Machine layer — Extraction (script-maintained)
 
-_Auto-generated from `-transcript.md` + knot index. **Journal layer** (narrative) lives **above** the `<!-- strategy-expert-thread:start -->` marker._
+_Auto-generated from `-transcript.md` + knot index. **Journal layer** (narrative) lives **above** the **strategy-expert-thread** start HTML comment. The machine-layer HTML block is replaced on each `thread` run._
 
 _(No transcript or knot material for extraction.)_
 <!-- strategy-expert-thread:end -->
