@@ -64,6 +64,18 @@ _Operator block per [weak-signal-template.md](weak-signal-template.md). **§1f**
 | **Trump TS ~09:57** vs **Hormuz “open”** narrative same calendar day | **Primary** Truth Social + wire; **test** digest “Oman momentum” arc — **same day** may be **offer–counteroffer** not **monotonic de-escalation** |
 | **Davis @DanielLDavis1** — two posts (~06:30 “breaking” + later **Truth Social** reaction chain) | **Analyst** — use for **hypothesis** and **expert-thread** routing (`thread:daniel-davis`); **not** substitute for **§1h** / **§1e** primaries |
 
+**Triage disposition (2026-04-17 operator pass):** **`Q`** = remain in §1f quarantine — no weave to Signal / Judgment from the paste alone. **`P`** = partially covered **outside** the Grok block (same-day brief sections or verify table). **`W`** = watch — credible public sources may exist, but digest lines still do not graduate without a named receipt row.
+
+| Cluster | Code | Note |
+|--------|------|------|
+| Israel–Lebanon 10-day; Trump–Oman “momentum” lines inside paste | **Q** | No new wire/primary hit on this pass — **do not** treat paste as confirmed |
+| Russia–Ukraine strike package (counts, “record 2026,” overnight date string) | **Q** | Internal **date/title** tension (see contradiction digest §1) — blocked until night pinned to wire/OSINT |
+| IMF WEO branching / “updated today” | **W** | Verify against IMF release if needed; **no** Judgment lead from digest alone |
+| Macron–Starmer Hormuz mission; PLA/Japan; Pakistan-mediated extension | **Q** | High **fabrication / single-source** risk per triage table |
+| SPR 172M / IEA 400M vs 04-16 G7 45M | **Q** | Reconcile instruments and magnitudes **before** any cross-brief arithmetic |
+| Araghchi Hormuz (04-17); Trump pool + TS same day | **P** | Routed to **§1h** / **§1e** / `#strategy-verify-2026-04-17` — **not** lifted from §1f narrative |
+| Davis thread | **P** | Expert lane + inbox — **not** a primary for §1f claims |
+
 **Contradiction & tension digest (notebook-only — not Record):**
 
 1. **Internal — strike date vs brief date:** Development 2 timestamps the package as **“Overnight April 14–15/16”** while the document title is **April 17, 2026**. Either the model mixed **stock Ukraine-war imagery** with wrong dates, or it refers to a named night that must be **pinned to wire time** before use. **Do not** merge into Judgment until the **calendar night** matches independent chronology.
