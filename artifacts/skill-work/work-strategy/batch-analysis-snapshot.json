@@ -1,8 +1,49 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-04-17T20:55:50.356091+00:00",
-  "count": 24,
+  "generated_at": "2026-04-17T22:34:42.229397+00:00",
+  "count": 26,
   "batch_analysis_refs": [
+    {
+      "date": "2026-04-17",
+      "label": "Ritter × Diesen — **Baltic** **/ MoD** **list** **×** **NATO** **liability** **×** **Iran** **carryover**",
+      "raw": "- batch-analysis | 2026-04-17 | Ritter × Diesen — **Baltic** **/ MoD** **list** **×** **NATO** **liability** **×** **Iran** **carryover** | **Tension-first:** **Same** **`scott-ritter`** **lane** **as** **04-10–04-15** **Hormuz** **/** **Islamabad** **threads** **but** **Europe** **theater** **load-bearing** **here** **(proxy** **acknowledgment,** **Article** **5** **read,** **“decisive** **strike”** **forecast).** **Cross-theater:** **Islamabad** **MOU** **/ Hormuz** **“selective** **open”** **claims** **stack** **prior** **Ritter** **ingests** **—** **do** **not** **merge** **dock** **facts** **with** **Baltic** **strike** **hypothesis** **without** **labeled** **seam.** **Falsifiers:** **Russian** **kinetic** **follow-through** **(wires),** **NATO** **Council** **text,** **U.S.** **executive** **statements,** **IEA** **aviation-fuel** **claim.** | crosses:scott-ritter+glenn-diesen",
+      "expert_ids": [
+        "scott-ritter",
+        "glenn-diesen"
+      ],
+      "confidence": "high",
+      "sources": {
+        "crosses": [
+          "scott-ritter",
+          "glenn-diesen"
+        ],
+        "upstream_verify": [
+          "glenn-diesen"
+        ]
+      }
+    },
+    {
+      "date": "2026-04-17",
+      "label": "Ritter × Marandi × Davis — **three** **`thread:`** **planes** **+** **§1h**",
+      "raw": "- batch-analysis | 2026-04-17 | Ritter × Marandi × Davis — **three** **`thread:`** **planes** **+** **§1h** | **Tension-first:** **Marandi** **04-17** **X** **gloss** **vs** **Araghchi** **(dual-register** **IRI);** **Davis** **04-17** **(Araghchi** **QT** **+** **TS)** **=** **U.S.** **process** **/** **ultimatum** **clock;** **Ritter** **04-17** **Diesen** **=** **Baltic** **/** **NATO** **+** **Islamabad** **carryover** **—** **do** **not** **merge** **into** **one** **Judgment** **without** **seams** **(folded** **[`days.md`](../chapters/2026-04/days.md#2026-04-17)** **Weave** **bullet).** **`crosses:`** **N/A** **(three** **experts** **+** **state** **primary)** — **use** **knot** **[marandi-ritter-mercouris-hormuz-scaffold](strategy-notebook-knot-2026-04-13-marandi-ritter-mercouris-hormuz-scaffold.md)** **for** **lattice.**",
+      "expert_ids": [
+        "seyed-marandi",
+        "daniel-davis",
+        "scott-ritter",
+        "glenn-diesen",
+        "alexander-mercouris"
+      ],
+      "confidence": "medium",
+      "sources": {
+        "alias_match": [
+          "seyed-marandi",
+          "daniel-davis",
+          "scott-ritter",
+          "glenn-diesen",
+          "alexander-mercouris"
+        ]
+      }
+    },
     {
       "date": "2026-04-17",
       "label": "Davis × Araghchi × Trump TS",
