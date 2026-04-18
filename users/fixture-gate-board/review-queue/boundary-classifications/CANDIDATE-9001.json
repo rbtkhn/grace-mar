@@ -11,7 +11,7 @@
   "why": [],
   "confidenceBand": "high",
   "confidenceScore": 0.85,
-  "createdAt": "2026-04-16T16:46:40Z",
+  "createdAt": "2026-04-18T16:38:45Z",
   "source": "recursion_gate_review",
   "proposalClassSuggested": "SELF_KNOWLEDGE_ADD",
   "artifactRelPath": "review-queue/boundary-classifications/CANDIDATE-9001.json"

@@ -1,0 +1,33 @@
+{
+  "expert_id": "mearsheimer",
+  "thread_path": "docs/skill-work/work-strategy/strategy-notebook/strategy-expert-mearsheimer-thread.md",
+  "segment_id": "2026-01",
+  "parse_note": "parsed `## YYYY-MM` month segments",
+  "segment": {
+    "segment_id": "2026-01",
+    "raw_text": "- [strength: medium] **Through-line:** Iran as **US–Israel playbook** (upend regime / wreck) and **Gulf** states increasingly treating the **US–Israel tag team** as the **stability threat** — own summary in [Antiwar reprint **2026-01-16**](https://www.antiwar.com/blog/2026/01/16/mearsheimer-on-the-iran-playbook/) of Substack “Iran Playbook”; **Judging Freedom** appearance **15 Jan** cited there.\n- [strength: medium] **Mechanism:** **“Old-style imperialism”** vs great-power competition — **SCMP** “Open Questions” interview **19 Jan** — [Substack mirror + PDF](https://mearsheimer.substack.com/p/its-not-great-power-politics-its) (Iran ≠ Venezuela on regime-change difficulty, Greenland, Trump administration).\n- [strength: low] **Ambiguity:** Full broadcast transcripts not in-repo — treat pull quotes as **verify-tier** until pinned.\n- [strength: medium] **Tension / lattice:** Same Q1 window as **Davis × Mearsheimer** “classic regime change” long-form on [Daniel Davis Deep Dive **2026-01-14**](https://danieldavisdeepdive.substack.com/p/prof-mearsheimer-classic-us) — notebook cross; do not merge with **Mercouris** diplomatic-room reads without seam discipline.",
+    "bullets": [
+      "[strength: medium] **Through-line:** Iran as **US–Israel playbook** (upend regime / wreck) and **Gulf** states increasingly treating the **US–Israel tag team** as the **stability threat** — own summary in [Antiwar reprint **2026-01-16**](https://www.antiwar.com/blog/2026/01/16/mearsheimer-on-the-iran-playbook/) of Substack “Iran Playbook”; **Judging Freedom** appearance **15 Jan** cited there.",
+      "[strength: medium] **Mechanism:** **“Old-style imperialism”** vs great-power competition — **SCMP** “Open Questions” interview **19 Jan** — [Substack mirror + PDF](https://mearsheimer.substack.com/p/its-not-great-power-politics-its) (Iran ≠ Venezuela on regime-change difficulty, Greenland, Trump administration).",
+      "[strength: low] **Ambiguity:** Full broadcast transcripts not in-repo — treat pull quotes as **verify-tier** until pinned.",
+      "[strength: medium] **Tension / lattice:** Same Q1 window as **Davis × Mearsheimer** “classic regime change” long-form on [Daniel Davis Deep Dive **2026-01-14**](https://danieldavisdeepdive.substack.com/p/prof-mearsheimer-classic-us) — notebook cross; do not merge with **Mercouris** diplomatic-room reads without seam discipline."
+    ],
+    "strength_counts": {
+      "high": 0,
+      "medium": 3,
+      "low": 1
+    },
+    "signal_lines": [
+      "[strength: medium] **Mechanism:** **“Old-style imperialism”** vs great-power competition — **SCMP** “Open Questions” interview **19 Jan** — [Substack mirror + PDF](https://mearsheimer.substack.com/p/its-not-great-power-politics-its) (Iran ≠ Venezuela on regime-change difficulty, Greenland, Trump administration)."
+    ],
+    "tension_lines": [
+      "[strength: medium] **Mechanism:** **“Old-style imperialism”** vs great-power competition — **SCMP** “Open Questions” interview **19 Jan** — [Substack mirror + PDF](https://mearsheimer.substack.com/p/its-not-great-power-politics-its) (Iran ≠ Venezuela on regime-change difficulty, Greenland, Trump administration).",
+      "[strength: medium] **Tension / lattice:** Same Q1 window as **Davis × Mearsheimer** “classic regime change” long-form on [Daniel Davis Deep Dive **2026-01-14**](https://danieldavisdeepdive.substack.com/p/prof-mearsheimer-classic-us) — notebook cross; do not merge with **Mercouris** diplomatic-room reads without seam discipline."
+    ],
+    "shift_lines": [
+      "[strength: medium] **Mechanism:** **“Old-style imperialism”** vs great-power competition — **SCMP** “Open Questions” interview **19 Jan** — [Substack mirror + PDF](https://mearsheimer.substack.com/p/its-not-great-power-politics-its) (Iran ≠ Venezuela on regime-change difficulty, Greenland, Trump administration).",
+      "[strength: medium] **Tension / lattice:** Same Q1 window as **Davis × Mearsheimer** “classic regime change” long-form on [Daniel Davis Deep Dive **2026-01-14**](https://danieldavisdeepdive.substack.com/p/prof-mearsheimer-classic-us) — notebook cross; do not merge with **Mercouris** diplomatic-room reads without seam discipline."
+    ],
+    "source": "h2"
+  }
+}

@@ -24,13 +24,13 @@ See also: ``scripts/parse_batch_analysis.py`` for ``batch-analysis`` pipe snapsh
 Typical use
 -----------
 python3 scripts/strategy_historical_expert_context.py \\
-  --expert-id scott-ritter \\
+  --expert-id ritter \\
   --start-segment 2026-01 \\
   --end-segment 2026-03 \\
   --dry-run
 
 python3 scripts/strategy_historical_expert_context.py \\
-  --expert-id scott-ritter \\
+  --expert-id ritter \\
   --start-segment 2026-01 \\
   --end-segment 2026-03 \\
   --apply

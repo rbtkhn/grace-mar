@@ -20,7 +20,7 @@ Hold a **single comparable object** across indexed experts: *conditional* **near
 
 | Week / date | `expert_id` | Direction | Horizon (expert) | Source (inbox / URL) | Notes |
 |-------------|-------------|-----------|------------------|----------------------|-------|
-| *— example —* | *`daniel-davis`* | *↑* | *near term* | *`daily-strategy-inbox.md` `thread:` row* | *Replace with real rows* |
+| *— example —* | *`davis`* | *↑* | *near term* | *`daily-strategy-inbox.md` `thread:` row* | *Replace with real rows* |
 
 _Add rows above the example or delete the example row when the first real row lands._
 

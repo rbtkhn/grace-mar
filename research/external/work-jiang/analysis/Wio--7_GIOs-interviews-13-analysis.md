@@ -19,7 +19,7 @@ quality_level: draft
 - **canonical_url:** https://www.youtube.com/watch?v=Wio--7_GIOs
 - **series / episode:** Predictive History · Volume VI — Interviews #13
 - **upload_date (YouTube):** 20260407
-- **raw_transcript:** [lectures/interviews-13-pbd-podcast-772-jiang-xueqin.md](../lectures/interviews-13-pbd-podcast-772-jiang-xueqin.md)
+- **raw_transcript:** [lectures/interviews-13-pbd-podcast-772-jiang.md](../lectures/interviews-13-pbd-podcast-772-jiang.md)
 
 ## Thesis (draft)
 

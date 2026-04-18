@@ -89,4 +89,4 @@ Grace-mar paths (from `.cursor/skills/strategy-notebook-expert-cross-weave/`).
 | Parent lane skill | [.cursor/skills/skill-strategy/SKILL.md](../skill-strategy/SKILL.md) |
 | Manifest / sync | [skills-portable/manifest.yaml](../../../skills-portable/manifest.yaml) · [scripts/sync_portable_skills.py](../../../scripts/sync_portable_skills.py) |
 
-**Worked example (2026-04):** Ritter × Davis weave — `crosses:scott-ritter+daniel-davis`; commits `c09cedcc`, `ecac8c0e`, `4fff0860` on `main`.
+**Worked example (2026-04):** Ritter × Davis weave — `crosses:ritter+davis`; commits `c09cedcc`, `ecac8c0e`, `4fff0860` on `main`.

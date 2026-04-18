@@ -14,7 +14,7 @@
 | **`transcripts/*.md`** | Default location for full transcript + Perceiver summary (existing convention). |
 | **`analysts/<slug>/`** (optional) | Per-analyst add-ons: `RECURRING-MOVES.md`, `VERIFY.md`, links to triangulation stubs under `docs/skill-work/work-strategy/`. **No requirement** to create this until an analyst is high-volume. |
 
-**`<slug>`** — lowercase kebab-case, stable over time: `theodore-postol`, `robert-pape`, `alexander-mercouris`.
+**`<slug>`** — lowercase kebab-case, stable over time: `theodore-postol`, `pape`, `mercouris`.
 
 ---
 

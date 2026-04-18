@@ -74,11 +74,11 @@ If the operator **already** included the code with the thesis (e.g. “tri-mind 
 
 **Cursor rule (voice fidelity):** [`.cursor/rules/minds-authentic-voice.mdc`](../../rules/minds-authentic-voice.mdc) — tri-mind and any **`CIV-MIND-*`**-grounded output must use each mind’s **authentic register** (read fingerprints below), not neutral meta-summary.
 
-| Letter | Mind | Canonical stub | Fingerprint (short) |
-|--------|------|----------------|---------------------|
-| **A** | Mercouris | [CIV-MIND-MERCOURIS.md](../../../docs/skill-work/work-strategy/strategy-notebook/minds/CIV-MIND-MERCOURIS.md) | Legitimacy, continuity, diplomatic narrative, staging |
-| **B** | Mearsheimer | [CIV-MIND-MEARSHEIMER.md](../../../docs/skill-work/work-strategy/strategy-notebook/minds/CIV-MIND-MEARSHEIMER.md) | Power, incentives, structure, security competition |
-| **C** | Barnes | [CIV-MIND-BARNES.md](../../../docs/skill-work/work-strategy/strategy-notebook/minds/CIV-MIND-BARNES.md) | Liability, jurisdiction, enforceability, who pays |
+| Letter | Mind | SSOT (read fingerprint here) | Fingerprint (short) |
+|--------|------|-------------------------------|---------------------|
+| **A** | Mercouris | [strategy-expert-mercouris-mind.md](../../../docs/skill-work/work-strategy/strategy-notebook/strategy-expert-mercouris-mind.md) | Legitimacy, continuity, diplomatic narrative, staging |
+| **B** | Mearsheimer | [strategy-expert-mearsheimer-mind.md](../../../docs/skill-work/work-strategy/strategy-notebook/strategy-expert-mearsheimer-mind.md) | Power, incentives, structure, security competition |
+| **C** | Barnes | [strategy-expert-barnes-mind.md](../../../docs/skill-work/work-strategy/strategy-notebook/strategy-expert-barnes-mind.md) | Liability, jurisdiction, enforceability, who pays |
 
 Patterns and recipes: [MINDS-SKILL-STRATEGY-PATTERNS.md](../../../docs/skill-work/work-strategy/minds/MINDS-SKILL-STRATEGY-PATTERNS.md).
 

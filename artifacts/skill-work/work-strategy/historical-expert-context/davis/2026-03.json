@@ -1,0 +1,34 @@
+{
+  "expert_id": "davis",
+  "thread_path": "docs/skill-work/work-strategy/strategy-notebook/strategy-expert-davis-thread.md",
+  "segment_id": "2026-03",
+  "parse_note": "parsed `## YYYY-MM` month segments",
+  "segment": {
+    "segment_id": "2026-03",
+    "raw_text": "- [strength: medium] **Through-line:** **Strategic trap** language — “**no viable off-ramp**,” Hormuz closure, and **nuclear tail risk** if leaders reach for “easy” escapes ([*GRAVE WARNING…*](https://danieldavisdeepdive.substack.com/p/grave-warning-no-good-outcome-left), **2026-03-16**; public excerpt).\n- [strength: medium] **Mechanism:** **Ground troops** in Iran as **catastrophic mistake** — hosts **Defense Priorities** analysts Kavanaugh + Kelanic on boots-on-ground risks ([*IRAN WAR: There’s More Joining the Fight*](https://danieldavisdeepdive.substack.com/p/iran-war-theres-more-joining-the), **2026-03-20**; paid — preview only).\n- [strength: medium] **Mechanism / policy whiplash:** **Energy-strike delay**, **oil**, and **rapid Trump rhetoric shifts** (“victory” → “death and destruction” → de-escalation talk) ([*BREAKING: Trump Delays Attacks on Iran’s Energy*](https://danieldavisdeepdive.substack.com/p/breaking-trump-delays-attacks-on), **2026-03-23**; paid — preview only).\n- [strength: medium] **Tension vs April knot lane:** Q1 Davis stresses **strategy trap / ground-force / energy-pause** mechanics; compare to **April** `thread:` material on **ultimatum vs negotiation**, **resumption clock**, and **Hormuz closure** narratives — **convergence** on “no clean win,” **divergence** on **operational detail depth** (Ritter ORBAT/weave vs Davis grand-strategy warnings).",
+    "bullets": [
+      "[strength: medium] **Through-line:** **Strategic trap** language — “**no viable off-ramp**,” Hormuz closure, and **nuclear tail risk** if leaders reach for “easy” escapes ([*GRAVE WARNING…*](https://danieldavisdeepdive.substack.com/p/grave-warning-no-good-outcome-left), **2026-03-16**; public excerpt).",
+      "[strength: medium] **Mechanism:** **Ground troops** in Iran as **catastrophic mistake** — hosts **Defense Priorities** analysts Kavanaugh + Kelanic on boots-on-ground risks ([*IRAN WAR: There’s More Joining the Fight*](https://danieldavisdeepdive.substack.com/p/iran-war-theres-more-joining-the), **2026-03-20**; paid — preview only).",
+      "[strength: medium] **Mechanism / policy whiplash:** **Energy-strike delay**, **oil**, and **rapid Trump rhetoric shifts** (“victory” → “death and destruction” → de-escalation talk) ([*BREAKING: Trump Delays Attacks on Iran’s Energy*](https://danieldavisdeepdive.substack.com/p/breaking-trump-delays-attacks-on), **2026-03-23**; paid — preview only).",
+      "[strength: medium] **Tension vs April knot lane:** Q1 Davis stresses **strategy trap / ground-force / energy-pause** mechanics; compare to **April** `thread:` material on **ultimatum vs negotiation**, **resumption clock**, and **Hormuz closure** narratives — **convergence** on “no clean win,” **divergence** on **operational detail depth** (Ritter ORBAT/weave vs Davis grand-strategy warnings)."
+    ],
+    "strength_counts": {
+      "high": 0,
+      "medium": 4,
+      "low": 0
+    },
+    "signal_lines": [
+      "[strength: medium] **Through-line:** **Strategic trap** language — “**no viable off-ramp**,” Hormuz closure, and **nuclear tail risk** if leaders reach for “easy” escapes ([*GRAVE WARNING…*](https://danieldavisdeepdive.substack.com/p/grave-warning-no-good-outcome-left), **2026-03-16**; public excerpt).",
+      "[strength: medium] **Mechanism:** **Ground troops** in Iran as **catastrophic mistake** — hosts **Defense Priorities** analysts Kavanaugh + Kelanic on boots-on-ground risks ([*IRAN WAR: There’s More Joining the Fight*](https://danieldavisdeepdive.substack.com/p/iran-war-theres-more-joining-the), **2026-03-20**; paid — preview only).",
+      "[strength: medium] **Mechanism / policy whiplash:** **Energy-strike delay**, **oil**, and **rapid Trump rhetoric shifts** (“victory” → “death and destruction” → de-escalation talk) ([*BREAKING: Trump Delays Attacks on Iran’s Energy*](https://danieldavisdeepdive.substack.com/p/breaking-trump-delays-attacks-on), **2026-03-23**; paid — preview only).",
+      "[strength: medium] **Tension vs April knot lane:** Q1 Davis stresses **strategy trap / ground-force / energy-pause** mechanics; compare to **April** `thread:` material on **ultimatum vs negotiation**, **resumption clock**, and **Hormuz closure** narratives — **convergence** on “no clean win,” **divergence** on **operational detail depth** (Ritter ORBAT/weave vs Davis grand-strategy warnings)."
+    ],
+    "tension_lines": [
+      "[strength: medium] **Tension vs April knot lane:** Q1 Davis stresses **strategy trap / ground-force / energy-pause** mechanics; compare to **April** `thread:` material on **ultimatum vs negotiation**, **resumption clock**, and **Hormuz closure** narratives — **convergence** on “no clean win,” **divergence** on **operational detail depth** (Ritter ORBAT/weave vs Davis grand-strategy warnings)."
+    ],
+    "shift_lines": [
+      "[strength: medium] **Mechanism / policy whiplash:** **Energy-strike delay**, **oil**, and **rapid Trump rhetoric shifts** (“victory” → “death and destruction” → de-escalation talk) ([*BREAKING: Trump Delays Attacks on Iran’s Energy*](https://danieldavisdeepdive.substack.com/p/breaking-trump-delays-attacks-on), **2026-03-23**; paid — preview only)."
+    ],
+    "source": "h2"
+  }
+}

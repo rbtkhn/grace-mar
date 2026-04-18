@@ -20,13 +20,13 @@ _(Append below this line.)_
 
 <!-- brief-handoff-bundle: 2026-04-12 -->
 
-- X | cold: test // hook | https://example.com | verify:x | thread:john-mearsheimer
+- X | cold: test // hook | https://example.com | verify:x | thread:mearsheimer
 """
     out = extract_thread_ingests(inbox, today=date(2026, 4, 14))
-    assert "john-mearsheimer" in out
+    assert "mearsheimer" in out
     d = date(2026, 4, 12)
-    assert d in out["john-mearsheimer"]
-    assert any("john-mearsheimer" in line for line in out["john-mearsheimer"][d])
+    assert d in out["mearsheimer"]
+    assert any("mearsheimer" in line for line in out["mearsheimer"][d])
 
 
 def test_multiline_thread_ingest_includes_paragraphs_until_next_bullet() -> None:
@@ -35,16 +35,16 @@ def test_multiline_thread_ingest_includes_paragraphs_until_next_bullet() -> None
 
 _(Append below this line.)_
 
-- YT | cold: opener // hook | https://example.com | thread:john-mearsheimer
+- YT | cold: opener // hook | https://example.com | thread:mearsheimer
 Second paragraph of quote without a leading dash.
 
-- X | other | thread:scott-ritter
+- X | other | thread:ritter
 """
     out = extract_thread_ingests(inbox, today=date(2026, 4, 14))
     d = date(2026, 4, 14)
-    block = out["john-mearsheimer"][d][0]
+    block = out["mearsheimer"][d][0]
     assert "Second paragraph" in block
-    assert "scott-ritter" not in block
+    assert "ritter" not in block
 
 
 def test_ignores_unknown_thread_slug() -> None:
@@ -61,7 +61,7 @@ _(Append below this line.)_
 
 def test_render_thread_extraction_includes_transcript_and_knots() -> None:
     text = render_thread_extraction(
-        "john-mearsheimer",
+        "mearsheimer",
         transcript_lines=["- `transcript line`"],
         knot_refs=[
             {

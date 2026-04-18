@@ -2,7 +2,7 @@
   "tool": "backfill_expert_thread.py",
   "tool_version": "1",
   "script_sha256_12": "7892c5020ae6",
-  "expert_id": "steve-jermy",
+  "expert_id": "jermy",
   "start": "2026-01-01",
   "end": "2026-03-31",
   "aliases": [

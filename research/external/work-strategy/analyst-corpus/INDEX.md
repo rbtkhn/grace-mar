@@ -6,7 +6,7 @@
 
 | Column | Required | Meaning |
 |--------|----------|---------|
-| `analyst_slug` | yes | Stable id: `theodore-postol`, `robert-pape`, … |
+| `analyst_slug` | yes | Stable id: `theodore-postol`, `pape`, … |
 | `display_name` | yes | Human label for sorting and prose. |
 | `transcript_path` | yes | Path to the markdown (usually under `research/external/work-strategy/transcripts/`). |
 | `episode_title` | yes | Short title; can match the `#` heading in the file. |
@@ -32,7 +32,7 @@
 | theodore-postol | Theodore Postol | research/external/work-strategy/transcripts/theodore-postol-2025-03-striving-nuclear-armageddon-able-archer-diesen.md | Striving for Nuclear Armageddon — Able Archer 1983 | https://www.youtube.com/watch?v=2GbJg8bb4Dg | ~2025-03 | 2026-04-02 | able-archer; nuclear; inf; germany-2026; abm; poseidon; escalation | Exercise ladder to general war by day 5; fire/fallout/blast; Germany 2026 = nuclear must; INF reinstatement | Declassified exercise record vs this retelling; Chernobyl multiples; Poseidon yield; policy claims | — |
 | theodore-postol | Theodore Postol | research/external/work-strategy/transcripts/theodore-postol-2026-03-irans-missiles-drones-underestimated.md | Iran's missiles & drones underestimated (YouTube) | — | ~2026-03 | 2026-04-02 | iran; israel; drones; bmd; tunnels; starlink; rusi | Tunnels + drone radar-kill + cheap precision; ~5% BM intercept claim; RUSI depletion table | RUSI primary; intercept rates; Starlink policy; radar strike dates; cost figures | — |
 | mercouris | Alexander Mercouris | research/external/work-strategy/transcripts/mercouris-2026-03-30-israel-iran-china-g7-ukraine.md | Israel AD / China / G7 / Ukraine monologue | — | 2026-03-30 | 2026-03-30 | iran; israel; ad; ukraine; china; oil | Haaretz-sourced leak-through narrative; Hormuz/Brent stress; GT editorial frame | battle claims; intercept rates; Kuwait strike reports | — |
-| larry-johnson | Larry Johnson | research/external/work-strategy/transcripts/larry-johnson-2026-03-30-full-escalation-yemen-hezbollah.md | Yemen / Hezbollah / escalation (digest) | — | 2026-03-30 | 2026-03-30 | yemen; hezbollah; escalation | (see file Perceiver) | primary sources for ops claims | — |
+| johnson | Larry Johnson | research/external/work-strategy/transcripts/johnson-2026-03-30-full-escalation-yemen-hezbollah.md | Yemen / Hezbollah / escalation (digest) | — | 2026-03-30 | 2026-03-30 | yemen; hezbollah; escalation | (see file Perceiver) | primary sources for ops claims | — |
 | parsi-davis | Parsi & Davis | research/external/work-strategy/transcripts/no-threat-can-force-iran-surrender-parsi-davis.md | No threat can force Iran to surrender | — | — | — | iran; diplomacy | (see file) | — | — |
 
 ---

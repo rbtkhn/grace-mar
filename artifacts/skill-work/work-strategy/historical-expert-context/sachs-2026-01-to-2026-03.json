@@ -1,0 +1,76 @@
+{
+  "expert_id": "sachs",
+  "thread_path": "docs/skill-work/work-strategy/strategy-notebook/strategy-expert-sachs-thread.md",
+  "start_segment": "2026-01",
+  "end_segment": "2026-03",
+  "parse_note": "parsed `## YYYY-MM` month segments",
+  "segments": [
+    {
+      "segment_id": "2026-01",
+      "raw_text": "**Macro + rogue-state** framing after the **Venezuela** arc — Sachs uses **interview** and **outlet** chains to stress **regime-change playbook** continuity and **tail-risk** to global stability; tier **honesty**: **India Today** / **jeffsachs.org** pages are **primary** hosts, not wire proof of policy moves.\n\n- [strength: high] **Through-line:** **India Today** — **7 Jan 2026** — “Iran could be next… hotter than Venezuela” — [story](https://www.indiatoday.in/world/story/sachs-exposes-americas-regime-change-foreign-policy-playbook-after-venezuela-2847780-2026-01-07) — **date** in URL path.\n- [strength: medium] **Mechanism:** **JeffSachs.org** — **U.S. War on Iran** — “attack is imminent” class interview — [interviews hub](https://www.jeffsachs.org/interviewsandmedia/tpmdr839gjx9ge4l6yfzg3g2p2m832) — **pin** exact **title/date** on page before **Links** merge.\n- [strength: medium] **Tension vs Quincy restraint:** Same window as **`parsi`** Beltway diplomacy lane — **institutions** vs **process** emphasis — **batch-analysis** only.",
+      "bullets": [
+        "[strength: high] **Through-line:** **India Today** — **7 Jan 2026** — “Iran could be next… hotter than Venezuela” — [story](https://www.indiatoday.in/world/story/sachs-exposes-americas-regime-change-foreign-policy-playbook-after-venezuela-2847780-2026-01-07) — **date** in URL path.",
+        "[strength: medium] **Mechanism:** **JeffSachs.org** — **U.S. War on Iran** — “attack is imminent” class interview — [interviews hub](https://www.jeffsachs.org/interviewsandmedia/tpmdr839gjx9ge4l6yfzg3g2p2m832) — **pin** exact **title/date** on page before **Links** merge.",
+        "[strength: medium] **Tension vs Quincy restraint:** Same window as **`parsi`** Beltway diplomacy lane — **institutions** vs **process** emphasis — **batch-analysis** only."
+      ],
+      "strength_counts": {
+        "high": 1,
+        "medium": 2,
+        "low": 0
+      },
+      "signal_lines": [
+        "[strength: medium] **Mechanism:** **JeffSachs.org** — **U.S. War on Iran** — “attack is imminent” class interview — [interviews hub](https://www.jeffsachs.org/interviewsandmedia/tpmdr839gjx9ge4l6yfzg3g2p2m832) — **pin** exact **title/date** on page before **Links** merge."
+      ],
+      "tension_lines": [
+        "[strength: medium] **Tension vs Quincy restraint:** Same window as **`parsi`** Beltway diplomacy lane — **institutions** vs **process** emphasis — **batch-analysis** only."
+      ],
+      "shift_lines": [
+        "[strength: high] **Through-line:** **India Today** — **7 Jan 2026** — “Iran could be next… hotter than Venezuela” — [story](https://www.indiatoday.in/world/story/sachs-exposes-americas-regime-change-foreign-policy-playbook-after-venezuela-2847780-2026-01-07) — **date** in URL path."
+      ],
+      "source": "h2"
+    },
+    {
+      "segment_id": "2026-02",
+      "raw_text": "**Doha** / **FM Araghchi** “comprehensive peace proposal” week — Sachs co-authors / comments on **Palestinian statehood** as load-bearing for **regional** settlement; keep **separate** from **Marandi** **room** facts without a labeled seam.\n\n- [strength: high] **Through-line:** **Consortium News** — **9 Feb 2026** — “Iran’s Comprehensive Peace Proposal” — [article](https://consortiumnews.com/2026/02/09/sachs-irans-comprehensive-peace-proposal/) — verify **byline** + **Sybil Fares** co-author line on page.\n- [strength: medium] **Mechanism:** **Inside U.S. Imperial Strategy** — **jeffsachs.org** — Iran talks + Latin America + U.S. economy — [page](https://www.jeffsachs.org/interviewsandmedia/j9ebxfarjfynh5ks5wshfw8rk6x6ss) — indexes cite **~7 Feb 2026** class — **tier-B** for causal chains.",
+      "bullets": [
+        "[strength: high] **Through-line:** **Consortium News** — **9 Feb 2026** — “Iran’s Comprehensive Peace Proposal” — [article](https://consortiumnews.com/2026/02/09/sachs-irans-comprehensive-peace-proposal/) — verify **byline** + **Sybil Fares** co-author line on page.",
+        "[strength: medium] **Mechanism:** **Inside U.S. Imperial Strategy** — **jeffsachs.org** — Iran talks + Latin America + U.S. economy — [page](https://www.jeffsachs.org/interviewsandmedia/j9ebxfarjfynh5ks5wshfw8rk6x6ss) — indexes cite **~7 Feb 2026** class — **tier-B** for causal chains."
+      ],
+      "strength_counts": {
+        "high": 1,
+        "medium": 1,
+        "low": 0
+      },
+      "signal_lines": [
+        "[strength: medium] **Mechanism:** **Inside U.S. Imperial Strategy** — **jeffsachs.org** — Iran talks + Latin America + U.S. economy — [page](https://www.jeffsachs.org/interviewsandmedia/j9ebxfarjfynh5ks5wshfw8rk6x6ss) — indexes cite **~7 Feb 2026** class — **tier-B** for causal chains."
+      ],
+      "tension_lines": [],
+      "shift_lines": [],
+      "source": "h2"
+    },
+    {
+      "segment_id": "2026-03",
+      "raw_text": "Kinetic **escalation** month in third-party indexes — **underestimation** thesis, **nuclear-use** hypotheticals, **India** / **ground-invasion** dilemmas; **YouTube** long-form for **hegemony** thesis — **capacity / health** claims about **executives** stay **tier-C** per profile.\n\n- [strength: high] **Through-line:** **U.S. and Israel underestimated Iran** — [jeffsachs.org](https://www.jeffsachs.org/interviewsandmedia/64krp3h43e342gtwjg4lg3296c6kkg) — **~13 Mar 2026** class in indexes.\n- [strength: medium] **Mechanism:** **Israel could use nuclear weapons against Iran** — [jeffsachs.org](https://www.jeffsachs.org/interviewsandmedia/28ya8raa4gstsb34al6drezprlpee3) — **~16 Mar 2026** — **hypothesis-grade** — **not** merged with **open-source** ORBAT.\n- [strength: high] **Synthesis:** **“Iran is the Graveyard of American Hegemony”** — [YouTube OcqIEJEk4MY](https://www.youtube.com/watch?v=OcqIEJEk4MY) — **~25 Mar 2026** class — pair with **Diesen** **Substack** / **April** knot [diesen-vi14 vs Sachs](strategy-notebook-knot-2026-04-14-diesen-vi14-petrodollar-vs-sachs-hormuz.md) only as **abstract** fork.\n- [strength: medium] **Macro:** **US–Iran War Deepens** — India dilemma / deal talk — [jeffsachs.org](https://www.jeffsachs.org/interviewsandmedia/jzhlpzl4cp25k3d7jrz9j7bpwkwd6x) — **~31 Mar 2026** — **verify** page stamp.\n\nCanonical knot paths and raw ingest lines live in **Segment 2** below (regenerated each **`thread`** run).\n\n---",
+      "bullets": [
+        "[strength: high] **Through-line:** **U.S. and Israel underestimated Iran** — [jeffsachs.org](https://www.jeffsachs.org/interviewsandmedia/64krp3h43e342gtwjg4lg3296c6kkg) — **~13 Mar 2026** class in indexes.",
+        "[strength: medium] **Mechanism:** **Israel could use nuclear weapons against Iran** — [jeffsachs.org](https://www.jeffsachs.org/interviewsandmedia/28ya8raa4gstsb34al6drezprlpee3) — **~16 Mar 2026** — **hypothesis-grade** — **not** merged with **open-source** ORBAT.",
+        "[strength: high] **Synthesis:** **“Iran is the Graveyard of American Hegemony”** — [YouTube OcqIEJEk4MY](https://www.youtube.com/watch?v=OcqIEJEk4MY) — **~25 Mar 2026** class — pair with **Diesen** **Substack** / **April** knot [diesen-vi14 vs Sachs](strategy-notebook-knot-2026-04-14-diesen-vi14-petrodollar-vs-sachs-hormuz.md) only as **abstract** fork.",
+        "[strength: medium] **Macro:** **US–Iran War Deepens** — India dilemma / deal talk — [jeffsachs.org](https://www.jeffsachs.org/interviewsandmedia/jzhlpzl4cp25k3d7jrz9j7bpwkwd6x) — **~31 Mar 2026** — **verify** page stamp."
+      ],
+      "strength_counts": {
+        "high": 2,
+        "medium": 2,
+        "low": 0
+      },
+      "signal_lines": [
+        "[strength: medium] **Mechanism:** **Israel could use nuclear weapons against Iran** — [jeffsachs.org](https://www.jeffsachs.org/interviewsandmedia/28ya8raa4gstsb34al6drezprlpee3) — **~16 Mar 2026** — **hypothesis-grade** — **not** merged with **open-source** ORBAT.",
+        "[strength: high] **Synthesis:** **“Iran is the Graveyard of American Hegemony”** — [YouTube OcqIEJEk4MY](https://www.youtube.com/watch?v=OcqIEJEk4MY) — **~25 Mar 2026** class — pair with **Diesen** **Substack** / **April** knot [diesen-vi14 vs Sachs](strategy-notebook-knot-2026-04-14-diesen-vi14-petrodollar-vs-sachs-hormuz.md) only as **abstract** fork."
+      ],
+      "tension_lines": [
+        "[strength: high] **Synthesis:** **“Iran is the Graveyard of American Hegemony”** — [YouTube OcqIEJEk4MY](https://www.youtube.com/watch?v=OcqIEJEk4MY) — **~25 Mar 2026** class — pair with **Diesen** **Substack** / **April** knot [diesen-vi14 vs Sachs](strategy-notebook-knot-2026-04-14-diesen-vi14-petrodollar-vs-sachs-hormuz.md) only as **abstract** fork."
+      ],
+      "shift_lines": [],
+      "source": "h2"
+    }
+  ]
+}

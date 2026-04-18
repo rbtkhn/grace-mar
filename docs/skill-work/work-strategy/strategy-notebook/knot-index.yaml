@@ -60,14 +60,14 @@ knots:
   - path: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/knots/strategy-notebook-knot-2026-04-13-marandi-ritter-mercouris-hormuz-scaffold.md
     date: "2026-04-13"
     knot_label: marandi-ritter-mercouris-hormuz-scaffold
-    clusters: [seyed-marandi, scott-ritter, alexander-mercouris, hormuz]
+    clusters: [marandi, ritter, mercouris, hormuz]
     patterns: [expert-scaffold-weave]
     note: "Marandi×Ritter×Mercouris shared scaffold; Davis×Freeman×Mearsheimer parallel; cross-day to 04-12/04-14"
 
   - path: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/knots/strategy-notebook-knot-2026-04-14-diesen-vi14-petrodollar-vs-sachs-hormuz.md
     date: "2026-04-14"
     knot_label: diesen-vi14-petrodollar-vs-sachs-hormuz
-    clusters: [glenn-diesen, work-jiang-ph, hormuz]
+    clusters: [diesen, work-jiang-ph, hormuz]
     patterns: [ph-vi14-vs-sachs-hormuz]
     note: "Abstract PH vi-14 petrodollar vs Diesen×Sachs Hormuz; orthogonal Judgment"
 
@@ -81,14 +81,14 @@ knots:
   - path: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/knots/strategy-notebook-knot-2026-04-14-mercouris-mearsheimer-lebanon-split.md
     date: "2026-04-14"
     knot_label: mercouris-mearsheimer-lebanon-split
-    clusters: [lebanon-washington, tri-mind, alexander-mercouris, john-mearsheimer, robert-pape]
+    clusters: [lebanon-washington, tri-mind, mercouris, mearsheimer, pape]
     patterns: [legitimacy-vs-structure]
     note: "Abstract Mercouris diplomatic surface vs Mearsheimer incentives; Lebanon fork; Pape lane (escalation-trap / sectarian map) indexes here for expert-thread knot refs"
 
-  - path: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/knots/strategy-notebook-knot-2026-04-14-scott-ritter-blockade-hormuz-weave.md
+  - path: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/knots/strategy-notebook-knot-2026-04-14-ritter-blockade-hormuz-weave.md
     date: "2026-04-14"
-    knot_label: scott-ritter-blockade-hormuz-weave
-    clusters: [scott-ritter, hormuz, blockade, expert-lattice]
+    knot_label: ritter-blockade-hormuz-weave
+    clusters: [ritter, hormuz, blockade, expert-lattice]
     patterns: [ritter-center-weave]
     weave_count: 6
     note: "Ritter blockade mechanics + sister knots + indexed threads same topic; weave_count from knot_seam_metrics.py (outgoing knot links)"
@@ -110,13 +110,13 @@ knots:
   - path: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/knots/strategy-notebook-knot-2026-04-16-pape-janssen-escalation-blockade.md
     date: "2026-04-16"
     knot_label: pape-janssen-escalation-blockade
-    clusters: [robert-pape, hormuz, escalation-trap, blockade, lebanon]
+    clusters: [pape, hormuz, escalation-trap, blockade, lebanon]
     patterns: [pape-lattice, janssen-studio, third-player-spoiler, weave-d]
     note: "Weave D: Pape-primary Janssen trap + blockade calendar + spoiler; same-day Marandi+Blumenthal evidence streams → sister weave C; lattice vs Mearsheimer/Davis"
 
   - path: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/knots/strategy-notebook-knot-2026-04-16-marandi-blumenthal-jf-primary.md
     date: "2026-04-16"
     knot_label: marandi-blumenthal-jf-primary
-    clusters: [seyed-marandi, max-blumenthal, islamabad, hormuz]
+    clusters: [marandi, blumenthal, islamabad, hormuz]
     patterns: [weave-c, marandi-primary, blumenthal-amplifier]
     note: "Weave C: Marandi BP primary + Blumenthal JF amplifier; Pape validate fork → sister pape-janssen (weave D)"

@@ -1,0 +1,30 @@
+{
+  "expert_id": "parsi",
+  "thread_path": "docs/skill-work/work-strategy/strategy-notebook/strategy-expert-parsi-thread.md",
+  "segment_id": "2026-01",
+  "parse_note": "parsed `## YYYY-MM` month segments",
+  "segment": {
+    "segment_id": "2026-01",
+    "raw_text": "**Quincy** / Beltway-facing lane opens the year on **nuclear-talks scope** — thesis: diplomacy fails if **only** the nuclear file is centered; sanctions relief and escalation dynamics sit in the same conversation.\n\n- [strength: high] **Through-line:** **Al Jazeera** **Quotable** — **13 Jan 2026** — “Iran–US diplomacy won’t succeed if focus on nuclear issue” — [video page](https://www.aljazeera.com/video/quotable/2026/1/13/iran-us-diplomacy-wont-succeed-if-focus-on-nuclear) — primary **outlet** date in URL path.\n- [strength: medium] **Mechanism:** **ScheerPost** interview / analysis — **13 Jan 2026** — Iran–US relations insights — [scheerpost.com piece](https://scheerpost.com/2026/01/13/parsi-unveils-the-latest-insights-on-iran-us-relations/) — cross-check against **Al Jazeera** pull quotes before **Judgment** merge.\n- [strength: medium] **Tension:** **NPR** nuclear-talks outcomes — transcript page [NPR](https://www.npr.org/transcripts/nx-s1-5719169) — **dismantlement** expectations vs Iranian red lines — pair with **`marandi`** register in **batch-analysis**.\n- [strength: low] **Lattice:** Upstream of **April** Parsi×Davis [war-powers](strategy-notebook-knot-2026-04-14-parsi-davis-war-powers.md) / EU-naming seam — Q1 is **thesis** only.",
+    "bullets": [
+      "[strength: high] **Through-line:** **Al Jazeera** **Quotable** — **13 Jan 2026** — “Iran–US diplomacy won’t succeed if focus on nuclear issue” — [video page](https://www.aljazeera.com/video/quotable/2026/1/13/iran-us-diplomacy-wont-succeed-if-focus-on-nuclear) — primary **outlet** date in URL path.",
+      "[strength: medium] **Mechanism:** **ScheerPost** interview / analysis — **13 Jan 2026** — Iran–US relations insights — [scheerpost.com piece](https://scheerpost.com/2026/01/13/parsi-unveils-the-latest-insights-on-iran-us-relations/) — cross-check against **Al Jazeera** pull quotes before **Judgment** merge.",
+      "[strength: medium] **Tension:** **NPR** nuclear-talks outcomes — transcript page [NPR](https://www.npr.org/transcripts/nx-s1-5719169) — **dismantlement** expectations vs Iranian red lines — pair with **`marandi`** register in **batch-analysis**.",
+      "[strength: low] **Lattice:** Upstream of **April** Parsi×Davis [war-powers](strategy-notebook-knot-2026-04-14-parsi-davis-war-powers.md) / EU-naming seam — Q1 is **thesis** only."
+    ],
+    "strength_counts": {
+      "high": 1,
+      "medium": 2,
+      "low": 1
+    },
+    "signal_lines": [
+      "[strength: medium] **Mechanism:** **ScheerPost** interview / analysis — **13 Jan 2026** — Iran–US relations insights — [scheerpost.com piece](https://scheerpost.com/2026/01/13/parsi-unveils-the-latest-insights-on-iran-us-relations/) — cross-check against **Al Jazeera** pull quotes before **Judgment** merge.",
+      "[strength: low] **Lattice:** Upstream of **April** Parsi×Davis [war-powers](strategy-notebook-knot-2026-04-14-parsi-davis-war-powers.md) / EU-naming seam — Q1 is **thesis** only."
+    ],
+    "tension_lines": [
+      "[strength: medium] **Tension:** **NPR** nuclear-talks outcomes — transcript page [NPR](https://www.npr.org/transcripts/nx-s1-5719169) — **dismantlement** expectations vs Iranian red lines — pair with **`marandi`** register in **batch-analysis**."
+    ],
+    "shift_lines": [],
+    "source": "h2"
+  }
+}

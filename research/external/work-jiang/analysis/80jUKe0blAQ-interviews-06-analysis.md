@@ -17,7 +17,7 @@ quality_level: draft
 - **video_id:** `80jUKe0blAQ`
 - **canonical_url:** https://www.youtube.com/watch?v=80jUKe0blAQ
 - **series / episode:** Predictive History · Volume VI — Interviews #6
-- **raw_transcript:** [lectures/interviews-06-glenn-diesen-great-power-wars-new-world-order.md](../lectures/interviews-06-glenn-diesen-great-power-wars-new-world-order.md)
+- **raw_transcript:** [lectures/interviews-06-diesen-great-power-wars-new-world-order.md](../lectures/interviews-06-diesen-great-power-wars-new-world-order.md)
 - **analyzed_at:** 2026-03-25 (operator)
 
 ## Thesis / aim
@@ -69,7 +69,7 @@ The interview frames **US–China** and **middle-power** dynamics through **Carn
 - [Interviews #7 — Breaking Points](4Ql24Z8SIeE-interviews-07-analysis.md) — **Krystal** **/** **Saagar** **;** **2024** **predictions** **recap** **;** **upload** **2026-03-02** **.**
 - [Interviews #1 — Cyrus Janssen](XRk5VSEzJ4Y-interviews-01-analysis.md) — **game** **theory** **survey** **;** **upload** **2025-10-30** **;** **`vi-01`** **.**
 - [Interviews #9 — SNEAKO](o1DElACHNRo-interviews-09-analysis.md) — **Iran** **war** **;** **upload** **2026-03-09** **;** **`vi-09`** **.**
-- [lectures/interviews-06-glenn-diesen-great-power-wars-new-world-order.md](../lectures/interviews-06-glenn-diesen-great-power-wars-new-world-order.md)
+- [lectures/interviews-06-diesen-great-power-wars-new-world-order.md](../lectures/interviews-06-diesen-great-power-wars-new-world-order.md)
 
 ## Follow-ups
 

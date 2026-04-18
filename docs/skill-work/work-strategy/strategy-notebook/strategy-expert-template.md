@@ -153,7 +153,7 @@ _(No narrative distillation yet — add prose above the markers, not inside them
 - **Historical expert context (optional rebuild)** — `python3 scripts/strategy_historical_expert_context.py --expert-id <expert_id> --start-segment YYYY-MM --end-segment YYYY-MM --apply` emits batch-analysis handoff under `artifacts/skill-work/work-strategy/historical-expert-context/`: a **range rollup** (`<expert_id>-<start>-to-<end>.md`) plus **per-month** files (`<expert_id>/<YYYY-MM>.md`). [`strategy_batch_analysis_with_history.py`](../../../../scripts/strategy_batch_analysis_with_history.py) loads **per-month** artifacts when every month in the requested window exists; otherwise it uses the rollup. See `historical-expert-context/README.md` in that folder.
 - **`<!-- backfill:<expert_id>:start -->` … `end` blocks** — reconstructed historical arc from out-of-repo URLs; not contemporaneous journal prose; keep scope/rules inside the block.
 - **Machine hint / opt-out:** `python3 scripts/validate_strategy_expert_threads.py` warns when a `## YYYY-MM` block is heavy on list lines and has **no** prose lines (optional `--month MM` to audit one month only). For a **whole file** where month bullets-only is intentional (transitional ledger), add once in the human layer: `<!-- strategy-expert-thread:segment-1-month-bullets-ledger-ok -->`. Editing assistants: `.cursor/rules/strategy-expert-thread-journal-layer.mdc`.
-- **Lens vs lane (Tri-Frame / `CIV-MIND-*` only):** Optional journal subsection **above** `<!-- strategy-expert-thread:start -->` when this expert has a **CIV-MIND-*** file: link `minds/CIV-MIND-….md`, state **lens ≠ transcript**, and when to use **`verify:lens-fold+CIV-MIND-…`** vs a **primary URL**. Filled example: [`strategy-expert-alexander-mercouris-thread.md`](strategy-expert-alexander-mercouris-thread.md) (**CIV-MIND-MERCOURIS**).
+- **Lens vs lane (Tri-Frame / `CIV-MIND-*` only):** Optional journal subsection **above** `<!-- strategy-expert-thread:start -->` when this expert has a **CIV-MIND-*** file: link `minds/CIV-MIND-….md`, state **lens ≠ transcript**, and when to use **`verify:lens-fold+<expert_id>`** (same **`<expert_id>`** as `thread:<expert_id>` and `strategy-expert-<expert_id>-*.md`) vs a **primary URL**. Fingerprint text still lives in **`strategy-expert-<expert_id>-mind.md`**; `minds/CIV-MIND-….md` remains the stable redirect path for bookmarks. Filled example: [`strategy-expert-mercouris-thread.md`](strategy-expert-mercouris-thread.md) (`verify:lens-fold+mercouris`).
 
 ---
 
@@ -234,7 +234,7 @@ WORK only; not Record.
 
 **Epistemic fence:** This file is an **analytical voice / style fingerprint** for WORK (tri-mind, strategy passes). It is **not** biographical truth about a real person, **not** the Record, and **not** a substitute for **transcript-grounded** Judgment when a claim must be anchored to a primary line.
 
-**Provenance (when migrating from `minds/`):** If a [`minds/CIV-MIND-*.md`](minds/) file exists for this lane, populate this file by **mapping** that source into the section spine below (reformat; avoid one undifferentiated paste). Add an explicit line: *Derived from / aligned with `minds/CIV-MIND-….md`.* Until **tri-mind** / **minds-authentic-voice** paths are updated, skills may still cite `minds/CIV-MIND-*`; this **`-mind.md`** copy is the **strategy-notebook bundle-local** long read.
+**Provenance:** **Grace-Mar SSOT** for Tri-Frame lanes is this **`-mind.md`** file (mapped corpus below). [`minds/CIV-MIND-*.md`](minds/) is a **stable redirect** path to this file for skills and upstream template naming. When **bootstrapping** a new expert from civ-mem, you may first map from `research/repos/civilization_memory/docs/templates/CIV–MIND–….md` into this spine — then keep `minds/CIV-MIND-*.md` as a redirect to this file (no duplicate body).
 
 **Companion files:** [`strategy-expert-<expert_id>.md`](strategy-expert-template.md#profile-template) (profile), [`strategy-expert-<expert_id>-thread.md`](strategy-expert-template.md#thread-template) (distilled thread), [`strategy-expert-<expert_id>-transcript.md`](strategy-expert-template.md#transcript-template) (verbatim ingests).
 
@@ -269,4 +269,4 @@ WORK only; not Record.
 
 ---
 
-_Stubs ship with the above headings only; Tri-Frame lanes may replace the body with mapped content from `minds/CIV-MIND-*.md`._
+_Stubs ship with the above headings only; Tri-Frame lanes replace the body with mapped content here (SSOT); `minds/CIV-MIND-*.md` stays a redirect to this file for stable links._

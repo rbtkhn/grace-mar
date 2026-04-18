@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0-work-lanes-dashboard",
-  "generatedAt": "2026-04-16T16:47:15.874544+00:00",
+  "generatedAt": "2026-04-18T16:39:33.080676+00:00",
   "recordMergeAuthority": "RECURSION-GATE and companion approval only \u2014 never implied by lane metrics.",
   "lanes": {
     "work_strategy": {
@@ -167,30 +167,19 @@
       ]
     },
     "work_dev_dashboard_legacy": {
-      "generated_at": "2026-04-16T16:47:13Z",
+      "generated_at": "2026-04-18T16:39:30Z",
       "integration_status_counts": {
         "implemented": 11,
         "partial": 2,
         "documented_only": 1
       },
       "pipeline_event_counts": {
-        "staged": 22,
-        "applied": 43,
-        "intent_constitutional_critique": 20,
-        "approved": 2,
-        "dyad:checkpoint_request": 2,
-        "validation_failed": 8,
-        "openclaw_export": 1,
-        "rejected": 4,
-        "maintenance": 18,
-        "dyad:grounded_query": 1,
-        "sandbox_execution_pre": 1,
-        "sandbox_execution_post": 1
+        "maintenance": 3
       },
       "provenance_completeness_score": 1.0,
       "provenance_from_gate": false,
       "lane_violation_count": 0,
-      "continuity_block_count": 25,
+      "continuity_block_count": 26,
       "gap_ids_open": [],
       "notes": [
         "Lane / continuity counts come from runtime/observability/*.jsonl when present (local or CI); empty feeds => 0.",

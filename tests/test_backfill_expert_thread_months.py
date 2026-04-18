@@ -20,7 +20,7 @@ def test_months_spanning_range_single_month() -> None:
 
 
 def test_render_backfill_empty_evidence_emits_month_shells() -> None:
-    block = render_backfill_block("scott-ritter", date(2026, 1, 1), date(2026, 3, 31), [])
+    block = render_backfill_block("ritter", date(2026, 1, 1), date(2026, 3, 31), [])
     assert "### 2026-01" in block
     assert "### 2026-02" in block
     assert "### 2026-03" in block

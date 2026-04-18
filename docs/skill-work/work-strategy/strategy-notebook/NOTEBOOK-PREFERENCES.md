@@ -64,27 +64,27 @@
 
 | Primary (`thread:`) | Default | Notes |
 |---------------------|---------|--------|
-| `scott-ritter` | **S1** | |
-| `daniel-davis` | **S1** | Ultimatum / resumption / policy–military interface. |
-| `seyed-marandi` | **S1** | Red-line / regional **hard edge**; often paired with **S2** in body. |
-| `steve-jermy` | **S1** | Naval / maritime. |
-| `brian-berletic` | **S1** | OSINT / open military-technical. |
-| `jacques-baud` | **S1** | Operational / mil-intel mechanism claims. |
-| `larry-johnson` | **S1** | OOB / feasibility / operational skepticism. |
-| `douglas-macgregor` | **S1** | Campaign-scale force mechanics — override to **S2** if weave is **grand strategic map** with little ORBAT. |
-| `john-mearsheimer` | **S2** | Alliance geometry and structural incentives. |
-| `alexander-mercouris` | **S3** | |
-| `trita-parsi` | **S3** | War-powers / accountability frames land in body vs **S4** when Congress machinery owns the title. |
-| `charles-freeman` | **S3** | |
-| `alastair-crooke` | **S3** | |
-| `glenn-diesen` | **S3** | Euro–Russian strategic narrative room. |
-| `jeffrey-sachs` | **S3** | Multilateral / development table — override toward **S5** if macro/debt/sanctions **lead**. |
-| `jiang-xueqin` | **S3** | Civilizational / education-bridge speech layer. |
-| `aaron-mate` | **S3** | Media / narrative contestation — override toward **S5** if **commodity / price** leads. |
-| `max-blumenthal` | **S3** | Investigative / counter-narrative legitimacy — same override as Mate. |
-| `robert-barnes` | **S4** | |
-| `robert-pape` | **S4** | Escalation trap / domestic lock-in — body may glue **S5** when calendar is load-bearing. |
-| `martin-armstrong` | **S5** | Market / cycle machinery. |
+| `ritter` | **S1** | |
+| `davis` | **S1** | Ultimatum / resumption / policy–military interface. |
+| `marandi` | **S1** | Red-line / regional **hard edge**; often paired with **S2** in body. |
+| `jermy` | **S1** | Naval / maritime. |
+| `berletic` | **S1** | OSINT / open military-technical. |
+| `baud` | **S1** | Operational / mil-intel mechanism claims. |
+| `johnson` | **S1** | OOB / feasibility / operational skepticism. |
+| `macgregor` | **S1** | Campaign-scale force mechanics — override to **S2** if weave is **grand strategic map** with little ORBAT. |
+| `mearsheimer` | **S2** | Alliance geometry and structural incentives. |
+| `mercouris` | **S3** | |
+| `parsi` | **S3** | War-powers / accountability frames land in body vs **S4** when Congress machinery owns the title. |
+| `freeman` | **S3** | |
+| `crooke` | **S3** | |
+| `diesen` | **S3** | Euro–Russian strategic narrative room. |
+| `sachs` | **S3** | Multilateral / development table — override toward **S5** if macro/debt/sanctions **lead**. |
+| `jiang` | **S3** | Civilizational / education-bridge speech layer. |
+| `mate` | **S3** | Media / narrative contestation — override toward **S5** if **commodity / price** leads. |
+| `blumenthal` | **S3** | Investigative / counter-narrative legitimacy — same override as Mate. |
+| `barnes` | **S4** | |
+| `pape` | **S4** | Escalation trap / domestic lock-in — body may glue **S5** when calendar is load-bearing. |
+| `armstrong` | **S5** | Market / cycle machinery. |
 
 **Overrides:** Use when inbox density or knot title makes another spine honest (e.g. **Mate** + lead = **commodity arithmetic** → weight **S5** in body while keeping **S3** primary only if narrative room still owns the file title).
 
@@ -112,7 +112,7 @@ Use **sparingly**. They cue later handling in this lane; they are **not** formal
 
 **WORK-only;** not Record. Default **hypothesis-grade** until **wires**, **Pentagon-primary**, or **named** **order-of-battle** **receipts** land.
 
-**Core roster (illustrative):** Experts who **often** **speak** **this** **thread** — e.g. `scott-ritter`, `larry-johnson`, `daniel-davis`, `seyed-marandi`, `trita-parsi`, `alexander-mercouris`, `steve-jermy`, `john-mearsheimer`, `jacques-baud`, `brian-berletic`, `douglas-macgregor`, `jeffrey-sachs`, `glenn-diesen`. **Log a row** in [US-IRAN-KINETIC-TRACKER.md](US-IRAN-KINETIC-TRACKER.md) **only** when **that** **ingest** **states** **a** **directional** **view** (↑ higher near-term kinetic risk, ↓ lower, — flat/unclear, **N/A** abstain or no Iran-kinetic content).
+**Core roster (illustrative):** Experts who **often** **speak** **this** **thread** — e.g. `ritter`, `johnson`, `davis`, `marandi`, `parsi`, `mercouris`, `jermy`, `mearsheimer`, `baud`, `berletic`, `macgregor`, `sachs`, `diesen`. **Log a row** in [US-IRAN-KINETIC-TRACKER.md](US-IRAN-KINETIC-TRACKER.md) **only** when **that** **ingest** **states** **a** **directional** **view** (↑ higher near-term kinetic risk, ↓ lower, — flat/unclear, **N/A** abstain or no Iran-kinetic content).
 
 **Peripheral / off-topic weeks:** Experts whose **only** **material** **is** **Europe**, **Rome**, **KY-4**, **PH** **lecture**, **etc.** → **omit** **row** **or** **explicit** **`N/A`** — **silence** **≠** **neutral** **forecast**.
 

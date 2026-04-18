@@ -68,7 +68,7 @@ _RE_PRIOR = re.compile(r"\*\*Prior scratch\s*[-—–]\s*(\d{4}-\d{2}-\d{2})")
 _RE_DATE_HEADING = re.compile(r"^##\s+(\d{4}-\d{2}-\d{2})")
 
 # Build alias lookup: last name segment of each canonical slug → full slug.
-# e.g. "scott-ritter" → alias "ritter" → "scott-ritter"
+# e.g. "ritter" → alias "ritter" → "ritter"
 _ALIAS_TO_ID: dict[str, str] = {}
 for _cid in CANONICAL_EXPERT_IDS:
     parts = _cid.split("-")

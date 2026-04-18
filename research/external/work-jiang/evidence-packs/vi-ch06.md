@@ -8,7 +8,7 @@ Book chapter for Interviews episode 6 — Volume VI Part I; divergence end-box p
 
 ## Core sources
 
-- `vi-06` → [interviews-06-glenn-diesen-great-power-wars-new-world-order.md](lectures/interviews-06-glenn-diesen-great-power-wars-new-world-order.md)
+- `vi-06` → [interviews-06-diesen-great-power-wars-new-world-order.md](lectures/interviews-06-diesen-great-power-wars-new-world-order.md)
 
 ## Core analysis
 

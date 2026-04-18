@@ -8,7 +8,7 @@ Book chapter for Interviews episode 2 — Volume VI Part I; divergence end-box p
 
 ## Core sources
 
-- `vi-02` → [interviews-02-glenn-diesen-west-civilizational-collapse.md](lectures/interviews-02-glenn-diesen-west-civilizational-collapse.md)
+- `vi-02` → [interviews-02-diesen-west-civilizational-collapse.md](lectures/interviews-02-diesen-west-civilizational-collapse.md)
 
 ## Core analysis
 

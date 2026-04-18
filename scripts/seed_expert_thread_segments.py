@@ -14,12 +14,12 @@ Purpose
 Typical use
 -----------
 python3 scripts/seed_expert_thread_segments.py \
-  --expert-id daniel-davis \
+  --expert-id davis \
   --segments 2026-01,2026-02,2026-03 \
   --dry-run
 
 python3 scripts/seed_expert_thread_segments.py \
-  --expert-id daniel-davis \
+  --expert-id davis \
   --segments 2026-01,2026-02,2026-03 \
   --apply
 """

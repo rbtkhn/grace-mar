@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "1.0.0",
+  "candidateId": "CANDIDATE-0997",
+  "userSlug": "grace-mar",
+  "proposalClassCurrent": "SELF_KNOWLEDGE_ADD",
+  "surfaceCurrent": "self_knowledge",
+  "surfaceSuggested": "self_knowledge",
+  "subsurfaceSuggested": null,
+  "boundaryStatus": "clear",
+  "misfiled": false,
+  "why": [],
+  "confidenceBand": "high",
+  "confidenceScore": 0.85,
+  "createdAt": "2026-04-18T16:38:06Z",
+  "source": "recursion_gate_review",
+  "proposalClassSuggested": "SELF_KNOWLEDGE_ADD",
+  "artifactRelPath": "review-queue/boundary-classifications/CANDIDATE-0997.json"
+}

@@ -1,0 +1,78 @@
+{
+  "expert_id": "berletic",
+  "thread_path": "docs/skill-work/work-strategy/strategy-notebook/strategy-expert-berletic-thread.md",
+  "start_segment": "2026-01",
+  "end_segment": "2026-04",
+  "parse_note": "parsed `## YYYY-MM` month segments",
+  "segments": [
+    {
+      "segment_id": "2026-01",
+      "raw_text": "January holds **no dated** `thread:` ingest line for Berletic in this notebook snapshot; the lane remains **industrial capacity, sanctions, proxy-war logistics** per the roster. Treat hub links as **routing anchors**, not proof of a January calendar appearance.\n\n- [strength: low] **Identity anchor:** The New Atlas — site and channel hub (profile Seed).  \n  [thenewatlas.com](https://www.thenewatlas.com/) · [YouTube @TheNewAtlas](https://www.youtube.com/@TheNewAtlas)",
+      "bullets": [
+        "[strength: low] **Identity anchor:** The New Atlas — site and channel hub (profile Seed)."
+      ],
+      "strength_counts": {
+        "high": 0,
+        "medium": 0,
+        "low": 1
+      },
+      "signal_lines": [],
+      "tension_lines": [],
+      "shift_lines": [],
+      "source": "h2"
+    },
+    {
+      "segment_id": "2026-02",
+      "raw_text": "February has the same **no-indexed-Q1-primary** posture in-repo; use **`batch-analysis`** when headline battlefield claims need **factory / stockpile / resupply** counterweight beside **`ritter`** ORBAT lanes — per [strategy-commentator-threads](strategy-commentator-threads.md).\n\n- [strength: low] **Discovery pointer:** X handle — not a verified February posting list.  \n  [X @BrianJBerletic](https://x.com/BrianJBerletic)",
+      "bullets": [
+        "[strength: low] **Discovery pointer:** X handle — not a verified February posting list."
+      ],
+      "strength_counts": {
+        "high": 0,
+        "medium": 0,
+        "low": 1
+      },
+      "signal_lines": [],
+      "tension_lines": [],
+      "shift_lines": [],
+      "source": "h2"
+    },
+    {
+      "segment_id": "2026-03",
+      "raw_text": "March rows for this expert are still **absent** from the indexed notebook ledger; keep third-party index dates **hypothesis-grade** until pinned against primary tape.\n\n- [strength: low] **Repeat anchor:** Same Seed hubs as January — scope discipline unchanged.",
+      "bullets": [
+        "[strength: low] **Repeat anchor:** Same Seed hubs as January — scope discipline unchanged."
+      ],
+      "strength_counts": {
+        "high": 0,
+        "medium": 0,
+        "low": 1
+      },
+      "signal_lines": [],
+      "tension_lines": [],
+      "shift_lines": [
+        "[strength: low] **Repeat anchor:** Same Seed hubs as January — scope discipline unchanged."
+      ],
+      "source": "h2"
+    },
+    {
+      "segment_id": "2026-04",
+      "raw_text": "_Partial month — no April machine/knot row for Berletic in-repo; **industrial capacity / sanctions** lane per roster — hub anchors only._\n\n- [strength: low] **Outlet anchor:** [The New Atlas](https://www.thenewatlas.com/) · [YouTube @TheNewAtlas](https://www.youtube.com/@TheNewAtlas) — not a dated April calendar.\n- [strength: low] **Note:** Pair with **`ritter`** / **`jermy`** when headline kinetic claims need factory–stockpile counterweight — [`batch-analysis`](strategy-commentator-threads.md) discipline.\n\nCanonical knot paths and raw ingest lines live in **Segment 2** below (regenerated each **`thread`** run).\n\n---",
+      "bullets": [
+        "[strength: low] **Outlet anchor:** [The New Atlas](https://www.thenewatlas.com/) · [YouTube @TheNewAtlas](https://www.youtube.com/@TheNewAtlas) — not a dated April calendar.",
+        "[strength: low] **Note:** Pair with **`ritter`** / **`jermy`** when headline kinetic claims need factory–stockpile counterweight — [`batch-analysis`](strategy-commentator-threads.md) discipline."
+      ],
+      "strength_counts": {
+        "high": 0,
+        "medium": 0,
+        "low": 2
+      },
+      "signal_lines": [
+        "[strength: low] **Note:** Pair with **`ritter`** / **`jermy`** when headline kinetic claims need factory–stockpile counterweight — [`batch-analysis`](strategy-commentator-threads.md) discipline."
+      ],
+      "tension_lines": [],
+      "shift_lines": [],
+      "source": "h2"
+    }
+  ]
+}

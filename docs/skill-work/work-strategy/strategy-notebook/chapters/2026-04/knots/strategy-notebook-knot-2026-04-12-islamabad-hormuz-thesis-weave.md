@@ -17,8 +17,8 @@
 
 ### Lineage — **talks break → leverage move** (anchor)
 
-- **Primary spine:** [`days.md` § 2026-04-12](../days.md#2026-04-12) — **Islamabad → Hormuz**: failed/inconclusive direct talks; **Truth Social** blockade order (surfaced via **`daniel-davis`** repost chain) — **verify** **DoD/Navy/WH** before campaign or public ship.
-- **Indexed expert lanes (same topic — no new `expert_id`):** **`trita-parsi`** (Lebanon vs nuclear “mask,” phased ceasefire **unverified**); **`charles-freeman`** ([*India and the Global Left*](https://www.youtube.com/watch?v=Thy3e6ququ8) — Islamabad as **continuing war**, **Hormuz** / third-country hull **ROE** gap — **parallel** to inconclusive-talks wire); **`robert-pape`** (X — **Stage 3** escalation-trap graphic; **ground op** branch **scenario-grade**); **`robert-barnes`** (domestic **TS** gloss pole vs **strategic-asset** / **satirical-spiral** — see **Deprecated** note in [strategy-commentator-threads.md](../../../strategy-commentator-threads.md)); **`daniel-davis`** as **relay** surface for executive text, **not** ORBAT substitute.
+- **Primary spine:** [`days.md` § 2026-04-12](../days.md#2026-04-12) — **Islamabad → Hormuz**: failed/inconclusive direct talks; **Truth Social** blockade order (surfaced via **`davis`** repost chain) — **verify** **DoD/Navy/WH** before campaign or public ship.
+- **Indexed expert lanes (same topic — no new `expert_id`):** **`parsi`** (Lebanon vs nuclear “mask,” phased ceasefire **unverified**); **`freeman`** ([*India and the Global Left*](https://www.youtube.com/watch?v=Thy3e6ququ8) — Islamabad as **continuing war**, **Hormuz** / third-country hull **ROE** gap — **parallel** to inconclusive-talks wire); **`pape`** (X — **Stage 3** escalation-trap graphic; **ground op** branch **scenario-grade**); **`barnes`** (domestic **TS** gloss pole vs **strategic-asset** / **satirical-spiral** — see **Deprecated** note in [strategy-commentator-threads.md](../../../strategy-commentator-threads.md)); **`davis`** as **relay** surface for executive text, **not** ORBAT substitute.
 
 ### History resonance
 
@@ -34,7 +34,7 @@ none this pass
 |-----------|--------|----------|
 | **Next day** | [`days.md` § 2026-04-13](../days.md#2026-04-13) | Long-form **Deep Dive** ingests (**Freeman**, **Mearsheimer**, **Marandi**, **Ritter**, **Mercouris**) — **mechanics + room** layer thickens; still **not** CENTCOM substitute. |
 | **Later weave** | [strategy-notebook-knot-2026-04-13-marandi-ritter-mercouris-hormuz-scaffold.md](strategy-notebook-knot-2026-04-13-marandi-ritter-mercouris-hormuz-scaffold.md) | **Marandi × Ritter × Mercouris** shared scaffold. |
-| **Later weave** | [strategy-notebook-knot-2026-04-14-scott-ritter-blockade-hormuz-weave.md](strategy-notebook-knot-2026-04-14-scott-ritter-blockade-hormuz-weave.md) | **04-14** **`thread:`** **batch-analysis** lattice (Davis×Jermy, Diesen×Sachs, Parsi×Davis knots). |
+| **Later weave** | [strategy-notebook-knot-2026-04-14-ritter-blockade-hormuz-weave.md](strategy-notebook-knot-2026-04-14-ritter-blockade-hormuz-weave.md) | **04-14** **`thread:`** **batch-analysis** lattice (Davis×Jermy, Diesen×Sachs, Parsi×Davis knots). |
 
 ### Judgment
 

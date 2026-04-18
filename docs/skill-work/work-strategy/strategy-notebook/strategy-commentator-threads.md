@@ -4,7 +4,7 @@
 
 **Choreography (vs tri-mind):** Threads track **each commentator over time** (accuracy, narrative, compare–contrast). **Tri-mind** is a separate **analysis** pattern — usually **outboard** from `days.md`; see [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md) § **Expert choreography**.
 
-**Terminology — `expert_id`:** The **first column** in the table below — **one canonical slug per named expert** (e.g. `seyed-marandi`, `scott-ritter`). **Inbox `verify:`** tails use **`thread:<expert_id>`** — the token after **`thread:`** is the **`expert_id`**. **Legacy synonym:** **`thread_id`** (same column / value). **Legacy prose:** Older notes may say “analyst_id” / “analyst threads” — same field and lanes as **`expert_id`** / **expert threads**.
+**Terminology — `expert_id`:** The **first column** in the table below — **one canonical slug per named expert** (e.g. `marandi`, `ritter`). **Inbox `verify:`** tails use **`thread:<expert_id>`** — the token after **`thread:`** is the **`expert_id`**. **Legacy synonym:** **`thread_id`** (same column / value). **Legacy prose:** Older notes may say “analyst_id” / “analyst threads” — same field and lanes as **`expert_id`** / **expert threads**.
 
 **Lane discipline (no hybrid slugs):** Each **`expert_id`** identifies **exactly one** **named commentator** (one **Name** in the roster). **Topic** framing (Islamabad process, Hormuz domestic politics, escalation trap, etc.) lives in the **Role** column, **cold** text, and **grep tags** — **not** in the slug. **Verbatim quotes** and **attributed analysis** belong on a line whose **`thread:`** matches **that speaker’s** row; putting another expert’s words under the wrong **`thread:`** is a **routing error**. **`batch-analysis`** is where **topic** tension (same crisis, different mechanisms) meets **expert** tension (same week, different predictions or registers).
 
@@ -29,7 +29,7 @@ Run operator **`thread`**: **`bin/thread`** or **`python3 scripts/strategy_threa
 
 **Wires and outlets (no expert `thread:`):** A **wire**, **pool paragraph**, or **outlet summary** is **not** an indexed expert unless the cold line names **that person** as the speaker or author. Use **`verify:wire-RSS`** (and topic grep tags) **without** **`thread:<expert_id>`**; optional **`membrane:single`** when the line must **not** imply **`batch-analysis`** membership for expert threads.
 
-**Official IRI / MFA voices (no `thread:`):** The **Iranian foreign minister** and **MFA** spokespeople are **state primaries**, not **`expert_id`** rows. Capture with **`verify:IRI-primary`** (and **`fa`** triangulation when load-bearing) plus **`IRAN`** / **`IRI`** / **`TEHRAN`** grep tags — **no** **`thread:`** on the FM line itself. **Continuity** to indexed threads is via **`batch-analysis`** and **`daily-brief` §1h** — e.g. **2026-04-17** **Araghchi** (Hormuz + **Lebanon** opener) **crosses** **`trita-parsi`** (Lebanon vs nuclear scope), **`seyed-marandi`** (elite register), **`daniel-davis`** (U.S.-side packaging of the **X** post), **`alexander-mercouris`** (institutional **Lebanon**/**Hormuz** surface) — see [daily-brief-2026-04-17.md](../daily-brief-2026-04-17.md) **§1h** + [daily-strategy-inbox.md](daily-strategy-inbox.md).
+**Official IRI / MFA voices (no `thread:`):** The **Iranian foreign minister** and **MFA** spokespeople are **state primaries**, not **`expert_id`** rows. Capture with **`verify:IRI-primary`** (and **`fa`** triangulation when load-bearing) plus **`IRAN`** / **`IRI`** / **`TEHRAN`** grep tags — **no** **`thread:`** on the FM line itself. **Continuity** to indexed threads is via **`batch-analysis`** and **`daily-brief` §1h** — e.g. **2026-04-17** **Araghchi** (Hormuz + **Lebanon** opener) **crosses** **`parsi`** (Lebanon vs nuclear scope), **`marandi`** (elite register), **`davis`** (U.S.-side packaging of the **X** post), **`mercouris`** (institutional **Lebanon**/**Hormuz** surface) — see [daily-brief-2026-04-17.md](../daily-brief-2026-04-17.md) **§1h** + [daily-strategy-inbox.md](daily-strategy-inbox.md).
 
 **Ephemeral / one-shot ingests (no persistent expert thread):** Not every line needs a **`thread:<expert_id>`**. The index exists so the **same** voice can be **joined across dates** (drift, accuracy). If the capture is **tactical** — one article, a stray clip, a **verify** pass, or material you **do not** want to treat as a standing **expert** lane — **omit** **`thread:`**. Use **cold** + **URL** + **`verify:`** and **topic** grep tags (`IRAN`, `ROME`, …) as usual. Optional **`verify:… | membrane:single`** signals that this line is **not** inviting a same-day **`batch-analysis`** membership claim for indexed threads (see **Crossing filters**). You are **not** required to mint a table row for every name that appears once.
 
@@ -37,11 +37,11 @@ Run operator **`thread`**: **`bin/thread`** or **`python3 scripts/strategy_threa
 
 **Month arc pointer (chapter meta):** Cross-day **movement** and weave boundaries for the active month (example **2026-04-08–15**: Hormuz week, expert density, **04-15** Grok-vs-brief overlay) live in [chapters/2026-04/meta.md](chapters/2026-04/meta.md#april-arc-one-screen) (**April arc — one screen**). Use that block for **grep / calendar** orientation; it **does not** mint **`expert_id`** rows—this file remains the roster SSOT.
 
-**Mearsheimer vs Diesen (individual commentators):** **`john-mearsheimer`** = **John Mearsheimer** only; **`glenn-diesen`** = **Glenn Diesen** only — **no** shared **`expert_id`** for a “session pair.” Same episode with **both** speakers → **two** paste-ready lines (each **`thread:<expert_id>`**) + optional **`batch-analysis`**.
+**Mearsheimer vs Diesen (individual commentators):** **`mearsheimer`** = **John Mearsheimer** only; **`diesen`** = **Glenn Diesen** only — **no** shared **`expert_id`** for a “session pair.” Same episode with **both** speakers → **two** paste-ready lines (each **`thread:<expert_id>`**) + optional **`batch-analysis`**.
 
 ## Notebook-use tags (reverse index)
 
-**Purpose:** Cross-cutting **usage** tags — answers “how might the notebook use this voice?” (open a frame, read talks, check plausibility, etc.). **Source of truth:** the **`Notebook-use tags`** field in each [`strategy-expert-<expert_id>.md`](strategy-expert-alexander-mercouris.md) profile (Identity table row or **`## Notebook-use tags`** section). This subsection is a **convenience mirror** for shortlists.
+**Purpose:** Cross-cutting **usage** tags — answers “how might the notebook use this voice?” (open a frame, read talks, check plausibility, etc.). **Source of truth:** the **`Notebook-use tags`** field in each [`strategy-expert-<expert_id>.md`](strategy-expert-mercouris.md) profile (Identity table row or **`## Notebook-use tags`** section). This subsection is a **convenience mirror** for shortlists.
 
 **Guardrail:** Tags are **notebook-use families**, not ideological classes, not maintenance tiers, and **not** substitutes for **`expert_id`**, **Role**, **Default grep tags**, or **Typical pairings**. An expert may appear under **multiple** tags.
 
@@ -49,106 +49,106 @@ Run operator **`thread`**: **`bin/thread`** or **`python3 scripts/strategy_threa
 
 ### `orient`
 
-- `alexander-mercouris`
-- `douglas-macgregor`
-- `glenn-diesen`
-- `jeffrey-sachs`
-- `jiang-xueqin`
-- `john-mearsheimer`
+- `mercouris`
+- `macgregor`
+- `diesen`
+- `sachs`
+- `jiang`
+- `mearsheimer`
 
 ### `negotiate`
 
-- `alexander-mercouris`
-- `alastair-crooke`
-- `charles-freeman`
-- `jeffrey-sachs`
-- `seyed-marandi`
-- `trita-parsi`
+- `mercouris`
+- `crooke`
+- `freeman`
+- `sachs`
+- `marandi`
+- `parsi`
 
 ### `validate`
 
-- `daniel-davis`
-- `douglas-macgregor`
-- `jacques-baud`
-- `larry-johnson`
-- `robert-pape`
-- `scott-ritter`
+- `davis`
+- `macgregor`
+- `baud`
+- `johnson`
+- `pape`
+- `ritter`
 
 ### `authorize`
 
-- `daniel-davis`
-- `jacques-baud`
-- `robert-barnes`
-- `robert-pape`
-- `scott-ritter`
+- `davis`
+- `baud`
+- `barnes`
+- `pape`
+- `ritter`
 
 ### `stress-test`
 
-- `brian-berletic`
-- `glenn-diesen`
-- `jeffrey-sachs`
-- `martin-armstrong`
-- `scott-ritter`
-- `steve-jermy`
+- `berletic`
+- `diesen`
+- `sachs`
+- `armstrong`
+- `ritter`
+- `jermy`
 
 ### `narrate`
 
-- `aaron-mate`
-- `alastair-crooke`
-- `alexander-mercouris`
-- `max-blumenthal`
-- `seyed-marandi`
-- `trita-parsi`
+- `mate`
+- `crooke`
+- `mercouris`
+- `blumenthal`
+- `marandi`
+- `parsi`
 
 ### `historicize`
 
-- `alastair-crooke`
-- `alexander-mercouris`
-- `glenn-diesen`
-- `jeffrey-sachs`
-- `jiang-xueqin`
-- `john-mearsheimer`
-- `martin-armstrong`
+- `crooke`
+- `mercouris`
+- `diesen`
+- `sachs`
+- `jiang`
+- `mearsheimer`
+- `armstrong`
 
 ---
 
 | expert_id | Name | Role (one line) | Default grep tag | Typical `batch-analysis` pairings |
 |-----------|--------|-----------------|------------------|-----------------------------------|
-| `seyed-marandi` | Seyed Mohammad Marandi | Iranian English long-form: negotiation **process**, red lines, legitimacy register | `IRAN`, `TEHRAN`, or `Marandi` in cold | × `scott-ritter`, × `trita-parsi`, × `rome-ecumenical` (Pontifex / Marandi Easter) |
-| `scott-ritter` | Scott Ritter | U.S. **military dissent**: Hormuz **sea control**, blockade ops, Vance frame; **faith-politics** register when **Ritter** is the speaking expert | `JDVance`, `IRAN`, or `Ritter` | × `seyed-marandi`, × `robert-barnes`, × `rome-invective` (split from ecumenical) |
-| `trita-parsi` | Trita Parsi (`@tparsi`) | Beltway-facing **Lebanon vs nuclear** scope; “mask” thesis | `IRAN` + Parsi in cold | × `holy-see-moral` (Pontifex Lebanon), × `seyed-marandi`, × `douglas-macgregor` |
-| `robert-barnes` | Robert Barnes (`@barnes_law`) | **Domestic liability** pole on Hormuz / executive TS chain | `JDVance` or `barnes` in cold | × `robert-pape`; **topic** forks (JTN-style “card” vs satirical spiral) in **`batch-analysis`** without a second expert |
-| `douglas-macgregor` | Douglas Macgregor (`@DougAMacgregor`) | Importers / **Asia–Europe** distance from U.S.–Israel kinetic frame | `IRAN` or Macgregor in cold | × `robert-pape`, × `john-mearsheimer`, × `trita-parsi` |
-| `robert-pape` | Robert Pape (`@ProfessorPape`) | **Escalation Trap** / commitment ratchet on demands | `ProfessorPape` or Pape in cold | × `daniel-davis`, × `robert-barnes`, × `john-mearsheimer` |
-| `daniel-davis` | Daniel Davis (Lt Col; `@DanielLDavis1`) | Ceasefire as **extension game**; ultimatum vs negotiation; macro pain to U.S. | `IRAN`, `JDVance`, or Davis in cold | × `john-mearsheimer`, × `robert-pape`, × `seyed-marandi`, × `steve-jermy` |
-| `steve-jermy` | Steve Jermy (Commodore, RN ret.) | **Energy–GDP / maritime system**: Hormuz closure **recovery lags** (Ever Given–style **knock-on**), **diesel** → supply chain / semis / fertilizer; **rough-order** macro slides vs **currency-first** economics; **close vs distant** blockade **risk geometry** | `Jermy`, `IRAN`, or `Hormuz` in cold | × `daniel-davis`, × `scott-ritter`, × `john-mearsheimer` (in-show cite) |
-| `john-mearsheimer` | John Mearsheimer | **Offensive realism**: security dilemma, Israel structural, great-power geometry | `MEARSHEIMER` or `Mearsheimer` in cold | × `daniel-davis`, × `alexander-mercouris`, × `glenn-diesen`, × `jeffrey-sachs` |
-| `alexander-mercouris` | Alexander Mercouris | **Institutional / narrative** diplomatic read (Hormuz, Lebanon, Islamabad) | `Mercouris` or mind cite in cold | × `john-mearsheimer`, × `glenn-diesen`, × `jeffrey-sachs`, × `seyed-marandi`, × Tri-Frame [minds/](../minds/README.md) |
-| `max-blumenthal` | Max Blumenthal (`@MaxBlumenthal`) | **Grayzone** / **antiwar** pole: **U.S. Middle East** policy and **elite-access** critique; **Lebanon**/**Gulf** narrative framing; **media-layer** “who engineered what” — **access** and **backchannel** claims stay **hypothesis-grade** until **primary tape** or **on-record** source | `Blumenthal`, `Grayzone`, or `Lebanon` in cold | × `aaron-mate`, × `trita-parsi`, × `alexander-mercouris`, × `seyed-marandi`, × `charles-freeman` |
-| `aaron-mate` | Aaron Maté (`@aaronjmate`) | **Grayzone** / **investigative** lane: **media ownership**, **corporate skin**, and **propaganda** framing; **Israel/Palestine** vocabulary (**colonization** thesis); **CBS** / **billionaire** / outlet **lineage** claims — **tier verify** (filings, corporate docs) before **Links-grade** | `Mate`, `Maté`, `Grayzone`, or `aaronjmate` in cold | × `max-blumenthal`, × `trita-parsi`, × `alexander-mercouris`, × `seyed-marandi` |
-| `larry-johnson` | Larry Johnson | Ex-CIA / **material** and **ORBAT** emphasis: force structure, **Hormuz** geometry, **F-15/Isfahan** raid narrative reconstructions (Haiphong–Ritter roundtables) | `Johnson` or `LarryJohnson` in cold | × `scott-ritter`, × `daniel-davis`; see [transcript digest](../transcript-analysis-haiphong-ritter-johnson-iran-2026-04.md) |
-| `charles-freeman` | Charles (“Chas”) Freeman | Retired **career diplomat**: **inconclusive** talks, **alliance** and **material** framing (Islamabad as diplomacy-while-war); **separate plane** from papal **moral** register | `Freeman` or `ChasFreeman` in cold | × `trita-parsi`, × `alexander-mercouris`, × [rome-persia-legitimacy-signal-check.md](rome-persia-legitimacy-signal-check.md) (**seam**, not merge) |
-| `alastair-crooke` | Alastair Crooke | Former diplomat / **Levant–Islamabad** “room” and **spoiler** reads; often beside **Davis** in digests | `Crooke` in cold | × `daniel-davis`, × `seyed-marandi`, × `trita-parsi` |
-| `glenn-diesen` | Glenn Diesen | **Eurasia / multipolar** discourse; **non-Western** institutional / rationality frames when distinct from **Mearsheimer**’s structural-realist register | `Diesen` in cold | × `john-mearsheimer`, × `douglas-macgregor`, × `robert-pape`, × `jeffrey-sachs` |
-| `jeffrey-sachs` | Jeffrey Sachs | **UN / development–macro + DC institutions** pole: **deinstitutionalization** thesis (group process vs personalized executive); **relative decline** and **multipolar** misrecognition; **Congress** war-and-peace **vacuum**; cites **NYT** “room” narratives — **hypothesis-grade** capacity/health claims stay **tier-C** unless clinical primary | `Sachs`, `IRAN`, or `Hormuz` in cold | × `glenn-diesen`, × `john-mearsheimer`, × `alexander-mercouris` |
-| `jiang-xueqin` | Jiang Xueqin (Predictive History) | **Long-horizon civilizational / game-theory** lectures; PH is the sole upstream for notebook-facing Jiang ingest | `Jiang`, `PH`, or `predictive-history` in cold | × `john-mearsheimer`, × `glenn-diesen`, × `jeffrey-sachs` |
-| `martin-armstrong` | Martin A. Armstrong (`@ArmstrongEcon`) | **Cycle / timing** models (Socrates-style), **sovereign debt** stress, **energy–food system** shocks (diesel, fertilizer) framed with **geopolitical war**; critiques **“perpetual wealth” vs “dollar crash”** as headline distractions | `Armstrong`, `debt`, `IRAN`, or `Hormuz` in cold | × `steve-jermy`, × `glenn-diesen`, × `jeffrey-sachs`, × `robert-pape` |
-| `jacques-baud` | Jacques Baud | **NATO / UN / intelligence-adjacent** framing: **law-of-war**, **HUMINT vs OSINT** limits, **European security** and **cross-theater** reads; **convergence vs tension** between **official narrative** and **evidential** claims — **complements** **ORBAT** lanes without duplicating them | `Baud`, `NATO`, `UN`, or `EU` in cold | × `scott-ritter`, × `douglas-macgregor`, × `daniel-davis`, × `robert-barnes` |
-| `brian-berletic` | Brian Berletic (`@BrianJBerletic`, The New Atlas) | **Industrial capacity**, **sanctions**, **proxy-war** logistics, **force-generation** vs **headline** battlefield narratives; **long-run production** and **material** constraints as a distinct fingerprint | `Berletic`, `NewAtlas`, `sanctions`, or `IRAN` in cold | × `scott-ritter`, × `steve-jermy`, × `glenn-diesen`, × `daniel-davis`, × `john-mearsheimer` |
+| `marandi` | Seyed Mohammad Marandi | Iranian English long-form: negotiation **process**, red lines, legitimacy register | `IRAN`, `TEHRAN`, or `Marandi` in cold | × `ritter`, × `parsi`, × `rome-ecumenical` (Pontifex / Marandi Easter) |
+| `ritter` | Scott Ritter | U.S. **military dissent**: Hormuz **sea control**, blockade ops, Vance frame; **faith-politics** register when **Ritter** is the speaking expert | `JDVance`, `IRAN`, or `Ritter` | × `marandi`, × `barnes`, × `rome-invective` (split from ecumenical) |
+| `parsi` | Trita Parsi (`@tparsi`) | Beltway-facing **Lebanon vs nuclear** scope; “mask” thesis | `IRAN` + Parsi in cold | × `holy-see-moral` (Pontifex Lebanon), × `marandi`, × `macgregor` |
+| `barnes` | Robert Barnes (`@barnes_law`) | **Domestic liability** pole on Hormuz / executive TS chain | `JDVance` or `barnes` in cold | × `pape`; **topic** forks (JTN-style “card” vs satirical spiral) in **`batch-analysis`** without a second expert |
+| `macgregor` | Douglas Macgregor (`@DougAMacgregor`) | Importers / **Asia–Europe** distance from U.S.–Israel kinetic frame | `IRAN` or Macgregor in cold | × `pape`, × `mearsheimer`, × `parsi` |
+| `pape` | Robert Pape (`@ProfessorPape`) | **Escalation Trap** / commitment ratchet on demands | `ProfessorPape` or Pape in cold | × `davis`, × `barnes`, × `mearsheimer` |
+| `davis` | Daniel Davis (Lt Col; `@DanielLDavis1`) | Ceasefire as **extension game**; ultimatum vs negotiation; macro pain to U.S. | `IRAN`, `JDVance`, or Davis in cold | × `mearsheimer`, × `pape`, × `marandi`, × `jermy` |
+| `jermy` | Steve Jermy (Commodore, RN ret.) | **Energy–GDP / maritime system**: Hormuz closure **recovery lags** (Ever Given–style **knock-on**), **diesel** → supply chain / semis / fertilizer; **rough-order** macro slides vs **currency-first** economics; **close vs distant** blockade **risk geometry** | `Jermy`, `IRAN`, or `Hormuz` in cold | × `davis`, × `ritter`, × `mearsheimer` (in-show cite) |
+| `mearsheimer` | John Mearsheimer | **Offensive realism**: security dilemma, Israel structural, great-power geometry | `MEARSHEIMER` or `Mearsheimer` in cold | × `davis`, × `mercouris`, × `diesen`, × `sachs` |
+| `mercouris` | Alexander Mercouris | **Institutional / narrative** diplomatic read (Hormuz, Lebanon, Islamabad) | `Mercouris` or mind cite in cold | × `mearsheimer`, × `diesen`, × `sachs`, × `marandi`, × Tri-Frame [minds/](../minds/README.md) |
+| `blumenthal` | Max Blumenthal (`@MaxBlumenthal`) | **Grayzone** / **antiwar** pole: **U.S. Middle East** policy and **elite-access** critique; **Lebanon**/**Gulf** narrative framing; **media-layer** “who engineered what” — **access** and **backchannel** claims stay **hypothesis-grade** until **primary tape** or **on-record** source | `Blumenthal`, `Grayzone`, or `Lebanon` in cold | × `mate`, × `parsi`, × `mercouris`, × `marandi`, × `freeman` |
+| `mate` | Aaron Maté (`@aaronjmate`) | **Grayzone** / **investigative** lane: **media ownership**, **corporate skin**, and **propaganda** framing; **Israel/Palestine** vocabulary (**colonization** thesis); **CBS** / **billionaire** / outlet **lineage** claims — **tier verify** (filings, corporate docs) before **Links-grade** | `Mate`, `Maté`, `Grayzone`, or `aaronjmate` in cold | × `blumenthal`, × `parsi`, × `mercouris`, × `marandi` |
+| `johnson` | Larry Johnson | Ex-CIA / **material** and **ORBAT** emphasis: force structure, **Hormuz** geometry, **F-15/Isfahan** raid narrative reconstructions (Haiphong–Ritter roundtables) | `Johnson` or `LarryJohnson` in cold | × `ritter`, × `davis`; see [transcript digest](../transcript-analysis-haiphong-ritter-johnson-iran-2026-04.md) |
+| `freeman` | Charles (“Chas”) Freeman | Retired **career diplomat**: **inconclusive** talks, **alliance** and **material** framing (Islamabad as diplomacy-while-war); **separate plane** from papal **moral** register | `Freeman` or `ChasFreeman` in cold | × `parsi`, × `mercouris`, × [rome-persia-legitimacy-signal-check.md](rome-persia-legitimacy-signal-check.md) (**seam**, not merge) |
+| `crooke` | Alastair Crooke | Former diplomat / **Levant–Islamabad** “room” and **spoiler** reads; often beside **Davis** in digests | `Crooke` in cold | × `davis`, × `marandi`, × `parsi` |
+| `diesen` | Glenn Diesen | **Eurasia / multipolar** discourse; **non-Western** institutional / rationality frames when distinct from **Mearsheimer**’s structural-realist register | `Diesen` in cold | × `mearsheimer`, × `macgregor`, × `pape`, × `sachs` |
+| `sachs` | Jeffrey Sachs | **UN / development–macro + DC institutions** pole: **deinstitutionalization** thesis (group process vs personalized executive); **relative decline** and **multipolar** misrecognition; **Congress** war-and-peace **vacuum**; cites **NYT** “room” narratives — **hypothesis-grade** capacity/health claims stay **tier-C** unless clinical primary | `Sachs`, `IRAN`, or `Hormuz` in cold | × `diesen`, × `mearsheimer`, × `mercouris` |
+| `jiang` | Jiang Xueqin (Predictive History) | **Long-horizon civilizational / game-theory** lectures; PH is the sole upstream for notebook-facing Jiang ingest | `Jiang`, `PH`, or `predictive-history` in cold | × `mearsheimer`, × `diesen`, × `sachs` |
+| `armstrong` | Martin A. Armstrong (`@ArmstrongEcon`) | **Cycle / timing** models (Socrates-style), **sovereign debt** stress, **energy–food system** shocks (diesel, fertilizer) framed with **geopolitical war**; critiques **“perpetual wealth” vs “dollar crash”** as headline distractions | `Armstrong`, `debt`, `IRAN`, or `Hormuz` in cold | × `jermy`, × `diesen`, × `sachs`, × `pape` |
+| `baud` | Jacques Baud | **NATO / UN / intelligence-adjacent** framing: **law-of-war**, **HUMINT vs OSINT** limits, **European security** and **cross-theater** reads; **convergence vs tension** between **official narrative** and **evidential** claims — **complements** **ORBAT** lanes without duplicating them | `Baud`, `NATO`, `UN`, or `EU` in cold | × `ritter`, × `macgregor`, × `davis`, × `barnes` |
+| `berletic` | Brian Berletic (`@BrianJBerletic`, The New Atlas) | **Industrial capacity**, **sanctions**, **proxy-war** logistics, **force-generation** vs **headline** battlefield narratives; **long-run production** and **material** constraints as a distinct fingerprint | `Berletic`, `NewAtlas`, `sanctions`, or `IRAN` in cold | × `ritter`, × `jermy`, × `diesen`, × `davis`, × `mearsheimer` |
 
-**Special routing rule — Predictive History:** PH-derived notebook-facing ingest must use `thread:jiang-xueqin`. Do not route PH directly into other expert lanes or directly into knots. See [strategy-notebook/README.md](README.md) § **Predictive History routing rule**.
+**Special routing rule — Predictive History:** PH-derived notebook-facing ingest must use `thread:jiang`. Do not route PH directly into other expert lanes or directly into knots. See [strategy-notebook/README.md](README.md) § **Predictive History routing rule**.
 
 ### Distinctive lane shorthands (recommended sentences)
 
-- **`robert-pape`:** This lane **names escalation as a trap** — a **commitment ratchet** on **demands** plus **staged** branches (e.g. **nuclear-stockpile** logic → **ground-force** scenarios, **Stage** framing, packaged graphics) — **not** a substitute for **`scott-ritter`** **Hormuz** **mechanics**, **`alexander-mercouris`** **room** **reads**, or **`john-mearsheimer`** **alliance** **geometry** alone; use **Typical pairings** and, when folded, **`### Judgment`** bullets such as **Thesis A — Pape / “escalation trap”** in the active month’s [`chapters/YYYY-MM/days.md`](chapters/2026-04/days.md) (replace **YYYY-MM**).
+- **`pape`:** This lane **names escalation as a trap** — a **commitment ratchet** on **demands** plus **staged** branches (e.g. **nuclear-stockpile** logic → **ground-force** scenarios, **Stage** framing, packaged graphics) — **not** a substitute for **`ritter`** **Hormuz** **mechanics**, **`mercouris`** **room** **reads**, or **`mearsheimer`** **alliance** **geometry** alone; use **Typical pairings** and, when folded, **`### Judgment`** bullets such as **Thesis A — Pape / “escalation trap”** in the active month’s [`chapters/YYYY-MM/days.md`](chapters/2026-04/days.md) (replace **YYYY-MM**).
 
-- **Domestic plane (do not collapse):** **`robert-barnes`** tracks **liability**, **coalition sell**, and the **executive / TS** **chain**. **Pape** may add **U.S. audience** **or** **polling** **theses** (e.g. political support **hardening** under casualties) — keep those **hypothesis-grade** until **ingested** with **`verify:`** (dated poll, screenshot, or primary); **do not** **merge** with Barnes **without** a **labeled seam**.
+- **Domestic plane (do not collapse):** **`barnes`** tracks **liability**, **coalition sell**, and the **executive / TS** **chain**. **Pape** may add **U.S. audience** **or** **polling** **theses** (e.g. political support **hardening** under casualties) — keep those **hypothesis-grade** until **ingested** with **`verify:`** (dated poll, screenshot, or primary); **do not** **merge** with Barnes **without** a **labeled seam**.
 
-- **`martin-armstrong`:** **Cycle / timing** and **debt–war–commodity** convergence theses — **not** a substitute for **`steve-jermy`** **diesel / fertilizer / logistics** mechanics or **`jeffrey-sachs`** **institutional** reads without **tiered** verify; treat **“computer was right on timing”** claims as **hypothesis-grade** until **disclosed methodology** or **out-of-sample** documentation exists.
+- **`armstrong`:** **Cycle / timing** and **debt–war–commodity** convergence theses — **not** a substitute for **`jermy`** **diesel / fertilizer / logistics** mechanics or **`sachs`** **institutional** reads without **tiered** verify; treat **“computer was right on timing”** claims as **hypothesis-grade** until **disclosed methodology** or **out-of-sample** documentation exists.
 
-- **`jacques-baud`:** **Law + intel + NATO/Europe** spine for **why narratives cohere or crack** — **not** a substitute for **`scott-ritter`** **sea-control** **mechanics** or **`robert-barnes`** **domestic liability** **chain**; use **`batch-analysis`** when the same week needs **evidential tension** across **Pentagon/Western** claims vs **treaty / mandate** framing.
+- **`baud`:** **Law + intel + NATO/Europe** spine for **why narratives cohere or crack** — **not** a substitute for **`ritter`** **sea-control** **mechanics** or **`barnes`** **domestic liability** **chain**; use **`batch-analysis`** when the same week needs **evidential tension** across **Pentagon/Western** claims vs **treaty / mandate** framing.
 
-- **`brian-berletic`:** **Production and sanctions** as **strategic variables** — **not** a second **`scott-ritter`** **ORBAT** voice; pairs when **headline** **kinetic** **wins** need a **factory / stockpile / resupply** **counter-narrative** (**`steve-jermy`** for **closure economics**, **`glenn-diesen`** for **multipolar** **institutions**).
+- **`berletic`:** **Production and sanctions** as **strategic variables** — **not** a second **`ritter`** **ORBAT** voice; pairs when **headline** **kinetic** **wins** need a **factory / stockpile / resupply** **counter-narrative** (**`jermy`** for **closure economics**, **`diesen`** for **multipolar** **institutions**).
 
 ### Quantitative thread metrics (illustrative — civ-mem–style calibration)
 
@@ -162,27 +162,27 @@ Run operator **`thread`**: **`bin/thread`** or **`python3 scripts/strategy_threa
 
 | expert_id | SCI | AD | CTC | Plain-language note (Predictive History reader) |
 |-----------|-----|----|-----|--------------------------------------------------|
-| `seyed-marandi` | 0.78 | 0.42 | 0.71 | He usually sounds like one kind of speaker: negotiation, red lines, and how the Islamic Republic wants to be heard. Many of his strongest claims only settle when the diplomatic music stops, so “who was right?” often stays open. In the notebook he keeps showing up next to other Iran-facing voices, which is why the “bridge” score runs high. |
-| `scott-ritter` | 0.82 | 0.48 | 0.74 | His lane is recognizable—sea control, blockade mechanics, the military story under the headlines—so he does not drift into generic punditry as often. Operational claims need time and evidence to judge, so verdicts arrive slowly. He is often placed beside diplomats or lawyers of war in the same week’s analysis, which raises the “compares with others” score. |
-| `trita-parsi` | 0.74 | 0.45 | 0.69 | Washington’s story can pull him between Lebanon, nuclear scope, and what “the process” means, so the thread can feel like it crosses slightly different questions in one breath. What closes in the Beltway and what closes on the ground do not always move together. He still pairs often with other named voices, but he is not the hub everyone orbits. |
-| `robert-barnes` | 0.88 | 0.36 | 0.52 | He stays on home law and politics—who is exposed, what the chain of command implies—which keeps his voice distinct from foreign-policy generalists. Poll-driven or coalition claims often stay “maybe” until hard numbers land, so clear yes/no resolution is rarer. He is essential when the story is liability; he is less often the center of multi-country roundtables. |
-| `douglas-macgregor` | 0.76 | 0.40 | 0.68 | Third-country distance from the U.S.–Israel frame is a steady theme, easy to recognize week to week. Event-linked scorekeeping is uneven because his value is often framing, not a dated bet. He still shows up in side-by-side comparisons with other realists. |
-| `robert-pape` | 0.81 | 0.55 | 0.77 | Escalation-as-trap is a named mechanism—demands, ratchets, staged branches—so the reader can see what would count as a test. When those pieces are written down clearly, time can actually grade the claim. That same clarity makes him a natural partner in “fork A vs fork B” discussions. |
-| `daniel-davis` | 0.79 | 0.50 | 0.72 | Ceasefire as extension game, ultimatums, who hurts first—the architecture is easy to follow. Some forecasts need the calendar to catch up before you know. He is regularly read against other named analysts in the same crisis week. |
-| `steve-jermy` | 0.74 | 0.44 | 0.58 | Energy–logistics modeling is a recognizable lane—diesel, closure recovery, systemic second-order effects. Macro numbers stay **rough-order** until primaries pin. Often paired on **Deep Dive** with Davis rather than as the widest crossover hub. |
-| `john-mearsheimer` | 0.85 | 0.58 | 0.84 | Great-power geometry is his home turf; the listener rarely wonders which discipline they are in. If-then structure helps the record show what would falsify a line of argument. In comparative work he is the voice others are measured against, so he sits at the center of many paired readings. |
-| `alexander-mercouris` | 0.72 | 0.44 | 0.88 | The diplomatic “room” story can shade into narrative that is harder to pin to a single falsifying fact, so discipline scores a little lower. The payoff is synthesis: he is the commentator most often placed beside others to hear harmony or dissonance, which drives the bridge score to the top. |
-| `max-blumenthal` | 0.74 | 0.33 | 0.62 | Elite-network and media-critique framing is recognizable week to week; closure on “who whispered to whom” claims often waits on tape or official denial. Pairs well with Beltway-facing or diplomatic lanes when the notebook wants an alt-media tension. |
-| `aaron-mate` | 0.75 | 0.34 | 0.64 | Media-structure and ownership critiques are a steady lane—outlet naming and corporate parentage need primary documents to close. Often read beside the same Grayzone-adjacent week as Blumenthal but keeps a distinct thread id for routing. |
-| `larry-johnson` | 0.80 | 0.46 | 0.63 | Order-of-battle and material detail keep him in a narrow lane—useful when the question is what forces could actually do. Raid and battle narratives take time and sources to check. He shines on panels and roundtables more than as the universal hub for every thread. |
-| `charles-freeman` | 0.83 | 0.41 | 0.66 | Veteran diplomat’s habit—“talks are inconclusive by nature”—matches a careful separation between moral language and hard security, which keeps the voice steady. Diplomatic time horizons mean many calls stay unresolved for a long while. Pairings happen, but he is not the busiest crossover node. |
-| `alastair-crooke` | 0.75 | 0.39 | 0.70 | Levant room and spoiler logic hang together as a worldview. Spoiler readings often stay open until events force a fork. He appears often enough next to other specialists that the bridge score stays solid. |
-| `glenn-diesen` | 0.77 | 0.43 | 0.79 | Multipolar language is clearly his own—not a copy of standard U.S. structural realism—so you can tell when Diesen is speaking. Closure looks like his peer group: partly about time and evidence. He is frequently read alongside other realist commentators when the week demands comparison. |
-| `jeffrey-sachs` | 0.73 | 0.38 | 0.71 | Institutional-decay and macro-development framing is recognizable—UN/DC process contrasted to personalized executive behavior. Many strongest claims (war-room origin stories, capacity) need primaries before they close. Often paired with **Diesen** on multipolar episodes rather than as the widest mechanics hub. |
-| `jiang-xueqin` | 0.70 | 0.35 | 0.65 | Long-horizon PH / game-theory material is coherent inside its archive; calendar-facing checks are slow. Notebook use stays bounded by the PH routing rule; pairs with realist and multipolar lanes when the operator explicitly bridges. |
-| `martin-armstrong` | 0.68 | 0.32 | 0.55 | Cycle-timing and macro-war convergence claims are a recognizable brand; falsifiable windows need dated model outputs or method disclosure, not vibes. Useful beside energy-logistics or sovereign-debt weeks when Hormuz or fiscal stress is the question. |
-| `jacques-baud` | 0.76 | 0.40 | 0.62 | Law-of-war and alliance-mandate framing stays recognizable across crises; many claims hinge on classified or contested sourcing, so closure is slow. Often pulled in when the notebook needs European or UN-adjacent tension beside U.S. military-dissent lanes. |
-| `brian-berletic` | 0.74 | 0.36 | 0.58 | Industrial and sanctions-throughput arguments are a clear signature; headline battle maps age faster than factory counts, so pair him when logistics and attrition matter. Bridges to energy-system and realist lanes without replacing hull-level ORBAT work. |
+| `marandi` | 0.78 | 0.42 | 0.71 | He usually sounds like one kind of speaker: negotiation, red lines, and how the Islamic Republic wants to be heard. Many of his strongest claims only settle when the diplomatic music stops, so “who was right?” often stays open. In the notebook he keeps showing up next to other Iran-facing voices, which is why the “bridge” score runs high. |
+| `ritter` | 0.82 | 0.48 | 0.74 | His lane is recognizable—sea control, blockade mechanics, the military story under the headlines—so he does not drift into generic punditry as often. Operational claims need time and evidence to judge, so verdicts arrive slowly. He is often placed beside diplomats or lawyers of war in the same week’s analysis, which raises the “compares with others” score. |
+| `parsi` | 0.74 | 0.45 | 0.69 | Washington’s story can pull him between Lebanon, nuclear scope, and what “the process” means, so the thread can feel like it crosses slightly different questions in one breath. What closes in the Beltway and what closes on the ground do not always move together. He still pairs often with other named voices, but he is not the hub everyone orbits. |
+| `barnes` | 0.88 | 0.36 | 0.52 | He stays on home law and politics—who is exposed, what the chain of command implies—which keeps his voice distinct from foreign-policy generalists. Poll-driven or coalition claims often stay “maybe” until hard numbers land, so clear yes/no resolution is rarer. He is essential when the story is liability; he is less often the center of multi-country roundtables. |
+| `macgregor` | 0.76 | 0.40 | 0.68 | Third-country distance from the U.S.–Israel frame is a steady theme, easy to recognize week to week. Event-linked scorekeeping is uneven because his value is often framing, not a dated bet. He still shows up in side-by-side comparisons with other realists. |
+| `pape` | 0.81 | 0.55 | 0.77 | Escalation-as-trap is a named mechanism—demands, ratchets, staged branches—so the reader can see what would count as a test. When those pieces are written down clearly, time can actually grade the claim. That same clarity makes him a natural partner in “fork A vs fork B” discussions. |
+| `davis` | 0.79 | 0.50 | 0.72 | Ceasefire as extension game, ultimatums, who hurts first—the architecture is easy to follow. Some forecasts need the calendar to catch up before you know. He is regularly read against other named analysts in the same crisis week. |
+| `jermy` | 0.74 | 0.44 | 0.58 | Energy–logistics modeling is a recognizable lane—diesel, closure recovery, systemic second-order effects. Macro numbers stay **rough-order** until primaries pin. Often paired on **Deep Dive** with Davis rather than as the widest crossover hub. |
+| `mearsheimer` | 0.85 | 0.58 | 0.84 | Great-power geometry is his home turf; the listener rarely wonders which discipline they are in. If-then structure helps the record show what would falsify a line of argument. In comparative work he is the voice others are measured against, so he sits at the center of many paired readings. |
+| `mercouris` | 0.72 | 0.44 | 0.88 | The diplomatic “room” story can shade into narrative that is harder to pin to a single falsifying fact, so discipline scores a little lower. The payoff is synthesis: he is the commentator most often placed beside others to hear harmony or dissonance, which drives the bridge score to the top. |
+| `blumenthal` | 0.74 | 0.33 | 0.62 | Elite-network and media-critique framing is recognizable week to week; closure on “who whispered to whom” claims often waits on tape or official denial. Pairs well with Beltway-facing or diplomatic lanes when the notebook wants an alt-media tension. |
+| `mate` | 0.75 | 0.34 | 0.64 | Media-structure and ownership critiques are a steady lane—outlet naming and corporate parentage need primary documents to close. Often read beside the same Grayzone-adjacent week as Blumenthal but keeps a distinct thread id for routing. |
+| `johnson` | 0.80 | 0.46 | 0.63 | Order-of-battle and material detail keep him in a narrow lane—useful when the question is what forces could actually do. Raid and battle narratives take time and sources to check. He shines on panels and roundtables more than as the universal hub for every thread. |
+| `freeman` | 0.83 | 0.41 | 0.66 | Veteran diplomat’s habit—“talks are inconclusive by nature”—matches a careful separation between moral language and hard security, which keeps the voice steady. Diplomatic time horizons mean many calls stay unresolved for a long while. Pairings happen, but he is not the busiest crossover node. |
+| `crooke` | 0.75 | 0.39 | 0.70 | Levant room and spoiler logic hang together as a worldview. Spoiler readings often stay open until events force a fork. He appears often enough next to other specialists that the bridge score stays solid. |
+| `diesen` | 0.77 | 0.43 | 0.79 | Multipolar language is clearly his own—not a copy of standard U.S. structural realism—so you can tell when Diesen is speaking. Closure looks like his peer group: partly about time and evidence. He is frequently read alongside other realist commentators when the week demands comparison. |
+| `sachs` | 0.73 | 0.38 | 0.71 | Institutional-decay and macro-development framing is recognizable—UN/DC process contrasted to personalized executive behavior. Many strongest claims (war-room origin stories, capacity) need primaries before they close. Often paired with **Diesen** on multipolar episodes rather than as the widest mechanics hub. |
+| `jiang` | 0.70 | 0.35 | 0.65 | Long-horizon PH / game-theory material is coherent inside its archive; calendar-facing checks are slow. Notebook use stays bounded by the PH routing rule; pairs with realist and multipolar lanes when the operator explicitly bridges. |
+| `armstrong` | 0.68 | 0.32 | 0.55 | Cycle-timing and macro-war convergence claims are a recognizable brand; falsifiable windows need dated model outputs or method disclosure, not vibes. Useful beside energy-logistics or sovereign-debt weeks when Hormuz or fiscal stress is the question. |
+| `baud` | 0.76 | 0.40 | 0.62 | Law-of-war and alliance-mandate framing stays recognizable across crises; many claims hinge on classified or contested sourcing, so closure is slow. Often pulled in when the notebook needs European or UN-adjacent tension beside U.S. military-dissent lanes. |
+| `berletic` | 0.74 | 0.36 | 0.58 | Industrial and sanctions-throughput arguments are a clear signature; headline battle maps age faster than factory counts, so pair him when logistics and attrition matter. Bridges to energy-system and realist lanes without replacing hull-level ORBAT work. |
 
 ---
 
@@ -276,27 +276,27 @@ You do **not** get a special “joint thread.” You **populate** each expert’
 
 | Deprecated | Use instead |
 |------------|-------------|
-| `islamabad-process` | `seyed-marandi` |
-| `washington-channel` | `scott-ritter` |
-| `lebanon-scope` | `trita-parsi` |
-| `hormuz-domestic` | `robert-barnes` |
-| `third-party-system` | `douglas-macgregor` |
-| `game-theory-escalation` | `robert-pape` |
-| `extension-game` | `daniel-davis` |
-| `structural-pause` | `john-mearsheimer` |
-| `diplomatic-institutional` | `alexander-mercouris` |
+| `islamabad-process` | `marandi` |
+| `washington-channel` | `ritter` |
+| `lebanon-scope` | `parsi` |
+| `hormuz-domestic` | `barnes` |
+| `third-party-system` | `macgregor` |
+| `game-theory-escalation` | `pape` |
+| `extension-game` | `davis` |
+| `structural-pause` | `mearsheimer` |
+| `diplomatic-institutional` | `mercouris` |
 
-Removed from the table **2026-04-13** — **git history** still has prior rows; do **not** reuse these **`expert_id`s** for new **Names** without clearing the deprecation note: `danny-haiphong`, `intervention-media-hawk`, `skyvirginson-lay-catholic`, `kelly-senate-catholic`, `narrative-faith-meme`, `delegation-babysitter`. **Coverage:** **Haiphong**-hosted digests stay linked from **`larry-johnson`** / digest file; **Keane**-class TV, **Kushner**/**Witkoff** narrators, **SkyVirginSon** / **Kelly** / **Milad** lanes → pair under existing rows (**`daniel-davis`**, **`scott-ritter`**, **`seyed-marandi`**, **`ROME`** / [trump-religion-papacy-arc.md](trump-religion-papacy-arc.md), **`narrative-escalation`** grep) instead of dedicated ids.
+Removed from the table **2026-04-13** — **git history** still has prior rows; do **not** reuse these **`expert_id`s** for new **Names** without clearing the deprecation note: `danny-haiphong`, `intervention-media-hawk`, `skyvirginson-lay-catholic`, `kelly-senate-catholic`, `narrative-faith-meme`, `delegation-babysitter`. **Coverage:** **Haiphong**-hosted digests stay linked from **`johnson`** / digest file; **Keane**-class TV, **Kushner**/**Witkoff** narrators, **SkyVirginSon** / **Kelly** / **Milad** lanes → pair under existing rows (**`davis`**, **`ritter`**, **`marandi`**, **`ROME`** / [trump-religion-papacy-arc.md](trump-religion-papacy-arc.md), **`narrative-escalation`** grep) instead of dedicated ids.
 
-Removed from the table **2026-04-14** — **`hormuz-story-fork`** (commentators John Solomon / Chris Martenson). **Coverage:** U.S. domestic Hormuz story split (e.g. JTN “strategic asset” vs satirical spiral) → `batch-analysis` + topic tags only; pair with **`robert-barnes`** when a third pole matters. Git history / 2026-04-12 inbox lines may still name Solomon or Martenson; do **not** use `thread:hormuz-story-fork` on new ingests.
+Removed from the table **2026-04-14** — **`hormuz-story-fork`** (commentators John Solomon / Chris Martenson). **Coverage:** U.S. domestic Hormuz story split (e.g. JTN “strategic asset” vs satirical spiral) → `batch-analysis` + topic tags only; pair with **`barnes`** when a third pole matters. Git history / 2026-04-12 inbox lines may still name Solomon or Martenson; do **not** use `thread:hormuz-story-fork` on new ingests.
 
 ---
 
 ## Related voices (not separate rows)
 
-- **Andrew Napolitano** — **Judging Freedom** **host**; **not** **`scott-ritter`**. **`scott-ritter`** = **Scott Ritter** ingests only. **Host-only** segments → [daily-strategy-inbox.md](daily-strategy-inbox.md) **Host-only** rule: **`thread:`** only when a **named** indexed expert speaks, else **omit**.
+- **Andrew Napolitano** — **Judging Freedom** **host**; **not** **`ritter`**. **`ritter`** = **Scott Ritter** ingests only. **Host-only** segments → [daily-strategy-inbox.md](daily-strategy-inbox.md) **Host-only** rule: **`thread:`** only when a **named** indexed expert speaks, else **omit**.
 - **`@Pontifex` / Holy See** — Institutional **Rome** line: use **`ROME`**, [ROME-PASS.md](../work-strategy-rome/ROME-PASS.md), [rome-persia-legitimacy-signal-check.md](rome-persia-legitimacy-signal-check.md); not a freelance **expert** row.
-- **Joe Kent** — Resignation-letter **war rationale**; pair with **`daniel-davis`** / **`scott-ritter`** when citing, not a duplicate of IAEA/DNI.
+- **Joe Kent** — Resignation-letter **war rationale**; pair with **`davis`** / **`ritter`** when citing, not a duplicate of IAEA/DNI.
 - **Milad33B** — **Meme** / **faith-escalation** lane: use **`narrative-escalation`** + `Milad` in cold and [trump-religion-papacy-arc.md](trump-religion-papacy-arc.md); policy Hormuz threads stay separate.
 
 ---

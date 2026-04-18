@@ -54,7 +54,7 @@ memo_format_version: 1
 - [essay-the-secret-history-of-the-world-1-analysis.md](essay-the-secret-history-of-the-world-1-analysis.md) — prior essay in chronological chain (Aug 20, 2025)
 - [essay-the-secret-history-of-the-world-3-analysis.md](essay-the-secret-history-of-the-world-3-analysis.md) — next ingested essay (Aug 26, 2025)
 - [secret-history-02-how-societies-collapse.md](../lectures/secret-history-02-how-societies-collapse.md) — same **Piketty** / **Turchin** / **Spengler** triad and decline framing (lecture spine)
-- [interviews-02-glenn-diesen-west-civilizational-collapse.md](../lectures/interviews-02-glenn-diesen-west-civilizational-collapse.md) — **energy**, **openness**, **cohesion** + three theorists (interview crosswalk)
+- [interviews-02-diesen-west-civilizational-collapse.md](../lectures/interviews-02-diesen-west-civilizational-collapse.md) — **energy**, **openness**, **cohesion** + three theorists (interview crosswalk)
 
 ## Follow-ups
 

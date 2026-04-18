@@ -17,7 +17,7 @@ quality_level: draft
 - **video_id:** `ORyCS0r2Tpg`
 - **canonical_url:** https://www.youtube.com/watch?v=ORyCS0r2Tpg
 - **series / episode:** Predictive History · Volume VI — Interviews #3
-- **raw_transcript:** [lectures/interviews-03-glenn-diesen-predictions-2026-empire-rivalry-collapse.md](../lectures/interviews-03-glenn-diesen-predictions-2026-empire-rivalry-collapse.md)
+- **raw_transcript:** [lectures/interviews-03-diesen-predictions-2026-empire-rivalry-collapse.md](../lectures/interviews-03-diesen-predictions-2026-empire-rivalry-collapse.md)
 - **analyzed_at:** 2026-03-25 (operator)
 
 ## Thesis / aim
@@ -67,7 +67,7 @@ Forward-looking **2026** **interview**: **US–China** **April** **summit** as *
 - [Interviews #4 — Danny Haiphong — Iran / empire](H5lCJ0D4DpY-interviews-04-analysis.md) — **Iran** **2026** **flashpoint** **/** **NSS** **(Jan** **18)**.
 - [Interviews #5 — Dimitri Lascaris](uHIdRgFypNo-interviews-05-analysis.md) — **Iran** **/** **Hormuz** **/** **Carney** **Davos** **(Jan** **22)**.
 - [Interviews #6 — Great Power Wars](80jUKe0blAQ-interviews-06-analysis.md) (Glenn Diesen) — **Carney**, **NATO**, **Trump** **themes** **carry** **forward**.
-- [lectures/interviews-03-glenn-diesen-predictions-2026-empire-rivalry-collapse.md](../lectures/interviews-03-glenn-diesen-predictions-2026-empire-rivalry-collapse.md)
+- [lectures/interviews-03-diesen-predictions-2026-empire-rivalry-collapse.md](../lectures/interviews-03-diesen-predictions-2026-empire-rivalry-collapse.md)
 
 ## Follow-ups
 

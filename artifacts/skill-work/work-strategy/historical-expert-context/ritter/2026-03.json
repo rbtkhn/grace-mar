@@ -1,0 +1,27 @@
+{
+  "expert_id": "ritter",
+  "thread_path": "docs/skill-work/work-strategy/strategy-notebook/strategy-expert-ritter-thread.md",
+  "segment_id": "2026-03",
+  "parse_note": "parsed `## YYYY-MM` month segments",
+  "segment": {
+    "segment_id": "2026-03",
+    "raw_text": "- [strength: low] **Signal:** US–Israel campaign against Iran described as underperforming strategically; missile-defense and dispersal themes recur in cited pieces.\n- [strength: low] **Shift:** Emphasis moves from “buildup” framing (Jan) to “campaign trajectory / failure mode” framing (Mar) in the reconstructed arc — **drift** to be checked against April machine extraction.\n\n---",
+    "bullets": [
+      "[strength: low] **Signal:** US–Israel campaign against Iran described as underperforming strategically; missile-defense and dispersal themes recur in cited pieces.",
+      "[strength: low] **Shift:** Emphasis moves from “buildup” framing (Jan) to “campaign trajectory / failure mode” framing (Mar) in the reconstructed arc — **drift** to be checked against April machine extraction."
+    ],
+    "strength_counts": {
+      "high": 0,
+      "medium": 0,
+      "low": 2
+    },
+    "signal_lines": [
+      "[strength: low] **Signal:** US–Israel campaign against Iran described as underperforming strategically; missile-defense and dispersal themes recur in cited pieces."
+    ],
+    "tension_lines": [],
+    "shift_lines": [
+      "[strength: low] **Shift:** Emphasis moves from “buildup” framing (Jan) to “campaign trajectory / failure mode” framing (Mar) in the reconstructed arc — **drift** to be checked against April machine extraction."
+    ],
+    "source": "h2"
+  }
+}

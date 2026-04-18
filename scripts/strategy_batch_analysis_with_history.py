@@ -52,7 +52,7 @@ def read_json(path: Path) -> Any:
 def parse_pair(raw: str) -> tuple[str, str]:
     m = PAIR_RE.match(raw)
     if not m:
-        raise SystemExit("--pair must look like: scott-ritter,daniel-davis")
+        raise SystemExit("--pair must look like: ritter,davis")
     return m.group(1).strip().lower(), m.group(2).strip().lower()
 
 

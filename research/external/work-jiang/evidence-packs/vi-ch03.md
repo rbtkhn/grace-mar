@@ -8,7 +8,7 @@ Book chapter for Interviews episode 3 — Volume VI Part I; divergence end-box p
 
 ## Core sources
 
-- `vi-03` → [interviews-03-glenn-diesen-predictions-2026-empire-rivalry-collapse.md](lectures/interviews-03-glenn-diesen-predictions-2026-empire-rivalry-collapse.md)
+- `vi-03` → [interviews-03-diesen-predictions-2026-empire-rivalry-collapse.md](lectures/interviews-03-diesen-predictions-2026-empire-rivalry-collapse.md)
 
 ## Core analysis
 

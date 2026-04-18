@@ -1,0 +1,22 @@
+{
+  "expert_id": "pape",
+  "thread_path": "docs/skill-work/work-strategy/strategy-notebook/strategy-expert-pape-thread.md",
+  "segment_id": "2026-02",
+  "parse_note": "parsed `## YYYY-MM` month segments",
+  "segment": {
+    "segment_id": "2026-02",
+    "raw_text": "February shows **no indexed Q1 primary** in-repo; **`davis`** / **`mearsheimer`** crosses stay **labeled** when coercion vocabulary meets structural-realist reads.\n\n- [strength: low] **Repeat:** Escalation Trap Substack index — not a verified February posting calendar.",
+    "bullets": [
+      "[strength: low] **Repeat:** Escalation Trap Substack index — not a verified February posting calendar."
+    ],
+    "strength_counts": {
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "signal_lines": [],
+    "tension_lines": [],
+    "shift_lines": [],
+    "source": "h2"
+  }
+}

@@ -6,13 +6,13 @@ WORK-only artifacts produced by [`scripts/strategy_historical_expert_context.py`
 
 ```bash
 python3 scripts/strategy_historical_expert_context.py \
-  --expert-id scott-ritter \
+  --expert-id ritter \
   --start-segment 2026-01 \
   --end-segment 2026-03 \
   --dry-run
 
 python3 scripts/strategy_historical_expert_context.py \
-  --expert-id scott-ritter \
+  --expert-id ritter \
   --start-segment 2026-01 \
   --end-segment 2026-03 \
   --apply
@@ -40,6 +40,6 @@ Reads only the human layer **above** `<!-- strategy-expert-thread:start -->` in 
 **Manual paste (still valid):** copy the **Prompt-ready compact block** from a generated expert `.md` (fenced `text` section) into your batch-analysis prompt or scratch, **before** the canonical inbox line:
 
 ```text
-historical-expert-context | scott-ritter | stance=... | tensions=... | provenance=...
+historical-expert-context | ritter | stance=... | tensions=... | provenance=...
 `batch-analysis | YYYY-MM-DD | Ritter × Davis | ...`
 ```

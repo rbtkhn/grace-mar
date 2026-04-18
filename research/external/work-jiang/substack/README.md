@@ -62,7 +62,7 @@ This folder holds **operator-maintained notes** that map **individual posts** to
 | **Carriers** vulnerable / **air supremacy** doubt | **Tucker #11**; **Geo #8**; **GT #9** / **GT #11** |
 | **Israeli** cohesion, **Mossad** / decapitation vs **US** bulk | **GT #16**; **Interviews #8**; **Interviews #9** |
 | **Greater Israel**, **US** exit, **GCC**/**Iran**/**Russia–China** geometry | **GT #16**; **SH #28**; **Tucker #11** |
-| **Transnational capital**, **Wall Street**, **London**, **BIS** / **Basel** frame | **GT #16**; [Interviews #5 — Lascaris](../lectures/interviews-05-dimitri-lascaris-trump-iran-davos-canada-china.md); [Interviews #2 — Diesen](../lectures/interviews-02-glenn-diesen-west-civilizational-collapse.md) |
+| **Transnational capital**, **Wall Street**, **London**, **BIS** / **Basel** frame | **GT #16**; [Interviews #5 — Lascaris](../lectures/interviews-05-dimitri-lascaris-trump-iran-davos-canada-china.md); [Interviews #2 — Diesen](../lectures/interviews-02-diesen-west-civilizational-collapse.md) |
 | **Epstein** / elite morale, **“pizza and grape soda”** coda | [Game Theory #13 — Epstein’s World](../lectures/game-theory-13-epsteins-world.md); Substack **Twilight of the Liberal Elite** (2026-02-07) — [essays/twilight-of-the-liberal-elite.md](essays/twilight-of-the-liberal-elite.md), twenty-fifth-to-last section in this file |
 | **Trump** + **Putin** as loose variables vs financier plan | [Geo-Strategy #9](../lectures/geo-strategy-09-putins-war-for-the-soul-of-russia.md), [Geo-Strategy #10](../lectures/geo-strategy-10-putins-strategic-imagination.md); Trump–Iran across **GT #9–#16** and geo-strategy updates |
 
@@ -892,7 +892,7 @@ This folder holds **operator-maintained notes** that map **individual posts** to
 
 | Substack theme | In-repo touchpoints |
 |----------------|---------------------|
-| **Piketty** / **financialization** / **rentier** | [Secret History lecture #2 — How Societies Collapse](../lectures/secret-history-02-how-societies-collapse.md); [Interviews #2 — Diesen](../lectures/interviews-02-glenn-diesen-west-civilizational-collapse.md) |
+| **Piketty** / **financialization** / **rentier** | [Secret History lecture #2 — How Societies Collapse](../lectures/secret-history-02-how-societies-collapse.md); [Interviews #2 — Diesen](../lectures/interviews-02-diesen-west-civilizational-collapse.md) |
 | **Turchin** / **elite overproduction** | [SH #2 lecture](../lectures/secret-history-02-how-societies-collapse.md); **Diesen #2**; [Civilization #6 — Elite overproduction](../lectures/civilization-06-elite-overproduction-and-the-bronze-age-collapse.md); [Geo-Strategy #20 — Why the West Is Doomed](../lectures/geo-strategy-20-why-the-west-is-doomed.md) |
 | **Spengler** / **civilizational** life cycle | [SH #2 lecture](../lectures/secret-history-02-how-societies-collapse.md); **Diesen #2**; **Geo #20** neighbors |
 | **Energy** / **openness** / **cohesion** (resilience lens) | **Diesen #2** (explicit triad in interview topic line) |

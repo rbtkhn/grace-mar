@@ -11,11 +11,11 @@ LEARN MODE is an **explicit deep-analysis mode**. It does **not** replace the no
 
 ## Canonical mind references
 
-All LEARN MODE sessions **must** reference the three primary CMC analytical lenses (canonical templates live in **civilization_memory**). In this repo, **entry-point stubs** live under [`minds/`](minds/); each stub links to the matching `CIV–MIND–*.md` template.
+All LEARN MODE sessions **must** reference the three primary CMC analytical lenses (upstream templates live in **civilization_memory** for optional diff). In this repo, **long-form fingerprints (SSOT)** live in the strategy-expert **`-mind.md`** files; [`strategy-notebook/minds/CIV-MIND-*.md`](strategy-notebook/minds/) are **stable redirect paths** to the same bodies.
 
-- **mind-mercouris.md** — Legitimacy, narrative grammar, recursive civilizational self-conception, doctrine evolution, and symbolic continuity.
-- **mind-mearsheimer.md** — Power distribution, security dilemmas, offensive/defensive realism, alliance dynamics, and great-power competition geometry.
-- **mind-barnes.md** — Material foundations, liability chains, extraction/defection logic, fiscal and resource constraints, and structural economic realities.
+- **[`strategy-expert-mercouris-mind.md`](strategy-notebook/strategy-expert-mercouris-mind.md)** — Legitimacy, narrative grammar, recursive civilizational self-conception, doctrine evolution, and symbolic continuity.
+- **[`strategy-expert-mearsheimer-mind.md`](strategy-notebook/strategy-expert-mearsheimer-mind.md)** — Power distribution, security dilemmas, offensive/defensive realism, alliance dynamics, and great-power competition geometry.
+- **[`strategy-expert-barnes-mind.md`](strategy-notebook/strategy-expert-barnes-mind.md)** — Material foundations, liability chains, extraction/defection logic, fiscal and resource constraints, and structural economic realities.
 
 These three minds form the **Tri-Frame Synthesis** and must be applied unless a single-frame analysis is explicitly justified.
 
@@ -28,7 +28,7 @@ These three minds form the **Tri-Frame Synthesis** and must be applied unless a 
 2. **Context loading**  
    - Load current **STRATEGY** ledger: [`STRATEGY.md`](STRATEGY.md) (§I CORE + relevant lane-specific core + recent §III SCHOLAR).  
    - Load relevant **[STRATEGY.md](STRATEGY.md) §IV** (operator strategy log **in this file only**; not CMC `MEM–*` shards under `research/repos/civilization_memory/`).  
-   - Load the three canonical minds via [`minds/`](minds/) (follow links to `CIV–MIND–*.md` as needed).
+   - Load the three canonical minds (open each **`-mind.md`** above, or follow [`minds/README.md`](minds/README.md) → expert bundle table).
 
 3. **Analysis sequence** (mandatory)  
    a. Failure-first scan (identify collapse points, legitimacy breakdowns, or structural overloads).  

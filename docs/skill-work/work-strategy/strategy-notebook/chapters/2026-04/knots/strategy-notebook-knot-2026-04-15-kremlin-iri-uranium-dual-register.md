@@ -16,8 +16,8 @@ WORK only; not Record.
 ### Lineage
 
 - **Inbox:** [`daily-strategy-inbox.md`](../../../daily-strategy-inbox.md) — Wire capture — 2026-04-15 (9 lines + 3 batch-analysis); `batch-analysis | 2026-04-15 | §1d Kremlin + §1h IRI MFA (uranium off-ramp)`, `batch-analysis | 2026-04-15 | §1h dual register (MFA vs IRGC)`, `batch-analysis | 2026-04-15 | Leo XIV + Vance (legitimacy collision)`
-- **Expert threads:** `thread:alexander-mercouris` (pending; Mercouris 04-15 episode URL not yet pinned), laterally `thread:scott-ritter` (blockade enforcement mechanics — **see owner knot below**, not re-derived here), `thread:trita-parsi` (war-powers / accountability frame for Vance "grand bargain")
-- **Blockade mechanics owner:** [strategy-notebook-knot-2026-04-14-scott-ritter-blockade-hormuz-weave.md](strategy-notebook-knot-2026-04-14-scott-ritter-blockade-hormuz-weave.md) — **hull-level / porous–blockade read**, picket vs boarding, third-country hulls, `thread:scott-ritter` ingest. This knot cites **blockade** only as **policy / register / legitimacy** context in **§1e–§1h**; **no duplicate ORBAT or sea-control prose** beyond wire-summary bullets below.
+- **Expert threads:** `thread:mercouris` (pending; Mercouris 04-15 episode URL not yet pinned), laterally `thread:ritter` (blockade enforcement mechanics — **see owner knot below**, not re-derived here), `thread:parsi` (war-powers / accountability frame for Vance "grand bargain")
+- **Blockade mechanics owner:** [strategy-notebook-knot-2026-04-14-ritter-blockade-hormuz-weave.md](strategy-notebook-knot-2026-04-14-ritter-blockade-hormuz-weave.md) — **hull-level / porous–blockade read**, picket vs boarding, third-country hulls, `thread:ritter` ingest. This knot cites **blockade** only as **policy / register / legitimacy** context in **§1e–§1h**; **no duplicate ORBAT or sea-control prose** beyond wire-summary bullets below.
 - **History resonance:** CASE-0007 (Habsburg administrative overcomplexity — coalition coordination cost under multi-party blockade), CASE-0014 (Austro-Hungarian elite coordination strain — internal management consuming strategic bandwidth; France-UK split from US as instance)
 - **Civilizational bridge:** deferred — Kremlin-IRI enrichment convergence may warrant a CMC mechanism entry (sovereign-custody-as-compromise pattern) if the off-ramp materializes; not premature
 
@@ -25,7 +25,7 @@ WORK only; not Record.
 
 ### Signal
 
-**Mechanics pointer:** Interdiction semantics, **porous / political blockade** framing, and **Ritter-class** operational vocabulary → **04-14** [Scott Ritter — Hormuz blockade weave](strategy-notebook-knot-2026-04-14-scott-ritter-blockade-hormuz-weave.md). **Signal** here = **same-day convergence** only (**uranium off-ramp**, **IRI dual register**, **legitimacy seam**).
+**Mechanics pointer:** Interdiction semantics, **porous / political blockade** framing, and **Ritter-class** operational vocabulary → **04-14** [Scott Ritter — Hormuz blockade weave](strategy-notebook-knot-2026-04-14-ritter-blockade-hormuz-weave.md). **Signal** here = **same-day convergence** only (**uranium off-ramp**, **IRI dual register**, **legitimacy seam**).
 
 Five-channel harvest on the same calendar day produced three convergence findings that don't appear in any single channel read:
 
@@ -59,7 +59,7 @@ A moral objection (Leo XIV) can be dismissed as non-political. An alliance defec
 - **§1h:** [Fars News EN — Baghaei via Pakistan (15 Apr)](https://farsnews.ir/Rahgozar_b/1776257144908428059) · [Al Jazeera — Iran warns ceasefire end (15 Apr)](https://www.aljazeera.com/news/2026/4/15/iran-warns-us-naval-blockade-threatens-ceasefire)
 - **Rome:** [AP — Leo XIV demands end to war (13–14 Apr)](https://apnews.com/article/vatican-pope-iran-war-trump-aa33df8902ca4f30f38e39f1d4b651b2)
 - **Enforcement:** [gCaptain — Hormuz enforcement phase](https://gcaptain.com/all-eyes-on-hormuz-as-u-s-maritime-blockade-on-iran-enters-enforcement-phase/) · [FP — US blockade](https://foreignpolicy.com/2026/04/13/us-military-blockade-iran-ports-strait-hormuz-trump-pope-leo-nato/)
-- **Sister knots:** [strategy-notebook-knot-2026-04-14-scott-ritter-blockade-hormuz-weave.md](strategy-notebook-knot-2026-04-14-scott-ritter-blockade-hormuz-weave.md) (blockade mechanics), [strategy-notebook-knot-2026-04-14-parsi-davis-war-powers.md](strategy-notebook-knot-2026-04-14-parsi-davis-war-powers.md) (accountability language for "grand bargain"), [strategy-notebook-knot-2026-04-12-islamabad-hormuz-thesis-weave.md](strategy-notebook-knot-2026-04-12-islamabad-hormuz-thesis-weave.md) (Islamabad collapse + Thesis A/B precursor)
+- **Sister knots:** [strategy-notebook-knot-2026-04-14-ritter-blockade-hormuz-weave.md](strategy-notebook-knot-2026-04-14-ritter-blockade-hormuz-weave.md) (blockade mechanics), [strategy-notebook-knot-2026-04-14-parsi-davis-war-powers.md](strategy-notebook-knot-2026-04-14-parsi-davis-war-powers.md) (accountability language for "grand bargain"), [strategy-notebook-knot-2026-04-12-islamabad-hormuz-thesis-weave.md](strategy-notebook-knot-2026-04-12-islamabad-hormuz-thesis-weave.md) (Islamabad collapse + Thesis A/B precursor)
 - **Case echoes:** CASE-0007 (coalition complexity), CASE-0014 (elite coordination strain)
 - **Day block:** [`days.md` § 2026-04-15](../days.md#2026-04-15)
 
@@ -69,7 +69,7 @@ A moral objection (Leo XIV) can be dismissed as non-political. An alliance defec
 - **IRI register dominance (Thesis B):** Track which institutional voice (MFA vs IRGC) leads Iranian media in next 48h; if IRGC escalation language displaces MFA opening, the ceasefire clock shortens and Thesis B's "conditioned branching" framing needs revision.
 - **France-UK mission (Thesis C):** Mandate, assets, legal basis — test whether distance-signaling or operational divergence. UK MOD / Élysée readout is the source.
 - **§1h `fa` primaries:** IRNA / presidency.ir Persian text for Baghaei + Abdollahi — load-bearing when this knot's copy cites "Iran says."
-- **Mercouris 04-15 episode:** Pin canonical URL for `thread:alexander-mercouris` when available; likely carries Kremlin-IRI convergence analysis in his register.
+- **Mercouris 04-15 episode:** Pin canonical URL for `thread:mercouris` when available; likely carries Kremlin-IRI convergence analysis in his register.
 - **CMC candidate:** If uranium off-ramp materializes as a pattern (sovereign custody as compromise mechanism), draft a civilizational-strategy-surface entry. Not premature yet.
 
 ---

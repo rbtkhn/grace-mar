@@ -10,21 +10,15 @@
 
 ### 1.1 The three “minds” (cognitive lenses)
 
-**Canonical mind files (Grace-Mar — full content in repo, no civ-mem required):**
+**Canonical mind files (Grace-Mar — full content in repo, no civ-mem required):** long-form fingerprints are the strategy-expert **`-mind.md`** files; `strategy-notebook/minds/CIV-MIND-*.md` **redirect** to them (stable links for skills and upstream naming).
 
-- [`strategy-notebook/minds/CIV-MIND-MERCOURIS.md`](../strategy-notebook/minds/CIV-MIND-MERCOURIS.md) — legitimacy, narrative, doctrine, symbolic continuity (often **primary** in upstream CMC).
-- [`strategy-notebook/minds/CIV-MIND-MEARSHEIMER.md`](../strategy-notebook/minds/CIV-MIND-MEARSHEIMER.md) — power, alliances, security dilemmas, great-power geometry (**advisory / sharpening** in upstream design).
-- [`strategy-notebook/minds/CIV-MIND-BARNES.md`](../strategy-notebook/minds/CIV-MIND-BARNES.md) — material bases, liabilities, fiscal/resource constraints, “who defects first” (**catalyst / third voice** in upstream design).
+- [`strategy-expert-mercouris-mind.md`](../strategy-notebook/strategy-expert-mercouris-mind.md) — legitimacy, narrative, doctrine, symbolic continuity (often **primary** in upstream CMC). Redirect: [`CIV-MIND-MERCOURIS.md`](../strategy-notebook/minds/CIV-MIND-MERCOURIS.md).
+- [`strategy-expert-mearsheimer-mind.md`](../strategy-notebook/strategy-expert-mearsheimer-mind.md) — power, alliances, security dilemmas, great-power geometry (**advisory / sharpening** in upstream design). Redirect: [`CIV-MIND-MEARSHEIMER.md`](../strategy-notebook/minds/CIV-MIND-MEARSHEIMER.md).
+- [`strategy-expert-barnes-mind.md`](../strategy-notebook/strategy-expert-barnes-mind.md) — material bases, liabilities, fiscal/resource constraints, “who defects first” (**catalyst / third voice** in upstream design). Redirect: [`CIV-MIND-BARNES.md`](../strategy-notebook/minds/CIV-MIND-BARNES.md).
 
 **Optional:** If `civilization_memory` (civ-mem) is present, upstream `docs/templates/CIV–MIND–*.md` for governance-only diff — not required for work-strategy.
 
-Short **entry-point stubs** (link to canonical files above — avoid drift):
-
-- `docs/skill-work/work-strategy/minds/mind-mercouris.md`
-- `docs/skill-work/work-strategy/minds/mind-mearsheimer.md`
-- `docs/skill-work/work-strategy/minds/mind-barnes.md`
-
-Index: `docs/skill-work/work-strategy/minds/README.md`.
+Index (tri-frame expert bundles): [`docs/skill-work/work-strategy/minds/README.md`](../minds/README.md).
 
 **Important:** Grace-Mar does **not** ship a live CMC console; these files are **reference** for roles, tensions, and optional voice-shaped analysis — not mandatory full “polyphonic engine” emulation in chat.
 

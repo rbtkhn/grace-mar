@@ -1,0 +1,24 @@
+{
+  "expert_id": "crooke",
+  "thread_path": "docs/skill-work/work-strategy/strategy-notebook/strategy-expert-crooke-thread.md",
+  "segment_id": "2026-01",
+  "parse_note": "parsed `## YYYY-MM` month segments",
+  "segment": {
+    "segment_id": "2026-01",
+    "raw_text": "January has **no dated** notebook ingest row for Crooke in this snapshot; the voice stays **Levant–Islamabad room / spoiler** reads beside **`davis`** digests when the operator crosses lanes — per roster. Hub URLs are **anchors** only.\n\n- [strength: low] **Identity anchor:** Conflicts Forum + Substack (profile Seed).  \n  [conflictsforum.org](https://conflictsforum.org/) · [Substack @alastaircrooke](https://substack.com/@alastaircrooke)",
+    "bullets": [
+      "[strength: low] **Identity anchor:** Conflicts Forum + Substack (profile Seed)."
+    ],
+    "strength_counts": {
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "signal_lines": [],
+    "tension_lines": [
+      "[strength: low] **Identity anchor:** Conflicts Forum + Substack (profile Seed)."
+    ],
+    "shift_lines": [],
+    "source": "h2"
+  }
+}

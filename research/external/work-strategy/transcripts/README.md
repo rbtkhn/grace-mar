@@ -39,7 +39,7 @@ Lens pass (optional — pick one, combine, or skip):
 - Mercouris: <one line in Mercouris linguistic fingerprint>
 ```
 
-**Fingerprint:** Same requirement as [`skill-strategy` § Post-entry lens offer](../../../../.cursor/skills/skill-strategy/SKILL.md#post-entry-lens-offer) — read **LINGUISTIC FINGERPRINT** in [CIV-MIND-BARNES.md](../strategy-notebook/minds/CIV-MIND-BARNES.md), [CIV-MIND-MEARSHEIMER.md](../strategy-notebook/minds/CIV-MIND-MEARSHEIMER.md), [CIV-MIND-MERCOURIS.md](../strategy-notebook/minds/CIV-MIND-MERCOURIS.md). No generic placeholder lines.
+**Fingerprint:** Same requirement as [`skill-strategy` § Post-entry lens offer](../../../../.cursor/skills/skill-strategy/SKILL.md#post-entry-lens-offer) — read **LINGUISTIC FINGERPRINT** in [strategy-expert-barnes-mind.md](../../../../docs/skill-work/work-strategy/strategy-notebook/strategy-expert-barnes-mind.md), [strategy-expert-mearsheimer-mind.md](../../../../docs/skill-work/work-strategy/strategy-notebook/strategy-expert-mearsheimer-mind.md), [strategy-expert-mercouris-mind.md](../../../../docs/skill-work/work-strategy/strategy-notebook/strategy-expert-mercouris-mind.md) (SSOT; [`CIV-MIND-*.md`](../../../../docs/skill-work/work-strategy/strategy-notebook/minds/) redirect to the same files). No generic placeholder lines.
 
 **Rules:** **B → M → M** order; **one-liners in-voice only** until the operator picks; not a default **tri-frame** deep pass unless they ask (see [strategy-minds-granular](../../../../.cursor/rules/strategy-minds-granular.mdc)). If they pick a lens, append to that day’s **`days.md`** block per [MINDS-SKILL-STRATEGY-PATTERNS](../../../../docs/skill-work/work-strategy/minds/MINDS-SKILL-STRATEGY-PATTERNS.md) recipes.
 

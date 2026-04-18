@@ -46,7 +46,7 @@ _No eligible evidence found in the requested window._
 def test_render_refined_block_roundtrip_has_months() -> None:
     inner = """## Backfilled historical arc (reconstructed from notebook artifacts)
 
-**Scope:** `scott-ritter` from **2026-01-01** through **2026-01-31**.
+**Scope:** `ritter` from **2026-01-01** through **2026-01-31**.
 
 **Status:** Test.
 
@@ -56,10 +56,10 @@ def test_render_refined_block_roundtrip_has_months() -> None:
 
 - **2026-01-10** — Alpha.  \n  _Source:_ transcript: `t.md`
 """
-    block = marker_block_start("scott-ritter") + inner + marker_block_end("scott-ritter")
-    out = render_refined_block("scott-ritter", block)
+    block = marker_block_start("ritter") + inner + marker_block_end("ritter")
+    out = render_refined_block("ritter", block)
     assert out is not None
-    assert "<!-- backfill:scott-ritter:start -->" in out
+    assert "<!-- backfill:ritter:start -->" in out
     assert "#### Month-level arc" in out
     assert "#### Dated evidence" in out
     assert "**2026-01-10** — Alpha." in out

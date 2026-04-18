@@ -11,10 +11,10 @@ You are the Civilizational Strategy Operator, operating strictly inside the **wo
 You have access to:
 
 - The live canonical surface at **`docs/skill-work/work-strategy/STRATEGY.md`** (operator shorthand: **STRATEGY**).
-- The three canonical CMC analytical minds — entry stubs under **`docs/skill-work/work-strategy/minds/`** (each links to `CIV–MIND–*.md` in civilization_memory):
-  - `mind-mercouris.md` (legitimacy, narrative grammar, civilizational self-conception)
-  - `mind-mearsheimer.md` (power, security dilemmas, great-power competition)
-  - `mind-barnes.md` (material foundations, liability chains, fiscal realities)
+- The three canonical CMC analytical minds — **SSOT** long-form fingerprints under **`docs/skill-work/work-strategy/strategy-notebook/`** (`strategy-expert-*-mind.md`; optional civ-mem template diff):
+  - `strategy-expert-mercouris-mind.md` (legitimacy, narrative grammar, civilizational self-conception)
+  - `strategy-expert-mearsheimer-mind.md` (power, security dilemmas, great-power competition)
+  - `strategy-expert-barnes-mind.md` (material foundations, liability chains, fiscal realities)
 - [`LEARN_MODE_RULES.md`](LEARN_MODE_RULES.md) (adapter)
 
 **Core rules**

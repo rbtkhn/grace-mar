@@ -17,14 +17,14 @@
 
 ### Lineage
 
-- **Inbox:** [`daily-strategy-inbox.md`](../../../daily-strategy-inbox.md) — `batch-analysis | 2026-04-14 | Parsi × Davis` (`crosses:trita-parsi+daniel-davis`); **`X | cold`** lines for **`thread:trita-parsi`** (Kallas QT) and **`thread:daniel-davis`** (Congress / blockade / war-powers).
-- **Expert threads:** `trita-parsi`, `daniel-davis`.
+- **Inbox:** [`daily-strategy-inbox.md`](../../../daily-strategy-inbox.md) — `batch-analysis | 2026-04-14 | Parsi × Davis` (`crosses:parsi+davis`); **`X | cold`** lines for **`thread:parsi`** (Kallas QT) and **`thread:davis`** (Congress / blockade / war-powers).
+- **Expert threads:** `parsi`, `davis`.
 - **History resonance:** none this pass
 - **Civilizational bridge:** none this pass
 
 ### Signal
 
-See [`days.md` § Signal — `trita-parsi` / `daniel-davis`](../days.md) and **Weave** lead bullet.
+See [`days.md` § Signal — `parsi` / `davis`](../days.md) and **Weave** lead bullet.
 
 ### Judgment
 
@@ -32,7 +32,7 @@ See [`days.md` § Judgment — *Parsi × Davis (Judgment seam)*](../days.md). Th
 
 ### Links
 
-- **Batch spine:** `batch-analysis | 2026-04-14 | Parsi × Davis` in [daily-strategy-inbox.md](../../../daily-strategy-inbox.md) (search `crosses:trita-parsi+daniel-davis`).
+- **Batch spine:** `batch-analysis | 2026-04-14 | Parsi × Davis` in [daily-strategy-inbox.md](../../../daily-strategy-inbox.md) (search `crosses:parsi+davis`).
 - **Wire bundle (same-day context):** [Roll Call — Iran war powers + expulsion talk](https://rollcall.com/2026/04/13/this-week-iran-war-powers-and-expulsion-talk/) (mirrored in inbox §2c; **verify** date if citing “this week”).
 - **Daniel Davis X (paste-grade):** inbox `X | cold: Daniel Davis` — pin **`TBD`** status URL when stable.
 
@@ -42,7 +42,7 @@ Pins keep **Trita Parsi** (EU / **Kallas** speech-act lane) and **Daniel Davis**
 
 | Pin | Target | URL |
 |-----|--------|-----|
-| **1** | **`batch-analysis | Parsi × Davis`** (`crosses:trita-parsi+daniel-davis`) | [daily-strategy-inbox.md](../../../daily-strategy-inbox.md) — search `crosses:trita-parsi+daniel-davis` |
+| **1** | **`batch-analysis | Parsi × Davis`** (`crosses:parsi+davis`) | [daily-strategy-inbox.md](../../../daily-strategy-inbox.md) — search `crosses:parsi+davis` |
 | **2** | **Parsi** × **Kallas** (quote-grade **X** when pinned) | `https://x.com/tparsi/status/TBD-pin-exact` |
 | **3** | **Davis** war-powers / blockade line (quote-grade **X** when pinned) | `https://x.com/DanielLDavis1/status/TBD-pin-exact` |
 | **4** | Same-week **Congress** procedure context (wire) | [Roll Call — Iran war powers + expulsion talk](https://rollcall.com/2026/04/13/this-week-iran-war-powers-and-expulsion-talk/) |

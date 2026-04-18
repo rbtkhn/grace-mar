@@ -1,0 +1,26 @@
+{
+  "expert_id": "diesen",
+  "thread_path": "docs/skill-work/work-strategy/strategy-notebook/strategy-expert-diesen-thread.md",
+  "segment_id": "2026-04",
+  "parse_note": "parsed `## YYYY-MM` month segments",
+  "segment": {
+    "segment_id": "2026-04",
+    "raw_text": "_Partial month — **2026-04-12** cold ingest (Jiang × Diesen) + **2026-04-14** knots; not a full April ledger._\n\nApril folds **petrodollar / Treasury / Hormuz–Malacca** framing beside Islamabad spine — **vi-14** work-jiang lecture verify path — and abstract compare vs Sachs in dedicated knot.\n\n- [strength: high] **Signal (cold):** Jiang × Glenn Diesen — Iran war as petrodollar / Treasury stress — [YouTube P_DHMUdOVdo](https://www.youtube.com/watch?v=P_DHMUdOVdo) — verify:work-jiang-vi-14 + lecture markdown per ingest line.\n- [strength: medium] **Abstract fork:** [diesen-vi14-petrodollar-vs-sachs-hormuz](strategy-notebook-knot-2026-04-14-diesen-vi14-petrodollar-vs-sachs-hormuz.md) — Judgment-only; not merged voice with Ritter blockade mechanics.\n- [strength: medium] **Lattice:** [ritter-blockade-hormuz-weave](strategy-notebook-knot-2026-04-14-ritter-blockade-hormuz-weave.md) — closure economics seam.\n\n---",
+    "bullets": [
+      "[strength: high] **Signal (cold):** Jiang × Glenn Diesen — Iran war as petrodollar / Treasury stress — [YouTube P_DHMUdOVdo](https://www.youtube.com/watch?v=P_DHMUdOVdo) — verify:work-jiang-vi-14 + lecture markdown per ingest line.",
+      "[strength: medium] **Abstract fork:** [diesen-vi14-petrodollar-vs-sachs-hormuz](strategy-notebook-knot-2026-04-14-diesen-vi14-petrodollar-vs-sachs-hormuz.md) — Judgment-only; not merged voice with Ritter blockade mechanics.",
+      "[strength: medium] **Lattice:** [ritter-blockade-hormuz-weave](strategy-notebook-knot-2026-04-14-ritter-blockade-hormuz-weave.md) — closure economics seam."
+    ],
+    "strength_counts": {
+      "high": 1,
+      "medium": 2,
+      "low": 0
+    },
+    "signal_lines": [
+      "[strength: high] **Signal (cold):** Jiang × Glenn Diesen — Iran war as petrodollar / Treasury stress — [YouTube P_DHMUdOVdo](https://www.youtube.com/watch?v=P_DHMUdOVdo) — verify:work-jiang-vi-14 + lecture markdown per ingest line."
+    ],
+    "tension_lines": [],
+    "shift_lines": [],
+    "source": "h2"
+  }
+}

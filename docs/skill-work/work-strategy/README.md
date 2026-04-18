@@ -81,7 +81,7 @@ Quick index for **Capture**-adjacent surfaces: **narrative register**, **Grok-st
 | **[daily-brief-native-international-pass.md](daily-brief-native-international-pass.md)** | **Native-language triangulation** for international load-bearing stories (§1d / §1e / §1g / §1h + coffee C); one native bullet per jurisdiction alongside wires. |
 | **[daily-brief-jiang-layer.md](daily-brief-jiang-layer.md)** | **Slow layer** pointers (work-jiang) embedded in the daily brief as **§1c** — compressions, sweep snippets, lecture tracks; not breaking news. |
 | **[daily-brief-template.md](daily-brief-template.md)** | Spec for the combined daily brief output. |
-| **[daily-brief-minds-config.json](daily-brief-minds-config.json)** | Optional Tri-Frame **scaffold** overlays after the daily brief (Barnes / Mearsheimer / Mercouris); trimmed `CIV-MIND-*.md` paths; outputs under [minds/outputs](minds/outputs). See [minds/DAILY-BRIEF-MINDS-WORKFLOW.md](minds/DAILY-BRIEF-MINDS-WORKFLOW.md). |
+| **[daily-brief-minds-config.json](daily-brief-minds-config.json)** | Optional Tri-Frame **scaffold** overlays after the daily brief (Barnes / Mearsheimer / Mercouris); strategy-expert **`-mind.md`** paths (SSOT); outputs under [minds/outputs](minds/outputs). See [minds/DAILY-BRIEF-MINDS-WORKFLOW.md](minds/DAILY-BRIEF-MINDS-WORKFLOW.md). |
 | **[daily-brief-minds-menu.md](daily-brief-minds-menu.md)** | Human-readable A–D menus per mind (program order B → M → M). |
 | **[brief-source-registry.md](brief-source-registry.md)** | Human-readable source-governance layer for work-strategy: 6 source classes, artifact-by-artifact usage policy (§6), corroboration expectations by claim strength (§9), transcript discipline (§10), historical/civilizational use policy (§7), weak-signal source bounds (§11), promotion eligibility (§8). Complements (does not duplicate) the [work-politics weekly-brief registry](../work-politics/brief-source-registry.md). WORK only. |
 | **[weak-signals.md](weak-signals.md)** | Weak-signal discipline: **§1f** block, promotion to STRATEGY **§II-A / §III-A / §IV**, analogy audit before overclaiming (WORK only). |
@@ -171,7 +171,7 @@ Default config path: `docs/skill-work/work-strategy/daily-brief-config.json`.
 After `daily-brief-YYYY-MM-DD.md` exists, the operator may run optional **Tri-Frame mind scaffolds** (same generator; **scaffold-only** — no LLM inside the script):
 
 - **Config:** [daily-brief-minds-config.json](daily-brief-minds-config.json)
-- **Trimmed minds:** load `CIV-MIND-BARNES.md`, `CIV-MIND-MEARSHEIMER.md`, `CIV-MIND-MERCOURIS.md` from [`strategy-notebook/minds/`](strategy-notebook/minds/) (see [minds/README.md](minds/README.md))
+- **Mind fingerprints (SSOT):** `strategy-expert-barnes-mind.md`, `strategy-expert-mearsheimer-mind.md`, `strategy-expert-mercouris-mind.md` under [`strategy-notebook/`](strategy-notebook/) — [`strategy-notebook/minds/CIV-MIND-*.md`](strategy-notebook/minds/) redirect to the same bodies (see [minds/README.md](minds/README.md))
 - **Outputs:** `docs/skill-work/work-strategy/minds/outputs/` — dated sidecar files; complete analysis in Cursor or a **`strategy`** pass
 - **CLI:** `scripts/generate_wap_daily_brief.py` — `--offer-minds`, `--mind`, `--mind-option`, `--mind-all`, `--brief-path`, `--skip-brief` (see [minds/DAILY-BRIEF-MINDS-WORKFLOW.md](minds/DAILY-BRIEF-MINDS-WORKFLOW.md))
 

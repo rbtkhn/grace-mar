@@ -1,0 +1,29 @@
+{
+  "expert_id": "diesen",
+  "thread_path": "docs/skill-work/work-strategy/strategy-notebook/strategy-expert-diesen-thread.md",
+  "segment_id": "2026-01",
+  "parse_note": "parsed `## YYYY-MM` month segments",
+  "segment": {
+    "segment_id": "2026-01",
+    "raw_text": "**Greater Eurasia** long-forms with **Marandi** anchor the month — **multipolar** / **non-Western** register on escalation, domestic unrest narrative, and **“limited strike”** assumptions; cross-host **Macgregor** on **rising war risk** keeps the **importer / distance** lane visible beside pure Tehran voice.\n\n- [strength: high] **Through-line:** **Marandi** on **overwhelming retaliation** to any U.S. strike — host **Diesen** — [YouTube I6XHVDtHRX4](https://www.youtube.com/watch?v=I6XHVDtHRX4) — indexes cite **~30 Jan 2026** — verify **title/date** in UI.\n- [strength: medium] **Mechanism:** **Civil unrest** / **war preparation** thread — [Singju Post — Greater Eurasia + Marandi transcript](https://singjupost.com/greater-eurasia-podcast-w-seyed-m-marandi-on-irans-civil-unrest-transcript/) — **transcript-grade**; pair with **Mercouris** diplomatic tickers only via **batch-analysis** seam.\n- [strength: medium] **Parallel lane:** **Macgregor** — **rising war risks** — [Singju Post transcript](https://singjupost.com/greater-eurasia-podcast-w-macgregor-on-rising-war-risks-transcript/) — third-country **distance** from U.S.–Israel frame — **do not** merge with **Marandi** lines without labels.\n- [strength: low] **Lattice:** Upstream of **April** **PH vi-14** / Diesen×Sachs [petrodollar vs Hormuz](strategy-notebook-knot-2026-04-14-diesen-vi14-petrodollar-vs-sachs-hormuz.md) abstract — Q1 is **voice + episode** discipline only.",
+    "bullets": [
+      "[strength: high] **Through-line:** **Marandi** on **overwhelming retaliation** to any U.S. strike — host **Diesen** — [YouTube I6XHVDtHRX4](https://www.youtube.com/watch?v=I6XHVDtHRX4) — indexes cite **~30 Jan 2026** — verify **title/date** in UI.",
+      "[strength: medium] **Mechanism:** **Civil unrest** / **war preparation** thread — [Singju Post — Greater Eurasia + Marandi transcript](https://singjupost.com/greater-eurasia-podcast-w-seyed-m-marandi-on-irans-civil-unrest-transcript/) — **transcript-grade**; pair with **Mercouris** diplomatic tickers only via **batch-analysis** seam.",
+      "[strength: medium] **Parallel lane:** **Macgregor** — **rising war risks** — [Singju Post transcript](https://singjupost.com/greater-eurasia-podcast-w-macgregor-on-rising-war-risks-transcript/) — third-country **distance** from U.S.–Israel frame — **do not** merge with **Marandi** lines without labels.",
+      "[strength: low] **Lattice:** Upstream of **April** **PH vi-14** / Diesen×Sachs [petrodollar vs Hormuz](strategy-notebook-knot-2026-04-14-diesen-vi14-petrodollar-vs-sachs-hormuz.md) abstract — Q1 is **voice + episode** discipline only."
+    ],
+    "strength_counts": {
+      "high": 1,
+      "medium": 2,
+      "low": 1
+    },
+    "signal_lines": [
+      "[strength: medium] **Mechanism:** **Civil unrest** / **war preparation** thread — [Singju Post — Greater Eurasia + Marandi transcript](https://singjupost.com/greater-eurasia-podcast-w-seyed-m-marandi-on-irans-civil-unrest-transcript/) — **transcript-grade**; pair with **Mercouris** diplomatic tickers only via **batch-analysis** seam."
+    ],
+    "tension_lines": [
+      "[strength: low] **Lattice:** Upstream of **April** **PH vi-14** / Diesen×Sachs [petrodollar vs Hormuz](strategy-notebook-knot-2026-04-14-diesen-vi14-petrodollar-vs-sachs-hormuz.md) abstract — Q1 is **voice + episode** discipline only."
+    ],
+    "shift_lines": [],
+    "source": "h2"
+  }
+}

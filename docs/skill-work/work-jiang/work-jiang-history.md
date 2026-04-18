@@ -26,7 +26,7 @@ _(Append below this line.)_
 
 ### 2026-04-07
 
-- **Interviews #13 ingested (PBD Podcast #772):** `vi-13` / `vi-ch13` — `lectures/interviews-13-pbd-podcast-772-jiang-xueqin.md` (operator transcript from grace-mar ingest; one speaker label fix); YouTube `Wio--7_GIOs`, upload date 20260407; VTT `youtube-channels/valuetainment-network/transcripts/Wio--7_GIOs.en.vtt`; draft analysis `analysis/Wio--7_GIOs-interviews-13-analysis.md`; evidence pack `evidence-packs/vi-ch13.md`; `book-architecture.yaml` (`part_2.after_chapter: vi-ch13`), `source-map.yaml`, `CHAPTER-QUEUE-VOLUME-VI.md` (vi-ch12 + vi-ch13 sections), `ANALYSIS-BACKLOG.md` row.
+- **Interviews #13 ingested (PBD Podcast #772):** `vi-13` / `vi-ch13` — `lectures/interviews-13-pbd-podcast-772-jiang.md` (operator transcript from grace-mar ingest; one speaker label fix); YouTube `Wio--7_GIOs`, upload date 20260407; VTT `youtube-channels/valuetainment-network/transcripts/Wio--7_GIOs.en.vtt`; draft analysis `analysis/Wio--7_GIOs-interviews-13-analysis.md`; evidence pack `evidence-packs/vi-ch13.md`; `book-architecture.yaml` (`part_2.after_chapter: vi-ch13`), `source-map.yaml`, `CHAPTER-QUEUE-VOLUME-VI.md` (vi-ch12 + vi-ch13 sections), `ANALYSIS-BACKLOG.md` row.
 - **`normalize_analysis_frontmatter.py`:** Skips `essay-*-analysis.md`, `interviews-NN-analysis.md` (no leading video id), `*-civmem-analysis.md`, `*-psy-hist-analysis.md`, and Substack front matter (`source_kind` / `series: substack`); adds `--only-glob` (fnmatch on basename) so `--write` no longer clobbers Volume VII essay YAML.
 
 ### 2026-04-06

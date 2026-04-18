@@ -8,7 +8,7 @@ Book chapter for Interviews episode 13 — Volume VI Part I; divergence end-box 
 
 ## Core sources
 
-- `vi-13` → [interviews-13-pbd-podcast-772-jiang-xueqin.md](lectures/interviews-13-pbd-podcast-772-jiang-xueqin.md)
+- `vi-13` → [interviews-13-pbd-podcast-772-jiang.md](lectures/interviews-13-pbd-podcast-772-jiang.md)
 
 ## Core analysis
 

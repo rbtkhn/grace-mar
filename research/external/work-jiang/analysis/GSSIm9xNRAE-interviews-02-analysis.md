@@ -17,7 +17,7 @@ quality_level: draft
 - **video_id:** `GSSIm9xNRAE`
 - **canonical_url:** https://www.youtube.com/watch?v=GSSIm9xNRAE
 - **series / episode:** Predictive History · Volume VI — Interviews #2
-- **raw_transcript:** [lectures/interviews-02-glenn-diesen-west-civilizational-collapse.md](../lectures/interviews-02-glenn-diesen-west-civilizational-collapse.md)
+- **raw_transcript:** [lectures/interviews-02-diesen-west-civilizational-collapse.md](../lectures/interviews-02-diesen-west-civilizational-collapse.md)
 - **upload_date (YouTube):** 20251124
 - **analyzed_at:** 2026-03-25 (operator)
 
@@ -68,7 +68,7 @@ Long-form **civilizational** **interview**: **three** **factors** (**energy**, *
 - [Interviews #3 — Predictions 2026](ORyCS0r2Tpg-interviews-03-analysis.md) — **forward** **macro** **/** **US–China** **(Jan** **2026)**.
 - [Interviews #4 — Danny Haiphong — Iran / empire](H5lCJ0D4DpY-interviews-04-analysis.md) — **Iran** **WWIII** **frame** **/** **empire** **collapse** **(Jan** **2026)**.
 - [Interviews #6 — Great Power Wars](80jUKe0blAQ-interviews-06-analysis.md) — **same** **host** **cluster** **as** **Glenn** **Diesen** **;** **empire** **/** **NATO** **/** **elite** **themes**.
-- [lectures/interviews-02-glenn-diesen-west-civilizational-collapse.md](../lectures/interviews-02-glenn-diesen-west-civilizational-collapse.md)
+- [lectures/interviews-02-diesen-west-civilizational-collapse.md](../lectures/interviews-02-diesen-west-civilizational-collapse.md)
 
 ## Follow-ups
 

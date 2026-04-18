@@ -1,0 +1,27 @@
+{
+  "expert_id": "macgregor",
+  "thread_path": "docs/skill-work/work-strategy/strategy-notebook/strategy-expert-macgregor-thread.md",
+  "segment_id": "2026-03",
+  "parse_note": "parsed `## YYYY-MM` month segments",
+  "segment": {
+    "segment_id": "2026-03",
+    "raw_text": "March shifts to **open conflict** commentary — **Persian Gulf** **control** thesis, **dangerous phase** video essays, and **Hormuz** **oil** **band** **warnings**; align with **Jermy** **macro** **closure** lane only via **labeled** **batch-analysis**.\n\n- [strength: high] **Through-line:** **The Iran War Just Entered A Dangerous Phase** — [YouTube VWJPiQV84w4](https://www.youtube.com/watch?v=VWJPiQV84w4) — verify **publish** date in UI.\n- [strength: high] **Mechanism:** **TRUTH About The War In Iran** — [YouTube ZWGN-2WaODU](https://www.youtube.com/watch?v=ZWGN-2WaODU) — **strategic defeat** / **sitting ducks** framing — **not** **AIS** proof.\n- [strength: medium] **Outlet mirror:** **21st Century Wire** — [2026/03 article](https://www.21cir.com/2026/03/191016/) — **tier-C** — use as **pointer** only until **primary** **tape** pinned.\n- [strength: low] **Lattice:** **`pape`** **escalation trap** / **`jermy`** **energy** **system** — **downstream** **April** knots — Q1 **does not** merge voices.\n\nCanonical knot paths and raw ingest lines live in **Segment 2** below (regenerated each **`thread`** run).",
+    "bullets": [
+      "[strength: high] **Through-line:** **The Iran War Just Entered A Dangerous Phase** — [YouTube VWJPiQV84w4](https://www.youtube.com/watch?v=VWJPiQV84w4) — verify **publish** date in UI.",
+      "[strength: high] **Mechanism:** **TRUTH About The War In Iran** — [YouTube ZWGN-2WaODU](https://www.youtube.com/watch?v=ZWGN-2WaODU) — **strategic defeat** / **sitting ducks** framing — **not** **AIS** proof.",
+      "[strength: medium] **Outlet mirror:** **21st Century Wire** — [2026/03 article](https://www.21cir.com/2026/03/191016/) — **tier-C** — use as **pointer** only until **primary** **tape** pinned.",
+      "[strength: low] **Lattice:** **`pape`** **escalation trap** / **`jermy`** **energy** **system** — **downstream** **April** knots — Q1 **does not** merge voices."
+    ],
+    "strength_counts": {
+      "high": 2,
+      "medium": 1,
+      "low": 1
+    },
+    "signal_lines": [
+      "[strength: high] **Mechanism:** **TRUTH About The War In Iran** — [YouTube ZWGN-2WaODU](https://www.youtube.com/watch?v=ZWGN-2WaODU) — **strategic defeat** / **sitting ducks** framing — **not** **AIS** proof."
+    ],
+    "tension_lines": [],
+    "shift_lines": [],
+    "source": "h2"
+  }
+}

@@ -24,11 +24,11 @@
 
 ## Grounding paths
 
-### Mind files (load these — trimmed for strategy-notebook)
+### Mind files (load these — SSOT = expert `-mind.md`)
 
-- [`strategy-notebook/minds/CIV-MIND-MERCOURIS.md`](../strategy-notebook/minds/CIV-MIND-MERCOURIS.md) — dated **operator corpus addenda** (e.g. **III.M** spoken-register scaffolds) live **in-file**; WORK emulation only — not substitute for tier-A verify on current facts.
-- [`strategy-notebook/minds/CIV-MIND-MEARSHEIMER.md`](../strategy-notebook/minds/CIV-MIND-MEARSHEIMER.md)
-- [`strategy-notebook/minds/CIV-MIND-BARNES.md`](../strategy-notebook/minds/CIV-MIND-BARNES.md)
+- [`strategy-expert-mercouris-mind.md`](../strategy-notebook/strategy-expert-mercouris-mind.md) — dated **operator corpus addenda** (e.g. **III.M** spoken-register scaffolds) live **in-file** under the mapped corpus; WORK emulation only — not substitute for tier-A verify on current facts. [`CIV-MIND-MERCOURIS.md`](../strategy-notebook/minds/CIV-MIND-MERCOURIS.md) redirects here.
+- [`strategy-expert-mearsheimer-mind.md`](../strategy-notebook/strategy-expert-mearsheimer-mind.md) — [`CIV-MIND-MEARSHEIMER.md`](../strategy-notebook/minds/CIV-MIND-MEARSHEIMER.md) redirects here.
+- [`strategy-expert-barnes-mind.md`](../strategy-notebook/strategy-expert-barnes-mind.md) — [`CIV-MIND-BARNES.md`](../strategy-notebook/minds/CIV-MIND-BARNES.md) redirects here.
 - [`strategy-notebook/minds/README.md`](../strategy-notebook/minds/README.md)
 
 ### Optional upstream templates (civ-mem — diff / governance-only; not required for Grace-Mar)
@@ -39,16 +39,13 @@ If `research/repos/civilization_memory` is present:
 - `docs/templates/CIV–MIND–MEARSHEIMER.md`
 - `docs/templates/CIV–MIND–BARNES.md`
 
-**Grace-Mar canonical** mind bodies: [`strategy-notebook/minds/`](../strategy-notebook/minds/) (always).
+**Grace-Mar canonical** mind bodies: strategy-expert **`-mind.md`** files under [`strategy-notebook/`](../strategy-notebook/) (SSOT); [`strategy-notebook/minds/CIV-MIND-*.md`](../strategy-notebook/minds/) are **redirects** to the same content.
 
 **Strategy pass × civ-mem:** After frontier read (and tier-A verify for disputed current facts), `python3 scripts/suggest_civ_mem_from_relevance.py <ENTITY>` when `MEM–RELEVANCE–<ENTITY>.md` exists; cite MEM paths in **`### Links`**. Tri-frame bridge: [CIV-MEM-TRI-FRAME-ROUTING.md](CIV-MEM-TRI-FRAME-ROUTING.md). Trump–Leo Barnes training sheet: [TRUMP-LEO-CIV-MEM-BARNES-DRILL.md](../strategy-notebook/TRUMP-LEO-CIV-MEM-BARNES-DRILL.md).
 
-### Work-strategy mind stubs (entry points)
+### Tri-frame entry index
 
-- `docs/skill-work/work-strategy/minds/mind-mercouris.md`
-- `docs/skill-work/work-strategy/minds/mind-mearsheimer.md`
-- `docs/skill-work/work-strategy/minds/mind-barnes.md`
-- `docs/skill-work/work-strategy/minds/README.md`
+- [`docs/skill-work/work-strategy/minds/README.md`](README.md) — expert bundle table (Mercouris / Mearsheimer / Barnes **`-mind.md`** + companion files).
 
 ### Strategy surfaces
 
@@ -79,7 +76,7 @@ The stronger pattern is:
 
 **What:** Run one mind when the day’s problem is clearly one-dimensional.  
 **When:** Crisis days, narrow drafting days, or when the operator wants speed.  
-**Where in repo:** `strategy-notebook/chapters/YYYY-MM/days.md` under `### Judgment`, with one line in `### Links` citing the relevant mind stub.  
+**Where in repo:** `strategy-notebook/chapters/YYYY-MM/days.md` under `### Judgment`, with one line in `### Links` citing the relevant strategy-expert **`-mind.md`** (SSOT) or **`CIV-MIND-*.md`** redirect.  
 **Cost:** Light.  
 **Risk:** Overfitting the day to one lens and missing a hidden contradiction.
 
@@ -268,7 +265,7 @@ Promote only when one of these is true:
 3. In `### Signal`, summarize only what crossed the strategy threshold.
 4. In `### Judgment`, write one Barnes-shaped paragraph: material constraint, liabilities, who can sustain what.
 5. If numbers are load-bearing, add `### Web verification (YYYY-MM-DD)`.
-6. In `### Links`, include the relevant brief/transcript plus `minds/mind-barnes.md`. **Optional civ-mem:** If `research/repos/civilization_memory` is checked out and structural precedent helps, add **1–2** upstream `MEM–…` file receipts (see [TRUMP-LEO-CIV-MEM-BARNES-DRILL.md](../strategy-notebook/TRUMP-LEO-CIV-MEM-BARNES-DRILL.md) for Trump–Leo / Rome + U.S. pairing); never substitute MEM for tier-A wires on breaking claims.
+6. In `### Links`, include the relevant brief/transcript plus [`strategy-expert-barnes-mind.md`](../strategy-notebook/strategy-expert-barnes-mind.md) (or the [`CIV-MIND-BARNES.md`](../strategy-notebook/minds/CIV-MIND-BARNES.md) redirect). **Optional civ-mem:** If `research/repos/civilization_memory` is checked out and structural precedent helps, add **1–2** upstream `MEM–…` file receipts (see [TRUMP-LEO-CIV-MEM-BARNES-DRILL.md](../strategy-notebook/TRUMP-LEO-CIV-MEM-BARNES-DRILL.md) for Trump–Leo / Rome + U.S. pairing); never substitute MEM for tier-A wires on breaking claims.
 7. In `### Open`, carry one falsifiable follow-up.
 
 **Use when**
@@ -317,7 +314,7 @@ Promote only when one of these is true:
 **Agent moves**
 
 1. Declare mode exactly as required by `LEARN_MODE_RULES.md`.
-2. Load [`STRATEGY.md`](../STRATEGY.md): **§I CORE**, relevant **lane-specific core** (§II), **§III SCHOLAR** as needed, and relevant **§IV** (operator strategy log in this file only — not CMC `MEM–*` shards under `research/repos/civilization_memory/`). Load the three mind files from [`strategy-notebook/minds/`](../strategy-notebook/minds/) (trimmed working copies).
+2. Load [`STRATEGY.md`](../STRATEGY.md): **§I CORE**, relevant **lane-specific core** (§II), **§III SCHOLAR** as needed, and relevant **§IV** (operator strategy log in this file only — not CMC `MEM–*` shards under `research/repos/civilization_memory/`). Load the three strategy-expert **`-mind.md`** files (SSOT; see [minds/README.md](README.md) table).
 3. Run failure-first scan.
 4. Apply in the mandated order:
    - Mercouris

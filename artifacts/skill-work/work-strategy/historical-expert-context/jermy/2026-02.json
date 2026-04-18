@@ -1,0 +1,30 @@
+{
+  "expert_id": "jermy",
+  "thread_path": "docs/skill-work/work-strategy/strategy-notebook/strategy-expert-jermy-thread.md",
+  "segment_id": "2026-02",
+  "parse_note": "parsed `## YYYY-MM` month segments",
+  "segment": {
+    "segment_id": "2026-02",
+    "raw_text": "**Peacemonger** and **Deep Dive** feeds widen audience — Iran **strategy** “lost at sea” framing sits next to **Ukraine guarantees** skepticism; keep **diesel / closure recovery** thesis distinct from pure **kinetic** analysis.\n\n- [strength: high] **Through-line:** **The Peacemonger** — **“USA lost at sea on Iran strategy…”** with **Cdre Steve Jermy** — [YouTube UKvnpz1WRBU](https://www.youtube.com/watch?v=UKvnpz1WRBU) — indexes cite **~4 Feb 2026** — verify **title card** date.\n- [strength: medium] **Mechanism:** **Daniel Davis Deep Dive** — **“There's No FORCING RUSSIA Into…”** — [Apple Podcasts episode](https://podcasts.apple.com/us/podcast/theres-no-forcing-russia-into-anything-lt-col-daniel/id1761369345?i=1000748980029) — **~9 Feb 2026** class — **Russia** arc vs **Hormuz** arc — **no** automatic merge.\n- [strength: low] **Tension:** Same-month **Mercouris** / **Duran** **tanker** headlines vs **Jermy** **systemic lag** thesis — **batch-analysis** compare, not single narrator.",
+    "bullets": [
+      "[strength: high] **Through-line:** **The Peacemonger** — **“USA lost at sea on Iran strategy…”** with **Cdre Steve Jermy** — [YouTube UKvnpz1WRBU](https://www.youtube.com/watch?v=UKvnpz1WRBU) — indexes cite **~4 Feb 2026** — verify **title card** date.",
+      "[strength: medium] **Mechanism:** **Daniel Davis Deep Dive** — **“There's No FORCING RUSSIA Into…”** — [Apple Podcasts episode](https://podcasts.apple.com/us/podcast/theres-no-forcing-russia-into-anything-lt-col-daniel/id1761369345?i=1000748980029) — **~9 Feb 2026** class — **Russia** arc vs **Hormuz** arc — **no** automatic merge.",
+      "[strength: low] **Tension:** Same-month **Mercouris** / **Duran** **tanker** headlines vs **Jermy** **systemic lag** thesis — **batch-analysis** compare, not single narrator."
+    ],
+    "strength_counts": {
+      "high": 1,
+      "medium": 1,
+      "low": 1
+    },
+    "signal_lines": [
+      "[strength: medium] **Mechanism:** **Daniel Davis Deep Dive** — **“There's No FORCING RUSSIA Into…”** — [Apple Podcasts episode](https://podcasts.apple.com/us/podcast/theres-no-forcing-russia-into-anything-lt-col-daniel/id1761369345?i=1000748980029) — **~9 Feb 2026** class — **Russia** arc vs **Hormuz** arc — **no** automatic merge.",
+      "[strength: low] **Tension:** Same-month **Mercouris** / **Duran** **tanker** headlines vs **Jermy** **systemic lag** thesis — **batch-analysis** compare, not single narrator."
+    ],
+    "tension_lines": [
+      "[strength: medium] **Mechanism:** **Daniel Davis Deep Dive** — **“There's No FORCING RUSSIA Into…”** — [Apple Podcasts episode](https://podcasts.apple.com/us/podcast/theres-no-forcing-russia-into-anything-lt-col-daniel/id1761369345?i=1000748980029) — **~9 Feb 2026** class — **Russia** arc vs **Hormuz** arc — **no** automatic merge.",
+      "[strength: low] **Tension:** Same-month **Mercouris** / **Duran** **tanker** headlines vs **Jermy** **systemic lag** thesis — **batch-analysis** compare, not single narrator."
+    ],
+    "shift_lines": [],
+    "source": "h2"
+  }
+}

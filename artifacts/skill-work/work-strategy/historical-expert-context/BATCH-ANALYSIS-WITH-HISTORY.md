@@ -8,13 +8,13 @@ This file documents **`scripts/strategy_batch_analysis_with_history.py`** (in-re
 
 ```bash
 python3 scripts/strategy_batch_analysis_with_history.py \
-  --pair scott-ritter,daniel-davis \
+  --pair ritter,davis \
   --history-start 2026-01 \
   --history-end 2026-03 \
   --dry-run
 
 python3 scripts/strategy_batch_analysis_with_history.py \
-  --pair scott-ritter,daniel-davis \
+  --pair ritter,davis \
   --history-start 2026-01 \
   --history-end 2026-03 \
   --apply
@@ -24,9 +24,9 @@ python3 scripts/strategy_batch_analysis_with_history.py \
 
 ```bash
 python3 scripts/strategy_historical_expert_context.py \
-  --expert-id scott-ritter --start-segment 2026-01 --end-segment 2026-03 --apply
+  --expert-id ritter --start-segment 2026-01 --end-segment 2026-03 --apply
 python3 scripts/strategy_historical_expert_context.py \
-  --expert-id daniel-davis --start-segment 2026-01 --end-segment 2026-03 --apply
+  --expert-id davis --start-segment 2026-01 --end-segment 2026-03 --apply
 ```
 
 For **Jan–Apr** (or any month where `strategy-expert-<id>-thread.md` has a `## YYYY-MM` segment), use the same command with `--end-segment 2026-04` and align `--history-end` on the wrapper with that window.

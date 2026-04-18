@@ -19,7 +19,7 @@ quality_level: draft
 - **canonical_url:** https://www.youtube.com/watch?v=P_DHMUdOVdo
 - **series / episode:** Predictive History · Volume VI — Interviews #14
 - **upload_date (YouTube):** operator ingested 20260411 — confirm `publication_date` in `metadata/sources.yaml` against YouTube metadata when convenient
-- **raw_transcript:** [lectures/interviews-14-glenn-diesen-iran-war-petrodollar.md](../lectures/interviews-14-glenn-diesen-iran-war-petrodollar.md)
+- **raw_transcript:** [lectures/interviews-14-diesen-iran-war-petrodollar.md](../lectures/interviews-14-diesen-iran-war-petrodollar.md)
 
 ## Thesis (draft)
 

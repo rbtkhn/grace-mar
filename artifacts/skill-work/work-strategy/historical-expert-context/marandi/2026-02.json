@@ -1,0 +1,28 @@
+{
+  "expert_id": "marandi",
+  "thread_path": "docs/skill-work/work-strategy/strategy-notebook/strategy-expert-marandi-thread.md",
+  "segment_id": "2026-02",
+  "parse_note": "parsed `## YYYY-MM` month segments",
+  "segment": {
+    "segment_id": "2026-02",
+    "raw_text": "February clips stack **catastrophic-war** framing (long-form podcast) beside **post-strike** urgency narratives — useful for **timing** and **register** (who is speaking after which event), not for collapsing into a single “Iran position.”\n\n- [strength: high] **Through-line:** **Daniel Davis Deep Dive** — Prof. Marandi on **war with Iran** as **catastrophic** — [Apple Podcasts episode](https://podcasts.apple.com/us/podcast/prof-marandi-war-w-iran-will-be-catastrophic/id1761369345?i=1000749314279) — verify **episode date** in client (index cites **11 Feb 2026** class appearances).\n- [strength: high] **Signal:** **Israel & U.S. launch surprise attack** transcript + mirror video — [Singju Post transcript](https://singjupost.com/seyed-m-marandi-israel-u-s-launch-surprise-attack-on-iran-transcript/) · [YouTube](https://www.youtube.com/watch?v=NEW44Zk7W3g) — **pair** with Feb **Glenn Diesen** urgent clip if the notebook needs same-week **cross-host** discipline.\n- [strength: medium] **Tension vs Parsi:** **Quincy** diplomacy-first Beltway lane vs **Marandi** **IRI-facing** legitimacy register — compare in **batch-analysis**, not merged Judgment.",
+    "bullets": [
+      "[strength: high] **Through-line:** **Daniel Davis Deep Dive** — Prof. Marandi on **war with Iran** as **catastrophic** — [Apple Podcasts episode](https://podcasts.apple.com/us/podcast/prof-marandi-war-w-iran-will-be-catastrophic/id1761369345?i=1000749314279) — verify **episode date** in client (index cites **11 Feb 2026** class appearances).",
+      "[strength: high] **Signal:** **Israel & U.S. launch surprise attack** transcript + mirror video — [Singju Post transcript](https://singjupost.com/seyed-m-marandi-israel-u-s-launch-surprise-attack-on-iran-transcript/) · [YouTube](https://www.youtube.com/watch?v=NEW44Zk7W3g) — **pair** with Feb **Glenn Diesen** urgent clip if the notebook needs same-week **cross-host** discipline.",
+      "[strength: medium] **Tension vs Parsi:** **Quincy** diplomacy-first Beltway lane vs **Marandi** **IRI-facing** legitimacy register — compare in **batch-analysis**, not merged Judgment."
+    ],
+    "strength_counts": {
+      "high": 2,
+      "medium": 1,
+      "low": 0
+    },
+    "signal_lines": [
+      "[strength: high] **Signal:** **Israel & U.S. launch surprise attack** transcript + mirror video — [Singju Post transcript](https://singjupost.com/seyed-m-marandi-israel-u-s-launch-surprise-attack-on-iran-transcript/) · [YouTube](https://www.youtube.com/watch?v=NEW44Zk7W3g) — **pair** with Feb **Glenn Diesen** urgent clip if the notebook needs same-week **cross-host** discipline."
+    ],
+    "tension_lines": [
+      "[strength: medium] **Tension vs Parsi:** **Quincy** diplomacy-first Beltway lane vs **Marandi** **IRI-facing** legitimacy register — compare in **batch-analysis**, not merged Judgment."
+    ],
+    "shift_lines": [],
+    "source": "h2"
+  }
+}

@@ -135,7 +135,7 @@ Single entry point (working name **`strategy_ingest`** or fold into **`strategy_
 
 #### Worked example — Alexander Mercouris · air date **2026-04-16**
 
-Source: [`strategy-expert-alexander-mercouris-transcript.md`](strategy-expert-alexander-mercouris-transcript.md) **`## 2026-04-16`** `~~~text` fence (thesis-scaffold verbatim trimmed to policy). **Shape** for bold theses + separated paragraphs: [strategy-expert-template.md#thesis-scaffold-pattern](strategy-expert-template.md#thesis-scaffold-pattern). Below: **five theses** in narrative order, each with **sample verbatim sentences** (short excerpt table — same episode).
+Source: [`strategy-expert-mercouris-transcript.md`](strategy-expert-mercouris-transcript.md) **`## 2026-04-16`** `~~~text` fence (thesis-scaffold verbatim trimmed to policy). **Shape** for bold theses + separated paragraphs: [strategy-expert-template.md#thesis-scaffold-pattern](strategy-expert-template.md#thesis-scaffold-pattern). Below: **five theses** in narrative order, each with **sample verbatim sentences** (short excerpt table — same episode).
 
 | Order | Thesis (operator label) | Verbatim scaffold (excerpts) |
 |------|-------------------------|--------------------------------|

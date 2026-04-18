@@ -21,7 +21,7 @@ Design goals
 Typical use
 -----------
 python3 scripts/backfill_expert_thread.py \\
-  --expert-id scott-ritter \\
+  --expert-id ritter \\
   --start 2026-01-01 \\
   --end 2026-03-31 \\
   --apply
@@ -29,7 +29,7 @@ python3 scripts/backfill_expert_thread.py \\
 Dry run
 -------
 python3 scripts/backfill_expert_thread.py \\
-  --expert-id scott-ritter \\
+  --expert-id ritter \\
   --start 2026-01-01 \\
   --end 2026-03-31 \\
   --dry-run
@@ -80,7 +80,7 @@ THREAD_MARKER_END = "<!-- strategy-expert-thread:end -->"
 SCRIPT_VERSION = "1"
 
 DEFAULT_ALIASES = {
-    "scott-ritter": ["scott ritter", "ritter", "thread:scott-ritter"],
+    "ritter": ["scott ritter", "ritter", "thread:ritter"],
 }
 
 DATE_HEADING_RE = re.compile(r"^##\s+(\d{4}-\d{2}-\d{2})\s*$", re.MULTILINE)

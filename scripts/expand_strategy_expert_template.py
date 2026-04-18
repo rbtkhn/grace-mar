@@ -124,7 +124,7 @@ def main() -> int:
     ap.add_argument(
         "--expert-id",
         required=True,
-        help="Slug, e.g. alexander-mercouris (letters, digits, hyphen)",
+        help="Slug, e.g. mercouris (letters, digits, hyphen)",
     )
     ap.add_argument(
         "--full-name",

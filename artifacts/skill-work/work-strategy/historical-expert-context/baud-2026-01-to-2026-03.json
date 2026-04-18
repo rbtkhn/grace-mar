@@ -1,0 +1,59 @@
+{
+  "expert_id": "baud",
+  "thread_path": "docs/skill-work/work-strategy/strategy-notebook/strategy-expert-baud-thread.md",
+  "start_segment": "2026-01",
+  "end_segment": "2026-03",
+  "parse_note": "parsed `## YYYY-MM` month segments",
+  "segments": [
+    {
+      "segment_id": "2026-01",
+      "raw_text": "January has **no dated** notebook ingest for Baud in this snapshot; the lane stays **NATO / UN / law-of-war vs narrative** — complements ORBAT lanes without duplicating them — per roster.\n\n- [strength: low] **Identity anchor:** The Postil + IHL reference instrument (Seed).  \n  [thepostil.com](https://www.thepostil.com/) · [OHCHR — IHL instruments](https://www.ohchr.org/en/instruments-mechanisms/instruments/international-humanitarian-law)",
+      "bullets": [
+        "[strength: low] **Identity anchor:** The Postil + IHL reference instrument (Seed)."
+      ],
+      "strength_counts": {
+        "high": 0,
+        "medium": 0,
+        "low": 1
+      },
+      "signal_lines": [],
+      "tension_lines": [],
+      "shift_lines": [],
+      "source": "h2"
+    },
+    {
+      "segment_id": "2026-02",
+      "raw_text": "February shows **no indexed Q1 primary** in-repo; use **`ritter`** / **`macgregor`** crosses only with explicit **European mandate / classification** seams.\n\n- [strength: low] **Secondary pointer:** Transcend TMS reprint (Dec 2025 URL in profile) — **not** a February 2026 dated primary; tier-C context only.  \n  [Transcend — EU/NATO censorship architecture](https://www.transcend.org/tms/2025/12/baud-and-the-eu-nato-censorship-architecture-%E2%9B%94/)",
+      "bullets": [
+        "[strength: low] **Secondary pointer:** Transcend TMS reprint (Dec 2025 URL in profile) — **not** a February 2026 dated primary; tier-C context only."
+      ],
+      "strength_counts": {
+        "high": 0,
+        "medium": 0,
+        "low": 1
+      },
+      "signal_lines": [],
+      "tension_lines": [],
+      "shift_lines": [],
+      "source": "h2"
+    },
+    {
+      "segment_id": "2026-03",
+      "raw_text": "March remains **thin** on calendar-facing rows here; treat any third-party “Baud + Iran” index line as **verify-tier** until pinned.\n\n- [strength: low] **Repeat anchor:** The Postil hub — scope unchanged.\n\nCanonical knot paths and raw ingest lines live in **Segment 2** below (regenerated each **`thread`** run).\n\n---",
+      "bullets": [
+        "[strength: low] **Repeat anchor:** The Postil hub — scope unchanged."
+      ],
+      "strength_counts": {
+        "high": 0,
+        "medium": 0,
+        "low": 1
+      },
+      "signal_lines": [],
+      "tension_lines": [],
+      "shift_lines": [
+        "[strength: low] **Repeat anchor:** The Postil hub — scope unchanged."
+      ],
+      "source": "h2"
+    }
+  ]
+}

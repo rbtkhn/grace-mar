@@ -19,7 +19,7 @@ quality_level: draft
 - **canonical_url:** https://www.youtube.com/watch?v=n44OF1Y7zgo
 - **series / episode:** Predictive History · Volume VI — Interviews #15
 - **upload_date (YouTube):** confirm against YouTube metadata — `publication_date` in `metadata/sources.yaml` set to **2026-04-14** (operator ingest)
-- **raw_transcript:** [lectures/interviews-15-sneako-jiang-xueqin-dugin-eschatology.md](../lectures/interviews-15-sneako-jiang-xueqin-dugin-eschatology.md)
+- **raw_transcript:** [lectures/interviews-15-sneako-jiang-dugin-eschatology.md](../lectures/interviews-15-sneako-jiang-dugin-eschatology.md)
 
 ## Thesis (draft)
 

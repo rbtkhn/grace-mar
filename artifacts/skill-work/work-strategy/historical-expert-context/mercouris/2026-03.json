@@ -1,0 +1,30 @@
+{
+  "expert_id": "mercouris",
+  "thread_path": "docs/skill-work/work-strategy/strategy-notebook/strategy-expert-mercouris-thread.md",
+  "segment_id": "2026-03",
+  "parse_note": "parsed `## YYYY-MM` month segments",
+  "segment": {
+    "segment_id": "2026-03",
+    "raw_text": "- [strength: medium] **Through-line:** **Hormuz closure** / **tanker** / **oil** headline stack — The Duran title lane includes **12 Mar 2026** “Iran Leader: Keep Hormuz Closed…” — `https://www.youtube.com/watch?v=hbl3tuy-CA4` — **verify:title+date on YouTube** before merge with AIS/tanker facts.\n- [strength: medium] **Mechanism:** **Sanctions / Russian exports** + **Kiev aid** debate in mid-March Duran stack (e.g. [EU/UK/Russia exports — **14 Mar** YouTube](https://www.youtube.com/watch?v=xLfY2QGWklM)) — **cross-domain** only with explicit **verify**; do not substitute for **Mearsheimer** resource-diversion claims without cites.\n- [strength: low] **Ambiguity:** **Alex vs Alex** co-host blocks — which segment is **Mercouris solo** line — pin per ingest.\n- [strength: medium] **Tension:** **Media/speech-act** surface (Mercouris) vs **Mearsheimer** March Substack [**Unfolding Disaster**](https://mearsheimer.substack.com/p/the-unfolding-disaster-in-the-gulf) / [**Piers**](https://mearsheimer.substack.com/p/agreeing-with-piers-on-iran) **structural** framing — **batch-analysis** compares lanes; no **voice-merge** in-thread.",
+    "bullets": [
+      "[strength: medium] **Through-line:** **Hormuz closure** / **tanker** / **oil** headline stack — The Duran title lane includes **12 Mar 2026** “Iran Leader: Keep Hormuz Closed…” — `https://www.youtube.com/watch?v=hbl3tuy-CA4` — **verify:title+date on YouTube** before merge with AIS/tanker facts.",
+      "[strength: medium] **Mechanism:** **Sanctions / Russian exports** + **Kiev aid** debate in mid-March Duran stack (e.g. [EU/UK/Russia exports — **14 Mar** YouTube](https://www.youtube.com/watch?v=xLfY2QGWklM)) — **cross-domain** only with explicit **verify**; do not substitute for **Mearsheimer** resource-diversion claims without cites.",
+      "[strength: low] **Ambiguity:** **Alex vs Alex** co-host blocks — which segment is **Mercouris solo** line — pin per ingest.",
+      "[strength: medium] **Tension:** **Media/speech-act** surface (Mercouris) vs **Mearsheimer** March Substack [**Unfolding Disaster**](https://mearsheimer.substack.com/p/the-unfolding-disaster-in-the-gulf) / [**Piers**](https://mearsheimer.substack.com/p/agreeing-with-piers-on-iran) **structural** framing — **batch-analysis** compares lanes; no **voice-merge** in-thread."
+    ],
+    "strength_counts": {
+      "high": 0,
+      "medium": 3,
+      "low": 1
+    },
+    "signal_lines": [
+      "[strength: medium] **Mechanism:** **Sanctions / Russian exports** + **Kiev aid** debate in mid-March Duran stack (e.g. [EU/UK/Russia exports — **14 Mar** YouTube](https://www.youtube.com/watch?v=xLfY2QGWklM)) — **cross-domain** only with explicit **verify**; do not substitute for **Mearsheimer** resource-diversion claims without cites."
+    ],
+    "tension_lines": [
+      "[strength: low] **Ambiguity:** **Alex vs Alex** co-host blocks — which segment is **Mercouris solo** line — pin per ingest.",
+      "[strength: medium] **Tension:** **Media/speech-act** surface (Mercouris) vs **Mearsheimer** March Substack [**Unfolding Disaster**](https://mearsheimer.substack.com/p/the-unfolding-disaster-in-the-gulf) / [**Piers**](https://mearsheimer.substack.com/p/agreeing-with-piers-on-iran) **structural** framing — **batch-analysis** compares lanes; no **voice-merge** in-thread."
+    ],
+    "shift_lines": [],
+    "source": "h2"
+  }
+}

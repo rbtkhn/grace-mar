@@ -17,13 +17,13 @@
 
 ### Lineage — **triple anchor** (same Judgment sentence)
 
-- **`thread:seyed-marandi`** — *Why the Iran Talks Failed* — channel-authority, structural deadlocks (stock / program / Hormuz governance), **Lebanon–Hormuz** linkage, **Easter ecumenical** register vs wire lane — episode URL **operator to pin** per [`days.md`](../days.md#2026-04-13).
-- **`thread:scott-ritter`** — **Judging Freedom** (*Who Controls Hormuz?*) — **porous blockade**, picket vs boarding, third-country hulls, **Trump–Pope** narrative-escalation segment — **lane-split** from Marandi — URL **operator to pin**.
-- **`thread:alexander-mercouris`** — **The Duran** 2026-04-13 monologue — Islamabad recap, blockade/Keane lineage, **zugzwang**, multilateral tickers — **verify each chain** before one arc — URL **operator to pin**.
+- **`thread:marandi`** — *Why the Iran Talks Failed* — channel-authority, structural deadlocks (stock / program / Hormuz governance), **Lebanon–Hormuz** linkage, **Easter ecumenical** register vs wire lane — episode URL **operator to pin** per [`days.md`](../days.md#2026-04-13).
+- **`thread:ritter`** — **Judging Freedom** (*Who Controls Hormuz?*) — **porous blockade**, picket vs boarding, third-country hulls, **Trump–Pope** narrative-escalation segment — **lane-split** from Marandi — URL **operator to pin**.
+- **`thread:mercouris`** — **The Duran** 2026-04-13 monologue — Islamabad recap, blockade/Keane lineage, **zugzwang**, multilateral tickers — **verify each chain** before one arc — URL **operator to pin**.
 
-**Same showrunner, structural lanes (not interchangeable):** **`daniel-davis`** Deep Dive × **`charles-freeman`** (process failure, ROE, Bessent vs recession — URL TBD); × **`john-mearsheimer`** (15 vs 10 point frames, bargaining asymmetry, allies clips — URL TBD). **`thread:trita-parsi`** — Breaking Points / Quincy — Ravid red-lines leak tier — **not** WH primary.
+**Same showrunner, structural lanes (not interchangeable):** **`davis`** Deep Dive × **`freeman`** (process failure, ROE, Bessent vs recession — URL TBD); × **`mearsheimer`** (15 vs 10 point frames, bargaining asymmetry, allies clips — URL TBD). **`thread:parsi`** — Breaking Points / Quincy — Ravid red-lines leak tier — **not** WH primary.
 
-**Process overlap:** **`thread:larry-johnson`** × Mercouris (Napolitano / Johnson digest vs Duran monologue) — **strip to process + price** for parity; **park** Bab el-Mandeb / pipeline under verify ([`days.md` Judgment](../days.md#2026-04-13)).
+**Process overlap:** **`thread:johnson`** × Mercouris (Napolitano / Johnson digest vs Duran monologue) — **strip to process + price** for parity; **park** Bab el-Mandeb / pipeline under verify ([`days.md` Judgment](../days.md#2026-04-13)).
 
 ### History resonance
 
@@ -38,7 +38,7 @@ none this pass
 | Direction | Target | Relation |
 |-----------|--------|----------|
 | **Prior day** | [strategy-notebook-knot-2026-04-12-islamabad-hormuz-thesis-weave.md](strategy-notebook-knot-2026-04-12-islamabad-hormuz-thesis-weave.md) | **Thesis A/B** + **Pape/Parsi/Freeman** **fork** **before** this **scaffold** **densifies**. |
-| **Next day** | [strategy-notebook-knot-2026-04-14-scott-ritter-blockade-hormuz-weave.md](strategy-notebook-knot-2026-04-14-scott-ritter-blockade-hormuz-weave.md) | **Ritter**-centered **04-14** lattice + **Parsi×Davis** / **Diesen×Sachs** / **Mercouris×Mearsheimer** **knot** files. |
+| **Next day** | [strategy-notebook-knot-2026-04-14-ritter-blockade-hormuz-weave.md](strategy-notebook-knot-2026-04-14-ritter-blockade-hormuz-weave.md) | **Ritter**-centered **04-14** lattice + **Parsi×Davis** / **Diesen×Sachs** / **Mercouris×Mearsheimer** **knot** files. |
 | **Day prose** | [`days.md` § 2026-04-14](../days.md#2026-04-14) | **Continuity spine** **explicitly** **stacks** **04-12–04-14** **`thread:`** **carries**. |
 
 ### Judgment

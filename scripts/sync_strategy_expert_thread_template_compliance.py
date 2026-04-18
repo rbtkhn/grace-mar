@@ -63,13 +63,13 @@ def canonical_journal_intro(expert_id: str) -> str:
         'comments — do not call that "Segment 2" in the month sense.',
         "",
     ]
-    if expert_id == "robert-pape":
+    if expert_id == "pape":
         lines += [
             "**Expert note (pape):** **`## 2026-04`** may also hold a partial-month ledger + "
             "optional **`### Distilled thread`** subsection.",
             "",
         ]
-    elif expert_id == "jiang-xueqin":
+    elif expert_id == "jiang":
         lines += [
             "**Expert note (PH / work-jiang):** **Predictive History** notebook-facing ingest routes "
             "here only — see [strategy-commentator-threads](strategy-commentator-threads.md) special "

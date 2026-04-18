@@ -20,11 +20,11 @@ machine extraction block is unchanged on ``--apply``. No-op when there are no
 Typical use
 -----------
 python3 scripts/score_backfilled_thread_sources.py \\
-  --expert-id scott-ritter \\
+  --expert-id ritter \\
   --dry-run
 
 python3 scripts/score_backfilled_thread_sources.py \\
-  --expert-id scott-ritter \\
+  --expert-id ritter \\
   --apply
 """
 

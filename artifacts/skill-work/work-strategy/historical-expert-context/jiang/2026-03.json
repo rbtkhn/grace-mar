@@ -1,0 +1,24 @@
+{
+  "expert_id": "jiang",
+  "thread_path": "docs/skill-work/work-strategy/strategy-notebook/strategy-expert-jiang-thread.md",
+  "segment_id": "2026-03",
+  "parse_note": "parsed `## YYYY-MM` month segments",
+  "segment": {
+    "segment_id": "2026-03",
+    "raw_text": "March remains **scope-note** territory until the operator pins indexed transcripts; **April** machine lines may reference **vi-15** etc. — Q1 is **honest sparsity**.\n\n- [strength: low] **Repeat:** PH channel hub — verify any calendar claim against lecture index before Links merge.",
+    "bullets": [
+      "[strength: low] **Repeat:** PH channel hub — verify any calendar claim against lecture index before Links merge."
+    ],
+    "strength_counts": {
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "signal_lines": [
+      "[strength: low] **Repeat:** PH channel hub — verify any calendar claim against lecture index before Links merge."
+    ],
+    "tension_lines": [],
+    "shift_lines": [],
+    "source": "h2"
+  }
+}

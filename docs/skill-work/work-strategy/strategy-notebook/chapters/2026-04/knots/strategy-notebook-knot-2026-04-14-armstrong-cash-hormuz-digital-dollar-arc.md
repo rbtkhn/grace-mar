@@ -18,7 +18,7 @@
 ### Lineage
 
 - **Ingest:** Operator **Cursor session weave** (option **D**) — not gated on a single [`daily-strategy-inbox.md`](../../../daily-strategy-inbox.md) paste line; **optional follow-up:** add a cold line + `batch-analysis` tail if this arc is folded into the inbox accumulator.
-- **Indexed expert threads (`thread:<expert_id>`):** **none** for this knot — provocation is **social + documentary** sources, not a named **strategy-commentator** transcript row. Same-day **Hormuz** work on **2026-04-14** uses **`thread:scott-ritter`**, **`thread:daniel-davis`**, **`thread:steve-jermy`**, etc.; this page is a **different plane** (money, statute, attribution).
+- **Indexed expert threads (`thread:<expert_id>`):** **none** for this knot — provocation is **social + documentary** sources, not a named **strategy-commentator** transcript row. Same-day **Hormuz** work on **2026-04-14** uses **`thread:ritter`**, **`thread:davis`**, **`thread:jermy`**, etc.; this page is a **different plane** (money, statute, attribution).
 - **Analytical lenses (work-strategy mind files — not `thread:` experts):** [CIV-MIND-BARNES.md](../../../minds/CIV-MIND-BARNES.md) (statute, Federal Reserve Act, Congress as chokepoint), [CIV-MIND-MERCOURIS.md](../../../minds/CIV-MIND-MERCOURIS.md) (legitimacy of cash, civilizational “story” of money), [CIV-MIND-MEARSHEIMER.md](../../../minds/CIV-MIND-MEARSHEIMER.md) (who gains if retail central-bank digital currency stalls while private digital dollars advance).
 - **Source objects woven:** **Martin Armstrong** posts on X (`@ArmstrongEcon`) — **emotional / percentage** provocation (cash vs digital split; adjacent commodity claims); **Larry Fink / BlackRock** — chairman letters and public interviews on **tokenization** and **market plumbing** (primary pulls in Links); **U.S. Congress** — stablecoin and retail central-bank digital currency bills (text in Links); **Statista** (citing **Signal Group**) — **Arabian Gulf** share of **seaborne fertilizer** exports (definition: **origin**, not automatically **Strait of Hormuz transit**).
 - **History resonance:** deferred — no **history-notebook** chapter wired this pass.
@@ -28,7 +28,7 @@
 
 | Knot | Relation |
 |------|-----------|
-| [strategy-notebook-knot-2026-04-14-scott-ritter-blockade-hormuz-weave.md](strategy-notebook-knot-2026-04-14-scott-ritter-blockade-hormuz-weave.md) | **Hormuz** expert mechanics — **orthogonal** to this knot’s **U.S. payment-law** arc; **fertilizer** language may **overlap in mood** with **`steve-jermy`** cascade lines in [`days.md`](../days.md), not as proof of the same **quantity**. |
+| [strategy-notebook-knot-2026-04-14-ritter-blockade-hormuz-weave.md](strategy-notebook-knot-2026-04-14-ritter-blockade-hormuz-weave.md) | **Hormuz** expert mechanics — **orthogonal** to this knot’s **U.S. payment-law** arc; **fertilizer** language may **overlap in mood** with **`jermy`** cascade lines in [`days.md`](../days.md), not as proof of the same **quantity**. |
 
 ### Signal
 
@@ -45,7 +45,7 @@
 - **U.S. Congress (119th) — illustrative statutory objects:** [H.R.1919 — Anti-CBDC Surveillance State Act](https://www.congress.gov/bill/119th-congress/house-bill/1919) (retail CBDC restrictions — read current status on Congress.gov) · [S.394 — GENIUS Act](https://www.congress.gov/bill/119th-congress/senate-bill/394/text) (payment **stablecoin** framework — not interchangeable with retail CBDC bans)
 - **Fertilizer / Gulf (origin share — not identical to Hormuz transit %):** [Statista chart — Gulf fertilizer / Signal Group chain](https://www.statista.com/chart/35981/share-of-global-seaborne-fertilizer-trade-from-the-arabian-gulf-and-destination-breakdown/) · [Signal Group — market insights (fertilizer)](https://www.thesignalgroup.com/newsroom/market-insights-fertiliser-markets-suffer-from-arabian-gulf-conflict/)
 - **Martin Armstrong (provocation source):** operator to pin **exact** `x.com` status URL(s) when this knot is cited publicly — **not** tier-A fact without **screenshot hash** / **archive** discipline.
-- **Same-day Hormuz lattice (expert plane):** [strategy-notebook-knot-2026-04-14-scott-ritter-blockade-hormuz-weave.md](strategy-notebook-knot-2026-04-14-scott-ritter-blockade-hormuz-weave.md)
+- **Same-day Hormuz lattice (expert plane):** [strategy-notebook-knot-2026-04-14-ritter-blockade-hormuz-weave.md](strategy-notebook-knot-2026-04-14-ritter-blockade-hormuz-weave.md)
 
 ### Open / verify
 

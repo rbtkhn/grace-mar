@@ -26,13 +26,13 @@ skip when the backfill is empty or has no ``###`` month sections.
 Typical use
 -----------
 python3 scripts/refine_backfilled_thread_arc.py \\
-  --expert-id scott-ritter \\
+  --expert-id ritter \\
   --apply
 
 Dry run
 -------
 python3 scripts/refine_backfilled_thread_arc.py \\
-  --expert-id scott-ritter \\
+  --expert-id ritter \\
   --dry-run
 """
 

@@ -4,9 +4,9 @@
   "write_mode_note": "Script writes title, paths, and copy-paste prompt bundle only. Operator or Cursor agent fills the body (no LLM inside the generator).",
   "source_brief_glob": "docs/skill-work/work-strategy/daily-brief-*.md",
   "trimmed_mind_files": {
-    "barnes": "strategy-notebook/minds/CIV-MIND-BARNES.md",
-    "mearsheimer": "strategy-notebook/minds/CIV-MIND-MEARSHEIMER.md",
-    "mercouris": "strategy-notebook/minds/CIV-MIND-MERCOURIS.md"
+    "barnes": "strategy-notebook/strategy-expert-barnes-mind.md",
+    "mearsheimer": "strategy-notebook/strategy-expert-mearsheimer-mind.md",
+    "mercouris": "strategy-notebook/strategy-expert-mercouris-mind.md"
   },
   "output_dir": "minds/outputs",
   "menu_order": ["barnes", "mearsheimer", "mercouris"],

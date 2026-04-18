@@ -1,0 +1,32 @@
+{
+  "expert_id": "mearsheimer",
+  "thread_path": "docs/skill-work/work-strategy/strategy-notebook/strategy-expert-mearsheimer-thread.md",
+  "segment_id": "2026-02",
+  "parse_note": "parsed `## YYYY-MM` month segments",
+  "segment": {
+    "segment_id": "2026-02",
+    "raw_text": "- [strength: medium] **Through-line:** **Netanyahu–Trump** **11 Feb** meeting **poor from an Israeli perspective**; **no** apparent military strategy to **win** vs Iran — [A Deep Dive on Iran](https://mearsheimer.substack.com/p/a-deep-dive-on-iran) Substack **14 Feb** (Deep Dive w/ Danny Davis **12 Feb**).\n- [strength: medium] **Mechanism:** Critique of **experts** claiming a **clean military fix** for Iran; parallel skepticism on **Ukraine** “upper hand” narrative in same conversation.\n- [strength: low] **Ambiguity:** Video vs Substack emphasis — strength capped where only Substack body used here.\n- [strength: medium] **Lattice:** Feeds **Mercouris × Mearsheimer** fork (incentives vs speech-acts) — see April [`mercouris-mearsheimer-lebanon-split`](strategy-notebook-knot-2026-04-14-mercouris-mearsheimer-lebanon-split.md); Q1 is **upstream** thesis only.",
+    "bullets": [
+      "[strength: medium] **Through-line:** **Netanyahu–Trump** **11 Feb** meeting **poor from an Israeli perspective**; **no** apparent military strategy to **win** vs Iran — [A Deep Dive on Iran](https://mearsheimer.substack.com/p/a-deep-dive-on-iran) Substack **14 Feb** (Deep Dive w/ Danny Davis **12 Feb**).",
+      "[strength: medium] **Mechanism:** Critique of **experts** claiming a **clean military fix** for Iran; parallel skepticism on **Ukraine** “upper hand” narrative in same conversation.",
+      "[strength: low] **Ambiguity:** Video vs Substack emphasis — strength capped where only Substack body used here.",
+      "[strength: medium] **Lattice:** Feeds **Mercouris × Mearsheimer** fork (incentives vs speech-acts) — see April [`mercouris-mearsheimer-lebanon-split`](strategy-notebook-knot-2026-04-14-mercouris-mearsheimer-lebanon-split.md); Q1 is **upstream** thesis only."
+    ],
+    "strength_counts": {
+      "high": 0,
+      "medium": 3,
+      "low": 1
+    },
+    "signal_lines": [
+      "[strength: medium] **Mechanism:** Critique of **experts** claiming a **clean military fix** for Iran; parallel skepticism on **Ukraine** “upper hand” narrative in same conversation.",
+      "[strength: medium] **Lattice:** Feeds **Mercouris × Mearsheimer** fork (incentives vs speech-acts) — see April [`mercouris-mearsheimer-lebanon-split`](strategy-notebook-knot-2026-04-14-mercouris-mearsheimer-lebanon-split.md); Q1 is **upstream** thesis only."
+    ],
+    "tension_lines": [
+      "[strength: medium] **Through-line:** **Netanyahu–Trump** **11 Feb** meeting **poor from an Israeli perspective**; **no** apparent military strategy to **win** vs Iran — [A Deep Dive on Iran](https://mearsheimer.substack.com/p/a-deep-dive-on-iran) Substack **14 Feb** (Deep Dive w/ Danny Davis **12 Feb**).",
+      "[strength: low] **Ambiguity:** Video vs Substack emphasis — strength capped where only Substack body used here.",
+      "[strength: medium] **Lattice:** Feeds **Mercouris × Mearsheimer** fork (incentives vs speech-acts) — see April [`mercouris-mearsheimer-lebanon-split`](strategy-notebook-knot-2026-04-14-mercouris-mearsheimer-lebanon-split.md); Q1 is **upstream** thesis only."
+    ],
+    "shift_lines": [],
+    "source": "h2"
+  }
+}

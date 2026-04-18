@@ -17,8 +17,8 @@
 
 ### Lineage
 
-- **Inbox:** [`daily-strategy-inbox.md`](../../../daily-strategy-inbox.md) — when present, a **`batch-analysis | … | Mercouris × Mearsheimer`** or separate **`thread:alexander-mercouris`** / **`thread:john-mearsheimer`** lines on **Lebanon**/**Israel**/**Washington** **talks** (search `Lebanon`, `Mercouris`, `Mearsheimer`). **Typical pairing:** [strategy-commentator-threads.md](../../../strategy-commentator-threads.md) (`alexander-mercouris` × `john-mearsheimer`).
-- **Expert threads:** `alexander-mercouris`, `john-mearsheimer` — **two** **Judgment** **planes**: **diplomatic** **legitimacy** / **room** **narrative** vs **offensive-realist** **incentives** / **alliance** **geometry**; **not** a merged **single** **expert** **object**.
+- **Inbox:** [`daily-strategy-inbox.md`](../../../daily-strategy-inbox.md) — when present, a **`batch-analysis | … | Mercouris × Mearsheimer`** or separate **`thread:mercouris`** / **`thread:mearsheimer`** lines on **Lebanon**/**Israel**/**Washington** **talks** (search `Lebanon`, `Mercouris`, `Mearsheimer`). **Typical pairing:** [strategy-commentator-threads.md](../../../strategy-commentator-threads.md) (`mercouris` × `mearsheimer`).
+- **Expert threads:** `mercouris`, `mearsheimer` — **two** **Judgment** **planes**: **diplomatic** **legitimacy** / **room** **narrative** vs **offensive-realist** **incentives** / **alliance** **geometry**; **not** a merged **single** **expert** **object**.
 - **History resonance:** none this pass
 - **Civilizational bridge:** none this pass
 
@@ -28,7 +28,7 @@ See [`days.md` § Signal / § Judgment](../days.md) when **Lebanon**/**Washingto
 
 ### Judgment
 
-**Abstract (this knot):** **Alexander Mercouris** tracks **who sounds credible** in **room** **diplomacy** (**Lebanon–Israel** **framing**, **U.S.** **messaging**, **legitimacy** **choreography**). **John Mearsheimer** tracks **what states can afford** and **how power** **distributes** **incentives** (**alliance** **strain**, **escalation** **geometry**) — **orthogonal** **default**: **speech-act** **success** ≠ **structural** **settlement** **without** **evidence** **coupling**. **Do not** **tri-mind**-merge into one **verdict** in **`days.md`** without **labeled** **Thesis A / B** or **`batch-analysis`** **`crosses:alexander-mercouris+john-mearsheimer`** when ingests exist.
+**Abstract (this knot):** **Alexander Mercouris** tracks **who sounds credible** in **room** **diplomacy** (**Lebanon–Israel** **framing**, **U.S.** **messaging**, **legitimacy** **choreography**). **John Mearsheimer** tracks **what states can afford** and **how power** **distributes** **incentives** (**alliance** **strain**, **escalation** **geometry**) — **orthogonal** **default**: **speech-act** **success** ≠ **structural** **settlement** **without** **evidence** **coupling**. **Do not** **tri-mind**-merge into one **verdict** in **`days.md`** without **labeled** **Thesis A / B** or **`batch-analysis`** **`crosses:mercouris+mearsheimer`** when ingests exist.
 
 ### Links
 
@@ -43,7 +43,7 @@ Pins keep **Mercouris** **legitimacy** **layer** and **Mearsheimer** **structure
 | Pin | Target | URL |
 |-----|--------|-----|
 | **1** | Active month **`days.md`** **Judgment** / **Signal** (Lebanon-relevant lines) | [`days.md` § 2026-04-14](../days.md) |
-| **2** | **`thread:alexander-mercouris`** / **`thread:john-mearsheimer`** grep surface | [daily-strategy-inbox.md](../../../daily-strategy-inbox.md) |
+| **2** | **`thread:mercouris`** / **`thread:mearsheimer`** grep surface | [daily-strategy-inbox.md](../../../daily-strategy-inbox.md) |
 | **3** | **Mercouris** / **Mearsheimer** **episode** or **transcript** (when scoped to this knot) | `TBD` — pin **canonical** **watch** **URL** |
 
 **Falsifier:** This knot fails if **Lebanon**/**Washington** **progress** is **asserted** from **Mercouris**-class **narrative** **alone** **without** **Mearsheimer**-class **incentive** **checks** (or **vice versa**: **structure** **only** **without** **on-record** **speech** **acts**) — **forced** **merge** **replaces** **Thesis A / B** **discipline**.
