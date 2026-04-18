@@ -628,3 +628,16 @@ items:
     primary_arc: rome
     candidate_hn_chapters: [hn-i-v1-04, hn-i-v1-05, hn-i-v1-14]
     notes: "Series vol. 3; late Republic–Empire and rise of Christianity through ~476 AD West."
+
+  - id: HNSRC-0058
+    title: "The New Roman Empire: A History of Byzantium"
+    author: "Anthony Kaldellis"
+    era: medieval
+    eras: [ancient, medieval]
+    year: 2023
+    added_batch: "2026-04-18-kaldellis"
+    tags: [Byzantium, Rome, Eastern Empire, synthesis, Oxford]
+    hn_volume: vol-ii
+    primary_arc: rome
+    candidate_hn_chapters: [hn-i-v1-04, hn-ii-rome-byzantine]
+    notes: "Single-volume Byzantium; ~324 AD (Constantinople) through fifteenth century; OUP."
