@@ -17,7 +17,8 @@
 #   lib_id: optional — if promoted to users/grace-mar self-library LIB-* entry
 #   content_path: optional — phase 2: gitignored file or absolute path (not committed)
 #
-# Upload order: ancient → medieval → colonial → industrial → modern (see OPERATOR-SOURCE-CATALOG.md)
+# Upload order: ancient → medieval → colonial → industrial → modern (see OPERATOR-SOURCE-CATALOG.md).
+# Era "ancient" = through fall of Western Roman Empire (~476 CE); late Roman / fall-of-the-West titles stay ancient.
 # Ancient / medieval / modern (operator) 2026-04-18: shelf photos — Landmark (a); Assyria/Persians (b); Everitt/Goldsworthy/Oxford (c); late Rome–Byzantine (d); Roman lives–empire (e); Everyman Library canons (f); Penguin Clothbound epics (g). Assets: .cursor/projects/.../assets/.
 
 version: 1
