@@ -1,8 +1,33 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-04-17T22:34:42.229397+00:00",
-  "count": 26,
+  "generated_at": "2026-04-18T05:19:37.384791+00:00",
+  "count": 28,
   "batch_analysis_refs": [
+    {
+      "date": "2026-04-17",
+      "label": "Davis × Johnson (YT) — **Hormuz** **dual-register** **×** **Bessent** **×** **three-option** **scaffold**",
+      "raw": "- batch-analysis | 2026-04-17 | Davis × Johnson (YT) — **Hormuz** **dual-register** **×** **Bessent** **×** **three-option** **scaffold** | **Tension-first:** **Same-day** **stack** **as** **@araghchi** **/** **Marandi** **/** **Trump** **TS** **—** **Davis** **hosts** **structured** **read** **(open** **vs** **blockade,** **Lebanon** **linkage,** **IFM** **three** **conditions);** **Johnson** **adds** **military** **WTF,** **Malacca** **reject,** **Islamabad**/**China** **angle,** **maximal** **C-plane** **on** **Trump** **—** **label** **analyst** **hyperbole** **vs** **§1h.** **Cross** **Ritter** **04-17** **Iran** **ego/theater** **segment** **with** **explicit** **seam.** **Falsifiers:** **pinned** **TS** **text,** **MFA** **spokesman** **URL,** **Bessent** **/ Treasury** **primary,** **Marine** **ration** **claims.** | crosses:larry-johnson+daniel-davis",
+      "expert_ids": [
+        "larry-johnson",
+        "daniel-davis",
+        "seyed-marandi",
+        "scott-ritter"
+      ],
+      "confidence": "high",
+      "sources": {
+        "crosses": [
+          "larry-johnson",
+          "daniel-davis"
+        ],
+        "alias_match": [
+          "seyed-marandi",
+          "scott-ritter"
+        ],
+        "upstream_verify": [
+          "larry-johnson"
+        ]
+      }
+    },
     {
       "date": "2026-04-17",
       "label": "Ritter × Diesen — **Baltic** **/ MoD** **list** **×** **NATO** **liability** **×** **Iran** **carryover**",
@@ -25,7 +50,7 @@
     {
       "date": "2026-04-17",
       "label": "Ritter × Marandi × Davis — **three** **`thread:`** **planes** **+** **§1h**",
-      "raw": "- batch-analysis | 2026-04-17 | Ritter × Marandi × Davis — **three** **`thread:`** **planes** **+** **§1h** | **Tension-first:** **Marandi** **04-17** **X** **gloss** **vs** **Araghchi** **(dual-register** **IRI);** **Davis** **04-17** **(Araghchi** **QT** **+** **TS)** **=** **U.S.** **process** **/** **ultimatum** **clock;** **Ritter** **04-17** **Diesen** **=** **Baltic** **/** **NATO** **+** **Islamabad** **carryover** **—** **do** **not** **merge** **into** **one** **Judgment** **without** **seams** **(folded** **[`days.md`](../chapters/2026-04/days.md#2026-04-17)** **Weave** **bullet).** **`crosses:`** **N/A** **(three** **experts** **+** **state** **primary)** — **use** **knot** **[marandi-ritter-mercouris-hormuz-scaffold](strategy-notebook-knot-2026-04-13-marandi-ritter-mercouris-hormuz-scaffold.md)** **for** **lattice.**",
+      "raw": "- batch-analysis | 2026-04-17 | Ritter × Marandi × Davis — **three** **`thread:`** **planes** **+** **§1h** | **Tension-first:** **Marandi** **04-17** **X** **gloss** **vs** **Araghchi** **(dual-register** **IRI);** **Davis** **04-17** **(Araghchi** **QT** **+** **TS)** **=** **U.S.** **process** **/** **ultimatum** **clock;** **Ritter** **04-17** **Diesen** **=** **Baltic** **/** **NATO** **+** **Islamabad** **carryover** **—** **do** **not** **merge** **into** **one** **Judgment** **without** **seams** **(folded** **[`days.md`](chapters/2026-04/days.md#2026-04-17)** **Weave** **bullet).** **`crosses:`** **N/A** **(three** **experts** **+** **state** **primary)** — **use** **knot** **[marandi-ritter-mercouris-hormuz-scaffold](strategy-notebook-knot-2026-04-13-marandi-ritter-mercouris-hormuz-scaffold.md)** **for** **lattice.**",
       "expert_ids": [
         "seyed-marandi",
         "daniel-davis",
@@ -147,6 +172,33 @@
           "trita-parsi",
           "scott-ritter",
           "robert-pape"
+        ]
+      }
+    },
+    {
+      "date": "2026-04-17",
+      "label": "**Barnes × Johnson (YT) — US politics room × Iran week**",
+      "raw": "- batch-analysis | 2026-04-17 | **Barnes × Johnson (YT) — US politics room × Iran week** | **Tension-first:** **`thread:robert-barnes`** **long-form** **domestic-liability** **+** **White** **House** **process** **(C-plane** **hypothesis)** **—** **not** **§1e** **text** **and** **not** **Pentagon** **primary.** **Same** **calendar** **day** **as** **Hormuz** **/** **Islamabad** **expert** **stack** **—** **cross** **`thread:daniel-davis`**, **`thread:larry-johnson`** **(Davis** **×** **Johnson** **earlier** **YT),** **`thread:scott-ritter`** **with** **explicit** **plane** **tags** **(room** **vs** **ORBAT** **vs** **FM).** **Falsifiers:** **named** **official** **statements,** **vote** **counts,** **Navy** **press,** **TS** **screenshots.** | crosses:robert-barnes+larry-johnson",
+      "expert_ids": [
+        "robert-barnes",
+        "larry-johnson",
+        "daniel-davis",
+        "scott-ritter"
+      ],
+      "confidence": "high",
+      "sources": {
+        "crosses": [
+          "robert-barnes",
+          "larry-johnson"
+        ],
+        "thread_in_line": [
+          "robert-barnes",
+          "daniel-davis",
+          "larry-johnson",
+          "scott-ritter"
+        ],
+        "upstream_verify": [
+          "robert-barnes"
         ]
       }
     },
