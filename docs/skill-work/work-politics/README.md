@@ -104,6 +104,40 @@ The skill stays **work-politics**; the principal and scope can shift (e.g. new p
 
 ---
 
+## Risk mitigation (template — Tier 1+)
+
+Per [work-template/README.md](../work-template/README.md) § *Risk-mitigation checklist*. Filled for **shadow campaign + brief + gate** obligations (human approves all public ship; SQLite / outreach are optional lanes).
+
+### 1. Quantitative success criteria
+
+| Metric | Target | How to measure |
+|--------|--------|----------------|
+| Public ship discipline | **Zero** agent-autonomous posts or paid outreach on behalf of the principal | [account-x.md](account-x.md) / SMM workflow — human (or designated SMM) posts; agent output stays draft |
+| Brief readiness | Sources and §0 recency within [brief-source-registry.md](brief-source-registry.md) “watch/needs_refresh” budget before relying on a brief for decisions | [workspace.md](workspace.md) dashboard / registry rows; warmup **brief readiness** line when applicable |
+| Gate lane hygiene | At least **weekly** — one work-politics `CANDIDATE-*` path **or** explicit **doc-only this week** | [§ Rhythm](#sync-with-recursion-gate) — avoids silent drift between `docs/…/work-politics/` and `recursion-gate.md` |
+
+### 2. Sustainment table
+
+| Task | Cadence | What to check |
+|------|---------|---------------|
+| Weekly / daily brief cadence | Weekly (before key dates); daily when operator runs strategy+politics horizon | [workspace.md](workspace.md) path; generator commands still match [Operator path](#operator-path) |
+| Principal and opposition surfaces | On race news or companion request | [principal-profile.md](principal-profile.md), [opposition-brief.md](opposition-brief.md) still match public filings and stated positions |
+| Compliance | Before **international** or sensitive paid scope | [compliance-checklist.md](compliance-checklist.md) |
+| SQLite / WPR queue (if used) | Weekly light pass when engine is active | `WPR-*` not stale without owner; optional [§ Operational SQLite engine](#operational-sqlite-engine-optional) |
+
+### 3. Deprecation / retirement path
+
+1. **Companion ends active shadow support** for the current principal — explicit decision ([§ Phase 2](#lifecycle) already frames bifurcation).
+2. Close or hand off open **WPR** / content-queue items with status notes; companion-approved **RECURSION-GATE** rows still merge on normal pipeline (`process_approved_candidates.py`), not abandoned mid-merge.
+3. Archive principal-specific experiments and dated campaign notes under **git history + dated pointers** in this folder (e.g. README “last phase” line), not by deleting audit or revenue logs.
+4. Remove or downgrade automation (brief scripts, optional SQLite) only after no operator relies on the path; **never** treat `recursion-gate.md` as disposable history.
+
+### 4. Scope creep guardrail
+
+> Any workflow that **posts publicly**, **commits the principal’s name to outreach**, or **merges campaign substance into Voice / IX / Record** without [§ Sync with RECURSION-GATE](#sync-with-recursion-gate) and companion approval is **out of charter**. Incremental “just this once” public or paid moves require an explicit plan — not a silent doc edit. This lane is **research + draft + staged evidence**; **sovereignty stays with the companion.**
+
+---
+
 ## Revenue / monetization
 
 This workflow can support revenue when someone pays for campaign content — e.g. Thomas Massie briefs, research, opposition memos, message drafts, or X copy. The system produces the content; the companion controls who pays, what’s delivered, pricing, and terms. No autonomous deals or commitments; any paid engagement is companion-led. Same support menu and principles apply; payment is a use case, not a change of role.
@@ -118,7 +152,7 @@ This workflow can support revenue when someone pays for campaign content — e.g
 
 | Doc / file | Purpose |
 |------------|---------|
-| **This README** | Objective, scope, principles, gate convention. |
+| **This README** | Objective, scope, principles, gate convention, [risk mitigation (Tier 1+)](#risk-mitigation-template--tier-1). |
 | **[work-politics-strategic-memo.md](work-politics-strategic-memo.md)** | Strategic framing: what this territory is, why it matters, architectural weaknesses, bottom-line judgment. |
 | **[scripts/work_politics_engine.py](../../../scripts/work_politics_engine.py)** | Optional SQLite WORK layer (clients, WPR review queue, funnel); see [§ Operational SQLite engine](#operational-sqlite-engine-optional). |
 | **[consulting-charter.md](consulting-charter.md)** | Umbrella mission, service lines, pricing, phase note. |
