@@ -20,7 +20,7 @@
 #
 # Upload order: ancient → medieval → colonial → industrial → modern (see OPERATOR-SOURCE-CATALOG.md).
 # Era "ancient" = through fall of Western Roman Empire (~476 AD); late Roman / fall-of-the-West titles stay ancient.
-# Ancient / medieval / modern (operator) 2026-04-18: shelf photos — Landmark (a); Assyria/Persians (b); Everitt/Goldsworthy/Oxford (c); late Rome–Byzantine (d); Roman lives–empire (e); Everyman Library canons (f); Penguin Clothbound epics (g). Assets: .cursor/projects/.../assets/.
+# Ancient / medieval / modern (operator) 2026-04-18: shelf photos — Landmark (a); Assyria/Persians (b); Everitt/Goldsworthy/Oxford (c); late Rome–Byzantine (d); Roman lives–empire (e); Everyman Library canons (f); Penguin Clothbound epics (g). Medieval/early modern batches 2026-04-18: shelf-batch-a/b (Europe + Ottoman), batch-c (Weatherford + Khazaria), batch-d (Penguin Clothbound medieval canon). Assets: .cursor/projects/.../assets/photo_2026-04-18_*.png.
 
 version: 1
 items:
@@ -641,3 +641,254 @@ items:
     primary_arc: rome
     candidate_hn_chapters: [hn-i-v1-04, hn-i-v1-19, hn-ii-rome-byzantine]
     notes: "Single-volume Byzantium; ~324 AD (Constantinople) through fifteenth century; OUP."
+
+  # --- Medieval / early modern shelf photos 2026-04-18 (see .cursor/projects/.../assets/photo_2026-04-18_*.png) ---
+
+  - id: HNSRC-0059
+    title: "The Ottomans: Khans, Caesars, and Caliphs"
+    author: "Marc David Baer"
+    era: colonial
+    eras: [medieval, colonial]
+    added_batch: "2026-04-18-medieval-shelf-batch-a"
+    tags: [Ottoman, Turkey, Islam, empire, Europe]
+    hn_volume: vol-iii
+    candidate_hn_chapters: [hn-iii-ottoman, hn-ii-islam]
+    notes: "Basic Books; cream spine Ottoman figure. Duplicate spine on second shelf photo — one catalog row."
+
+  - id: HNSRC-0060
+    title: "The Florentines"
+    author: "Paul Strathern"
+    era: colonial
+    eras: [medieval, colonial]
+    added_batch: "2026-04-18-medieval-shelf-batch-a"
+    tags: [Italy, Florence, Renaissance, city]
+    hn_volume: vol-iii
+    candidate_hn_chapters: [hn-ii-rome-byzantine]
+    notes: "Light blue spine; Florence landscape."
+
+  - id: HNSRC-0061
+    title: "The Medici"
+    author: "Paul Strathern"
+    era: colonial
+    eras: [medieval, colonial]
+    added_batch: "2026-04-18-medieval-shelf-batch-a"
+    tags: [Italy, Florence, Renaissance, dynasty]
+    hn_volume: vol-iii
+    candidate_hn_chapters: [hn-ii-rome-byzantine]
+    notes: "Pale yellow/cream spine; Medici emblem."
+
+  - id: HNSRC-0062
+    title: "The Borgias"
+    author: "Paul Strathern"
+    era: colonial
+    eras: [medieval, colonial]
+    added_batch: "2026-04-18-medieval-shelf-batch-a"
+    tags: [Italy, Renaissance, papacy, dynasty]
+    hn_volume: vol-iii
+    candidate_hn_chapters: [hn-ii-rome-byzantine]
+    notes: "Purple spine; Renaissance group portrait."
+
+  - id: HNSRC-0063
+    title: "Leonardo da Vinci"
+    author: "Walter Isaacson"
+    era: colonial
+    eras: [medieval, colonial]
+    added_batch: "2026-04-18-medieval-shelf-batch-a"
+    tags: [Italy, Renaissance, biography, art]
+    hn_volume: vol-iii
+    candidate_hn_chapters: [hn-ii-rome-byzantine]
+    notes: "Reddish-brown spine; Leonardo portrait."
+
+  - id: HNSRC-0064
+    title: "House of Lilies: The Dynasty That Made Medieval France"
+    author: "Justine Firnhaber-Baker"
+    era: medieval
+    added_batch: "2026-04-18-medieval-shelf-batch-a"
+    tags: [France, Capetian, dynasty, medieval]
+    hn_volume: vol-ii
+    candidate_hn_chapters: [hn-iii-france]
+    notes: "Basic Books; white spine crown/crest."
+
+  - id: HNSRC-0065
+    title: "The Habsburgs: To Rule the World"
+    author: "Martyn Rady"
+    era: colonial
+    eras: [medieval, colonial]
+    added_batch: "2026-04-18-medieval-shelf-batch-a"
+    tags: [Habsburg, empire, Central Europe, dynasty]
+    hn_volume: vol-iii
+    candidate_hn_chapters: [hn-iii-france, hn-iii-russia]
+
+  - id: HNSRC-0066
+    title: "Iron and Blood"
+    author: "Peter H. Wilson"
+    era: industrial
+    added_batch: "2026-04-18-medieval-shelf-batch-a"
+    tags: [Germany, military, Habsburg, Prussia]
+    hn_volume: vol-iv
+    candidate_hn_chapters: [hn-iv-germany]
+    notes: "Belknap Harvard; black spine soldiers — verify period emphasis in your edition; adjust era if needed."
+
+  - id: HNSRC-0067
+    title: "Charlemagne"
+    author: "Johannes Fried"
+    era: medieval
+    added_batch: "2026-04-18-medieval-shelf-batch-b"
+    tags: [Carolingian, Frankish, empire, early medieval]
+    hn_volume: vol-ii
+    candidate_hn_chapters: [hn-iii-france, hn-ii-rome-byzantine]
+    notes: "Harvard University Press; red spine."
+
+  - id: HNSRC-0068
+    title: "The Middle Kingdoms: A New History of Central Europe"
+    author: "Martyn Rady"
+    era: medieval
+    eras: [medieval, colonial]
+    added_batch: "2026-04-18-medieval-shelf-batch-b"
+    tags: [Central Europe, Poland, Hungary, Bohemia, synthesis]
+    hn_volume: vol-ii
+    candidate_hn_chapters: [hn-ii-rome-byzantine, hn-iii-russia]
+
+  - id: HNSRC-0069
+    title: "The Life and Legend of the Sultan Saladin"
+    author: "Jonathan Phillips"
+    era: medieval
+    added_batch: "2026-04-18-medieval-shelf-batch-b"
+    tags: [Crusades, Islam, Ayyubid, biography]
+    hn_volume: vol-ii
+    primary_arc: islam
+    candidate_hn_chapters: [hn-ii-islam, hn-ii-persia-islamic]
+
+  - id: HNSRC-0070
+    title: "The Burgundians"
+    author: "Bart Van Loo"
+    era: medieval
+    added_batch: "2026-04-18-medieval-shelf-batch-b"
+    tags: [Burgundy, Low Countries, France, dynasty]
+    hn_volume: vol-ii
+    candidate_hn_chapters: [hn-iii-france]
+
+  - id: HNSRC-0071
+    title: "Henry V"
+    author: "Dan Jones"
+    era: medieval
+    added_batch: "2026-04-18-medieval-shelf-batch-b"
+    tags: [England, Lancaster, Hundred Years War, biography]
+    hn_volume: vol-ii
+    primary_arc: anglia
+    candidate_hn_chapters: [hn-iii-anglia]
+
+  - id: HNSRC-0072
+    title: "A World Lit Only by Fire"
+    author: "William Manchester"
+    era: colonial
+    eras: [medieval, colonial]
+    added_batch: "2026-04-18-medieval-shelf-batch-b"
+    tags: [Renaformation, Europe, late medieval, Renaissance]
+    hn_volume: vol-iii
+    candidate_hn_chapters: [hn-ii-rome-byzantine]
+    notes: "Little Brown; thin tan spine — popular bridge to early modern."
+
+  - id: HNSRC-0073
+    title: "Children of Ash and Elm: A History of the Vikings"
+    author: "Neil Price"
+    era: medieval
+    added_batch: "2026-04-18-medieval-shelf-batch-b"
+    tags: [Vikings, Scandinavia, archaeology, North Sea]
+    hn_volume: vol-ii
+    candidate_hn_chapters: [hn-iii-anglia]
+
+  - id: HNSRC-0074
+    title: "Emperor of the Seas"
+    author: "Jack Weatherford"
+    era: medieval
+    eras: [medieval, colonial]
+    added_batch: "2026-04-18-medieval-shelf-batch-c"
+    tags: [maritime, Asia, Mongolia, China, trade]
+    hn_volume: vol-ii
+    candidate_hn_chapters: [hn-ii-mongol, hn-ii-china-medieval]
+
+  - id: HNSRC-0075
+    title: "The Secret History of the Mongol Queens"
+    author: "Jack Weatherford"
+    era: medieval
+    added_batch: "2026-04-18-medieval-shelf-batch-c"
+    tags: [Mongol, gender, empire, Inner Asia]
+    hn_volume: vol-ii
+    candidate_hn_chapters: [hn-ii-mongol, hn-ii-china-medieval]
+
+  - id: HNSRC-0076
+    title: "Genghis Khan and the Making of the Modern World"
+    author: "Jack Weatherford"
+    era: medieval
+    added_batch: "2026-04-18-medieval-shelf-batch-c"
+    tags: [Mongol, Genghis, empire, synthesis]
+    hn_volume: vol-ii
+    candidate_hn_chapters: [hn-ii-mongol]
+
+  - id: HNSRC-0077
+    title: "The Jews of Khazaria"
+    author: "Kevin Alan Brook"
+    era: medieval
+    added_batch: "2026-04-18-medieval-shelf-batch-c"
+    tags: [Khazaria, steppe, Judaism, Caucasus]
+    hn_volume: vol-ii
+    candidate_hn_chapters: [hn-ii-islam, hn-ii-mongol]
+    notes: "Third edition; Rowman & Littlefield."
+
+  - id: HNSRC-0078
+    title: "Tales from 1,001 Nights"
+    author: "Various"
+    era: medieval
+    added_batch: "2026-04-18-medieval-shelf-batch-d-penguin-clothbound"
+    tags: [Arabic, story, Islam, Penguin Clothbound]
+    hn_volume: vol-ii
+    candidate_hn_chapters: [hn-ii-islam, hn-ii-persia-islamic]
+
+  - id: HNSRC-0079
+    title: "The Travels"
+    author: "Marco Polo"
+    era: medieval
+    added_batch: "2026-04-18-medieval-shelf-batch-d-penguin-clothbound"
+    tags: [China, Mongol, travel, Silk Road, Penguin Clothbound]
+    hn_volume: vol-ii
+    candidate_hn_chapters: [hn-ii-mongol, hn-ii-china-medieval]
+
+  - id: HNSRC-0080
+    title: "Inferno"
+    author: "Dante Alighieri"
+    era: medieval
+    added_batch: "2026-04-18-medieval-shelf-batch-d-penguin-clothbound"
+    tags: [Italy, poetry, Divine Comedy, Penguin Clothbound]
+    hn_volume: vol-ii
+    candidate_hn_chapters: [hn-ii-rome-byzantine]
+
+  - id: HNSRC-0081
+    title: "The Canterbury Tales"
+    author: "Geoffrey Chaucer"
+    era: medieval
+    added_batch: "2026-04-18-medieval-shelf-batch-d-penguin-clothbound"
+    tags: [England, poetry, Middle English, Penguin Clothbound]
+    hn_volume: vol-ii
+    candidate_hn_chapters: [hn-iii-anglia]
+
+  - id: HNSRC-0082
+    title: "Don Quixote"
+    author: "Miguel de Cervantes"
+    era: colonial
+    eras: [medieval, colonial]
+    added_batch: "2026-04-18-medieval-shelf-batch-d-penguin-clothbound"
+    tags: [Spain, novel, Renaissance, Penguin Clothbound]
+    hn_volume: vol-iii
+    candidate_hn_chapters: [hn-ii-rome-byzantine]
+    notes: "Early 17th c; Spain — no dedicated hn-iii chapter id; use notes when drafting."
+
+  - id: HNSRC-0083
+    title: "Monkey King"
+    author: "Wu Cheng'en"
+    era: medieval
+    added_batch: "2026-04-18-medieval-shelf-batch-d-penguin-clothbound"
+    tags: [China, novel, Ming, Journey to the West, Penguin Clothbound]
+    hn_volume: vol-ii
+    primary_arc: china
+    candidate_hn_chapters: [hn-ii-china-medieval]
