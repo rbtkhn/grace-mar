@@ -29,6 +29,12 @@ So `work-civ-mem` is about **repository management**, not about importing CMC op
 
 ---
 
+## Topic routing (strategy lane)
+
+For **multi-region** questions (papacy, Latin Europe, Americas Catholic history, Islam–Christian encounter), see **[TOPIC-ROUTING.md](TOPIC-ROUTING.md)** and `scripts/route_civ_mem_topic.py` — profiles in `config/civ_mem_topic_routes.yaml` prioritize **ROME** and MEM **CONNECTIONS** expansion before ad hoc search.
+
+---
+
 ## How CMC Is Useful Inside Grace-Mar
 
 Civilization memory has **no monetary purpose**. Its purpose is **pure understanding of history**, which can help leaders’ wisdom. Inside Grace-Mar it functions as an **external civilizational reference surface**, not as part of the companion's Record. It can support lookup, curriculum design, historical explanation, strategic analogy, and work territories that need deeper structured context about civilizations, institutions, continuity, and decline. Grace-Mar may consult it when civilizational context helps the companion think, learn, plan, or build, but nothing from `civilization_memory` becomes Grace-Mar's personal knowledge unless it is explicitly surfaced and approved through the normal gate. In this way, `civilization_memory` functions as a high-quality external corpus and thinking aid, while the Record remains companion-specific, evidence-linked, and sovereign.

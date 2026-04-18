@@ -1,0 +1,102 @@
+# Civ-mem topic routing — WORK only; not Record.
+# See docs/skill-work/work-civ-mem/TOPIC-ROUTING.md
+routing_rules_version: 1
+
+# Re-check when bumping research/repos/civilization_memory (MEM–RELEVANCE–* inventory).
+tier_a_relevance_entities:
+  - AMERICA
+  - CHINA
+  - GERMANY
+  - INDIA
+  - RUSSIA
+
+# Default when token overlap ties or query is empty of profile keywords.
+default_profile: latin_catholic_sphere
+
+# ROME seeds (no MEM–RELEVANCE–ROME.md at many pins) — paths under content/civilizations/ROME/
+# Aligned with docs/skill-work/work-strategy/strategy-notebook/TRUMP-LEO-CIV-MEM-BARNES-DRILL.md
+rome_seed_files:
+  - MEM–ROME–PAPACY.md
+  - MEM–ROME–VATICAN.md
+  - MEM–ROME–LAW–CITIZENSHIP.md
+  - MEM–ROME–LAW–SLAVERY.md
+  - MEM–ROME–GEO–MEDITERRANEAN–SEA.md
+
+profiles:
+  latin_catholic_sphere:
+    description: "Papacy, Latin Europe, Iberian proxy, Americas Catholic register — ROME-first."
+    priority: 20
+    required_tokens: []  # if non-empty, at least one must match for this profile to win
+    keywords:
+      - pope
+      - leo
+      - leo-xiv
+      - vatican
+      - holy-see
+      - papacy
+      - papal
+      - curia
+      - apostolic
+      - italy
+      - italian
+      - rome
+      - france
+      - french
+      - paris
+      - spain
+      - spanish
+      - iberia
+      - iberian
+      - castile
+      - patronato
+      - mexico
+      - mexican
+      - brazil
+      - brazilian
+      - latin-america
+      - latam
+      - hispanic
+      - catholic
+      - cathedral
+    primary_civ: ROME
+    secondary_civs:
+      - FRANCE
+      - AMERICA
+    attention_pct:
+      rome: 70
+      france: 15
+      america: 15
+    max_mem_budget_default: 12
+    max_cross_civ_edges: 4
+
+  mediterranean_islam_christian_encounter:
+    description: "Mosque visits, Maghreb dialogue, Islam–Christian encounter headlines."
+    priority: 25
+    required_tokens: []
+    keywords:
+      - mosque
+      - minaret
+      - islam
+      - muslim
+      - maghreb
+      - algiers
+      - algeria
+      - morocco
+      - tunisia
+      - dialogue
+      - interfaith
+      - coexistence
+      - quran
+      - quranic
+    primary_civ: ISLAM
+    secondary_civs:
+      - ROME
+      - FRANCE
+      - AMERICA
+    attention_pct:
+      islam: 45
+      rome: 35
+      france: 10
+      america: 10
+    max_mem_budget_default: 12
+    max_cross_civ_edges: 4
