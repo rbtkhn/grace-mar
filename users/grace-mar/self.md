@@ -99,37 +99,37 @@ entries: []
 
 ```yaml
 entries:
-  - id: CUR-001
+  - id: CUR-0001
     label: "Geopolitics and international relations"
     detail: "Sustained cross-territory judgment: daily strategy notebook entries, 21+ expert commentariat threads (Mercouris, Mearsheimer, Barnes, Ritter, Parsi, Davis, etc.), wire sources from Kremlin/MID, US executive, PRC MFA, IRI MFA/IRGC, Rome."
     source: "lane: work-strategy (64 expert files, wire §1d-§1h)"
     merged: 2026-04-17
-  - id: CUR-002
+  - id: CUR-0002
     label: "Jiang philosophy and Predictive History"
     detail: "Multivolume book/site production from lecture series analysis. Thesis mapping, concept dictionary, evidence packs, counter-readings. Primary operator analytical book (LIB-0149)."
     source: "lane: work-jiang, LIB-0149"
     merged: 2026-04-17
-  - id: CUR-003
+  - id: CUR-0003
     label: "AI systems design and companion-self architecture"
     detail: "Cognitive fork infrastructure — Record/Voice/gate pipeline, OpenClaw integration, portable identity exports, template-instance sync. Building the system that hosts the Record."
     source: "lane: work-dev, work-companion-self"
     merged: 2026-04-17
-  - id: CUR-004
+  - id: CUR-0004
     label: "Political consulting"
     detail: "Shadow campaign management, opposition research, message discipline, AI-assisted briefs. Interest area — no client details in the Record."
     source: "lane: work-politics (interest only)"
     merged: 2026-04-17
-  - id: CUR-005
+  - id: CUR-0005
     label: "Civilizational history and structured knowledge"
     detail: "Civilization_memory stewardship — historical analogy, institutional continuity, empire and decline patterns. CIV-MEM as external reference corpus for strategic judgment."
     source: "lane: work-civ-mem, LIB-0157"
     merged: 2026-04-17
-  - id: CUR-006
+  - id: CUR-0006
     label: "Theology"
     detail: "Named shelf in the companion library. Intersects with civilization memory, institutional history, and values-level analysis."
     source: "library: self-library.md (Theology shelf)"
     merged: 2026-04-17
-  - id: CUR-007
+  - id: CUR-0007
     label: "Mentoring and teaching methodology"
     detail: "Xavier advisor module (OB1 instance, learning rhythm, skills portfolio), alpha-school lane. Cross-instance companion-self deployment as a teaching and coaching tool."
     source: "lane: work-xavier, work-alpha-school"

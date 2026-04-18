@@ -49,7 +49,7 @@ status: approved
 channel_key: operator:cursor
 source: docs/skill-work/work-strategy/README.md, strategy-notebook (64 expert files)
 summary: "Geopolitics and international relations"
-merged_as: CUR-001
+merged_as: CUR-0001
 ```
 
 ### CANDIDATE-0008 — approved 2026-04-17
@@ -62,7 +62,7 @@ status: approved
 channel_key: operator:cursor
 source: users/grace-mar/work-jiang.md, LIB-0149
 summary: "Jiang philosophy and Predictive History"
-merged_as: CUR-002
+merged_as: CUR-0002
 ```
 
 ### CANDIDATE-0009 — approved 2026-04-17
@@ -75,7 +75,7 @@ status: approved
 channel_key: operator:cursor
 source: docs/skill-work/work-dev/README.md, work-companion-self/README.md
 summary: "AI systems design and companion-self architecture"
-merged_as: CUR-003
+merged_as: CUR-0003
 ```
 
 ### CANDIDATE-0010 — approved 2026-04-17
@@ -88,7 +88,7 @@ status: approved
 channel_key: operator:cursor
 source: docs/skill-work/work-politics/README.md
 summary: "Political consulting (interest only)"
-merged_as: CUR-004
+merged_as: CUR-0004
 ```
 
 ### CANDIDATE-0011 — approved 2026-04-17
@@ -101,7 +101,7 @@ status: approved
 channel_key: operator:cursor
 source: docs/skill-work/work-civ-mem/README.md, LIB-0157
 summary: "Civilizational history and structured knowledge"
-merged_as: CUR-005
+merged_as: CUR-0005
 ```
 
 ### CANDIDATE-0012 — approved 2026-04-17
@@ -114,7 +114,7 @@ status: approved
 channel_key: operator:cursor
 source: users/grace-mar/self-library.md
 summary: "Theology"
-merged_as: CUR-006
+merged_as: CUR-0006
 ```
 
 ### CANDIDATE-0013 — approved 2026-04-17
@@ -127,7 +127,7 @@ status: approved
 channel_key: operator:cursor
 source: docs/skill-work/work-xavier/README.md, work-alpha-school/README.md
 summary: "Mentoring and teaching methodology"
-merged_as: CUR-007
+merged_as: CUR-0007
 ```
 
 ### CANDIDATE-0001 — approved 2026-04-17
