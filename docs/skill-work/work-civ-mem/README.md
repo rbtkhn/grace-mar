@@ -71,7 +71,7 @@ Compressed rule: `civilization_memory` is a reference corpus and work aid, not p
 
 | Doc / file | Purpose |
 |------------|---------|
-| **This README** | Objective, purpose, boundary, and principles for `work-civ-mem`. |
+| **This README** | Objective, purpose, boundary, principles, [risk mitigation (Tier 1+)](#risk-mitigation-template--tier-1). |
 | **[roadmap.md](roadmap.md)** | Phased path from manual repo stewardship to bounded autonomous maintenance. |
 | **[workspace.md](workspace.md)** | Lightweight runbook: start points, core repo surfaces, validation commands, and default stewardship loop. |
 | **[audit-report.md](audit-report.md)** | Initial baseline audit snapshot for repo strengths, likely risks, and next stewardship steps. |
@@ -86,6 +86,39 @@ Compressed rule: `civilization_memory` is a reference corpus and work aid, not p
 4. **No mixed-scope drift** — Keep repo management, civilizational operations, and Companion Self product strategy distinct.
 5. **Auditability first** — Track repo-management work through explicit docs, reports, and future contribution surfaces rather than ad hoc memory.
 6. **Future leverage stays explicit** — Adjacent product priorities may be recorded in the roadmap, but they are not implied commitments for this territory's first pass.
+
+---
+
+## Risk mitigation (template — Tier 1+)
+
+Per [work-template/README.md](../work-template/README.md) § *Risk-mitigation checklist*. Filled for **external-repo stewardship** — `civilization_memory` stays upstream-governed; Grace-Mar prepares, not replaces, CMC canon.
+
+### 1. Quantitative success criteria
+
+| Metric | Target | How to measure |
+|--------|--------|----------------|
+| Contribution hygiene | Prepared patches pass **upstream** validation before open PR | `tools/cmc-governance-checks.sh`, `cmc-validate-corpus.py`, index build — see [Repo Touchpoints](#repo-touchpoints) |
+| Drift visibility | [audit-report.md](audit-report.md) and [workspace.md](workspace.md) do not silently contradict each other on “what’s broken” | Occasional diff between audit snapshot and runbook; reopen audit when repo structure shifts |
+| Record boundary | **Zero** merges of CMC prose into `IX-A` / Voice as default knowledge | [§ Safe vs unsafe](#safe-vs-unsafe-boundary); political ship stays [civ-mem-draft-protocol.md](../work-politics/civ-mem-draft-protocol.md) |
+
+### 2. Sustainment table
+
+| Task | Cadence | What to check |
+|------|---------|---------------|
+| Validation loop | On change to managed paths or before upstream PR | Commands in [workspace.md](workspace.md) still match repo `README` / `tools/` |
+| Roadmap honesty | Quarterly or when roadmap assumptions change | [roadmap.md](roadmap.md) phased claims vs actual automation shipped |
+| Routing / scripts | When `config/civ_mem_*.yaml` or routers change | [TOPIC-ROUTING.md](TOPIC-ROUTING.md) + `route_civ_mem_topic.py` smoke still match operator paths |
+
+### 3. Deprecation / retirement path
+
+1. **Stop active stewardship** of the fork/workspace — companion decision; document in [workspace.md](workspace.md) or this README (one “last reviewed / status” line).
+2. Close open **prepared contribution** notes with explicit **wontfix** or **upstream superseded** — no ghost tickets.
+3. Archive Grace-Mar-only stewardship memos under dated pointers; **do not** strip `research/repos/civilization_memory/` history or pretend the external repo is deprecated from Grace-Mar without upstream reality.
+4. Remove or narrow automation (`scripts/` bridges) only after nothing depends on them; **CMC upstream** remains the source of truth for corpus rules.
+
+### 4. Scope creep guardrail
+
+> Any workflow that **imports CMC operating modes (STATE/SCHOLAR)** into Grace-Mar as **live control surfaces**, **merges civilizational claims into the Record without the gate**, or **folds Companion Self product roadmaps into CMC obligations** requires a **new plan** — not an incremental README edit. This lane’s charter is **stewardship + bounded contributions**; **sovereignty and Record stay Grace-Mar-governed**, **canon stays `civilization_memory`-governed**.
 
 ---
 
