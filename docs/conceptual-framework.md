@@ -164,7 +164,7 @@ Use the tetrad to anticipate second-order effects and avoid unintended reversals
 
 **Status language should preserve this distinction.** Process microcopy must not anthropomorphize WORK execution, lookup, or maintenance into hidden companion-facing agency. In practice: status text should reveal whether the system is reading the Record, looking outside it, staging, validating, or drafting — not collapse all of those into generic "thinking." This keeps triadic cognition legible instead of mystified.
 
-**Historical context (Jaynes):** Julian Jaynes (*The Origin of Consciousness in the Breakdown of the Bicameral Mind*, 1976) proposed that before ~1000 BCE humans had a "bicameral" mind: one hemisphere produced commands, the other received and obeyed, experienced as *external* voices. Grace-Mar is not a return to that; it is a new structure — voluntary, sovereign, with Mind in charge. We sometimes say **tricameral** next to Jaynes only as contrast vocabulary, not as a claim about brain hemispheres.
+**Historical context (Jaynes):** Julian Jaynes (*The Origin of Consciousness in the Breakdown of the Bicameral Mind*, 1976) proposed that before ~1000 BC humans had a "bicameral" mind: one hemisphere produced commands, the other received and obeyed, experienced as *external* voices. Grace-Mar is not a return to that; it is a new structure — voluntary, sovereign, with Mind in charge. We sometimes say **tricameral** next to Jaynes only as contrast vocabulary, not as a claim about brain hemispheres.
 
 **Triad — three parts:**
 

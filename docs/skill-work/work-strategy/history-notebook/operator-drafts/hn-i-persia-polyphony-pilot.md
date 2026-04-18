@@ -11,7 +11,7 @@
 **Timeline / facts**
 
 - **Achaemenid:** Imperial integration with local faces retained; Cyrus Cylinder–style restoration rhetoric; Royal Road and satrap extraction; collapse after Alexander decapitates Darius III at Gaugamela — elite loyalty tied to person as well as system.
-- **Parthian:** Long Roman frontier; decentralized Arsacid structure; Carrhae (53 BCE) shows mobility and denial defeating Roman mass on chosen ground; neither side permanently subdues the other — parity as mutual exhaustion.
+- **Parthian:** Long Roman frontier; decentralized Arsacid structure; Carrhae (53 BC) shows mobility and denial defeating Roman mass on chosen ground; neither side permanently subdues the other — parity as mutual exhaustion.
 - **Sassanid:** Centralized state religion and law; heavy Byzantine wars; Shapur–Valerian episode as civilizational “validation”; fall when exhausted before Arab expansion — brittleness under decapitation vs feudal resilience.
 
 **Patterns:** tolerance → parity → compression across regimes; endurance and doctrine densification after shock.

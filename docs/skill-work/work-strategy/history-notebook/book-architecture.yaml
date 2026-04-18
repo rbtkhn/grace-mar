@@ -14,7 +14,7 @@ project:
 
 volumes:
   - id: vol-i
-    title: "Ancient Empires (to 476 CE — Fall of Rome in the West)"
+    title: "Ancient Empires (to 476 AD — Fall of Rome in the West)"
     thesis: "Twenty strategic problems; comparative ancient evidence (Persia, Rome, China, India and adjacent cases). Not civ-by-civ Parts."
     sub_groups:
       - label: "Part 1 — State formation and imperial shape"
@@ -31,7 +31,7 @@ volumes:
         chapters: [hn-i-v1-16, hn-i-v1-17, hn-i-v1-18, hn-i-v1-19, hn-i-v1-20]
 
   - id: vol-ii
-    title: "Medieval (476–1453 — Fall of Constantinople)"
+    title: "Medieval (476 AD–1453 AD — Fall of Constantinople)"
     thesis: "The post-Roman reconfigurations. Islam arrives; Byzantium survives; the Mongol disruption resets Eurasia; China peaks and fragments."
     sub_groups:
       - label: "Successor Civilizations"

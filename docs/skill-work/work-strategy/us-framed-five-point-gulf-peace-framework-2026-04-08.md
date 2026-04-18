@@ -33,7 +33,7 @@ Treaty of Paris (1783): Ended the Revolutionary War with clear territorial bound
 
 **Historical precedents — ancient and medieval**
 
-Thirty Years’ Peace (445 BCE): Agreement between Athens and Sparta that imposed verifiable limits on military expansion and established a period of non-aggression, aiming for long-term stability in the Greek world.
+Thirty Years’ Peace (445 BC): Agreement between Athens and Sparta that imposed verifiable limits on military expansion and established a period of non-aggression, aiming for long-term stability in the Greek world.
 
 ### 2. Safe and Unimpeded Transit through the Strait of Hormuz + Enhanced Cooperative Regime
 
@@ -73,7 +73,7 @@ Treaty of Guadalupe Hidalgo (1848): Ended the Mexican-American War with clear, v
 
 **Historical precedents — ancient and medieval**
 
-Thirty Years’ Peace (445 BCE): Featured mutual verification-like clauses and arms-related limits between rival powers, attempting to create a stable balance through documented agreements.
+Thirty Years’ Peace (445 BC): Featured mutual verification-like clauses and arms-related limits between rival powers, attempting to create a stable balance through documented agreements.
 
 ### 4. Phased Termination of Nuclear-Related Sanctions + Legal Implementation
 

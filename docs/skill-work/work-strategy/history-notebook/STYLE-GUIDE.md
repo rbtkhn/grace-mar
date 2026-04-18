@@ -16,6 +16,15 @@ Public-facing sources cite historical authors and works (Herodotus, Ferdowsi, Pl
 
 ---
 
+## Dating (years)
+
+Use the **traditional BC / AD** system everywhere in History Notebook prose, tables, and operator-facing metadata for this book. **Do not** use BCE or CE.
+
+- **Before the common era:** year + **BC** (e.g. `53 BC`, `445 BC`).  
+- **In the common era:** year + **AD** or **AD** + year (e.g. `476 AD`, `AD 476`); for ranges, repeat or mark once as needed (e.g. `476 AD–1453 AD`).
+
+---
+
 ## Chapter format (6 sections)
 
 Each chapter is ~500–1000 words. Sections appear in this order:
@@ -76,7 +85,7 @@ When and why this chapter's patterns apply to present-day analysis. Includes at 
 
 The case should be concrete enough that a strategist can reason by analogy:
 
-> **Strategic case — Carrhae (53 BCE).** Crassus invaded Parthia with 40,000 heavy infantry. Surena refused engagement on Roman terms — horse archers at range, feigned retreats, supply denial. The case demonstrates parity-mode logic: when the weaker force controls terrain and tempo, the stronger force's advantages become liabilities.
+> **Strategic case — Carrhae (53 BC).** Crassus invaded Parthia with 40,000 heavy infantry. Surena refused engagement on Roman terms — horse archers at range, feigned retreats, supply denial. The case demonstrates parity-mode logic: when the weaker force controls terrain and tempo, the stronger force's advantages become liabilities.
 
 No internal skill or doctrine file references. The analysis speaks for itself.
 

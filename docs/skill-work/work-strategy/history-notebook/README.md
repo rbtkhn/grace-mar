@@ -30,8 +30,8 @@ Flow: **CIV-MEM (reservoir) → distill into HN chapters (`hn-*`) → strategy-n
 
 | Volume | Era | Chapters |
 |--------|-----|----------|
-| **I — Ancient Empires** (to 476 CE) | Twenty **problem-led** chapters (comparative ancient evidence); see [research/VOL-I-PROBLEM-CHAPTERS.md](research/VOL-I-PROBLEM-CHAPTERS.md) | `hn-i-v1-01` … `hn-i-v1-20` (legacy civ draft: [chapters/vol-i/persia.md](chapters/vol-i/persia.md)) |
-| **II — Medieval** (476–1453) | Post-Roman reconfigurations: Islam, Byzantium, Mongol disruption | islam, rome-byzantine, persia-islamic, mongol, china-medieval |
+| **I — Ancient Empires** (to 476 AD) | Twenty **problem-led** chapters (comparative ancient evidence); see [research/VOL-I-PROBLEM-CHAPTERS.md](research/VOL-I-PROBLEM-CHAPTERS.md) | `hn-i-v1-01` … `hn-i-v1-20` (legacy civ draft: [chapters/vol-i/persia.md](chapters/vol-i/persia.md)) |
+| **II — Medieval** (476 AD–1453 AD) | Post-Roman reconfigurations: Islam, Byzantium, Mongol disruption | islam, rome-byzantine, persia-islamic, mongol, china-medieval |
 | **III — Early Modern** (1453–1789) | Ottoman peak, maritime expansion, continental consolidation | ottoman, anglia, france, russia |
 | **IV — Industrial & Imperial** (1789–1945) | Revolution, total war, imperial collapse | america, germany, russia-imperial, anglia-imperial |
 | **V — Contemporary** (1945–present) | Cold War, unipolarity, current crisis landscape | america-hegemonic, china-modern, russia-modern, persia-modern |

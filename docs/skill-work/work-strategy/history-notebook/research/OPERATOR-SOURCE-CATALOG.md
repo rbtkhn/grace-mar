@@ -36,11 +36,13 @@ Process the shelf in this **fixed sequence** (batches of **five titles** within 
 
 ### Era boundaries (operator rule)
 
-**`ancient` ends with the fall of the Roman Empire in the West** (traditional **~476 CE**). Works whose main subject is **late Roman decline, the fall itself, or the last generations of the Western imperial order** stay **`era: ancient`** — they close the ancient arc; they are not “misplaced” medieval.
+**Year labels:** use **BC** and **AD** (traditional system), not BCE or CE — see [STYLE-GUIDE § Dating](../STYLE-GUIDE.md#dating-years).
+
+**`ancient` ends with the fall of the Roman Empire in the West** (traditional **~476 AD**). Works whose main subject is **late Roman decline, the fall itself, or the last generations of the Western imperial order** stay **`era: ancient`** — they close the ancient arc; they are not “misplaced” medieval.
 
 **`medieval`** begins with the **post-476** formations and parallel stories you shelve next (e.g. Ostrogothic Italy, Byzantine empire as medieval frame, Islamic expansion, medieval church and states — aligned to History Notebook Vol II and your upload order).
 
-If a title straddles (e.g. one volume covers 400–600 CE), use **`notes`** and pick one `era` for catalog sorting, or split editions later.
+If a title straddles (e.g. one volume covers 400–600 AD), use **`notes`** and pick one `era` for catalog sorting, or split editions later.
 
 ## Per-batch workflow (five titles)
 
