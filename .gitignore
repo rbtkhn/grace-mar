@@ -121,6 +121,9 @@ runtime/observability/*.jsonl
 # Runtime observation ledger (append-only; operator-local — see runtime/observations/README.md)
 runtime/observations/index.jsonl
 
+# Retrieval-miss ledger (append-only; operator-local — see runtime/retrieval-misses/README.md)
+runtime/retrieval-misses/*.jsonl
+
 # Local runtime/export noise
 users/*/user.md
 users/*/harness-events.jsonl

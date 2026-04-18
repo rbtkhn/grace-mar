@@ -37,6 +37,8 @@ These change only through the **gated pipeline** and companion-approved merge ([
 | **Active lane compression** | `artifacts/context/active-lane-*.md` from [`compress_active_lane.py`](../scripts/compress_active_lane.py) | Points back to lane README and `self-work.md`; [doc](skill-work/active-lane-compression.md) |
 | **Vector index** | `users/<id>/.chroma` | Retrieval aid; rebuild from Record |
 | **Runtime observations ledger** | `runtime/observations/index.jsonl` | Append-only work-lane notes; [README](../runtime/observations/README.md); not Record |
+| **Retrieval-miss ledger** | `runtime/retrieval-misses/index.jsonl` | Append-only retrieval-miss log for debugging; [doc](retrieval-miss-ledger.md); not Record |
+| **Hybrid retrieval** | `scripts/runtime/hybrid_retrieve.py` | Non-canonical ranked search across surfaces; [doc](hybrid-retrieval.md); not Record |
 
 ---
 

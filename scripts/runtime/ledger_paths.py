@@ -24,3 +24,15 @@ def observations_jsonl() -> Path:
 
 def runtime_observation_schema() -> Path:
     return REPO_ROOT / "schema-registry" / "runtime-observation.v1.json"
+
+
+def retrieval_misses_dir() -> Path:
+    return ledger_base() / "runtime" / "retrieval-misses"
+
+
+def retrieval_misses_jsonl() -> Path:
+    return retrieval_misses_dir() / "index.jsonl"
+
+
+def retrieval_miss_schema() -> Path:
+    return REPO_ROOT / "schema-registry" / "retrieval-miss.v1.json"
