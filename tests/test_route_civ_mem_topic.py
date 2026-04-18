@@ -12,6 +12,7 @@ SCRIPTS = REPO_ROOT / "scripts"
 sys.path.insert(0, str(SCRIPTS))
 
 from route_civ_mem_topic import (  # noqa: E402
+    _focus_is_valid,
     _pick_profile,
     _score_profile,
     extract_mem_connection_ids,
@@ -45,27 +46,88 @@ MINIMAL_CFG = {
 
 
 def test_pick_profile_papal_latin() -> None:
-    pid, prof = _pick_profile(MINIMAL_CFG, "Pope Leo Vatican visit Italy", None)
+    pid, prof, _audit = _pick_profile(
+        MINIMAL_CFG, "Pope Leo Vatican visit Italy", None, None, focus_active=False
+    )
     assert pid == "latin_catholic_sphere"
     assert prof["primary_civ"] == "ROME"
 
 
 def test_pick_profile_mosque_islam() -> None:
-    pid, prof = _pick_profile(
-        MINIMAL_CFG, "Grand mosque Algiers islam dialogue", None
+    pid, prof, _audit = _pick_profile(
+        MINIMAL_CFG, "Grand mosque Algiers islam dialogue", None, None, focus_active=False
     )
     assert pid == "mediterranean_islam_christian_encounter"
     assert prof["primary_civ"] == "ISLAM"
 
 
 def test_pick_profile_override() -> None:
-    pid, prof = _pick_profile(MINIMAL_CFG, "anything", "latin_catholic_sphere")
+    pid, prof, audit = _pick_profile(
+        MINIMAL_CFG, "anything", "latin_catholic_sphere", None, focus_active=False
+    )
     assert pid == "latin_catholic_sphere"
+    assert audit.get("reason") == "profile_override"
 
 
 def test_pick_profile_default_when_no_keyword_match() -> None:
-    pid, prof = _pick_profile(MINIMAL_CFG, "quantum computing", None)
+    pid, prof, _audit = _pick_profile(
+        MINIMAL_CFG, "quantum computing", None, None, focus_active=False
+    )
     assert pid == "latin_catholic_sphere"
+
+
+def test_focus_expired_no_bonus() -> None:
+    focus = {
+        "focus_version": 1,
+        "valid_from": "2000-01-01",
+        "valid_until": "2000-12-31",
+        "profile_overlap_bonus": {"latin_catholic_sphere": 99},
+        "sticky_keywords": [],
+    }
+    pid, _prof, audit = _pick_profile(
+        MINIMAL_CFG, "quantum computing", None, focus, focus_active=_focus_is_valid(focus)
+    )
+    assert pid == "latin_catholic_sphere"
+    assert audit["per_profile"]["latin_catholic_sphere"]["effective_overlap"] == 0
+
+
+def test_focus_bonus_flips_to_mediterranean() -> None:
+    focus = {
+        "focus_version": 1,
+        "valid_from": "2000-01-01",
+        "valid_until": "2099-12-31",
+        "profile_overlap_bonus": {"mediterranean_islam_christian_encounter": 3},
+        "sticky_keywords": [],
+    }
+    active = _focus_is_valid(focus)
+    pid, prof, audit = _pick_profile(
+        MINIMAL_CFG, "quantum computing", None, focus, focus_active=active
+    )
+    assert active is True
+    assert pid == "mediterranean_islam_christian_encounter"
+    assert prof["primary_civ"] == "ISLAM"
+    assert audit["per_profile"]["mediterranean_islam_christian_encounter"][
+        "effective_overlap"
+    ] == 3
+
+
+def test_sticky_keyword_bonus() -> None:
+    focus = {
+        "focus_version": 1,
+        "valid_from": "2000-01-01",
+        "valid_until": "2099-12-31",
+        "profile_overlap_bonus": {},
+        "sticky_keywords": [
+            {"keyword": "hormuz", "profile": "latin_catholic_sphere", "bonus": 2}
+        ],
+    }
+    active = _focus_is_valid(focus)
+    pid, _prof, audit = _pick_profile(
+        MINIMAL_CFG, "Strait of Hormuz traffic", None, focus, focus_active=active
+    )
+    assert pid == "latin_catholic_sphere"
+    assert audit["per_profile"]["latin_catholic_sphere"]["sticky_bonus"] == 2
+    assert audit["per_profile"]["latin_catholic_sphere"]["effective_overlap"] == 2
 
 
 def test_extract_mem_connections_ordering() -> None:

@@ -10,13 +10,17 @@
 python3 scripts/route_civ_mem_topic.py "Pope Leo Vatican France"
 python3 scripts/route_civ_mem_topic.py "mosque Algiers dialogue" --expand-connections
 python3 scripts/route_civ_mem_topic.py --profile latin_catholic_sphere "custom"
+python3 scripts/route_civ_mem_topic.py "hormuz" --focus-config config/civ_mem_routing_focus.yaml
+python3 scripts/route_civ_mem_topic.py "test" --no-focus
 ```
 
 **Config:** [`config/civ_mem_topic_routes.yaml`](../../../config/civ_mem_topic_routes.yaml) — profiles, keywords, `rome_seed_files`, `routing_rules_version`.
 
+**Optional routing focus:** [`config/civ_mem_routing_focus.yaml`](../../../config/civ_mem_routing_focus.yaml) — time-bounded `profile_overlap_bonus` and `sticky_keywords` (see **Routing focus** below).
+
 ## Behavior
 
-1. **Profile match** — Keyword substring overlap against each profile’s `keywords` list; tie-break by `priority`. If overlap is zero, use `default_profile`.
+1. **Profile match** — Keyword substring overlap against each profile’s `keywords` list; tie-break by `priority`. If overlap is zero, use `default_profile`. If a **routing focus** file is loaded, in date range, and not disabled with `--no-focus`, add **integer bonuses**: per-profile `profile_overlap_bonus` plus per-entry `sticky_keywords` (substring match → bonus to named profile). Effective score = base overlap + those bonuses (disqualified profiles stay excluded).
 2. **Civ order** — `primary_civ` then `secondary_civs` (e.g. ROME → FRANCE → AMERICA for `latin_catholic_sphere`).
 3. **Per civ:**
    - If `MEM–RELEVANCE–<CIV>.md` exists under `research/repos/civilization_memory/content/civilizations/<CIV>/`, run `suggest_civ_mem_from_relevance.py <CIV>` (unless `--dry-run`).
@@ -32,6 +36,29 @@ Re-check **`tier_a_relevance_entities`** and filesystem inventory when bumping t
 | `route_civ_mem_topic.py` | Mixed geography / papacy / Islam–Christian encounter; need **ordered** civs and ROME-first discipline |
 | `suggest_civ_mem_from_relevance.py <X>` | You already fixed **X** and a relevance spine exists |
 | `build_civmem_upstream_index.py query` | Exploratory search without a routing prior |
+
+## Routing focus (forward-looking)
+
+**Purpose:** Encode a **fortnight-scale prior** (e.g. “last 14 days’ strategy lanes stay hot next 14 days”) without editing the main routes file every day. Same **additive, integer** discipline as base overlap—easy to audit in git.
+
+- **File:** [`config/civ_mem_routing_focus.yaml`](../../../config/civ_mem_routing_focus.yaml) — `focus_version`, `valid_from` / `valid_until` (UTC, inclusive; date-only means start/end of that calendar day in UTC), `profile_overlap_bonus`, `sticky_keywords`.
+- **CLI:** `--focus-config PATH` (default: `config/civ_mem_routing_focus.yaml`), `--no-focus` to ignore the file (tests, A/B).
+- **Stdout:** **Routing focus** section lists `focus_version`, validity window, whether any **non-zero** adjustment applied, and per-profile breakdown (`base` + `profile_bonus` + `sticky` → `effective`).
+- **`--log-decision`:** JSONL rows gain `focus_version`, `focus_active`, `focus_applied` (true only if a non-zero bonus changed scores), `score_components` for the winning profile, `routing_fallback` when `default_profile` was used.
+
+**Rollup (print-only):** After logging decisions, generate a pasteable snippet:
+
+```bash
+python3 scripts/suggest_routing_focus.py --days 14
+```
+
+Review the YAML comment header (`generated_from`, `modal_profile`, `rows_in_window`) before merging into `civ_mem_routing_focus.yaml`. Nothing writes focus YAML automatically.
+
+**Cadence:** Rotate the validity window and bonuses after heavy strategy weeks; bump `focus_version` when the contract changes.
+
+### Related patterns (not dependencies)
+
+Industry tools use the same **building blocks** with different names: **search** stacks add **recency boosts** and **function scores** (e.g. Elasticsearch), **editorial elevation** for query-specific overrides (Apache Solr), **scheduled rules** on time windows (feature-flag products). This router stays **transparent**: additive integer overlap, human-edited YAML, no fused multiplicative scores.
 
 ## Recursive improvement (no black boxes)
 

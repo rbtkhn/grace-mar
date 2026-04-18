@@ -1,0 +1,28 @@
+# Optional time-bounded overlap bonuses for scripts/route_civ_mem_topic.py
+# See docs/skill-work/work-civ-mem/TOPIC-ROUTING.md — ignored when outside valid_* (UTC).
+#
+# Rotate after heavy strategy weeks: bump focus_version, adjust window, paste
+# suggestions from: python3 scripts/suggest_routing_focus.py --days 14
+
+focus_version: 1
+
+# Inclusive validity window (ISO 8601 date or datetime, UTC).
+# Date-only: start = 00:00:00 UTC that day; end = 23:59:59.999 UTC that day.
+valid_from: "2026-04-01"
+valid_until: "2026-12-31"
+
+# Added to base keyword overlap per profile (non-negative integers).
+profile_overlap_bonus:
+  latin_catholic_sphere: 0
+  mediterranean_islam_christian_encounter: 0
+
+# If keyword appears as a substring of the query (case-insensitive), add bonus to that profile.
+sticky_keywords: []
+# Example (uncomment to use):
+# sticky_keywords:
+#   - keyword: hormuz
+#     profile: latin_catholic_sphere
+#     bonus: 1
+#   - keyword: islamabad
+#     profile: latin_catholic_sphere
+#     bonus: 1

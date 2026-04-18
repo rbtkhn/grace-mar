@@ -31,7 +31,7 @@ So `work-civ-mem` is about **repository management**, not about importing CMC op
 
 ## Topic routing (strategy lane)
 
-For **multi-region** questions (papacy, Latin Europe, Americas Catholic history, Islam–Christian encounter), see **[TOPIC-ROUTING.md](TOPIC-ROUTING.md)** and `scripts/route_civ_mem_topic.py` — profiles in `config/civ_mem_topic_routes.yaml` prioritize **ROME** and MEM **CONNECTIONS** expansion before ad hoc search.
+For **multi-region** questions (papacy, Latin Europe, Americas Catholic history, Islam–Christian encounter), see **[TOPIC-ROUTING.md](TOPIC-ROUTING.md)** and `scripts/route_civ_mem_topic.py` — profiles in `config/civ_mem_topic_routes.yaml` prioritize **ROME** and MEM **CONNECTIONS** expansion before ad hoc search. Optional **routing focus** (`config/civ_mem_routing_focus.yaml`, `scripts/suggest_routing_focus.py`) adds time-bounded overlap bonuses from recent routing logs.
 
 ---
 
