@@ -53,7 +53,11 @@ Process the shelf in this **fixed sequence** (batches of **five titles** within 
 
 **`industrial`** (Vol IV) picks up **post-1789** themes for this book; use **`notes`** when a title straddles 1789.
 
-If a title straddles (e.g. one volume covers 400–600 AD, or 1400–1500 AD across 1453, or 1750–1850 AD across 1789), set **`eras`** when multiple buckets apply; use **`notes`** for nuance; pick one **`era`** as primary for batch/sort, or split editions later.
+**`industrial` ends with the end of the Second World War** (traditional **1945 AD**), matching [History Notebook Vol IV](../README.md) (1789 AD–1945 AD). Works whose narrative crosses into the **contemporary** order (Cold War, decolonization, post-1945 institutions) may use **`eras: [industrial, modern]`** (or **`notes`**) — pick primary **`era`** for shelf sort.
+
+**`modern`** (Vol V) picks up **post-1945** themes for this book; use **`notes`** when a title straddles 1945.
+
+If a title straddles (e.g. one volume covers 400–600 AD, or 1400–1500 AD across 1453, or 1750–1850 AD across 1789, or 1930–1960 AD across 1945), set **`eras`** when multiple buckets apply; use **`notes`** for nuance; pick one **`era`** as primary for batch/sort, or split editions later.
 
 ## Per-batch workflow (five titles)
 
