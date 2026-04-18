@@ -18,7 +18,7 @@
 #   content_path: optional — phase 2: gitignored file or absolute path (not committed)
 #
 # Upload order: ancient → medieval → colonial → industrial → modern (see OPERATOR-SOURCE-CATALOG.md)
-# Ancient shelf 2026-04-18: operator photos — Landmark/Viking row (shelf-a); Assyria/Persians pair (shelf-b); Everitt/Goldsworthy/Oxford row (shelf-c). Workspace assets under .cursor/projects/.../assets/.
+# Ancient / medieval / modern (operator) 2026-04-18: shelf photos — Landmark row (a); Assyria/Persians (b); Everitt/Goldsworthy/Oxford (c); late Rome–Byzantine row (d); Roman lives–empire row (e). Assets: .cursor/projects/.../assets/.
 
 version: 1
 items:
@@ -223,3 +223,174 @@ items:
     primary_arc: rome
     candidate_hn_chapters: [hn-i-v1-11, hn-i-v1-14]
     notes: "Carthaginian campaigns; spine author Gabriel."
+
+  - id: HNSRC-0020
+    title: "How Rome Fell"
+    author: "Adrian Goldsworthy"
+    era: ancient
+    added_batch: "2026-04-18-shelf-d-late-antiquity"
+    tags: [Rome, late antiquity, decline, empire]
+    hn_volume: vol-i
+    primary_arc: rome
+    candidate_hn_chapters: [hn-i-v1-20, hn-i-v1-04]
+    notes: "Yale University Press; end of Western Roman Empire."
+
+  - id: HNSRC-0021
+    title: "Theoderic the Great"
+    author: "Hans-Ulrich Wiemer"
+    era: medieval
+    added_batch: "2026-04-18-shelf-d-late-antiquity"
+    tags: [Ostrogoths, Italy, post-Roman, early medieval]
+    hn_volume: vol-ii
+    primary_arc: rome
+    candidate_hn_chapters: [hn-ii-rome-byzantine]
+    notes: "Deep red spine; Ostrogothic kingdom."
+
+  - id: HNSRC-0022
+    title: "Justinian"
+    author: "Peter Sarris"
+    era: medieval
+    added_batch: "2026-04-18-shelf-d-late-antiquity"
+    tags: [Byzantium, law, empire, mosaic]
+    hn_volume: vol-ii
+    candidate_hn_chapters: [hn-ii-rome-byzantine]
+    notes: "Basic Books; Justinian mosaic portrait on spine."
+
+  - id: HNSRC-0023
+    title: "Ravenna"
+    author: "Judith Herrin"
+    era: medieval
+    added_batch: "2026-04-18-shelf-d-late-antiquity"
+    tags: [Italy, Byzantium, art, city]
+    hn_volume: vol-ii
+    candidate_hn_chapters: [hn-ii-rome-byzantine]
+    notes: "Penguin; mosaic-style spine."
+
+  - id: HNSRC-0024
+    title: "Christendom"
+    author: "Peter Heather"
+    era: medieval
+    added_batch: "2026-04-18-shelf-d-late-antiquity"
+    tags: [Christianity, Europe, late antiquity, medieval]
+    hn_volume: vol-ii
+    candidate_hn_chapters: [hn-ii-rome-byzantine, hn-ii-islam]
+    notes: "Knopf; painted figure on spine."
+
+  - id: HNSRC-0025
+    title: "Land Between the Rivers"
+    author: "Bartle Bull"
+    era: modern
+    added_batch: "2026-04-18-shelf-d-late-antiquity"
+    tags: [Iraq, Mesopotamia, Tigris, Euphrates, Middle East]
+    hn_volume: vol-v
+    candidate_hn_chapters: [hn-v-persia-modern]
+    notes: "Black spine with geometric band; Mesopotamia / Iraq scope — revise era or hn hints if your edition centers another period."
+
+  - id: HNSRC-0026
+    title: "The Alexiad"
+    author: "Anna Comnena"
+    era: medieval
+    added_batch: "2026-04-18-shelf-d-late-antiquity"
+    tags: [Byzantium, First Crusade, primary source, Komnenian]
+    hn_volume: vol-ii
+    candidate_hn_chapters: [hn-ii-rome-byzantine]
+    notes: "Penguin Classics; Byzantine primary text."
+
+  - id: HNSRC-0027
+    title: "Plutarch's Lives"
+    author: "Plutarch"
+    era: ancient
+    added_batch: "2026-04-18-shelf-e-roman-biographies"
+    tags: [biography, parallel lives, source, Dryden]
+    hn_volume: vol-i
+    primary_arc: rome
+    candidate_hn_chapters: [hn-i-v1-14, hn-i-v1-04]
+    notes: "Dryden translation; Modern Library Giant."
+
+  - id: HNSRC-0028
+    title: "Caesar: Life of a Colossus"
+    author: "Adrian Goldsworthy"
+    era: ancient
+    added_batch: "2026-04-18-shelf-e-roman-biographies"
+    tags: [Rome, biography, late republic]
+    hn_volume: vol-i
+    primary_arc: rome
+    candidate_hn_chapters: [hn-i-v1-01, hn-i-v1-13]
+    notes: "Yale University Press."
+
+  - id: HNSRC-0029
+    title: "Antony and Cleopatra"
+    author: "Adrian Goldsworthy"
+    era: ancient
+    added_batch: "2026-04-18-shelf-e-roman-biographies"
+    tags: [Rome, Egypt, Ptolemaic, civil war]
+    hn_volume: vol-i
+    primary_arc: rome
+    candidate_hn_chapters: [hn-i-v1-14, hn-i-v1-16]
+    notes: "Yale University Press."
+
+  - id: HNSRC-0030
+    title: "Cicero: The Life and Times of Rome's Greatest Politician"
+    author: "Anthony Everitt"
+    era: ancient
+    added_batch: "2026-04-18-shelf-e-roman-biographies"
+    tags: [Rome, republic, oratory, politics]
+    hn_volume: vol-i
+    primary_arc: rome
+    candidate_hn_chapters: [hn-i-v1-10, hn-i-v1-14]
+    notes: "Random House."
+
+  - id: HNSRC-0031
+    title: "Augustus: First Emperor of Rome"
+    author: "Adrian Goldsworthy"
+    era: ancient
+    added_batch: "2026-04-18-shelf-e-roman-biographies"
+    tags: [Rome, principate, biography]
+    hn_volume: vol-i
+    primary_arc: rome
+    candidate_hn_chapters: [hn-i-v1-04, hn-i-v1-05]
+    notes: "Yale University Press; distinct from Everitt Augustus."
+
+  - id: HNSRC-0032
+    title: "Augustus: The Life of Rome's First Emperor"
+    author: "Anthony Everitt"
+    era: ancient
+    added_batch: "2026-04-18-shelf-e-roman-biographies"
+    tags: [Rome, principate, biography]
+    hn_volume: vol-i
+    primary_arc: rome
+    candidate_hn_chapters: [hn-i-v1-04, hn-i-v1-05]
+    notes: "Random House; paired with Goldsworthy Augustus for comparison."
+
+  - id: HNSRC-0033
+    title: "Hadrian and the Triumph of Rome"
+    author: "Anthony Everitt"
+    era: ancient
+    added_batch: "2026-04-18-shelf-e-roman-biographies"
+    tags: [Rome, empire, high empire, biography]
+    hn_volume: vol-i
+    primary_arc: rome
+    candidate_hn_chapters: [hn-i-v1-05, hn-i-v1-11]
+    notes: "Random House."
+
+  - id: HNSRC-0034
+    title: "Rome and Persia: The Seven Hundred Year Rivalry"
+    author: "Adrian Goldsworthy"
+    era: ancient
+    added_batch: "2026-04-18-shelf-e-roman-biographies"
+    tags: [Rome, Persia, frontier, long war]
+    hn_volume: vol-i
+    primary_arc: rome
+    candidate_hn_chapters: [hn-i-v1-19, hn-i-v1-11]
+    notes: "Basic Books."
+
+  - id: HNSRC-0035
+    title: "Pax Romana: War, Peace and Conquest in the Roman World"
+    author: "Adrian Goldsworthy"
+    era: ancient
+    added_batch: "2026-04-18-shelf-e-roman-biographies"
+    tags: [Rome, empire, peace, military]
+    hn_volume: vol-i
+    primary_arc: rome
+    candidate_hn_chapters: [hn-i-v1-11, hn-i-v1-04]
+    notes: "Yale University Press."
