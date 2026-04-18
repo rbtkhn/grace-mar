@@ -747,3 +747,25 @@ Barnes says both sides face material clocks and the question is which clock runs
 - **§1f digest:** **Q** rows in [daily-brief-2026-04-17.md](../../daily-brief-2026-04-17.md) **Triage disposition** — Ukraine night vs brief date, SPR reconciliation, Pakistan-mediated / Macron–Starmer / paste-only Middle East lines — before any Signal lead cites superlatives from the paste.
 - **Optional:** **`python3 scripts/strategy_thread.py`** **for** **`thread:davis`** **after** **URL** **pins** **—** **inbox** **lines** **already** **list** **`thread:`**.
 - **Optional:** **`python3 scripts/strategy_thread.py`** **`--today 2026-04-17`** **after** **Freeman** **URL** **pin** — **`thread:freeman`** **ingest** **now** **in** **inbox**.
+
+## 2026-04-18
+
+### Signal
+
+- **Expert thread-integrate (inbox `thread:` batch):** Third-party scan rows + **`batch-analysis | 2026-04-18 | Hormuz × Islamabad × Lebanon`** in [daily-strategy-inbox.md](../../daily-strategy-inbox.md) (`<!-- thread-integrate scan 2026-04-18 -->`). Covers **`thread:marandi`**, **`thread:ritter`**, **`thread:parsi`**, **`thread:barnes`**, **`thread:macgregor`**, **`thread:pape`**, **`thread:davis`**. **Accumulator** line dated **2026-04-18**; weave here is **stub-grade** until tier-verify passes.
+- **`thread:ritter` transcript:** [strategy-expert-ritter-transcript.md](../../strategy-expert-ritter-transcript.md) — **Diesen** YT block **trimmed** to stub (verbatim exceeded per-ingest budget); **2026-04-18** section keeps **three** **X** status lines (genocide register; Intel Roundtable; Hormuz/Lebanon video). Re-run **`python3 scripts/strategy_thread.py --today 2026-04-18`** to refresh **`*-thread.md`**.
+
+### Judgment
+
+- **Tension-first (from inbox `batch-analysis | 2026-04-18`):** **Hormuz open / not-open / who-decides** appears across **Parsi**, **Barnes**, **Davis**, **Marandi** — **do not** merge **commentator** or **forecast** tiers with **AIS** / **shipping** primaries without tags. **Pape** Substack (**supply wall**, **fourth-power** framing) stays **forecast / analyst** tier. **Lebanon** casualty / explosion claims (**Marandi**, **Davis**) need **wire primaries**, not **thread** echo. **Ritter** moral-register **X** rows are **not** automatic joins to **Hormuz mechanics** **the same day**.
+
+### Links
+
+- [daily-strategy-inbox.md](../../daily-strategy-inbox.md) — thread-integrate block + **`batch-analysis | 2026-04-18`**
+- [strategy-expert-ritter-transcript.md](../../strategy-expert-ritter-transcript.md) · [strategy-expert-ritter-thread.md](../../strategy-expert-ritter-thread.md) (refresh after **`strategy_thread.py`**)
+
+### Open
+
+- **`strategy_thread.py`** for **2026-04-18** after commit (**ritter** + full expert set from inbox).
+- Pin **Diesen × Ritter** canonical **`watch?v=`** (still **`TBD-…`** in stub rows) when available.
+- Prior day: [2026-04-17](#2026-04-17)
