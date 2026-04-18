@@ -18,58 +18,81 @@
 #   content_path: optional — phase 2: gitignored file or absolute path (not committed)
 #
 # Upload order: ancient → medieval → colonial → industrial → modern (see OPERATOR-SOURCE-CATALOG.md)
+# Ancient shelf batch 2026-04-18: operator physical shelf (7 spines); photo in workspace assets.
 
 version: 1
 items:
   - id: HNSRC-0001
-    title: "Histories"
+    title: "The Histories"
     author: "Herodotus"
     era: ancient
-    added_batch: "2026-04-18-ancient-a"
-    tags: [Greece, Persia, inquiry, empire]
+    added_batch: "2026-04-18-ancient-shelf-a"
+    tags: [Greece, Persia, inquiry, empire, translation]
     hn_volume: vol-i
     primary_arc: greek-persian
     candidate_hn_chapters: [hn-i-v1-11]
-    notes: "Seed row for ancient batch workflow; replace or extend with your shelf."
+    notes: "Viking; translation Tom Holland; introduction Paul Cartledge."
 
   - id: HNSRC-0002
-    title: "History of the Peloponnesian War"
-    author: "Thucydides"
+    title: "The Landmark Herodotus"
+    author: "Herodotus"
     era: ancient
-    added_batch: "2026-04-18-ancient-a"
-    tags: [Greece, war, democracy, empire]
+    added_batch: "2026-04-18-ancient-shelf-a"
+    tags: [Greece, Persia, Landmark, maps, annotation]
     hn_volume: vol-i
-    candidate_hn_chapters: [hn-i-v1-14, hn-i-v1-20]
-    notes: "Seed row for ancient batch workflow; replace or extend with your shelf."
+    primary_arc: greek-persian
+    candidate_hn_chapters: [hn-i-v1-11]
+    notes: "Edited Robert B. Strassler; Pantheon (Landmark series)."
 
   - id: HNSRC-0003
-    title: "Hellenica"
-    author: "Xenophon"
+    title: "The Landmark Thucydides"
+    author: "Thucydides"
     era: ancient
-    added_batch: "2026-04-18-ancient-a"
-    tags: [Greece, Sparta, succession]
+    added_batch: "2026-04-18-ancient-shelf-a"
+    tags: [Greece, war, democracy, empire, Landmark]
     hn_volume: vol-i
-    candidate_hn_chapters: [hn-i-v1-20]
-    notes: "Seed row for ancient batch workflow; replace or extend with your shelf."
+    candidate_hn_chapters: [hn-i-v1-14, hn-i-v1-20]
+    notes: "Edited Robert B. Strassler; Free Press (Landmark series)."
 
   - id: HNSRC-0004
-    title: "Histories"
-    author: "Polybius"
+    title: "The Landmark Xenophon's Hellenika"
+    author: "Xenophon"
     era: ancient
-    added_batch: "2026-04-18-ancient-a"
-    tags: [Rome, republic, Mediterranean, cycles]
+    added_batch: "2026-04-18-ancient-shelf-a"
+    tags: [Greece, Sparta, succession, Landmark]
     hn_volume: vol-i
-    primary_arc: rome
-    candidate_hn_chapters: [hn-i-v1-04, hn-i-v1-05]
-    notes: "Seed row for ancient batch workflow; replace or extend with your shelf."
+    candidate_hn_chapters: [hn-i-v1-20]
+    notes: "Edited Robert B. Strassler; Quercus (Landmark series)."
 
   - id: HNSRC-0005
-    title: "Commentarii de Bello Gallico"
+    title: "The Landmark Xenophon's Anabasis"
+    author: "Xenophon"
+    era: ancient
+    added_batch: "2026-04-18-ancient-shelf-a"
+    tags: [Greece, Persia, march, frontier, Landmark]
+    hn_volume: vol-i
+    primary_arc: greek-persian
+    candidate_hn_chapters: [hn-i-v1-13, hn-i-v1-18]
+    notes: "Edited Shane Brennan and David Thomas; Robert B. Strassler series editor; Pantheon (Landmark series)."
+
+  - id: HNSRC-0006
+    title: "The Landmark Arrian: The Campaigns of Alexander"
+    author: "Arrian"
+    era: ancient
+    added_batch: "2026-04-18-ancient-shelf-a"
+    tags: [Macedon, empire, conquest, Landmark]
+    hn_volume: vol-i
+    primary_arc: greek-persian
+    candidate_hn_chapters: [hn-i-v1-05, hn-i-v1-11]
+    notes: "Edited James Romm; Robert B. Strassler series editor; Pantheon (Landmark series)."
+
+  - id: HNSRC-0007
+    title: "The Landmark Julius Caesar"
     author: "Julius Caesar"
     era: ancient
-    added_batch: "2026-04-18-ancient-a"
-    tags: [Rome, conquest, frontier, narrative]
+    added_batch: "2026-04-18-ancient-shelf-a"
+    tags: [Rome, conquest, war commentaries, Landmark]
     hn_volume: vol-i
     primary_arc: rome
     candidate_hn_chapters: [hn-i-v1-01, hn-i-v1-13]
-    notes: "Seed row for ancient batch workflow; replace or extend with your shelf."
+    notes: "Edited Kurt A. Raaflaub; Robert B. Strassler series editor; Pantheon (Landmark series)."
