@@ -23,7 +23,7 @@
 - **Dashboard:** [STATUS.md](STATUS.md)
 - **Chapters:** `chapters/YYYY-MM/` — `meta.md` (month) + `days.md` (chronology / continuity / routing — links to knots and tracks what happened each day) + `knots/` (atomic notebook pages — one `strategy-notebook-knot-YYYY-MM-DD-<slug>.md` per page)
 - **Minds:** [`minds/`](minds/) — trimmed CIV-MIND files (Barnes, Mearsheimer, Mercouris) for analytical lens work; see [MINDS-SKILL-STRATEGY-PATTERNS.md](../minds/MINDS-SKILL-STRATEGY-PATTERNS.md) for recipes
-- **History notebook (parallel, LIB-0156):** [../history-notebook/README.md](../history-notebook/README.md) — operator mechanism chapters; **`### History resonance`** in knots cites chapter ids + warrants (see [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *Parallel to History notebook*)
+- **History notebook (parallel, LIB-0156):** [../history-notebook/README.md](../history-notebook/README.md) — operator mechanism chapters; [STATUS — distillation queue](../history-notebook/STATUS.md) (single SSOT for next `hn-*`); **`### History resonance`** tiers + optional **`HN gap:`** (see [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *Parallel to History notebook*); `python3 scripts/validate_strategy_hn_citations.py` warns on unknown `hn-*` tokens
 - **Demo / calibration:** [DEMO-SKILL-STRATEGY-TRANSCRIPTS.md](DEMO-SKILL-STRATEGY-TRANSCRIPTS.md) — step-by-step `skill-strategy` exercise using three ingested transcripts + explicit tri-frame; run `bash scripts/demo_skill_strategy_transcripts_check.sh` from repo root first · [Executive report (implementation & readiness)](DEMO-SKILL-STRATEGY-EXECUTIVE-REPORT.md)
 
 WORK only; not Record unless promoted through RECURSION-GATE.

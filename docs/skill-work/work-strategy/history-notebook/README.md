@@ -11,9 +11,10 @@ Book identity and chapter IDs remain **SSOT** in [book-architecture.yaml](book-a
 | Piece | Location | Role |
 |-------|----------|------|
 | **Chapters** | [chapters/](chapters/) + YAML ids | Primary deliverable: comparative chapters (~500–1000w); cite **chapter ids** (`hn-i-v1-04`, …) from strategy-notebook **`### History resonance`** |
+| **Distillation queue** | [STATUS.md](STATUS.md) | **Single SSOT** for next `hn-*` to draft; strategy **`meta.md`** links here — see [STRATEGY-NOTEBOOK-ARCHITECTURE § Parallel to History notebook](../strategy-notebook/STRATEGY-NOTEBOOK-ARCHITECTURE.md#parallel-to-history-notebook-lib-0156) |
 | **Civilization threads** (optional) | [threads/](threads/) — `history-civ-*.md` | Longitudinal lanes: continuity, mechanism candidates, candidate chapter targets — **scaffolding** for drafting, not a parallel codex |
 
-Flow: **CIV-MEM (reservoir) → threads (optional) → chapter drafts** → short resonance lines in [strategy-notebook](../strategy-notebook/README.md). Retired experiment: see [knots/README.md](knots/README.md).
+Flow: **CIV-MEM (reservoir) → distill into HN chapters (`hn-*`) → strategy-notebook** cites ids + mechanisms in **`### History resonance`** (tiers + optional **`HN gap:`** back-pressure — [STATUS.md](STATUS.md)). Threads optional before drafting. Retired experiment: see [knots/README.md](knots/README.md).
 
 - **Chapter format:** See [STYLE-GUIDE.md](STYLE-GUIDE.md)
 - **Polyphonic drafting (operator):** [POLYPHONY-WORKFLOW.md](POLYPHONY-WORKFLOW.md) — CIV-MIND passes on a neutral spine, then public translation (no mind names in chapter prose)

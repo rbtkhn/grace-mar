@@ -2,6 +2,12 @@
 # SSOT for the inter-book relationship. This is the ONLY file that stores
 # which PH theses/concepts are addressed by which HN chapters.
 #
+# Coverage coupling (operator): when promoting a thesis/concept row from
+# stub -> partial (or partial -> full), add at least one strategy-notebook
+# "### History resonance" line that month so fast judgment reflects HN progress.
+# See docs/skill-work/work-strategy/history-notebook/STATUS.md and
+# STRATEGY-NOTEBOOK-ARCHITECTURE.md § Parallel to History notebook.
+#
 # Validates against:
 #   - PH thesis-map.yaml (8 theses: t01–t08)
 #   - PH concepts.yaml (20 concepts)
