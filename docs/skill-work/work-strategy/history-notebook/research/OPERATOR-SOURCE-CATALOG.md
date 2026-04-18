@@ -49,7 +49,11 @@ Process the shelf in this **fixed sequence** (batches of **five titles** within 
 
 **`colonial`** (operator label → Vol III) picks up **post-1453** early modern / maritime–colonial themes for this book; use **`notes`** when a title straddles 1453.
 
-If a title straddles (e.g. one volume covers 400–600 AD, or 1400–1500 AD across 1453), set **`eras`** when multiple buckets apply; use **`notes`** for nuance; pick one **`era`** as primary for batch/sort, or split editions later.
+**`colonial` ends with the French Revolution** (traditional **1789 AD**), matching [History Notebook Vol III](../README.md) (1453 AD–1789 AD). Works whose narrative crosses into **industrial** war or state formation (e.g. long 18th–19th-century arcs) may use **`eras: [colonial, industrial]`** (or **`notes`**) — pick primary **`era`** for shelf sort.
+
+**`industrial`** (Vol IV) picks up **post-1789** themes for this book; use **`notes`** when a title straddles 1789.
+
+If a title straddles (e.g. one volume covers 400–600 AD, or 1400–1500 AD across 1453, or 1750–1850 AD across 1789), set **`eras`** when multiple buckets apply; use **`notes`** for nuance; pick one **`era`** as primary for batch/sort, or split editions later.
 
 ## Per-batch workflow (five titles)
 
