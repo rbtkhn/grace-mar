@@ -23,7 +23,7 @@
 # Era "medieval" = post-476 AD formations through fall of Constantinople (~1453 AD); straddles into Vol III use eras/notes.
 # Era "colonial" (Vol III) = post-1453 through ~1789 AD (French Revolution); straddles into Vol IV use eras/notes.
 # Era "industrial" (Vol IV) = post-1789 through ~1945 AD (end of WWII); straddles into Vol V use eras/notes.
-# Ancient / medieval / modern (operator) 2026-04-18: shelf photos — Landmark (a); Assyria/Persians (b); Everitt/Goldsworthy/Oxford (c); late Rome–Byzantine (d); Roman lives–empire (e); Everyman Library canons (f); Penguin Clothbound epics (g). Medieval/early modern batches 2026-04-18: shelf-batch-a/b (Europe + Ottoman), batch-c (Weatherford + Khazaria), batch-d (Penguin Clothbound medieval canon). Assets: .cursor/projects/.../assets/photo_2026-04-18_*.png.
+# Ancient / medieval / modern (operator) 2026-04-18: shelf photos — Landmark (a); Assyria/Persians (b); Everitt/Goldsworthy/Oxford (c); late Rome–Byzantine (d); Roman lives–empire (e); Everyman Library canons (f); Penguin Clothbound epics (g). Medieval/early modern batches 2026-04-18: shelf-batch-a/b (Europe + Ottoman), batch-c (Weatherford + Khazaria), batch-d (Penguin Clothbound medieval canon). Colonial batches 2026-04-18: colonial-shelf-a (Wilson TYW + dedupe note vs HNSRC-0065/0066), b (Voltaire/French Rev), c (US founders), d (Atlantic), e (Library of America), f (Everyman Shakespeare + Enlightenment), g (Russia/Spain/Europe). Assets: .cursor/projects/.../assets/photo_2026-04-18_11.*–12.*.png.
 
 version: 1
 items:
@@ -895,3 +895,437 @@ items:
     hn_volume: vol-ii
     primary_arc: china
     candidate_hn_chapters: [hn-ii-china-medieval]
+
+  # --- Colonial shelf photos 2026-04-18 (see photo_2026-04-18_12.04–12.05 assets); dedupe: Habsburgs + Iron and Blood already HNSRC-0065/0066 ---
+
+  - id: HNSRC-0084
+    title: "The Thirty Years War"
+    author: "Peter H. Wilson"
+    era: colonial
+    added_batch: "2026-04-18-colonial-shelf-a-europe"
+    tags: [Germany, Habsburg, war, Belknap]
+    hn_volume: vol-iii
+    candidate_hn_chapters: [hn-iii-france, hn-iii-russia]
+    notes: "Belknap Harvard; 1618–1648. Wilson — distinct from Iron and Blood (HNSRC-0066)."
+
+  - id: HNSRC-0085
+    title: "Voltaire Almighty"
+    author: "Roger Pearson"
+    era: colonial
+    added_batch: "2026-04-18-colonial-shelf-b-enlightenment"
+    tags: [France, Enlightenment, biography]
+    hn_volume: vol-iii
+    candidate_hn_chapters: [hn-iii-france]
+
+  - id: HNSRC-0086
+    title: "A New World Begins: The History of the French Revolution"
+    author: "Jeremy D. Popkin"
+    era: colonial
+    added_batch: "2026-04-18-colonial-shelf-b-enlightenment"
+    tags: [France, Revolution, 1789]
+    hn_volume: vol-iii
+    candidate_hn_chapters: [hn-iii-france]
+    notes: "Revolution terminus 1789 — aligns colonial-era boundary."
+
+  - id: HNSRC-0087
+    title: "Jefferson"
+    author: "John B. Boles"
+    era: colonial
+    added_batch: "2026-04-18-colonial-shelf-c-us-founders"
+    tags: [America, founding, biography, Basic Books]
+    hn_volume: vol-iii
+    primary_arc: america
+    candidate_hn_chapters: [hn-iv-america]
+
+  - id: HNSRC-0088
+    title: "Alexander Hamilton"
+    author: "Ron Chernow"
+    era: colonial
+    added_batch: "2026-04-18-colonial-shelf-c-us-founders"
+    tags: [America, founding, biography, Penguin Press]
+    hn_volume: vol-iii
+    primary_arc: america
+    candidate_hn_chapters: [hn-iv-america]
+
+  - id: HNSRC-0089
+    title: "James Monroe"
+    author: "Tim McGrath"
+    era: colonial
+    added_batch: "2026-04-18-colonial-shelf-c-us-founders"
+    tags: [America, founding, biography, Dutton]
+    hn_volume: vol-iii
+    primary_arc: america
+    candidate_hn_chapters: [hn-iv-america]
+
+  - id: HNSRC-0090
+    title: "John Quincy Adams"
+    author: "Randall Woods"
+    era: colonial
+    added_batch: "2026-04-18-colonial-shelf-c-us-founders"
+    tags: [America, founding, biography, Dutton]
+    hn_volume: vol-iii
+    primary_arc: america
+    candidate_hn_chapters: [hn-iv-america]
+
+  - id: HNSRC-0091
+    title: "Founding Partisans"
+    author: "H. W. Brands"
+    era: colonial
+    added_batch: "2026-04-18-colonial-shelf-c-us-founders"
+    tags: [America, founding, politics]
+    hn_volume: vol-iii
+    primary_arc: america
+    candidate_hn_chapters: [hn-iv-america]
+
+  - id: HNSRC-0092
+    title: "Heirs of the Founders"
+    author: "H. W. Brands"
+    era: colonial
+    added_batch: "2026-04-18-colonial-shelf-c-us-founders"
+    tags: [America, early republic, politics]
+    hn_volume: vol-iii
+    primary_arc: america
+    candidate_hn_chapters: [hn-iv-america]
+
+  - id: HNSRC-0093
+    title: "Martin Van Buren"
+    author: "James C. Bradley"
+    era: colonial
+    added_batch: "2026-04-18-colonial-shelf-c-us-founders"
+    tags: [America, biography, Oxford]
+    hn_volume: vol-iii
+    primary_arc: america
+    candidate_hn_chapters: [hn-iv-america]
+    notes: "Oxford; verify author string on your edition if spine differs."
+
+  - id: HNSRC-0094
+    title: "The Age of Jackson"
+    author: "Arthur M. Schlesinger Jr."
+    era: colonial
+    eras: [colonial, industrial]
+    added_batch: "2026-04-18-colonial-shelf-c-us-founders"
+    tags: [America, Jacksonian, politics]
+    hn_volume: vol-iii
+    primary_arc: america
+    candidate_hn_chapters: [hn-iv-america]
+    notes: "Jacksonian era straddles colonial operator boundary — primary colonial for shelf batch."
+
+  - id: HNSRC-0095
+    title: "Andrew Jackson"
+    author: "H. W. Brands"
+    era: colonial
+    eras: [colonial, industrial]
+    added_batch: "2026-04-18-colonial-shelf-c-us-founders"
+    tags: [America, biography, Jackson]
+    hn_volume: vol-iii
+    primary_arc: america
+    candidate_hn_chapters: [hn-iv-america]
+
+  - id: HNSRC-0096
+    title: "The Blazing World"
+    author: "Jonathan Healey"
+    era: colonial
+    added_batch: "2026-04-18-colonial-shelf-d-atlantic"
+    tags: [England, Stuart, seventeenth century, Knopf]
+    hn_volume: vol-iii
+    candidate_hn_chapters: [hn-iii-anglia]
+
+  - id: HNSRC-0097
+    title: "Frederick the Great"
+    author: "Tim Blanning"
+    era: colonial
+    added_batch: "2026-04-18-colonial-shelf-d-atlantic"
+    tags: [Prussia, biography, eighteenth century]
+    hn_volume: vol-iii
+    candidate_hn_chapters: [hn-iv-germany]
+
+  - id: HNSRC-0098
+    title: "Crucible of War"
+    author: "Fred Anderson"
+    era: colonial
+    added_batch: "2026-04-18-colonial-shelf-d-atlantic"
+    tags: [America, Seven Years War, French and Indian War, Knopf]
+    hn_volume: vol-iii
+    primary_arc: america
+    candidate_hn_chapters: [hn-iv-america]
+
+  - id: HNSRC-0099
+    title: "The Last King of America: The Misunderstood Reign of George III"
+    author: "Andrew Roberts"
+    era: colonial
+    added_batch: "2026-04-18-colonial-shelf-d-atlantic"
+    tags: [Britain, monarchy, American Revolution, Viking]
+    hn_volume: vol-iii
+    candidate_hn_chapters: [hn-iii-anglia, hn-iv-america]
+
+  - id: HNSRC-0100
+    title: "Empire: How Britain Made the Modern World"
+    author: "Niall Ferguson"
+    era: colonial
+    eras: [colonial, industrial]
+    added_batch: "2026-04-18-colonial-shelf-d-atlantic"
+    tags: [Britain, empire, global, Basic Books]
+    hn_volume: vol-iii
+    candidate_hn_chapters: [hn-iii-anglia, hn-iv-anglia-imperial]
+    notes: "Basic Books; long-span — adjust era if your edition subtitle differs."
+
+  - id: HNSRC-0101
+    title: "Plymouth Colony: Narratives of English Settlement and Native Resistance from the Mayflower to King Philip's War"
+    author: "Lisa Brooks & Kelly Wisecup"
+    era: colonial
+    added_batch: "2026-04-18-colonial-shelf-e-library-of-america"
+    tags: [America, Library of America, New England, primary sources]
+    hn_volume: vol-iii
+    candidate_hn_chapters: [hn-iv-america]
+
+  - id: HNSRC-0102
+    title: "The American Revolution: Writings from the War of Independence 1775–1783"
+    author: "Various"
+    era: colonial
+    added_batch: "2026-04-18-colonial-shelf-e-library-of-america"
+    tags: [America, Library of America, Revolution, primary sources]
+    hn_volume: vol-iii
+    candidate_hn_chapters: [hn-iv-america]
+
+  - id: HNSRC-0103
+    title: "The American Revolution: Writings from the Pamphlet Debate 1773–1776"
+    author: "Various"
+    era: colonial
+    added_batch: "2026-04-18-colonial-shelf-e-library-of-america"
+    tags: [America, Library of America, Revolution, primary sources]
+    hn_volume: vol-iii
+    candidate_hn_chapters: [hn-iv-america]
+
+  - id: HNSRC-0104
+    title: "Franklin: Autobiography, Poor Richard, and Later Writings"
+    author: "Benjamin Franklin"
+    era: colonial
+    added_batch: "2026-04-18-colonial-shelf-e-library-of-america"
+    tags: [America, Library of America, Enlightenment, primary sources]
+    hn_volume: vol-iii
+    candidate_hn_chapters: [hn-iv-america]
+
+  - id: HNSRC-0105
+    title: "Paine: Collected Writings"
+    author: "Thomas Paine"
+    era: colonial
+    added_batch: "2026-04-18-colonial-shelf-e-library-of-america"
+    tags: [America, Library of America, Revolution, primary sources]
+    hn_volume: vol-iii
+    candidate_hn_chapters: [hn-iv-america]
+
+  - id: HNSRC-0106
+    title: "Jefferson: Writings"
+    author: "Thomas Jefferson"
+    era: colonial
+    added_batch: "2026-04-18-colonial-shelf-e-library-of-america"
+    tags: [America, Library of America, founding, primary sources]
+    hn_volume: vol-iii
+    candidate_hn_chapters: [hn-iv-america]
+
+  - id: HNSRC-0107
+    title: "Madison: Writings"
+    author: "James Madison"
+    era: colonial
+    added_batch: "2026-04-18-colonial-shelf-e-library-of-america"
+    tags: [America, Library of America, founding, primary sources]
+    hn_volume: vol-iii
+    candidate_hn_chapters: [hn-iv-america]
+
+  - id: HNSRC-0108
+    title: "Hamilton: Writings"
+    author: "Alexander Hamilton"
+    era: colonial
+    added_batch: "2026-04-18-colonial-shelf-e-library-of-america"
+    tags: [America, Library of America, founding, primary sources]
+    hn_volume: vol-iii
+    candidate_hn_chapters: [hn-iv-america]
+
+  - id: HNSRC-0109
+    title: "Washington: Writings"
+    author: "George Washington"
+    era: colonial
+    added_batch: "2026-04-18-colonial-shelf-e-library-of-america"
+    tags: [America, Library of America, founding, primary sources]
+    hn_volume: vol-iii
+    candidate_hn_chapters: [hn-iv-america]
+
+  - id: HNSRC-0110
+    title: "The Complete Works"
+    author: "Michel de Montaigne"
+    era: colonial
+    eras: [medieval, colonial]
+    added_batch: "2026-04-18-colonial-shelf-f-everyman-canons"
+    tags: [France, essay, philosophy, Everyman's Library]
+    hn_volume: vol-iii
+    candidate_hn_chapters: [hn-iii-france]
+
+  - id: HNSRC-0111
+    title: "Histories Volume 1"
+    author: "William Shakespeare"
+    era: colonial
+    added_batch: "2026-04-18-colonial-shelf-f-everyman-canons"
+    tags: [England, drama, Everyman's Library]
+    hn_volume: vol-iii
+    candidate_hn_chapters: [hn-iii-anglia]
+
+  - id: HNSRC-0112
+    title: "Histories Volume 2"
+    author: "William Shakespeare"
+    era: colonial
+    added_batch: "2026-04-18-colonial-shelf-f-everyman-canons"
+    tags: [England, drama, Everyman's Library]
+    hn_volume: vol-iii
+    candidate_hn_chapters: [hn-iii-anglia]
+
+  - id: HNSRC-0113
+    title: "Romances"
+    author: "William Shakespeare"
+    era: colonial
+    added_batch: "2026-04-18-colonial-shelf-f-everyman-canons"
+    tags: [England, drama, Everyman's Library]
+    hn_volume: vol-iii
+    candidate_hn_chapters: [hn-iii-anglia]
+
+  - id: HNSRC-0114
+    title: "The Sonnets and Narrative Poems"
+    author: "William Shakespeare"
+    era: colonial
+    added_batch: "2026-04-18-colonial-shelf-f-everyman-canons"
+    tags: [England, poetry, Everyman's Library]
+    hn_volume: vol-iii
+    candidate_hn_chapters: [hn-iii-anglia]
+
+  - id: HNSRC-0115
+    title: "Tragedies Volume 1"
+    author: "William Shakespeare"
+    era: colonial
+    added_batch: "2026-04-18-colonial-shelf-f-everyman-canons"
+    tags: [England, drama, Everyman's Library]
+    hn_volume: vol-iii
+    candidate_hn_chapters: [hn-iii-anglia]
+
+  - id: HNSRC-0116
+    title: "Tragedies Volume 2"
+    author: "William Shakespeare"
+    era: colonial
+    added_batch: "2026-04-18-colonial-shelf-f-everyman-canons"
+    tags: [England, drama, Everyman's Library]
+    hn_volume: vol-iii
+    candidate_hn_chapters: [hn-iii-anglia]
+
+  - id: HNSRC-0117
+    title: "Comedies, Volume 1"
+    author: "William Shakespeare"
+    era: colonial
+    added_batch: "2026-04-18-colonial-shelf-f-everyman-canons"
+    tags: [England, drama, Everyman's Library]
+    hn_volume: vol-iii
+    candidate_hn_chapters: [hn-iii-anglia]
+
+  - id: HNSRC-0118
+    title: "Comedies Volume 2"
+    author: "William Shakespeare"
+    era: colonial
+    added_batch: "2026-04-18-colonial-shelf-f-everyman-canons"
+    tags: [England, drama, Everyman's Library]
+    hn_volume: vol-iii
+    candidate_hn_chapters: [hn-iii-anglia]
+
+  - id: HNSRC-0119
+    title: "Candide and Other Stories"
+    author: "Voltaire"
+    era: colonial
+    added_batch: "2026-04-18-colonial-shelf-f-everyman-canons"
+    tags: [France, fiction, Enlightenment, Everyman's Library]
+    hn_volume: vol-iii
+    candidate_hn_chapters: [hn-iii-france]
+
+  - id: HNSRC-0120
+    title: "Confessions"
+    author: "Jean-Jacques Rousseau"
+    era: colonial
+    added_batch: "2026-04-18-colonial-shelf-f-everyman-canons"
+    tags: [France, memoir, Enlightenment, Everyman's Library]
+    hn_volume: vol-iii
+    candidate_hn_chapters: [hn-iii-france]
+
+  - id: HNSRC-0121
+    title: "The Social Contract and The Discourses"
+    author: "Jean-Jacques Rousseau"
+    era: colonial
+    added_batch: "2026-04-18-colonial-shelf-f-everyman-canons"
+    tags: [France, political philosophy, Enlightenment, Everyman's Library]
+    hn_volume: vol-iii
+    candidate_hn_chapters: [hn-iii-france]
+
+  - id: HNSRC-0122
+    title: "The Romanovs: 1613–1918"
+    author: "Simon Sebag Montefiore"
+    era: industrial
+    eras: [colonial, industrial, modern]
+    added_batch: "2026-04-18-colonial-shelf-g-europe-empires"
+    tags: [Russia, dynasty, Romanov]
+    hn_volume: vol-iv
+    primary_arc: russia
+    candidate_hn_chapters: [hn-iii-russia, hn-iv-russia-imperial]
+    notes: "Long chronology — primary industrial for catalog sort; shelf grouped with colonial batch photo."
+
+  - id: HNSRC-0123
+    title: "Peter the Great: His Life and World"
+    author: "Robert K. Massie"
+    era: colonial
+    added_batch: "2026-04-18-colonial-shelf-g-europe-empires"
+    tags: [Russia, biography, tsar]
+    hn_volume: vol-iii
+    candidate_hn_chapters: [hn-iii-russia]
+
+  - id: HNSRC-0124
+    title: "Catherine the Great"
+    author: "Robert K. Massie"
+    era: colonial
+    added_batch: "2026-04-18-colonial-shelf-g-europe-empires"
+    tags: [Russia, biography, empress]
+    hn_volume: vol-iii
+    candidate_hn_chapters: [hn-iii-russia]
+
+  - id: HNSRC-0125
+    title: "Nicholas and Alexandra"
+    author: "Robert K. Massie"
+    era: industrial
+    eras: [industrial, modern]
+    added_batch: "2026-04-18-colonial-shelf-g-europe-empires"
+    tags: [Russia, Romanov, World War I, biography]
+    hn_volume: vol-iv
+    candidate_hn_chapters: [hn-iv-russia-imperial]
+    notes: "1917 revolution — industrial-era primary; same shelf photo as colonial batch."
+
+  - id: HNSRC-0126
+    title: "The Dutch Republic: Its Rise, Greatness, and Fall 1477–1806"
+    author: "Jonathan Israel"
+    era: colonial
+    eras: [colonial, industrial]
+    added_batch: "2026-04-18-colonial-shelf-g-europe-empires"
+    tags: [Netherlands, early modern, Europe]
+    hn_volume: vol-iii
+    candidate_hn_chapters: [hn-iii-france]
+
+  - id: HNSRC-0127
+    title: "Conquistador: Hernán Cortés, King Montezuma, and the Last Stand of the Aztecs"
+    author: "Buddy Levy"
+    era: colonial
+    added_batch: "2026-04-18-colonial-shelf-g-europe-empires"
+    tags: [Spain, Mexico, conquest, Aztec]
+    hn_volume: vol-iii
+    candidate_hn_chapters: []
+    notes: "Americas conquest — no dedicated hn-iii Americas id; wire in cross-book-map when drafting."
+
+  - id: HNSRC-0128
+    title: "Empire: How Spain Became a World Power 1492–1763"
+    author: "Henry Kamen"
+    era: colonial
+    added_batch: "2026-04-18-colonial-shelf-g-europe-empires"
+    tags: [Spain, empire, Habsburg, maritime]
+    hn_volume: vol-iii
+    candidate_hn_chapters: [hn-iii-france]
+    notes: "Iberian world monarchy — France chapter id is imperfect proxy; adjust when drafting."
