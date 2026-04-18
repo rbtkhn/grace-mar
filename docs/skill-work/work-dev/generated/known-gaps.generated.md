@@ -7,4 +7,4 @@
 | `BUILD-AI-GAP-001` | Handback provenance | `closed` | Historical collapse of OpenClaw metadata at /stage |
 | `BUILD-AI-GAP-005` | Factorial scenario library | `partial` | Matrix drift is CI-enforced; client-specific tail packs still outside repo baselines |
 | `BUILD-AI-GAP-006` | Reasoning vs action (handback) | `partial` | Optional staged_risk_tier vs narrative heuristics; broad NL understanding still manual |
-| `BUILD-AI-GAP-007` | Progressive autonomy metrics | `partial` | Shadow log + tier script exist; dashboard or CI hook not wired |
+| `BUILD-AI-GAP-007` | Progressive autonomy metrics | `partial` | Dashboard + harness + CI smoke wired; operator habit + optional UI still limiters |

@@ -74,3 +74,9 @@ jobs:
 
       - name: Validate work-dev control plane
         run: python scripts/work_dev/validate_control_plane.py
+
+      - name: Autonomy tier evaluator smoke (GAP-007)
+        run: |
+          out=$(python3 scripts/work_dev/evaluate_autonomy_tiers.py)
+          echo "$out"
+          test "$out" = "insufficient_data"

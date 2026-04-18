@@ -26,3 +26,7 @@ Stdout is one of: `stay_shadow`, `limited_expand`, `insufficient_data`.
 
 - **work-dev dashboard** ([`scripts/work_dev/build_dashboard.py`](../../../../scripts/work_dev/build_dashboard.py)) includes an **Autonomy (GAP-007)** section: shadow JSONL line count and tier evaluation for the default profile.
 - **`scripts/harness_warmup.py`** appends a one-line autonomy summary when `runtime/autonomy/shadow_decisions.jsonl` exists and is non-empty (same evaluation as the dashboard).
+
+## CI
+
+**Tests** workflow (`.github/workflows/test.yml`) runs **`evaluate_autonomy_tiers.py`** with no shadow log and asserts stdout is **`insufficient_data`** — catches YAML/CLI regressions on every PR (`insufficient_data` is the expected cold-path label when the log is missing or too short).

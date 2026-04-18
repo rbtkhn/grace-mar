@@ -27,8 +27,9 @@ items:
 
   - id: BUILD-AI-GAP-007
     area: Progressive autonomy metrics
-    problem: Shadow log + tier script exist; dashboard or CI hook not wired
+    problem: Dashboard + harness + CI smoke wired; operator habit + optional UI still limiters
     status: partial
     related_integration_ids: []
     notes:
       - log_shadow_decision.py appends JSONL; evaluate_autonomy_tiers.py loads tier_thresholds.yaml per --profile; pytest tests/test_autonomy_tiers.py.
+      - Tests workflow runs evaluate_autonomy_tiers.py cold path (insufficient_data); build_dashboard Autonomy section; harness_warmup optional line.
