@@ -18,7 +18,7 @@
 #   content_path: optional — phase 2: gitignored file or absolute path (not committed)
 #
 # Upload order: ancient → medieval → colonial → industrial → modern (see OPERATOR-SOURCE-CATALOG.md)
-# Ancient shelf batch 2026-04-18: operator physical shelf (7 spines); photo in workspace assets.
+# Ancient shelf 2026-04-18: operator photos — Landmark/Viking row (shelf-a); Assyria/Persians pair (shelf-b); Everitt/Goldsworthy/Oxford row (shelf-c). Workspace assets under .cursor/projects/.../assets/.
 
 version: 1
 items:
@@ -96,3 +96,130 @@ items:
     primary_arc: rome
     candidate_hn_chapters: [hn-i-v1-01, hn-i-v1-13]
     notes: "Edited Kurt A. Raaflaub; Robert B. Strassler series editor; Pantheon (Landmark series)."
+
+  - id: HNSRC-0008
+    title: "Assyria"
+    author: "Eckart Frahm"
+    era: ancient
+    added_batch: "2026-04-18-ancient-shelf-b"
+    tags: [Mesopotamia, empire, Assyria, Near East]
+    hn_volume: vol-i
+    primary_arc: persia
+    candidate_hn_chapters: [hn-i-v1-04, hn-i-v1-16]
+    notes: "Basic Books."
+
+  - id: HNSRC-0009
+    title: "Persians"
+    author: "Lloyd Llewellyn-Jones"
+    era: ancient
+    added_batch: "2026-04-18-ancient-shelf-b"
+    tags: [Persia, Achaemenid, empire]
+    hn_volume: vol-i
+    primary_arc: persia
+    candidate_hn_chapters: [hn-i-v1-11, hn-i-v1-19]
+    notes: "Standalone volume (spine beside Frahm Assyria)."
+
+  - id: HNSRC-0010
+    title: "The Rise of Athens"
+    author: "Anthony Everitt"
+    era: ancient
+    added_batch: "2026-04-18-ancient-shelf-c"
+    tags: [Greece, Athens, democracy, classical]
+    hn_volume: vol-i
+    candidate_hn_chapters: [hn-i-v1-10, hn-i-v1-14]
+    notes: "Random House."
+
+  - id: HNSRC-0011
+    title: "Alexander the Great"
+    author: "Anthony Everitt"
+    era: ancient
+    added_batch: "2026-04-18-ancient-shelf-c"
+    tags: [Macedon, empire, biography]
+    hn_volume: vol-i
+    primary_arc: greek-persian
+    candidate_hn_chapters: [hn-i-v1-05, hn-i-v1-11]
+    notes: "Random House."
+
+  - id: HNSRC-0012
+    title: "Philip and Alexander: Kings and Conquerors"
+    author: "Adrian Goldsworthy"
+    era: ancient
+    added_batch: "2026-04-18-ancient-shelf-c"
+    tags: [Macedon, monarchy, military]
+    hn_volume: vol-i
+    primary_arc: greek-persian
+    candidate_hn_chapters: [hn-i-v1-01, hn-i-v1-05]
+    notes: "Basic Books."
+
+  - id: HNSRC-0013
+    title: "Alexandria"
+    author: "Islam Issa"
+    era: ancient
+    added_batch: "2026-04-18-ancient-shelf-c"
+    tags: [Egypt, Hellenistic, city, memory]
+    hn_volume: vol-i
+    candidate_hn_chapters: [hn-i-v1-16, hn-i-v1-18]
+    notes: "Lighthouse of Alexandria cover motif."
+
+  - id: HNSRC-0014
+    title: "The Cleopatras: The Forgotten Queens of Egypt"
+    author: "Lloyd Llewellyn-Jones"
+    era: ancient
+    added_batch: "2026-04-18-ancient-shelf-c"
+    tags: [Egypt, Ptolemaic, women, queens]
+    hn_volume: vol-i
+    candidate_hn_chapters: [hn-i-v1-14, hn-i-v1-16]
+    notes: "Basic Books."
+
+  - id: HNSRC-0015
+    title: "The Scythians"
+    author: "Barry Cunliffe"
+    era: ancient
+    added_batch: "2026-04-18-ancient-shelf-c"
+    tags: [steppe, Eurasia, nomads, frontier]
+    hn_volume: vol-i
+    candidate_hn_chapters: [hn-i-v1-13, hn-i-v1-15]
+    notes: "Oxford University Press."
+
+  - id: HNSRC-0016
+    title: "Empire of the Black Sea"
+    author: "Duane W. Roller"
+    era: ancient
+    added_batch: "2026-04-18-ancient-shelf-c"
+    tags: [Pontus, Black Sea, Hellenistic, monarchy]
+    hn_volume: vol-i
+    candidate_hn_chapters: [hn-i-v1-19, hn-i-v1-20]
+    notes: "Oxford University Press."
+
+  - id: HNSRC-0017
+    title: "The Rise of Rome"
+    author: "Anthony Everitt"
+    era: ancient
+    added_batch: "2026-04-18-ancient-shelf-c"
+    tags: [Rome, republic, origins]
+    hn_volume: vol-i
+    primary_arc: rome
+    candidate_hn_chapters: [hn-i-v1-04, hn-i-v1-05]
+    notes: "Random House."
+
+  - id: HNSRC-0018
+    title: "The Punic Wars"
+    author: "Adrian Goldsworthy"
+    era: ancient
+    added_batch: "2026-04-18-ancient-shelf-c"
+    tags: [Rome, Carthage, Mediterranean, war]
+    hn_volume: vol-i
+    primary_arc: rome
+    candidate_hn_chapters: [hn-i-v1-11, hn-i-v1-20]
+    notes: "Illustrated battle scene on spine."
+
+  - id: HNSRC-0019
+    title: "Hannibal"
+    author: "Richard A. Gabriel"
+    era: ancient
+    added_batch: "2026-04-18-ancient-shelf-c"
+    tags: [Carthage, Rome, warfare, biography]
+    hn_volume: vol-i
+    primary_arc: rome
+    candidate_hn_chapters: [hn-i-v1-11, hn-i-v1-14]
+    notes: "Carthaginian campaigns; spine author Gabriel."
