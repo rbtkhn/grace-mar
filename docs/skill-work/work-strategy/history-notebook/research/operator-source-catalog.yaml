@@ -551,3 +551,78 @@ items:
     hn_volume: vol-i
     candidate_hn_chapters: []
     notes: "Leftmost Penguin Clothbound on photo; red spine fish pattern — replace title/author when identified."
+
+  - id: HNSRC-0051
+    title: "Meditations"
+    author: "Marcus Aurelius"
+    era: ancient
+    added_batch: "2026-04-18-operator-classics"
+    tags: [Rome, Stoicism, philosophy, primary source]
+    hn_volume: vol-i
+    primary_arc: rome
+    candidate_hn_chapters: [hn-i-v1-04, hn-i-v1-05, hn-i-v1-10]
+    notes: "Imperial Stoic notebook; Greek original (Ta eis heauton)."
+
+  - id: HNSRC-0052
+    title: "On the Nature of Things"
+    author: "Lucretius"
+    era: ancient
+    added_batch: "2026-04-18-operator-classics"
+    tags: [Rome, Epicureanism, philosophy, poetry, primary source]
+    hn_volume: vol-i
+    primary_arc: rome
+    candidate_hn_chapters: [hn-i-v1-05, hn-i-v1-10]
+    notes: "De Rerum Natura; materialist cosmology and ethics in Latin hexameters."
+
+  - id: HNSRC-0053
+    title: "Letters from a Stoic"
+    author: "Seneca"
+    era: ancient
+    added_batch: "2026-04-18-operator-classics"
+    tags: [Rome, Stoicism, philosophy, letters, primary source]
+    hn_volume: vol-i
+    primary_arc: rome
+    candidate_hn_chapters: [hn-i-v1-04, hn-i-v1-05, hn-i-v1-10]
+    notes: "Moral Letters to Lucilius (Epistulae Morales ad Lucilium); common trade title."
+
+  - id: HNSRC-0054
+    title: "The History of the Decline and Fall of the Roman Empire"
+    author: "Edward Gibbon"
+    era: medieval
+    added_batch: "2026-04-18-operator-classics"
+    tags: [Rome, Byzantium, historiography, Enlightenment, synthesis]
+    hn_volume: vol-ii
+    primary_arc: rome
+    candidate_hn_chapters: [hn-i-v1-04, hn-ii-rome-byzantine]
+    notes: "Narrative spans late antiquity, Western fall (~476 AD), Byzantium, and medieval Europe; published 1776–1788."
+
+  - id: HNSRC-0055
+    title: "The Story of Civilization, Vol. I: Our Oriental Heritage"
+    author: "Will Durant"
+    era: ancient
+    added_batch: "2026-04-18-operator-classics"
+    tags: [synthesis, Durant, Story of Civilization, Near East]
+    hn_volume: vol-i
+    candidate_hn_chapters: [hn-i-v1-01, hn-i-v1-02, hn-i-v1-03]
+    notes: "Series vol. 1; comparative ancient Near East and foundations."
+
+  - id: HNSRC-0056
+    title: "The Story of Civilization, Vol. II: The Life of Greece"
+    author: "Will Durant"
+    era: ancient
+    added_batch: "2026-04-18-operator-classics"
+    tags: [synthesis, Durant, Story of Civilization, Greece]
+    hn_volume: vol-i
+    candidate_hn_chapters: [hn-i-v1-10, hn-i-v1-14]
+    notes: "Series vol. 2; Greek civilization."
+
+  - id: HNSRC-0057
+    title: "The Story of Civilization, Vol. III: Caesar and Christ"
+    author: "Will Durant"
+    era: ancient
+    added_batch: "2026-04-18-operator-classics"
+    tags: [synthesis, Durant, Story of Civilization, Rome, Christianity]
+    hn_volume: vol-i
+    primary_arc: rome
+    candidate_hn_chapters: [hn-i-v1-04, hn-i-v1-05, hn-i-v1-14]
+    notes: "Series vol. 3; late Republic–Empire and rise of Christianity through ~476 AD West."
