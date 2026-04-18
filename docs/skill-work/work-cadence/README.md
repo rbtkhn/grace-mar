@@ -71,7 +71,7 @@ The script runs, in order: `export_manifest.py`, `fork_checksum.py --manifest`, 
 | Beat | Clock | Primary job | Typical frequency |
 |------|--------|-------------|-------------------|
 | **coffee** | Hours (framing) | Reorientation: grounding, priorities, menu of next forks | Many per day |
-| **thanks** | Minutes (pause) | Bookmark: optional park line + one telemetry line; **no** maintenance stack | As needed |
+| **thanks** | Minutes (pause) | Bookmark: **last cadence line** → **Recent rhythm** + **Leaving on the desk** (two-block reply), optional park, one telemetry line; **no** maintenance stack | As needed |
 | **dream** | Day (residue) | Consolidation: memory normalize, integrity/governance, contradiction digest, night handoff | Usually once |
 | **bridge** | Session (context) | Seal: commit/push where appropriate, transfer prompt for the **next** Cursor thread | Per session close |
 | **harvest** | Cross-thread (import) | Ship dense substance **into** a session that is already running — not a clock | On demand |
@@ -104,7 +104,7 @@ Skills may ask the agent to **read** `work-cadence-events.md` **before** running
 
 | Ritual | Prior events synthesized | Rationale |
 |--------|----------------------------|-----------|
-| **thanks** | **2** | Minimal pause — just enough “what just happened” to anchor the bookmark |
+| **thanks** | **1** | Minimal pause — **most recent** audit line only (empty-log / file fallbacks in SKILL); two-block reply |
 | **coffee** | **4** | Reorientation — roughly half a day of mixed beats at typical spacing |
 | **bridge** | **4** | Same depth as **coffee** — the next session almost always pastes the bridge packet and ends with **`coffee`** on its own line; matching window length keeps seal → sip symmetric |
 | **dream** | **4** (default) / **8** (full day-close) | Default matches coffee/bridge depth; use **8** when the operator asks for full rhythm (`dream full`, `deep rhythm`, `wide rhythm`, or explicit wider window) — see [.cursor/skills/dream/SKILL.md](../../../.cursor/skills/dream/SKILL.md) Step 0 |
@@ -154,7 +154,7 @@ Choreography operates in **Maintenance / operational** territory. It does **not*
 ### Where to read the executable spec
 
 - [.cursor/skills/coffee/SKILL.md](../../../.cursor/skills/coffee/SKILL.md) — Step 0 recent rhythm, Step 1 scripts, A–E menu
-- [.cursor/skills/thanks/SKILL.md](../../../.cursor/skills/thanks/SKILL.md) — pause beat + recent rhythm (2 lines)
+- [.cursor/skills/thanks/SKILL.md](../../../.cursor/skills/thanks/SKILL.md) — pause beat + last cadence line + two-block reply
 - [.cursor/skills/dream/SKILL.md](../../../.cursor/skills/dream/SKILL.md) — Step 0 recent rhythm (4 default / 8 full closeout), `auto_dream.py`, handoff
 - [.cursor/skills/bridge/SKILL.md](../../../.cursor/skills/bridge/SKILL.md) — Step 0 recent rhythm (4), seal + transfer prompt
 - [.cursor/skills/harvest/SKILL.md](../../../.cursor/skills/harvest/SKILL.md) — packet contract (no trailing `coffee`; no Step 0 rhythm synthesis in reply)
@@ -406,7 +406,7 @@ If the **same** troubleshooting bullet applies **twice in a short window**, add 
 ## Adjacent surfaces
 
 - [.cursor/skills/coffee/SKILL.md](../../../.cursor/skills/coffee/SKILL.md) — coffee trigger
-- [.cursor/skills/thanks/SKILL.md](../../../.cursor/skills/thanks/SKILL.md) — thanks micro-pause (recent rhythm ×2)
+- [.cursor/skills/thanks/SKILL.md](../../../.cursor/skills/thanks/SKILL.md) — thanks micro-pause (recent rhythm ×1, two-block reply)
 - [.cursor/skills/dream/SKILL.md](../../../.cursor/skills/dream/SKILL.md) — dream trigger
 - [.cursor/skills/bridge/SKILL.md](../../../.cursor/skills/bridge/SKILL.md) — bridge trigger
 - [.cursor/skills/harvest/SKILL.md](../../../.cursor/skills/harvest/SKILL.md) — harvest trigger

@@ -292,13 +292,13 @@ Usually one `dream` session per day is normal.
 
 ## Cadence choreography
 
-`coffee`, `dream`, and `bridge` form Grace-Mar's cadence triad; **`thanks`** is a **light pause** (telemetry + optional park line + synthesis of prior two events — see [.cursor/skills/thanks/SKILL.md](../thanks/SKILL.md)).
+`coffee`, `dream`, and `bridge` form Grace-Mar's cadence triad; **`thanks`** is a **light pause** (telemetry + optional park line + synthesis of the **most recent** cadence line — see [.cursor/skills/thanks/SKILL.md](../thanks/SKILL.md)).
 
 | Time | Ritual | What it does |
 |------|--------|-------------|
 | **Morning** | `coffee` (work-start) | Read dream handoff, grounding scripts, **A–E** menu |
 | **During day** | `coffee` (reorientation) | Re-sip as needed — many per day is normal |
-| **During day** | `thanks` (micro-pause) | Synthesis of prior two log events (recent rhythm) + optional park + one telemetry line — no maintenance stack |
+| **During day** | `thanks` (micro-pause) | Synthesis of the most recent cadence line (recent rhythm) + two-block reply + optional park + one telemetry line — no maintenance stack |
 | **End of day** | `dream` | Memory normalization, integrity, governance, contradiction digest; optional strategy-notebook **FYI** + **Xavier journal** day file generation (see §§ Strategy notebook, Xavier journal) |
 | **Session close** | `bridge` | Seal repos (commit/push), synthesize transfer prompt for next session |
 

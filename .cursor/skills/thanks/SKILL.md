@@ -1,14 +1,14 @@
 ---
 name: thanks
 preferred_activation: thanks
-description: "Grace-Mar micro-pause cadence beat. Primary trigger: thanks (optionally followed by a short park line). Reads the prior two events from work-cadence-events.md, synthesizes **Recent rhythm** in plain language (no internal ops jargon or timestamps in chat), then logs one thanks line via log_cadence_event.py. No dream stack, no integrity/digest, no Record merge. Lighter than signing-off coffee or bridge; heavier than silence."
+description: "Grace-Mar micro-pause cadence beat. Primary trigger: thanks (optionally followed by a short park line). Reads the most recent cadence event from work-cadence-events.md (with empty-log and file fallbacks), synthesizes **Recent rhythm** in plain language (no internal ops jargon or timestamps in chat), replies in **two blocks** (recent rhythm + leaving on the desk with resume hint), then logs one thanks line via log_cadence_event.py. No dream stack, no integrity/digest, no Record merge. Lighter than signing-off coffee or bridge; heavier than silence."
 ---
 
 # Thanks (micro-pause)
 
 **Preferred activation (operator):** say **`thanks`** — optionally **same message**, after a space or punctuation, a **short park line** (what you are leaving on the desk).
 
-`thanks` is a **bookmark**, not gratitude training for the model. It exists so **pauses** show up in **cadence telemetry** and the next thread can see a **one-line anchor** without running **`dream`**. Each beat also **echoes the last two lines** from this log (as **Recent rhythm** in chat), so the pause lands in context, not isolation.
+`thanks` is a **bookmark**, not gratitude training for the model. It exists so **pauses** show up in **cadence telemetry** and the next thread can see a **one-line anchor** without running **`dream`**. Each beat **echoes the most recent cadence line** from this log (as **Recent rhythm** in chat), so the pause lands in context, not isolation.
 
 ---
 
@@ -24,23 +24,35 @@ description: "Grace-Mar micro-pause cadence beat. Primary trigger: thanks (optio
 
 ## Disambiguation (agent)
 
-- **Treat as this ritual** when the message is **clearly** a pause close: e.g. message is **`thanks`** alone, **`Thanks.`**, **`thanks — …`**, **`thanks:`** + park line, or **`thank you`** in the same minimal shape **and** no substantive new task in the same turn.
-- **Do not** treat as this ritual when **`thanks`** is **inside** a longer technical or conversational message (e.g. “the function thanks the caller for …”) or when the operator is **also** assigning new work — answer the work; **skip** cadence logging unless they say **`thanks`** as its own beat afterward.
-- If **ambiguous**, ask one short question: **“Log a pause beat (thanks), or conversational only?”**
+- **Default — run the ritual without asking:** Message is **`thanks`** alone, **`Thanks.`**, **`thanks — …`**, **`thanks:`** + park line, or **`thank you`** in the same **minimal** shape **and** there is **no substantive new task** in the same turn. Do **not** ask “log or conversational?” for these.
+- **Work first:** If the operator **also** assigns substantive work in the same message (“thanks, and fix the script…”), **answer the work**; **skip** cadence logging in that turn unless they send **`thanks`** again as its **own** beat afterward.
+- **Do not** treat as this ritual when **`thanks`** is **inside** technical or narrative prose (e.g. “the function thanks the caller for …”).
+- **Rare clarify:** Ask **“Log a pause beat (thanks), or conversational only?”** only when **`thanks`** might be **social politeness** inside a **longer conversational** message and intent is genuinely unclear — **not** when the line is clearly thanks-only.
 
 ---
 
 ## Steps (agent)
 
-1. **Read recent rhythm** (before logging this thanks): open **`docs/skill-work/work-cadence/work-cadence-events.md`** at repo root. Below the line `_(Append below this line.)_`, collect lines that match the audit format: `- **YYYY-MM-DD HH:MM UTC** — kind (user) …`. Take the **last two** such lines **already in the file** (the two most recent events **before** this beat). If there is only one line, synthesize that one; if none, the companion-facing line is **Recent rhythm:** _(nothing logged yet)_ (agent-internal: empty log).
-2. **Synthesize** those lines into **one short sentence** in **plain prose** — **name concrete specifics** from the log (e.g. prior **coffee** mode, **bridge** commit refs, **dream** outcome in ordinary words, **thanks** **park** text if any). **One sentence maximum**; two only if the prior events span genuinely different topics. **Companion-facing UX:** use the **Recent rhythm** label (or prose only); **do not** include **dates, UTC, or clock times** in this prose (use sequence and plain language: “after bridge,” “then a thanks pause,” “earlier today”). **Do not** lead with a bare telemetry strip; **do not** use generic filler that ignores what those two lines actually say. **Do not** paste the raw log lines in full unless they are already very short.
+1. **Read the most recent cadence line** (before logging this thanks): open **`docs/skill-work/work-cadence/work-cadence-events.md`** at repo root. Below the line `_(Append below this line.)_`, find lines that match the audit format: `- **YYYY-MM-DD HH:MM UTC** — kind (user) …`. Take **only the last** such line **already in the file** (the single most recent event **before** this beat).
+   - **File missing or unreadable:** Do **not** fail the ritual. Skip file read; for step 2, set **Recent rhythm** from **one honest sentence** summarizing the **last substantive turn in this thread** (concrete topic, not generic filler).
+   - **File OK but no qualifying lines below the anchor:** Use the **fixed empty-log sentence** for **Recent rhythm** in step 2 (exact wording below — do not improvise a different empty-log line).
 
-   **Cadence voice:** Follow the **cadence voice principle** ([work-cadence README](../../../docs/skill-work/work-cadence/README.md#cadence-voice-principle-all-rituals)). Lead with *felt* acknowledgment of what was settled or decided, end with the **optimal next direction**. Use **"we"** framing. The operator should feel **seen and grounded**, not debriefed. Name what was learned, not what was executed. No commit hashes, no process names — warm, direct, future-facing.
-3. **Parse** optional **park** text: trim the leading **`thanks`** / **`thank you`** (case-insensitive) and punctuation; remainder = **park** (collapse internal newlines to spaces; empty is OK). **Auto-park:** if the operator did not provide park text, the agent **must** infer a short 3–8 word dash-joined slug from the most recent substantive topic in this thread (e.g. `cadence-auto-park-design`, `template-sync-lockfile-impl`). Pass the inferred slug as `park=<slug>` — do **not** default to `park=none`. The script also has a git-based fallback (`auto:` prefix) but the agent should provide richer context when possible.
-4. **Reply** with a tiny **Pause beat** block (friendly to a **new companion-self user** — no internal ops jargon in labels):
-   - **Recent rhythm:** the synthesis from step 2.
-   - **Leaving on the desk:** the park text, or the agent-inferred slug.
-   - **Next:** one line — e.g. “Pick up from the park line or run **`coffee`**.”
+2. **Synthesize Recent rhythm** into **one short sentence** in **plain prose** — **name concrete specifics** from the chosen cadence line (e.g. prior **coffee** mode, **bridge** feel, **dream** outcome, prior **thanks** park) **or**, when using thread fallback, from the thread. **One sentence only** for this block (the text that appears after the **Recent rhythm:** label in step 4).
+
+   **Empty-log fixed prose (use verbatim when step 1 finds no qualifying lines below the anchor):**
+
+   `No prior cadence events yet — this pause still bookmarks the desk.`
+
+   **Cadence voice** (when synthesizing from a real line or thread): Follow the **cadence voice principle** ([work-cadence README](../../../docs/skill-work/work-cadence/README.md#cadence-voice-principle-all-rituals)). Lead with *felt* acknowledgment of what was settled or decided; end with the **optimal next direction**. Use **"we"** framing. The operator should feel **seen and grounded**, not debriefed. Name what was learned, not what was executed. No commit hashes, no process names — warm, direct, future-facing.
+
+   **Companion-facing UX:** use the **Recent rhythm** label (or prose only); **do not** include **dates, UTC, or clock times** in this prose (use sequence and plain language: “after bridge,” “then a thanks pause,” “earlier today”). **Do not** lead with a bare telemetry strip. **Do not** paste the raw log line in full unless it is already very short.
+
+3. **Parse** optional **park** text: trim the leading **`thanks`** / **`thank you`** (case-insensitive) and punctuation; remainder = **park** (collapse internal newlines to spaces; empty is OK). **Examples** of useful slugs (dash-joined; still a single `park=` value): `lane-work-dev`, `routing-focus`, `lane-strategy` — helps grep of `work-cadence-events.md` later. **Auto-park:** if the operator did not provide park text, the agent **must** infer a short 3–8 word dash-joined slug from the most recent substantive topic in this thread (e.g. `cadence-auto-park-design`, `template-sync-lockfile-impl`). Pass the inferred slug as `park=<slug>` — do **not** default to `park=none`. The script also has a git-based fallback (`auto:` prefix) but the agent should provide richer context when possible.
+
+4. **Reply** with a **two-block** **Pause beat** only (friendly to a **new companion-self user** — no internal ops jargon in labels):
+   - **Recent rhythm:** the line from step 2 (synthesis, empty-log fixed sentence, or thread fallback).
+   - **Leaving on the desk:** the park text or agent-inferred slug **—** resume here or run **`coffee`** when you return.
+
 5. **Log** (operator repo, default user **`grace-mar`** unless context names another id):
 
 ```bash
@@ -61,7 +73,7 @@ Pass **`--cursor-model "…"`** when the Cursor UI model name is known (parity w
 
 - **Read-only** for Record: no **`self.md`**, **`self-archive.md`**, or **`process_approved_candidates`** from **`thanks`** alone.
 - **Park** text is **operator ephemera** — keep it short; it is **not** SELF truth.
-- If **`work-cadence-events.md`** is missing or has no lines below the append anchor, say **Recent rhythm:** briefly that there’s nothing to read; still log **`thanks`** if the operator invoked the ritual.
+- If **`work-cadence-events.md`** is missing, unreadable, or has **no** qualifying lines below the append anchor, still log **`thanks`** when the operator invoked the ritual — use the **thread fallback** or **fixed empty-log sentence** for **Recent rhythm** as in steps 1–2; do not skip logging.
 - Cadence file: [docs/skill-work/work-cadence/work-cadence-events.md](../../../docs/skill-work/work-cadence/work-cadence-events.md).
 
 ---
@@ -71,7 +83,7 @@ Pass **`--cursor-model "…"`** when the Cursor UI model name is known (parity w
 | Ritual | Role |
 |--------|------|
 | **coffee** | Framing + menu (many per day) |
-| **thanks** | Micro-pause + **synthesis of prior two cadence lines** + optional park + one telemetry line |
+| **thanks** | Micro-pause + **synthesis of the prior cadence line** (or fallbacks) + optional park + **two-block** reply + one telemetry line |
 | **dream** | Day-close maintenance |
 | **bridge** | Session seal + transfer prompt |
 
