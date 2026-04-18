@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """Validate History Notebook operator-source-catalog.yaml (HNSRC-* seed rows).
 
-Checks: unique ids, required era, candidate_hn_chapters ⊆ book-architecture.yaml,
-duplicate (title, author) warnings, optional hn_volume vs era heuristic.
+Checks: unique ids, required era, optional eras (multi-bucket; must include era),
+candidate_hn_chapters ⊆ book-architecture.yaml, duplicate (title, author) warnings,
+optional hn_volume vs era heuristic.
 
 Exit 0 on success; exit 1 if --strict and any error, or on duplicate ids / bad era / bad hn-*.
 
@@ -101,6 +102,33 @@ def validate_catalog(
         era = raw.get("era")
         if era not in ERAS:
             errors.append(f"{sid}: era must be one of {sorted(ERAS)}, got {era!r}")
+
+        eras_field = raw.get("eras")
+        if eras_field is not None:
+            if not isinstance(eras_field, list):
+                errors.append(f"{sid}: eras must be a list when set, got {type(eras_field).__name__}")
+            elif len(eras_field) == 0:
+                errors.append(f"{sid}: eras must be non-empty when set")
+            else:
+                seen_era: set[str] = set()
+                for e in eras_field:
+                    if not isinstance(e, str):
+                        errors.append(f"{sid}: each eras entry must be a string")
+                        continue
+                    if e not in ERAS:
+                        errors.append(f"{sid}: unknown era in eras {e!r}")
+                        continue
+                    if e in seen_era:
+                        errors.append(f"{sid}: duplicate era in eras: {e!r}")
+                    seen_era.add(e)
+                if isinstance(era, str) and era in ERAS and era not in seen_era:
+                    errors.append(
+                        f"{sid}: primary era={era!r} must be included in eras when eras is set"
+                    )
+                if len(eras_field) == 1 and isinstance(era, str) and eras_field[0] == era:
+                    warnings.append(
+                        f"{sid}: eras has one entry matching era — drop eras or add more categories"
+                    )
 
         pair = (title.lower(), author.lower())
         if title and author:

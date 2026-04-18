@@ -6,7 +6,8 @@
 #   title, author: string (author may be "Various" or unknown)
 #   year: optional int or string (publication / composition hint)
 #   isbn: optional string
-#   era: required — ancient | medieval | colonial | industrial | modern
+#   era: required — primary bucket for upload order (ancient | medieval | colonial | industrial | modern)
+#   eras: optional list — when a work logically spans multiple buckets, list all that apply; must include era
 #   added_batch: optional string (e.g. 2026-04-18-ancient-a) for traceability
 #   tags: optional list of strings
 #   hn_volume: optional — vol-i | vol-ii | vol-iii | vol-iv | vol-v | appendix
@@ -589,6 +590,7 @@ items:
     title: "The History of the Decline and Fall of the Roman Empire"
     author: "Edward Gibbon"
     era: medieval
+    eras: [ancient, medieval]
     added_batch: "2026-04-18-operator-classics"
     tags: [Rome, Byzantium, historiography, Enlightenment, synthesis]
     hn_volume: vol-ii

@@ -10,7 +10,7 @@
 
 | Artifact | Role |
 |----------|------|
-| [`operator-source-catalog.yaml`](operator-source-catalog.yaml) | Bibliographic rows (`HNSRC-*`), **era**, optional hints to `hn-*` and PH — **planning shelf** |
+| [`operator-source-catalog.yaml`](operator-source-catalog.yaml) | Bibliographic rows (`HNSRC-*`), **era** (+ optional **eras**), optional hints to `hn-*` and PH — **planning shelf** |
 | **HN chapters** (`chapters/`, `hn-*`) | Operator-distilled ~500–1000w prose — **deliverable** |
 | **STATUS.md** | Single queue for **which chapter to write next**; link from strategy-notebook `meta.md` |
 
@@ -34,6 +34,8 @@ Process the shelf in this **fixed sequence** (batches of **five titles** within 
 | `industrial` | `vol-iv` |
 | `modern` | `vol-v` |
 
+**Multiple temporal categories:** When a work **logically belongs** in more than one bucket (e.g. Gibbon’s narrative spans late antiquity and medieval Europe), set **`eras`** to the full list and keep **`era`** as the **primary** bucket (upload order, default shelf file). Example: `era: medieval` + `eras: [ancient, medieval]`. Omit **`eras`** when a single category is enough.
+
 ### Era boundaries (operator rule)
 
 **Year labels:** use **BC** and **AD** (traditional system), not BCE or CE — see [STYLE-GUIDE § Dating](../STYLE-GUIDE.md#dating-years).
@@ -42,7 +44,7 @@ Process the shelf in this **fixed sequence** (batches of **five titles** within 
 
 **`medieval`** begins with the **post-476** formations and parallel stories you shelve next (e.g. Ostrogothic Italy, Byzantine empire as medieval frame, Islamic expansion, medieval church and states — aligned to History Notebook Vol II and your upload order).
 
-If a title straddles (e.g. one volume covers 400–600 AD), use **`notes`** and pick one `era` for catalog sorting, or split editions later.
+If a title straddles (e.g. one volume covers 400–600 AD), set **`eras`** when multiple buckets apply; use **`notes`** for nuance; pick one **`era`** as primary for batch/sort, or split editions later.
 
 ## Per-batch workflow (five titles)
 
@@ -50,7 +52,7 @@ If a title straddles (e.g. one volume covers 400–600 AD), use **`notes`** and 
 2. Add five new `items` in `operator-source-catalog.yaml` (or paste a block for the agent to merge):
    - Next sequential `id`: `HNSRC-NNNN`.
    - Required: `title`, `author`, **`era`**.
-   - Optional: `year`, `isbn`, `added_batch`, `tags`, `hn_volume`, `primary_arc`, `candidate_hn_chapters`, `ph_thesis_hints`, `ph_concept_hints`, `notes`.
+   - Optional: `eras`, `year`, `isbn`, `added_batch`, `tags`, `hn_volume`, `primary_arc`, `candidate_hn_chapters`, `ph_thesis_hints`, `ph_concept_hints`, `notes`.
 3. Run validation: `python3 scripts/validate_hn_source_catalog.py` (use `--strict` in CI if wired).
 4. **Within-era pass:** dedupe, cluster tags, adjust `candidate_hn_chapters` only as **planning** hints.
 5. **When an era slice feels complete:** optional short summary in this file (dated bullet) or in git commit message — not required for v1.
