@@ -36,3 +36,11 @@ def retrieval_misses_jsonl() -> Path:
 
 def retrieval_miss_schema() -> Path:
     return REPO_ROOT / "schema-registry" / "retrieval-miss.v1.json"
+
+
+def chunks_dir_root() -> Path:
+    return ledger_base() / "runtime" / "chunks"
+
+
+def chunks_dir(surface: str) -> Path:
+    return chunks_dir_root() / surface

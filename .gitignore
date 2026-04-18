@@ -124,6 +124,9 @@ runtime/observations/index.jsonl
 # Retrieval-miss ledger (append-only; operator-local — see runtime/retrieval-misses/README.md)
 runtime/retrieval-misses/*.jsonl
 
+# Chunk indexes (generated; rebuildable — see runtime/chunks/README.md)
+runtime/chunks/**/*.jsonl
+
 # Local runtime/export noise
 users/*/user.md
 users/*/harness-events.jsonl

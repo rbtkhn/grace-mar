@@ -28,6 +28,7 @@ for _p in (_RUNTIME_DIR, _SCRIPTS_DIR):
     if str(_p) not in sys.path:
         sys.path.insert(0, str(_p))
 
+import chunk_store  # noqa: E402
 import hybrid_scoring as hs  # noqa: E402
 import ledger_paths  # noqa: E402
 
@@ -155,6 +156,75 @@ def _search_evidence(
 
 # ── surface: artifact_lookup / notebook_lookup ────────────────────────
 
+def _score_chunks(
+    chunks: list[dict],
+    query: str,
+    query_tokens: list[str],
+    idf: dict[str, float],
+    surface: str,
+    use_recency: bool,
+    weights: tuple[float, float, float],
+) -> list[hs.HybridResult]:
+    """Score pre-generated chunk records and return HybridResults."""
+    sem_active = hs.semantic_available()
+    scored: list[tuple[float, dict]] = []
+    for chk in chunks:
+        tokens = hs.tokenize(chk.get("content", ""))
+        s = hs.tfidf_cosine(query_tokens, tokens, idf)
+        if s > 0:
+            scored.append((s, chk))
+
+    if not scored:
+        return []
+
+    lexical_vals = [s for s, _ in scored]
+    normed = hs.normalize_scores(lexical_vals)
+
+    results: list[hs.HybridResult] = []
+    for (raw_lex, chk), norm_lex in zip(scored, normed):
+        rec = 0.0
+        if use_recency and chk.get("generated_at"):
+            rec = hs.recency_from_iso(chk["generated_at"])
+
+        content = chk.get("content", "")
+        sem = hs.semantic_score(query, content[:2000])
+        final = hs.combine_scores(norm_lex, sem, rec, weights=weights, semantic_active=sem_active)
+
+        src_path = chk.get("source_path", "?")
+        start = chk.get("start_line", "?")
+        end = chk.get("end_line", "?")
+        section = chk.get("section_hint", "")
+
+        chunk_tokens = set(hs.tokenize(content))
+        matched = sorted(t for t in query_tokens if t in chunk_tokens)
+
+        snippet = content[:300].replace("\n", " ").strip()
+        if len(content) > 300:
+            snippet = snippet[:297] + "..."
+
+        results.append(hs.HybridResult(
+            path=f"{src_path}:{start}-{end}",
+            label=section or chk.get("chunk_id", "?"),
+            retrieval_surface=surface,
+            lexical_score=norm_lex,
+            semantic_score=sem,
+            recency_score=rec,
+            final_score=final,
+            matched_terms=matched,
+            snippet=snippet,
+            meta={
+                "chunk_id": chk.get("chunk_id"),
+                "chunk_index": chk.get("chunk_index"),
+                "total_chunks": chk.get("total_chunks"),
+                "section_hint": section,
+                "source_path": src_path,
+                "filename": Path(src_path).name,
+            },
+        ))
+
+    return results
+
+
 def _scan_md_files(
     base_dir: Path,
     query: str,
@@ -163,9 +233,17 @@ def _scan_md_files(
     use_recency: bool,
     weights: tuple[float, float, float],
 ) -> list[hs.HybridResult]:
-    """Token-overlap search over .md/.json files under *base_dir*."""
+    """Token-overlap search over .md/.json files under *base_dir*.
+
+    When chunk indexes are available for a surface, large files are scored
+    at chunk granularity instead of whole-file. Small/un-chunked files use
+    the original whole-file path.
+    """
     if not base_dir.is_dir():
         return []
+
+    chunked_paths = chunk_store.chunked_source_paths(surface)
+    all_chunks = chunk_store.load_chunks(surface) if chunked_paths else []
 
     skip = {".git", "node_modules", ".cache", "__pycache__"}
     docs: list[tuple[Path, str, list[str]]] = []
@@ -177,6 +255,12 @@ def _scan_md_files(
         if any(part in skip for part in p.parts):
             continue
         try:
+            rel = str(p.relative_to(REPO_ROOT))
+        except ValueError:
+            rel = str(p)
+        if rel in chunked_paths:
+            continue  # handled via chunk scoring below
+        try:
             text = p.read_text(encoding="utf-8", errors="replace")
         except OSError:
             continue
@@ -184,72 +268,78 @@ def _scan_md_files(
         if tokens:
             docs.append((p, text, tokens))
 
-    if not docs:
-        return []
-
     query_tokens = hs.tokenize(query)
     if not query_tokens:
         return []
 
-    all_doc_tokens = [t for _, _, t in docs]
-    all_doc_tokens.append(query_tokens)
-    idf = hs.build_idf(all_doc_tokens)
+    all_token_lists: list[list[str]] = [t for _, _, t in docs]
+    for chk in all_chunks:
+        all_token_lists.append(hs.tokenize(chk.get("content", "")))
+    all_token_lists.append(query_tokens)
+    idf = hs.build_idf(all_token_lists)
 
-    scored: list[tuple[float, Path, str, list[str]]] = []
-    for p, text, tokens in docs:
-        s = hs.tfidf_cosine(query_tokens, tokens, idf)
-        if s > 0:
-            scored.append((s, p, text, tokens))
-
-    if not scored:
-        return []
-
-    lexical_vals = [s for s, _, _, _ in scored]
-    normed = hs.normalize_scores(lexical_vals)
-
-    sem_active = hs.semantic_available()
+    # Score whole-file docs (un-chunked)
     results: list[hs.HybridResult] = []
-    for (raw_lex, p, text, tokens), norm_lex in zip(scored, normed):
-        rec = 0.0
-        if use_recency:
-            try:
-                rec = hs.recency_from_mtime(p.stat().st_mtime)
-            except OSError:
-                pass
+    if docs:
+        scored: list[tuple[float, Path, str, list[str]]] = []
+        for p, text, tokens in docs:
+            s = hs.tfidf_cosine(query_tokens, tokens, idf)
+            if s > 0:
+                scored.append((s, p, text, tokens))
 
-        sem = hs.semantic_score(query, text[:2000])
-        final = hs.combine_scores(norm_lex, sem, rec, weights=weights, semantic_active=sem_active)
+        if scored:
+            lexical_vals = [s for s, _, _, _ in scored]
+            normed = hs.normalize_scores(lexical_vals)
 
-        try:
-            rel = str(p.relative_to(REPO_ROOT))
-        except ValueError:
-            rel = str(p)
+            sem_active = hs.semantic_available()
+            for (raw_lex, p, text, tokens), norm_lex in zip(scored, normed):
+                rec = 0.0
+                if use_recency:
+                    try:
+                        rec = hs.recency_from_mtime(p.stat().st_mtime)
+                    except OSError:
+                        pass
 
-        heading = ""
-        for line in text.splitlines()[:10]:
-            if line.startswith("# "):
-                heading = line[2:].strip()[:120]
-                break
+                sem = hs.semantic_score(query, text[:2000])
+                final = hs.combine_scores(norm_lex, sem, rec, weights=weights, semantic_active=sem_active)
 
-        doc_set = set(tokens)
-        matched = sorted(t for t in query_tokens if t in doc_set)
+                try:
+                    rel = str(p.relative_to(REPO_ROOT))
+                except ValueError:
+                    rel = str(p)
 
-        snippet_text = text[:300].replace("\n", " ").strip()
-        if len(text) > 300:
-            snippet_text = snippet_text[:297] + "..."
+                heading = ""
+                for line in text.splitlines()[:10]:
+                    if line.startswith("# "):
+                        heading = line[2:].strip()[:120]
+                        break
 
-        results.append(hs.HybridResult(
-            path=rel,
-            label=heading or p.name,
-            retrieval_surface=surface,
-            lexical_score=norm_lex,
-            semantic_score=sem,
-            recency_score=rec,
-            final_score=final,
-            matched_terms=matched,
-            snippet=snippet_text,
-            meta={"filename": p.name},
-        ))
+                doc_set = set(tokens)
+                matched = sorted(t for t in query_tokens if t in doc_set)
+
+                snippet_text = text[:300].replace("\n", " ").strip()
+                if len(text) > 300:
+                    snippet_text = snippet_text[:297] + "..."
+
+                results.append(hs.HybridResult(
+                    path=rel,
+                    label=heading or p.name,
+                    retrieval_surface=surface,
+                    lexical_score=norm_lex,
+                    semantic_score=sem,
+                    recency_score=rec,
+                    final_score=final,
+                    matched_terms=matched,
+                    snippet=snippet_text,
+                    meta={"filename": p.name},
+                ))
+
+    # Score chunk records
+    if all_chunks:
+        chunk_results = _score_chunks(
+            all_chunks, query, query_tokens, idf, surface, use_recency, weights,
+        )
+        results.extend(chunk_results)
 
     results.sort(key=lambda r: -r.final_score)
     return results[:top_k]
