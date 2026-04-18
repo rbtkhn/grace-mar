@@ -1,0 +1,75 @@
+# History Notebook — operator source catalog (title-level seed)
+# WORK only; not Record. Does not replace book-architecture.yaml or cross-book-map.yaml.
+#
+# Schema (items[]):
+#   id: HNSRC-NNNN (zero-padded 4 digits, unique)
+#   title, author: string (author may be "Various" or unknown)
+#   year: optional int or string (publication / composition hint)
+#   isbn: optional string
+#   era: required — ancient | medieval | colonial | industrial | modern
+#   added_batch: optional string (e.g. 2026-04-18-ancient-a) for traceability
+#   tags: optional list of strings
+#   hn_volume: optional — vol-i | vol-ii | vol-iii | vol-iv | vol-v | appendix
+#   primary_arc: optional — matches arc_id or thread name in README (free string)
+#   candidate_hn_chapters: optional list of hn-* ids (planning only; not PH coverage)
+#   ph_thesis_hints / ph_concept_hints: optional lists of strings (t01… / concept ids)
+#   notes: optional string
+#   lib_id: optional — if promoted to users/grace-mar self-library LIB-* entry
+#   content_path: optional — phase 2: gitignored file or absolute path (not committed)
+#
+# Upload order: ancient → medieval → colonial → industrial → modern (see OPERATOR-SOURCE-CATALOG.md)
+
+version: 1
+items:
+  - id: HNSRC-0001
+    title: "Histories"
+    author: "Herodotus"
+    era: ancient
+    added_batch: "2026-04-18-ancient-a"
+    tags: [Greece, Persia, inquiry, empire]
+    hn_volume: vol-i
+    primary_arc: greek-persian
+    candidate_hn_chapters: [hn-i-v1-11]
+    notes: "Seed row for ancient batch workflow; replace or extend with your shelf."
+
+  - id: HNSRC-0002
+    title: "History of the Peloponnesian War"
+    author: "Thucydides"
+    era: ancient
+    added_batch: "2026-04-18-ancient-a"
+    tags: [Greece, war, democracy, empire]
+    hn_volume: vol-i
+    candidate_hn_chapters: [hn-i-v1-14, hn-i-v1-20]
+    notes: "Seed row for ancient batch workflow; replace or extend with your shelf."
+
+  - id: HNSRC-0003
+    title: "Hellenica"
+    author: "Xenophon"
+    era: ancient
+    added_batch: "2026-04-18-ancient-a"
+    tags: [Greece, Sparta, succession]
+    hn_volume: vol-i
+    candidate_hn_chapters: [hn-i-v1-20]
+    notes: "Seed row for ancient batch workflow; replace or extend with your shelf."
+
+  - id: HNSRC-0004
+    title: "Histories"
+    author: "Polybius"
+    era: ancient
+    added_batch: "2026-04-18-ancient-a"
+    tags: [Rome, republic, Mediterranean, cycles]
+    hn_volume: vol-i
+    primary_arc: rome
+    candidate_hn_chapters: [hn-i-v1-04, hn-i-v1-05]
+    notes: "Seed row for ancient batch workflow; replace or extend with your shelf."
+
+  - id: HNSRC-0005
+    title: "Commentarii de Bello Gallico"
+    author: "Julius Caesar"
+    era: ancient
+    added_batch: "2026-04-18-ancient-a"
+    tags: [Rome, conquest, frontier, narrative]
+    hn_volume: vol-i
+    primary_arc: rome
+    candidate_hn_chapters: [hn-i-v1-01, hn-i-v1-13]
+    notes: "Seed row for ancient batch workflow; replace or extend with your shelf."

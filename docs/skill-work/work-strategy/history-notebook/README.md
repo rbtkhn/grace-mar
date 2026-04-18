@@ -12,6 +12,7 @@ Book identity and chapter IDs remain **SSOT** in [book-architecture.yaml](book-a
 |-------|----------|------|
 | **Chapters** | [chapters/](chapters/) + YAML ids | Primary deliverable: comparative chapters (~500–1000w); cite **chapter ids** (`hn-i-v1-04`, …) from strategy-notebook **`### History resonance`** |
 | **Distillation queue** | [STATUS.md](STATUS.md) | **Single SSOT** for next `hn-*` to draft; strategy **`meta.md`** links here — see [STRATEGY-NOTEBOOK-ARCHITECTURE § Parallel to History notebook](../strategy-notebook/STRATEGY-NOTEBOOK-ARCHITECTURE.md#parallel-to-history-notebook-lib-0156) |
+| **Operator source catalog** (optional) | [research/operator-source-catalog.yaml](research/operator-source-catalog.yaml) + [research/OPERATOR-SOURCE-CATALOG.md](research/OPERATOR-SOURCE-CATALOG.md) | Title-level **reference shelf** (e.g. batched by era) that **informs** drafting; not chapter SSOT. Run `python3 scripts/validate_hn_source_catalog.py` after edits. |
 | **Civilization threads** (optional) | [threads/](threads/) — `history-civ-*.md` | Longitudinal lanes: continuity, mechanism candidates, candidate chapter targets — **scaffolding** for drafting, not a parallel codex |
 
 Flow: **CIV-MEM (reservoir) → distill into HN chapters (`hn-*`) → strategy-notebook** cites ids + mechanisms in **`### History resonance`** (tiers + optional **`HN gap:`** back-pressure — [STATUS.md](STATUS.md)). Threads optional before drafting. Retired experiment: see [knots/README.md](knots/README.md).
