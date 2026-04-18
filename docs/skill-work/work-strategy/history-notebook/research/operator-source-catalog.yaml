@@ -18,7 +18,7 @@
 #   content_path: optional — phase 2: gitignored file or absolute path (not committed)
 #
 # Upload order: ancient → medieval → colonial → industrial → modern (see OPERATOR-SOURCE-CATALOG.md)
-# Ancient / medieval / modern (operator) 2026-04-18: shelf photos — Landmark row (a); Assyria/Persians (b); Everitt/Goldsworthy/Oxford (c); late Rome–Byzantine row (d); Roman lives–empire row (e). Assets: .cursor/projects/.../assets/.
+# Ancient / medieval / modern (operator) 2026-04-18: shelf photos — Landmark (a); Assyria/Persians (b); Everitt/Goldsworthy/Oxford (c); late Rome–Byzantine (d); Roman lives–empire (e); Everyman Library canons (f); Penguin Clothbound epics (g). Assets: .cursor/projects/.../assets/.
 
 version: 1
 items:
@@ -394,3 +394,159 @@ items:
     primary_arc: rome
     candidate_hn_chapters: [hn-i-v1-11, hn-i-v1-04]
     notes: "Yale University Press."
+
+  - id: HNSRC-0036
+    title: "The Old Testament"
+    author: "Various"
+    era: ancient
+    added_batch: "2026-04-18-shelf-f-everyman-canons"
+    tags: [Bible, Hebrew Bible, scripture, religion]
+    hn_volume: vol-i
+    candidate_hn_chapters: [hn-i-v1-08, hn-i-v1-10]
+    notes: "Red/black spine with gold accents; Everyman's Library style (operator edition)."
+
+  - id: HNSRC-0037
+    title: "The New Testament"
+    author: "Various"
+    era: ancient
+    added_batch: "2026-04-18-shelf-f-everyman-canons"
+    tags: [Bible, Christian, scripture, religion]
+    hn_volume: vol-i
+    candidate_hn_chapters: [hn-i-v1-08, hn-i-v1-10]
+    notes: "Red/black spine with gold accents; paired with OT on shelf."
+
+  - id: HNSRC-0038
+    title: "Hindu Scriptures"
+    author: "Various"
+    era: ancient
+    added_batch: "2026-04-18-shelf-f-everyman-canons"
+    tags: [India, Hinduism, scripture, religion]
+    hn_volume: vol-i
+    primary_arc: india
+    candidate_hn_chapters: [hn-i-v1-12, hn-i-v1-16]
+    notes: "Everyman's Library black spine / white band."
+
+  - id: HNSRC-0039
+    title: "Lao-Tzu: Tao Te Ching"
+    author: "Lao Tzu"
+    era: ancient
+    added_batch: "2026-04-18-shelf-f-everyman-canons"
+    tags: [China, Daoism, philosophy, scripture]
+    hn_volume: vol-i
+    primary_arc: china
+    candidate_hn_chapters: [hn-i-v1-08, hn-i-v1-17]
+    notes: "Everyman's Library."
+
+  - id: HNSRC-0040
+    title: "Confucius: The Analects"
+    author: "Confucius"
+    era: ancient
+    added_batch: "2026-04-18-shelf-f-everyman-canons"
+    tags: [China, philosophy, ethics, education]
+    hn_volume: vol-i
+    primary_arc: china
+    candidate_hn_chapters: [hn-i-v1-08, hn-i-v1-10]
+    notes: "Everyman's Library."
+
+  - id: HNSRC-0041
+    title: "Plato: The Republic"
+    author: "Plato"
+    era: ancient
+    added_batch: "2026-04-18-shelf-f-everyman-canons"
+    tags: [Greece, philosophy, politics, education]
+    hn_volume: vol-i
+    candidate_hn_chapters: [hn-i-v1-08, hn-i-v1-10]
+    notes: "Everyman's Library."
+
+  - id: HNSRC-0042
+    title: "Plato: Symposium and Phaedrus"
+    author: "Plato"
+    era: ancient
+    added_batch: "2026-04-18-shelf-f-everyman-canons"
+    tags: [Greece, philosophy, dialogue, love]
+    hn_volume: vol-i
+    candidate_hn_chapters: [hn-i-v1-08, hn-i-v1-10]
+    notes: "Everyman's Library."
+
+  - id: HNSRC-0043
+    title: "Sophocles: The Theban Plays"
+    author: "Sophocles"
+    era: ancient
+    added_batch: "2026-04-18-shelf-f-everyman-canons"
+    tags: [Greece, tragedy, drama, myth]
+    hn_volume: vol-i
+    candidate_hn_chapters: [hn-i-v1-10, hn-i-v1-14]
+    notes: "Everyman's Library."
+
+  - id: HNSRC-0044
+    title: "Aeschylus: The Oresteia"
+    author: "Aeschylus"
+    era: ancient
+    added_batch: "2026-04-18-shelf-f-everyman-canons"
+    tags: [Greece, tragedy, drama, justice]
+    hn_volume: vol-i
+    candidate_hn_chapters: [hn-i-v1-10, hn-i-v1-14]
+    notes: "Everyman's Library."
+
+  - id: HNSRC-0045
+    title: "Tacitus: Annals and Histories"
+    author: "Tacitus"
+    era: ancient
+    added_batch: "2026-04-18-shelf-f-everyman-canons"
+    tags: [Rome, history, empire, source]
+    hn_volume: vol-i
+    primary_arc: rome
+    candidate_hn_chapters: [hn-i-v1-04, hn-i-v1-14]
+    notes: "Everyman's Library."
+
+  - id: HNSRC-0046
+    title: "The Iliad"
+    author: "Homer"
+    era: ancient
+    added_batch: "2026-04-18-shelf-g-penguin-clothbound"
+    tags: [Greece, epic, poetry, Trojan War]
+    hn_volume: vol-i
+    candidate_hn_chapters: [hn-i-v1-10, hn-i-v1-14]
+    notes: "Penguin Clothbound Classics; maroon spine flame motif."
+
+  - id: HNSRC-0047
+    title: "The Odyssey"
+    author: "Homer"
+    era: ancient
+    added_batch: "2026-04-18-shelf-g-penguin-clothbound"
+    tags: [Greece, epic, poetry, nostos]
+    hn_volume: vol-i
+    candidate_hn_chapters: [hn-i-v1-10, hn-i-v1-14]
+    notes: "Penguin Clothbound Classics; teal spine wave motif."
+
+  - id: HNSRC-0048
+    title: "The Aeneid"
+    author: "Virgil"
+    era: ancient
+    added_batch: "2026-04-18-shelf-g-penguin-clothbound"
+    tags: [Rome, epic, poetry, foundation]
+    hn_volume: vol-i
+    primary_arc: rome
+    candidate_hn_chapters: [hn-i-v1-05, hn-i-v1-10]
+    notes: "Penguin Clothbound Classics; yellow spine warrior silhouettes."
+
+  - id: HNSRC-0049
+    title: "Metamorphoses"
+    author: "Ovid"
+    era: ancient
+    added_batch: "2026-04-18-shelf-g-penguin-clothbound"
+    tags: [Rome, poetry, myth, narrative]
+    hn_volume: vol-i
+    primary_arc: rome
+    candidate_hn_chapters: [hn-i-v1-10, hn-i-v1-14]
+    notes: "Penguin Clothbound Classics; dark grey spine cloud/wave motif."
+
+  - id: HNSRC-0050
+    title: "(Spine unread — operator fill)"
+    author: "Unknown"
+    era: ancient
+    added_batch: "2026-04-18-shelf-g-penguin-clothbound"
+    tags: [Penguin, Clothbound, classics]
+    hn_volume: vol-i
+    candidate_hn_chapters: []
+    notes: "Leftmost Penguin Clothbound on photo; red spine fish pattern — replace title/author when identified."
