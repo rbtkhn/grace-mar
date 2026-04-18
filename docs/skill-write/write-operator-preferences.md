@@ -97,7 +97,18 @@ Operator copy on **Locals / X / PH** often **explains an idea**, not **asks the 
 | **has any bite** | Informal verdict shorthand | State what would **confirm or falsify** the idea in concrete terms |
 | **when the stakes spike** | Vague “stakes” theater | Name the **fork** (vote, strike, leak, official communique, first casualty headline) or omit |
 
+**Strategy-lane residue (analyst packaging)** — sounds like **internal** skill vocabulary, not **reader** exposition:
+
+| Dispreferred | Why | Prefer |
+|--------------|-----|--------|
+| **equilibrium / entropy / planes** as **abstract labels** in Judgment | Repo **machinery** visible in prose | **Named** actors, **forks**, and **seams** in **plain English** (definitions stay in skill reference, not as Judgment decoration) |
+| **Ground claims… / The analytic point is…** as a **closer** | **Instructions** to the writer, not a **thesis** | **Declarative** last line: what **differs**, what **hangs** in the balance |
+
 Extend this table when new stock phrases grate the same way.
+
+### Strategy → write handoff (recorded)
+
+After a substantive **`strategy`** pass with **load-bearing** Judgment-style prose, the agent **offers once** whether you want a **`skill-write`** next pass — **Locals / X / PH** polish per this hub — unless you opted out (**no menu**) or already asked for **write** / **publish**. **Same bar:** Judgment in **chat** and on **`days.md`** should already match **popular-academic** readability; **skill-write** strips **pundit** and **analyst** residue for **shipping** surfaces.
 
 ### Canonical inputs (recorded)
 

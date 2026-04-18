@@ -9,7 +9,8 @@ description: >-
   gap matrices, weak-signal and analogy-audit discipline. PH (work-jiang) via Jiang resonance —
   not work-politics pulse or weekly brief generator. Pasted or LLM “daily strategic” digests: same daily-brief §1f discipline as generator output; triage claims to a falsifiable table before weave per NOTEBOOK-PREFERENCES — never substitute for §1d–§1h until primaries.
   Session hygiene: disk-grounded scaffolds (STATUS/days/inbox/meta); strategy-commentator roster for “every expert” coverage; popular-academic weave-time prose default per NOTEBOOK-PREFERENCES; optional weave skeleton S1–S5 when the operator picks a primary strategy-expert (NOTEBOOK-PREFERENCES § Weave skeletons);
-  MEM grounding via suggest_civ_mem_from_relevance.py + documented fallback when MEM–RELEVANCE–X is missing; tri-mind chat games are WORK brainstorm only.
+  MEM grounding via suggest_civ_mem_from_relevance.py + documented fallback when MEM–RELEVANCE–X is missing (run for file picks; cite paths under Links on disk; chat default no full stdout paste unless audit requested); tri-mind chat games are WORK brainstorm only.
+  Judgment (chat + days.md): same popular-academic bar; anti-patterns — methodology-as-closer, repo jargon labels (equilibrium/entropy/planes) in Judgment prose; after substantive pass offer optional skill-write polish per docs/skill-write/write-operator-preferences.md.
   Notebook spec (STRATEGY-NOTEBOOK-ARCHITECTURE + NOTEBOOK-PREFERENCES + daily-strategy-inbox SSOT) is incorporated by reference — one contract with this skill, not optional parallel docs.
 ---
 
@@ -69,6 +70,18 @@ description: >-
 - **Pillar lists:** When the operator asks for **N orthogonal points**, prefer **one axis per point** and a **clear sequence** (e.g. facts → mechanism → material → structure → audiences) — not the same conflict **repeated** in every bullet.
 - **Tri-mind games in chat:** Numerical scoring, **rounds**, or simulated debates are **WORK brainstorming** — **not** Record, **not** gate truth; optional **menu** output only.
 - **Daily brief — LLM or paste supplements:** Treat pasted or LLM-produced strategic digests **like other `daily-brief-YYYY-MM-DD.md` material** (same §1f home and verify rules as generator output), not a separate “overlay” product. **Pre-write checklist** still requires **`strategy + verify`** triage before weave — do **not** fold unsourced counts or multi-capital arcs into **`days.md` Judgment** or **§1d–§1h** without **plane-tagged** URLs ([NOTEBOOK-PREFERENCES.md § Daily brief supplements](../../../docs/skill-work/work-strategy/strategy-notebook/NOTEBOOK-PREFERENCES.md#daily-brief-supplements)).
+
+### Judgment prose — same bar in chat and on disk (operator calibration)
+
+**Bar:** **`### Signal` / `### Judgment`** prose in **Cursor chat** and in **`days.md`** (or knots) uses the **same** **popular-academic** standard — not a looser “session answer” register in chat.
+
+**Anti-patterns in Judgment (no alternate “modes” — just avoid these):**
+
+- **Methodology as the thesis** — Do not **close** on instructions to the writer (“ground claims…,” “the analytic point is…,” “verify first…”). Those belong in **checklists**, **`### Links`**, or a **separate** operator note — not as the **last** sentence of Judgment.
+- **Repo jargon as labels** — Do not **decorate** Judgment with skill-internal tokens (**equilibrium**, **entropy**, **planes**, **channels** as abstract nouns) where **plain English** carries the same load (**who** is speaking, **what** fork, **what** would falsify). The **definitions** elsewhere in this file are for **agent orientation**; **Judgment** names **actors**, **stakes**, and **seams** in **reader-facing** language unless the operator **quotes** the vocabulary on purpose.
+- **MEM machinery in flowing prose** — Do not **paste** `suggest_civ_mem_from_relevance.py` **stdout** into chat **by default** (see § *Civilization memory*). **Weave** **named** historical substance; put **repo-relative MEM paths** under **`### Links`** when writing to disk.
+
+**After substantive `strategy` output:** When the reply included **load-bearing** Signal/Judgment-style prose (not a one-line inbox ping), **offer once**: whether the operator wants a **`skill-write`** pass next — **polish for Locals / X / PH** per [docs/skill-write/write-operator-preferences.md](../../../docs/skill-write/write-operator-preferences.md) — **unless** they said **no menu**, **no options**, or already asked for **write** / **publish**.
 
 ## Five primary threads (operator geopolitical theory)
 
@@ -295,7 +308,7 @@ Lens pass (optional — pick one, combine, or skip):
 
 **When:** Optional **structural / precedent / analogy** depth — **not** tier-A verification for breaking headlines or same-week papal primary text (use **`strategy + verify`** and [ROME-PASS.md](../../../docs/skill-work/work-strategy/work-strategy-rome/ROME-PASS.md) source order first when those claims load-bear).
 
-**How:** Fix civilization id **X** (folder under `content/civilizations/<X>/`) → run `python3 scripts/suggest_civ_mem_from_relevance.py X` **when** `MEM–RELEVANCE–X.md` exists → open that relevance spine plus **1–2** MEM bodies per column in [CIV-MEM-TRI-FRAME-ROUTING.md](../../../docs/skill-work/work-strategy/minds/CIV-MEM-TRI-FRAME-ROUTING.md). **Paste script stdout (or stderr) into the chat** when the operator asked for MEM-grounded notebook synthesis — **no silent picks.**
+**How:** Fix civilization id **X** (folder under `content/civilizations/<X>/`) → run `python3 scripts/suggest_civ_mem_from_relevance.py X` **when** `MEM–RELEVANCE–X.md` exists → open that relevance spine plus **1–2** MEM bodies per column in [CIV-MEM-TRI-FRAME-ROUTING.md](../../../docs/skill-work/work-strategy/minds/CIV-MEM-TRI-FRAME-ROUTING.md). **Use the script to pick files** — **no silent picks.** **Chat (default):** Do **not** paste full script **stdout/stderr** into the assistant reply; summarize **named** historical substance in Judgment-style prose; cite **MEM paths** on disk under **`### Links`**. **Paste stdout** only when the operator asks for an **audit trail** in-thread or when a **disk weave** session explicitly expects the same receipt in chat. **No silent picks** remains: if you used the script or a fallback branch, say so in one line when helpful.
 
 **When `MEM–RELEVANCE–X.md` is missing** (script exits `1`; clone errors; or upstream not pinned): **do not** invent MEM paths. **Fallback order:** (1) [CIV–INDEX–X](../../../research/repos/civilization_memory/content/civilizations/) + `CIV–STATE–X.md` decision-relevant sections where present; (2) [CIV-MEM-TRI-FRAME-ROUTING.md](../../../docs/skill-work/work-strategy/minds/CIV-MEM-TRI-FRAME-ROUTING.md) for which MEM class belongs in which tri-frame column; (3) **ROME** manual table in [TRUMP-LEO-CIV-MEM-BARNES-DRILL.md](../../../docs/skill-work/work-strategy/strategy-notebook/TRUMP-LEO-CIV-MEM-BARNES-DRILL.md) and optional **AMERICA** `suggest_civ_mem_from_relevance.py AMERICA` for U.S.-arena liability; (4) **already-cited** MEM paths in the active `days.md` / gap-matrix rows — **read those files** and cite the **same** repo-relative paths under **`### Links`**. **PERSIA:** At some pins there is **no** `MEM–RELEVANCE–PERSIA.md` (see `CIV–STATE–PERSIA.md` MEM discovery note) — use this fallback until the relevance spine lands upstream.
 
