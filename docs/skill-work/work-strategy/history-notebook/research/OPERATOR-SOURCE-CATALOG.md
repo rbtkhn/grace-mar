@@ -11,6 +11,7 @@
 | Artifact | Role |
 |----------|------|
 | [`operator-source-catalog.yaml`](operator-source-catalog.yaml) | Bibliographic rows (`HNSRC-*`), **era** (+ optional **eras**), optional hints to `hn-*` and PH — **planning shelf** |
+| [VOL-I-LIBRARY-SCAFFOLD.md](VOL-I-LIBRARY-SCAFFOLD.md) | Vol I only: **chapter × shelf** matrix + gap notes (drafting aid; not chapter SSOT) |
 | **HN chapters** (`chapters/`, `hn-*`) | Operator-distilled ~500–1000w prose — **deliverable** |
 | **STATUS.md** | Single queue for **which chapter to write next**; link from strategy-notebook `meta.md` |
 

@@ -4,6 +4,8 @@
 
 **SSOT for IDs and titles:** [`book-architecture.yaml`](../book-architecture.yaml) `chapters` where `volume: i`.
 
+**Operator library scaffold (optional):** [VOL-I-LIBRARY-SCAFFOLD.md](VOL-I-LIBRARY-SCAFFOLD.md) — maps personal shelf (`HNSRC-*`) to these chapters for drafting; does not change IDs or Q-bundles.
+
 ## Chapter list (problem → inventory questions)
 
 | ID | Title (public) | Primary Q# (bundle) | Registers (evidence) |

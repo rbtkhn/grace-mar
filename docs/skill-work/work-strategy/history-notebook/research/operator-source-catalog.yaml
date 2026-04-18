@@ -32,7 +32,7 @@ items:
     tags: [Greece, Persia, inquiry, empire, translation]
     hn_volume: vol-i
     primary_arc: greek-persian
-    candidate_hn_chapters: [hn-i-v1-11]
+    candidate_hn_chapters: [hn-i-v1-01, hn-i-v1-07, hn-i-v1-11, hn-i-v1-19]
     notes: "Viking; translation Tom Holland; introduction Paul Cartledge."
 
   - id: HNSRC-0002
@@ -43,7 +43,7 @@ items:
     tags: [Greece, Persia, Landmark, maps, annotation]
     hn_volume: vol-i
     primary_arc: greek-persian
-    candidate_hn_chapters: [hn-i-v1-11]
+    candidate_hn_chapters: [hn-i-v1-01, hn-i-v1-07, hn-i-v1-11, hn-i-v1-19]
     notes: "Edited Robert B. Strassler; Pantheon (Landmark series)."
 
   - id: HNSRC-0003
@@ -53,7 +53,7 @@ items:
     added_batch: "2026-04-18-ancient-shelf-a"
     tags: [Greece, war, democracy, empire, Landmark]
     hn_volume: vol-i
-    candidate_hn_chapters: [hn-i-v1-14, hn-i-v1-20]
+    candidate_hn_chapters: [hn-i-v1-06, hn-i-v1-10, hn-i-v1-11, hn-i-v1-14]
     notes: "Edited Robert B. Strassler; Free Press (Landmark series)."
 
   - id: HNSRC-0004
@@ -63,7 +63,7 @@ items:
     added_batch: "2026-04-18-ancient-shelf-a"
     tags: [Greece, Sparta, succession, Landmark]
     hn_volume: vol-i
-    candidate_hn_chapters: [hn-i-v1-20]
+    candidate_hn_chapters: [hn-i-v1-09, hn-i-v1-17, hn-i-v1-20]
     notes: "Edited Robert B. Strassler; Quercus (Landmark series)."
 
   - id: HNSRC-0005
@@ -85,7 +85,7 @@ items:
     tags: [Macedon, empire, conquest, Landmark]
     hn_volume: vol-i
     primary_arc: greek-persian
-    candidate_hn_chapters: [hn-i-v1-05, hn-i-v1-11]
+    candidate_hn_chapters: [hn-i-v1-05, hn-i-v1-08, hn-i-v1-11]
     notes: "Edited James Romm; Robert B. Strassler series editor; Pantheon (Landmark series)."
 
   - id: HNSRC-0007
@@ -96,7 +96,7 @@ items:
     tags: [Rome, conquest, war commentaries, Landmark]
     hn_volume: vol-i
     primary_arc: rome
-    candidate_hn_chapters: [hn-i-v1-01, hn-i-v1-13]
+    candidate_hn_chapters: [hn-i-v1-01, hn-i-v1-06, hn-i-v1-07, hn-i-v1-13]
     notes: "Edited Kurt A. Raaflaub; Robert B. Strassler series editor; Pantheon (Landmark series)."
 
   - id: HNSRC-0008
@@ -107,7 +107,7 @@ items:
     tags: [Mesopotamia, empire, Assyria, Near East]
     hn_volume: vol-i
     primary_arc: persia
-    candidate_hn_chapters: [hn-i-v1-04, hn-i-v1-16]
+    candidate_hn_chapters: [hn-i-v1-01, hn-i-v1-04, hn-i-v1-10, hn-i-v1-16, hn-i-v1-19]
     notes: "Basic Books."
 
   - id: HNSRC-0009
@@ -118,7 +118,7 @@ items:
     tags: [Persia, Achaemenid, empire]
     hn_volume: vol-i
     primary_arc: persia
-    candidate_hn_chapters: [hn-i-v1-11, hn-i-v1-19]
+    candidate_hn_chapters: [hn-i-v1-01, hn-i-v1-07, hn-i-v1-11, hn-i-v1-19]
     notes: "Standalone volume (spine beside Frahm Assyria)."
 
   - id: HNSRC-0010
@@ -128,7 +128,7 @@ items:
     added_batch: "2026-04-18-ancient-shelf-c"
     tags: [Greece, Athens, democracy, classical]
     hn_volume: vol-i
-    candidate_hn_chapters: [hn-i-v1-10, hn-i-v1-14]
+    candidate_hn_chapters: [hn-i-v1-03, hn-i-v1-06, hn-i-v1-10, hn-i-v1-14]
     notes: "Random House."
 
   - id: HNSRC-0011
@@ -150,7 +150,7 @@ items:
     tags: [Macedon, monarchy, military]
     hn_volume: vol-i
     primary_arc: greek-persian
-    candidate_hn_chapters: [hn-i-v1-01, hn-i-v1-05]
+    candidate_hn_chapters: [hn-i-v1-01, hn-i-v1-03, hn-i-v1-05]
     notes: "Basic Books."
 
   - id: HNSRC-0013
@@ -160,7 +160,7 @@ items:
     added_batch: "2026-04-18-ancient-shelf-c"
     tags: [Egypt, Hellenistic, city, memory]
     hn_volume: vol-i
-    candidate_hn_chapters: [hn-i-v1-16, hn-i-v1-18]
+    candidate_hn_chapters: [hn-i-v1-07, hn-i-v1-16, hn-i-v1-18]
     notes: "Lighthouse of Alexandria cover motif."
 
   - id: HNSRC-0014
@@ -180,7 +180,7 @@ items:
     added_batch: "2026-04-18-ancient-shelf-c"
     tags: [steppe, Eurasia, nomads, frontier]
     hn_volume: vol-i
-    candidate_hn_chapters: [hn-i-v1-13, hn-i-v1-15]
+    candidate_hn_chapters: [hn-i-v1-12, hn-i-v1-13, hn-i-v1-15]
     notes: "Oxford University Press."
 
   - id: HNSRC-0016
@@ -190,7 +190,7 @@ items:
     added_batch: "2026-04-18-ancient-shelf-c"
     tags: [Pontus, Black Sea, Hellenistic, monarchy]
     hn_volume: vol-i
-    candidate_hn_chapters: [hn-i-v1-19, hn-i-v1-20]
+    candidate_hn_chapters: [hn-i-v1-12, hn-i-v1-13, hn-i-v1-18]
     notes: "Oxford University Press."
 
   - id: HNSRC-0017
@@ -201,7 +201,7 @@ items:
     tags: [Rome, republic, origins]
     hn_volume: vol-i
     primary_arc: rome
-    candidate_hn_chapters: [hn-i-v1-04, hn-i-v1-05]
+    candidate_hn_chapters: [hn-i-v1-02, hn-i-v1-04, hn-i-v1-05, hn-i-v1-09, hn-i-v1-17]
     notes: "Random House."
 
   - id: HNSRC-0018
@@ -212,7 +212,7 @@ items:
     tags: [Rome, Carthage, Mediterranean, war]
     hn_volume: vol-i
     primary_arc: rome
-    candidate_hn_chapters: [hn-i-v1-11, hn-i-v1-20]
+    candidate_hn_chapters: [hn-i-v1-05, hn-i-v1-06, hn-i-v1-11, hn-i-v1-20]
     notes: "Illustrated battle scene on spine."
 
   - id: HNSRC-0019
@@ -223,7 +223,7 @@ items:
     tags: [Carthage, Rome, warfare, biography]
     hn_volume: vol-i
     primary_arc: rome
-    candidate_hn_chapters: [hn-i-v1-11, hn-i-v1-14]
+    candidate_hn_chapters: [hn-i-v1-05, hn-i-v1-11, hn-i-v1-13, hn-i-v1-14]
     notes: "Carthaginian campaigns; spine author Gabriel."
 
   - id: HNSRC-0020
@@ -234,7 +234,7 @@ items:
     tags: [Rome, late antiquity, decline, empire]
     hn_volume: vol-i
     primary_arc: rome
-    candidate_hn_chapters: [hn-i-v1-20, hn-i-v1-04]
+    candidate_hn_chapters: [hn-i-v1-02, hn-i-v1-04, hn-i-v1-14, hn-i-v1-17, hn-i-v1-20]
     notes: "Yale University Press; end of Western Roman Empire."
 
   - id: HNSRC-0021
@@ -306,7 +306,7 @@ items:
     tags: [biography, parallel lives, source, Dryden]
     hn_volume: vol-i
     primary_arc: rome
-    candidate_hn_chapters: [hn-i-v1-14, hn-i-v1-04]
+    candidate_hn_chapters: [hn-i-v1-02, hn-i-v1-04, hn-i-v1-08, hn-i-v1-14]
     notes: "Dryden translation; Modern Library Giant."
 
   - id: HNSRC-0028
@@ -317,7 +317,7 @@ items:
     tags: [Rome, biography, late republic]
     hn_volume: vol-i
     primary_arc: rome
-    candidate_hn_chapters: [hn-i-v1-01, hn-i-v1-13]
+    candidate_hn_chapters: [hn-i-v1-01, hn-i-v1-03, hn-i-v1-08, hn-i-v1-13]
     notes: "Yale University Press."
 
   - id: HNSRC-0029
@@ -339,7 +339,7 @@ items:
     tags: [Rome, republic, oratory, politics]
     hn_volume: vol-i
     primary_arc: rome
-    candidate_hn_chapters: [hn-i-v1-10, hn-i-v1-14]
+    candidate_hn_chapters: [hn-i-v1-04, hn-i-v1-08, hn-i-v1-10, hn-i-v1-14]
     notes: "Random House."
 
   - id: HNSRC-0031
@@ -350,7 +350,7 @@ items:
     tags: [Rome, principate, biography]
     hn_volume: vol-i
     primary_arc: rome
-    candidate_hn_chapters: [hn-i-v1-04, hn-i-v1-05]
+    candidate_hn_chapters: [hn-i-v1-03, hn-i-v1-04, hn-i-v1-05]
     notes: "Yale University Press; distinct from Everitt Augustus."
 
   - id: HNSRC-0032
@@ -361,7 +361,7 @@ items:
     tags: [Rome, principate, biography]
     hn_volume: vol-i
     primary_arc: rome
-    candidate_hn_chapters: [hn-i-v1-04, hn-i-v1-05]
+    candidate_hn_chapters: [hn-i-v1-03, hn-i-v1-04, hn-i-v1-05]
     notes: "Random House; paired with Goldsworthy Augustus for comparison."
 
   - id: HNSRC-0033
@@ -372,7 +372,7 @@ items:
     tags: [Rome, empire, high empire, biography]
     hn_volume: vol-i
     primary_arc: rome
-    candidate_hn_chapters: [hn-i-v1-05, hn-i-v1-11]
+    candidate_hn_chapters: [hn-i-v1-05, hn-i-v1-11, hn-i-v1-12, hn-i-v1-13]
     notes: "Random House."
 
   - id: HNSRC-0034
@@ -383,7 +383,7 @@ items:
     tags: [Rome, Persia, frontier, long war]
     hn_volume: vol-i
     primary_arc: rome
-    candidate_hn_chapters: [hn-i-v1-19, hn-i-v1-11]
+    candidate_hn_chapters: [hn-i-v1-05, hn-i-v1-11, hn-i-v1-13, hn-i-v1-18, hn-i-v1-19]
     notes: "Basic Books."
 
   - id: HNSRC-0035
@@ -394,7 +394,7 @@ items:
     tags: [Rome, empire, peace, military]
     hn_volume: vol-i
     primary_arc: rome
-    candidate_hn_chapters: [hn-i-v1-11, hn-i-v1-04]
+    candidate_hn_chapters: [hn-i-v1-04, hn-i-v1-11, hn-i-v1-18]
     notes: "Yale University Press."
 
   - id: HNSRC-0036
@@ -404,7 +404,7 @@ items:
     added_batch: "2026-04-18-shelf-f-everyman-canons"
     tags: [Bible, Hebrew Bible, scripture, religion]
     hn_volume: vol-i
-    candidate_hn_chapters: [hn-i-v1-08, hn-i-v1-10]
+    candidate_hn_chapters: [hn-i-v1-01, hn-i-v1-08, hn-i-v1-10, hn-i-v1-16]
     notes: "Red/black spine with gold accents; Everyman's Library style (operator edition)."
 
   - id: HNSRC-0037
@@ -414,7 +414,7 @@ items:
     added_batch: "2026-04-18-shelf-f-everyman-canons"
     tags: [Bible, Christian, scripture, religion]
     hn_volume: vol-i
-    candidate_hn_chapters: [hn-i-v1-08, hn-i-v1-10]
+    candidate_hn_chapters: [hn-i-v1-08, hn-i-v1-10, hn-i-v1-16, hn-i-v1-20]
     notes: "Red/black spine with gold accents; paired with OT on shelf."
 
   - id: HNSRC-0038
@@ -425,7 +425,7 @@ items:
     tags: [India, Hinduism, scripture, religion]
     hn_volume: vol-i
     primary_arc: india
-    candidate_hn_chapters: [hn-i-v1-12, hn-i-v1-16]
+    candidate_hn_chapters: [hn-i-v1-10, hn-i-v1-12, hn-i-v1-15, hn-i-v1-16]
     notes: "Everyman's Library black spine / white band."
 
   - id: HNSRC-0039
@@ -436,7 +436,7 @@ items:
     tags: [China, Daoism, philosophy, scripture]
     hn_volume: vol-i
     primary_arc: china
-    candidate_hn_chapters: [hn-i-v1-08, hn-i-v1-17]
+    candidate_hn_chapters: [hn-i-v1-04, hn-i-v1-08, hn-i-v1-15, hn-i-v1-17]
     notes: "Everyman's Library."
 
   - id: HNSRC-0040
@@ -447,7 +447,7 @@ items:
     tags: [China, philosophy, ethics, education]
     hn_volume: vol-i
     primary_arc: china
-    candidate_hn_chapters: [hn-i-v1-08, hn-i-v1-10]
+    candidate_hn_chapters: [hn-i-v1-04, hn-i-v1-10]
     notes: "Everyman's Library."
 
   - id: HNSRC-0041
@@ -457,7 +457,7 @@ items:
     added_batch: "2026-04-18-shelf-f-everyman-canons"
     tags: [Greece, philosophy, politics, education]
     hn_volume: vol-i
-    candidate_hn_chapters: [hn-i-v1-08, hn-i-v1-10]
+    candidate_hn_chapters: [hn-i-v1-03, hn-i-v1-15]
     notes: "Everyman's Library."
 
   - id: HNSRC-0042
@@ -467,7 +467,7 @@ items:
     added_batch: "2026-04-18-shelf-f-everyman-canons"
     tags: [Greece, philosophy, dialogue, love]
     hn_volume: vol-i
-    candidate_hn_chapters: [hn-i-v1-08, hn-i-v1-10]
+    candidate_hn_chapters: [hn-i-v1-03, hn-i-v1-08]
     notes: "Everyman's Library."
 
   - id: HNSRC-0043
@@ -477,7 +477,7 @@ items:
     added_batch: "2026-04-18-shelf-f-everyman-canons"
     tags: [Greece, tragedy, drama, myth]
     hn_volume: vol-i
-    candidate_hn_chapters: [hn-i-v1-10, hn-i-v1-14]
+    candidate_hn_chapters: [hn-i-v1-02, hn-i-v1-10, hn-i-v1-14]
     notes: "Everyman's Library."
 
   - id: HNSRC-0044
@@ -487,7 +487,7 @@ items:
     added_batch: "2026-04-18-shelf-f-everyman-canons"
     tags: [Greece, tragedy, drama, justice]
     hn_volume: vol-i
-    candidate_hn_chapters: [hn-i-v1-10, hn-i-v1-14]
+    candidate_hn_chapters: [hn-i-v1-02, hn-i-v1-10, hn-i-v1-14]
     notes: "Everyman's Library."
 
   - id: HNSRC-0045
@@ -498,7 +498,7 @@ items:
     tags: [Rome, history, empire, source]
     hn_volume: vol-i
     primary_arc: rome
-    candidate_hn_chapters: [hn-i-v1-04, hn-i-v1-14]
+    candidate_hn_chapters: [hn-i-v1-04, hn-i-v1-07, hn-i-v1-13, hn-i-v1-18, hn-i-v1-20]
     notes: "Everyman's Library."
 
   - id: HNSRC-0046
@@ -508,7 +508,7 @@ items:
     added_batch: "2026-04-18-shelf-g-penguin-clothbound"
     tags: [Greece, epic, poetry, Trojan War]
     hn_volume: vol-i
-    candidate_hn_chapters: [hn-i-v1-10, hn-i-v1-14]
+    candidate_hn_chapters: [hn-i-v1-10, hn-i-v1-11, hn-i-v1-14]
     notes: "Penguin Clothbound Classics; maroon spine flame motif."
 
   - id: HNSRC-0047
@@ -518,7 +518,7 @@ items:
     added_batch: "2026-04-18-shelf-g-penguin-clothbound"
     tags: [Greece, epic, poetry, nostos]
     hn_volume: vol-i
-    candidate_hn_chapters: [hn-i-v1-10, hn-i-v1-14]
+    candidate_hn_chapters: [hn-i-v1-06, hn-i-v1-10, hn-i-v1-14]
     notes: "Penguin Clothbound Classics; teal spine wave motif."
 
   - id: HNSRC-0048
@@ -529,7 +529,7 @@ items:
     tags: [Rome, epic, poetry, foundation]
     hn_volume: vol-i
     primary_arc: rome
-    candidate_hn_chapters: [hn-i-v1-05, hn-i-v1-10]
+    candidate_hn_chapters: [hn-i-v1-05, hn-i-v1-09, hn-i-v1-10]
     notes: "Penguin Clothbound Classics; yellow spine warrior silhouettes."
 
   - id: HNSRC-0049
@@ -540,7 +540,7 @@ items:
     tags: [Rome, poetry, myth, narrative]
     hn_volume: vol-i
     primary_arc: rome
-    candidate_hn_chapters: [hn-i-v1-10, hn-i-v1-14]
+    candidate_hn_chapters: [hn-i-v1-09, hn-i-v1-10, hn-i-v1-14]
     notes: "Penguin Clothbound Classics; dark grey spine cloud/wave motif."
 
   - id: HNSRC-0050
@@ -551,7 +551,7 @@ items:
     tags: [Penguin, Clothbound, classics]
     hn_volume: vol-i
     candidate_hn_chapters: []
-    notes: "Leftmost Penguin Clothbound on photo; red spine fish pattern — replace title/author when identified."
+    notes: "Leftmost Penguin Clothbound on photo; red spine fish pattern — replace title/author when identified. See research/VOL-I-LIBRARY-SCAFFOLD.md § Pending catalog identification."
 
   - id: HNSRC-0051
     title: "Meditations"
@@ -572,7 +572,7 @@ items:
     tags: [Rome, Epicureanism, philosophy, poetry, primary source]
     hn_volume: vol-i
     primary_arc: rome
-    candidate_hn_chapters: [hn-i-v1-05, hn-i-v1-10]
+    candidate_hn_chapters: [hn-i-v1-05, hn-i-v1-15]
     notes: "De Rerum Natura; materialist cosmology and ethics in Latin hexameters."
 
   - id: HNSRC-0053
@@ -583,7 +583,7 @@ items:
     tags: [Rome, Stoicism, philosophy, letters, primary source]
     hn_volume: vol-i
     primary_arc: rome
-    candidate_hn_chapters: [hn-i-v1-04, hn-i-v1-05, hn-i-v1-10]
+    candidate_hn_chapters: [hn-i-v1-04, hn-i-v1-10]
     notes: "Moral Letters to Lucilius (Epistulae Morales ad Lucilium); common trade title."
 
   - id: HNSRC-0054
@@ -595,7 +595,7 @@ items:
     tags: [Rome, Byzantium, historiography, Enlightenment, synthesis]
     hn_volume: vol-ii
     primary_arc: rome
-    candidate_hn_chapters: [hn-i-v1-04, hn-ii-rome-byzantine]
+    candidate_hn_chapters: [hn-i-v1-04, hn-i-v1-19, hn-i-v1-20, hn-ii-rome-byzantine]
     notes: "Narrative spans late antiquity, Western fall (~476 AD), Byzantium, and medieval Europe; published 1776–1788."
 
   - id: HNSRC-0055
@@ -605,7 +605,7 @@ items:
     added_batch: "2026-04-18-operator-classics"
     tags: [synthesis, Durant, Story of Civilization, Near East]
     hn_volume: vol-i
-    candidate_hn_chapters: [hn-i-v1-01, hn-i-v1-02, hn-i-v1-03]
+    candidate_hn_chapters: [hn-i-v1-01, hn-i-v1-02, hn-i-v1-03, hn-i-v1-12, hn-i-v1-18]
     notes: "Series vol. 1; comparative ancient Near East and foundations."
 
   - id: HNSRC-0056
@@ -615,7 +615,7 @@ items:
     added_batch: "2026-04-18-operator-classics"
     tags: [synthesis, Durant, Story of Civilization, Greece]
     hn_volume: vol-i
-    candidate_hn_chapters: [hn-i-v1-10, hn-i-v1-14]
+    candidate_hn_chapters: [hn-i-v1-10, hn-i-v1-12, hn-i-v1-14, hn-i-v1-18]
     notes: "Series vol. 2; Greek civilization."
 
   - id: HNSRC-0057
@@ -626,7 +626,7 @@ items:
     tags: [synthesis, Durant, Story of Civilization, Rome, Christianity]
     hn_volume: vol-i
     primary_arc: rome
-    candidate_hn_chapters: [hn-i-v1-04, hn-i-v1-05, hn-i-v1-14]
+    candidate_hn_chapters: [hn-i-v1-04, hn-i-v1-05, hn-i-v1-14, hn-i-v1-16, hn-i-v1-18, hn-i-v1-20]
     notes: "Series vol. 3; late Republic–Empire and rise of Christianity through ~476 AD West."
 
   - id: HNSRC-0058
@@ -639,5 +639,5 @@ items:
     tags: [Byzantium, Rome, Eastern Empire, synthesis, Oxford]
     hn_volume: vol-ii
     primary_arc: rome
-    candidate_hn_chapters: [hn-i-v1-04, hn-ii-rome-byzantine]
+    candidate_hn_chapters: [hn-i-v1-04, hn-i-v1-19, hn-ii-rome-byzantine]
     notes: "Single-volume Byzantium; ~324 AD (Constantinople) through fifteenth century; OUP."
