@@ -20,6 +20,7 @@
 #
 # Upload order: ancient → medieval → colonial → industrial → modern (see OPERATOR-SOURCE-CATALOG.md).
 # Era "ancient" = through fall of Western Roman Empire (~476 AD); late Roman / fall-of-the-West titles stay ancient.
+# Era "medieval" = post-476 AD formations through fall of Constantinople (~1453 AD); straddles into Vol III use eras/notes.
 # Ancient / medieval / modern (operator) 2026-04-18: shelf photos — Landmark (a); Assyria/Persians (b); Everitt/Goldsworthy/Oxford (c); late Rome–Byzantine (d); Roman lives–empire (e); Everyman Library canons (f); Penguin Clothbound epics (g). Medieval/early modern batches 2026-04-18: shelf-batch-a/b (Europe + Ottoman), batch-c (Weatherford + Khazaria), batch-d (Penguin Clothbound medieval canon). Assets: .cursor/projects/.../assets/photo_2026-04-18_*.png.
 
 version: 1

@@ -43,9 +43,13 @@ Process the shelf in this **fixed sequence** (batches of **five titles** within 
 
 **`ancient` ends with the fall of the Roman Empire in the West** (traditional **~476 AD**). Works whose main subject is **late Roman decline, the fall itself, or the last generations of the Western imperial order** stay **`era: ancient`** — they close the ancient arc; they are not “misplaced” medieval.
 
-**`medieval`** begins with the **post-476** formations and parallel stories you shelve next (e.g. Ostrogothic Italy, Byzantine empire as medieval frame, Islamic expansion, medieval church and states — aligned to History Notebook Vol II and your upload order).
+**`medieval`** begins with the **post-476 AD** formations and parallel stories you shelve next (e.g. Ostrogothic Italy, Byzantine empire as medieval frame, Islamic expansion, medieval church and states — aligned to History Notebook Vol II and your upload order).
 
-If a title straddles (e.g. one volume covers 400–600 AD), set **`eras`** when multiple buckets apply; use **`notes`** for nuance; pick one **`era`** as primary for batch/sort, or split editions later.
+**`medieval` ends with the fall of Constantinople** (traditional **1453 AD**), matching [History Notebook Vol II](../README.md) (476 AD–1453 AD). Works centered on **late Byzantine** or the **1453** transition may use **`eras: [medieval, colonial]`** (or **`notes`**) when the narrative runs into early modern **Ottoman** or maritime Europe — pick primary **`era`** for shelf sort.
+
+**`colonial`** (operator label → Vol III) picks up **post-1453** early modern / maritime–colonial themes for this book; use **`notes`** when a title straddles 1453.
+
+If a title straddles (e.g. one volume covers 400–600 AD, or 1400–1500 AD across 1453), set **`eras`** when multiple buckets apply; use **`notes`** for nuance; pick one **`era`** as primary for batch/sort, or split editions later.
 
 ## Per-batch workflow (five titles)
 

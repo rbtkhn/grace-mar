@@ -23,6 +23,8 @@ Use the **traditional BC / AD** system everywhere in History Notebook prose, tab
 - **Before the common era:** year + **BC** (e.g. `53 BC`, `445 BC`).  
 - **In the common era:** year + **AD** or **AD** + year (e.g. `476 AD`, `AD 476`); for ranges, repeat or mark once as needed (e.g. `476 AD–1453 AD`).
 
+**Operator catalog era buckets** (shelf / `HNSRC` rows): **ancient** through ~476 AD (fall of Rome in the West); **medieval** through ~1453 AD (fall of Constantinople); later eras per [OPERATOR-SOURCE-CATALOG.md](research/OPERATOR-SOURCE-CATALOG.md#era-boundaries-operator-rule).
+
 ---
 
 ## Chapter format (6 sections)
