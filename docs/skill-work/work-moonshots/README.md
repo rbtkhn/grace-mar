@@ -11,6 +11,7 @@
 | [moonshot-operating-model.md](../../moonshot-operating-model.md) | Doctrine: gate YAML, merge mapping, Voice/portfolio deferrals |
 | [missions/](missions/README.md) | Mission-scale WORK folders (`missions/<slug>/`) + intake for tacit-derived snapshots |
 | [mission-spec-template.md](mission-spec-template.md) | Full mission spec scaffold (statement, success/failure, hypotheses, …) |
+| [swarm-spirit.md](swarm-spirit.md) | **Ritual only:** many modes of attention → one gate-ready bundle; no automation, no gate writes from scripts |
 
 **v0.1 limits:** No bot commands, no data-ingestion connectors — template + docs + gate pattern only.
 
