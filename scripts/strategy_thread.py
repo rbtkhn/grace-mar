@@ -11,21 +11,23 @@ or::
 
     python3 scripts/strategy_thread.py
 
-This runs **three automatic steps**:
+This runs **two automatic steps**:
 
 1. **Triage** (``strategy_expert_transcript.py``) — routes ``thread:`` lines
-   from the inbox to per-expert ``-transcript.md`` files (append-only, 7-day
-   prune). Internal infrastructure; not a separate operator command.
+   from the inbox to per-expert transcript files (append-only, 7-day prune).
 2. **Extraction** (``strategy_expert_corpus.py``) — reads each expert's
-   transcript + relevant knots, writes raw material to ``-thread.md`` between
-   script markers. The assistant then refines this into a curated analytical
-   thread.
-3. **Batch-analysis snapshot** (``parse_batch_analysis.py``) — parses
-   ``batch-analysis`` lines from the inbox and writes a JSON snapshot to
-   ``artifacts/skill-work/work-strategy/batch-analysis-snapshot.json``.
+   transcript + relevant knots + existing pages, writes raw material to
+   thread files between script markers. Prefers pages over knots when both
+   cover the same content.
+
+After extraction, prints **page-candidate suggestions** when cross-expert
+material or tension-bearing content is detected.
+
+**Batch-analysis snapshot** has moved to ``strategy_weave.py`` — run
+``weave`` to refresh it.
 
 **Not** **``weave``**: **``thread``** updates transcript and thread files
-only; it does **not** merge into ``days.md`` or knot pages.
+only; it does **not** perform integrated analysis or write pages.
 
 WORK-only; not Record.
 
@@ -37,6 +39,7 @@ from __future__ import annotations
 
 import argparse
 import sys
+from collections import defaultdict
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
@@ -53,6 +56,36 @@ DEFAULT_OUT_DIR = (
 DEFAULT_KNOT_INDEX = (
     REPO_ROOT / "docs/skill-work/work-strategy/strategy-notebook/knot-index.yaml"
 )
+
+
+def _suggest_page_candidates(out_dir: Path) -> list[str]:
+    """Detect cross-expert page opportunities from pages already in threads."""
+    from strategy_page_reader import discover_all_pages
+
+    all_pages = discover_all_pages(out_dir)
+    page_experts: dict[str, list[str]] = defaultdict(list)
+    for expert_id, pages in all_pages.items():
+        for p in pages:
+            page_experts[p.id].append(expert_id)
+
+    suggestions: list[str] = []
+    for page_id, experts in page_experts.items():
+        if len(experts) >= 2:
+            watch = ""
+            for ep_list in all_pages.values():
+                for p in ep_list:
+                    if p.id == page_id and p.watch:
+                        watch = p.watch
+                        break
+                if watch:
+                    break
+            cmd = f"page {' '.join(sorted(experts))}"
+            if watch:
+                cmd += f" --watch {watch}"
+            suggestions.append(
+                f"page candidate: '{page_id}' spans {', '.join(sorted(experts))} → `{cmd}`"
+            )
+    return suggestions
 
 
 def main() -> int:
@@ -81,8 +114,8 @@ def main() -> int:
     for path in transcript_paths:
         print(f"  transcript: {path.relative_to(REPO_ROOT)}")
 
-    # Step 2: Extract transcript + knots → thread files
-    print("--- Step 2: Extraction (transcripts + knots → threads) ---")
+    # Step 2: Extract transcript + knots + pages → thread files
+    print("--- Step 2: Extraction (transcripts + knots + pages → threads) ---")
     from strategy_expert_corpus import rebuild_threads
     thread_paths = rebuild_threads(
         out_dir=args.out,
@@ -92,28 +125,20 @@ def main() -> int:
     for path in thread_paths:
         print(f"  thread: {path.relative_to(REPO_ROOT)}")
 
-    # Step 3: Refresh batch-analysis snapshot
-    print("--- Step 3: Batch-analysis snapshot ---")
-    from parse_batch_analysis import parse_inbox, build_snapshot
-    import json
-    batch_refs = parse_inbox(args.inbox)
-    snapshot = build_snapshot(batch_refs)
-    batch_out = REPO_ROOT / "artifacts/skill-work/work-strategy/batch-analysis-snapshot.json"
-    if args.dry_run:
-        print(f"  dry-run: {len(batch_refs)} batch-analysis refs (not written)")
-    else:
-        batch_out.parent.mkdir(parents=True, exist_ok=True)
-        batch_out.write_text(
-            json.dumps(snapshot, indent=2, ensure_ascii=False) + "\n",
-            encoding="utf-8",
-        )
-        print(f"  snapshot: {batch_out.relative_to(REPO_ROOT)} ({len(batch_refs)} refs)")
+    # Page-candidate suggestions
+    suggestions = _suggest_page_candidates(args.out)
+    if suggestions:
+        print("--- Page candidates ---")
+        for s in suggestions:
+            print(f"  {s}")
 
     mode = "dry-run" if args.dry_run else "write"
     print(
         f"\nDone ({mode}): {len(transcript_paths)} transcripts, "
-        f"{len(thread_paths)} threads, {len(batch_refs)} batch-analysis refs"
+        f"{len(thread_paths)} threads"
     )
+    if suggestions:
+        print(f"  {len(suggestions)} page candidate(s) detected — run weave + page to act on them")
     return 0
 
 

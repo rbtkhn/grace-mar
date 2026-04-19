@@ -188,10 +188,13 @@ def rebuild_preamble(old_preamble: str, expert_id: str) -> str:
 
 
 def process_file(path: Path, apply: bool) -> bool:
-    m = re.match(r"^strategy-expert-(.+)-thread\.md$", path.name)
-    if not m:
-        return False
-    expert_id = m.group(1)
+    if path.name == "thread.md" and path.parent.parent.name == "experts":
+        expert_id = path.parent.name
+    else:
+        m = re.match(r"^strategy-expert-(.+)-thread\.md$", path.name)
+        if not m:
+            return False
+        expert_id = m.group(1)
     text = path.read_text(encoding="utf-8")
     parts = split_file(text)
     if parts is None:
@@ -221,7 +224,10 @@ def main() -> int:
     )
     args = ap.parse_args()
     updated = 0
-    for path in sorted(NOTEBOOK.glob("strategy-expert-*-thread.md")):
+    paths = sorted(NOTEBOOK.glob("experts/*/thread.md"))
+    if not paths:
+        paths = sorted(NOTEBOOK.glob("strategy-expert-*-thread.md"))
+    for path in paths:
         if process_file(path, args.apply):
             updated += 1
     print(f"summary: {updated} file(s) " + ("updated" if args.apply else "would change"), file=sys.stderr)

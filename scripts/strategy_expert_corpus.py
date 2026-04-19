@@ -78,6 +78,17 @@ _EXPERT_IDS_SET = frozenset(CANONICAL_EXPERT_IDS)
 THREAD_MARKER_START = "<!-- strategy-expert-thread:start -->"
 THREAD_MARKER_END = "<!-- strategy-expert-thread:end -->"
 
+
+def expert_paths(expert_id: str, notebook_dir: Path) -> dict[str, Path]:
+    """Resolve per-expert file paths under ``experts/<id>/``."""
+    base = notebook_dir / "experts" / expert_id
+    return {
+        "profile": base / "profile.md",
+        "transcript": base / "transcript.md",
+        "thread": base / "thread.md",
+        "mind": base / "mind.md",
+    }
+
 # Legacy markers kept for backward compat (extract_thread_ingests)
 CORPUS_MARKER_START = "<!-- strategy-expert-corpus:start -->"
 CORPUS_MARKER_END = "<!-- strategy-expert-corpus:end -->"
@@ -91,6 +102,11 @@ _RE_RETAINED = re.compile(
     r"### Retained reference \((\d{4}-\d{2}-\d{2})(?:\s+fold)?\)"
 )
 _RE_THREAD = re.compile(r"thread:([a-z][a-z0-9]*(?:-[a-z][a-z0-9]*)*)")
+# Verify-tail expert tag (see daily-strategy-inbox.md): ``| thread:<id> |`` — not hook prose ``**`thread:davis`**``.
+_RE_THREAD_PIPE = re.compile(
+    r"\|\s*thread:([a-z][a-z0-9]*(?:-[a-z][a-z0-9]*)*)\s*\|"
+)
+_RE_PUBLISHED = re.compile(r"published:(\d{4}-\d{2}-\d{2})")
 # Dated `## YYYY-MM-DD` scratch subsection (inbox) — same pattern as transcript date headings.
 _RE_DATE_HEADING = re.compile(r"^## (\d{4}-\d{2}-\d{2})\s*$")
 
@@ -119,6 +135,33 @@ class MetricsRow:
 
 def _parse_date_yyyy_mm_dd(s: str) -> date:
     return datetime.strptime(s, "%Y-%m-%d").date()
+
+
+def ingest_thread_slugs(line: str) -> list[str]:
+    """Resolve expert ids for an inbox ingest line.
+
+    Prefer pipe-delimited verify-tail tags (``| thread:id |``) so hook prose like
+    ``**`thread:davis`**`` does not route the row to the wrong transcript.
+    Fallback: ``| thread:id`` at end of line, then legacy ``thread:`` scan.
+    """
+    pipe_hits = [
+        m.group(1)
+        for m in _RE_THREAD_PIPE.finditer(line)
+        if m.group(1) in _EXPERT_IDS_SET
+    ]
+    if pipe_hits:
+        return [pipe_hits[-1]]
+    m_end = re.search(
+        r"\|\s*thread:([a-z][a-z0-9]*(?:-[a-z][a-z0-9]*)*)\s*$",
+        line.rstrip(),
+    )
+    if m_end and m_end.group(1) in _EXPERT_IDS_SET:
+        return [m_end.group(1)]
+    # Backtick synthetic rows (e.g. ``batch-analysis``) often contain ``thread:`` in prose;
+    # do not fall back to naive findall — avoids false routes.
+    if line.lstrip().startswith("`"):
+        return []
+    return [s for s in _RE_THREAD.findall(line) if s in _EXPERT_IDS_SET]
 
 
 def _date_markers(line: str) -> str | None:
@@ -295,6 +338,13 @@ def extract_thread_ingests(
     a new top-level ``- `` list item (column 0), a ``## `` heading, a scratch ``## YYYY-MM-DD``,
     a brief-handoff / fold date marker line, or end of file. Blank lines **inside** the block
     are kept (multi-paragraph quotes).
+
+    **Date key:** Uses scratch context / accumulator unless the first line contains
+    ``published:YYYY-MM-DD`` in the verify tail (Substack / article byline date), which
+    overrides the section date for that block only.
+
+    **Expert routing:** Prefer verify-tail ``| thread:<id> |`` via :func:`ingest_thread_slugs`;
+    hook prose like ``**`thread:davis`**`` must not route the row to the wrong transcript.
     """
     today = today or datetime.now(timezone.utc).date()
     accum: str | None = None
@@ -329,7 +379,7 @@ def extract_thread_ingests(
             i += 1
             continue
 
-        slugs = [s for s in _RE_THREAD.findall(line) if s in _EXPERT_IDS_SET]
+        slugs = ingest_thread_slugs(line)
         if not slugs:
             i += 1
             continue
@@ -340,6 +390,10 @@ def extract_thread_ingests(
         if use_date is None:
             i += 1
             continue
+
+        pub_m = _RE_PUBLISHED.search(line)
+        if pub_m:
+            use_date = _parse_date_yyyy_mm_dd(pub_m.group(1))
 
         block_lines = [line.rstrip()]
         j = i + 1
@@ -512,8 +566,9 @@ def rebuild_threads(
     written: list[Path] = []
 
     for expert_id in CANONICAL_EXPERT_IDS:
-        transcript_path = out_dir / f"strategy-expert-{expert_id}-transcript.md"
-        thread_path = out_dir / f"strategy-expert-{expert_id}-thread.md"
+        paths = expert_paths(expert_id, out_dir)
+        transcript_path = paths["transcript"]
+        thread_path = paths["thread"]
 
         transcript_lines = read_transcript_content(transcript_path)
         knot_refs = find_knot_references(expert_id, knot_index_path=knot_index_path)

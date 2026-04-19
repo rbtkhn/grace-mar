@@ -46,8 +46,10 @@ OPT_OUT_BULLETS_LEDGER = "<!-- strategy-expert-thread:segment-1-month-bullets-le
 MIN_PROSE_WORDS = 500
 
 
-def expert_id_from_thread_name(name: str) -> str | None:
-    m = re.match(r"^strategy-expert-(.+)-thread\.md$", name)
+def expert_id_from_thread_path(path: Path) -> str | None:
+    if path.name == "thread.md" and path.parent.parent.name == "experts":
+        return path.parent.name
+    m = re.match(r"^strategy-expert-(.+)-thread\.md$", path.name)
     return m.group(1) if m else None
 
 
@@ -136,9 +138,9 @@ def validate_thread_file(path: Path, month_mm: str | None = None) -> list[str]:
     """
     warnings: list[str] = []
     text = path.read_text(encoding="utf-8")
-    eid = expert_id_from_thread_name(path.name)
+    eid = expert_id_from_thread_path(path)
     if not eid:
-        return [f"unexpected filename (expected strategy-expert-<id>-thread.md): {path.name}"]
+        return [f"unexpected filename (expected experts/<id>/thread.md or strategy-expert-<id>-thread.md): {path}"]
 
     human = extract_human_layer(text)
     if OPT_OUT_BULLETS_LEDGER in human:
@@ -199,9 +201,11 @@ def main() -> int:
             )
             return 1
 
-    paths = sorted(args.dir.glob("strategy-expert-*-thread.md"))
+    paths = sorted(args.dir.glob("experts/*/thread.md"))
     if not paths:
-        print("error: no strategy-expert-*-thread.md files found", file=sys.stderr)
+        paths = sorted(args.dir.glob("strategy-expert-*-thread.md"))
+    if not paths:
+        print("error: no thread files found (experts/*/thread.md or strategy-expert-*-thread.md)", file=sys.stderr)
         return 1
 
     all_warnings: list[str] = []

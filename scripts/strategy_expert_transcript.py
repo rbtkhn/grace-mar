@@ -23,6 +23,7 @@ from strategy_expert_corpus import (
     MAX_VERBATIM_WORDS_PER_INGEST,
     SOFT_MAX_TRANSCRIPT_FILE_WORDS,
     _word_count,
+    expert_paths,
     extract_thread_ingests,
     verbatim_to_transcript_lines,
 )
@@ -140,7 +141,7 @@ def triage_to_transcripts(
     warn_ingest: list[str] = []
 
     for expert_id in all_ids:
-        transcript_path = out_dir / f"strategy-expert-{expert_id}-transcript.md"
+        transcript_path = expert_paths(expert_id, out_dir)["transcript"]
 
         new_by_date = extracted.get(expert_id, {})
 
@@ -155,13 +156,14 @@ def triage_to_transcripts(
             if date_str in existing_sections:
                 existing_lines_text = "\n".join(existing_sections[date_str])
                 for verbatim in lines:
-                    if verbatim.rstrip() not in existing_lines_text:
+                    rendered = "\n".join(verbatim_to_transcript_lines(verbatim))
+                    if rendered.rstrip() not in existing_lines_text:
                         msg = _warn_verbatim_size(verbatim, expert_id, date_str)
                         if msg:
                             warn_ingest.append(msg)
-                        existing_sections[date_str].extend(
-                            verbatim_to_transcript_lines(verbatim)
-                        )
+                        new_lines = verbatim_to_transcript_lines(verbatim)
+                        existing_sections[date_str].extend(new_lines)
+                        existing_lines_text = "\n".join(existing_sections[date_str])
             else:
                 section_lines = [f"## {date_str}"]
                 for verbatim in lines:

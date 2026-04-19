@@ -33,13 +33,18 @@ def main() -> int:
     p.add_argument("--dry-run", action="store_true", help="Print paths only; do not write")
     args = p.parse_args()
 
-    paths = sorted(NOTEBOOK.glob("strategy-expert-*-transcript.md"))
+    paths = sorted(NOTEBOOK.glob("experts/*/transcript.md"))
+    if not paths:
+        paths = sorted(NOTEBOOK.glob("strategy-expert-*-transcript.md"))
     updated = 0
     for path in paths:
-        m = RE_TRANSCRIPT.match(path.name)
-        if not m:
-            continue
-        expert_id = m.group(1)
+        if path.name == "transcript.md" and path.parent.parent.name == "experts":
+            expert_id = path.parent.name
+        else:
+            m = RE_TRANSCRIPT.match(path.name)
+            if not m:
+                continue
+            expert_id = m.group(1)
         text = path.read_text(encoding="utf-8")
         idx = text.find(TRIAGE_MARKER)
         if idx == -1:

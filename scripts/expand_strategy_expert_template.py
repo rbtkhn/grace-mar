@@ -170,11 +170,13 @@ def main() -> int:
     transcript_body = _apply_substitutions(_strip_transcript_section(xw), eid, args.full_name)
     mind_body = _apply_substitutions(_strip_mind_section(mw), eid, args.full_name)
 
+    expert_dir = args.out_dir / "experts" / eid
+    expert_dir.mkdir(parents=True, exist_ok=True)
     paths = [
-        args.out_dir / f"strategy-expert-{eid}.md",
-        args.out_dir / f"strategy-expert-{eid}-thread.md",
-        args.out_dir / f"strategy-expert-{eid}-transcript.md",
-        args.out_dir / f"strategy-expert-{eid}-mind.md",
+        expert_dir / "profile.md",
+        expert_dir / "thread.md",
+        expert_dir / "transcript.md",
+        expert_dir / "mind.md",
     ]
     bodies = [profile_body, thread_body, transcript_body, mind_body]
 

@@ -332,7 +332,8 @@ def source_anchor_label(path: Path, d: str) -> str:
 def collect_transcript_evidence(
     expert_id: str, aliases: list[str], start: date, end: date
 ) -> list[Evidence]:
-    path = NOTEBOOK_DIR / f"strategy-expert-{expert_id}-transcript.md"
+    from strategy_expert_corpus import expert_paths as _expert_paths
+    path = _expert_paths(expert_id, NOTEBOOK_DIR)["transcript"]
     if not path.is_file():
         return []
     text = ensure_text(path)
@@ -694,7 +695,8 @@ def main() -> int:
 
     aliases = aliases_for(expert_id, args.alias)
 
-    thread_path = args.thread_path or (NOTEBOOK_DIR / f"strategy-expert-{expert_id}-thread.md")
+    from strategy_expert_corpus import expert_paths as _ep
+    thread_path = args.thread_path or _ep(expert_id, NOTEBOOK_DIR)["thread"]
     if not thread_path.is_file():
         raise SystemExit(f"Thread file not found: {thread_path}")
 

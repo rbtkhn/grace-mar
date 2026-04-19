@@ -74,7 +74,9 @@ def clean_cell(raw: str) -> str:
 
 
 def load_profile(expert_id: str) -> dict[str, str]:
-    path = NOTEBOOK_DIR / f"strategy-expert-{expert_id}.md"
+    path = NOTEBOOK_DIR / "experts" / expert_id / "profile.md"
+    if not path.is_file():
+        path = NOTEBOOK_DIR / f"strategy-expert-{expert_id}.md"
     if not path.is_file():
         return {
             "name": expert_id,
@@ -266,10 +268,13 @@ def process_thread(path: Path, *, apply: bool) -> tuple[int, int]:
     if OPT_OUT_BULLETS_LEDGER in extract_human_layer(text):
         return 0, 0
 
-    expert_m = re.match(r"^strategy-expert-(.+)-thread\.md$", path.name)
-    if not expert_m:
-        return 0, 0
-    expert_id = expert_m.group(1)
+    if path.name == "thread.md" and path.parent.parent.name == "experts":
+        expert_id = path.parent.name
+    else:
+        expert_m = re.match(r"^strategy-expert-(.+)-thread\.md$", path.name)
+        if not expert_m:
+            return 0, 0
+        expert_id = expert_m.group(1)
     profile = load_profile(expert_id)
 
     if THREAD_MARKER_START not in text:
@@ -318,7 +323,9 @@ def main() -> int:
         print("error: specify --dry-run or --apply", file=sys.stderr)
         return 1
 
-    paths = sorted(NOTEBOOK_DIR.glob("strategy-expert-*-thread.md"))
+    paths = sorted(NOTEBOOK_DIR.glob("experts/*/thread.md"))
+    if not paths:
+        paths = sorted(NOTEBOOK_DIR.glob("strategy-expert-*-thread.md"))
     total_m = 0
     total_u = 0
     for path in paths:

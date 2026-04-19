@@ -368,7 +368,8 @@ def main() -> int:
         return 2
 
     expert_id = args.expert_id.strip()
-    thread_path = args.thread_path or NOTEBOOK_DIR / f"strategy-expert-{expert_id}-thread.md"
+    from strategy_expert_corpus import expert_paths as _expert_paths
+    thread_path = args.thread_path or _expert_paths(expert_id, NOTEBOOK_DIR)["thread"]
     if not thread_path.is_file():
         raise SystemExit(f"Thread file not found: {thread_path}")
 

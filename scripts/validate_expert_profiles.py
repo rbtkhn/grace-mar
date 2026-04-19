@@ -85,14 +85,18 @@ def validate_expert_file(path: Path) -> list[str]:
                 file=sys.stderr,
             )
 
-    thread_path = path.parent / path.name.replace(".md", "-thread.md")
+    if path.name == "profile.md" and path.parent.parent.name == "experts":
+        thread_path = path.parent / "thread.md"
+        transcript_path = path.parent / "transcript.md"
+    else:
+        thread_path = path.parent / path.name.replace(".md", "-thread.md")
+        transcript_path = path.parent / path.name.replace(".md", "-transcript.md")
     if not thread_path.is_file():
-        errs.append(f"companion file missing: {thread_path.name}")
+        errs.append(f"companion file missing: {thread_path}")
 
-    transcript_path = path.parent / path.name.replace(".md", "-transcript.md")
     if not transcript_path.is_file():
         print(
-            f"warning: {path.name}: companion file missing: {transcript_path.name}",
+            f"warning: {path.name}: companion file missing: {transcript_path}",
             file=sys.stderr,
         )
 
@@ -109,11 +113,13 @@ def main() -> int:
     )
     args = ap.parse_args()
 
-    expert_files = sorted(
-        p
-        for p in args.dir.glob("strategy-expert-*.md")
-        if p.name not in SKIP_FILES and not _is_companion_file(p.name)
-    )
+    expert_files = sorted(args.dir.glob("experts/*/profile.md"))
+    if not expert_files:
+        expert_files = sorted(
+            p
+            for p in args.dir.glob("strategy-expert-*.md")
+            if p.name not in SKIP_FILES and not _is_companion_file(p.name)
+        )
 
     if not expert_files:
         print("error: no expert files found", file=sys.stderr)

@@ -46,13 +46,21 @@ def notebook_dir(tmp_path: Path) -> Path:
     return d
 
 
+def _expert_dir(notebook_dir: Path, expert_id: str) -> Path:
+    d = notebook_dir / "experts" / expert_id
+    d.mkdir(parents=True, exist_ok=True)
+    return d
+
+
 def _write_profile(notebook_dir: Path, expert_id: str) -> None:
-    (notebook_dir / f"strategy-expert-{expert_id}.md").write_text(
+    _expert_dir(notebook_dir, expert_id)
+    (notebook_dir / "experts" / expert_id / "profile.md").write_text(
         f"# Expert — `{expert_id}`\n", encoding="utf-8"
     )
 
 
 def _write_transcript(notebook_dir: Path, expert_id: str, dates: dict[str, list[str]]) -> None:
+    _expert_dir(notebook_dir, expert_id)
     lines = [
         f"# Expert transcript — `{expert_id}`\n",
         "<!-- Triage appends new date sections below. Do not add content above this line. -->\n",
@@ -62,14 +70,15 @@ def _write_transcript(notebook_dir: Path, expert_id: str, dates: dict[str, list[
         for entry in dates[date_str]:
             lines.append(entry)
         lines.append("")
-    (notebook_dir / f"strategy-expert-{expert_id}-transcript.md").write_text(
+    (notebook_dir / "experts" / expert_id / "transcript.md").write_text(
         "\n".join(lines), encoding="utf-8"
     )
 
 
 def _write_thread(notebook_dir: Path, expert_id: str, machine_lines: list[str]) -> None:
+    _expert_dir(notebook_dir, expert_id)
     inner = "\n".join(machine_lines) if machine_lines else "_(No transcript or knot material for extraction.)_"
-    (notebook_dir / f"strategy-expert-{expert_id}-thread.md").write_text(
+    (notebook_dir / "experts" / expert_id / "thread.md").write_text(
         f"# Expert thread — `{expert_id}`\n\n"
         f"{THREAD_MARKER_START}\n"
         f"{inner}\n"

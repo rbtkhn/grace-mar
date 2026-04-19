@@ -78,8 +78,9 @@ def main() -> int:
 
     expert_id = args.expert_id.strip()
     segments = [s.strip() for s in args.segments.split(",") if s.strip()]
+    from strategy_expert_corpus import expert_paths as _expert_paths
     thread_path = (
-        Path(args.thread_path) if args.thread_path else NOTEBOOK_DIR / f"strategy-expert-{expert_id}-thread.md"
+        Path(args.thread_path) if args.thread_path else _expert_paths(expert_id, NOTEBOOK_DIR)["thread"]
     )
 
     if not thread_path.exists():

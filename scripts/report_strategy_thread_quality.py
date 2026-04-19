@@ -110,9 +110,11 @@ def _check_missing_files(expert_id: str, notebook_dir: Path) -> ExpertDiagnostic
     """Check whether profile, transcript, and thread files exist."""
     diag = ExpertDiagnostic(expert_id=expert_id)
 
-    profile = notebook_dir / f"strategy-expert-{expert_id}.md"
-    transcript = notebook_dir / f"strategy-expert-{expert_id}-transcript.md"
-    thread = notebook_dir / f"strategy-expert-{expert_id}-thread.md"
+    from strategy_expert_corpus import expert_paths as _expert_paths
+    ep = _expert_paths(expert_id, notebook_dir)
+    profile = ep["profile"]
+    transcript = ep["transcript"]
+    thread = ep["thread"]
 
     if not profile.is_file():
         diag.profile_exists = False
@@ -129,7 +131,8 @@ def _check_missing_files(expert_id: str, notebook_dir: Path) -> ExpertDiagnostic
 
 def _check_transcript_content(diag: ExpertDiagnostic, notebook_dir: Path, cutoff: date) -> None:
     """Populate transcript stats and staleness."""
-    transcript_path = notebook_dir / f"strategy-expert-{diag.expert_id}-transcript.md"
+    from strategy_expert_corpus import expert_paths as _expert_paths
+    transcript_path = _expert_paths(diag.expert_id, notebook_dir)["transcript"]
     if not transcript_path.is_file():
         diag.stale = True
         return
@@ -161,7 +164,8 @@ def _check_transcript_content(diag: ExpertDiagnostic, notebook_dir: Path, cutoff
 
 def _check_machine_layer(diag: ExpertDiagnostic, notebook_dir: Path) -> None:
     """Count machine layer lines and detect coverage gaps."""
-    thread_path = notebook_dir / f"strategy-expert-{diag.expert_id}-thread.md"
+    from strategy_expert_corpus import expert_paths as _expert_paths
+    thread_path = _expert_paths(diag.expert_id, notebook_dir)["thread"]
     if not thread_path.is_file():
         return
 
