@@ -127,6 +127,12 @@ runtime/tacit/candidates/*
 !runtime/tacit/candidates/.gitkeep
 runtime/tacit/index.jsonl
 
+# Runtime worker — operator-local (see runtime/runtime-worker/README.md)
+runtime/runtime-worker/proposals/*
+!runtime/runtime-worker/proposals/.gitkeep
+runtime/runtime-worker/traces/*
+!runtime/runtime-worker/traces/.gitkeep
+
 # Runtime observation ledger (append-only; operator-local — see runtime/observations/README.md)
 runtime/observations/index.jsonl
 
