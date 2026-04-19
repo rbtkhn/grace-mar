@@ -168,6 +168,57 @@ def test_sweep_budgets_json(tmp_path: Path) -> None:
         assert "mean_included_rank" in row
 
 
+def test_workflow_depth_shallow_writes_receipt(tmp_path: Path) -> None:
+    """--workflow-depth with --task-anchor appends JSONL receipt; no canonical writes."""
+    obs_dir = tmp_path / "runtime" / "observations"
+    obs_dir.mkdir(parents=True)
+    a = _minimal_obs("obs_wd_001", "lane-x", "T1", "summary about iran")
+    (obs_dir / "index.jsonl").write_text(json.dumps(a) + "\n", encoding="utf-8")
+    out = tmp_path / "prepared-context" / "out.md"
+    wd_home = tmp_path / "workflow-depth"
+    env = {
+        **os.environ,
+        "GRACE_MAR_RUNTIME_LEDGER_ROOT": str(tmp_path),
+        "GRACE_MAR_WORKFLOW_DEPTH_HOME": str(wd_home),
+    }
+    r = subprocess.run(
+        [
+            sys.executable,
+            str(SCRIPT),
+            "--repo-root",
+            str(tmp_path),
+            "--lane",
+            "lane-x",
+            "--workflow-depth",
+            "shallow",
+            "--task-anchor",
+            "Test anchor for prepared context",
+            "-q",
+            "iran",
+            "-o",
+            str(out),
+            "--budgets-file",
+            str(REPO_ROOT / "config" / "context_budgets" / "lane-defaults.json"),
+        ],
+        env=env,
+        capture_output=True,
+        text=True,
+    )
+    assert r.returncode == 0, r.stderr + r.stdout
+    text = out.read_text(encoding="utf-8")
+    assert "## Task anchor" in text
+    assert "Test anchor" in text
+    assert "workflow-depth" in text.lower() or "Workflow depth" in text
+    idx = wd_home / "index.jsonl"
+    assert idx.is_file()
+    line = idx.read_text(encoding="utf-8").strip().splitlines()[-1]
+    row = json.loads(line)
+    assert row["schemaVersion"] == "1.0-workflow-depth-receipt"
+    assert row["workflow_depth"] == "shallow"
+    assert row["stop_reason"].startswith("fixed_")
+    assert row["task_anchor"] == "Test anchor for prepared context"
+
+
 def test_compute_benchmark_scores_unit() -> None:
     """Unit test for compute_benchmark_scores with synthetic pieces."""
     sys.path.insert(0, str(REPO_ROOT / "scripts" / "prepared_context"))

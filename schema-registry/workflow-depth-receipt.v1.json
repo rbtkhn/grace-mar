@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schema-registry/workflow-depth-receipt.v1.json",
+  "title": "Grace-Mar workflow depth receipt (non-canonical)",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "schemaVersion",
+    "status",
+    "timestamp",
+    "boundary_notes",
+    "task_anchor",
+    "lane",
+    "workflow_depth",
+    "effective_mode",
+    "stop_reason",
+    "phases"
+  ],
+  "properties": {
+    "schemaVersion": { "type": "string", "const": "1.0-workflow-depth-receipt" },
+    "status": { "type": "string", "enum": ["ok", "error", "partial"] },
+    "timestamp": { "type": "string", "minLength": 1 },
+    "boundary_notes": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "run_id": { "type": "string" },
+    "task_anchor": { "type": "string" },
+    "constraint_anchor": { "type": ["string", "null"] },
+    "lane": { "type": "string" },
+    "workflow_depth": { "type": "string" },
+    "effective_mode": { "type": "string" },
+    "max_observations": { "type": "integer" },
+    "stop_reason": { "type": "string" },
+    "output_markdown": { "type": "string" },
+    "scores": { "type": "object" },
+    "phases": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    "compact_dry_scores": { "type": "object" }
+  }
+}

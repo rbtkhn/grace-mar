@@ -42,6 +42,7 @@ These change only through the **gated pipeline** and companion-approved merge ([
 | **Hybrid retrieval** | `scripts/runtime/hybrid_retrieve.py` | Non-canonical ranked search across surfaces; [doc](hybrid-retrieval.md); not Record |
 | **Chunk indexes** | `runtime/chunks/**/*.chunks.jsonl` | Generated retrieval-aid chunks; rebuildable; [doc](chunked-retrieval.md); not Record |
 | **Runtime worker** | `runtime/runtime-worker/` (`proposals/`, `traces/index.jsonl`) | Disposable inspect / optional LLM summary; [doc](runtime-worker.md); not Record |
+| **Workflow depth receipts** | `runtime/workflow-depth/index.jsonl` | Halt/continue log for adaptive `build_budgeted_context` runs; [context-budgeting](runtime/context-budgeting.md); not Record |
 
 ---
 

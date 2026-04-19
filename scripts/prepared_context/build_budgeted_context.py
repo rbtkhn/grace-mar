@@ -8,8 +8,11 @@ Runtime / WORK scaffolding only — not Record truth. See docs/runtime/context-b
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
+import os
 import sys
+import uuid
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
 from pathlib import Path
@@ -30,6 +33,13 @@ from policy_mode_config import (  # noqa: E402
     policy_mode_header_lines,
     resolve_mode as resolve_policy_mode,
 )
+from workflow_depth_control import (  # noqa: E402
+    auto_decide_format,
+    depth_to_mode_and_max_obs,
+    phase_anchor_blurb,
+)
+
+DEPTH_CHOICES = ("shallow", "normal", "deep", "exhaustive", "auto")
 
 LANE_DEFAULTS = REPO_ROOT / "config" / "context_budgets" / "lane-defaults.json"
 MODES = ("compact", "medium", "deep")
@@ -101,7 +111,7 @@ def _format_observation(row: dict, budget_class: str) -> str:
     return f"### {oid}\n{summary}\n"
 
 
-def _gather_observations(lane: str, query: str, budget_class: str, max_candidates: int) -> list[RankedPiece]:
+def _ranked_score_rows(lane: str, query: str, max_candidates: int) -> list[tuple[float, dict]]:
     rows = load_all()
     pool = filter_rows(
         rows,
@@ -117,8 +127,17 @@ def _gather_observations(lane: str, query: str, budget_class: str, max_candidate
         bonus_tags=[],
         require_positive_match=bool(query.strip()),
     )
+    return ranked[:max_candidates]
+
+
+def _ranked_observation_rows(lane: str, query: str, max_candidates: int) -> list[dict]:
+    """Top-ranked observation rows for metrics (contradiction density, pool size)."""
+    return [row for _, row in _ranked_score_rows(lane, query, max_candidates)]
+
+
+def _gather_observations(lane: str, query: str, budget_class: str, max_candidates: int) -> list[RankedPiece]:
     out: list[RankedPiece] = []
-    for score, row in ranked[:max_candidates]:
+    for score, row in _ranked_score_rows(lane, query, max_candidates):
         rk = _observation_rank_score(row, score)
         text = _format_observation(row, budget_class)
         oid = str(row.get("obs_id", ""))
@@ -243,6 +262,10 @@ def build_markdown(
     excluded: list[RankedPiece],
     built: str,
     policy_defaults_path: Path | None = None,
+    task_anchor: str | None = None,
+    constraint_anchor: str | None = None,
+    workflow_depth_label: str | None = None,
+    effective_mode_note: str | None = None,
 ) -> str:
     pdefs = load_policy_defaults(policy_defaults_path)
     pol = resolve_policy_mode(policy_mode, pdefs)
@@ -258,8 +281,28 @@ def build_markdown(
         f"Budget target: {budget} (character estimate)",
         f"Query: {query or '(none — recency/rank only)'}",
         "",
-        "## Included",
     ]
+    if task_anchor and str(task_anchor).strip():
+        lines.extend(
+            [
+                "## Task anchor",
+                "",
+                f"- **Task:** {str(task_anchor).strip()}",
+            ]
+        )
+        if constraint_anchor and str(constraint_anchor).strip():
+            lines.append(f"- **Constraint:** {str(constraint_anchor).strip()}")
+        if workflow_depth_label:
+            lines.append(f"- **Workflow depth:** {workflow_depth_label}")
+        if effective_mode_note:
+            lines.append(f"- **Effective budget mode:** {effective_mode_note}")
+        lines.append("")
+    lines.extend(
+        [
+            "## Included",
+            "",
+        ]
+    )
     if not included:
         lines.append("- _(nothing fit — raise mode or narrow inputs)_")
     else:
@@ -306,12 +349,56 @@ def build_markdown(
     return "\n".join(lines) + "\n"
 
 
+def _utc_run_id() -> str:
+    ts = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
+    h = hashlib.sha256(f"{ts}:{uuid.uuid4().hex}".encode()).hexdigest()[:12]
+    return f"wd_{ts}_{h}"
+
+
+def _workflow_depth_root(repo_root: Path) -> Path:
+    raw = os.environ.get("GRACE_MAR_WORKFLOW_DEPTH_HOME", "").strip()
+    if raw:
+        return Path(raw).expanduser().resolve()
+    return (repo_root / "runtime" / "workflow-depth").resolve()
+
+
+def _append_workflow_depth_receipt(repo_root: Path, record: dict[str, Any]) -> Path:
+    wd = _workflow_depth_root(repo_root)
+    wd.mkdir(parents=True, exist_ok=True)
+    idx = wd / "index.jsonl"
+    with idx.open("a", encoding="utf-8") as f:
+        f.write(json.dumps(record, ensure_ascii=False) + "\n")
+    return idx
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(
         description="Build budgeted prepared-context Markdown with inclusion/exclusion report.",
     )
     ap.add_argument("--lane", required=True, help="Work lane (exact string)")
-    ap.add_argument("--mode", required=True, choices=MODES, help="Budget class: compact | medium | deep")
+    ap.add_argument(
+        "--mode",
+        default=None,
+        choices=MODES,
+        help="Budget class: compact | medium | deep (required unless --workflow-depth is set)",
+    )
+    ap.add_argument(
+        "--workflow-depth",
+        default=None,
+        choices=DEPTH_CHOICES,
+        metavar="MODE",
+        help="Adaptive workflow depth (shallow|normal|deep|exhaustive|auto); requires --task-anchor; ignores --mode",
+    )
+    ap.add_argument(
+        "--task-anchor",
+        default="",
+        help="Original operator task (required with --workflow-depth); reinjected into output and receipts",
+    )
+    ap.add_argument(
+        "--constraint-anchor",
+        default="",
+        help="Optional constraint line (scope, abstention, format) — WORK only",
+    )
     ap.add_argument("--query", "-q", default="", help="Optional search query for ranking observations")
     ap.add_argument("--output", "-o", type=Path, required=True, help="Output Markdown path")
     ap.add_argument("--repo-root", type=Path, default=REPO_ROOT)
@@ -351,7 +438,13 @@ def main() -> int:
         metavar="PATH",
         help="Mission workspace .md (WORK; same priority as checkpoint; labeled mission_workspace)",
     )
-    ap.add_argument("--max-observations", type=int, default=30, help="Max observation candidates to rank")
+    ap.add_argument(
+        "--max-observations",
+        type=int,
+        default=None,
+        metavar="N",
+        help="Max observation candidates to rank (default: 30, or depth preset for --workflow-depth)",
+    )
     ap.add_argument(
         "--policy-mode",
         default=None,
@@ -373,12 +466,23 @@ def main() -> int:
 
     root = args.repo_root.resolve()
     lane = args.lane.strip()
-    budget_class = args.mode.strip()
+    wf_depth = args.workflow_depth
+    task_anchor = (args.task_anchor or "").strip()
+    constraint_anchor = (args.constraint_anchor or "").strip()
+
+    if wf_depth and not task_anchor:
+        print("error: --task-anchor is required when --workflow-depth is set", file=sys.stderr)
+        return 2
+    if not wf_depth and args.mode is None:
+        print("error: --mode is required when --workflow-depth is not set", file=sys.stderr)
+        return 2
+    if wf_depth and args.mode is not None:
+        print("notice: --mode ignored when --workflow-depth is set", file=sys.stderr)
+
     policy_defaults_path = args.policy_defaults.resolve() if args.policy_defaults else None
     pdefs = load_policy_defaults(policy_defaults_path)
     policy_resolved = resolve_policy_mode(args.policy_mode, pdefs)
     budgets = _load_budgets(args.budgets_file.resolve())
-    budget = _budget_for_lane(budgets, lane, budget_class)
 
     pieces: list[RankedPiece] = []
     if args.include_memory_brief:
@@ -402,22 +506,166 @@ def main() -> int:
         if rp:
             pieces.append(rp)
 
-    pieces.extend(_gather_observations(lane, args.query, budget_class, args.max_observations))
-
-    included, excluded = _greedy_pack(pieces, budget)
+    run_id = _utc_run_id()
     built = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
-    scores = compute_benchmark_scores(included, excluded, budget)
-    md = build_markdown(
-        lane=lane,
-        budget_class=budget_class,
-        policy_mode=args.policy_mode or "",
-        query=args.query,
-        budget=budget,
-        included=included,
-        excluded=excluded,
-        built=built,
-        policy_defaults_path=policy_defaults_path,
-    )
+    phases_log: list[dict[str, Any]] = []
+    stop_reason = ""
+    budget_class: str
+    max_obs: int
+    receipt_extra: dict[str, Any] | None = None
+
+    if not wf_depth:
+        budget_class = args.mode.strip()  # type: ignore[union-attr]
+        max_obs = args.max_observations if args.max_observations is not None else 30
+        pieces.extend(_gather_observations(lane, args.query, budget_class, max_obs))
+        budget = _budget_for_lane(budgets, lane, budget_class)
+        included, excluded = _greedy_pack(pieces, budget)
+        scores = compute_benchmark_scores(included, excluded, budget)
+        md = build_markdown(
+            lane=lane,
+            budget_class=budget_class,
+            policy_mode=args.policy_mode or "",
+            query=args.query,
+            budget=budget,
+            included=included,
+            excluded=excluded,
+            built=built,
+            policy_defaults_path=policy_defaults_path,
+        )
+    elif wf_depth != "auto":
+        dm, depth_max_obs = depth_to_mode_and_max_obs(wf_depth)  # type: ignore[arg-type]
+        budget_class = dm
+        max_obs = args.max_observations if args.max_observations is not None else depth_max_obs
+        phases_log.append(
+            {
+                "phase": "phase_1_retrieval",
+                "halt_continue": "continue",
+                "summary": phase_anchor_blurb("phase_1_retrieval", task_anchor),
+            }
+        )
+        phases_log.append(
+            {
+                "phase": "phase_2_metrics",
+                "halt_continue": "skip",
+                "summary": "fixed workflow depth — auto metrics not used",
+            }
+        )
+        phases_log.append(
+            {
+                "phase": "phase_3_escalate",
+                "halt_continue": "skip",
+                "summary": f"using mapped mode {budget_class} (depth={wf_depth})",
+            }
+        )
+        pieces.extend(_gather_observations(lane, args.query, budget_class, max_obs))
+        budget = _budget_for_lane(budgets, lane, budget_class)
+        included, excluded = _greedy_pack(pieces, budget)
+        scores = compute_benchmark_scores(included, excluded, budget)
+        stop_reason = f"fixed_{wf_depth}"
+        phases_log.append(
+            {
+                "phase": "phase_4_pack_emit",
+                "halt_continue": "continue",
+                "summary": "packed and emitted markdown",
+            }
+        )
+        md = build_markdown(
+            lane=lane,
+            budget_class=budget_class,
+            policy_mode=args.policy_mode or "",
+            query=args.query,
+            budget=budget,
+            included=included,
+            excluded=excluded,
+            built=built,
+            policy_defaults_path=policy_defaults_path,
+            task_anchor=task_anchor,
+            constraint_anchor=constraint_anchor or None,
+            workflow_depth_label=str(wf_depth),
+            effective_mode_note=f"{budget_class} (max_obs={max_obs})",
+        )
+        receipt_extra = {
+            "run_id": run_id,
+            "workflow_depth": wf_depth,
+            "phases": phases_log,
+            "stop_reason": stop_reason,
+            "task_anchor": task_anchor,
+            "constraint_anchor": constraint_anchor or None,
+            "lane": lane,
+            "effective_mode": budget_class,
+            "max_observations": max_obs,
+        }
+    else:
+        # auto
+        max_obs = args.max_observations if args.max_observations is not None else 30
+        pool_rows = _ranked_observation_rows(lane, args.query, max_obs)
+        phases_log.append(
+            {
+                "phase": "phase_1_retrieval",
+                "halt_continue": "continue",
+                "summary": phase_anchor_blurb("phase_1_retrieval", task_anchor)
+                + f" — ranked {len(pool_rows)} observation row(s)",
+            }
+        )
+        obs_compact = _gather_observations(lane, args.query, "compact", max_obs)
+        pieces_auto = pieces + obs_compact
+        budget_try = _budget_for_lane(budgets, lane, "compact")
+        inc_try, exc_try = _greedy_pack(pieces_auto, budget_try)
+        scores_try = compute_benchmark_scores(inc_try, exc_try, budget_try)
+        mode_auto, stop_reason, phase_metrics = auto_decide_format(
+            query=args.query,
+            pool_rows=pool_rows,
+            compact_scores=scores_try,
+        )
+        for p in phase_metrics:
+            phases_log.append(dict(p))
+        budget_class = mode_auto
+        if mode_auto == "compact":
+            included, excluded = inc_try, exc_try
+            budget = budget_try
+            scores = scores_try
+        else:
+            obs_final = _gather_observations(lane, args.query, mode_auto, max_obs)
+            pieces_f = pieces + obs_final
+            budget = _budget_for_lane(budgets, lane, budget_class)
+            included, excluded = _greedy_pack(pieces_f, budget)
+            scores = compute_benchmark_scores(included, excluded, budget)
+        phases_log.append(
+            {
+                "phase": "phase_4_pack_emit",
+                "halt_continue": "continue",
+                "summary": "final pack at effective mode "
+                + f"{budget_class} (stop_reason={stop_reason})",
+            }
+        )
+        md = build_markdown(
+            lane=lane,
+            budget_class=budget_class,
+            policy_mode=args.policy_mode or "",
+            query=args.query,
+            budget=budget,
+            included=included,
+            excluded=excluded,
+            built=built,
+            policy_defaults_path=policy_defaults_path,
+            task_anchor=task_anchor,
+            constraint_anchor=constraint_anchor or None,
+            workflow_depth_label="auto",
+            effective_mode_note=f"{budget_class} (auto — {stop_reason})",
+        )
+        receipt_extra = {
+            "run_id": run_id,
+            "workflow_depth": "auto",
+            "phases": phases_log,
+            "stop_reason": stop_reason,
+            "task_anchor": task_anchor,
+            "constraint_anchor": constraint_anchor or None,
+            "lane": lane,
+            "effective_mode": budget_class,
+            "max_observations": max_obs,
+            "compact_dry_scores": scores_try,
+        }
+
     out = args.output.resolve()
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(md, encoding="utf-8")
@@ -434,6 +682,21 @@ def main() -> int:
     )
     print(f"wrote {out}", file=sys.stderr)
     print(f"wrote {root / 'prepared-context' / 'last-budget-builds.json'}", file=sys.stderr)
+    if wf_depth and receipt_extra:
+        rec = {
+            "schemaVersion": "1.0-workflow-depth-receipt",
+            "status": "ok",
+            "timestamp": built,
+            "boundary_notes": [
+                "non_canonical",
+                "runtime_workflow_depth_receipt_not_record_truth",
+            ],
+            "output_markdown": str(out.resolve().relative_to(root)) if out.resolve().is_relative_to(root) else str(out),
+            "scores": scores,
+            **receipt_extra,
+        }
+        idxp = _append_workflow_depth_receipt(root, rec)
+        print(f"wrote workflow-depth receipt {idxp}", file=sys.stderr)
     if args.score:
         print(json.dumps({"lane": lane, "mode": budget_class, **scores}, indent=2))
     return 0

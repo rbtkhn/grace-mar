@@ -133,6 +133,9 @@ runtime/runtime-worker/proposals/*
 runtime/runtime-worker/traces/*
 !runtime/runtime-worker/traces/.gitkeep
 
+# Workflow depth receipts (append-only; see runtime/workflow-depth/README.md)
+runtime/workflow-depth/index.jsonl
+
 # Runtime observation ledger (append-only; operator-local — see runtime/observations/README.md)
 runtime/observations/index.jsonl
 
