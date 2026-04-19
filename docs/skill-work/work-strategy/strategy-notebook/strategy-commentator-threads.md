@@ -110,6 +110,12 @@ Run operator **`thread`**: **`bin/thread`** or **`python3 scripts/strategy_threa
 - `mearsheimer`
 - `armstrong`
 
+### Civ-China — strategy (primary commentator)
+
+**Purpose:** Single **default** **`thread:`** for **People’s Republic** / **U.S.–China** **relations** **as** **civilizational–strategic** **speech** in the **strategy notebook** (order talk, **détente** memory, **strait** **mirrors**, **BRI** **spillovers** **when** **Freeman** **is** **the** **speaker**). **Not** a substitute for **`jiang`** **Predictive** **History** **corpus** **or** **wire** **primaries** — **weave** **with** **explicit** **tier** **tags**.
+
+- `freeman`
+
 ---
 
 | expert_id | Name | Role (one line) | Default grep tag | Typical `batch-analysis` pairings |
@@ -127,7 +133,7 @@ Run operator **`thread`**: **`bin/thread`** or **`python3 scripts/strategy_threa
 | `blumenthal` | Max Blumenthal (`@MaxBlumenthal`) | **Grayzone** / **antiwar** pole: **U.S. Middle East** policy and **elite-access** critique; **Lebanon**/**Gulf** narrative framing; **media-layer** “who engineered what” — **access** and **backchannel** claims stay **hypothesis-grade** until **primary tape** or **on-record** source | `Blumenthal`, `Grayzone`, or `Lebanon` in cold | × `mate`, × `parsi`, × `mercouris`, × `marandi`, × `freeman` |
 | `mate` | Aaron Maté (`@aaronjmate`) | **Grayzone** / **investigative** lane: **media ownership**, **corporate skin**, and **propaganda** framing; **Israel/Palestine** vocabulary (**colonization** thesis); **CBS** / **billionaire** / outlet **lineage** claims — **tier verify** (filings, corporate docs) before **Links-grade** | `Mate`, `Maté`, `Grayzone`, or `aaronjmate` in cold | × `blumenthal`, × `parsi`, × `mercouris`, × `marandi` |
 | `johnson` | Larry Johnson | Ex-CIA / **material** and **ORBAT** emphasis: force structure, **Hormuz** geometry, **F-15/Isfahan** raid narrative reconstructions (Haiphong–Ritter roundtables) | `Johnson` or `LarryJohnson` in cold | × `ritter`, × `davis`; see [transcript digest](../transcript-analysis-haiphong-ritter-johnson-iran-2026-04.md) |
-| `freeman` | Charles (“Chas”) Freeman | Retired **career diplomat**: **inconclusive** talks, **alliance** and **material** framing (Islamabad as diplomacy-while-war); **separate plane** from papal **moral** register | `Freeman` or `ChasFreeman` in cold | × `parsi`, × `mercouris`, × [rome-persia-legitimacy-signal-check.md](rome-persia-legitimacy-signal-check.md) (**seam**, not merge) |
+| `freeman` | Charles (“Chas”) Freeman | **Primary civ-china (strategy) expert**: **U.S.–China** **diplomatic** **memory** **&** **PRC** **order** **talk**; **inconclusive** talks + **alliance/material** framing; **seam** from **`jiang`** **PH** **by** **default** | `Freeman` or `ChasFreeman` in cold | × `parsi`, × `mercouris`, × [rome-persia-legitimacy-signal-check.md](rome-persia-legitimacy-signal-check.md) (**seam**, not merge); × `diesen`, × `jiang`, × `sachs` |
 | `crooke` | Alastair Crooke | Former diplomat / **Levant–Islamabad** “room” and **spoiler** reads; often beside **Davis** in digests | `Crooke` in cold | × `davis`, × `marandi`, × `parsi` |
 | `diesen` | Glenn Diesen | **Eurasia / multipolar** discourse; **non-Western** institutional / rationality frames when distinct from **Mearsheimer**’s structural-realist register | `Diesen` in cold | × `mearsheimer`, × `macgregor`, × `pape`, × `sachs` |
 | `sachs` | Jeffrey Sachs | **UN / development–macro + DC institutions** pole: **deinstitutionalization** thesis (group process vs personalized executive); **relative decline** and **multipolar** misrecognition; **Congress** war-and-peace **vacuum**; cites **NYT** “room” narratives — **hypothesis-grade** capacity/health claims stay **tier-C** unless clinical primary | `Sachs`, `IRAN`, or `Hormuz` in cold | × `diesen`, × `mearsheimer`, × `mercouris` |
@@ -308,3 +314,8 @@ Removed from the table **2026-04-14** — **`hormuz-story-fork`** (commentators 
 - Tri-Frame minds: [minds/README.md](../minds/README.md)  
 - Haiphong / Ritter / Johnson digest: [transcript-analysis-haiphong-ritter-johnson-iran-2026-04.md](../transcript-analysis-haiphong-ritter-johnson-iran-2026-04.md)  
 - Fact-check skill (resolution / tiered verdicts): [.cursor/skills/fact-check/SKILL.md](../../../../.cursor/skills/fact-check/SKILL.md)
+- Quality report: [scripts/report_strategy_thread_quality.py](../../../../scripts/report_strategy_thread_quality.py)
+
+## Quality report
+
+`python3 scripts/report_strategy_thread_quality.py` is a read-only diagnostic that examines the 21-expert thread ecosystem and flags: **coverage gaps** (transcript content but empty machine layer), **roster drift** (table vs `CANONICAL_EXPERT_IDS`), **stale threads** (no transcript content in the lookback window), **extraction density** outliers, **missing companion files**, and **batch-analysis alignment** issues (misspelled `thread:` tags). Output is markdown by default; `--json` for structured data. Optional `--log-miss` records gaps to the retrieval-miss ledger (`runtime/retrieval-misses/index.jsonl`). Run after `python3 scripts/strategy_thread.py` or standalone.
