@@ -165,6 +165,6 @@ def test_rebuild_ix_on_real_prompt_smoke() -> None:
     end = prompt.find('"""', start)
     body = prompt[start:end]
     rebuilt = rebuild_observation_sections_from_self(body, self_md)
-    assert "## YOUR KNOWLEDGE (from observations)" in rebuilt
     assert "## IMPORTANT CONSTRAINTS" in rebuilt
+    assert "## RECORD STATE" in rebuilt or "## YOUR KNOWLEDGE" in rebuilt
     assert len(rebuilt) > 500

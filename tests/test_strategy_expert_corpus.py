@@ -82,4 +82,4 @@ def test_rebuild_threads_returns_one_path_per_canonical_expert(tmp_path: Path) -
     knot.write_text("knots: []\n", encoding="utf-8")
     paths = rebuild_threads(out_dir=tmp_path, knot_index_path=knot, dry_run=True)
     assert len(paths) == len(CANONICAL_EXPERT_IDS)
-    assert all(p.name.startswith("strategy-expert-") for p in paths)
+    assert all(p.name == "thread.md" for p in paths)

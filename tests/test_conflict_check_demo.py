@@ -18,8 +18,16 @@ def test_format_empty():
     assert format_conflicts_for_yaml([]) == ""
 
 
-def test_dependent_vs_independent_when_profile_has_independent():
-    """grace-mar self.md seed includes trait: independent."""
+def test_dependent_vs_independent_when_profile_has_independent(tmp_path, monkeypatch):
+    """Conflict detection triggers when existing profile has trait opposite to candidate."""
+    mock_self = tmp_path / "self.md"
+    mock_self.write_text(
+        "## IX-C. PERSONALITY\n\n```yaml\nentries:\n"
+        '  - id: PERS-001\n    label: "independent learner"\n'
+        '    detail: "shows independent work habits"\n```\n',
+        encoding="utf-8",
+    )
+    monkeypatch.setattr("bot.conflict_check.SELF_PATH", mock_self)
     yaml = """
 mind_category: personality
 summary: Student was dependent on teacher cues today

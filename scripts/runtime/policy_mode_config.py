@@ -40,14 +40,34 @@ def _fallback_operator_only() -> dict[str, Any]:
     }
 
 
-def resolve_mode(name: str | None, defaults: dict[str, dict[str, Any]] | None = None) -> str:
-    """Normalize mode key; unknown or empty -> operator_only."""
+class UnknownPolicyModeError(ValueError):
+    """Raised in strict mode when a policy mode name is not in defaults."""
+    pass
+
+
+def resolve_mode(
+    name: str | None,
+    defaults: dict[str, dict[str, Any]] | None = None,
+    *,
+    strict: bool = False,
+) -> str:
+    """Normalize mode key; unknown or empty -> operator_only.
+
+    With strict=True, raises UnknownPolicyModeError instead of falling back
+    when a non-empty mode name is not found in defaults.
+    """
     modes = defaults if defaults is not None else load_defaults()
     raw = (name or "").strip() or os.environ.get(ENV_POLICY_MODE, "").strip()
     if not raw:
         return DEFAULT_MODE
     if raw in modes:
         return raw
+    if strict:
+        raise UnknownPolicyModeError(
+            f"Unknown policy mode: {raw!r}. "
+            f"Valid modes: {', '.join(sorted(modes))}. "
+            f"Pass a valid mode or remove --policy-mode to use default ({DEFAULT_MODE})."
+        )
     return DEFAULT_MODE
 
 

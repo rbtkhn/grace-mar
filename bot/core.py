@@ -53,7 +53,6 @@ try:
         LIBRARY_LOOKUP_PROMPT,
         REPHRASE_PROMPT,
         ANALYST_PROMPT,
-        HOMEWORK_PROMPT,
     )
 except ImportError:
     from prompt import (
@@ -62,8 +61,15 @@ except ImportError:
         LIBRARY_LOOKUP_PROMPT,
         REPHRASE_PROMPT,
         ANALYST_PROMPT,
-        HOMEWORK_PROMPT,
     )
+
+try:
+    from .prompt import HOMEWORK_PROMPT  # type: ignore[attr-defined]
+except (ImportError, AttributeError):
+    try:
+        from prompt import HOMEWORK_PROMPT  # type: ignore[attr-defined]
+    except (ImportError, AttributeError):
+        HOMEWORK_PROMPT = None  # dormant — removed during adult reseed
 
 load_dotenv()
 
@@ -793,6 +799,8 @@ def start_homework_session(channel_key: str) -> tuple[str | None, str | None]:
     recency = _load_recency_context()
     if not recency.strip():
         return None, "i don't have enough in my record yet to make homework! let's chat and learn some stuff first."
+    if HOMEWORK_PROMPT is None:
+        return None, "homework is not available in this instance."
     prompt = HOMEWORK_PROMPT.format(recency_context=recency)
     try:
         result = _get_client().chat.completions.create(

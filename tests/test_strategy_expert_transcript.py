@@ -25,7 +25,9 @@ def test_prune_drops_sections_older_than_keep_days_window(tmp_path: Path) -> Non
     inbox = tmp_path / "inbox.md"
     inbox.write_text(_minimal_inbox(), encoding="utf-8")
 
-    transcript = out_dir / f"strategy-expert-{expert}-transcript.md"
+    expert_dir = out_dir / "experts" / expert
+    expert_dir.mkdir(parents=True)
+    transcript = expert_dir / "transcript.md"
     transcript.write_text(
         canonical_transcript_header(expert)
         + "\n"
@@ -61,8 +63,9 @@ def test_prune_exact_cutoff_date_is_removed(tmp_path: Path) -> None:
     inbox = tmp_path / "inbox.md"
     inbox.write_text(_minimal_inbox(), encoding="utf-8")
 
-    transcript = out_dir / f"strategy-expert-{expert}-transcript.md"
-    # today 2026-01-20, keep_days=7 -> cutoff 2026-01-13; 2026-01-13 should drop
+    expert_dir = out_dir / "experts" / expert
+    expert_dir.mkdir(parents=True)
+    transcript = expert_dir / "transcript.md"
     transcript.write_text(
         canonical_transcript_header(expert)
         + "\n"

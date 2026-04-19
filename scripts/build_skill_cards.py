@@ -233,6 +233,29 @@ def _build_cmc_strategy_card(out_dir: Path, markdown: bool) -> bool:
     return True
 
 
+def _validate_card(card: dict) -> list[str]:
+    """Validate a card against the JSON schema. Returns list of error messages (empty = valid)."""
+    try:
+        from jsonschema import Draft202012Validator
+    except ImportError:
+        return ["jsonschema not installed; skipping validation"]
+    if not SCHEMA_PATH.is_file():
+        return [f"schema not found: {SCHEMA_PATH}"]
+    schema = json.loads(SCHEMA_PATH.read_text(encoding="utf-8"))
+    validator = Draft202012Validator(schema)
+    return [e.message for e in validator.iter_errors(card)]
+
+
+def _completeness_score(card: dict) -> dict[str, bool]:
+    """Check which quality fields are populated."""
+    return {
+        "has_purpose": bool(card.get("purpose") and card["purpose"] != "(no description in frontmatter)"),
+        "has_snippet": bool(card.get("runtime_snippet")),
+        "has_operator_view": bool(card.get("operator_view")),
+        "has_source_path": bool(card.get("source_path")),
+    }
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="Build derived skill card JSON/MD from portable skills.")
     parser.add_argument(
@@ -242,6 +265,16 @@ def main() -> int:
         help="Output directory for *.json and *.md",
     )
     parser.add_argument("--markdown", action="store_true", help="Also write .md alongside .json")
+    parser.add_argument(
+        "--check",
+        action="store_true",
+        help="Validate each card against skill-card.v1.json schema; exit 1 if any fail",
+    )
+    parser.add_argument(
+        "--report",
+        action="store_true",
+        help="Print completeness report (purpose, snippet, operator_view coverage) as JSON",
+    )
     args = parser.parse_args()
 
     rows = _load_manifest()
@@ -251,17 +284,48 @@ def main() -> int:
 
     args.out_dir.mkdir(parents=True, exist_ok=True)
 
+    cards: list[dict] = []
+    validation_errors: dict[str, list[str]] = {}
+
     for row in rows:
         card = build_card_for_skill(row)
+        cards.append(card)
         out_json = args.out_dir / f"{card['skill_id']}.json"
         out_json.write_text(json.dumps(card, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
         if args.markdown:
             _write_markdown(card, args.out_dir / f"{card['skill_id']}.md")
+        if args.check:
+            errs = _validate_card(card)
+            if errs:
+                validation_errors[card["skill_id"]] = errs
 
     if _build_cmc_strategy_card(args.out_dir, args.markdown):
-        print(f"Wrote {len(rows) + 1} skill card(s) to {args.out_dir} (including THINK-CIVILIZATIONAL-STRATEGY)")
+        print(f"Wrote {len(rows) + 1} skill card(s) to {args.out_dir} (including THINK-CIVILIZATIONAL-STRATEGY)", file=sys.stderr)
     else:
-        print(f"Wrote {len(rows)} skill card(s) to {args.out_dir}")
+        print(f"Wrote {len(rows)} skill card(s) to {args.out_dir}", file=sys.stderr)
+
+    if args.report:
+        report_rows = []
+        for card in cards:
+            comp = _completeness_score(card)
+            report_rows.append({"skill_id": card["skill_id"], **comp})
+        total = len(report_rows)
+        complete_count = sum(1 for r in report_rows if all(r[k] for k in r if k != "skill_id"))
+        report = {
+            "total_cards": total,
+            "fully_complete": complete_count,
+            "completeness_rate": round(complete_count / total, 4) if total > 0 else 0.0,
+            "cards": report_rows,
+        }
+        print(json.dumps(report, indent=2))
+
+    if args.check and validation_errors:
+        print(f"\nSchema validation failed for {len(validation_errors)} card(s):", file=sys.stderr)
+        for sid, errs in validation_errors.items():
+            for e in errs:
+                print(f"  {sid}: {e}", file=sys.stderr)
+        return 1
+
     return 0
 
 

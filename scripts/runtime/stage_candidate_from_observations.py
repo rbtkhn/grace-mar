@@ -25,7 +25,12 @@ for p in (_SCRIPTS, _RUNTIME):
 from observation_store import by_id  # noqa: E402
 from repo_io import profile_dir, read_path  # noqa: E402
 from search_scoring import parse_obs_timestamp  # noqa: E402
-from policy_mode_config import load_defaults, resolve_mode, staging_decision  # noqa: E402
+from policy_mode_config import (  # noqa: E402
+    UnknownPolicyModeError,
+    load_defaults,
+    resolve_mode,
+    staging_decision,
+)
 from stage_gate_candidate import (  # noqa: E402
     build_block,
     convergence_check,
@@ -153,7 +158,11 @@ def main() -> int:
     args = ap.parse_args()
 
     pdefs = load_defaults()
-    pol = resolve_mode(args.policy_mode, pdefs)
+    try:
+        pol = resolve_mode(args.policy_mode, pdefs, strict=True)
+    except UnknownPolicyModeError as e:
+        print(f"error: {e}", file=sys.stderr)
+        return 2
     verb, reason = staging_decision(pol, args.target_surface, pdefs)
     if verb == "blocked":
         print(f"error: policy mode {pol}: {reason}", file=sys.stderr)

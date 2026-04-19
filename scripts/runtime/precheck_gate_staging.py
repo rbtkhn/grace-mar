@@ -16,7 +16,12 @@ _RUNTIME = Path(__file__).resolve().parent
 if str(_RUNTIME) not in sys.path:
     sys.path.insert(0, str(_RUNTIME))
 
-from policy_mode_config import load_defaults, resolve_mode  # noqa: E402
+from policy_mode_config import (  # noqa: E402
+    UnknownPolicyModeError,
+    load_defaults,
+    resolve_mode,
+    staging_decision,
+)
 from observation_store import by_id  # noqa: E402
 from uncertainty_envelope import (  # noqa: E402
     compute_envelope,
@@ -48,7 +53,40 @@ def main() -> int:
         default=None,
         help="Optional: tie stderr hints to policy envelope (GRACE_MAR_POLICY_MODE if unset)",
     )
+    p.add_argument(
+        "--target-surface",
+        default=None,
+        help="Target surface hint for staging_decision check (e.g. SELF, EVIDENCE)",
+    )
+    p.add_argument(
+        "--policy-ack",
+        action="store_true",
+        help="Acknowledge policy warn/hold to proceed (matches stage_candidate behavior)",
+    )
     args = p.parse_args()
+
+    pdefs = load_defaults()
+    try:
+        pol = resolve_mode(args.policy_mode, pdefs, strict=True)
+    except UnknownPolicyModeError as e:
+        print(f"error: {e}", file=sys.stderr)
+        return 2
+
+    verb, reason = staging_decision(pol, args.target_surface, pdefs)
+    print(f"policy_mode: {pol}", file=sys.stderr)
+    print(f"staging_decision: {verb} — {reason}", file=sys.stderr)
+
+    if verb == "blocked":
+        print(f"error: policy mode {pol}: {reason}", file=sys.stderr)
+        return 2
+    if verb in ("warn", "hold_hint") and not args.policy_ack:
+        print(
+            f"error: policy mode {pol}: {reason} Pass --policy-ack to proceed.",
+            file=sys.stderr,
+        )
+        return 2
+    if verb in ("warn", "hold_hint") and args.policy_ack:
+        print(f"warning: policy mode {pol} override acknowledged: {reason}", file=sys.stderr)
 
     rows: list[dict] = []
     if args.ids:
@@ -67,8 +105,6 @@ def main() -> int:
     env = compute_envelope(rows)
     print(envelope_to_json(env))
     promo = env.get("promotion_recommendation", "")
-    pdefs = load_defaults()
-    pol = resolve_mode(args.policy_mode, pdefs)
     blob = pdefs.get(pol) or {}
     if pol == "high_risk_abstention" or blob.get("abstention_level") == "very_strict":
         print(

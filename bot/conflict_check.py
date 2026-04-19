@@ -44,11 +44,12 @@ def _load_self_personality_summary() -> str:
     if m:
         parts.append(m.group(1).lower())
 
-    # IX-C entries: observation fields
-    ix_c = re.search(r"### IX-C\. PERSONALITY.*?```yaml\n(.*?)```", content, re.DOTALL)
+    # IX-C entries: observation, label, and detail fields (## or ### heading)
+    ix_c = re.search(r"#{2,3} IX-C\. PERSONALITY.*?```yaml\n(.*?)```", content, re.DOTALL)
     if ix_c:
-        for obs in re.finditer(r"observation:\s*[\"']?([^\"'\n]+)", ix_c.group(1)):
-            parts.append(obs.group(1).lower())
+        for field in ("observation", "label", "detail"):
+            for obs in re.finditer(rf"{field}:\s*[\"']?([^\"'\n]+)", ix_c.group(1)):
+                parts.append(obs.group(1).lower())
 
     return " ".join(parts)
 

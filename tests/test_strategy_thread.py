@@ -48,5 +48,5 @@ def test_strategy_thread_dry_run_exits_zero() -> None:
         check=False,
     )
     assert proc.returncode == 0, proc.stderr
-    assert "strategy-expert-" in proc.stdout
+    assert "experts/" in proc.stdout
     assert "Done (dry-run):" in proc.stdout

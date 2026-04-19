@@ -169,6 +169,29 @@ def _greedy_pack(pieces: list[RankedPiece], budget: int) -> tuple[list[RankedPie
     return included, excluded
 
 
+def compute_benchmark_scores(
+    included: list[RankedPiece],
+    excluded: list[RankedPiece],
+    budget: int,
+) -> dict[str, float]:
+    """Return deterministic quality metrics for the packing result."""
+    total_candidates = len(included) + len(excluded)
+    chars_included = sum(len(p.text) for p in included)
+    utilization = chars_included / budget if budget > 0 else 0.0
+    coverage = len(included) / total_candidates if total_candidates > 0 else 0.0
+    ranks = [p.meta.get("rank", 0.0) for p in included if "rank" in p.meta]
+    mean_included_rank = sum(ranks) / len(ranks) if ranks else 0.0
+    return {
+        "utilization": round(utilization, 4),
+        "coverage": round(coverage, 4),
+        "mean_included_rank": round(mean_included_rank, 4),
+        "chars_included": chars_included,
+        "total_candidates": total_candidates,
+        "included_count": len(included),
+        "excluded_count": len(excluded),
+    }
+
+
 def _write_receipt(
     *,
     repo_root: Path,
@@ -179,6 +202,7 @@ def _write_receipt(
     budget: int,
     exclusions: bool,
     built: str,
+    scores: dict[str, float] | None = None,
 ) -> None:
     receipt = repo_root / "prepared-context" / "last-budget-builds.json"
     data: dict[str, Any] = {"schemaVersion": "1.0-budget-receipt", "lanes": {}}
@@ -193,7 +217,7 @@ def _write_receipt(
         rel_out = str(output.resolve().relative_to(repo_root.resolve()))
     except ValueError:
         rel_out = str(output)
-    data["lanes"][lane] = {
+    lane_data: dict[str, Any] = {
         "path": rel_out,
         "mode": budget_class,
         "policy_mode": policy_mode,
@@ -201,6 +225,9 @@ def _write_receipt(
         "exclusions": exclusions,
         "built": built,
     }
+    if scores:
+        lane_data["scores"] = scores
+    data["lanes"][lane] = lane_data
     receipt.parent.mkdir(parents=True, exist_ok=True)
     receipt.write_text(json.dumps(data, indent=2) + "\n", encoding="utf-8")
 
@@ -328,6 +355,12 @@ def main() -> int:
         default=None,
         help="Optional path to policy_modes defaults.json (default: config/policy_modes/defaults.json)",
     )
+    ap.add_argument(
+        "--score",
+        action="store_true",
+        default=False,
+        help="Print benchmark quality scores (utilization, coverage, mean_included_rank) to stdout as JSON",
+    )
     args = ap.parse_args()
 
     root = args.repo_root.resolve()
@@ -361,6 +394,7 @@ def main() -> int:
 
     included, excluded = _greedy_pack(pieces, budget)
     built = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    scores = compute_benchmark_scores(included, excluded, budget)
     md = build_markdown(
         lane=lane,
         budget_class=budget_class,
@@ -384,9 +418,12 @@ def main() -> int:
         budget=budget,
         exclusions=bool(excluded),
         built=built,
+        scores=scores,
     )
     print(f"wrote {out}", file=sys.stderr)
     print(f"wrote {root / 'prepared-context' / 'last-budget-builds.json'}", file=sys.stderr)
+    if args.score:
+        print(json.dumps({"lane": lane, "mode": budget_class, **scores}, indent=2))
     return 0
 
 
