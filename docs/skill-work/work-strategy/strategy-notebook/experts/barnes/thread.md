@@ -140,6 +140,45 @@ The `barnes` lane’s role (Constitutional, civil rights, and criminal tax trial
 Canonical knot paths and raw ingest lines live in **Segment 2** below (regenerated each **`thread`** run).
 
 ---
+<!-- strategy-page:start id="parsi-barnes-trump-mental-erratic-conduct" date="2026-04-19" watch="us-exec-conduct" -->
+### Page: parsi-barnes-trump-mental-erratic-conduct
+
+**Date:** 2026-04-19
+**Watch:** us-exec-conduct
+**Also in:** parsi
+
+**Page type:** Weave — `parsi` × `barnes` — US executive conduct / erratic behavior × Iran diplomacy (2026-04-19).
+
+**Curated ingest (SSOT row):**
+
+- X | cold: **Parsi × Barnes page** (2026-04-19) — Trump mental state / erratic conduct → Iran FP: @barnes_law QT @tparsi — Parsi: poor discipline, optics of victory over deal, humiliation undermines diplomacy; Barnes: lack of self-control as only reason no Iran deal, emotional regression and mental health few want to say publicly; separate Barnes QRT JPost (citing WSJ): advisers excluded Trump from situation/command room on high-stakes Iran airman extraction, fearing erratic temper jeopardizes mission // hook: three planes — diplomatic speech-act (Parsi) vs commentary psych thesis (Barnes) vs institutional process (exclusion story) — do not merge tiers | verify:pin-@barnes_law-statuses+WSJ+JPost | thread:parsi | thread:barnes | crosses:parsi+barnes
+
+_Note: `strategy_page.py` echoes every inbox line containing each `thread:` tag; this page keeps one curated row plus the weave below._
+
+### Signal
+
+**Parsi** (quoted by Barnes): discipline collapses into performance — victory optics and humiliation crowd out reciprocal moves a counterparty could sequence into a deal. **Barnes** adds a domestic-liability thesis: self-control as the binding constraint on any Iran bargain, with emotional regression and mental health framed as what few will say openly but still steer public behavior. A second Barnes beat (Jerusalem Post / WSJ chain): military advisers reportedly excluded the President from the situation/command context during a high-stakes Iran-related extraction mission, citing erratic temper risk to mission integrity. **Weave:** domestic readings of executive fitness meet foreign policy at both performative channels (X / Truth Social) and room-access decisions — different falsifiers on each plane.
+
+### Judgment
+
+Hold three planes open — no single headline merge:
+
+| Plane | Expert / source | What would falsify or tighten |
+|-------|-----------------|--------------------------------|
+| Diplomatic mechanism | Parsi | IRI responses, sequenced offers, Islamabad room facts — not proved by US psych takes alone. |
+| Commentary (psych / liability) | Barnes | Interpretive thesis — elevate only with accepted sourcing discipline; social posts ≠ clinical or personnel primary. |
+| Operational / process | WSJ → JPost summary | Exclusion from command room — verify WSJ text, date, on-record pushback (DoD/WH) before Judgment-grade merge with naval or deal facts. |
+
+Optional crosses: `thread:davis` (war-powers / C-plane packaging), `thread:johnson` (Countercurrent domestic room same week) — seams, not one voice.
+
+### Links / verify
+
+- Pin `@barnes_law` status URLs for 2026-04-19 (QT @tparsi + QRT JPost/WSJ chain).
+- WSJ piece as summarized — canonical link + headline match before treating exclusion as settled.
+- Continuity: Same month as page `parsi-moral-vocabulary-western-leaders` (western legitimacy / optics vs institutional break) — complementary angles on US + allied leadership register, not duplicate Judgment.
+
+<!-- strategy-page:end -->
+
 <!-- strategy-expert-thread:start -->
 ## Machine layer — Extraction (script-maintained)
 

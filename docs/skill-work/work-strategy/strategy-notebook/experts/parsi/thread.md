@@ -235,6 +235,75 @@ Pins keep **Trita Parsi** (EU / **Kallas** speech-act lane) and **Daniel Davis**
 
 Optional keys (omit if unused): `clusters` (list of strings), `patterns` (list of strings), `note` (string).
 <!-- strategy-page:end -->
+<!-- strategy-page:start id="parsi-moral-vocabulary-western-leaders" date="2026-04-19" watch="western-legitimacy" -->
+### Page: parsi-moral-vocabulary-western-leaders
+
+**Date:** 2026-04-19
+**Watch:** western-legitimacy
+
+**Page type:** Thesis — **B** (contrast of leaders, shared moral vocabulary).
+
+**Curated ingest (SSOT row):**
+
+- X | cold: @tparsi — **Page B** (2026-04-19) — **(1)** Trump / Iran / GCC thread: reciprocal de-escalation undercut by early victory lap + humiliation + threats; optics over counterpart management (“self-sabotage”) // **(2)** QT **Pedro Sánchez**: time to break **EU–Israel Association Agreement**—government violating international law cannot be EU partner; **Parsi** frames **Sánchez** as “giant,” most EU leaders “moral dwarfs” // hook: **same moral vocabulary** — **legitimacy shopping** among Western leaders (infantile performative win vs principled institutional break with consensus) — **seam:** US exec channel ≠ EU PM ≠ IRI // https://x.com/tparsi | verify:pin-status-2026-04-19+Sanchez-official-text | thread:parsi
+
+_Note: `strategy_page.py` echoes all `thread:parsi` inbox hits; this page keeps one curated row. Full inbox backlog unchanged._
+
+### Signal
+
+Parsi uses the **same moral lexicon** in two directions: he reads **Trump** as **unable to defer gratification**—each Iranian or Gulf-adjacent opening becomes a **stage** for **triumph and humiliation** before counterparts can **reciprocate**, which **burns** the **sequence** diplomacy needs. In the same register he elevates **Pedro Sánchez** against a **shrunken** EU median: a **principled** push to **break** the **EU–Israel Association Agreement** on **international-law** grounds. The juxtaposition is **not** celebrity gossip; it is a **claim** about how Western leaders **purchase** or **forfeit** **legitimacy** in public—**performative win** versus **institutional rupture** with consensus.
+
+### Judgment
+
+**Thesis B** holds if “dwarf vs giant” tracks **audience-facing legitimacy** (who gets to look **moral** to **which** gallery) rather than a literal ranking of **statesmanship**. **Do not** merge **planes**: **U.S. executive** **optics** (Trump) **≠** **EU** institutional **speech-act** (Sánchez / Commission / capitals) **≠** **IRI** **signaling** on Hormuz or talks. Parsi’s **Trump** line **rhymes with** his older **GCC** story (early **Truth Social** victory lap **sabotaging** a **delicate** reciprocal move); the **Sánchez** QT **rhymes** with **EU values** and **partnership** **conditionality**—same **vocabulary**, **different** institutions and **falsifiers**.
+
+### Links / verify
+
+- Pin **exact** `@tparsi` **status URL(s)** for **2026-04-19** (Trump/Iran thread + Sánchez QT)—**screenshot** or **archive** if needed.
+- **Sánchez** text: **official** Spanish + **verified** English on **Association Agreement** break—**not** Judgment-grade from image alone.
+- **GCC / Qeshm / Truth Social** chain from the **long** Parsi thread: **tier-A** or **hypothesis** per line before **Links** merge.
+- **Typical crosses** (optional batch): `mercouris` (EU institutional surface), `davis` (U.S. war-powers / exec packaging), `marandi` (Tehran register)—**seams**, not **merged** voice.
+<!-- strategy-page:end -->
+
+<!-- strategy-page:start id="parsi-barnes-trump-mental-erratic-conduct" date="2026-04-19" watch="us-exec-conduct" -->
+### Page: parsi-barnes-trump-mental-erratic-conduct
+
+**Date:** 2026-04-19
+**Watch:** us-exec-conduct
+**Also in:** barnes
+
+**Page type:** Weave — `parsi` × `barnes` — US executive conduct / erratic behavior × Iran diplomacy (2026-04-19).
+
+**Curated ingest (SSOT row):**
+
+- X | cold: **Parsi × Barnes page** (2026-04-19) — Trump mental state / erratic conduct → Iran FP: @barnes_law QT @tparsi — Parsi: poor discipline, optics of victory over deal, humiliation undermines diplomacy; Barnes: lack of self-control as only reason no Iran deal, emotional regression and mental health few want to say publicly; separate Barnes QRT JPost (citing WSJ): advisers excluded Trump from situation/command room on high-stakes Iran airman extraction, fearing erratic temper jeopardizes mission // hook: three planes — diplomatic speech-act (Parsi) vs commentary psych thesis (Barnes) vs institutional process (exclusion story) — do not merge tiers | verify:pin-@barnes_law-statuses+WSJ+JPost | thread:parsi | thread:barnes | crosses:parsi+barnes
+
+_Note: `strategy_page.py` echoes every inbox line containing each `thread:` tag; this page keeps one curated row plus the weave below._
+
+### Signal
+
+**Parsi** (quoted by Barnes): discipline collapses into performance — victory optics and humiliation crowd out reciprocal moves a counterparty could sequence into a deal. **Barnes** adds a domestic-liability thesis: self-control as the binding constraint on any Iran bargain, with emotional regression and mental health framed as what few will say openly but still steer public behavior. A second Barnes beat (Jerusalem Post / WSJ chain): military advisers reportedly excluded the President from the situation/command context during a high-stakes Iran-related extraction mission, citing erratic temper risk to mission integrity. **Weave:** domestic readings of executive fitness meet foreign policy at both performative channels (X / Truth Social) and room-access decisions — different falsifiers on each plane.
+
+### Judgment
+
+Hold three planes open — no single headline merge:
+
+| Plane | Expert / source | What would falsify or tighten |
+|-------|-----------------|--------------------------------|
+| Diplomatic mechanism | Parsi | IRI responses, sequenced offers, Islamabad room facts — not proved by US psych takes alone. |
+| Commentary (psych / liability) | Barnes | Interpretive thesis — elevate only with accepted sourcing discipline; social posts ≠ clinical or personnel primary. |
+| Operational / process | WSJ → JPost summary | Exclusion from command room — verify WSJ text, date, on-record pushback (DoD/WH) before Judgment-grade merge with naval or deal facts. |
+
+Optional crosses: `thread:davis` (war-powers / C-plane packaging), `thread:johnson` (Countercurrent domestic room same week) — seams, not one voice.
+
+### Links / verify
+
+- Pin `@barnes_law` status URLs for 2026-04-19 (QT @tparsi + QRT JPost/WSJ chain).
+- WSJ piece as summarized — canonical link + headline match before treating exclusion as settled.
+- Continuity: Same month as page `parsi-moral-vocabulary-western-leaders` (western legitimacy / optics vs institutional break) — complementary angles on US + allied leadership register, not duplicate Judgment.
+
+<!-- strategy-page:end -->
+
 <!-- strategy-expert-thread:start -->
 ## Machine layer — Extraction (script-maintained)
 

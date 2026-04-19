@@ -56,3 +56,10 @@ skills:
     verify_forbidden_substrings:
       - users/grace-mar/
       - process_approved_candidates
+  - name: primary-overhearing-analysis
+    source: primary-overhearing-analysis/SKILL.md
+    appendix: .cursor/skills/primary-overhearing-analysis/CURSOR_APPENDIX.md
+    target: .cursor/skills/primary-overhearing-analysis/SKILL.md
+    verify_forbidden_substrings:
+      - users/grace-mar/
+      - process_approved_candidates

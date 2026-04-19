@@ -171,6 +171,8 @@ research/external/work-jiang/prediction-tracking/scratch/*
 
 # Prepared context — operator-generated memory brief (optional; scripts/runtime/memory_brief.py --output)
 prepared-context/memory-brief.md
+# Prepared context — per-lane budget receipt (regenerable; build_budgeted_context.py)
+prepared-context/last-budget-builds.json
 
 # Misc
 *.pem
