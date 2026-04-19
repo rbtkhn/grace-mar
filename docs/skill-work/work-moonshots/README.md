@@ -2,9 +2,11 @@
 
 **Scope:** WORK lane — Personal Moonshot Operating System **scaffold** (governance-first). Not a separate Record surface.
 
+**Placement:** PMOS artifacts live **here** under `docs/skill-work/work-moonshots/` (and per-instance [`self-moonshots.md`](../../../users/grace-mar/self-moonshots.md)). Do not add a parallel top-level `moonshots/` tree—extend this lane instead.
+
 | Artifact | Role |
 |----------|------|
-| [moonshot-template.md](moonshot-template.md) | Copy/paste structure for a single moonshot program |
+| [moonshot-template.md](moonshot-template.md) | Copy/paste structure for a single moonshot program (failure/stop conditions, WORK surface links, manual snapshot; no auto-gated EVIDENCE) |
 | [users/grace-mar/self-moonshots.md](../../../users/grace-mar/self-moonshots.md) (per instance) | **Staging** list of active moonshots — **non-authoritative** until gate merge |
 | [moonshot-operating-model.md](../../moonshot-operating-model.md) | Doctrine: gate YAML, merge mapping, Voice/portfolio deferrals |
 | [missions/](missions/README.md) | Mission-scale WORK folders (`missions/<slug>/`) + intake for tacit-derived snapshots |
