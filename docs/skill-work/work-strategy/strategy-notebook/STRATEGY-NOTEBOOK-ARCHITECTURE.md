@@ -29,8 +29,8 @@
 
 **`thread`** (operator command — use backticks in prose so it is **not** confused with the inbox verify tail **`thread:<expert_id>`**) runs the expert pipeline via **`bin/thread`** or **`python3 scripts/strategy_thread.py`** (same flags; from repo root):
 
-1. **Triage** (internal, not operator-facing) — routes **`thread:<expert_id>`** lines from **`daily-strategy-inbox.md`** to per-expert **`strategy-expert-<expert_id>-transcript.md`** files (append-only, 7-day rolling window, auto-pruned). Operator may lightly edit transcripts for clarity; edits are preserved across runs.
-2. **Extraction** — reads each expert's **`-transcript.md`** (what the expert said recently) and relevant **knot files** (where that material was used), writes **machine-maintained** material to **`strategy-expert-<expert_id>-thread.md`** **between** the HTML comment markers (see below). **Human narrative** lives **outside** that block.
+1. **Triage** (internal, not operator-facing) — routes **`thread:<expert_id>`** lines from **`daily-strategy-inbox.md`** to per-expert **`experts/<expert_id>/transcript.md`** files (append-only, 7-day rolling window, auto-pruned). Operator may lightly edit transcripts for clarity; edits are preserved across runs.
+2. **Extraction** — reads each expert's **`transcript.md`** (what the expert said recently) and relevant **pages / knot files** (where that material was used), writes **machine-maintained** material to **`experts/<expert_id>/thread.md`** **between** the HTML comment markers (see below). **Human narrative** lives **outside** that block.
 
 **`-thread.md` is layered (in order top to bottom).** **Do not** overload the word **Segment** for these layers — reserve **Segment 1–4** for the **2026 month index** (below).
 
@@ -61,23 +61,23 @@ Within the **journal layer**, each **`## YYYY-MM`** heading opens **one month-se
 
 **What it is not:** **`thread`** does **not** update **`days.md`**, knot files, or the inbox **`Accumulator for:`** line. It is **not** a substitute for **`weave`**. Transcript or aggregator output still lands in the **inbox** first (paste-ready lines + **`thread:`** when the cold line attributes speech to a named indexed expert).
 
-**3-file model:** Each expert has three files — **`strategy-expert-<expert_id>.md`** (cognitive profile — operator-authored, stable), **`-transcript.md`** (7-day rolling verbatim **from inbox** — first `thread:` line plus optional continuation paragraphs; target **≤ ~2000 words** per block, soft **≤ ~20k words** per file after prune), **`-thread.md`** (**narrative journal** + **machine extraction** + optional ledger). The **`thread`** command updates transcripts and **only the marked block** in **`-thread.md`**; the profile file is never script-modified. **Templates** for all three filenames are maintained as **one** bundle: [strategy-expert-template.md](strategy-expert-template.md) (jump anchors at top of that file).
+**Per-folder model:** Each expert has its own folder **`experts/<expert_id>/`** with companion files — **`profile.md`** (cognitive profile — operator-authored, stable), **`transcript.md`** (7-day rolling verbatim **from inbox** — first `thread:` line plus optional continuation paragraphs; target **≤ ~2000 words** per block, soft **≤ ~20k words** per file after prune), **`thread.md`** (**journal layer** + **machine layer** + optional ledger; pages live inside month chapters), and optional **`mind.md`** (extended CIV-MIND profile). The **`thread`** command updates transcripts and **only the marked block** in **`thread.md`**; the profile file is never script-modified. **Templates** are maintained as **one** bundle: [strategy-expert-template.md](strategy-expert-template.md) (jump anchors at top of that file). See [watches/README.md](watches/README.md) for the pages-in-threads model.
 
 <a id="split-ingest-model"></a>
 
 ### Split ingest model (operator direction — planned)
 
-**Problem:** Long verbatim belongs in **`strategy-expert-<expert_id>-transcript.md`**, but **unified discovery** still needs a **grep-friendly registry** and a **single habitual action** (see operator preference: stub + corpus + one command).
+**Problem:** Long verbatim belongs in **`experts/<expert_id>/transcript.md`**, but **unified discovery** still needs a **grep-friendly registry** and a **single habitual action** (see operator preference: stub + corpus + one command).
 
 **Policy (target):**
 
 | Layer | Role |
 |-------|------|
 | **[`daily-strategy-inbox.md`](daily-strategy-inbox.md)** | **Index / stub** — at minimum one paste-ready line per capture: **`thread:<expert_id>`**, **`aired:YYYY-MM-DD`** (or equivalent) when the event has a clear **air/publication date**, short **cold** / **hook**, **URL**, **`verify:`**. Same tags as today so **`rg`** across the inbox stays the primary “what did we file?” sweep. |
-| **`strategy-expert-<expert_id>-transcript.md`** | **Corpus** — long quoted speech under **`## YYYY-MM-DD`** where that date is the **air/publication day** (not only “the day I typed”). Continuation paragraphs follow the [long-form verbatim](daily-strategy-inbox.md#long-form-verbatim-thread) rules. |
+| **`experts/<expert_id>/transcript.md`** | **Corpus** — long quoted speech under **`## YYYY-MM-DD`** where that date is the **air/publication day** (not only “the day I typed”). Continuation paragraphs follow the [long-form verbatim](daily-strategy-inbox.md#long-form-verbatim-thread) rules. |
 | **`python3 scripts/strategy_thread.py`** (today) | Triage + extraction from inbox → transcript → machine block; **until** a dedicated command ships, triage still assumes inbox-sourced `thread:` blocks. |
 
-**Unified search:** Treat **inbox + `*-transcript.md`** as one habit: grep inbox for stubs and episode slugs; grep transcripts for full text — **or** (future) a generated rollup listing pointers only. **Not** Record.
+**Unified search:** Treat **inbox + `experts/*/transcript.md`** as one habit: grep inbox for stubs and episode slugs; grep transcripts for full text — **or** (future) a generated rollup listing pointers only. **Not** Record.
 
 **Transition:** Current tooling remains valid; a future **`strategy_ingest`** (name TBD) would implement “one command” below without deleting the inbox as registry.
 
@@ -106,7 +106,7 @@ Single entry point (working name **`strategy_ingest`** or fold into **`strategy_
 
 ### Verbatim thesis scaffold (operator methodology)
 
-**Purpose:** Fit a long expert transcript into the **≤ ~2000 words per ingest** target for `strategy-expert-<expert_id>-transcript.md` **without changing any of the expert’s words** — by **dropping whole sentences only**, selected for **argument weight**.
+**Purpose:** Fit a long expert transcript into the **≤ ~2000 words per ingest** target for `experts/<expert_id>/transcript.md` **without changing any of the expert’s words** — by **dropping whole sentences only**, selected for **argument weight**.
 
 **Pipeline (manual or assisted):**
 
@@ -121,9 +121,9 @@ Single entry point (working name **`strategy_ingest`** or fold into **`strategy_
 
 **Strong-sentence discipline:** Use the repeatable checklist and tie-break rules in [THESIS-SCAFFOLD-CHECKLIST.md](THESIS-SCAFFOLD-CHECKLIST.md) (printable one-pager).
 
-**Where to put bold theses and separated paragraphs:** [strategy-expert-template.md — Thesis-first verbatim scaffold](strategy-expert-template.md#thesis-scaffold-pattern) (markdown above `~~~text` in the same `-transcript.md` date section — not a separate `*-thesis-scaffold-FULL.md` file).
+**Where to put bold theses and separated paragraphs:** [strategy-expert-template.md — Thesis-first verbatim scaffold](strategy-expert-template.md#thesis-scaffold-pattern) (markdown above `~~~text` in the same `transcript.md` date section — not a separate `*-thesis-scaffold-FULL.md` file).
 
-**Full verbatim when the fence is thesis-scaffold only (archive policy):** If the dated `~~~text` block in `strategy-expert-<expert_id>-transcript.md` holds a **≤ ~2000 word** scaffold (thesis-selected and/or sentence-trimmed) instead of a full episode paste, **dropped sentences are not recoverable from that fence**. Before relying on a trimmed fence as the only copy, choose **at least one** archive for the longer or full text:
+**Full verbatim when the fence is thesis-scaffold only (archive policy):** If the dated `~~~text` block in `experts/<expert_id>/transcript.md` holds a **≤ ~2000 word** scaffold (thesis-selected and/or sentence-trimmed) instead of a full episode paste, **dropped sentences are not recoverable from that fence**. Before relying on a trimmed fence as the only copy, choose **at least one** archive for the longer or full text:
 
 | Archive | Use when |
 |--------|----------|
@@ -135,7 +135,7 @@ Single entry point (working name **`strategy_ingest`** or fold into **`strategy_
 
 #### Worked example — Alexander Mercouris · air date **2026-04-16**
 
-Source: [`strategy-expert-mercouris-transcript.md`](strategy-expert-mercouris-transcript.md) **`## 2026-04-16`** `~~~text` fence (thesis-scaffold verbatim trimmed to policy). **Shape** for bold theses + separated paragraphs: [strategy-expert-template.md#thesis-scaffold-pattern](strategy-expert-template.md#thesis-scaffold-pattern). Below: **five theses** in narrative order, each with **sample verbatim sentences** (short excerpt table — same episode).
+Source: [`experts/mercouris/transcript.md`](experts/mercouris/transcript.md) **`## 2026-04-16`** `~~~text` fence (thesis-scaffold verbatim trimmed to policy). **Shape** for bold theses + separated paragraphs: [strategy-expert-template.md#thesis-scaffold-pattern](strategy-expert-template.md#thesis-scaffold-pattern). Below: **five theses** in narrative order, each with **sample verbatim sentences** (short excerpt table — same episode).
 
 | Order | Thesis (operator label) | Verbatim scaffold (excerpts) |
 |------|-------------------------|--------------------------------|
@@ -212,7 +212,7 @@ The **strategy-notebook knots** are the **primary written units** of the work-st
 
 **Two planes:**
 
-1. **Commentator / expert threads** ([strategy-commentator-threads.md](strategy-commentator-threads.md)) — **longitudinal** lanes: what each named voice said over time so you can track **accuracy**, **narrative drift**, and **compare–contrast** across experts. Ingests use **`thread:<expert_id>`** (see that file). This is the **bookkeeping and evidence** plane for *who said what*. **3-file model:** each expert has `strategy-expert-<expert_id>.md` (cognitive profile), `-transcript.md` (7-day rolling verbatim from inbox triage), and `-thread.md` (distilled analytical thread from transcript + knots). Run operator **`thread`** — `python3 scripts/strategy_thread.py` — to auto-triage and extract.
+1. **Commentator / expert threads** ([strategy-commentator-threads.md](strategy-commentator-threads.md)) — **longitudinal** lanes: what each named voice said over time so you can track **accuracy**, **narrative drift**, and **compare–contrast** across experts. Ingests use **`thread:<expert_id>`** (see that file). This is the **bookkeeping and evidence** plane for *who said what*. **Per-folder model:** each expert has `experts/<expert_id>/profile.md` (cognitive profile), `transcript.md` (7-day rolling verbatim from inbox triage), `thread.md` (analytical thread with journal layer, machine layer, and pages), and optional `mind.md`. Run operator **`thread`** — `python3 scripts/strategy_thread.py` — to auto-triage and extract.
 
 2. **Tri-mind (Barnes → Mearsheimer → Mercouris)** — a **mode of analysis** for high-stakes mechanism and tradeoffs. It is **not** defaulted into the notebook as a full tri-frame wall. Run it in **chat**, [minds/outputs/](minds/outputs/) or [demo-runs/](demo-runs/) as needed; on **weave**, the notebook gets **compressed judgment + Links**, not the raw three-lens essay unless you explicitly want a short in-page summary.
 
@@ -236,7 +236,7 @@ The **strategy-notebook knots** are the **primary written units** of the work-st
 
 **File:** [`daily-strategy-inbox.md`](daily-strategy-inbox.md) — **append-only** during the local day for rough captures (bullets, links, paste). **`strategy`** sessions **add** here first if you want separation between scratch and finished page; you may still draft directly in `days.md` when you prefer. The **canonical, grep-friendly line format** for strategy ingests (“paste-ready one-liner”) is specified **only** in that file’s § *Paste-ready one-liner (canonical unit)* — not duplicated here. **Optional two-tier gist** (`cold: … // hook: …`) separates **source paraphrase** from **notebook placement** — same subsection. **Multi-item** capture with optional **common analysis** (one line per excerpt, plus an optional `batch-analysis` note) lives in that file’s § *Multi-item ingest (optional common analysis)*.
 
-**Per-expert rolling mirror:** Ingest lines that carry **`thread:<expert_id>`** are automatically triaged into `strategy-expert-<expert_id>-transcript.md` and extracted for thread distillation into `-thread.md` via **`python3 scripts/strategy_thread.py`** (operator **`thread`**); crossing rules and optional `verify:` tails stay in [strategy-commentator-threads.md](strategy-commentator-threads.md).
+**Per-expert rolling mirror:** Ingest lines that carry **`thread:<expert_id>`** are automatically triaged into `experts/<expert_id>/transcript.md` and extracted for thread distillation into `thread.md` via **`python3 scripts/strategy_thread.py`** (operator **`thread`**); crossing rules and optional `verify:` tails stay in [strategy-commentator-threads.md](strategy-commentator-threads.md).
 
 **Batch-analysis (joint pattern line):** Optional single metadata line `batch-analysis | YYYY-MM-DD | <short label> | <body>` stating how **multiple** ingests relate for **weave** (tension, comparison, or *optional weak* convergence—never a substitute for each line’s own `verify:`). The line must **stand alone** when read in isolation: there is **no** `paired-with` field. **Placement** is the membership anchor—the `batch-analysis` line **immediately follows** the **last** ingest in the set whenever the ingests are contiguous in the accumulator; if one ingest must stay **earlier** in the scratch (e.g. a Macgregor line referenced again with later ingests), add a **short inline parenthetical** in the batch body naming that exception so membership stays unambiguous without a second column. **Assistants:** default to **proposing** a draft `batch-analysis` line **in chat** for operator copy or rejection; **append** to the inbox file only when the operator asks (**EXECUTE** or explicit paste). **Success criterion:** less duplicated prose in `days.md` **Judgment** after **weave**, not fewer ingest lines.
 
