@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schema-registry/tacit-capture-normalized.v1.json",
+  "title": "Grace-Mar Tacit Capture Normalized",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "timestamp",
+    "source",
+    "lane",
+    "raw_text",
+    "tags",
+    "candidate_destinations",
+    "confidence",
+    "privacy",
+    "provenance_path",
+    "normalization_version",
+    "content_sha256"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^tacit_[0-9]{8}T[0-9]{6}Z_[a-f0-9]{12}$"
+    },
+    "timestamp": {
+      "type": "string",
+      "minLength": 1,
+      "description": "ISO-8601 timestamp from intake metadata"
+    },
+    "source": {
+      "type": "string",
+      "minLength": 1
+    },
+    "lane": {
+      "type": "string",
+      "minLength": 1
+    },
+    "raw_text": {
+      "type": "string",
+      "description": "Body under ## Raw note"
+    },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "candidate_destinations": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Derived from intended_destination (pipe-separated in source)"
+    },
+    "confidence": {
+      "type": "string",
+      "enum": ["low", "medium", "high"]
+    },
+    "privacy": {
+      "type": "string",
+      "enum": ["private", "shareable"]
+    },
+    "provenance_path": {
+      "type": "string",
+      "minLength": 1
+    },
+    "normalization_version": {
+      "type": "string",
+      "const": "1.0"
+    },
+    "content_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    }
+  }
+}

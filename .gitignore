@@ -118,6 +118,15 @@ runtime/autonomy/shadow_decisions.jsonl
 # Operator/runtime observability feeds (lane scope, continuity blocks)
 runtime/observability/*.jsonl
 
+# Tacit capture (operator-local — see runtime/tacit/README.md)
+runtime/tacit/inbox/*
+!runtime/tacit/inbox/.gitkeep
+runtime/tacit/normalized/*
+!runtime/tacit/normalized/.gitkeep
+runtime/tacit/candidates/*
+!runtime/tacit/candidates/.gitkeep
+runtime/tacit/index.jsonl
+
 # Runtime observation ledger (append-only; operator-local — see runtime/observations/README.md)
 runtime/observations/index.jsonl
 

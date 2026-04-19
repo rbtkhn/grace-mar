@@ -343,6 +343,14 @@ def main() -> int:
         metavar="PATH",
         help="Handoff packet .md (repeatable)",
     )
+    ap.add_argument(
+        "--include-mission",
+        type=Path,
+        action="append",
+        default=[],
+        metavar="PATH",
+        help="Mission workspace .md (WORK; same priority as checkpoint; labeled mission_workspace)",
+    )
     ap.add_argument("--max-observations", type=int, default=30, help="Max observation candidates to rank")
     ap.add_argument(
         "--policy-mode",
@@ -387,6 +395,10 @@ def main() -> int:
             pieces.append(rp)
     for hp in args.include_handoff:
         rp = _read_file_piece(hp.resolve(), "handoff", str(hp))
+        if rp:
+            pieces.append(rp)
+    for mp in args.include_mission:
+        rp = _read_file_piece(mp.resolve(), "mission_workspace", str(mp))
         if rp:
             pieces.append(rp)
 

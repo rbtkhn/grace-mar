@@ -1,0 +1,21 @@
+{
+  "id": "tacit_20260419T161200Z_e0a8ff708977",
+  "timestamp": "2026-04-19T16:12:00Z",
+  "source": "voice_note",
+  "lane": "work-strategy",
+  "raw_text": "When framing civilizational bridge work, sacred sites and pilgrimage feel like the first concrete dignity lever—policy brief next quarter.",
+  "tags": [
+    "negotiation",
+    "pattern",
+    "operator-habit"
+  ],
+  "candidate_destinations": [
+    "moonshot",
+    "work"
+  ],
+  "confidence": "high",
+  "privacy": "shareable",
+  "provenance_path": "tests/tacit/fixtures/inbox/demo-note.md",
+  "normalization_version": "1.0",
+  "content_sha256": "a9e86ddeaf9d017011206373206a9e391c0d938ff399088bce2ffbfceb309432"
+}
