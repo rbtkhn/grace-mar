@@ -6,9 +6,10 @@
 |-------|--------|
 | **Project status** | `active` |
 | **Active chapter** | `2026-04` |
-| **Last substantive entry** | `2026-04-16` — **`## 2026-04-16`** in [`chapters/2026-04/days.md`](chapters/2026-04/days.md#2026-04-16): Marandi BP + Pape knots; **`strategy + verify`** (Macgregor×WSJ, Parsi×Daily Beast); ROME (Leo XIV Bamenda × Hegseth); **`thread:mercouris` × §1g** seam; **`thread:macgregor`** (JF 04-16 + optional Macgregor `X` lines still filed under inbox **Expert X … 2026-04-18** — accumulator date, not an extra `days.md` heading). Earlier mistaken **`## 2026-04-17` / `## 2026-04-18`** splits were folded here; see weave date note in that block. |
+| **Last substantive entry** | `2026-04-19` — **`## 2026-04-19`** in [`chapters/2026-04/days.md`](chapters/2026-04/days.md#2026-04-19): **`thread:ritter`** Substack *[The Consequences of Incompetence](https://scottritter.substack.com/p/the-consequences-of-incompetence)* + **fold** adds [`daily-brief-2026-04-19.md`](../daily-brief-2026-04-19.md) **§1f** (Grok digest + `#strategy-verify-2026-04-19`) and **tri-mind `ab+c`** Judgment seam (inbox `batch-analysis | fold: daily-brief §1f × tri-mind`). [daily-strategy-inbox.md](daily-strategy-inbox.md) ingest rows + [experts/ritter/thread.md](experts/ritter/thread.md) § **2026-04**. Earlier mistaken **`## 2026-04-17` / `## 2026-04-18`** splits were folded under STATUS weave note in `days.md`. |
 | **Prepared stub** | _Optional_ — only if you use calendar stubs; otherwise capture in [daily-strategy-inbox.md](daily-strategy-inbox.md) and **weave** when you run **`strategy`** / explicit **`weave`** / **`fold`** (legacy) |
 | **Daily inbox** | [daily-strategy-inbox.md](daily-strategy-inbox.md) — **SSOT** (cadence + paste-ready lines); weave/prune → [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *Daily strategy inbox* |
+| **Expert predictions ledger** | [strategy-expert-predictions.md](strategy-expert-predictions.md) — optional **`pred_id`** adjudication rows + **2026** `topic_slug` registry (WORK; not Record) |
 | **Next stitch** | Optional: roll month-end summary into [STRATEGY.md](../STRATEGY.md) §IV |
 | **Operator prefs** | [NOTEBOOK-PREFERENCES.md](NOTEBOOK-PREFERENCES.md) |
 

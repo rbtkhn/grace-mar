@@ -63,6 +63,9 @@ jobs:
       - name: Validate strategy expert threads (Segment 1 prose hints)
         run: python3 scripts/validate_strategy_expert_threads.py
 
+      - name: Validate strategy expert predictions ledger
+        run: python3 scripts/validate_expert_predictions.py
+
       - name: Validate history-notebook operator source catalog
         run: python3 scripts/validate_hn_source_catalog.py
 

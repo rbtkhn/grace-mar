@@ -17,6 +17,8 @@
 5. **Touch [STRATEGY.md](../STRATEGY.md)** only when a watch, analogy line, operator log arc, or doctrine note has **stabilized** (promotion ladder).
 6. **Do not** update Record, SELF, EVIDENCE, or Voice from this lane.
 
+**Expert predictions ledger (optional):** Falsifiable **`pred_id`** adjudication rows and the **`topic_slug` registry** live in [`strategy-expert-predictions.md`](strategy-expert-predictions.md). Run [`validate_expert_predictions.py`](../../../../scripts/validate_expert_predictions.py) from repo root to check roster **`expert_id`**s and registry slugs; CI runs the same check (**Tests** workflow — *Validate strategy expert predictions ledger*).
+
 **Rule of thumb:** **Inbox** = intake SSOT for rough capture; **knots** = page-level judgment (after weave); **`days.md`** = chronology and continuity.
 
 **Default output path (chat / assistant):** chat → inbox → **knots + `days.md` continuity only on explicit weave** — same discipline as [Expert choreography](#expert-choreography) *Output path (default)* below.
