@@ -246,7 +246,6 @@ none this pass
     knot_label: marandi-ritter-mercouris-hormuz-scaffold
 ```
 <!-- strategy-page:end -->
-
 <!-- strategy-expert-thread:start -->
 ## Machine layer — Extraction (script-maintained)
 

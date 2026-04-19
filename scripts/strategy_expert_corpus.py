@@ -524,6 +524,7 @@ def write_thread_file(
     inner: str,
 ) -> None:
     """Write extraction content between thread markers in a -thread.md file."""
+    dest.parent.mkdir(parents=True, exist_ok=True)
     if not dest.exists():
         dest.write_text(
             THREAD_MARKER_START + "\n" + inner.rstrip() + "\n" + THREAD_MARKER_END + "\n",

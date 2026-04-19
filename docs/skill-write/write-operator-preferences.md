@@ -19,6 +19,7 @@
 |--------|----------------|
 | **`users/[id]/skill-write.md`** | **Companion Record** — demonstrated production, samples, YAML capability evidence; feeds Voice / linguistic layer per [skills-modularity](../skills-modularity.md). |
 | **This file + siblings under `docs/skill-write/`** | **Operator preferences and craft rules** — how you want drafts shaped when working with agents; does not require gate merge to update (docs lane). |
+| **CIV-MIND-BARNES / `tri-mind` Barnes block** | **WORK/strategy** lens and **authentic voice** per [`minds/README.md`](../skill-work/work-strategy/minds/README.md) — **not** the default register for **VivaBarnesLaw Locals** posts. **Locals** drafts follow **this hub** (topic-first, closers, plain exposition). Mind-voice is for analysis passes unless you ask to adapt it. |
 
 **Relation to SELF:** Preferences here are **workflow and style instructions**, not identity claims about the companion. If a preference should become **Record truth**, it still goes through the normal pipeline.
 
@@ -77,6 +78,7 @@ Edit and extend this section as your taste evolves.
 ### Short public copy (posts, threads, ledes)
 
 - **Topic-first openings** — Concrete anchors (who, conflict, policy) before abstraction or “here’s the thing” setup. See [.cursor/rules/drafting-topic-lede.mdc](../../.cursor/rules/drafting-topic-lede.mdc) (always on in Cursor).
+- **Substance-first when a visual is attached (Locals / X)** — If the operator pairs copy with an **image or screen capture**, **do not** spend the lede (or a “second beat”) on **the attachment**: no “screenshot,” “image above,” “I’m posting,” **grab**, or meta about what the reader is looking at unless they ask for an explicit caption. The reader has the visual; the **first sentence** still opens on the **argument** (multilingual spread, policy fork, mechanism—whatever the post is actually about).
 
 ### Closers and density
 
@@ -103,6 +105,13 @@ Operator copy on **Locals / X / PH** often **explains an idea**, not **asks the 
 |--------------|-----|--------|
 | **equilibrium / entropy / planes** as **abstract labels** in Judgment | Repo **machinery** visible in prose | **Named** actors, **forks**, and **seams** in **plain English** (definitions stay in skill reference, not as Judgment decoration) |
 | **Ground claims… / The analytic point is…** as a **closer** | **Instructions** to the writer, not a **thesis** | **Declarative** last line: what **differs**, what **hangs** in the balance |
+
+**Production / feed slang** — reads **insider** on a public forum:
+
+| Dispreferred | Why | Prefer |
+|--------------|-----|--------|
+| **grab**, **scroll-stop**, **the line** (vague analyst shorthand) | Sounds like a rundown room, not a reader | Plain nouns: **photo**, **headline**, **story**, **report** — or **omit** if the visual carries it |
+| **before any editor tied it together** | Meta about news process, not the claim | State the **substance** (e.g. how narratives **diverge** by language or capital) |
 
 Extend this table when new stock phrases grate the same way.
 

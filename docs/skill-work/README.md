@@ -23,6 +23,7 @@ This folder holds **submodules** that support WORK, the Record, and instances: r
 | **[work-xavier](work-xavier/)** | Advisor/project module for Xavier — contracts, runbooks, content plans, work profile, SMM rubric, journal; Cursor **`skill-xavier`**. Not Xavier's Record repo. |
 | **[work-coffee](work-coffee/)** | Operator cadence ritual architecture — `coffee` design, menu reference, activation/re-entry/signing-off ergonomics; executable trigger in `.cursor/skills/coffee/SKILL.md`. |
 | **[work-civ-mem](work-civ-mem/)** | Stewardship surface for the `civilization_memory` repository — drift audit, contribution prep, workflow clarity; not a replacement for civ-mem internal STATE/SCHOLAR. |
+| **[work-moonshots](work-moonshots/)** | PMOS v0.1 — moonshot program **template** + lane README; staging surface is `users/[id]/self-moonshots.md`; see [moonshot-operating-model.md](../moonshot-operating-model.md). |
 
 ---
 

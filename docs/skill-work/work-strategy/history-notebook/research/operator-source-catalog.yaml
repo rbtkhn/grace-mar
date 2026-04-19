@@ -1,5 +1,6 @@
 # History Notebook — operator source catalog (title-level seed)
 # WORK only; not Record. Does not replace book-architecture.yaml or cross-book-map.yaml.
+# Self-library pointer: LIB-0158 — users/grace-mar/self-library.md#personal-physical-library (owned HNSRC-* shelf; not operator_book / operator_analytical).
 #
 # Schema (items[]):
 #   id: HNSRC-NNNN (zero-padded 4 digits, unique)
@@ -23,7 +24,7 @@
 # Era "medieval" = post-476 AD formations through fall of Constantinople (~1453 AD); straddles into Vol III use eras/notes.
 # Era "colonial" (Vol III) = post-1453 through ~1789 AD (French Revolution); straddles into Vol IV use eras/notes.
 # Era "industrial" (Vol IV) = post-1789 through ~1945 AD (end of WWII); straddles into Vol V use eras/notes.
-# Ancient / medieval / modern (operator) 2026-04-18: shelf photos — Landmark (a); Assyria/Persians (b); Everitt/Goldsworthy/Oxford (c); late Rome–Byzantine (d); Roman lives–empire (e); Everyman Library canons (f); Penguin Clothbound epics (g). Medieval/early modern batches 2026-04-18: shelf-batch-a/b (Europe + Ottoman), batch-c (Weatherford + Khazaria), batch-d (Penguin Clothbound medieval canon). Colonial batches 2026-04-18: colonial-shelf-a (Wilson TYW + dedupe note vs HNSRC-0065/0066), b (Voltaire/French Rev), c (US founders), d (Atlantic), e (Library of America), f (Everyman Shakespeare + Enlightenment), g (Russia/Spain/Europe). Assets: .cursor/projects/.../assets/photo_2026-04-18_11.*–12.*.png.
+# Ancient / medieval / modern (operator) 2026-04-18: shelf photos — Landmark (a); Assyria/Persians (b); Everitt/Goldsworthy/Oxford (c); late Rome–Byzantine (d); Roman lives–empire (e); Everyman Library canons (f); Penguin Clothbound epics (g). Medieval/early modern batches 2026-04-18: shelf-batch-a/b (Europe + Ottoman), batch-c (Weatherford + Khazaria), batch-d (Penguin Clothbound medieval canon). Colonial batches 2026-04-18: colonial-shelf-a (Wilson TYW + dedupe note vs HNSRC-0065/0066), b (Voltaire/French Rev), c (US founders), d (Atlantic), e (Library of America), f (Everyman Shakespeare + Enlightenment), g (Russia/Spain/Europe). Industrial/modern fiction + philosophy shelf (batch 2026-04-18-modern-shelf-photos-12): Penguin Clothbound / Everyman's / Little Black Classics / Library of America — see HNSRC-0129+. Assets: .cursor/projects/.../assets/photo_2026-04-18_11.*–12.*.png (incl. 22 files photo_2026-04-18_12.15.*–12.17.*).
 
 version: 1
 items:
@@ -565,7 +566,7 @@ items:
     hn_volume: vol-i
     primary_arc: rome
     candidate_hn_chapters: [hn-i-v1-04, hn-i-v1-05, hn-i-v1-10]
-    notes: "Imperial Stoic notebook; Greek original (Ta eis heauton)."
+    notes: "Imperial Stoic notebook; Greek original (Ta eis heauton). Also on shelf: Penguin Clothbound edition (photo 2026-04-18 batch 12) — do not add duplicate row."
 
   - id: HNSRC-0052
     title: "On the Nature of Things"
@@ -576,7 +577,7 @@ items:
     hn_volume: vol-i
     primary_arc: rome
     candidate_hn_chapters: [hn-i-v1-05, hn-i-v1-15]
-    notes: "De Rerum Natura; materialist cosmology and ethics in Latin hexameters."
+    notes: "De Rerum Natura; materialist cosmology and ethics in Latin hexameters. Also on shelf: Penguin Clothbound under trade title The Nature of Things (photo 2026-04-18 batch 12) — do not add duplicate row."
 
   - id: HNSRC-0053
     title: "Letters from a Stoic"
@@ -1329,3 +1330,1478 @@ items:
     hn_volume: vol-iii
     candidate_hn_chapters: [hn-iii-france]
     notes: "Iberian world monarchy — France chapter id is imperfect proxy; adjust when drafting."
+  # --- Industrial / modern shelf — personal library photos 2026-04-18 (LIB-0158) ---
+  - id: HNSRC-0129
+    title: The Sonnets and A Lover's Complaint
+    author: William Shakespeare
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - England
+    - poetry
+    - Penguin Clothbound
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-anglia-imperial
+  - id: HNSRC-0130
+    title: Paradise Lost
+    author: John Milton
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - England
+    - poetry
+    - Penguin Clothbound
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-anglia-imperial
+  - id: HNSRC-0131
+    title: Robinson Crusoe
+    author: Daniel Defoe
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - England
+    - fiction
+    - Penguin Clothbound
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-anglia-imperial
+  - id: HNSRC-0132
+    title: Les Misérables
+    author: Victor Hugo
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - France
+    - fiction
+    - Penguin Clothbound
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iii-france
+  - id: HNSRC-0133
+    title: David Copperfield
+    author: Charles Dickens
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - England
+    - fiction
+    - Penguin Clothbound
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-anglia-imperial
+  - id: HNSRC-0134
+    title: Love and Freindship
+    author: Jane Austen
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - England
+    - fiction
+    - Penguin Clothbound
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-anglia-imperial
+  - id: HNSRC-0135
+    title: Sense and Sensibility
+    author: Jane Austen
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - England
+    - fiction
+    - Penguin Clothbound
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-anglia-imperial
+  - id: HNSRC-0136
+    title: Pride and Prejudice
+    author: Jane Austen
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - England
+    - fiction
+    - Penguin Clothbound
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-anglia-imperial
+  - id: HNSRC-0137
+    title: Mansfield Park
+    author: Jane Austen
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - England
+    - fiction
+    - Penguin Clothbound
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-anglia-imperial
+  - id: HNSRC-0138
+    title: Emma
+    author: Jane Austen
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - England
+    - fiction
+    - Penguin Clothbound
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-anglia-imperial
+  - id: HNSRC-0139
+    title: Northanger Abbey
+    author: Jane Austen
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - England
+    - fiction
+    - Penguin Clothbound
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-anglia-imperial
+  - id: HNSRC-0140
+    title: Persuasion
+    author: Jane Austen
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - England
+    - fiction
+    - Penguin Clothbound
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-anglia-imperial
+  - id: HNSRC-0141
+    title: Collected Stories
+    author: Rudyard Kipling
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - England
+    - fiction
+    - Everyman's Library
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-anglia-imperial
+  - id: HNSRC-0142
+    title: The Three Musketeers
+    author: Alexandre Dumas
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - France
+    - fiction
+    - Everyman's Library
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iii-france
+  - id: HNSRC-0143
+    title: Dr. Jekyll and Mr. Hyde and Other Stories
+    author: Robert Louis Stevenson
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - Scotland
+    - fiction
+    - Everyman's Library
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-anglia-imperial
+  - id: HNSRC-0144
+    title: In Search of Lost Time
+    author: Marcel Proust
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - France
+    - fiction
+    - Everyman's Library
+    - boxed set
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iii-france
+    notes: Everyman's Library 4-volume slipcased set.
+  - id: HNSRC-0145
+    title: Selected Works
+    author: Johann Wolfgang von Goethe
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - Germany
+    - literature
+    - Everyman's Library
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-germany
+  - id: HNSRC-0146
+    title: On War
+    author: Carl von Clausewitz
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - Germany
+    - strategy
+    - Everyman's Library
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-germany
+  - id: HNSRC-0147
+    title: Byron's Travels
+    author: Lord Byron
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - England
+    - poetry
+    - travel
+    - Everyman's Library
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-anglia-imperial
+  - id: HNSRC-0148
+    title: The Collected Stories
+    author: Alexander Pushkin
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - Russia
+    - fiction
+    - Everyman's Library
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-russia-imperial
+  - id: HNSRC-0149
+    title: Novels, Tales, Journeys
+    author: Alexander Pushkin
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - Russia
+    - fiction
+    - Everyman's Library
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-russia-imperial
+  - id: HNSRC-0150
+    title: Dead Souls
+    author: Nikolai Gogol
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - Russia
+    - fiction
+    - Everyman's Library
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-russia-imperial
+  - id: HNSRC-0151
+    title: The Collected Tales
+    author: Nikolai Gogol
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - Russia
+    - fiction
+    - Everyman's Library
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-russia-imperial
+  - id: HNSRC-0152
+    title: The Double and The Gambler
+    author: Fyodor Dostoevsky
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - Russia
+    - fiction
+    - Everyman's Library
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-russia-imperial
+  - id: HNSRC-0153
+    title: Notes from a Dead House
+    author: Fyodor Dostoevsky
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - Russia
+    - fiction
+    - Everyman's Library
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-russia-imperial
+  - id: HNSRC-0154
+    title: Notes from Underground
+    author: Fyodor Dostoevsky
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - Russia
+    - fiction
+    - Everyman's Library
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-russia-imperial
+  - id: HNSRC-0155
+    title: Demons
+    author: Fyodor Dostoevsky
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - Russia
+    - fiction
+    - Everyman's Library
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-russia-imperial
+  - id: HNSRC-0156
+    title: The Idiot
+    author: Fyodor Dostoevsky
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - Russia
+    - fiction
+    - Everyman's Library
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-russia-imperial
+  - id: HNSRC-0157
+    title: Crime and Punishment
+    author: Fyodor Dostoevsky
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - Russia
+    - fiction
+    - Everyman's Library
+    - Penguin Clothbound
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-russia-imperial
+    notes: Everyman's Library and Penguin Clothbound editions on shelf.
+  - id: HNSRC-0158
+    title: The Turn of the Screw
+    author: Henry James
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - America
+    - fiction
+    - Penguin Clothbound
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-america
+  - id: HNSRC-0159
+    title: The Adventures of Huckleberry Finn
+    author: Mark Twain
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - America
+    - fiction
+    - Penguin Clothbound
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-america
+  - id: HNSRC-0160
+    title: Treasure Island
+    author: Robert Louis Stevenson
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - Scotland
+    - fiction
+    - Penguin Clothbound
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-anglia-imperial
+  - id: HNSRC-0161
+    title: The Jungle Books
+    author: Rudyard Kipling
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - England
+    - fiction
+    - Penguin Clothbound
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-anglia-imperial
+  - id: HNSRC-0162
+    title: Oliver Twist
+    author: Charles Dickens
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - England
+    - fiction
+    - Penguin Clothbound
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-anglia-imperial
+  - id: HNSRC-0163
+    title: Bleak House
+    author: Charles Dickens
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - England
+    - fiction
+    - Penguin Clothbound
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-anglia-imperial
+  - id: HNSRC-0164
+    title: Great Expectations
+    author: Charles Dickens
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - England
+    - fiction
+    - Penguin Clothbound
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-anglia-imperial
+  - id: HNSRC-0165
+    title: A Tale of Two Cities
+    author: Charles Dickens
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - England
+    - fiction
+    - Penguin Clothbound
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-anglia-imperial
+  - id: HNSRC-0166
+    title: Hard Times
+    author: Charles Dickens
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - England
+    - fiction
+    - Penguin Clothbound
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-anglia-imperial
+  - id: HNSRC-0167
+    title: A Christmas Carol and Other Christmas Writings
+    author: Charles Dickens
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - England
+    - fiction
+    - Penguin Clothbound
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-anglia-imperial
+  - id: HNSRC-0168
+    title: The Adventures of Sherlock Holmes
+    author: Arthur Conan Doyle
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - Scotland
+    - fiction
+    - Penguin Clothbound
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-anglia-imperial
+  - id: HNSRC-0169
+    title: The Hound of the Baskervilles
+    author: Arthur Conan Doyle
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - Scotland
+    - fiction
+    - Penguin Clothbound
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-anglia-imperial
+  - id: HNSRC-0170
+    title: Dracula
+    author: Bram Stoker
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - Ireland
+    - fiction
+    - Penguin Clothbound
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-anglia-imperial
+  - id: HNSRC-0171
+    title: Nineteen Eighty-Four
+    author: George Orwell
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - England
+    - fiction
+    - Penguin Clothbound
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-anglia-imperial
+  - id: HNSRC-0172
+    title: The Strange Case of Dr Jekyll and Mr Hyde
+    author: Robert Louis Stevenson
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - Scotland
+    - fiction
+    - Penguin Clothbound
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-anglia-imperial
+  - id: HNSRC-0173
+    title: The War of the Worlds
+    author: H. G. Wells
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - England
+    - fiction
+    - Penguin Clothbound
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-anglia-imperial
+  - id: HNSRC-0174
+    title: The Pearl
+    author: John Steinbeck
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - America
+    - fiction
+    - Penguin Clothbound
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-america
+  - id: HNSRC-0175
+    title: The Outsider
+    author: Albert Camus
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - France
+    - fiction
+    - Penguin Clothbound
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iii-france
+  - id: HNSRC-0176
+    title: The Little Prince
+    author: Antoine de Saint-Exupéry
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - France
+    - fiction
+    - Penguin Clothbound
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iii-france
+  - id: HNSRC-0177
+    title: Animal Farm
+    author: George Orwell
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - England
+    - fiction
+    - Penguin Clothbound
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-anglia-imperial
+  - id: HNSRC-0178
+    title: Tinker Tailor Soldier Spy
+    author: John le Carré
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - England
+    - fiction
+    - Penguin Clothbound
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-anglia-imperial
+  - id: HNSRC-0179
+    title: Jane Eyre
+    author: Charlotte Brontë
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - England
+    - fiction
+    - Penguin Clothbound
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-anglia-imperial
+  - id: HNSRC-0180
+    title: Villette
+    author: Charlotte Brontë
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - England
+    - fiction
+    - Penguin Clothbound
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-anglia-imperial
+  - id: HNSRC-0181
+    title: Wuthering Heights
+    author: Emily Brontë
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - England
+    - fiction
+    - Penguin Clothbound
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-anglia-imperial
+  - id: HNSRC-0182
+    title: The Tenant of Wildfell Hall
+    author: Anne Brontë
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - England
+    - fiction
+    - Penguin Clothbound
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-anglia-imperial
+  - id: HNSRC-0183
+    title: Moby-Dick
+    author: Herman Melville
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - America
+    - fiction
+    - Penguin Clothbound
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-america
+  - id: HNSRC-0184
+    title: Alice's Adventures in Wonderland and Through the Looking-Glass
+    author: Lewis Carroll
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - England
+    - fiction
+    - Penguin Clothbound
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-anglia-imperial
+  - id: HNSRC-0185
+    title: Jabberwocky and Other Nonsense
+    author: Lewis Carroll
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - England
+    - poetry
+    - Penguin Clothbound
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-anglia-imperial
+    notes: Verify exact collected-title string on your Penguin edition.
+  - id: HNSRC-0186
+    title: Grimm Tales
+    author: Philip Pullman
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - England
+    - retelling
+    - Penguin Clothbound
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-anglia-imperial
+  - id: HNSRC-0187
+    title: Frankenstein
+    author: Mary Shelley
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - England
+    - fiction
+    - Penguin Clothbound
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-anglia-imperial
+  - id: HNSRC-0188
+    title: The Origin of Species and The Voyage of the Beagle
+    author: Charles Darwin
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - England
+    - science
+    - Everyman's Library
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-anglia-imperial
+  - id: HNSRC-0189
+    title: The Cossacks
+    author: Leo Tolstoy
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - Russia
+    - fiction
+    - Everyman's Library
+    - Little Black Classics
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-russia-imperial
+    notes: Everyman's Library copy; Little Black Classics edition also on shelf — one
+      catalog row.
+  - id: HNSRC-0190
+    title: Childhood, Boyhood, and Youth
+    author: Leo Tolstoy
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - Russia
+    - fiction
+    - Everyman's Library
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-russia-imperial
+  - id: HNSRC-0191
+    title: Collected Shorter Fiction Volume 1
+    author: Leo Tolstoy
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - Russia
+    - fiction
+    - Everyman's Library
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-russia-imperial
+  - id: HNSRC-0192
+    title: Collected Shorter Fiction Volume 2
+    author: Leo Tolstoy
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - Russia
+    - fiction
+    - Everyman's Library
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-russia-imperial
+  - id: HNSRC-0193
+    title: War and Peace
+    author: Leo Tolstoy
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - Russia
+    - fiction
+    - Penguin Clothbound
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-russia-imperial
+  - id: HNSRC-0194
+    title: Anna Karenina
+    author: Leo Tolstoy
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - Russia
+    - fiction
+    - Penguin Clothbound
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-russia-imperial
+  - id: HNSRC-0195
+    title: The Brothers Karamazov
+    author: Fyodor Dostoevsky
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - Russia
+    - fiction
+    - Penguin Clothbound
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-russia-imperial
+  - id: HNSRC-0196
+    title: The Adolescent
+    author: Fyodor Dostoevsky
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - Russia
+    - fiction
+    - Everyman's Library
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-russia-imperial
+  - id: HNSRC-0197
+    title: Reflections on the Revolution in France
+    author: Edmund Burke
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - England
+    - political philosophy
+    - Everyman's Library
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-anglia-imperial
+  - id: HNSRC-0198
+    title: The Complete Short Novels
+    author: Anton Chekhov
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - Russia
+    - fiction
+    - Everyman's Library
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-russia-imperial
+  - id: HNSRC-0199
+    title: The Wealth of Nations
+    author: Adam Smith
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - Scotland
+    - economics
+    - Everyman's Library
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-anglia-imperial
+  - id: HNSRC-0200
+    title: The Poems
+    author: John Keats
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - England
+    - poetry
+    - Everyman's Library
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-anglia-imperial
+  - id: HNSRC-0201
+    title: Fathers and Children
+    author: Ivan Turgenev
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - Russia
+    - fiction
+    - Everyman's Library
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-russia-imperial
+  - id: HNSRC-0202
+    title: Three Novels
+    author: Jules Verne
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - France
+    - fiction
+    - Everyman's Library
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iii-france
+    notes: Two identical Everyman's Library copies on shelf.
+  - id: HNSRC-0203
+    title: Journey to the Centre of the Earth, Twenty Thousand Leagues Under the Sea,
+      Around the World in Eighty Days
+    author: Jules Verne
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - France
+    - fiction
+    - Everyman's Library
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iii-france
+    notes: Single-volume omnibus; illustrated spine edition.
+  - id: HNSRC-0204
+    title: Typhoon and Other Stories
+    author: Joseph Conrad
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - Poland
+    - England
+    - fiction
+    - Everyman's Library
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-anglia-imperial
+  - id: HNSRC-0205
+    title: Lord Jim
+    author: Joseph Conrad
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - Poland
+    - England
+    - fiction
+    - Everyman's Library
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-anglia-imperial
+  - id: HNSRC-0206
+    title: Heart of Darkness
+    author: Joseph Conrad
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - Poland
+    - England
+    - fiction
+    - Everyman's Library
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-anglia-imperial
+  - id: HNSRC-0207
+    title: Victory
+    author: Joseph Conrad
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - Poland
+    - England
+    - fiction
+    - Everyman's Library
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-anglia-imperial
+  - id: HNSRC-0208
+    title: The Time Machine, The Invisible Man, The War of the Worlds
+    author: H. G. Wells
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - England
+    - fiction
+    - Everyman's Library
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-anglia-imperial
+  - id: HNSRC-0209
+    title: Kim
+    author: Rudyard Kipling
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - England
+    - fiction
+    - Everyman's Library
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-anglia-imperial
+  - id: HNSRC-0210
+    title: White Nights
+    author: Fyodor Dostoevsky
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - Russia
+    - fiction
+    - Penguin Clothbound
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-russia-imperial
+  - id: HNSRC-0211
+    title: The Prince
+    author: Niccolò Machiavelli
+    era: colonial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - Italy
+    - political philosophy
+    - Penguin Clothbound
+    - shelf photo 2026-04-18
+    hn_volume: vol-iii
+    candidate_hn_chapters:
+    - hn-iii-france
+  - id: HNSRC-0212
+    title: Utopia
+    author: Thomas More
+    era: colonial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - England
+    - political philosophy
+    - Penguin Clothbound
+    - shelf photo 2026-04-18
+    hn_volume: vol-iii
+    candidate_hn_chapters:
+    - hn-iv-anglia-imperial
+  - id: HNSRC-0213
+    title: Essays and Aphorisms
+    author: Arthur Schopenhauer
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - Germany
+    - philosophy
+    - Penguin Clothbound
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-germany
+  - id: HNSRC-0214
+    title: Beyond Good and Evil
+    author: Friedrich Nietzsche
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - Germany
+    - philosophy
+    - Penguin Clothbound
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-germany
+  - id: HNSRC-0215
+    title: The Communist Manifesto
+    author: "Karl Marx & Friedrich Engels"
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - Germany
+    - political philosophy
+    - Penguin Clothbound
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-germany
+  - id: HNSRC-0216
+    title: Fear and Trembling
+    author: Søren Kierkegaard
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - Denmark
+    - philosophy
+    - Penguin Clothbound
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-germany
+  - id: HNSRC-0217
+    title: Civilization and Its Discontents
+    author: Sigmund Freud
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - Austria
+    - psychology
+    - Penguin Clothbound
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-germany
+  - id: HNSRC-0218
+    title: Babylon Revisited
+    author: F. Scott Fitzgerald
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - America
+    - fiction
+    - Penguin Little Black Classics
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-america
+  - id: HNSRC-0219
+    title: The Lagoon
+    author: Joseph Conrad
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - Poland
+    - England
+    - fiction
+    - Penguin Little Black Classics
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-anglia-imperial
+  - id: HNSRC-0220
+    title: The Nutcracker
+    author: E. T. A. Hoffmann
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - Germany
+    - fiction
+    - Penguin Little Black Classics
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-germany
+  - id: HNSRC-0221
+    title: The Adventure of the Blue Carbuncle
+    author: Arthur Conan Doyle
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - Scotland
+    - fiction
+    - Penguin Little Black Classics
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-anglia-imperial
+  - id: HNSRC-0222
+    title: Of Mice and Men
+    author: John Steinbeck
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - America
+    - fiction
+    - Penguin Little Black Classics
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-america
+  - id: HNSRC-0223
+    title: Lady Susan
+    author: Jane Austen
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - England
+    - fiction
+    - Penguin Little Black Classics
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-anglia-imperial
+  - id: HNSRC-0224
+    title: Metamorphosis
+    author: Franz Kafka
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - Bohemia
+    - fiction
+    - Penguin Little Black Classics
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-germany
+    notes: Two copies on shelf.
+  - id: HNSRC-0225
+    title: The Queen of Spades
+    author: Alexander Pushkin
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - Russia
+    - fiction
+    - Penguin Little Black Classics
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-russia-imperial
+  - id: HNSRC-0226
+    title: About Love
+    author: Anton Chekhov
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - Russia
+    - fiction
+    - Penguin Little Black Classics
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-russia-imperial
+  - id: HNSRC-0227
+    title: Novels and Stories 1920–1922
+    author: F. Scott Fitzgerald
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - America
+    - fiction
+    - Library of America
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-america
+  - id: HNSRC-0228
+    title: "The Great Gatsby, All the Sad Young Men & Other Writings 1920–1926"
+    author: F. Scott Fitzgerald
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - America
+    - fiction
+    - Library of America
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-america
+  - id: HNSRC-0229
+    title: A Tramp Abroad, Following the Equator, Other Travels
+    author: Mark Twain
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - America
+    - nonfiction
+    - Library of America
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-america
+  - id: HNSRC-0230
+    title: Historical Romances
+    author: Mark Twain
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - America
+    - fiction
+    - Library of America
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-america
+  - id: HNSRC-0231
+    title: "Collected Tales, Sketches, Speeches, & Essays 1891–1910"
+    author: Mark Twain
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - America
+    - nonfiction
+    - Library of America
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-america
+  - id: HNSRC-0232
+    title: Mississippi Writings
+    author: Mark Twain
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - America
+    - fiction
+    - Library of America
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-america
+  - id: HNSRC-0233
+    title: "The Gilded Age & Later Novels"
+    author: Mark Twain
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - America
+    - fiction
+    - Library of America
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-america
+  - id: HNSRC-0234
+    title: Novels and Stories 1932–1937
+    author: John Steinbeck
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - America
+    - fiction
+    - Library of America
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-america
+  - id: HNSRC-0235
+    title: Novels 1942–1952
+    author: John Steinbeck
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - America
+    - fiction
+    - Library of America
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-america
+  - id: HNSRC-0236
+    title: "Pierre, Israel Potter, The Confidence-Man, Tales, & Billy Budd"
+    author: Herman Melville
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - America
+    - fiction
+    - Library of America
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-america
+  - id: HNSRC-0237
+    title: Jude the Obscure
+    author: Thomas Hardy
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - England
+    - fiction
+    - Penguin Clothbound
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-anglia-imperial
+  - id: HNSRC-0238
+    title: Far from the Madding Crowd
+    author: Thomas Hardy
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - England
+    - fiction
+    - Penguin Clothbound
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-anglia-imperial
+  - id: HNSRC-0239
+    title: The Mayor of Casterbridge
+    author: Thomas Hardy
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - England
+    - fiction
+    - Penguin Clothbound
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-anglia-imperial
+  - id: HNSRC-0240
+    title: Tess of the D'Urbervilles
+    author: Thomas Hardy
+    era: industrial
+    added_batch: 2026-04-18-modern-shelf-photos-12
+    tags:
+    - England
+    - fiction
+    - Penguin Clothbound
+    - shelf photo 2026-04-18
+    hn_volume: vol-iv
+    candidate_hn_chapters:
+    - hn-iv-anglia-imperial

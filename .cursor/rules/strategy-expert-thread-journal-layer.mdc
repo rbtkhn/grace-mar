@@ -2,6 +2,7 @@
 description: Expert thread journal layer — prose-first narrative (not bullet-default)
 globs:
   - docs/skill-work/work-strategy/strategy-notebook/strategy-expert-*-thread.md
+  - docs/skill-work/work-strategy/strategy-notebook/experts/*/thread.md
 alwaysApply: false
 ---
 
@@ -22,6 +23,10 @@ Applies when **editing or drafting** the human layer **above** `<!-- strategy-ex
 
 - Run `python3 scripts/validate_strategy_expert_threads.py` — it **warns** when a `## YYYY-MM` block has many list lines and **no** prose lines, or when prose word count is **below 500**.
 - **Opt-out (whole file, transitional):** `<!-- strategy-expert-thread:segment-1-month-bullets-ledger-ok -->` in the journal layer (documented in the template). Legacy rule filename may still say `segment-1`; meaning = **journal-layer** bullets-OK.
+
+## Cross-check blocks (optional)
+
+When folding one expert’s theses against **other `thread:`** lanes and **§1e / maritime** discipline, add **`### Cross-check (…)`** inside the relevant **`## YYYY-MM`**, **above** the machine markers — **hybrid** lede + table or **`[strength: …]`** bullets; **balanced** tier handling (one seam sentence; heavy detail → `days.md` / `batch-analysis`). Major ingests may warrant a **`days.md` `### Links`** back-pointer. Full normative wording: `docs/skill-work/work-strategy/strategy-notebook/STRATEGY-NOTEBOOK-ARCHITECTURE.md` § *Thread* → *Cross-check blocks (hybrid) and tier discipline* (`#expert-thread-cross-check-blocks`).
 
 ## Do not
 

@@ -1,6 +1,6 @@
 # Operator source catalog (History Notebook)
 
-**WORK only;** not Record. This runbook describes the **title-level seed catalog** for building a personal reference shelf (target ~500 works) that **informs** [History Notebook](../README.md) chapter drafting. It does **not** replace:
+**WORK only;** not Record. This runbook describes the **title-level seed catalog** for building a personal reference shelf (target ~500 works) that **informs** [History Notebook](../README.md) chapter drafting. **Self-library container:** [LIB-0158](../../../../users/grace-mar/self-library.md#personal-physical-library) (owned print library — separate from [LIB-0156](../../../../users/grace-mar/self-library.md#operator-analytical-books) operator-authored chapters). It does **not** replace:
 
 - [`book-architecture.yaml`](../book-architecture.yaml) — chapter SSOT  
 - [`cross-book-map.yaml`](../cross-book-map.yaml) — Predictive History ↔ HN coverage truth  

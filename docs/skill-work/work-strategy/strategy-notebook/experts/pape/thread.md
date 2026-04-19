@@ -333,7 +333,6 @@ Pape stacks four public claims in one appearance:
     note: "Pape Janssen escalation trap + staged blockade calendar + Israel spoiler; lattice vs Mearsheimer/Davis; Lebanon X + AP seam"
 ```
 <!-- strategy-page:end -->
-
 <!-- strategy-expert-thread:start -->
 ## Machine layer — Extraction (script-maintained)
 

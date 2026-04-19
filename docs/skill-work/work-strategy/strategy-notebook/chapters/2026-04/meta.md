@@ -14,6 +14,8 @@
 
 **Grep anchor (Ritter×Davis):** `batch-analysis | 2026-04-14 | Ritter × Davis | crosses:ritter+davis` — inbox row ↔ [`days.md`](days.md) **`## 2026-04-14`** **Signal** / **Judgment** / **Open**.
 
+**04-19:** **Operator `fold`** — [`daily-brief-2026-04-19.md`](../../daily-brief-2026-04-19.md) **§1f** (archived Grok + `#strategy-verify-2026-04-19`) + **tri-mind litigator-close** (`ab+c`) **Judgment** **seam** **woven** **into** [`days.md`](days.md) **`## 2026-04-19`** **beside** **existing** **`thread:ritter`** **/** **Sánchez** **/** **Trump** **TS** **cluster**; **RSS** §2 **anchors** **Islamabad** **Monday** **stack** — **digest** **quantities** **remain** **hypothesis** **tier** **until** **primaries** **clear**. **Grep:** `batch-analysis | 2026-04-19 | fold:`.
+
 **04-15 (second weave, same chapter):** **`mercouris`** **15 Apr 2026** programme × **`tri-mind`** (**B→A→C**) + **fact-check triage** receipts — [`days.md`](days.md) **`## 2026-04-15`**; optional inbox `batch-analysis | 2026-04-15 | Mercouris × tri-mind | seam:mercouris-tri-frame`.
 
 **04-15 (Lavrov Beijing × knot-shape E):** **Kremlin FM** **Beijing** remarks **corroborate** **E** (**Russia–China–Hormuz–energy**; official **§1d/§1g** lane, **not** **`thread:`**); **[`daily-strategy-inbox.md`](../../daily-strategy-inbox.md)** **`batch-analysis | Lavrov Beijing × knot-shape E`**; **`## 2026-04-15` `Open`** adds **UNSC Hormuz draft vs Islamabad** falsifier pair — **verify** **MID/Kremlin** + **MFA PRC** beside paste.

@@ -235,7 +235,6 @@ Pins keep **Trita Parsi** (EU / **Kallas** speech-act lane) and **Daniel Davis**
 
 Optional keys (omit if unused): `clusters` (list of strings), `patterns` (list of strings), `note` (string).
 <!-- strategy-page:end -->
-
 <!-- strategy-expert-thread:start -->
 ## Machine layer — Extraction (script-maintained)
 

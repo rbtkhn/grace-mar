@@ -57,7 +57,9 @@ This system uses a **four-layer instruction architecture**. Later layers may nar
 | **1. Core Doctrine** | This file (`AGENTS.md`) | State separation, authority, promotion law, knowledge boundary, terminology |
 | **2. Instance Doctrine** | `users/[id]/instance-doctrine.md` | Operating modes, repo structure, file update protocol, success metrics, prompt architecture |
 | **3. Lane Overlays** | `docs/skill-work/work-*/` | work-dev, work-politics, work-business, work-jiang, seed-phase |
-| **4. Mode Overlays** | `.cursor/skills/*/SKILL.md` | coffee, dream, bridge, harvest, thanks, gate-review |
+| **4. Mode Overlays** | `.cursor/skills/*/SKILL.md` | coffee, dream, bridge, harvest, thanks, gate-review, strategy, skill-write, tri-mind, and other listed skills |
+
+**Operator publishing (Locals / X / Predictive History comments):** [`docs/skill-write/README.md`](docs/skill-write/README.md) — calibrates paste-ready public copy; **not** the companion Record `users/[id]/skill-write.md` (capability evidence). SSOT: [`docs/skill-write/write-operator-preferences.md`](docs/skill-write/write-operator-preferences.md).
 
 **Substantive WORK plans (optional discipline):** For large plans in work-strategy, work-dev, or brief contexts, assistants may end with a **Reality Sprint Block** per [`docs/skill-work/reality-sprint-block.md`](docs/skill-work/reality-sprint-block.md) — a compact execution wedge (primary path, first contact with reality, failure checks, pruned steps). It is **not** a gate substitute, not a merge, and not required on every reply.
 

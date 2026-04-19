@@ -232,3 +232,12 @@ _(Append below this line.)_
 - **2026-04-18 17:34 UTC** — coffee (grace-mar) ok=true mode=work-start cursor_model=unknown model_tier=unknown
 - **2026-04-19 02:04 UTC** — coffee (grace-mar) ok=true mode=work-start cursor_model=unknown model_tier=unknown
 - **2026-04-19 03:29 UTC** — thanks (grace-mar) ok=true cursor_model=unknown model_tier=unknown park=strategy-tri-mind-davis-pape-freeman
+- **2026-04-19 05:14 UTC** — dream (grace-mar) ok=false mode=default cursor_model=unknown model_tier=unknown phase=both integrity=fail governance=pass mem_changed=true reviewable=0 contradictions=0 civmem_echo_count=0 civmem_suppressed=true handoff_written=true
+- **2026-04-19 13:17 UTC** — coffee (grace-mar) ok=true mode=work-start cursor_model=unknown model_tier=unknown
+- **2026-04-19 14:15 UTC** — coffee (grace-mar) ok=true mode=work-start cursor_model=unknown model_tier=unknown
+- **2026-04-19 16:26 UTC** — coffee (grace-mar) ok=true mode=work-start cursor_model=unknown model_tier=unknown
+- **2026-04-19 17:10 UTC** — dream (demo) ok=true mode=default cursor_model=unknown model_tier=unknown phase=both integrity=pass governance=pass mem_changed=true reviewable=0 contradictions=0 civmem_echo_count=0 civmem_suppressed=false handoff_written=true
+- **2026-04-19 17:14 UTC** — dream (demo) ok=true mode=default cursor_model=unknown model_tier=unknown phase=both integrity=pass governance=pass mem_changed=true reviewable=0 contradictions=0 civmem_echo_count=0 civmem_suppressed=false handoff_written=true
+- **2026-04-19 17:24 UTC** — dream (demo) ok=true mode=default cursor_model=unknown model_tier=unknown phase=both integrity=pass governance=pass mem_changed=true reviewable=0 contradictions=0 civmem_echo_count=0 civmem_suppressed=false handoff_written=true
+- **2026-04-19 17:26 UTC** — dream (demo) ok=true mode=default cursor_model=unknown model_tier=unknown phase=both integrity=pass governance=pass mem_changed=true reviewable=0 contradictions=0 civmem_echo_count=0 civmem_suppressed=false handoff_written=true
+- **2026-04-19 17:27 UTC** — dream (demo) ok=true mode=default cursor_model=unknown model_tier=unknown phase=both integrity=pass governance=pass mem_changed=true reviewable=0 contradictions=0 civmem_echo_count=0 civmem_suppressed=false handoff_written=true

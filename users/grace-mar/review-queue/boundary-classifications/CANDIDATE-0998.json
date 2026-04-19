@@ -14,7 +14,7 @@
   ],
   "confidenceBand": "low",
   "confidenceScore": 0.25,
-  "createdAt": "2026-04-18T16:38:05Z",
+  "createdAt": "2026-04-19T17:27:39Z",
   "source": "recursion_gate_review",
   "proposalClassSuggested": "SELF_LIBRARY_ADD",
   "artifactRelPath": "review-queue/boundary-classifications/CANDIDATE-0998.json"

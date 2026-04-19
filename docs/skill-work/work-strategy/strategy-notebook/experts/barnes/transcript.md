@@ -30,6 +30,7 @@ WORK only; not Record.
 
 
 
+
 ## 2026-04-17
 
 - YT | cold: **Larry Johnson** (*Countercurrent*) × **Robert Barnes** — *What the HELL is going on in the White House?* — US politics: executive cognition / room dynamics; **Vance** vs **Trump** on ceasefire **10 points**; **Witkoff**/**Kushner** vs **Driscoll** lane; **Iran** “VP no authority”; **Navy** “mall cop” blockade + **false** success feed; **polling**/**Congress** brake; **Hegseth**/**Bessent**; farmer supply shock; **work-politics** domestic fork // hook: **§1e** adjacent; stack **04-17** Iran **threads** with **labeled** **seam** — not §1h | https://www.youtube.com/watch?v=TBD-johnson-barnes-white-house-2026-04 | verify:operator-transcript+pin-canonical-URL+aired:2026-04-17 | thread:barnes | grep:Barnes+White+House+Vance+Iran+blockade+25th

@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-04-18T16:39:30Z",
+  "generated_at": "2026-04-19T17:28:28Z",
   "integration_status_counts": {
     "implemented": 11,
     "partial": 2,
     "documented_only": 1
   },
   "pipeline_event_counts": {
-    "maintenance": 3
+    "maintenance": 5
   },
   "provenance_completeness_score": 1.0,
   "provenance_from_gate": false,
   "lane_violation_count": 0,
-  "continuity_block_count": 26,
+  "continuity_block_count": 31,
   "gap_ids_open": [],
   "notes": [
     "Lane / continuity counts come from runtime/observability/*.jsonl when present (local or CI); empty feeds => 0.",

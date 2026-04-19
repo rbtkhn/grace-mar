@@ -10,6 +10,7 @@
 |-------|----------|------|
 | **Companion WRITE (Record)** | `users/[id]/skill-write.md` (and related evidence) | What the fork **demonstrates** — samples, YAML, capability trajectory; feeds **Voice** / linguistic layer per skills-modularity §4. |
 | **skill-write doctrine (this hub)** | `docs/skill-write/*.md` | **Operator preferences** and **drafting craft** — how agent-assisted drafts are shaped for **Locals / X / YouTube comments** (above), plus ledes, closers, density; update when your taste changes. |
+| **CIV-MIND-BARNES / tri-mind Barnes** | `docs/skill-work/work-strategy/strategy-notebook/experts/barnes/mind.md` (via [minds/README.md](../skill-work/work-strategy/minds/README.md)) | **WORK/strategy** analysis voice — **orthogonal** to **VivaBarnesLaw Locals** paste-up defaults; see [write-operator-preferences.md](write-operator-preferences.md) (*Not the same as*). |
 
 **Territory:** **self-skill-write** in the Record still means **capability-facing** production evidence. **Identity-facing** truth stays **SELF**. This hub holds **how you want prose shaped** when collaborating with agents, alongside pointers into `.cursor/rules/` where those rules are also enforced in Cursor.
 
@@ -19,7 +20,8 @@
 
 | Doc | Role |
 |-----|------|
-| [write-operator-preferences.md](write-operator-preferences.md) | **SSOT for operator writing preferences** — living list; start here (includes **tri-mind → public copy** handoff and **Chat delivery** — full echo in Cursor thread) |
+| [`.cursor/skills/skill-write/SKILL.md`](../../.cursor/skills/skill-write/SKILL.md) | **Cursor skill entry** — triggers **`write`**, **`skill-write`**, **`publish`**; compound **`strategy write`** loads **skill-strategy + skill-write** |
+| [write-operator-preferences.md](write-operator-preferences.md) | **SSOT for operator writing preferences** — living list; start here (includes **tri-mind → public copy** handoff, **Chat delivery**, **Locals vs CIV-MIND-BARNES**, **substance-first ledes with images**) |
 | [write-no-abstract-stacked-closers.md](write-no-abstract-stacked-closers.md) | Craft: avoid bloaty abstract stacked closers in short public copy |
 | [write-memorable-closer.md](write-memorable-closer.md) | Craft: end on one strong sentence that encapsulates the core argument |
 | [write-no-rhetorical-question-closer.md](write-no-rhetorical-question-closer.md) | Craft: do not end on a rhetorical question (prefer declarative closer) |

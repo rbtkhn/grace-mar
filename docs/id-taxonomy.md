@@ -67,9 +67,9 @@ Use these rules everywhere docs list companion-self components (the `self-*` sta
 
 | Kind | Rule | Examples |
 |------|------|----------|
-| **Standard labels** | Lowercase, hyphenated, **bold** when listing components | **self-knowledge**, **self-identity**, **self-curiosity**, **self-personality**, **self-skill-think**, **self-skill-write**, **self-skill-work**, **self-skill-steward**, **self-archive**, **self-library**, **self-memory**, **self-voice** |
+| **Standard labels** | Lowercase, hyphenated, **bold** when listing components | **self-knowledge**, **self-identity**, **self-curiosity**, **self-personality**, **self-skill-think**, **self-skill-write**, **self-skill-work**, **self-skill-steward**, **self-archive**, **self-library**, **self-memory**, **self-moonshots**, **self-voice** |
 | **Formal Record surfaces** (disambiguation) | ALL CAPS with hyphen | **SELF-KNOWLEDGE** (identity-facing IX-A), **SELF-LIBRARY** (reference-facing `self-library.md`), **SELF** (identity + IX in `self.md`), **SELF-ARCHIVE** (gated approved log — `self-archive.md` § VIII; full EVIDENCE on disk) |
-| **On-disk paths** | Monospace, always lowercase filenames | `self.md`, `self-identity.md` (optional split surface), `self-library.md`, `self-evidence.md`, `self-archive.md` |
+| **On-disk paths** | Monospace, always lowercase filenames | `self.md`, `self-identity.md` (optional split surface), `self-library.md`, `self-evidence.md`, `self-archive.md`, `self-moonshots.md` (PMOS staging) |
 | **Planned WORK coordination** | Not part of companion self; same label shape as other `self-*` files | **`self-work`** → `users/[id]/self-work.md` (operator coordination; **not** SELF-KNOWLEDGE) |
 
 **Do not** use sentence case (**Self-voice**) or mixed-case (**Self-Knowledge**) for standard labels. **Voice** and **Record** remain capitalized when meaning the product interfaces (triadic cognition / triad), not as `self-voice` spelled with two capitals.
@@ -93,6 +93,7 @@ The **companion self** (the documented self + the self that companions) is compo
 | **self-archive** | `self-archive.md` (full file) | **EVIDENCE** — chronological, **multicategory** activity spine + § VIII gated approved (voice + non-voice) |
 | **self-library** | self-library.md | Curated return-to store of references, canon works, and influential media |
 | **self-memory** | self-memory.md | Short/medium/long continuity; **non-Record** and prunable (not “only session-length”); **chronological** prose; narrower than EVIDENCE / self-archive |
+| **self-moonshots** | self-moonshots.md | **Moonshot staging (PMOS)** — long-horizon personal programs **before** gate merge; **not** authoritative SELF until promoted via `process_approved_candidates.py`. See [moonshot-operating-model.md](moonshot-operating-model.md). |
 | **self-voice** | Voice / bot (e.g. bot/bot.py) | Queryable interface that speaks the Record when queried; renders self-skill-think, self-skill-write, and the rest of the companion self (including WORK/STEWARD split files when present) |
 
 **Adjacent but separate:** work territories and instance work contexts may use full LLM/tool capability and may produce artifacts or staged candidates, but they are not part of the self-skill taxonomy and do not automatically enter the Record.

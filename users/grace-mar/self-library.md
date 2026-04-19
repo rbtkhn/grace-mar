@@ -6,7 +6,7 @@ A governed retrieval substrate for reference-facing knowledge. Active entries sh
 
 **Schema:** [docs/library-schema.md](../../docs/library-schema.md)
 
-**Contents:** [Operator analytical books](#operator-analytical-books) · [Entries](#entries) · [Theology](#theology) · [Physics, chemistry & biology](#physics-chemistry--biology) · [History](#history) · [Computer Science](#computer-science) · [Metadata](#metadata)
+**Contents:** [Operator analytical books](#operator-analytical-books) · [Personal physical library](#personal-physical-library) · [Entries](#entries) · [Theology](#theology) · [Physics, chemistry & biology](#physics-chemistry--biology) · [History](#history) · [Computer Science](#computer-science) · [Metadata](#metadata)
 
 **Library-first preference:** [LIB-0149 — Predictive History](#operator-analytical-books) uses `lookup_priority: preferred` so it sorts **above** `high` in the analyst library summary (see [library-schema.md](../../docs/library-schema.md) · `lookup_priority`).
 
@@ -24,10 +24,22 @@ A governed retrieval substrate for reference-facing knowledge. Active entries sh
 | **LIB-0153** | Strategy notebook | [`docs/skill-work/work-strategy/strategy-notebook/README.md`](../../docs/skill-work/work-strategy/strategy-notebook/README.md) |
 | **LIB-0154** | Xavier journal | [`docs/skill-work/work-xavier/xavier-journal/README.md`](../../docs/skill-work/work-xavier/xavier-journal/README.md) |
 | **LIB-0155** | Dev journal | [`docs/skill-work/work-dev/dev-journal/README.md`](../../docs/skill-work/work-dev/dev-journal/README.md) |
-| **LIB-0156** | History notebook | [`docs/skill-work/work-strategy/history-notebook/README.md`](../../docs/skill-work/work-strategy/history-notebook/README.md) |
+| **LIB-0156** | History notebook — **operator-authored** `hn-*` chapters (deliverable) | [`docs/skill-work/work-strategy/history-notebook/README.md`](../../docs/skill-work/work-strategy/history-notebook/README.md) |
 | **LIB-0157** | Civilization Memory (upstream repository) | Local: [`research/repos/civilization_memory/`](../../research/repos/civilization_memory/README.md) · symlink: [`SELF-LIBRARY/civilization_memory`](SELF-LIBRARY/civilization_memory) |
 
 **Related (not on this shelf):** [LIB-0151](#entries) (YouTube transcript library) and [LIB-0152](#entries) (TCN curated transcript book) are **bundled channel books** — operator analytical, but listed under the YouTube subsection in **Entries**.
+
+---
+
+## Personal physical library
+
+**Purpose:** A **separate container** from [Operator analytical books](#operator-analytical-books). Here live **third-party books the operator physically owns** — cataloged as **`HNSRC-*`** seed rows for drafting and shelf order, **not** operator-authored corpora. SSOT: [`docs/skill-work/work-strategy/history-notebook/research/operator-source-catalog.yaml`](../../docs/skill-work/work-strategy/history-notebook/research/operator-source-catalog.yaml) + runbook [`OPERATOR-SOURCE-CATALOG.md`](../../docs/skill-work/work-strategy/history-notebook/research/OPERATOR-SOURCE-CATALOG.md). **Do not** tag these with **`shelf_intent: operator_book`** or **`scope: operator_analytical`**; use **[LIB-0158](#personal-physical-library)**.
+
+| ID | Title | SSOT |
+|----|--------|------|
+| **LIB-0158** | Personal history shelf (owned books catalog) | [`operator-source-catalog.yaml`](../../docs/skill-work/work-strategy/history-notebook/research/operator-source-catalog.yaml) · [runbook](../../docs/skill-work/work-strategy/history-notebook/research/OPERATOR-SOURCE-CATALOG.md) |
+
+**Contrast:** [LIB-0156](#operator-analytical-books) is the **History Notebook** project (your compressed **chapters**). [LIB-0158](#personal-physical-library) is the **owned print library** that **informs** those chapters.
 
 ---
 
@@ -104,6 +116,39 @@ entries:
     reviewed_at: 2026-04-16
     added_at: 2026-04-09
     notes: "Operator analytical book: work-dev integration and tooling learning log. WORK; not Record or Voice knowledge until gated. Contrast work-dev-history.md (milestones) vs narrative journal."
+
+  - id: LIB-0156
+    title: "History notebook"
+    author: "grace-mar"
+    lane: "reference"
+    type: "book"
+    status: "active"
+    shelf_intent: "operator_book"
+    operator_subtype: "operator_notebook"
+    engagement_status: "in_progress"
+    lookup_priority: "high"
+    scope: ["work_strategy", "history_notebook", "operator_analytical"]
+    source: "url"
+    url: "https://github.com/rbtkhn/grace-mar/blob/main/docs/skill-work/work-strategy/history-notebook/README.md"
+    reviewed_at: 2026-04-18
+    added_at: 2026-04-18
+    notes: "Operator analytical book: compressed civilizational chapters (hn-*), book-architecture.yaml SSOT. Distinct from LIB-0158 (third-party owned books in operator-source-catalog.yaml). WORK; not Record until gated."
+
+  - id: LIB-0158
+    title: "Personal history shelf (owned books catalog)"
+    author: "operator"
+    lane: "reference"
+    type: "reference"
+    status: "active"
+    shelf_intent: "working_reference"
+    engagement_status: "recurring"
+    lookup_priority: "medium"
+    scope: ["personal_library", "history", "work_strategy", "physical_shelf", "HNSRC"]
+    source: "url"
+    url: "https://github.com/rbtkhn/grace-mar/blob/main/docs/skill-work/work-strategy/history-notebook/research/operator-source-catalog.yaml"
+    reviewed_at: 2026-04-18
+    added_at: 2026-04-18
+    notes: "Third-party print books the operator owns; HNSRC-* rows in operator-source-catalog.yaml. Separate from operator_analytical shelf (LIB-0149, LIB-0153, LIB-0156, …). Informs History Notebook drafting; not companion Record. Runbook: OPERATOR-SOURCE-CATALOG.md."
 
   - id: LIB-0157
     title: "Civilization Memory (upstream repository)"

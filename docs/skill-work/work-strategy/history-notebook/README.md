@@ -1,6 +1,6 @@
 # History Notebook
 
-**Discoverability:** Linked from **`users/grace-mar/SELF-LIBRARY/history-notebook`** (repo-relative symlink when created). **LIB:** [LIB-0156](../../../../users/grace-mar/self-library.md#operator-analytical-books) in [`self-library.md`](../../../../users/grace-mar/self-library.md) (Operator analytical books).
+**Discoverability:** Linked from **`users/grace-mar/SELF-LIBRARY/history-notebook`** (repo-relative symlink when created). **LIB:** [LIB-0156](../../../../users/grace-mar/self-library.md#operator-analytical-books) (operator-authored chapters) · [LIB-0158](../../../../users/grace-mar/self-library.md#personal-physical-library) (owned print catalog `HNSRC-*`) in [`self-library.md`](../../../../users/grace-mar/self-library.md).
 
 **Operator-authored compressed chapters** distilling civilizational patterns into strategy-ready reference. Five temporal volumes; **target 20 chapters per volume (100 main-era chapters)**; each chapter ~500–1000 words. Not a mirror of CIV-MEM — an independent analytical layer the operator writes and the agent reads.
 

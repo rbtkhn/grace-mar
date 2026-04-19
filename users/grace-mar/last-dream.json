@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-18T06:17:45.756330+00:00",
+  "generated_at": "2026-04-19T05:14:36.405353+00:00",
   "user_id": "grace-mar",
   "agent_surface": {
     "cursor_model": "unknown"
@@ -29,19 +29,19 @@
     }
   },
   "coffee_rollup_24h": {
-    "window_start_utc": "2026-04-17T06:17:41.423539+00:00",
-    "window_end_utc": "2026-04-18T06:17:41.423539+00:00",
+    "window_start_utc": "2026-04-18T05:14:29.345158+00:00",
+    "window_end_utc": "2026-04-19T05:14:29.345158+00:00",
     "window_hours": 24.0,
-    "count": 5,
-    "first_ts": "2026-04-17T12:26:00+00:00",
-    "last_ts": "2026-04-17T22:11:00+00:00",
-    "span_hours": 9.75,
+    "count": 4,
+    "first_ts": "2026-04-18T13:04:00+00:00",
+    "last_ts": "2026-04-19T02:04:00+00:00",
+    "span_hours": 13.0,
     "by_mode": {
-      "work-start": 5
+      "work-start": 4
     },
     "runs": [
       {
-        "ts_iso": "2026-04-17T12:26:00+00:00",
+        "ts_iso": "2026-04-18T13:04:00+00:00",
         "ok": true,
         "mode": "work-start",
         "kv": {
@@ -50,7 +50,7 @@
         }
       },
       {
-        "ts_iso": "2026-04-17T15:04:00+00:00",
+        "ts_iso": "2026-04-18T14:05:00+00:00",
         "ok": true,
         "mode": "work-start",
         "kv": {
@@ -59,7 +59,7 @@
         }
       },
       {
-        "ts_iso": "2026-04-17T19:19:00+00:00",
+        "ts_iso": "2026-04-18T17:34:00+00:00",
         "ok": true,
         "mode": "work-start",
         "kv": {
@@ -68,16 +68,7 @@
         }
       },
       {
-        "ts_iso": "2026-04-17T20:21:00+00:00",
-        "ok": true,
-        "mode": "work-start",
-        "kv": {
-          "cursor_model": "unknown",
-          "model_tier": "unknown"
-        }
-      },
-      {
-        "ts_iso": "2026-04-17T22:11:00+00:00",
+        "ts_iso": "2026-04-19T02:04:00+00:00",
         "ok": true,
         "mode": "work-start",
         "kv": {
@@ -86,26 +77,8 @@
         }
       }
     ],
-    "picks": [
-      {
-        "ts_iso": "2026-04-17T15:16:00+00:00",
-        "picked": "B",
-        "steward": "template"
-      },
-      {
-        "ts_iso": "2026-04-17T22:24:00+00:00",
-        "picked": "B",
-        "steward": "template"
-      },
-      {
-        "ts_iso": "2026-04-17T22:26:00+00:00",
-        "picked": "C"
-      }
-    ],
-    "by_picked": {
-      "B": 2,
-      "C": 1
-    }
+    "picks": [],
+    "by_picked": {}
   },
   "execution_paths": [
     {
@@ -113,9 +86,7 @@
       "title": "Daily Brief (generator + watch slices; optional KY-4 intel when chosen)",
       "first_move": "python3 scripts/operator_coffee.py -u grace-mar \u2014 then coffee menu C \u2014 Strategy (daily brief)",
       "stop_rule": "One slice: daily brief path opened or optional intel pass started \u2014 enough for first block.",
-      "signals_used": [
-        "reentry_heavy"
-      ]
+      "signals_used": []
     },
     {
       "id": "build",
@@ -132,9 +103,9 @@
       "signals_used": []
     }
   ],
-  "suggested_execution_path_index": 0,
+  "suggested_execution_path_index": 1,
   "execution_path_suggestion_reason": "calendar_mod3",
-  "tomorrow_inherits": "Tomorrow inherits (hint): **Daily Brief (generator + watch slices; optional KY-4 intel when chosen)** \u2014 calendar rotation; not policy or Record.",
+  "tomorrow_inherits": "Tomorrow inherits (hint): **Build / integrate (repo + work-dev)** \u2014 calendar rotation; not policy or Record.",
   "civmem_echoes": [
     {
       "path": "book/APPLIED-THEOLOGY-INSIGHTS-MERCOURIS-LENS.md",
@@ -170,7 +141,7 @@
   "dream_catchup": {
     "semantics": "since_previous_dream",
     "timezone": "UTC",
-    "previous_dream_generated_at": "2026-04-18T06:14:13.439591+00:00",
+    "previous_dream_generated_at": "2026-04-19T05:14:09.334867+00:00",
     "local_calendar_dates": [],
     "strategy_notebook_missing_day_headers": []
   },

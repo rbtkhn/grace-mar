@@ -243,7 +243,6 @@ Pins keep **Glenn Diesen**’s **PH vi-14** lane and the **Glenn Diesen × Jeffr
 
 Optional keys (omit if unused): `clusters` (list of strings), `patterns` (list of strings), `note` (string).
 <!-- strategy-page:end -->
-
 <!-- strategy-expert-thread:start -->
 ## Machine layer — Extraction (script-maintained)
 

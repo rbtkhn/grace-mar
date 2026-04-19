@@ -1037,6 +1037,7 @@ WORK only; not Record.
     Larry Johnson: All right, my brother. We’ll see you later
 
 
+
 ## 2026-04-17
 
 - YT | cold: **Daniel Davis** × **Larry Johnson** — *HORMUZ OPENING, CEASEFIRE ENDING: Conflicting Messages* — dual-register Trump TS vs IRI Lebanon/Hormuz conditions; Bessent sanctions; military “WTF”; three-option endgame; Johnson strong C-plane on Trump // hook: stack 04-17 §1h + Ritter Diesen Iran segment — seams not one Judgment | https://www.youtube.com/watch?v=TBD-davis-johnson-hormuz-2026-04-17 | verify:operator-transcript+pin-canonical-URL+aired:2026-04-17+Truth-Social-primary | thread:johnson | grep:Hormuz+Johnson+Davis+blockade+Bessent

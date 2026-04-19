@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-04-18T17:29:21.344037+00:00",
-  "count": 30,
+  "generated_at": "2026-04-19T04:23:24.941088+00:00",
+  "count": 35,
   "batch_analysis_refs": [
     {
       "date": "2026-04-17",
-      "label": "Davis \u00d7 Johnson (YT) \u2014 **Hormuz** **dual-register** **\u00d7** **Bessent** **\u00d7** **three-option** **scaffold**",
-      "raw": "- batch-analysis | 2026-04-17 | Davis \u00d7 Johnson (YT) \u2014 **Hormuz** **dual-register** **\u00d7** **Bessent** **\u00d7** **three-option** **scaffold** | **Tension-first:** **Same-day** **stack** **as** **@araghchi** **/** **Marandi** **/** **Trump** **TS** **\u2014** **Davis** **hosts** **structured** **read** **(open** **vs** **blockade,** **Lebanon** **linkage,** **IFM** **three** **conditions);** **Johnson** **adds** **military** **WTF,** **Malacca** **reject,** **Islamabad**/**China** **angle,** **maximal** **C-plane** **on** **Trump** **\u2014** **label** **analyst** **hyperbole** **vs** **\u00a71h.** **Cross** **Ritter** **04-17** **Iran** **ego/theater** **segment** **with** **explicit** **seam.** **Falsifiers:** **pinned** **TS** **text,** **MFA** **spokesman** **URL,** **Bessent** **/ Treasury** **primary,** **Marine** **ration** **claims.** | crosses:johnson+davis",
+      "label": "Davis × Johnson (YT) — **Hormuz** **dual-register** **×** **Bessent** **×** **three-option** **scaffold**",
+      "raw": "- batch-analysis | 2026-04-17 | Davis × Johnson (YT) — **Hormuz** **dual-register** **×** **Bessent** **×** **three-option** **scaffold** | **Tension-first:** **Same-day** **stack** **as** **@araghchi** **/** **Marandi** **/** **Trump** **TS** **—** **Davis** **hosts** **structured** **read** **(open** **vs** **blockade,** **Lebanon** **linkage,** **IFM** **three** **conditions);** **Johnson** **adds** **military** **WTF,** **Malacca** **reject,** **Islamabad**/**China** **angle,** **maximal** **C-plane** **on** **Trump** **—** **label** **analyst** **hyperbole** **vs** **§1h.** **Cross** **Ritter** **04-17** **Iran** **ego/theater** **segment** **with** **explicit** **seam.** **Falsifiers:** **pinned** **TS** **text,** **MFA** **spokesman** **URL,** **Bessent** **/ Treasury** **primary,** **Marine** **ration** **claims.** | crosses:johnson+davis",
       "expert_ids": [
         "johnson",
         "davis",
@@ -30,8 +30,8 @@
     },
     {
       "date": "2026-04-17",
-      "label": "Ritter \u00d7 Diesen \u2014 **Baltic** **/ MoD** **list** **\u00d7** **NATO** **liability** **\u00d7** **Iran** **carryover**",
-      "raw": "- batch-analysis | 2026-04-17 | Ritter \u00d7 Diesen \u2014 **Baltic** **/ MoD** **list** **\u00d7** **NATO** **liability** **\u00d7** **Iran** **carryover** | **Tension-first:** **Same** **`ritter`** **lane** **as** **04-10\u201304-15** **Hormuz** **/** **Islamabad** **threads** **but** **Europe** **theater** **load-bearing** **here** **(proxy** **acknowledgment,** **Article** **5** **read,** **\u201cdecisive** **strike\u201d** **forecast).** **Cross-theater:** **Islamabad** **MOU** **/ Hormuz** **\u201cselective** **open\u201d** **claims** **stack** **prior** **Ritter** **ingests** **\u2014** **do** **not** **merge** **dock** **facts** **with** **Baltic** **strike** **hypothesis** **without** **labeled** **seam.** **Falsifiers:** **Russian** **kinetic** **follow-through** **(wires),** **NATO** **Council** **text,** **U.S.** **executive** **statements,** **IEA** **aviation-fuel** **claim.** | crosses:ritter+diesen",
+      "label": "Ritter × Diesen — **Baltic** **/ MoD** **list** **×** **NATO** **liability** **×** **Iran** **carryover**",
+      "raw": "- batch-analysis | 2026-04-17 | Ritter × Diesen — **Baltic** **/ MoD** **list** **×** **NATO** **liability** **×** **Iran** **carryover** | **Tension-first:** **Same** **`ritter`** **lane** **as** **04-10–04-15** **Hormuz** **/** **Islamabad** **threads** **but** **Europe** **theater** **load-bearing** **here** **(proxy** **acknowledgment,** **Article** **5** **read,** **“decisive** **strike”** **forecast).** **Cross-theater:** **Islamabad** **MOU** **/ Hormuz** **“selective** **open”** **claims** **stack** **prior** **Ritter** **ingests** **—** **do** **not** **merge** **dock** **facts** **with** **Baltic** **strike** **hypothesis** **without** **labeled** **seam.** **Falsifiers:** **Russian** **kinetic** **follow-through** **(wires),** **NATO** **Council** **text,** **U.S.** **executive** **statements,** **IEA** **aviation-fuel** **claim.** | crosses:ritter+diesen",
       "expert_ids": [
         "ritter",
         "diesen"
@@ -49,8 +49,8 @@
     },
     {
       "date": "2026-04-17",
-      "label": "Ritter \u00d7 Marandi \u00d7 Davis \u2014 **three** **`thread:`** **planes** **+** **\u00a71h**",
-      "raw": "- batch-analysis | 2026-04-17 | Ritter \u00d7 Marandi \u00d7 Davis \u2014 **three** **`thread:`** **planes** **+** **\u00a71h** | **Tension-first:** **Marandi** **04-17** **X** **gloss** **vs** **Araghchi** **(dual-register** **IRI);** **Davis** **04-17** **(Araghchi** **QT** **+** **TS)** **=** **U.S.** **process** **/** **ultimatum** **clock;** **Ritter** **04-17** **Diesen** **=** **Baltic** **/** **NATO** **+** **Islamabad** **carryover** **\u2014** **do** **not** **merge** **into** **one** **Judgment** **without** **seams** **(folded** **[`days.md`](chapters/2026-04/days.md#2026-04-17)** **Weave** **bullet).** **`crosses:`** **N/A** **(three** **experts** **+** **state** **primary)** \u2014 **use** **knot** **[marandi-ritter-mercouris-hormuz-scaffold](strategy-notebook-knot-2026-04-13-marandi-ritter-mercouris-hormuz-scaffold.md)** **for** **lattice.**",
+      "label": "Ritter × Marandi × Davis — **three** **`thread:`** **planes** **+** **§1h**",
+      "raw": "- batch-analysis | 2026-04-17 | Ritter × Marandi × Davis — **three** **`thread:`** **planes** **+** **§1h** | **Tension-first:** **Marandi** **04-17** **X** **gloss** **vs** **Araghchi** **(dual-register** **IRI);** **Davis** **04-17** **(Araghchi** **QT** **+** **TS)** **=** **U.S.** **process** **/** **ultimatum** **clock;** **Ritter** **04-17** **Diesen** **=** **Baltic** **/** **NATO** **+** **Islamabad** **carryover** **—** **do** **not** **merge** **into** **one** **Judgment** **without** **seams** **(folded** **[`days.md`](chapters/2026-04/days.md#2026-04-17)** **Weave** **bullet).** **`crosses:`** **N/A** **(three** **experts** **+** **state** **primary)** — **use** **knot** **[marandi-ritter-mercouris-hormuz-scaffold](strategy-notebook-knot-2026-04-13-marandi-ritter-mercouris-hormuz-scaffold.md)** **for** **lattice.**",
       "expert_ids": [
         "marandi",
         "davis",
@@ -71,8 +71,8 @@
     },
     {
       "date": "2026-04-17",
-      "label": "Davis \u00d7 Araghchi \u00d7 Trump TS",
-      "raw": "- batch-analysis | 2026-04-17 | Davis \u00d7 Araghchi \u00d7 Trump TS | **Tension-first:** IRI **signals** Hormuz **open** for ceasefire remainder vs **U.S. executive** **maximalist** reply **same day** \u2014 **sequenced bargaining**, not necessarily **monotonic** **Oman** **momentum** from \u00a71f paste. **Davis** = restraint / **negotiation-window** analyst \u2014 routes to **Mearsheimer** (**incentives**) + **Mercouris** (**staging**) overlaps in [strategy-expert-davis-thread.md](strategy-expert-davis-thread.md); **does not** replace **\u00a71h** / **\u00a71e** primaries.",
+      "label": "Davis × Araghchi × Trump TS",
+      "raw": "- batch-analysis | 2026-04-17 | Davis × Araghchi × Trump TS | **Tension-first:** IRI **signals** Hormuz **open** for ceasefire remainder vs **U.S. executive** **maximalist** reply **same day** — **sequenced bargaining**, not necessarily **monotonic** **Oman** **momentum** from §1f paste. **Davis** = restraint / **negotiation-window** analyst — routes to **Mearsheimer** (**incentives**) + **Mercouris** (**staging**) overlaps in [strategy-expert-davis-thread.md](strategy-expert-davis-thread.md); **does not** replace **§1h** / **§1e** primaries.",
       "expert_ids": [
         "davis",
         "mearsheimer",
@@ -93,15 +93,15 @@
     {
       "date": "2026-04-17",
       "label": "**Pool vs Truth Social (dual-register)**",
-      "raw": "- batch-analysis | 2026-04-17 | **Pool vs Truth Social (dual-register)** | **Tension-first:** Wire **pool** remarks **04-17** (e.g. **Moneycontrol** on **uranium** / \u201c**nuclear dust**\u201d / deal **optimism**) **\u2260** authenticated **Truth Social** **maximalist** embed \u2014 **do not** merge into one **U.S. position** in Judgment without **both** primaries + explicit **seam**; see [daily-brief-2026-04-17.md \u2014 strategy + verify](../daily-brief-2026-04-17.md#strategy-verify-2026-04-17).",
+      "raw": "- batch-analysis | 2026-04-17 | **Pool vs Truth Social (dual-register)** | **Tension-first:** Wire **pool** remarks **04-17** (e.g. **Moneycontrol** on **uranium** / “**nuclear dust**” / deal **optimism**) **≠** authenticated **Truth Social** **maximalist** embed — **do not** merge into one **U.S. position** in Judgment without **both** primaries + explicit **seam**; see [daily-brief-2026-04-17.md — strategy + verify](../daily-brief-2026-04-17.md#strategy-verify-2026-04-17).",
       "expert_ids": [],
       "confidence": "none",
       "sources": {}
     },
     {
       "date": "2026-04-17",
-      "label": "**Marandi X \u00d7 Araghchi \u00d7 tri-mind (`ab+c`) seam**",
-      "raw": "- batch-analysis | 2026-04-17 | **Marandi X \u00d7 Araghchi \u00d7 tri-mind (`ab+c`) seam** | **Dual-register (IRI):** **\u00a71h / @araghchi** \u201copen\u2026\u201d = **MFA signal**; **@s_m_marandi** three conditions = **gloss** \u2014 same object, **two tiers** (do not one-line merge for Links-grade). **QT:** quoted block = **Araghchi**; text above = **Marandi** \u2014 tier-tag each. **Lebanon \u2194 Strait:** *ceasefire durability load-bearing for how \u201copen\u201d is read by markets/insurers, not necessarily same-hour naval physics.* **Global economy** line = rhetorical pressure until receipts. See [strategy-expert-marandi-thread.md](strategy-expert-marandi-thread.md) \u00a7 **Tri-mind resolution**.",
+      "label": "**Marandi X × Araghchi × tri-mind (`ab+c`) seam**",
+      "raw": "- batch-analysis | 2026-04-17 | **Marandi X × Araghchi × tri-mind (`ab+c`) seam** | **Dual-register (IRI):** **§1h / @araghchi** “open…” = **MFA signal**; **@s_m_marandi** three conditions = **gloss** — same object, **two tiers** (do not one-line merge for Links-grade). **QT:** quoted block = **Araghchi**; text above = **Marandi** — tier-tag each. **Lebanon ↔ Strait:** *ceasefire durability load-bearing for how “open” is read by markets/insurers, not necessarily same-hour naval physics.* **Global economy** line = rhetorical pressure until receipts. See [strategy-expert-marandi-thread.md](strategy-expert-marandi-thread.md) § **Tri-mind resolution**.",
       "expert_ids": [
         "marandi"
       ],
@@ -117,16 +117,16 @@
     },
     {
       "date": "2026-04-17",
-      "label": "**Ghalibaf X \u00d7 @araghchi FM (dual-register \u00a71h)**",
-      "raw": "- batch-analysis | 2026-04-17 | **Ghalibaf X \u00d7 @araghchi FM (dual-register \u00a71h)** | **Tension-first:** **Majlis** **speaker** **coercion** **/ route-authorization** **frame** **vs** **MFA** **ceasefire-window** **\u201copen\u201d** **on** **PMO** **coordinated** **route** **\u2014** **same** **day,** **different** **institutional** **weight** **and** **audience.** **Do** **not** **collapse** **into** **one** **\u201cIran** **says\u201d** **line** **for** **Links** **until** **primaries** **pair** **(Persian** **+** **X** **URLs).** **Desk** **English** **(NDTV** **etc.)** **=** **hypothesis** **until** **pinned.**",
+      "label": "**Ghalibaf X × @araghchi FM (dual-register §1h)**",
+      "raw": "- batch-analysis | 2026-04-17 | **Ghalibaf X × @araghchi FM (dual-register §1h)** | **Tension-first:** **Majlis** **speaker** **coercion** **/ route-authorization** **frame** **vs** **MFA** **ceasefire-window** **“open”** **on** **PMO** **coordinated** **route** **—** **same** **day,** **different** **institutional** **weight** **and** **audience.** **Do** **not** **collapse** **into** **one** **“Iran** **says”** **line** **for** **Links** **until** **primaries** **pair** **(Persian** **+** **X** **URLs).** **Desk** **English** **(NDTV** **etc.)** **=** **hypothesis** **until** **pinned.**",
       "expert_ids": [],
       "confidence": "none",
       "sources": {}
     },
     {
       "date": "2026-04-17",
-      "label": "**Parsi X \u00d7 Marandi (04-17 X + 04-16 BP)**",
-      "raw": "- batch-analysis | 2026-04-17 | **Parsi X \u00d7 Marandi (04-17 X + 04-16 BP)** | **Tension-first:** **`parsi`** = Quincy **process** read (Pakistan-mediated **framework** timing, **Israeli sabotage** of US\u2013Iran reconciliation, **Trump\u2013Netanyahu** leverage, optional **\u201cIran saved Lebanon\u201d** narrative). **`marandi`** = Tehran **insider** + **Breaking Points** (04-16): **Islamabad** authority, **Netanyahu**/lobby **block**, **Hormuz** / economy, **Lebanon** **moral** frame; **04-17** Marandi X = **gloss** on **@araghchi** (already batched above) \u2014 **third** register vs Parsi **Beltway** fourth-party synthesis. **Shared:** spoiler pressure on **Netanyahu** and **U.S. enforcement** credibility \u2014 **do not** fuse voices. | crosses:parsi+marandi",
+      "label": "**Parsi X × Marandi (04-17 X + 04-16 BP)**",
+      "raw": "- batch-analysis | 2026-04-17 | **Parsi X × Marandi (04-17 X + 04-16 BP)** | **Tension-first:** **`parsi`** = Quincy **process** read (Pakistan-mediated **framework** timing, **Israeli sabotage** of US–Iran reconciliation, **Trump–Netanyahu** leverage, optional **“Iran saved Lebanon”** narrative). **`marandi`** = Tehran **insider** + **Breaking Points** (04-16): **Islamabad** authority, **Netanyahu**/lobby **block**, **Hormuz** / economy, **Lebanon** **moral** frame; **04-17** Marandi X = **gloss** on **@araghchi** (already batched above) — **third** register vs Parsi **Beltway** fourth-party synthesis. **Shared:** spoiler pressure on **Netanyahu** and **U.S. enforcement** credibility — **do not** fuse voices. | crosses:parsi+marandi",
       "expert_ids": [
         "parsi",
         "marandi",
@@ -145,9 +145,45 @@
       }
     },
     {
+      "date": "2026-04-18",
+      "label": "**Freeman × Diesen (YT) × Hormuz week stack**",
+      "raw": "- batch-analysis | 2026-04-18 | **Freeman × Diesen (YT) × Hormuz week stack** | **Tension-first:** **`thread:freeman`** **career-diplomat** **staging** (**door/padlock**, **Islamabad** **performative**, **China** **/ Pakistan** **/ Lebanon** **long** **segments**) — **not** **wire** **ORBAT**. **Cross** **`marandi`** **(Tehran** **register),** **`barnes`** **(White** **House** **/ Vance** **/ Witkoff–Kushner),** **`davis`/`mearsheimer`** **(channel** **geometry),** **`mercouris`** **(institutional** **tickers),** **`parsi`** **(Beltway** **process)** — **explicit** **seams**; **quant** **(**barrels,** **crew** **reports,** **pipeline** **repair)** **verify-first**. | crosses:freeman+diesen(host-not-thread)",
+      "expert_ids": [
+        "freeman",
+        "diesen",
+        "marandi",
+        "barnes",
+        "davis",
+        "mearsheimer",
+        "mercouris",
+        "parsi"
+      ],
+      "confidence": "high",
+      "sources": {
+        "crosses": [
+          "freeman",
+          "diesen"
+        ],
+        "thread_in_line": [
+          "freeman"
+        ],
+        "alias_match": [
+          "marandi",
+          "barnes",
+          "davis",
+          "mearsheimer",
+          "mercouris",
+          "parsi"
+        ],
+        "upstream_verify": [
+          "freeman"
+        ]
+      }
+    },
+    {
       "date": "2026-04-17",
-      "label": "**Freeman Grayzone \u00d7 tri-mind (`ab+c`) resolve \u00d7 same-day stack**",
-      "raw": "- batch-analysis | 2026-04-17 | **Freeman Grayzone \u00d7 tri-mind (`ab+c`) resolve \u00d7 same-day stack** | **Seam:** Freeman = **monologue** (**staging** + **incentives** + **enforceability**) \u2014 **not** wire, **not** **\u00a71h**. **Resolve** rules in [strategy-expert-freeman-thread.md](strategy-expert-freeman-thread.md) \u00a7 **Tri-mind resolution**. **Cross** `parsi` + `marandi` + `@araghchi` **primary** \u2014 **four** **tiers**; **quant** claims (**flights**, **barrels**, **redirects**, **reserves**) **verify-first** before Judgment.",
+      "label": "**Freeman Grayzone × tri-mind (`ab+c`) resolve × same-day stack**",
+      "raw": "- batch-analysis | 2026-04-17 | **Freeman Grayzone × tri-mind (`ab+c`) resolve × same-day stack** | **Seam:** Freeman = **monologue** (**staging** + **incentives** + **enforceability**) — **not** wire, **not** **§1h**. **Resolve** rules in [strategy-expert-freeman-thread.md](strategy-expert-freeman-thread.md) § **Tri-mind resolution**. **Cross** `parsi` + `marandi` + `@araghchi` **primary** — **four** **tiers**; **quant** claims (**flights**, **barrels**, **redirects**, **reserves**) **verify-first** before Judgment.",
       "expert_ids": [
         "freeman",
         "parsi",
@@ -159,16 +195,13 @@
           "freeman",
           "parsi",
           "marandi"
-        ],
-        "upstream_verify": [
-          "freeman"
         ]
       }
     },
     {
       "date": "2026-04-17",
-      "label": "**Parsi \u00d7 Ritter \u00d7 Pape \u2014 AIS vs SAR vs policy**",
-      "raw": "- batch-analysis | 2026-04-17 | **Parsi \u00d7 Ritter \u00d7 Pape \u2014 AIS vs SAR vs policy** | **Tension-first:** **`parsi`** = **sanctions / diplomacy / spoiler** incentives \u2014 whether \u201copen strait\u201d **policy** lines up with **compliance** and **charter** reality. **`ritter`** = **naval / blockade / throughput** discourse \u2014 **sensor split**: **AIS** suppression or routing \u2260 proven **closure** vs **SAR** / alternate sensing. **`pape`** = **escalation economics** \u2014 **shock calendars**, blockade **pain staging**, **domestic lock-in** vs crude market reads. **Do not** merge viral **daily-count** cells with **Windward** SAR narrative without **definition** alignment and **primary** export. **Threads:** [strategy-expert-parsi-thread.md](strategy-expert-parsi-thread.md), [strategy-expert-ritter-thread.md](strategy-expert-ritter-thread.md), [strategy-expert-pape-thread.md](strategy-expert-pape-thread.md) \u2014 synthetic **three-way** batch (**no** `crosses:` triple in schema; grep **membership** by expert ids in prose).",
+      "label": "**Parsi × Ritter × Pape — AIS vs SAR vs policy**",
+      "raw": "- batch-analysis | 2026-04-17 | **Parsi × Ritter × Pape — AIS vs SAR vs policy** | **Tension-first:** **`parsi`** = **sanctions / diplomacy / spoiler** incentives — whether “open strait” **policy** lines up with **compliance** and **charter** reality. **`ritter`** = **naval / blockade / throughput** discourse — **sensor split**: **AIS** suppression or routing ≠ proven **closure** vs **SAR** / alternate sensing. **`pape`** = **escalation economics** — **shock calendars**, blockade **pain staging**, **domestic lock-in** vs crude market reads. **Do not** merge viral **daily-count** cells with **Windward** SAR narrative without **definition** alignment and **primary** export. **Threads:** [strategy-expert-parsi-thread.md](strategy-expert-parsi-thread.md), [strategy-expert-ritter-thread.md](strategy-expert-ritter-thread.md), [strategy-expert-pape-thread.md](strategy-expert-pape-thread.md) — synthetic **three-way** batch (**no** `crosses:` triple in schema; grep **membership** by expert ids in prose).",
       "expert_ids": [
         "parsi",
         "ritter",
@@ -185,8 +218,8 @@
     },
     {
       "date": "2026-04-17",
-      "label": "**Barnes \u00d7 Johnson (YT) \u2014 US politics room \u00d7 Iran week**",
-      "raw": "- batch-analysis | 2026-04-17 | **Barnes \u00d7 Johnson (YT) \u2014 US politics room \u00d7 Iran week** | **Tension-first:** **`thread:barnes`** **long-form** **domestic-liability** **+** **White** **House** **process** **(C-plane** **hypothesis)** **\u2014** **not** **\u00a71e** **text** **and** **not** **Pentagon** **primary.** **Same** **calendar** **day** **as** **Hormuz** **/** **Islamabad** **expert** **stack** **\u2014** **cross** **`thread:davis`**, **`thread:johnson`** **(Davis** **\u00d7** **Johnson** **earlier** **YT),** **`thread:ritter`** **with** **explicit** **plane** **tags** **(room** **vs** **ORBAT** **vs** **FM).** **Falsifiers:** **named** **official** **statements,** **vote** **counts,** **Navy** **press,** **TS** **screenshots.** | crosses:barnes+johnson",
+      "label": "**Barnes × Johnson (YT) — US politics room × Iran week**",
+      "raw": "- batch-analysis | 2026-04-17 | **Barnes × Johnson (YT) — US politics room × Iran week** | **Tension-first:** **`thread:barnes`** **long-form** **domestic-liability** **+** **White** **House** **process** **(C-plane** **hypothesis)** **—** **not** **§1e** **text** **and** **not** **Pentagon** **primary.** **Same** **calendar** **day** **as** **Hormuz** **/** **Islamabad** **expert** **stack** **—** **cross** **`thread:davis`**, **`thread:johnson`** **(Davis** **×** **Johnson** **earlier** **YT),** **`thread:ritter`** **with** **explicit** **plane** **tags** **(room** **vs** **ORBAT** **vs** **FM).** **Falsifiers:** **named** **official** **statements,** **vote** **counts,** **Navy** **press,** **TS** **screenshots.** | crosses:barnes+johnson",
       "expert_ids": [
         "barnes",
         "johnson",
@@ -212,8 +245,8 @@
     },
     {
       "date": "2026-04-17",
-      "label": "**Pape X \u2014 04-14 Lebanon fork \u00d7 04-17 truce / NYT power thesis**",
-      "raw": "- batch-analysis | 2026-04-17 | **Pape X \u2014 04-14 Lebanon fork \u00d7 04-17 truce / NYT power thesis** | **Tension-first:** **04-14** indexed ingest = **downside** / **civil-war** fork + **AP** Washington talks **seam**; **04-17** = **settlement / power-shift** read + **NYT** secondary thesis Pape spotlights \u2014 use **dated evolution**, not silent merge. **Homophone risk:** Janssen **04-16** **\u201cfourth center\u201d** (negotiation fork) \u2260 NYT headline **\u201cmajor world power\u201d** / **\u201c4th\u201d** \u2014 **do not** equate in Judgment. **Membership:** `thread:pape` only.",
+      "label": "**Pape X — 04-14 Lebanon fork × 04-17 truce / NYT power thesis**",
+      "raw": "- batch-analysis | 2026-04-17 | **Pape X — 04-14 Lebanon fork × 04-17 truce / NYT power thesis** | **Tension-first:** **04-14** indexed ingest = **downside** / **civil-war** fork + **AP** Washington talks **seam**; **04-17** = **settlement / power-shift** read + **NYT** secondary thesis Pape spotlights — use **dated evolution**, not silent merge. **Homophone risk:** Janssen **04-16** **“fourth center”** (negotiation fork) ≠ NYT headline **“major world power”** / **“4th”** — **do not** equate in Judgment. **Membership:** `thread:pape` only.",
       "expert_ids": [
         "pape"
       ],
@@ -229,8 +262,8 @@
     },
     {
       "date": "2026-04-16",
-      "label": "Marandi BP 04-16 \u00d7 04-13 scaffold",
-      "raw": "- batch-analysis | 2026-04-16 | Marandi BP 04-16 \u00d7 04-13 scaffold | **Tension-first:** Iranian **process** and **moral-historical** register (Islamabad authority vs Vance channel, school/synagogue/Gaza\u2013Lebanon frames) vs **Ritter-class** **USN** / **interdiction** facts and **wire-tier** throughput \u2014 **do not** merge lanes. **Weak bridge:** same **Hormuz** / **Islamabad** / **Lebanon** object as **Mercouris** narrative surface \u2014 **verify** still splits **speech** from **AIS** / **DOD** readouts.",
+      "label": "Marandi BP 04-16 × 04-13 scaffold",
+      "raw": "- batch-analysis | 2026-04-16 | Marandi BP 04-16 × 04-13 scaffold | **Tension-first:** Iranian **process** and **moral-historical** register (Islamabad authority vs Vance channel, school/synagogue/Gaza–Lebanon frames) vs **Ritter-class** **USN** / **interdiction** facts and **wire-tier** throughput — **do not** merge lanes. **Weak bridge:** same **Hormuz** / **Islamabad** / **Lebanon** object as **Mercouris** narrative surface — **verify** still splits **speech** from **AIS** / **DOD** readouts.",
       "expert_ids": [
         "ritter",
         "mercouris",
@@ -249,8 +282,8 @@
     },
     {
       "date": "2026-04-14",
-      "label": "Armstrong cash \u00d7 Gulf fertilizer \u00d7 U.S. digital-dollar law",
-      "raw": "`batch-analysis | 2026-04-14 | Armstrong cash \u00d7 Gulf fertilizer \u00d7 U.S. digital-dollar law | **Tension-first:** Social graphics mix physical cash, bank money, stablecoins, and a hypothetical Fed-issued retail digital dollar into one \u201cdigital\u201d threat; statute still treats payment-stablecoin frameworks and anti-retail-central-bank-digital-currency restrictions as different objects. Gulf-origin seaborne fertilizer share (Statista citing Signal Group) is not interchangeable with a \u201cpercent through Hormuz\u201d shipping claim. **Orthogonal** to the same-day Hormuz expert lattice (Scott Ritter blockade weave). **Weak bridge:** food-price fear and money-control fear can rise together without sharing one causal graph.`",
+      "label": "Armstrong cash × Gulf fertilizer × U.S. digital-dollar law",
+      "raw": "`batch-analysis | 2026-04-14 | Armstrong cash × Gulf fertilizer × U.S. digital-dollar law | **Tension-first:** Social graphics mix physical cash, bank money, stablecoins, and a hypothetical Fed-issued retail digital dollar into one “digital” threat; statute still treats payment-stablecoin frameworks and anti-retail-central-bank-digital-currency restrictions as different objects. Gulf-origin seaborne fertilizer share (Statista citing Signal Group) is not interchangeable with a “percent through Hormuz” shipping claim. **Orthogonal** to the same-day Hormuz expert lattice (Scott Ritter blockade weave). **Weak bridge:** food-price fear and money-control fear can rise together without sharing one causal graph.`",
       "expert_ids": [
         "ritter",
         "mercouris"
@@ -267,16 +300,16 @@
     },
     {
       "date": "2026-04-15",
-      "label": "\u00a71d Kremlin + \u00a71h IRI MFA (uranium off-ramp)",
-      "raw": "`batch-analysis | 2026-04-15 | \u00a71d Kremlin + \u00a71h IRI MFA (uranium off-ramp) | **Tension-first:** Kremlin offers concrete **mechanism** (fuel-grade conversion or custody in Russia \u2014 2015 precedent); IRI MFA says enrichment **right** is NPT-grounded, level/type \"open to discussion\" \u2014 these two positions are **compatible in principle** but **test against** US \"affirmative commitment\" demand (Vance pre-talk framing). **Do not** treat Kremlin offer as IRI acceptance or US acquiescence \u2014 three parties, three positions. **Weak bridge:** both reject US unilateral demand posture; Lavrov explicitly says \"continuation of talks started in Pakistan.\"`",
+      "label": "§1d Kremlin + §1h IRI MFA (uranium off-ramp)",
+      "raw": "`batch-analysis | 2026-04-15 | §1d Kremlin + §1h IRI MFA (uranium off-ramp) | **Tension-first:** Kremlin offers concrete **mechanism** (fuel-grade conversion or custody in Russia — 2015 precedent); IRI MFA says enrichment **right** is NPT-grounded, level/type \"open to discussion\" — these two positions are **compatible in principle** but **test against** US \"affirmative commitment\" demand (Vance pre-talk framing). **Do not** treat Kremlin offer as IRI acceptance or US acquiescence — three parties, three positions. **Weak bridge:** both reject US unilateral demand posture; Lavrov explicitly says \"continuation of talks started in Pakistan.\"`",
       "expert_ids": [],
       "confidence": "none",
       "sources": {}
     },
     {
       "date": "2026-04-15",
-      "label": "\u00a71h dual register (MFA vs IRGC)",
-      "raw": "`batch-analysis | 2026-04-15 | \u00a71h dual register (MFA vs IRGC) | **Tension-first:** Iranian MFA (Baghaei) = **diplomatic opening** (\"open to discussion,\" partial consensus, NPT rights framing); IRGC (Abdollahi) = **military escalation** (block all traffic in three seas if blockade continues). **Do not** merge into one \"Iran says\" \u2014 two institutions, two registers, two audiences. **Weak bridge:** both contingent on US behavior (\"seriousness and good faith\" / \"could end ceasefire\") \u2014 conditionality is the shared spine, not the threat level.`",
+      "label": "§1h dual register (MFA vs IRGC)",
+      "raw": "`batch-analysis | 2026-04-15 | §1h dual register (MFA vs IRGC) | **Tension-first:** Iranian MFA (Baghaei) = **diplomatic opening** (\"open to discussion,\" partial consensus, NPT rights framing); IRGC (Abdollahi) = **military escalation** (block all traffic in three seas if blockade continues). **Do not** merge into one \"Iran says\" — two institutions, two registers, two audiences. **Weak bridge:** both contingent on US behavior (\"seriousness and good faith\" / \"could end ceasefire\") — conditionality is the shared spine, not the threat level.`",
       "expert_ids": [],
       "confidence": "none",
       "sources": {}
@@ -284,15 +317,15 @@
     {
       "date": "2026-04-15",
       "label": "Leo XIV + Vance (legitimacy collision)",
-      "raw": "`batch-analysis | 2026-04-15 | Leo XIV + Vance (legitimacy collision) | **Tension-first:** Leo XIV grounds peace advocacy in **Gospel** (\"Blessed are the peacemakers\"), rejects Trump criticism as non-political, denounces \"delusion of omnipotence.\" Vance grounds escalation in **economic terrorism** framing + \"grand bargain\" offer. **Orthogonal registers:** moral-theological vs executive-strategic \u2014 do not merge or treat Leo as \"opposing\" Vance in the same frame without naming the **register gap**. Same 24h window as Algerian apostolic journey.`",
+      "raw": "`batch-analysis | 2026-04-15 | Leo XIV + Vance (legitimacy collision) | **Tension-first:** Leo XIV grounds peace advocacy in **Gospel** (\"Blessed are the peacemakers\"), rejects Trump criticism as non-political, denounces \"delusion of omnipotence.\" Vance grounds escalation in **economic terrorism** framing + \"grand bargain\" offer. **Orthogonal registers:** moral-theological vs executive-strategic — do not merge or treat Leo as \"opposing\" Vance in the same frame without naming the **register gap**. Same 24h window as Algerian apostolic journey.`",
       "expert_ids": [],
       "confidence": "none",
       "sources": {}
     },
     {
       "date": "2026-04-15",
-      "label": "Lavrov Beijing \u00d7 knot-shape E (Kremlin FM speech)",
-      "raw": "`batch-analysis | 2026-04-15 | Lavrov Beijing \u00d7 knot-shape E (Kremlin FM speech) | **Tension-first:** Operator-pasted **Lavrov** **Beijing** remarks (~14\u201315 Apr) **amplify** **knot-shape E** \u2014 **Russia\u2013China**, **Hormuz\u2192energy**, **sanctions**, **JCPOA/uranium**, **Islamabad** / **third-party** **support** \u2014 **official** **\u00a71d**/**Kremlin** lane, **not** **`thread:`** expert **`crosses:`**. **Do not** let **FM** **causal** closure substitute for **AIS/Bloomberg** tier discipline on **Hormuz** facts. **UNSC** resolution **narrative** (condemn **Iran** / **Hormuz** without **root cause**) **vs** **Islamabad** talks \u2014 **falsifier pair** in **`days.md` Open**; **verify:** **MID**/**Kremlin** transcript + **MFA PRC** readout **beside** paste (CGTN/Xinhua shell already in **\u00a71g Links**).`",
+      "label": "Lavrov Beijing × knot-shape E (Kremlin FM speech)",
+      "raw": "`batch-analysis | 2026-04-15 | Lavrov Beijing × knot-shape E (Kremlin FM speech) | **Tension-first:** Operator-pasted **Lavrov** **Beijing** remarks (~14–15 Apr) **amplify** **knot-shape E** — **Russia–China**, **Hormuz→energy**, **sanctions**, **JCPOA/uranium**, **Islamabad** / **third-party** **support** — **official** **§1d**/**Kremlin** lane, **not** **`thread:`** expert **`crosses:`**. **Do not** let **FM** **causal** closure substitute for **AIS/Bloomberg** tier discipline on **Hormuz** facts. **UNSC** resolution **narrative** (condemn **Iran** / **Hormuz** without **root cause**) **vs** **Islamabad** talks — **falsifier pair** in **`days.md` Open**; **verify:** **MID**/**Kremlin** transcript + **MFA PRC** readout **beside** paste (CGTN/Xinhua shell already in **§1g Links**).`",
       "expert_ids": [],
       "confidence": "none",
       "sources": {}
@@ -300,7 +333,7 @@
     {
       "date": "2026-04-12",
       "label": "Parsi + Solomon/Martenson",
-      "raw": "`batch-analysis | 2026-04-12 | Parsi + Solomon/Martenson | Parsi cluster: Tehran\u2019s test of U.S. control of Israel (Lebanon) vs nuclear headline; JTN/Martenson: **domestic** split on Hormuz blockade (decisive \u201cTrump card\u201d vs satirical escalation spiral)\u2014same week, three audiences (Iranian signability, coalition sell, U.S. commentariat)`",
+      "raw": "`batch-analysis | 2026-04-12 | Parsi + Solomon/Martenson | Parsi cluster: Tehran’s test of U.S. control of Israel (Lebanon) vs nuclear headline; JTN/Martenson: **domestic** split on Hormuz blockade (decisive “Trump card” vs satirical escalation spiral)—same week, three audiences (Iranian signability, coalition sell, U.S. commentariat)`",
       "expert_ids": [
         "parsi"
       ],
@@ -317,7 +350,7 @@
     {
       "date": "2026-04-12",
       "label": "Barnes + Solomon/Martenson",
-      "raw": "`batch-analysis | 2026-04-12 | Barnes + Solomon/Martenson | **Three U.S. domestic reads** on the same Hormuz lever: Solomon/JTN\u2014**strategic asset** (\u201cTrump card\u201d); Martenson\u2014**spiral / strategery** satire; Barnes\u2014**two-word verdict** (\u201cdumb\u201d) on the executive order chain (Disclose.tv \u2192 Truth Social packaging). **Tension:** leverage heroics vs circular-escalation mock vs outright dismissal\u2014not one domestic **sell** story; coalition validators see different **movies**.`",
+      "raw": "`batch-analysis | 2026-04-12 | Barnes + Solomon/Martenson | **Three U.S. domestic reads** on the same Hormuz lever: Solomon/JTN—**strategic asset** (“Trump card”); Martenson—**spiral / strategery** satire; Barnes—**two-word verdict** (“dumb”) on the executive order chain (Disclose.tv → Truth Social packaging). **Tension:** leverage heroics vs circular-escalation mock vs outright dismissal—not one domestic **sell** story; coalition validators see different **movies**.`",
       "expert_ids": [
         "barnes"
       ],
@@ -334,7 +367,7 @@
     {
       "date": "2026-04-12",
       "label": "Parsi + Macgregor (Lebanon / Hormuz cluster)",
-      "raw": "`batch-analysis | 2026-04-12 | Parsi + Macgregor (Lebanon / Hormuz cluster) | **Same week, two \u201cwho still believes Washington?\u201d meters\u2014not the same geography.** Parsi: **Middle East analyst** overlay\u2014**room-level** credibility test (rein in Israel on Lebanon) vs nuclear headline / Islamabad thread. Macgregor: **extra-room** lane\u2014importer + European diplomatic + Hormuz-adjacent **tonnage** as **third-party** distance from Israeli\u2013American kinetic framing; **Thesis B** (mediation vs restart). **Shared theme only:** non-U.S. audiences pricing **coherence of alliance behavior**\u2014**not** one mechanism (**Lebanon discipline** \u2260 **importer/embassy repositioning**). **Tension:** signability-in-the-room analysis vs macro defection narrative\u2014verify each chain before folding one Judgment.`",
+      "raw": "`batch-analysis | 2026-04-12 | Parsi + Macgregor (Lebanon / Hormuz cluster) | **Same week, two “who still believes Washington?” meters—not the same geography.** Parsi: **Middle East analyst** overlay—**room-level** credibility test (rein in Israel on Lebanon) vs nuclear headline / Islamabad thread. Macgregor: **extra-room** lane—importer + European diplomatic + Hormuz-adjacent **tonnage** as **third-party** distance from Israeli–American kinetic framing; **Thesis B** (mediation vs restart). **Shared theme only:** non-U.S. audiences pricing **coherence of alliance behavior**—**not** one mechanism (**Lebanon discipline** ≠ **importer/embassy repositioning**). **Tension:** signability-in-the-room analysis vs macro defection narrative—verify each chain before folding one Judgment.`",
       "expert_ids": [
         "parsi",
         "macgregor"
@@ -353,7 +386,7 @@
     {
       "date": "2026-04-12",
       "label": "Macgregor + Pape + Davis",
-      "raw": "`batch-analysis | 2026-04-12 | Macgregor + Pape + Davis | **Tension-first:** **Pape** + **Davis** = **U.S. offer structure** (commitment ratchet / \u201cEscalation Trap\u201d; final-offer-as-ultimatum, resumption clock, Hormuz/oil/fertilizer \u2192 U.S.-side macro pain). **Macgregor** = **system + third-party** (importer/diplomatic distance; world-economy risk if restart spoils \u201cIstanbul moment\u201d). **Do not fuse** those levels in one causal paragraph. *Optional weak bridge:* all three treat headline \u201cbargain\u201d as **asymmetric coercion**\u2014still verify each ingest. Fold one Judgment only after status URLs on all chains. *(Membership: Macgregor line earlier in accumulator; Pape + Davis immediately above this batch line.)*`",
+      "raw": "`batch-analysis | 2026-04-12 | Macgregor + Pape + Davis | **Tension-first:** **Pape** + **Davis** = **U.S. offer structure** (commitment ratchet / “Escalation Trap”; final-offer-as-ultimatum, resumption clock, Hormuz/oil/fertilizer → U.S.-side macro pain). **Macgregor** = **system + third-party** (importer/diplomatic distance; world-economy risk if restart spoils “Istanbul moment”). **Do not fuse** those levels in one causal paragraph. *Optional weak bridge:* all three treat headline “bargain” as **asymmetric coercion**—still verify each ingest. Fold one Judgment only after status URLs on all chains. *(Membership: Macgregor line earlier in accumulator; Pape + Davis immediately above this batch line.)*`",
       "expert_ids": [
         "pape",
         "davis",
@@ -374,7 +407,7 @@
     {
       "date": "2026-04-12",
       "label": "Pontifex thread (Ukraine / Lebanon / Sudan)",
-      "raw": "`batch-analysis | 2026-04-12 | Pontifex thread (Ukraine / Lebanon / Sudan) | **Tension-first:** one **Vatican** account sequences **three** distinct crises (Julian Easter\u2192**Ukraine** attention; **Lebanon** IHL/civilian solidarity; **Sudan** anniversary appeal)\u2014**not** one war story. *Weak bridge:* shared **moral\u2013legal** register (humanity, civilian protection); **do not** equate papal **Lebanon** solidarity line with **operational** Beltway/Parsi ceasefire mechanics without dated URLs. Fold under **ROME-PASS** only with pinned posts.`",
+      "raw": "`batch-analysis | 2026-04-12 | Pontifex thread (Ukraine / Lebanon / Sudan) | **Tension-first:** one **Vatican** account sequences **three** distinct crises (Julian Easter→**Ukraine** attention; **Lebanon** IHL/civilian solidarity; **Sudan** anniversary appeal)—**not** one war story. *Weak bridge:* shared **moral–legal** register (humanity, civilian protection); **do not** equate papal **Lebanon** solidarity line with **operational** Beltway/Parsi ceasefire mechanics without dated URLs. Fold under **ROME-PASS** only with pinned posts.`",
       "expert_ids": [
         "parsi"
       ],
@@ -388,7 +421,7 @@
     {
       "date": "2026-04-14",
       "label": "vi-14 Diesen + vi-15 Sneako/Dugin",
-      "raw": "`batch-analysis | 2026-04-14 | vi-14 Diesen + vi-15 Sneako/Dugin | **Tension-first:** same week\u2019s **US\u2013Iran** arc read through **petrodollar / chokepoint mechanics** (Diesen session) vs **theological\u2013civilizational** stack (Dugin session), with Jiang bridging **1694\u2192Enlightenment genealogy** and **China materialist** drag on \u201cantichrist\u201d urgency\u2014**do not** merge causal chains in one Judgment. *Weak bridge:* **Islamabad negotiators as visible layer / scapegoat** motif appears in **both**\u2014still verify each factual chain against primaries before folding.`",
+      "raw": "`batch-analysis | 2026-04-14 | vi-14 Diesen + vi-15 Sneako/Dugin | **Tension-first:** same week’s **US–Iran** arc read through **petrodollar / chokepoint mechanics** (Diesen session) vs **theological–civilizational** stack (Dugin session), with Jiang bridging **1694→Enlightenment genealogy** and **China materialist** drag on “antichrist” urgency—**do not** merge causal chains in one Judgment. *Weak bridge:* **Islamabad negotiators as visible layer / scapegoat** motif appears in **both**—still verify each factual chain against primaries before folding.`",
       "expert_ids": [
         "diesen",
         "jiang"
@@ -406,8 +439,8 @@
     },
     {
       "date": "2026-04-14",
-      "label": "carry 04-12\u201304-13 expert lanes + PH vi-14/15 + Diesen\u00d7Sachs",
-      "raw": "`batch-analysis | 2026-04-14 | carry 04-12\u201304-13 expert lanes + PH vi-14/15 + Diesen\u00d7Sachs | **Continuity spine:** **Hormuz / Islamabad / alliance geometry** threads (`ritter`, `mearsheimer`, `mercouris`, `marandi`, `parsi`, `pape`, `davis`, `johnson`, `freeman`, `sachs`) stay the **mechanics + room + trap** / **institutions** stack; **PH vi-14/vi-15** (`diesen`, `jiang`) add **petrodollar / eschatology** overlays\u2014**do not** collapse into one \u201ccivilizational verdict.\u201d **`diesen`** **same-day** **double** ingest (**vi-14** vs **`crosses:diesen+sachs`**) \u2014 keep **lecture** lane separate from **Sachs** **DC-process** **hypotheses** until **verify** tier. **New this cycle (wires / social):** **Italy** as **European hinge** (defense-diplomatic + Trump\u2013Pope friction) + **IRI presidential roster** naming Italy beside others\u2014**treat as coalition narrative + verify tier**, not automatic merge with **04-13** **Marandi\u00d7Mercouris\u00d7Ritter** Judgment until primaries pin. **Rome plane** (`ROME`, **Pontifex** / Algeria journey): **parallel legitimacy seam** vs **Hormuz ORBAT**\u2014same **tier split** as 04-13 **Grand Mosque** fold. **Weak bridge:** \u201cisolation / beg counts\u201d memes = **hypothesis-grade** unless elevated with **dated** **\u00a71d/\u00a71e**-class cites\u2014**do not** stand in for **`thread:`** experts.`",
+      "label": "carry 04-12–04-13 expert lanes + PH vi-14/15 + Diesen×Sachs",
+      "raw": "`batch-analysis | 2026-04-14 | carry 04-12–04-13 expert lanes + PH vi-14/15 + Diesen×Sachs | **Continuity spine:** **Hormuz / Islamabad / alliance geometry** threads (`ritter`, `mearsheimer`, `mercouris`, `marandi`, `parsi`, `pape`, `davis`, `johnson`, `freeman`, `sachs`) stay the **mechanics + room + trap** / **institutions** stack; **PH vi-14/vi-15** (`diesen`, `jiang`) add **petrodollar / eschatology** overlays—**do not** collapse into one “civilizational verdict.” **`diesen`** **same-day** **double** ingest (**vi-14** vs **`crosses:diesen+sachs`**) — keep **lecture** lane separate from **Sachs** **DC-process** **hypotheses** until **verify** tier. **New this cycle (wires / social):** **Italy** as **European hinge** (defense-diplomatic + Trump–Pope friction) + **IRI presidential roster** naming Italy beside others—**treat as coalition narrative + verify tier**, not automatic merge with **04-13** **Marandi×Mercouris×Ritter** Judgment until primaries pin. **Rome plane** (`ROME`, **Pontifex** / Algeria journey): **parallel legitimacy seam** vs **Hormuz ORBAT**—same **tier split** as 04-13 **Grand Mosque** fold. **Weak bridge:** “isolation / beg counts” memes = **hypothesis-grade** unless elevated with **dated** **§1d/§1e**-class cites—**do not** stand in for **`thread:`** experts.`",
       "expert_ids": [
         "diesen",
         "sachs",
@@ -444,8 +477,8 @@
     },
     {
       "date": "2026-04-14",
-      "label": "Ritter \u00d7 Davis",
-      "raw": "`batch-analysis | 2026-04-14 | Ritter \u00d7 Davis | **Tension-first:** **Ritter** digest \u00a7B = **OOB / closure** skepticism on a Hollywood-grade Hormuz **seizure** at scale; **Davis** X = **ultimatum vs negotiation** + **resumption clock** + **U.S.-side macro** hurt if talks read as final offer\u2014**convergence:** both undercut a clean **bomb \u2192 fold** story. **Do not** treat **digest quants** as **proof** of **Davis** claims or vice versa until **status URLs** + **wire** rows land. **`crosses:ritter+davis`** \u2014 **membership:** **`thread:ritter`** (brief-handoff bundle **2026-04-10**) + **`thread:davis`** (Prior scratch **2026-04-12** block); folded **[`## 2026-04-14`](chapters/2026-04/days.md)** **Signal**/**Judgment**/**Links**/**Open**.`\n`batch-analysis | 2026-04-14 | Ritter \u00d7 Davis | crosses:ritter+davis`",
+      "label": "Ritter × Davis",
+      "raw": "`batch-analysis | 2026-04-14 | Ritter × Davis | **Tension-first:** **Ritter** digest §B = **OOB / closure** skepticism on a Hollywood-grade Hormuz **seizure** at scale; **Davis** X = **ultimatum vs negotiation** + **resumption clock** + **U.S.-side macro** hurt if talks read as final offer—**convergence:** both undercut a clean **bomb → fold** story. **Do not** treat **digest quants** as **proof** of **Davis** claims or vice versa until **status URLs** + **wire** rows land. **`crosses:ritter+davis`** — **membership:** **`thread:ritter`** (brief-handoff bundle **2026-04-10**) + **`thread:davis`** (Prior scratch **2026-04-12** block); folded **[`## 2026-04-14`](chapters/2026-04/days.md)** **Signal**/**Judgment**/**Links**/**Open**.`\n`batch-analysis | 2026-04-14 | Ritter × Davis | crosses:ritter+davis`",
       "expert_ids": [
         "ritter",
         "davis"
@@ -464,8 +497,8 @@
     },
     {
       "date": "2026-04-15",
-      "label": "Mercouris \u00d7 tri-mind",
-      "raw": "`batch-analysis | 2026-04-15 | Mercouris \u00d7 tri-mind | **Tension-first:** thread:mercouris **15 Apr 2026** **The Duran** strand (contested Hormuz narratives, Islamabad reads, Lavrov\u2013Wang\u2013Xi, Russian SC commentary, attrition frame) \u00d7 tri-mind **B\u2192A\u2192C** + solo A; fact-check triage rows in days.md **## 2026-04-15** **Links**\u2014do not merge second-hand ORBAT with tanker AIS facts without tier discipline. seam:mercouris-tri-frame \u2014 WORK only; not a crosses: two-expert row.`\n`batch-analysis | 2026-04-15 | Mercouris \u00d7 tri-mind | seam:mercouris-tri-frame`",
+      "label": "Mercouris × tri-mind",
+      "raw": "`batch-analysis | 2026-04-15 | Mercouris × tri-mind | **Tension-first:** thread:mercouris **15 Apr 2026** **The Duran** strand (contested Hormuz narratives, Islamabad reads, Lavrov–Wang–Xi, Russian SC commentary, attrition frame) × tri-mind **B→A→C** + solo A; fact-check triage rows in days.md **## 2026-04-15** **Links**—do not merge second-hand ORBAT with tanker AIS facts without tier discipline. seam:mercouris-tri-frame — WORK only; not a crosses: two-expert row.`\n`batch-analysis | 2026-04-15 | Mercouris × tri-mind | seam:mercouris-tri-frame`",
       "expert_ids": [
         "mercouris"
       ],
@@ -484,8 +517,8 @@
     },
     {
       "date": "2026-04-16",
-      "label": "Pape (Janssen) \u00d7 **Mearsheimer** lattice",
-      "raw": "`batch-analysis | 2026-04-16 | Pape (Janssen) \u00d7 **Mearsheimer** lattice | **Tension-first:** Pape stresses **domestic lock-in**, **calendarized blockade pain**, **Israel spoiler**, **Iran long-war** time-on-side\u2014**not** the same analytic units as **Mearsheimer**-class **alliance incentives** / **buck-passing** / **who can afford to fight** (see indexed `mearsheimer` thread for geometry\u2014**do not** force-merge). **Do not** treat Pape\u2019s **70\u201380% ground** talk as structural data. **Weak bridge:** both undercut a simple **bomb-to-fold** victory story for the Hormuz arc\u2014for **different mechanisms**.`",
+      "label": "Pape (Janssen) × **Mearsheimer** lattice",
+      "raw": "`batch-analysis | 2026-04-16 | Pape (Janssen) × **Mearsheimer** lattice | **Tension-first:** Pape stresses **domestic lock-in**, **calendarized blockade pain**, **Israel spoiler**, **Iran long-war** time-on-side—**not** the same analytic units as **Mearsheimer**-class **alliance incentives** / **buck-passing** / **who can afford to fight** (see indexed `mearsheimer` thread for geometry—**do not** force-merge). **Do not** treat Pape’s **70–80% ground** talk as structural data. **Weak bridge:** both undercut a simple **bomb-to-fold** victory story for the Hormuz arc—for **different mechanisms**.`",
       "expert_ids": [
         "pape",
         "mearsheimer"
@@ -503,8 +536,8 @@
     },
     {
       "date": "2026-04-16",
-      "label": "Pape (Janssen) \u00d7 **Davis** lattice",
-      "raw": "`batch-analysis | 2026-04-16 | Pape (Janssen) \u00d7 **Davis** lattice | **Tension-first:** **Davis** lane (**extension game**, ultimatum vs negotiation, **resumption clock**, U.S. macro hurt if talks read as final offer) tests **process credibility** and **timing**; Pape lane tests **commodity-shock staging**, **spoiler third player**, and **Trump exit narrative**. **Do not** merge **Rubio / negotiator-killing** specifics without dated primaries. **Weak bridge:** both model **why talks break under pressure**\u2014**different falsifiers** (process vs domestic ratchet + shocks).`",
+      "label": "Pape (Janssen) × **Davis** lattice",
+      "raw": "`batch-analysis | 2026-04-16 | Pape (Janssen) × **Davis** lattice | **Tension-first:** **Davis** lane (**extension game**, ultimatum vs negotiation, **resumption clock**, U.S. macro hurt if talks read as final offer) tests **process credibility** and **timing**; Pape lane tests **commodity-shock staging**, **spoiler third player**, and **Trump exit narrative**. **Do not** merge **Rubio / negotiator-killing** specifics without dated primaries. **Weak bridge:** both model **why talks break under pressure**—**different falsifiers** (process vs domestic ratchet + shocks).`",
       "expert_ids": [
         "davis",
         "pape"
@@ -519,8 +552,8 @@
     },
     {
       "date": "2026-04-18",
-      "label": "Hormuz **open/not-open** \u00d7 **Islamabad** \u00d7 **Lebanon**",
-      "raw": "`batch-analysis | 2026-04-18 | Hormuz **open/not-open** \u00d7 **Islamabad** \u00d7 **Lebanon** | **Tension-first:** **Parsi / Barnes / Davis / Marandi** all touch **strait status** or **talks credibility** \u2014 **do not** merge **X hot-take** with **AIS** / **flag-state** facts without tier tags; **Pape** long-horizon **supply wall** is **forecast**, not fleet state. **Lebanon** kinetic claims (**Marandi** medics, **Davis** detonations) need **wire primaries**, not cross-expert echo. **Weak seam:** **ritter** moral register **off** same-news-day **Hormuz** mechanics rows \u2014 **different Judgment objects.**`",
+      "label": "Hormuz **open/not-open** × **Islamabad** × **Lebanon**",
+      "raw": "`batch-analysis | 2026-04-18 | Hormuz **open/not-open** × **Islamabad** × **Lebanon** | **Tension-first:** **Parsi / Barnes / Davis / Marandi** all touch **strait status** or **talks credibility** — **do not** merge **X hot-take** with **AIS** / **flag-state** facts without tier tags; **Pape** long-horizon **supply wall** is **forecast**, not fleet state. **Lebanon** kinetic claims (**Marandi** medics, **Davis** detonations) need **wire primaries**, not cross-expert echo. **Weak seam:** **ritter** moral register **off** same-news-day **Hormuz** mechanics rows — **different Judgment objects.**`",
       "expert_ids": [
         "parsi",
         "barnes",
@@ -541,6 +574,110 @@
         ],
         "upstream_verify": [
           "davis"
+        ]
+      }
+    },
+    {
+      "date": "2026-04-18",
+      "label": "**Davis** Hormuz deep-dive (verbatim) × **week** **stack**",
+      "raw": "`batch-analysis | 2026-04-18 | **Davis** Hormuz deep-dive (verbatim) × **week** **stack** | **Tension-first:** same **object** **chain** **as** **04-17** **Davis×Johnson** **(dual-register** **open** **vs** **blockade)** **but** **long-form** **history** **+** **cost** **accrual** **+** **Trump** **maximal** **nuclear** **/** **Strait** **language** — **label** **analyst** **hypothesis** **(market-manipulation,** **leader** **visibility)** **verify-first** **before** **Judgment** **merge** **with** **wire** **or** **§1e.** **Crosses:** **`crosses:ritter+davis`**, **`crosses:johnson+davis`**, **`crosses:pape+davis`** **(escalation** **/** **supply** **wall** **—** **different** **time** **horizons),** **`crosses:jermy+davis`** **if** **recession** **segment** **same** **window** **pinned.**`",
+      "expert_ids": [
+        "ritter",
+        "davis",
+        "johnson",
+        "pape",
+        "jermy"
+      ],
+      "confidence": "high",
+      "sources": {
+        "crosses": [
+          "ritter",
+          "davis",
+          "johnson",
+          "pape",
+          "jermy"
+        ],
+        "upstream_verify": [
+          "davis"
+        ]
+      }
+    },
+    {
+      "date": "2026-04-18",
+      "label": "**Davis × Pape** (tri-mind **1**)",
+      "raw": "`batch-analysis | 2026-04-18 | **Davis × Pape** (tri-mind **1**) | **Tension-first:** **`thread:davis`** **Hormuz** **/** **blockade** **/** **cost** **accrual** **+** **bargaining** **asymmetry** **vs** **`thread:pape`** **escalation-trap** **/** **binary** **(nuclear** **+** **strait** **control)** **/** **pause-not-deal** **(04-18** **X)** — **material** **plane** **vs** **structural** **theory** **plane**; **do** **not** **collapse** **AIS** **rows** **into** **zero-sum** **Judgment** **without** **tags.** | crosses:davis+pape`",
+      "expert_ids": [
+        "davis",
+        "pape"
+      ],
+      "confidence": "high",
+      "sources": {
+        "crosses": [
+          "davis",
+          "pape"
+        ],
+        "thread_in_line": [
+          "davis",
+          "pape"
+        ],
+        "upstream_verify": [
+          "davis"
+        ]
+      }
+    },
+    {
+      "date": "2026-04-18",
+      "label": "**Davis × Freeman** (tri-mind **2**)",
+      "raw": "`batch-analysis | 2026-04-18 | **Davis × Freeman** (tri-mind **2**) | **Tension-first:** **`thread:davis`** **dual-register** **+** **Iranian** **memory** **frame** **vs** **`thread:freeman`** **career-diplomat** **staging** **(door/padlock,** **Islamabad** **performative,** **GCC/China/Lebanon** **segments**)** **—** **run** **after** **Davis×Pape**; **pin** **Freeman** **Diesen** **2026-04-18** **YT** **when** **stable.** | crosses:davis+freeman`",
+      "expert_ids": [
+        "davis",
+        "freeman",
+        "pape",
+        "diesen"
+      ],
+      "confidence": "high",
+      "sources": {
+        "crosses": [
+          "davis",
+          "freeman"
+        ],
+        "thread_in_line": [
+          "davis",
+          "freeman"
+        ],
+        "alias_match": [
+          "pape",
+          "diesen"
+        ]
+      }
+    },
+    {
+      "date": "2026-04-19",
+      "label": "**Ritter Substack** × **Hormuz** **/ negotiations** **week**",
+      "raw": "`batch-analysis | 2026-04-19 | **Ritter Substack** × **Hormuz** **/ negotiations** **week** | **Tension-first:** **`thread:ritter`** **essay** (**failed** **first-round** **narrative,** **second-strike** **infrastructure** **forecast,** **Trump** **domestic** **risk**) **—** **not** **§1e** **/** **AIS** **primaries.** **Cross** **`thread:davis`** **(physical** **Strait** **/** **cost** **clock),** **`thread:pape`** **(escalation** **trap** **/** **binary),** **`thread:barnes`** **(White** **House** **room** **where** **essay** **touches** **Congress** **/** **elections**)** **—** **explicit** **seams:** **material** **/** **theory** **/** **forecast.** **Falsifiers:** **named** **military** **/** **shipping** **primaries,** **negotiation** **texts,** **vote** **counts.** | crosses:ritter+davis`",
+      "expert_ids": [
+        "ritter",
+        "davis",
+        "pape",
+        "barnes"
+      ],
+      "confidence": "high",
+      "sources": {
+        "crosses": [
+          "ritter",
+          "davis"
+        ],
+        "thread_in_line": [
+          "ritter",
+          "davis",
+          "pape",
+          "barnes"
+        ],
+        "upstream_verify": [
+          "ritter",
+          "davis",
+          "pape",
+          "barnes"
         ]
       }
     }

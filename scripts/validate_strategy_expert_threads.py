@@ -10,13 +10,19 @@ This script **warns** (stderr) when:
 
 - a ``## YYYY-MM`` block has **three or more** list lines and **no** detected prose
   lines (bullets-only months), **or**
-- a ``## YYYY-MM`` block has **fewer than 500 words** of detected prose (words on
-  ``is_prose_line`` lines only; list lines do not count).
+- a ``## YYYY-MM`` block has **fewer than 500 words** of substantive text: **prose lines**
+  (``is_prose_line``) **plus** words in **markdown blockquote** lines (``>`` …), matching
+  **verbatim-forward** journal policy; list lines still do not count toward the threshold.
 
 **Opt-out (whole file):** place anywhere in the human layer (above
 ``<!-- strategy-expert-thread:start -->``)::
 
     <!-- strategy-expert-thread:segment-1-month-bullets-ledger-ok -->
+
+**Opt-out (verbatim-forward / alternate journal discipline):** suppress month word-count
+warnings for the whole file::
+
+    <!-- strategy-expert-thread:verbatim-forward-journal-ok -->
 
 Exit 0 by default (warnings do not fail). Use ``--strict`` to exit 1 if any warning.
 
@@ -42,6 +48,7 @@ RE_LIST = re.compile(r"^\s*[-*]\s+\S")
 RE_NUM_LIST = re.compile(r"^\s*\d+\.\s+\S")
 
 OPT_OUT_BULLETS_LEDGER = "<!-- strategy-expert-thread:segment-1-month-bullets-ledger-ok -->"
+OPT_OUT_VERBATIM_FORWARD = "<!-- strategy-expert-thread:verbatim-forward-journal-ok -->"
 
 MIN_PROSE_WORDS = 500
 
@@ -131,6 +138,25 @@ def prose_word_count(body: str) -> int:
     return n
 
 
+def blockquote_word_count(body: str) -> int:
+    """Word count on markdown blockquote lines (verbatim-forward months)."""
+    n = 0
+    for line in body.splitlines():
+        if line.strip().startswith(">"):
+            # strip leading '>' and optional space for counting
+            stripped = line.lstrip()
+            if stripped.startswith(">"):
+                content = stripped[1:].lstrip()
+                if content:
+                    n += len(content.split())
+    return n
+
+
+def substantive_word_count(body: str) -> int:
+    """Prose lines + blockquote words (architecture verbatim-forward policy)."""
+    return prose_word_count(body) + blockquote_word_count(body)
+
+
 def validate_thread_file(path: Path, month_mm: str | None = None) -> list[str]:
     """Return warning strings for one thread file.
 
@@ -146,6 +172,8 @@ def validate_thread_file(path: Path, month_mm: str | None = None) -> list[str]:
     if OPT_OUT_BULLETS_LEDGER in human:
         return []
 
+    skip_word_warnings = OPT_OUT_VERBATIM_FORWARD in human
+
     human = strip_backfill_block(human, eid)
 
     for month_id, body in iter_month_h2_bodies(human):
@@ -154,19 +182,22 @@ def validate_thread_file(path: Path, month_mm: str | None = None) -> list[str]:
             if len(parts) < 2 or parts[1] != month_mm:
                 continue
         bullets, prose_lines = analyze_month_body(body)
-        words = prose_word_count(body)
-        if bullets >= 3 and prose_lines == 0:
+        bq_words = blockquote_word_count(body)
+        words = substantive_word_count(body)
+        if bullets >= 3 and prose_lines == 0 and bq_words < 50:
             warnings.append(
                 f"{path.name}: ## {month_id} — bullet-led month with no prose lines "
-                f"({bullets} list lines). Add a short prose lede or "
+                f"({bullets} list lines). Add a short prose lede, blockquoted expert text, or "
                 f"{OPT_OUT_BULLETS_LEDGER} if ledger-only is intentional "
                 f"(see strategy-expert-template.md — journal layer narrative)."
             )
-        elif words < MIN_PROSE_WORDS:
+        elif not skip_word_warnings and words < MIN_PROSE_WORDS:
+            pw = prose_word_count(body)
             warnings.append(
-                f"{path.name}: ## {month_id} — prose word count {words} < {MIN_PROSE_WORDS} "
-                f"(prose lines only; expand narrative or run "
-                f"`python3 scripts/expand_strategy_expert_segment_prose.py --apply`)."
+                f"{path.name}: ## {month_id} — substantive word count {words} < {MIN_PROSE_WORDS} "
+                f"(prose={pw}, blockquotes={bq_words}; expand narrative/quotes or run "
+                f"`python3 scripts/expand_strategy_expert_segment_prose.py --apply`; "
+                f"or {OPT_OUT_VERBATIM_FORWARD} to skip word-count warnings for this file)."
             )
     return warnings
 

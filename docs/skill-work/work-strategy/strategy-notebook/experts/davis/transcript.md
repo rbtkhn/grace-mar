@@ -35,6 +35,7 @@ WORK only; not Record.
 
 
 
+
 ## 2026-04-17
 - X | cold: @DanielLDavis1 **2026-04-17 ~06:30** — QT **@araghchi**: Hormuz passage **open** for **all commercial vessels** for **remaining ceasefire period** on **coordinated route** (Ports & Maritime Organisation); Davis — back-channel diplomacy, **zero-give** warning re U.S. posture // hook: [daily-brief-2026-04-17.md](../daily-brief-2026-04-17.md) **§1h** + expert mesh; **pin** @araghchi + Davis status URLs | verify:pin-x-urls+IRI-primary-chain | thread:davis | IRI+TEHRAN
 - X | cold: @DanielLDavis1 same calendar day — embeds **Trump** Truth Social **~09:57** (~**30 min** after Hormuz “open” framing per Davis); Davis reads **maximalist** terms (**nuclear** reprocessing / **no** money / **Lebanon–Hezbollah** separate / **Israel** **prohibited** from bombing **Lebanon** by **USA**) as **slamming door** on diplomatic space // hook: **§1e** executive primary + **falsifier** for §1f single-arc de-escalation; pin **Truth Social** full text | verify:truth-social-primary+embed-chain | thread:davis
@@ -53,6 +54,7 @@ WORK only; not Record.
 
 
 - batch-analysis | 2026-04-17 | **Barnes × Johnson (YT) — US politics room × Iran week** | **Tension-first:** **`thread:barnes`** **long-form** **domestic-liability** **+** **White** **House** **process** **(C-plane** **hypothesis)** **—** **not** **§1e** **text** **and** **not** **Pentagon** **primary.** **Same** **calendar** **day** **as** **Hormuz** **/** **Islamabad** **expert** **stack** **—** **cross** **`thread:davis`**, **`thread:johnson`** **(Davis** **×** **Johnson** **earlier** **YT),** **`thread:ritter`** **with** **explicit** **plane** **tags** **(room** **vs** **ORBAT** **vs** **FM).** **Falsifiers:** **named** **official** **statements,** **vote** **counts,** **Navy** **press,** **TS** **screenshots.** | crosses:barnes+johnson
+
 
 
 

@@ -197,6 +197,7 @@ def triage_to_transcripts(
                 )
 
         if not dry_run:
+            transcript_path.parent.mkdir(parents=True, exist_ok=True)
             transcript_path.write_text(final, encoding="utf-8")
 
         written.append(transcript_path)

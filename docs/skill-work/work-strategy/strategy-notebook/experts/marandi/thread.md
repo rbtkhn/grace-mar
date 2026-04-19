@@ -375,7 +375,6 @@ WORK only; not Record.
     note: "Weave C: Marandi BP primary + Blumenthal JF amplifier; Pape validate fork → sister pape-janssen knot (weave D)"
 ```
 <!-- strategy-page:end -->
-
 <!-- strategy-expert-thread:start -->
 ## Machine layer — Extraction (script-maintained)
 

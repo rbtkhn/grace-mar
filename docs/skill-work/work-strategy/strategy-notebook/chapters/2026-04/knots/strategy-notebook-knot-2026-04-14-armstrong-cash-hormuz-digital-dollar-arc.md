@@ -53,6 +53,12 @@
 - Add **dedicated** shipping / **UNCTAD** or **commodity shipping** primary if **“through Hormuz”** **fertilizer %** is needed at **Links** tier.
 - Optional inbox: one **`batch-analysis`** line naming **this knot** + **`crosses:`** none — or **crosses** to a future **`thread:`** expert if **money** and **Hormuz** lanes are **explicitly** coupled with evidence.
 
+### Optional satellite — @ArmstrongEcon negotiation posts (2026-04-17)
+
+**Not** load-bearing for the **2026-04-14** thesis above (cash / statute / Gulf-origin fertilizer definition; **BlackRock** / **Congress** primaries). A **separate** pair of X posts from Martin Armstrong raises **Pakistan–nuclear analogy**, attacks **Kushner** and **Witkoff** as negotiators (with **Vance** named), and uses **“religious war”** framing.
+
+**Tie to this knot only** when an operator weave **explicitly** couples **negotiation-trust**, **personnel mood**, or **“who speaks for Washington”** to the **war-economy + payment-plumbing** arc. **Default:** keep that content on the **`thread:armstrong`** journal in [`strategy-expert-armstrong-thread.md`](../../../strategy-expert-armstrong-thread.md) and use **expert crosses** (`barnes`, `davis`, `mearsheimer`, `marandi`) — **do not** merge **fertilizer share**, **bill text**, or **Fink** lines with those **X** claims without a **labeled seam**. Pin **exact** status URL(s) / screenshot if this satellite is cited outside WORK.
+
 ---
 
 ### Index row (YAML — paste into `knots:` in `knot-index.yaml`)
