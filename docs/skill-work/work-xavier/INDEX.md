@@ -4,6 +4,7 @@
 |-----|------|
 | [evidence/cici-github-sync-2026-04-20.md](evidence/cici-github-sync-2026-04-20.md) | **Cici GitHub sync (2026-04-20)** — `main` `b02b5da` memory-policy + prop-20260420-001 |
 | [evidence/cici-rtf-sessions-ingest-2026-04-17.md](evidence/cici-rtf-sessions-ingest-2026-04-17.md) | **RTF sessions (2026-04-17)** — proposals applied, `main` [`d2358ce`](https://github.com/Xavier-x01/Cici/commit/d2358ce); daily ship [`a602e3a`](https://github.com/Xavier-x01/Cici/commit/a602e3a) |
+| [handoffs/cici-claude-agent-grace-mar-discipline-prompt.md](handoffs/cici-claude-agent-grace-mar-discipline-prompt.md) | **Cici agent prompt** — lanes, boundary, proposals, leakage, grounding (paste into `.claude/agents/` or `CLAUDE.md`) |
 | [handoffs/cici-brewmind-governed-steward.md](handoffs/cici-brewmind-governed-steward.md) | **Cici paste handoff** — `docs/skills/brewmind-governed-steward.md` body + optional `CLAUDE.md` line (canonical skill: [.cursor/skills/brewmind-governed-steward/SKILL.md](../../../.cursor/skills/brewmind-governed-steward/SKILL.md)) |
 | [README.md](README.md) | Advisor / project module vs Xavier’s external instance repo |
 | [xavier-work-profile.md](xavier-work-profile.md) | Employee work profile + skills portfolio (operator WORK); not her Record |

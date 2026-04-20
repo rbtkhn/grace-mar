@@ -12,6 +12,10 @@
 
 ## Log
 
+### 2026-04-21
+
+- **Cici handoff — Claude agent prompt (grace-mar discipline):** [handoffs/cici-claude-agent-grace-mar-discipline-prompt.md](handoffs/cici-claude-agent-grace-mar-discipline-prompt.md) — copy-paste block for **lanes**, knowledge boundary, proposal echo, leakage, session grounding; scoped to [Cici](https://github.com/Xavier-x01/Cici), not grace-mar Record.
+
 ### 2026-04-20
 
 - **Cici GitHub sync:** [evidence/cici-github-sync-2026-04-20.md](evidence/cici-github-sync-2026-04-20.md) — **`main`** advanced [`3712b88`](https://github.com/Xavier-x01/Cici/commit/3712b88) (queue **prop-20260420-001**) → [`b02b5da`](https://github.com/Xavier-x01/Cici/commit/b02b5da) (governed apply **memory-policy** surface + `policy.json`). Prior tip [`d2358ce`](https://github.com/Xavier-x01/Cici/commit/d2358ce).
