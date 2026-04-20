@@ -134,6 +134,7 @@ Candidates may include optional keys linking **runtime observations** (e.g. `sou
 
 ## See also
 
+- [governance/comprehension-envelope-gate.md](governance/comprehension-envelope-gate.md) — Comprehension Envelope (`envelope_class`) vs traffic `risk_tier` (orthogonal)
 - [gate-vs-change-review.md](gate-vs-change-review.md) — default gate vs material escalation
 - [feedback-loops.md](feedback-loops.md) — low-friction approval, merge feedback
 - [operator-brief.md](operator-brief.md) — session continuity and gate habits
