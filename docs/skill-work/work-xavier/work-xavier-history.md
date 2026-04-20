@@ -12,6 +12,10 @@
 
 ## Log
 
+### 2026-04-20
+
+- **Cici GitHub sync:** [evidence/cici-github-sync-2026-04-20.md](evidence/cici-github-sync-2026-04-20.md) — **`main`** advanced [`3712b88`](https://github.com/Xavier-x01/Cici/commit/3712b88) (queue **prop-20260420-001**) → [`b02b5da`](https://github.com/Xavier-x01/Cici/commit/b02b5da) (governed apply **memory-policy** surface + `policy.json`). Prior tip [`d2358ce`](https://github.com/Xavier-x01/Cici/commit/d2358ce).
+
 ### 2026-04-17
 
 - **Cici RTF ingests (governed steward + daily ship):** [evidence/cici-rtf-sessions-ingest-2026-04-17.md](evidence/cici-rtf-sessions-ingest-2026-04-17.md) + RTFs — transcript: approve **prop-20260413-001** + **prop-20260414-001**, merge `claude/brewmind-governed-steward-IE4RH` → **`main`** [`d2358ce`](https://github.com/Xavier-x01/Cici/commit/d2358ce); daily ship journal [`a602e3a`](https://github.com/Xavier-x01/Cici/commit/a602e3a). API chain verified.
