@@ -70,7 +70,7 @@ Verification stance for Douglas Macgregor (@DougAMacgregor) in 2026-02 should st
 - [strength: high] **Through-line:** **72–96 hour** full-war warning — **Substack** — [Capital Cosm](https://capitalcosm.substack.com/p/col-macgregor-us-about-to-launch) — indexes cite **~19 Feb 2026** — **hypothesis-grade** timing — **do not** treat as **OPORD**.
 - [strength: medium] **Mechanism:** **US–Iran diplomacy fail** — [Singju Post transcript](https://singjupost.com/macgregor-us-iran-diplomacy-fail-transcript/) — **process** vs **Marandi** **room** — **seam** in weave.
 - [strength: medium] **Parallel:** **NATO** / **British missiles** / **Ukraine** — [YouTube 2eHOe0LyK9A](https://www.youtube.com/watch?v=2eHOe0LyK9A) — **~26 Feb 2026** class — **orthogonal** theater unless operator **crosses** explicitly.
-- [strength: medium] **Tension:** **Bombing Iran won’t fix this** — [YouTube TfOT5ITP2Uk](https://www.youtube.com/watch?v=TfOT5ITP2Uk) — **mechanics** skepticism vs **Ritter** **closure** claims — **April** [blockade weave](strategy-notebook-knot-2026-04-14-ritter-blockade-hormuz-weave.md) compares lanes.
+- [strength: medium] **Tension:** **Bombing Iran won’t fix this** — [YouTube TfOT5ITP2Uk](https://www.youtube.com/watch?v=TfOT5ITP2Uk) — **mechanics** skepticism vs **Ritter** **closure** claims — **April** blockade weave (page id `ritter-blockade-hormuz-weave`) compares lanes.
 ## 2026-03
 
 March shifts to **open conflict** commentary — **Persian Gulf** **control** thesis, **dangerous phase** video essays, and **Hormuz** **oil** **band** **warnings**; align with **Jermy** **macro** **closure** lane only via **labeled** **batch-analysis**.
@@ -167,13 +167,13 @@ Segment discipline here follows the strategy-notebook contract: Segment 1 is hum
 Verification stance for Douglas Macgregor (@DougAMacgregor) in 2026-04 should stay tier-honest: web-index rows, newsletter dates, and YouTube upload metadata differ in **claim strength**. The notebook uses `[strength: low|medium|high]` precisely because not every cite supports the same inference. Prose here can narrate **what kind of mistake** would happen if a low-strength hook were promoted to a headline judgment—without turning that caution into a substitute for fresh primary checks when the operator needs cite-grade output.
 
 - [strength: medium] **Signal:** Cold ingest **~Apr 10** — Asia rejecting Israeli–American Iran war framing; tankers toward Hormuz; ROK envoy; Spain embassy Tehran — [X @DougAMacgregor](https://x.com/DougAMacgregor) — verify:pin-exact-status-URL+tanker-ROK-Spain-wires.
-- [strength: medium] **Knot compare:** [ritter-blockade-hormuz-weave](strategy-notebook-knot-2026-04-14-ritter-blockade-hormuz-weave.md) — mechanics skepticism vs Macgregor importer lane — **batch-analysis** seam only.
+- [strength: medium] **Knot compare:** `ritter-blockade-hormuz-weave` — mechanics skepticism vs Macgregor importer lane — **batch-analysis** seam only.
 
 ---
 <!-- strategy-expert-thread:start -->
 ## Machine layer — Extraction (script-maintained)
 
-_Auto-generated from `-transcript.md` + knot index. **Journal layer** (narrative) lives **above** the **strategy-expert-thread** start HTML comment. The machine-layer HTML block is replaced on each `thread` run._
+_Auto-generated from `-transcript.md` + `strategy-page` blocks in this thread + optional knot-index rows (legacy). **Journal layer** (narrative) lives **above** the **strategy-expert-thread** start HTML comment. The machine-layer HTML block is replaced on each `thread` run._
 
-_(No transcript or knot material for extraction.)_
+_(No transcript, page, or knot material for extraction.)_
 <!-- strategy-expert-thread:end -->

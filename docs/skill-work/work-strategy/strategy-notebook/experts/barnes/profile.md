@@ -47,6 +47,7 @@ Headings-only pointers into the mapped corpus in [`strategy-expert-barnes-mind.m
 
 - `barnes` + **Viva Frei / independent legal commentary** — accessible constitutional breakdowns, civil-liberties emphasis, podcast co-hosting as primary vehicle.
 - `barnes` + **free-speech / anti-censorship** commentators (e.g. Rubin-class interviews cited in secondary materials) — “law for the people” vs institutional gatekeeping.
+- **`barnes` + [1776 Law Center](https://1776lawcenter.com)** — nonprofit legal-advocacy / **Citizens of ’76** membership and **annual convention** (2nd annual listed on shop; **Chattanooga, TN**; ticket page lists **$999** and ties the event to **America’s 250th** framing per homepage). **Aug 1–2, 2026** appear on **official promotion** (e.g. X/poster); **confirm** full schedule and speaker roster on **1776lawcenter.com** before Judgment-grade event claims. **Strategy cross:** same live bill can include **`mercouris`**, **`johnson`**, and Barnes — **offline audience + fundraising** lane, not **`thread:`** speech content unless ingested separately.
 
 ### Convergence conditions
 
@@ -88,10 +89,12 @@ Headings-only pointers into the mapped corpus in [`strategy-expert-barnes-mind.m
 
 - Pull this expert into weave when:
   - **Hormuz** story touches **executive TS**, **Disclose.tv**-class chains, **JDVance** “cards,” or **domestic sell** of foreign policy — **third pole** beside op-ed realists.
+  - You name **1776 Law Center**, **Citizens of ’76**, or the **annual convention** — nonprofit **coalition** / **list-building** / ticket **fundraising** (**Links/Open**); **do not** auto-weave on **Hormuz / Iran / Islamabad** passes unless you explicitly cue this lane.
 
 ## Knot-use guidance
 
 - Best for: **mechanism** pages on **liability**, **watch** pages on prosecutorial moves, **case** pages contrasting **Barnes** vs **Pape** audience hypotheses.
+- **1776 / convention** material: **Links/Open** and coalition-**mechanism** framing — **not** **ORBAT** or theater-order stand-ins.
 - Usually insufficient alone for: **ORBAT**, **EU speech acts** — pair per index.
 
 ## History resonance defaults
@@ -107,6 +110,7 @@ Headings-only pointers into the mapped corpus in [`strategy-expert-barnes-mind.m
 4. https://www.linkedin.com/in/barnes-149a2051
 5. https://unstructured.podbean.com/e/barnes-is-a-high-profile-constitutional-lawyer-and-political-gambler-defending-amy-cooper/ — example long-form interview (verify current URL)
 6. YouTube / podcast: search *Viva & Barnes Law for the People* for canonical playlist (operator pins)
+7. https://1776lawcenter.com/ — **1776 Law Center** (nonprofit mission, **Citizens of ’76**, convention shop); related nonprofit family per secondary bios: **Free America Law Center** — verify entity relationship if governance matters for weave
 
 ## Seed (index mirror — operator may extend)
 

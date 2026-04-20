@@ -32,6 +32,8 @@ from pathlib import Path
 
 import yaml
 
+from strategy_page_reader import discover_pages
+
 REPO_ROOT = Path(__file__).resolve().parent.parent
 
 DEFAULT_THREADS = (
@@ -480,16 +482,19 @@ def render_thread_extraction(
     *,
     transcript_lines: list[str],
     knot_refs: list[dict],
+    page_blocks: list | None = None,
 ) -> str:
     """Render machine-layer content between -thread.md markers (overwrite each run).
 
     Human narrative belongs *above* THREAD_MARKER_START in the file; see
     STRATEGY-NOTEBOOK-ARCHITECTURE.md § Thread (two layers).
     """
+    page_blocks = page_blocks or []
     parts: list[str] = []
     parts.append("## Machine layer — Extraction (script-maintained)\n")
     parts.append(
-        "_Auto-generated from `-transcript.md` + knot index. "
+        "_Auto-generated from `-transcript.md` + `strategy-page` blocks in this thread "
+        "+ optional knot-index rows (legacy). "
         "**Journal layer** (narrative) lives **above** the **strategy-expert-thread** "
         "start HTML comment. The machine-layer HTML block is replaced on each `thread` run._\n"
     )
@@ -500,8 +505,18 @@ def render_thread_extraction(
             parts.append(line)
         parts.append("")
 
+    if page_blocks:
+        parts.append("### Page references\n")
+        for pb in page_blocks:
+            w = f" watch=`{pb.watch}`" if pb.watch else ""
+            parts.append(f"- **{pb.id}** — {pb.date}{w}")
+        parts.append("")
+
     if knot_refs:
-        parts.append("### Knot references\n")
+        parts.append("### Legacy knot references (deprecated)\n")
+        parts.append(
+            "_Standalone `chapters/…/knots/` files; prefer **Page references** above._\n"
+        )
         for knot in knot_refs:
             knot_path = knot.get("path", "?")
             knot_date = knot.get("date", "?")
@@ -513,8 +528,10 @@ def render_thread_extraction(
             parts.append(f"- [{basename}]({basename}) {knot_date}{label_str}{note_str}")
         parts.append("")
 
-    if not transcript_lines and not knot_refs:
-        parts.append("_(No transcript or knot material for extraction.)_\n")
+    if not transcript_lines and not knot_refs and not page_blocks:
+        parts.append(
+            "_(No transcript, page, or knot material for extraction.)_\n"
+        )
 
     return "\n".join(parts).rstrip() + "\n"
 
@@ -573,11 +590,13 @@ def rebuild_threads(
 
         transcript_lines = read_transcript_content(transcript_path)
         knot_refs = find_knot_references(expert_id, knot_index_path=knot_index_path)
+        page_blocks = discover_pages(thread_path, expert_id=expert_id)
 
         inner = render_thread_extraction(
             expert_id,
             transcript_lines=transcript_lines,
             knot_refs=knot_refs,
+            page_blocks=page_blocks,
         )
 
         if not dry_run:

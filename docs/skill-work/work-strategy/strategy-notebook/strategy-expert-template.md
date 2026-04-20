@@ -147,6 +147,10 @@ _Write here in full sentences. Dated arcs are welcome (e.g. **2026-04-12 → 04-
 
 _(No narrative distillation yet — add prose above the markers, not inside them.)_
 
+### Thread-embedded `strategy-page` blocks (journal layer)
+
+Woven pages use the scaffold in [strategy-page-template.md](strategy-page-template.md): marker-fenced **`<!-- strategy-page:start` … `end` →`** under the correct **`## YYYY-MM`** in **`experts/<expert_id>/thread.md`** (same layout as this template’s **Thread** section when using the per-folder model). After edits, run **`python3 scripts/validate_strategy_pages.py`** from repo root (optional **`--strict-prose`** per that template’s **Machine checks**). Full section rules, optional **`### Technical appendix`**, and shared-`id` peer guidance live in **strategy-page-template.md** — not duplicated here.
+
 **Optional journal-layer extensions (still above the thread start HTML comment):**
 
 - **`## YYYY-MM` month headings** — each heading opens **one month-segment** of the readable journal (quarter-scale or ongoing). **Default:** **at least ~500 words** of substantive text per month-segment — **running prose** and/or **markdown blockquotes** (`>`) of the expert (verbatim-forward); see `validate_strategy_expert_threads.py`. List lines do not count. A short lede alone is not enough when tooling expects a full segment. Bullet stacks with `[strength: …]` hooks are **compressed ledger** material — fine for lattice discipline — but they **do not** count toward the minimum and are **not** an equally canonical substitute unless the operator opts into ledger-only months (see HTML comment below). To scaffold, run `python3 scripts/expand_strategy_expert_segment_prose.py --apply` from repo root. Whole-file opt-out for alternate journal discipline: `<!-- strategy-expert-thread:verbatim-forward-journal-ok -->`.

@@ -143,7 +143,7 @@ Canonical knot paths and raw ingest lines live in **Segment 2** below (regenerat
 ### Page: marandi-blumenthal-jf-primary
 
 **Date:** 2026-04-16
-**Source knot:** strategy-notebook-knot-2026-04-16-marandi-blumenthal-jf-primary.md
+**Source page:** `marandi-blumenthal-jf-primary`
 **Also in:** marandi
 
 # Knot — 2026-04-16 — Marandi-primary: Breaking Points × Blumenthal (Judging Freedom)
@@ -159,14 +159,14 @@ WORK only; not Record.
 
 ### Page type
 
-- [x] **Synthesis page** — **Marandi** spine + **Blumenthal** as **US/UK amplifier**; **not** the Pape-primary trap page (see [weave D](strategy-notebook-knot-2026-04-16-pape-janssen-escalation-blockade.md)).
+- [x] **Synthesis page** — **Marandi** spine + **Blumenthal** as **US/UK amplifier**; **not** the Pape-primary trap page (see weave D (page id `pape-janssen-escalation-blockade`)).
 
 ### Lineage
 
-- **Weave option C** (strategy session): Marandi-primary; Blumenthal = domestic/media amplifier; **Pape** = **validate fork** only → pointer to **same-day** [Pape × Janssen knot](strategy-notebook-knot-2026-04-16-pape-janssen-escalation-blockade.md), **not** merged analysis here.
+- **Weave option C** (strategy session): Marandi-primary; Blumenthal = domestic/media amplifier; **Pape** = **validate fork** only → pointer to **same-day** Pape × Janssen knot (page id `pape-janssen-escalation-blockade`), **not** merged analysis here.
 - **Inbox:** [`daily-strategy-inbox.md`](../../../daily-strategy-inbox.md) **`## 2026-04-16`** — **`- BP |`** Marandi row; **Judging Freedom — Max Blumenthal — 2026-04-16** (operator session; paste to inbox when ready).
 - **Expert threads:** `thread:marandi` · `thread:blumenthal`
-- **Sister:** [04-13 Marandi × Ritter × Mercouris scaffold](strategy-notebook-knot-2026-04-13-marandi-ritter-mercouris-hormuz-scaffold.md)
+- **Sister:** 04-13 Marandi × Ritter × Mercouris scaffold (page id `marandi-ritter-mercouris-hormuz-scaffold`)
 
 ---
 
@@ -176,7 +176,7 @@ WORK only; not Record.
 
 **`thread:blumenthal` — Judging Freedom (2026-04-16):** **Amplifier stream** — **US-facing** narrative on **10-day** Lebanon **pause** and **Islamabad** round-two **optics**; **Aoun/Salam** vs **Hezbollah** **monopoly on violence**; **Iran** **counter-leverage** after **Black Wednesday**; **Islamabad** as **failed process** — **Vance** / **Rubio** / **Thiessen** (delegation includes **Marandi** — named); **UK** **Palestine Action** / **gag** / **jury** as **parallel** **speech-state** story. **Does not** replace **Marandi** **process** facts or **wire** **Lebanon** **terms**.
 
-**Validate fork (`thread:pape`):** For **escalation-trap** / **commodity-calendar** / **spoiler** **stress-test** vocabulary on the **same calendar day**, use **[weave D — Pape Janssen](strategy-notebook-knot-2026-04-16-pape-janssen-escalation-blockade.md)** — **do not** duplicate that mechanism page here.
+**Validate fork (`thread:pape`):** For **escalation-trap** / **commodity-calendar** / **spoiler** **stress-test** vocabulary on the **same calendar day**, use **weave D — Pape Janssen (page id `pape-janssen-escalation-blockade`)** — **do not** duplicate that mechanism page here.
 
 ---
 
@@ -186,7 +186,7 @@ WORK only; not Record.
 
 **Pape (fork):** **Ratchet / checkpoints / third-player spoiler** **validate** whether **short pauses** **re-price** **next escalation** — see **D** knot; **C** **does not** **answer** **“exitless ratchet?”** **as** **primary** **thesis**.
 
-**Lattice:** **Ritter** / **Davis** **ORBAT**, **Mercouris** **institutional** — [04-13](strategy-notebook-knot-2026-04-13-marandi-ritter-mercouris-hormuz-scaffold.md) / [04-14 Ritter](strategy-notebook-knot-2026-04-14-ritter-blockade-hormuz-weave.md); **do not** **merge** **registers**.
+**Lattice:** **Ritter** / **Davis** **ORBAT**, **Mercouris** **institutional** — 04-13 (page id `marandi-ritter-mercouris-hormuz-scaffold`) / 04-14 Ritter (page id `ritter-blockade-hormuz-weave`); **do not** **merge** **registers**.
 
 **Falsifier:** If **primaries** show **sustained** **US** **flexibility** **at** **Islamabad** **and** **documented** **closure** **path**, **re-weight** **Marandi** **“not serious”** **frame** — **Blumenthal** **amplifier** **may** **still** **track** **domestic** **politics** **separately**.
 
@@ -194,8 +194,8 @@ WORK only; not Record.
 
 ### Links
 
-- **Weave D (same day, separate knot):** [strategy-notebook-knot-2026-04-16-pape-janssen-escalation-blockade.md](strategy-notebook-knot-2026-04-16-pape-janssen-escalation-blockade.md)
-- **Scaffold:** [strategy-notebook-knot-2026-04-13-marandi-ritter-mercouris-hormuz-scaffold.md](strategy-notebook-knot-2026-04-13-marandi-ritter-mercouris-hormuz-scaffold.md)
+- **Weave D (same day, separate knot):** `pape-janssen-escalation-blockade`
+- **Scaffold:** `marandi-ritter-mercouris-hormuz-scaffold`
 - **Threads:** [`strategy-expert-marandi-thread.md`](../../../strategy-expert-marandi-thread.md) · [`strategy-expert-blumenthal-thread.md`](../../../strategy-expert-blumenthal-thread.md)
 - **Inbox:** [`daily-strategy-inbox.md`](../../../daily-strategy-inbox.md) **`## 2026-04-16`**
 
@@ -212,7 +212,7 @@ WORK only; not Record.
 ### Index row (YAML — `knot-index.yaml`)
 
 ```yaml
-  - path: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/knots/strategy-notebook-knot-2026-04-16-marandi-blumenthal-jf-primary.md
+  - page_id: `marandi-blumenthal-jf-primary` (legacy path removed)
     date: "2026-04-16"
     knot_label: marandi-blumenthal-jf-primary
     clusters: [marandi, blumenthal, islamabad, hormuz]
@@ -220,13 +220,99 @@ WORK only; not Record.
     note: "Weave C: Marandi BP primary + Blumenthal JF amplifier; Pape validate fork → sister pape-janssen knot (weave D)"
 ```
 <!-- strategy-page:end -->
+<!-- strategy-page:start id="pape-janssen-escalation-blockade" date="2026-04-16" watch="" -->
+### Page: pape-janssen-escalation-blockade
+
+**Date:** 2026-04-16
+**Source page:** `pape-janssen-escalation-blockade`
+**Also in:** davis, marandi, mearsheimer, pape
+
+### Signal
+
+**Source artifact:** operator-pasted transcript — *Professor Robert Pape: The US Can NOT Beat Iran*, interview **Cyrus Janssen**, uploaded **2026-04-16** (YouTube `@CyrusJanssen`). **Pin** canonical episode `watch?v=` when confirmed; until then treat lines as **operator-transcript** tier.
+
+Pape stacks four public claims in one appearance:
+
+1. **Escalation trap / domestic lock-in:** Regime-change bombing failed; the U.S. cannot “accept” defeat in narrative terms; Trump needs a “clean win” versus an Obama-frame loss; Iran is unlikely to “bail out” that domestic story.
+2. **Blockade → commodity calendar (hypothesis-grade):** Price rise → ~45d shortages → 60–90d commodity production contraction; named checkpoints (**day 46**, **May 1** shortages reporting, **Jun 1** contraction) with 1973 / WWII Japan blockade analogies — **requires primary econ series** before Links-grade merge with §1c macro rows.
+3. **Escalation stages + fork:** Withdrawal under Hormuz leverage → **“fourth center”** branch; **Vance** enriched-uranium-out framing; subjective **~70%→~80%+** ground-operation probability — **opinion-forecast**, not ORBAT.
+4. **Israel as spoiler:** Third player in presidential diplomacy; **May 2025** / **Feb 2026** rounds cited; **Rubio** cited re Israeli pressure on negotiators — **needs Rubio primary quotes + dates** before tight weave with Islamabad / grand-bargain rows.
+
+**Same-week X (2026-04-14):** sectarian **map** + claim that Israel talks with **Christian & Sunni** Lebanese leadership while **Shia** leaders opposed → trajectory toward **south Shia cleansing + civil war** vs peace — **parallel** to [AP — Israel–Lebanon Washington talks](https://apnews.com/article/lebanon-israel-negotiations-hezbollah-rubio-washington-88f5123bfcf4c00625e98ea14a16eef9) **process** shell; **do not** merge map thesis with wire “who met” without primaries.
+
+---
+
+### Judgment
+
+**Mechanism (Pape lane):** Treat **escalation trap** as a **commitment-ratchet + audience-cost** story — demands that harden as sunk costs rise — **not** interchangeable with **Mearsheimer** alliance geometry or **Ritter** hull-level blockade mechanics.
+
+**Thesis — lattice separation (from inbox `batch-analysis`):**
+
+- **Pape × Mearsheimer:** Pape stresses **domestic lock-in**, **calendarized commodity pain**, **Israel spoiler**, **long-war time-on-side** — **not** the same units as Mearsheimer-class **who can afford to fight**, **buck-passing**, **regional balancer** geometry (`thread:mearsheimer`). **Do not** force-merge; **weak bridge:** both undercut a simple **bomb-to-fold** victory story — **different mechanisms**.
+
+- **Pape × Davis:** **Davis** tests **ultimatum vs negotiation**, **resumption clock**, **U.S.-side macro hurt** if talks read as final offer (`thread:davis`). Pape tests **commodity-shock staging**, **third-player killing talks**, **Trump exit narrative**. **Weak bridge:** both model **why talks break under pressure** — **different falsifiers** (process vs domestic ratchet + shocks).
+
+**Falsifier:** If **White House / State** readouts show **sustained** Islamabad rounds **without** Rubio-attributed Israeli spoiler behavior **and** commodity checkpoints **miss** Pape’s calendar, downgrade the **spoiler + calendar** spine for this knot (keep escalation-trap vocabulary if demand structure still ratchets).
+
+**Weave D — same-day evidence streams (do not merge registers):** **Marandi — Breaking Points (page id `marandi-blumenthal-jf-primary`)** (Tehran **process** / **delegation authority** / **Hormuz leverage** — `thread:marandi`) and **Blumenthal — Judging Freedom (page id `marandi-blumenthal-jf-primary`)** (US **domestic** / **media** **amplifier** on **Vance**, **Islamabad optics**, **delegation targeting** — `thread:blumenthal`, operator session) feed **stress-test** **questions** for this **trap** page: *does the room failure look like **ratchet + audience lock-in** (Pape) rather than only **Tehran framing** (Marandi) or **DC humiliation** (Blumenthal)?* **Three lanes** — **three falsifiers**; cite **sister** weave C (page id `marandi-blumenthal-jf-primary`) for **non-Pape** **primary** **Judgment**.
+
+---
+
+### Open
+
+- Pin **Janssen × Pape** canonical **`watch?v=`** URL; drop **`@CyrusJanssen/videos`** placeholder in Judgment when pinned.
+- **Rubio** + **Israeli negotiator-pressure** claims: **primary** quotes / dates before merging with §1e **grand bargain** or Islamabad rows.
+- **Blockade calendar** (day 46, May 1, Jun 1): **IMF / industry** or **government** commodity data — **do not** cite Pape’s interview as sole primary for macro §1c.
+- **Ground op %:** track as **hypothesis** only; **not** ORBAT.
+- **Lebanon:** keep **sectarian-map thesis** **separate** from **AP** **process** **readout** until same-day participant list is pinned.
+
+---
+
+### Technical appendix
+
+# Knot — 2026-04-16 — Pape (Janssen): escalation trap, staged blockade, third-player spoiler
+
+WORK only; not Record.
+
+| Field | Value |
+|--------|--------|
+| **Date** | 2026-04-16 |
+| **knot_label** (machine slug) | `pape-janssen-escalation-blockade` — matches basename and [`knot-index.yaml`](../../../knot-index.yaml) |
+| **Day block** | [`days.md` § 2026-04-16](../days.md#2026-04-16) |
+| **Primary expert (`thread:`)** | `pape` — **escalation trap / staged blockade / spoiler** mechanism; **not** Tehran process register (see weave C (page id `marandi-blumenthal-jf-primary`)). |
+
+### Page type
+
+- [x] **Mechanism page** — staged coercion, calendarized commodity shock, spoiler logic
+- [x] **Thesis page** — Pape lane vs Mearsheimer / Davis lattices (non-merge)
+
+### Lineage
+
+- **Inbox:** [`daily-strategy-inbox.md`](../../../daily-strategy-inbox.md) — **Expert ingest — 2026-04-16** (Pape × Cyrus Janssen YT lines + `batch-analysis | 2026-04-16 | Pape (Janssen) × Mearsheimer` + `× Davis`); **X** Lebanon map + **AP** Washington talks context (`wire | cold: LEBANON | AP 14 Apr`)
+- **Expert threads:** `thread:pape` — operator transcript + channel URL until **`watch?v=`** pinned
+- **Sister knots:** `islamabad-hormuz-thesis-weave` (Thesis A/B + escalation-trap vocabulary), `kremlin-iri-uranium-dual-register` (enrichment / grand-bargain scope trap), `mercouris-mearsheimer-lebanon-split` (Lebanon fork + Pape sectarian map lane)
+
+---
+
+### Links
+
+- **Inbox capture:** [daily-strategy-inbox.md — Expert ingest 2026-04-16](../../../daily-strategy-inbox.md) (search `Janssen` / `Pape`)
+- **Expert thread:** [strategy-expert-pape-thread.md](../../../strategy-expert-pape-thread.md)
+- **YT (channel until pin):** [Cyrus Janssen — videos](https://www.youtube.com/@CyrusJanssen/videos)
+- **X (Lebanon map):** [ProfessorPape](https://x.com/ProfessorPape) — `verify:pin-exact-status-URL` in inbox
+- **Wire:** [AP — Israel–Lebanon talks Washington (14 Apr)](https://apnews.com/article/lebanon-israel-negotiations-hezbollah-rubio-washington-88f5123bfcf4c00625e98ea14a16eef9)
+- **Weave C (same day):** `marandi-blumenthal-jf-primary` — Marandi-primary + Blumenthal amplifier; **this** knot is **weave D** (Pape-primary).
+- **Sister knots:** 2026-04-12 islamabad-hormuz-thesis-weave (page id `islamabad-hormuz-thesis-weave`) · 2026-04-15 kremlin-iri-uranium-dual-register (page id `kremlin-iri-uranium-dual-register`) · 2026-04-14 mercouris-mearsheimer-lebanon-split (page id `mercouris-mearsheimer-lebanon-split`)
+
+---
+<!-- strategy-page:end -->
 <!-- strategy-expert-thread:start -->
 ## Machine layer — Extraction (script-maintained)
 
-_Auto-generated from `-transcript.md` + knot index. **Journal layer** (narrative) lives **above** the **strategy-expert-thread** start HTML comment. The machine-layer HTML block is replaced on each `thread` run._
+_Auto-generated from `-transcript.md` + `strategy-page` blocks in this thread + optional knot-index rows (legacy). **Journal layer** (narrative) lives **above** the **strategy-expert-thread** start HTML comment. The machine-layer HTML block is replaced on each `thread` run._
 
-### Knot references
+### Page references
 
-- [strategy-notebook-knot-2026-04-16-pape-janssen-escalation-blockade.md](strategy-notebook-knot-2026-04-16-pape-janssen-escalation-blockade.md) 2026-04-16 (pape-janssen-escalation-blockade) — Weave D: Pape-primary Janssen trap + blockade calendar + spoiler; same-day Marandi+Blumenthal evidence streams → sister weave C; lattice vs Mearsheimer/Davis
-- [strategy-notebook-knot-2026-04-16-marandi-blumenthal-jf-primary.md](strategy-notebook-knot-2026-04-16-marandi-blumenthal-jf-primary.md) 2026-04-16 (marandi-blumenthal-jf-primary) — Weave C: Marandi BP primary + Blumenthal JF amplifier; Pape validate fork → sister pape-janssen (weave D)
+- **marandi-blumenthal-jf-primary** — 2026-04-16
+- **pape-janssen-escalation-blockade** — 2026-04-16
 <!-- strategy-expert-thread:end -->

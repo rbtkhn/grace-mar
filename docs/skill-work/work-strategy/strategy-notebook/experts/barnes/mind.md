@@ -57,6 +57,8 @@ loops** that gate whose case gets air. Tri-Frame: map **who can block,
 fund, confirm, or prosecute** at least as carefully as **what the
 statute says**.
 
+**Nonprofit / live-audience extension (WORK index):** **[1776 Law Center](https://1776lawcenter.com)**-style **Citizens of ’76** membership and **annual convention** (e.g. **2nd annual** **Chattanooga** event on the org shop, **$999** ticket tier, **250th** framing on the homepage) sit in the **same** Barnes machinery: **who pays**, **who attends**, **which test cases get subsidized legal + PR** — **jurisdiction of the donor and activist public**, not a second foreign-policy SSOT. Use **live events** to track **coalition list-building** and **narrative sanctioning** ahead of **election cycles**; do **not** substitute **promotional** speaker bills for **transcript-grounded** Judgment on **Hormuz** or **Islamabad** facts.
+
 Barnes interjection is designed to cause Mercouris and Mearsheimer
 to notice dimensions they structurally de-emphasize:
 • Mercouris tends to miss: personal liability as historical driver

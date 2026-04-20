@@ -36,13 +36,13 @@ End the pass with **3–5 options** (standard WORK menu). Typical forks on a nor
 
 | Letter | Option |
 |--------|--------|
-| **A** | Weave inbox → knot(s) + `days.md` continuity |
+| **A** | Weave inbox → **`strategy-page`** block(s) + `days.md` continuity |
 | **B** | Verify — run `strategy + verify` on a claim |
 | **C** | Lens — B/M/M one-liners (pick one, two, or skip) |
 | **D** | Promote — stitch a stabilized arc to STRATEGY.md |
 | **E** | Pivot to another lane or park |
 
-If the operator picks **A**, follow the weave contract: compose or extend knot(s) with Signal / Judgment / Links minimum, update `days.md` continuity, then condense if over ~1200 words. If they skip, the inbox holds state for next time.
+If the operator picks **A**, follow the weave contract: compose or extend **`strategy-page`** blocks in expert **`thread.md`** with Signal / Judgment / Links minimum, update `days.md` continuity, then condense if over ~1200 words. If they skip, the inbox holds state for next time.
 
 ---
 

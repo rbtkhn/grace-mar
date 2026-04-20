@@ -57,8 +57,11 @@ jobs:
       - name: Validate template sync contract
         run: python scripts/validate_template_sync_contract.py
 
-      - name: Validate strategy-notebook knot index
+      - name: Validate strategy-notebook knot index (legacy; may be empty)
         run: python3 scripts/validate_knot_index.py
+
+      - name: Validate strategy-page fences in expert threads
+        run: python3 scripts/validate_strategy_pages.py
 
       - name: Validate strategy expert threads (Segment 1 prose hints)
         run: python3 scripts/validate_strategy_expert_threads.py

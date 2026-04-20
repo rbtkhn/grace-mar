@@ -10,18 +10,20 @@ Purpose: fixed retrieval baseline for the OB1 chunking spike across `full_file`,
 
 ## Test set (10 fixed queries)
 
+Anchors match current `users/grace-mar/self.md` section headings (reseeded April 2026). If `self.md` structure changes again, update this table in the same PR.
+
 | # | Query | Expected source in `users/grace-mar/self.md` |
 |---|---|---|
-| 1 | What are Grace-Mar's favorite books and media? | `## II. PREFERENCES` |
-| 2 | How does Grace-Mar prefer to write and speak? | `## III. LINGUISTIC STYLE` |
-| 3 | What recurring personality patterns are documented? | `## IV. PERSONALITY` |
-| 4 | What are the strongest core interests right now? | `## V. INTERESTS` |
-| 5 | What values guide difficult decisions? | `## VI. VALUES` |
-| 6 | What reasoning style appears during conflict? | `## VII. REASONING PATTERNS` |
-| 7 | What family and memory narrative anchors exist? | `## VIII. NARRATIVE` |
-| 8 | What knowledge has been added in IX-A recently? | `### IX-A. KNOWLEDGE` |
-| 9 | What curiosity threads are active in IX-B? | `### IX-B. CURIOSITY` |
-| 10 | What observed behavior changes show up in IX-C? | `### IX-C. PERSONALITY (Observed)` |
+| 1 | What work rhythm, decision style, and quality bar are documented? | `## II. PREFERENCES` |
+| 2 | What family profile is recorded (including explicit empties)? | `## III. FAMILY` |
+| 3 | What school or education profile exists? | `## IV. SCHOOL / EDUCATION` |
+| 4 | What health-related profile exists? | `## V. HEALTH` |
+| 5 | What is the life mission reference and list of intellectual values? | `## VI. PHILOSOPHY` |
+| 6 | When was Self reseeded and what companion-freeze pointer exists? | `## VII. METADATA` |
+| 7 | How do gated approvals merge into the Record? | `## VIII. GATED APPROVED LOG` |
+| 8 | What knowledge entries are listed in IX-A? | `## IX-A. KNOWLEDGE` |
+| 9 | What curiosity labels and lanes appear in IX-B? | `## IX-B. CURIOSITY` |
+| 10 | What personality observations are listed in IX-C? | `## IX-C. PERSONALITY` |
 
 ## Run sheet
 
@@ -49,16 +51,16 @@ Then evaluate retrieval against the 10 fixed queries above.
 
 | # | Query (short) | Expected section | Score | Notes |
 |---|---|---|---:|---|
-| 1 | favorites/media | `## II. PREFERENCES` |  |  |
-| 2 | writing/speaking style | `## III. LINGUISTIC STYLE` |  |  |
-| 3 | personality patterns | `## IV. PERSONALITY` |  |  |
-| 4 | active interests | `## V. INTERESTS` |  |  |
-| 5 | decision values | `## VI. VALUES` |  |  |
-| 6 | conflict reasoning style | `## VII. REASONING PATTERNS` |  |  |
-| 7 | family/memory anchors | `## VIII. NARRATIVE` |  |  |
-| 8 | IX-A knowledge additions | `### IX-A. KNOWLEDGE` |  |  |
-| 9 | IX-B curiosity threads | `### IX-B. CURIOSITY` |  |  |
-| 10 | IX-C behavior changes | `### IX-C. PERSONALITY (Observed)` |  |  |
+| 1 | rhythm / decision / quality bar | `## II. PREFERENCES` |  |  |
+| 2 | family profile | `## III. FAMILY` |  |  |
+| 3 | school / education | `## IV. SCHOOL / EDUCATION` |  |  |
+| 4 | health profile | `## V. HEALTH` |  |  |
+| 5 | mission + intellectual values | `## VI. PHILOSOPHY` |  |  |
+| 6 | reseed + companion freeze | `## VII. METADATA` |  |  |
+| 7 | gated merge path | `## VIII. GATED APPROVED LOG` |  |  |
+| 8 | IX-A knowledge entries | `## IX-A. KNOWLEDGE` |  |  |
+| 9 | IX-B curiosity labels | `## IX-B. CURIOSITY` |  |  |
+| 10 | IX-C personality observations | `## IX-C. PERSONALITY` |  |  |
 
 Result summary:
 
@@ -78,16 +80,45 @@ Then evaluate retrieval against the same 10 fixed queries above.
 
 | # | Query (short) | Expected section | Score | Notes |
 |---|---|---|---:|---|
-| 1 | favorites/media | `## II. PREFERENCES` |  |  |
-| 2 | writing/speaking style | `## III. LINGUISTIC STYLE` |  |  |
-| 3 | personality patterns | `## IV. PERSONALITY` |  |  |
-| 4 | active interests | `## V. INTERESTS` |  |  |
-| 5 | decision values | `## VI. VALUES` |  |  |
-| 6 | conflict reasoning style | `## VII. REASONING PATTERNS` |  |  |
-| 7 | family/memory anchors | `## VIII. NARRATIVE` |  |  |
-| 8 | IX-A knowledge additions | `### IX-A. KNOWLEDGE` |  |  |
-| 9 | IX-B curiosity threads | `### IX-B. CURIOSITY` |  |  |
-| 10 | IX-C behavior changes | `### IX-C. PERSONALITY (Observed)` |  |  |
+| 1 | rhythm / decision / quality bar | `## II. PREFERENCES` |  |  |
+| 2 | family profile | `## III. FAMILY` |  |  |
+| 3 | school / education | `## IV. SCHOOL / EDUCATION` |  |  |
+| 4 | health profile | `## V. HEALTH` |  |  |
+| 5 | mission + intellectual values | `## VI. PHILOSOPHY` |  |  |
+| 6 | reseed + companion freeze | `## VII. METADATA` |  |  |
+| 7 | gated merge path | `## VIII. GATED APPROVED LOG` |  |  |
+| 8 | IX-A knowledge entries | `## IX-A. KNOWLEDGE` |  |  |
+| 9 | IX-B curiosity labels | `## IX-B. CURIOSITY` |  |  |
+| 10 | IX-C personality observations | `## IX-C. PERSONALITY` |  |  |
+
+Result summary:
+
+- Total score: `__/10`
+- Precision proxy: `__`
+- Repeated misses:
+
+## Third pass worksheet — `per_entry`
+
+Status: blocked pending exporter implementation (`scripts/export_open_brain_bundle.py` is not present in this repo yet).
+
+When exporter is available, run:
+
+`python3 scripts/export_open_brain_bundle.py -u grace-mar -o ob1-export/ --chunk-strategy per_entry`
+
+Then evaluate retrieval against the same 10 fixed queries above.
+
+| # | Query (short) | Expected section | Score | Notes |
+|---|---|---|---:|---|
+| 1 | rhythm / decision / quality bar | `## II. PREFERENCES` |  |  |
+| 2 | family profile | `## III. FAMILY` |  |  |
+| 3 | school / education | `## IV. SCHOOL / EDUCATION` |  |  |
+| 4 | health profile | `## V. HEALTH` |  |  |
+| 5 | mission + intellectual values | `## VI. PHILOSOPHY` |  |  |
+| 6 | reseed + companion freeze | `## VII. METADATA` |  |  |
+| 7 | gated merge path | `## VIII. GATED APPROVED LOG` |  |  |
+| 8 | IX-A knowledge entries | `## IX-A. KNOWLEDGE` |  |  |
+| 9 | IX-B curiosity labels | `## IX-B. CURIOSITY` |  |  |
+| 10 | IX-C personality observations | `## IX-C. PERSONALITY` |  |  |
 
 Result summary:
 

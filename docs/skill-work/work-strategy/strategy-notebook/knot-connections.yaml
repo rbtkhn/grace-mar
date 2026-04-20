@@ -1,7 +1,10 @@
-# knot-connections.yaml — governed edge layer between strategy-notebook knot pages.
+# knot-connections.yaml — LEGACY governed edge layer (WORK only; not Record).
+#
+# **Deprecated:** Knot files under `chapters/…/knots/` were retired in favor of **thread-embedded pages**.
+# Edges keyed by knot paths are empty until a **page-id graph** (or watch-centric layer) replaces this file.
 #
 # Separate from knot-index.yaml (inventory / table of contents).
-# knot-connections.yaml records *relationships* between pages.
+# Historically: relationships between knot files.
 #
 # Validate: `python3 scripts/validate_knot_connections.py` (from repo root).
 #
@@ -37,57 +40,4 @@ relations:
   - same-watch
   - sequence-next
 
-connections:
-  - from: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/knots/strategy-notebook-knot-2026-04-14-parsi-davis-war-powers.md
-    to: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/knots/strategy-notebook-knot-2026-04-14-mercouris-mearsheimer-lebanon-split.md
-    relation: tension
-    reason: "Parsi/Davis accountability framing vs Mercouris/Mearsheimer structural-incentive framing on the same theatre legitimacy question."
-    warrant:
-      - "same-day"
-      - "shared-watch:accountability-language"
-    status: active
-
-  - from: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/knots/strategy-notebook-knot-2026-04-12-islamabad-hormuz-thesis-weave.md
-    to: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/knots/strategy-notebook-knot-2026-04-14-ritter-blockade-hormuz-weave.md
-    relation: extends
-    reason: "Ritter blockade mechanics extends the Islamabad-Hormuz thesis with operational detail."
-    warrant:
-      - "shared-watch:hormuz"
-      - "sequence-cross-day"
-    status: active
-
-  - from: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/knots/strategy-notebook-knot-2026-04-13-marandi-ritter-mercouris-hormuz-scaffold.md
-    to: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/knots/strategy-notebook-knot-2026-04-14-diesen-vi14-petrodollar-vs-sachs-hormuz.md
-    relation: mechanism-for
-    reason: "Diesen/Sachs petrodollar mechanism supplies structural explanation for the expert scaffold's Hormuz convergence."
-    warrant:
-      - "shared-watch:hormuz"
-    status: active
-
-  - from: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/knots/strategy-notebook-knot-2026-04-12-islamabad-hormuz-thesis-weave.md
-    to: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/knots/strategy-notebook-knot-2026-04-15-kremlin-iri-uranium-dual-register.md
-    relation: extends
-    reason: "04-15 uranium off-ramp thesis extends the Islamabad collapse + Thesis A/B with same-day Kremlin-IRI convergence evidence and a concrete falsifier."
-    warrant:
-      - "shared-watch:hormuz"
-      - "shared-watch:islamabad"
-      - "sequence-cross-day"
-    status: active
-
-  - from: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/knots/strategy-notebook-knot-2026-04-14-ritter-blockade-hormuz-weave.md
-    to: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/knots/strategy-notebook-knot-2026-04-15-kremlin-iri-uranium-dual-register.md
-    relation: same-watch
-    reason: "Both track Hormuz blockade enforcement; Ritter supplies operational mechanics, 04-15 knot supplies diplomatic/legitimacy read of the same blockade."
-    warrant:
-      - "shared-watch:hormuz"
-      - "shared-watch:blockade"
-    status: active
-
-  - from: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/knots/strategy-notebook-knot-2026-04-14-parsi-davis-war-powers.md
-    to: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/knots/strategy-notebook-knot-2026-04-15-kremlin-iri-uranium-dual-register.md
-    relation: tension
-    reason: "Parsi/Davis accountability language ('who authorizes the blockade') is in tension with Vance 'grand bargain' framing that bypasses war-powers debate by expanding scope."
-    warrant:
-      - "shared-watch:accountability-language"
-      - "shared-watch:hormuz"
-    status: active
+connections: []

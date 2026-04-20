@@ -77,7 +77,7 @@ python3 scripts/strategy_page.py davis barnes --dry-run
 
 ### `watch` — cross-expert watch views
 
-Lists watches or shows detail for one watch, including tension relations from `knot-connections.yaml`.
+Lists watches or shows detail for one watch, including optional tension relations from `knot-connections.yaml` (legacy schema; often empty — page-level graph TBD).
 
 ```
 python3 scripts/strategy_watch.py                        # list all watches
@@ -95,11 +95,11 @@ python3 scripts/strategy_watch.py --tensions-only         # only disagreements
 
 ## Migration
 
-Existing knot files under `chapters/YYYY-MM/knots/` remain on disk until the operator removes them. The migration script (`scripts/migrate_knots_to_pages.py`) converts knots into page blocks and moves flat expert files into per-expert folders.
+Standalone knot files under `chapters/YYYY-MM/knots/` were **removed** after `scripts/migrate_knots_to_pages.py` transfigured them into **`strategy-page`** blocks; git history retains old files. Flat expert files may still exist in some trees—per-expert folders under `experts/<id>/` are canonical for new work.
 
 ## What this does NOT replace
 
 - The machine layer (`strategy-expert-thread:start/end` markers) is unchanged
 - `strategy_thread.py` still writes the machine layer
-- `knot-index.yaml` and `knot-connections.yaml` remain as the migration source and tension/connection reference
+- **`knot-index.yaml` / `knot-connections.yaml`** are **deprecated** (empty lists); page inventory comes from expert threads + validators
 - No new Python packages, JSON stores, or state directories

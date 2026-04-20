@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-19T05:14:36.405353+00:00",
+  "generated_at": "2026-04-20T06:06:47.509852+00:00",
   "user_id": "grace-mar",
   "agent_surface": {
     "cursor_model": "unknown"
@@ -9,7 +9,7 @@
   "ok": true,
   "integrity_ok": true,
   "governance_ok": true,
-  "self_memory_changed": false,
+  "self_memory_changed": true,
   "reviewable_count": 0,
   "contradiction_count": 0,
   "artifact_draft_count": 0,
@@ -17,7 +17,7 @@
   "followups": [],
   "phases": {
     "recent": {
-      "self_memory_changed": false,
+      "self_memory_changed": true,
       "entry_count": 0,
       "relation_counts": {}
     },
@@ -29,19 +29,19 @@
     }
   },
   "coffee_rollup_24h": {
-    "window_start_utc": "2026-04-18T05:14:29.345158+00:00",
-    "window_end_utc": "2026-04-19T05:14:29.345158+00:00",
+    "window_start_utc": "2026-04-19T06:06:42.811839+00:00",
+    "window_end_utc": "2026-04-20T06:06:42.811839+00:00",
     "window_hours": 24.0,
     "count": 4,
-    "first_ts": "2026-04-18T13:04:00+00:00",
-    "last_ts": "2026-04-19T02:04:00+00:00",
-    "span_hours": 13.0,
+    "first_ts": "2026-04-19T13:17:00+00:00",
+    "last_ts": "2026-04-19T20:15:00+00:00",
+    "span_hours": 6.97,
     "by_mode": {
       "work-start": 4
     },
     "runs": [
       {
-        "ts_iso": "2026-04-18T13:04:00+00:00",
+        "ts_iso": "2026-04-19T13:17:00+00:00",
         "ok": true,
         "mode": "work-start",
         "kv": {
@@ -50,7 +50,7 @@
         }
       },
       {
-        "ts_iso": "2026-04-18T14:05:00+00:00",
+        "ts_iso": "2026-04-19T14:15:00+00:00",
         "ok": true,
         "mode": "work-start",
         "kv": {
@@ -59,7 +59,7 @@
         }
       },
       {
-        "ts_iso": "2026-04-18T17:34:00+00:00",
+        "ts_iso": "2026-04-19T16:26:00+00:00",
         "ok": true,
         "mode": "work-start",
         "kv": {
@@ -68,7 +68,7 @@
         }
       },
       {
-        "ts_iso": "2026-04-19T02:04:00+00:00",
+        "ts_iso": "2026-04-19T20:15:00+00:00",
         "ok": true,
         "mode": "work-start",
         "kv": {
@@ -103,9 +103,9 @@
       "signals_used": []
     }
   ],
-  "suggested_execution_path_index": 1,
+  "suggested_execution_path_index": 2,
   "execution_path_suggestion_reason": "calendar_mod3",
-  "tomorrow_inherits": "Tomorrow inherits (hint): **Build / integrate (repo + work-dev)** \u2014 calendar rotation; not policy or Record.",
+  "tomorrow_inherits": "Tomorrow inherits (hint): **Steward / membrane (gate + template parity)** \u2014 calendar rotation; not policy or Record.",
   "civmem_echoes": [
     {
       "path": "book/APPLIED-THEOLOGY-INSIGHTS-MERCOURIS-LENS.md",
@@ -141,9 +141,13 @@
   "dream_catchup": {
     "semantics": "since_previous_dream",
     "timezone": "UTC",
-    "previous_dream_generated_at": "2026-04-19T05:14:09.334867+00:00",
-    "local_calendar_dates": [],
-    "strategy_notebook_missing_day_headers": []
+    "previous_dream_generated_at": "2026-04-19T05:14:36.405353+00:00",
+    "local_calendar_dates": [
+      "2026-04-20"
+    ],
+    "strategy_notebook_missing_day_headers": [
+      "2026-04-20"
+    ]
   },
   "handoffSchemaVersion": 2,
   "topActionReason": "calendar_mod3",
@@ -154,6 +158,6 @@
     "blocked": "",
     "watch_later": ""
   },
-  "worktreeState": "risky residue",
-  "worktreeAdvice": "Large or wide diff \u2014 inspect before continuing; use bridge when closing session."
+  "worktreeState": "light residue",
+  "worktreeAdvice": "leave or commit before sleep; bridge seals when you close the session."
 }

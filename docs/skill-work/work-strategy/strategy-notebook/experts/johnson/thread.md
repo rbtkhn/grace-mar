@@ -112,10 +112,10 @@ The 2026-03 segment for the Larry Johnson lane (`johnson`) exists so the noteboo
 ### 2026-04
 
 - **2026-04** — Notebook knot cross-ref (partial month).  
-  _Source:_ notebook: `strategy-notebook-knot-2026-04-13-marandi-ritter-mercouris-hormuz-scaffold.md`
+  _Source:_ notebook: `marandi-ritter-mercouris-hormuz-scaffold``
 
 - **2026-04** — Notebook knot cross-ref (partial month).  
-  _Source:_ notebook: `strategy-notebook-knot-2026-04-14-ritter-blockade-hormuz-weave.md`
+  _Source:_ notebook: `ritter-blockade-hormuz-weave``
 
 <!-- backfill:johnson:end -->
 ## 2026-04
@@ -140,15 +140,186 @@ Finally, 2026-04 should remain safe for **operator rotation**: someone returning
 - [strength: medium] **Mechanism:** YT cold **2026-04-10** — F-15/Isfahan rescue narrative; deployment ~Mar 10–11; load-math scenarios — path: [transcript-analysis-haiphong-ritter-johnson-iran-2026-04.md](../transcript-analysis-haiphong-ritter-johnson-iran-2026-04.md) — verify:operator-transcript-digest.
 - [strength: medium] **2026-04-17 — Countercurrent × Robert Barnes** (*What the HELL is going on in the White House?*): Johnson **hosts** Barnes on **US politics** / **White House** **process** (executive cognition **frame**, **Vance**/**ceasefire**/**Witkoff–Kushner**, **Navy** Hormuz **“mall cop”**, **electoral** brake) — **`thread:barnes`** **primary** **analytic** **voice**; Johnson = **interviewer**. Verbatim excerpt: [barnes-countercurrent-2026-04-17-verbatim.md](barnes-countercurrent-2026-04-17-verbatim.md); **`crosses:barnes+johnson`**.
 - [strength: medium] **2026-04-17 — Daniel Davis × Larry Johnson** (*HORMUZ OPENING, CEASEFIRE ENDING: Conflicting Messages*): Johnson stresses **dual messaging** — Trump “Strait open” alongside **blockade** on **Iran**; **IFM / spokesman** lines on **Lebanon** contingency and **three passage conditions** (commercial-only, Iran-designated routes, coordination); **military** contact “WTF” lane; **Bessent** re-sanctions same day as ceasefire; **Islamabad** mediated by **Pakistan** with **China** in the story; Davis’s **three-option** endgame (10-point diplomacy vs **Keane**-style escalation vs sanctions long game) with Johnson predicting **escalation** and **Gulf** pressure as a possible de-escalation lever. **C-plane:** Johnson uses **maximal clinical language** on Trump (**detached**, **delusional**, removal call) — **analyst rhetoric**, not §1h; keep **separate** from **`@araghchi` / `@s_m_marandi`** primaries and from **Ritter** 04-17 **ego/theater** Iran segment until explicit **seam** in Judgment. Verbatim: [strategy-expert-johnson-transcript.md](strategy-expert-johnson-transcript.md) **2026-04-17**; inbox: [daily-strategy-inbox.md](daily-strategy-inbox.md) (same-day scratch). **Cross:** `thread:davis` same episode; **`ritter`** **2026-04-17** Diesen (Iran block).
-- [strength: medium] **Knot lattice:** [marandi-ritter-mercouris-hormuz-scaffold](strategy-notebook-knot-2026-04-13-marandi-ritter-mercouris-hormuz-scaffold.md) · [ritter-blockade-hormuz-weave](strategy-notebook-knot-2026-04-14-ritter-blockade-hormuz-weave.md).
+- [strength: medium] **Knot lattice:** `marandi-ritter-mercouris-hormuz-scaffold` · `ritter-blockade-hormuz-weave`.
 
 Canonical knot paths and raw ingest lines live in **Segment 2** below (regenerated each **`thread`** run).
 
 ---
+<!-- strategy-page:start id="marandi-ritter-mercouris-hormuz-scaffold" date="2026-04-13" watch="hormuz" -->
+### Page: marandi-ritter-mercouris-hormuz-scaffold
+
+**Date:** 2026-04-13
+**Watch:** hormuz
+**Source page:** `marandi-ritter-mercouris-hormuz-scaffold`
+**Also in:** davis, freeman, marandi, mearsheimer, mercouris, parsi, ritter
+
+### Judgment
+
+**Weave:** **Mercouris** = **institutional / analyst-constellation / zugzwang** language; **Marandi** = **Iranian red lines** + **wire-verify** roster (**Ghalibaf** head; **Larijani** = transcript **misname**); **Ritter** = **USN mechanics** + **faith invective** lane. **Davis × Freeman × Mearsheimer** = **systemic / bargaining / alliance-cost** folds — **parallel** **Ritter ego-reduction** **lane** until primaries show sequence ([`days.md`](../days.md#2026-04-13)). **Do not** collapse **leadership-psychology** into **Links** without **`narrative-escalation`** + primaries. **Rome–faith registers** (Marandi ecumenical vs Ritter invective vs **SkyVirginSon** vs **Milad**) — **parallel legitimacy combat** — **not** Hormuz **material** **row** without **seam**.
+
+### Open
+
+- Pin **canonical** episode URLs for **Breaking Points**, **The Duran**, **Judging Freedom**, **Daniel Davis Deep Dive** (Freeman, Mearsheimer), **Napolitano × Johnson** per [`days.md` Open](../days.md#2026-04-13).
+
+---
+
+### Technical appendix
+
+# Knot — 2026-04-13 — Marandi × Ritter × Mercouris — Hormuz scaffold (expert lattice)
+
+| Field | Value |
+|--------|--------|
+| **Date** | 2026-04-13 |
+| **knot_label** (machine slug) | `marandi-ritter-mercouris-hormuz-scaffold` — matches basename and [`knot-index.yaml`](../../../knot-index.yaml) |
+| **Day block** | [`days.md` § 2026-04-13](../days.md#2026-04-13) |
+
+### Page type (**pick per knot** — mixed types allowed)
+
+- [ ] **Thesis page**
+- [x] **Synthesis page**
+- [ ] **Case page**
+- [ ] **Mechanism page**
+- [ ] **Watch page**
+- [x] **Link hub**
+
+### Lineage — **triple anchor** (same Judgment sentence)
+
+- **`thread:marandi`** — *Why the Iran Talks Failed* — channel-authority, structural deadlocks (stock / program / Hormuz governance), **Lebanon–Hormuz** linkage, **Easter ecumenical** register vs wire lane — episode URL **operator to pin** per [`days.md`](../days.md#2026-04-13).
+- **`thread:ritter`** — **Judging Freedom** (*Who Controls Hormuz?*) — **porous blockade**, picket vs boarding, third-country hulls, **Trump–Pope** narrative-escalation segment — **lane-split** from Marandi — URL **operator to pin**.
+- **`thread:mercouris`** — **The Duran** 2026-04-13 monologue — Islamabad recap, blockade/Keane lineage, **zugzwang**, multilateral tickers — **verify each chain** before one arc — URL **operator to pin**.
+
+**Same showrunner, structural lanes (not interchangeable):** **`davis`** Deep Dive × **`freeman`** (process failure, ROE, Bessent vs recession — URL TBD); × **`mearsheimer`** (15 vs 10 point frames, bargaining asymmetry, allies clips — URL TBD). **`thread:parsi`** — Breaking Points / Quincy — Ravid red-lines leak tier — **not** WH primary.
+
+**Process overlap:** **`thread:johnson`** × Mercouris (Napolitano / Johnson digest vs Duran monologue) — **strip to process + price** for parity; **park** Bab el-Mandeb / pipeline under verify ([`days.md` Judgment](../days.md#2026-04-13)).
+
+### History resonance
+
+none this pass
+
+### Civilizational bridge
+
+none this pass
+
+### Cross-day links
+
+| Direction | Target | Relation |
+|-----------|--------|----------|
+| **Prior day** | `islamabad-hormuz-thesis-weave` | **Thesis A/B** + **Pape/Parsi/Freeman** **fork** **before** this **scaffold** **densifies**. |
+| **Next day** | `ritter-blockade-hormuz-weave` | **Ritter**-centered **04-14** lattice + **Parsi×Davis** / **Diesen×Sachs** / **Mercouris×Mearsheimer** **knot** files. |
+| **Day prose** | [`days.md` § 2026-04-14](../days.md#2026-04-14) | **Continuity spine** **explicitly** **stacks** **04-12–04-14** **`thread:`** **carries**. |
+
+### Links
+
+- [daily-strategy-inbox.md](../../../daily-strategy-inbox.md) — **Primary pulls (2026-04-13)** · **Ritter blockade checklist** (paste-grade)
+- [Al Jazeera — Islamabad talks unfolded](https://www.aljazeera.com/news/2026/4/13/how-the-us-iran-talks-in-islamabad-unfolded)
+- [Vatican News — Grand Mosque Algiers (2026-04-13)](https://www.vaticannews.va/en/pope/news/2026-04/pope-leo-apostolic-journey-algeria-grand-mosque-algiers-dialogue.html) — tier-A; **Trump–Leo** fold **tier split** per day **Judgment**
+- [rome-persia-legitimacy-signal-check.md](../../../rome-persia-legitimacy-signal-check.md)
+- **Episodes (pin):** Breaking Points (Parsi), The Duran (Mercouris), Judging Freedom (Ritter), Davis Deep Dive (Freeman, Mearsheimer), Johnson stack — **`operator to pin`** strings in [`days.md` Links / Open](../days.md#2026-04-13)
+
+### Receipt
+
+| Pin | Target | URL / pointer |
+|-----|--------|----------------|
+| **1** | **Wire** — Islamabad timeline | [Al Jazeera](https://www.aljazeera.com/news/2026/4/13/how-the-us-iran-talks-in-islamabad-unfolded) |
+| **2** | **Tier-A** Holy See — **Grand Mosque** | [Vatican News](https://www.vaticannews.va/en/pope/news/2026-04/pope-leo-apostolic-journey-algeria-grand-mosque-algiers-dialogue.html) |
+| **3** | **Inbox** checklist + **episode** queue | [daily-strategy-inbox.md](../../../daily-strategy-inbox.md) — Ritter mechanics / Mercouris verify hooks |
+
+**Falsifier:** One **merged** arc treats **Mercouris** **multilateral** **tickers** + **Johnson** **OOB** **skepticism** + **Marandi** **ecumenical** **register** + **Ritter** **hull** **claims** as **one** **voice** **without** **seams** — **lattice** **collapsed**.
+<!-- strategy-page:end -->
+
+<!-- strategy-page:start id="ritter-blockade-hormuz-weave" date="2026-04-14" watch="" -->
+### Page: ritter-blockade-hormuz-weave
+
+**Date:** 2026-04-14
+**Source page:** `scott-ritter-blockade-hormuz-weave`
+**Also in:** barnes, davis, diesen, jermy, marandi, mearsheimer, mercouris, parsi, ritter, sachs
+
+### Signal
+
+**Davis × Jermy** Deep Dive ([YouTube `etxmqrdm3V0`](https://www.youtube.com/watch?v=etxmqrdm3V0)) — **`thread:davis`**, **`thread:jermy`** — same-episode **blockade** **brinkmanship** + **energy–GDP** cascade; stacks **Ritter** **porous** **blockade** thesis vs **slide-order** macro (**not** wire ORBAT).
+
+### Judgment
+
+**Weave (this knot):** **`ritter`** carries **Hormuz** **sea-control** / **blockade** **mechanics** (semantics, hull burden, third-party **hull** behavior, **time** / **storage**). **Same topic**, **non-interchangeable** **expert** **objects:** **`davis`** + **`jermy`** = **executive** **clock** + **systemic** **energy** **lag**; **`diesen`** + **`sachs`** = **talks**/**institutions** **collapse** **frame** on **blockade** (**orthogonal** to **vi-14** per sister knot); **`parsi`** + **`davis`** = **EU** **naming** vs **Congress** **lane**; **`barnes`** = **domestic** **TS** **liability** **pole** (inbox **Disclose**/**Truth Social** **chain**) — **not** **Navy** **facts**; **`johnson`** = **digest** **ORBAT** **Haiphong** **roundtable** path ([transcript digest](../../../transcript-analysis-haiphong-ritter-johnson-iran-2026-04.md)); **`marandi`** / **`mercouris`** / **`mearsheimer`** = **continuity spine** **room** / **geometry** — **triangulate**, **do not** **collapse** into **one** **Ritter** **paragraph** without **labeled** **seams**.
+
+### Open
+
+- [Ritter blockade mechanics — verify checklist (2026-04-13)](../../../daily-strategy-inbox.md) (inbox **§ Ritter blockade mechanics**)
+- Re-run **`python3 scripts/strategy_thread.py`** after inbox **`thread:`** updates.
+
+---
+
+### Technical appendix
+
+# Knot — 2026-04-14 — Scott Ritter — Hormuz blockade weave (expert lattice)
+
+| Field | Value |
+|--------|--------|
+| **Date** | 2026-04-14 |
+| **knot_label** (machine slug) | `ritter-blockade-hormuz-weave` — matches basename and [`knot-index.yaml`](../../../knot-index.yaml) |
+| **Day block** | [`days.md` § 2026-04-14](../days.md) |
+
+### Page type (**pick per knot** — mixed types allowed)
+
+- [ ] **Thesis page**
+- [x] **Synthesis page**
+- [ ] **Case page**
+- [ ] **Mechanism page**
+- [ ] **Watch page**
+- [x] **Link hub**
+
+### Lineage — **`thread:ritter`** (anchor)
+
+- **Primary ingest:** [`daily-strategy-inbox.md`](../../../daily-strategy-inbox.md) — **`YT | cold: Scott Ritter — Ritter's Rant 085: The Blockade`** (`thread:ritter`) — **blockade** vs **quarantine**, hull count, **Kennedy** analogy, **China/Russia/India** exceptions thesis, porous / political blockade read — URL `TBD-canonical-085` until pinned; **verify** vs **AP/Reuters** hull + **MFA** lines per inbox tail.
+- **Same-topic expert threads (indexed only — no new anchors):** pull **`davis`**, **`jermy`**, **`diesen`**, **`sachs`**, **`parsi`**, **`mearsheimer`**, **`mercouris`**, **`barnes`**, **`johnson`**, **`marandi`** only where **`daily-strategy-inbox.md`** / **`days.md`** already carries a **`thread:`** or **continuity-spine** line for **2026-04-12–14** **Hormuz** / **blockade** — this knot **weaves**; it does **not** mint **new** **`expert_id`** rows.
+
+### Prior days (same Hormuz arc — cross-links)
+
+| Day | Knot | Notes |
+|-----|------|--------|
+| **2026-04-12** | `islamabad-hormuz-thesis-weave` | **Islamabad → Hormuz** **Thesis A/B** + **Pape/Parsi/Freeman** **fork** |
+| **2026-04-13** | `marandi-ritter-mercouris-hormuz-scaffold` | **Marandi × Ritter × Mercouris** **scaffold** **before** **04-14** **`batch-analysis`** **density** |
+
+### Sister knots (same calendar day — cross-links)
+
+| Knot | `knot_label` | Experts (from those files) | Relation to **Ritter** blockade |
+|------|----------------|------------------------------|--------------------------------|
+| `parsi-davis-war-powers` | `parsi-davis-war-powers` | **`parsi`**, **`davis`** | **Speech-act** / **war-powers** **accountability** vs **Ritter** **sea-control** mechanics — **orthogonal** planes; **Parsi × Davis** `batch-analysis` names **Mercouris**/**Barnes**/**Mearsheimer** as **layers**, not substitutes for **hull** facts. |
+| `diesen-vi14-petrodollar-vs-sachs-hormuz` | `diesen-vi14-petrodollar-vs-sachs-hormuz` | **`diesen`**, **`sachs`** | **Diesen × Sachs** **Hormuz blockade** episode ([YouTube `S6mlCuvKKIQ`](https://www.youtube.com/watch?v=S6mlCuvKKIQ)) — **institutional** / **chaos** thesis; **do not** merge **PH vi-14** petrodollar lane with **Ritter** **ORBAT** without **seam**; **Ritter** = **operations** vocabulary, **Sachs** = **DC process** **hypothesis** tier. |
+| `mercouris-mearsheimer-lebanon-split` | `mercouris-mearsheimer-lebanon-split` | **`mercouris`**, **`mearsheimer`** | **Lebanon**/**Washington** **fork** — **adjacent** **news week** to **Hormuz** **blockade**; use for **legitimacy vs structure** **language** only — **not** a substitute for **Ritter** **interdiction** **mechanics**. |
+| `armstrong-cash-hormuz-digital-dollar-arc` | `armstrong-cash-hormuz-digital-dollar-arc` | **minds** + **Armstrong** X + **Fink**/**BlackRock** + **Congress.gov** | **Money-law / fertilizer-definition** plane — **orthogonal** to **`thread:`** **ORBAT**; **fertilizer** **mood** may **echo** **Jermy** cascade **without** **merging** **quantity** claims. |
+
+### History resonance
+
+none this pass
+
+### Civilizational bridge
+
+none this pass
+
+### Links
+
+- **Ritter 085 (pin):** inbox line — `TBD-canonical-085` → replace when canonical **YouTube** ID is fixed.
+- **Davis × Jermy (same day):** [YouTube `etxmqrdm3V0`](https://www.youtube.com/watch?v=etxmqrdm3V0) — **`thread:davis`**, **`thread:jermy`**
+- **Diesen × Sachs blockade:** [YouTube `S6mlCuvKKIQ`](https://www.youtube.com/watch?v=S6mlCuvKKIQ) — **`thread:diesen`**, **`thread:sachs`**
+- **Haiphong / Johnson / Ritter digest:** [transcript-analysis-haiphong-ritter-johnson-iran-2026-04.md](../../../transcript-analysis-haiphong-ritter-johnson-iran-2026-04.md) — **`thread:johnson`**, **`thread:ritter`** (digest rows)
+
+### Receipt
+
+Pins keep **`ritter`** **mechanics** **distinct** from **speech**/**institution**/**macro** **lanes** on the same **Hormuz** **headline**.
+
+| Pin | Target | URL |
+|-----|--------|-----|
+| **1** | **Ritter** **Rant 085** (canonical episode) | `TBD` — [inbox `thread:ritter`](../../../daily-strategy-inbox.md) |
+| **2** | **Davis × Jermy** Deep Dive (blockade **same week**) | [YouTube](https://www.youtube.com/watch?v=etxmqrdm3V0) |
+| **3** | **Sister knot** registry (this file’s **cross-links**) | [knot-index.yaml](../../../knot-index.yaml) — search `2026-04-14` |
+
+**Falsifier:** This weave fails if **one** **merged** **Judgment** treats **Ritter** **hull**/**interdiction** **claims** as **fully** **confirmed** by **`parsi`** **EU** **wording**, **`sachs`** **NYT** **room** **hypotheses**, or **`jermy`** **GDP** **slides** **without** **tiered** **verify** — **expert** **lattice** **collapsed** into **mood**.
+<!-- strategy-page:end -->
 <!-- strategy-expert-thread:start -->
 ## Machine layer — Extraction (script-maintained)
 
-_Auto-generated from `-transcript.md` + knot index. **Journal layer** (narrative) lives **above** the **strategy-expert-thread** start HTML comment. The machine-layer HTML block is replaced on each `thread` run._
+_Auto-generated from `-transcript.md` + `strategy-page` blocks in this thread + optional knot-index rows (legacy). **Journal layer** (narrative) lives **above** the **strategy-expert-thread** start HTML comment. The machine-layer HTML block is replaced on each `thread` run._
 
 ### Recent transcript material
 
@@ -907,7 +1078,8 @@ Daniel Davis: We’ll find out soon enough. Larry, really appreciate you making 
 Larry Johnson: All right, my brother. We’ll see you later
 - batch-analysis | 2026-04-17 | **Barnes × Johnson (YT) — US politics room × Iran week** | **Tension-first:** **`thread:barnes`** **long-form** **domestic-liability** **+** **White** **House** **process** **(C-plane** **hypothesis)** **—** **not** **§1e** **text** **and** **not** **Pentagon** **primary.** **Same** **calendar** **day** **as** **Hormuz** **/** **Islamabad** **expert** **stack** **—** **cross** **`thread:davis`**, **`thread:johnson`** **(Davis** **×** **Johnson** **earlier** **YT),** **`thread:ritter`** **with** **explicit** **plane** **tags** **(room** **vs** **ORBAT** **vs** **FM).** **Falsifiers:** **named** **official** **statements,** **vote** **counts,** **Navy** **press,** **TS** **screenshots.** | crosses:barnes+johnson
 
-### Knot references
+### Page references
 
-- [strategy-notebook-knot-2026-04-13-marandi-ritter-mercouris-hormuz-scaffold.md](strategy-notebook-knot-2026-04-13-marandi-ritter-mercouris-hormuz-scaffold.md) 2026-04-13 (marandi-ritter-mercouris-hormuz-scaffold) — Marandi×Ritter×Mercouris shared scaffold; Davis×Freeman×Mearsheimer parallel; cross-day to 04-12/04-14
+- **marandi-ritter-mercouris-hormuz-scaffold** — 2026-04-13 watch=`hormuz`
+- **ritter-blockade-hormuz-weave** — 2026-04-14
 <!-- strategy-expert-thread:end -->

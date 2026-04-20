@@ -245,14 +245,17 @@ _(Three-mind block in paste is notebook meta — use in-repo [strategy-notebook/
 
 ### strategy + verify — Grok supplemental cluster (2026-04-19)
 
+**Assistant triage pass:** Fast web + §**2** cross-read — **not** a primary-doc audit. **Confidence:** triage **low–medium**; escalate for ship-tier Judgment.
+
 | Sub-claim | Verdict | Notes |
 |-----------|---------|--------|
-| **Lebanon** pause **day-2** + **UNIFIL** **14 km** + **zero** violations | **Unclear** | Needs **UNIFIL**/mission **statement** + **LAF**/**IDF** **corroboration**; §**2** shows **competing** **Lebanon** **casualty** **framing** — **do not** merge **without** **tier tags** |
-| **Oman** **sequencing** **leak** (**3.67%**, **non-oil** first) | **Unclear** | Anonymous; **Monday** readout **or** **IAEA**/joint **document** **hash** |
-| **Hungary** **COREPER** **Monday** + **€18 bn** **Apr 28** | **Unclear** | **Council**/**Commission** **text** + **Hungarian** **domestic** **source** |
-| **Kerch** **anchorage** / **48h** **ferry** | **Unclear** | **OSINT** + **Russian** **transport** **authority** **or** **MoD** |
-| **SPR** **3.2M** + **IEA** **18M** | **Unclear** | **DOE**/IEA **primary** |
-| **Glide-bomb** **70%** cap | **Unclear** | **MoD** **quote** + **independent** **sortie** **proxy** |
+| **Lebanon** pause **day-2** + **UNIFIL** **14 km** + **zero** violations | **Tension** | §**2** [France 24 Arabic — Lebanon soldier / truce fears](https://www.france24.com/ar/%D9%81%D9%8A%D8%AF%D9%8A%D9%88/20260419-%D9%84%D8%A8%D9%86%D8%A7%D9%86-%D9%85%D9%82%D8%AA%D9%84-%D8%AC%D9%86%D8%AF%D9%8A-%D8%A5%D8%B3%D8%B1%D8%A7%D8%A6%D9%8A%D9%84%D9%8A-%D9%88%D9%85%D8%AE%D8%A7%D9%88%D9%81-%D9%85%D9%86-%D8%B3%D9%82%D9%88%D8%B7-%D8%A7%D9%84%D9%87%D8%AF%D9%86%D8%A9) **does not** support a clean **“zero violations”** read same window. UN mission copy through **2026-03** frames **violations on all sides** ([UN peacekeeping — Lebanon](http://peacekeeping.un.org/en/lebanon-peacekeepers-concerned-over-ceasefire-violations-all-sides-0)). **14 km** metric still needs **same-day UNIFIL** primary. |
+| **Islamabad** **Monday** delegation / **Iran** talks (Trump exec line) | **Supported** (headline) | Aligns with §**2** (e.g. [The Hill — Islamabad / ceasefire](https://thehill.com/homenews/administration/5838330-trump-iran-ceasefire-islamabad-talks/)); triangulated by [Geo.tv — negotiators Monday Islamabad](https://www.geo.tv/latest/660726-us-negotiators-will-be-in-islamabad-on-monday-for-iran-talks-confirms-trump). **Does not** verify Grok’s downstream **Oman**/**Kerch**/**SPR** bundle. |
+| **Oman** **sequencing** **leak** (**3.67%**, **non-oil** first) | **Unclear** | Anonymous; needs **joint readout** or **IAEA**/negotiation **primary**. |
+| **Hungary** **COREPER** **Monday** + **€18 bn** **Apr 28** | **Unclear** | **Council**/**Commission** **instrument** + **Hungarian** **domestic** **source**. |
+| **Kerch** **anchorage** / **48h** **ferry** | **Unclear** | **OSINT**/**MoD**/**regional** wire triangulation still required. |
+| **SPR** **3.2M** + **IEA** **18M** | **Tension** | April **2026** trade press describes **SPR loans/releases** amid Iran tensions (e.g. [World Oil — second tranche loan](https://www.worldoil.com/news/2026/4/12/u-s-loans-8-5-mmbbl-from-spr-in-second-release-amid-iran-war/)), not a lock on Grok’s exact **“3.2M loading”** sentence — pull **DOE**/**IEA** **press** for the specific figure before Links-grade merge. |
+| **Glide-bomb** **70%** cap | **Unclear** | **MoD** verbatim + independent **sortie** proxy. |
 | **Cross-theater “diffusion–compression”** synthesis | **Hypothesis** | **Judgment** only with **per-plane** **URLs** |
 
 **Seam:** Same discipline as **04-17**/**04-18** — **three** **Iran-facing** **channels** can stay **parallel** (**FM**, **field**, **legislative**); **Grok** adds **EU**/**Ukraine**/**energy** planes — **no** single merged **Judgment** until receipts clear.

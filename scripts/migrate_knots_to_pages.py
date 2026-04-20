@@ -41,7 +41,101 @@ DEFAULT_KNOT_CONNECTIONS = NOTEBOOK_DIR / "knot-connections.yaml"
 _RE_EXPERT_THREADS = re.compile(
     r"\*\*Expert threads?:\*\*\s*(.+)", re.IGNORECASE
 )
+_RE_THREAD_SLUG = re.compile(r"thread:([a-z0-9-]+)", re.IGNORECASE)
 _RE_MONTH = re.compile(r"^##\s+(\d{4}-\d{2})\s*$")
+_RE_H3 = re.compile(r"^###\s+(.+)$")
+
+
+def _split_markdown_sections(text: str) -> tuple[str, list[tuple[str, str]]]:
+    """Return (preamble before first ###, [(heading, body), ...])."""
+    lines = text.splitlines()
+    preamble: list[str] = []
+    sections: list[tuple[str, str]] = []
+    i = 0
+    while i < len(lines):
+        m = _RE_H3.match(lines[i])
+        if m:
+            break
+        preamble.append(lines[i])
+        i += 1
+    pre = "\n".join(preamble).strip()
+    while i < len(lines):
+        hm = _RE_H3.match(lines[i])
+        if not hm:
+            i += 1
+            continue
+        title = hm.group(1).strip()
+        i += 1
+        body_lines: list[str] = []
+        while i < len(lines) and not _RE_H3.match(lines[i]):
+            body_lines.append(lines[i])
+            i += 1
+        sections.append((title, "\n".join(body_lines).strip()))
+    return pre, sections
+
+
+def _norm_heading(h: str) -> str:
+    return h.strip().lower()
+
+
+def _canonicalize_knot_body(raw: str) -> str:
+    """Reorder knot markdown into prose-first + Technical appendix (transfigure)."""
+    pre, sections = _split_markdown_sections(raw)
+    by_norm: dict[str, str] = {}
+    for title, body in sections:
+        key = _norm_heading(title)
+        if key in by_norm:
+            by_norm[key] = by_norm[key] + "\n\n" + body
+        else:
+            by_norm[key] = body
+
+    if "open" in by_norm and "open / verify" in by_norm:
+        by_norm["open / verify"] = (
+            by_norm.pop("open") + "\n\n" + by_norm["open / verify"]
+        )
+    elif "open" in by_norm:
+        by_norm["open / verify"] = by_norm.pop("open")
+
+    prose_order = [
+        "signal",
+        "judgment",
+        "open / verify",
+    ]
+    prose_parts: list[str] = []
+    label_map = {"signal": "Signal", "judgment": "Judgment", "open / verify": "Open"}
+    for pk in prose_order:
+        if pk not in by_norm:
+            continue
+        prose_parts.append(f"### {label_map[pk]}\n\n{by_norm[pk].strip()}")
+
+    tech_blocks: list[str] = []
+    if pre:
+        tech_blocks.append(pre)
+    prose_norm_set = frozenset(["signal", "judgment", "open / verify", "open"])
+    for title, body in sections:
+        kn = _norm_heading(title)
+        if kn in prose_norm_set:
+            continue
+        if kn.startswith("index row"):
+            continue
+        tech_blocks.append(f"### {title}\n\n{body.strip()}")
+
+    out: list[str] = []
+    if prose_parts:
+        out.append("\n\n".join(prose_parts))
+    if tech_blocks:
+        tech = "\n\n".join(tech_blocks).strip()
+        if out:
+            out.append("")
+        out.append("### Technical appendix")
+        out.append("")
+        out.append(tech)
+    return "\n".join(out).strip() if out else raw.strip()
+
+
+def _page_id_in_thread(text: str, page_id: str) -> bool:
+    needle = f'id="{page_id}"'
+    return needle in text
 
 PAGE_MARKER_START = '<!-- strategy-page:start id="{id}" date="{date}" watch="{watch}" -->'
 PAGE_MARKER_END = "<!-- strategy-page:end -->"
@@ -121,7 +215,9 @@ def _watches_for_knot(knot_path_str: str, connections: list[dict]) -> list[str]:
     return watches
 
 
-def _experts_from_knot(knot: dict, knot_content: str) -> list[str]:
+def _experts_from_knot(
+    knot: dict, knot_content: str, knot_label: str, knot_basename: str
+) -> list[str]:
     """Determine which canonical experts this knot involves."""
     experts: list[str] = []
     for c in knot.get("clusters", []) or []:
@@ -133,6 +229,18 @@ def _experts_from_knot(knot: dict, knot_content: str) -> list[str]:
             slug = slug.strip().strip("`").strip(".")
             if slug in _EXPERT_IDS_SET and slug not in experts:
                 experts.append(slug)
+    for slug in _RE_THREAD_SLUG.findall(knot_content):
+        if slug in _EXPERT_IDS_SET and slug not in experts:
+            experts.append(slug)
+    blob = f"{knot_label}-{knot_basename}"
+    for part in re.split(r"[^a-z0-9]+", blob.lower()):
+        if part in _EXPERT_IDS_SET and part not in experts:
+            experts.append(part)
+    # Knot lineage often uses **`expert_id`** (no `thread:` tail).
+    for m in re.finditer(r"\*\*`([a-z][a-z0-9-]+)`\*\*", knot_content):
+        slug = m.group(1)
+        if slug in _EXPERT_IDS_SET and slug not in experts:
+            experts.append(slug)
     return sorted(experts)
 
 
@@ -230,13 +338,13 @@ def phase_pages(dry_run: bool) -> list[str]:
         knot_date = knot.get("date", "unknown")
         knot_label = knot.get("knot_label", "")
         month = knot_date[:7] if len(knot_date) >= 7 else "unknown"
-
         if not knot_path.is_file():
             actions.append(f"skip (knot file missing): {knot_path_str}")
             continue
 
-        content = knot_path.read_text(encoding="utf-8")
-        experts = _experts_from_knot(knot, content)
+        raw = knot_path.read_text(encoding="utf-8")
+        experts = _experts_from_knot(knot, raw, knot_label, knot_path.name)
+        body = _canonicalize_knot_body(raw)
         watches = _watches_for_knot(knot_path_str, connections)
 
         if not experts:
@@ -245,6 +353,13 @@ def phase_pages(dry_run: bool) -> list[str]:
 
         for expert_id in experts:
             thread_path = expert_paths(expert_id, NOTEBOOK_DIR)["thread"]
+            if thread_path.is_file():
+                existing = thread_path.read_text(encoding="utf-8")
+                if _page_id_in_thread(existing, knot_label):
+                    actions.append(
+                        f"skip (page id exists): {knot_label} → {thread_path.relative_to(REPO_ROOT)}"
+                    )
+                    continue
             page_block = _build_page_block(
                 knot_label=knot_label,
                 knot_date=knot_date,
@@ -252,7 +367,7 @@ def phase_pages(dry_run: bool) -> list[str]:
                 experts=experts,
                 expert_id=expert_id,
                 source_basename=knot_path.name,
-                content=content,
+                content=body,
             )
             action = _insert_page_into_thread(thread_path, month, page_block, dry_run)
             actions.append(action)

@@ -46,6 +46,10 @@ A **cognitive fork** — a structured, versioned record of an individual's cogni
 
 Four modes: **Session** (conversational, no merges — default), **Pipeline** (process staged candidates), **Query** (read-only), **Maintenance** (dream). See [instance-doctrine.md](users/grace-mar/instance-doctrine.md) for the full mode table, proposal format, and edit restraint rules.
 
+### Default WORK lane (operator)
+
+Unless the operator **explicitly** names another territory (e.g. **work-dev**, **work-cici**, **work-xavier**), assistants should treat the session as **work-strategy** by default: [work-strategy](docs/skill-work/work-strategy/) discipline, **skill-strategy** boundaries, strategy-notebook (inbox, `days.md`, expert threads) and verify tier. Other lanes apply when the task clearly belongs there or the operator labels it. Technical execution (fixes, scripts, CI) may still run under that default unless the operator asks for **hands-only** implementation with no strategy framing.
+
 ---
 
 ## Layer Architecture

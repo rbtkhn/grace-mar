@@ -84,7 +84,7 @@ The `sachs` lane’s role (University Professor, Columbia; Director, Center for 
 
 - [strength: high] **Through-line:** **U.S. and Israel underestimated Iran** — [jeffsachs.org](https://www.jeffsachs.org/interviewsandmedia/64krp3h43e342gtwjg4lg3296c6kkg) — **~13 Mar 2026** class in indexes.
 - [strength: medium] **Mechanism:** **Israel could use nuclear weapons against Iran** — [jeffsachs.org](https://www.jeffsachs.org/interviewsandmedia/28ya8raa4gstsb34al6drezprlpee3) — **~16 Mar 2026** — **hypothesis-grade** — **not** merged with **open-source** ORBAT.
-- [strength: high] **Synthesis:** **“Iran is the Graveyard of American Hegemony”** — [YouTube OcqIEJEk4MY](https://www.youtube.com/watch?v=OcqIEJEk4MY) — **~25 Mar 2026** class — pair with **Diesen** **Substack** / **April** knot [diesen-vi14 vs Sachs](strategy-notebook-knot-2026-04-14-diesen-vi14-petrodollar-vs-sachs-hormuz.md) only as **abstract** fork.
+- [strength: high] **Synthesis:** **“Iran is the Graveyard of American Hegemony”** — [YouTube OcqIEJEk4MY](https://www.youtube.com/watch?v=OcqIEJEk4MY) — **~25 Mar 2026** class — pair with **Diesen** **Substack** / **April** knot diesen-vi14 vs Sachs (page id `diesen-vi14-petrodollar-vs-sachs-hormuz`) only as **abstract** fork.
 - [strength: medium] **Macro:** **US–Iran War Deepens** — India dilemma / deal talk — [jeffsachs.org](https://www.jeffsachs.org/interviewsandmedia/jzhlpzl4cp25k3d7jrz9j7bpwkwd6x) — **~31 Mar 2026** — **verify** page stamp.
 
 Canonical knot paths and raw ingest lines live in **Segment 2** below (regenerated each **`thread`** run).
@@ -129,10 +129,10 @@ Canonical knot paths and raw ingest lines live in **Segment 2** below (regenerat
 ### 2026-04
 
 - **2026-04** — Notebook knot cross-ref (partial month).  
-  _Source:_ notebook: `strategy-notebook-knot-2026-04-14-diesen-vi14-petrodollar-vs-sachs-hormuz.md`
+  _Source:_ notebook: `diesen-vi14-petrodollar-vs-sachs-hormuz``
 
 - **2026-04** — Notebook knot cross-ref (partial month).  
-  _Source:_ notebook: `strategy-notebook-knot-2026-04-14-ritter-blockade-hormuz-weave.md`
+  _Source:_ notebook: `ritter-blockade-hormuz-weave``
 
 <!-- backfill:sachs:end -->
 ## 2026-04
@@ -152,16 +152,173 @@ Verification stance for Jeffrey D. Sachs in 2026-04 should stay tier-honest: web
 
 Typical pairings on file for `sachs` emphasize contrast surfaces: × diesen, × mearsheimer, × mercouris, × parsi. In WORK, those pairings are **operational**: they tell the operator which other `thread:` lanes to open when a claim needs a second fingerprint, not a second opinion dressed as neutrality. This 2026-04 segment should be read as **mesh navigation**—which lanes to pull into the same batch pass—rather than as a claim that those voices agreed or disagreed on any particular day unless a dated bullet below says so explicitly.
 
-- [strength: medium] **Lattice:** [diesen-vi14-petrodollar-vs-sachs-hormuz](strategy-notebook-knot-2026-04-14-diesen-vi14-petrodollar-vs-sachs-hormuz.md) — abstract **PH vi-14** petrodollar vs Sachs Hormuz fork — orthogonal Judgment, not merged Register.
-- [strength: medium] **Parallel:** [ritter-blockade-hormuz-weave](strategy-notebook-knot-2026-04-14-ritter-blockade-hormuz-weave.md) — macro / closure economics seam vs Sachs institutional interviews — tier discipline.
+- [strength: medium] **Lattice:** `diesen-vi14-petrodollar-vs-sachs-hormuz` — abstract **PH vi-14** petrodollar vs Sachs Hormuz fork — orthogonal Judgment, not merged Register.
+- [strength: medium] **Parallel:** `ritter-blockade-hormuz-weave` — macro / closure economics seam vs Sachs institutional interviews — tier discipline.
 
 ---
+<!-- strategy-page:start id="diesen-vi14-petrodollar-vs-sachs-hormuz" date="2026-04-14" watch="hormuz" -->
+### Page: diesen-vi14-petrodollar-vs-sachs-hormuz
+
+**Date:** 2026-04-14
+**Watch:** hormuz
+**Source page:** `diesen-vi14-petrodollar-vs-sachs-hormuz`
+**Also in:** diesen
+
+### Signal
+
+See [`days.md` § Signal — `diesen` × `sachs`](../days.md) and **Weave** lead bullet for 2026-04-14.
+
+### Judgment
+
+**Abstract (this knot):** **`diesen`** carries two **2026-04-14** expert threads — **work-jiang PH vi-14** (Jiang × Diesen lecture: petrodollar / chokepoint / Islamabad frame) and **Diesen × Sachs** (Hormuz blockade / DC institutional decay). Same **`expert_id`** on the **`thread:`** line does **not** make them the same **Judgment** object: **`crosses:diesen+sachs`** is **orthogonal** to **vi-14** petrodollar spine; do **not** fold Sachs hypotheses into PH overlay without **verify** tier. Full seam: [`days.md` § Judgment — *Diesen × Sachs vs PH vi-14*](../days.md).
+
+### Open
+
+- **NYT** war-room / **Sachs** capacity claims: **journalistic / hypothesis** until on-record primary or wire tier.
+- Re-run **`python3 scripts/strategy_thread.py`** if inbox **`thread:`** lines for these experts change.
+
+---
+
+### Technical appendix
+
+# Knot — 2026-04-14 — PH vi-14 Diesen (petrodollar) vs Diesen × Sachs (Hormuz)
+
+| Field | Value |
+|--------|--------|
+| **Date** | 2026-04-14 |
+| **knot_label** (machine slug) | `diesen-vi14-petrodollar-vs-sachs-hormuz` — matches basename and [`knot-index.yaml`](../../../knot-index.yaml) |
+| **Day block** | [`days.md` § 2026-04-14](../days.md) |
+
+### Page type (**pick per knot** — mixed types allowed)
+
+- [ ] **Thesis page**
+- [ ] **Synthesis page**
+- [x] **Case page**
+- [ ] **Mechanism page**
+- [ ] **Watch page**
+- [ ] **Link hub**
+
+### Lineage
+
+- **Inbox:** [`daily-strategy-inbox.md`](../../../daily-strategy-inbox.md) — `batch-analysis | 2026-04-14 | Diesen × Sachs` (`crosses:diesen+sachs`); PH **vi-14** `YT | cold` (`thread:diesen`, `P_DHMUdOVdo`); **Diesen × Sachs** `YT | cold` (`thread:diesen` + `thread:sachs`, `S6mlCuvKKIQ`). **Expert threads:** `diesen`, `sachs`.
+- **History resonance:** none this pass
+- **Civilizational bridge:** none this pass
+- **Expert threads:** `thread:diesen` appears **twice** same calendar day — different episodes; `thread:sachs` only on the blockade episode.
+
+### Links
+
+- **PH vi-14 (lecture):** [interviews-14-diesen-iran-war-petrodollar.md](../../../../../../../research/external/work-jiang/lectures/interviews-14-diesen-iran-war-petrodollar.md) · [YouTube](https://www.youtube.com/watch?v=P_DHMUdOVdo)
+- **Diesen × Sachs (blockade episode):** [YouTube](https://www.youtube.com/watch?v=S6mlCuvKKIQ)
+
+### Receipt
+
+Pins keep **Glenn Diesen**’s **PH vi-14** lane and the **Glenn Diesen × Jeffrey Sachs** blockade episode tethered to distinct artifacts—**merge-by-mood** is out of scope.
+
+| Pin | Target | URL |
+|-----|--------|-----|
+| **1** | PH vi-14 lecture (repo body + watch link) | [lecture `.md`](../../../../../../../research/external/work-jiang/lectures/interviews-14-diesen-iran-war-petrodollar.md) · [YouTube `P_DHMUdOVdo`](https://www.youtube.com/watch?v=P_DHMUdOVdo) |
+| **2** | Diesen × Sachs episode (same-day **`thread:diesen` + `thread:sachs`**) | [YouTube `S6mlCuvKKIQ`](https://www.youtube.com/watch?v=S6mlCuvKKIQ) |
+| **3** | Inbox **`batch-analysis`** spine (`crosses:diesen+sachs`) | [daily-strategy-inbox.md](../../../daily-strategy-inbox.md) — search `Diesen × Sachs` / `crosses:diesen+sachs` |
+
+**Falsifier:** This knot’s **orthogonal Judgment** fails if a single authoritative source treats **vi-14** petrodollar claims and **Sachs**-layer **NYT** / **DC-process** hypotheses as **one** merged **Glenn Diesen** verdict **without** separate episode grounding—i.e. **collapse-by-edit** replaces **`crosses:`** discipline.
+<!-- strategy-page:end -->
+
+<!-- strategy-page:start id="ritter-blockade-hormuz-weave" date="2026-04-14" watch="" -->
+### Page: ritter-blockade-hormuz-weave
+
+**Date:** 2026-04-14
+**Source page:** `scott-ritter-blockade-hormuz-weave`
+**Also in:** barnes, davis, diesen, jermy, johnson, marandi, mearsheimer, mercouris, parsi, ritter
+
+### Signal
+
+**Davis × Jermy** Deep Dive ([YouTube `etxmqrdm3V0`](https://www.youtube.com/watch?v=etxmqrdm3V0)) — **`thread:davis`**, **`thread:jermy`** — same-episode **blockade** **brinkmanship** + **energy–GDP** cascade; stacks **Ritter** **porous** **blockade** thesis vs **slide-order** macro (**not** wire ORBAT).
+
+### Judgment
+
+**Weave (this knot):** **`ritter`** carries **Hormuz** **sea-control** / **blockade** **mechanics** (semantics, hull burden, third-party **hull** behavior, **time** / **storage**). **Same topic**, **non-interchangeable** **expert** **objects:** **`davis`** + **`jermy`** = **executive** **clock** + **systemic** **energy** **lag**; **`diesen`** + **`sachs`** = **talks**/**institutions** **collapse** **frame** on **blockade** (**orthogonal** to **vi-14** per sister knot); **`parsi`** + **`davis`** = **EU** **naming** vs **Congress** **lane**; **`barnes`** = **domestic** **TS** **liability** **pole** (inbox **Disclose**/**Truth Social** **chain**) — **not** **Navy** **facts**; **`johnson`** = **digest** **ORBAT** **Haiphong** **roundtable** path ([transcript digest](../../../transcript-analysis-haiphong-ritter-johnson-iran-2026-04.md)); **`marandi`** / **`mercouris`** / **`mearsheimer`** = **continuity spine** **room** / **geometry** — **triangulate**, **do not** **collapse** into **one** **Ritter** **paragraph** without **labeled** **seams**.
+
+### Open
+
+- [Ritter blockade mechanics — verify checklist (2026-04-13)](../../../daily-strategy-inbox.md) (inbox **§ Ritter blockade mechanics**)
+- Re-run **`python3 scripts/strategy_thread.py`** after inbox **`thread:`** updates.
+
+---
+
+### Technical appendix
+
+# Knot — 2026-04-14 — Scott Ritter — Hormuz blockade weave (expert lattice)
+
+| Field | Value |
+|--------|--------|
+| **Date** | 2026-04-14 |
+| **knot_label** (machine slug) | `ritter-blockade-hormuz-weave` — matches basename and [`knot-index.yaml`](../../../knot-index.yaml) |
+| **Day block** | [`days.md` § 2026-04-14](../days.md) |
+
+### Page type (**pick per knot** — mixed types allowed)
+
+- [ ] **Thesis page**
+- [x] **Synthesis page**
+- [ ] **Case page**
+- [ ] **Mechanism page**
+- [ ] **Watch page**
+- [x] **Link hub**
+
+### Lineage — **`thread:ritter`** (anchor)
+
+- **Primary ingest:** [`daily-strategy-inbox.md`](../../../daily-strategy-inbox.md) — **`YT | cold: Scott Ritter — Ritter's Rant 085: The Blockade`** (`thread:ritter`) — **blockade** vs **quarantine**, hull count, **Kennedy** analogy, **China/Russia/India** exceptions thesis, porous / political blockade read — URL `TBD-canonical-085` until pinned; **verify** vs **AP/Reuters** hull + **MFA** lines per inbox tail.
+- **Same-topic expert threads (indexed only — no new anchors):** pull **`davis`**, **`jermy`**, **`diesen`**, **`sachs`**, **`parsi`**, **`mearsheimer`**, **`mercouris`**, **`barnes`**, **`johnson`**, **`marandi`** only where **`daily-strategy-inbox.md`** / **`days.md`** already carries a **`thread:`** or **continuity-spine** line for **2026-04-12–14** **Hormuz** / **blockade** — this knot **weaves**; it does **not** mint **new** **`expert_id`** rows.
+
+### Prior days (same Hormuz arc — cross-links)
+
+| Day | Knot | Notes |
+|-----|------|--------|
+| **2026-04-12** | `islamabad-hormuz-thesis-weave` | **Islamabad → Hormuz** **Thesis A/B** + **Pape/Parsi/Freeman** **fork** |
+| **2026-04-13** | `marandi-ritter-mercouris-hormuz-scaffold` | **Marandi × Ritter × Mercouris** **scaffold** **before** **04-14** **`batch-analysis`** **density** |
+
+### Sister knots (same calendar day — cross-links)
+
+| Knot | `knot_label` | Experts (from those files) | Relation to **Ritter** blockade |
+|------|----------------|------------------------------|--------------------------------|
+| `parsi-davis-war-powers` | `parsi-davis-war-powers` | **`parsi`**, **`davis`** | **Speech-act** / **war-powers** **accountability** vs **Ritter** **sea-control** mechanics — **orthogonal** planes; **Parsi × Davis** `batch-analysis` names **Mercouris**/**Barnes**/**Mearsheimer** as **layers**, not substitutes for **hull** facts. |
+| `diesen-vi14-petrodollar-vs-sachs-hormuz` | `diesen-vi14-petrodollar-vs-sachs-hormuz` | **`diesen`**, **`sachs`** | **Diesen × Sachs** **Hormuz blockade** episode ([YouTube `S6mlCuvKKIQ`](https://www.youtube.com/watch?v=S6mlCuvKKIQ)) — **institutional** / **chaos** thesis; **do not** merge **PH vi-14** petrodollar lane with **Ritter** **ORBAT** without **seam**; **Ritter** = **operations** vocabulary, **Sachs** = **DC process** **hypothesis** tier. |
+| `mercouris-mearsheimer-lebanon-split` | `mercouris-mearsheimer-lebanon-split` | **`mercouris`**, **`mearsheimer`** | **Lebanon**/**Washington** **fork** — **adjacent** **news week** to **Hormuz** **blockade**; use for **legitimacy vs structure** **language** only — **not** a substitute for **Ritter** **interdiction** **mechanics**. |
+| `armstrong-cash-hormuz-digital-dollar-arc` | `armstrong-cash-hormuz-digital-dollar-arc` | **minds** + **Armstrong** X + **Fink**/**BlackRock** + **Congress.gov** | **Money-law / fertilizer-definition** plane — **orthogonal** to **`thread:`** **ORBAT**; **fertilizer** **mood** may **echo** **Jermy** cascade **without** **merging** **quantity** claims. |
+
+### History resonance
+
+none this pass
+
+### Civilizational bridge
+
+none this pass
+
+### Links
+
+- **Ritter 085 (pin):** inbox line — `TBD-canonical-085` → replace when canonical **YouTube** ID is fixed.
+- **Davis × Jermy (same day):** [YouTube `etxmqrdm3V0`](https://www.youtube.com/watch?v=etxmqrdm3V0) — **`thread:davis`**, **`thread:jermy`**
+- **Diesen × Sachs blockade:** [YouTube `S6mlCuvKKIQ`](https://www.youtube.com/watch?v=S6mlCuvKKIQ) — **`thread:diesen`**, **`thread:sachs`**
+- **Haiphong / Johnson / Ritter digest:** [transcript-analysis-haiphong-ritter-johnson-iran-2026-04.md](../../../transcript-analysis-haiphong-ritter-johnson-iran-2026-04.md) — **`thread:johnson`**, **`thread:ritter`** (digest rows)
+
+### Receipt
+
+Pins keep **`ritter`** **mechanics** **distinct** from **speech**/**institution**/**macro** **lanes** on the same **Hormuz** **headline**.
+
+| Pin | Target | URL |
+|-----|--------|-----|
+| **1** | **Ritter** **Rant 085** (canonical episode) | `TBD` — [inbox `thread:ritter`](../../../daily-strategy-inbox.md) |
+| **2** | **Davis × Jermy** Deep Dive (blockade **same week**) | [YouTube](https://www.youtube.com/watch?v=etxmqrdm3V0) |
+| **3** | **Sister knot** registry (this file’s **cross-links**) | [knot-index.yaml](../../../knot-index.yaml) — search `2026-04-14` |
+
+**Falsifier:** This weave fails if **one** **merged** **Judgment** treats **Ritter** **hull**/**interdiction** **claims** as **fully** **confirmed** by **`parsi`** **EU** **wording**, **`sachs`** **NYT** **room** **hypotheses**, or **`jermy`** **GDP** **slides** **without** **tiered** **verify** — **expert** **lattice** **collapsed** into **mood**.
+<!-- strategy-page:end -->
 <!-- strategy-expert-thread:start -->
 ## Machine layer — Extraction (script-maintained)
 
-_Auto-generated from `-transcript.md` + knot index. **Journal layer** (narrative) lives **above** the **strategy-expert-thread** start HTML comment. The machine-layer HTML block is replaced on each `thread` run._
+_Auto-generated from `-transcript.md` + `strategy-page` blocks in this thread + optional knot-index rows (legacy). **Journal layer** (narrative) lives **above** the **strategy-expert-thread** start HTML comment. The machine-layer HTML block is replaced on each `thread` run._
 
-### Knot references
+### Page references
 
-- [strategy-notebook-knot-2026-04-14-diesen-vi14-petrodollar-vs-sachs-hormuz.md](strategy-notebook-knot-2026-04-14-diesen-vi14-petrodollar-vs-sachs-hormuz.md) 2026-04-14 (diesen-vi14-petrodollar-vs-sachs-hormuz) — Abstract PH vi-14 petrodollar vs Diesen×Sachs Hormuz; orthogonal Judgment
+- **diesen-vi14-petrodollar-vs-sachs-hormuz** — 2026-04-14 watch=`hormuz`
+- **ritter-blockade-hormuz-weave** — 2026-04-14
 <!-- strategy-expert-thread:end -->

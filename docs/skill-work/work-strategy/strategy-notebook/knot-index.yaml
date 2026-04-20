@@ -1,122 +1,22 @@
-# knot-index.yaml — strategy-notebook knot registry (WORK only; not Record).
+# knot-index.yaml — LEGACY registry (WORK only; not Record).
 #
-# New knot files: copy from strategy-notebook-knot-template.md (repo-relative: docs/skill-work/work-strategy/strategy-notebook/strategy-notebook-knot-template.md).
+# **Deprecated:** Primary strategy units are **thread-embedded pages** (`<!-- strategy-page:start`
+# … in `experts/<id>/thread.md`). This file is kept for tooling compatibility; `knots` may be empty.
+# Historical rows lived in git before knot retirement.
 #
 # Validate: `python3 scripts/validate_knot_index.py` (from repo root).
-# Optional: `--warn-days-md` / `--strict-days-md` — knot basename should appear in that month's chapters/YYYY-MM/days.md.
-#
-# Machine list for knots organized by cluster and pattern. Paths are POSIX paths
-# relative to the repository root. Each knot *file* should include the substring
-# "knot" in its basename (naming protocol).
-#
-# Multiple weaves per calendar day → multiple knot *files* and multiple knots[] rows
-# with the same `date` are normal. Disambiguate with a unique basename, e.g.:
-#   strategy-notebook-knot-YYYY-MM-DD-<short-slug>.md
-# Slug = knot_label (morning, islamabad, tri-mind, etc.) — avoid opaque -01 -02
-# unless you prefer sequence.
 #
 # schema_version — bump when fields change (tooling). v3: `weave_label` renamed to `knot_label`.
 #   v4: optional gamification / seam fields: `weave_count`, `seam_integrity`, `qoi_check`, `kac_check`.
 #
-# knots[]:
+# knots[]: (legacy schema — optional rows)
 #   path         (string, required) — repo-relative path to the knot markdown file (unique)
-#   date         (string, required) — YYYY-MM-DD calendar day (same date may repeat across rows)
-#   knot_label   (string, optional) — stable short id for this knot on that day (tooling / sorts /
-#                  joins); kebab-case slug, e.g. islamabad-morning, tri-mind; may mirror filename
-#                  slug; omit if one knot that day or label is only in `note`
-#   clusters     (list of string, optional) — thematic cluster slugs, e.g. islamabad-hormuz
-#   patterns     (list of string, optional) — cross-cutting pattern ids, e.g. escalation-trap
-#   note         (string, optional) — freeform one-line comment (not a stable key)
-#   weave_count  (int, optional) — manual tally or copy from `scripts/knot_seam_metrics.py`
-#                  (outgoing links to other knot files); must be >= 0
-#   seam_integrity (number, optional) — subjective 0–1 seam quality for this knot (not a scoreboard)
-#   qoi_check    (bool, optional) — Quality-of-information checklist done (see knot template)
-#   kac_check    (bool, optional) — Key-assumptions checklist done (see knot template)
-#
-# Examples (commented; remove leading # to activate):
-#   - path: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/knots/strategy-notebook-knot-2026-04-13-islamabad.md
-#     date: "2026-04-13"
-#     knot_label: islamabad-morning
-#     clusters: [islamabad-hormuz]
-#     patterns: [escalation-trap-frame]
-#     note: "first pass after brief"
-#   - path: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/knots/strategy-notebook-knot-2026-04-13-tri-mind.md
-#     date: "2026-04-13"
-#     knot_label: tri-mind
-#     clusters: [trump-leo]
-#     patterns: [tri-mind-batch]
-#     note: "afternoon batch-analysis fold"
+#   date         (string, required) — YYYY-MM-DD calendar day
+#   knot_label   (string, optional) — stable short id (kebab-case)
+#   clusters     (list of string, optional)
+#   patterns     (list of string, optional)
+#   note         (string, optional)
 
 schema_version: 4
 
-knots:
-  - path: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/knots/strategy-notebook-knot-2026-04-12-islamabad-hormuz-thesis-weave.md
-    date: "2026-04-12"
-    knot_label: islamabad-hormuz-thesis-weave
-    clusters: [islamabad, hormuz, thesis-a-b, escalation-trap]
-    patterns: [pre-blockade-lattice]
-    note: "Islamabad collapse + Thesis A/B + indexed threads; cross-links to 04-13 scaffold + 04-14 Ritter weave"
-
-  - path: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/knots/strategy-notebook-knot-2026-04-13-marandi-ritter-mercouris-hormuz-scaffold.md
-    date: "2026-04-13"
-    knot_label: marandi-ritter-mercouris-hormuz-scaffold
-    clusters: [marandi, ritter, mercouris, hormuz]
-    patterns: [expert-scaffold-weave]
-    note: "Marandi×Ritter×Mercouris shared scaffold; Davis×Freeman×Mearsheimer parallel; cross-day to 04-12/04-14"
-
-  - path: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/knots/strategy-notebook-knot-2026-04-14-diesen-vi14-petrodollar-vs-sachs-hormuz.md
-    date: "2026-04-14"
-    knot_label: diesen-vi14-petrodollar-vs-sachs-hormuz
-    clusters: [diesen, work-jiang-ph, hormuz]
-    patterns: [ph-vi14-vs-sachs-hormuz]
-    note: "Abstract PH vi-14 petrodollar vs Diesen×Sachs Hormuz; orthogonal Judgment"
-
-  - path: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/knots/strategy-notebook-knot-2026-04-14-parsi-davis-war-powers.md
-    date: "2026-04-14"
-    knot_label: parsi-davis-war-powers
-    clusters: [accountability-language, war-powers, hormuz]
-    patterns: [parsi-davis-crosses]
-    note: "Link hub + verify pins for EU naming vs Congress lane"
-
-  - path: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/knots/strategy-notebook-knot-2026-04-14-mercouris-mearsheimer-lebanon-split.md
-    date: "2026-04-14"
-    knot_label: mercouris-mearsheimer-lebanon-split
-    clusters: [lebanon-washington, tri-mind, mercouris, mearsheimer, pape]
-    patterns: [legitimacy-vs-structure]
-    note: "Abstract Mercouris diplomatic surface vs Mearsheimer incentives; Lebanon fork; Pape lane (escalation-trap / sectarian map) indexes here for expert-thread knot refs"
-
-  - path: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/knots/strategy-notebook-knot-2026-04-14-ritter-blockade-hormuz-weave.md
-    date: "2026-04-14"
-    knot_label: ritter-blockade-hormuz-weave
-    clusters: [ritter, hormuz, blockade, expert-lattice]
-    patterns: [ritter-center-weave]
-    weave_count: 6
-    note: "Ritter blockade mechanics + sister knots + indexed threads same topic; weave_count from knot_seam_metrics.py (outgoing knot links)"
-
-  - path: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/knots/strategy-notebook-knot-2026-04-14-armstrong-cash-hormuz-digital-dollar-arc.md
-    date: "2026-04-14"
-    knot_label: armstrong-cash-hormuz-digital-dollar-arc
-    clusters: [minds-tri-frame, us-payment-law, hormuz-commodity, attribution]
-    patterns: [operator-weave-d, cash-cbdc-stablecoin-seam]
-    note: "Synthesis: Barnes/Mercouris/Mearsheimer mind files + Armstrong X + Fink/BlackRock + Congress.gov + Statista/Signal Gulf fertilizer; orthogonal to thread: Hormuz lattice"
-
-  - path: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/knots/strategy-notebook-knot-2026-04-15-kremlin-iri-uranium-dual-register.md
-    date: "2026-04-15"
-    knot_label: kremlin-iri-uranium-dual-register
-    clusters: [kremlin-iri, uranium-offramp, iri-dual-register, legitimacy-seam, hormuz]
-    patterns: [convergence-finding, conditioned-branching, multi-register-legitimacy]
-    note: "Synthesis+Thesis: Kremlin-IRI uranium convergence, MFA vs IRGC dual register, Leo-France-UK legitimacy stack"
-
-  - path: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/knots/strategy-notebook-knot-2026-04-16-pape-janssen-escalation-blockade.md
-    date: "2026-04-16"
-    knot_label: pape-janssen-escalation-blockade
-    clusters: [pape, hormuz, escalation-trap, blockade, lebanon]
-    patterns: [pape-lattice, janssen-studio, third-player-spoiler, weave-d]
-    note: "Weave D: Pape-primary Janssen trap + blockade calendar + spoiler; same-day Marandi+Blumenthal evidence streams → sister weave C; lattice vs Mearsheimer/Davis"
-
-  - path: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/knots/strategy-notebook-knot-2026-04-16-marandi-blumenthal-jf-primary.md
-    date: "2026-04-16"
-    knot_label: marandi-blumenthal-jf-primary
-    clusters: [marandi, blumenthal, islamabad, hormuz]
-    patterns: [weave-c, marandi-primary, blumenthal-amplifier]
-    note: "Weave C: Marandi BP primary + Blumenthal JF amplifier; Pape validate fork → sister pape-janssen (weave D)"
+knots: []

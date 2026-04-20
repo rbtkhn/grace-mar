@@ -87,7 +87,7 @@ Headings-only pointers into the mapped corpus in [`strategy-expert-mercouris-min
 ## Active weave cues
 
 - Pull this expert into weave when:
-  - **Mercouris × Mearsheimer**-class splits (legitimacy vs structure), **Islamabad** narrative, or **Lebanon**/**Hormuz** **room** tests — see prior **knot** scaffolds in `chapters/…/knots/`.
+  - **Mercouris × Mearsheimer**-class splits (legitimacy vs structure), **Islamabad** narrative, or **Lebanon**/**Hormuz** **room** tests — see prior **`strategy-page`** scaffolds in **`thread.md`** under **`## YYYY-MM`** (git history has old `chapters/…/knots/` files).
 
 ## Knot-use guidance
 

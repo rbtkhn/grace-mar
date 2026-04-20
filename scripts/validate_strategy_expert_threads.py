@@ -157,6 +157,23 @@ def substantive_word_count(body: str) -> int:
     return prose_word_count(body) + blockquote_word_count(body)
 
 
+def strategy_page_fence_word_count(body: str) -> int:
+    """Words inside ``<!-- strategy-page:start`` … ``end`` --> blocks (thread-embedded pages)."""
+    n = 0
+    pos = 0
+    while True:
+        start = body.find("<!-- strategy-page:start", pos)
+        if start == -1:
+            break
+        end = body.find("<!-- strategy-page:end", start)
+        if end == -1:
+            break
+        chunk = body[start:end]
+        n += len(chunk.split())
+        pos = end + 1
+    return n
+
+
 def validate_thread_file(path: Path, month_mm: str | None = None) -> list[str]:
     """Return warning strings for one thread file.
 
@@ -183,7 +200,8 @@ def validate_thread_file(path: Path, month_mm: str | None = None) -> list[str]:
                 continue
         bullets, prose_lines = analyze_month_body(body)
         bq_words = blockquote_word_count(body)
-        words = substantive_word_count(body)
+        sp_words = strategy_page_fence_word_count(body)
+        words = substantive_word_count(body) + sp_words
         if bullets >= 3 and prose_lines == 0 and bq_words < 50:
             warnings.append(
                 f"{path.name}: ## {month_id} — bullet-led month with no prose lines "
@@ -195,7 +213,7 @@ def validate_thread_file(path: Path, month_mm: str | None = None) -> list[str]:
             pw = prose_word_count(body)
             warnings.append(
                 f"{path.name}: ## {month_id} — substantive word count {words} < {MIN_PROSE_WORDS} "
-                f"(prose={pw}, blockquotes={bq_words}; expand narrative/quotes or run "
+                f"(prose={pw}, blockquotes={bq_words}, strategy-page={sp_words}; expand narrative/quotes or run "
                 f"`python3 scripts/expand_strategy_expert_segment_prose.py --apply`; "
                 f"or {OPT_OUT_VERBATIM_FORWARD} to skip word-count warnings for this file)."
             )

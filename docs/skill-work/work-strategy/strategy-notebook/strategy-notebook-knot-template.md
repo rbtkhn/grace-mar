@@ -1,4 +1,10 @@
-# Knot template — strategy-notebook (WORK only; not Record)
+# Knot template — **deprecated** (WORK only; not Record)
+
+**Superseded by:** [strategy-page-template.md](strategy-page-template.md) — analysis lives in **`<!-- strategy-page:start … -->`** blocks inside **`experts/<expert_id>/thread.md`**, not under `chapters/…/knots/`.
+
+---
+
+# Knot template — strategy-notebook (historical; do not use for new work)
 
 **Use:** Copy to `chapters/YYYY-MM/knots/strategy-notebook-knot-YYYY-MM-DD-<knot_label>.md`, replace placeholders, append a row to [`knot-index.yaml`](knot-index.yaml), run `python3 scripts/validate_knot_index.py` from repo root.
 

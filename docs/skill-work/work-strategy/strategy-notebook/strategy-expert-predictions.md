@@ -68,7 +68,7 @@ Use one of: `open` · `resolved-supported` · `resolved-contradicted` · `resolv
 
 ## 2026 prediction-topic registry (frequency-informed)
 
-**Method:** Keyword / document-frequency scan across [daily-strategy-inbox.md](daily-strategy-inbox.md), [experts/\*/thread.md](experts/mercouris/thread.md), [chapters/2026-04/days.md](chapters/2026-04/days.md), [chapters/2026-04/knots/](chapters/2026-04/knots/), and [meta.md April arc](chapters/2026-04/meta.md). Counts are **indicative** (keyword overlap, not a statistical model). Dense **2026** expert activity in-repo is currently strongest in **2026-04**; extend this registry when other months accumulate comparable ingest volume.
+**Method:** Keyword / document-frequency scan across [daily-strategy-inbox.md](daily-strategy-inbox.md), [experts/\*/thread.md](experts/mercouris/thread.md) (**`strategy-page`** blocks), [chapters/2026-04/days.md](chapters/2026-04/days.md), and [meta.md April arc](chapters/2026-04/meta.md). Counts are **indicative** (keyword overlap, not a statistical model). Dense **2026** expert activity in-repo is currently strongest in **2026-04**; extend this registry when other months accumulate comparable ingest volume.
 
 | Order | `topic_slug` | Bucket | Typical falsifiable shape | Often-involved `expert_id` lanes |
 |-------|----------------|--------|---------------------------|----------------------------------|
