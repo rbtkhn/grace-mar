@@ -6,7 +6,6 @@ import json
 import os
 import subprocess
 import sys
-import tempfile
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent.parent
@@ -36,9 +35,11 @@ def test_build_review_packet_markdown_unit():
     sys.path.insert(0, str(REPO_ROOT / "scripts" / "runtime"))
     import importlib.util
 
-    spec = importlib.util.spec_from_file_location("review_orchestrator", RO_MOD)
+    mod_name = "review_orchestrator_test_fixture"
+    spec = importlib.util.spec_from_file_location(mod_name, RO_MOD)
     mod = importlib.util.module_from_spec(spec)
     assert spec.loader
+    sys.modules[mod_name] = mod
     spec.loader.exec_module(mod)
 
     env = {
@@ -50,7 +51,12 @@ def test_build_review_packet_markdown_unit():
         "promotion_recommendation": "allow",
     }
     obs = [_base_obs("obs_20260101T120000Z_aaaaaaaa", "work-strategy", "a", ["x"])]
-    md = mod.build_review_packet_markdown(
+    anchor = mod.ReviewAnchor(
+        task_anchor="Unit-test task anchor",
+        constraint_anchor="Stay within fixture observations.",
+        active_scope="pre_gate; lane=work-strategy; obs=obs_20260101T120000Z_aaaaaaaa",
+    )
+    md, phase_checks = mod.build_review_packet_markdown(
         mode="pre_gate",
         built_iso="2026-01-01T00:00:00Z",
         target_label="obs_20260101T120000Z_aaaaaaaa",
@@ -58,14 +64,44 @@ def test_build_review_packet_markdown_unit():
         env=env,
         candidate_row=None,
         gate_text_derived=False,
+        anchor=anchor,
     )
     assert "# Review Packet" in md
+    assert "## Task Anchor" in md
+    assert "Unit-test task anchor" in md
+    assert "pre_gate; lane=work-strategy" in md
     assert "## Evidence Pass" in md
+    assert "Anchor fidelity" in md
     assert "## Contradiction Pass" in md
     assert "## Boundary Pass" in md
     assert "## Promotion-Risk Pass" in md
     assert "## Synthesis" in md
     assert "## Operator Questions" in md
+    assert len(phase_checks) == 6
+    assert phase_checks[0]["phase"] == "evidence_pass"
+    assert phase_checks[0]["scope_drift_risk"] in ("low", "medium", "high")
+
+
+def test_task_anchor_required_exit_code():
+    r = subprocess.run(
+        [
+            sys.executable,
+            str(SCRIPT),
+            "--mode",
+            "candidate_review",
+            "--candidate",
+            "CANDIDATE-0001",
+            "--user",
+            "grace-mar",
+            "--repo-root",
+            str(REPO_ROOT),
+        ],
+        cwd=str(REPO_ROOT),
+        capture_output=True,
+        text=True,
+    )
+    assert r.returncode == 2
+    assert "task-anchor" in r.stderr.lower()
 
 
 def test_pre_gate_subprocess(tmp_path: Path) -> None:
@@ -88,6 +124,8 @@ def test_pre_gate_subprocess(tmp_path: Path) -> None:
             a["obs_id"],
             "--id",
             b["obs_id"],
+            "--task-anchor",
+            "Assess observations before staging to gate.",
         ],
         cwd=str(REPO_ROOT),
         capture_output=True,
@@ -96,6 +134,8 @@ def test_pre_gate_subprocess(tmp_path: Path) -> None:
     )
     assert r.returncode == 0, r.stderr
     assert "Evidence Pass" in r.stdout
+    assert "## Task Anchor" in r.stdout
+    assert "Assess observations before staging to gate." in r.stdout
     assert a["obs_id"] in r.stdout
 
 
@@ -133,6 +173,8 @@ profile_target: IX-A.1
             user,
             "--repo-root",
             str(tmp_path),
+            "--task-anchor",
+            "Review pending candidate for gate hygiene.",
         ],
         cwd=str(REPO_ROOT),
         capture_output=True,
@@ -142,3 +184,53 @@ profile_target: IX-A.1
     assert "CANDIDATE-9999" in r.stdout
     assert "gate-text-derived" in r.stdout
     assert "Boundary Pass" in r.stdout
+    assert "Review pending candidate for gate hygiene." in r.stdout
+
+
+def test_receipt_out_json(tmp_path: Path) -> None:
+    obs_dir = tmp_path / "runtime" / "observations"
+    obs_dir.mkdir(parents=True)
+    a = _base_obs("obs_20260101T120000Z_aaaaaaaa", "lane-a", "one", ["ref/1"])
+    (obs_dir / "index.jsonl").write_text(json.dumps(a) + "\n", encoding="utf-8")
+    env = {**os.environ, "GRACE_MAR_RUNTIME_LEDGER_ROOT": str(tmp_path)}
+    receipt_path = tmp_path / "anchor-receipt.json"
+    out_md = tmp_path / "packet.md"
+    r = subprocess.run(
+        [
+            sys.executable,
+            str(SCRIPT),
+            "--mode",
+            "pre_gate",
+            "--lane",
+            "lane-a",
+            "--id",
+            a["obs_id"],
+            "--task-anchor",
+            "Receipt test anchor",
+            "--constraint-anchor",
+            "Do not broaden.",
+            "--receipt-out",
+            str(receipt_path),
+            "-o",
+            str(out_md),
+        ],
+        cwd=str(REPO_ROOT),
+        capture_output=True,
+        text=True,
+        env=env,
+    )
+    assert r.returncode == 0, r.stderr
+    data = json.loads(receipt_path.read_text(encoding="utf-8"))
+    assert data["non_canonical"] is True
+    assert data["mode"] == "pre_gate"
+    assert data["target"] == a["obs_id"]
+    assert data["anchor"]["task_anchor"] == "Receipt test anchor"
+    assert data["anchor"]["constraint_anchor"] == "Do not broaden."
+    assert "lane-a" in data["anchor"]["active_scope"]
+    assert len(data["phase_anchor_checks"]) == 6
+    for row in data["phase_anchor_checks"]:
+        assert "phase" in row
+        assert "scope_drift_risk" in row
+    assert data["run_id"].startswith("ro_")
+    # stdout empty when -o used (md goes to file)
+    assert out_md.read_text(encoding="utf-8").startswith("# Review Packet")

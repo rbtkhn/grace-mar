@@ -15,6 +15,15 @@ Four passes plus synthesis (see script output):
 5. **Synthesis** — recommended action (`allow` | `allow_with_review` | `hold` | `block`) aligned with the envelope (advisory).
 6. **Operator questions** — concrete follow-ups.
 
+## Task anchor (required)
+
+Every invocation must include **`--task-anchor`** with a short description of the operator’s original question or constraint for this review. The packet includes a **`## Task Anchor`** section (task, optional constraint, and **active scope**) so long reviews do not silently drift from intent.
+
+- **`--constraint-anchor`** — optional extra boundary (e.g. abstention, “do not broaden”).
+- **`--active-scope`** — optional human-readable scope string. If omitted, scope is **derived** from lane, observation ids, or candidate id (see script).
+
+Optional **`--receipt-out PATH`** writes a minimal **JSON sidecar** (`run_id`, `built`, `mode`, `target`, `anchor`, per-pass anchor checks, `non_canonical: true`) for audit — not canonical Record truth.
+
 ## Modes
 
 | Mode | Input | Use when |
@@ -33,7 +42,8 @@ python3 scripts/runtime/review_orchestrator.py \
   --mode pre_gate \
   --lane work-strategy \
   --id obs_20260413T184210Z_a1b2c3d4 \
-  --id obs_20260413T191455Z_e5f6g7h8
+  --id obs_20260413T191455Z_e5f6g7h8 \
+  --task-anchor "Decide whether these observations justify staging a gate candidate."
 ```
 
 **Candidate-driven:**
@@ -42,7 +52,8 @@ python3 scripts/runtime/review_orchestrator.py \
 python3 scripts/runtime/review_orchestrator.py \
   --mode candidate_review \
   --candidate CANDIDATE-0042 \
-  --user grace-mar
+  --user grace-mar \
+  --task-anchor "Hygiene review on pending CANDIDATE-0042 before companion approve."
 ```
 
 **Write to optional artifact path:**
@@ -51,7 +62,21 @@ python3 scripts/runtime/review_orchestrator.py \
 python3 scripts/runtime/review_orchestrator.py \
   --mode candidate_review \
   --candidate CANDIDATE-0042 \
+  --user grace-mar \
+  --task-anchor "Hygiene review before approve." \
   --output artifacts/review-packets/CANDIDATE-0042.md
+```
+
+**Optional JSON receipt (non-canonical):**
+
+```bash
+python3 scripts/runtime/review_orchestrator.py \
+  --mode pre_gate \
+  --lane work-strategy \
+  --id obs_20260413T184210Z_a1b2c3d4 \
+  --task-anchor "Assess ledger observations for promotion." \
+  --receipt-out artifacts/review-packets/example-anchor-receipt.json \
+  -o artifacts/review-packets/review-packet.md
 ```
 
 **Tests / alternate repo root:**
@@ -61,7 +86,8 @@ python3 scripts/runtime/review_orchestrator.py \
   --mode candidate_review \
   --candidate CANDIDATE-9001 \
   --user testuser \
-  --repo-root /path/to/fixture/repo
+  --repo-root /path/to/fixture/repo \
+  --task-anchor "Fixture run for tests."
 ```
 
 ## Policy mode envelope
