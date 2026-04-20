@@ -35,17 +35,19 @@ Each successful run updates `prepared-context/last-budget-builds.json` (per-lane
 
 ## Workflow depth (adaptive halting)
 
-Optional **`--workflow-depth`** on [`build_budgeted_context.py`](../../scripts/prepared_context/build_budgeted_context.py) adds **named phases**, a **task anchor** (and optional **constraint**), and an append-only receipt at `runtime/workflow-depth/index.jsonl` (or `GRACE_MAR_WORKFLOW_DEPTH_HOME`). This is **runtime weather** — not a second governance layer and not Record truth.
+Optional **`--workflow-depth`** (alias **`--depth`**) on [`build_budgeted_context.py`](../../scripts/prepared_context/build_budgeted_context.py) adds **named phases**, a **task anchor** (and optional **constraint**), and an append-only receipt at `runtime/workflow-depth/index.jsonl` (or `GRACE_MAR_WORKFLOW_DEPTH_HOME`). This is **runtime weather** — not a second governance layer and not Record truth.
+
+**See also:** [workflow-depth.md](workflow-depth.md) — when to pick each depth mode and example commands.
 
 | Flag | Meaning |
 |------|---------|
-| `--workflow-depth shallow` | Map to **compact** (and depth-specific max observation count) |
+| `--workflow-depth shallow` (or `--depth shallow`) | Map to **compact** (and depth-specific max observation count) |
 | `normal` | **medium** |
 | `deep` | **deep** |
 | `exhaustive` | **deep** with higher candidate cap |
 | `auto` | Compact dry-pack → heuristic halt/continue → optional escalation to **medium** |
 
-**Requires** `--task-anchor` (operator problem statement). **`--mode` is ignored** when `--workflow-depth` is set.
+**Requires** `--task-anchor` (operator problem statement). **`--mode` is ignored** when `--workflow-depth` or `--depth` is set.
 
 **Work-strategy calibration:** Heuristics for `auto` are tuned first against [`lane-defaults.json`](../../config/context_budgets/lane-defaults.json) **work-strategy** budgets.
 
@@ -72,6 +74,7 @@ Receipt schema: [`schema-registry/workflow-depth-receipt.v1.json`](../../schema-
 
 ## Related
 
+- Workflow depth modes: [workflow-depth.md](workflow-depth.md)
 - Progressive retrieval: [memory-retrieval.md](memory-retrieval.md)
 - Memory brief: [read-hints.md](read-hints.md), `scripts/runtime/memory_brief.py` (optional `--budgeted-follow-on`)
 - Review orchestrator: [../orchestration/review-orchestrator.md](../orchestration/review-orchestrator.md) (`--context-mode`)

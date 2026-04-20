@@ -395,19 +395,24 @@ def main() -> int:
         "--mode",
         default=None,
         choices=MODES,
-        help="Budget class: compact | medium | deep (required unless --workflow-depth is set)",
+        help="Budget class: compact | medium | deep (required unless --workflow-depth / --depth is set)",
     )
     ap.add_argument(
         "--workflow-depth",
+        "--depth",
+        dest="workflow_depth",
         default=None,
         choices=DEPTH_CHOICES,
         metavar="MODE",
-        help="Adaptive workflow depth (shallow|normal|deep|exhaustive|auto); requires --task-anchor; ignores --mode",
+        help=(
+            "Adaptive workflow depth (shallow|normal|deep|exhaustive|auto); alias --depth; "
+            "requires --task-anchor; ignores --mode"
+        ),
     )
     ap.add_argument(
         "--task-anchor",
         default="",
-        help="Original operator task (required with --workflow-depth); reinjected into output and receipts",
+        help="Original operator task (required with --workflow-depth or --depth); reinjected into output and receipts",
     )
     ap.add_argument(
         "--constraint-anchor",
@@ -458,7 +463,7 @@ def main() -> int:
         type=int,
         default=None,
         metavar="N",
-        help="Max observation candidates to rank (default: 30, or depth preset for --workflow-depth)",
+        help="Max observation candidates to rank (default: 30, or depth preset for --workflow-depth / --depth)",
     )
     ap.add_argument(
         "--policy-mode",
@@ -486,13 +491,22 @@ def main() -> int:
     constraint_anchor = (args.constraint_anchor or "").strip()
 
     if wf_depth and not task_anchor:
-        print("error: --task-anchor is required when --workflow-depth is set", file=sys.stderr)
+        print(
+            "error: --task-anchor is required when --workflow-depth or --depth is set",
+            file=sys.stderr,
+        )
         return 2
     if not wf_depth and args.mode is None:
-        print("error: --mode is required when --workflow-depth is not set", file=sys.stderr)
+        print(
+            "error: --mode is required when neither --workflow-depth nor --depth is set",
+            file=sys.stderr,
+        )
         return 2
     if wf_depth and args.mode is not None:
-        print("notice: --mode ignored when --workflow-depth is set", file=sys.stderr)
+        print(
+            "notice: --mode ignored when --workflow-depth or --depth is set",
+            file=sys.stderr,
+        )
 
     policy_defaults_path = args.policy_defaults.resolve() if args.policy_defaults else None
     pdefs = load_policy_defaults(policy_defaults_path)

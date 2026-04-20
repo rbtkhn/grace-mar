@@ -219,6 +219,78 @@ def test_workflow_depth_shallow_writes_receipt(tmp_path: Path) -> None:
     assert row["task_anchor"] == "Test anchor for prepared context"
 
 
+def test_workflow_depth_depth_alias_matches_long_flag(tmp_path: Path) -> None:
+    """--depth is an alias for --workflow-depth; receipt matches shallow preset."""
+    obs_dir = tmp_path / "runtime" / "observations"
+    obs_dir.mkdir(parents=True)
+    a = _minimal_obs("obs_wd_002", "lane-x", "T1", "summary about iran")
+    (obs_dir / "index.jsonl").write_text(json.dumps(a) + "\n", encoding="utf-8")
+    out = tmp_path / "prepared-context" / "out-depth.md"
+    wd_home = tmp_path / "workflow-depth-alias"
+    env = {
+        **os.environ,
+        "GRACE_MAR_RUNTIME_LEDGER_ROOT": str(tmp_path),
+        "GRACE_MAR_WORKFLOW_DEPTH_HOME": str(wd_home),
+    }
+    r = subprocess.run(
+        [
+            sys.executable,
+            str(SCRIPT),
+            "--repo-root",
+            str(tmp_path),
+            "--lane",
+            "lane-x",
+            "--depth",
+            "shallow",
+            "--task-anchor",
+            "Alias parity anchor",
+            "-q",
+            "iran",
+            "-o",
+            str(out),
+            "--budgets-file",
+            str(REPO_ROOT / "config" / "context_budgets" / "lane-defaults.json"),
+        ],
+        env=env,
+        capture_output=True,
+        text=True,
+    )
+    assert r.returncode == 0, r.stderr + r.stdout
+    idx = wd_home / "index.jsonl"
+    assert idx.is_file()
+    line = idx.read_text(encoding="utf-8").strip().splitlines()[-1]
+    row = json.loads(line)
+    assert row["workflow_depth"] == "shallow"
+    assert row["task_anchor"] == "Alias parity anchor"
+
+
+def test_depth_requires_task_anchor(tmp_path: Path) -> None:
+    """--depth without --task-anchor exits with error (same rule as --workflow-depth)."""
+    out = tmp_path / "out.md"
+    env = {**os.environ, "GRACE_MAR_RUNTIME_LEDGER_ROOT": str(tmp_path)}
+    r = subprocess.run(
+        [
+            sys.executable,
+            str(SCRIPT),
+            "--repo-root",
+            str(tmp_path),
+            "--lane",
+            "lane-x",
+            "--depth",
+            "auto",
+            "-o",
+            str(out),
+            "--budgets-file",
+            str(REPO_ROOT / "config" / "context_budgets" / "lane-defaults.json"),
+        ],
+        env=env,
+        capture_output=True,
+        text=True,
+    )
+    assert r.returncode == 2
+    assert "task-anchor" in r.stderr.lower()
+
+
 def test_compute_benchmark_scores_unit() -> None:
     """Unit test for compute_benchmark_scores with synthetic pieces."""
     sys.path.insert(0, str(REPO_ROOT / "scripts" / "prepared_context"))
