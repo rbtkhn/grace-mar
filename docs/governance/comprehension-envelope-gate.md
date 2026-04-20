@@ -6,14 +6,27 @@
 
 ---
 
-## Two different “tier” systems (do not merge)
+## Three orthogonal axes (do not merge)
 
-| System | Where documented | Meaning |
-|--------|------------------|---------|
-| **Traffic / merge UX `risk_tier`** | [recursion-gate-three-tier.md](../recursion-gate-three-tier.md) | `quick_merge_eligible`, `review_batch`, `manual_escalate` — how fast or heavy **review** is. |
-| **Comprehension `envelope_class`** | This doc | Whether a **Comprehension Envelope** block is omitted, optional, or **required** for a candidate. |
+| System | Field name | Where documented | Meaning |
+|--------|------------|------------------|---------|
+| **Traffic / merge UX** | **`risk_tier`** (machine) | [recursion-gate-three-tier.md](../recursion-gate-three-tier.md), [recursion_gate_review.py](../../scripts/recursion_gate_review.py) | `quick_merge_eligible`, `review_batch`, `manual_escalate` — how fast or heavy **review** is. |
+| **Blast radius / promotion sensitivity** | **`impact_tier`** (author) | This doc; [users/…/recursion-gate.md](../../users/grace-mar/recursion-gate.md) § Candidate classification | `low`, `medium`, `high`, `boundary` — how sensitive the **content** of the merge is (canonical surfaces, governance, etc.). **Not** a rename of `risk_tier`. |
+| **Comprehension proof** | **`envelope_class`** | This doc | `none`, `optional`, `required` — whether a **Comprehension Envelope** markdown block is omitted, recommended, or required. |
 
-Orthogonal: a candidate can be `review_batch` (traffic) and `envelope_class: required` (comprehension), or `quick_merge_eligible` with `envelope_class: none`.
+**Orthogonality:** Traffic `risk_tier` describes **review flow** (dashboards, quick-merge eligibility). **`impact_tier`** and **`envelope_class`** describe **what the companion must see** before approval. A candidate can be `review_batch` (traffic) and `envelope_class: required` (comprehension), or `quick_merge_eligible` with `envelope_class: none`.
+
+**Typical pairing (rollout):** `impact_tier: low` → `envelope_class: none`; `medium` → `optional`; `high` or `boundary` → `required`. Adjust in YAML when a case is exceptional.
+
+---
+
+## Gate wiring (operational surface)
+
+The first place these fields appear in day-to-day use is **`users/<id>/recursion-gate.md`** (markdown-first; YAML keys inside each `### CANDIDATE-…` fenced block).
+
+- **`impact_tier`** and **`envelope_class`** are optional on any candidate; when present, reviewers and tooling can rely on them.
+- **Do not** overload **`risk_tier`** in YAML to mean `low`/`medium`/`high` — that collides with machine traffic tiers. Use **`impact_tier`** for that ladder.
+- **Rollout:** start with documentation + examples; optional **`python3 scripts/validate_gate_comprehension_envelope.py`** (presence check for `envelope_class: required` only). Reflection Gates, observability, and stricter enforcement are **follow-on** layers after usage stabilizes.
 
 ---
 

@@ -27,6 +27,71 @@
 
 ---
 
+## Candidate classification (Comprehension Envelope)
+
+Optional YAML keys on each `### CANDIDATE-…` fenced block. **Orthogonal** to traffic **`risk_tier`** (`quick_merge_eligible` / `review_batch` / `manual_escalate` from [recursion-gate-three-tier.md](../../docs/recursion-gate-three-tier.md) and [recursion_gate_review.py](../../scripts/recursion_gate_review.py)) — do **not** reuse `risk_tier` for a `low`/`medium`/`high` blast-radius ladder.
+
+| Field | Values | Role |
+|-------|--------|------|
+| **`impact_tier`** | `low` \| `medium` \| `high` \| `boundary` | Blast radius / promotion sensitivity of **this** merge (content), not review traffic. |
+| **`envelope_class`** | `none` \| `optional` \| `required` | Whether a **Comprehension Envelope** block is omitted, recommended, or required. |
+
+**Intended pairing:** `low` → `none`; `medium` → `optional`; `high` or `boundary` → `required`. Full vocabulary: [comprehension-envelope-gate.md](../../docs/governance/comprehension-envelope-gate.md).
+
+**Optional check:** `python3 scripts/validate_gate_comprehension_envelope.py -u grace-mar` (warns if `envelope_class: required` but envelope missing; `--strict` exits non-zero).
+
+### Comprehension Envelope template
+
+Place **below** the closing YAML fence of the candidate block, still under the same `### CANDIDATE-…` section:
+
+```markdown
+### Comprehension Envelope
+- What this is:
+- Why this path:
+- Why not the next-best option:
+- Blast radius:
+- Assumptions / fragile points:
+- Human override applied:
+```
+
+**Authoring:** 1–2 sentences per bullet; name concrete surfaces; `unknown` allowed; no motivational filler; reviewer scannable in ~30 seconds.
+
+### Examples (illustrative)
+
+Not live candidates — copy the shape when adding real **pending** blocks above `## Processed`.
+
+**Example A — low impact, no envelope**
+
+```yaml
+impact_tier: low
+envelope_class: none
+status: pending
+# … other required candidate keys …
+```
+
+*(No `### Comprehension Envelope` block for this class.)*
+
+**Example B — boundary impact, envelope required**
+
+```yaml
+impact_tier: boundary
+envelope_class: required
+status: pending
+# … other required candidate keys …
+```
+
+```markdown
+### Comprehension Envelope
+- What this is: One IX-A line from a daily-brief claim already verified under Links with dated citations.
+- Why this path: Knowledge belongs in SELF when stable; the brief was intake only.
+- Why not the next-best option: Pasting the full brief into SELF would bloat IX-A; leaving it only in days.md would skip the Record.
+- Blast radius: Single IX-A bullet; no prompt or abstention rule change.
+- Assumptions / fragile points: Source may need refresh if the situation moves; companion may narrow wording on approve.
+- Human override applied: none.
+```
+
+---
+
 ## Candidates
 
 ## Processed

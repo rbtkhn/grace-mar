@@ -4,6 +4,8 @@
 **Purpose:** Satisfy the insights-to-implementations workflow (operator plan under `.cursor/plans/` — do not treat this file as that plan file).  
 **Audience:** Repo owner and companion deciding whether to ship the Comprehension Envelope PR sequence.
 
+**Gate wiring (approach A, shipped):** Operational classification uses **`impact_tier`** (`low` \| `medium` \| `high` \| `boundary`) for blast radius — **not** informal `low`/`medium`/`high` on **`risk_tier`**, which remains the machine traffic field (`quick_merge_eligible` / `review_batch` / `manual_escalate`). See [comprehension-envelope-gate.md](comprehension-envelope-gate.md) § Three orthogonal axes and § Gate wiring. The six-PR sequence below (template, validator, UI, schema mirror) remains valid for automation.
+
 ---
 
 ## Phase 1 — Insight table (atomic findings)
@@ -89,7 +91,7 @@ Authoring rules: 1–2 sentences per bullet; concrete surfaces; `unknown` allowe
 |------|--------|
 | Doctrine | This file; [comprehension-envelope-gate.md](comprehension-envelope-gate.md) (vocabulary + mapping); link from [recursion-gate-three-tier.md](../recursion-gate-three-tier.md) |
 | Template | [users/_template/recursion-gate.md](../../users/_template/recursion-gate.md); optional instance README under `users/` |
-| Validation | New script under `scripts/` (follow-on PR) |
+| Validation | [validate_gate_comprehension_envelope.py](../../scripts/validate_gate_comprehension_envelope.py) (presence for `envelope_class: required`; `--strict` optional) |
 | UI | [apps/gate-review-app.py](../../apps/gate-review-app.py) (follow-on PR) |
 | Schema | [schema-registry/change-proposal.v1.json](../../schema-registry/change-proposal.v1.json) (defer) |
 

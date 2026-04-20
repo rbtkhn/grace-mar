@@ -6,12 +6,47 @@ Governed by Identity Fork Protocol: agent may stage, may not merge. The gate is 
 
 **Operator routing:** [docs/recursion-gate-three-tier.md](../../docs/recursion-gate-three-tier.md) — fast vs normal vs escalated review, change-review export, work-politics batch scope vs tier depth.
 
+**Comprehension Envelope:** [docs/governance/comprehension-envelope-gate.md](../../docs/governance/comprehension-envelope-gate.md) — optional **`impact_tier`** and **`envelope_class`** on each candidate; orthogonal to traffic **`risk_tier`**. Optional check: `python3 scripts/validate_gate_comprehension_envelope.py -u <user_id>`.
+
+---
+
+## Candidate classification (optional YAML keys)
+
+On each `### CANDIDATE-…` block, you may add:
+
+| Field | Values |
+|-------|--------|
+| **`impact_tier`** | `low` \| `medium` \| `high` \| `boundary` |
+| **`envelope_class`** | `none` \| `optional` \| `required` |
+
+**Pairing:** `low` → `none`; `medium` → `optional`; `high` or `boundary` → `required`. Do **not** put blast-radius labels on **`risk_tier`** — that name is reserved for traffic tiers (`quick_merge_eligible` / `review_batch` / `manual_escalate`).
+
+### Comprehension Envelope (when not `none`)
+
+Place **below** the YAML fence, same candidate section:
+
+```markdown
+### Comprehension Envelope
+- What this is:
+- Why this path:
+- Why not the next-best option:
+- Blast radius:
+- Assumptions / fragile points:
+- Human override applied:
+```
+
 ---
 
 ## Candidates
 
-(Placeholder: each candidate has mind_category, signal_type, summary, profile_target, suggested_entry — per instance schema. Companion approves, rejects, or edits; then merge runs.)
+(Each pending candidate lives **above** `## Processed`. Bot and scripts insert new blocks immediately before `## Processed`.)
 
 ---
 
-*Do not use this file as a live staging area in the template. Copy to `users/<new_id>/recursion-gate.md` in an instance (or keep an equivalent name such as recursion-gate.json for the machine-readable queue).*
+## Processed
+
+*(Approved / merged / rejected history — per instance.)*
+
+---
+
+*Copy to `users/<new_id>/recursion-gate.md` in an instance. Do not use this template file as a live staging area.*
