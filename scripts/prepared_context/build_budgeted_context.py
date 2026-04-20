@@ -188,6 +188,21 @@ def _greedy_pack(pieces: list[RankedPiece], budget: int) -> tuple[list[RankedPie
     return included, excluded
 
 
+def _compact_included_observation_rows(included: list[RankedPiece]) -> list[dict]:
+    """Full observation dicts for compact pack — used by workflow depth quality guard."""
+    out: list[dict] = []
+    for p in included:
+        if p.kind != "runtime_observation":
+            continue
+        oid = p.meta.get("obs_id")
+        if not oid:
+            continue
+        raw = by_id(str(oid))
+        if raw:
+            out.append(raw)
+    return out
+
+
 def compute_benchmark_scores(
     included: list[RankedPiece],
     excluded: list[RankedPiece],
@@ -612,10 +627,13 @@ def main() -> int:
         budget_try = _budget_for_lane(budgets, lane, "compact")
         inc_try, exc_try = _greedy_pack(pieces_auto, budget_try)
         scores_try = compute_benchmark_scores(inc_try, exc_try, budget_try)
-        mode_auto, stop_reason, phase_metrics = auto_decide_format(
+        compact_included_rows = _compact_included_observation_rows(inc_try)
+        mode_auto, stop_reason, phase_metrics, guard_receipt = auto_decide_format(
             query=args.query,
             pool_rows=pool_rows,
             compact_scores=scores_try,
+            task_anchor=task_anchor,
+            compact_included_rows=compact_included_rows,
         )
         for p in phase_metrics:
             phases_log.append(dict(p))
@@ -664,6 +682,7 @@ def main() -> int:
             "effective_mode": budget_class,
             "max_observations": max_obs,
             "compact_dry_scores": scores_try,
+            **guard_receipt,
         }
 
     out = args.output.resolve()
