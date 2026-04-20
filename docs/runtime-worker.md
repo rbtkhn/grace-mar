@@ -32,6 +32,8 @@
 
 **Schema:** `schema-registry/runtime-worker-trace.v1.json`
 
+**Worker routing (optional):** `--task-type` records shared vs routed worker entrypoints under `provenance.worker_routing` on the trace line — see [worker-routing.md](runtime/worker-routing.md).
+
 **Commands:**
 
 ```bash

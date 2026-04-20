@@ -28,6 +28,12 @@ REPO_ROOT = Path(__file__).resolve().parent.parent.parent
 # Import adapter from same package directory
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from agents_sdk_adapter import summarize_inspection  # noqa: E402
+from worker_router import (  # noqa: E402
+    TASK_TYPE_TO_ROUTED,
+    UnknownTaskTypeError,
+    resolve_routing,
+    routing_receipt_payload,
+)
 
 DEFAULT_SCOPE = "docs/skill-work/work-strategy/strategy-notebook"
 DEFAULT_MAX_FILES = 400
@@ -216,6 +222,7 @@ def task_inspect_work_area(
     dry_run: bool,
     compose_with: str | None,
     lens_name: str | None = None,
+    task_type: str | None = None,
 ) -> int:
     scope = (repo_root / scope_rel).resolve()
     try:
@@ -288,6 +295,20 @@ def task_inspect_work_area(
     body = "\n".join(lines)
     proposal_path.write_text(body, encoding="utf-8")
 
+    provenance: dict[str, object] = {
+        "script": "scripts/runtime/grace_mar_runtime_worker.py",
+        "adapter": "scripts/runtime/agents_sdk_adapter.py",
+        "compose_with": compose_with,
+        "lens": lens_name,
+    }
+    if task_type:
+        try:
+            rr = resolve_routing(task_type, repo_root)
+            provenance["worker_routing"] = routing_receipt_payload(run_id=run_id, result=rr)
+        except (UnknownTaskTypeError, FileNotFoundError, KeyError, ValueError) as e:
+            print(f"error: worker routing failed: {e}", file=sys.stderr)
+            return 2
+
     trace = {
         "run_id": run_id,
         "timestamp": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
@@ -308,12 +329,7 @@ def task_inspect_work_area(
             "compose_exit": compose_exit if compose_with else None,
         },
         "status": "ok" if compose_exit == 0 or not compose_with else "partial",
-        "provenance": {
-            "script": "scripts/runtime/grace_mar_runtime_worker.py",
-            "adapter": "scripts/runtime/agents_sdk_adapter.py",
-            "compose_with": compose_with,
-            "lens": lens_name,
-        },
+        "provenance": provenance,
     }
 
     with trace_path.open("a", encoding="utf-8") as f:
@@ -362,6 +378,16 @@ def main() -> int:
         formatter_class=argparse.RawDescriptionHelpFormatter,
     )
     ap.add_argument("--task", default="inspect_work_area", choices=("inspect_work_area",))
+    ap.add_argument(
+        "--task-type",
+        default=None,
+        choices=tuple(sorted(TASK_TYPE_TO_ROUTED.keys())),
+        metavar="TYPE",
+        help=(
+            "Optional routed worker hint (strategy|tacit|moonshot|contradiction|research); "
+            "records shared+routed entrypoints in trace provenance — does not invoke them"
+        ),
+    )
     ap.add_argument("--repo-root", type=Path, default=REPO_ROOT)
     ap.add_argument(
         "--scope",
@@ -421,6 +447,7 @@ def main() -> int:
             dry_run=args.dry_run,
             compose_with=compose_with,
             lens_name=lens_name,
+            task_type=args.task_type,
         )
     return 1
 

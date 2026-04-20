@@ -1,0 +1,33 @@
+# Runtime worker registry (WORK only — inspectable mapping to existing scripts).
+# v1: documentation + routing metadata; does not spawn workers automatically.
+
+shared_workers:
+  provenance_checker:
+    role: "Validate provenance-bearing inputs and refs"
+    entrypoint: scripts/runtime/score_evidence_sufficiency.py
+  boundary_checker:
+    role: "Protect canonical and gated surfaces"
+    entrypoint: scripts/runtime/boundary_regression.py
+  budget_enforcer:
+    role: "Enforce workflow-depth and budget policies"
+    entrypoint: scripts/prepared_context/workflow_depth_control.py
+  anchor_reinjector:
+    role: "Preserve task-anchor fidelity across passes"
+    entrypoint: scripts/runtime/review_orchestrator.py
+
+routed_workers:
+  strategy_worker:
+    role: "Strategy / notebook / decision workflows"
+    entrypoint: scripts/runtime/review_orchestrator.py
+  tacit_worker:
+    role: "Tacit abstraction and observation-driven candidate work"
+    entrypoint: scripts/runtime/stage_candidate_from_observations.py
+  moonshot_worker:
+    role: "Mission / moonshot runtime support"
+    entrypoint: scripts/runtime/build_handoff_packet.py
+  contradiction_worker:
+    role: "Contradiction and fabricated-history risk checks"
+    entrypoint: scripts/runtime/flag_fabricated_history_risk.py
+  research_worker:
+    role: "Research / retrieval / evidence exploration"
+    entrypoint: scripts/runtime/hybrid_retrieve.py

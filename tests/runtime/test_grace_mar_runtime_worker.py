@@ -89,6 +89,57 @@ def test_inspect_work_area_dry_run_writes_only_worker_home(
         v.validate(obj)
 
 
+def test_task_type_strategy_records_worker_routing_in_trace(
+    tmp_path: Path, worker_env: dict[str, str]
+) -> None:
+    before = {p: (p.stat().st_mtime_ns if p.exists() else None) for p in CANONICAL_TOUCH_PATHS}
+
+    r = subprocess.run(
+        [
+            sys.executable,
+            str(SCRIPT),
+            "--task",
+            "inspect_work_area",
+            "--task-type",
+            "strategy",
+            "--dry-run",
+            "--repo-root",
+            str(REPO_ROOT),
+            "--scope",
+            "docs/skill-work/work-strategy/strategy-notebook",
+            "--max-files",
+            "8",
+            "--max-chars",
+            "12000",
+        ],
+        cwd=str(REPO_ROOT),
+        env=worker_env,
+        capture_output=True,
+        text=True,
+    )
+    assert r.returncode == 0, r.stderr + r.stdout
+
+    for p, t in before.items():
+        if t is not None and p.exists():
+            assert p.stat().st_mtime_ns == t
+
+    wh = Path(worker_env["GRACE_MAR_RUNTIME_WORKER_HOME"])
+    trace_path = wh / "traces" / "index.jsonl"
+    line = trace_path.read_text(encoding="utf-8").strip().splitlines()[-1]
+    obj = json.loads(line)
+    wr = obj["provenance"].get("worker_routing")
+    assert isinstance(wr, dict)
+    assert wr.get("non_canonical") is True
+    assert wr.get("task_type") == "strategy"
+    assert wr.get("routed_worker") == "strategy_worker"
+    assert "provenance_checker" in wr.get("shared_workers", [])
+    assert wr["entrypoints"]["strategy_worker"].endswith("review_orchestrator.py")
+
+    v = _validator()
+    if v is not None:
+        v.validate(obj)
+
+
 def test_lens_quick_scan_sets_caps_and_trace_lens(
     tmp_path: Path, worker_env: dict[str, str]
 ) -> None:
