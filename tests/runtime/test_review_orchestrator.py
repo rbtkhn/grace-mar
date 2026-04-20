@@ -12,6 +12,15 @@ REPO_ROOT = Path(__file__).resolve().parent.parent.parent
 SCRIPT = REPO_ROOT / "scripts" / "runtime" / "review_orchestrator.py"
 RO_MOD = REPO_ROOT / "scripts" / "runtime" / "review_orchestrator.py"
 
+EXPECTED_PHASE_IDS: tuple[str, ...] = (
+    "phase_1_retrieval",
+    "phase_2_invalidators",
+    "phase_3_boundary",
+    "phase_4_promotion_risk",
+    "phase_5_synthesis",
+    "phase_6_operator_questions",
+)
+
 
 def _base_obs(oid: str, lane: str, summary: str, refs: list[str]) -> dict:
     return {
@@ -56,7 +65,7 @@ def test_build_review_packet_markdown_unit():
         constraint_anchor="Stay within fixture observations.",
         active_scope="pre_gate; lane=work-strategy; obs=obs_20260101T120000Z_aaaaaaaa",
     )
-    md, phase_checks = mod.build_review_packet_markdown(
+    md, phase_checks, phase_results = mod.build_review_packet_markdown(
         mode="pre_gate",
         built_iso="2026-01-01T00:00:00Z",
         target_label="obs_20260101T120000Z_aaaaaaaa",
@@ -66,6 +75,9 @@ def test_build_review_packet_markdown_unit():
         gate_text_derived=False,
         anchor=anchor,
     )
+    assert [pr.phase_id for pr in phase_results] == list(mod.PHASE_ORDER)
+    assert [pr.phase_id for pr in phase_results] == list(EXPECTED_PHASE_IDS)
+    assert all(pr.status == "completed" for pr in phase_results)
     assert "# Review Packet" in md
     assert "## Task Anchor" in md
     assert "Unit-test task anchor" in md
@@ -231,6 +243,54 @@ def test_receipt_out_json(tmp_path: Path) -> None:
     for row in data["phase_anchor_checks"]:
         assert "phase" in row
         assert "scope_drift_risk" in row
+    assert "phase_sequence" in data
+    assert len(data["phase_sequence"]) == 6
+    assert [row["phase_id"] for row in data["phase_sequence"]] == list(EXPECTED_PHASE_IDS)
+    for row in data["phase_sequence"]:
+        assert row["status"] == "completed"
+        assert "summary" in row
+        assert isinstance(row["summary"], list)
+        assert "halt_recommended" in row
+        assert "halt_reason" in row
     assert data["run_id"].startswith("ro_")
     # stdout empty when -o used (md goes to file)
     assert out_md.read_text(encoding="utf-8").startswith("# Review Packet")
+
+
+def test_orchestrator_outputs_only_operator_paths(tmp_path: Path) -> None:
+    """Read-only: script writes only paths the test passes (no canonical Record targets)."""
+    obs_dir = tmp_path / "runtime" / "observations"
+    obs_dir.mkdir(parents=True)
+    a = _base_obs("obs_20260101T120000Z_aaaaaaaa", "lane-a", "one", ["ref/1"])
+    (obs_dir / "index.jsonl").write_text(json.dumps(a) + "\n", encoding="utf-8")
+    env = {**os.environ, "GRACE_MAR_RUNTIME_LEDGER_ROOT": str(tmp_path)}
+    receipt_path = tmp_path / "out" / "receipt.json"
+    out_md = tmp_path / "out" / "packet.md"
+    receipt_path.parent.mkdir(parents=True)
+    r = subprocess.run(
+        [
+            sys.executable,
+            str(SCRIPT),
+            "--mode",
+            "pre_gate",
+            "--lane",
+            "lane-a",
+            "--id",
+            a["obs_id"],
+            "--task-anchor",
+            "Read-only path test",
+            "--receipt-out",
+            str(receipt_path),
+            "-o",
+            str(out_md),
+        ],
+        cwd=str(REPO_ROOT),
+        capture_output=True,
+        text=True,
+        env=env,
+    )
+    assert r.returncode == 0, r.stderr
+    assert receipt_path.is_file()
+    assert out_md.is_file()
+    data = json.loads(receipt_path.read_text(encoding="utf-8"))
+    assert data["non_canonical"] is True

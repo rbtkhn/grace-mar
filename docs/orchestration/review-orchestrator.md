@@ -22,7 +22,7 @@ Every invocation must include **`--task-anchor`** with a short description of th
 - **`--constraint-anchor`** — optional extra boundary (e.g. abstention, “do not broaden”).
 - **`--active-scope`** — optional human-readable scope string. If omitted, scope is **derived** from lane, observation ids, or candidate id (see script).
 
-Optional **`--receipt-out PATH`** writes a minimal **JSON sidecar** (`run_id`, `built`, `mode`, `target`, `anchor`, per-pass anchor checks, `non_canonical: true`) for audit — not canonical Record truth.
+Optional **`--receipt-out PATH`** writes a **JSON sidecar** for audit (not canonical Record truth): `run_id`, `built`, `mode`, `target`, `anchor`, **`phase_anchor_checks`** (per-pass drift strings, PR 2), **`phase_sequence`** (six named phases with `phase_id`, `title`, `status`, `summary`, `halt_recommended`, `halt_reason`), and `non_canonical: true`. Phases match the Markdown sections in order: retrieval (Evidence) → invalidators (Contradiction) → boundary → promotion risk → synthesis → operator questions.
 
 ## Modes
 

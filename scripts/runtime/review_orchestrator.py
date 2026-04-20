@@ -48,6 +48,55 @@ class ReviewAnchor:
     active_scope: str
 
 
+PHASE_ORDER: tuple[str, ...] = (
+    "phase_1_retrieval",
+    "phase_2_invalidators",
+    "phase_3_boundary",
+    "phase_4_promotion_risk",
+    "phase_5_synthesis",
+    "phase_6_operator_questions",
+)
+
+
+@dataclass
+class PhaseResult:
+    """One named review phase — machine-readable contract + markdown body."""
+
+    phase_id: str
+    title: str
+    status: str
+    summary_lines: list[str]
+    halt_recommended: bool
+    halt_reason: str
+    markdown_body_lines: list[str]
+    anchor_check: dict[str, str]
+
+
+def _halt_from_anchor_check(chk: dict[str, str]) -> tuple[bool, str]:
+    if chk.get("scope_drift_risk") == "high":
+        return True, chk.get("why_continue_or_halt", "")
+    return False, ""
+
+
+def _render_phase_section(title: str, markdown_body_lines: list[str], anchor_check: dict[str, str]) -> list[str]:
+    out = [f"## {title}", ""]
+    out.extend(markdown_body_lines)
+    out.append("")
+    out.extend(_anchor_fidelity_lines(anchor_check))
+    return out
+
+
+def _phase_result_to_receipt_row(pr: PhaseResult) -> dict[str, Any]:
+    return {
+        "phase_id": pr.phase_id,
+        "title": pr.title,
+        "status": pr.status,
+        "halt_recommended": pr.halt_recommended,
+        "halt_reason": pr.halt_reason,
+        "summary": pr.summary_lines,
+    }
+
+
 def _run_id() -> str:
     ts = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
     h = hashlib.sha256(f"{ts}:{uuid.uuid4().hex}".encode()).hexdigest()[:12]
@@ -62,6 +111,7 @@ def _build_anchor_receipt_dict(
     target: str,
     anchor: ReviewAnchor,
     phase_anchor_checks: list[dict[str, str]],
+    phase_sequence: list[dict[str, Any]],
 ) -> dict[str, Any]:
     return {
         "run_id": run_id,
@@ -74,6 +124,7 @@ def _build_anchor_receipt_dict(
             "active_scope": anchor.active_scope,
         },
         "phase_anchor_checks": phase_anchor_checks,
+        "phase_sequence": phase_sequence,
         "non_canonical": True,
     }
 
@@ -408,6 +459,227 @@ def _operator_questions(
     return qs[:8]
 
 
+def _run_phase_1_retrieval(
+    observations: list[dict],
+    env: dict[str, Any],
+    anchor: ReviewAnchor,
+) -> PhaseResult:
+    n = len(observations)
+    total_refs = sum(len(o.get("source_refs") or []) for o in observations)
+    md_lines: list[str] = [
+        f"- **Observation count:** {n}",
+        f"- **Supporting refs (source_refs count):** {total_refs}",
+    ]
+    summary_lines = [
+        f"Observation count: {n}",
+        f"Supporting refs count: {total_refs}",
+    ]
+    if observations:
+        kinds: dict[str, int] = {}
+        for o in observations:
+            k = o.get("source_kind") or "?"
+            kinds[k] = kinds.get(k, 0) + 1
+        md_lines.append(f"- **source_kind mix:** {kinds}")
+        summary_lines.append(f"source_kind mix: {kinds}")
+        ts = [o.get("timestamp") for o in observations if o.get("timestamp")]
+        if ts:
+            md_lines.append(f"- **Recency (timestamps):** oldest `{min(ts)}` → newest `{max(ts)}`")
+            summary_lines.append(f"Recency: {min(ts)} to {max(ts)}")
+    md_lines.append(f"- **Evidence sufficiency (PR 1 envelope):** `{env['evidence_state']}`")
+    summary_lines.append(f"Evidence sufficiency: {env['evidence_state']}")
+    chk = _anchor_check_evidence(observations, env, anchor)
+    halt_r, halt_why = _halt_from_anchor_check(chk)
+    return PhaseResult(
+        phase_id="phase_1_retrieval",
+        title="Evidence Pass",
+        status="completed",
+        summary_lines=summary_lines,
+        halt_recommended=halt_r,
+        halt_reason=halt_why,
+        markdown_body_lines=md_lines,
+        anchor_check=chk,
+    )
+
+
+def _run_phase_2_invalidators(
+    mode: str,
+    observations: list[dict],
+    candidate_row: dict | None,
+    env: dict[str, Any],
+    anchor: ReviewAnchor,
+) -> PhaseResult:
+    md_lines: list[str] = []
+    summary_lines: list[str] = []
+    if mode == "pre_gate":
+        for x in _contradiction_pass_observations(observations, env):
+            md_lines.append(f"- {x}")
+        summary_lines.append("Contradiction pass (observation-led)")
+    else:
+        assert candidate_row is not None
+        for x in _contradiction_pass_candidate(candidate_row, env):
+            md_lines.append(f"- {x}")
+        summary_lines.append("Contradiction pass (candidate-led)")
+    chk = _anchor_check_contradiction(mode, observations, candidate_row, env, anchor)
+    halt_r, halt_why = _halt_from_anchor_check(chk)
+    if env.get("evidence_state") == "conflicted":
+        summary_lines.append("Envelope evidence_state: conflicted")
+    return PhaseResult(
+        phase_id="phase_2_invalidators",
+        title="Contradiction Pass",
+        status="completed",
+        summary_lines=summary_lines,
+        halt_recommended=halt_r,
+        halt_reason=halt_why,
+        markdown_body_lines=md_lines,
+        anchor_check=chk,
+    )
+
+
+def _run_phase_3_boundary(
+    mode: str,
+    observations: list[dict],
+    candidate_row: dict | None,
+    lane_for_boundary: str,
+    anchor: ReviewAnchor,
+) -> PhaseResult:
+    md_lines: list[str] = []
+    summary_lines: list[str] = []
+    if mode == "pre_gate" and observations:
+        lane = observations[0].get("lane") or ""
+        for note in _pre_gate_boundary_notes(observations, lane):
+            md_lines.append(f"- {note}")
+        summary_lines.append(f"Boundary notes for lane: {lane or '(unknown)'}")
+    elif candidate_row:
+        br = candidate_row.get("boundary_review") or {}
+        md_lines.extend(
+            [
+                f"- **profile_target:** `{candidate_row.get('profile_target', '')}`",
+                f"- **mind_category:** `{candidate_row.get('mind_category', '')}`",
+                f"- **territory:** `{candidate_row.get('territory', '')}`",
+                f"- **proposal_class:** `{candidate_row.get('proposal_class', '')}`",
+                (
+                    f"- **boundary_review target_surface:** `{br.get('target_surface', '')}` → "
+                    f"suggested `{br.get('suggested_surface', '')}` (confidence: {br.get('confidence', '')})"
+                ),
+            ]
+        )
+        if br.get("misfiled_warning"):
+            md_lines.append(f"- **Misfiled warning:** {br['misfiled_warning']}")
+        for h in br.get("hint_reasons") or []:
+            md_lines.append(f"- Hint: {h}")
+        md_lines.append(f"- **risk_tier:** `{candidate_row.get('risk_tier', '')}`")
+        summary_lines.append(f"profile_target: {candidate_row.get('profile_target', '')}")
+        summary_lines.append(f"boundary_review target_surface: {br.get('target_surface', '')}")
+    else:
+        md_lines.append("- (No boundary metadata for this packet.)")
+        summary_lines.append("No boundary metadata for this packet shape")
+    chk = _anchor_check_boundary(mode, observations, candidate_row, lane_for_boundary, anchor)
+    halt_r, halt_why = _halt_from_anchor_check(chk)
+    return PhaseResult(
+        phase_id="phase_3_boundary",
+        title="Boundary Pass",
+        status="completed",
+        summary_lines=summary_lines,
+        halt_recommended=halt_r,
+        halt_reason=halt_why,
+        markdown_body_lines=md_lines,
+        anchor_check=chk,
+    )
+
+
+def _run_phase_4_promotion_risk(
+    env: dict[str, Any],
+    candidate_row: dict | None,
+    anchor: ReviewAnchor,
+) -> PhaseResult:
+    md_lines = [
+        f"- **Fabricated-history risk:** `{env['fabricated_history_risk']}`",
+        f"- **Promotion recommendation:** `{env.get('promotion_recommendation', '')}`",
+        "- **Reasons (envelope):**",
+    ]
+    for r in env.get("reasons", [])[:14]:
+        md_lines.append(f"  - {r}")
+    summary_lines = [
+        f"Fabricated-history risk: {env['fabricated_history_risk']}",
+        f"Promotion recommendation: {env.get('promotion_recommendation', '')}",
+        f"Envelope reasons count: {len(env.get('reasons') or [])}",
+    ]
+    if candidate_row:
+        rt = candidate_row.get("risk_tier", "")
+        md_lines.append(
+            f"- **Scope / prematurity (gate risk_tier):** `{rt}` — defer or escalate when `manual_escalate`."
+        )
+        summary_lines.append(f"Gate risk_tier: {rt}")
+    else:
+        md_lines.append(
+            "- **Scope / prematurity:** If staging to gate, confirm IX target and provenance before merge."
+        )
+        summary_lines.append("Scope/prematurity: confirm IX target if staging")
+    chk = _anchor_check_promotion_risk(env, anchor)
+    halt_r, halt_why = _halt_from_anchor_check(chk)
+    return PhaseResult(
+        phase_id="phase_4_promotion_risk",
+        title="Promotion-Risk Pass",
+        status="completed",
+        summary_lines=summary_lines,
+        halt_recommended=halt_r,
+        halt_reason=halt_why,
+        markdown_body_lines=md_lines,
+        anchor_check=chk,
+    )
+
+
+def _run_phase_5_synthesis(env: dict[str, Any], anchor: ReviewAnchor) -> PhaseResult:
+    promo = env.get("promotion_recommendation", "allow_with_review")
+    md_lines = [
+        f"- **Recommended action:** `{promo}`",
+        "- **Rationale:** Derived from PR 1 uncertainty envelope "
+        "+ contradiction/boundary signals (advisory; companion decides).",
+    ]
+    summary_lines = [
+        f"Recommended action: {promo}",
+        "Rationale: envelope + contradiction/boundary signals (advisory)",
+    ]
+    chk = _anchor_check_synthesis(env, anchor)
+    halt_r, halt_why = _halt_from_anchor_check(chk)
+    return PhaseResult(
+        phase_id="phase_5_synthesis",
+        title="Synthesis",
+        status="completed",
+        summary_lines=summary_lines,
+        halt_recommended=halt_r,
+        halt_reason=halt_why,
+        markdown_body_lines=md_lines,
+        anchor_check=chk,
+    )
+
+
+def _run_phase_6_operator_questions(
+    mode: str,
+    env: dict[str, Any],
+    candidate_row: dict | None,
+    anchor: ReviewAnchor,
+) -> PhaseResult:
+    cid = candidate_row.get("id") if candidate_row else None
+    oqs = _operator_questions(mode, env, candidate_id=cid)
+    md_lines = [f"- {q}" for q in oqs]
+    summary_lines = [f"Operator questions count: {len(oqs)}"]
+    if cid:
+        summary_lines.append(f"Candidate id: {cid}")
+    chk = _anchor_check_operator_questions(mode, oqs, cid, anchor)
+    halt_r, halt_why = _halt_from_anchor_check(chk)
+    return PhaseResult(
+        phase_id="phase_6_operator_questions",
+        title="Operator Questions",
+        status="completed",
+        summary_lines=summary_lines,
+        halt_recommended=halt_r,
+        halt_reason=halt_why,
+        markdown_body_lines=md_lines,
+        anchor_check=chk,
+    )
+
+
 def build_review_packet_markdown(
     *,
     mode: str,
@@ -418,8 +690,7 @@ def build_review_packet_markdown(
     candidate_row: dict | None,
     gate_text_derived: bool,
     anchor: ReviewAnchor,
-) -> tuple[str, list[dict[str, str]]]:
-    phase_checks: list[dict[str, str]] = []
+) -> tuple[str, list[dict[str, str]], list[PhaseResult]]:
     lane_for_boundary = (observations[0].get("lane") or "") if observations else ""
 
     lines: list[str] = [
@@ -452,121 +723,22 @@ def build_review_packet_markdown(
         ]
     )
 
-    # Evidence pass
-    lines.extend(["## Evidence Pass", ""])
-    n = len(observations)
-    lines.append(f"- **Observation count:** {n}")
-    total_refs = sum(len(o.get("source_refs") or []) for o in observations)
-    lines.append(f"- **Supporting refs (source_refs count):** {total_refs}")
-    if observations:
-        kinds = {}
-        for o in observations:
-            k = o.get("source_kind") or "?"
-            kinds[k] = kinds.get(k, 0) + 1
-        lines.append(f"- **source_kind mix:** {kinds}")
-        ts = [o.get("timestamp") for o in observations if o.get("timestamp")]
-        if ts:
-            lines.append(f"- **Recency (timestamps):** oldest `{min(ts)}` → newest `{max(ts)}`")
-    lines.append(f"- **Evidence sufficiency (PR 1 envelope):** `{env['evidence_state']}`")
-    lines.append("")
-    chk_e = _anchor_check_evidence(observations, env, anchor)
-    phase_checks.append(chk_e)
-    lines.extend(_anchor_fidelity_lines(chk_e))
+    p1 = _run_phase_1_retrieval(observations, env, anchor)
+    p2 = _run_phase_2_invalidators(mode, observations, candidate_row, env, anchor)
+    p3 = _run_phase_3_boundary(mode, observations, candidate_row, lane_for_boundary, anchor)
+    p4 = _run_phase_4_promotion_risk(env, candidate_row, anchor)
+    p5 = _run_phase_5_synthesis(env, anchor)
+    p6 = _run_phase_6_operator_questions(mode, env, candidate_row, anchor)
+    phase_results = [p1, p2, p3, p4, p5, p6]
+    phase_checks = [pr.anchor_check for pr in phase_results]
 
-    # Contradiction pass
-    lines.extend(["## Contradiction Pass", ""])
-    if mode == "pre_gate":
-        for x in _contradiction_pass_observations(observations, env):
-            lines.append(f"- {x}")
-    else:
-        assert candidate_row is not None
-        for x in _contradiction_pass_candidate(candidate_row, env):
-            lines.append(f"- {x}")
-    lines.append("")
-    chk_c = _anchor_check_contradiction(mode, observations, candidate_row, env, anchor)
-    phase_checks.append(chk_c)
-    lines.extend(_anchor_fidelity_lines(chk_c))
-
-    # Boundary pass
-    lines.extend(["## Boundary Pass", ""])
-    if mode == "pre_gate" and observations:
-        lane = observations[0].get("lane") or ""
-        for note in _pre_gate_boundary_notes(observations, lane):
-            lines.append(f"- {note}")
-    elif candidate_row:
-        br = candidate_row.get("boundary_review") or {}
-        lines.append(f"- **profile_target:** `{candidate_row.get('profile_target', '')}`")
-        lines.append(f"- **mind_category:** `{candidate_row.get('mind_category', '')}`")
-        lines.append(f"- **territory:** `{candidate_row.get('territory', '')}`")
-        lines.append(f"- **proposal_class:** `{candidate_row.get('proposal_class', '')}`")
-        lines.append(
-            f"- **boundary_review target_surface:** `{br.get('target_surface', '')}` → "
-            f"suggested `{br.get('suggested_surface', '')}` (confidence: {br.get('confidence', '')})"
-        )
-        if br.get("misfiled_warning"):
-            lines.append(f"- **Misfiled warning:** {br['misfiled_warning']}")
-        for h in br.get("hint_reasons") or []:
-            lines.append(f"- Hint: {h}")
-        lines.append(f"- **risk_tier:** `{candidate_row.get('risk_tier', '')}`")
-    else:
-        lines.append("- (No boundary metadata for this packet.)")
-    lines.append("")
-    chk_b = _anchor_check_boundary(mode, observations, candidate_row, lane_for_boundary, anchor)
-    phase_checks.append(chk_b)
-    lines.extend(_anchor_fidelity_lines(chk_b))
-
-    # Promotion-risk pass (explicit section)
-    lines.extend(["## Promotion-Risk Pass", ""])
-    lines.append(f"- **Fabricated-history risk:** `{env['fabricated_history_risk']}`")
-    lines.append(f"- **Promotion recommendation:** `{env.get('promotion_recommendation', '')}`")
-    lines.append("- **Reasons (envelope):**")
-    for r in env.get("reasons", [])[:14]:
-        lines.append(f"  - {r}")
-    if candidate_row:
-        rt = candidate_row.get("risk_tier", "")
-        lines.append(
-            f"- **Scope / prematurity (gate risk_tier):** `{rt}` — defer or escalate when `manual_escalate`."
-        )
-    else:
-        lines.append(
-            "- **Scope / prematurity:** If staging to gate, confirm IX target and provenance before merge."
-        )
-    lines.append("")
-    chk_p = _anchor_check_promotion_risk(env, anchor)
-    phase_checks.append(chk_p)
-    lines.extend(_anchor_fidelity_lines(chk_p))
-
-    # Synthesis
-    promo = env.get("promotion_recommendation", "allow_with_review")
-    lines.extend(
-        [
-            "## Synthesis",
-            "",
-            f"- **Recommended action:** `{promo}`",
-            "- **Rationale:** Derived from PR 1 uncertainty envelope "
-            "+ contradiction/boundary signals (advisory; companion decides).",
-            "",
-        ]
-    )
-    chk_s = _anchor_check_synthesis(env, anchor)
-    phase_checks.append(chk_s)
-    lines.extend(_anchor_fidelity_lines(chk_s))
-
-    # Operator questions
-    cid = candidate_row.get("id") if candidate_row else None
-    oqs = _operator_questions(mode, env, candidate_id=cid)
-    lines.extend(["## Operator Questions", ""])
-    for q in oqs:
-        lines.append(f"- {q}")
-    lines.append("")
-    chk_o = _anchor_check_operator_questions(mode, oqs, cid, anchor)
-    phase_checks.append(chk_o)
-    lines.extend(_anchor_fidelity_lines(chk_o))
+    for pr in phase_results:
+        lines.extend(_render_phase_section(pr.title, pr.markdown_body_lines, pr.anchor_check))
 
     lines.append("---")
     lines.append("_Review orchestrator output is not canonical. Merge only via companion-approved gate pipeline._")
     lines.append("")
-    return "\n".join(lines), phase_checks
+    return "\n".join(lines), phase_checks, phase_results
 
 
 def main() -> int:
@@ -617,7 +789,7 @@ def main() -> int:
         type=Path,
         default=None,
         metavar="PATH",
-        help="Optional JSON sidecar with anchor fidelity (non-canonical)",
+        help="Optional JSON sidecar: anchor + phase_anchor_checks + phase_sequence (non-canonical)",
     )
     args = p.parse_args()
     repo_root = args.repo_root.resolve() if args.repo_root else None
@@ -666,7 +838,7 @@ def main() -> int:
             mixed_lane=args.mixed_lane,
         )
         anchor = ReviewAnchor(task_anchor, constraint_s, active_scope)
-        md, phase_checks = build_review_packet_markdown(
+        md, phase_checks, phase_results = build_review_packet_markdown(
             mode="pre_gate",
             built_iso=built,
             target_label=target_label,
@@ -700,7 +872,7 @@ def main() -> int:
             mixed_lane=False,
         )
         anchor = ReviewAnchor(task_anchor, constraint_s, active_scope)
-        md, phase_checks = build_review_packet_markdown(
+        md, phase_checks, phase_results = build_review_packet_markdown(
             mode="candidate_review",
             built_iso=built,
             target_label=target_label,
@@ -736,6 +908,7 @@ def main() -> int:
         )
 
     if args.receipt_out is not None:
+        phase_sequence = [_phase_result_to_receipt_row(pr) for pr in phase_results]
         receipt = _build_anchor_receipt_dict(
             run_id=run_id,
             built=built,
@@ -743,6 +916,7 @@ def main() -> int:
             target=target_label,
             anchor=anchor,
             phase_anchor_checks=phase_checks,
+            phase_sequence=phase_sequence,
         )
         outp = args.receipt_out.resolve()
         outp.parent.mkdir(parents=True, exist_ok=True)
