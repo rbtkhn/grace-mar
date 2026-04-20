@@ -20,6 +20,8 @@ This is **architecture clarification**, not a second governance layer. Routing m
 - **No** automatic execution of routed scripts from the registry.
 - The **[runtime worker](runtime-worker.md)** [`grace_mar_runtime_worker.py`](../../scripts/runtime/grace_mar_runtime_worker.py) can take optional **`--task-type`**; it resolves routing and writes **`provenance.worker_routing`** on the trace line in `runtime/runtime-worker/traces/index.jsonl` (non-canonical).
 
+**Pass overlays (optional):** **`--overlay`** supplies default scope/caps/task-type emphasis from [`overlays.yaml`](../../config/runtime_workers/overlays.yaml) — see [worker-overlays.md](worker-overlays.md). Routing still follows **`--task-type`** (overlay default or explicit).
+
 ## Task type mapping
 
 | `--task-type` | Routed worker (registry key) |
@@ -47,5 +49,6 @@ Inspect the last JSON line in `runtime/runtime-worker/traces/index.jsonl` (or `G
 
 ## See also
 
+- [worker-overlays.md](worker-overlays.md) — pass defaults on the same worker spine
 - [runtime-worker.md](runtime-worker.md) — proposals + traces
 - [context-budgeting.md](context-budgeting.md) — budget vs policy vs workflow depth

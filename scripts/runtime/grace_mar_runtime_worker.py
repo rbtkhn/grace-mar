@@ -22,12 +22,21 @@ import uuid
 from dataclasses import dataclass
 from datetime import datetime, timezone
 from pathlib import Path
+from types import SimpleNamespace
 
 REPO_ROOT = Path(__file__).resolve().parent.parent.parent
 
 # Import adapter from same package directory
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from agents_sdk_adapter import summarize_inspection  # noqa: E402
+from worker_overlays import (  # noqa: E402
+    OVERLAY_NAMES,
+    OverlayConfigError,
+    UnknownOverlayError,
+    apply_overlay_defaults,
+    emphasis_flags,
+    get_overlay,
+)
 from worker_router import (  # noqa: E402
     TASK_TYPE_TO_ROUTED,
     UnknownTaskTypeError,
@@ -223,6 +232,9 @@ def task_inspect_work_area(
     compose_with: str | None,
     lens_name: str | None = None,
     task_type: str | None = None,
+    overlay_name: str | None = None,
+    overlay_defaults_applied: list[str] | None = None,
+    overlay_emphasis: dict[str, bool] | None = None,
 ) -> int:
     scope = (repo_root / scope_rel).resolve()
     try:
@@ -274,6 +286,23 @@ def task_inspect_work_area(
     ]
     if lens_name:
         lines.extend([f"- **lens:** `{lens_name}`", ""])
+    if overlay_name or overlay_emphasis:
+        lines.extend(
+            [
+                "## Worker overlay (non-canonical)",
+                "",
+            ]
+        )
+        if overlay_name:
+            lines.append(f"- **overlay:** `{overlay_name}`")
+        if overlay_defaults_applied:
+            lines.append(f"- **defaults applied:** {', '.join(f'`{k}`' for k in overlay_defaults_applied)}")
+        if overlay_emphasis:
+            lines.append(
+                "- **emphasis:** "
+                + ", ".join(f"`{k}`" for k in sorted(overlay_emphasis.keys()))
+            )
+        lines.append("")
     lines.extend(
         [
             "## File paths (relative to repo)",
@@ -301,10 +330,26 @@ def task_inspect_work_area(
         "compose_with": compose_with,
         "lens": lens_name,
     }
+    if overlay_name is not None:
+        provenance["overlay"] = overlay_name
+    if overlay_defaults_applied:
+        provenance["overlay_defaults_applied"] = list(overlay_defaults_applied)
+    if overlay_emphasis:
+        provenance["overlay_emphasis"] = dict(overlay_emphasis)
+
     if task_type:
         try:
             rr = resolve_routing(task_type, repo_root)
             provenance["worker_routing"] = routing_receipt_payload(run_id=run_id, result=rr)
+            provenance["runtime_receipt"] = {
+                "overlay": overlay_name,
+                "overlay_defaults_applied": list(overlay_defaults_applied or []),
+                "task_type": rr.task_type,
+                "routed_worker": rr.routed_worker_id,
+                "shared_workers": list(rr.shared_worker_ids),
+                "emphasis": dict(overlay_emphasis or {}),
+                "non_canonical": True,
+            }
         except (UnknownTaskTypeError, FileNotFoundError, KeyError, ValueError) as e:
             print(f"error: worker routing failed: {e}", file=sys.stderr)
             return 2
@@ -338,6 +383,49 @@ def task_inspect_work_area(
     print(f"wrote proposal {proposal_path}", file=sys.stderr)
     print(f"appended trace {trace_path}", file=sys.stderr)
     return 0
+
+
+def _resolve_inspect_with_overlay(
+    args: argparse.Namespace,
+    repo_root: Path,
+    overlay_block: dict[str, object] | None,
+) -> tuple[str, int, int, str | None, str | None, str | None, list[str], dict[str, bool]]:
+    """
+    Resolve scope/caps/compose/lens and effective task_type.
+
+    Precedence: explicit CLI (--scope, --max-*, --task-type) > overlay defaults >
+    built-in defaults. If ``--lens`` is set, it wins over overlay for scope/caps;
+    overlay may still set ``task_type`` when ``--task-type`` is omitted.
+    """
+    emphasis = emphasis_flags(overlay_block) if overlay_block else {}
+    overlay_name: str | None = args.overlay
+
+    if args.lens:
+        scope, mf, mc, compose, lens_name = _resolve_lens_args(args)
+        applied: list[str] = []
+        tt = args.task_type
+        if overlay_block and tt is None and overlay_block.get("default_task_type"):
+            tt = str(overlay_block["default_task_type"]).strip().lower()
+            applied.append("task_type")
+        return scope, mf, mc, compose, lens_name, tt, applied, emphasis
+
+    s, mf, mc, tt, ov_applied = apply_overlay_defaults(
+        overlay=overlay_block,
+        scope=args.scope,
+        max_files=args.max_files,
+        max_chars=args.max_chars,
+        task_type=args.task_type,
+    )
+    eff = SimpleNamespace(
+        scope=s,
+        max_files=mf,
+        max_chars=mc,
+        compose_with=args.compose_with,
+        no_compose=args.no_compose,
+        lens=None,
+    )
+    scope, mf2, mc2, compose, lens_name = _resolve_lens_args(eff)
+    return scope, mf2, mc2, compose, lens_name, tt, ov_applied, emphasis
 
 
 def _resolve_lens_args(args: argparse.Namespace) -> tuple[str, int, int, str | None, str | None]:
@@ -386,6 +474,16 @@ def main() -> int:
         help=(
             "Optional routed worker hint (strategy|tacit|moonshot|contradiction|research); "
             "records shared+routed entrypoints in trace provenance — does not invoke them"
+        ),
+    )
+    ap.add_argument(
+        "--overlay",
+        default=None,
+        choices=tuple(sorted(OVERLAY_NAMES)),
+        metavar="NAME",
+        help=(
+            "Optional pass overlay (config/runtime_workers/overlays.yaml): default scope/caps/task_type "
+            "when not overridden by explicit CLI; with --lens, only default task_type may apply"
         ),
     )
     ap.add_argument("--repo-root", type=Path, default=REPO_ROOT)
@@ -438,7 +536,23 @@ def main() -> int:
     repo_root = args.repo_root.resolve()
 
     if args.task == "inspect_work_area":
-        scope, max_files, max_chars, compose_with, lens_name = _resolve_lens_args(args)
+        overlay_block: dict[str, object] | None = None
+        if args.overlay:
+            try:
+                overlay_block = get_overlay(args.overlay, repo_root)
+            except (UnknownOverlayError, OverlayConfigError, FileNotFoundError) as e:
+                print(f"error: overlay: {e}", file=sys.stderr)
+                return 2
+        (
+            scope,
+            max_files,
+            max_chars,
+            compose_with,
+            lens_name,
+            effective_task_type,
+            overlay_applied,
+            overlay_emphasis,
+        ) = _resolve_inspect_with_overlay(args, repo_root, overlay_block)
         return task_inspect_work_area(
             repo_root=repo_root,
             scope_rel=scope,
@@ -447,7 +561,10 @@ def main() -> int:
             dry_run=args.dry_run,
             compose_with=compose_with,
             lens_name=lens_name,
-            task_type=args.task_type,
+            task_type=effective_task_type,
+            overlay_name=args.overlay,
+            overlay_defaults_applied=overlay_applied,
+            overlay_emphasis=overlay_emphasis,
         )
     return 1
 

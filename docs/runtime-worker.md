@@ -34,6 +34,8 @@
 
 **Worker routing (optional):** `--task-type` records shared vs routed worker entrypoints under `provenance.worker_routing` on the trace line — see [worker-routing.md](runtime/worker-routing.md).
 
+**Worker overlays (optional):** `--overlay strategy|moonshot|research|tacit` applies small defaults from [`config/runtime_workers/overlays.yaml`](../config/runtime_workers/overlays.yaml) (explicit CLI wins) — see [worker-overlays.md](runtime/worker-overlays.md).
+
 **Commands:**
 
 ```bash

@@ -89,6 +89,97 @@ def test_inspect_work_area_dry_run_writes_only_worker_home(
         v.validate(obj)
 
 
+def test_overlay_strategy_applies_scope_and_task_type_and_runtime_receipt(
+    tmp_path: Path, worker_env: dict[str, str]
+) -> None:
+    before = {p: (p.stat().st_mtime_ns if p.exists() else None) for p in CANONICAL_TOUCH_PATHS}
+
+    r = subprocess.run(
+        [
+            sys.executable,
+            str(SCRIPT),
+            "--task",
+            "inspect_work_area",
+            "--overlay",
+            "strategy",
+            "--dry-run",
+            "--repo-root",
+            str(REPO_ROOT),
+            "--max-files",
+            "5",
+            "--max-chars",
+            "5000",
+        ],
+        cwd=str(REPO_ROOT),
+        env=worker_env,
+        capture_output=True,
+        text=True,
+    )
+    assert r.returncode == 0, r.stderr + r.stdout
+
+    for p, t in before.items():
+        if t is not None and p.exists():
+            assert p.stat().st_mtime_ns == t
+
+    wh = Path(worker_env["GRACE_MAR_RUNTIME_WORKER_HOME"])
+    trace_path = wh / "traces" / "index.jsonl"
+    line = trace_path.read_text(encoding="utf-8").strip().splitlines()[-1]
+    obj = json.loads(line)
+    assert obj["scope"] == "docs/skill-work/work-strategy/strategy-notebook"
+    prov = obj["provenance"]
+    assert prov.get("overlay") == "strategy"
+    assert "scope" in prov.get("overlay_defaults_applied", [])
+    assert "task_type" in prov.get("overlay_defaults_applied", [])
+    rr = prov.get("runtime_receipt")
+    assert isinstance(rr, dict)
+    assert rr.get("non_canonical") is True
+    assert rr.get("overlay") == "strategy"
+    assert rr.get("task_type") == "strategy"
+    assert rr.get("routed_worker") == "strategy_worker"
+    assert "provenance_checker" in rr.get("shared_workers", [])
+    assert "emphasize_anchor" in (rr.get("emphasis") or {})
+
+    v = _validator()
+    if v is not None:
+        v.validate(obj)
+
+
+def test_overlay_research_explicit_task_type_overrides_default(
+    tmp_path: Path, worker_env: dict[str, str]
+) -> None:
+    r = subprocess.run(
+        [
+            sys.executable,
+            str(SCRIPT),
+            "--overlay",
+            "research",
+            "--task-type",
+            "contradiction",
+            "--dry-run",
+            "--repo-root",
+            str(REPO_ROOT),
+            "--scope",
+            "research",
+            "--max-files",
+            "8",
+            "--max-chars",
+            "12000",
+        ],
+        cwd=str(REPO_ROOT),
+        env=worker_env,
+        capture_output=True,
+        text=True,
+    )
+    assert r.returncode == 0, r.stderr + r.stdout
+    wh = Path(worker_env["GRACE_MAR_RUNTIME_WORKER_HOME"])
+    line = (wh / "traces" / "index.jsonl").read_text(encoding="utf-8").strip().splitlines()[-1]
+    obj = json.loads(line)
+    rr = obj["provenance"]["runtime_receipt"]
+    assert rr["overlay"] == "research"
+    assert rr["task_type"] == "contradiction"
+    assert rr["routed_worker"] == "contradiction_worker"
+
+
 def test_task_type_strategy_records_worker_routing_in_trace(
     tmp_path: Path, worker_env: dict[str, str]
 ) -> None:

@@ -1,0 +1,35 @@
+# Runtime worker overlays (WORK only — non-canonical defaults; not routing, not Record truth).
+# Precedence: explicit CLI > overlay defaults > built-in worker/lens defaults.
+# v1: four overlays; fields are optional except where noted per-overlay.
+
+strategy:
+  default_task_type: strategy
+  default_scope: docs/skill-work/work-strategy/strategy-notebook
+  max_files: 250
+  max_chars: 150000
+  emphasize_anchor: true
+  emphasize_contradictions: true
+
+moonshot:
+  default_task_type: moonshot
+  default_scope: docs/skill-work/work-strategy/strategy-notebook
+  max_files: 300
+  max_chars: 180000
+  emphasize_anchor: true
+  emphasize_mission_context: true
+
+research:
+  default_task_type: research
+  default_scope: research
+  max_files: 300
+  max_chars: 180000
+  emphasize_provenance: true
+  emphasize_evidence_density: true
+
+tacit:
+  default_task_type: tacit
+  default_scope: runtime/tacit
+  max_files: 150
+  max_chars: 100000
+  emphasize_candidate_extraction: true
+  emphasize_grounding: true
