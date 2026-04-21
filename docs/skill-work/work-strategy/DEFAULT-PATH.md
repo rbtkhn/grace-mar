@@ -4,7 +4,7 @@
 
 **When:** Normal day. Operator says **`strategy`** or **`strategy pass`**. No special modifiers.
 
-**Full sequence (SSOT):** When you need the **numbered** inbox-first path (accumulate → weave → optional markers → escalation → STRATEGY → no Record), use [STRATEGY-NOTEBOOK-ARCHITECTURE.md — Default operating path](strategy-notebook/STRATEGY-NOTEBOOK-ARCHITECTURE.md#default-operating-path-ssot). The three moves below are the **minimum**; that section is the **long-form** contract.
+**Full sequence (SSOT):** When you need the **numbered** inbox-first path (accumulate → **EOD strategy session** → optional markers → escalation → STRATEGY → no Record), use [STRATEGY-NOTEBOOK-ARCHITECTURE.md — Default operating path](strategy-notebook/STRATEGY-NOTEBOOK-ARCHITECTURE.md#default-operating-path-ssot). The three moves below are the **minimum**; that section is the **long-form** contract.
 
 ---
 
@@ -26,7 +26,7 @@ If a daily brief exists for today (`daily-brief-YYYY-MM-DD.md`), skim its lead.
 
 Append paste-ready lines to [`daily-strategy-inbox.md`](strategy-notebook/daily-strategy-inbox.md). Shape: one-liner or two-tier gist (`cold: … // hook: …`). Tag the plane when load-bearing (§1d–§1h watch tags).
 
-Do **not** touch `days.md` unless the operator says **weave**.
+Do **not** touch `days.md` unless the operator directs **EOD notebook compose** / **end-of-day strategy session** (or **breaking glass**). *Deprecated prompt:* **`weave`**.
 
 **Time:** Variable (5–30 min depending on ingest volume).
 
@@ -36,13 +36,13 @@ End the pass with **3–5 options** (standard WORK menu). Typical forks on a nor
 
 | Letter | Option |
 |--------|--------|
-| **A** | Weave inbox → **`strategy-page`** block(s) + `days.md` continuity |
+| **A** | **EOD compose** — inbox + **`raw-input/`** → **`strategy-page`** block(s) + `days.md` continuity |
 | **B** | Verify — run `strategy + verify` on a claim |
 | **C** | Lens — B/M/M one-liners (pick one, two, or skip) |
 | **D** | Promote — stitch a stabilized arc to STRATEGY.md |
 | **E** | Pivot to another lane or park |
 
-If the operator picks **A**, follow the weave contract: compose or extend **`strategy-page`** blocks in expert **`thread.md`** with Signal / Judgment / Links minimum, update `days.md` continuity, then condense if over ~1200 words. If they skip, the inbox holds state for next time.
+If the operator picks **A**, follow the **EOD compose** contract ([architecture § End-of-day strategy session](strategy-notebook/STRATEGY-NOTEBOOK-ARCHITECTURE.md#end-of-day-strategy-session-terminology)): compose or extend **`strategy-page`** blocks in expert **`thread.md`** with Signal / Judgment / Links minimum, update `days.md` continuity, then condense if over ~1200 words. If they skip, the inbox + **`raw-input/`** hold state for the next **EOD session**.
 
 ---
 
@@ -61,7 +61,7 @@ These are all valuable. None are required on every pass.
 | **Promotion to STRATEGY.md** | Arc has stabilized (weekly or less) |
 | **Current-events analysis pipeline** | Live event needs the full 11-section workflow |
 | **Condense-to-target (Full path)** | Draft mixes notebook + DEMO + lens walls |
-| **LLM / pasted strategic digest triage** | Dense §1f paste uses the **same** falsifiable-table + verify-before-weave discipline as generator stubs ([NOTEBOOK-PREFERENCES — daily brief supplements](strategy-notebook/NOTEBOOK-PREFERENCES.md#daily-brief-supplements)) |
+| **LLM / pasted strategic digest triage** | Dense §1f paste uses the **same** falsifiable-table + verify-before-**EOD compose** discipline as generator stubs ([NOTEBOOK-PREFERENCES — daily brief supplements](strategy-notebook/NOTEBOOK-PREFERENCES.md#daily-brief-supplements)) |
 
 Each optional feature has its own section in [SKILL.md](../../.cursor/skills/skill-strategy/SKILL.md) and the architecture docs. Consult them when the operator triggers them — not before.
 
@@ -80,6 +80,6 @@ Compare: the full skill file describes ~15 optional features, 5 watch threads, 4
 | Doc | Role |
 |-----|------|
 | [SYNTHESIS-OPERATING-MODEL.md](strategy-notebook/SYNTHESIS-OPERATING-MODEL.md) | Session types A–D, section router, minds defaults |
-| [NOTEBOOK-PREFERENCES.md](strategy-notebook/NOTEBOOK-PREFERENCES.md) | Operator narrowings (minimum sections, prose register, weave rhythm) |
+| [NOTEBOOK-PREFERENCES.md](strategy-notebook/NOTEBOOK-PREFERENCES.md) | Operator narrowings (minimum sections, prose register, EOD compose rhythm) |
 | [STRATEGY-NOTEBOOK-ARCHITECTURE.md](strategy-notebook/STRATEGY-NOTEBOOK-ARCHITECTURE.md) | Full architecture (condense, entry model, polyphony, templates) |
 | [SKILL.md](../../.cursor/skills/skill-strategy/SKILL.md) | Complete skill contract (all features, all obligations) |

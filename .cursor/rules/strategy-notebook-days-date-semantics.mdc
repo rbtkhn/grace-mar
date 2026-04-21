@@ -1,5 +1,5 @@
 ---
-description: strategy-notebook — days.md dates are weave anchors, not inbox clock or upload receipts; anti-split
+description: strategy-notebook — days.md dates are compose/EOD anchors, not inbox clock or upload receipts; anti-split
 alwaysApply: true
 ---
 
@@ -7,11 +7,11 @@ alwaysApply: true
 
 **SSOT:** [STRATEGY-NOTEBOOK-ARCHITECTURE.md — `days.md` date keys](../../docs/skill-work/work-strategy/strategy-notebook/STRATEGY-NOTEBOOK-ARCHITECTURE.md#days-md-date-semantics).
 
-**Invariants (WORK / `strategy` / `weave`):**
+**Invariants (WORK / `strategy` / **EOD compose**):**
 
-- **`## YYYY-MM-DD` in `days.md`** = **weave continuity day**, not proof the operator uploaded files that calendar day.
-- **Do not** add a **new** `## YYYY-MM-DD` **only** because **`Accumulator for:`**, inbox **`### … YYYY-MM-DD`**, assistant session clock, or **wire bylines** differ — consolidate; put external dates in **Links** / **Signal**; optional **weave date note** when scopes differ.
+- **`## YYYY-MM-DD` in `days.md`** = **compose / continuity day** (default: **end-of-day strategy session**), not proof the operator uploaded files that calendar day.
+- **Do not** add a **new** `## YYYY-MM-DD` **only** because **`Accumulator for:`**, inbox **`### … YYYY-MM-DD`**, assistant session clock, or **wire bylines** differ — consolidate; put external dates in **Links** / **Signal**; optional **compose date note** (legacy: **weave date note**) when scopes differ.
 - **Operator last-ingest boundary** → fold assistant work into that **notebook day** (or episodic heading), not extra split headings.
 - **`STATUS.md`** links must match **real** `days.md` anchors after consolidation.
 
-**Weave menu** (knot-shape options before editing `days.md` on **`weave`**) is unchanged — [architecture § Entry model / Weave command](../../docs/skill-work/work-strategy/strategy-notebook/STRATEGY-NOTEBOOK-ARCHITECTURE.md#entry-model-operator-contract).
+**EOD page-shape menu** (options before editing `days.md` in the **EOD strategy session**) — [architecture § EOD compose — page-shape menu](../../docs/skill-work/work-strategy/strategy-notebook/STRATEGY-NOTEBOOK-ARCHITECTURE.md#weave-command-page-shape-menu). *Legacy:* “Weave menu.”

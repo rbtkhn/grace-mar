@@ -8,7 +8,7 @@
 
 **Use:** Copy to `chapters/YYYY-MM/knots/strategy-notebook-knot-YYYY-MM-DD-<knot_label>.md`, replace placeholders, append a row to [`knot-index.yaml`](knot-index.yaml), run `python3 scripts/validate_knot_index.py` from repo root.
 
-**Weave length target:** **300–1000 words** for the knot file body (`wc -w`). If synthesis would exceed **~1000**, move bulk to [`days.md`](chapters/YYYY-MM/days.md) **or** split into another knot—see [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *Weave choice and section weighting* (knot body length). Thin router knots **below 300** are allowed only when **deferring** narrative to `days.md` (architecture).
+**Compose length target (legacy knot file):** **300–1000 words** for the knot file body (`wc -w`). If synthesis would exceed **~1000**, move bulk to [`days.md`](chapters/YYYY-MM/days.md) **or** split into another knot—see [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *Compose choice and section weighting* (knot body length). Thin router knots **below 300** are allowed only when **deferring** narrative to `days.md` (architecture).
 
 **Naming:** Basename must contain **`knot`**. The segment after the date is the **machine slug** (see **`knot_label`** below).
 

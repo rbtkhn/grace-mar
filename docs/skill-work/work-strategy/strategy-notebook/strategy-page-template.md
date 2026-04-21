@@ -69,6 +69,6 @@ python3 scripts/validate_strategy_pages.py --strict-prose --min-prose-ratio 0.90
 <!-- strategy-page:end -->
 ```
 
-**Rules:** When **`### Technical appendix`** is present, keep **machinery** (URLs, `thread:`, `verify:`, path dumps) **in that section only** — see [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *Weave command — page-shape menu* and § *Intra-day weaves*.
+**Rules:** When **`### Technical appendix`** is present, keep **machinery** (URLs, `thread:`, `verify:`, path dumps) **in that section only** — see [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *EOD compose — page-shape menu* and § *Same-day iteration* under *Compose choice and section weighting*.
 
 **Legacy:** Standalone files under `chapters/…/knots/` were retired; old content lives in git history. Deprecated mirror: [strategy-notebook-knot-template.md](strategy-notebook-knot-template.md).

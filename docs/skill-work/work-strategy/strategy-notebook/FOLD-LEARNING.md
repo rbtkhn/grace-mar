@@ -1,10 +1,10 @@
 # Fold learning — metrics and recursive review
 
-**Operator command:** **`weave`** composes or revises knot(s) from inbox material and updates `days.md` continuity (same operation this doc calls a **fold** in JSON fields — `fold_kind` is a legacy field name; the current command is `weave`).
+**Operator session:** **EOD strategy session** composes or revises **`strategy-page`** blocks from inbox + **`raw-input/`** and updates `days.md` continuity (JSONL still uses **`fold_kind`** as a legacy field name; log lines may say **fold** for grep).
 
-**Purpose:** Optional **append-only** ledger for **strategy-notebook weaves** so you can compare sessions over time (compression proxies, verification surface, fold kind) and calibrate **how** you weave—not to claim a single objective “insight score.”
+**Purpose:** Optional **append-only** ledger for **strategy-notebook EOD compose passes** so you can compare sessions over time (compression proxies, verification surface, fold kind) and calibrate **how** you compose—not to claim a single objective “insight score.”
 
-**Governed by:** [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *Weave choice and section weighting* · [daily-strategy-inbox.md](daily-strategy-inbox.md) · [NOTEBOOK-PREFERENCES.md](NOTEBOOK-PREFERENCES.md).
+**Governed by:** [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *Compose choice and section weighting* · [daily-strategy-inbox.md](daily-strategy-inbox.md) · [NOTEBOOK-PREFERENCES.md](NOTEBOOK-PREFERENCES.md).
 
 **Boundary:** **WORK / operator coaching** — not Record, not **MEMORY**, not **RECURSION-GATE**. Data file: `users/<id>/strategy-fold-events.jsonl` (same namespace as `pipeline-events.jsonl`; different purpose).
 

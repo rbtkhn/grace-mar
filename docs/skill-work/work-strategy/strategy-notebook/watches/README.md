@@ -55,9 +55,9 @@ Triages inbox to transcripts, extracts material to thread file machine layers. S
 python3 scripts/strategy_thread.py
 ```
 
-### `weave` — integrated analysis (Think lane)
+### `strategy_weave.py` — integrated analysis (Think lane)
 
-Cross-expert analysis of named topics, experts, or watches. Read-only; produces analysis to stdout. Also refreshes the batch-analysis snapshot.
+**Not** the deprecated operator **`weave`** token for notebook composition — this is the **read-only** script for cross-expert analysis of named topics, experts, or watches (stdout). Also refreshes the batch-analysis snapshot. Notebook **`strategy-page`** + `days.md` writes happen in the **EOD strategy session** ([architecture § End-of-day strategy session](../STRATEGY-NOTEBOOK-ARCHITECTURE.md)).
 
 ```
 python3 scripts/strategy_weave.py davis barnes hormuz
@@ -67,7 +67,7 @@ python3 scripts/strategy_weave.py escalation blockade --json
 
 ### `page` — compose a page (Ship lane)
 
-Creates a page block in each named expert's thread file. The Ship-lane complement to `weave`.
+Creates a page block in each named expert's thread file. Ship-lane complement to **`strategy_weave.py`** analysis (above).
 
 ```
 python3 scripts/strategy_page.py davis barnes --watch hormuz

@@ -24,9 +24,9 @@ Use this skill when two indexed **`thread:<expert_id>`** lines in the daily stra
 
 ## Procedure
 
-### 0) Knot-shape fork (before any file write)
+### 0) Page-shape fork (before any file write)
 
-When the operator invokes **`weave`** without naming a single shape, present **4–6** labeled options (**A–F** or **1–6**) that describe **this** weave’s **thesis / knot shape** (e.g. **cross-expert seam** vs **continuity-only days.md** vs **new knot file + pointer** vs **Judgment-heavy / Links-light** vs **verify-first Open**). **Stub only**—no developed weave until the operator picks. If they already said **`weave <expert-a> <expert-b>`** or **`no menu`**, skip or shorten per [STRATEGY-NOTEBOOK-ARCHITECTURE.md](../../../docs/skill-work/work-strategy/strategy-notebook/STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *Weave command — knot-shape menu*.
+When the operator invokes **expert cross-weave** / **`crosses:`** without naming a single shape, present **4–6** labeled options (**A–F** or **1–6**) that describe **this** session’s **thesis / page shape** (e.g. **cross-expert seam** vs **continuity-only days.md** vs **Judgment-heavy / Links-light** vs **verify-first Open**). **Stub only**—no developed prose until the operator picks. Run inside the **EOD strategy session** by default. If they already said **`<expert-a> <expert-b>`** (legacy: **`weave <expert-a> <expert-b>`**) or **`no menu`**, skip or shorten per [STRATEGY-NOTEBOOK-ARCHITECTURE.md](../../../docs/skill-work/work-strategy/strategy-notebook/STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *EOD compose — page-shape menu*.
 
 ### 1) Name the seam
 

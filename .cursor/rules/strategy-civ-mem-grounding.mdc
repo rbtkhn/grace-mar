@@ -11,7 +11,7 @@ Use when the operator asks for **civilization MEM** depth, **MEM-grounded** synt
 
 1. **Run** `python3 scripts/suggest_civ_mem_from_relevance.py <ENTITY>` from repo root (e.g. `AMERICA`, `RUSSIA`) **when** `content/civilizations/<ENTITY>/MEM–RELEVANCE–<ENTITY>.md` exists — **for file selection**; do **not** treat stdout as finished Judgment prose.
 2. **Chat (default):** Do **not** paste full script **stdout/stderr** into the reply. **Weave** **named** historical substance from opened MEM bodies; **one line** may state that the script or a **fallback** branch was used. **Paste stdout verbatim** only when the operator asks for an **audit trail** in-thread.
-3. **Disk:** **Open** the listed MEM files (and relevance spine) and **cite repo-relative paths** under **`### Links`** in `days.md` or inbox lines — **not** content-only paraphrase with no receipt. Optional: paste stdout into a **session artifact** or chat when **weave** + operator expects full receipt.
+3. **Disk:** **Open** the listed MEM files (and relevance spine) and **cite repo-relative paths** under **`### Links`** in `days.md` or inbox lines — **not** content-only paraphrase with no receipt. Optional: paste stdout into a **session artifact** or chat when **EOD compose** + operator expects full receipt.
 4. **If exit code 1** (missing relevance file, missing clone): follow **fallback** in SKILL — `CIV–STATE–*`, `CIV–INDEX–*`, [CIV-MEM-TRI-FRAME-ROUTING.md](../../docs/skill-work/work-strategy/minds/CIV-MEM-TRI-FRAME-ROUTING.md), [TRUMP-LEO-CIV-MEM-BARNES-DRILL.md](../../docs/skill-work/work-strategy/strategy-notebook/TRUMP-LEO-CIV-MEM-BARNES-DRILL.md), or paths **already** cited on the active `days.md` block — and **say so** in chat (which branch).
 
 **Do not:**

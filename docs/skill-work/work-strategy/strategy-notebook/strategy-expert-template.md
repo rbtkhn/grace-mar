@@ -6,7 +6,7 @@
 
 Jump: [Profile](#profile-template) · [Thread](#thread-template) · [Transcript](#transcript-template) · [Mind](#mind-template)
 
-**Weave skeleton (primary expert):** When a **`weave`** names this **`thread:`** as **primary**, default **Signal / Judgment / Links / Open** pressure for the knot (and compressed `days.md` when woven there) follows [NOTEBOOK-PREFERENCES.md § Weave skeletons (S1–S5)](NOTEBOOK-PREFERENCES.md#weave-skeletons-s1-s5) — see the **primary → skeleton** table and **failure modes**; orthogonal to the **knot-shape** menu ([STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *Weave command — knot-shape menu*).
+**Compose skeleton (primary expert):** When the **EOD session** names this **`thread:`** as **primary**, default **Signal / Judgment / Links / Open** pressure (and compressed `days.md` when composed there) follows [NOTEBOOK-PREFERENCES.md § Weave skeletons (S1–S5)](NOTEBOOK-PREFERENCES.md#weave-skeletons-s1-s5) — see the **primary → skeleton** table and **failure modes**; orthogonal to the **page-shape** menu ([STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *EOD compose — page-shape menu*).
 
 ---
 
