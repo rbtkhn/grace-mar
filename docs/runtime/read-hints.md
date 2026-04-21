@@ -68,6 +68,7 @@ python3 scripts/runtime/memory_brief.py work-strategy "iran negotiation framing"
 - **`--cross-lane`** — search pool can include all lanes (use sparingly); timeline behavior matches `lane_timeline.py --cross-lane`.
 - **`--output` / `-o`** — optional file write; parent directories are created as needed.
 - Default caps: `--limit 5`, `--expand 3`, `--timeline-before 2`, `--timeline-after 2`.
+- **`--budgeted-follow-on PATH`** — after writing `-o`, runs `build_budgeted_context.py` with the brief as `--include-memory-brief`. Without **`--workflow-depth` / `--depth`**, pass-through mode uses **`--budgeted-mode`** (default `compact`). With **`--workflow-depth`**, **`--task-anchor`** is required (same rule as prepared context); see [workflow-depth.md](workflow-depth.md).
 
 Output sections: **Best Matches**, **Timeline Context**, **Expanded Takeaways**, **Recommended Next Move**, plus an explicit **Boundary** that this is not Record truth.
 

@@ -8,8 +8,18 @@ no Record truth. See docs/runtime/context-budgeting.md.
 from __future__ import annotations
 
 import re
+import sys
 from dataclasses import dataclass, field
+from pathlib import Path
 from typing import Any, Literal
+
+_REPO_SRC = Path(__file__).resolve().parent.parent.parent / "src"
+if str(_REPO_SRC) not in sys.path:
+    sys.path.insert(0, str(_REPO_SRC))
+
+from grace_mar.runtime.workflow_depth import (  # noqa: E402
+    fixed_depth_to_budget_and_max_obs as depth_to_mode_and_max_obs,
+)
 
 DepthMode = Literal["shallow", "normal", "deep", "exhaustive", "auto"]
 
@@ -21,19 +31,6 @@ THRESHOLD_DUPLICATE_EVIDENCE_RATIO = 0.60
 THRESHOLD_MARGINAL_SUPPORT_GAIN = 0.15
 THRESHOLD_POOL_MIN_FOR_DIMINISHING = 6
 THRESHOLD_ANCHOR_DRIFT_RISK = 0.72
-
-
-def depth_to_mode_and_max_obs(depth: DepthMode) -> tuple[BudgetMode, int]:
-    """Fixed depth modes: map to lane budget class and max observation candidates."""
-    if depth == "shallow":
-        return "compact", 30
-    if depth == "normal":
-        return "medium", 30
-    if depth == "deep":
-        return "deep", 30
-    if depth == "exhaustive":
-        return "deep", 48
-    raise ValueError(f"depth_to_mode_and_max_obs expects fixed mode, got {depth!r}")
 
 
 def count_contradiction_refs(rows: list[dict], limit: int = 12) -> int:

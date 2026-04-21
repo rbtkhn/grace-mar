@@ -3,9 +3,17 @@ from __future__ import annotations
 
 import argparse
 import json
+import sys
 from collections import Counter
 from pathlib import Path
 from typing import Any, Dict, List
+
+REPO_ROOT = Path(__file__).resolve().parents[1]
+_SRC = REPO_ROOT / "src"
+if str(_SRC) not in sys.path:
+    sys.path.insert(0, str(_SRC))
+
+from grace_mar.observability.metric_contract import WORKFLOW_METRIC_KEY, fill_contract  # noqa: E402
 
 
 def load_json_files(root: Path) -> List[dict[str, Any]]:
@@ -176,7 +184,26 @@ def main() -> None:
     out_path = Path(args.out)
     write_markdown_report(out_path, receipt_summary, artifact_summary)
 
+    metrics_path = REPO_ROOT / "artifacts" / "forecast" / "workflow-metric-contract.json"
+    metrics_path.parent.mkdir(parents=True, exist_ok=True)
+    wf_total = receipt_summary["total_receipts"] + artifact_summary["total_artifacts"]
+    metrics_path.write_text(
+        json.dumps(
+            {
+                WORKFLOW_METRIC_KEY: fill_contract(
+                    "forecast",
+                    workflow_count=max(0, wf_total),
+                    partial=True,
+                )
+            },
+            indent=2,
+        )
+        + "\n",
+        encoding="utf-8",
+    )
+
     print(f"Wrote observability report: {out_path}")
+    print(f"wrote {metrics_path}")
 
 
 if __name__ == "__main__":

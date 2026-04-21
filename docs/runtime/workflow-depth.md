@@ -27,6 +27,12 @@ Append-only JSONL under `runtime/workflow-depth/index.jsonl` (or `GRACE_MAR_WORK
 
 See also [context-budgeting.md](context-budgeting.md) for budget doctrine and [workflow_depth_control.py](../../scripts/prepared_context/workflow_depth_control.py) for heuristics.
 
+**Shared contract:** [workflow-depth-contract.md](workflow-depth-contract.md).
+
+## Memory brief follow-on
+
+[`memory_brief.py`](../../scripts/runtime/memory_brief.py) can run a budgeted prepared-context build after the brief using **`--budgeted-follow-on`**. When you set **`--workflow-depth`** / **`--depth`**, you must also pass **`--task-anchor`** (and keep **`-o`**). The child build uses the shared depth routing contract; receipts may show **`sourceWorkflow`: `memory_brief`**.
+
 ## Examples
 
 **Auto depth (alias):**

@@ -71,6 +71,7 @@ After the report shape is stable, it is validated against **`schema-registry/obs
 
 ## Related
 
+- [workflow-observability.md](workflow-observability.md) — workflow-level batch metrics (events + aggregate reports; inspection only)
 - [change-review.md](change-review.md) — doctrine entrypoint
 - [change-review-validation.md](change-review-validation.md) — validator commands
 - [state-proposals.md](state-proposals.md) — Change Proposal v1

@@ -1,6 +1,6 @@
 {
   "schemaVersion": "2.0.0-work-strategy",
-  "generatedAt": "2026-04-15T18:32:51.351429+00:00",
+  "generatedAt": "2026-04-20T21:16:34.609287+00:00",
   "lane": "work-strategy",
   "metrics": {
     "structure": {
@@ -10,16 +10,37 @@
       "promotion_policy_present": true
     },
     "judgment_quality": {
-      "notebook_entries_total": 8,
+      "notebook_entries_total": 13,
       "inbox_pending_lines": 0,
       "promotion_date_mentions": 22,
       "months": {
+        "2026-01": {
+          "dated_entries": 0,
+          "knot_pages": 0,
+          "avg_sections_per_entry": 4.0,
+          "avg_links_per_entry": 3.0,
+          "open_carry_forward": 1
+        },
+        "2026-02": {
+          "dated_entries": 0,
+          "knot_pages": 0,
+          "avg_sections_per_entry": 4.0,
+          "avg_links_per_entry": 3.0,
+          "open_carry_forward": 1
+        },
+        "2026-03": {
+          "dated_entries": 0,
+          "knot_pages": 0,
+          "avg_sections_per_entry": 4.0,
+          "avg_links_per_entry": 3.0,
+          "open_carry_forward": 0
+        },
         "2026-04": {
-          "dated_entries": 8,
-          "knot_pages": 6,
-          "avg_sections_per_entry": 3.44,
-          "avg_links_per_entry": 10.4,
-          "open_carry_forward": 2
+          "dated_entries": 13,
+          "knot_pages": 0,
+          "avg_sections_per_entry": 3.64,
+          "avg_links_per_entry": 15.2,
+          "open_carry_forward": 6
         }
       }
     }
@@ -35,5 +56,19 @@
     "Recommendation acceptance/rejection rates: need operator workflow.",
     "Cross-lane references: manual until automated extract.",
     "judgment_quality metrics are computed from on-disk notebook state."
-  ]
+  ],
+  "workflowMetricContract": {
+    "schemaVersion": "1.0.0",
+    "lane": "work-strategy",
+    "workflowCount": 15,
+    "acceptedCount": 0,
+    "revisionCount": 0,
+    "staleCount": 0,
+    "medianContextTokens": null,
+    "compressionRate": null,
+    "retrievalMissRate": null,
+    "medianReviewCycles": null,
+    "partialMetrics": true,
+    "notes": ""
+  }
 }

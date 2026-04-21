@@ -824,3 +824,44 @@ Barnes says both sides face material clocks and the question is which clock runs
 - **Verify** **burn-down:** **[`daily-brief-2026-04-19.md`](../../../daily-brief-2026-04-19.md)** **`strategy`** **`+`** **`verify`** **table** **before** **lifting** **any** **Grok** **quantity** **to** **tier-A** **Judgment**.
 
 - Prior day: [2026-04-18](#2026-04-18)
+
+## 2026-04-20
+
+### Signal
+
+- **Same calendar day, two Judging Freedom episodes (pin under Links):** **`thread:johnson`** — [YouTube `geWpX8w7BNU`](https://www.youtube.com/watch?v=geWpX8w7BNU) (*Larry Johnson : Who Controls Hormuz?*, published **2026-04-20**). **`thread:ritter`** — operator transcript *Trump and Hegseth Haven’t a Clue* (same **host date**; **canonical `watch?v=`** still **TBD** on channel search). **Caine / nuclear:** Johnson **states** the **Saturday emergency meeting** / **Trump** **nuclear codes** / **Gen. Caine** **refusal** **arc** **on-mic** in `geWpX8w7BNU` (see **Receipts**); Ritter **episode** **later** **weaves** **institutional** **analysis** **and** Napolitano says **“Larry Johnson reported it from two sources”** — align **that** **phrase** **to** **Johnson’s** **own** **published** **chain** **(video** **+** **optional** **second** **source** **off-air)** **on** **verify**.
+- **`thread:ritter` — *Trump and Hegseth Haven’t a Clue* (operator paste, 2026-04-20):** **Strait incident** — Ritter: U.S. destroyer ordered **engine room** evacuated, **fired on engine room**, **USMC** boarded and **took** an **Iranian cargo ship**; labeled **piracy**; framed against **Islamabad ceasefire** and **U.S. blockade** legitimacy. **Islamabad** — **Vance / Witkoff / Kushner** in hotel vs **Iranian team** in **Tehran**; **U.S. unprepared** thesis (Iran brought draft text; U.S. “blind”); **Morandi** cited on near-**MOU** and **pullback** over **weakness** optics; **“joint excavation”** of enriched stock dismissed vs **IAEA**-style accounting. **Forecasts** — **GCC** power/desalination, **Israel**/**Gulf** infrastructure, **Houthi** **Bab el-Mandeb** line in voice; **Turkey × Israel** rhetoric. **UN ambassador** clip (IRGC / bridges / power) — **IHL** counter-argument (**why not in first 40 days**). **Host:** Trump said **ceasefire ends Wednesday** (**verify** TS/wire). **Board of Peace** — **derelict** vs **Strait** institutional path not used.
+- **Nuclear / JCS:** Ritter **does not** **quote** **Johnson** **verbatim**; **develops** **Caine** **/** **nuclear** **doctrine** **(JCS** **/** **oath** **/** **NYT-on-Israeli** **claims** **in** **voice)**. **Tier:** **analyst** **until** **WH** **/** **DoD** **on-record** **on** **the** **Saturday** **meeting** **(if** **any)**.
+- **Overlap — [Haiphong / Ritter / Johnson digest](../../../transcript-analysis-haiphong-ritter-johnson-iran-2026-04.md) (`thread:johnson` × `thread:ritter`):** Digest **§B**: **Ritter** — **mass Hormuz seizure** **infeasible** (echelon **LOC** math); **Johnson** — **F-15/Isfahan** **load** scenarios (**ORBAT** lane). **04-20** **is** **different** **objects:** **single-ship** **boarding** **(Ritter** **JF)** **+** **Johnson** **JF** **Caine** **segment** **—** **do** **not** **merge** **digest** **§B** **with** **04-20** **Caine** **story** **without** **tier** **tags**.
+
+### Judgment
+
+- **Three `thread:ritter` objects, one Hormuz spine:** **Digest §B** (roundtable **ORBAT**), **04-19 Substack** (essay **forecast**), **04-20 JF** (**incident** + **talks psychology** + **nuclear gossip**) — **cross-link**, **don’t** collapse into one **“Ritter said”** line without **seams**.
+- **`thread:johnson` seam:** Digest **§B** **ORBAT** **lane** **vs** **04-20** **JF** **Johnson** **on** **Caine** **(video** **pinned** **`geWpX8w7BNU`)** — **same** **lane** **id**, **different** **dates** **/** **claims**; **NYT** **(4/7** **piece)** **is** **Ritter’s** **and** **Johnson’s** **shared** **off-ramp** **for** **Caine-in-the-room** **read** **—** **still** **not** **DoD** **primary** **on** **Saturday** **meeting** **facts**.
+
+### Links
+
+- [transcript-analysis-haiphong-ritter-johnson-iran-2026-04.md](../../../transcript-analysis-haiphong-ritter-johnson-iran-2026-04.md) — **§B** **Ritter × Johnson** (April digest)
+- [The Consequences of Incompetence](https://scottritter.substack.com/p/the-consequences-of-incompetence) — **04-19** **Substack** (same-week continuity)
+- [`experts/ritter/transcript.md`](../../experts/ritter/transcript.md) — **`## 2026-04-20`** **stub**
+- [`experts/ritter/thread.md`](../../experts/ritter/thread.md) · [`experts/johnson/thread.md`](../../experts/johnson/thread.md) — **April** **overlap** **bullets**
+
+#### Receipts — Caine / nuclear (pinned primaries + secondary)
+
+| # | Source | URL | Role |
+|---|--------|-----|------|
+| 1 | **Judging Freedom — Larry Johnson** (2026-04-20) | https://www.youtube.com/watch?v=geWpX8w7BNU | **On-mic** source for **Saturday meeting** / **nuclear codes** / **Caine** **refusal** / **“head down”** **photos** (transcript on YouTube). |
+| 2 | **Larry Johnson — Substack** (2026-04-09) | https://larrycjohnson.substack.com/p/trump-got-played-by-israel-and-the | **NYT** **pointer** + **Johnson** **read** of **Gen. Caine** in **NYT** **long** **piece** (“close third… **weak man**, **afraid** **to** **challenge** **the** **President**”). |
+| 3 | **New York Times** (2026-04-07) | https://www.nytimes.com/2026/04/07/us/politics/trump-iran-war.html | ***How Trump Took the U.S. to War With Iran*** — **Ritter** **and** **Johnson** **both** **anchor** **Caine** **characterization** **to** **this** **reporting** **(not** **the** **Saturday** **codes** **meeting** **—** **that** **remains** **episodic** **claim**). |
+| 4 | **IBTimes UK** (summary) | https://www.ibtimes.co.uk/ex-cia-analyst-claims-trump-nuclear-codes-iran-1792717 | Secondary **wrap**; **links** **`geWpX8w7BNU`**, **Jimmy** **Dore** **X**, **no** **WH** **response** **stated**. |
+| 5 | **Lead Stories** (fact-check) | https://leadstories.com/hoax-alert/2026/04/fact-check-caine-did-not-storm-out-of-emergency-meeting-after-trump-suggested-threatening-iran-with-nuclear-weapons.html | **Counter** **narrative** **—** **use** **for** **verify** **balance**, **not** **as** **Record** **without** **reading** **full** **piece**. |
+| 6 | **White House — Trump Truth Social** (Caine reporting pushback; via IBTimes) | https://truthsocial.com/@realDonaldTrump/posts/116121997925438698 | **Executive** **denial** **of** **earlier** **“Caine** **warned** **risks”** **press** **theme** **—** **orthogonal** **to** **Saturday** **codes** **specific** **claim**. |
+
+**Ritter JF episode (same host date, title *Trump and Hegseth Haven’t a Clue*):** **canonical** **YouTube** **ID** **not** **found** **in** **search** **—** **replace** **row** **when** **pinned** **from** **[Judge Napolitano — Judging Freedom](https://www.youtube.com/@JudgingFreedom)** **upload** **list**.
+
+### Open
+
+- **Verify:** **CENTCOM** / **USN** / **IRI** **MFA** (or equivalent) on **weekend** **Strait** **boarding** **(vessel** **name,** **ROE)** before **piracy**/**civilian** **fire** claims **ship** as **fact**.
+- **Caine / Saturday meeting:** **No** **on-record** **WH** **/** **Pentagon** **confirm** **in** **IBTimes** **wrap** **—** **keep** **hypothesis** **or** **disputed** **per** **Lead** **Stories** **+** **primary** **video** **only** **where** **speech** **is** **attributed**.
+- Pin **Ritter** **04-20** **`watch?v=`** **when** **listed** **on** **channel**.
+- Prior day: [2026-04-19](#2026-04-19)

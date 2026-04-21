@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schema-registry/workflow-observability-report.v1.json",
+  "title": "Workflow observability aggregate report v1",
+  "description": "Batch rollup over workflow events. Inspection only.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "generatedAt",
+    "batchId",
+    "partialMetrics",
+    "eventCount",
+    "totalsByWorkflowType",
+    "totalsByLane",
+    "acceptanceCount",
+    "revisionCount",
+    "staleCount",
+    "reviewFrictionHotspots",
+    "leverageCandidates",
+    "sourcesUsed"
+  ],
+  "properties": {
+    "schemaVersion": { "const": "1.0.0-workflow-report" },
+    "generatedAt": { "type": "string", "minLength": 1 },
+    "batchId": { "type": "string", "minLength": 1 },
+    "partialMetrics": { "type": "boolean" },
+    "eventCount": { "type": "integer", "minimum": 0 },
+    "totalsByWorkflowType": {
+      "type": "object",
+      "additionalProperties": { "type": "integer", "minimum": 0 }
+    },
+    "totalsByLane": {
+      "type": "object",
+      "additionalProperties": { "type": "integer", "minimum": 0 }
+    },
+    "acceptanceCount": { "type": "integer", "minimum": 0 },
+    "revisionCount": { "type": "integer", "minimum": 0 },
+    "staleCount": { "type": "integer", "minimum": 0 },
+    "medianTimeToFirstReviewSeconds": { "type": ["number", "null"] },
+    "medianTimeToMergeSeconds": { "type": ["number", "null"] },
+    "medianContextTokensLoaded": { "type": ["number", "null"] },
+    "compressionRate": { "type": ["number", "null"], "minimum": 0, "maximum": 1 },
+    "retrievalMissRate": { "type": ["number", "null"], "minimum": 0, "maximum": 1 },
+    "medianReviewCycles": { "type": ["number", "null"] },
+    "reviewFrictionHotspots": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "required": ["label", "score"],
+        "properties": {
+          "label": { "type": "string" },
+          "lane": { "type": "string" },
+          "workflowType": { "type": "string" },
+          "score": { "type": "number" }
+        }
+      }
+    },
+    "leverageCandidates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "required": ["label", "score"],
+        "properties": {
+          "label": { "type": "string" },
+          "lane": { "type": "string" },
+          "workflowType": { "type": "string" },
+          "score": { "type": "number" }
+        }
+      }
+    },
+    "sourcesUsed": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "notes": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}

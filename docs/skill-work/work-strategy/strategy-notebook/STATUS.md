@@ -12,6 +12,7 @@
 | **Expert predictions ledger** | [strategy-expert-predictions.md](strategy-expert-predictions.md) — optional **`pred_id`** adjudication rows + **2026** `topic_slug` registry (WORK; not Record) |
 | **Next stitch** | Optional: roll month-end summary into [STRATEGY.md](../STRATEGY.md) §IV |
 | **Operator prefs** | [NOTEBOOK-PREFERENCES.md](NOTEBOOK-PREFERENCES.md) |
+| **Retro Q1 syntheses** | `2026-01`–`2026-03` — meta-led chapter narratives ([2026-01/meta.md](chapters/2026-01/meta.md), [2026-02/meta.md](chapters/2026-02/meta.md), [2026-03/meta.md](chapters/2026-03/meta.md)); episodic `days.md` only |
 
 ## Seam / weave observability (optional)
 

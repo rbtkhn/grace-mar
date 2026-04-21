@@ -37,7 +37,7 @@ Each successful run updates `prepared-context/last-budget-builds.json` (per-lane
 
 Optional **`--workflow-depth`** (alias **`--depth`**) on [`build_budgeted_context.py`](../../scripts/prepared_context/build_budgeted_context.py) adds **named phases**, a **task anchor** (and optional **constraint**), and an append-only receipt at `runtime/workflow-depth/index.jsonl` (or `GRACE_MAR_WORKFLOW_DEPTH_HOME`). This is **runtime weather** — not a second governance layer and not Record truth.
 
-**See also:** [workflow-depth.md](workflow-depth.md) — when to pick each depth mode and example commands.
+**See also:** [workflow-depth.md](workflow-depth.md) — when to pick each depth mode and example commands; [workflow-depth-contract.md](workflow-depth-contract.md) — shared routing vocabulary.
 
 | Flag | Meaning |
 |------|---------|

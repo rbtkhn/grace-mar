@@ -117,6 +117,7 @@ runtime/autonomy/shadow_decisions.jsonl
 
 # Operator/runtime observability feeds (lane scope, continuity blocks)
 runtime/observability/*.jsonl
+runtime/observability/workflow-events/
 
 # Tacit capture (operator-local — see runtime/tacit/README.md)
 runtime/tacit/inbox/*

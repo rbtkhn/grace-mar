@@ -19,11 +19,14 @@ from pathlib import Path
 from typing import Any
 
 REPO_ROOT = Path(__file__).resolve().parent.parent.parent
+_SRC = REPO_ROOT / "src"
 _SCRIPTS = REPO_ROOT / "scripts"
 _RUNTIME = Path(__file__).resolve().parent
-for _p in (_SCRIPTS, _RUNTIME):
+for _p in (_SRC, _SCRIPTS, _RUNTIME):
     if str(_p) not in sys.path:
         sys.path.insert(0, str(_p))
+
+from grace_mar.runtime.workflow_depth import DEPTH_CHOICES  # noqa: E402
 
 from observation_store import by_id  # noqa: E402
 from uncertainty_envelope import (  # noqa: E402
@@ -765,6 +768,15 @@ def main() -> int:
         help="Append a suggested build_budgeted_context.py command using this budget mode (optional)",
     )
     p.add_argument(
+        "--workflow-depth",
+        "--depth",
+        dest="workflow_depth",
+        default=None,
+        choices=DEPTH_CHOICES,
+        metavar="DEPTH",
+        help="Optional: suggest build_budgeted_context.py with --workflow-depth instead of --mode (uses --task-anchor)",
+    )
+    p.add_argument(
         "--policy-mode",
         default=None,
         help="Append Policy mode envelope section (default: GRACE_MAR_POLICY_MODE or operator_only)",
@@ -798,6 +810,12 @@ def main() -> int:
     if not task_anchor:
         print("error: --task-anchor is required", file=sys.stderr)
         return 2
+
+    if args.workflow_depth and args.context_mode:
+        print(
+            "notice: --context-mode ignored because --workflow-depth / --depth is set",
+            file=sys.stderr,
+        )
 
     built = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     run_id = _run_id()
@@ -890,7 +908,27 @@ def main() -> int:
     md += "\n".join(mode_summary_lines(pol, pdefs)) + "\n"
     md += "\nSee `docs/policy-modes.md`.\n"
 
-    if args.context_mode:
+    if args.workflow_depth:
+        lane_hint = (args.lane or "").strip() or "work-strategy"
+        ca = constraint_s or ""
+        ca_line = f"  --constraint-anchor {json.dumps(ca)} \\\n" if ca else ""
+        md += (
+            "\n## Suggested budgeted context\n\n"
+            f"Lane **`{lane_hint}`** — run `build_budgeted_context.py` with **workflow depth `{args.workflow_depth}`** "
+            "(does not use `--mode`; see `docs/runtime/workflow-depth.md`). "
+            f"Add `--policy-mode {pol}` to match this envelope. **`--task-anchor`** is required and should match your review intent.\n\n"
+            "```bash\n"
+            f"python3 scripts/prepared_context/build_budgeted_context.py \\\n"
+            f"  --lane {lane_hint} \\\n"
+            f"  --policy-mode {pol} \\\n"
+            f"  --workflow-depth {args.workflow_depth} \\\n"
+            f"  --task-anchor {json.dumps(task_anchor)} \\\n"
+            f"{ca_line}"
+            "  --query \"(add search terms)\" \\\n"
+            "  -o prepared-context/budgeted-review-context.md\n"
+            "```\n"
+        )
+    elif args.context_mode:
         lane_hint = (args.lane or "").strip() or "work-strategy"
         md += (
             "\n## Suggested budgeted context\n\n"

@@ -41,6 +41,25 @@
         "additionalProperties": true
       }
     },
-    "compact_dry_scores": { "type": "object" }
+    "compact_dry_scores": { "type": "object" },
+    "initialDepth": { "type": "string" },
+    "finalDepth": { "type": "string" },
+    "budgetClass": { "type": "string" },
+    "escalated": { "type": "boolean" },
+    "escalationReason": { "type": "string" },
+    "haltReason": { "type": "string" },
+    "rationale": { "type": "string" },
+    "operatorOverride": { "type": "boolean" },
+    "estimatedLoad": {
+      "oneOf": [{ "type": "string" }, { "type": "number" }]
+    },
+    "sourceWorkflow": { "type": "string" },
+    "retrievalMissCount": { "type": ["integer", "null"] },
+    "stop_signal": { "type": "string" },
+    "stop_signal_value": { "type": "number" },
+    "stop_signal_threshold": { "type": "number" },
+    "guard_summary": { "type": "object" },
+    "guard_veto": { "type": "boolean" },
+    "veto_reason": { "type": "string" }
   }
 }

@@ -1,6 +1,7 @@
 # Chapter 2026-04 — meta
 
-**Kind:** month (first strategy-notebook chapter)  
+**Kind:** month (first strategy-notebook chapter with dense `days.md` continuity)  
+**Prior chapters (retro meta syntheses):** [2026-01](../2026-01/meta.md) · [2026-02](../2026-02/meta.md) · [2026-03](../2026-03/meta.md)  
 **Status:** `open`  
 **Operator preferences (notebook):** [NOTEBOOK-PREFERENCES.md](../../NOTEBOOK-PREFERENCES.md) — structure, weave rhythm, promotion, Judgment rules (set 2026-04-12).  
 **Standing cross-expert track (U.S.–Iran kinetic):** [US-IRAN-KINETIC-TRACKER.md](../../US-IRAN-KINETIC-TRACKER.md) — near-term **large-scale U.S. kinetic** on **Iran** as a **shared** **hypothesis** **object** across **`thread:`** experts; prefs § *US–Iran kinetic likelihood (cross-expert track)*.  

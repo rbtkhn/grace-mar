@@ -10,11 +10,17 @@ Usage:
 from __future__ import annotations
 
 import json
+import sys
 from collections import Counter
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
+_SRC = REPO_ROOT / "src"
+if str(_SRC) not in sys.path:
+    sys.path.insert(0, str(_SRC))
+
+from grace_mar.observability.metric_contract import WORKFLOW_METRIC_KEY, fill_contract  # noqa: E402
 CLAIMS_PATH = REPO_ROOT / "artifacts/skill-think/think-claims.json"
 OUT_PATH = REPO_ROOT / "artifacts/skill-think/think-observability.json"
 
@@ -94,7 +100,14 @@ def main() -> int:
             "Test-coverage metrics added in v1.1.0 (exercise layer).",
             "Sibling to work-strategy observability — not merged into observability-report.v1.",
         ],
+        "lane": "skill-think",
     }
+    doc[WORKFLOW_METRIC_KEY] = fill_contract(
+        "skill-think",
+        workflow_count=len(claims),
+        revision_count=promo,
+        partial=True,
+    )
     OUT_PATH.parent.mkdir(parents=True, exist_ok=True)
     OUT_PATH.write_text(json.dumps(doc, indent=2) + "\n", encoding="utf-8")
     print(f"wrote {OUT_PATH}")

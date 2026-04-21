@@ -15,9 +15,13 @@ from pathlib import Path
 
 _RUNTIME_DIR = Path(__file__).resolve().parent
 REPO_ROOT = _RUNTIME_DIR.parent.parent
+_SRC = REPO_ROOT / "src"
 BUDGET_SCRIPT = REPO_ROOT / "scripts" / "prepared_context" / "build_budgeted_context.py"
-if str(_RUNTIME_DIR) not in sys.path:
-    sys.path.insert(0, str(_RUNTIME_DIR))
+for _p in (_SRC, _RUNTIME_DIR):
+    if str(_p) not in sys.path:
+        sys.path.insert(0, str(_p))
+
+from grace_mar.runtime.workflow_depth import DEPTH_CHOICES  # noqa: E402
 
 from expand_observations import expanded_row  # noqa: E402
 from lane_search import filter_rows, rank_hits, format_ts_display  # noqa: E402
@@ -75,12 +79,39 @@ def main() -> int:
         "--budgeted-mode",
         choices=("compact", "medium", "deep"),
         default="compact",
-        help="Mode for --budgeted-follow-on (default: compact)",
+        help="Mode for --budgeted-follow-on when --workflow-depth is not set (default: compact)",
+    )
+    parser.add_argument(
+        "--workflow-depth",
+        "--depth",
+        dest="workflow_depth",
+        default=None,
+        choices=DEPTH_CHOICES,
+        metavar="DEPTH",
+        help="Optional: pass through to build_budgeted_context when using --budgeted-follow-on; requires --task-anchor",
+    )
+    parser.add_argument(
+        "--task-anchor",
+        default="",
+        help="Required when --workflow-depth / --depth is set (operator task for budgeted follow-on)",
+    )
+    parser.add_argument(
+        "--constraint-anchor",
+        default="",
+        help="Optional constraint passed to build_budgeted_context with workflow depth",
     )
     args = parser.parse_args()
 
     if args.budgeted_follow_on is not None and args.output is None:
         parser.error("--budgeted-follow-on requires --output (brief must be written to a file first)")
+
+    wf_depth = args.workflow_depth
+    task_anchor = (args.task_anchor or "").strip()
+    constraint_s = (args.constraint_anchor or "").strip()
+    if wf_depth and not task_anchor:
+        parser.error("--task-anchor is required when --workflow-depth or --depth is set")
+    if wf_depth and args.budgeted_follow_on is None:
+        parser.error("--workflow-depth / --depth requires --budgeted-follow-on (nothing to route without follow-on)")
 
     if args.lane is not None and args.positional:
         parser.error("use either --lane/--query or positional LANE [QUERY], not both")
@@ -223,8 +254,6 @@ def main() -> int:
             str(BUDGET_SCRIPT),
             "--lane",
             lane,
-            "--mode",
-            args.budgeted_mode,
             "--query",
             q,
             "--include-memory-brief",
@@ -233,7 +262,22 @@ def main() -> int:
             str(out_budget),
             "--repo-root",
             str(REPO_ROOT),
+            "--source-workflow",
+            "memory_brief",
         ]
+        if wf_depth:
+            cmd.extend(
+                [
+                    "--workflow-depth",
+                    wf_depth,
+                    "--task-anchor",
+                    task_anchor,
+                ]
+            )
+            if constraint_s:
+                cmd.extend(["--constraint-anchor", constraint_s])
+        else:
+            cmd.extend(["--mode", args.budgeted_mode])
         r = subprocess.run(cmd, capture_output=True, text=True)
         if r.returncode != 0:
             print(r.stderr or r.stdout or "build_budgeted_context failed", file=sys.stderr)

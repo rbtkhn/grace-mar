@@ -96,7 +96,19 @@ Every packet includes a **Policy mode envelope** section (from `--policy-mode` o
 
 ## Optional: budgeted context hint
 
-Pass `--context-mode compact|medium|deep` to append a **Suggested budgeted context** section with a copy-paste command for [`build_budgeted_context.py`](../../scripts/prepared_context/build_budgeted_context.py). This does **not** run the script; it links review prep to explicit context budgeting ([context-budgeting.md](../runtime/context-budgeting.md)). The suggested command includes `--policy-mode` matching the active envelope when possible.
+Pass **`--context-mode compact|medium|deep`** to append a **Suggested budgeted context** section with a copy-paste command for [`build_budgeted_context.py`](../../scripts/prepared_context/build_budgeted_context.py). This does **not** run the script; it links review prep to explicit context budgeting ([context-budgeting.md](../runtime/context-budgeting.md)). The suggested command includes `--policy-mode` matching the active envelope when possible.
+
+Alternatively, pass **`--workflow-depth`** / **`--depth`** (`shallow` … `auto`) to suggest the same script with **workflow depth** instead of `--mode` (requires the same **`--task-anchor`** you already pass). If both `--workflow-depth` and `--context-mode` are set, **workflow depth wins** and a notice is printed to stderr — hints only, no execution.
+
+| Depth (hint) | Typical review prep |
+|----------------|---------------------|
+| `shallow` | Quick triage; minimal pack |
+| `normal` | Standard review prep |
+| `deep` | Contradiction-heavy or merge-sensitive review |
+| `exhaustive` | Maximum bounded observation cap (still not unbounded) |
+| `auto` | Let compact dry-pack + heuristics decide |
+
+See [workflow-depth.md](../runtime/workflow-depth.md) and [workflow-depth-contract.md](../runtime/workflow-depth-contract.md).
 
 ## Relation to other docs
 

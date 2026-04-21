@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.1.0-skill-think",
-  "generatedAt": "2026-04-19T17:28:18.923005+00:00",
+  "generatedAt": "2026-04-20T18:55:34.352704+00:00",
   "metrics": {
     "claim_count": 1,
     "claims_by_capability_type": {
@@ -26,5 +26,20 @@
   "notes": [
     "Test-coverage metrics added in v1.1.0 (exercise layer).",
     "Sibling to work-strategy observability \u2014 not merged into observability-report.v1."
-  ]
+  ],
+  "lane": "skill-think",
+  "workflowMetricContract": {
+    "schemaVersion": "1.0.0",
+    "lane": "skill-think",
+    "workflowCount": 1,
+    "acceptedCount": 0,
+    "revisionCount": 0,
+    "staleCount": 0,
+    "medianContextTokens": null,
+    "compressionRate": null,
+    "retrievalMissRate": null,
+    "medianReviewCycles": null,
+    "partialMetrics": true,
+    "notes": ""
+  }
 }

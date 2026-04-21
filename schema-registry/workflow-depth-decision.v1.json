@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schema-registry/workflow-depth-decision.v1.json",
+  "title": "Grace-Mar workflow depth routing decision (non-canonical)",
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "initialDepth": {
+      "type": "string",
+      "description": "Requested depth: shallow | normal | deep | exhaustive | auto"
+    },
+    "finalDepth": {
+      "type": "string",
+      "description": "Resolved routing label: same as initial for fixed presets, or compact | medium | deep when auto chose a pack depth"
+    },
+    "budgetClass": {
+      "type": "string",
+      "description": "Lane budget class used for packing: compact | medium | deep"
+    },
+    "escalated": { "type": "boolean" },
+    "escalationReason": { "type": "string" },
+    "haltReason": { "type": "string" },
+    "rationale": { "type": "string" },
+    "lane": { "type": "string" },
+    "taskAnchor": { "type": "string" },
+    "constraint": { "type": ["string", "null"] },
+    "operatorOverride": { "type": "boolean" },
+    "estimatedLoad": {
+      "description": "Opaque hint (chars, token estimate, or label) — inspection only",
+      "oneOf": [{ "type": "string" }, { "type": "number" }]
+    },
+    "sourceWorkflow": {
+      "type": "string",
+      "description": "Emitter id e.g. prepared_context, memory_brief"
+    },
+    "retrievalMissCount": { "type": ["integer", "null"] }
+  }
+}

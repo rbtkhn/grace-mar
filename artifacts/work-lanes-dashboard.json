@@ -1,11 +1,11 @@
 {
   "schemaVersion": "1.0.0-work-lanes-dashboard",
-  "generatedAt": "2026-04-19T17:28:31.051826+00:00",
+  "generatedAt": "2026-04-20T18:55:45.354991+00:00",
   "recordMergeAuthority": "RECURSION-GATE and companion approval only \u2014 never implied by lane metrics.",
   "lanes": {
     "work_strategy": {
       "schemaVersion": "2.0.0-work-strategy",
-      "generatedAt": "2026-04-15T18:32:51.351429+00:00",
+      "generatedAt": "2026-04-20T17:48:46.782751+00:00",
       "lane": "work-strategy",
       "metrics": {
         "structure": {
@@ -15,16 +15,37 @@
           "promotion_policy_present": true
         },
         "judgment_quality": {
-          "notebook_entries_total": 8,
+          "notebook_entries_total": 12,
           "inbox_pending_lines": 0,
           "promotion_date_mentions": 22,
           "months": {
+            "2026-01": {
+              "dated_entries": 0,
+              "knot_pages": 0,
+              "avg_sections_per_entry": 4.0,
+              "avg_links_per_entry": 3.0,
+              "open_carry_forward": 1
+            },
+            "2026-02": {
+              "dated_entries": 0,
+              "knot_pages": 0,
+              "avg_sections_per_entry": 4.0,
+              "avg_links_per_entry": 3.0,
+              "open_carry_forward": 1
+            },
+            "2026-03": {
+              "dated_entries": 0,
+              "knot_pages": 0,
+              "avg_sections_per_entry": 4.0,
+              "avg_links_per_entry": 3.0,
+              "open_carry_forward": 0
+            },
             "2026-04": {
-              "dated_entries": 8,
-              "knot_pages": 6,
-              "avg_sections_per_entry": 3.44,
-              "avg_links_per_entry": 10.4,
-              "open_carry_forward": 2
+              "dated_entries": 12,
+              "knot_pages": 0,
+              "avg_sections_per_entry": 3.62,
+              "avg_links_per_entry": 15.3,
+              "open_carry_forward": 5
             }
           }
         }
@@ -167,19 +188,19 @@
       ]
     },
     "work_dev_dashboard_legacy": {
-      "generated_at": "2026-04-19T17:28:28Z",
+      "generated_at": "2026-04-20T18:55:44Z",
       "integration_status_counts": {
         "implemented": 11,
         "partial": 2,
         "documented_only": 1
       },
       "pipeline_event_counts": {
-        "maintenance": 5
+        "maintenance": 6
       },
       "provenance_completeness_score": 1.0,
       "provenance_from_gate": false,
       "lane_violation_count": 0,
-      "continuity_block_count": 31,
+      "continuity_block_count": 33,
       "gap_ids_open": [],
       "notes": [
         "Lane / continuity counts come from runtime/observability/*.jsonl when present (local or CI); empty feeds => 0.",

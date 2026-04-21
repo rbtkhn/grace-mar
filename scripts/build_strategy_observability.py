@@ -19,6 +19,11 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
+_SRC = REPO_ROOT / "src"
+if str(_SRC) not in sys.path:
+    sys.path.insert(0, str(_SRC))
+
+from grace_mar.observability.metric_contract import WORKFLOW_METRIC_KEY, fill_contract  # noqa: E402
 OUT = REPO_ROOT / "artifacts/work-strategy/strategy-observability.json"
 
 STRATEGY_ROOT = REPO_ROOT / "docs/skill-work/work-strategy"
@@ -198,6 +203,13 @@ def main() -> int:
             "judgment_quality metrics are computed from on-disk notebook state.",
         ],
     }
+    wf_approx = len(decision_files) + total_entries + inbox_pending
+    doc[WORKFLOW_METRIC_KEY] = fill_contract(
+        "work-strategy",
+        workflow_count=max(1, wf_approx),
+        stale_count=min(inbox_pending, 10_000),
+        partial=True,
+    )
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(doc, indent=2) + "\n", encoding="utf-8")
     print(f"wrote {OUT}")

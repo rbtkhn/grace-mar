@@ -10,7 +10,6 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
-import os
 import sys
 import uuid
 from dataclasses import dataclass, field
@@ -19,11 +18,20 @@ from pathlib import Path
 from typing import Any
 
 REPO_ROOT = Path(__file__).resolve().parent.parent.parent
+_SRC = REPO_ROOT / "src"
 _RUNTIME = REPO_ROOT / "scripts" / "runtime"
 _PREP = Path(__file__).resolve().parent
-for _p in (_RUNTIME, _PREP):
+for _p in (_SRC, _RUNTIME, _PREP):
     if str(_p) not in sys.path:
         sys.path.insert(0, str(_p))
+
+from grace_mar.runtime.workflow_depth import (  # noqa: E402
+    WorkflowDepthDecision,
+    append_workflow_depth_receipt,
+    build_workflow_depth_receipt_record,
+    decision_from_auto_resolved,
+    decision_from_fixed,
+)
 
 from expand_observations import expanded_row  # noqa: E402
 from lane_search import filter_rows, rank_hits  # noqa: E402
@@ -370,22 +378,6 @@ def _utc_run_id() -> str:
     return f"wd_{ts}_{h}"
 
 
-def _workflow_depth_root(repo_root: Path) -> Path:
-    raw = os.environ.get("GRACE_MAR_WORKFLOW_DEPTH_HOME", "").strip()
-    if raw:
-        return Path(raw).expanduser().resolve()
-    return (repo_root / "runtime" / "workflow-depth").resolve()
-
-
-def _append_workflow_depth_receipt(repo_root: Path, record: dict[str, Any]) -> Path:
-    wd = _workflow_depth_root(repo_root)
-    wd.mkdir(parents=True, exist_ok=True)
-    idx = wd / "index.jsonl"
-    with idx.open("a", encoding="utf-8") as f:
-        f.write(json.dumps(record, ensure_ascii=False) + "\n")
-    return idx
-
-
 def main() -> int:
     ap = argparse.ArgumentParser(
         description="Build budgeted prepared-context Markdown with inclusion/exclusion report.",
@@ -482,6 +474,12 @@ def main() -> int:
         default=False,
         help="Print benchmark quality scores (utilization, coverage, mean_included_rank) to stdout as JSON",
     )
+    ap.add_argument(
+        "--source-workflow",
+        default="prepared_context",
+        metavar="ID",
+        help="Receipt field sourceWorkflow (default: prepared_context; e.g. memory_brief when invoked from memory_brief.py)",
+    )
     args = ap.parse_args()
 
     root = args.repo_root.resolve()
@@ -542,6 +540,8 @@ def main() -> int:
     budget_class: str
     max_obs: int
     receipt_extra: dict[str, Any] | None = None
+    depth_decision: WorkflowDepthDecision | None = None
+    guard_receipt: dict[str, Any] = {}
 
     if not wf_depth:
         budget_class = args.mode.strip()  # type: ignore[union-attr]
@@ -624,6 +624,13 @@ def main() -> int:
             "effective_mode": budget_class,
             "max_observations": max_obs,
         }
+        depth_decision = decision_from_fixed(
+            preset=wf_depth,  # type: ignore[arg-type]
+            lane=lane,
+            task_anchor=task_anchor,
+            constraint=constraint_anchor or None,
+            source_workflow=(args.source_workflow or "prepared_context").strip() or "prepared_context",
+        )
     else:
         # auto
         max_obs = args.max_observations if args.max_observations is not None else 30
@@ -698,6 +705,16 @@ def main() -> int:
             "compact_dry_scores": scores_try,
             **guard_receipt,
         }
+        depth_decision = decision_from_auto_resolved(
+            resolved_budget_class=budget_class,  # type: ignore[arg-type]
+            stop_reason=stop_reason,
+            lane=lane,
+            task_anchor=task_anchor,
+            constraint=constraint_anchor or None,
+            guard_veto=bool(guard_receipt.get("guard_veto")),
+            veto_reason=str(guard_receipt.get("veto_reason") or ""),
+            source_workflow=(args.source_workflow or "prepared_context").strip() or "prepared_context",
+        )
 
     out = args.output.resolve()
     out.parent.mkdir(parents=True, exist_ok=True)
@@ -715,20 +732,47 @@ def main() -> int:
     )
     print(f"wrote {out}", file=sys.stderr)
     print(f"wrote {root / 'prepared-context' / 'last-budget-builds.json'}", file=sys.stderr)
-    if wf_depth and receipt_extra:
-        rec = {
-            "schemaVersion": "1.0-workflow-depth-receipt",
-            "status": "ok",
-            "timestamp": built,
-            "boundary_notes": [
+    if wf_depth and receipt_extra and depth_decision is not None:
+        out_rel = str(out.resolve().relative_to(root)) if out.resolve().is_relative_to(root) else str(out)
+        gr_extras: dict[str, Any] | None = None
+        if wf_depth == "auto":
+            known = {
+                "run_id",
+                "workflow_depth",
+                "phases",
+                "stop_reason",
+                "task_anchor",
+                "constraint_anchor",
+                "lane",
+                "effective_mode",
+                "max_observations",
+                "compact_dry_scores",
+            }
+            gr_extras = {k: v for k, v in receipt_extra.items() if k not in known}
+        rec = build_workflow_depth_receipt_record(
+            schema_version="1.0-workflow-depth-receipt",
+            status="ok",
+            timestamp=built,
+            boundary_notes=[
                 "non_canonical",
                 "runtime_workflow_depth_receipt_not_record_truth",
             ],
-            "output_markdown": str(out.resolve().relative_to(root)) if out.resolve().is_relative_to(root) else str(out),
-            "scores": scores,
-            **receipt_extra,
-        }
-        idxp = _append_workflow_depth_receipt(root, rec)
+            output_markdown=out_rel,
+            scores=scores,
+            run_id=receipt_extra["run_id"],
+            workflow_depth_label=str(receipt_extra["workflow_depth"]),
+            effective_mode=budget_class,
+            max_observations=int(receipt_extra["max_observations"]),
+            phases=list(receipt_extra["phases"]),
+            stop_reason=str(receipt_extra["stop_reason"]),
+            task_anchor=task_anchor,
+            constraint_anchor=constraint_anchor or None,
+            lane=lane,
+            decision=depth_decision,
+            compact_dry_scores=receipt_extra.get("compact_dry_scores") if wf_depth == "auto" else None,
+            guard_receipt_extras=gr_extras,
+        )
+        idxp = append_workflow_depth_receipt(root, rec)
         print(f"wrote workflow-depth receipt {idxp}", file=sys.stderr)
     if args.score:
         print(json.dumps({"lane": lane, "mode": budget_class, **scores}, indent=2))
