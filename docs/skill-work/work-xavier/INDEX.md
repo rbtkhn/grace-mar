@@ -7,6 +7,7 @@
 | [evidence/cici-rtf-sessions-ingest-2026-04-17.md](evidence/cici-rtf-sessions-ingest-2026-04-17.md) | **RTF sessions (2026-04-17)** — proposals applied, `main` [`d2358ce`](https://github.com/Xavier-x01/Cici/commit/d2358ce); daily ship [`a602e3a`](https://github.com/Xavier-x01/Cici/commit/a602e3a) |
 | [handoffs/cici-claude-agent-grace-mar-discipline-prompt.md](handoffs/cici-claude-agent-grace-mar-discipline-prompt.md) | **Cici agent prompt** — lanes, boundary, proposals, leakage, grounding (paste into `.claude/agents/` or `CLAUDE.md`) |
 | [handoffs/cici-brewmind-governed-steward.md](handoffs/cici-brewmind-governed-steward.md) | **Cici paste handoff** — `docs/skills/brewmind-governed-steward.md` body + optional `CLAUDE.md` line (canonical skill: [.cursor/skills/brewmind-governed-steward/SKILL.md](../../../.cursor/skills/brewmind-governed-steward/SKILL.md)) |
+| [cici-pilot-propagation-low-cost-operator.md](cici-pilot-propagation-low-cost-operator.md) | **10-pilot reach** — low-cost propagation checklist (referral, FB groups, Telegram, borrowed audiences) + citations |
 | [cici-community-mission-operator.md](cici-community-mission-operator.md) | **Cici / Neural Sandbox** — short-term mission, drop-off focus, funnel metrics (operator WORK) |
 | [README.md](README.md) | Advisor / project module vs Xavier’s external instance repo |
 | [xavier-work-profile.md](xavier-work-profile.md) | Employee work profile + skills portfolio (operator WORK); not her Record |

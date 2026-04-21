@@ -12,6 +12,10 @@
 
 ## Log
 
+### 2026-04-23
+
+- **Cici pilot propagation (low-cost):** [cici-pilot-propagation-low-cost-operator.md](cici-pilot-propagation-low-cost-operator.md) — organic / referral / PH Facebook Groups / Telegram / borrowed audiences; external desk links; funnel alignment with [cici-community-mission-operator.md](cici-community-mission-operator.md).
+
 ### 2026-04-22
 
 - **Cici community mission (operator):** [cici-community-mission-operator.md](cici-community-mission-operator.md) — short-term mission (self-teach → train others, **10** set up, PH context, no fee); **drop-off** as primary risk; funnel metrics + mitigations; advisor load note.

@@ -12,6 +12,7 @@
 
 | Date (captured) | Artifact | What it shows |
 |-----------------|----------|----------------|
+| 2026-04-23 | [cici-pilot-propagation-low-cost-operator.md](cici-pilot-propagation-low-cost-operator.md) | **Low-cost propagation** — referral/FB Groups/Telegram/borrowed lists + desk links; pairs with mission doc (DOCSYNC). |
 | 2026-04-22 | [cici-community-mission-operator.md](cici-community-mission-operator.md) | **Operator mission doc** — Neural Sandbox / Cici short-term goals (**10** set up), **drop-off** primary risk, funnel metrics, advisor-load note (DOCSYNC). |
 | 2026-04-21 | [evidence/cici-neural-sandbox-rtf-ingest-2026-04-21.md](evidence/cici-neural-sandbox-rtf-ingest-2026-04-21.md) | **Telegram Neural Sandbox** — Rules of Engagement (fork Cici, own Supabase, Tier A/B/C, secrets); RTF [cici-rtf-neural-sandbox-transcript-2026-04-21.rtf](evidence/cici-rtf-neural-sandbox-transcript-2026-04-21.rtf). **Repo:** `main` still [`b02b5da`](https://github.com/Xavier-x01/Cici/commit/b02b5da) (no new commit from this export). |
 | 2026-04-20 | [evidence/cici-github-sync-2026-04-20.md](evidence/cici-github-sync-2026-04-20.md) | **API sync** — [Cici](https://github.com/Xavier-x01/Cici) `main` [`b02b5da`](https://github.com/Xavier-x01/Cici/commit/b02b5da): **prop-20260420-001** memory-policy surface + `policy.json` ([`3712b88`](https://github.com/Xavier-x01/Cici/commit/3712b88) → [`b02b5da`](https://github.com/Xavier-x01/Cici/commit/b02b5da)). |
@@ -98,6 +99,7 @@ Transcribed for search/analysis; **verify** against her app if titles change.
 
 | Date | Note |
 |------|------|
+| 2026-04-23 | **Cici pilot propagation** low-cost doc ([cici-pilot-propagation-low-cost-operator.md](cici-pilot-propagation-low-cost-operator.md)); progress log index + burst; [work-xavier-history.md](work-xavier-history.md); [INDEX.md](INDEX.md). |
 | 2026-04-22 | **Cici community mission** operator doc ([cici-community-mission-operator.md](cici-community-mission-operator.md)); progress log index + burst; [work-xavier-history.md](work-xavier-history.md); [INDEX.md](INDEX.md). |
 | 2026-04-21 | **Neural Sandbox** RTF ingest ([cici-neural-sandbox-rtf-ingest-2026-04-21.md](evidence/cici-neural-sandbox-rtf-ingest-2026-04-21.md)); progress log index + burst; [work-xavier-history.md](work-xavier-history.md); [INDEX.md](INDEX.md). |
 | 2026-04-20 | Cici **GitHub sync** ([cici-github-sync-2026-04-20.md](evidence/cici-github-sync-2026-04-20.md)); progress log index + burst; [work-xavier-history.md](work-xavier-history.md); [INDEX.md](INDEX.md). |
