@@ -43,3 +43,24 @@ fetch_note: Operator CSV export; Link column shows “View post” without per-s
 | 2026-04-03 | 17:52:55 | In a conversation with my brother Ilham Aliyev (@presidentaz), I appreciated the sympathy and support of the government and the people of Azerbaijan. Friendly and brotherly nations find each other in hard times, and the deeper the civilizational roots, the stronger this bond. | 13,561 / 1,933 / 947,551 | View post |
 | 2026-04-03 | 12:32:44 | تهدید به بازگرداندن یک ملت به عصر حجر آیا معنایی جز جنایت گسترده جنگی دارد؟ این سوالی بود که از همتای فنلاندی خود که یک حقوقدان است پرسیدم. تاریخ سرشار از تجربه کسانی است که بابت سکوت در برابر جنایتکاران، تاوان‌های بزرگی پرداخته‌اند. (quoting English version) | 5,387 / 1,016 / 339,108 | View post |
 | 2026-04-03 | 12:32:12 | Does threatening to send an entire nation back to the Stone Age mean anything other than a massive war crime? This was the question I asked my Finnish counterpart, who is a jurist. History is full of those who paid a heavy price for their silence in the face of criminals. | 57,118 / 13,605 / 1,500,650 | View post |
+
+---
+
+## Slice anchors (registry)
+
+<a id="slice-drpezeshkian-2026-04-03"></a>
+<a id="slice-drpezeshkian-2026-04-04"></a>
+<a id="slice-drpezeshkian-2026-04-07"></a>
+<a id="slice-drpezeshkian-2026-04-08"></a>
+<a id="slice-drpezeshkian-2026-04-09"></a>
+<a id="slice-drpezeshkian-2026-04-10"></a>
+<a id="slice-drpezeshkian-2026-04-11"></a>
+<a id="slice-drpezeshkian-2026-04-12"></a>
+<a id="slice-drpezeshkian-2026-04-13"></a>
+<a id="slice-drpezeshkian-2026-04-14"></a>
+<a id="slice-drpezeshkian-2026-04-15"></a>
+<a id="slice-drpezeshkian-2026-04-16"></a>
+<a id="slice-drpezeshkian-2026-04-19"></a>
+<a id="slice-drpezeshkian-2026-04-20"></a>
+
+**Slice registry:** [strategy-state-iran/chapters/2026-04/april-2026-slice-registry.md](../../strategy-state-iran/chapters/2026-04/april-2026-slice-registry.md).

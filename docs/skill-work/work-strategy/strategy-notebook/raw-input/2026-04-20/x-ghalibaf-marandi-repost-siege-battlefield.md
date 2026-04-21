@@ -25,3 +25,11 @@ Translated from Persian
 
 Trump, by imposing a siege and violating the ceasefire, seeks to turn this negotiating table— in his own imagination— into a table of surrender or to justify renewed warmongering.  
 We do not accept negotiations under the shadow of threats, and in the past two weeks, we have prepared to reveal new cards on the battlefield.
+
+---
+
+## Slice anchor (registry)
+
+<a id="slice-mb_ghalibaf-2026-04-20"></a>
+
+**Slice registry:** [strategy-state-iran/chapters/2026-04/april-2026-slice-registry.md](../../strategy-state-iran/chapters/2026-04/april-2026-slice-registry.md).

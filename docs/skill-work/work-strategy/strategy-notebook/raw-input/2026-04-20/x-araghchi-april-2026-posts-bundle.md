@@ -31,3 +31,20 @@ fetch_note: "Advanced X search; chronological fetch; all times GMT; no threads (
 | 2026-04-02 | 19:01:13  | Striking civilian structures, including unfinished bridges, power plants and oil terminals, is not strategy — it is barbarism. [Photo] | 101,697 / 29,283 / 2,258,889 | [View post](https://x.com/araghchi/status/2039780209860202888) |
 
 No additional posts were found on April 1 or April 18–20, 2026 (up to the last fetch). Posts frequently include media; links allow viewing full context, replies, and visuals on X.
+
+---
+
+## Slice anchors (registry)
+
+<a id="slice-araghchi-2026-04-02"></a>
+<a id="slice-araghchi-2026-04-03"></a>
+<a id="slice-araghchi-2026-04-04"></a>
+<a id="slice-araghchi-2026-04-06"></a>
+<a id="slice-araghchi-2026-04-07"></a>
+<a id="slice-araghchi-2026-04-08"></a>
+<a id="slice-araghchi-2026-04-09"></a>
+<a id="slice-araghchi-2026-04-12"></a>
+<a id="slice-araghchi-2026-04-15"></a>
+<a id="slice-araghchi-2026-04-17"></a>
+
+**Slice registry:** [strategy-state-iran/chapters/2026-04/april-2026-slice-registry.md](../../strategy-state-iran/chapters/2026-04/april-2026-slice-registry.md).
