@@ -1,0 +1,11 @@
+# Strategy Iran — chapter 2026-04 — meta
+
+**Kind:** month (first **strategy-iran** chapter)  
+**Status:** `open`  
+**Main notebook mirror:** [chapters/2026-04/meta.md](../../../chapters/2026-04/meta.md) — full arc, expert pages, US–Iran kinetic track.
+
+## April arc (Iran lane — one screen)
+
+**2026-04-20 — seed:** [Mohammad-Baqer Ghalibaf](https://x.com/mb_ghalibaf) X text (fa→EN), **Marandi repost** — **siege / ceasefire violation / no talks under threat / “new cards on the battlefield.”** Full verbatim and tier notes: [raw-input/2026-04-20/x-ghalibaf-marandi-repost-siege-battlefield.md](../../raw-input/2026-04-20/x-ghalibaf-marandi-repost-siege-battlefield.md). Voice folder: [`experts/mb_ghalibaf/`](../../experts/mb_ghalibaf/). Day block: [`days.md`](days.md) **`## 2026-04-20`**.
+
+**Cross-weave rule:** Iran-lane **`days.md`** entries are **seams** into main [`days.md`](../../../chapters/2026-04/days.md), not replacements for **`thread:`** expert Judgment or wire primaries.

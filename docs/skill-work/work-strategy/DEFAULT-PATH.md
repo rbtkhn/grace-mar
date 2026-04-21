@@ -2,7 +2,7 @@
 
 **Purpose:** The minimum viable strategy pass. Three moves, then stop. Everything else in the lane (minds, civ-mem, promotion, verify, history notebook, commentator threads) is **optional** and triggered only when the operator asks or the day demands it.
 
-**When:** Normal day. Operator says **`strategy`** or **`strategy pass`**. No special modifiers.
+**When:** Normal day. Operator says **`strategy`** or **`strategy pass`**. **`strategy page read`** — **read-only** notebook frontier (no `days.md` / **`strategy-page`** writes); see [architecture § *End-of-day strategy session* — *Read-only variant*](strategy-notebook/STRATEGY-NOTEBOOK-ARCHITECTURE.md#end-of-day-strategy-session-terminology). No special modifiers otherwise.
 
 **Full sequence (SSOT):** When you need the **numbered** inbox-first path (accumulate → **EOD strategy session** → optional markers → escalation → STRATEGY → no Record), use [STRATEGY-NOTEBOOK-ARCHITECTURE.md — Default operating path](strategy-notebook/STRATEGY-NOTEBOOK-ARCHITECTURE.md#default-operating-path-ssot). The three moves below are the **minimum**; that section is the **long-form** contract.
 
@@ -11,6 +11,8 @@
 ## The three moves
 
 ### 1. Read the frontier
+
+If the operator said **`strategy page read`**, stay in **read-only** mode for this pass: complete this step (and optional daily-brief skim), summarize **where the notebook stands** in chat, then stop or offer a **short** pivot menu — **do not** compose into `days.md` or **`strategy-page`**, and **do not** append inbox **unless** they also ask to capture. Otherwise proceed with the full three moves below.
 
 Open **two files**, scan **one**:
 
@@ -26,7 +28,7 @@ If a daily brief exists for today (`daily-brief-YYYY-MM-DD.md`), skim its lead.
 
 Append paste-ready lines to [`daily-strategy-inbox.md`](strategy-notebook/daily-strategy-inbox.md). Shape: one-liner or two-tier gist (`cold: … // hook: …`). Tag the plane when load-bearing (§1d–§1h watch tags).
 
-Do **not** touch `days.md` unless the operator directs **EOD notebook compose** / **end-of-day strategy session** (or **breaking glass**). *Deprecated prompt:* **`weave`**.
+Do **not** touch `days.md` unless the operator says **`strategy page`**, **`strategy page compose`**, or otherwise directs **EOD notebook compose** / **end-of-day strategy session** (or **breaking glass**). *Deprecated prompt:* **`weave`**.
 
 **Time:** Variable (5–30 min depending on ingest volume).
 
@@ -36,7 +38,7 @@ End the pass with **3–5 options** (standard WORK menu). Typical forks on a nor
 
 | Letter | Option |
 |--------|--------|
-| **A** | **EOD compose** — inbox + **`raw-input/`** → **`strategy-page`** block(s) + `days.md` continuity |
+| **A** | **`strategy page`** / **`strategy page compose`** — inbox + **`raw-input/`** → **`strategy-page`** block(s) + `days.md` continuity; optional **MCQ-driven** sequencing per [EOD-MCQ-PROTOCOL.md](strategy-notebook/EOD-MCQ-PROTOCOL.md) |
 | **B** | Verify — run `strategy + verify` on a claim |
 | **C** | Lens — B/M/M one-liners (pick one, two, or skip) |
 | **D** | Promote — stitch a stabilized arc to STRATEGY.md |

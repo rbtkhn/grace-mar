@@ -139,7 +139,7 @@ Include only what matters this run:
 - **`dream_catchup`:** local dates, `strategy_notebook_missing_day_headers`, timezone, `previous_dream_generated_at` — FYI for calendar coverage; drives Xavier `--catch-up-from-last-dream` (operational; not Record)
 - Coffee **24h rollup**, **execution paths** + suggested index, **civ-mem echoes** (with **“Analogy candidate only — not evidence, not recommendation, not Record”** when cited)
 - **Capability shift** (sources, REVIEW / monitor alerts)
-- **Strategy notebook** / **Xavier journal** / **Dev journal:** one line each when relevant (strategy-notebook **deferred** unless operator asked **EOD notebook compose** in-thread; Xavier per § below)
+- **Strategy notebook** / **Xavier journal** / **Dev journal:** one line each when relevant (strategy-notebook **deferred** unless operator asked **`strategy page`**, **`strategy page compose`**, or **EOD notebook compose** in-thread; Xavier per § below)
 
 If nothing important changed, say so plainly. A quiet run is success.
 
@@ -219,7 +219,7 @@ If **strict** dream halts for the **same** integrity or governance **reason** mo
 
 ## Strategy notebook (LIB-0153) — optional FYI; **not** owned by `dream`
 
-**Contract (repo):** [STRATEGY-NOTEBOOK-ARCHITECTURE.md](../../../docs/skill-work/work-strategy/strategy-notebook/STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *Entry model* / § *End-of-day strategy session* — **hybrid** dated + episodic sections; **inbox + `raw-input/` = capture**, **notebook = synthesized** in the **EOD strategy session** when the operator runs **`strategy`** with **notebook compose** intent — **not** because night close ran. *Deprecated:* operator token **`weave`**.
+**Contract (repo):** [STRATEGY-NOTEBOOK-ARCHITECTURE.md](../../../docs/skill-work/work-strategy/strategy-notebook/STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *Entry model* / § *End-of-day strategy session* — **hybrid** dated + episodic sections; **inbox + `raw-input/` = capture**, **notebook = synthesized** in the **EOD strategy session** when the operator says **`strategy page`**, **`strategy page compose`**, or runs **`strategy`** with **notebook compose** intent — **not** because night close ran. *Deprecated:* operator token **`weave`**.
 
 **Telemetry only:** `python3 scripts/auto_dream.py` (and `last-dream.json`) still include **`dream_catchup`**: `local_calendar_dates`, `previous_dream_generated_at`, `timezone`, and **`strategy_notebook_missing_day_headers`** (dates in the catch-up window with no matching `## YYYY-MM-DD` in the relevant `chapters/YYYY-MM/days.md` files). Treat this as **optional FYI** if you track calendar coverage — **not** a mandatory stub list and **not** a reason for the agent to auto-write the notebook during `dream`.
 
@@ -237,7 +237,7 @@ If **strict** dream halts for the **same** integrity or governance **reason** mo
 
 1. After Step 1, you **may** read **`dream_catchup.strategy_notebook_missing_day_headers`** and mention it **one line** in the night-close brief if useful — **or skip** if the operator does not calendar-track the notebook.
 2. **Do not** auto-compose strategy notebook, **do not** add stubs, **do not** edit `days.md` unless the operator **explicitly** asks in this thread.
-3. If the operator **explicitly** asks to run **EOD strategy notebook** / fold strategy inbox or add stubs in the same message, follow [skill-strategy](../skill-strategy/SKILL.md) and architecture; otherwise defer to a later **`strategy`** session.
+3. If the operator **explicitly** asks to run **`strategy page`**, **`strategy page compose`**, **EOD strategy notebook**, fold strategy inbox, or add stubs in the same message, follow [skill-strategy](../skill-strategy/SKILL.md) and architecture; otherwise defer to a later **`strategy`** session.
 
 **Boundaries:** **WORK only** — not Record, not `self.md` / EVIDENCE / gate merge.
 

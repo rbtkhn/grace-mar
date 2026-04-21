@@ -10,7 +10,7 @@
 | **experts/`<id>`/transcript.md** | 7-day rolling **triage** corpus from inbox `thread:` blocks (word caps per architecture) |
 | **`raw-input/` (this tree)** | **Unabridged** text and bundled inputs for **7 calendar days**, then **deleted** from this folder by prune (git history may still hold copies if committed) |
 
-**End-of-day strategy session (notebook compose):** Default **sole** window for writing **`strategy-page`** blocks + `days.md` judgment is the **once-per-day EOD session**, using **this folder’s** dated files as the **primary bulk evidence** alongside inbox stubs — see [STRATEGY-NOTEBOOK-ARCHITECTURE.md](../STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *End-of-day strategy session*. The operator token **`weave`** is **deprecated** for that compose step.
+**End-of-day strategy session (notebook compose):** Default **sole** window for writing **`strategy-page`** blocks + `days.md` judgment is the **once-per-day** session you open with **`strategy page`** or **`strategy page compose`** (operator phrases — see [STRATEGY-NOTEBOOK-ARCHITECTURE.md](../STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *End-of-day strategy session*). **Primary bulk evidence:** **this folder’s** dated files plus inbox stubs. The operator token **`weave`** is **deprecated** for that compose step.
 
 WORK only; not Record.
 
