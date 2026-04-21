@@ -1,0 +1,27 @@
+# Runtime-only model tier definitions (non-canonical). Used by scripts/runtime/model_policy.py.
+# Does not change Record or merge authority.
+
+tiers:
+  A:
+    description: deterministic_or_no_model
+    providers: []
+
+  B:
+    description: cheap_public_model
+    providers:
+      - provider: openai
+        model_env: OPENAI_CHEAP_MODEL
+
+  C:
+    description: reliable_frontier_model
+    providers:
+      - provider: openai
+        model_env: OPENAI_DEFAULT_MODEL
+
+  D:
+    description: privileged_restricted_model
+    providers: []
+
+  X:
+    description: forbidden
+    providers: []

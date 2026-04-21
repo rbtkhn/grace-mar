@@ -38,6 +38,7 @@ from worker_overlays import (  # noqa: E402
     emphasis_flags,
     get_overlay,
 )
+from model_policy import resolve_model_policy  # noqa: E402
 from worker_router import (  # noqa: E402
     TASK_TYPE_TO_ROUTED,
     UnknownTaskTypeError,
@@ -246,6 +247,7 @@ def build_execution_receipt(
     proposal_path: str,
     status: str,
     error: str | None,
+    model_policy: dict[str, Any],
 ) -> dict[str, Any]:
     """Projected non-canonical summary for one worker run (schema: execution-receipt.v1)."""
     if routing_payload:
@@ -289,6 +291,7 @@ def build_execution_receipt(
             "status": status,
             "error": error,
         },
+        "model_policy": model_policy,
         "non_canonical": True,
     }
 
@@ -312,6 +315,7 @@ def task_inspect_work_area(
     compose_with: str | None,
     lens_name: str | None = None,
     task_type: str | None = None,
+    task_subtype: str | None = None,
     overlay_name: str | None = None,
     overlay_defaults_applied: list[str] | None = None,
     overlay_emphasis: dict[str, bool] | None = None,
@@ -464,11 +468,17 @@ def task_inspect_work_area(
     with trace_path.open("a", encoding="utf-8") as f:
         f.write(json.dumps(trace, ensure_ascii=False) + "\n")
 
+    model_policy = resolve_model_policy(
+        repo_root=repo_root,
+        task_type=task_type,
+        task_subtype=task_subtype,
+        action=None,
+    )
     receipt = build_execution_receipt(
         run_id=run_id,
         timestamp=ts_iso,
         task_mode="inspect_work_area",
-        task_subtype=None,
+        task_subtype=task_subtype,
         scope_root=scope_rel,
         max_files=max_files,
         max_chars=max_chars,
@@ -477,6 +487,7 @@ def task_inspect_work_area(
         proposal_path=_repo_rel_or_abs(proposal_path, repo_root),
         status=trace_status,
         error=None,
+        model_policy=model_policy,
     )
     receipt_path = write_execution_receipt(worker_home, repo_root, run_id, receipt)
 
@@ -578,6 +589,15 @@ def main() -> int:
         ),
     )
     ap.add_argument(
+        "--task-subtype",
+        default=None,
+        metavar="NAME",
+        help=(
+            "Optional task subtype for model-tier policy (e.g. quick_scan, contradiction_review); "
+            "see config/model_routing/task_policy.yaml"
+        ),
+    )
+    ap.add_argument(
         "--overlay",
         default=None,
         choices=tuple(sorted(OVERLAY_NAMES)),
@@ -654,6 +674,8 @@ def main() -> int:
             overlay_applied,
             overlay_emphasis,
         ) = _resolve_inspect_with_overlay(args, repo_root, overlay_block)
+        ts_raw = (args.task_subtype or "").strip()
+        effective_subtype = ts_raw if ts_raw else None
         return task_inspect_work_area(
             repo_root=repo_root,
             scope_rel=scope,
@@ -663,6 +685,7 @@ def main() -> int:
             compose_with=compose_with,
             lens_name=lens_name,
             task_type=effective_task_type,
+            task_subtype=effective_subtype,
             overlay_name=args.overlay,
             overlay_defaults_applied=overlay_applied,
             overlay_emphasis=overlay_emphasis,

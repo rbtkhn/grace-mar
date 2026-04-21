@@ -90,6 +90,21 @@
       }
     },
 
+    "model_policy": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "properties": {
+        "allowed_tier": { "type": ["string", "null"] },
+        "resolved_provider": { "type": ["string", "null"] },
+        "resolved_model": { "type": ["string", "null"] },
+        "fallback_chain": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "requires_human_review": { "type": ["boolean", "null"] }
+      }
+    },
+
     "non_canonical": { "type": "boolean", "const": true }
   }
 }

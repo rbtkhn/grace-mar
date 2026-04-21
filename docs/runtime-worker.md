@@ -31,9 +31,11 @@
 | `inbox-day` | full strategy-notebook | 80 / 80k | inbox Accumulator date check |
 | `quick-scan` | full strategy-notebook | 25 / 24k | none |
 
-**Schemas:** `schema-registry/runtime-worker-trace.v1.json` (trace line) · `schema-registry/execution-receipt.v1.json` (per-run receipt)
+**Schemas:** `schema-registry/runtime-worker-trace.v1.json` (trace line) · `schema-registry/execution-receipt.v1.json` (per-run receipt, optional `model_policy`)
 
 **Worker routing (optional):** `--task-type` records shared vs routed worker entrypoints under `provenance.worker_routing` on the trace line — see [worker-routing.md](runtime/worker-routing.md).
+
+**Model tier policy (optional):** `--task-subtype` feeds `config/model_routing/task_policy.yaml` into the receipt’s `model_policy` block — see [model-tier-routing.md](runtime/model-tier-routing.md).
 
 **Worker overlays (optional):** `--overlay strategy|moonshot|research|tacit` applies small defaults from [`config/runtime_workers/overlays.yaml`](../config/runtime_workers/overlays.yaml) (explicit CLI wins) — see [worker-overlays.md](runtime/worker-overlays.md).
 

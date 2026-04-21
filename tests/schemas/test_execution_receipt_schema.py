@@ -51,6 +51,13 @@ def _minimal_valid_receipt() -> dict:
             "proposal_path": "runtime/runtime-worker/proposals/rw_fixture.md",
         },
         "outcome": {"status": "ok", "error": None},
+        "model_policy": {
+            "allowed_tier": "A",
+            "resolved_provider": None,
+            "resolved_model": None,
+            "fallback_chain": ["B", "A"],
+            "requires_human_review": False,
+        },
         "non_canonical": True,
     }
 
@@ -62,6 +69,9 @@ def test_schema_and_minimal_instance_validate() -> None:
     meta = v.schema
     jsonschema.validators.validator_for(meta).check_schema(meta)
     v.validate(_minimal_valid_receipt())
+    # nullable model_policy on schema — explicit null is valid
+    alt = {**_minimal_valid_receipt(), "model_policy": None}
+    v.validate(alt)
 
 
 @pytest.fixture
@@ -141,3 +151,40 @@ def test_task_type_strategy_receipt_routing(tmp_path: Path, worker_env: dict[str
     assert wr["resolved"] is True
     assert wr["task_type"] == "strategy"
     assert wr["routed_worker"] == "strategy_worker"
+    assert receipt["model_policy"]["allowed_tier"] == "B"
+
+
+def test_task_type_strategy_quick_scan_receipt_model_policy(tmp_path: Path, worker_env: dict[str, str]) -> None:
+    v = _receipt_validator()
+    r = subprocess.run(
+        [
+            sys.executable,
+            str(WORKER_SCRIPT),
+            "--task",
+            "inspect_work_area",
+            "--task-type",
+            "strategy",
+            "--task-subtype",
+            "quick_scan",
+            "--dry-run",
+            "--repo-root",
+            str(REPO_ROOT),
+            "--scope",
+            "docs/skill-work/work-strategy/strategy-notebook",
+            "--max-files",
+            "8",
+            "--max-chars",
+            "12000",
+        ],
+        cwd=str(REPO_ROOT),
+        env=worker_env,
+        capture_output=True,
+        text=True,
+    )
+    assert r.returncode == 0, r.stderr + r.stdout
+    wh = Path(worker_env["GRACE_MAR_RUNTIME_WORKER_HOME"])
+    run_id = next((wh / "proposals").glob("rw_*.md")).stem
+    receipt = json.loads((wh / "receipts" / f"{run_id}.json").read_text(encoding="utf-8"))
+    v.validate(receipt)
+    assert receipt["model_policy"]["allowed_tier"] == "B"
+    assert receipt.get("task_subtype") == "quick_scan"

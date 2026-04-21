@@ -1,0 +1,33 @@
+# Runtime-only task → tier mapping (non-canonical). Align task keys with worker_router TASK_TYPE_TO_ROUTED where possible.
+
+defaults:
+  fallback_chain: ["B", "A"]
+
+tasks:
+  strategy:
+    default_tier: "B"
+    subtypes:
+      contradiction_review:
+        default_tier: "C"
+      quick_scan:
+        default_tier: "B"
+      record_candidate_draft:
+        default_tier: "C"
+        requires_human_review: true
+
+  tacit:
+    default_tier: "B"
+
+  research:
+    default_tier: "C"
+
+  moonshot:
+    default_tier: "C"
+
+  contradiction:
+    default_tier: "C"
+
+forbidden_actions:
+  - merge_record
+  - mutate_prompt
+  - auto_stage_gate
