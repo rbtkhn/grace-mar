@@ -1,4 +1,4 @@
-# Strategy Iran — voice thread — `mb_ghalibaf`
+# strategy-state-iran — voice thread — `mb_ghalibaf`
 
 WORK only; not Record.
 
@@ -8,7 +8,7 @@ WORK only; not Record.
 
 ## Journal layer — Narrative (operator)
 
-Within this layer, each **`## YYYY-MM`** heading is a **month segment** (same convention as [`experts/parsi/thread.md`](../../../experts/parsi/thread.md)). There is **no** `strategy_thread.py` machine block for strategy-iran yet; maintain prose and page fences manually.
+Within this layer, each **`## YYYY-MM`** heading is a **month segment** (same convention as [`experts/parsi/thread.md`](../../../experts/parsi/thread.md)). There is **no** `strategy_thread.py` machine block for strategy-state-iran yet; maintain prose and page fences manually.
 
 ## 2026-04
 
@@ -20,7 +20,7 @@ Optional embedded page for this day:
 ### Page: Ghalibaf — siege, ceasefire violation, battlefield cards (2026-04-20)
 
 **Date:** 2026-04-20
-**Also in:** _(strategy-iran chapter days —_ [`../../chapters/2026-04/days.md`](../../chapters/2026-04/days.md)_)_
+**Also in:** _(strategy-state-iran chapter days —_ [`../../chapters/2026-04/days.md`](../../chapters/2026-04/days.md)_)_
 
 ### Signal
 

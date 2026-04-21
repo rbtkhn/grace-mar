@@ -1,6 +1,6 @@
-# Strategy Iran — voice — `mb_ghalibaf`
+# strategy-state-iran — voice — `mb_ghalibaf`
 
-**Lane:** [strategy-iran](../README.md) — Iranian institutional / elite voices (parallel to Western `experts/`).
+**Lane:** [strategy-state-iran](../README.md) — Iranian institutional / elite voices (parallel to Western `experts/`).
 
 ## Identity
 

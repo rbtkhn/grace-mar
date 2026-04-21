@@ -1,12 +1,12 @@
-# Strategy Iran (institutional / elite lane)
+# strategy-state-iran (institutional / elite lane)
 
 **Purpose:** Parallel notebook tree for **Iranian institutional and elite-authored** material (Majlis, MFA-adjacent social, Tasnim-class republication, repost chains) that **complements** Western **`thread:`** experts under [`experts/`](../experts/) — same **chapters + per-voice folder** shape, **not** the same ingestion scripts until wired.
 
 **Relation to the main notebook:**
 
-| Main strategy-notebook | Strategy Iran (this tree) |
+| Main strategy-notebook | strategy-state-iran (this tree) |
 |------------------------|---------------------------|
-| [`experts/<expert_id>/`](../experts/) — indexed commentators | [`experts/<voice_id>/`](experts/) — Iranian elite / institutional **voices** |
+| [`experts/<expert_id>/`](../experts/) — indexed commentators | [`experts/<voice_id>/`](experts/) — Iranian elite / institutional **voices** (e.g. `mb_ghalibaf`, `araghchi`) |
 | [`chapters/YYYY-MM/days.md`](../chapters/2026-04/days.md) — full chronology | [`chapters/YYYY-MM/days.md`](chapters/2026-04/days.md) — **Iran-lane** day stubs and seams |
 | [`raw-input/`](../raw-input/) | Same [`raw-input/`](../raw-input/) paths — **point here**, do not duplicate verbatim |
 
