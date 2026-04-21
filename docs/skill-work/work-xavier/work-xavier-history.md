@@ -14,6 +14,7 @@
 
 ### 2026-04-23
 
+- **Cici handoff — self-directed Claude agent prompt:** [handoffs/cici-claude-agent-self-directed-learning-prompt.md](handoffs/cici-claude-agent-self-directed-learning-prompt.md) — autonomy doctrine, discover→develop loop, pilot/outreach support, pairs with [handoffs/cici-claude-agent-grace-mar-discipline-prompt.md](handoffs/cici-claude-agent-grace-mar-discipline-prompt.md).
 - **Cici pilot propagation (low-cost):** [cici-pilot-propagation-low-cost-operator.md](cici-pilot-propagation-low-cost-operator.md) — organic / referral / PH Facebook Groups / Telegram / borrowed audiences; external desk links; funnel alignment with [cici-community-mission-operator.md](cici-community-mission-operator.md).
 
 ### 2026-04-22
