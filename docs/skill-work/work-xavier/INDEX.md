@@ -2,6 +2,7 @@
 
 | Doc | Role |
 |-----|------|
+| [evidence/cici-rtf-session-ingest-2026-04-26-productive-feature-source-priority.md](evidence/cici-rtf-session-ingest-2026-04-26-productive-feature-source-priority.md) | **Cici session RTF** — source-priority `policy.json` PR [#3](https://github.com/Xavier-x01/Cici/pull/3) [`4dba0f3`](https://github.com/Xavier-x01/Cici/commit/4dba0f3); `main` [`3b25703`](https://github.com/Xavier-x01/Cici/commit/3b25703) |
 | [evidence/cici-neural-sandbox-pt2-rtf-ingest-2026-04-21.md](evidence/cici-neural-sandbox-pt2-rtf-ingest-2026-04-21.md) | **Neural Sandbox pt.2** — Technical Onboarding draft (prereqs, fork Cici); RTF |
 | [evidence/cici-neural-sandbox-rtf-ingest-2026-04-21.md](evidence/cici-neural-sandbox-rtf-ingest-2026-04-21.md) | **Neural Sandbox Telegram (2026-04-21)** — rules + onboarding RTF; `main` unchanged vs `b02b5da` |
 | [evidence/cici-github-sync-2026-04-20.md](evidence/cici-github-sync-2026-04-20.md) | **Cici GitHub sync (2026-04-20)** — `main` `b02b5da` memory-policy + prop-20260420-001 |

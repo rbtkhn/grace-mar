@@ -12,6 +12,7 @@
 
 | Date (captured) | Artifact | What it shows |
 |-----------------|----------|----------------|
+| 2026-04-26 | [evidence/cici-rtf-session-ingest-2026-04-26-productive-feature-source-priority.md](evidence/cici-rtf-session-ingest-2026-04-26-productive-feature-source-priority.md) | **RTF** — “next productive feature” → **`prop-20260421-001`** **source-priority** governed policy; PR [#3](https://github.com/Xavier-x01/Cici/pull/3) [`4dba0f3`](https://github.com/Xavier-x01/Cici/commit/4dba0f3); `main` tip [`3b25703`](https://github.com/Xavier-x01/Cici/commit/3b25703). [RTF](evidence/cici-rtf-what-productive-feature-next-2-2026-04-21.rtf). |
 | 2026-04-23 | [handoffs/cici-claude-agent-self-directed-learning-prompt.md](handoffs/cici-claude-agent-self-directed-learning-prompt.md) | **Cici handoff** — Claude Code agent prompt for **self-directed** learning + community pilot (autonomy, discover loop, outreach support). |
 | 2026-04-23 | [cici-pilot-propagation-low-cost-operator.md](cici-pilot-propagation-low-cost-operator.md) | **Low-cost propagation** — referral/FB Groups/Telegram/borrowed lists + desk links; pairs with mission doc (DOCSYNC). |
 | 2026-04-22 | [cici-community-mission-operator.md](cici-community-mission-operator.md) | **Operator mission doc** — Neural Sandbox / Cici short-term goals (**10** set up), **drop-off** primary risk, funnel metrics, advisor-load note (DOCSYNC). |
@@ -43,6 +44,7 @@
 
 _Freeform. Append dated bullets._
 
+- **2026-04-26** — **Cici RTF — productive feature / source-priority:** [cici-rtf-session-ingest-2026-04-26-productive-feature-source-priority.md](evidence/cici-rtf-session-ingest-2026-04-26-productive-feature-source-priority.md) — **`prop-20260421-001`** → `source-priority/policy.json`; PR [#3](https://github.com/Xavier-x01/Cici/pull/3) merged [`4dba0f3`](https://github.com/Xavier-x01/Cici/commit/4dba0f3); also **self-directed-learning** agent + **daily-task** on `main`. *Stubs left:* `tools`, `runtime-bridges` per transcript.
 - **2026-04-23** — **Cici self-directed agent handoff:** [cici-claude-agent-self-directed-learning-prompt.md](handoffs/cici-claude-agent-self-directed-learning-prompt.md) — autonomy + discover→develop loop + pilot outreach support; merge with [cici-claude-agent-grace-mar-discipline-prompt.md](handoffs/cici-claude-agent-grace-mar-discipline-prompt.md) in Cici if needed.
 - **2026-04-23** — **Cici pilot propagation (DOCSYNC):** [cici-pilot-propagation-low-cost-operator.md](cici-pilot-propagation-low-cost-operator.md) — organic reach + desk links; funnel aligned with [cici-community-mission-operator.md](cici-community-mission-operator.md).
 - **2026-04-22** — **Cici community mission (DOCSYNC):** [cici-community-mission-operator.md](cici-community-mission-operator.md) — mission restatement, **member drop-off** mitigations, funnel table; cross-link [Neural Sandbox RTF](evidence/cici-neural-sandbox-rtf-ingest-2026-04-21.md).
@@ -104,6 +106,7 @@ Transcribed for search/analysis; **verify** against her app if titles change.
 
 | Date | Note |
 |------|------|
+| 2026-04-26 | Cici **RTF ingest** — source-priority session ([cici-rtf-session-ingest-2026-04-26-productive-feature-source-priority.md](evidence/cici-rtf-session-ingest-2026-04-26-productive-feature-source-priority.md)); progress log index + burst; [work-xavier-history.md](work-xavier-history.md); [INDEX.md](INDEX.md). |
 | 2026-04-23 | **Cici pilot propagation** low-cost doc ([cici-pilot-propagation-low-cost-operator.md](cici-pilot-propagation-low-cost-operator.md)); **self-directed agent** handoff ([cici-claude-agent-self-directed-learning-prompt.md](handoffs/cici-claude-agent-self-directed-learning-prompt.md)); progress log index + burst; [work-xavier-history.md](work-xavier-history.md); [INDEX.md](INDEX.md). |
 | 2026-04-22 | **Cici community mission** operator doc ([cici-community-mission-operator.md](cici-community-mission-operator.md)); progress log index + burst; [work-xavier-history.md](work-xavier-history.md); [INDEX.md](INDEX.md). |
 | 2026-04-21 | **Neural Sandbox** RTFs — pt.1 [cici-neural-sandbox-rtf-ingest-2026-04-21.md](evidence/cici-neural-sandbox-rtf-ingest-2026-04-21.md) + pt.2 [cici-neural-sandbox-pt2-rtf-ingest-2026-04-21.md](evidence/cici-neural-sandbox-pt2-rtf-ingest-2026-04-21.md); progress log index + burst; [work-xavier-history.md](work-xavier-history.md); [INDEX.md](INDEX.md). |

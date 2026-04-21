@@ -12,6 +12,10 @@
 
 ## Log
 
+### 2026-04-26
+
+- **Cici RTF — “productive feature next” / source-priority:** [evidence/cici-rtf-session-ingest-2026-04-26-productive-feature-source-priority.md](evidence/cici-rtf-session-ingest-2026-04-26-productive-feature-source-priority.md) + [cici-rtf-what-productive-feature-next-2-2026-04-21.rtf](evidence/cici-rtf-what-productive-feature-next-2-2026-04-21.rtf) — **`prop-20260421-001`** → **source-priority** `policy.json`; PR [#3](https://github.com/Xavier-x01/Cici/pull/3) squash-merge [`4dba0f3`](https://github.com/Xavier-x01/Cici/commit/4dba0f3); `main` later [`3b25703`](https://github.com/Xavier-x01/Cici/commit/3b25703) (daily-task #2), [`2e0f6ab`](https://github.com/Xavier-x01/Cici/commit/2e0f6ab) (self-directed-learning agent).
+
 ### 2026-04-23
 
 - **Cici handoff — self-directed Claude agent prompt:** [handoffs/cici-claude-agent-self-directed-learning-prompt.md](handoffs/cici-claude-agent-self-directed-learning-prompt.md) — autonomy doctrine, discover→develop loop, pilot/outreach support, pairs with [handoffs/cici-claude-agent-grace-mar-discipline-prompt.md](handoffs/cici-claude-agent-grace-mar-discipline-prompt.md).
