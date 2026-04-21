@@ -339,6 +339,8 @@ _Auto-generated from `-transcript.md` + `strategy-page` blocks in this thread + 
 
 ### Recent transcript material
 
+## 2026-04-20
+- YT | cold: **Glenn Diesen** — **host** / interviewer; **same** **episode** **as** **verbatim** **above** (Baltic/Finland, Article 5, Trump, Iran↔Ukraine spillover) // hook: **paired** **`expert_id`** **per** **commentator-threads** **two-speaker** **rule** | https://www.youtube.com/watch?v=TBD-diesen-ritter-finland-baltic-2026-04 | verify:paired-host+pin-canonical-URL | thread:diesen | grep:Diesen+Greater-Eurasia+Ritter
 ## 2026-04-18
 - YT | cold: **Glenn Diesen** — **host** / interviewer; **same** **episode** **as** **verbatim** **above** (Baltic/Finland, Article 5, Trump, Iran↔Ukraine spillover) // hook: **paired** **`expert_id`** **per** **commentator-threads** **two-speaker** **rule** | https://www.youtube.com/watch?v=TBD-diesen-ritter-finland-baltic-2026-04 | verify:paired-host+pin-canonical-URL | thread:diesen | grep:Diesen+Greater-Eurasia+Ritter
 ## 2026-04-17
