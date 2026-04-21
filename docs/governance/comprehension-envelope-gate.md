@@ -20,13 +20,33 @@
 
 ---
 
+## Authority map integration
+
+Surface keys in [`config/authority-map.json`](../../config/authority-map.json) resolve to an **authority class** (write policy). Recommended **`impact_tier`**, **`envelope_class`**, and Reflection Gate label for staging are **derived** from that class in one place: [`scripts/authority_comprehension_defaults.py`](../../scripts/authority_comprehension_defaults.py). Run `python3 scripts/check-authority.py --surface <key> --json` to see recommendations for a named surface. Full table: [docs/authority-map.md](../authority-map.md) § Relationship to Comprehension Envelope and Reflection Gates.
+
+---
+
 ## Gate wiring (operational surface)
 
 The first place these fields appear in day-to-day use is **`users/<id>/recursion-gate.md`** (markdown-first; YAML keys inside each `### CANDIDATE-…` fenced block).
 
 - **`impact_tier`** and **`envelope_class`** are optional on any candidate; when present, reviewers and tooling can rely on them.
 - **Do not** overload **`risk_tier`** in YAML to mean `low`/`medium`/`high` — that collides with machine traffic tiers. Use **`impact_tier`** for that ladder.
-- **Rollout:** start with documentation + examples; optional **`python3 scripts/validate_gate_comprehension_envelope.py`** (presence check for `envelope_class: required` only). Reflection Gates, observability, and stricter enforcement are **follow-on** layers after usage stabilizes.
+- **Rollout:** start with documentation + examples; optional **`python3 scripts/validate_gate_comprehension_envelope.py`** (presence + Reflection Gate advisory warnings). Observability-driven **Dynamic Gate** and stronger enforcement remain **follow-on**.
+
+---
+
+## Reflection Gates integration (v1)
+
+**Reflection Gates** are the **process layer** that scales reviewer attention using **`impact_tier`** and **`envelope_class`** — without reusing traffic **`risk_tier`**. They apply only at the **promotion boundary** (companion review before approve).
+
+| Label | `impact_tier` | Role in v1 |
+|-------|----------------|------------|
+| *(none)* | `low` or unset | No extra gate label; fast path |
+| **Light Gate** | `medium` | Comprehension Envelope **recommended** (`envelope_class: optional`); advisory only |
+| **Heavy Gate** | `high` or `boundary` | Envelope **required**; **Blast radius** and **Human override applied** bullets must be filled honestly; advisory-first validator warnings |
+
+**Initial rollout:** advisory-first. **Dynamic Gate** (observability escalation) is **deferred**. Live copy: [users/grace-mar/recursion-gate.md](../../users/grace-mar/recursion-gate.md) § Reflection Gates (v1).
 
 ---
 

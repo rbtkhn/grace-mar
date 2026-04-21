@@ -8,7 +8,7 @@ Companion-Self template · Who may change what
 
 Not every surface should be writable by the same runtime. The template distinguishes **read-only**, **draftable**, **review-required**, **human-only**, and **ephemeral-only** behavior so operators and agents do not silently widen write authority “because it was faster.”
 
-Machine-readable defaults: [`config/authority-map.json`](../config/authority-map.json) (schema [`schema-registry/authority-map.v1.json`](../schema-registry/authority-map.v1.json)). Lookup helper: `scripts/check-authority.py --surface <key>`.
+Machine-readable defaults: [`config/authority-map.json`](../config/authority-map.json) (schema [`schema-registry/authority-map.v1.json`](../schema-registry/authority-map.v1.json)). Lookup helper: `scripts/check-authority.py --surface <key>` (authority class only). Structured recommendations: `python3 scripts/check-authority.py --surface <key> --json` (includes Comprehension Envelope + Reflection Gate hints; see below).
 
 ---
 
@@ -53,6 +53,24 @@ The config file uses a **single flat map** for simplicity. Keys mix **different 
 ## Relationship to change review
 
 Transition into governed state must respect the authority map and the gated pipeline ([change-review.md](change-review.md), [change-review-lifecycle.md](change-review-lifecycle.md)). Proposal generation and review routing should be **authority-aware**: draftable and review_required are not merge authority.
+
+---
+
+## Relationship to Comprehension Envelope and Reflection Gates
+
+Write **authority class** (per surface key) is the **policy** layer: who may change what. **Comprehension Envelope** and **Reflection Gates** (see [governance/comprehension-envelope-gate.md](governance/comprehension-envelope-gate.md) and [users/grace-mar/recursion-gate.md](users/grace-mar/recursion-gate.md)) are the **staging** layer: how much deliberate review and proof accompany a candidate before promotion.
+
+**Single derivation (SSOT in code):** [`scripts/authority_comprehension_defaults.py`](../scripts/authority_comprehension_defaults.py) maps each **authority class** to recommended **`impact_tier`**, **`envelope_class`**, and **`recommended_reflection_gate`** (aligned with `none` \| `optional` \| `required` and Light/Heavy gate labels). **Companion may override** these in candidate YAML when context demands it.
+
+| Authority class | Typical recommended `impact_tier` | `envelope_class` | Reflection Gate label |
+|-----------------|-----------------------------------|------------------|-------------------------|
+| **human_only** | `boundary` | `required` | Heavy |
+| **review_required** | `medium` | `optional` | Light |
+| **draftable** | `low` | `none` | *(none)* |
+| **read_only** | `low` | `none` | *(none)* |
+| **ephemeral_only** | `low` | `none` | *(none)* |
+
+**Lookup:** `python3 scripts/check-authority.py --surface <key> --json` prints `authority_class` plus the recommended fields and a short rationale. This does **not** change merge authority or automate merges; it advises staging only.
 
 ---
 

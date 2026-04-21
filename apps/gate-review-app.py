@@ -118,6 +118,18 @@ def index():
         risk_tier = html.escape(r.get("risk_tier", ""))
         label = html.escape(r.get("territory_label", ""))
         pill_slug = "pol" if r.get("territory") == TERRITORY_WORK_POLITICS else "companion"
+        refl_gate = (r.get("reflection_gate") or "none").strip()
+        refl_html = ""
+        if refl_gate == "light":
+            refl_html = (
+                '<span class="pill pill-refl-light" title="Reflection Gate (impact_tier medium)">'
+                "Light Gate</span>"
+            )
+        elif refl_gate == "heavy":
+            refl_html = (
+                '<span class="pill pill-refl-heavy" title="Reflection Gate (impact_tier high/boundary)">'
+                "Heavy Gate</span>"
+            )
         age = _age_label(r.get("age_days"))
         channel = html.escape(str(norm["channel_key"]))
         ts = html.escape(str(norm["timestamp"]))
@@ -162,6 +174,7 @@ def index():
             f'<header><span class="id">{cid}</span>'
             f'<span class="pill pill-{pill_slug}">{label}</span>'
             f'<span class="pill pill-risk-tier">{risk_tier}</span>'
+            f"{refl_html}"
             f'<span class="age">{age}</span></header>'
             f'<div class="pill-row">'
             f'<span class="pill pill-meta" title="proposal_class">{pc}</span>'
@@ -215,6 +228,9 @@ def index():
     .pill-meta {{ background: rgba(255,255,255,.08); color: var(--muted); text-transform: none; font-size: 0.65rem; }}
     .pill-warn {{ background: rgba(221,142,145,0.25); color: var(--danger); }}
     .pill-ok {{ background: rgba(125,192,154,0.15); color: var(--good); }}
+    .pill-risk-tier {{ background: rgba(200,200,220,.12); color: #c8d0e0; text-transform: none; }}
+    .pill-refl-light {{ background: rgba(126,184,218,.18); color: #9ecbe8; text-transform: none; }}
+    .pill-refl-heavy {{ background: rgba(193,127,89,.22); color: #e8b89a; text-transform: none; }}
     .age {{ margin-left: auto; color: var(--muted); font-size: 0.8rem; }}
     .summary {{ margin: 0; }}
     .hint {{ margin: 0.6rem 0 0; color: var(--muted); font-size: 0.82rem; }}

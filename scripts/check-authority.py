@@ -3,6 +3,11 @@
 Look up authority class for a surface key in config/authority-map.json.
 
 Optional: validate config against schema-registry/authority-map.v1.json when jsonschema is installed.
+
+With --json: print one JSON object including recommended Comprehension Envelope + Reflection Gate
+fields derived from authority class (see scripts/authority_comprehension_defaults.py).
+
+Without --json: print only the authority class string (legacy behavior).
 """
 
 from __future__ import annotations
@@ -16,6 +21,11 @@ try:
     import jsonschema
 except ImportError:
     jsonschema = None  # type: ignore
+
+try:
+    from authority_comprehension_defaults import recommend_for_authority_class
+except ImportError:
+    from scripts.authority_comprehension_defaults import recommend_for_authority_class
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -36,6 +46,11 @@ def main() -> int:
         action="store_true",
         help="Skip JSON Schema validation of config when jsonschema is available",
     )
+    parser.add_argument(
+        "--json",
+        action="store_true",
+        help="Print JSON with authority_class and recommended envelope/gate staging fields",
+    )
     args = parser.parse_args()
 
     cfg_path = Path(args.config) if args.config else DEFAULT_CONFIG
@@ -54,6 +69,17 @@ def main() -> int:
     if not level:
         print("unknown_surface", file=sys.stderr)
         return 1
+
+    if args.json:
+        rec = recommend_for_authority_class(level)
+        out = {
+            "surface": args.surface,
+            "authority_class": level,
+            **rec,
+        }
+        print(json.dumps(out, indent=2))
+        return 0
+
     print(level)
     return 0
 

@@ -4,5 +4,5 @@ Additive notes that sit beside [identity-fork-protocol.md](../identity-fork-prot
 
 | Doc | Role |
 |-----|------|
-| [comprehension-envelope-gate.md](comprehension-envelope-gate.md) | Vocabulary: `impact_tier`, `envelope_class`, vs traffic `risk_tier`; gate wiring |
+| [comprehension-envelope-gate.md](comprehension-envelope-gate.md) | Vocabulary: `impact_tier`, `envelope_class`, vs traffic `risk_tier`; gate wiring; Reflection Gates (v1); link to [authority-map](../authority-map.md) + `check-authority.py --json` |
 | [comprehension-envelope-insights-to-implementation.md](comprehension-envelope-insights-to-implementation.md) | Insight table, design note, six-PR sequence, reject list |

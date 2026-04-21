@@ -118,6 +118,16 @@ def _extract_scalar(yaml_body: str, key: str) -> str:
     return _strip_quotes(m.group(1))
 
 
+def _reflection_gate_label(impact_tier_raw: str) -> str:
+    """Reflection Gates v1 label from author impact_tier: none | light | heavy."""
+    s = (impact_tier_raw or "").strip().lower()
+    if s == "medium":
+        return "light"
+    if s in ("high", "boundary"):
+        return "heavy"
+    return "none"
+
+
 def _extract_block(yaml_body: str, key: str) -> str:
     lines = yaml_body.splitlines()
     out: list[str] = []
@@ -500,10 +510,14 @@ def parse_review_candidates(user_id: str = DEFAULT_USER, *, repo_root: Path | No
                 for row in events
             ],
             "advisory_flagged": _has_advisory_flagged(events),
+            "impact_tier": _extract_scalar(yaml_body, "impact_tier"),
+            "envelope_class": _extract_scalar(yaml_body, "envelope_class"),
+            "reflection_ack": _extract_scalar(yaml_body, "reflection_ack"),
         }
         row["duplicate_hints"] = _duplicate_hints(row, self_text)
         row["ready_for_quick_merge"] = _ready_for_quick_merge(row) and not row["duplicate_hints"]
         row["risk_tier"] = _risk_tier(row)
+        row["reflection_gate"] = _reflection_gate_label(row.get("impact_tier") or "")
         row["boundary_review"] = _compute_boundary_review(row)
         row["cmc_source_provenance"] = _cmc_source_provenance(row)
         _try_persist_boundary_classification(user_id, row)

@@ -38,6 +38,8 @@ Optional YAML keys on each `### CANDIDATE-…` fenced block. **Orthogonal** to t
 
 **Intended pairing:** `low` → `none`; `medium` → `optional`; `high` or `boundary` → `required`. Full vocabulary: [comprehension-envelope-gate.md](../../docs/governance/comprehension-envelope-gate.md).
 
+**Authority map (advisory):** When you can name a [surface key](../../docs/authority-map.md) for the change (e.g. `memory_governance`, `prepared_context`), run `python3 scripts/check-authority.py --surface <key> --json` for **recommended** `impact_tier`, `envelope_class`, and Reflection Gate label derived from write authority — not a substitute for judgment; companion may override in YAML.
+
 **Optional check:** `python3 scripts/validate_gate_comprehension_envelope.py -u grace-mar` (warns if `envelope_class: required` but envelope missing; `--strict` exits non-zero).
 
 ### Comprehension Envelope template
@@ -88,6 +90,33 @@ status: pending
 - Blast radius: Single IX-A bullet; no prompt or abstention rule change.
 - Assumptions / fragile points: Source may need refresh if the situation moves; companion may narrow wording on approve.
 - Human override applied: none.
+```
+
+---
+
+## Reflection Gates (v1)
+
+**Reflection Gates** are a **process-control label** at the **promotion boundary** only. They scale how much deliberate review to apply; they do **not** change runtime generation or bot staging speed.
+
+**Triggers use `impact_tier`**, not traffic **`risk_tier`**. Traffic tiers (`quick_merge_eligible` / `review_batch` / `manual_escalate`) remain the machine UX lane from [recursion-gate-three-tier.md](../../docs/recursion-gate-three-tier.md).
+
+| Gate | When (`impact_tier`) | Comprehension Envelope | v1 enforcement |
+|------|----------------------|------------------------|----------------|
+| *(none)* | `low` or unset | `envelope_class: none` typical | Fast path; no extra friction |
+| **Light Gate** | `medium` | `envelope_class: optional` (recommended) | **Advisory only** — no hard block if omitted early on; ~30s scan of purpose + blast radius (summary or envelope) |
+| **Heavy Gate** | `high` or `boundary` | `envelope_class: required` | Envelope required; **Blast radius** and **Human override applied** bullets must be honestly filled (`unknown` ok). **Advisory-first** warnings from `validate_gate_comprehension_envelope.py`; optional `--strict` only where documented |
+
+**Dynamic Gate** (observability-driven escalation) is **not** in v1 — reserved for a later PR.
+
+**Optional acknowledgment (Heavy):** You may set `reflection_ack: heavy` on the candidate YAML when the companion has done an explicit Heavy Gate read (still one human approver in v1).
+
+**Suggested YAML (Heavy example)**
+
+```yaml
+impact_tier: boundary
+envelope_class: required
+reflection_ack: heavy
+# … status, summary, mind_category, profile_target, suggested_entry, …
 ```
 
 ---
