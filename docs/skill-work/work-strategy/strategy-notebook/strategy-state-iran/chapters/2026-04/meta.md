@@ -10,4 +10,6 @@
 
 **April 2026 — FM X corpus:** [Seyed Abbas Araghchi](https://x.com/araghchi) — **12 posts** **2026-04-02 → 2026-04-17** (full table, status URLs, engagement): [raw-input/2026-04-20/x-araghchi-april-2026-posts-bundle.md](../../raw-input/2026-04-20/x-araghchi-april-2026-posts-bundle.md). Voice: [`experts/araghchi/`](../../experts/araghchi/). **Grep:** `Araghchi+April+2026+bundle`.
 
+**April 2026 — President X corpus:** [Masoud Pezeshkian](https://x.com/drpezeshkian) — **29** table rows **2026-04-03 → 2026-04-20** (fa/en/ar bundle): [raw-input/2026-04-20/x-drpezeshkian-april-2026-posts-bundle.md](../../raw-input/2026-04-20/x-drpezeshkian-april-2026-posts-bundle.md). Voice: [`experts/drpezeshkian/`](../../experts/drpezeshkian/). **Grep:** `Pezeshkian+drpezeshkian+bundle`.
+
 **Cross-weave rule:** Iran-lane **`days.md`** entries are **seams** into main [`days.md`](../../../chapters/2026-04/days.md), not replacements for **`thread:`** expert Judgment or wire primaries.

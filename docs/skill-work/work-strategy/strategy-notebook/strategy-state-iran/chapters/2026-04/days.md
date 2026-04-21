@@ -46,3 +46,21 @@ WORK only; not Record.
 - Profile: [https://x.com/araghchi](https://x.com/araghchi)
 
 **Open:** Image-heavy rows need **visual** / **official** readout for full cite; refresh scrape if later April posts appear.
+
+---
+
+### IRI President — @drpezeshkian — April 2026 X corpus (table ingest 2026-04-20)
+
+**Span:** 2026-04-03 — 2026-04-20 — **29** rows (fa / en / ar + quote chains; CSV export — **Link** column **View post** without status IDs until pinned).
+
+**Signal (compressed):** **04-20** dialogue requires **honoring commitments**; **U.S.** signals read as **surrender** demand. **04-13** **@Pontifex** (**Leo XIV**) EN + **fa** — **ROME** legitimacy seam (see [rome-persia-legitimacy-signal-check.md](../../../rome-persia-legitimacy-signal-check.md)). **04-11–12** **Pakistan** delegation + **cheer to Ghalibaf** negotiators. **04-09** **Lebanon** “**hands on the trigger**” trilingual stack. **04-03** **Strategic Council** assassination frame vs **speech to American people**; **Aliyev**; **Finnish** “Stone Age” jurist frame. **UNGA** Golden Rule **1/2–2/2** and **Minab** on **04-16**.
+
+**Judgment:** **Presidential** narrative lane — **strong** for **intent / moral register** and **multi-audience** choreography; **seam** with **FM @araghchi**, **`thread:mercouris`**, **ROME** docs — **not** merged without object tags.
+
+**Links**
+
+- Table: [raw-input/2026-04-20/x-drpezeshkian-april-2026-posts-bundle.md](../../raw-input/2026-04-20/x-drpezeshkian-april-2026-posts-bundle.md)
+- Voice: [experts/drpezeshkian/thread.md](../../experts/drpezeshkian/thread.md) (`strategy-page` **id** `iran-drpezeshkian-x-april-2026-corpus`)
+- Profile: [https://x.com/drpezeshkian](https://x.com/drpezeshkian)
+
+**Open:** Pin **status URLs** for cite-grade rows; verify **assassination** / **Lebanon** kinetic claims on **wire** before **Links**-grade merge with expert Judgment.

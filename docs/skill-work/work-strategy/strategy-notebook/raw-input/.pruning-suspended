@@ -1,0 +1,7 @@
+# Raw-input auto-prune policy (grace-mar)
+#
+# Pruning is SUSPENDED by default: `python3 scripts/prune_strategy_raw_input.py --apply`
+# exits without deleting unless you pass `--override` (or remove this file).
+# Operator initiates pruning manually when ready.
+#
+# Dry-run (`--dry-run` or no flag) is always allowed for previews.

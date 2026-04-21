@@ -5,11 +5,16 @@ Scans ``docs/skill-work/work-strategy/strategy-notebook/raw-input/`` for
 subdirectories named ``YYYY-MM-DD`` and deletes those strictly before the
 cutoff date (local timezone).
 
+If ``.pruning-suspended`` exists under the raw-input root, ``--apply`` refuses
+unless ``--override`` is passed (operator-initiated prune). Dry-run is
+always allowed.
+
 WORK-only; not Record.
 
 Usage:
   python3 scripts/prune_strategy_raw_input.py --dry-run
   python3 scripts/prune_strategy_raw_input.py --apply
+  python3 scripts/prune_strategy_raw_input.py --apply --override   # when suspended
 """
 
 from __future__ import annotations
@@ -54,6 +59,11 @@ def _parse_args() -> argparse.Namespace:
         action="store_true",
         help="Actually remove old date directories",
     )
+    p.add_argument(
+        "--override",
+        action="store_true",
+        help="Required for --apply when raw-input/.pruning-suspended exists",
+    )
     return p.parse_args()
 
 
@@ -67,6 +77,16 @@ def main() -> int:
     root: Path = args.root.resolve()
     if not root.is_dir():
         print(f"raw-input root missing or not a directory: {root}")
+        return 1
+
+    suspend_marker = root / ".pruning-suspended"
+    if args.apply and suspend_marker.is_file() and not args.override:
+        print(
+            "Raw-input pruning is suspended (marker file present):\n"
+            f"  {suspend_marker.relative_to(REPO_ROOT)}\n"
+            "Pass --override with --apply to delete old folders, or remove the marker file.\n"
+            "Dry-run is unchanged; run without --apply to preview."
+        )
         return 1
 
     today = date.today()

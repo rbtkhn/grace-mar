@@ -8,7 +8,7 @@
 |--------|------|
 | **daily-strategy-inbox.md** | Paste-ready **stubs** + grep registry; optional short excerpts only |
 | **experts/`<id>`/transcript.md** | 7-day rolling **triage** corpus from inbox `thread:` blocks (word caps per architecture) |
-| **`raw-input/` (this tree)** | **Unabridged** text and bundled inputs for **7 calendar days**, then **deleted** from this folder by prune (git history may still hold copies if committed) |
+| **`raw-input/` (this tree)** | **Unabridged** text and bundled inputs; **pruning is operator-initiated only** (see § Pruning). Nothing in CI auto-deletes this tree. |
 
 **End-of-day strategy session (notebook compose):** Default **sole** window for writing **`strategy-page`** blocks + `days.md` judgment is the **once-per-day** session you open with **`strategy page`** or **`strategy page compose`** (operator phrases — see [STRATEGY-NOTEBOOK-ARCHITECTURE.md](../STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *End-of-day strategy session*). **Primary bulk evidence:** **this folder’s** dated files plus inbox stubs. The operator token **`weave`** is **deprecated** for that compose step.
 
@@ -64,7 +64,9 @@ Idempotent: unchanged files are skipped (content hash). See [`scripts/populate_s
 
 ## Pruning
 
-Retention matches expert **`transcript.md`**: folders named **`YYYY-MM-DD`** are **removed** when that date is **not** strictly after **`today − 7`** local calendar days (same rule as `scripts/strategy_expert_transcript.py` — the oldest kept folder is **today − 6** through **today** when `days=7`).
+**Policy:** There is **no** scheduled or CI-driven prune in this repo — **you** run the script when you want to reclaim disk space. A marker file **[`.pruning-suspended`](.pruning-suspended)** is committed: **`python3 scripts/prune_strategy_raw_input.py --apply`** **refuses** to delete until you either pass **`--override`** with **`--apply`** or **remove** the marker file. **`--dry-run`** (or default preview mode) **always** works so you can see what would be removed.
+
+Retention (when you do prune) matches expert **`transcript.md`**: folders named **`YYYY-MM-DD`** are **removed** when that date is **`<= today − N`** (default **`N = 7`** via **`--days`**) — same calendar window as `scripts/strategy_expert_transcript.py`.
 
 From repo root:
 
@@ -72,8 +74,8 @@ From repo root:
 # Preview what would be deleted
 python3 scripts/prune_strategy_raw_input.py --dry-run
 
-# Apply deletion
-python3 scripts/prune_strategy_raw_input.py --apply
+# Apply deletion (only when not suspended, or with override)
+python3 scripts/prune_strategy_raw_input.py --apply --override
 ```
 
 Default root: `docs/skill-work/work-strategy/strategy-notebook/raw-input`. Override with `--root <path>` if needed.
