@@ -14,6 +14,7 @@
 |--------|------|------|
 | Proposal | `runtime/runtime-worker/proposals/<run_id>.md` | Operator paste / review; gitignored |
 | Trace | `runtime/runtime-worker/traces/index.jsonl` | Append-only audit line per run; gitignored |
+| Execution receipt | `runtime/runtime-worker/receipts/<run_id>.json` | One JSON summary per run; links trace + proposal; gitignored; [doc](runtime/execution-receipts.md) |
 
 **Default CI / no-secret posture:** `--dry-run` skips the LLM and still writes proposal + trace (file list and excerpts). No API key required.
 
@@ -30,7 +31,7 @@
 | `inbox-day` | full strategy-notebook | 80 / 80k | inbox Accumulator date check |
 | `quick-scan` | full strategy-notebook | 25 / 24k | none |
 
-**Schema:** `schema-registry/runtime-worker-trace.v1.json`
+**Schemas:** `schema-registry/runtime-worker-trace.v1.json` (trace line) · `schema-registry/execution-receipt.v1.json` (per-run receipt)
 
 **Worker routing (optional):** `--task-type` records shared vs routed worker entrypoints under `provenance.worker_routing` on the trace line — see [worker-routing.md](runtime/worker-routing.md).
 

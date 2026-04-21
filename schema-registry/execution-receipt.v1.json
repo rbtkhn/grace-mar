@@ -1,0 +1,95 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schema-registry/execution-receipt.v1.json",
+  "title": "Grace-Mar Execution Receipt (non-canonical runtime artifact)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "run_id",
+    "timestamp",
+    "task_mode",
+    "scope",
+    "worker_route",
+    "epistemic",
+    "artifacts",
+    "outcome",
+    "non_canonical"
+  ],
+  "properties": {
+    "run_id": { "type": "string", "minLength": 1 },
+    "timestamp": { "type": "string", "minLength": 1 },
+
+    "task_mode": { "type": "string", "minLength": 1 },
+    "task_subtype": { "type": ["string", "null"] },
+
+    "scope": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["root", "max_files", "max_chars"],
+      "properties": {
+        "root": { "type": "string", "minLength": 1 },
+        "max_files": { "type": "integer", "minimum": 1 },
+        "max_chars": { "type": "integer", "minimum": 1 }
+      }
+    },
+
+    "worker_route": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["resolved", "shared_workers", "routed_worker"],
+      "properties": {
+        "resolved": { "type": "boolean" },
+        "task_type": { "type": ["string", "null"] },
+        "shared_workers": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "routed_worker": { "type": ["string", "null"] },
+        "entrypoints": {
+          "type": "object",
+          "additionalProperties": { "type": "string" }
+        }
+      }
+    },
+
+    "epistemic": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["decision", "abstained"],
+      "properties": {
+        "decision": {
+          "type": "string",
+          "enum": ["allow", "allow_with_review", "hold", "block", "abstain"]
+        },
+        "abstained": { "type": "boolean" },
+        "evidence_state": { "type": ["string", "null"] },
+        "notes": { "type": ["string", "null"] }
+      }
+    },
+
+    "artifacts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["trace_path", "proposal_path"],
+      "properties": {
+        "trace_path": { "type": ["string", "null"] },
+        "proposal_path": { "type": ["string", "null"] }
+      }
+    },
+
+    "outcome": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status"],
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": ["ok", "error", "partial"]
+        },
+        "error": { "type": ["string", "null"] }
+      }
+    },
+
+    "non_canonical": { "type": "boolean", "const": true }
+  }
+}

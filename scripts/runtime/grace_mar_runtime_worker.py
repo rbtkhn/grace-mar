@@ -23,6 +23,7 @@ from dataclasses import dataclass
 from datetime import datetime, timezone
 from pathlib import Path
 from types import SimpleNamespace
+from typing import Any
 
 REPO_ROOT = Path(__file__).resolve().parent.parent.parent
 
@@ -222,6 +223,85 @@ def _run_compose(repo_root: Path, script_rel: str, scope_path: Path) -> tuple[st
     return out[:12_000], proc.returncode
 
 
+def _repo_rel_or_abs(path: Path, repo_root: Path) -> str:
+    pr = path.resolve()
+    rr = repo_root.resolve()
+    try:
+        return str(pr.relative_to(rr))
+    except ValueError:
+        return str(pr)
+
+
+def build_execution_receipt(
+    *,
+    run_id: str,
+    timestamp: str,
+    task_mode: str,
+    task_subtype: str | None,
+    scope_root: str,
+    max_files: int,
+    max_chars: int,
+    routing_payload: dict[str, Any] | None,
+    trace_path: str,
+    proposal_path: str,
+    status: str,
+    error: str | None,
+) -> dict[str, Any]:
+    """Projected non-canonical summary for one worker run (schema: execution-receipt.v1)."""
+    if routing_payload:
+        worker_route: dict[str, Any] = {
+            "resolved": True,
+            "task_type": routing_payload.get("task_type"),
+            "shared_workers": list(routing_payload.get("shared_workers") or []),
+            "routed_worker": routing_payload.get("routed_worker"),
+            "entrypoints": dict(routing_payload.get("entrypoints") or {}),
+        }
+    else:
+        worker_route = {
+            "resolved": False,
+            "task_type": None,
+            "shared_workers": [],
+            "routed_worker": None,
+            "entrypoints": {},
+        }
+    return {
+        "run_id": run_id,
+        "timestamp": timestamp,
+        "task_mode": task_mode,
+        "task_subtype": task_subtype,
+        "scope": {
+            "root": scope_root,
+            "max_files": max_files,
+            "max_chars": max_chars,
+        },
+        "worker_route": worker_route,
+        "epistemic": {
+            "decision": "allow_with_review" if status == "ok" else "hold",
+            "abstained": False,
+            "evidence_state": None,
+            "notes": None,
+        },
+        "artifacts": {
+            "trace_path": trace_path,
+            "proposal_path": proposal_path,
+        },
+        "outcome": {
+            "status": status,
+            "error": error,
+        },
+        "non_canonical": True,
+    }
+
+
+def write_execution_receipt(worker_home: Path, repo_root: Path, run_id: str, receipt: dict[str, Any]) -> Path:
+    receipts_dir = worker_home / "receipts"
+    receipts_dir.mkdir(parents=True, exist_ok=True)
+    out = receipts_dir / f"{run_id}.json"
+    _ensure_worker_writable(out, repo_root)
+    out.write_text(json.dumps(receipt, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    return out
+
+
 def task_inspect_work_area(
     *,
     repo_root: Path,
@@ -337,10 +417,12 @@ def task_inspect_work_area(
     if overlay_emphasis:
         provenance["overlay_emphasis"] = dict(overlay_emphasis)
 
+    routing_payload: dict[str, Any] | None = None
     if task_type:
         try:
             rr = resolve_routing(task_type, repo_root)
-            provenance["worker_routing"] = routing_receipt_payload(run_id=run_id, result=rr)
+            routing_payload = routing_receipt_payload(run_id=run_id, result=rr)
+            provenance["worker_routing"] = routing_payload
             provenance["runtime_receipt"] = {
                 "overlay": overlay_name,
                 "overlay_defaults_applied": list(overlay_defaults_applied or []),
@@ -354,9 +436,11 @@ def task_inspect_work_area(
             print(f"error: worker routing failed: {e}", file=sys.stderr)
             return 2
 
+    ts_iso = datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
+    trace_status = "ok" if compose_exit == 0 or not compose_with else "partial"
     trace = {
         "run_id": run_id,
-        "timestamp": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
+        "timestamp": ts_iso,
         "task_mode": "inspect_work_area",
         "scope": scope_rel,
         "tools_used": tools_used,
@@ -373,15 +457,32 @@ def task_inspect_work_area(
             "worker_home": str(worker_home),
             "compose_exit": compose_exit if compose_with else None,
         },
-        "status": "ok" if compose_exit == 0 or not compose_with else "partial",
+        "status": trace_status,
         "provenance": provenance,
     }
 
     with trace_path.open("a", encoding="utf-8") as f:
         f.write(json.dumps(trace, ensure_ascii=False) + "\n")
 
+    receipt = build_execution_receipt(
+        run_id=run_id,
+        timestamp=ts_iso,
+        task_mode="inspect_work_area",
+        task_subtype=None,
+        scope_root=scope_rel,
+        max_files=max_files,
+        max_chars=max_chars,
+        routing_payload=routing_payload,
+        trace_path=_repo_rel_or_abs(trace_path, repo_root),
+        proposal_path=_repo_rel_or_abs(proposal_path, repo_root),
+        status=trace_status,
+        error=None,
+    )
+    receipt_path = write_execution_receipt(worker_home, repo_root, run_id, receipt)
+
     print(f"wrote proposal {proposal_path}", file=sys.stderr)
     print(f"appended trace {trace_path}", file=sys.stderr)
+    print(f"wrote receipt {receipt_path}", file=sys.stderr)
     return 0
 
 

@@ -6,6 +6,7 @@
 |------|------|
 | `proposals/` | Operator-facing markdown snapshots (gitignored `*.md`). |
 | `traces/index.jsonl` | Append-only audit lines per run (gitignored). |
+| `receipts/` | One execution receipt JSON per run (`<run_id>.json`); non-canonical summary; gitignored (see [execution-receipts](../../docs/runtime/execution-receipts.md)). |
 
 **Doctrine:** [docs/runtime-worker.md](../../docs/runtime-worker.md)
 
