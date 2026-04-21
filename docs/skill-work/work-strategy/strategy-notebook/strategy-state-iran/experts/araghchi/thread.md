@@ -10,6 +10,12 @@ WORK only; not Record.
 
 ## 2026-04
 
+### Month ledger (2026-04)
+
+- **Bundle ingest (2026-04-20 snapshot):** **12** English posts **2026-04-02 → 2026-04-17**; **no** rows **04-01** or **04-18–04-20** in fetch.
+- **Seam targets:** Islamabad MoU line, Hormuz commercial passage aligned with Lebanon ceasefire, Pakistan/Munir gratitude — **dual-register** with [`thread:marandi`](../../../experts/marandi/thread.md), [`thread:mercouris`](../../../experts/mercouris/thread.md), [`thread:davis`](../../../experts/davis/thread.md) and main [`chapters/2026-04/days.md`](../../../chapters/2026-04/days.md).
+- **Open:** Refresh advanced search if late-April FM posts appear; **image** rows (**SNSC**, photos) need **visual** readout for full cite.
+
 **April 2026 on @araghchi (English X)** — twelve standalone posts **2026-04-02 → 2026-04-17** (GMT times in bundle; **no** thread chains in scrape). Arc in brief: **IHL / civilian infrastructure** and **Bushehr** framing early in the month; **SNSC** image post **04-07**; **ceasefire terms** and **ball in Washington** **04-08**; **Lebanon / Netanyahu trial** hook **04-09**; **Islamabad MoU** failure with **U.S. maximalism + blockade** **04-12**; **Munir** welcome **04-15**; **Hormuz open for commercial vessels** aligned with **Lebanon ceasefire** + **PMO coordinated route** **04-17** — same object chain the main notebook already indexes against **Davis** packaging and **Marandi** three-condition Hormuz gloss (**seam**, not merged voice).
 
 Embedded page for the corpus ingest:

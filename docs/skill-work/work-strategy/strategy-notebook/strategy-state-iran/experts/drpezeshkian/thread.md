@@ -10,6 +10,12 @@ WORK only; not Record.
 
 ## 2026-04
 
+### Month ledger (2026-04)
+
+- **Bundle ingest (2026-04-20 snapshot):** **29** table rows **2026-04-03 → 2026-04-20** (mixed **fa** / **en** / **ar** + quote chains).
+- **Seam targets:** Lebanon “trigger” stack, Islamabad delegation / Ghalibaf negotiator cheer, **ROME** (**@Pontifex**), UNGA Golden Rule / Minab — **dual-register** with **@araghchi** FM lane and main [`chapters/2026-04/days.md`](../../../chapters/2026-04/days.md); see [rome-persia-legitimacy-signal-check.md](../../../rome-persia-legitimacy-signal-check.md).
+- **Open:** Pin **status URLs** for cite-grade rows; verify kinetic / assassination claims on **wire** before Links-grade merge.
+
 **April 2026 @drpezeshkian** — twenty-nine table rows **2026-04-03 → 2026-04-20** (mixed **fa** / **en** / **ar**, duplicate timestamps for quote chains). Highlights: **04-03** Stone Age / war-crime frame to **Finnish** counterpart; **Strategic Council** assassination / wife martyrdom vs **address to American people**; **Aliyev** call. **04-07–08** mass **#جان_فدا** / **ceasefire** as fruit of **Khamenei** sacrifice + **#باهم_بودنمان_پیروزی_است**. **04-09** **Lebanon** trilingual **“hands on the trigger”** line. **04-11** **Pakistan** delegation + **industry** visit. **04-12** **U.S.** should drop **hegemony**, respect **Iranian rights**; **cheer to Ghalibaf** negotiators. **04-13** **Pope Leo XIV** English + **fa** — **ROME** plane (see **rome-persia** signal check). **04-14** **Spain / China / Russia / Türkiye / Italy / Egypt** vs **Zionist** warmongering. **04-16** **UNGA Golden Rule** 1/2–2/2 + **Minab** children / scientists thread. **04-19** **Fatimiyya / Daughter’s Day** + **Minab** mourning. **04-20** **dialogue** requires **commitments**; **U.S.** seeks **surrender**, **Iranians** won’t submit — seam vs **@araghchi** Hormuz/Islamabad same week.
 
 <!-- strategy-page:start id="iran-drpezeshkian-x-april-2026-corpus" date="2026-04-20" watch="" -->

@@ -4,12 +4,18 @@
 **Status:** `open`  
 **Main notebook mirror:** [chapters/2026-04/meta.md](../../../chapters/2026-04/meta.md) — full arc, expert pages, US–Iran kinetic track.
 
+## Shape (this chapter)
+
+- **Calendar index:** [`days.md`](days.md) — one row per April day → [`daily/`](daily/) consolidated pages (Signal / Judgment / Links / Open).
+- **Slice registry:** [april-2026-slice-registry.md](april-2026-slice-registry.md) — **date → bundle anchor** for **@araghchi**, **@drpezeshkian**, **@mb_ghalibaf** (SSOT tables under [`raw-input/2026-04-20/`](../../raw-input/2026-04-20/)).
+- **Cross-weave:** Iran-lane dailies are **seams** into main [`days.md`](../../../chapters/2026-04/days.md), not substitutes for **`thread:`** Judgment or wire primaries.
+
 ## April arc (Iran lane — one screen)
 
-**2026-04-20 — seed:** [Mohammad-Baqer Ghalibaf](https://x.com/mb_ghalibaf) X text (fa→EN), **Marandi repost** — **siege / ceasefire violation / no talks under threat / “new cards on the battlefield.”** Full verbatim and tier notes: [raw-input/2026-04-20/x-ghalibaf-marandi-repost-siege-battlefield.md](../../raw-input/2026-04-20/x-ghalibaf-marandi-repost-siege-battlefield.md). Voice folder: [`experts/mb_ghalibaf/`](../../experts/mb_ghalibaf/). Day block: [`days.md`](days.md) **`## 2026-04-20`**.
+**2026-04-20 — seed:** [Mohammad-Baqer Ghalibaf](https://x.com/mb_ghalibaf) X text (fa→EN), **Marandi repost** — **siege / ceasefire violation / no talks under threat / “new cards on the battlefield.”** Full verbatim: [raw-input/2026-04-20/x-ghalibaf-marandi-repost-siege-battlefield.md](../../raw-input/2026-04-20/x-ghalibaf-marandi-repost-siege-battlefield.md). **Consolidated day:** [daily/2026-04-20.md](daily/2026-04-20.md). Voice: [`experts/mb_ghalibaf/`](../../experts/mb_ghalibaf/).
 
-**April 2026 — FM X corpus:** [Seyed Abbas Araghchi](https://x.com/araghchi) — **12 posts** **2026-04-02 → 2026-04-17** (full table, status URLs, engagement): [raw-input/2026-04-20/x-araghchi-april-2026-posts-bundle.md](../../raw-input/2026-04-20/x-araghchi-april-2026-posts-bundle.md). Voice: [`experts/araghchi/`](../../experts/araghchi/). **Grep:** `Araghchi+April+2026+bundle`.
+**April 2026 — FM X corpus:** [Seyed Abbas Araghchi](https://x.com/araghchi) — **12 posts** **2026-04-02 → 2026-04-17** (table + status URLs): [x-araghchi-april-2026-posts-bundle.md](../../raw-input/2026-04-20/x-araghchi-april-2026-posts-bundle.md). Voice: [`experts/araghchi/`](../../experts/araghchi/). **Grep:** `Araghchi+April+2026+bundle`.
 
-**April 2026 — President X corpus:** [Masoud Pezeshkian](https://x.com/drpezeshkian) — **29** table rows **2026-04-03 → 2026-04-20** (fa/en/ar bundle): [raw-input/2026-04-20/x-drpezeshkian-april-2026-posts-bundle.md](../../raw-input/2026-04-20/x-drpezeshkian-april-2026-posts-bundle.md). Voice: [`experts/drpezeshkian/`](../../experts/drpezeshkian/). **Grep:** `Pezeshkian+drpezeshkian+bundle`.
+**April 2026 — President X corpus:** [Masoud Pezeshkian](https://x.com/drpezeshkian) — **29** rows **2026-04-03 → 2026-04-20**: [x-drpezeshkian-april-2026-posts-bundle.md](../../raw-input/2026-04-20/x-drpezeshkian-april-2026-posts-bundle.md). Voice: [`experts/drpezeshkian/`](../../experts/drpezeshkian/). **Grep:** `Pezeshkian+drpezeshkian+bundle`.
 
-**Cross-weave rule:** Iran-lane **`days.md`** entries are **seams** into main [`days.md`](../../../chapters/2026-04/days.md), not replacements for **`thread:`** expert Judgment or wire primaries.
+**Month ledger (workflow):** Under **`## 2026-04`** in each voice [`thread.md`](../../experts/araghchi/thread.md), record **one** short block per month — ingest span, seam objects, and **open** refresh hooks (see [strategy-state-iran README](../../README.md)). **Not** a daily ledger; **month-gate** accumulation.

@@ -12,6 +12,12 @@ Within this layer, each **`## YYYY-MM`** heading is a **month segment** (same co
 
 ## 2026-04
 
+### Month ledger (2026-04)
+
+- **Capture (2026-04-20 snapshot):** One filed **Ghalibaf** text (**fa→EN**), **Marandi repost** — **siege / ceasefire violation / no talks under threat / battlefield cards** hook.
+- **Seam targets:** **Islamabad coercion fork** vocabulary vs same-week **MFA** and **U.S.-side** lines — **dual-register** with [`thread:marandi`](../../../experts/marandi/thread.md) when Marandi speaks in his **own** voice; main [`chapters/2026-04/days.md`](../../../chapters/2026-04/days.md).
+- **Open:** **fa** primary + optional-pin **status URL**; pair **ceasefire** claims with **dated** wire before merge.
+
 **April opens** with a filed **X** capture (**2026-04-20**): Ghalibaf text (fa→EN via X) signal-boosted by **@s_m_marandi** — **siege + ceasefire-violation** framing, **rejection of talks under threat**, and **“new cards on the battlefield”** after a **~two-week** prep window. Treat as **elite coercion register** parallel to same-week Islamabad / Hormuz expert stack; **seam** to **`thread:marandi`** when Marandi speaks in his own voice, **not** automatic merge with this Majlis line.
 
 Optional embedded page for this day:

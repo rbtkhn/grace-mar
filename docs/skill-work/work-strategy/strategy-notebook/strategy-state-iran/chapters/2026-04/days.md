@@ -2,65 +2,47 @@
 
 WORK only; not Record.
 
-**Purpose:** Iran **institutional / elite** continuity for **April 2026**, parallel to the main notebook [`days.md`](../../../chapters/2026-04/days.md). **Compose:** default **end-of-day strategy session** or explicit operator instruction — same discipline as [STRATEGY-NOTEBOOK-ARCHITECTURE.md](../../../STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *End-of-day strategy session*.
+**Purpose:** Iran **institutional / elite** continuity for **April 2026**, parallel to the main notebook [`days.md`](../../../chapters/2026-04/days.md). **Per-day prose** lives under [`daily/`](daily/) (Signal / Judgment / Links / Open). This file is a **calendar index** for the full month.
 
-**Meta:** [meta.md](meta.md)
+**Compose:** default **end-of-day strategy session** or explicit operator instruction — same discipline as [STRATEGY-NOTEBOOK-ARCHITECTURE.md](../../../STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *End-of-day strategy session*.
 
----
-
-## 2026-04-20
-
-### Signal
-
-[Mohammad-Baqer Ghalibaf](https://x.com/mb_ghalibaf) — X text (machine **fa→EN** in operator capture), **signal-boosted by @s_m_marandi**: **Trump** accused of **siege** and **ceasefire violation**; negotiation table framed as **surrender** or **warmongering** pretext; **no negotiations under threat**; **~two weeks** preparation → **“new cards on the battlefield.”** Verbatim: [raw-input/2026-04-20/x-ghalibaf-marandi-repost-siege-battlefield.md](../../raw-input/2026-04-20/x-ghalibaf-marandi-repost-siege-battlefield.md).
-
-### Judgment
-
-**Majlis-speaker register** — valid for **Islamabad / coercion fork** vocabulary alongside Western expert threads, **not** interchangeable with **IRI FM** wires or **CENTCOM** field state. Marandi **repost** is **distribution**, not a second primary of Ghalibaf’s text.
-
-### Links
-
-- Profile anchor: [https://x.com/mb_ghalibaf](https://x.com/mb_ghalibaf)
-- Raw input: [x-ghalibaf-marandi-repost-siege-battlefield.md](../../raw-input/2026-04-20/x-ghalibaf-marandi-repost-siege-battlefield.md)
-- Voice thread page: [experts/mb_ghalibaf/thread.md](../../experts/mb_ghalibaf/thread.md) (`strategy-page` **id** `iran-ghalibaf-siege-battlefield-cards-2026-04-20`)
-
-### Open
-
-- **fa** primary + **optional-pin** per-post URL for cite-grade archive.
-- Pair **ceasefire / siege** claims against **dated** wire + **MFA** rows in main [`chapters/2026-04/days.md`](../../../chapters/2026-04/days.md) before merging into cross-expert **Judgment**.
+**Meta:** [meta.md](meta.md) · **Slice registry (date → bundle anchors):** [april-2026-slice-registry.md](april-2026-slice-registry.md)
 
 ---
 
-### IRI FM — @araghchi — April 2026 X corpus (table ingest 2026-04-20)
+## April 2026 — daily index
 
-**Span:** 2026-04-02 — 2026-04-17 — **12** standalone posts (GMT); advanced-search fetch; **no posts** in scrape for **04-01** or **04-18–04-20**.
+| Date | Consolidated daily | Notes |
+|------|-------------------|--------|
+| 2026-04-01 | [daily/2026-04-01.md](daily/2026-04-01.md) | No bundle rows (ingest gap) |
+| 2026-04-02 | [daily/2026-04-02.md](daily/2026-04-02.md) | @araghchi |
+| 2026-04-03 | [daily/2026-04-03.md](daily/2026-04-03.md) | @araghchi + @drpezeshkian |
+| 2026-04-04 | [daily/2026-04-04.md](daily/2026-04-04.md) | @araghchi + @drpezeshkian |
+| 2026-04-05 | [daily/2026-04-05.md](daily/2026-04-05.md) | No bundle rows |
+| 2026-04-06 | [daily/2026-04-06.md](daily/2026-04-06.md) | @araghchi |
+| 2026-04-07 | [daily/2026-04-07.md](daily/2026-04-07.md) | @araghchi + @drpezeshkian |
+| 2026-04-08 | [daily/2026-04-08.md](daily/2026-04-08.md) | @araghchi + @drpezeshkian |
+| 2026-04-09 | [daily/2026-04-09.md](daily/2026-04-09.md) | @araghchi + @drpezeshkian |
+| 2026-04-10 | [daily/2026-04-10.md](daily/2026-04-10.md) | @drpezeshkian |
+| 2026-04-11 | [daily/2026-04-11.md](daily/2026-04-11.md) | @drpezeshkian |
+| 2026-04-12 | [daily/2026-04-12.md](daily/2026-04-12.md) | @araghchi + @drpezeshkian |
+| 2026-04-13 | [daily/2026-04-13.md](daily/2026-04-13.md) | @drpezeshkian (ROME seam) |
+| 2026-04-14 | [daily/2026-04-14.md](daily/2026-04-14.md) | @drpezeshkian |
+| 2026-04-15 | [daily/2026-04-15.md](daily/2026-04-15.md) | @araghchi + @drpezeshkian |
+| 2026-04-16 | [daily/2026-04-16.md](daily/2026-04-16.md) | @drpezeshkian |
+| 2026-04-17 | [daily/2026-04-17.md](daily/2026-04-17.md) | @araghchi (Hormuz commercial) |
+| 2026-04-18 | [daily/2026-04-18.md](daily/2026-04-18.md) | No @araghchi rows in fetch |
+| 2026-04-19 | [daily/2026-04-19.md](daily/2026-04-19.md) | @drpezeshkian |
+| 2026-04-20 | [daily/2026-04-20.md](daily/2026-04-20.md) | @mb_ghalibaf + @drpezeshkian (ingest snapshot) |
+| 2026-04-21 | [daily/2026-04-21.md](daily/2026-04-21.md) | Calendar stub (post–04-20 ingest) |
+| 2026-04-22 | [daily/2026-04-22.md](daily/2026-04-22.md) | Calendar stub |
+| 2026-04-23 | [daily/2026-04-23.md](daily/2026-04-23.md) | Calendar stub |
+| 2026-04-24 | [daily/2026-04-24.md](daily/2026-04-24.md) | Calendar stub |
+| 2026-04-25 | [daily/2026-04-25.md](daily/2026-04-25.md) | Calendar stub |
+| 2026-04-26 | [daily/2026-04-26.md](daily/2026-04-26.md) | Calendar stub |
+| 2026-04-27 | [daily/2026-04-27.md](daily/2026-04-27.md) | Calendar stub |
+| 2026-04-28 | [daily/2026-04-28.md](daily/2026-04-28.md) | Calendar stub |
+| 2026-04-29 | [daily/2026-04-29.md](daily/2026-04-29.md) | Calendar stub |
+| 2026-04-30 | [daily/2026-04-30.md](daily/2026-04-30.md) | Calendar stub |
 
-**Signal (compressed):** Early month: **IHL / civilian infrastructure**, **MIT**, **Bushehr** vs **Zaporizhzhia** comparison, **WHO** quote on **health** targets. **04-07** SNSC **image** post. **04-08** **ceasefire terms** (cessation, **lift sanctions/blockade**, **return assets**) — **ball in Washington**. **04-09** **Lebanon** ceasefire / **Netanyahu** trial hook. **04-12** **Islamabad MoU** blocked by **U.S. maximalism** and **new blockade**. **04-15** **Munir** visit / **Pakistan** thanks. **04-17** **Hormuz** **commercial** passage **open** for **ceasefire remainder** on **PMO coordinated route**, **in line with Lebanon ceasefire**.
-
-**Judgment:** **IRI-primary** English lane for **Islamabad–Hormuz–Lebanon** week; **seam** with **`thread:davis`** (Araghchi packaging), **`thread:marandi`**, **`thread:mercouris`** — not merged without **tier** tags.
-
-**Links**
-
-- Table + status URLs + engagement: [raw-input/2026-04-20/x-araghchi-april-2026-posts-bundle.md](../../raw-input/2026-04-20/x-araghchi-april-2026-posts-bundle.md)
-- Voice: [experts/araghchi/thread.md](../../experts/araghchi/thread.md) (`strategy-page` **id** `iran-araghchi-x-april-2026-corpus`)
-- Profile: [https://x.com/araghchi](https://x.com/araghchi)
-
-**Open:** Image-heavy rows need **visual** / **official** readout for full cite; refresh scrape if later April posts appear.
-
----
-
-### IRI President — @drpezeshkian — April 2026 X corpus (table ingest 2026-04-20)
-
-**Span:** 2026-04-03 — 2026-04-20 — **29** rows (fa / en / ar + quote chains; CSV export — **Link** column **View post** without status IDs until pinned).
-
-**Signal (compressed):** **04-20** dialogue requires **honoring commitments**; **U.S.** signals read as **surrender** demand. **04-13** **@Pontifex** (**Leo XIV**) EN + **fa** — **ROME** legitimacy seam (see [rome-persia-legitimacy-signal-check.md](../../../rome-persia-legitimacy-signal-check.md)). **04-11–12** **Pakistan** delegation + **cheer to Ghalibaf** negotiators. **04-09** **Lebanon** “**hands on the trigger**” trilingual stack. **04-03** **Strategic Council** assassination frame vs **speech to American people**; **Aliyev**; **Finnish** “Stone Age” jurist frame. **UNGA** Golden Rule **1/2–2/2** and **Minab** on **04-16**.
-
-**Judgment:** **Presidential** narrative lane — **strong** for **intent / moral register** and **multi-audience** choreography; **seam** with **FM @araghchi**, **`thread:mercouris`**, **ROME** docs — **not** merged without object tags.
-
-**Links**
-
-- Table: [raw-input/2026-04-20/x-drpezeshkian-april-2026-posts-bundle.md](../../raw-input/2026-04-20/x-drpezeshkian-april-2026-posts-bundle.md)
-- Voice: [experts/drpezeshkian/thread.md](../../experts/drpezeshkian/thread.md) (`strategy-page` **id** `iran-drpezeshkian-x-april-2026-corpus`)
-- Profile: [https://x.com/drpezeshkian](https://x.com/drpezeshkian)
-
-**Open:** Pin **status URLs** for cite-grade rows; verify **assassination** / **Lebanon** kinetic claims on **wire** before **Links**-grade merge with expert Judgment.
+**Cross-weave:** Iran-lane **`daily/`** pages are **seams** into main [`chapters/2026-04/days.md`](../../../chapters/2026-04/days.md), not replacements for **`thread:`** expert Judgment or wire primaries.
