@@ -12,6 +12,10 @@
 
 ## Log
 
+### 2026-04-22
+
+- **Cici community mission (operator):** [cici-community-mission-operator.md](cici-community-mission-operator.md) — short-term mission (self-teach → train others, **10** set up, PH context, no fee); **drop-off** as primary risk; funnel metrics + mitigations; advisor load note.
+
 ### 2026-04-21
 
 - **Neural Sandbox (Telegram) RTF:** [evidence/cici-neural-sandbox-rtf-ingest-2026-04-21.md](evidence/cici-neural-sandbox-rtf-ingest-2026-04-21.md) + [cici-rtf-neural-sandbox-transcript-2026-04-21.rtf](evidence/cici-rtf-neural-sandbox-transcript-2026-04-21.rtf) — **Rules of Engagement** for collaborative learning around [Cici](https://github.com/Xavier-x01/Cici) (fork + own Supabase, Tier A/B/C, no keys in chat); onboarding chat (e.g. **PenguinPH739**). **`main`** unchanged by this export — tip still [`b02b5da`](https://github.com/Xavier-x01/Cici/commit/b02b5da).

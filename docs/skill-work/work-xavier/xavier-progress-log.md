@@ -12,6 +12,7 @@
 
 | Date (captured) | Artifact | What it shows |
 |-----------------|----------|----------------|
+| 2026-04-22 | [cici-community-mission-operator.md](cici-community-mission-operator.md) | **Operator mission doc** — Neural Sandbox / Cici short-term goals (**10** set up), **drop-off** primary risk, funnel metrics, advisor-load note (DOCSYNC). |
 | 2026-04-21 | [evidence/cici-neural-sandbox-rtf-ingest-2026-04-21.md](evidence/cici-neural-sandbox-rtf-ingest-2026-04-21.md) | **Telegram Neural Sandbox** — Rules of Engagement (fork Cici, own Supabase, Tier A/B/C, secrets); RTF [cici-rtf-neural-sandbox-transcript-2026-04-21.rtf](evidence/cici-rtf-neural-sandbox-transcript-2026-04-21.rtf). **Repo:** `main` still [`b02b5da`](https://github.com/Xavier-x01/Cici/commit/b02b5da) (no new commit from this export). |
 | 2026-04-20 | [evidence/cici-github-sync-2026-04-20.md](evidence/cici-github-sync-2026-04-20.md) | **API sync** — [Cici](https://github.com/Xavier-x01/Cici) `main` [`b02b5da`](https://github.com/Xavier-x01/Cici/commit/b02b5da): **prop-20260420-001** memory-policy surface + `policy.json` ([`3712b88`](https://github.com/Xavier-x01/Cici/commit/3712b88) → [`b02b5da`](https://github.com/Xavier-x01/Cici/commit/b02b5da)). |
 | 2026-04-17 | [evidence/cici-rtf-sessions-ingest-2026-04-17.md](evidence/cici-rtf-sessions-ingest-2026-04-17.md) | **Two RTF exports** — **brewmind-governed-steward** session: reviews + **approve** `prop-20260413-001` / `prop-20260414-001`, governed applies [`0c1e36e`](https://github.com/Xavier-x01/Cici/commit/0c1e36e) [`d310647`](https://github.com/Xavier-x01/Cici/commit/d310647), merge to **`main`** [`d2358ce`](https://github.com/Xavier-x01/Cici/commit/d2358ce). **Daily SHIP** session: `docs/operator-daily-log.md` [`a602e3a`](https://github.com/Xavier-x01/Cici/commit/a602e3a). RTFs in [evidence/](evidence/). |
@@ -39,6 +40,7 @@
 
 _Freeform. Append dated bullets._
 
+- **2026-04-22** — **Cici community mission (DOCSYNC):** [cici-community-mission-operator.md](cici-community-mission-operator.md) — mission restatement, **member drop-off** mitigations, funnel table; cross-link [Neural Sandbox RTF](evidence/cici-neural-sandbox-rtf-ingest-2026-04-21.md).
 - **2026-04-21** — **Neural Sandbox Telegram RTF:** [cici-neural-sandbox-rtf-ingest-2026-04-21.md](evidence/cici-neural-sandbox-rtf-ingest-2026-04-21.md) — community **Rules of Engagement** aligned with Cici tier model + fork-your-own; member onboarding snippet. *GitHub:* no delta vs [`b02b5da`](https://github.com/Xavier-x01/Cici/commit/b02b5da) from this file alone.
 - **2026-04-20** — **Cici GitHub sync:** [cici-github-sync-2026-04-20.md](evidence/cici-github-sync-2026-04-20.md) — **`main`** [`b02b5da`](https://github.com/Xavier-x01/Cici/commit/b02b5da) — **memory-policy** governed surface activated (**prop-20260420-001**).
 - **2026-04-17** — **Cici RTF sessions + GitHub verify:** [cici-rtf-sessions-ingest-2026-04-17.md](evidence/cici-rtf-sessions-ingest-2026-04-17.md) — **`main`** tip [`d2358ce`](https://github.com/Xavier-x01/Cici/commit/d2358ce) (merge steward branch); voice + workflows governed surfaces applied; journal **`a602e3a`**. *Next:* transcript suggests **(c)** `/work-journal` or similar command skill; still **Tier C** gap if `intentions-and-preferences.md` absent.
@@ -96,6 +98,7 @@ Transcribed for search/analysis; **verify** against her app if titles change.
 
 | Date | Note |
 |------|------|
+| 2026-04-22 | **Cici community mission** operator doc ([cici-community-mission-operator.md](cici-community-mission-operator.md)); progress log index + burst; [work-xavier-history.md](work-xavier-history.md); [INDEX.md](INDEX.md). |
 | 2026-04-21 | **Neural Sandbox** RTF ingest ([cici-neural-sandbox-rtf-ingest-2026-04-21.md](evidence/cici-neural-sandbox-rtf-ingest-2026-04-21.md)); progress log index + burst; [work-xavier-history.md](work-xavier-history.md); [INDEX.md](INDEX.md). |
 | 2026-04-20 | Cici **GitHub sync** ([cici-github-sync-2026-04-20.md](evidence/cici-github-sync-2026-04-20.md)); progress log index + burst; [work-xavier-history.md](work-xavier-history.md); [INDEX.md](INDEX.md). |
 | 2026-04-17 | Cici **RTF ingests** — governed steward + daily ship ([cici-rtf-sessions-ingest-2026-04-17.md](evidence/cici-rtf-sessions-ingest-2026-04-17.md)); progress log index + burst; [work-xavier-history.md](work-xavier-history.md); [INDEX.md](INDEX.md). |
