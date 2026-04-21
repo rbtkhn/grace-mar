@@ -2,6 +2,7 @@
 
 | Doc | Role |
 |-----|------|
+| [evidence/cici-neural-sandbox-rtf-ingest-2026-04-21.md](evidence/cici-neural-sandbox-rtf-ingest-2026-04-21.md) | **Neural Sandbox Telegram (2026-04-21)** — rules + onboarding RTF; `main` unchanged vs `b02b5da` |
 | [evidence/cici-github-sync-2026-04-20.md](evidence/cici-github-sync-2026-04-20.md) | **Cici GitHub sync (2026-04-20)** — `main` `b02b5da` memory-policy + prop-20260420-001 |
 | [evidence/cici-rtf-sessions-ingest-2026-04-17.md](evidence/cici-rtf-sessions-ingest-2026-04-17.md) | **RTF sessions (2026-04-17)** — proposals applied, `main` [`d2358ce`](https://github.com/Xavier-x01/Cici/commit/d2358ce); daily ship [`a602e3a`](https://github.com/Xavier-x01/Cici/commit/a602e3a) |
 | [handoffs/cici-claude-agent-grace-mar-discipline-prompt.md](handoffs/cici-claude-agent-grace-mar-discipline-prompt.md) | **Cici agent prompt** — lanes, boundary, proposals, leakage, grounding (paste into `.claude/agents/` or `CLAUDE.md`) |
