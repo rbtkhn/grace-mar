@@ -1,0 +1,29 @@
+# Regenerate library-index.md and fail if the committed artifact is stale.
+name: Library index
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Regenerate library index
+        run: python3 scripts/build_library_index.py -u grace-mar
+
+      - name: Assert artifacts/library-index.md matches generator
+        run: |
+          if ! git diff --exit-code -- artifacts/library-index.md; then
+            echo "::error::artifacts/library-index.md is out of date. Run: python3 scripts/build_library_index.py -u grace-mar"
+            git diff -- artifacts/library-index.md | head -200
+            exit 1
+          fi

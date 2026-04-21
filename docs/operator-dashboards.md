@@ -30,9 +30,11 @@ python3 scripts/build_gate_board.py
 
 Use `-u grace-mar` where scripts support it (default user is usually `grace-mar`).
 
+**CI:** On push and pull requests to `main`, [`.github/workflows/library-index.yml`](../.github/workflows/library-index.yml) runs `build_library_index.py` and fails if `artifacts/library-index.md` is out of date — regenerate locally and commit with `self-library.md` changes.
+
 ## Design notes
 
-- **Library index** parses the `entries:` YAML block in `users/<id>/self-library.md` (first `## Entries` fence).
+- **Library index** parses the `entries:` YAML block in `users/<id>/self-library.md` (first `## Entries` fence); emitted Markdown is **dashboard-ordered** (summary → Start here → recent → compact lanes → appendix full inventory).
 - **Review dashboard** uses [`scripts/gate_block_parser.py`](../scripts/gate_block_parser.py) for fenced `### CANDIDATE-*` blocks; pending rows are any block with `status: pending` (even if misplaced relative to `## Processed` — fix the gate file when possible).
 - **Lane dashboards** aggregate `runtime/observations/index.jsonl` (when present) and embed or reference `artifacts/work-lanes-dashboard.json`.
 
