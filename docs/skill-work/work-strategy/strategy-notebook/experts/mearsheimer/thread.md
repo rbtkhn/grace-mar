@@ -141,7 +141,7 @@ Canonical knot paths and raw ingest lines live in **Segment 2** below (regenerat
 <!-- backfill:mearsheimer:end -->
 ## 2026-04
 
-_Partial month — Segment 2 is **knot-index** only for April; no standalone Mearsheimer ingest line in machine block at authoring time._
+_April **2026-04-20** ingests **Chris Hedges Report** operator transcript ([`raw-input/…/transcript-hedges-mearsheimer-iran-2026-04-20.md`](../../raw-input/2026-04-20/transcript-hedges-mearsheimer-iran-2026-04-20.md)); Segment 2 remains **knot-index** + machine block._
 
 April lattice is **Mercouris × Mearsheimer** (speech-act vs structural incentives) on Lebanon / Hormuz week — scaffold and blockade weaves carry the cross-expert seam; Pape Janssen block adds domestic escalation-trap vocabulary beside same cycle.
 
@@ -161,6 +161,7 @@ Verification stance for John Mearsheimer in 2026-04 should stay tier-honest: web
 - [strength: medium] **Fork:** `mercouris-mearsheimer-lebanon-split` — diplomatic surface vs incentive geometry — **do not** voice-merge.
 - [strength: medium] **Scaffold:** `marandi-ritter-mercouris-hormuz-scaffold` — Davis×Freeman×Mearsheimer parallel plane named in knot header.
 - [strength: medium] **Lattice:** `ritter-blockade-hormuz-weave` · `pape-janssen-escalation-blockade` — blockade calendar vs structural off-ramp framing — tier discipline.
+- [strength: medium] **2026-04-20 — Chris Hedges Report:** Islamabad timing (<48h), Iran **10-point** scaffold, Hormuz blockade + ship-seizure breach frame, deal/extend-ceasefire vs escalation ladder, Israel lobby × economy cliff, Lebanon lever, **WSJ** tantrum (F-15 down) episode, Titanic/food/fertilizer/jet fuel — full transcript [`transcript-hedges-mearsheimer-iran-2026-04-20.md`](../../raw-input/2026-04-20/transcript-hedges-mearsheimer-iran-2026-04-20.md); **cross** `mercouris`, `ritter`, `pape`, IRI state bundles.
 
 ---
 <!-- strategy-page:start id="mercouris-mearsheimer-lebanon-split" date="2026-04-14" watch="accountability-language" -->
