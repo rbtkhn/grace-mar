@@ -2075,8 +2075,7 @@ sources:
   video_id: GSSIm9xNRAE
   title: 'Interviews #2: Glenn Diesen — The West''s Civilizational Collapse'
   canonical_url: https://www.youtube.com/watch?v=GSSIm9xNRAE
-  publication_date: 2025-11-24
-  lecture_path: lectures/interviews-02-diesen-west-civilizational-collapse.md
+  lecture_path: lectures/interviews-02-glenn-diesen-west-civilizational-collapse.md
   analysis_path: analysis/GSSIm9xNRAE-interviews-02-analysis.md
   series: interviews
   episode: 2
@@ -2090,8 +2089,7 @@ sources:
   video_id: ORyCS0r2Tpg
   title: 'Interviews #3: Glenn Diesen — Predictions for 2026 (Empire, Rivalry & Collapse)'
   canonical_url: https://www.youtube.com/watch?v=ORyCS0r2Tpg
-  publication_date: 2026-01-05
-  lecture_path: lectures/interviews-03-diesen-predictions-2026-empire-rivalry-collapse.md
+  lecture_path: lectures/interviews-03-glenn-diesen-predictions-2026-empire-rivalry-collapse.md
   analysis_path: analysis/ORyCS0r2Tpg-interviews-03-analysis.md
   series: interviews
   episode: 3
@@ -2136,8 +2134,7 @@ sources:
   video_id: 80jUKe0blAQ
   title: 'Interviews #6: Glenn Diesen — Great Power Wars Over a New World Order'
   canonical_url: https://www.youtube.com/watch?v=80jUKe0blAQ
-  publication_date: 2026-01-26
-  lecture_path: lectures/interviews-06-diesen-great-power-wars-new-world-order.md
+  lecture_path: lectures/interviews-06-glenn-diesen-great-power-wars-new-world-order.md
   analysis_path: analysis/80jUKe0blAQ-interviews-06-analysis.md
   series: interviews
   episode: 6
@@ -2244,8 +2241,7 @@ sources:
   title: 'Interviews #13: Patrick Bet-David — Jiang Xueqin Finally Breaks His Silence
     (PBD Podcast #772)'
   canonical_url: https://www.youtube.com/watch?v=Wio--7_GIOs
-  publication_date: '2026-04-07'
-  lecture_path: lectures/interviews-13-pbd-podcast-772-jiang.md
+  lecture_path: lectures/interviews-13-pbd-podcast-772-jiang-xueqin.md
   analysis_path: analysis/Wio--7_GIOs-interviews-13-analysis.md
   series: interviews
   episode: 13
@@ -2259,8 +2255,7 @@ sources:
   video_id: P_DHMUdOVdo
   title: 'Interviews #14: Glenn Diesen — The Iran War & the Battle for the Petrodollar'
   canonical_url: https://www.youtube.com/watch?v=P_DHMUdOVdo
-  publication_date: '2026-04-11'
-  lecture_path: lectures/interviews-14-diesen-iran-war-petrodollar.md
+  lecture_path: lectures/interviews-14-glenn-diesen-iran-war-petrodollar.md
   analysis_path: analysis/P_DHMUdOVdo-interviews-14-analysis.md
   series: interviews
   episode: 14
@@ -2274,8 +2269,7 @@ sources:
   video_id: n44OF1Y7zgo
   title: 'Interviews #15: Sneako — Jiang Xueqin & Aleksandr Dugin (Eschatology & Geopolitics)'
   canonical_url: https://www.youtube.com/watch?v=n44OF1Y7zgo
-  publication_date: '2026-04-14'
-  lecture_path: lectures/interviews-15-sneako-jiang-dugin-eschatology.md
+  lecture_path: lectures/interviews-15-sneako-jiang-xueqin-dugin-eschatology.md
   analysis_path: analysis/n44OF1Y7zgo-interviews-15-analysis.md
   series: interviews
   episode: 15
@@ -2780,3 +2774,18 @@ sources:
     curated_lecture: complete
     analysis: complete
     chapter_mapping: complete
+- source_id: es-34
+  video_id: ''
+  title: The US-Iran War, Round Two
+  canonical_url: https://predictivehistory.substack.com/p/the-us-iran-war-round-two
+  publication_date: '2026-04-18'
+  lecture_path: substack/essays/the-us-iran-war-round-two.md
+  analysis_path: analysis/essay-the-us-iran-war-round-two-analysis.md
+  series: essays
+  episode: 34
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: complete
+    chapter_mapping: not_started
