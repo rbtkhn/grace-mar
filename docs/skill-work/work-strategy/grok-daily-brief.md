@@ -2,7 +2,7 @@
 
 **Purpose:** After `generate_work_politics_daily_brief.py` produces `daily-brief-YYYY-MM-DD.md`, use this **headings-only** skeleton for the **magazine-style** pass (single spine, structured developments, explicit signal/noise, forward watch). **Cite only** what §2 / §1d–§1h / inbox / wires support; do **not** invent precise battle or market numbers.
 
-**Related:** [daily-brief-template.md](daily-brief-template.md) (generator sections), [grok-daily-brief-task-prompt.md](grok-daily-brief-task-prompt.md) (Grok task instructions, v2.1 Barnes-type prose), [strategy-notebook/daily-strategy-inbox.md](strategy-notebook/daily-strategy-inbox.md) (paste ingests), [STRATEGY-NOTEBOOK-ARCHITECTURE.md](strategy-notebook/STRATEGY-NOTEBOOK-ARCHITECTURE.md) (fold rules).
+**Related:** [daily-brief-template.md](daily-brief-template.md) (generator sections), [grok-daily-brief-task-prompt.md](grok-daily-brief-task-prompt.md) (Grok task instructions, v2.6 — fourteen default X accounts), [strategy-notebook/daily-strategy-inbox.md](strategy-notebook/daily-strategy-inbox.md) (paste ingests), [STRATEGY-NOTEBOOK-ARCHITECTURE.md](strategy-notebook/STRATEGY-NOTEBOOK-ARCHITECTURE.md) (fold rules).
 
 ---
 
