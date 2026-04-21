@@ -23,6 +23,7 @@
 
 ### 2026-04-21
 
+- **Neural Sandbox pt.2 RTF:** [evidence/cici-neural-sandbox-pt2-rtf-ingest-2026-04-21.md](evidence/cici-neural-sandbox-pt2-rtf-ingest-2026-04-21.md) + [cici-rtf-neural-sandbox-transcript-pt2-2026-04-21.rtf](evidence/cici-rtf-neural-sandbox-transcript-pt2-2026-04-21.rtf) — **Technical Onboarding** draft (prereqs: GitHub, Claude Pro/Max for Claude Code, terminal, Supabase, Git, ~45 min); **Step 1** fork [Cici](https://github.com/Xavier-x01/Cici) + clone; chat confirms member account. **`main`** unchanged — [`b02b5da`](https://github.com/Xavier-x01/Cici/commit/b02b5da).
 - **Neural Sandbox (Telegram) RTF:** [evidence/cici-neural-sandbox-rtf-ingest-2026-04-21.md](evidence/cici-neural-sandbox-rtf-ingest-2026-04-21.md) + [cici-rtf-neural-sandbox-transcript-2026-04-21.rtf](evidence/cici-rtf-neural-sandbox-transcript-2026-04-21.rtf) — **Rules of Engagement** for collaborative learning around [Cici](https://github.com/Xavier-x01/Cici) (fork + own Supabase, Tier A/B/C, no keys in chat); onboarding chat (e.g. **PenguinPH739**). **`main`** unchanged by this export — tip still [`b02b5da`](https://github.com/Xavier-x01/Cici/commit/b02b5da).
 - **Cici handoff — Claude agent prompt (grace-mar discipline):** [handoffs/cici-claude-agent-grace-mar-discipline-prompt.md](handoffs/cici-claude-agent-grace-mar-discipline-prompt.md) — copy-paste block for **lanes**, knowledge boundary, proposal echo, leakage, session grounding; scoped to [Cici](https://github.com/Xavier-x01/Cici), not grace-mar Record.
 
