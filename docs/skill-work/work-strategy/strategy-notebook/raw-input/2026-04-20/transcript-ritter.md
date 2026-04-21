@@ -1,0 +1,15 @@
+---
+ingest_date: 2026-04-20
+aired_date: 2026-04-20
+thread: ritter
+kind: transcript
+source_path: docs/skill-work/work-strategy/strategy-notebook/experts/ritter/transcript.md
+---
+
+## 2026-04-20
+- JF | cold: **Scott Ritter** × **Judge Andrew Napolitano** (*Judging Freedom* — *Trump and Hegseth Haven’t a Clue*) — **host date 2026-04-20** — **Hormuz / weekend cargo incident:** U.S. **destroyer** **engine-room** **fire** **→** **USMC** **boarding** **/** **Ritter** **“piracy”** **frame** **vs** **Islamabad** **ceasefire** **/** **blockade** **legitimacy** **thesis**; **Islamabad** **room** **emptying** **(Vance** **/** **Witkoff** **/** **Kushner** **vs** **Tehran** **team);** **Trump** **team** **unprepared** **/** **Iran** **brought** **text** **thesis;** **MOU** **near-sign** **then** **pulled** **(Morandi** **cited** **in** **voice);** **“joint** **excavation”** **of** **enriched** **material** **fantasy** **vs** **IAEA** **inspection** **path** **(Geneva** **prior** **round** **referenced);** **CJCS** **Caine** **/** **nuclear** **codes** **anecdote** **(hypothesis** **—** **Larry** **Johnson** **two** **sources,** **NYT** **pattern** **in** **voice);** **Israel** **×** **Turkey** **warning** **track;** **UAE** **/** **GCC** **/** **Israel** **second-round** **infrastructure** **forecast** **(parallel** **04-19** **Substack);** **IRGC** **bridge** **/** **power** **targets** **vs** **IHL** **(Ritter** **cross-exam** **frame);** **Trump** **“ceasefire** **ends** **Wednesday”** **(host** **—** **verify** **wire** **/** **TS);** **Houthis** **Bab** **el-Mandeb** **in** **voice;** **Board** **of** **Peace** **derelict** **thesis** // hook: **`thread:ritter`** **same-week** **stack** **as** **04-19** **essay** **+** **`thread:davis`** **/** **`thread:pape`** **—** **commentator** **tier** **until** **USN** **/** **FM** **/** **shipping** **primaries** | https://www.youtube.com/watch?v=TBD-judging-freedom-ritter-2026-04-20 | verify:operator-paste+aired:2026-04-20+pin-canonical-URL | thread:ritter | grep:Ritter+Napolitano+Judging+Freedom+Hormuz+Hegseth+Caine — **same-day** **JF** **Johnson** **episode** **(Caine** **segment):** https://www.youtube.com/watch?v=geWpX8w7BNU
+
+    Full episode transcript: operator paste in Cursor (2026-04-20); not stored verbatim on disk — digest in [`chapters/2026-04/days.md`](../../chapters/2026-04/days.md) § **2026-04-20**. Pin canonical **YouTube** / **Rumble** URL when available.
+
+    **Overlap — earlier Haiphong / Ritter / Johnson digest:** [transcript-analysis §B](../../../transcript-analysis-haiphong-ritter-johnson-iran-2026-04.md) — **`thread:ritter`** **mass Hormuz seizure** **infeasibility** (echelon math) **vs** **this** **single-ship** **boarding** **narrative**; **`thread:johnson`** **digest** **lane** (**F-15/Isfahan** **ORBAT**) **vs** **same-day** **JF** **[`geWpX8w7BNU`](https://www.youtube.com/watch?v=geWpX8w7BNU)** **(Johnson** **on-mic** **Caine** **/** **codes)** **vs** **Ritter** **JF** **institutional** **take**. **`crosses:ritter+johnson`** **seam** — **do** **not** **merge** **tiers**.
+

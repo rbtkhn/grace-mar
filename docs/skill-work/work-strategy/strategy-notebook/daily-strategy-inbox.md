@@ -61,6 +61,8 @@
 
 When you need **substantial quoted speech** (interview, monologue segment), put **`thread:<expert_id>`** on the **first** paste-ready line, then continue the quote on **following lines** without a leading `- ` at column 0 (plain paragraphs and blank lines are included until the next top-level `- ` bullet or `##` heading). **Budget:** **≤ ~2000 words** per block (triage warns above that); **7-day** pruning keeps each **`-transcript.md`** near a **≤ ~20k word** soft file cap. Run **`python3 scripts/strategy_thread.py`** (operator **`thread`**) to triage inbox → per-expert **`-transcript.md`**.
 
+**Full transcript / complete input capture (no trim):** Store the **entire** body under **[`raw-input/YYYY-MM-DD/<slug>.md`](raw-input/README.md)** (7-day rolling folders; prune with **`python3 scripts/prune_strategy_raw_input.py`**). Keep **this file** to a **one-line stub** plus **`verify:`** pointer to that path — do **not** duplicate megabyte pastes in the inbox scratch. Contract: [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *Raw input archive (7-day full retention)*.
+
 ### Multi-item ingest (optional common analysis)
 
 When the operator captures **two or more** excerpts in one pass, **items stay separate** — still **one canonical line per excerpt** (separate grep targets; separate Links when the inbox weaves into `days.md`). **Same interview URL for two experts:** repeat the URL on **two lines**, each with its own **`thread:<id>`**; see **Same transcript, show, or panel** in [strategy-commentator-threads.md](strategy-commentator-threads.md). **Default:** assistant **drafts** the bundle in chat; **append only after operator approval** (or **`EXECUTE`**).

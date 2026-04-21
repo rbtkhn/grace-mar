@@ -12,7 +12,7 @@ description: >-
   MEM grounding via suggest_civ_mem_from_relevance.py + documented fallback when MEM–RELEVANCE–X is missing (run for file picks; cite paths under Links on disk; chat default no full stdout paste unless audit requested); tri-mind chat games are WORK brainstorm only.
   Judgment (chat + days.md): same popular-academic bar; anti-patterns — methodology-as-closer, repo jargon labels (equilibrium/entropy/planes) in Judgment prose; after substantive pass offer optional skill-write polish per docs/skill-write/write-operator-preferences.md.
   Expert-thread journal (optional): ### Cross-check blocks — hybrid lede + table or [strength] bullets; fold named thread: lanes + §1e/maritime/wire with balanced seams (pointer to days.md / batch-analysis for dense primaries); major ingests may add one days.md Links back-pointer; do not collapse essay/analyst/tri-mind into AIS/wire facts without tier tags.
-  Notebook spec (STRATEGY-NOTEBOOK-ARCHITECTURE + NOTEBOOK-PREFERENCES + daily-strategy-inbox SSOT) is incorporated by reference — one contract with this skill, not optional parallel docs.
+  Notebook spec (STRATEGY-NOTEBOOK-ARCHITECTURE + NOTEBOOK-PREFERENCES + daily-strategy-inbox SSOT; unabridged 7-day capture optional under strategy-notebook/raw-input per architecture) is incorporated by reference — one contract with this skill, not optional parallel docs.
   Cross-skill: at high-leverage symbolic-diplomacy or multi-audience migration moments, recommend primary-overhearing-analysis (primary overhearing / audience optics) per skill-strategy § Primary vs overhearing — stack with strategy, not a substitute for ROME-PASS primaries.
 ---
 

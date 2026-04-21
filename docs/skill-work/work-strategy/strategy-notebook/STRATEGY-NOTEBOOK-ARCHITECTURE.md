@@ -92,10 +92,17 @@ Apply **prospectively**; no obligation to backfill older months unless you expli
 | Layer | Role |
 |-------|------|
 | **[`daily-strategy-inbox.md`](daily-strategy-inbox.md)** | **Index / stub** — at minimum one paste-ready line per capture: **`thread:<expert_id>`**, **`aired:YYYY-MM-DD`** (or equivalent) when the event has a clear **air/publication date**, short **cold** / **hook**, **URL**, **`verify:`**. Same tags as today so **`rg`** across the inbox stays the primary “what did we file?” sweep. |
-| **`experts/<expert_id>/transcript.md`** | **Corpus** — long quoted speech under **`## YYYY-MM-DD`** where that date is the **air/publication day** (not only “the day I typed”). Continuation paragraphs follow the [long-form verbatim](daily-strategy-inbox.md#long-form-verbatim-thread) rules. |
+| **`experts/<expert_id>/transcript.md`** | **Corpus** — long quoted speech under **`## YYYY-MM-DD`** where that date is the **air/publication day** (not only “the day I typed”). Continuation paragraphs follow the [long-form verbatim](daily-strategy-inbox.md#long-form-verbatim-thread) rules. Triage targets **≤ ~2000 words** per ingest block (soft caps). |
+| **[`raw-input/`](raw-input/README.md)** | **Full retention (7 days)** — **unabridged** transcripts and bundled source material in **`raw-input/YYYY-MM-DD/<slug>.md`**, separate from the inbox. Same rolling calendar window as expert transcripts; prune with **`python3 scripts/prune_strategy_raw_input.py`**. |
 | **`python3 scripts/strategy_thread.py`** (today) | Triage + extraction from inbox → transcript → machine block; **until** a dedicated command ships, triage still assumes inbox-sourced `thread:` blocks. |
 
-**Unified search:** Treat **inbox + `experts/*/transcript.md`** as one habit: grep inbox for stubs and episode slugs; grep transcripts for full text — **or** (future) a generated rollup listing pointers only. **Not** Record.
+**Unified search:** Treat **inbox + `experts/*/transcript.md` + `raw-input/`** as one habit: grep inbox for stubs; grep **`raw-input`** for full text when the operator stored it there; grep transcripts for triage-sized verbatim — **or** (future) a generated rollup listing pointers only. **Not** Record.
+
+<a id="raw-input-archive-7d"></a>
+
+### Raw input archive (7-day full retention)
+
+When you need the **entire** transcript or **all** pasted inputs on disk for roughly a week — without stuffing the inbox or splitting across **`thread`** word budgets — write under **[`raw-input/`](raw-input/README.md)** and keep **[`daily-strategy-inbox.md`](daily-strategy-inbox.md)** to a **stub** that points at the file (e.g. **`verify:`** tail with `raw-input/YYYY-MM-DD/slug.md`). **Prune** dated folders with **`scripts/prune_strategy_raw_input.py`** on the same cadence you run **`thread`** (or add to a personal maintenance script). **Git** may still recover pruned paths from history if committed.
 
 **Transition:** Current tooling remains valid; a future **`strategy_ingest`** (name TBD) would implement “one command” below without deleting the inbox as registry.
 
@@ -196,6 +203,8 @@ The word **“page”** is overloaded in this lane. Use the table below as the d
 ## Entry model (operator contract)
 
 **Hybrid spine (default):** The notebook uses **`## YYYY-MM-DD`** dated blocks in `days.md` as the **chronology layer** — tracking which **pages** were active, what changed, and what should be resumed tomorrow. Expert-thread **pages** hold the substantive writing. `days.md` also allows **episodic or thematic** top-level sections when one day is not the right unit — e.g. `## Weave — YYYY-MM-DD–YYYY-MM-DD (short label)` or `## Lens pass — Barnes — YYYY-MM-DD`. You are **not** required to produce **exactly one** dated section per local calendar day. Prefer **one substantive block per weave** over empty stubs.
+
+**Meta-led retro months:** When contemporaneous capture was thin, a chapter may place the **full monthly narrative** in [`chapters/YYYY-MM/meta.md`](chapters/2026-01/meta.md) with a **short episodic** [`days.md`](chapters/2026-01/days.md) (e.g. `## Chapter synthesis — YYYY-MM`) instead of daily decomposition — see [strategy-notebook README § Chapters](README.md).
 
 **Inbox vs notebook:** [`daily-strategy-inbox.md`](daily-strategy-inbox.md) is the **raw accumulator** (firehose, paste-ready lines). **`days.md` / episodic headings** hold **synthesized** judgment (Signal / Judgment / Links / Open — not a raw dump). **Weaving** (inbox → notebook) is a **meaning move**, not a file-sync.
 
