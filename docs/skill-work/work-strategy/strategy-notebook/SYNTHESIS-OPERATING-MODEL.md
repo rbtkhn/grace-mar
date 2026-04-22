@@ -33,6 +33,8 @@ Think top-down; **stop** when the day’s job is done — do not fill every opti
 
 **Default:** **B**. Escalate to **C** only when the draft is visibly mixed notebook + bulk.
 
+**Embodied stance (optional):** For a repeatable **morning** warm-up that chooses *how* you show up to the same session types (precision vs. flow vs. polish vs. selectivity) — the **conductor** vocabulary and five “movements” — see [COFFEE-CADENCE-CONDUCTOR-PROTOCOL.md](COFFEE-CADENCE-CONDUCTOR-PROTOCOL.md). That protocol is **WORK-only** seeds, separate from the Cursor **`coffee`** skill; it does not replace the A–D table above.
+
 ---
 
 ## 3. Section router (where content goes)
