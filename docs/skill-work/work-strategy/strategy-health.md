@@ -12,7 +12,7 @@
 | Authorized sources YAML | Growing toward parity with [work-strategy-sources.md](work-strategy-sources.md) | Stalled count vs markdown "Total: N sources" |
 | Promotion policy | Present | Missing file |
 
-### Judgment quality signals
+### Reflection quality signals
 
 | Signal | Healthy | Yellow | Red |
 |--------|---------|--------|-----|

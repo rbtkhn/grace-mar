@@ -156,7 +156,7 @@ def test_extract_strategy_notebook_day_block(tmp_path: Path) -> None:
     days = tmp_path / "docs" / "skill-work" / "work-strategy" / "strategy-notebook" / "chapters" / ym
     days.mkdir(parents=True)
     (days / "days.md").write_text(
-        "# Month\n\n## 2026-04-09\nold\n\n## 2026-04-10\n### Signal\ngeo line\n\n## 2026-04-11\nnext\n",
+        "# Month\n\n## 2026-04-09\nold\n\n## 2026-04-10\n### Chronicle\ngeo line\n\n## 2026-04-11\nnext\n",
         encoding="utf-8",
     )
     block, rel = xj.extract_strategy_notebook_day_block(tmp_path, date(2026, 4, 10), max_chars=5000)

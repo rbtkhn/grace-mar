@@ -10,7 +10,7 @@
 
 | ID | Criterion | Pass | Fail |
 |----|-----------|------|------|
-| NB | Notebook-primary | Output uses `### Signal`, `### Judgment`, `### Links` (or equivalent subsection labels) on the chosen surface. | Full transcript recap as Judgment; or STRATEGY.md touched when exercise forbids it. |
+| NB | Notebook-primary | Output uses `### Chronicle`, `### Reflection`, `### References` (or equivalent subsection labels) on the chosen surface. | Full transcript recap as Judgment; or STRATEGY.md touched when exercise forbids it. |
 | VF | Verify discipline | `### Web verification (YYYY-MM-DD)` when verify is in scope; unverified numbers not stated as fact. | Thread-only or stale numbers as settled Judgment fact. |
 | LK | Links complete | Exercise-specific required paths (digests, watch docs, repo paths) appear under Links. | Missing required pointer when the input supports it. |
 | TF | Tri-frame / lens | When exercise specifies **tri-frame** or **single-lens**, order and labels match the prompt; no merge of A/B runs when exercise says compare. | Wrong order; merged outputs when separated runs required. |

@@ -41,7 +41,7 @@ If `research/repos/civilization_memory` is present:
 
 **Grace-Mar canonical** mind bodies: strategy-expert **`-mind.md`** files under [`strategy-notebook/`](../strategy-notebook/) (SSOT); [`strategy-notebook/minds/CIV-MIND-*.md`](../strategy-notebook/minds/) are **redirects** to the same content.
 
-**Strategy pass × civ-mem:** After frontier read (and tier-A verify for disputed current facts), `python3 scripts/suggest_civ_mem_from_relevance.py <ENTITY>` when `MEM–RELEVANCE–<ENTITY>.md` exists; cite MEM paths in **`### Links`**. Tri-frame bridge: [CIV-MEM-TRI-FRAME-ROUTING.md](CIV-MEM-TRI-FRAME-ROUTING.md). Trump–Leo Barnes training sheet: [TRUMP-LEO-CIV-MEM-BARNES-DRILL.md](../strategy-notebook/TRUMP-LEO-CIV-MEM-BARNES-DRILL.md).
+**Strategy pass × civ-mem:** After frontier read (and tier-A verify for disputed current facts), `python3 scripts/suggest_civ_mem_from_relevance.py <ENTITY>` when `MEM–RELEVANCE–<ENTITY>.md` exists; cite MEM paths in **`### References`**. Tri-frame bridge: [CIV-MEM-TRI-FRAME-ROUTING.md](CIV-MEM-TRI-FRAME-ROUTING.md). Trump–Leo Barnes training sheet: [TRUMP-LEO-CIV-MEM-BARNES-DRILL.md](../strategy-notebook/TRUMP-LEO-CIV-MEM-BARNES-DRILL.md).
 
 ### Tri-frame entry index
 
@@ -76,7 +76,7 @@ The stronger pattern is:
 
 **What:** Run one mind when the day’s problem is clearly one-dimensional.  
 **When:** Crisis days, narrow drafting days, or when the operator wants speed.  
-**Where in repo:** `strategy-notebook/chapters/YYYY-MM/days.md` under `### Judgment`, with one line in `### Links` citing the relevant strategy-expert **`-mind.md`** (SSOT) or **`CIV-MIND-*.md`** redirect.  
+**Where in repo:** `strategy-notebook/chapters/YYYY-MM/days.md` under `### Reflection`, with one line in `### References` citing the relevant strategy-expert **`-mind.md`** (SSOT) or **`CIV-MIND-*.md`** redirect.  
 **Cost:** Light.  
 **Risk:** Overfitting the day to one lens and missing a hidden contradiction.
 
@@ -92,7 +92,7 @@ The stronger pattern is:
 
 **What:** Use two minds to stage a productive disagreement.  
 **When:** The day’s judgment hinges on whether narrative, power, or material structure should dominate.  
-**Where in repo:** `days.md`, either as a short split within `### Judgment` or as a dedicated `### Analogy / tension` subsection.  
+**Where in repo:** `days.md`, either as a short split within `### Reflection` or as a dedicated `### Analogy / tension` subsection.  
 **Cost:** Light to medium.  
 **Risk:** Becoming a mini tri-frame without admitting it.
 
@@ -106,13 +106,13 @@ The stronger pattern is:
 
 ### 3) Links-only lensing
 
-**What:** Keep the notebook prose plain, but attach lens-specific files in `### Links` rather than writing overt lens labels in the judgment.  
+**What:** Keep the notebook prose plain, but attach lens-specific files in `### References` rather than writing overt lens labels in the judgment.  
 **When:** Synthesis days where overt labels would clutter the prose.  
-**Where in repo:** `### Links`, with optional shorthand like `Mercouris lens only` or `Barnes check deferred`.  
+**Where in repo:** `### References`, with optional shorthand like `Mercouris lens only` or `Barnes check deferred`.  
 **Cost:** Light.  
 **Risk:** The lens effect becomes too implicit and easy to forget later.
 
-**Why it matters:** This best preserves the repo’s granular-control rule: plain `Signal / Judgment / Links` should remain valid without mandatory M/M/B headings.
+**Why it matters:** This best preserves the repo’s granular-control rule: plain `Chronicle / Reflection / References` should remain valid without mandatory M/M/B headings.
 
 ---
 
@@ -120,7 +120,7 @@ The stronger pattern is:
 
 **What:** Assign who “owns” the need for verification before finalizing judgment.  
 **When:** Any day involving numbers, shipping, casualties, sanctions, oil, market pricing, force counts, or public-facing claims.  
-**Where in repo:** Add `### Web verification (YYYY-MM-DD)` in the daily block, then list supporting URLs under `### Links`.  
+**Where in repo:** Add `### Web verification (YYYY-MM-DD)` in the daily block, then list supporting URLs under `### References`.  
 **Cost:** Medium.  
 **Risk:** Verification grows into a second workflow and bloats the notebook.
 
@@ -190,7 +190,7 @@ Promote only when one of these is true:
 
 **What:** If more than one lens is used, force explicit seams between negotiation scope, material facts, and narrative framing.  
 **When:** Iran/U.S., Gulf, Rome, Vatican, Israel/Iran, Russia/Ukraine/Putin, U.S.–China / PRC state lines, or any multi-plane topic.  
-**Where in repo:** `### Judgment` with labeled sub-lines or a short three-bullet split before synthesis.  
+**Where in repo:** `### Reflection` with labeled sub-lines or a short three-bullet split before synthesis.  
 **Cost:** Medium.  
 **Risk:** Slightly more formal prose.
 
@@ -235,7 +235,7 @@ Promote only when one of these is true:
 
 **What:** Treat tri-frame as **multiple export shapes**, not a single “three parallel summaries” template. Common shapes: **lens-by-lens** (Barnes → Mearsheimer → Mercouris), **one merged synthesis paragraph**, **prediction divergence / debate** (where lenses disagree and what would falsify each), and a **short paste-under disagreement block** for public copy.  
 **When:** The operator asks for tri-mind, tri-frame, or an explicit multi-lens stress test; or when exporting strategy analysis to **Locals / X** as an appendix.  
-**Where in repo:** `days.md` under `### Judgment` / `### Analogy / tension`, or a companion note linked from `### Links`; public copy stays outside the notebook if it is not Record-bound.  
+**Where in repo:** `days.md` under `### Reflection` / `### Analogy / tension`, or a companion note linked from `### References`; public copy stays outside the notebook if it is not Record-bound.  
 **Cost:** Medium if you run all shapes; light if you pick one shape deliberately.  
 **Risk:** Meta-framing (“this stacks three readings”) can read weaker than **findings-first** prose on short-form platforms.
 
@@ -262,11 +262,11 @@ Promote only when one of these is true:
 
 1. Read notebook frontier and today’s relevant inputs.
 2. Append today’s block in `days.md`.
-3. In `### Signal`, summarize only what crossed the strategy threshold.
-4. In `### Judgment`, write one Barnes-shaped paragraph: material constraint, liabilities, who can sustain what.
+3. In `### Chronicle`, summarize only what crossed the strategy threshold.
+4. In `### Reflection`, write one Barnes-shaped paragraph: material constraint, liabilities, who can sustain what.
 5. If numbers are load-bearing, add `### Web verification (YYYY-MM-DD)`.
-6. In `### Links`, include the relevant brief/transcript plus [`strategy-expert-barnes-mind.md`](../strategy-notebook/strategy-expert-barnes-mind.md) (or the [`CIV-MIND-BARNES.md`](../strategy-notebook/minds/CIV-MIND-BARNES.md) redirect). **Optional civ-mem:** If `research/repos/civilization_memory` is checked out and structural precedent helps, add **1–2** upstream `MEM–…` file receipts (see [TRUMP-LEO-CIV-MEM-BARNES-DRILL.md](../strategy-notebook/TRUMP-LEO-CIV-MEM-BARNES-DRILL.md) for Trump–Leo / Rome + U.S. pairing); never substitute MEM for tier-A wires on breaking claims.
-7. In `### Open`, carry one falsifiable follow-up.
+6. In `### References`, include the relevant brief/transcript plus [`strategy-expert-barnes-mind.md`](../strategy-notebook/strategy-expert-barnes-mind.md) (or the [`CIV-MIND-BARNES.md`](../strategy-notebook/minds/CIV-MIND-BARNES.md) redirect). **Optional civ-mem:** If `research/repos/civilization_memory` is checked out and structural precedent helps, add **1–2** upstream `MEM–…` file receipts (see [TRUMP-LEO-CIV-MEM-BARNES-DRILL.md](../strategy-notebook/TRUMP-LEO-CIV-MEM-BARNES-DRILL.md) for Trump–Leo / Rome + U.S. pairing); never substitute MEM for tier-A wires on breaking claims.
+7. In `### Foresight`, carry one falsifiable follow-up.
 
 **Use when**
 
@@ -288,13 +288,13 @@ Promote only when one of these is true:
 **Agent moves**
 
 1. Read notebook frontier.
-2. In `### Signal`, note the event or thesis that matters.
-3. In `### Judgment`, use two short sub-sections:
+2. In `### Chronicle`, note the event or thesis that matters.
+3. In `### Reflection`, use two short sub-sections:
    - **Mercouris:** narrative legitimacy, doctrine posture, symbolic continuity
    - **Mearsheimer:** alliance geometry, deterrence, compulsion
 4. Add one synthesis sentence: either `converge` or `tension`.
-5. Put source files in `### Links`.
-6. Put unresolved contradiction in `### Open`.
+5. Put source files in `### References`.
+6. Put unresolved contradiction in `### Foresight`.
 
 **Use when**
 

@@ -117,7 +117,7 @@
 
 *(WORK-local operating memory: decisions, experiments, actions, intermediate syntheses, and implementation notes.)*
 
-### Open threads
+### Foresight threads
 
 - _TBD_
 

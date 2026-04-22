@@ -6,7 +6,7 @@ WORK only; not Record.
 
 ---
 
-### Signal
+### Chronicle
 
 The episode opens on Geneva: Witkoff and Kushner meet Araghchi with an Omani mediator; Tehran’s package is summarized as NPT-grounded enrichment, multi-year suspension with dilution to civilian levels, resumed IAEA access, and a post-suspension regional (plus possibly Russian) enrichment consortium. Mercouris treats dilution language as implicit confirmation that a highly enriched stockpile survived the June 2025 strikes better than Trump’s “obliterated” narrative. The Wall Street Journal–sourced U.S. counterproposal is described as maximalist: end enrichment, destroy Fordow/Natanz/Isfahan infrastructure, plus missiles and regional alliance demands, with no security guarantee, no sanctions relief timetable, and discretionary U.S. supervision—read as unacceptable and regime-change foreshadowing after the State of the Union. Oman and Iran still float “technical talks” in Vienna; Mercouris is skeptical of the label without substance. He then chains Larry Johnson (Sonar21) on embassy evacuations and citizen departures as attack precursors to same-day reports: UK drawdown in Tehran and advice to nationals, U.S. warnings on Israel and partial embassy evacuation there. Vance’s exclusion of a “long war” is read as telegraphing a short offensive decision, set beside Iranian long-war rhetoric and U.S. sustainability doubts, plus reporting that Caine and Ratcliffe could not guarantee regime-change success. A weekend timing guess and full-moon aside follow.
 
@@ -14,11 +14,11 @@ Ukraine: no evidence of a renewed Medinsky-style trilateral in Geneva; Dmitriev�
 
 Domestic UK: Gorton and Denton by-election—Greens first, Reform second, Labour third; Starmer’s negative campaign, Burnham block, Mandelson context, demographic split (Reform older working class, Greens younger and Muslim community), establishment-party crisis framing.
 
-### Judgment
+### Reflection
 
 The Iran thread is a single escalation-read: diplomatic gap is unbridgeable on the terms described, while evacuation and Vance rhetoric function as pre-strike indicators in Mercouris’s interpretive model—explicitly probabilistic (weekend guess) and morally charged (“unnecessary war”). Ukraine is read as negotiation-stalled by both Kiev and Moscow’s incentives, with map momentum and elite U.S. journal dissent reinforcing attrition and land-for-peace logic; Meduza is used tactically to undermine Western loss narratives without endorsing Kremlin sympathy. UK politics is folded as a separate legitimacy/insulation story with limited direct Iran mechanics but relevant to Starmer–Ukraine alignment and voter backlash. Verification should treat WSJ, evacuations, Caine/Ratcliffe, and battle geography as distinct tiers—not one merged “fact.”
 
-### Open
+### Foresight
 
 - **Geneva / Vienna:** Primary readouts vs WSJ nuclear-demand detail; what “technical talks” meant in room.
 - **Evacuations:** FCDO, State, and embassy staffing—confirm scope and timing; Johnson blog as hypothesis scaffold only.
@@ -30,7 +30,7 @@ The Iran thread is a single escalation-read: diplomatic gap is unbridgeable on t
 
 ---
 
-### Technical appendix
+### Appendix
 
 - **Full verbatim (capture):** [raw-input/2026-02-27/duran-mercouris-us-iran-geneva-embassies-konstantinovka-uk-2026-02-27.md](../../raw-input/2026-02-27/duran-mercouris-us-iran-geneva-embassies-konstantinovka-uk-2026-02-27.md)
 - **Inbox / triage:** [daily-strategy-inbox.md](../../daily-strategy-inbox.md) (search `thread:mercouris`, aired 2026-02-27)

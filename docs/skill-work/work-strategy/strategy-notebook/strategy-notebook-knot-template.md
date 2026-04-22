@@ -38,7 +38,7 @@ So: **you are labeling the knot** (the file / indexed row), not re-labeling the 
 | **Date** | YYYY-MM-DD |
 | **knot_label** (machine slug) | `<kebab-slug>` — must match `strategy-notebook-knot-YYYY-MM-DD-<kebab-slug>.md` and [`knot-index.yaml`](knot-index.yaml) |
 | **Day block** | [`days.md` § YYYY-MM-DD](chapters/YYYY-MM/days.md) |
-| **Primary expert (`thread:`) — optional** | If this knot was woven with one **primary** expert, record **`thread:<expert_id>`** (same id as [`strategy-commentator-threads.md`](strategy-commentator-threads.md)); default **Signal / Judgment / Links / Open** weighting follows [NOTEBOOK-PREFERENCES § Weave skeletons (S1–S5)](NOTEBOOK-PREFERENCES.md#weave-skeletons-s1-s5). **Omit** for link-only hubs or when no single spine applies — multi-expert synthesis still belongs in the sections below. |
+| **Primary expert (`thread:`) — optional** | If this knot was woven with one **primary** expert, record **`thread:<expert_id>`** (same id as [`strategy-commentator-threads.md`](strategy-commentator-threads.md)); default **Chronicle / Reflection / References / Foresight** weighting follows [NOTEBOOK-PREFERENCES § Weave skeletons (S1–S5)](NOTEBOOK-PREFERENCES.md#weave-skeletons-s1-s5). **Omit** for link-only hubs or when no single spine applies — multi-expert synthesis still belongs in the sections below. |
 
 ### Page type (**pick per knot** — mixed types allowed)
 
@@ -76,16 +76,16 @@ When using [`knot-index.yaml`](knot-index.yaml) **v4+**, you may set optional **
 - **History resonance:** optional — chapter id(s) from [history-notebook](../../history-notebook/README.md) (e.g. `hn-i-v1-04`) + mechanism line when this knot leans on durable pattern language; **none** or **deferred** if no HN wire applies
 - **Civilizational bridge:** optional — [civilizational-strategy-surface.md](../../civilizational-strategy-surface.md) case family or lens id when CIV-MEM material grounded this page; omit if none
 
-### Signal
+### Chronicle
 <page-level signal>
 
-### Judgment
+### Reflection
 <page-level thesis / synthesis>
 
-### Links
+### References
 <primaries / wires / PH / expert corpus / related knots>
 
-### Open / verify
+### Foresight / verify
 <pins, tests, unresolved tensions, next-session checks>
 
 ---

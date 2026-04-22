@@ -4,7 +4,7 @@
 Checks:
 
 - Every ``<!-- strategy-page:start`` has a matching ``<!-- strategy-page:end -->``.
-- Optional ``--strict-prose``: for each page body, text above ``### Technical appendix``
+- Optional ``--strict-prose``: for each page body, text above ``### Appendix``
   (or entire body if no appendix heading) should be **≥90%** of words in that page
   (excludes appendix from denominator when present).
 
@@ -55,10 +55,20 @@ def find_unclosed_page_markers(text: str) -> list[str]:
     return errs
 
 
+def _appendix_heading_index(page_inner: str) -> int:
+    """Start index of first machinery appendix heading (new or legacy), or -1."""
+    low = page_inner.lower()
+    best = -1
+    for pat in (r"^### appendix\s*$", r"^### technical appendix\s*$"):
+        m = re.search(pat, low, re.MULTILINE)
+        if m is not None and (best < 0 or m.start() < best):
+            best = m.start()
+    return best
+
+
 def prose_ratio_before_appendix(page_inner: str) -> tuple[float, int, int]:
     """Return (ratio 0–1, prose_words, total_words) for one page inner (between HTML markers)."""
-    low = page_inner.lower()
-    idx = low.find("### technical appendix")
+    idx = _appendix_heading_index(page_inner)
     prose_part = page_inner[:idx] if idx != -1 else page_inner
     total_w = len(page_inner.split())
     prose_w = len(prose_part.split())
@@ -93,7 +103,7 @@ def validate_notebook(
                     msg = (
                         f"{thread_path.relative_to(REPO_ROOT)}: page `{pb.id}` — "
                         f"prose ratio {ratio:.2f} < {min_prose_ratio:.2f} "
-                        f"(words before `### Technical appendix` = {pw} / all = {tw})"
+                        f"(words before `### Appendix` = {pw} / all = {tw})"
                     )
                     if strict_prose:
                         errors.append(msg)
@@ -128,7 +138,7 @@ def main() -> int:
         "--min-prose-ratio",
         type=float,
         default=0.90,
-        help="Minimum share of words before ### Technical appendix (default 0.90).",
+        help="Minimum share of words before ### Appendix (default 0.90).",
     )
     args = ap.parse_args()
 

@@ -163,22 +163,22 @@ Cross-lane convergence and tension are notebook-native concepts. For 2026-04, re
 **Source page:** `scott-ritter-blockade-hormuz-weave`
 **Also in:** barnes, davis, diesen, johnson, marandi, mearsheimer, mercouris, parsi, ritter, sachs
 
-### Signal
+### Chronicle
 
 **Davis × Jermy** Deep Dive ([YouTube `etxmqrdm3V0`](https://www.youtube.com/watch?v=etxmqrdm3V0)) — **`thread:davis`**, **`thread:jermy`** — same-episode **blockade** **brinkmanship** + **energy–GDP** cascade; stacks **Ritter** **porous** **blockade** thesis vs **slide-order** macro (**not** wire ORBAT).
 
-### Judgment
+### Reflection
 
 **Weave (this knot):** **`ritter`** carries **Hormuz** **sea-control** / **blockade** **mechanics** (semantics, hull burden, third-party **hull** behavior, **time** / **storage**). **Same topic**, **non-interchangeable** **expert** **objects:** **`davis`** + **`jermy`** = **executive** **clock** + **systemic** **energy** **lag**; **`diesen`** + **`sachs`** = **talks**/**institutions** **collapse** **frame** on **blockade** (**orthogonal** to **vi-14** per sister knot); **`parsi`** + **`davis`** = **EU** **naming** vs **Congress** **lane**; **`barnes`** = **domestic** **TS** **liability** **pole** (inbox **Disclose**/**Truth Social** **chain**) — **not** **Navy** **facts**; **`johnson`** = **digest** **ORBAT** **Haiphong** **roundtable** path ([transcript digest](../../../transcript-analysis-haiphong-ritter-johnson-iran-2026-04.md)); **`marandi`** / **`mercouris`** / **`mearsheimer`** = **continuity spine** **room** / **geometry** — **triangulate**, **do not** **collapse** into **one** **Ritter** **paragraph** without **labeled** **seams**.
 
-### Open
+### Foresight
 
 - [Ritter blockade mechanics — verify checklist (2026-04-13)](../../../daily-strategy-inbox.md) (inbox **§ Ritter blockade mechanics**)
 - Re-run **`python3 scripts/strategy_thread.py`** after inbox **`thread:`** updates.
 
 ---
 
-### Technical appendix
+### Appendix
 
 # Knot — 2026-04-14 — Scott Ritter — Hormuz blockade weave (expert lattice)
 
@@ -226,7 +226,7 @@ none this pass
 
 none this pass
 
-### Links
+### References
 
 - **Ritter 085 (pin):** inbox line — `TBD-canonical-085` → replace when canonical **YouTube** ID is fixed.
 - **Davis × Jermy (same day):** [YouTube `etxmqrdm3V0`](https://www.youtube.com/watch?v=etxmqrdm3V0) — **`thread:davis`**, **`thread:jermy`**
@@ -253,21 +253,21 @@ Pins keep **`ritter`** **mechanics** **distinct** from **speech**/**institution*
 **Source page:** `armstrong-cash-hormuz-digital-dollar-arc`
 **Also in:** armstrong, davis, ritter
 
-### Signal
+### Chronicle
 
 **Armstrong**-style graphics compress **cash**, **bank money**, **stablecoins**, and **hypothetical Federal Reserve retail money** into one **digital** threat; the same news cycle ties **Strait of Hormuz** stress to **food and fertilizer** fear. **Fink**-adjacent reposts often **compress** **tokenization** advocacy into **“end of cash”** headlines — **attribution** and **definition** lag the **mood**.
 
-### Judgment
+### Reflection
 
 **One arc, three seams.** (1) **Mercouris lane:** Physical **cash** carries a **legitimacy memory** — permissionless small settlement — while **digitization** carries **intermediation** and **visibility**; **82/20**-style splits are **morally legible** before they are **definition-clean**. (2) **Mearsheimer lane:** If **retail central-bank digital currency** stays **politically stalled** in the United States while **private** **dollar-linked** instruments and **tokenized** rails **advance**, **structural** winners and losers shift toward **intermediaries**, **compliance rent**, and **jurisdiction** — not toward a **single** Washington **switch**. (3) **Barnes lane:** **Law** still gates a **Federal Reserve** **retail** digital dollar — **Congress** and the **Federal Reserve Act** are load-bearing; **stablecoin** bills and **anti–central-bank digital currency** bills are **different** statutory objects (see Links). **False merge:** treating **Gulf-origin** fertilizer share as **“percent through Hormuz”** without a **transit** primary; **false merge:** **BlackRock** **plumbing** quotes as **proof** of a **specific** **Federal Reserve** **retail** **launch** absent **bill text** and **notice-and-comment** facts.
 
-### Open
+### Foresight
 
 - Pin **primary** **Fink** paragraph or **CNBC** transcript line if **social** repost chain is load-bearing.
 - Add **dedicated** shipping / **UNCTAD** or **commodity shipping** primary if **“through Hormuz”** **fertilizer %** is needed at **Links** tier.
 - Optional inbox: one **`batch-analysis`** line naming **this knot** + **`crosses:`** none — or **crosses** to a future **`thread:`** expert if **money** and **Hormuz** lanes are **explicitly** coupled with evidence.
 
-### Technical appendix
+### Appendix
 
 # Knot — 2026-04-14 — Cash narrative, Hormuz fertilizer anxiety, U.S. digital-dollar law (operator weave D)
 
@@ -301,7 +301,7 @@ Pins keep **`ritter`** **mechanics** **distinct** from **speech**/**institution*
 |------|-----------|
 | `ritter-blockade-hormuz-weave` | **Hormuz** expert mechanics — **orthogonal** to this knot’s **U.S. payment-law** arc; **fertilizer** language may **overlap in mood** with **`jermy`** cascade lines in [`days.md`](../days.md), not as proof of the same **quantity**. |
 
-### Links
+### References
 
 - **Mind profiles (WORK):** [CIV-MIND-BARNES.md](../../../minds/CIV-MIND-BARNES.md) · [CIV-MIND-MERCOURIS.md](../../../minds/CIV-MIND-MERCOURIS.md) · [CIV-MIND-MEARSHEIMER.md](../../../minds/CIV-MIND-MEARSHEIMER.md)
 - **BlackRock — Larry Fink chairman letters (primary hub):** [Investor relations — annual chairman’s letter](https://www.blackrock.com/corporate/investor-relations/larry-fink-annual-chairmans-letter)

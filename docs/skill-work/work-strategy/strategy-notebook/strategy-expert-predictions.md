@@ -22,7 +22,7 @@
 - Only claims that are **checkable** against **primaries or twin wires** (not vibes).
 - **Conditional** forecasts (`if X then Y`) need **both** legs scored or deferred.
 - Distinguish **Bayesian update** from **flip**; new facts may justify revised judgment.
-- **Ingest flow:** inbox first when practical; this file holds **canonical adjudication rows** + optional pointers from [`chapters/YYYY-MM/days.md`](chapters/2026-04/days.md) **`### Open`**. **Direct rows here are OK** without a prior inbox line when attribution is already solid.
+- **Ingest flow:** inbox first when practical; this file holds **canonical adjudication rows** + optional pointers from [`chapters/YYYY-MM/days.md`](chapters/2026-04/days.md) **`### Foresight`**. **Direct rows here are OK** without a prior inbox line when attribution is already solid.
 
 ---
 

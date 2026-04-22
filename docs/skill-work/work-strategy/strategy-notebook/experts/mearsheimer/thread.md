@@ -196,15 +196,15 @@ Verification stance for John Mearsheimer in 2026-04 should stay tier-honest: web
 - **History resonance:** none this pass
 - **Civilizational bridge:** none this pass
 
-### Signal
+### Chronicle
 
 See [`days.md` § Signal / § Judgment](../days.md) when **Lebanon**/**Washington** **venue** lines appear beside **Hormuz**/**Iran** **cycle**; this knot **abstracts** **Mercouris**/**Mearsheimer** **fork** only.
 
-### Judgment
+### Reflection
 
 **Abstract (this knot):** **Alexander Mercouris** tracks **who sounds credible** in **room** **diplomacy** (**Lebanon–Israel** **framing**, **U.S.** **messaging**, **legitimacy** **choreography**). **John Mearsheimer** tracks **what states can afford** and **how power** **distributes** **incentives** (**alliance** **strain**, **escalation** **geometry**) — **orthogonal** **default**: **speech-act** **success** ≠ **structural** **settlement** **without** **evidence** **coupling**. **Do not** **tri-mind**-merge into one **verdict** in **`days.md`** without **labeled** **Thesis A / B** or **`batch-analysis`** **`crosses:mercouris+mearsheimer`** when ingests exist.
 
-### Links
+### References
 
 - **Mind registers (in-voice discipline):** [CIV-MIND-MERCOURIS.md](../../../minds/CIV-MIND-MERCOURIS.md) · [CIV-MIND-MEARSHEIMER.md](../../../minds/CIV-MIND-MEARSHEIMER.md)
 - **Tri-mind skill:** [`.cursor/skills/tri-mind/SKILL.md`](../../../../../../../.cursor/skills/tri-mind/SKILL.md) (**A** = Mercouris, **B** = Mearsheimer)
@@ -222,7 +222,7 @@ Pins keep **Mercouris** **legitimacy** **layer** and **Mearsheimer** **structure
 
 **Falsifier:** This knot fails if **Lebanon**/**Washington** **progress** is **asserted** from **Mercouris**-class **narrative** **alone** **without** **Mearsheimer**-class **incentive** **checks** (or **vice versa**: **structure** **only** **without** **on-record** **speech** **acts**) — **forced** **merge** **replaces** **Thesis A / B** **discipline**.
 
-### Open / verify
+### Foresight / verify
 
 - Add **`batch-analysis | YYYY-MM-DD | Mercouris × Mearsheimer`** to inbox when **both** **`thread:`** ingests land same day.
 - **Wire** **Lebanon–Israel** **Washington** **talks** primaries vs **commentary** **only** — tier before **Links-grade** **Judgment**.
@@ -280,17 +280,17 @@ _(Operator/assistant: refine this page content.)_
 **Source page:** `marandi-ritter-mercouris-hormuz-scaffold`
 **Also in:** davis, freeman, johnson, marandi, mercouris, parsi, ritter
 
-### Judgment
+### Reflection
 
 **Weave:** **Mercouris** = **institutional / analyst-constellation / zugzwang** language; **Marandi** = **Iranian red lines** + **wire-verify** roster (**Ghalibaf** head; **Larijani** = transcript **misname**); **Ritter** = **USN mechanics** + **faith invective** lane. **Davis × Freeman × Mearsheimer** = **systemic / bargaining / alliance-cost** folds — **parallel** **Ritter ego-reduction** **lane** until primaries show sequence ([`days.md`](../days.md#2026-04-13)). **Do not** collapse **leadership-psychology** into **Links** without **`narrative-escalation`** + primaries. **Rome–faith registers** (Marandi ecumenical vs Ritter invective vs **SkyVirginSon** vs **Milad**) — **parallel legitimacy combat** — **not** Hormuz **material** **row** without **seam**.
 
-### Open
+### Foresight
 
 - Pin **canonical** episode URLs for **Breaking Points**, **The Duran**, **Judging Freedom**, **Daniel Davis Deep Dive** (Freeman, Mearsheimer), **Napolitano × Johnson** per [`days.md` Open](../days.md#2026-04-13).
 
 ---
 
-### Technical appendix
+### Appendix
 
 # Knot — 2026-04-13 — Marandi × Ritter × Mercouris — Hormuz scaffold (expert lattice)
 
@@ -335,7 +335,7 @@ none this pass
 | **Next day** | `ritter-blockade-hormuz-weave` | **Ritter**-centered **04-14** lattice + **Parsi×Davis** / **Diesen×Sachs** / **Mercouris×Mearsheimer** **knot** files. |
 | **Day prose** | [`days.md` § 2026-04-14](../days.md#2026-04-14) | **Continuity spine** **explicitly** **stacks** **04-12–04-14** **`thread:`** **carries**. |
 
-### Links
+### References
 
 - [daily-strategy-inbox.md](../../../daily-strategy-inbox.md) — **Primary pulls (2026-04-13)** · **Ritter blockade checklist** (paste-grade)
 - [Al Jazeera — Islamabad talks unfolded](https://www.aljazeera.com/news/2026/4/13/how-the-us-iran-talks-in-islamabad-unfolded)
@@ -361,22 +361,22 @@ none this pass
 **Source page:** `scott-ritter-blockade-hormuz-weave`
 **Also in:** barnes, davis, diesen, jermy, johnson, marandi, mercouris, parsi, ritter, sachs
 
-### Signal
+### Chronicle
 
 **Davis × Jermy** Deep Dive ([YouTube `etxmqrdm3V0`](https://www.youtube.com/watch?v=etxmqrdm3V0)) — **`thread:davis`**, **`thread:jermy`** — same-episode **blockade** **brinkmanship** + **energy–GDP** cascade; stacks **Ritter** **porous** **blockade** thesis vs **slide-order** macro (**not** wire ORBAT).
 
-### Judgment
+### Reflection
 
 **Weave (this knot):** **`ritter`** carries **Hormuz** **sea-control** / **blockade** **mechanics** (semantics, hull burden, third-party **hull** behavior, **time** / **storage**). **Same topic**, **non-interchangeable** **expert** **objects:** **`davis`** + **`jermy`** = **executive** **clock** + **systemic** **energy** **lag**; **`diesen`** + **`sachs`** = **talks**/**institutions** **collapse** **frame** on **blockade** (**orthogonal** to **vi-14** per sister knot); **`parsi`** + **`davis`** = **EU** **naming** vs **Congress** **lane**; **`barnes`** = **domestic** **TS** **liability** **pole** (inbox **Disclose**/**Truth Social** **chain**) — **not** **Navy** **facts**; **`johnson`** = **digest** **ORBAT** **Haiphong** **roundtable** path ([transcript digest](../../../transcript-analysis-haiphong-ritter-johnson-iran-2026-04.md)); **`marandi`** / **`mercouris`** / **`mearsheimer`** = **continuity spine** **room** / **geometry** — **triangulate**, **do not** **collapse** into **one** **Ritter** **paragraph** without **labeled** **seams**.
 
-### Open
+### Foresight
 
 - [Ritter blockade mechanics — verify checklist (2026-04-13)](../../../daily-strategy-inbox.md) (inbox **§ Ritter blockade mechanics**)
 - Re-run **`python3 scripts/strategy_thread.py`** after inbox **`thread:`** updates.
 
 ---
 
-### Technical appendix
+### Appendix
 
 # Knot — 2026-04-14 — Scott Ritter — Hormuz blockade weave (expert lattice)
 
@@ -424,7 +424,7 @@ none this pass
 
 none this pass
 
-### Links
+### References
 
 - **Ritter 085 (pin):** inbox line — `TBD-canonical-085` → replace when canonical **YouTube** ID is fixed.
 - **Davis × Jermy (same day):** [YouTube `etxmqrdm3V0`](https://www.youtube.com/watch?v=etxmqrdm3V0) — **`thread:davis`**, **`thread:jermy`**
@@ -451,7 +451,7 @@ Pins keep **`ritter`** **mechanics** **distinct** from **speech**/**institution*
 **Source page:** `pape-janssen-escalation-blockade`
 **Also in:** blumenthal, davis, marandi, pape
 
-### Signal
+### Chronicle
 
 **Source artifact:** operator-pasted transcript — *Professor Robert Pape: The US Can NOT Beat Iran*, interview **Cyrus Janssen**, uploaded **2026-04-16** (YouTube `@CyrusJanssen`). **Pin** canonical episode `watch?v=` when confirmed; until then treat lines as **operator-transcript** tier.
 
@@ -466,7 +466,7 @@ Pape stacks four public claims in one appearance:
 
 ---
 
-### Judgment
+### Reflection
 
 **Mechanism (Pape lane):** Treat **escalation trap** as a **commitment-ratchet + audience-cost** story — demands that harden as sunk costs rise — **not** interchangeable with **Mearsheimer** alliance geometry or **Ritter** hull-level blockade mechanics.
 
@@ -482,7 +482,7 @@ Pape stacks four public claims in one appearance:
 
 ---
 
-### Open
+### Foresight
 
 - Pin **Janssen × Pape** canonical **`watch?v=`** URL; drop **`@CyrusJanssen/videos`** placeholder in Judgment when pinned.
 - **Rubio** + **Israeli negotiator-pressure** claims: **primary** quotes / dates before merging with §1e **grand bargain** or Islamabad rows.
@@ -492,7 +492,7 @@ Pape stacks four public claims in one appearance:
 
 ---
 
-### Technical appendix
+### Appendix
 
 # Knot — 2026-04-16 — Pape (Janssen): escalation trap, staged blockade, third-player spoiler
 
@@ -518,7 +518,7 @@ WORK only; not Record.
 
 ---
 
-### Links
+### References
 
 - **Inbox capture:** [daily-strategy-inbox.md — Expert ingest 2026-04-16](../../../daily-strategy-inbox.md) (search `Janssen` / `Pape`)
 - **Expert thread:** [strategy-expert-pape-thread.md](../../../strategy-expert-pape-thread.md)

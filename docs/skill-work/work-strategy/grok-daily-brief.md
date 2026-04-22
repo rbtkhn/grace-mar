@@ -65,7 +65,7 @@
 
 _(Add or remove **Development N** blocks as needed.)_
 
-### Signal vs noise
+### Chronicle vs noise
 
 #### High-signal
 

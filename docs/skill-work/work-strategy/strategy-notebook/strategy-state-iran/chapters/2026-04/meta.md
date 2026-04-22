@@ -6,7 +6,7 @@
 
 ## Shape (this chapter)
 
-- **Calendar index:** [`days.md`](days.md) — one row per April day → [`daily/`](daily/) consolidated pages (Signal / Judgment / Links / Open).
+- **Calendar index:** [`days.md`](days.md) — one row per April day → [`daily/`](daily/) consolidated pages (Chronicle / Reflection / References / Foresight).
 - **Slice registry:** [april-2026-slice-registry.md](april-2026-slice-registry.md) — **date → bundle anchor** for **@araghchi**, **@drpezeshkian**, **@mb_ghalibaf** (SSOT tables under [`raw-input/2026-04-20/`](../../raw-input/2026-04-20/)).
 - **Cross-weave:** Iran-lane dailies are **seams** into main [`days.md`](../../../chapters/2026-04/days.md), not substitutes for **`thread:`** Judgment or wire primaries.
 

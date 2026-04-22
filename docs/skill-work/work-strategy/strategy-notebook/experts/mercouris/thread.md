@@ -213,11 +213,11 @@ none this pass
 | **Next day** | `ritter-blockade-hormuz-weave` | **Ritter**-centered **04-14** lattice + **Parsi×Davis** / **Diesen×Sachs** / **Mercouris×Mearsheimer** **knot** files. |
 | **Day prose** | [`days.md` § 2026-04-14](../days.md#2026-04-14) | **Continuity spine** **explicitly** **stacks** **04-12–04-14** **`thread:`** **carries**. |
 
-### Judgment
+### Reflection
 
 **Weave:** **Mercouris** = **institutional / analyst-constellation / zugzwang** language; **Marandi** = **Iranian red lines** + **wire-verify** roster (**Ghalibaf** head; **Larijani** = transcript **misname**); **Ritter** = **USN mechanics** + **faith invective** lane. **Davis × Freeman × Mearsheimer** = **systemic / bargaining / alliance-cost** folds — **parallel** **Ritter ego-reduction** **lane** until primaries show sequence ([`days.md`](../days.md#2026-04-13)). **Do not** collapse **leadership-psychology** into **Links** without **`narrative-escalation`** + primaries. **Rome–faith registers** (Marandi ecumenical vs Ritter invective vs **SkyVirginSon** vs **Milad**) — **parallel legitimacy combat** — **not** Hormuz **material** **row** without **seam**.
 
-### Links
+### References
 
 - [daily-strategy-inbox.md](../../../daily-strategy-inbox.md) — **Primary pulls (2026-04-13)** · **Ritter blockade checklist** (paste-grade)
 - [Al Jazeera — Islamabad talks unfolded](https://www.aljazeera.com/news/2026/4/13/how-the-us-iran-talks-in-islamabad-unfolded)
@@ -235,7 +235,7 @@ none this pass
 
 **Falsifier:** One **merged** arc treats **Mercouris** **multilateral** **tickers** + **Johnson** **OOB** **skepticism** + **Marandi** **ecumenical** **register** + **Ritter** **hull** **claims** as **one** **voice** **without** **seams** — **lattice** **collapsed**.
 
-### Open / verify
+### Foresight / verify
 
 - Pin **canonical** episode URLs for **Breaking Points**, **The Duran**, **Judging Freedom**, **Daniel Davis Deep Dive** (Freeman, Mearsheimer), **Napolitano × Johnson** per [`days.md` Open](../days.md#2026-04-13).
 
@@ -282,15 +282,15 @@ none this pass
 - **History resonance:** none this pass
 - **Civilizational bridge:** none this pass
 
-### Signal
+### Chronicle
 
 See [`days.md` § Signal / § Judgment](../days.md) when **Lebanon**/**Washington** **venue** lines appear beside **Hormuz**/**Iran** **cycle**; this knot **abstracts** **Mercouris**/**Mearsheimer** **fork** only.
 
-### Judgment
+### Reflection
 
 **Abstract (this knot):** **Alexander Mercouris** tracks **who sounds credible** in **room** **diplomacy** (**Lebanon–Israel** **framing**, **U.S.** **messaging**, **legitimacy** **choreography**). **John Mearsheimer** tracks **what states can afford** and **how power** **distributes** **incentives** (**alliance** **strain**, **escalation** **geometry**) — **orthogonal** **default**: **speech-act** **success** ≠ **structural** **settlement** **without** **evidence** **coupling**. **Do not** **tri-mind**-merge into one **verdict** in **`days.md`** without **labeled** **Thesis A / B** or **`batch-analysis`** **`crosses:mercouris+mearsheimer`** when ingests exist.
 
-### Links
+### References
 
 - **Mind registers (in-voice discipline):** [CIV-MIND-MERCOURIS.md](../../../minds/CIV-MIND-MERCOURIS.md) · [CIV-MIND-MEARSHEIMER.md](../../../minds/CIV-MIND-MEARSHEIMER.md)
 - **Tri-mind skill:** [`.cursor/skills/tri-mind/SKILL.md`](../../../../../../../.cursor/skills/tri-mind/SKILL.md) (**A** = Mercouris, **B** = Mearsheimer)
@@ -308,7 +308,7 @@ Pins keep **Mercouris** **legitimacy** **layer** and **Mearsheimer** **structure
 
 **Falsifier:** This knot fails if **Lebanon**/**Washington** **progress** is **asserted** from **Mercouris**-class **narrative** **alone** **without** **Mearsheimer**-class **incentive** **checks** (or **vice versa**: **structure** **only** **without** **on-record** **speech** **acts**) — **forced** **merge** **replaces** **Thesis A / B** **discipline**.
 
-### Open / verify
+### Foresight / verify
 
 - Add **`batch-analysis | YYYY-MM-DD | Mercouris × Mearsheimer`** to inbox when **both** **`thread:`** ingests land same day.
 - **Wire** **Lebanon–Israel** **Washington** **talks** primaries vs **commentary** **only** — tier before **Links-grade** **Judgment**.
@@ -431,22 +431,22 @@ _(Operator/assistant: refine this page content.)_
 **Source page:** `scott-ritter-blockade-hormuz-weave`
 **Also in:** barnes, davis, diesen, jermy, johnson, marandi, mearsheimer, parsi, ritter, sachs
 
-### Signal
+### Chronicle
 
 **Davis × Jermy** Deep Dive ([YouTube `etxmqrdm3V0`](https://www.youtube.com/watch?v=etxmqrdm3V0)) — **`thread:davis`**, **`thread:jermy`** — same-episode **blockade** **brinkmanship** + **energy–GDP** cascade; stacks **Ritter** **porous** **blockade** thesis vs **slide-order** macro (**not** wire ORBAT).
 
-### Judgment
+### Reflection
 
 **Weave (this knot):** **`ritter`** carries **Hormuz** **sea-control** / **blockade** **mechanics** (semantics, hull burden, third-party **hull** behavior, **time** / **storage**). **Same topic**, **non-interchangeable** **expert** **objects:** **`davis`** + **`jermy`** = **executive** **clock** + **systemic** **energy** **lag**; **`diesen`** + **`sachs`** = **talks**/**institutions** **collapse** **frame** on **blockade** (**orthogonal** to **vi-14** per sister knot); **`parsi`** + **`davis`** = **EU** **naming** vs **Congress** **lane**; **`barnes`** = **domestic** **TS** **liability** **pole** (inbox **Disclose**/**Truth Social** **chain**) — **not** **Navy** **facts**; **`johnson`** = **digest** **ORBAT** **Haiphong** **roundtable** path ([transcript digest](../../../transcript-analysis-haiphong-ritter-johnson-iran-2026-04.md)); **`marandi`** / **`mercouris`** / **`mearsheimer`** = **continuity spine** **room** / **geometry** — **triangulate**, **do not** **collapse** into **one** **Ritter** **paragraph** without **labeled** **seams**.
 
-### Open
+### Foresight
 
 - [Ritter blockade mechanics — verify checklist (2026-04-13)](../../../daily-strategy-inbox.md) (inbox **§ Ritter blockade mechanics**)
 - Re-run **`python3 scripts/strategy_thread.py`** after inbox **`thread:`** updates.
 
 ---
 
-### Technical appendix
+### Appendix
 
 # Knot — 2026-04-14 — Scott Ritter — Hormuz blockade weave (expert lattice)
 
@@ -494,7 +494,7 @@ none this pass
 
 none this pass
 
-### Links
+### References
 
 - **Ritter 085 (pin):** inbox line — `TBD-canonical-085` → replace when canonical **YouTube** ID is fixed.
 - **Davis × Jermy (same day):** [YouTube `etxmqrdm3V0`](https://www.youtube.com/watch?v=etxmqrdm3V0) — **`thread:davis`**, **`thread:jermy`**
@@ -522,7 +522,7 @@ Pins keep **`ritter`** **mechanics** **distinct** from **speech**/**institution*
 **Source page:** `kremlin-iri-uranium-dual-register`
 **Also in:** parsi, ritter
 
-### Signal
+### Chronicle
 
 **Mechanics pointer:** Interdiction semantics, **porous / political blockade** framing, and **Ritter-class** operational vocabulary → **04-14** Scott Ritter — Hormuz blockade weave (page id `ritter-blockade-hormuz-weave`). **Signal** here = **same-day convergence** only (**uranium off-ramp**, **IRI dual register**, **legitimacy seam**).
 
@@ -534,7 +534,7 @@ Five-channel harvest on the same calendar day produced three convergence finding
 
 3. **§1e × Rome × NATO allies (legitimacy seam):** Vance framed Iran as committing "economic terrorism" and positioned the Trump objective as a "grand bargain" (nuclear + terrorism + economic). Leo XIV rejected Trump criticism from the papal plane, grounding peace advocacy in the Gospel and denouncing "delusion of omnipotence." France and UK refused to join the US blockade and announced a separate "peaceful multinational mission" for freedom of navigation. Three legitimacy challenges to the US posture in a single news cycle — moral-theological (Leo), alliance-mechanical (France-UK), and diplomatic (Iran MFA framing the US as the party lacking "seriousness and good faith").
 
-### Judgment
+### Reflection
 
 **Thesis A — The uranium off-ramp is the nearest-term falsifier for the "grand bargain" frame.**
 
@@ -550,7 +550,7 @@ Both MFA and IRGC positions are contingent on US behavior. The MFA branch opens 
 
 A moral objection (Leo XIV) can be dismissed as non-political. An alliance defection (France-UK) can be managed bilaterally. An adversary's framing (Iran MFA) can be ignored. But when all three appear simultaneously in the same news cycle, the US blockade faces a *legitimacy stack* — three registers that reinforce each other without coordinating. Leo's "delusion of omnipotence" language and France-UK's separate mission and Iran MFA's "seriousness and good faith" demand all independently question whether the US is the party upholding order or disrupting it. The question for the notebook: does the stack compress into a narrative ("the world is turning against the blockade") or stay disaggregated (three separate objections that happen to coincide)?
 
-### Open
+### Foresight
 
 - **Falsifier watch (Thesis A):** Next WH / State readout specifying "affirmative commitment" → zero enrichment or managed. Pin when available.
 - **IRI register dominance (Thesis B):** Track which institutional voice (MFA vs IRGC) leads Iranian media in next 48h; if IRGC escalation language displaces MFA opening, the ceasefire clock shortens and Thesis B's "conditioned branching" framing needs revision.
@@ -561,7 +561,7 @@ A moral objection (Leo XIV) can be dismissed as non-political. An alliance defec
 
 ---
 
-### Technical appendix
+### Appendix
 
 # Knot — 2026-04-15 — Kremlin–IRI uranium off-ramp, dual register, and the legitimacy seam
 
@@ -588,7 +588,7 @@ WORK only; not Record.
 
 ---
 
-### Links
+### References
 
 - **§1d:** [RIA — Peskov 15 Apr uranium transfer](https://ria.ru/20260415/peskov-2087244756.html) · [RIA — Peskov 15 Apr cooperation](https://ria.ru/20260415/peskov-2087245816.html) · [TASS — Lavrov urges continuation](https://tass.com/politics/2117137)
 - **§1e:** [Independent — Vance "economic terrorism" (14 Apr)](https://www.independent.co.uk/news/world/americas/us-politics/vance-strait-of-hormuz-blockade-terrorism-b2957110.html)

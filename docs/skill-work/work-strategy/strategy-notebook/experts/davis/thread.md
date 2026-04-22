@@ -182,17 +182,17 @@ Operator-ingested **long-form** **Davis** monologue (title in verbatim header). 
 **Source page:** `islamabad-hormuz-thesis-weave`
 **Also in:** barnes, freeman, pape, parsi
 
-### Judgment
+### Reflection
 
 **Thesis A (trap / ratchet)** vs **Thesis B (bargaining / third-party off-ramps)** — **both** stay live until dated evidence collapses one ([`days.md` Judgment](../days.md#2026-04-12)). **False merge:** **Pape** **forecast** **branch** (**~10k** **troops**) **as** **fact**; **false merge:** **Parsi** **Lebanon** **hypothesis** **as** **Islamabad** **table** **fact** without primaries; **false merge:** **Freeman** **alliance** **read** **as** **Navy** **ROE** **confirmation**.
 
-### Open
+### Foresight
 
 - Pin **canonical** Truth Social / **Parsi** / **Pape** **status** URLs per [`days.md` Open](../days.md#2026-04-12) **block**.
 
 ---
 
-### Technical appendix
+### Appendix
 
 # Knot — 2026-04-12 — Islamabad → Hormuz — thesis weave (pre-blockade lattice)
 
@@ -232,7 +232,7 @@ none this pass
 | **Later weave** | `marandi-ritter-mercouris-hormuz-scaffold` | **Marandi × Ritter × Mercouris** shared scaffold. |
 | **Later weave** | `ritter-blockade-hormuz-weave` | **04-14** **`thread:`** **batch-analysis** lattice (Davis×Jermy, Diesen×Sachs, Parsi×Davis knots). |
 
-### Links
+### References
 
 - [daily-brief-2026-04-12.md](../../../../daily-brief-2026-04-12.md)
 - [daily-strategy-inbox.md](../../../daily-strategy-inbox.md) — **Expert-thread continuity** / **batch-analysis** tails
@@ -257,17 +257,17 @@ none this pass
 **Source page:** `marandi-ritter-mercouris-hormuz-scaffold`
 **Also in:** freeman, johnson, marandi, mearsheimer, mercouris, parsi, ritter
 
-### Judgment
+### Reflection
 
 **Weave:** **Mercouris** = **institutional / analyst-constellation / zugzwang** language; **Marandi** = **Iranian red lines** + **wire-verify** roster (**Ghalibaf** head; **Larijani** = transcript **misname**); **Ritter** = **USN mechanics** + **faith invective** lane. **Davis × Freeman × Mearsheimer** = **systemic / bargaining / alliance-cost** folds — **parallel** **Ritter ego-reduction** **lane** until primaries show sequence ([`days.md`](../days.md#2026-04-13)). **Do not** collapse **leadership-psychology** into **Links** without **`narrative-escalation`** + primaries. **Rome–faith registers** (Marandi ecumenical vs Ritter invective vs **SkyVirginSon** vs **Milad**) — **parallel legitimacy combat** — **not** Hormuz **material** **row** without **seam**.
 
-### Open
+### Foresight
 
 - Pin **canonical** episode URLs for **Breaking Points**, **The Duran**, **Judging Freedom**, **Daniel Davis Deep Dive** (Freeman, Mearsheimer), **Napolitano × Johnson** per [`days.md` Open](../days.md#2026-04-13).
 
 ---
 
-### Technical appendix
+### Appendix
 
 # Knot — 2026-04-13 — Marandi × Ritter × Mercouris — Hormuz scaffold (expert lattice)
 
@@ -312,7 +312,7 @@ none this pass
 | **Next day** | `ritter-blockade-hormuz-weave` | **Ritter**-centered **04-14** lattice + **Parsi×Davis** / **Diesen×Sachs** / **Mercouris×Mearsheimer** **knot** files. |
 | **Day prose** | [`days.md` § 2026-04-14](../days.md#2026-04-14) | **Continuity spine** **explicitly** **stacks** **04-12–04-14** **`thread:`** **carries**. |
 
-### Links
+### References
 
 - [daily-strategy-inbox.md](../../../daily-strategy-inbox.md) — **Primary pulls (2026-04-13)** · **Ritter blockade checklist** (paste-grade)
 - [Al Jazeera — Islamabad talks unfolded](https://www.aljazeera.com/news/2026/4/13/how-the-us-iran-talks-in-islamabad-unfolded)
@@ -339,15 +339,15 @@ none this pass
 **Source page:** `parsi-davis-war-powers`
 **Also in:** parsi
 
-### Signal
+### Chronicle
 
 See [`days.md` § Signal — `parsi` / `davis`](../days.md) and **Weave** lead bullet.
 
-### Judgment
+### Reflection
 
 See [`days.md` § Judgment — *Parsi × Davis (Judgment seam)*](../days.md). This knot does not duplicate it; it **hubs** sources for accountability **language** across **two institutions** (EU HR speech-act vs U.S. constitutional lane).
 
-### Open
+### Foresight
 
 - Pin **`x.com/tparsi/status/...`** and **`x.com/DanielLDavis1/status/...`** for quote-grade **Parsi × Kallas** and **Davis** blockade/war-powers lines.
 - **Do not** merge **Kallas** wording craft with **House/Senate** votes without **Roll Call** / committee primaries.
@@ -355,7 +355,7 @@ See [`days.md` § Judgment — *Parsi × Davis (Judgment seam)*](../days.md). Th
 
 ---
 
-### Technical appendix
+### Appendix
 
 # Knot — 2026-04-14 — Parsi × Davis — EU naming vs U.S. war-powers
 
@@ -381,7 +381,7 @@ See [`days.md` § Judgment — *Parsi × Davis (Judgment seam)*](../days.md). Th
 - **History resonance:** none this pass
 - **Civilizational bridge:** none this pass
 
-### Links
+### References
 
 - **Batch spine:** `batch-analysis | 2026-04-14 | Parsi × Davis` in [daily-strategy-inbox.md](../../../daily-strategy-inbox.md) (search `crosses:parsi+davis`).
 - **Wire bundle (same-day context):** [Roll Call — Iran war powers + expulsion talk](https://rollcall.com/2026/04/13/this-week-iran-war-powers-and-expulsion-talk/) (mirrored in inbox §2c; **verify** date if citing “this week”).
@@ -408,22 +408,22 @@ Pins keep **Trita Parsi** (EU / **Kallas** speech-act lane) and **Daniel Davis**
 **Source page:** `scott-ritter-blockade-hormuz-weave`
 **Also in:** barnes, diesen, jermy, johnson, marandi, mearsheimer, mercouris, parsi, ritter, sachs
 
-### Signal
+### Chronicle
 
 **Davis × Jermy** Deep Dive ([YouTube `etxmqrdm3V0`](https://www.youtube.com/watch?v=etxmqrdm3V0)) — **`thread:davis`**, **`thread:jermy`** — same-episode **blockade** **brinkmanship** + **energy–GDP** cascade; stacks **Ritter** **porous** **blockade** thesis vs **slide-order** macro (**not** wire ORBAT).
 
-### Judgment
+### Reflection
 
 **Weave (this knot):** **`ritter`** carries **Hormuz** **sea-control** / **blockade** **mechanics** (semantics, hull burden, third-party **hull** behavior, **time** / **storage**). **Same topic**, **non-interchangeable** **expert** **objects:** **`davis`** + **`jermy`** = **executive** **clock** + **systemic** **energy** **lag**; **`diesen`** + **`sachs`** = **talks**/**institutions** **collapse** **frame** on **blockade** (**orthogonal** to **vi-14** per sister knot); **`parsi`** + **`davis`** = **EU** **naming** vs **Congress** **lane**; **`barnes`** = **domestic** **TS** **liability** **pole** (inbox **Disclose**/**Truth Social** **chain**) — **not** **Navy** **facts**; **`johnson`** = **digest** **ORBAT** **Haiphong** **roundtable** path ([transcript digest](../../../transcript-analysis-haiphong-ritter-johnson-iran-2026-04.md)); **`marandi`** / **`mercouris`** / **`mearsheimer`** = **continuity spine** **room** / **geometry** — **triangulate**, **do not** **collapse** into **one** **Ritter** **paragraph** without **labeled** **seams**.
 
-### Open
+### Foresight
 
 - [Ritter blockade mechanics — verify checklist (2026-04-13)](../../../daily-strategy-inbox.md) (inbox **§ Ritter blockade mechanics**)
 - Re-run **`python3 scripts/strategy_thread.py`** after inbox **`thread:`** updates.
 
 ---
 
-### Technical appendix
+### Appendix
 
 # Knot — 2026-04-14 — Scott Ritter — Hormuz blockade weave (expert lattice)
 
@@ -471,7 +471,7 @@ none this pass
 
 none this pass
 
-### Links
+### References
 
 - **Ritter 085 (pin):** inbox line — `TBD-canonical-085` → replace when canonical **YouTube** ID is fixed.
 - **Davis × Jermy (same day):** [YouTube `etxmqrdm3V0`](https://www.youtube.com/watch?v=etxmqrdm3V0) — **`thread:davis`**, **`thread:jermy`**
@@ -498,21 +498,21 @@ Pins keep **`ritter`** **mechanics** **distinct** from **speech**/**institution*
 **Source page:** `armstrong-cash-hormuz-digital-dollar-arc`
 **Also in:** armstrong, jermy, ritter
 
-### Signal
+### Chronicle
 
 **Armstrong**-style graphics compress **cash**, **bank money**, **stablecoins**, and **hypothetical Federal Reserve retail money** into one **digital** threat; the same news cycle ties **Strait of Hormuz** stress to **food and fertilizer** fear. **Fink**-adjacent reposts often **compress** **tokenization** advocacy into **“end of cash”** headlines — **attribution** and **definition** lag the **mood**.
 
-### Judgment
+### Reflection
 
 **One arc, three seams.** (1) **Mercouris lane:** Physical **cash** carries a **legitimacy memory** — permissionless small settlement — while **digitization** carries **intermediation** and **visibility**; **82/20**-style splits are **morally legible** before they are **definition-clean**. (2) **Mearsheimer lane:** If **retail central-bank digital currency** stays **politically stalled** in the United States while **private** **dollar-linked** instruments and **tokenized** rails **advance**, **structural** winners and losers shift toward **intermediaries**, **compliance rent**, and **jurisdiction** — not toward a **single** Washington **switch**. (3) **Barnes lane:** **Law** still gates a **Federal Reserve** **retail** digital dollar — **Congress** and the **Federal Reserve Act** are load-bearing; **stablecoin** bills and **anti–central-bank digital currency** bills are **different** statutory objects (see Links). **False merge:** treating **Gulf-origin** fertilizer share as **“percent through Hormuz”** without a **transit** primary; **false merge:** **BlackRock** **plumbing** quotes as **proof** of a **specific** **Federal Reserve** **retail** **launch** absent **bill text** and **notice-and-comment** facts.
 
-### Open
+### Foresight
 
 - Pin **primary** **Fink** paragraph or **CNBC** transcript line if **social** repost chain is load-bearing.
 - Add **dedicated** shipping / **UNCTAD** or **commodity shipping** primary if **“through Hormuz”** **fertilizer %** is needed at **Links** tier.
 - Optional inbox: one **`batch-analysis`** line naming **this knot** + **`crosses:`** none — or **crosses** to a future **`thread:`** expert if **money** and **Hormuz** lanes are **explicitly** coupled with evidence.
 
-### Technical appendix
+### Appendix
 
 # Knot — 2026-04-14 — Cash narrative, Hormuz fertilizer anxiety, U.S. digital-dollar law (operator weave D)
 
@@ -546,7 +546,7 @@ Pins keep **`ritter`** **mechanics** **distinct** from **speech**/**institution*
 |------|-----------|
 | `ritter-blockade-hormuz-weave` | **Hormuz** expert mechanics — **orthogonal** to this knot’s **U.S. payment-law** arc; **fertilizer** language may **overlap in mood** with **`jermy`** cascade lines in [`days.md`](../days.md), not as proof of the same **quantity**. |
 
-### Links
+### References
 
 - **Mind profiles (WORK):** [CIV-MIND-BARNES.md](../../../minds/CIV-MIND-BARNES.md) · [CIV-MIND-MERCOURIS.md](../../../minds/CIV-MIND-MERCOURIS.md) · [CIV-MIND-MEARSHEIMER.md](../../../minds/CIV-MIND-MEARSHEIMER.md)
 - **BlackRock — Larry Fink chairman letters (primary hub):** [Investor relations — annual chairman’s letter](https://www.blackrock.com/corporate/investor-relations/larry-fink-annual-chairmans-letter)
@@ -571,7 +571,7 @@ Pins keep **`ritter`** **mechanics** **distinct** from **speech**/**institution*
 **Source page:** `pape-janssen-escalation-blockade`
 **Also in:** blumenthal, marandi, mearsheimer, pape
 
-### Signal
+### Chronicle
 
 **Source artifact:** operator-pasted transcript — *Professor Robert Pape: The US Can NOT Beat Iran*, interview **Cyrus Janssen**, uploaded **2026-04-16** (YouTube `@CyrusJanssen`). **Pin** canonical episode `watch?v=` when confirmed; until then treat lines as **operator-transcript** tier.
 
@@ -586,7 +586,7 @@ Pape stacks four public claims in one appearance:
 
 ---
 
-### Judgment
+### Reflection
 
 **Mechanism (Pape lane):** Treat **escalation trap** as a **commitment-ratchet + audience-cost** story — demands that harden as sunk costs rise — **not** interchangeable with **Mearsheimer** alliance geometry or **Ritter** hull-level blockade mechanics.
 
@@ -602,7 +602,7 @@ Pape stacks four public claims in one appearance:
 
 ---
 
-### Open
+### Foresight
 
 - Pin **Janssen × Pape** canonical **`watch?v=`** URL; drop **`@CyrusJanssen/videos`** placeholder in Judgment when pinned.
 - **Rubio** + **Israeli negotiator-pressure** claims: **primary** quotes / dates before merging with §1e **grand bargain** or Islamabad rows.
@@ -612,7 +612,7 @@ Pape stacks four public claims in one appearance:
 
 ---
 
-### Technical appendix
+### Appendix
 
 # Knot — 2026-04-16 — Pape (Janssen): escalation trap, staged blockade, third-player spoiler
 
@@ -638,7 +638,7 @@ WORK only; not Record.
 
 ---
 
-### Links
+### References
 
 - **Inbox capture:** [daily-strategy-inbox.md — Expert ingest 2026-04-16](../../../daily-strategy-inbox.md) (search `Janssen` / `Pape`)
 - **Expert thread:** [strategy-expert-pape-thread.md](../../../strategy-expert-pape-thread.md)
@@ -658,7 +658,7 @@ WORK only; not Record.
 **Watch:** us-iran-diplomacy
 **Also in:** pape
 
-### Signal
+### Chronicle
 
 **Davis lane (`thread:davis`):** Same-day X capture frames Trump as again threatening Iranian energy and the Strait, contrasts Islamabad team “performative” process optics with war-resume risk, and stacks Strait / missile / drone retaliation geometry against U.S., Israeli, and Gulf allies alongside petroleum constraint and years-scale macro downside—explicitly tagged as material and macro forecast, not §1e text without primaries.
 
@@ -668,7 +668,7 @@ WORK only; not Record.
 
 Same-day **Sánchez** EU–Israel institutional lines and **Ritter** Substack essay ingests sit in the same inbox subsection but **orthogonal** planes—do not fold them into this page’s Judgment without a labeled seam (see inbox `batch-analysis` fold row).
 
-### Judgment
+### Reflection
 
 **Davis-forward read:** Daniel Davis’s contribution this day is **material and time-horizon**: whether coercive rhetoric maps onto a navigable negotiation path or boxes the parties into resume-war framing; whether Islamabad rounds read as serious process or performative when paired with executive threats; whether petroleum and recession-grade risk claims stay proportionate to pinned primaries. **Do not** collapse this lane into Pape’s ratchet vocabulary—merge only with explicit tier tags.
 
@@ -678,7 +678,7 @@ Same-day **Sánchez** EU–Israel institutional lines and **Ritter** Substack es
 
 When macro or petroleum lines in Davis’s post read as **multi-year** stress tests, tag them as **forecast-grade** in any `days.md` weave—same standard as Pape’s Janssen calendar hooks.
 
-### Open
+### Foresight
 
 - Pin **exact** Truth Social primary text and timestamp for the threat chain Pape screenshots; archive if load-bearing.
 - Pin **@DanielLDavis1** and **@ProfessorPape** status URLs used for this day’s weave.
@@ -686,7 +686,7 @@ When macro or petroleum lines in Davis’s post read as **multi-year** stress te
 
 **Davis resume:** If Islamabad readouts or §1e primaries contradict “performative only,” revise this page’s Signal sentence on the delegation in the next weave pass—**process fact** can move faster than X-tier mood.
 
-### Technical appendix
+### Appendix
 
 **SSOT:** paste-ready `thread:pape`, `thread:davis`, and `batch-analysis | 2026-04-19 | Pape × Davis × Trump Truth Social (Iran threats)` in [daily-strategy-inbox.md](../../daily-strategy-inbox.md) under **`## 2026-04-19`**.
 

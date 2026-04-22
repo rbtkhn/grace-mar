@@ -23,8 +23,8 @@
 | `judgment_quality.inbox_pending_lines` | Non-blank lines below the append marker in `daily-strategy-inbox.md` | 0–30 normal; >50 = overdue weave or prune |
 | `judgment_quality.promotion_date_mentions` | Date strings found in `STRATEGY.md` (proxy for promotion activity) | 0 fine early; sustained 0 over months = notebook may not feed STRATEGY |
 | `months.<YYYY-MM>.dated_entries` | Entries that month | Variable |
-| `months.<YYYY-MM>.avg_sections_per_entry` | Average of Signal/Judgment/Links/Open present per entry | 4.0 = all four; <3.0 = sections skipped regularly |
-| `months.<YYYY-MM>.avg_links_per_entry` | Average link/path references per `### Links` section | >2 healthy; <1 = under-cited judgment |
+| `months.<YYYY-MM>.avg_sections_per_entry` | Average of Chronicle/Reflection/References/Open present per entry | 4.0 = all four; <3.0 = sections skipped regularly |
+| `months.<YYYY-MM>.avg_links_per_entry` | Average link/path references per `### References` section | >2 healthy; <1 = under-cited judgment |
 | `months.<YYYY-MM>.open_carry_forward` | Open sections with unresolved items (verify, deferred, questions) | Active threads normal; very high relative to entries = debt |
 
 **Not yet auto-computed:** recommendation acceptance/rejection, cross-lane reference counts — require operator logging convention.

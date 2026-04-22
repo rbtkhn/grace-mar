@@ -63,6 +63,9 @@ jobs:
       - name: Validate strategy-page fences in expert threads
         run: python3 scripts/validate_strategy_pages.py
 
+      - name: Verify Ritter refined pages (manifest + spine)
+        run: python3 scripts/strategy/verify_ritter_refined_pages.py
+
       - name: Validate strategy expert threads (Segment 1 prose hints)
         run: python3 scripts/validate_strategy_expert_threads.py
 

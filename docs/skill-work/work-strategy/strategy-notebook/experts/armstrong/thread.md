@@ -154,21 +154,21 @@ Canonical knot paths and raw ingest lines live in **Segment 2** below (regenerat
 **Source page:** `armstrong-cash-hormuz-digital-dollar-arc`
 **Also in:** davis, jermy, ritter
 
-### Signal
+### Chronicle
 
 **Armstrong**-style graphics compress **cash**, **bank money**, **stablecoins**, and **hypothetical Federal Reserve retail money** into one **digital** threat; the same news cycle ties **Strait of Hormuz** stress to **food and fertilizer** fear. **Fink**-adjacent reposts often **compress** **tokenization** advocacy into **“end of cash”** headlines — **attribution** and **definition** lag the **mood**.
 
-### Judgment
+### Reflection
 
 **One arc, three seams.** (1) **Mercouris lane:** Physical **cash** carries a **legitimacy memory** — permissionless small settlement — while **digitization** carries **intermediation** and **visibility**; **82/20**-style splits are **morally legible** before they are **definition-clean**. (2) **Mearsheimer lane:** If **retail central-bank digital currency** stays **politically stalled** in the United States while **private** **dollar-linked** instruments and **tokenized** rails **advance**, **structural** winners and losers shift toward **intermediaries**, **compliance rent**, and **jurisdiction** — not toward a **single** Washington **switch**. (3) **Barnes lane:** **Law** still gates a **Federal Reserve** **retail** digital dollar — **Congress** and the **Federal Reserve Act** are load-bearing; **stablecoin** bills and **anti–central-bank digital currency** bills are **different** statutory objects (see Links). **False merge:** treating **Gulf-origin** fertilizer share as **“percent through Hormuz”** without a **transit** primary; **false merge:** **BlackRock** **plumbing** quotes as **proof** of a **specific** **Federal Reserve** **retail** **launch** absent **bill text** and **notice-and-comment** facts.
 
-### Open
+### Foresight
 
 - Pin **primary** **Fink** paragraph or **CNBC** transcript line if **social** repost chain is load-bearing.
 - Add **dedicated** shipping / **UNCTAD** or **commodity shipping** primary if **“through Hormuz”** **fertilizer %** is needed at **Links** tier.
 - Optional inbox: one **`batch-analysis`** line naming **this knot** + **`crosses:`** none — or **crosses** to a future **`thread:`** expert if **money** and **Hormuz** lanes are **explicitly** coupled with evidence.
 
-### Technical appendix
+### Appendix
 
 # Knot — 2026-04-14 — Cash narrative, Hormuz fertilizer anxiety, U.S. digital-dollar law (operator weave D)
 
@@ -202,7 +202,7 @@ Canonical knot paths and raw ingest lines live in **Segment 2** below (regenerat
 |------|-----------|
 | `ritter-blockade-hormuz-weave` | **Hormuz** expert mechanics — **orthogonal** to this knot’s **U.S. payment-law** arc; **fertilizer** language may **overlap in mood** with **`jermy`** cascade lines in [`days.md`](../days.md), not as proof of the same **quantity**. |
 
-### Links
+### References
 
 - **Mind profiles (WORK):** [CIV-MIND-BARNES.md](../../../minds/CIV-MIND-BARNES.md) · [CIV-MIND-MERCOURIS.md](../../../minds/CIV-MIND-MERCOURIS.md) · [CIV-MIND-MEARSHEIMER.md](../../../minds/CIV-MIND-MEARSHEIMER.md)
 - **BlackRock — Larry Fink chairman letters (primary hub):** [Investor relations — annual chairman’s letter](https://www.blackrock.com/corporate/investor-relations/larry-fink-annual-chairmans-letter)

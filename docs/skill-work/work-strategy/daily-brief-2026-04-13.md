@@ -309,7 +309,7 @@ remains elevated.
 battle geometry remains `[UNVERIFIED — no primary found]` beyond the headline
 claim.
 
-### Signal vs noise
+### Chronicle vs noise
 
 #### High-signal
 

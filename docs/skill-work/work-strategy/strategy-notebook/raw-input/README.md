@@ -53,7 +53,7 @@ raw-input/
     <slug>.md        ← other captures: verbatim sidecars, RSS without thread:, bundles, indexes
 ```
 
-**Refined day page (not here):** **`experts/<expert_id>/mercouris-page-YYYY-MM-DD.md`** (Mercouris) — Signal / Judgment / Open; links back to **verbatim** in this tree. Distinct from **`strategy-page`** in `thread.md` unless mirrored during EOD compose.
+**Refined day page (not here):** **`experts/<expert_id>/mercouris-page-YYYY-MM-DD.md`** (Mercouris) — Chronicle / Reflection / Foresight; links back to **verbatim** in this tree. Distinct from **`strategy-page`** in `thread.md` unless mirrored during EOD compose.
 
 **Raw capture:** e.g. **`2026-04-21-mercouris-verbatim.md`** for full operator transcript; RSS **`thread: mercouris`** appends to **`2026-04-21-mercouris.md`**.
 

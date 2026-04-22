@@ -10,7 +10,7 @@
 
 ## Arc phases (phenomena classes — verify before Judgment)
 
-_Add **dated URLs** to `days.md` **`### Links`** when a phase is load-bearing; this table is **scaffold**, not cited history._
+_Add **dated URLs** to `days.md` **`### References`** when a phase is load-bearing; this table is **scaffold**, not cited history._
 
 | Phase | Rough window | Trump — Christianity / religion (what to track) | Trump — papacy / Holy See (what to track) |
 |-------|----------------|-----------------------------------------------------|-------------------------------------------|

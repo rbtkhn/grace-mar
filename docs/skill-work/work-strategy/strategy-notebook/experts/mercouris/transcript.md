@@ -3,7 +3,7 @@
 WORK only; not Record.
 
 **Source:** Verbatim blocks from [`daily-strategy-inbox.md`](daily-strategy-inbox.md) that include `thread:mercouris` (first line + optional continuation paragraphs), routed on ingest.
-**Day page (refined):** **`experts/mercouris/mercouris-page-YYYY-MM-DD.md`** — Signal / Judgment / Open artifact; points to **verbatim** in [`raw-input/`](../../raw-input/README.md). **Verbatim capture** stays under **`raw-input/<date>/`** (e.g. `*-mercouris-verbatim.md` or RSS-merge **`YYYY-MM-DD-mercouris.md`**). Distinct from a **`strategy-page`** fence in [`thread.md`](strategy-expert-mercouris-thread.md) unless you duplicate judgment there during EOD compose. **Template:** [`mercouris-page-template.md`](mercouris-page-template.md).
+**Day page (refined):** **`experts/mercouris/mercouris-page-YYYY-MM-DD.md`** — Chronicle / Reflection / Foresight artifact; points to **verbatim** in [`raw-input/`](../../raw-input/README.md). **Verbatim capture** stays under **`raw-input/<date>/`** (e.g. `*-mercouris-verbatim.md` or RSS-merge **`YYYY-MM-DD-mercouris.md`**). Distinct from a **`strategy-page`** fence in [`thread.md`](strategy-expert-mercouris-thread.md) unless you duplicate judgment there during EOD compose. **Template:** [`mercouris-page-template.md`](mercouris-page-template.md).
 **Length:** Target **≤ 2000 words** per ingest block; whole file soft **≤ 20000 words** after prune (7-day window makes overrun unlikely).
 **Retention:** 7-day rolling window; date sections older than 7 days are pruned automatically.
 **Editing:** Operator may lightly edit for clarity after triage. Edits are preserved across triage runs (append-only, not overwrite).

@@ -155,11 +155,11 @@ Canonical knot paths and raw ingest lines live in **Segment 2** below (regenerat
 
 _Note: `strategy_page.py` echoes every inbox line containing each `thread:` tag; this page keeps one curated row plus the weave below._
 
-### Signal
+### Chronicle
 
 **Parsi** (quoted by Barnes): discipline collapses into performance — victory optics and humiliation crowd out reciprocal moves a counterparty could sequence into a deal. **Barnes** adds a domestic-liability thesis: self-control as the binding constraint on any Iran bargain, with emotional regression and mental health framed as what few will say openly but still steer public behavior. A second Barnes beat (Jerusalem Post / WSJ chain): military advisers reportedly excluded the President from the situation/command context during a high-stakes Iran-related extraction mission, citing erratic temper risk to mission integrity. **Weave:** domestic readings of executive fitness meet foreign policy at both performative channels (X / Truth Social) and room-access decisions — different falsifiers on each plane.
 
-### Judgment
+### Reflection
 
 Hold three planes open — no single headline merge:
 
@@ -171,7 +171,7 @@ Hold three planes open — no single headline merge:
 
 Optional crosses: `thread:davis` (war-powers / C-plane packaging), `thread:johnson` (Countercurrent domestic room same week) — seams, not one voice.
 
-### Links / verify
+### References / verify
 
 - Pin `@barnes_law` status URLs for 2026-04-19 (QT @tparsi + QRT JPost/WSJ chain).
 - WSJ piece as summarized — canonical link + headline match before treating exclusion as settled.
@@ -253,17 +253,17 @@ _(Operator/assistant: refine this page content.)_
 **Source page:** `islamabad-hormuz-thesis-weave`
 **Also in:** davis, freeman, pape, parsi
 
-### Judgment
+### Reflection
 
 **Thesis A (trap / ratchet)** vs **Thesis B (bargaining / third-party off-ramps)** — **both** stay live until dated evidence collapses one ([`days.md` Judgment](../days.md#2026-04-12)). **False merge:** **Pape** **forecast** **branch** (**~10k** **troops**) **as** **fact**; **false merge:** **Parsi** **Lebanon** **hypothesis** **as** **Islamabad** **table** **fact** without primaries; **false merge:** **Freeman** **alliance** **read** **as** **Navy** **ROE** **confirmation**.
 
-### Open
+### Foresight
 
 - Pin **canonical** Truth Social / **Parsi** / **Pape** **status** URLs per [`days.md` Open](../days.md#2026-04-12) **block**.
 
 ---
 
-### Technical appendix
+### Appendix
 
 # Knot — 2026-04-12 — Islamabad → Hormuz — thesis weave (pre-blockade lattice)
 
@@ -303,7 +303,7 @@ none this pass
 | **Later weave** | `marandi-ritter-mercouris-hormuz-scaffold` | **Marandi × Ritter × Mercouris** shared scaffold. |
 | **Later weave** | `ritter-blockade-hormuz-weave` | **04-14** **`thread:`** **batch-analysis** lattice (Davis×Jermy, Diesen×Sachs, Parsi×Davis knots). |
 
-### Links
+### References
 
 - [daily-brief-2026-04-12.md](../../../../daily-brief-2026-04-12.md)
 - [daily-strategy-inbox.md](../../../daily-strategy-inbox.md) — **Expert-thread continuity** / **batch-analysis** tails
@@ -327,22 +327,22 @@ none this pass
 **Source page:** `scott-ritter-blockade-hormuz-weave`
 **Also in:** davis, diesen, jermy, johnson, marandi, mearsheimer, mercouris, parsi, ritter, sachs
 
-### Signal
+### Chronicle
 
 **Davis × Jermy** Deep Dive ([YouTube `etxmqrdm3V0`](https://www.youtube.com/watch?v=etxmqrdm3V0)) — **`thread:davis`**, **`thread:jermy`** — same-episode **blockade** **brinkmanship** + **energy–GDP** cascade; stacks **Ritter** **porous** **blockade** thesis vs **slide-order** macro (**not** wire ORBAT).
 
-### Judgment
+### Reflection
 
 **Weave (this knot):** **`ritter`** carries **Hormuz** **sea-control** / **blockade** **mechanics** (semantics, hull burden, third-party **hull** behavior, **time** / **storage**). **Same topic**, **non-interchangeable** **expert** **objects:** **`davis`** + **`jermy`** = **executive** **clock** + **systemic** **energy** **lag**; **`diesen`** + **`sachs`** = **talks**/**institutions** **collapse** **frame** on **blockade** (**orthogonal** to **vi-14** per sister knot); **`parsi`** + **`davis`** = **EU** **naming** vs **Congress** **lane**; **`barnes`** = **domestic** **TS** **liability** **pole** (inbox **Disclose**/**Truth Social** **chain**) — **not** **Navy** **facts**; **`johnson`** = **digest** **ORBAT** **Haiphong** **roundtable** path ([transcript digest](../../../transcript-analysis-haiphong-ritter-johnson-iran-2026-04.md)); **`marandi`** / **`mercouris`** / **`mearsheimer`** = **continuity spine** **room** / **geometry** — **triangulate**, **do not** **collapse** into **one** **Ritter** **paragraph** without **labeled** **seams**.
 
-### Open
+### Foresight
 
 - [Ritter blockade mechanics — verify checklist (2026-04-13)](../../../daily-strategy-inbox.md) (inbox **§ Ritter blockade mechanics**)
 - Re-run **`python3 scripts/strategy_thread.py`** after inbox **`thread:`** updates.
 
 ---
 
-### Technical appendix
+### Appendix
 
 # Knot — 2026-04-14 — Scott Ritter — Hormuz blockade weave (expert lattice)
 
@@ -390,7 +390,7 @@ none this pass
 
 none this pass
 
-### Links
+### References
 
 - **Ritter 085 (pin):** inbox line — `TBD-canonical-085` → replace when canonical **YouTube** ID is fixed.
 - **Davis × Jermy (same day):** [YouTube `etxmqrdm3V0`](https://www.youtube.com/watch?v=etxmqrdm3V0) — **`thread:davis`**, **`thread:jermy`**

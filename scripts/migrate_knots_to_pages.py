@@ -79,45 +79,57 @@ def _norm_heading(h: str) -> str:
     return h.strip().lower()
 
 
+def _prose_bucket(kn: str) -> str | None:
+    """Map any spine heading variant to stable bucket keys (signal/judgment/open_verify/refs)."""
+    if kn in ("signal", "chronicle"):
+        return "signal"
+    if kn in ("judgment", "reflection"):
+        return "judgment"
+    if kn in ("open", "open / verify", "foresight", "foresight / verify"):
+        return "open_verify"
+    if kn in ("links", "references"):
+        return "references"
+    return None
+
+
 def _canonicalize_knot_body(raw: str) -> str:
-    """Reorder knot markdown into prose-first + Technical appendix (transfigure)."""
+    """Reorder knot markdown into prose-first + Appendix (transfigure)."""
     pre, sections = _split_markdown_sections(raw)
-    by_norm: dict[str, str] = {}
+    by_bucket: dict[str, str] = {}
     for title, body in sections:
-        key = _norm_heading(title)
-        if key in by_norm:
-            by_norm[key] = by_norm[key] + "\n\n" + body
-        else:
-            by_norm[key] = body
-
-    if "open" in by_norm and "open / verify" in by_norm:
-        by_norm["open / verify"] = (
-            by_norm.pop("open") + "\n\n" + by_norm["open / verify"]
-        )
-    elif "open" in by_norm:
-        by_norm["open / verify"] = by_norm.pop("open")
-
-    prose_order = [
-        "signal",
-        "judgment",
-        "open / verify",
-    ]
-    prose_parts: list[str] = []
-    label_map = {"signal": "Signal", "judgment": "Judgment", "open / verify": "Open"}
-    for pk in prose_order:
-        if pk not in by_norm:
+        kn = _norm_heading(title)
+        bucket = _prose_bucket(kn)
+        if bucket is None:
             continue
-        prose_parts.append(f"### {label_map[pk]}\n\n{by_norm[pk].strip()}")
+        if bucket in by_bucket:
+            by_bucket[bucket] = by_bucket[bucket] + "\n\n" + body
+        else:
+            by_bucket[bucket] = body
+
+    prose_order = ["signal", "judgment", "open_verify", "references"]
+    label_map = {
+        "signal": "Chronicle",
+        "judgment": "Reflection",
+        "open_verify": "Foresight",
+        "references": "References",
+    }
+    prose_parts: list[str] = []
+    for pk in prose_order:
+        if pk not in by_bucket:
+            continue
+        prose_parts.append(f"### {label_map[pk]}\n\n{by_bucket[pk].strip()}")
 
     tech_blocks: list[str] = []
     if pre:
         tech_blocks.append(pre)
-    prose_norm_set = frozenset(["signal", "judgment", "open / verify", "open"])
     for title, body in sections:
         kn = _norm_heading(title)
-        if kn in prose_norm_set:
+        if _prose_bucket(kn) is not None:
             continue
         if kn.startswith("index row"):
+            continue
+        if kn in ("technical appendix", "appendix"):
+            tech_blocks.append(body.strip())
             continue
         tech_blocks.append(f"### {title}\n\n{body.strip()}")
 
@@ -128,7 +140,7 @@ def _canonicalize_knot_body(raw: str) -> str:
         tech = "\n\n".join(tech_blocks).strip()
         if out:
             out.append("")
-        out.append("### Technical appendix")
+        out.append("### Appendix")
         out.append("")
         out.append(tech)
     return "\n".join(out).strip() if out else raw.strip()

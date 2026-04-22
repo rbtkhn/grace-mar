@@ -33,21 +33,21 @@ Embedded page for the corpus ingest:
 **Post span:** 2026-04-02 — 2026-04-17  
 **Also in:** [strategy-state-iran — `chapters/2026-04/days.md`](../../chapters/2026-04/days.md)
 
-### Signal
+### Chronicle
 
 The bundled table records **twelve** dated posts with **full English text**, **per-post status links**, and **engagement** snapshots. Substantively they assert: **ceasefire** terms (**hostilities stop**, **sanctions/blockade lift**, **assets return**); **Islamabad** track collapsed near **MoU** due to **U.S. demands and blockade**; gratitude to **Pakistan** and **Munir**; **Hormuz** passage **open** for **commercial** shipping on **PMO coordinated route** **in line with Lebanon ceasefire** remainder. Earlier lines stress **civilian** / **health** / **MIT** / **Bushehr** under **Israeli–U.S.** strikes and quote **WHO** on **health facilities**.
 
-### Judgment
+### Reflection
 
 Treat as **IRI FM register** for **§1e / Islamabad / Hormuz–Lebanon linkage** — **stronger** tier for **announced posture** than Majlis-only lines, but **not** a substitute for **AIS**, **shipping**, or **multilateral** readouts when the Judgment object is **material strait state**. **Dual-register** with **Marandi** / **Mercouris** / **Davis** remains mandatory: same week may show **different emphases** (commercial route vs “open” headline vs blockade narrative).
 
-### Open
+### Foresight
 
 **Gap:** Scrape reports **no** Araghchi posts **04-01**, **04-18–04-20** — refresh if the account adds posts. **Image-only** rows (**SNSC**, photos) need **visual primary** or **fa/EN readout** for full cite. Engagement numbers are **snapshot** from fetch, not live.
 
 ---
 
-### Technical appendix
+### Appendix
 
 - **Raw input:** [`raw-input/2026-04-20/x-araghchi-april-2026-posts-bundle.md`](../../../raw-input/2026-04-20/x-araghchi-april-2026-posts-bundle.md)
 - **Profile:** [https://x.com/araghchi](https://x.com/araghchi)
@@ -72,21 +72,21 @@ Treat as **IRI FM register** for **§1e / Islamabad / Hormuz–Lebanon linkage**
 **Post span:** 2026-04-03 — 2026-04-20  
 **Also in:** [strategy-state-iran — `chapters/2026-04/days.md`](../../chapters/2026-04/days.md)
 
-### Signal
+### Chronicle
 
 The table captures **presidential** messaging across **negotiation posture** (commitments, surrender frame), **humanitarian / IHL** (health workers, Red Crescent), **Lebanon ceasefire** violation rhetoric, **Islamabad** delegation reassurance, **Pope** legitimacy wedge, **civilizational** multipolar shout-outs, and **UNGA** Golden Rule **1/2–2/2** nuclear-hypocrisy frame. Engagement snapshots are operator-exported; **per-post status URLs** are not in the CSV — use **optional-pin** for cite-grade.
 
-### Judgment
+### Reflection
 
 **IRI presidential** register — **strong** for **narrative and intent** on **ROME**, **Lebanon fork**, and **U.S.–Iran talks** mood; **not** a substitute for **FM** operational lines (**@araghchi**) or **field** receipts on **ceasefire** / **strikes**. Keep **seams** explicit when folding into **`days.md`** with main-notebook **`thread:`** commentator lanes.
 
-### Open
+### Foresight
 
 Pin **status URLs** from live X for high-traffic rows (**Pontifex**, **04-20** EN surrender line). **Assassination** row (**04-03**) needs **named** **wire** if Judgment cites **fact** of attack. Arabic **Lebanon** row pairs with **fa**/EN for translation parity if cited.
 
 ---
 
-### Technical appendix
+### Appendix
 
 - **Raw input:** [`raw-input/2026-04-20/x-drpezeshkian-april-2026-posts-bundle.md`](../../../raw-input/2026-04-20/x-drpezeshkian-april-2026-posts-bundle.md)
 - **Rome–Persia check:** [`rome-persia-legitimacy-signal-check.md`](../../../rome-persia-legitimacy-signal-check.md)
@@ -111,21 +111,21 @@ Optional embedded page for this day:
 **Date:** 2026-04-20
 **Also in:** _(strategy-state-iran chapter days —_ [`../../chapters/2026-04/days.md`](../../chapters/2026-04/days.md)_)_
 
-### Signal
+### Chronicle
 
 Mohammad-Baqer Ghalibaf’s account, circulated via a **Seyed Mohammad Marandi repost** on X, uses translated Persian copy to assert that **Trump** is imposing a **siege** and **violating the ceasefire**, aiming to turn negotiations into **surrender** or to **justify warmongering**. The same text **rejects negotiations under threat** and states that **new cards** may be shown on the **battlefield** after roughly **two weeks** of preparation. The profile anchor for attribution is [https://x.com/mb_ghalibaf](https://x.com/mb_ghalibaf).
 
-### Judgment
+### Reflection
 
 This is **Majlis-speaker rhetoric**, useful for **§1e / Islamabad coercion posture** and for **dual-register** checks against **MFA** and **U.S.-side** lines the same week. It does **not** by itself establish operational facts (siege, ceasefire breach, or imminent military moves); those require **wire / ORBAT / named primary** rows in the main notebook. The **“new cards”** line is a **forecasting hook** for the Iran-lane **Open** list, not a verified order of battle.
 
-### Open
+### Foresight
 
 Falsifiers include **dated ceasefire-status primaries** that contradict the “violation” frame, **negotiation-room readouts** that show talks proceeding without the described coercion, and **field receipts** that falsify a near-term escalation shift. **fa** original post + **optional-pin** status URL raise tier when the operator archives them beside the machine translation.
 
 ---
 
-### Technical appendix
+### Appendix
 
 - **Raw input:** [`raw-input/2026-04-20/x-ghalibaf-marandi-repost-siege-battlefield.md`](../../../raw-input/2026-04-20/x-ghalibaf-marandi-repost-siege-battlefield.md)
 - **Main notebook chronology:** [`chapters/2026-04/days.md`](../../../chapters/2026-04/days.md)

@@ -6,7 +6,7 @@
 
 | Abbrev | Criterion |
 |--------|-----------|
-| NB | Notebook-primary (Signal / Judgment / Links) |
+| NB | Notebook-primary (Chronicle / Reflection / References) |
 | VF | Verify discipline |
 | LK | Links complete (exercise-specific) |
 | TF | Tri-frame / lens control (as specified) |

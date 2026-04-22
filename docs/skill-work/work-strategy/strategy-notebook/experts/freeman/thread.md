@@ -238,17 +238,17 @@ _(Operator/assistant: refine this page content.)_
 **Source page:** `islamabad-hormuz-thesis-weave`
 **Also in:** barnes, davis, pape, parsi
 
-### Judgment
+### Reflection
 
 **Thesis A (trap / ratchet)** vs **Thesis B (bargaining / third-party off-ramps)** — **both** stay live until dated evidence collapses one ([`days.md` Judgment](../days.md#2026-04-12)). **False merge:** **Pape** **forecast** **branch** (**~10k** **troops**) **as** **fact**; **false merge:** **Parsi** **Lebanon** **hypothesis** **as** **Islamabad** **table** **fact** without primaries; **false merge:** **Freeman** **alliance** **read** **as** **Navy** **ROE** **confirmation**.
 
-### Open
+### Foresight
 
 - Pin **canonical** Truth Social / **Parsi** / **Pape** **status** URLs per [`days.md` Open](../days.md#2026-04-12) **block**.
 
 ---
 
-### Technical appendix
+### Appendix
 
 # Knot — 2026-04-12 — Islamabad → Hormuz — thesis weave (pre-blockade lattice)
 
@@ -288,7 +288,7 @@ none this pass
 | **Later weave** | `marandi-ritter-mercouris-hormuz-scaffold` | **Marandi × Ritter × Mercouris** shared scaffold. |
 | **Later weave** | `ritter-blockade-hormuz-weave` | **04-14** **`thread:`** **batch-analysis** lattice (Davis×Jermy, Diesen×Sachs, Parsi×Davis knots). |
 
-### Links
+### References
 
 - [daily-brief-2026-04-12.md](../../../../daily-brief-2026-04-12.md)
 - [daily-strategy-inbox.md](../../../daily-strategy-inbox.md) — **Expert-thread continuity** / **batch-analysis** tails
@@ -313,17 +313,17 @@ none this pass
 **Source page:** `marandi-ritter-mercouris-hormuz-scaffold`
 **Also in:** davis, johnson, marandi, mearsheimer, mercouris, parsi, ritter
 
-### Judgment
+### Reflection
 
 **Weave:** **Mercouris** = **institutional / analyst-constellation / zugzwang** language; **Marandi** = **Iranian red lines** + **wire-verify** roster (**Ghalibaf** head; **Larijani** = transcript **misname**); **Ritter** = **USN mechanics** + **faith invective** lane. **Davis × Freeman × Mearsheimer** = **systemic / bargaining / alliance-cost** folds — **parallel** **Ritter ego-reduction** **lane** until primaries show sequence ([`days.md`](../days.md#2026-04-13)). **Do not** collapse **leadership-psychology** into **Links** without **`narrative-escalation`** + primaries. **Rome–faith registers** (Marandi ecumenical vs Ritter invective vs **SkyVirginSon** vs **Milad**) — **parallel legitimacy combat** — **not** Hormuz **material** **row** without **seam**.
 
-### Open
+### Foresight
 
 - Pin **canonical** episode URLs for **Breaking Points**, **The Duran**, **Judging Freedom**, **Daniel Davis Deep Dive** (Freeman, Mearsheimer), **Napolitano × Johnson** per [`days.md` Open](../days.md#2026-04-13).
 
 ---
 
-### Technical appendix
+### Appendix
 
 # Knot — 2026-04-13 — Marandi × Ritter × Mercouris — Hormuz scaffold (expert lattice)
 
@@ -368,7 +368,7 @@ none this pass
 | **Next day** | `ritter-blockade-hormuz-weave` | **Ritter**-centered **04-14** lattice + **Parsi×Davis** / **Diesen×Sachs** / **Mercouris×Mearsheimer** **knot** files. |
 | **Day prose** | [`days.md` § 2026-04-14](../days.md#2026-04-14) | **Continuity spine** **explicitly** **stacks** **04-12–04-14** **`thread:`** **carries**. |
 
-### Links
+### References
 
 - [daily-strategy-inbox.md](../../../daily-strategy-inbox.md) — **Primary pulls (2026-04-13)** · **Ritter blockade checklist** (paste-grade)
 - [Al Jazeera — Islamabad talks unfolded](https://www.aljazeera.com/news/2026/4/13/how-the-us-iran-talks-in-islamabad-unfolded)

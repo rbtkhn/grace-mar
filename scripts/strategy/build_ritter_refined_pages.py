@@ -4,6 +4,10 @@
 Run from repo root after adding new Substack / JF / Ritter's Rant verbatim files:
   python3 scripts/strategy/build_ritter_refined_pages.py
 
+Scaffolds are structural only (empty Chronicle / Reflection / Foresight). After ingest, run
+`scripts/strategy/assemble_ritter_pages_verbatim.py` to embed ~80% expert verbatim in Chronicle
+and generated WORK analysis in Reflection/Foresight per `ritter-page-template.md`.
+
 Idempotent: overwrites manifest; overwrites ritter-page scaffolds that still contain
 the marker SCOUT_REFINED_PAGE_SCAFFOLD (or use --force to overwrite all).
 
@@ -188,31 +192,31 @@ def render_scaffold(e: dict) -> str:
     pdate = e["preamble_date"]
     cap = e["capture_mode"]
     lines = [
-        f"# Ritter day page — {vd}{title_suffix}",
+        f"# Ritter strategy page — {vd}{title_suffix}",
         "",
         "WORK only; not Record.",
         "",
-        f"**Expert:** `ritter` · **{prem}:** {pdate} · **Capture:** {cap} · **Artifact:** refined day page (standalone file under `experts/ritter/`). **Not** a `strategy-page` HTML fence in `thread.md` unless you duplicate the same judgment there during EOD compose.",
+        f"**Expert:** `ritter` · **{prem}:** {pdate} · **Capture:** {cap} · **Artifact:** strategy-page file (`ritter-page-…` under `experts/ritter/`). Optional: echo in `thread.md` fence for watches / cross-expert duplication.",
         "",
         SCAFFOLD_MARKER,
         "",
         "---",
         "",
-        "### Signal",
+        "### Chronicle",
         "",
         "",
         "",
-        "### Judgment",
+        "### Reflection",
         "",
         "",
         "",
-        "### Open",
+        "### Foresight",
         "",
         "",
         "",
         "---",
         "",
-        "### Technical appendix",
+        "### Appendix",
         "",
         f"- **Full verbatim (capture):** [{e['raw_input_relative']}]({e['href_verbatim']})",
         "- **Inbox / triage:** [daily-strategy-inbox.md](../../daily-strategy-inbox.md) (search `thread:ritter`, "

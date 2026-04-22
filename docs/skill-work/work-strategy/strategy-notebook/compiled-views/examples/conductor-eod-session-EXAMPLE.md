@@ -12,7 +12,7 @@
 - [ ] **Primary intent (L0):** one line — what Judgment must warrant tonight.
 - [ ] **Optional mode** (pick zero or one as emphasis):  
   - **Toscanini** — precision / verify / unambiguous convergences before naming them.  
-  - **Bernstein** — embodied operator voice in Signal/Judgment/Open (still score-anchored).  
+  - **Bernstein** — embodied operator voice in Chronicle/Reflection/Foresight (still score-anchored).  
   - **Karajan** — month-arc polish; economical edits; balance across voices.  
   - **Kleiber** — selective pass only; minimal intervention; no promote unless deeply prepared.
 
@@ -22,7 +22,7 @@
 
 - [ ] **Memory run:** 2–5 minutes — replay convergences/tensions from the last 7–30 days *before* re-opening raw walls.
 - [ ] **Score pass:** skim Machine layer + last `strategy-page` tails for involved `expert_id`s.
-- [ ] **Clarity pass:** after drafting, ask: “Would a future reader grasp Signal/Judgment/Open **without** insider context?”
+- [ ] **Clarity pass:** after drafting, ask: “Would a future reader grasp Chronicle/Reflection/Foresight **without** insider context?”
 - [ ] **Toscanini pause:** if synthesis feels wrong, **stop** — short break — return; no forced merge of tensions.
 - [ ] **Read-aloud:** read Judgment once aloud (or subvocalize) for rhythm and overstuffed sentences.
 
@@ -33,7 +33,7 @@
 Replace `expert_red`, `expert_blue` with real **`thread:`** ids when working.
 
 1. [ ] **Review the score:** `experts/expert_red/thread.md`, `experts/expert_blue/thread.md` — Machine + latest Journal / pages.
-2. [ ] **Compose or revise** `strategy-page` blocks — Signal / Judgment / Links / Open per template; keep seams visible.
+2. [ ] **Compose or revise** `strategy-page` blocks — Chronicle / Reflection / References / Foresight per template; keep seams visible.
 3. [ ] **`days.md` continuity:** one consolidated `## YYYY-MM-DD` when one logical EOD pass — [architecture § days.md date keys](../../STRATEGY-NOTEBOOK-ARCHITECTURE.md#days-md-date-semantics).
 4. [ ] **Markers:** add or update `[watch]` / `[decision]` / `[promote]` only where operator-owned.
 5. [ ] **Verify-forward** if any claim may leave WORK (D-session discipline).

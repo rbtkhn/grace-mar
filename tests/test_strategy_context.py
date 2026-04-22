@@ -22,20 +22,20 @@ def test_extract_day_block_and_open():
 
     md = """## 2026-04-01
 
-### Signal
+### Chronicle
 - x
 
-### Open
+### Foresight
 - First open
 - Second **bold**
 
 ## 2026-04-02
-### Open
+### Foresight
 - other
 """
     block = extract_day_block(md, "2026-04-01")
     assert block is not None
-    open_body = extract_h3_section(block, "Open")
+    open_body = extract_h3_section(block, "Foresight")
     bullets = open_bullet_lines(open_body, limit=5)
     assert bullets[0] == "First open"
     assert "bold" in bullets[1]

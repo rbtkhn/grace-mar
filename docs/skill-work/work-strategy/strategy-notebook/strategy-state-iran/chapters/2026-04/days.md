@@ -2,7 +2,7 @@
 
 WORK only; not Record.
 
-**Purpose:** Iran **institutional / elite** continuity for **April 2026**, parallel to the main notebook [`days.md`](../../../chapters/2026-04/days.md). **Per-day prose** lives under [`daily/`](daily/) (Signal / Judgment / Links / Open). This file is a **calendar index** for the full month.
+**Purpose:** Iran **institutional / elite** continuity for **April 2026**, parallel to the main notebook [`days.md`](../../../chapters/2026-04/days.md). **Per-day prose** lives under [`daily/`](daily/) (Chronicle / Reflection / References / Foresight). This file is a **calendar index** for the full month.
 
 **Compose:** default **end-of-day strategy session** or explicit operator instruction — same discipline as [STRATEGY-NOTEBOOK-ARCHITECTURE.md](../../../STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *End-of-day strategy session*.
 

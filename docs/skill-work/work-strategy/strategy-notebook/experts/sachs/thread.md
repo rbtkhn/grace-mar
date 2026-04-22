@@ -164,22 +164,22 @@ Typical pairings on file for `sachs` emphasize contrast surfaces: × diesen, × 
 **Source page:** `diesen-vi14-petrodollar-vs-sachs-hormuz`
 **Also in:** diesen
 
-### Signal
+### Chronicle
 
 See [`days.md` § Signal — `diesen` × `sachs`](../days.md) and **Weave** lead bullet for 2026-04-14.
 
-### Judgment
+### Reflection
 
 **Abstract (this knot):** **`diesen`** carries two **2026-04-14** expert threads — **work-jiang PH vi-14** (Jiang × Diesen lecture: petrodollar / chokepoint / Islamabad frame) and **Diesen × Sachs** (Hormuz blockade / DC institutional decay). Same **`expert_id`** on the **`thread:`** line does **not** make them the same **Judgment** object: **`crosses:diesen+sachs`** is **orthogonal** to **vi-14** petrodollar spine; do **not** fold Sachs hypotheses into PH overlay without **verify** tier. Full seam: [`days.md` § Judgment — *Diesen × Sachs vs PH vi-14*](../days.md).
 
-### Open
+### Foresight
 
 - **NYT** war-room / **Sachs** capacity claims: **journalistic / hypothesis** until on-record primary or wire tier.
 - Re-run **`python3 scripts/strategy_thread.py`** if inbox **`thread:`** lines for these experts change.
 
 ---
 
-### Technical appendix
+### Appendix
 
 # Knot — 2026-04-14 — PH vi-14 Diesen (petrodollar) vs Diesen × Sachs (Hormuz)
 
@@ -205,7 +205,7 @@ See [`days.md` § Signal — `diesen` × `sachs`](../days.md) and **Weave** lead
 - **Civilizational bridge:** none this pass
 - **Expert threads:** `thread:diesen` appears **twice** same calendar day — different episodes; `thread:sachs` only on the blockade episode.
 
-### Links
+### References
 
 - **PH vi-14 (lecture):** [interviews-14-diesen-iran-war-petrodollar.md](../../../../../../../research/external/work-jiang/lectures/interviews-14-diesen-iran-war-petrodollar.md) · [YouTube](https://www.youtube.com/watch?v=P_DHMUdOVdo)
 - **Diesen × Sachs (blockade episode):** [YouTube](https://www.youtube.com/watch?v=S6mlCuvKKIQ)
@@ -230,22 +230,22 @@ Pins keep **Glenn Diesen**’s **PH vi-14** lane and the **Glenn Diesen × Jeffr
 **Source page:** `scott-ritter-blockade-hormuz-weave`
 **Also in:** barnes, davis, diesen, jermy, johnson, marandi, mearsheimer, mercouris, parsi, ritter
 
-### Signal
+### Chronicle
 
 **Davis × Jermy** Deep Dive ([YouTube `etxmqrdm3V0`](https://www.youtube.com/watch?v=etxmqrdm3V0)) — **`thread:davis`**, **`thread:jermy`** — same-episode **blockade** **brinkmanship** + **energy–GDP** cascade; stacks **Ritter** **porous** **blockade** thesis vs **slide-order** macro (**not** wire ORBAT).
 
-### Judgment
+### Reflection
 
 **Weave (this knot):** **`ritter`** carries **Hormuz** **sea-control** / **blockade** **mechanics** (semantics, hull burden, third-party **hull** behavior, **time** / **storage**). **Same topic**, **non-interchangeable** **expert** **objects:** **`davis`** + **`jermy`** = **executive** **clock** + **systemic** **energy** **lag**; **`diesen`** + **`sachs`** = **talks**/**institutions** **collapse** **frame** on **blockade** (**orthogonal** to **vi-14** per sister knot); **`parsi`** + **`davis`** = **EU** **naming** vs **Congress** **lane**; **`barnes`** = **domestic** **TS** **liability** **pole** (inbox **Disclose**/**Truth Social** **chain**) — **not** **Navy** **facts**; **`johnson`** = **digest** **ORBAT** **Haiphong** **roundtable** path ([transcript digest](../../../transcript-analysis-haiphong-ritter-johnson-iran-2026-04.md)); **`marandi`** / **`mercouris`** / **`mearsheimer`** = **continuity spine** **room** / **geometry** — **triangulate**, **do not** **collapse** into **one** **Ritter** **paragraph** without **labeled** **seams**.
 
-### Open
+### Foresight
 
 - [Ritter blockade mechanics — verify checklist (2026-04-13)](../../../daily-strategy-inbox.md) (inbox **§ Ritter blockade mechanics**)
 - Re-run **`python3 scripts/strategy_thread.py`** after inbox **`thread:`** updates.
 
 ---
 
-### Technical appendix
+### Appendix
 
 # Knot — 2026-04-14 — Scott Ritter — Hormuz blockade weave (expert lattice)
 
@@ -293,7 +293,7 @@ none this pass
 
 none this pass
 
-### Links
+### References
 
 - **Ritter 085 (pin):** inbox line — `TBD-canonical-085` → replace when canonical **YouTube** ID is fixed.
 - **Davis × Jermy (same day):** [YouTube `etxmqrdm3V0`](https://www.youtube.com/watch?v=etxmqrdm3V0) — **`thread:davis`**, **`thread:jermy`**

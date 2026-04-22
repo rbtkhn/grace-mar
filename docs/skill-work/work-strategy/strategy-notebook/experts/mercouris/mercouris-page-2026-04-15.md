@@ -6,7 +6,7 @@ WORK only; not Record.
 
 ---
 
-### Signal
+### Chronicle
 
 **Hormuz / blockade facts contested:** Iran says tankers exit toward **China**; U.S. says reversals and **blockade intact**—Mercouris withholds verdict, doubts press certainty. **Ceasefire** framed as expiring **22 April**; possible return to **missile exchange**; **Vance** settlement talk vs rumors Trump calls the war a **loser** (discounted). **IRI** won’t concede on **missiles/enrichment**; **Barnea** / **Mossad** = **regime change** must-stay. **Economic attrition** thesis: mobilized **Iran** repair + **BRICS**/Central Asia backing vs **U.S.** economy, politics, allies; **Evans-Pritchard** cited as “Iran may be right” press strand; risk of **desperate** U.S. **military** lash-out.
 
@@ -26,11 +26,11 @@ WORK only; not Record.
 
 **Ukraine (short):** **ECJ** **Euroclear** **RCB** asset freeze case; **Sumy** collapse narrative; **Orekhov**; **Konstantinovka** past decisive point; **Geran** **mass** strikes + **manoeuvring** / **controller** thesis vs **fire-and-forget**; **jet** **Geran**, **relocating** **AD** hunted; **UAF** counterattack **talk** **faded** vs **RUS** offensive **momentum**.
 
-### Judgment
+### Reflection
 
 The episode stacks **factual uncertainty** on the **blockade** with a **strong structural story**: **Washington** diplomatic **template** as **victory terms** without **knockout**, mirrored to **2022** **Ankara**; **Beijing–Moscow** synchronization (**Putin** trip) and **PRC** **navy**/trade **red lines** as the **real** **escalation** fork; **Security Council** text as **institutional** **warning** of **post-ceasefire** **intensity** and **ground-op** **contingency**. **Sanctions** and **dollar** material is **partly speculative** but tied to observable **Treasury** move and prior **toll** framing. **Ukraine** **Geran** section is **capabilities** inference-heavy—**verify** against **MoD**/OSINT.
 
-### Open
+### Foresight
 
 - **Blockade:** Tanker tracks, **USN** releases, **IRI** statements for **15 Apr** window.
 - **Islamabad:** Delegation readouts, **10-point** vs **U.S.** text; **fuel-supply** offer chain-of-citation.
@@ -43,7 +43,7 @@ The episode stacks **factual uncertainty** on the **blockade** with a **strong s
 
 ---
 
-### Technical appendix
+### Appendix
 
 - **Full verbatim (capture):** [raw-input/2026-04-15/duran-mercouris-russia-intensify-china-tankers-putin-xi-2026-04-15.md](../../raw-input/2026-04-15/duran-mercouris-russia-intensify-china-tankers-putin-xi-2026-04-15.md)
 - **Inbox / triage:** [daily-strategy-inbox.md](../../daily-strategy-inbox.md) (search `thread:mercouris`, aired 2026-04-15)

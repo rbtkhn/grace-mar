@@ -40,7 +40,7 @@ def _count_dated_entries(days_path: Path) -> tuple[int, list[str]]:
 
 
 def _section_density(days_path: Path) -> dict:
-    """Per-entry average of key sections present (Signal, Judgment, Links, Open)."""
+    """Per-entry average of key sections present (Chronicle, Reflection, References, Foresight)."""
     if not days_path.is_file():
         return {"entries": 0, "avg_sections": 0.0}
     text = days_path.read_text(encoding="utf-8", errors="replace")
@@ -48,12 +48,18 @@ def _section_density(days_path: Path) -> dict:
     entries = [e for e in entries if e.strip()]
     if not entries:
         return {"entries": 0, "avg_sections": 0.0}
-    tracked = ["### Signal", "### Judgment", "### Links", "### Open"]
     total = 0
     for entry in entries:
-        for sec in tracked:
-            if sec in entry:
-                total += 1
+        slots = 0
+        if "### Chronicle" in entry or "### Signal" in entry:
+            slots += 1
+        if "### Reflection" in entry or "### Judgment" in entry:
+            slots += 1
+        if "### References" in entry or "### Links" in entry:
+            slots += 1
+        if "### Foresight" in entry or "### Open" in entry:
+            slots += 1
+        total += slots
     return {
         "entries": len(entries),
         "avg_sections": round(total / len(entries), 2),
@@ -61,12 +67,15 @@ def _section_density(days_path: Path) -> dict:
 
 
 def _links_density(days_path: Path) -> float:
-    """Average number of link/path references per Links section."""
+    """Average number of link/path references per References (or legacy Links) section."""
     if not days_path.is_file():
         return 0.0
     text = days_path.read_text(encoding="utf-8", errors="replace")
     links_blocks = re.findall(
-        r"### Links\n(.*?)(?=\n### |\n## |\Z)", text, re.DOTALL
+        r"### References\n(.*?)(?=\n### |\n## |\Z)", text, re.DOTALL
+    )
+    links_blocks.extend(
+        re.findall(r"### Links\n(.*?)(?=\n### |\n## |\Z)", text, re.DOTALL)
     )
     if not links_blocks:
         return 0.0
@@ -77,12 +86,15 @@ def _links_density(days_path: Path) -> float:
 
 
 def _open_carry_forward(days_path: Path) -> int:
-    """Count Open sections that mention 'verify', 'deferred', or question marks."""
+    """Count Foresight (or legacy Open) sections that mention verify/deferred/? etc."""
     if not days_path.is_file():
         return 0
     text = days_path.read_text(encoding="utf-8", errors="replace")
     open_blocks = re.findall(
-        r"### Open\n(.*?)(?=\n### |\n## |\Z)", text, re.DOTALL
+        r"### Foresight\n(.*?)(?=\n### |\n## |\Z)", text, re.DOTALL
+    )
+    open_blocks.extend(
+        re.findall(r"### Open\n(.*?)(?=\n### |\n## |\Z)", text, re.DOTALL)
     )
     carry = 0
     for block in open_blocks:
@@ -191,7 +203,7 @@ def main() -> int:
             },
         },
         "interpretation": {
-            "avg_sections_per_entry": "4.0 = all tracked sections (Signal/Judgment/Links/Open) present; <3.0 = sections skipped regularly",
+            "avg_sections_per_entry": "4.0 = Chronicle/Reflection/References/Foresight (or legacy headings) present; <3.0 = sections skipped regularly",
             "avg_links_per_entry": ">2 healthy; <1 = judgment may be under-cited",
             "open_carry_forward": "High = active threads; very high relative to entries = unresolved debt",
             "inbox_pending_lines": "0 = clean; >30 = overdue weave; >50 = prune candidate",

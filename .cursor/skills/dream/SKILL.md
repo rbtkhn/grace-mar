@@ -231,7 +231,7 @@ If **strict** dream halts for the **same** integrity or governance **reason** mo
 
 **Optional — fold learning ledger:** After **EOD compose**, the operator may append one line with [`scripts/log_strategy_fold.py`](../../../scripts/log_strategy_fold.py) and run [`scripts/report_strategy_fold_learning.py`](../../../scripts/report_strategy_fold_learning.py) — see [FOLD-LEARNING.md](../../../docs/skill-work/work-strategy/strategy-notebook/FOLD-LEARNING.md). **Not** required for `dream` to complete.
 
-**Optional — thread touch on compose:** When composing inbox into **`days.md`**, if lines contain **`thread:<id>`**, the agent **may** add **one bullet** under **`### Open`** (from [strategy-commentator-threads.md](../../../docs/skill-work/work-strategy/strategy-notebook/strategy-commentator-threads.md)) **only when the operator directed that compose** — not by default at `dream`.
+**Optional — thread touch on compose:** When composing inbox into **`days.md`**, if lines contain **`thread:<id>`**, the agent **may** add **one bullet** under **`### Foresight`** (from [strategy-commentator-threads.md](../../../docs/skill-work/work-strategy/strategy-notebook/strategy-commentator-threads.md)) **only when the operator directed that compose** — not by default at `dream`.
 
 **Other lanes:** Xavier and dev journals keep their own **inbox → compose / fold** habits — see **§ Xavier journal** and **§ Dev journal** below (`dream` may still run those when the operator expects it; strategy-notebook does not inherit that obligation).
 

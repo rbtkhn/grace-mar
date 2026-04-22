@@ -6,7 +6,7 @@
 
 Jump: [Profile](#profile-template) · [Thread](#thread-template) · [Transcript](#transcript-template) · [Mind](#mind-template)
 
-**Compose skeleton (primary expert):** When the **EOD session** names this **`thread:`** as **primary**, default **Signal / Judgment / Links / Open** pressure (and compressed `days.md` when composed there) follows [NOTEBOOK-PREFERENCES.md § Weave skeletons (S1–S5)](NOTEBOOK-PREFERENCES.md#weave-skeletons-s1-s5) — see the **primary → skeleton** table and **failure modes**; orthogonal to the **page-shape** menu ([STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *EOD compose — page-shape menu*).
+**Compose skeleton (primary expert):** When the **EOD session** names this **`thread:`** as **primary**, default **Chronicle / Reflection / References / Foresight** pressure (and compressed `days.md` when composed there) follows [NOTEBOOK-PREFERENCES.md § Weave skeletons (S1–S5)](NOTEBOOK-PREFERENCES.md#weave-skeletons-s1-s5) — see the **primary → skeleton** table and **failure modes**; orthogonal to the **page-shape** menu ([STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *EOD compose — page-shape menu*).
 
 ---
 
@@ -149,7 +149,7 @@ _(No narrative distillation yet — add prose above the markers, not inside them
 
 ### Thread-embedded `strategy-page` blocks (journal layer)
 
-Woven pages use the scaffold in [strategy-page-template.md](strategy-page-template.md): marker-fenced **`<!-- strategy-page:start` … `end` →`** under the correct **`## YYYY-MM`** in the **thread file for that month** — e.g. **`experts/<expert_id>/<expert_id>-thread-YYYY-MM.md`** (or legacy **`thread.md`** when still on a single file). After edits, run **`python3 scripts/validate_strategy_pages.py`** from repo root (optional **`--strict-prose`** per that template’s **Machine checks**). Full section rules, optional **`### Technical appendix`**, and shared-`id` peer guidance live in **strategy-page-template.md** — not duplicated here.
+Woven pages use the scaffold in [strategy-page-template.md](strategy-page-template.md): marker-fenced **`<!-- strategy-page:start` … `end` →`** under the correct **`## YYYY-MM`** in the **thread file for that month** — e.g. **`experts/<expert_id>/<expert_id>-thread-YYYY-MM.md`** (or legacy **`thread.md`** when still on a single file). After edits, run **`python3 scripts/validate_strategy_pages.py`** from repo root (optional **`--strict-prose`** per that template’s **Machine checks**). Full section rules, optional **`### Appendix`**, and shared-`id` peer guidance live in **strategy-page-template.md** — not duplicated here.
 
 **Optional journal-layer extensions (still above the thread start HTML comment):**
 
@@ -207,7 +207,7 @@ WORK only; not Record.
 **Editing:** Operator may lightly edit for clarity after triage. Edits are preserved across triage runs (append-only, not overwrite).
 **Companion files:** [`strategy-expert-<expert_id>.md`](strategy-expert-template.md#profile-template) (profile), [`strategy-expert-<expert_id>-thread.md`](strategy-expert-template.md#thread-template) (distilled thread), and [`strategy-expert-<expert_id>-mind.md`](strategy-expert-template.md#mind-template) (optional long-form mind).
 
-**Optional refined day page (same folder):** `experts/<expert_id>/<expert_id>-page-YYYY-MM-DD.md` (e.g. Mercouris: `mercouris-page-2026-04-21.md`; Pape: `pape-page-2026-04-20.md`) — Signal / Judgment / Open artifact; **not** a substitute for full **verbatim** in [`raw-input/`](raw-input/README.md). Distinct from **`strategy-page`** fences in the expert **thread file(s)** unless you mirror judgment during EOD compose. When this pattern is in use for an expert, maintain a colocated **`experts/<expert_id>/<expert_id>-page-template.md`** (scaffold + compliance checklist); references: [`experts/mercouris/mercouris-page-template.md`](experts/mercouris/mercouris-page-template.md), [`experts/pape/pape-page-template.md`](experts/pape/pape-page-template.md). Introducing that template implies **bringing existing `*-page-*.md` files into compliance** for that expert. Do **not** add empty `*-page-template.md` files until the expert has at least one day page or a settled capture contract.
+**Optional refined day page (same folder):** `experts/<expert_id>/<expert_id>-page-YYYY-MM-DD.md` (e.g. Mercouris: `mercouris-page-2026-04-21.md`; Pape: `pape-page-2026-04-20.md`) — Chronicle / Reflection / Foresight artifact; **not** a substitute for full **verbatim** in [`raw-input/`](raw-input/README.md). Distinct from **`strategy-page`** fences in the expert **thread file(s)** unless you mirror judgment during EOD compose. When this pattern is in use for an expert, maintain a colocated **`experts/<expert_id>/<expert_id>-page-template.md`** (scaffold + compliance checklist); references: [`experts/mercouris/mercouris-page-template.md`](experts/mercouris/mercouris-page-template.md), [`experts/pape/pape-page-template.md`](experts/pape/pape-page-template.md). Introducing that template implies **bringing existing `*-page-*.md` files into compliance** for that expert. Do **not** add empty `*-page-template.md` files until the expert has at least one day page or a settled capture contract.
 
 <a id="thesis-scaffold-pattern"></a>
 

@@ -90,7 +90,7 @@ When the operator captures **two or more** excerpts in one pass, **items stay se
 
 **Default assistant behavior (`batch-analysis`):** Prefer **proposing** a draft **`batch-analysis` line in chat** (tension-first; optional weak convergence) for operator **copy or reject**; **append** to this file only on operator request (**EXECUTE** / explicit paste). Do **not** treat batch as a substitute for each ingest’s **`verify:`** tail. Full contract: [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *Daily strategy inbox*.
 
-**Weave:** Inbox scratch merges into **`chapters/YYYY-MM/days.md`** as one **`## YYYY-MM-DD`** block (Signal / Judgment / Links / Open — synthesize, not a raw dump) when **`dream`** runs (**day-end**, timestamp-aligned), when the operator **manually** directs a weave (**intra-day cadence**), or on equivalent explicit instruction. **Assistants:** do **not** merge into `days.md` on strategy-ingest alone; keep captures **here** until **`dream`**, **`weave`**, **`weave`**, or explicit instruction. Full rules: [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *Daily strategy inbox*; **`dream`**: [.cursor/skills/dream/SKILL.md](../../../../.cursor/skills/dream/SKILL.md).
+**Weave:** Inbox scratch merges into **`chapters/YYYY-MM/days.md`** as one **`## YYYY-MM-DD`** block (Chronicle / Reflection / References / Foresight — synthesize, not a raw dump) when **`dream`** runs (**day-end**, timestamp-aligned), when the operator **manually** directs a weave (**intra-day cadence**), or on equivalent explicit instruction. **Assistants:** do **not** merge into `days.md` on strategy-ingest alone; keep captures **here** until **`dream`**, **`weave`**, **`weave`**, or explicit instruction. Full rules: [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *Daily strategy inbox*; **`dream`**: [.cursor/skills/dream/SKILL.md](../../../../.cursor/skills/dream/SKILL.md).
 
 **Length (scratch section only — below the append line):** When the scratch body exceeds **~20000 characters**, **prune from the top** (oldest lines first) in **~5000-character blocks** until **≤ ~20000 characters** remain (repeat if a single paste still leaves you above the limit). Re-count after large pastes. Optional: full clear to the template below anytime.
 
@@ -478,7 +478,7 @@ Larry Johnson: All right, my brother. We’ll see you later
 ### Prep — 2026-04-12 strategy-notebook (scratch)
 
 - **Brief:** [daily-brief-2026-04-12.md](../daily-brief-2026-04-12.md) — fill §1d / §1e / §1f / §1g / §1h as needed; **JD Vance** lane ties to Islamabad / no-deal frame.
-- **Notebook page:** `## 2026-04-12` is in [`chapters/2026-04/days.md`](chapters/2026-04/days.md) — **Accumulator** (above this Prep block) holds paste ingests; **tri-mind overlap scan** (below) and **Locals** (next subsections) align with **Signal / Judgment** there; meta § **Hormuz / Lebanon / pause≠settlement**.
+- **Notebook page:** `## 2026-04-12` is in [`chapters/2026-04/days.md`](chapters/2026-04/days.md) — **Accumulator** (above this Prep block) holds paste ingests; **tri-mind overlap scan** (below) and **Locals** (next subsections) align with **Chronicle / Reflection** there; meta § **Hormuz / Lebanon / pause≠settlement**.
 - **PH hook:** `research/external/work-jiang/lectures/game-theory-11-the-law-of-escalation.md` · `game-theory-20-mid-term-examination.md` (paths only; cite at a glance in Judgment).
 - **Weave:** Inbox → `days.md` at **`dream`** or when you **explicitly** direct (**`weave`**; not on ingest alone).
 

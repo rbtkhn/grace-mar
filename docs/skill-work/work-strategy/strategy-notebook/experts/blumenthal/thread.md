@@ -155,7 +155,7 @@ WORK only; not Record.
 | **Date** | 2026-04-16 |
 | **knot_label** (machine slug) | `marandi-blumenthal-jf-primary` — matches basename and [`knot-index.yaml`](../../../knot-index.yaml) |
 | **Day block** | [`days.md` § 2026-04-16](../days.md#2026-04-16) |
-| **Primary expert (`thread:`)** | `marandi` — **Signal / Judgment** follow **Iranian English process + red-line register** first. |
+| **Primary expert (`thread:`)** | `marandi` — **Chronicle / Reflection** follow **Iranian English process + red-line register** first. |
 
 ### Page type
 
@@ -170,7 +170,7 @@ WORK only; not Record.
 
 ---
 
-### Signal
+### Chronicle
 
 **`thread:marandi` — Breaking Points (2026-04-16):** Tehran-remote **process** read — **full delegation authority** vs **US executive** channel **tethered** to **Netanyahu** / late pivots; **Hormuz** / **blockade** as **leverage on Trump’s economy**; **next war** restart **“quite soon”** — **Iranian elite speech**; **verify** clips and readouts before ORBAT merge.
 
@@ -180,7 +180,7 @@ WORK only; not Record.
 
 ---
 
-### Judgment
+### Reflection
 
 **Primary spine:** **Tehran register** leads — **what the Iranian side was optimizing for** in **public diplomacy** (non-rejectionist **presentation**, **authority** to negotiate, **Hormuz** **leverage**) versus **military** and **blockade** **clock**. **Blumenthal** **colors** **why** **Washington** **cannot** **hold** a **stable negotiation story** (**humiliation**, **faction**, **media** **calls** **targeting** **diplomats**) **without** becoming the **same** claim as **Marandi’s** **in-room** **authority** **read**.
 
@@ -192,7 +192,7 @@ WORK only; not Record.
 
 ---
 
-### Links
+### References
 
 - **Weave D (same day, separate knot):** `pape-janssen-escalation-blockade`
 - **Scaffold:** `marandi-ritter-mercouris-hormuz-scaffold`
@@ -201,7 +201,7 @@ WORK only; not Record.
 
 ---
 
-### Open / verify
+### Foresight / verify
 
 - Pin **canonical** **Breaking Points** / **Judging Freedom** **`watch?v=`** URLs in inbox.
 - **Thiessen** / **delegation** / **Marandi**: **tier** before **Links-grade** merge.
@@ -227,7 +227,7 @@ WORK only; not Record.
 **Source page:** `pape-janssen-escalation-blockade`
 **Also in:** davis, marandi, mearsheimer, pape
 
-### Signal
+### Chronicle
 
 **Source artifact:** operator-pasted transcript — *Professor Robert Pape: The US Can NOT Beat Iran*, interview **Cyrus Janssen**, uploaded **2026-04-16** (YouTube `@CyrusJanssen`). **Pin** canonical episode `watch?v=` when confirmed; until then treat lines as **operator-transcript** tier.
 
@@ -242,7 +242,7 @@ Pape stacks four public claims in one appearance:
 
 ---
 
-### Judgment
+### Reflection
 
 **Mechanism (Pape lane):** Treat **escalation trap** as a **commitment-ratchet + audience-cost** story — demands that harden as sunk costs rise — **not** interchangeable with **Mearsheimer** alliance geometry or **Ritter** hull-level blockade mechanics.
 
@@ -258,7 +258,7 @@ Pape stacks four public claims in one appearance:
 
 ---
 
-### Open
+### Foresight
 
 - Pin **Janssen × Pape** canonical **`watch?v=`** URL; drop **`@CyrusJanssen/videos`** placeholder in Judgment when pinned.
 - **Rubio** + **Israeli negotiator-pressure** claims: **primary** quotes / dates before merging with §1e **grand bargain** or Islamabad rows.
@@ -268,7 +268,7 @@ Pape stacks four public claims in one appearance:
 
 ---
 
-### Technical appendix
+### Appendix
 
 # Knot — 2026-04-16 — Pape (Janssen): escalation trap, staged blockade, third-player spoiler
 
@@ -294,7 +294,7 @@ WORK only; not Record.
 
 ---
 
-### Links
+### References
 
 - **Inbox capture:** [daily-strategy-inbox.md — Expert ingest 2026-04-16](../../../daily-strategy-inbox.md) (search `Janssen` / `Pape`)
 - **Expert thread:** [strategy-expert-pape-thread.md](../../../strategy-expert-pape-thread.md)

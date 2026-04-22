@@ -19,7 +19,7 @@
 
 ## Manual ROME picks (Barnes-weighted — replace if upstream renames)
 
-Use **1–2** of these for **slow-layer** precedent when **Leo XIV / Holy See** is load-bearing; cite paths under **`### Links`** in `days.md` or inbox **cold:/hook:** lines.
+Use **1–2** of these for **slow-layer** precedent when **Leo XIV / Holy See** is load-bearing; cite paths under **`### References`** in `days.md` or inbox **cold:/hook:** lines.
 
 | MEM path (relative to `content/civilizations/ROME/`) | One-line use |
 |------------------------------------------------------|--------------|

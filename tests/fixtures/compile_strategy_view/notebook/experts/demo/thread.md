@@ -3,13 +3,13 @@
 Journal paragraph above the machine fence.
 
 <!-- strategy-page:start id="fixture-page" date="2026-04-01" watch="fixture-watch" -->
-### Signal
+### Chronicle
 Fixture signal.
 
-### Judgment
+### Reflection
 Fixture judgment.
 
-### Open
+### Foresight
 Fixture open.
 <!-- strategy-page:end -->
 

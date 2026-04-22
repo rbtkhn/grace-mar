@@ -6,7 +6,7 @@ WORK only; not Record.
 
 ---
 
-### Signal
+### Chronicle
 
 Trump’s Hormuz ultimatum is framed as expiring on **7 April 2026** (already extended twice). Mercouris argues industrial/strategic bombing cannot collapse Iran’s economy on a timetable that fixes the emerging **global energy** crunch; Tehran keeps **de facto** Hormuz control, **~10%** of normal traffic, **$2M** transit fees in **RMB** (read as **PRC green light**), tankers still moving heavily toward **China** (India/Pakistan also). Iran’s counter-proposal (via **Pakistan**, **NYT**): **non-aggression** guarantees, **full sanctions** lift, ceasefire covering **proxies** (Hezbollah, Houthis, Iraq militias), **reparations** for destroyed infra; Hormuz would reopen but **toll remains**—Trump calls it significant but insufficient; Mercouris treats U.S. acceptance as implausible, especially for Israel/Saudi red lines. **Graham** frames RMB toll as attack on **dollar reserve** status—Mercouris calls that far-fetched but notes **policy nervousness** under the surface.
 
@@ -16,11 +16,11 @@ Escalation loop: expected heavier U.S. strikes and **Iranian reciprocity**; earl
 
 **Reuters** long piece: **Russian satellite** surveillance of Gulf/Red Sea/U.S. bases, intel to Iran via **confirmed Moscow–Tehran military channel**; Ukrainian sourcing **laundered Western intel** hypothesis. Threads: missile **accuracy**, **tungsten**, **Shahed** evolution with **Ukraine-war** lessons; **PRC** open-source tracking of U.S. forces. **Taiwan** **KMT** leader’s **China** trip and polling read as **hedging** on U.S. reliability amid Gulf drawdown fears. **EU**: **Jørgensen** working group, “longstanding shock”; **Fico** “suicide ship,” **Orbán**, **De Wever**; bizarre **cross-border fuel levy** story on **Hungary/Slovakia**. **Putin–Erdogan** readout: Gulf **ceasefire** language plus **Black Sea** security coordination against **Ukrainian** attacks on **TurkStream**/**shipping**. **Ukraine**: rejected **Easter energy truce**; rumored **Oreshnik** package; **Events in Ukraine** on **drone** use—Russian **logistics** interdiction vs Ukrainian **infantry** hunt and **bounty** incentives; **Konstantinovka** logistics collapse; **Hulyaipole**/**Ray-Alexandrovka**; **7 April 2025** spring-offensive calendar rhyme.
 
-### Judgment
+### Reflection
 
 The episode binds **Hormuz coercion economics** (RMB toll, supply shock) to a **non-negotiable-looking** Iranian offer and a **domestic U.S.** escalation default, then uses **British press** and a **naval-officer** column to argue the **maritime** half of Trump’s strategy may be **militarily incoherent** without accepting huge surface risk. The **Russia/China enablement** block is **inference-heavy** (satellites, currency, materials) but structured as **corroborating pattern** rather than court-grade proof. **War-crimes** and **post-presidency liability** material is foregrounded as **institutional stress** speculation. Ukraine is folded in as **second-front** energy and **drone-logistics** geometry, with **Turkey–Russia** readout as the **Black Sea** seam.
 
-### Open
+### Foresight
 
 - **Hormuz toll:** $2M/RMB per ship, **Qatari** tanker interdiction—wire/MarineTrack tier vs voice.
 - **Iran proposal:** Full text via **Pakistan**; **NYT** lane; U.S. **non-response** detail.
@@ -35,7 +35,7 @@ The episode binds **Hormuz coercion economics** (RMB toll, supply shock) to a **
 
 ---
 
-### Technical appendix
+### Appendix
 
 - **Full verbatim (capture):** [raw-input/2026-04-07/duran-mercouris-hormuz-deadline-satellites-oreshnik-2026-04-07.md](../../raw-input/2026-04-07/duran-mercouris-hormuz-deadline-satellites-oreshnik-2026-04-07.md)
 - **Inbox / triage:** [daily-strategy-inbox.md](../../daily-strategy-inbox.md) (search `thread:mercouris`, aired 2026-04-07)

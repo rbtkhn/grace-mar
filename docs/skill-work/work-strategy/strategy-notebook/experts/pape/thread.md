@@ -195,15 +195,15 @@ Canonical knot paths and raw ingest lines live in **Segment 2** below (regenerat
 - **History resonance:** none this pass
 - **Civilizational bridge:** none this pass
 
-### Signal
+### Chronicle
 
 See [`days.md` § Signal / § Judgment](../days.md) when **Lebanon**/**Washington** **venue** lines appear beside **Hormuz**/**Iran** **cycle**; this knot **abstracts** **Mercouris**/**Mearsheimer** **fork** only.
 
-### Judgment
+### Reflection
 
 **Abstract (this knot):** **Alexander Mercouris** tracks **who sounds credible** in **room** **diplomacy** (**Lebanon–Israel** **framing**, **U.S.** **messaging**, **legitimacy** **choreography**). **John Mearsheimer** tracks **what states can afford** and **how power** **distributes** **incentives** (**alliance** **strain**, **escalation** **geometry**) — **orthogonal** **default**: **speech-act** **success** ≠ **structural** **settlement** **without** **evidence** **coupling**. **Do not** **tri-mind**-merge into one **verdict** in **`days.md`** without **labeled** **Thesis A / B** or **`batch-analysis`** **`crosses:mercouris+mearsheimer`** when ingests exist.
 
-### Links
+### References
 
 - **Mind registers (in-voice discipline):** [CIV-MIND-MERCOURIS.md](../../../minds/CIV-MIND-MERCOURIS.md) · [CIV-MIND-MEARSHEIMER.md](../../../minds/CIV-MIND-MEARSHEIMER.md)
 - **Tri-mind skill:** [`.cursor/skills/tri-mind/SKILL.md`](../../../../../../../.cursor/skills/tri-mind/SKILL.md) (**A** = Mercouris, **B** = Mearsheimer)
@@ -221,7 +221,7 @@ Pins keep **Mercouris** **legitimacy** **layer** and **Mearsheimer** **structure
 
 **Falsifier:** This knot fails if **Lebanon**/**Washington** **progress** is **asserted** from **Mercouris**-class **narrative** **alone** **without** **Mearsheimer**-class **incentive** **checks** (or **vice versa**: **structure** **only** **without** **on-record** **speech** **acts**) — **forced** **merge** **replaces** **Thesis A / B** **discipline**.
 
-### Open / verify
+### Foresight / verify
 
 - Add **`batch-analysis | YYYY-MM-DD | Mercouris × Mearsheimer`** to inbox when **both** **`thread:`** ingests land same day.
 - **Wire** **Lebanon–Israel** **Washington** **talks** primaries vs **commentary** **only** — tier before **Links-grade** **Judgment**.
@@ -269,7 +269,7 @@ WORK only; not Record.
 
 ---
 
-### Signal
+### Chronicle
 
 **Source artifact:** operator-pasted transcript — *Professor Robert Pape: The US Can NOT Beat Iran*, interview **Cyrus Janssen**, uploaded **2026-04-16** (YouTube `@CyrusJanssen`). **Pin** canonical episode `watch?v=` when confirmed; until then treat lines as **operator-transcript** tier.
 
@@ -284,7 +284,7 @@ Pape stacks four public claims in one appearance:
 
 ---
 
-### Judgment
+### Reflection
 
 **Mechanism (Pape lane):** Treat **escalation trap** as a **commitment-ratchet + audience-cost** story — demands that harden as sunk costs rise — **not** interchangeable with **Mearsheimer** alliance geometry or **Ritter** hull-level blockade mechanics.
 
@@ -300,7 +300,7 @@ Pape stacks four public claims in one appearance:
 
 ---
 
-### Links
+### References
 
 - **Inbox capture:** [daily-strategy-inbox.md — Expert ingest 2026-04-16](../../../daily-strategy-inbox.md) (search `Janssen` / `Pape`)
 - **Expert thread:** [strategy-expert-pape-thread.md](../../../strategy-expert-pape-thread.md)
@@ -312,7 +312,7 @@ Pape stacks four public claims in one appearance:
 
 ---
 
-### Open / verify
+### Foresight / verify
 
 - Pin **Janssen × Pape** canonical **`watch?v=`** URL; drop **`@CyrusJanssen/videos`** placeholder in Judgment when pinned.
 - **Rubio** + **Israeli negotiator-pressure** claims: **primary** quotes / dates before merging with §1e **grand bargain** or Islamabad rows.
@@ -341,17 +341,17 @@ Pape stacks four public claims in one appearance:
 **Source page:** `islamabad-hormuz-thesis-weave`
 **Also in:** barnes, davis, freeman, parsi
 
-### Judgment
+### Reflection
 
 **Thesis A (trap / ratchet)** vs **Thesis B (bargaining / third-party off-ramps)** — **both** stay live until dated evidence collapses one ([`days.md` Judgment](../days.md#2026-04-12)). **False merge:** **Pape** **forecast** **branch** (**~10k** **troops**) **as** **fact**; **false merge:** **Parsi** **Lebanon** **hypothesis** **as** **Islamabad** **table** **fact** without primaries; **false merge:** **Freeman** **alliance** **read** **as** **Navy** **ROE** **confirmation**.
 
-### Open
+### Foresight
 
 - Pin **canonical** Truth Social / **Parsi** / **Pape** **status** URLs per [`days.md` Open](../days.md#2026-04-12) **block**.
 
 ---
 
-### Technical appendix
+### Appendix
 
 # Knot — 2026-04-12 — Islamabad → Hormuz — thesis weave (pre-blockade lattice)
 
@@ -391,7 +391,7 @@ none this pass
 | **Later weave** | `marandi-ritter-mercouris-hormuz-scaffold` | **Marandi × Ritter × Mercouris** shared scaffold. |
 | **Later weave** | `ritter-blockade-hormuz-weave` | **04-14** **`thread:`** **batch-analysis** lattice (Davis×Jermy, Diesen×Sachs, Parsi×Davis knots). |
 
-### Links
+### References
 
 - [daily-brief-2026-04-12.md](../../../../daily-brief-2026-04-12.md)
 - [daily-strategy-inbox.md](../../../daily-strategy-inbox.md) — **Expert-thread continuity** / **batch-analysis** tails
@@ -415,7 +415,7 @@ none this pass
 **Source page:** `marandi-blumenthal-jf-primary`
 **Also in:** blumenthal, marandi
 
-### Signal
+### Chronicle
 
 **`thread:marandi` — Breaking Points (2026-04-16):** Tehran-remote **process** read — **full delegation authority** vs **US executive** channel **tethered** to **Netanyahu** / late pivots; **Hormuz** / **blockade** as **leverage on Trump’s economy**; **next war** restart **“quite soon”** — **Iranian elite speech**; **verify** clips and readouts before ORBAT merge.
 
@@ -425,7 +425,7 @@ none this pass
 
 ---
 
-### Judgment
+### Reflection
 
 **Primary spine:** **Tehran register** leads — **what the Iranian side was optimizing for** in **public diplomacy** (non-rejectionist **presentation**, **authority** to negotiate, **Hormuz** **leverage**) versus **military** and **blockade** **clock**. **Blumenthal** **colors** **why** **Washington** **cannot** **hold** a **stable negotiation story** (**humiliation**, **faction**, **media** **calls** **targeting** **diplomats**) **without** becoming the **same** claim as **Marandi’s** **in-room** **authority** **read**.
 
@@ -437,7 +437,7 @@ none this pass
 
 ---
 
-### Open
+### Foresight
 
 - Pin **canonical** **Breaking Points** / **Judging Freedom** **`watch?v=`** URLs in inbox.
 - **Thiessen** / **delegation** / **Marandi**: **tier** before **Links-grade** merge.
@@ -445,7 +445,7 @@ none this pass
 
 ---
 
-### Technical appendix
+### Appendix
 
 # Knot — 2026-04-16 — Marandi-primary: Breaking Points × Blumenthal (Judging Freedom)
 
@@ -456,7 +456,7 @@ WORK only; not Record.
 | **Date** | 2026-04-16 |
 | **knot_label** (machine slug) | `marandi-blumenthal-jf-primary` — matches basename and [`knot-index.yaml`](../../../knot-index.yaml) |
 | **Day block** | [`days.md` § 2026-04-16](../days.md#2026-04-16) |
-| **Primary expert (`thread:`)** | `marandi` — **Signal / Judgment** follow **Iranian English process + red-line register** first. |
+| **Primary expert (`thread:`)** | `marandi` — **Chronicle / Reflection** follow **Iranian English process + red-line register** first. |
 
 ### Page type
 
@@ -471,7 +471,7 @@ WORK only; not Record.
 
 ---
 
-### Links
+### References
 
 - **Weave D (same day, separate knot):** `pape-janssen-escalation-blockade`
 - **Scaffold:** `marandi-ritter-mercouris-hormuz-scaffold`
@@ -488,7 +488,7 @@ WORK only; not Record.
 **Watch:** us-iran-diplomacy
 **Also in:** davis
 
-### Signal
+### Chronicle
 
 **Pape lane (`thread:pape`):** The indexed capture is a Truth Social screenshot scenario: Trump threatening to knock out Iranian power plants and bridges absent a deal, with a “killing machine” close; Pape’s read is **third-time threat** and **escalation trap**—the IRGC “back stiffens” under repeated coercive framing—not a substitute for Iranian state primaries or for §1e executive process text. **Tier:** theory and mechanism vocabulary; pair with legal caution in Judgment.
 
@@ -498,7 +498,7 @@ WORK only; not Record.
 
 The **Pape** lane here is **not** the Cyrus Janssen mechanism page (`pape-janssen-escalation-blockade`); it is a **short-form X** reaction to executive threat rhetoric—lower verbatim depth, same structural vocabulary family.
 
-### Judgment
+### Reflection
 
 **Pape-forward read:** Robert Pape’s lane this day is **structural**: whether repeated presidential threats function as a ratchet that forecloses compromise (escalation trap), how a third-time threat pattern interacts with Iranian audience and IRGC-facing incentives, and whether “pause-not-deal” vocabulary from prior days still applies. **Do not** use Pape’s frame to smuggle wire-grade ORBAT or AIS facts—those stay in Davis-class or §1e lanes with tags.
 
@@ -508,7 +508,7 @@ The **Pape** lane here is **not** the Cyrus Janssen mechanism page (`pape-jansse
 
 If later the same day adds a longer Pape essay or studio appearance, prefer a **new** `strategy-page` `id` rather than silently expanding this X-tier block.
 
-### Open
+### Foresight
 
 - Pin **Truth Social** full text + **@ProfessorPape** post URL for the screenshot chain; mirror **@DanielLDavis1** URL from shared appendix.
 - If Judgment cites **genocide** or **incitement**, split **analytic** use from **legal** tests—no label from screenshots alone.
@@ -516,7 +516,7 @@ If later the same day adds a longer Pape essay or studio appearance, prefer a **
 
 **Pape resume:** Escalation-trap vocabulary here stays paired with **Davis** material geometry on the sibling copy of this page; update both files if one expert’s same-day post is retracted or superseded.
 
-### Technical appendix
+### Appendix
 
 **SSOT:** paste-ready `thread:pape`, `thread:davis`, and `batch-analysis | 2026-04-19 | Pape × Davis × Trump Truth Social (Iran threats)` in [daily-strategy-inbox.md](../../daily-strategy-inbox.md) under **`## 2026-04-19`**.
 

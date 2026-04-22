@@ -11,7 +11,7 @@
 **Canonical long-form sequence** for work-strategy judgment (inbox-first; complements the three-move minimum in [DEFAULT-PATH.md](../DEFAULT-PATH.md)):
 
 1. **Accumulate** through the day in [`daily-strategy-inbox.md`](daily-strategy-inbox.md) (paste-ready stubs) and **[`raw-input/`](raw-input/README.md)** (full verbatim when needed) — see [Split ingest model](#split-ingest-model) and [raw input archive](#raw-input-archive-7d).
-2. **Once per local day (default): end-of-day strategy session** — **compose or revise** thread-embedded pages (`<!-- strategy-page:start` … in `experts/<expert_id>/thread.md` under `## YYYY-MM`) and the matching `chapters/YYYY-MM/days.md` continuity block. **Inputs:** that day’s **`raw-input/`** files (primary bulk), inbox lines, briefs, and (after operator **`thread`**) expert **`transcript.md`** / machine layer — **synthesis** (required **Signal / Judgment / Open** prose; **`### Technical appendix`** optional — see [strategy-page-template.md](strategy-page-template.md)), **not** an inbox or raw-input mirror. **Breaking glass:** rare intra-day notebook compose only when the operator explicitly overrides — same synthesis discipline.
+2. **Once per local day (default): end-of-day strategy session** — **compose or revise** thread-embedded pages (`<!-- strategy-page:start` … in `experts/<expert_id>/thread.md` under `## YYYY-MM`) and the matching `chapters/YYYY-MM/days.md` continuity block. **Inputs:** that day’s **`raw-input/`** files (primary bulk), inbox lines, briefs, and (after operator **`thread`**) expert **`transcript.md`** / machine layer — **synthesis** (required **Chronicle / Reflection / Foresight** prose; **`### Appendix`** optional — see [strategy-page-template.md](strategy-page-template.md)), **not** an inbox or raw-input mirror. **Breaking glass:** rare intra-day notebook compose only when the operator explicitly overrides — same synthesis discipline.
 3. **Optionally mark** reusable material with lightweight escalation cues (`[watch]`, `[decision]`, `[promote]`) — definitions and sparing-use rules: [NOTEBOOK-PREFERENCES.md#escalation-marker-preference](NOTEBOOK-PREFERENCES.md#escalation-marker-preference).
 4. **Escalate artifacts** — watch support, analogy audit, or a **decision point** — only when a signal is maturing and **real options** are needed.
 5. **Touch [STRATEGY.md](../STRATEGY.md)** only when a watch, analogy line, operator log arc, or doctrine note has **stabilized** (promotion ladder).
@@ -88,7 +88,7 @@ Optional **`### Cross-check (…)`** subsections in the **journal layer** (insid
 
 - **Hybrid format:** One **scope** line (sources + tier tags + which **`thread:`** experts the matrix uses). Then **either** a compact **markdown table** (e.g. thesis × Davis × Pape × §1e/wire) **or** **`[strength: …]`** bullets when a table is noisy or columns multiply — operator choice per ingest.
 - **Balanced §1e:** State the **seam** in one sentence (material / theory / forecast). Do **not** duplicate full §1e tables or every maritime primary inside every expert file — **point** to the matching **`chapters/YYYY-MM/days.md`** block and **`batch-analysis`** rows for dense falsifiers and instrument-grade detail.
-- **`days.md` Links:** When the cross-check is tied to a **major** ingest — long-form essay (e.g. Substack-tier), a **`batch-analysis`** line, or a **page- / compose-facing** seam — add **one** bullet under that day’s **`### Links`** pointing back to the expert thread section (journal cross-check or month segment). Routine short ingests do **not** require this unless the operator wants traceability.
+- **`days.md` Links:** When the cross-check is tied to a **major** ingest — long-form essay (e.g. Substack-tier), a **`batch-analysis`** line, or a **page- / compose-facing** seam — add **one** bullet under that day’s **`### References`** pointing back to the expert thread section (journal cross-check or month segment). Routine short ingests do **not** require this unless the operator wants traceability.
 
 Apply **prospectively**; no obligation to backfill older months unless you explicitly schedule it.
 
@@ -210,7 +210,7 @@ The word **“page”** is overloaded in this lane. Use the table below as the d
 | Operator gloss | On-disk unit | Role |
 |----------------|--------------|------|
 | **Chapter** | One folder `chapters/YYYY-MM/` | One **calendar month**; contains `meta.md` + `days.md`. |
-| **Day page** | One `## YYYY-MM-DD` section in that month’s `days.md` | **Chronology / synthesis** for that notebook day when you commit it (Signal / Judgment / Links / Open). You are **not** required to open a dated section for every local calendar day — see § *Entry model* below. |
+| **Day page** | One `## YYYY-MM-DD` section in that month’s `days.md` | **Chronology / synthesis** for that notebook day when you commit it (Chronicle / Reflection / References / Foresight). You are **not** required to open a dated section for every local calendar day — see § *Entry model* below. |
 | **Strategy-page** | `<!-- strategy-page:start` … `<!-- strategy-page:end -->` in `experts/<expert_id>/thread.md` | **Expert-thread judgment** unit (primary written unit for **EOD compose**); **many** per month are normal; multi-expert sessions reuse the same **`id=`** across files. |
 
 **“Day page”** means the **`days.md` dated section** only. **`strategy-page`** is a separate token for expert-thread analysis. Do **not** read “one day = one page” as “one calendar day implies exactly one `strategy-page`.”
@@ -223,7 +223,7 @@ The word **“page”** is overloaded in this lane. Use the table below as the d
 
 **Meta-led retro months:** When contemporaneous capture was thin, a chapter may place the **full monthly narrative** in [`chapters/YYYY-MM/meta.md`](chapters/2026-01/meta.md) with a **short episodic** [`days.md`](chapters/2026-01/days.md) (e.g. `## Chapter synthesis — YYYY-MM`) instead of daily decomposition — see [strategy-notebook README § Chapters](README.md).
 
-**Inbox vs notebook:** [`daily-strategy-inbox.md`](daily-strategy-inbox.md) is the **raw accumulator** (firehose, paste-ready lines); **[`raw-input/`](raw-input/README.md)** holds **full verbatim** for the rolling window. **`days.md` / episodic headings** hold **synthesized** judgment (Signal / Judgment / Links / Open — not a raw dump). **EOD notebook compose** (scratch + **`raw-input/`** → judgment) is a **meaning move**, not a file-sync.
+**Inbox vs notebook:** [`daily-strategy-inbox.md`](daily-strategy-inbox.md) is the **raw accumulator** (firehose, paste-ready lines); **[`raw-input/`](raw-input/README.md)** holds **full verbatim** for the rolling window. **`days.md` / episodic headings** hold **synthesized** judgment (Chronicle / Reflection / References / Foresight — not a raw dump). **EOD notebook compose** (scratch + **`raw-input/`** → judgment) is a **meaning move**, not a file-sync.
 
 <a id="days-md-date-semantics"></a>
 
@@ -258,7 +258,7 @@ The word **“page”** is overloaded in this lane. Use the table below as the d
 
 <a id="weave-command-page-shape-menu"></a>
 
-**EOD compose — page-shape menu (assistant behavior):** At the **EOD strategy session** (or **breaking-glass** compose), when the operator runs **`strategy`** with **notebook compose** intent, **before** editing `days.md` or **`strategy-page`** blocks, present **4–6 labeled options** (e.g. **A–F**) that name **distinct page shapes / theses / content emphases** for **today’s** material (inbox + **`raw-input/`** + verified sources)—not a generic work-lane menu (not coffee **A–E**, not “strategy vs dev”). Each option is a **one-line stub**: what the **page argues**, what gets **compressed** into **Judgment**, which **`thread:`** experts get a **duplicated** logical page, or **continuity-only** `days.md` vs **case-index**-thin cite, **verify-first** compress, **tri-mind** summary in chat vs in-page, **batch-analysis** tail only, etc. **Page word budget:** composed or revised **`strategy-page`** bodies should land in **500–1000 words** for **Signal / Judgment / Open**; when **`### Technical appendix`** is present, keep **machinery** there (it is outside that prose band). The appendix is **optional** — see [strategy-page-template.md](strategy-page-template.md) § *Machine checks*. Menu stubs should **signal how** the pick hits that band. **Present, don’t pre-develop:** no full prose until the operator picks a letter (or **`no menu`**, or **EXECUTE** with an explicit thesis). If **one** shape is clearly dominant, still list **alternates** so the fork has **at least four** real choices unless the operator forbids the menu. **Do not** add new **`strategy-page`** blocks outside the **EOD session** unless **breaking glass** (see [watches/README.md](watches/README.md)). *Legacy § title:* “Weave command — page-shape menu.”
+**EOD compose — page-shape menu (assistant behavior):** At the **EOD strategy session** (or **breaking-glass** compose), when the operator runs **`strategy`** with **notebook compose** intent, **before** editing `days.md` or **`strategy-page`** blocks, present **4–6 labeled options** (e.g. **A–F**) that name **distinct page shapes / theses / content emphases** for **today’s** material (inbox + **`raw-input/`** + verified sources)—not a generic work-lane menu (not coffee **A–E**, not “strategy vs dev”). Each option is a **one-line stub**: what the **page argues**, what gets **compressed** into **Judgment**, which **`thread:`** experts get a **duplicated** logical page, or **continuity-only** `days.md` vs **case-index**-thin cite, **verify-first** compress, **tri-mind** summary in chat vs in-page, **batch-analysis** tail only, etc. **Page word budget:** composed or revised **`strategy-page`** bodies should land in **500–1000 words** for **Chronicle / Reflection / Foresight**; when **`### Appendix`** is present, keep **machinery** there (it is outside that prose band). The appendix is **optional** — see [strategy-page-template.md](strategy-page-template.md) § *Machine checks*. Menu stubs should **signal how** the pick hits that band. **Present, don’t pre-develop:** no full prose until the operator picks a letter (or **`no menu`**, or **EXECUTE** with an explicit thesis). If **one** shape is clearly dominant, still list **alternates** so the fork has **at least four** real choices unless the operator forbids the menu. **Do not** add new **`strategy-page`** blocks outside the **EOD session** unless **breaking glass** (see [watches/README.md](watches/README.md)). *Legacy § title:* “Weave command — page-shape menu.”
 
 **Multi-pick EOD options:** When the operator selects **two or more** menu letters (e.g. **C** and **D**) and each implies a **different primary `strategy-expert`**, **different page type**, or **non-mergeable** Judgment, default to **one logical page per letter**, **duplicated** into each involved expert’s **`thread.md`** with the same **`id=`** / date — and **one** matching **`days.md` Signal** line. For **shared** `id=` / date across experts, **Judgment** should differ by **voice** (perspective), not only the **`Also in:`** line — same logical page, distinct reads per lane. **Do not** merge into a **single** expert’s page **unless** the operator explicitly asks. See [.cursor/skills/skill-strategy/SKILL.md](../../../../.cursor/skills/skill-strategy/SKILL.md) (Multi-pick).
 
@@ -406,16 +406,16 @@ Paste under `## YYYY-MM-DD` in `days.md` (newest at bottom), **or** create `chap
 ```markdown
 ## YYYY-MM-DD
 
-### Signal
+### Chronicle
 - What moved (brief, news, gate, session) — short.
 
-### Judgment
+### Reflection
 - What you think it implies for strategy (not KY-4 tactics unless you choose).
 
 ### Analogy / tension
 - Optional. Flag if needs [analogy-audit](../analogy-audit-template.md) before reuse in public copy.
 
-### Links
+### References
 - e.g. `daily-brief-YYYY-MM-DD.md`, [STRATEGY.md](../STRATEGY.md) §…, framework path.
 
 ### Jiang resonance (optional)
@@ -424,7 +424,7 @@ Paste under `## YYYY-MM-DD` in `days.md` (newest at bottom), **or** create `chap
 ### History resonance (optional)
 - **Tier 1:** **chapter id(s)** from [history-notebook](../history-notebook/README.md) (e.g. `hn-i-v1-04`) + **mechanism or arc** (Persian, Roman, …) + link. **Tier 2:** MEM/STATE needed first — add **`HN gap: <mechanism> → hn-… (stub)`** (feeds [STATUS queue](../history-notebook/STATUS.md)). **Tier 3:** surface / case-index only — label the tier. If the parallel is load-bearing for public or Islamabad copy, flag [analogy-audit](../analogy-audit-template.md). Use **none** or **deferred** if no wire this pass — same honesty rule as Jiang.
 
-### Open
+### Foresight
 - One line carrying to tomorrow.
 
 ### Bets / watches (optional)
@@ -541,7 +541,7 @@ Synthesis **compresses and routes** sources into the notebook; it does **not** d
 
 *Legacy § title:* “Weave choice and section weighting …”
 
-An **EOD compose pass** is a **promotion decision**: which scratch lines (and **`raw-input/`** bodies) become **`### Signal`**, **`### Judgment`**, **`### Links`**, and **`### Open`** — **not** a mirror of ingest order, inbox length, or equal padding in every section.
+An **EOD compose pass** is a **promotion decision**: which scratch lines (and **`raw-input/`** bodies) become **`### Chronicle`**, **`### Reflection`**, **`### References`**, and **`### Foresight`** — **not** a mirror of ingest order, inbox length, or equal padding in every section.
 
 | Question the session answers | Typical landing |
 |---------------------------|-----------------|
@@ -550,7 +550,7 @@ An **EOD compose pass** is a **promotion decision**: which scratch lines (and **
 | What must be **citable** without pasting bodies? | **Links** (briefs, primaries, framework paths, paste-grade pointers). |
 | What did compose **surface as unstable** (pins, verify, next tests)? | **Open** — may grow if you run an **early** draft pass inside the same EOD block (rare). |
 
-**Same-day iteration:** Within **one** EOD strategy session, **one** consolidated **`## YYYY-MM-DD`** block in `days.md` is the default: later edits **merge into** the same heading (edit in place; tighten **Judgment**) unless you need a rare **Update (later pass):** trace; avoid **two parallel essays** for the same calendar day **in that single block**. **`strategy-page` blocks (atomic analysis):** the primary written units live in **`experts/<expert_id>/thread.md`** inside **`## YYYY-MM`** month segments—marker-fenced **`<!-- strategy-page:start … -->`** … **`<!-- strategy-page:end -->`**. **Multiple pages per calendar day** are normal when shapes differ—distinguished by **`id="…"`** on the page marker; **multi-expert** sessions **duplicate** the same logical **`id`** into each involved expert’s thread (see [watches/README.md](watches/README.md)). **Template:** [strategy-page-template.md](strategy-page-template.md). **Page body length (standard EOD compose):** target **500–1000 words** in **Signal / Judgment / Open** (machinery quarantined in **Technical appendix**); if material would exceed **~1000 words**, **route** long quotes, inventories, or alternate theses to **`days.md`**, a second page **`id`**, or **Links** rather than stuffing one page. **Below ~500 words** is allowed for **router / case / link-hub** pages only when the stub explicitly **defers** narrative to `days.md`. **Cadence:** default **one EOD session per local day** for **`strategy-page`** composition—do **not** add or extend **`strategy-page`** blocks continuously through the day unless **breaking glass** (daytime capture stays in inbox + **`raw-input/`**). The dated `days.md` block is the **chronology and continuity** layer; it should **name** active page **`id`s** and expert lanes so readers can find threads.
+**Same-day iteration:** Within **one** EOD strategy session, **one** consolidated **`## YYYY-MM-DD`** block in `days.md` is the default: later edits **merge into** the same heading (edit in place; tighten **Judgment**) unless you need a rare **Update (later pass):** trace; avoid **two parallel essays** for the same calendar day **in that single block**. **`strategy-page` blocks (atomic analysis):** the primary written units live in **`experts/<expert_id>/thread.md`** inside **`## YYYY-MM`** month segments—marker-fenced **`<!-- strategy-page:start … -->`** … **`<!-- strategy-page:end -->`**. **Multiple pages per calendar day** are normal when shapes differ—distinguished by **`id="…"`** on the page marker; **multi-expert** sessions **duplicate** the same logical **`id`** into each involved expert’s thread (see [watches/README.md](watches/README.md)). **Template:** [strategy-page-template.md](strategy-page-template.md). **Page body length (standard EOD compose):** target **500–1000 words** in **Chronicle / Reflection / Foresight** (machinery quarantined in **Technical appendix**); if material would exceed **~1000 words**, **route** long quotes, inventories, or alternate theses to **`days.md`**, a second page **`id`**, or **Links** rather than stuffing one page. **Below ~500 words** is allowed for **router / case / link-hub** pages only when the stub explicitly **defers** narrative to `days.md`. **Cadence:** default **one EOD session per local day** for **`strategy-page`** composition—do **not** add or extend **`strategy-page`** blocks continuously through the day unless **breaking glass** (daytime capture stays in inbox + **`raw-input/`**). The dated `days.md` block is the **chronology and continuity** layer; it should **name** active page **`id`s** and expert lanes so readers can find threads.
 
 
 **Anti-patterns:** **Judgment** bloat (every `batch-analysis` line promoted); **empty ritual** EOD passes; page structure that **mirrors inbox ordering**; duplicating raw paste across sections.
@@ -578,16 +578,16 @@ An **EOD compose pass** is a **promotion decision**: which scratch lines (and **
 **Modes**
 
 - **Default** — append or extend the dated block (`Signal` … `Bets`) from the last committed frontier.
-- **+ verify** — when the operator asks for **web**, **wires**, or **fact-check** tier: add a subsection such as **`### Web verification (YYYY-MM-DD)`** with **claim → source URL → correction if needed**; put secondary URLs in **`### Links`**. Hot numbers (casualties, ship counts, **oil**) need a **date** or they should not ship to public copy.
+- **+ verify** — when the operator asks for **web**, **wires**, or **fact-check** tier: add a subsection such as **`### Web verification (YYYY-MM-DD)`** with **claim → source URL → correction if needed**; put secondary URLs in **`### References`**. Hot numbers (casualties, ship counts, **oil**) need a **date** or they should not ship to public copy.
 - **Promote** — only when the operator asks: **STRATEGY.md** watches / §IV log; not every volatile news day.
 
-**Transcript / expert sources (video, long-form paste, commentator monologue):** Treat **proper nouns** — **delegation rosters**, **titles**, **dates**, **statistics** — as **verify-first** for **`### Links`** and **composed** **Judgment**. **`strategy ingest`** lines should carry **`verify:`** flags; corrections and **Primary pulls** belong in the **accumulator** (and, on **EOD compose**, **`### Web verification`**), not as silent upgrades to **Signal**. Full procedure: [.cursor/skills/fact-check/SKILL.md](../../../../.cursor/skills/fact-check/SKILL.md); triggers and roster discipline: [.cursor/skills/skill-strategy/SKILL.md](../../../../.cursor/skills/skill-strategy/SKILL.md) (§ **+ verify**, **Transcript / expert capture**).
+**Transcript / expert sources (video, long-form paste, commentator monologue):** Treat **proper nouns** — **delegation rosters**, **titles**, **dates**, **statistics** — as **verify-first** for **`### References`** and **composed** **Judgment**. **`strategy ingest`** lines should carry **`verify:`** flags; corrections and **Primary pulls** belong in the **accumulator** (and, on **EOD compose**, **`### Web verification`**), not as silent upgrades to **Signal**. Full procedure: [.cursor/skills/fact-check/SKILL.md](../../../../.cursor/skills/fact-check/SKILL.md); triggers and roster discipline: [.cursor/skills/skill-strategy/SKILL.md](../../../../.cursor/skills/skill-strategy/SKILL.md) (§ **+ verify**, **Transcript / expert capture**).
 
 **Dual-track verification seam (optional — web fact-check + civ-mem pattern pass):** When running a **retro** or **pilot** that combines **(A)** wire / primary **triage** on empirical claims with **(B)** [civilization_memory](../../../../research/repos/civilization_memory/README.md) **MEM / relevance** reads (see [CIV-MEM-TRI-FRAME-ROUTING.md](../minds/CIV-MEM-TRI-FRAME-ROUTING.md), `scripts/suggest_civ_mem_from_relevance.py`), **keep layers visible** — do **not** merge into one undifferentiated “verified” paragraph. **Recommended shape** for a dated block under load:
 
 1. **`### Web verification (YYYY-MM-DD)`** (or **Primary pulls** in the accumulator pre-**EOD compose**) — **claim → URL → correction** where applicable; **tier-A** for disputed **current** facts **before** civ-mem pulls ([skill-strategy](../../../../.cursor/skills/skill-strategy/SKILL.md) order). Include **native-language / official** sources when the claim is about **what a foreign government or Holy See said** (e.g. **Persian** MFA / presidency for Iran — [fact-check](../../../../.cursor/skills/fact-check/SKILL.md) § *Native / foreign-language primaries*; [daily-brief-iran-watch.md](../daily-brief-iran-watch.md) triangulation guardrails).
-2. **`### Links`** — civ-mem paths, entity **X**, and **tension / alignment** notes (pattern consistency, not wire substitution).
-3. **`### Signal` / `### Judgment`** — **unchanged** unless the operator explicitly edits interpretive prose; verification **spillway** stays in Support / Links.
+2. **`### References`** — civ-mem paths, entity **X**, and **tension / alignment** notes (pattern consistency, not wire substitution).
+3. **`### Chronicle` / `### Reflection`** — **unchanged** unless the operator explicitly edits interpretive prose; verification **spillway** stays in Support / Links.
 
 This preserves **liability traceability** (what was settled by **wires** vs **slow corpus**) and avoids civ-mem **laundering** stale headlines.
 
@@ -622,8 +622,8 @@ This preserves **liability traceability** (what was settled by **wires** vs **sl
 
 **Daily chain**
 
-- **`### Open`** is the explicit wire to the **next** day: unresolved questions, deferred analogy audits, “check wire on X.” The next day’s **`### Signal`** should **pick up** at least one Open line while it is still live, or **close** it (“Open from YYYY-MM-DD: resolved because …”).
-- **`### Links`** is the **back-pointer**: briefs, transcripts, frameworks, and optional anchors to earlier `days.md` blocks (“continues 2026-04-08 Judgment”) so threads stay traceable without rewriting history.
+- **`### Foresight`** is the explicit wire to the **next** day: unresolved questions, deferred analogy audits, “check wire on X.” The next day’s **`### Chronicle`** should **pick up** at least one Open line while it is still live, or **close** it (“Open from YYYY-MM-DD: resolved because …”).
+- **`### References`** is the **back-pointer**: briefs, transcripts, frameworks, and optional anchors to earlier `days.md` blocks (“continues 2026-04-08 Judgment”) so threads stay traceable without rewriting history.
 
 **Dream (`dream`) — end-of-day production closeout:** The night-close ritual **initiates** accountable **production closeout** for that calendar day’s page (ensure `## YYYY-MM-DD` exists, condense or defer per [Condense-to-target](#condense-to-target-mechanism-fit-1000-words), align [STATUS.md](STATUS.md)). Daytime **`strategy`** still supplies judgment; **`dream`** closes the loop — see [.cursor/skills/dream/SKILL.md](../../../../.cursor/skills/dream/SKILL.md) § *Strategy notebook*.
 

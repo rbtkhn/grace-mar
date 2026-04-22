@@ -1,7 +1,7 @@
 ---
 name: strategy-notebook-expert-cross-weave
 preferred_activation: weave expert cross
-description: "Fold two strategy-notebook expert-thread ingests into one days.md seam (Signal/Judgment/Links/Open), optional batch-analysis rows and chapter meta grep anchor; WORK lane only."
+description: "Fold two strategy-notebook expert-thread ingests into one days.md seam (Chronicle/Reflection/References/Open), optional batch-analysis rows and chapter meta grep anchor; WORK lane only."
 portable: true
 version: 0.1.0
 tags:

@@ -58,7 +58,7 @@ strategy
 Read only this digest (repo path):
 research/external/work-strategy/transcripts/2026-04-10-diesen-mearsheimer-iran-ceasefire-truth-social.md
 
-Append under today's date a subsection ### DEMO — Phase 1 with ### Signal, ### Judgment, ### Links.
+Append under today's date a subsection ### DEMO — Phase 1 with ### Chronicle, ### Reflection, ### References.
 Links must include the digest path. Do not paste the full Perceiver block. Do not edit STRATEGY.md.
 ```
 
@@ -112,7 +112,7 @@ Using digest #2 (Mercouris Good Friday transcript), pick ONE numeric or market c
 ```text
 strategy
 
-Synthesize across all three digests (Mearsheimer, Mercouris, Davis×Crooke paths as in DEMO-SKILL-STRATEGY-TRANSCRIPTS.md). Append ### DEMO — Phase 3 with ### Signal (max 3 bullets), ### Judgment (one short paragraph), ### Links (all three repo paths). Do not repeat each file's Perceiver summary in full.
+Synthesize across all three digests (Mearsheimer, Mercouris, Davis×Crooke paths as in DEMO-SKILL-STRATEGY-TRANSCRIPTS.md). Append ### DEMO — Phase 3 with ### Chronicle (max 3 bullets), ### Reflection (one short paragraph), ### References (all three repo paths). Do not repeat each file's Perceiver summary in full.
 ```
 
 | Pass | Fail |
@@ -145,7 +145,7 @@ Tri-frame, strict — Hormuz coercion, Lebanon ceasefire scope, and U.S. allianc
 
 Use the three trimmed minds under docs/skill-work/work-strategy/strategy-notebook/minds/ (CIV-MIND-MERCOURIS, CIV-MIND-MEARSHEIMER, CIV-MIND-BARNES). Analysis order: Mercouris, then Mearsheimer, then Barnes. Ground every section in the three transcript digests (2026-04-10 Mearsheimer, Mercouris, Davis×Crooke paths).
 
-Append ### DEMO — Phase 4 with three labeled subsections (Mercouris, Mearsheimer, Barnes), then one synthesis line (converge or tension). ### Links must list three digests + three mind files. Do not edit STRATEGY.md. Optional: if using LEARN MODE extraction, follow LEARN_MODE_RULES.md and label it.
+Append ### DEMO — Phase 4 with three labeled subsections (Mercouris, Mearsheimer, Barnes), then one synthesis line (converge or tension). ### References must list three digests + three mind files. Do not edit STRATEGY.md. Optional: if using LEARN MODE extraction, follow LEARN_MODE_RULES.md and label it.
 ```
 
 | Pass | Fail |
@@ -190,7 +190,7 @@ Score **Pass / Fail / Notes** for each row.
 
 | Criterion | Pass looks like |
 |-----------|-----------------|
-| Notebook-primary | Phases land in chosen surface with Signal/Judgment/Links pattern |
+| Notebook-primary | Phases land in chosen surface with Chronicle/Reflection/References pattern |
 | Verify discipline | Phase 2 has dated Web verification or explicit abstention |
 | Links complete | All three digests linked where required |
 | Tri-frame / three minds | Phase 4 has all three labeled sections + corpus-tied sentences |

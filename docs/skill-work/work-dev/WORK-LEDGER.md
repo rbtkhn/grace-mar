@@ -121,7 +121,7 @@
 
 *(Prefer [workspace.md](workspace.md) for day-to-day; use this section for cross-cutting ledger notes if needed.)*
 
-### Open threads
+### Foresight threads
 
 - See [workspace.md](workspace.md).
 

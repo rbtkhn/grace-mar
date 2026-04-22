@@ -6,7 +6,7 @@ Append-only. Newest dated block at the **bottom**.
 
 ## 2026-04-08
 
-### Signal
+### Chronicle
 
 - Closed a **work-strategy thread** by drafting a **Session Harvest Packet** (UTC-dated) for downstream agents: **Civilization Memory** Rome shards (`MEM–ROME–WAR–CANNAE`, Teutoburg, Rhine braid), **mainstream vs diplomatic** paragraph variants, **Mercouris** IV.E (*Faction Persistence* — `CIV–MIND–MERCOURIS.md`), and explicit **harvest** closure (**no** gate merge, **no** `coffee` tail).
 - **Before → after:** scattered civ-mem / Islamabad–Jiang notes → coherent **Rome helix** (military defeat → stronger *position* only with a named **ledger**): Cannae = staying in the game and changing terms; Teutoburg–Rhine = limits, settlement, **hard boundary** logic.
@@ -14,7 +14,7 @@ Append-only. Newest dated block at the **bottom**.
 - **Artifacts in play:** `islamabad-framework*.md`, Jiang Islamabad intake, `islamabad-operator-index` (later committed), STRATEGY §IV Islamabad logs (v0.6 / v0.7 / five-point). Cadence: **thanks** park lines on **Islamabad v06** (dual-audience) and **v08** (trimmed ~800w, ceasefire-window alignment).
 - **Explicitly not done that day:** paste final Rome paragraph into a canonical on-disk doc (disk framework files still without the full braid in-thread).
 
-### Judgment
+### Reflection
 
 - **Dual register** is the spine: Cannae and Teutoburg–Rhine sit in the same “inverse Pyrrhic” family but **different mechanisms** — keep both when tightening outreach copy.
 - **Warrant:** “Stronger” only tracks if the reader sees **which ledger** (survival, frontier, bargaining) and **time horizon** — otherwise it reads as moral triumph.
@@ -23,7 +23,7 @@ Append-only. Newest dated block at the **bottom**.
 
 - **Overclaim** if “stronger” implies permanent ascendancy; **compression** if the diplomatic graf flattens Second Punic or Rhine policy without a specialist footnote. **Mercouris:** guard against **modern “factions”** read back into Rome without a framing sentence.
 
-### Links
+### References
 
 - [STRATEGY.md](../../../STRATEGY.md) §IV — 2026-04-08 Islamabad entries · [islamabad-framework.md](../../../islamabad-framework.md) · [islamabad-framework-summary.md](../../../islamabad-framework-summary.md) · [Jiang intake](../../../../../../research/external/work-jiang/intake/Islamabad-5-point-reconciliation-plan-with-jiang-commentary.md) · [CIV-MIND–MERCOURIS](../../../minds/CIV-MIND-MERCOURIS.md) (IV.E — trimmed; canonical in `research/repos/civilization_memory`)
 
@@ -31,7 +31,7 @@ Append-only. Newest dated block at the **bottom**.
 
 - Intake **Islamabad 5-point + commentary** is the aligned slow layer for reconciliation language; Geo-Strategy lectures remain the separate **book** spine when expanding beyond the framework doc.
 
-### Open
+### Foresight
 
 - **Canonical home** for the final three-sentence / diplomatic block: summary only, framework only, or both — decided next working session (see 2026-04-09 entry).
 - **Public caveat:** one line on Cannae **as battle** vs **war** outcome — yes if the graf ships to a general audience.
@@ -42,7 +42,7 @@ Append-only. Newest dated block at the **bottom**.
 
 ## 2026-04-09
 
-### Signal
+### Chronicle
 
 - Compressed a **work-strategy arc** into a **Session Harvest Packet** (Islamabad framework + **Rome “helix”**: Cannae → endurance / terms of contest; Teutoburg → veto on annexation; Rhine → stabilized boundary) with **CMC** pointers (`MEM–ROME–WAR–CANNAE`, Teutoburg, Rhine) and **Mercouris** IV.E (*Faction Persistence*) from [`strategy-notebook/minds/CIV-MIND-MERCOURIS.md`](../../../minds/CIV-MIND-MERCOURIS.md) — framed as **optional policy bridge**, not proof of Roman history.
 - Grounded **downstream critique**: name the **ledger** whenever copy says “stronger”; keep **battle vs war** honest (Cannae catastrophic, Second Punic War continued); diplomatic register favors **recovery mechanisms** over tactical detail; **overclaim** risk if “stronger” reads as moral ascendancy.
@@ -51,7 +51,7 @@ Append-only. Newest dated block at the **bottom**.
 - **Predictive History (work-jiang):** extended **Volume I** book spine to **`ch20`** (Geo-Strategy **#13–#20** wired: `book-architecture`, `source-map`, `predictions.jsonl`, evidence packs, INTRO/PREFACE/PART-II framing note). **Export discipline:** added [`STUDENT-EXPORT.md`](../../../../../../research/external/work-jiang/STUDENT-EXPORT.md) checklist, README pointer, and [`book/PUBLISHING.md`](../../../../../../research/external/work-jiang/book/PUBLISHING.md) “run before release” line — pushed (`45830ec`, `032d8dd` on top of `3c64d46`).
 - **Strategy thread (Think):** student/RAG bundle stays **derived after** main spine is stable; hybrid chunking vs whole-chapter framed for **ch08**-style lectures; skill-capture line deferred.
 
-### Judgment
+### Reflection
 
 - The **dual register** (Cannae = stay in the game / change terms; Teutoburg–Rhine = accept limits, institutionalize border) is the load-bearing insight for US–Iran **outreach** copy; Mercouris is **adhesive** for coalition politics, not for historical closure.
 - **Notebook** gives a daily voice layer without diluting **STRATEGY.md** §IV or **work-strategy-history** — right separation of concerns.
@@ -61,7 +61,7 @@ Append-only. Newest dated block at the **bottom**.
 
 - Any **mainstream** Islamabad paragraph that names Cannae should carry a **one-line caveat** (catastrophic *battle*; war continued on other terms) before specialists wince. Promote to public only after [analogy-audit](../../../analogy-audit-template.md) if the parallel is load-bearing.
 
-### Links
+### References
 
 - [islamabad-framework.md](../../../islamabad-framework.md) · [islamabad-framework-summary.md](../../../islamabad-framework-summary.md) · [Islamabad Jiang intake](../../../../../../research/external/work-jiang/intake/Islamabad-5-point-reconciliation-plan-with-jiang-commentary.md) · [STRATEGY.md](../../../STRATEGY.md) §IV (2026-04-08 Islamabad logs) · [strategy-notebook README](../../README.md) · [STUDENT-EXPORT.md](../../../../../../research/external/work-jiang/STUDENT-EXPORT.md) · [PUBLISHING.md](../../../../../../research/external/work-jiang/book/PUBLISHING.md) · [BOOK-ARCHITECTURE.md](../../../../../../research/external/work-jiang/BOOK-ARCHITECTURE.md) (Vol. I now 20 chapters)
 
@@ -69,7 +69,7 @@ Append-only. Newest dated block at the **bottom**.
 
 - Intake commentary aligns with **five-point / Gulf** framing; Geo-Strategy corpus remains the slow layer for **energy / empire** chords when drafting expands. **Book spine** now includes **Geo #13–#20** as `ch13`–`ch20` for registry/scorecard continuity.
 
-### Open
+### Foresight
 
 - Execute on **2026-04-08** open items: **paste or merge** the diplomatic Rome block (summary vs framework — see prior day) and add the **Cannae battle vs war** caveat if shipping public copy.
 - **Part II (Geo):** fold **GS13–GS20** into the next full news pass on [`PART-II-GEO-STRATEGY.md`](../../../../../../research/external/work-jiang/book/PART-II-GEO-STRATEGY.md) when ready; **geo-14–20** analysis memos still missing.
@@ -83,7 +83,7 @@ Append-only. Newest dated block at the **bottom**.
 
 > **Length / condense:** This daily section is **~4500w** (over the ~1000w notebook target). **Full** condense path (**outboard DEMO + lens walls + trim duplicate warrants**) is outlined in [demo-runs/condense-outline-2026-04-10.md](../demo-runs/condense-outline-2026-04-10.md) — execute on a later `strategy` pass (no rewrite applied in the outline-only step).
 
-### Signal
+### Chronicle
 
 - **Strategy pass (proposed `skill-strategy`):** Ingested **Lt Col Daniel Davis** commentary (operator paste — *This Ceasefire Won’t Lead to Peace*): ceasefire as **extension game** — Iran may be counting on **time** so that falling oil, rising equities, and reduced political pressure on the White House make **restarting the war** less attractive even if diplomacy fails.
 - **Keane → Trump channel:** Sky News hit emphasizing **do not trust Iran** / **military hammer**; Davis stresses Trump **takes his calls** — institutional **counter-current** to the pause early in the window.
@@ -93,7 +93,7 @@ Append-only. Newest dated block at the **bottom**.
 - **Terms collision:** Trump **no enrichment / remove buried material** vs Iran **10-point** enrichment rights; **Graham** “surrender” terms; Trump **Truth Social** — forces stay loaded, “next conquest” tone; **both sides regroup** — U.S. munitions strain (JASSM, Tomahawk, interceptors) vs Iran and **Hormuz**.
 - **Internal contradiction (Davis):** **Admiral Cooper** “generational military defeat” vs **why negotiate** — same tension as **strength-of-position** vs **need-for-pause** already in notebook/J&P spine.
 
-### Judgment
+### Reflection
 
 - **Converges** with Johnson/Pape **meta** tail: pause ≠ settlement; **scope disputes** (Lebanon) can break the **story** of a single coherent deal before kinetic headlines return.
 - **Extension + markets** is a **distinct mechanism** — keep labeled **analyst thesis** until wires confirm timing and **causal** claims.
@@ -103,7 +103,7 @@ Append-only. Newest dated block at the **bottom**.
 
 - **Gaza “50% control”** as **limits of compellence** — scale mismatch vs Iran; if this parallel ships **load-bearing**, run [analogy-audit](../../../analogy-audit-template.md).
 
-### Links
+### References
 
 - Notebook: [meta.md](meta.md) (Johnson/Pape + **Davis** theme tails) · [islamabad-framework.md](../../../islamabad-framework.md) · [islamabad-framework-summary.md](../../../islamabad-framework-summary.md) · [STRATEGY.md](../../../STRATEGY.md) §IV
 - Transcript digest (Haiphong / Ritter / Johnson): [transcript-analysis-haiphong-ritter-johnson-iran-2026-04.md](../../../transcript-analysis-haiphong-ritter-johnson-iran-2026-04.md) — three-dimension skill-strategy + quant tags.
@@ -116,7 +116,7 @@ Append-only. Newest dated block at the **bottom**.
 
 - Optional chord: **Geo-Strategy** energy / Hormuz / negotiation layers when **Part II** pass ingests **GS13–GS20**; no new lecture id tied to this ingest.
 
-### Open
+### Foresight
 
 - **Tier-1 / primary** pass before any outreach cite: **Sharif** post time, **Vance** Lebanon line, **Cooper** quote, **“largest bombardment of Lebanon in history”**, munitions counts, **Iran population** figure — Davis is **analyst synthesis**, not a wire.
 - **Lebanon** line for **Islamabad vNext** copy: if U.S. messaging stays ambiguous, decide **one honest sentence** for general readers vs specialist footnote.
@@ -147,11 +147,11 @@ _Recipe A ([MINDS-SKILL-STRATEGY-PATTERNS](../../minds/MINDS-SKILL-STRATEGY-PATT
 
 **Implication for copy:** Any outreach paragraph asserting one side has a **material** advantage in waiting should name **which clock** and **what evidence** (throughput data, oil price band, inventory estimate) supports the claim. Unsourced "time is on X's side" is exactly the kind of sentence Barnes would flag.
 
-### Links (Barnes pass)
+### References (Barnes pass)
 
 - [strategy-expert-barnes-mind.md](../../../strategy-expert-barnes-mind.md) · [us-iran-bargaining-gaps-matrix.md](../../../us-iran-bargaining-gaps-matrix.md) (gap 3 Hormuz, gap 4 sanctions) · [19FortyFive — Hormuz Apr 8](https://www.19fortyfive.com/2026/04/2-ships-through-426-tankers-waiting-the-strait-of-hormuz-ceasefire-isnt-working/) · [Economic Times — oil Apr 8](https://economictimes.indiatimes.com/markets/commodities/news/oil-price-today-april-8-crude-oil-price-crashes-15-as-trump-agrees-2-week-ceasefire-with-iran-what-are-experts-saying/articleshow/130100328.cms) · [MINDS-SKILL-STRATEGY-PATTERNS — Recipe A](../../minds/MINDS-SKILL-STRATEGY-PATTERNS.md)
 
-### Open (Barnes pass)
+### Foresight (Barnes pass)
 
 - **Verify:** U.S. munitions inventory claims are analyst synthesis, not sourced to a public audit — flag before any outreach paragraph asserts "running low."
 - **Hormuz weekly throughput:** need **two independent** maritime sources before treating leverage direction as settled for the next notebook block.
@@ -182,11 +182,11 @@ The Lebanon dispute makes this worse. When the U.S. says Lebanon is not part of 
 
 Barnes says both sides face material clocks and the question is which clock runs out first. Mearsheimer says the clocks are not the point — the structure of the competition makes settlement non-credible regardless of material sustainability. The tension is productive: **Barnes** shows that the pause is materially costly for both sides (neither can sustain this posture indefinitely); **Mearsheimer** shows that the structural incentives prevent either side from accepting the terms that would end it. Together they describe a situation where **the pause is unsustainable but the alternative is structurally compelled to recur**. That is the analytical bind — and any copy that implies a path to stable settlement without naming what structural concession makes it possible is, to use the Mearsheimer test, not providing a plausible story.
 
-### Links (Mearsheimer pass)
+### References (Mearsheimer pass)
 
 - [strategy-expert-mearsheimer-mind.md](../../../strategy-expert-mearsheimer-mind.md) · [us-iran-bargaining-gaps-matrix.md](../../../us-iran-bargaining-gaps-matrix.md) (gap 1 Lebanon, gap 2 enrichment — structural, not just material) · [MINDS-SKILL-STRATEGY-PATTERNS — Recipe B](../../minds/MINDS-SKILL-STRATEGY-PATTERNS.md)
 
-### Open (Mearsheimer pass)
+### Foresight (Mearsheimer pass)
 
 - **Great-power incentives:** Claim that Russia and China are structural beneficiaries needs sourcing — verify whether either has taken concrete diplomatic steps to support or undermine the pause (wires, UN statements, bilateral signals).
 - **Nuclear timeline:** "Breakout timeline shortens during the pause" is structurally sound but needs an IAEA or equivalent estimate before any copy asserts a specific window.
@@ -207,7 +207,7 @@ Barnes says both sides face material clocks and the question is which clock runs
 2. **Enrichment (gap 9.5):** **No single paragraph** closes this. **Framework-aligned move:** keep **Islamabad**’s existing **phased verification + reciprocity** spine; in outreach, **separate** (a) **public Iranian 10-point** from (b) **reported back-channel** “condensed” text — **without** repeating **ChatGPT** in formal register. **Ledger:** what is **frozen first**, what **IAEA / third-party** shell, what **timeline** — per [us-iran-bargaining-gaps-matrix.md](../../../us-iran-bargaining-gaps-matrix.md).
 3. **Hormuz (gap 9):** Avoid binary “open vs closed.” Align language with **monitored, non-discriminatory passage** + **neutral mechanism** (framework §2 already). **Solve = metrics:** publish or cite **weekly throughput / queue** from **two independent** maritime sources before treating leverage as settled.
 
-### Links (flashpoint pass)
+### References (flashpoint pass)
 
 - [PBS — Beirut strikes / truce scope](https://www.pbs.org/newshour/world/israeli-strikes-kill-more-than-180-in-central-beirut-saying-iran-truce-doesnt-apply) · [The Hill — Vance misunderstanding](https://thehill.com/homenews/administration/5822826-vance-ceasefire-misunderstanding-iran/) · [19FortyFive — Hormuz backlog Apr 8](https://www.19fortyfive.com/2026/04/2-ships-through-426-tankers-waiting-the-strait-of-hormuz-ceasefire-isnt-working/) · [Economic Times — oil Apr 8](https://economictimes.indiatimes.com/markets/commodities/news/oil-price-today-april-8-crude-oil-price-crashes-15-as-trump-agrees-2-week-ceasefire-with-iran-what-are-experts-saying/articleshow/130100328.cms) · [Gap matrix](../../../us-iran-bargaining-gaps-matrix.md) · **Formal flashpoint summary (9 Apr):** [us-iran-top-three-flashpoints-formal.md](../../../us-iran-top-three-flashpoints-formal.md) · **Divergence + proposed compromises:** [us-iran-divergence-and-proposed-compromises.md](../../../us-iran-divergence-and-proposed-compromises.md)
 
@@ -344,26 +344,26 @@ Barnes says both sides face material clocks and the question is which clock runs
 
 **Links:** [`theodore-postol-2026-04-10-ceasefire-netanyahu-iran-missiles-starlink.md`](../../../../../../research/external/work-strategy/transcripts/theodore-postol-2026-04-10-ceasefire-netanyahu-iran-missiles-starlink.md) · [strategy-expert-barnes-mind.md](../../../strategy-expert-barnes-mind.md) · [MINDS-SKILL-STRATEGY-PATTERNS — Recipe A](../../minds/MINDS-SKILL-STRATEGY-PATTERNS.md)
 
-### Open (Barnes — Postol)
+### Foresight (Barnes — Postol)
 
 - Pin **RUSI** table date/assumptions vs. any **DOD/IDF** restock reporting before treating depletion as settled.
 - **[unverified]** **~70%** and **~$120/bbl** — replace with **dated** poll crosstabs and **market** or **wire** **Iran** **export** pricing when used in Judgment.
 
 ## 2026-04-11
 
-### Signal
+### Chronicle
 
 - **Daily brief (2026-04-11):** Generated and hand-filled `daily-brief-2026-04-11.md` (RSS §2, §1d Putin / §1e JD Vance scans, §1f weak signal, §3–§5 synthesis) — [daily-brief-2026-04-11.md](../../../daily-brief-2026-04-11.md).
 - **Tri-Frame mind overlays (second stage):** `generate_wap_daily_brief.py --mind-all` wrote **three** first-option scaffolds (Barnes **A**, Mearsheimer **A**, Mercouris **A**). **Completed Analysis sections** on three further passes: **Barnes** `hidden_liabilities`, **Mearsheimer** `alliance_dynamics`, **Mercouris** `legitimacy_doctrine`. The three `--mind-all` shells (`material_constraints`, `balance_of_power`, `governing_narrative`) remain **open scaffolds** until a later pass. Sidecars: [minds/outputs/](../../../minds/outputs/) (`2026-04-11-*.md`); §7 of the daily brief indexes paths.
 - **Civ-mem × Barnes (Trump–Leo) — same-day drill:** Session sheet [`TRUMP-LEO-CIV-MEM-BARNES-DRILL.md`](../../TRUMP-LEO-CIV-MEM-BARNES-DRILL.md) — **ROME** at pinned upstream SHA has **no** `MEM–RELEVANCE–ROME.md`; use **manual** `MEM–ROME–*` picks + **`AMERICA`** `python3 scripts/suggest_civ_mem_from_relevance.py AMERICA` for U.S. liability / elections texture. CI smoke: `python3 scripts/test_civmem_tri_frame_routing.py` (runs **RUSSIA** then **ROME**).
 
-### Judgment
+### Reflection
 
 - **Notebook vs. brief body:** Analytical prose lives in **minds/outputs** sidecars; the daily brief file stays the **substrate + index** — right split for re-use and git diffs.
 - **Honest completion state:** Six dated sidecar files exist; **three** carry finished Analysis blocks; **three** are still prompt shells — fine for incremental Tri-Frame work.
 - *(Trump–Leo civ-mem drill — stub:)* after a drill, list ≥2 MEM paths opened + one paragraph mapped to [CIV-MIND-BARNES.md](../../../minds/CIV-MIND-BARNES.md) § VII.
 
-### Links
+### References
 
 - [daily-brief-2026-04-11.md](../../../daily-brief-2026-04-11.md) · [daily-brief-minds-menu.md](../../../daily-brief-minds-menu.md) · [DAILY-BRIEF-MINDS-WORKFLOW.md](../../../minds/DAILY-BRIEF-MINDS-WORKFLOW.md)
 - Barnes: [2026-04-11-barnes-material-constraints.md](../../../minds/outputs/2026-04-11-barnes-material-constraints.md) · [2026-04-11-barnes-hidden-liabilities.md](../../../minds/outputs/2026-04-11-barnes-hidden-liabilities.md)
@@ -373,13 +373,13 @@ Barnes says both sides face material clocks and the question is which clock runs
 
 ## 2026-04-12
 
-### Signal
+### Chronicle
 
 - **Knot — Islamabad → Hormuz thesis weave:** `islamabad-hormuz-thesis-weave` — **Thesis A/B** + **Pape** / **Parsi** / **Freeman** / **Barnes** / **Davis** **lanes** on the same **talks-fail → Hormuz leverage** arc; **forward** to 04-13 scaffold (page id `marandi-ritter-mercouris-hormuz-scaffold`) and 04-14 Ritter weave (page id `ritter-blockade-hormuz-weave`).
 - **Islamabad → Hormuz:** Wires same day as **failed / inconclusive** direct talks; **Trump Truth Social** (surfaced via **Daniel Davis** repost) — **most points** said agreed, **nuclear** commitment not, **U.S. Navy** ordered to **blockade** traffic **in/out** of **Strait of Hormuz**; **verify** operational claims with **DoD/Navy / WH** primaries before any public or campaign ship.
 - **Brief + rule:** Refreshed [daily-brief-2026-04-12.md](../../../daily-brief-2026-04-12.md); standing **[native-language triangulation](../../../daily-brief-native-international-pass.md)** (e.g. **Tasnim `fa`**, **TASS**) filled in §1d/§1e; **Reuters World** RSS **fetch failed** in run (flagged in brief §2).
 
-### Judgment
+### Reflection
 
 - **Framing fork:** Washington emphasizes **nuclear nonproliferation** as the breaker; Iranian state-adjacent copy emphasizes **sovereignty / “excessive” demands** — triangulate, don’t collapse. **Barnes-relevant:** “blockade” wording + **coalition / war-powers** exposure if posture holds.
 - **Framing fork (analyst overlay — Lebanon):** **Trita Parsi** (CNN / X) argues **Lebanon** may be the **real sticking point** for Tehran: Iran treats **U.S. ability to rein in Israel** on bombardment as a **test** of whether any U.S. deal is **worth signing**; he suggests **Vance’s** public emphasis on the **nuclear file** as the deadlock reason can read as **cover** for that harder **Israel–Lebanon** wedge. A **nested Arabic-sourced** thread (via Parsi) claims **Washington** floated a **phased** Lebanon ceasefire rather than an immediate nationwide stop—**unverified** here; pin **primary readouts** before treating as **negotiation fact**.
@@ -395,7 +395,7 @@ Barnes says both sides face material clocks and the question is which clock runs
 - **Forecast branch (hypothesis, not verified):** Obvious **next U.S. move** in his thread — **ground ops to seize enriched uranium**, **~10k troops** on the ground **for weeks** minimum — treat as **scenario** until **order-of-battle / official** sources confirm; do not merge into Judgment as fact.
 - **Tension:** **Trap / “no off-ramp”** narrative competes with **material** questions (what is actually interdicted, under what legal authority, what allies price in) — if the **uranium-seizure** parallel becomes load-bearing in copy, run [analogy-audit](../../../analogy-audit-template.md).
 
-### Links
+### References
 
 - [daily-brief-2026-04-12.md](../../../daily-brief-2026-04-12.md) · [daily-brief-native-international-pass.md](../../../daily-brief-native-international-pass.md) · [MINDS-SKILL-STRATEGY-PATTERNS.md](../../../minds/MINDS-SKILL-STRATEGY-PATTERNS.md) (§ 11 — tri-mind deliverables / coherence)
 - [case-index.md](../../../case-index.md) — retroactive anchors: CASE-0001, -0006, -0011, -0012, -0013, -0015 (see Judgment above)
@@ -433,7 +433,7 @@ Barnes says both sides face material clocks and the question is which clock runs
 
 **Confidence:** medium for PERSIA **Hormuz** structure; **low** for AMERICA row (broad STATE skim).
 
-### Open
+### Foresight
 
 - Pin **canonical URL** for Trump Truth Social primary if archiving; add **IRNA `fa`** Islamabad/Hormuz line when stable (IRNA EN often redirects).
 - Pin **canonical X URL** for **Pape** post if this block ships beyond the notebook; optional link to **escalationtrap.substack.com** analysis only as **attributed secondary**, not tier-A fact.
@@ -472,7 +472,7 @@ Barnes says both sides face material clocks and the question is which clock runs
 
 ## 2026-04-13
 
-### Signal
+### Chronicle
 
 - **Knot — Marandi × Ritter × Mercouris Hormuz scaffold:** `marandi-ritter-mercouris-hormuz-scaffold` — **indexed** **`thread:`** **triple** **anchor** + **Davis × Freeman × Mearsheimer** / **Parsi** / **Johnson** **parallel** **lanes**; **back** 04-12 thesis weave (page id `islamabad-hormuz-thesis-weave`), **forward** 04-14 Ritter weave (page id `ritter-blockade-hormuz-weave`).
 - Post–**Islamabad** window: executive **Hormuz / blockade** rhetoric overlaps **long-form** commentary on **process failure** and **sea control** — **not** substitutes for **CENTCOM tasking**, **interdiction counts**, or **insurance-market** data.
@@ -486,7 +486,7 @@ Barnes says both sides face material clocks and the question is which clock runs
 - **X — Trump–Leo lane:** **@SkyVirginSon** lay-Catholic thread rebutting executive **Leo XIV** framing (conclave, dicastery CV, CST) vs **Kelly** **Senate-Catholic** guilt frame — **two genres**, same news week; **@Milad33B** Bible/oath → **“Satan”** caption — **narrative-escalation** / **fact-check** split per inbox batch-analysis.
 - **X — @MarioNawfal:** Juxtaposes Trump attacks (“weak on crime,” foreign policy) with **Leo XIV** at the **Grand Mosque of Algiers** (**2026-04-13**, Africa apostolic journey day-one)—**mosque stop** = tier-A **Holy See** + wires; **Nawfal** = **social** contrast frame (timing vs **Truth Social** — **pin** **order** before **Judgment** on **sequence**). **Primary:** [Vatican News — Grand Mosque visit](https://www.vaticannews.va/en/pope/news/2026-04/pope-leo-apostolic-journey-algeria-grand-mosque-algiers-dialogue.html).
 
-### Judgment
+### Reflection
 
 - **Marandi × Ritter × Mercouris:** Shared scaffold — **Islamabad collapse** + **Hormuz leverage** + **executive channel** doubt. **Mercouris** adds **institutional** / **analyst-constellation** / **zugzwang** language; **Marandi** holds **Iranian red lines** + **wire-verify** roster (**Ghalibaf** head; **Larijani** = transcript **misname**); **Ritter** holds **USN mechanics** + **faith invective** lane. **Do not** collapse **leadership-psychology** into **Links** without **`narrative-escalation`** + primaries. **Hormuz** “control” remains **testable** via checklist + primaries — not one speaker alone.
 - **Parsi × Parsi (04-12 CNN vs 04-13 Breaking Points):** Same analyst, **two venues** — **04-12** foregrounds **Lebanon vs nuclear** “mask”; **04-13** foregrounds **Ravid red-lines leak**, **MOU/Araghchi**, **Israeli enrichment shift**, **toll-sharing**, **walk-away**, **China/GCC**. **Weak bridge:** both probe whether **Washington’s leaked/published position** matches **room behavior** — **verify** each chain; **Ravid** = **journalist-sourced**, not WH primary.
@@ -499,7 +499,7 @@ Barnes says both sides face material clocks and the question is which clock runs
 - **Ritter ego reduction (Davis Deep Dive × Ritter, *TRUMP's BLOCKADE IS A JOKE*) vs structural fold:** **Ritter** treats **Trump** **ego**/**brand**/**midterms** as the **dominant** **lens** — **sole** **credit**, **Vance** **sacrificial**, **near-deal** **killed** **to** **avoid** **surrender** **optics**, **“they** **called”** **parsed** **as** **Pakistan** **relay** **on** **MOU** **continuity**. **Mearsheimer**/**Freeman**/**Davis** **fold** **structural** **claims** (**bargaining** **asymmetry**, **Israel-channel** **ultimatum**, **alliance** **cost**) **do** **not** **vanish**: they **sit** **parallel** **until** **primaries** **show** **whether** **room** **decisions** **track** **ego** **sequence** **alone**. **Barnes** **overlap:** **strength** **talking-head** **script** **(Pompeo**/**Howard**-class) **as** **set-up** **for** **“pressure** **worked”** **deal** **spin** — **verify** **before** **Links-grade** **merge** **with** **Hormuz** **mechanics**.
 - **Case-index anchors (retroactive, 2026-04-14):** Shared scaffold (Islamabad collapse + Hormuz leverage) → [CASE-0001](../../../case-index.md#case-0001--1973-oil-embargo) · [CASE-0013](../../../case-index.md#case-0013--opec-era-resource-leverage-without-full-control) (same chokepoint coercion fit as 04-12; 04-13 adds Ritter porous-blockade falsifier test: if interdiction throughput stays high at scale over weeks, "purely political / porous" weakens). Mearsheimer bargaining asymmetry + alliance opportunity cost → [CASE-0012](../../../case-index.md#case-0012--cold-war-proxy-escalation-logic) (proxy escalation: principals avoid direct war while peripheral theater signals; mismatch: if direct war already underway — verify ORBAT). Ritter ego-reduction / "sole credit" + prestige posture → [CASE-0006](../../../case-index.md#case-0006--british-imperial-overstretch-before-suez) (prestige trap: retreat delayed because humiliation costs feel too high; falsifier: actor can reduce commitments without severe credibility damage). Rome–faith legitimacy combat (Marandi ecumenical vs Ritter invective vs SkyVirginSon catechism) → [CASE-0005](../../../case-index.md#case-0005--byzantine-ritual-continuity-under-pressure) (fit: symbolic order still disciplines behavior and supports strategic patience; mismatch: if rituals persist but command no real deference — test against social caption vs tier-A Vatican doc). Late Soviet administrative hollowing echo (Mercouris "zugzwang" + Johnson "pretend blockade") → [CASE-0004](../../../case-index.md#case-0004--late-soviet-administrative-hollowing) (fit: procedures proliferate while responsiveness declines, official narratives diverge from lived reality; falsifier: system demonstrates repeated successful adaptation under pressure — verify with interdiction counts). Ritter porous-blockade + third-country hulls + rerouting → [CASE-0008](../../../case-index.md#case-0008--venetian-trade-network-resilience) (fit: advantage from positioning rather than raw scale, system survives by rerouting and brokerage; mismatch: if brokerage role is easily bypassed; falsifier: network cannot reconfigure when stressed — exactly what the blockade-mechanics verify checklist is testing). Davis × Freeman × Mearsheimer macro thread ("depression" / "iceberg" / recession / Bessent clip) → [CASE-0011](../../../case-index.md#case-0011--interwar-financial-fragility-and-political-spillover) (fit: financial disruption alters political alignment, economic pain delegitimizes governing center; mismatch: if economic stress remains compartmentalized; falsifier: major financial strain without meaningful political legitimacy or strategic spillover — keep "tiered" per Judgment until macro primaries). Kushner/Witkoff/Netanyahu channel + Vance-as-maximalist + Graham/Keane domestic witnesses → [CASE-0014](../../../case-index.md#case-0014--austro-hungarian-elite-coordination-strain-before-1914) (fit: internal management consumes strategic bandwidth, formal sovereignty hides internal bargaining paralysis; mismatch: if elite bargaining produces real agility; falsifier: polity demonstrates swift unified strategic action under pressure — test against coherence of U.S. negotiating position across channels).
 
-### Links
+### References
 
 - [daily-strategy-inbox.md](../../daily-strategy-inbox.md) — **Primary pulls (2026-04-13)** · **Mercouris verify hooks** · **Pezeshkian–Putin side-by-side** · **Ritter blockade checklist** (paste-grade; not Record)
 - [rome-persia-legitimacy-signal-check.md](../../rome-persia-legitimacy-signal-check.md)
@@ -511,7 +511,7 @@ Barnes says both sides face material clocks and the question is which clock runs
 - **Daniel Davis Deep Dive** — **Freeman** + **Mearsheimer** (2026-04-13 inbox fold; paste-grade one-liners remain in **git history** under [`daily-strategy-inbox.md`](../../daily-strategy-inbox.md)): pin **episode URLs**
 - [case-index.md](../../../case-index.md) — retroactive anchors: CASE-0001, -0004, -0005, -0006, -0008, -0011, -0012, -0013, -0014 (see Judgment above)
 
-### Open
+### Foresight
 
 - Pin **Breaking Points** + **Mercouris** + **Ritter** canonical **episode URLs**; keep **faith / blasphemy** segments **separate** from **Hormuz mechanics** unless **verify** complete.
 - **Rome–Persia legitimacy signal check** — append dated rows + **pinned** `x.com/...` for Pezeshkian→`@Pontifex` when available; keep **legitimacy plane** separate from Hormuz/Islamabad hard security: [rome-persia-legitimacy-signal-check.md](../../rome-persia-legitimacy-signal-check.md).
@@ -523,7 +523,7 @@ Barnes says both sides face material clocks and the question is which clock runs
 
 ## 2026-04-14
 
-### Signal
+### Chronicle
 
 - **Knot — Armstrong cash / Hormuz fertilizer / U.S. digital-dollar arc (weave D):** `armstrong-cash-hormuz-digital-dollar-arc` — **Barnes / Mercouris / Mearsheimer** mind files + **Martin Armstrong** X provocation + **Larry Fink / BlackRock** primaries + **Congress.gov** (retail central-bank digital currency vs payment stablecoin bills) + **Statista / Signal** Gulf **seaborne fertilizer** origin share; **money-law / attribution** plane — **orthogonal** to same-day **`thread:`** Hormuz expert lattice (Ritter weave (page id `ritter-blockade-hormuz-weave`)); **false merge:** Gulf-origin **fertilizer** % as **Strait transit** % without a **shipping** primary.
 - **Knot — `ritter` Hormuz blockade weave:** `ritter-blockade-hormuz-weave` — **`thread:ritter`** center + cross-links to same-day Parsi×Davis (page id `parsi-davis-war-powers`), Diesen×Sachs (page id `diesen-vi14-petrodollar-vs-sachs-hormuz`), Mercouris×Mearsheimer (page id `mercouris-mearsheimer-lebanon-split`); **Judgment** + **Receipt** keep expert lanes **non-collapsible** per inbox **`batch-analysis`** / **`crosses:`** discipline.
@@ -540,7 +540,7 @@ Barnes says both sides face material clocks and the question is which clock runs
 - **Coalition / legitimacy stack (parallel, not merged):** Social and wire snapshots this cycle highlight **Italy** as a **European hinge** (defense–diplomatic + executive–Holy See friction in the same news window), **IRI presidential** text naming **Italy** beside other capitals in a **civilizational roster** frame, and **Holy See** / **Algeria apostolic journey** moral register (**#ApostolicJourney**)—**three planes** (alliance stress, **Tehran narrative**, **Vatican audience**) **beside** Hormuz ORBAT and **`thread:`** expert mechanics. **Tier split** as on **04-13** Trump–Leo × **Grand Mosque** (tier-A Holy See doc vs social caption)—**no** single “West collapsed” Judgment without seams.
 - **Weave — `ritter` × `davis` (operator, inbox carry):** Folded two **`thread:`** lines from [daily-strategy-inbox.md](../../daily-strategy-inbox.md) — **Ritter** as **digest §B** **ORBAT** / **infeasible Hormuz seizure** framing (long LOC, **60–80k Marines + 120–200k Army** echelon math from [transcript-analysis-haiphong-ritter-johnson-iran-2026-04.md](../../../transcript-analysis-haiphong-ritter-johnson-iran-2026-04.md)); **Davis** as **X** lane on **“last, best chance”** vs **ultimatum**, **resumption clock**, **first-six-weeks** constraints, **Hormuz / oil / Gulf fertilizer** → **U.S.-side macro pain**. **Before → after:** parallel scratch ingests → one **explicit** **Ritter–Davis** **seam** under **Judgment** below (does **not** replace **04-13**/**04-14** **Marandi × Ritter × Mercouris** or **Davis × Jermy** knots).
 
-### Judgment
+### Reflection
 
 - **Continuity spine:** Treat **expert-thread carry** (`ritter`, `mearsheimer`, `mercouris`, `marandi`, `parsi`, `blumenthal`, `pape`, `davis`, `johnson`, `freeman`, `sachs`) as the **operational + room + trap** / **institutions** **layer**; **PH vi-14 / vi-15** (`diesen`, `jiang`) as **corpus overlay** (petrodollar / eschatology language—**WORK**, not wire substitute — **same-day** **`diesen`** **Diesen × Sachs** episode is **not** **vi-14**; see **Diesen × Sachs vs PH vi-14** seam below); **Rome / IRI roster / Italy headlines** as **legitimacy + coalition narrative** **layer**—**orthogonal** unless a **primary** chain proves **coupling**. Same day can hold **multiple weaves** (knot-ready); **isolation / “beg count”** table memes stay **hypothesis-grade** until **§1d/§1e-class** or primary cites land. **Case-index anchors:** Hormuz chokepoint coercion thread → [CASE-0001](../../../case-index.md#case-0001--1973-oil-embargo) (fit: concentrated supply leverage + downstream political effects larger than initiating act; mismatch: 2026 supply base more diffuse than 1973; falsifier: targeted system absorbs disruption cheaply) · [CASE-0013](../../../case-index.md#case-0013--opec-era-resource-leverage-without-full-control) (fit: leverage via coordination and timing, not total denial; mismatch: if consumer reconfiguration is fast). U.S. commitment expansion post-Islamabad → [CASE-0015](../../../case-index.md#case-0015--us-post-2001-prestige-and-commitment-expansion) (fit: rhetoric of necessity outlasting strategic clarity; falsifier: commitments reduced cleanly while preserving legitimacy). Proxy / indirect escalation structure → [CASE-0012](../../../case-index.md#case-0012--cold-war-proxy-escalation-logic) (fit: principals avoid direct confrontation, peripheral theater carries disproportionate symbolic weight; mismatch: if direct war is already underway — verify ORBAT). Jermy energy-GDP cascade + Rich Star Chinese tanker pass-through + rerouting thesis → [CASE-0008](../../../case-index.md#case-0008--venetian-trade-network-resilience) (fit: system survives by rerouting and brokerage, access management matters more than territorial control; falsifier: network cannot reconfigure when stressed — test against AIS/insurance data and third-party hull interdiction counts). Mearsheimer "Titanic" + Jermy diesel/semis/fertilizer/famine cascade + IMF global growth downgrade → [CASE-0011](../../../case-index.md#case-0011--interwar-financial-fragility-and-political-spillover) (fit: financial disruption alters political alignment, policy options narrow because economic disorder becomes political disorder; falsifier: major financial strain without meaningful political legitimacy or strategic spillover — tiered until macro primaries per 04-13 Judgment). U.S. domestic channel incoherence (Vance "cards" vs Trump endgame ambiguity + Kushner/Witkoff channel carry from 04-13) → [CASE-0014](../../../case-index.md#case-0014--austro-hungarian-elite-coordination-strain-before-1914) (fit: internal management consumes strategic bandwidth, mobilization logic shaped by domestic incoherence; falsifier: polity demonstrates swift unified action — test against coherence of negotiating position across channels).
 - **Italy as overlap node (hypothesis):** When **Italy** appears across **defense policy**, **IRI rhetorical list**, and **Trump–Pope** friction, the **strategy hook** is **stress on U.S.–European–Israel alignment** and **audience legitimacy**—not a merged story until **Italian government / NATO / bilateral** primaries are pinned; do **not** substitute **Pezeshkian** roster prose for **Mercouris** room facts or **Ritter** sea-control checks. Case echo: [CASE-0007](../../../case-index.md#case-0007--habsburg-imperial-administrative-overcomplexity) (multi-layered coalition coordination cost; mismatch: if high complexity coexists with rapid decisive coordination — test against NATO/bilateral primaries).
@@ -551,7 +551,7 @@ Barnes says both sides face material clocks and the question is which clock runs
 - **Tri-mind stub — Hormuz (B→A→C):** **Cross-reply (Mercouris → Mearsheimer):** Leverage stays **legitimacy choreography**: “cards” only while others behave as if your table is real—the same move reads strong in one feed, panicked in another. **Synthesis (operator, not a fourth mind):** **Leverage** (hurt/cost, coalition discipline) and **theater** (talks, clocks, podium lines) can diverge for weeks; **pain → votes** is faster than strategy argot. Keep **power / face / receipts** explicit; don’t treat a strong sentence as a strong position. **Seam:** **`jermy`** systems cascade is orthogonal—no slide-order macro inside M/M/B voice checks.
 - **`ritter` × `davis` (`crosses:ritter+davis`):** **Ritter** (digest **§B**) answers **whether** a **Hollywood-grade** Hormuz **seizure** story is **materially** **stackable** at scale — **order-of-battle** and **closure** **skepticism** as the **B-plane** anchor. **Davis** answers **whether** the **bargaining** **episode** reads as **negotiation** or **surrender demand** — **extension-game / ultimatum** **clock** plus **macro** **hurt** to the **U.S.** side if talks are treated as **final offer**. **Convergence:** both **undercut** a **clean** **“we bombed, therefore they fold”** **fairy tale** — one by **physics and echelons**, one by **incentive structure** and **commodity** **pressure**. **Tension:** **do not** treat **Davis** **macro** clauses as **proof** of **Ritter** **OOB** **facts** or vice versa; **do not** merge **digest** **quant** table with **Links-grade** **X** until **status URLs** and **wire** **checks** land per **04-14** **Open** ordering. **Related weave (same file):** [2026-04-13](#2026-04-13) **Ritter ego reduction vs structural fold**; **knot** `ritter-blockade-hormuz-weave`.
 
-### Links
+### References
 
 - [daily-strategy-inbox.md](../../daily-strategy-inbox.md) — **Expert-thread continuity**; **`batch-analysis` (2026-04-14):** **Parsi × Davis**, **Blumenthal × Parsi**, **Davis × Jermy**, **Diesen × Sachs**, **carry** + **PH vi-14/15** — see **`crosses:`** / **`seam:`** tails in inbox; **`thread:ritter`** (brief-handoff bundle **2026-04-10** backfill) · **`thread:davis`** (**Prior scratch — 2026-04-12** block) for **`crosses:ritter+davis`**
 - [transcript-analysis-haiphong-ritter-johnson-iran-2026-04.md](../../../transcript-analysis-haiphong-ritter-johnson-iran-2026-04.md) — **§B** material / quantitative table (operator transcript digest; not wire-verified)
@@ -566,7 +566,7 @@ Barnes says both sides face material clocks and the question is which clock runs
 - [civilizational-strategy-surface.md](../../../civilizational-strategy-surface.md) — 8 lenses, 12 case families; Hormuz thread maps to **Chokepoint coercion** family; Italy overlap node maps to **Delayed adaptation** / polycentric stress
 - [case-index.md](../../../case-index.md) — concrete case citations used in Judgment above (CASE-0001, -0007, -0008, -0011, -0012, -0013, -0014, -0015)
 
-### Open
+### Foresight
 
 - **Operator sequencing (policy B):** Close **[2026-04-13](#2026-04-13)** **canonical episode URLs** first — **Breaking Points** (Parsi), **Mercouris** (Duran), **Ritter** (Judging Freedom), **Daniel Davis Deep Dive** (Freeman + Mearsheimer), **Judging Freedom / Napolitano × Larry Johnson** — **before** tightening **`## 2026-04-14`** **Judgment** or **Parsi × Davis** to **Links-grade**. **Then** tier **04-14-only** pins (**Parsi + Kallas**, **Davis** X, **Roll Call** / committee hooks where load-bearing). Same list as [2026-04-13](#2026-04-13) **Open** / **Links**; this line states **order of operations** only.
 - Pin **canonical episode URLs** still open from [2026-04-13](#2026-04-13) **Open** (Breaking Points / Mercouris / Ritter / Davis Deep Dive / Johnson); append **rome-persia-legitimacy-signal-check** rows when **Pontifex** / **Pezeshkian** status URLs are stable.
@@ -578,7 +578,7 @@ Barnes says both sides face material clocks and the question is which clock runs
 
 ## 2026-04-15
 
-### Signal
+### Chronicle
 
 - **Grok × Grace-Mar daily brief triage:** **Grok** (LLM, **unverified**) vs **[daily-brief-2026-04-15.md](../../daily-brief-2026-04-15.md)** — **IMF** **3.1% vs 3.3%** growth (**0.2 pp**, not Grok **0.4 pp**) **supported** ([AP](https://apnews.com/article/economy-imf-outlook-iran-war-trump-inflation-growth-e3d8a239509abb50757f8c8d42fb32d8)). **G7**, **Hungary** draft **09:00 UTC**, **BLS CPI**, **Ukraine**, **Russia MoD 1.2T rubles**, **Taiwan** — **uncorroborated** fast triage; **no** **Judgment** without primaries. **Brief:** **§1f** **Grok** overlay; **§1g**/**§1h** **MFA Fu Cong** (en/**zh**) + **AP IMF** + **Tasnim EN** IRGC **12 Apr** Hormuz; **§2** RSS (**Reuters World** fetch failed). Ship from Grace-Mar **gaps + URLs**; **Grok** = falsifiable hypotheses only.
 - **`weave` (operator) after `coffee` C → watch fill:** **§1d**/**§1e** + URLs (**~2026-04-13 14:42**→**2026-04-15 14:42** UTC **Assembled**): **Kremlin** **79545** / **79558** (EN+`ru`), **RIA** Peskov **13 Apr** uranium (quote-check), **Moscow Times** HEU, **WH** Baier, **Reuters** blockade/fast-attack, **U.S.–Hungary** fact sheet; **§1f** maintenance (**Grok** **NOT verified**). **04-13 / 04-14** inbox **folded** to prior days — **no** full accumulator here (**synthesis-only**).
@@ -592,7 +592,7 @@ Barnes says both sides face material clocks and the question is which clock runs
   - **Hormuz enforcement:** UK Maritime Trade Ops: enforcement from 1400 UTC 13 Apr; at least **two tankers reversed course**; oil back to **$100/bbl**. NATO allies UK/France **refused to join** — announced separate "peaceful multinational mission" for freedom of navigation.
   - **Pakistan mediation (15 Apr):** Military chief + interior minister visiting Iran; Trump hints at second round in Pakistan, no date.
 
-### Judgment
+### Reflection
 
 - **Knot-shape E — great-power / energy spine (lead):** Read the crisis **first** through **alignment + energy**: **China–Russia** moves on **Iran**, **Hormuz** as pressure on **Asian** crude and **sanctions**, **Bloomberg** blockade→Beijing, **Russian SC** as authoritative commentary (**ORBAT** hypothesis until primary). **After** that spine, **Islamabad** or US **polling** pain — not before. **Mercouris** anchors the stack; **tanker** agnosticism is discipline, not a disproof of the great-power frame.
 - **Lavrov (Beijing, ~14–15 Apr) × E corroboration:** **Wang–Lavrov** meetings / extended **FM** remarks **on-spine** for **E** — **Russia–China** coordination, **sanctions** and **energy** (**Hormuz**, **Power of Siberia 2**, **PRC** **shortfall** narrative), **JCPOA** / **uranium** **mechanisms**, **Islamabad** and **third-party** **support** ring — **official** **Kremlin/MFA** voice, **not** indexed **`thread:`** commentary. **Judgment** still **tiers** **operational** **Hormuz** / **AIS** vs **editorial** “about China” vs **FM** **advocacy**; **pin** **MID**/**Kremlin** + **MFA PRC** **primaries** next to operator paste before treating long **press** text as **quote-grade**.
@@ -605,7 +605,7 @@ Barnes says both sides face material clocks and the question is which clock runs
 
 - **Digest vs brief / custody vs scope:** Unattributed digest rows vs **channel-tagged** wires (above). If **Moscow–Tehran** accept **custody** and **Washington** does not, **Vance** “grand bargain” risks a **scope trap**, not a wider deal.
 
-### Links
+### References
 
 - [daily-brief-2026-04-15.md](../../daily-brief-2026-04-15.md) — §1d · §1e · §1f strategic digest · §1g/§1h IMF + Hormuz native pointers
 - [daily-strategy-inbox.md](../../daily-strategy-inbox.md) — **Wire capture — 2026-04-15** + **batch-analysis** lines (incl. **Lavrov Beijing × E**); carry **expert-thread** / **`batch-analysis`** when this day ingests new **`thread:`** lines; **04-13/04-14** bulk already woven **[2026-04-14](#2026-04-14)**
@@ -620,7 +620,7 @@ Barnes says both sides face material clocks and the question is which clock runs
 - Legitimacy seam (rolling): [rome-persia-legitimacy-signal-check.md](../../rome-persia-legitimacy-signal-check.md)
 - [case-index.md](../../../case-index.md) — CASE-0007 (coalition complexity), CASE-0014 (elite coordination strain)
 
-### Open
+### Foresight
 
 - **UNSC Hormuz draft vs Islamabad:** Does a **Security Council** move to **condemn Iran** on **Hormuz** / **neighbors** (without **root-cause** language) **stall** or **accelerate** the **Islamabad** negotiation **track**? **Falsifier pair:** **UN** **vote** / **draft** text timing **vs** next **Islamabad** **session** readout and **parties’** **statements** (Russia/China **veto** or **abstention** story **vs** **Pakistan**-hosted **talks**).
 - **Knot-shape E falsifiers:** Next **Russia–China** Iran choreography vs **Bloomberg** Hormuz–China thesis; **Russian SC** primary for **ORBAT**; **AIS / throughput / insurance** vs editorial “about China.”
@@ -636,7 +636,7 @@ Barnes says both sides face material clocks and the question is which clock runs
 
 ## 2026-04-16
 
-### Signal
+### Chronicle
 
 - **Weave C (separate knot):** `marandi-blumenthal-jf-primary` — **`knot_label`** `marandi-blumenthal-jf-primary`. **`thread:marandi`** **primary** (**Breaking Points** 2026-04-16) + **`thread:blumenthal`** **Judging Freedom** (operator session, 2026-04-16) as **US/UK amplifier**; **Pape** **validate fork** only → points to **weave D** knot (not merged). Paste **JF** inbox line when ready; **no backfill** required for Marandi BP row already indexed.
 - **Weave D (separate knot):** `pape-janssen-escalation-blockade` — **`knot_label`** `pape-janssen-escalation-blockade`. **`thread:pape`** **primary** — **Robert Pape** on **Cyrus Janssen** (YT, uploaded 2026-04-16): **escalation trap** / domestic lock-in, **staged blockade → commodity calendar** (hypothesis-grade until primaries), **Israel as third-player spoiler** (Rubio cites need primaries), **Lebanon** sectarian-map **X** (2026-04-14) + **AP** Washington talks **separate Judgment objects**; **same-day** **Marandi** + **Blumenthal** streams as **evidence inputs** (see knot **Judgment**). Inbox: [daily-strategy-inbox.md](../../daily-strategy-inbox.md) **Expert ingest — 2026-04-16**; expert: [`strategy-expert-pape-thread.md`](../../strategy-expert-pape-thread.md).
@@ -652,7 +652,7 @@ Barnes says both sides face material clocks and the question is which clock runs
 
 - **`thread:macgregor` weave (Judging Freedom 2026-04-16 + optional later X stubs):** **Importer** **/ **mobilization** **/ **alliance-fracture** **lane** **—** **not** **`thread:ritter`** **ORBAT** **or** **`thread:davis`** **process** **clock.** **JF** **04-16** **with** **Napolitano:** **Baltic** **UAV/Art.51** **risk**; **Greater** **Israel** **+** **US** **backing**; **Trump/Cohn** **rules** **vs** **“new** **Iran** **regime”**; **Singapore** **revisionist** **US** **+** **Asian** **supply** **stress**; **Islamabad** **theater** **+** **Vance–Netanyahu** **channel** **(Marandi** **anecdotes** **hearsay** **tier)**; **Hormuz** **blockade/islands/killer** **strike** **skepticism**; **Russia–China** **/ **Putin** **Ukraine** **read**; **IC/advisors.** **Epistemic:** **show** **monologue** **<** **wire** **ORBAT.** **Optional:** **inbox** **`Expert X … 2026-04-18`** **batch** **(three** **`DougAMacgregor`** **lines)** **—** **not** **operator-uploaded** **to** **repo** **as** **of** **04-16** **scope;** **verify** **before** **Links-grade** **or** **defer.**
 
-### Judgment
+### Reflection
 
 - **Thin day — full thesis on the knot page.** Pape lane stays **lattice-separated** from **`thread:mearsheimer`** (alliance geometry) and **`thread:davis`** (ultimatum / resumption clock) per inbox **`batch-analysis | 2026-04-16 | Pape × Mearsheimer`** and **× Davis**. **Sister continuity:** 2026-04-12 islamabad-hormuz-thesis-weave (page id `islamabad-hormuz-thesis-weave`) · 2026-04-15 kremlin-iri-uranium-dual-register (page id `kremlin-iri-uranium-dual-register`) · 2026-04-14 mercouris-mearsheimer-lebanon-split (page id `mercouris-mearsheimer-lebanon-split`).
 - **Marandi BP 04-16 × 04-13 scaffold** (inbox **`batch-analysis | 2026-04-16`**): **Tension-first:** **Iranian process + moral-historical register** (Islamabad **full authority** vs **Vance**/**Netanyahu** channel; **school**/**synagogue**/**Gaza–Lebanon** frames) **vs** **`thread:ritter`** **USN**/**interdiction** **mechanics** and **wire-tier** throughput — **do not** merge into one “Iran says” or one “U.S. Navy says.” **Weak bridge:** same **Hormuz** / **Islamabad** / **Lebanon** **object** as **`thread:mercouris`** **institutional** surface — **verify** still splits **speech** from **AIS** / **DOD** readouts. **Vance** “**normal country** / **grand bargain**” block in the Marandi row is **counter-speech** (e.g. **Joe Kent** letter, **Leverett** book pointer) — **not** a substitute for **WH**/**State** **primary** text if Judgment tightens.
@@ -663,7 +663,7 @@ Barnes says both sides face material clocks and the question is which clock runs
 
 - **`macgregor` × `thread:parsi`:** **`membrane:pair`** — **Parsi** **=** **ceasefire** **viability** **requires** **Trump** **constrain** **Israel** **(TRT/Beast** **tier);** **Macgregor** **=** **observed** **US** **channel** **tracks** **Israeli** **demand** **structure** **(JF/X** **tier).** **Do** **not** **merge** **into** **one** **Judgment** **without** **thesis** **split.**
 
-### Links
+### References
 
 - Knot — weave C — marandi-blumenthal-jf-primary (page id `marandi-blumenthal-jf-primary`)
 - Knot — weave D — pape-janssen-escalation-blockade (page id `pape-janssen-escalation-blockade`)
@@ -678,7 +678,7 @@ Barnes says both sides face material clocks and the question is which clock runs
 - [`strategy-expert-macgregor-thread.md`](../../strategy-expert-macgregor-thread.md) — **2026-04** **lane** **+** **Ritter** **knot** **compare**
 - Prior day: [2026-04-15](#2026-04-15)
 
-### Open
+### Foresight
 
 - Pin **canonical Breaking Points / YouTube** URL for **Marandi 2026-04-16** (replace **`TBD-pin-Breaking-Points-Marandi-2026-04-16`** in inbox + transcript row).
 - **Quote verify:** **Hegseth** / **Caine** (blockade, **Pacific** interdiction) and **Vance** **grand bargain** clip — **tier** against **DOD**/**JCS**/**WH** **primary** or **full tape** before **Links-grade** merge with **Ritter**/**Davis** **ORBAT** rows.
@@ -694,7 +694,7 @@ Barnes says both sides face material clocks and the question is which clock runs
 
 ## 2026-04-17
 
-### Signal
+### Chronicle
 
 - **IRI FM primary (no `thread:`):** Seyed Abbas Araghchi (@araghchi), **2026-04-17 06:45** — Hormuz passage for commercial vessels **open** for the **remaining ceasefire period** on the **PMO coordinated route**; opens **in line with the Lebanon ceasefire** — **state** voice for **§1h**, not expert-thread speech. Engagement (operator screenshot, **3.3M** views) is not a substance verify tier.
 - **IRI Majlis speaker (no `thread:`):** Mohammad Bagher Ghalibaf (@mb_ghalibaf), **2026-04-17** — **six-point** X thread (EN desk summaries): accuses U.S. exec of **seven false claims**; Hormuz **will not remain open** if **blockade** continues; passage on **designated route** + **Iranian authorization**; strait status from **field** not **social media**; **media warfare**; FM spokesman for negotiation accuracy — **same calendar day** as **@araghchi** but **different institution** (**legislature** vs **MFA**) and **coercion** register vs diplomatic **“open”** line — **do not** merge into one **§1h** object without tier tags; **desk** tier until **Persian** primary + pinned **X** URL (see [daily-strategy-inbox.md](../../daily-strategy-inbox.md) `X | cold: @mb_ghalibaf` + [NDTV secondary](https://www.ndtv.com/world-news/irans-hormuz-wont-remain-open-warning-after-trumps-blockade-post-mohammad-bagher-ghalibaf-iran-war-strait-of-hormuz-uranium-11374202)).
@@ -709,7 +709,7 @@ Barnes says both sides face material clocks and the question is which clock runs
 - **`thread:pape` — 2026-04-17 (~08:07) X:** Israel–Lebanon truce framed as **power-shift signal**; **Iran** demand / **U.S. delivery** on **Lebanon** strikes + **NYT Opinion** cite (**Iran** / **major power** framing). **Seam** **04-14** worst-case sectarian fork vs this **settlement** read; **do not** conflate Janssen **“fourth center”** (**04-16**) with NYT **“4th” / major-power** headline — different analytic objects. Ingest + screenshot: [daily-strategy-inbox.md](../../daily-strategy-inbox.md); [assets/pape/x-2026-04-17-truce-nyt-power.png](../../assets/pape/x-2026-04-17-truce-nyt-power.png).
 - **`thread:barnes` × host `thread:johnson` — 2026-04-17 (YT):** Larry Johnson *Countercurrent* — **Robert Barnes** *What the HELL is going on in the White House?* — **US politics** / **executive–staff** **process** **(hypothesis-grade):** cognition **frame** (**hypothesis** **tier** **if** **verbatim** **uses** **clinical** **vocabulary** **on** **the** **executive** **—** **not** **medical** **Judgment** **without** **tier** **+** **sources** **beyond** **analyst** **audio**), **Vance**/**ceasefire**/**10 points**/**Witkoff–Kushner** **vs** **Driscoll**, **Navy** **“mall cop”** **Hormuz** **+** **incentive** **to** **soften** **metrics**, **electoral** **/ Congress** **money** **brake**, **farmer** **supply** **shock** — **orthogonal** **plane** **to** **§1h** **/** **wire** **(work-politics** **+** **§1e** **adjacent)**; **many** **sub-themes** **sit** **only** **in** **verbatim** **`[...]`** **—** **not** **excerpt-audited** **(see** **Judgment** **below). Verbatim excerpt: [barnes-countercurrent-2026-04-17-verbatim.md](../../barnes-countercurrent-2026-04-17-verbatim.md); **`batch-analysis`** **`crosses:barnes+johnson`** in [daily-strategy-inbox.md](../../daily-strategy-inbox.md); pin **YouTube** **`TBD-johnson-barnes-white-house-2026-04`**.
 
-### Judgment
+### Reflection
 
 - **Barnes×Johnson (Countercurrent) — clinical / collapsed gate:** **Hypothesis** **tier** **only** **for** **executive** **cognition** **narrative** **(including** **dementia-class** **wording** **in** **verbatim**); **do** **not** **treat** **as** **diagnostic** **fact** **or** **merge** **into** **§1h**/**wire** **Judgment** **—** **same** **discipline** **as** **Davis×Johnson** **“clinical** **language”** **([Signal](#2026-04-17)** **above).** **Claims** **named** **only** **from** **`[...]`** **collapsed** **spans** **(electoral**/**farmers**/**Cabinet**/**etc.)** **—** **verify** **or** **drop** **before** **Links-grade** **weave** **with** **Hormuz** **week**.
 - **Four institutional clocks, one day (IRI slice = two):** (1a) **IRI FM** (@araghchi) — Hormuz **open** / PMO route / Lebanon ceasefire alignment; (1b) **IRI Majlis speaker** (@mb_ghalibaf) — blockade → Hormuz not “open,” designated route + authorization, field vs social — **do not** collapse (1a) and (1b) into one “Iran says” line without tier tags and primaries; (2) U.S. executive — pool optimism (Moneycontrol) vs Truth Social hard terms (Davis embed) — dual-register until TS full text is pinned; (3) **`thread:davis`** — negotiation-window vs ultimatum framing — orthogonal to FM text and to §1f Grok arc unless verify rows merge them with receipts.
@@ -719,7 +719,7 @@ Barnes says both sides face material clocks and the question is which clock runs
 - **Weave — Ritter × Marandi × Davis (2026-04-17):** **Tension-first:** **`thread:marandi`** **(04-17** **X)** **tightens** **the** **same** **strait** **object** **as** **@araghchi** **with** **operational** **conditions** **+** **Lebanon** **sequelae** — **commentator** **gloss** **tier,** **not** **a** **second** **FM** **primary.** **`thread:davis`** **(Araghchi** **QT** **+** **Truth** **Social** **embed)** **=** **U.S.-side** **negotiation-window** **vs** **maximalist** **“door** **shut”** **—** **orthogonal** **to** **Marandi’s** **IRI** **legitimacy** **register** **and** **to** **§1h** **text** **unless** **primaries** **pin** **the** **same** **chain.** **`thread:ritter`** **(Diesen** **interview,** **same** **calendar** **day)** **=** **third** **theater** **(Baltic** **/** **NATO-Europe** **proxy,** **Article** **5** **read)** **plus** **Islamabad** **/** **Hormuz** **carryover** **claims** **in** **one** **audio** **—** **do** **not** **fuse** **Baltic** **strike** **hypothesis** **with** **Hormuz** **dock** **facts** **or** **Davis** **wires** **without** **explicit** **seam** **(see** `marandi-ritter-mercouris-hormuz-scaffold` **lattice** **+** **inbox** **`crosses:`** **rows).** **Weak** **bridge:** **all** **three** **orbit** **Trump** **/** **ceasefire** **/** **next-move** **calendar** **—** **still** **three** **verify** **planes.**
 - **Weave — Johnson × Ritter (2026-04-17, C-plane):** **Convergence:** both **`thread:`** lanes treat **Trump-room** output as **audience- and calendar-sensitive** — **`thread:ritter`** (Diesen) ties **Islamabad MOU** / **selective Hormuz** to **ego** + **midterm** “sell” of a deal; **`thread:johnson`** (Davis YT same day) ties **contradictory** TS / blockade / **Bessent** sanctions stack to **three-option** scaffolding and uses **maximal analyst language** on the **executive** (**detached** / **delusional**). **Tension:** Ritter still carries **Europe**/**Russia** theater + **“deal coming”** **Islamabad** **technicals** in one file; Johnson stresses **Iran** **material** **control** of the strait, **Gulf**/**China** pressure, **Option 2** escalation forecast, and **removal** rhetoric — **different** **forecast** **and** **moral** **load**. **Do not** collapse into one **“Trump psychology”** line without **B** vs **C** plane tags and **verify** on **TS** / **Treasury** / **DoD** where load-bearing.
 
-### Links
+### References
 
 - [daily-brief-2026-04-17.md](../../daily-brief-2026-04-17.md) — **Territory signals**, **§1e** / **§1h**, **§1f** digest + triage, **[strategy + verify](../../daily-brief-2026-04-17.md#strategy-verify-2026-04-17)**
 - [daily-strategy-inbox.md](../../daily-strategy-inbox.md) — **2026-04-17** **ingests** (digest, **X** **Davis**, **`batch-analysis`**, **`notebook`** **continuity**)
@@ -737,7 +737,7 @@ Barnes says both sides face material clocks and the question is which clock runs
 - [meta.md](meta.md) — **April arc** **04-17** **sentence** **(FM** **primary** **+** **Davis** **+** **dual-register**)
 - Prior day: [2026-04-16](#2026-04-16)
 
-### Open
+### Foresight
 
 - Pin **canonical** **status URLs:** **@araghchi** **2026-04-17** **post**, **@mb_ghalibaf** **2026-04-17** **thread** **(Persian** **+** **translation** **receipt)**, **@DanielLDavis1** **QT** **chain**, **Truth Social** **~09:57** **full** **text** **(primary** **or** **authorized** **mirror**).
 - Pin **Greater** **Eurasia** **/** **Diesen** **YouTube** **canonical** **URL** **for** **`thread:ritter`** **×** **`thread:diesen`** **2026-04-17** **(replace** **`TBD-diesen-ritter-finland-baltic-2026-04`** **in** **inbox** **+** **transcript** **rows).**
@@ -750,21 +750,21 @@ Barnes says both sides face material clocks and the question is which clock runs
 
 ## 2026-04-18
 
-### Signal
+### Chronicle
 
 - **`thread:davis` — screenshot weave (operator):** On-disk **[assets/davis/x-2026-04-17-araghchi-card-with-commentary.png](../../assets/davis/x-2026-04-17-araghchi-card-with-commentary.png)** packages the **2026-04-17** **@araghchi** Hormuz/**Lebanon**/PMO primary (**~06:45**, **3.3M** views on card) with **English commentary** above the post (moral-high-ground / famine-threat framing, civilizational geography, **Trump** transient — **not** **FM** text). **Same object** as **04-17** Signal **@araghchi** bullet; **new** here is **discourse-overlay** **tier** for **contrast** with **Davis** **dual-register** analysis — see [strategy-expert-davis-thread.md](../../strategy-expert-davis-thread.md) **`[strength: low]`** screenshot bullet + April Deep Dive note.
 - **Tri-mind weaves (operator order — 2026-04-18):** **`davis`×`pape` first**, **`davis`×`freeman` second** — **`batch-analysis`** rows in [daily-strategy-inbox.md](../../daily-strategy-inbox.md); **`[strength: medium]`** bullets + Deep Dive note in [strategy-expert-davis-thread.md](../../strategy-expert-davis-thread.md). **Pape** = coercion / binary / pause-not-deal **theory** tier vs **Davis** **mechanics**; **Freeman** = **staging** / **Islamabad** / **door–padlock** vs **Davis** **physical** **Strait** **control** — **two** **Judgment** **planes**, **explicit** **seams**.
 - **Expert thread-integrate (inbox `thread:` batch):** Third-party scan rows + **`batch-analysis | 2026-04-18 | Hormuz × Islamabad × Lebanon`** in [daily-strategy-inbox.md](../../daily-strategy-inbox.md) (`<!-- thread-integrate scan 2026-04-18 -->`). Covers **`thread:marandi`**, **`thread:ritter`**, **`thread:parsi`**, **`thread:barnes`**, **`thread:macgregor`**, **`thread:pape`**, **`thread:davis`**. **Accumulator** line dated **2026-04-18**; weave here is **stub-grade** until tier-verify passes.
 - **`thread:ritter` transcript:** [strategy-expert-ritter-transcript.md](../../strategy-expert-ritter-transcript.md) — **Diesen** YT block **trimmed** to stub (verbatim exceeded per-ingest budget); **2026-04-18** section keeps **three** **X** status lines (genocide register; Intel Roundtable; Hormuz/Lebanon video). Re-run **`python3 scripts/strategy_thread.py --today 2026-04-18`** to refresh **`*-thread.md`**.
 
-### Judgment
+### Reflection
 
 - **Araghchi screenshot commentary (2026-04-18 weave):** English **prose above the card** in [assets/davis/x-2026-04-17-araghchi-card-with-commentary.png](../../assets/davis/x-2026-04-17-araghchi-card-with-commentary.png) is **third-party interpretive gloss** — **not** **@araghchi** text. **Do not** treat **moral-high-ground** / **civilizational geography** / **Trump** transient lines as **IRI** **FM** **position** or as **Davis**; use as **discourse-sample** **tier** **vs** **`thread:davis`** **dual-register** mechanics.
 - **`davis`×`pape` (tri-mind 1):** **Structural** **binary** / **escalation-trap** **read** (**`thread:pape`**) **does** **not** **substitute** **for** **tanker** **/** **AIS** **/** **blockade** **primaries** **on** **the** **same** **headline** **—** **merge** **only** **with** **tier** **tags** **and** **dated** **X** **/** **Substack** **pins**.
 - **`davis`×`freeman` (tri-mind 2):** **Career-diplomat** **staging** **(**Freeman** **Diesen** **2026-04-18** **+** **Grayzone** **04-17)** **orthogonal** **to** **Davis** **ORBAT-adjacent** **claims** **—** **one** **lane** **=** **who** **narrates** **the** **week**, **other** **=** **what** **ships** **/** **routes** **do**.
 - **Tension-first (from inbox `batch-analysis | 2026-04-18`):** **Hormuz open / not-open / who-decides** appears across **Parsi**, **Barnes**, **Davis**, **Marandi** — **do not** merge **commentator** or **forecast** tiers with **AIS** / **shipping** primaries without tags. **Pape** Substack (**supply wall**, **fourth-power** framing) stays **forecast / analyst** tier. **Lebanon** casualty / explosion claims (**Marandi**, **Davis**) need **wire primaries**, not **thread** echo. **Ritter** moral-register **X** rows are **not** automatic joins to **Hormuz mechanics** **the same day**.
 
-### Links
+### References
 
 - [daily-strategy-inbox.md](../../daily-strategy-inbox.md) — thread-integrate block + **`batch-analysis | 2026-04-18`** + **`Davis × Pape`** + **`Davis × Freeman`**
 - [assets/davis/x-2026-04-17-araghchi-card-with-commentary.png](../../assets/davis/x-2026-04-17-araghchi-card-with-commentary.png) — **@araghchi** card + commentary (Davis lane weave; **not** a replacement for pinned **X** URL)
@@ -772,7 +772,7 @@ Barnes says both sides face material clocks and the question is which clock runs
 - [`strategy-expert-pape-thread.md`](../../strategy-expert-pape-thread.md) · [`strategy-expert-freeman-thread.md`](../../strategy-expert-freeman-thread.md) — **tri-mind** mirror notes (**2026-04-18**)
 - [strategy-expert-ritter-transcript.md](../../strategy-expert-ritter-transcript.md) · [strategy-expert-ritter-thread.md](../../strategy-expert-ritter-thread.md) (refresh after **`strategy_thread.py`**)
 
-### Open
+### Foresight
 
 - **`strategy_thread.py`** for **2026-04-18** after commit (**ritter** + full expert set from inbox).
 - Pin **Diesen × Ritter** canonical **`watch?v=`** (still **`TBD-…`** in stub rows) when available.
@@ -780,7 +780,7 @@ Barnes says both sides face material clocks and the question is which clock runs
 
 ## 2026-04-19
 
-### Signal
+### Chronicle
 
 - **`thread:ritter` — Substack:** Scott Ritter, *[The Consequences of Incompetence](https://scottritter.substack.com/p/the-consequences-of-incompetence)* (**publication date on page 2026-04-19**). Essay argues a **failed first round** of U.S.–Israel **coercion** against Iran, **incompatible** negotiation goals (**Iran** **practical** **vs** **Trump** **perception** **management**), **Hormuz** **selective** **transit** **/ no** **military** **fix** **→** **diplomatic** **path**, and a **second-round** **forecast** (**GCC** **energy** **+** **desalination** **/ power** **+** **Israel** **infrastructure**) — **synthesis** **tier** for the week’s **Hormuz** **spine**, not a **wire** **replacement**.
 
@@ -792,7 +792,7 @@ Barnes says both sides face material clocks and the question is which clock runs
 
 - **Grok §1f digest (archived in brief):** External **Daily** **Strategic** **Brief** **paste** **with** **triage** **clusters** **(Lebanon** **/** **Oman** **/** **EU–Hungary** **/** **Kerch** **/** **SPR** **/** **sortie** **cap)** **and** **`#strategy-verify-2026-04-19`** **—** **hypothesis** **/** **Q-tier** **until** **primaries** **match** **counts** **and** **schedules**.
 
-### Judgment
+### Reflection
 
 - **Essay tier:** Strong **rhetorical** **color** and **order-of-magnitude** **retaliation** **forecasts** stay **commentator** **load-bearing** **—** **separate** **from** **§1e** **maritime** **primaries** **and** **from** **`thread:pape`** **structural** **binary** **unless** **the** **weave** **labels** **material** **/** **theory** **/** **forecast** **seams**. **`thread:barnes`** **overlap** **only** **where** **named** **U.S.** **political** **facts** **support** **the** **midterm** **/** **impeachment** **frame** **—** **not** **by** **headline** **echo** **alone**.
 
@@ -802,7 +802,7 @@ Barnes says both sides face material clocks and the question is which clock runs
 
 - **Weave — `daily-brief-2026-04-19` §1f × tri-mind (litigator-close):** **Grok** **clusters** **and** **the** **brief’s** **`strategy`** **`+`** **`verify`** **table** **stay** **quarantined** **as** **hypothesis** **alongside** **today’s** **expert** **/** **social** **ingests** **—** **moving** **parts** **include** **Gulf** **sequencing**,** **EU** **disbursement** **mechanics**,** **Ukraine** **/** **Kerch** **downtime**,** **and** **energy** **buffer** **policy**,** **without** **collapsing** **into** **one** **single-theater** **Judgment** **until** **plane-tagged** **receipts** **land** **(same** **seam** **discipline** **as** **04-15**/**16**/**17**/**18** **digest** **rows)** **.** **Tri-mind** **read** **(WORK):** **mediation** **and** **verification** **staging** **buys** **time** **for** **domestic** **audiences** **;** **pause** **and** **reconstitution** **follow** **incentive** **geometry** **without** **requiring** **a** **shared** **endgame** **story** **;** **Notebook** **upgrades** **still** **turn** **on** **enforceable** **text** **and** **timestamped** **field** **objects** **(missions,** **ports,** **barrels,** **sortie** **proxies)** **—** **not** **anonymous** **sequencing** **leaks** **alone**.
 
-### Links
+### References
 
 - [daily-brief-2026-04-19.md](../../../daily-brief-2026-04-19.md) — **§1f** **Grok** **digest** **+** **`#strategy-verify-2026-04-19`** **;** **§2** **RSS** **(Islamabad** **Monday**,** **U.S.–Iran**,** **Ukraine** **sanctions**,** **Hormuz** **/** **Lebanon** **)**
 - [daily-strategy-inbox.md](../../daily-strategy-inbox.md) — **`batch-analysis | 2026-04-19 | Ritter Substack`** + **`batch-analysis | fold: daily-brief §1f × tri-mind`** + **`SS | cold`** **`thread:ritter`** row + **Sánchez** **X** **row** **(EU** **–** **Israel** **AA)** + **`thread:pape`** **/** **`thread:davis`** **Trump** **Truth** **Social** **cluster**
@@ -813,7 +813,7 @@ Barnes says both sides face material clocks and the question is which clock runs
 - [`strategy-expert-ritter-thread.md`](../../strategy-expert-ritter-thread.md) — **Cross-check (Davis / Pape / §1e)** (`###` heading in **April** journal layer, above machine block)
 - Primary: [The Consequences of Incompetence](https://scottritter.substack.com/p/the-consequences-of-incompetence) (Scott Ritter, Substack)
 
-### Open
+### Foresight
 
 - Optional: **full** **verbatim** **Substack** **on** **disk** **if** **operator** **needs** **long** **quotes** **—** **inbox** **uses** **summary** **row** **to** **stay** **under** **transcript** **per-ingest** **budget**.
 
@@ -827,19 +827,19 @@ Barnes says both sides face material clocks and the question is which clock runs
 
 ## 2026-04-20
 
-### Signal
+### Chronicle
 
 - **Same calendar day, two Judging Freedom episodes (pin under Links):** **`thread:johnson`** — [YouTube `geWpX8w7BNU`](https://www.youtube.com/watch?v=geWpX8w7BNU) (*Larry Johnson : Who Controls Hormuz?*, published **2026-04-20**). **`thread:ritter`** — operator transcript *Trump and Hegseth Haven’t a Clue* (same **host date**; **canonical `watch?v=`** still **TBD** on channel search). **Caine / nuclear:** Johnson **states** the **Saturday emergency meeting** / **Trump** **nuclear codes** / **Gen. Caine** **refusal** **arc** **on-mic** in `geWpX8w7BNU` (see **Receipts**); Ritter **episode** **later** **weaves** **institutional** **analysis** **and** Napolitano says **“Larry Johnson reported it from two sources”** — align **that** **phrase** **to** **Johnson’s** **own** **published** **chain** **(video** **+** **optional** **second** **source** **off-air)** **on** **verify**.
 - **`thread:ritter` — *Trump and Hegseth Haven’t a Clue* (operator paste, 2026-04-20):** **Strait incident** — Ritter: U.S. destroyer ordered **engine room** evacuated, **fired on engine room**, **USMC** boarded and **took** an **Iranian cargo ship**; labeled **piracy**; framed against **Islamabad ceasefire** and **U.S. blockade** legitimacy. **Islamabad** — **Vance / Witkoff / Kushner** in hotel vs **Iranian team** in **Tehran**; **U.S. unprepared** thesis (Iran brought draft text; U.S. “blind”); **Morandi** cited on near-**MOU** and **pullback** over **weakness** optics; **“joint excavation”** of enriched stock dismissed vs **IAEA**-style accounting. **Forecasts** — **GCC** power/desalination, **Israel**/**Gulf** infrastructure, **Houthi** **Bab el-Mandeb** line in voice; **Turkey × Israel** rhetoric. **UN ambassador** clip (IRGC / bridges / power) — **IHL** counter-argument (**why not in first 40 days**). **Host:** Trump said **ceasefire ends Wednesday** (**verify** TS/wire). **Board of Peace** — **derelict** vs **Strait** institutional path not used.
 - **Nuclear / JCS:** Ritter **does not** **quote** **Johnson** **verbatim**; **develops** **Caine** **/** **nuclear** **doctrine** **(JCS** **/** **oath** **/** **NYT-on-Israeli** **claims** **in** **voice)**. **Tier:** **analyst** **until** **WH** **/** **DoD** **on-record** **on** **the** **Saturday** **meeting** **(if** **any)**.
 - **Overlap — [Haiphong / Ritter / Johnson digest](../../../transcript-analysis-haiphong-ritter-johnson-iran-2026-04.md) (`thread:johnson` × `thread:ritter`):** Digest **§B**: **Ritter** — **mass Hormuz seizure** **infeasible** (echelon **LOC** math); **Johnson** — **F-15/Isfahan** **load** scenarios (**ORBAT** lane). **04-20** **is** **different** **objects:** **single-ship** **boarding** **(Ritter** **JF)** **+** **Johnson** **JF** **Caine** **segment** **—** **do** **not** **merge** **digest** **§B** **with** **04-20** **Caine** **story** **without** **tier** **tags**.
 
-### Judgment
+### Reflection
 
 - **Three `thread:ritter` objects, one Hormuz spine:** **Digest §B** (roundtable **ORBAT**), **04-19 Substack** (essay **forecast**), **04-20 JF** (**incident** + **talks psychology** + **nuclear gossip**) — **cross-link**, **don’t** collapse into one **“Ritter said”** line without **seams**.
 - **`thread:johnson` seam:** Digest **§B** **ORBAT** **lane** **vs** **04-20** **JF** **Johnson** **on** **Caine** **(video** **pinned** **`geWpX8w7BNU`)** — **same** **lane** **id**, **different** **dates** **/** **claims**; **NYT** **(4/7** **piece)** **is** **Ritter’s** **and** **Johnson’s** **shared** **off-ramp** **for** **Caine-in-the-room** **read** **—** **still** **not** **DoD** **primary** **on** **Saturday** **meeting** **facts**.
 
-### Links
+### References
 
 - [transcript-analysis-haiphong-ritter-johnson-iran-2026-04.md](../../../transcript-analysis-haiphong-ritter-johnson-iran-2026-04.md) — **§B** **Ritter × Johnson** (April digest)
 - [The Consequences of Incompetence](https://scottritter.substack.com/p/the-consequences-of-incompetence) — **04-19** **Substack** (same-week continuity)
@@ -859,7 +859,7 @@ Barnes says both sides face material clocks and the question is which clock runs
 
 **Ritter JF episode (same host date, title *Trump and Hegseth Haven’t a Clue*):** **canonical** **YouTube** **ID** **not** **found** **in** **search** **—** **replace** **row** **when** **pinned** **from** **[Judge Napolitano — Judging Freedom](https://www.youtube.com/@JudgingFreedom)** **upload** **list**.
 
-### Open
+### Foresight
 
 - **Verify:** **CENTCOM** / **USN** / **IRI** **MFA** (or equivalent) on **weekend** **Strait** **boarding** **(vessel** **name,** **ROE)** before **piracy**/**civilian** **fire** claims **ship** as **fact**.
 - **Caine / Saturday meeting:** **No** **on-record** **WH** **/** **Pentagon** **confirm** **in** **IBTimes** **wrap** **—** **keep** **hypothesis** **or** **disputed** **per** **Lead** **Stories** **+** **primary** **video** **only** **where** **speech** **is** **attributed**.

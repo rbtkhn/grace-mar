@@ -155,7 +155,7 @@ Run operator **`thread`**: **`bin/thread`** or **`python3 scripts/strategy_threa
 
 ### Distinctive lane shorthands (recommended sentences)
 
-- **`pape`:** This lane **names escalation as a trap** — a **commitment ratchet** on **demands** plus **staged** branches (e.g. **nuclear-stockpile** logic → **ground-force** scenarios, **Stage** framing, packaged graphics) — **not** a substitute for **`ritter`** **Hormuz** **mechanics**, **`mercouris`** **room** **reads**, or **`mearsheimer`** **alliance** **geometry** alone; use **Typical pairings** and, when folded, **`### Judgment`** bullets such as **Thesis A — Pape / “escalation trap”** in the active month’s [`chapters/YYYY-MM/days.md`](chapters/2026-04/days.md) (replace **YYYY-MM**).
+- **`pape`:** This lane **names escalation as a trap** — a **commitment ratchet** on **demands** plus **staged** branches (e.g. **nuclear-stockpile** logic → **ground-force** scenarios, **Stage** framing, packaged graphics) — **not** a substitute for **`ritter`** **Hormuz** **mechanics**, **`mercouris`** **room** **reads**, or **`mearsheimer`** **alliance** **geometry** alone; use **Typical pairings** and, when folded, **`### Reflection`** bullets such as **Thesis A — Pape / “escalation trap”** in the active month’s [`chapters/YYYY-MM/days.md`](chapters/2026-04/days.md) (replace **YYYY-MM**).
 
 - **Domestic plane (do not collapse):** **`barnes`** tracks **liability**, **coalition sell**, and the **executive / TS** **chain**. **Pape** may add **U.S. audience** **or** **polling** **theses** (e.g. political support **hardening** under casualties) — keep those **hypothesis-grade** until **ingested** with **`verify:`** (dated poll, screenshot, or primary); **do not** **merge** with Barnes **without** a **labeled seam**.
 
@@ -222,7 +222,7 @@ Run operator **`thread`**: **`bin/thread`** or **`python3 scripts/strategy_threa
 4. **Falsify** — one sentence on what would make the call **wrong** (or what outcome resolves a conditional).
 5. Later: **`resolved:`** + cite (wire / official readout) or **`deferred:`** + reason (still ambiguous, horizon not reached).
 
-**Where to put it:** Same session as the ingest — optional **`batch-analysis`** line comparing two experts’ **testable** forks; or a bullet under **`### Open`** on the dated block in [`chapters/YYYY-MM/days.md`](chapters/2026-04/days.md) (replace month); or a running list in a scratch doc the operator names (no default new file). **Optional consolidated ledger (same contract):** [strategy-expert-predictions.md](strategy-expert-predictions.md) — **`pred_id`** rows + **`topic_slug`** registry + resolution receipts. **Optional resolution pass:** [.cursor/skills/fact-check/SKILL.md](../../../../.cursor/skills/fact-check/SKILL.md) for tiered verdicts when wires exist.
+**Where to put it:** Same session as the ingest — optional **`batch-analysis`** line comparing two experts’ **testable** forks; or a bullet under **`### Foresight`** on the dated block in [`chapters/YYYY-MM/days.md`](chapters/2026-04/days.md) (replace month); or a running list in a scratch doc the operator names (no default new file). **Optional consolidated ledger (same contract):** [strategy-expert-predictions.md](strategy-expert-predictions.md) — **`pred_id`** rows + **`topic_slug`** registry + resolution receipts. **Optional resolution pass:** [.cursor/skills/fact-check/SKILL.md](../../../../.cursor/skills/fact-check/SKILL.md) for tiered verdicts when wires exist.
 
 **Guardrails:** **WORK only** — not Record, not **Voice** truth. Do **not** turn into **accuracy theater**: unfalsifiable rhetoric (“they are serious”) is **not** a prediction; **base rate** and **topic difficulty** matter; **conditional** forecasts (“if X then Y”) need **both** legs scored. Prefer **sparse** high-quality rows over scorecards full of mush.
 
@@ -237,7 +237,7 @@ Run operator **`thread`**: **`bin/thread`** or **`python3 scripts/strategy_threa
 3. **`thread:<expert_id>`** (same commentator).
 4. **Delta** — label the move: **update** (new information integrated), **scope shift** (topic or audience changed), **emphasis** (same mechanism, different stress), **tension** (two claims need reconciliation — do not assume **contradiction** until you have both texts).
 
-**Where to log:** A single **`batch-analysis | YYYY-MM-DD | …`** line can carry **A vs B** for the same voice; or **`### Open`** on the **later** date (“follow-up: compare to 2026-04-01 ingest”); **git log** / **grep** on `thread:<expert_id>` across [`daily-strategy-inbox.md`](daily-strategy-inbox.md) and [`days.md`](chapters/2026-04/days.md) history is the cheap detector.
+**Where to log:** A single **`batch-analysis | YYYY-MM-DD | …`** line can carry **A vs B** for the same voice; or **`### Foresight`** on the **later** date (“follow-up: compare to 2026-04-01 ingest”); **git log** / **grep** on `thread:<expert_id>` across [`daily-strategy-inbox.md`](daily-strategy-inbox.md) and [`days.md`](chapters/2026-04/days.md) history is the cheap detector.
 
 **Guardrails:** **New facts** often justify revised judgment — distinguish **flip** from **Bayesian update**. Do **not** use drift tracking as **gotcha** copy unless the operator wants outreach; default is **notebook calibration**, not dunking.
 
@@ -251,7 +251,7 @@ Threads are **semi-permeable** by design; “optimization” here means **explic
 
 1. **`batch-analysis | …`** lines that **name** the relationship (convergence / divergence / weak bridge) and implicitly or explicitly reference **which** `expert_id`s are in play — ideally aligned with the **Typical pairings** column.
 2. **Two (or more) separate** paste-ready ingests, **each** with its own **`thread:<expert_id>`**, followed by **one** `batch-analysis` — membership is unambiguous.
-3. **`days.md` `### Judgment`** bullets that **label** both experts when comparing (e.g. **Marandi × Ritter**) — prose bridge, not a merged ingest.
+3. **`days.md` `### Reflection`** bullets that **label** both experts when comparing (e.g. **Marandi × Ritter**) — prose bridge, not a merged ingest.
 4. **Related voices** (below) and linked docs — **documented** seams (you already know the pore).
 
 **Slow lane or block (do not merge without a seam):**

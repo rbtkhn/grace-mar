@@ -23,7 +23,7 @@ It is not legal policy and not Record truth.
 
 ### Strategy notebook entry
 
-- Name: daily `days.md` entry (Signal / Judgment / Links / Open)
+- Name: daily `days.md` entry (Chronicle / Reflection / References / Foresight)
 - Good enough means: Signal has attributed wire captures with dates and sources; Judgment names tensions and does not collapse distinct positions; Links has at least one primary URL per claim; Open has falsifiable follow-up items
 - Not good enough when: Judgment merges distinct actors into one position ("Iran says"); Links are missing primaries; Open items are vague ("follow up on this")
 - Typical acceptable imperfection: some Links may be `verify:` stubs awaiting URL confirmation; Open items may be speculative

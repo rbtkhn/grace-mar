@@ -45,7 +45,7 @@
 - **Our product:** We strip overhead for **one moment**: the decision. Pre-decision orientation in one place, no committee needed. Principal (or principal + aide) gets the field and decides. Fits "one principal, one decision" — we're not adding people to the room; we're giving the principal a way to see the full field and make a call.
 - **Takeaway:** For federal/executive buyers: "Reduce decision overhead. Get the full field in one place; decide; move. No extra meetings to 'get everyone's view.'"
 
-### Judgment density and instinct-as-input
+### Reflection density and instinct-as-input
 
 - **Lesson:** Judgment density = relevant pattern recognition, calibrated to conditions. You want to cultivate it and make it visible.
 - **Our product:** Instinct-as-input **tests** judgment density: principal states their read, we show where it sits in the field (A/B/C). We make judgment **visible and exercisable** — we don't replace it. Contradiction/tension labels ("A and C conflict here") help them **triage attention** to high-judgment spots.

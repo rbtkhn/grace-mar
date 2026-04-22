@@ -74,7 +74,7 @@ When rule **7** applies, the first line is fixed; then **at most five** more sho
 #### Part B — Developments (5–10)
 Each: **Label** → **What happened** → **Why it matters** → **Deeper significance** (parallel-not-fused) → **What to watch next** (testable). **What happened:** plain; **Deeper significance:** lead **incentives, costs, and constraints** before **narrative or legitimacy** framing when both apply; one tight **official story vs material constraint** line when useful. See rule **11** for **Readout A / Readout B** when institutions plainly conflict.
 
-#### Signal vs noise
+#### Chronicle vs noise
 - **High-signal** (falsifiable; decisions or physical reality)
 - **Noise** (deprioritize)
 

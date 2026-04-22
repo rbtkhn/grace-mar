@@ -21,7 +21,7 @@ docs/skill-work/work-strategy/strategy-notebook/demo-runs/skill-strategy-exercis
 
 Rewrite into tagged bullets: thread label + short paraphrase + verify-needed flag per line.
 Optional second step: Thesis A / Thesis B if two channels disagree on scope.
-Append ### EXERCISE — headline-collapse (YYYY-MM-DD) with ### Signal, ### Judgment, ### Links — or write clean-room and pointer in days.md.
+Append ### EXERCISE — headline-collapse (YYYY-MM-DD) with ### Chronicle, ### Reflection, ### References — or write clean-room and pointer in days.md.
 Do not edit STRATEGY.md.
 ```
 

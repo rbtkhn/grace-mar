@@ -636,7 +636,9 @@ def main() -> int:
 
     days_text = days_path.read_text(encoding="utf-8", errors="replace") if exists["days"] else ""
     day_block = extract_day_block(days_text, d) if days_text else None
-    open_body = extract_h3_section(day_block or "", "Open")
+    open_body = extract_h3_section(day_block or "", "Foresight") or extract_h3_section(
+        day_block or "", "Open"
+    )
     open_bullets = open_bullet_lines(open_body)
 
     threads_text = (

@@ -64,7 +64,7 @@ _Operator block per [weak-signal-template.md](weak-signal-template.md). **§1f**
 | **Trump TS ~09:57** vs **Hormuz “open”** narrative same calendar day | **Primary** Truth Social + wire; **test** digest “Oman momentum” arc — **same day** may be **offer–counteroffer** not **monotonic de-escalation** |
 | **Davis @DanielLDavis1** — two posts (~06:30 “breaking” + later **Truth Social** reaction chain) | **Analyst** — use for **hypothesis** and **expert-thread** routing (`thread:davis`); **not** substitute for **§1h** / **§1e** primaries |
 
-**Triage disposition (2026-04-17 operator pass):** **`Q`** = remain in §1f quarantine — no weave to Signal / Judgment from the paste alone. **`P`** = partially covered **outside** the Grok block (same-day brief sections or verify table). **`W`** = watch — credible public sources may exist, but digest lines still do not graduate without a named receipt row.
+**Triage disposition (2026-04-17 operator pass):** **`Q`** = remain in §1f quarantine — no weave to Chronicle / Reflection from the paste alone. **`P`** = partially covered **outside** the Grok block (same-day brief sections or verify table). **`W`** = watch — credible public sources may exist, but digest lines still do not graduate without a named receipt row.
 
 | Cluster | Code | Note |
 |--------|------|------|

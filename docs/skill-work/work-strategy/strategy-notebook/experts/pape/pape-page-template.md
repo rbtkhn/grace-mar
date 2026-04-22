@@ -2,7 +2,7 @@
 
 WORK only; not Record.
 
-**Purpose:** Standalone **Signal / Judgment / Open** artifact for the `pape` expert. **Not** a substitute for full **verbatim** in [`raw-input/`](../../raw-input/README.md). Distinct from a **`strategy-page`** HTML fence in [`thread.md`](thread.md) unless you duplicate judgment there during EOD compose.
+**Purpose:** Standalone **Chronicle / Reflection / Foresight** artifact for the `pape` expert. **Not** a substitute for full **verbatim** in [`raw-input/`](../../raw-input/README.md). Distinct from a **`strategy-page`** HTML fence in [`thread.md`](thread.md) unless you duplicate judgment there during EOD compose.
 
 **Thread-embedded pages:** Use [`strategy-page-template.md`](../../strategy-page-template.md) for `<!-- strategy-page:start … -->` blocks in thread files.
 
@@ -43,11 +43,11 @@ Guest spot with **pinned** canonical URL in raw-input frontmatter (`source_url`,
 ## Body scaffold
 
 1. Horizontal rule `---` after the preamble.
-2. `### Signal` — fact framing and capture content.
-3. `### Judgment` — Pape-lane arc (escalation trap, blockade stages, zero-sum binaries, domestic pocketbook, etc.); keep **homophone** and **tier** discipline (e.g. Janssen **“fourth center”** negotiation fork ≠ NYT **“4th power”** card—do not merge in Judgment).
-4. `### Open` — falsifiers, resume lines, tier tags.
+2. `### Chronicle` — fact framing and capture content.
+3. `### Reflection` — Pape-lane arc (escalation trap, blockade stages, zero-sum binaries, domestic pocketbook, etc.); keep **homophone** and **tier** discipline (e.g. Janssen **“fourth center”** negotiation fork ≠ NYT **“4th power”** card—do not merge in Judgment).
+4. `### Foresight` — falsifiers, resume lines, tier tags.
 5. Horizontal rule `---` before appendix.
-6. `### Technical appendix` — **machinery only**.
+6. `### Appendix` — **machinery only**.
 
 **Appendix bullet order (required):**
 
@@ -81,21 +81,21 @@ WORK only; not Record.
 
 ---
 
-### Signal
+### Chronicle
 
 
 
-### Judgment
+### Reflection
 
 
 
-### Open
+### Foresight
 
 
 
 ---
 
-### Technical appendix
+### Appendix
 
 - **Full verbatim (capture):** [raw-input/…](../../raw-input/….md)
 - **Inbox / triage:** [daily-strategy-inbox.md](../../daily-strategy-inbox.md) (search `thread:pape`, YYYY-MM-DD)
@@ -112,7 +112,7 @@ WORK only; not Record.
 1. Title `# Pape day page — YYYY-MM-DD` matches **`aired_date`**.
 2. `WORK only; not Record.`
 3. Preamble identifies **Mode A, B, or C** and uses **standalone file under `experts/pape/`**.
-4. `---` before `### Signal`; prose-only in Signal/Judgment/Open.
-5. `---` before `### Technical appendix`.
+4. `---` before `### Chronicle`; prose-only in Chronicle/Reflection/Foresight.
+5. `---` before `### Appendix`.
 6. Appendix bullets in order: capture → inbox → `thread:pape` verify → canonical / X.
 7. Relative links from `experts/pape/` (`../../raw-input/…`, `../../daily-strategy-inbox.md`).

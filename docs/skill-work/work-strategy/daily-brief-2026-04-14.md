@@ -259,7 +259,7 @@ crystallizes into procedural action or remains media pressure.
 - https://www.npr.org/2026/04/14/g-s1-117363/up-first-newsletter-eric-swalwell-strait-of-hormuz-pope-leo-trump-section-702-foreign-intelligence-surveillance-act  
 **Seam / tension:** High media salience does not yet equal legislative outcome; keep this as pressure signal, not settled process fact.
 
-### Signal vs noise
+### Chronicle vs noise
 
 #### High-signal
 

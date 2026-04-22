@@ -9,7 +9,7 @@
 
 | Criterion | Score | Notes |
 |-----------|-------|-------|
-| Notebook-primary | **Pass** | Phases 1–5 in `days.md` use Signal / Judgment / Links (or equivalent subsection labels). |
+| Notebook-primary | **Pass** | Phases 1–5 in `days.md` use Chronicle / Reflection / References (or equivalent subsection labels). |
 | Verify discipline | **Pass** | Phase 2 includes **`### Web verification (2026-04-10)`** with CNBC, Oilprice, FT (paywall noted); verdict states medium confidence on exact figures. |
 | Links complete | **Pass** | Phase 3 lists all three digest paths under `research/external/work-strategy/transcripts/`. |
 | Tri-frame / three minds | **Pass** | Phase 4 has **Mercouris → Mearsheimer → Barnes** labeled sections plus `CIV-MIND-*.md` notebook stubs. |
@@ -38,7 +38,7 @@ Operator: (session — grace-mar work-strategy)
 Output surface: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/days.md
 Shell check: pass (scripts/demo_skill_strategy_transcripts_check.sh — exit 0)
 
-Phase 1: Pass — Mearsheimer digest only; Signal / Judgment / Links + one digest path.
+Phase 1: Pass — Mearsheimer digest only; Chronicle / Reflection / References + one digest path.
 Phase 2: Pass — Forties/Brent claim; Web verification subsection with dated URLs; medium confidence on exact $ figures.
 Phase 3: Pass — Three-transcript synthesis; all three digest paths in Links.
 Phase 4: Pass — Strict tri-frame order; CIV-MIND notebook stubs linked.

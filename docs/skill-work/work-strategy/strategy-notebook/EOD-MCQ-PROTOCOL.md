@@ -179,7 +179,7 @@ Only after Menus **1–6** are complete (or the **fast path** below) should the 
 
 1. **`strategy-page`** block(s) inside **`experts/<expert_id>/thread.md`** (when B/C + authorized by Menu 5)
 2. Matching **`days.md`** continuity update
-3. Optional short **tomorrow start point** (in chat or under **`### Open`**)
+3. Optional short **tomorrow start point** (in chat or under **`### Foresight`**)
 
 **Constraints:**
 
@@ -187,7 +187,7 @@ Only after Menus **1–6** are complete (or the **fast path** below) should the 
 - Do **not** mirror **`raw-input/`**; use transcript context as **evidence**, not as finished judgment.
 - If the operator chose **transcript-only** or **defer**, do **not** smuggle in a full page.
 
-**Word band:** Target **500–1000 words** per **`strategy-page`** body (Signal / Judgment / Open) per architecture — [NOTEBOOK-PREFERENCES.md](NOTEBOOK-PREFERENCES.md).
+**Word band:** Target **500–1000 words** per **`strategy-page`** body (Chronicle / Reflection / Foresight) per architecture — [NOTEBOOK-PREFERENCES.md](NOTEBOOK-PREFERENCES.md).
 
 ---
 
@@ -213,7 +213,7 @@ Fastest path — use when the operator wants fewer forks:
 4. If routing is ambiguous, keep it **cold** rather than forcing the wrong expert lane.  
 5. Keep menus **short and tailored**; do not show giant universal menus every time.  
 6. Favor **one strong page** over many shallow ones.  
-7. End with a clean **recovery point** for tomorrow (`### Open` or one-line chat stub).
+7. End with a clean **recovery point** for tomorrow (`### Foresight` or one-line chat stub).
 
 ---
 

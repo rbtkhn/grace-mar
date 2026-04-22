@@ -44,7 +44,7 @@ End the pass with **3–5 options** (standard WORK menu). Typical forks on a nor
 | **D** | Promote — stitch a stabilized arc to STRATEGY.md |
 | **E** | Pivot to another lane or park |
 
-If the operator picks **A**, follow the **EOD compose** contract ([architecture § End-of-day strategy session](strategy-notebook/STRATEGY-NOTEBOOK-ARCHITECTURE.md#end-of-day-strategy-session-terminology)): compose or extend **`strategy-page`** blocks in expert **`thread.md`** with Signal / Judgment / Links minimum, update `days.md` continuity, then condense if over ~1200 words. If they skip, the inbox + **`raw-input/`** hold state for the next **EOD session**.
+If the operator picks **A**, follow the **EOD compose** contract ([architecture § End-of-day strategy session](strategy-notebook/STRATEGY-NOTEBOOK-ARCHITECTURE.md#end-of-day-strategy-session-terminology)): compose or extend **`strategy-page`** blocks in expert **`thread.md`** with Chronicle / Reflection / References minimum, update `days.md` continuity, then condense if over ~1200 words. If they skip, the inbox + **`raw-input/`** hold state for the next **EOD session**.
 
 ---
 
