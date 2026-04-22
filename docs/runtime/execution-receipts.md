@@ -6,4 +6,16 @@
 - **Schema:** [`schema-registry/execution-receipt.v1.json`](../../schema-registry/execution-receipt.v1.json).
 - **Audit atom:** The append-only **trace line** in `traces/index.jsonl` remains the low-level ledger; the receipt is a **projected**, schema-validated view for operators and tooling.
 
+### `model_policy` field reference (runtime-only)
+
+Nullable object from [`model_policy.resolve_model_policy`](../../scripts/runtime/model_policy.py). **Non-canonical** policy projection for the run; does not change which model the optional LLM summary uses until separately wired (see [model-tier routing](model-tier-routing.md)).
+
+| Key | Meaning |
+|-----|--------|
+| `allowed_tier` | Tier letter from YAML policy: `A` (no model) … `D`, or `X` (forbidden action). |
+| `resolved_provider` | Preferred provider id for the tier (e.g. `openai`), or null if none. |
+| `resolved_model` | Model id from the tier’s `model_env` at resolution time, or null if unset. |
+| `fallback_chain` | Ordered tier fallbacks from `task_policy.yaml` defaults (empty when tier `X`). |
+| `requires_human_review` | Subtype-driven flag (e.g. draft flows); boolean. |
+
 See also: [Runtime worker](../runtime-worker.md), [Runtime vs Record](../runtime-vs-record.md), [Worker routing](worker-routing.md), [Model tier routing](model-tier-routing.md).

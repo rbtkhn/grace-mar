@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schema-registry/governed-eval-result.v1.json",
+  "title": "Grace-Mar governed eval harness result (non-canonical)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "scenario_id",
+    "receipt_run_id",
+    "scores",
+    "notes",
+    "non_canonical"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "1.0-governed-eval-result"
+    },
+    "scenario_id": { "type": "string", "minLength": 1 },
+    "receipt_run_id": { "type": "string", "minLength": 1 },
+    "receipt_path": { "type": ["string", "null"] },
+    "scores": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "boundary_obedience": { "type": ["number", "null"] },
+        "epistemic_discipline": { "type": ["number", "null"] },
+        "abstention_correctness": { "type": ["number", "null"] },
+        "candidate_reviewability": { "type": ["number", "null"] },
+        "cost_adjusted_usefulness": { "type": ["number", "null"] }
+      }
+    },
+    "notes": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "non_canonical": { "type": "boolean", "const": true }
+  }
+}
