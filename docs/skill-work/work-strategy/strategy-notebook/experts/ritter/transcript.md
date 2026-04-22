@@ -19,6 +19,10 @@ WORK only; not Record.
 
 Verbatim: [`raw-input/2026-04-20/judging-freedom-trump-hegseth-2026-04-20.md`](../../raw-input/2026-04-20/judging-freedom-trump-hegseth-2026-04-20.md).
 
+Refined day page: [`ritter-page-2026-04-20-judging-freedom-trump-hegseth.md`](ritter-page-2026-04-20-judging-freedom-trump-hegseth.md).
+
+Template: [`ritter-page-template.md`](ritter-page-template.md).
+
 Judge Andrew Napolitano: Scott Ritter, welcome, my dear friend. What happened on the high seas over the weekend with the American piracy of an Iranian cargo ship? Did the SEALs shoot at civilians?
 Scott Ritter: My understanding is that an Iranian cargo ship was making transit in or out of the Strait of Hormuz into the Gulf. In accordance with the agreement reached between the United States and Iran in Islamabad regarding the ceasefire and an illegal American blockade — which has no legitimacy under international law and is in complete violation of the ceasefire agreement — the U.S. demanded that the ship stop. The ship didn't stop.
 Then a U.S. Navy destroyer told the ship to evacuate the engine room. They fired on the engine room, causing the ship to come to a halt. A U.S. Marine raiding group then landed on the vessel and took control of it.
@@ -104,6 +108,13 @@ Scott Ritter: Okay. Thank you very much.
 
 - YT | cold: **Scott Ritter** (*Ritter's Rant* — *The Shorting of America*) — **market-timing** **/** **Trump** **TS** **collusion** **hypothesis** **(AMC/GME** **parallel);** **cult-of-personality** **/** **Iran** **“round** **1** **defeat”** **frame;** **Hormuz** **open** **vs** **blockade** **contradiction;** **“civilization** **eraser”** **→** **NO** **NUCLEAR** **WEAPONS** **post** **chain;** **CJCS** **nuclear** **release** **refusal** **(Larry** **Johnson** **two** **sources** **in** **voice);** **NPD** **/** **impeachment** **/** **25th** **/** **Nov** **turnout** **close** — **C-plane** **analyst** **tier** **/** **verify-first** **law** **+** **clinical** **claims** // hook: **`thread:ritter`** **domestic** **×** **Iran** **week** **—** **not** **§1e** **primary**; **full** **verbatim** [raw-input/2026-04-20/ritter-rant-shorting-america-7pXI52jKcOU.md](raw-input/2026-04-20/ritter-rant-shorting-america-7pXI52jKcOU.md) | https://www.youtube.com/watch?v=7pXI52jKcOU | verify:full-text+raw-input+aired:TBD | thread:ritter | grep:Ritter+shorting+Hormuz+nuclear+CJCS
 
+# *Ritter's Rant* — *The Shorting of America*
+
+Verbatim: [`raw-input/2026-04-20/ritter-rant-shorting-america-7pXI52jKcOU.md`](../../raw-input/2026-04-20/ritter-rant-shorting-america-7pXI52jKcOU.md).
+
+Refined day page: [`ritter-page-2026-04-20-ritter-rant-shorting-america-7pXI52jKcOU.md`](ritter-page-2026-04-20-ritter-rant-shorting-america-7pXI52jKcOU.md).
+
+Template: [`ritter-page-template.md`](ritter-page-template.md).
 
 
 
@@ -193,12 +204,20 @@ Scott Ritter: Okay. Thank you very much.
 
 Verbatim: [`raw-input/2026-04-13/substack-ritter-blasphemy-american-style-2026-04-13.md`](../../raw-input/2026-04-13/substack-ritter-blasphemy-american-style-2026-04-13.md).
 
+Refined day page: [`ritter-page-2026-04-13.md`](ritter-page-2026-04-13.md).
+
+Template: [`ritter-page-template.md`](ritter-page-template.md).
+
 ## 2026-04-03
 - SS | cold: **Scott Ritter** — *Combat Search and Rescue, the Prequel* (Substack **2026-04-03**) — **opening** **frame:** **US** **pilot** **down** **/** **CSAR** **dispatched** **(Iran** **war** **hook);** **body** **=** **Desert** **Storm** **case:** **F-15E** **“Corvette** **3”** **(Eberly/Griffith)** **AAA** **loss** **/** **Al** **Qaim** **SAM-ambush** **context;** **CIA** **SOG** **/** **Bedouin** **agent** **net** **/** **Batman** **MH-53J** **attempt;** **Iraqi** **DF** **on** **rescue** **beacon** **→** **AAA** **trap** **thesis;** **crew** **captured** **before** **extraction;** **closes** **with** **The** **SCUD** **Hunters** **serialization** **note** **(analogy** **to** **current** **CSAR** **hazards)** // hook: **§1e** **/** **ORBAT-adjacent** **—** **historical** **CSAR** **mechanics** **vs** **wire** **on** **present** **Iran** **downed-pilot** **claims;** **essay** **tier** | https://scottritter.substack.com/p/combat-search-and-rescue-the-prequel | verify:primary-Substack+full-text+raw-input/2026-04-03/substack-ritter-combat-search-and-rescue-prequel-2026-04-03.md+published:2026-04-03 | thread:ritter | IRAN | grep:Ritter+CSAR+MH-53J+Eberly+Corvette+SCUD+Hunters
 
 # *Combat Search and Rescue, the Prequel* — Scott Ritter (Substack)
 
 Verbatim: [`raw-input/2026-04-03/substack-ritter-combat-search-and-rescue-prequel-2026-04-03.md`](../../raw-input/2026-04-03/substack-ritter-combat-search-and-rescue-prequel-2026-04-03.md).
+
+Refined day page: [`ritter-page-2026-04-03.md`](ritter-page-2026-04-03.md).
+
+Template: [`ritter-page-template.md`](ritter-page-template.md).
 
 ## 2026-04-01
 - SS | cold: **Scott Ritter** — *Why I no longer stand with Israel, and never will again* **(Redux)** (Substack **2026-04-01**) — **dek** **ties** **Iran** **“illegal** **war** **of** **aggression”** **to** **Oct** **2023** **essay** **reprint;** **Nakba** **/** **Yaakov** **Sharett** **/** **“Gates** **of** **Gaza”** **/** **Dayan** **eulogy** **frame** **→** **Oct** **7** **context** **thesis;** **long** **memoir:** **UNSCOM×AMAN,** **Rabin** **/** **Oslo,** **Netanyahu** **/** **Iraq** **claims** **/** **AIPAC,** **Hamas** **creation** **claim,** **break** **with** **“stand** **with** **Israel”;** **Palestinian** **state** **/** **Roger** **Waters** **close;** **2026** **coda** **(genocide/war-criminals/Nuremberg/cancer** **language)** **—** **opinion** **/** **narrative-escalation** **tier** // hook: **IRAN** **week** **×** **Israel–Palestine** **arc** **—** **essay** **≠** **wire;** **~50k** **chars** **on** **disk** | https://scottritter.substack.com/p/why-i-no-longer-stand-with-israel-fc2 | verify:primary-Substack+full-text+raw-input/2026-04-01/substack-ritter-why-i-no-longer-stand-with-israel-redux-2026-04-01.md+published:2026-04-01+redux-of-Oct-2023 | thread:ritter | IRAN | ISRAEL | PALESTINE | narrative-escalation | grep:Ritter+stand+with+Israel+Redux+Nakba+UNSCOM+Palestine
@@ -207,12 +226,20 @@ Verbatim: [`raw-input/2026-04-03/substack-ritter-combat-search-and-rescue-preque
 
 Verbatim (~50k chars; over per-block triage budget): [`raw-input/2026-04-01/substack-ritter-why-i-no-longer-stand-with-israel-redux-2026-04-01.md`](../../raw-input/2026-04-01/substack-ritter-why-i-no-longer-stand-with-israel-redux-2026-04-01.md).
 
+Refined day page: [`ritter-page-2026-04-01.md`](ritter-page-2026-04-01.md).
+
+Template: [`ritter-page-template.md`](ritter-page-template.md).
+
 ## 2026-03-25
 - SS | cold: **Scott Ritter** — *How the Chechen miracle kick-started the Russian 'Path of Redemption'* (Substack **2026-03-25**) — **Russia** **sojourn** **/** **Orthodox** **Christmas** **frame** **→** **“Path** **of** **Redemption”** **(Chechnya,** **Crimea,** **Kherson,** **Zaporozhye,** **Donetsk,** **Lugansk);** **Chechen** **wars** **/** **deportation** **memory** **→** **Putin×Akhmad** **Kadyrov** **reconciliation** **thesis** **(“Chechen** **miracle”);** **meetings** **Alaudinov,** **Delimkhanov,** **Daudov,** **Ramzan** **Kadyrov** **/** **SMO** **as** **parallel** **to** **anti-jihadist** **war;** **25k** **Grozny** **garrison** **rally** **witness;** **closes** **RT** **orig** **(Feb** **2024)** **+** ***Inside** **Chechnya*** **doc** **(summer** **2026)** // hook: **Russia** **/** **UKR** **narrative** **lane** **—** **advocacy** **tier,** **not** **wire;** **Kadyrov** **primary** **access** **disclosure** | https://scottritter.substack.com/p/how-the-chechen-miracle-kick-started | verify:primary-Substack+full-text+raw-input/2026-03-25/substack-ritter-chechen-miracle-path-redemption-2026-03-25.md+published:2026-03-25+repub-from-RT-2024-02-04 | thread:ritter | PUTIN | KREMLIN | grep:Ritter+Chechen+miracle+Path+Redemption+Kadyrov+Grozny
 
 # *How the Chechen miracle…* — Scott Ritter (Substack)
 
 Verbatim: [`raw-input/2026-03-25/substack-ritter-chechen-miracle-path-redemption-2026-03-25.md`](../../raw-input/2026-03-25/substack-ritter-chechen-miracle-path-redemption-2026-03-25.md).
+
+Refined day page: [`ritter-page-2026-03-25.md`](ritter-page-2026-03-25.md).
+
+Template: [`ritter-page-template.md`](ritter-page-template.md).
 
 ## 2026-03-18
 - SS | cold: **Scott Ritter** — *Zionism, the Human Parasitoid* **(Revisited)** (Substack **2026-03-18**) — **jewel-wasp** **/** **Ampulex** **compressa** **metaphor** **→** **Israel/** **Zionism** **as** **“parasitoid”** **on** **U.S.** **host;** **Holocaust** **/** **Finkelstein** **“Holocaust** **Industry”** **as** **GABA-analogy** **/** **free-speech** **suppression** **thesis;** **ICE/** **deportation** **/** **“death** **of** **America”** **graf;** **Iran** **negotiation** **vs** **war** **as** **host** **“avoided** **third** **sting”;** **AIPAC** **as** **egg** **/** **unregistered** **foreign** **agent** **(X** **quote);** **closes** **MAGA** **CTA** **+** **2025-04-17** **orig** **date** **—** **high** **political** **/** **narrative-escalation** **register** // hook: **domestic** **/** **IRAN** **week** **economy** **frame** **in** **dek** **—** **essay** **≠** **wire;** **tier** **sensitive** **merge** | https://scottritter.substack.com/p/zionism-the-human-parasitoid-revisited | verify:primary-Substack+full-text+raw-input/2026-03-18/substack-ritter-zionism-human-parasitoid-revisited-2026-03-18.md+published:2026-03-18+orig-2025-04-17 | thread:ritter | IRAN | ISRAEL | narrative-escalation | grep:Ritter+parasitoid+Zionism+AIPAC+jewel+wasp
@@ -221,12 +248,20 @@ Verbatim: [`raw-input/2026-03-25/substack-ritter-chechen-miracle-path-redemption
 
 Verbatim: [`raw-input/2026-03-18/substack-ritter-zionism-human-parasitoid-revisited-2026-03-18.md`](../../raw-input/2026-03-18/substack-ritter-zionism-human-parasitoid-revisited-2026-03-18.md).
 
+Refined day page: [`ritter-page-2026-03-18.md`](ritter-page-2026-03-18.md).
+
+Template: [`ritter-page-template.md`](ritter-page-template.md).
+
 ## 2026-03-14
 - SS | cold: **Scott Ritter** — *The Backpack Girls* (Substack **2026-03-14** operator byline; **UI** **may** **read** **Mar** **15**) — **speculative** **Feb** **28** **2026** **scenario:** **Shajareh** **Tayyebeh** **school** **/** **Minab** **/** **IRGC-adjacent** **ex-compound** **frame** **→** **IHL** **distinction** **/** **“do** **not** **strike”** **list** **thesis** **vs** **TLAM** **strike** **narrative** **(JMEWS** **/** **fourth** **TLAM** **re-attack** **thread);** **5th** **Fleet** **intel** **/** **NGIA** **maps** **/** **Asef** **brigade** **ORBAT** **exposition;** **CHMR** **closure** **/** **Hegseth** **“maximum** **lethality”** **/** **JAG** **fires** **/** **Quantico** **speech;** **Anthropic** **Claude** **as** **targeting** **engine** **(explicit** **plot** **device);** **168** **killed** **/** **war-crime** **verdict** **/** **Hegseth** **trial** **CTA** **—** **advocacy** **/** **scenario-fiction** **register** **≠** **wire** // hook: **IRAN** **week** **×** **civilian-harm** **policy** **lane** **—** **merge** **as** **essay** **only;** **verify** **claims** **vs** **Record** | https://scottritter.substack.com/p/the-backpack-girls | verify:primary-Substack+full-text+raw-input/2026-03-14/substack-ritter-the-backpack-girls-2026-03-14.md+published:2026-03-14+Substack-UI:2026-03-15 | thread:ritter | IRAN | US-MIL | IHL | grep:Ritter+Backpack+Hegseth+Shajareh+TLAM+CHMR+Claude
 
 # *The Backpack Girls* — Scott Ritter (Substack)
 
 Verbatim: [`raw-input/2026-03-14/substack-ritter-the-backpack-girls-2026-03-14.md`](../../raw-input/2026-03-14/substack-ritter-the-backpack-girls-2026-03-14.md).
+
+Refined day page: [`ritter-page-2026-03-14.md`](ritter-page-2026-03-14.md).
+
+Template: [`ritter-page-template.md`](ritter-page-template.md).
 
 ## 2026-03-01
 - SS | cold: **Scott Ritter** — *Regime Change, the Double-Edged Sword* (Substack **2026-03-01**) — **“Epic** **Fury”** **/** **regime-change** **dek** **→** **Truth** **Social** **8-min** **script** **(IRGC** **immunity** **ultimatum** **/** **“take** **over** **your** **government”);** **Feb** **28** **2026** **scenario:** **Israel** **strike** **/** **Khamenei** **+** **~46** **leadership** **killed** **/** **U.S.** **intel** **brag** **frame;** **perfidy** **+** **sham** **negotiations** **claim;** **Shi’a** **martyrdom** **/** **Karbala** **/** **Velâyat-e** **Faqih** **→** **street** **reversal** **(“Martyr** **Khamenei”);** **Trump** **legacy** **/** **midterms** **/** **logistics** **“use** **it** **or** **lose** **it”;** **MAGA** **×** **“Israel** **First”** **(Tucker×Huckabee** **thread);** **close:** **regime** **change** **cuts** **both** **ways** **/** **Trump** **regime** **at** **risk** **—** **scenario-fiction** **/** **advocacy** **≠** **wire** // hook: **IRAN** **arc** **×** **domestic** **politics** **—** **merge** **as** **essay** **only** | https://scottritter.substack.com/p/regime-change-the-double-edged-sword | verify:primary-Substack+full-text+raw-input/2026-03-01/substack-ritter-regime-change-double-edged-sword-2026-03-01.md+published:2026-03-01 | thread:ritter | IRAN | ISRAEL | US-POL | grep:Ritter+Epic+Fury+regime+change+Khamenei+double-edged+Truth+Social
@@ -235,12 +270,20 @@ Verbatim: [`raw-input/2026-03-14/substack-ritter-the-backpack-girls-2026-03-14.m
 
 Verbatim: [`raw-input/2026-03-01/substack-ritter-regime-change-double-edged-sword-2026-03-01.md`](../../raw-input/2026-03-01/substack-ritter-regime-change-double-edged-sword-2026-03-01.md).
 
+Refined day page: [`ritter-page-2026-03-01.md`](ritter-page-2026-03-01.md).
+
+Template: [`ritter-page-template.md`](ritter-page-template.md).
+
 ## 2026-02-22
 - SS | cold: **Scott Ritter** — *The Flamingo Effect* (Substack **2026-02-22**) — **Feb** **20–21** **2026** **scenario:** **Ukraine** **Flamingo** **/** **intermediate-range** **strike** **on** **Votkinsk** **Workshop** **19** **(ICBM-related** **industrial** **chain);** **New** **START** **expired** **frame** **/** **strategic** **industry** **“heart”** **thesis;** **Dec** **2021** **draft** **treaties** **/** **INF** **echo** **/** **2022** **Sherman–Ryabkov** **+** **NATO** **written** **response** **recap;** **2024** **long-range** **missile** **/** **Putin** **NATO** **co-belligerence** **quote** **/** **Buchanan** **CSIS** **+** **CIA** **>50%** **nuclear** **brief** **thread;** **FP-5** **(Milanion/** **IDEX-2025)** **/** **Motor** **Sich** **/** **Denmark** **propellant** **plant** **narrative;** **Karaganov** **2023** **/** **Oreshnik** **signals;** **Votkinsk=UK-design+CIA** **intel** **→** **“act** **of** **war”** **frame;** **Witkoff×Dmitriev** **7-point** **/** **Bessent** **sanctions** **graf** **+** **Dec** **29** **2025** **drone** **plot** **—** **scenario-adjacent** **advocacy** **≠** **wire** // hook: **UKR** **×** **strategic** **stability** **lane** **—** **merge** **as** **essay** **only** | https://scottritter.substack.com/p/the-flamingo-effect | verify:primary-Substack+full-text+raw-input/2026-02-22/substack-ritter-the-flamingo-effect-2026-02-22.md+published:2026-02-22 | thread:ritter | UKR | RU-NUC | NATO | grep:Ritter+Flamingo+Votkinsk+FP-5+Milanion+Karaganov+Workshop+19
 
 # *The Flamingo Effect* — Scott Ritter (Substack)
 
 Verbatim: [`raw-input/2026-02-22/substack-ritter-the-flamingo-effect-2026-02-22.md`](../../raw-input/2026-02-22/substack-ritter-the-flamingo-effect-2026-02-22.md).
+
+Refined day page: [`ritter-page-2026-02-22.md`](ritter-page-2026-02-22.md).
+
+Template: [`ritter-page-template.md`](ritter-page-template.md).
 
 ## 2026-02-20
 - SS | cold: **Scott Ritter** — *Dead at 27* (Substack **2026-02-20**) — **Polymarket** **/** **June** **2026** **attack** **odds** **frame** **→** **~100%** **personal** **conflict** **assessment;** **memoir:** **Riyadh** **bunker** **targeting** **/** **SCR** **678** **+** **1991** **AUMF** **“legal** **≠** **just”;** **2003** **Iraq** **“rogue** **nation”** **thesis;** **1985** **Soviet-invasion-Iran** **plan** **update** **/** **parallel** **to** **today’s** **planners;** **UCMJ** **unlawful-order** **burden** **read** **+** **“facially** **illegal”** **Iran** **strike** **without** **Congress/** **UNSC;** **midterm** **Congress** **accountability** **CTA;** **Iraqi** **MoI** **journalist** **/** **Iranian** **DM** **“dead** **at** **27”** **closer** **—** **advocacy** **/** **legal-moral** **argument** **≠** **wire** // hook: **IRAN** **week** **×** **U.S.** **constitutional** **war** **powers** **—** **merge** **as** **essay** **only** | https://scottritter.substack.com/p/dead-at-27 | verify:primary-Substack+full-text+raw-input/2026-02-20/substack-ritter-dead-at-27-2026-02-20.md+published:2026-02-20 | thread:ritter | IRAN | US-POL | LAW-OF-WAR | grep:Ritter+Dead+27+Polymarket+UCMJ+SCR678+journalist
@@ -249,12 +292,20 @@ Verbatim: [`raw-input/2026-02-22/substack-ritter-the-flamingo-effect-2026-02-22.
 
 Verbatim: [`raw-input/2026-02-20/substack-ritter-dead-at-27-2026-02-20.md`](../../raw-input/2026-02-20/substack-ritter-dead-at-27-2026-02-20.md).
 
+Refined day page: [`ritter-page-2026-02-20.md`](ritter-page-2026-02-20.md).
+
+Template: [`ritter-page-template.md`](ritter-page-template.md).
+
 ## 2026-02-05
 - SS | cold: **Scott Ritter** — *Alas, Babylon* (Substack **2026-02-05**) — **memoir-essay:** **Oct** **1978** **John** **Paul** **II** **election** **→** **NATO** **alert** **/** **Sembach** **bunker** **/** **family** **code** ***Alas,** **Babylon*** **(Pat** **Frank);** **Kriegsfeld** **“North** **Point”** **nuclear** **artillery** **/** **teen** **POV** **ground-zero** **frame;** **Kaiserslautern** **football** **/** **Betsy** **Ensign** **homecoming** **thread** **/** **sun** **flash** **false** **alarm;** **geopolitical** **claims:** **Brzezinski×Krol,** **CIA** **bribes,** **neutron-bomb** **/** **SS-20** **gap,** **Aug** **1978** **Pershing** **II** **+** **GLCM** **plan** **/** **“neutralize** **Poland”** **pope** **thesis;** **1988** **INF** **OSIA** **at** **Votkinsk** **bookend;** **close:** **New** **START** **gone** **/** **arms-control** **mission** **“failed”** **+** **Russia** **travel** **CTA** **—** **personal** **+** **contested-history** **register** **≠** **wire** // hook: **NUC** **×** **NATO** **memory** **lane** **—** **merge** **as** **essay** **only** | https://scottritter.substack.com/p/alas-babylon | verify:primary-Substack+full-text+raw-input/2026-02-05/substack-ritter-alas-babylon-2026-02-05.md+published:2026-02-05 | thread:ritter | NUC | NATO | POLAND | grep:Ritter+Alas+Babylon+Wojtyła+Sembach+North+Point+INF+Votkinsk
 
 # *Alas, Babylon* — Scott Ritter (Substack)
 
 Verbatim: [`raw-input/2026-02-05/substack-ritter-alas-babylon-2026-02-05.md`](../../raw-input/2026-02-05/substack-ritter-alas-babylon-2026-02-05.md).
+
+Refined day page: [`ritter-page-2026-02-05.md`](ritter-page-2026-02-05.md).
+
+Template: [`ritter-page-template.md`](ritter-page-template.md).
 
 ## 2026-01-20
 - SS | cold: **Scott Ritter** — *Getting it Wrong on Russia* (Substack **2026-01-20**; **UI** **may** **read** **2026-01-21**) — **Ilnitsky** **“Mental** **War”** **(consciousness** **/** **civilizational** **targets)** **×** **Obama–McFaul** **“reset”** **as** **regime-change** **cover;** **Biden** **2011** **MSU** **speech** **(polls,** **WTO,** **democracy** **ingredients)** **read** **as** **“manufacturing** **consent”** **/** **mental** **war;** **same-day** **Spaso** **House** **×** **opposition** **/** **Nemtsov** **quote** **+** **NG** **IOC-consolation** **squeeze** **thesis;** **Hersh** **“Putin’s** **Long** **War”** **takedown:** **unnamed** **IC** **sources,** **implausible** **Gerasimov** **lament** **(UKR-trope** **match),** **Prokopenko×Kolyandr×The** **Bell** **economy** **stack** **vs** **Ritter** **Russia** **field** **claims;** **Alaska** **Aug** **2025** **/** **Dmitriev–Witkoff** **economic** **promise** **as** **Biden** **2011** **VC** **frame** **replay** **→** **Putin-removal** **precondition** **—** **friend-of-Sy** **advocacy** **essay** **≠** **wire** // hook: **US-RU** **×** **“mental** **war”** **—** **merge** **as** **essay** **only;** **cross** **01-16** **BttF** **/** **Alaska** **pieces** **with** **explicit** **seam** | https://scottritter.substack.com/p/getting-it-wrong-on-russia | verify:primary-Substack+full-text+raw-input/2026-01-20/substack-ritter-getting-it-wrong-on-russia-2026-01-20.md+published:2026-01-20 | thread:ritter | US-RU | HERSH | INFO-WAR | grep:Ritter+Getting+Wrong+Russia+Hersh+Ilnitsky+Gerasimov+Prokopenko+Dmitriev+Alaska
@@ -263,12 +314,20 @@ Verbatim: [`raw-input/2026-02-05/substack-ritter-alas-babylon-2026-02-05.md`](..
 
 Verbatim: [`raw-input/2026-01-20/substack-ritter-getting-it-wrong-on-russia-2026-01-20.md`](../../raw-input/2026-01-20/substack-ritter-getting-it-wrong-on-russia-2026-01-20.md).
 
+Refined day page: [`ritter-page-2026-01-20.md`](ritter-page-2026-01-20.md).
+
+Template: [`ritter-page-template.md`](ritter-page-template.md).
+
 ## 2026-01-18
 - SS | cold: **Scott Ritter** — *Don’t Drink the Water* (Substack **2026-01-18**) — **Greenland** **/** **Inuit** **×** **Trump** **sovereignty** **frame** **→** **Manifest** **Destiny** **“business** **as** **usual”** **thesis;** **road-trip** **memoir** **(Grand** **Canyon** **/** **Havasupai** **1880s** **orders** **+** **Pinyon** **mine** **2024;** **Navajo** **Long** **Walk** **/** **code** **talkers;** **Comanche** **Palo** **Duro** **/** **Mackenzie** **1874;** **Cherokee** **Removal** **/** **Trail** **of** **Tears** **/** **Walkabout);** **interleaved** **Dave** **Matthews** **Band** **lyrics** **+** **YT** **link;** **Denmark** **/** **52** **KIA** **allies** **close** **—** **opinion** **/** **history** **essay** **≠** **wire** // hook: **GREENLAND** **×** **US** **indigenous** **history** **lane** | https://scottritter.substack.com/p/dont-drink-the-water | verify:primary-Substack+full-text+raw-input/2026-01-18/substack-ritter-dont-drink-the-water-2026-01-18.md+published:2026-01-18 | thread:ritter | GREENLAND | US-INDIGENOUS | DENMARK | grep:Ritter+Drink+Water+Greenland+Havasupai+Long+Walk+Dave+Matthews
 
 # *Don’t Drink the Water* — Scott Ritter (Substack)
 
 Verbatim: [`raw-input/2026-01-18/substack-ritter-dont-drink-the-water-2026-01-18.md`](../../raw-input/2026-01-18/substack-ritter-dont-drink-the-water-2026-01-18.md).
+
+Refined day page: [`ritter-page-2026-01-18.md`](ritter-page-2026-01-18.md).
+
+Template: [`ritter-page-template.md`](ritter-page-template.md).
 
 ## 2026-01-16
 - SS | cold: **Scott Ritter** — *Back to the Future* (Substack **2026-01-16**) — **Trump×Putin** **quote** **arc** **→** **continuity** **with** **post-1991** **subordination** **thesis;** **Munich** **2007** **/** **Obama** **“reset”** **as** **regime-change** **read;** **Spirit** **of** **Alaska** **as** **subterfuge** **frame;** **Gurganus** **(NIO)** **on** **Air** **Force** **One** **/** **Ratcliffe** **/** **ICA** **×** **Gabbard** **thread;** **Spiderweb** **+** **Putin** **residence** **drone** **(Dec** **2025)** **as** **regime-change** **“tell”;** **Christopher** **Ford** **/** **INF** **/** **arms-race-over-arms-control** **thesis;** **New** **START** **expiry** **+** **moratorium** **note;** **Cold** **War** **nostalgia** **/** **Kennan** **/** **Truman** **Doctrine** **recap** **(Treasury** **/** **IMF** **frame);** **“New** **Cold** **War”** **as** **prescriptive** **reset** **—** **long** **advocacy** **essay** **≠** **wire** // hook: **US-RU** **×** **strategic** **stability** **—** **merge** **as** **essay** **only** | https://scottritter.substack.com/p/back-to-the-future | verify:primary-Substack+full-text+raw-input/2026-01-16/substack-ritter-back-to-the-future-2026-01-16.md+published:2026-01-16 | thread:ritter | US-RU | NUC | COLD-WAR | grep:Ritter+Back+Future+Gurganus+Ratcliffe+New+START+Alaska+Kennan
@@ -277,11 +336,19 @@ Verbatim: [`raw-input/2026-01-18/substack-ritter-dont-drink-the-water-2026-01-18
 
 Verbatim: [`raw-input/2026-01-16/substack-ritter-back-to-the-future-2026-01-16.md`](../../raw-input/2026-01-16/substack-ritter-back-to-the-future-2026-01-16.md).
 
+Refined day page: [`ritter-page-2026-01-16-back-to-the-future.md`](ritter-page-2026-01-16-back-to-the-future.md).
+
+Template: [`ritter-page-template.md`](ritter-page-template.md).
+
 - SS | cold: **Scott Ritter** — *Reflections on a War* (Substack **2026-01-16**; **UI** **may** **read** **2026-01-17**) — **Desert** **Storm** **35-year** **frame** **/** **UN** **Ch.VII** **coalition;** **Carter** **Doctrine** **/** **7th** **MAB** **Iran** **landing** **plan** **(1985)** **→** **1991** **plan** **reuse;** **Vietnam** **ghosts** **/** **body-bag** **orders** **vs** **coalition** **KIA** **recap;** **Saddam** **/** **GHB** **Hitler** **/** **Nuremberg** **rhetoric;** **UNSCOM** **/** **sanctions** **/** **regime-change** **via** **inspections** **thesis;** **multipolarity** **collapse** **/** **Proverbs** **close** **/** **9-11→Iraq** **causal** **chain;** **Frost** ***War** **Thoughts** **at** **Home*** **interleaved** **+** ***SCUD** **Hunters*** **serialization** **note** **—** **memoir-essay** **≠** **wire** // hook: **IRAQ** **/** **MIDEAST** **historical** **lane** **—** **same-day** **second** **Substack** **as** **BttF** | https://scottritter.substack.com/p/reflections-on-a-war | verify:primary-Substack+full-text+raw-input/2026-01-16/substack-ritter-reflections-on-a-war-2026-01-16.md+published:2026-01-16 | thread:ritter | IRAQ | DESERT-STORM | UNSCOM | grep:Ritter+Reflections+War+Desert+Storm+Schwarzkopf+Frost+SCUD+Hunters
 
 # *Reflections on a War* — Scott Ritter (Substack)
 
 Verbatim: [`raw-input/2026-01-16/substack-ritter-reflections-on-a-war-2026-01-16.md`](../../raw-input/2026-01-16/substack-ritter-reflections-on-a-war-2026-01-16.md).
+
+Refined day page: [`ritter-page-2026-01-16-reflections-on-a-war.md`](ritter-page-2026-01-16-reflections-on-a-war.md).
+
+Template: [`ritter-page-template.md`](ritter-page-template.md).
 
 ## 2026-01-13
 - SS | cold: **Scott Ritter** — *Losing the Republic* (Substack **2026-01-13**) — **Franklin** **“republic** **if** **you** **can** **keep** **it”** **→** **“we** **lost** **the** **republic”** **thesis;** **despot** **frame** **(Constitution** **/** **“morality”);** **foreign** **policy** **charges** **/** **resource** **diversion** **graf;** **25th** **Amendment** **remedy** **+** **Senate** **/** **cabinet** **allegiance** **failure** **thread;** **war** **/** **+50%** **defense** **spending** **flip** **vs** **peace** **pledge;** **federal** **forces** **in** **cities;** **immigration** **/** **Constitution** **literacy** **contrast** **graf;** **Rome/** **Caligula** **close;** **NPD** **/** **“remove** **this** **man”** **CTA** **—** **domestic** **polemic** **≠** **wire** **/** **not** **medical** **or** **legal** **fact** // hook: **US-POL** **×** **constitutional** **culture** **lane** **—** **merge** **as** **essay** **only** | https://scottritter.substack.com/p/loosing-the-republic | verify:primary-Substack+full-text+raw-input/2026-01-13/substack-ritter-losing-the-republic-2026-01-13.md+published:2026-01-13+slug:loosing-the-republic | thread:ritter | US-POL | US-CONSTITUTION | grep:Ritter+Losing+Republic+Franklin+25th+Caligula+despot
@@ -290,12 +357,20 @@ Verbatim: [`raw-input/2026-01-16/substack-ritter-reflections-on-a-war-2026-01-16
 
 Verbatim: [`raw-input/2026-01-13/substack-ritter-losing-the-republic-2026-01-13.md`](../../raw-input/2026-01-13/substack-ritter-losing-the-republic-2026-01-13.md).
 
+Refined day page: [`ritter-page-2026-01-13.md`](ritter-page-2026-01-13.md).
+
+Template: [`ritter-page-template.md`](ritter-page-template.md).
+
 ## 2026-01-12
 - SS | cold: **Scott Ritter** — *Iranian Resilience* (Substack **2026-01-12**) — **Raisi** **2023** **UNGA** **read** **(post-Amini** **unrest** **/** **foreign** **intel** **thesis);** **Pezeshkian** **2025** **×** **Western** **policy** **split;** **June** **2025** **decapitation** **/** **“12** **Day** **War”** **frame** **→** **unity** **thesis;** **foreign-backed** **opposition** **near-defeat** **/** **Israel** **/** **US** **panic** **forecast;** **near-future** **strike** **risk** **×** **Gulf** **oil** **disruption** **/** **Venezuela** **timing** **hypothesis** **(secure** **oil** **before** **Iran** **crisis);** **global** **energy** **security** **/** **BRICS** **destabilization** **close** **—** **scenario-adjacent** **advocacy** **≠** **wire** // hook: **IRAN** **arc** **×** **energy** **lane** **—** **merge** **as** **essay** **only** | https://scottritter.substack.com/p/iranian-resilience | verify:primary-Substack+full-text+raw-input/2026-01-12/substack-ritter-iranian-resilience-2026-01-12.md+published:2026-01-12 | thread:ritter | IRAN | ENERGY | ISRAEL | US | grep:Ritter+Iranian+Resilience+Pezeshkian+Raisi+12+Day+BRICS+Venezuela
 
 # *Iranian Resilience* — Scott Ritter (Substack)
 
 Verbatim: [`raw-input/2026-01-12/substack-ritter-iranian-resilience-2026-01-12.md`](../../raw-input/2026-01-12/substack-ritter-iranian-resilience-2026-01-12.md).
+
+Refined day page: [`ritter-page-2026-01-12.md`](ritter-page-2026-01-12.md).
+
+Template: [`ritter-page-template.md`](ritter-page-template.md).
 
 ## 2026-01-10
 - SS | cold: **Scott Ritter** — *The End of a Dream?* (Substack **2026-01-10**) — **MLK/** **Lincoln** **Memorial** **frame** **via** **recycled** **“best** **speech** **never** **delivered”;** **arms** **control** **“unfulfillable”** **thesis** **(US** **zero** **appetite,** **Trump** **/** **international-law** **charge** **stack);** **Alaska** **“Spirit”** **/** **Russian** **discreet-process** **read** **→** **blocked** **public** **AC** **dialogue;** **GORKI** **mock** **negotiation** **plan** **(Mar** **29–Apr** **4)** **shelved;** **Putin** **residence** **drone** **/** **CIA×NYT** **timing** **thesis;** **Oreshnik** **Lvov** **+** **Medvedev** **strategic-deterrence** **claim** **→** **intermediate-range** **inside** **strategic** **forces** **read;** **Golden** **Dome** **+** **defense** **budget** **growth** **frame;** **pivot** **to** **Waging** **Peace** **/** **Russia** **House** **/** **donation** **CTA** **—** **advocacy** **/** **fundraising** **essay** **≠** **wire** // hook: **US-RU** **×** **NUC** **lane** **—** **stack** **with** **01-09** **Oreshnik** **piece** **using** **labeled** **seam** | https://scottritter.substack.com/p/the-end-of-a-dream | verify:primary-Substack+full-text+raw-input/2026-01-10/substack-ritter-the-end-of-a-dream-2026-01-10.md+published:2026-01-10 | thread:ritter | US-RU | NUC | ARMS-CONTROL | grep:Ritter+End+Dream+arms+control+GORKI+Oreshnik+Alaska+Waging+Peace
@@ -304,12 +379,20 @@ Verbatim: [`raw-input/2026-01-12/substack-ritter-iranian-resilience-2026-01-12.m
 
 Verbatim: [`raw-input/2026-01-10/substack-ritter-the-end-of-a-dream-2026-01-10.md`](../../raw-input/2026-01-10/substack-ritter-the-end-of-a-dream-2026-01-10.md).
 
+Refined day page: [`ritter-page-2026-01-10.md`](ritter-page-2026-01-10.md).
+
+Template: [`ritter-page-template.md`](ritter-page-template.md).
+
 ## 2026-01-09
 - SS | cold: **Scott Ritter** — *The Camel’s Bloody Nose* (Substack **2026-01-09**) — **camel-in-tent** **analogy** **(Telegram** **preface)** **→** **Oreshnik** **#2** **in** **combat** **(post** **Nov** **2024** **#1);** **Lvov-area** **+** **Kyiv** **energy** **strikes** **read** **as** **answer** **to** **West** **energy** **war** **(CIA** **refinery** **drones,** **tanker** **seizures** **claims)** **+** **Putin** **residence** **drone** **link;** **Polish** **border** **proximity** **→** **NATO** **signal** **thesis** **(non-nuclear** **“impunity”** **frame);** **Kapustin** **Yar** **launch** **as** **training** **event** **vs** **Belarus** **combat-duty** **brigade** **distinction;** **“limit** **escalation”** **/** **bloody** **nose** **close** **—** **advocacy** **/** **mil-analysis** **≠** **wire** // hook: **UKR** **×** **NATO** **escalation** **signaling** **—** **merge** **as** **essay** **only** | https://scottritter.substack.com/p/the-camels-bloody-nose | verify:primary-Substack+full-text+raw-input/2026-01-09/substack-ritter-the-camels-bloody-nose-2026-01-09.md+published:2026-01-09 | thread:ritter | UKR | RU-MIL | NATO | grep:Ritter+Camel+Oreshnik+Lvov+Kapustin+Yar+Polish+border
 
 # *The Camel’s Bloody Nose* — Scott Ritter (Substack)
 
 Verbatim: [`raw-input/2026-01-09/substack-ritter-the-camels-bloody-nose-2026-01-09.md`](../../raw-input/2026-01-09/substack-ritter-the-camels-bloody-nose-2026-01-09.md).
+
+Refined day page: [`ritter-page-2026-01-09.md`](ritter-page-2026-01-09.md).
+
+Template: [`ritter-page-template.md`](ritter-page-template.md).
 
 ## 2026-01-06
 - SS | cold: **Scott Ritter** — *The Battle of New York* (Substack **2026-01-06**) — **Maduro** **SDNY** **trial** **as** **“America** **on** **trial”** **frame;** **UN** **Charter** **/** **Art.** **2(4)** **/** **treaty-as-supreme-law** **exposition** **(Marshall/** **Miller);** **Rubio** **UN-dismissal** **hypocrisy** **thread;** **Congress** **asleep** **/** **executive** **carte** **blanche** **/** **“courts** **lack** **treaty** **jurisdiction”** **kicker** **(contested** **read);** **Hellerstein** **/** **2020** **indictment** **conflict** **+** **“last** **stand”** **thesis;** **Caligula/** **Roman** **mob** **close;** **Turkey** **1976** **bicentennial** **memoir** **/** **Jefferson–Smith** **“tree** **of** **liberty”** **quote** **—** **legal-moral** **advocacy** **≠** **wire** **/** **not** **legal** **advice** // hook: **VEN** **×** **US** **constitutional** **culture** **—** **merge** **as** **essay** **only** | https://scottritter.substack.com/p/the-battle-of-new-york | verify:primary-Substack+full-text+raw-input/2026-01-06/substack-ritter-the-battle-of-new-york-2026-01-06.md+published:2026-01-06 | thread:ritter | VEN | US-LAW | US-POL | grep:Ritter+Battle+New+York+Maduro+Hellerstein+UN+Charter+Jefferson
@@ -318,6 +401,10 @@ Verbatim: [`raw-input/2026-01-09/substack-ritter-the-camels-bloody-nose-2026-01-
 
 Verbatim: [`raw-input/2026-01-06/substack-ritter-the-battle-of-new-york-2026-01-06.md`](../../raw-input/2026-01-06/substack-ritter-the-battle-of-new-york-2026-01-06.md).
 
+Refined day page: [`ritter-page-2026-01-06.md`](ritter-page-2026-01-06.md).
+
+Template: [`ritter-page-template.md`](ritter-page-template.md).
+
 ## 2026-01-05
 - SS | cold: **Scott Ritter** — *The Sanctions Shield* (Substack **2026-01-05**) — **thesis:** **keep** **Western** **sanctions** **as** **“shield”** **vs** **greed/** **elite** **leverage** **/** **regime-change** **vector;** **sanctions** **as** **transactional** **commodity** **(Trump** **2.0** **“we** **can** **do** **business”);** **cases:** **Syria** **Nov** **2024** **elite** **betrayal** **read,** **Maduro** **abduction,** **Iran** **Pezeshkian×sanctions** **expectations** **/** **Khamenei** **removal** **frame;** **Russia:** **dual-track** **peace×economics** **as** **strategic-defeat** **play;** **cabinet** **(Rubio/** **Bessent/** **Ratcliffe)** **anti-normalization** **thread;** **NSS** **“strategic** **stability”** **as** **bait** **/** **tunnel** **as** **extractive** **metaphor;** **Dugin** **spy-network** **quote** **+** **Karaganov** **East** **close;** **EU** **breakup/** **NATO** **disband** **graf** **—** **advocacy** **/** **scenario-heavy** **≠** **wire** // hook: **US-RU** **×** **sanctions** **geometry** **—** **merge** **as** **essay** **only** | https://scottritter.substack.com/p/the-sanctions-shield | verify:primary-Substack+full-text+raw-input/2026-01-05/substack-ritter-the-sanctions-shield-2026-01-05.md+published:2026-01-05 | thread:ritter | US-RU | SANCTIONS | REGIME-CHANGE | grep:Ritter+Sanctions+Shield+Witkoff+Dmitriev+Dugin+Karaganov+transactional
 
@@ -325,12 +412,20 @@ Verbatim: [`raw-input/2026-01-06/substack-ritter-the-battle-of-new-york-2026-01-
 
 Verbatim: [`raw-input/2026-01-05/substack-ritter-the-sanctions-shield-2026-01-05.md`](../../raw-input/2026-01-05/substack-ritter-the-sanctions-shield-2026-01-05.md).
 
+Refined day page: [`ritter-page-2026-01-05.md`](ritter-page-2026-01-05.md).
+
+Template: [`ritter-page-template.md`](ritter-page-template.md).
+
 ## 2026-01-03
 - SS | cold: **Scott Ritter** — *Russia's Dark Sage* (Substack **2026-01-03** operator voice) — **Karaganov** **×** **US** **as** **untrustworthy** **partner** **(post-Budapest** **summit** **collapse** **+** **Rosneft/Lukoil** **sanctions);** **Maduro** **Caracas** **raid** **read** **as** **sanctions→elite** **leverage** **/** **regime-change** **corollary** **→** **parallel** **US** **play** **vs** **Russia;** **Witkoff–Dmitriev** **transactional** **track** **as** **economic** **expectations** **among** **Russian** **elites** **/** **“honey** **trap”** **thesis** **vs** **Putin** **root-causes** **demands;** **claimed** **Valdai** **drone** **swarm** **as** **humiliation** **/** **weak-leader** **narrative** **+** **Zelensky** **Maduro-precedent** **cue;** **closes** **with** **Russophobia** **renunciation** **as** **precondition** **for** **normalization** **(advocacy** **tier)** // hook: **retro** **ingest** **—** **trust** **/** **elite** **buy-in** **/** **sanctions** **geometry** **(essay** **≠** **wire);** **full** **text** **on** **disk** | https://scottritter.substack.com/p/russias-dark-sage | verify:primary-Substack+full-text+raw-input/2026-01-03/substack-ritter-russia-dark-sage-karaganov-2026-01-03.md+published:2026-01-03+UI-date-may-differ | thread:ritter | KREMLIN | US-RU | grep:Ritter+Karaganov+Dark+Sage+Maduro+Witkoff+Dmitriev
 
 # *Russia's Dark Sage* — Scott Ritter (Substack)
 
 Verbatim (~3k words; over per-block triage budget): [`raw-input/2026-01-03/substack-ritter-russia-dark-sage-karaganov-2026-01-03.md`](../../raw-input/2026-01-03/substack-ritter-russia-dark-sage-karaganov-2026-01-03.md).
+
+Refined day page: [`ritter-page-2026-01-03.md`](ritter-page-2026-01-03.md).
+
+Template: [`ritter-page-template.md`](ritter-page-template.md).
 
 
 

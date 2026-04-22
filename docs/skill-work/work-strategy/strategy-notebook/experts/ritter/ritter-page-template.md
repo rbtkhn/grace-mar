@@ -8,6 +8,8 @@ WORK only; not Record.
 
 **Filename date:** Prefer the **voice / publication** date in the title (`ritter-page-YYYY-MM-DD.md`)—the date the capture attributes to the episode or essay. If the `raw-input/` folder date differs (ingest batching), note it only in the **Technical appendix**.
 
+**Same-day collision:** When more than one primary capture shares the same voice date (e.g. two Substack essays on one calendar day, or **Judging Freedom** plus **Ritter’s Rant** on the same air date), use a **slug suffix**: `ritter-page-YYYY-MM-DD-<short-slug>.md`. Derive `<short-slug>` from the raw-input basename (drop the `substack-ritter-` prefix and trailing `-YYYY-MM-DD` if present, or use the whole stem for `judging-freedom-…` / `ritter-rant-…`). In the H1 title, add a parenthetical disambiguator: `# Ritter day page — YYYY-MM-DD (*Essay or episode title*)`. Under [`transcript.md`](transcript.md), add one **`Refined day page:`** line per refined file for that date.
+
 **Prose budget:** Target ~500–1000 words combined across **Signal**, **Judgment**, and **Open** for long-form captures (Substack, **Judging Freedom**, **YouTube** monologue). **Mode D** (thin X / registry-only rows) may be much shorter. Grammatical prose only in those sections—no path dumps or `verify:` machinery there.
 
 ---
@@ -79,7 +81,7 @@ Section titles use `###` headings, not bold.
 
 ## Raw-input naming (Ritter)
 
-Verbatim lives under `raw-input/<date>/`. Refined pages live only under `experts/ritter/`.
+Verbatim lives under `raw-input/<date>/`. Refined pages live only under `experts/ritter/`. Machine-readable map (primary capture → `ritter-page-*.md`, modes, URLs): [`ritter-pages-manifest.yaml`](ritter-pages-manifest.yaml). Regenerate scaffolds with [`scripts/strategy/build_ritter_refined_pages.py`](../../../../scripts/strategy/build_ritter_refined_pages.py); CI check: [`scripts/strategy/verify_ritter_refined_pages.py`](../../../../scripts/strategy/verify_ritter_refined_pages.py).
 
 ---
 
@@ -88,7 +90,7 @@ Verbatim lives under `raw-input/<date>/`. Refined pages live only under `experts
 Under the matching `## YYYY-MM-DD` in [`transcript.md`](transcript.md), add when missing:
 
 - **`Verbatim:`** → relative link to the `raw-input` capture (or stub note if over triage budget).
-- **`Refined day page:`** → `ritter-page-YYYY-MM-DD.md`.
+- **`Refined day page:`** → `ritter-page-YYYY-MM-DD.md` (or `ritter-page-YYYY-MM-DD-<slug>.md` when the date has multiple refined pages).
 - **`Template:`** → [`ritter-page-template.md`](ritter-page-template.md) (optional header pointer).
 
 ---
@@ -130,7 +132,7 @@ WORK only; not Record.
 
 ## Compliance checklist (retrofit / review)
 
-1. Title: `# Ritter day page — YYYY-MM-DD` (voice date).
+1. Title: `# Ritter day page — YYYY-MM-DD` (voice date); add `(*…*)` when the filename uses a same-day slug suffix.
 2. `WORK only; not Record.` on its own line after the title.
 3. Preamble identifies **Mode A–D**; **Artifact:** uses “refined day page (standalone file under `experts/ritter/`)”.
 4. `---` before `### Signal`; prose-only in Signal / Judgment / Open.

@@ -1,0 +1,285 @@
+generated_by: scripts/strategy/build_ritter_refined_pages.py
+primary_capture_count: 23
+backlog:
+- note: Substack *The Consequences of Incompetence* (2026-04-19) — listed in inbox/transcript;
+    no verbatim raw-input file yet.
+  action: Ingest substack-ritter-…-2026-04-19.md then re-run this script and fill
+    refined page.
+  status: backlog_no_raw_input
+pages:
+- raw_input_relative: raw-input/2026-01-03/substack-ritter-russia-dark-sage-karaganov-2026-01-03.md
+  voice_date: '2026-01-03'
+  page_filename: ritter-page-2026-01-03.md
+  collision: false
+  slug: russia-dark-sage-karaganov
+  mode: A
+  capture_mode: Mode A — Substack
+  preamble_label: Published
+  preamble_date: '2026-01-03'
+  display_title: Russia's Dark Sage
+  source_url: https://scottritter.substack.com/p/russias-dark-sage
+  href_verbatim: ../../raw-input/2026-01-03/substack-ritter-russia-dark-sage-karaganov-2026-01-03.md
+- raw_input_relative: raw-input/2026-01-05/substack-ritter-the-sanctions-shield-2026-01-05.md
+  voice_date: '2026-01-05'
+  page_filename: ritter-page-2026-01-05.md
+  collision: false
+  slug: the-sanctions-shield
+  mode: A
+  capture_mode: Mode A — Substack
+  preamble_label: Published
+  preamble_date: '2026-01-05'
+  display_title: The Sanctions Shield
+  source_url: https://scottritter.substack.com/p/the-sanctions-shield
+  href_verbatim: ../../raw-input/2026-01-05/substack-ritter-the-sanctions-shield-2026-01-05.md
+- raw_input_relative: raw-input/2026-01-06/substack-ritter-the-battle-of-new-york-2026-01-06.md
+  voice_date: '2026-01-06'
+  page_filename: ritter-page-2026-01-06.md
+  collision: false
+  slug: the-battle-of-new-york
+  mode: A
+  capture_mode: Mode A — Substack
+  preamble_label: Published
+  preamble_date: '2026-01-06'
+  display_title: The Battle of New York
+  source_url: https://scottritter.substack.com/p/the-battle-of-new-york
+  href_verbatim: ../../raw-input/2026-01-06/substack-ritter-the-battle-of-new-york-2026-01-06.md
+- raw_input_relative: raw-input/2026-01-09/substack-ritter-the-camels-bloody-nose-2026-01-09.md
+  voice_date: '2026-01-09'
+  page_filename: ritter-page-2026-01-09.md
+  collision: false
+  slug: the-camels-bloody-nose
+  mode: A
+  capture_mode: Mode A — Substack
+  preamble_label: Published
+  preamble_date: '2026-01-09'
+  display_title: The Camel’s Bloody Nose
+  source_url: https://scottritter.substack.com/p/the-camels-bloody-nose
+  href_verbatim: ../../raw-input/2026-01-09/substack-ritter-the-camels-bloody-nose-2026-01-09.md
+- raw_input_relative: raw-input/2026-01-10/substack-ritter-the-end-of-a-dream-2026-01-10.md
+  voice_date: '2026-01-10'
+  page_filename: ritter-page-2026-01-10.md
+  collision: false
+  slug: the-end-of-a-dream
+  mode: A
+  capture_mode: Mode A — Substack
+  preamble_label: Published
+  preamble_date: '2026-01-10'
+  display_title: The End of a Dream?
+  source_url: https://scottritter.substack.com/p/the-end-of-a-dream
+  href_verbatim: ../../raw-input/2026-01-10/substack-ritter-the-end-of-a-dream-2026-01-10.md
+- raw_input_relative: raw-input/2026-01-12/substack-ritter-iranian-resilience-2026-01-12.md
+  voice_date: '2026-01-12'
+  page_filename: ritter-page-2026-01-12.md
+  collision: false
+  slug: iranian-resilience
+  mode: A
+  capture_mode: Mode A — Substack
+  preamble_label: Published
+  preamble_date: '2026-01-12'
+  display_title: Iranian Resilience
+  source_url: https://scottritter.substack.com/p/iranian-resilience
+  href_verbatim: ../../raw-input/2026-01-12/substack-ritter-iranian-resilience-2026-01-12.md
+- raw_input_relative: raw-input/2026-01-13/substack-ritter-losing-the-republic-2026-01-13.md
+  voice_date: '2026-01-13'
+  page_filename: ritter-page-2026-01-13.md
+  collision: false
+  slug: losing-the-republic
+  mode: A
+  capture_mode: Mode A — Substack
+  preamble_label: Published
+  preamble_date: '2026-01-13'
+  display_title: Losing the Republic
+  source_url: https://scottritter.substack.com/p/loosing-the-republic
+  href_verbatim: ../../raw-input/2026-01-13/substack-ritter-losing-the-republic-2026-01-13.md
+- raw_input_relative: raw-input/2026-01-16/substack-ritter-back-to-the-future-2026-01-16.md
+  voice_date: '2026-01-16'
+  page_filename: ritter-page-2026-01-16-back-to-the-future.md
+  collision: true
+  slug: back-to-the-future
+  mode: A
+  capture_mode: Mode A — Substack
+  preamble_label: Published
+  preamble_date: '2026-01-16'
+  display_title: Back to the Future
+  source_url: https://scottritter.substack.com/p/back-to-the-future
+  href_verbatim: ../../raw-input/2026-01-16/substack-ritter-back-to-the-future-2026-01-16.md
+- raw_input_relative: raw-input/2026-01-16/substack-ritter-reflections-on-a-war-2026-01-16.md
+  voice_date: '2026-01-16'
+  page_filename: ritter-page-2026-01-16-reflections-on-a-war.md
+  collision: true
+  slug: reflections-on-a-war
+  mode: A
+  capture_mode: Mode A — Substack
+  preamble_label: Published
+  preamble_date: '2026-01-16'
+  display_title: Reflections on a War
+  source_url: https://scottritter.substack.com/p/reflections-on-a-war
+  href_verbatim: ../../raw-input/2026-01-16/substack-ritter-reflections-on-a-war-2026-01-16.md
+- raw_input_relative: raw-input/2026-01-18/substack-ritter-dont-drink-the-water-2026-01-18.md
+  voice_date: '2026-01-18'
+  page_filename: ritter-page-2026-01-18.md
+  collision: false
+  slug: dont-drink-the-water
+  mode: A
+  capture_mode: Mode A — Substack
+  preamble_label: Published
+  preamble_date: '2026-01-18'
+  display_title: Don't Drink the Water
+  source_url: https://scottritter.substack.com/p/dont-drink-the-water
+  href_verbatim: ../../raw-input/2026-01-18/substack-ritter-dont-drink-the-water-2026-01-18.md
+- raw_input_relative: raw-input/2026-01-20/substack-ritter-getting-it-wrong-on-russia-2026-01-20.md
+  voice_date: '2026-01-20'
+  page_filename: ritter-page-2026-01-20.md
+  collision: false
+  slug: getting-it-wrong-on-russia
+  mode: A
+  capture_mode: Mode A — Substack
+  preamble_label: Published
+  preamble_date: '2026-01-20'
+  display_title: Getting it Wrong on Russia
+  source_url: https://scottritter.substack.com/p/getting-it-wrong-on-russia
+  href_verbatim: ../../raw-input/2026-01-20/substack-ritter-getting-it-wrong-on-russia-2026-01-20.md
+- raw_input_relative: raw-input/2026-02-05/substack-ritter-alas-babylon-2026-02-05.md
+  voice_date: '2026-02-05'
+  page_filename: ritter-page-2026-02-05.md
+  collision: false
+  slug: alas-babylon
+  mode: A
+  capture_mode: Mode A — Substack
+  preamble_label: Published
+  preamble_date: '2026-02-05'
+  display_title: Alas, Babylon
+  source_url: https://scottritter.substack.com/p/alas-babylon
+  href_verbatim: ../../raw-input/2026-02-05/substack-ritter-alas-babylon-2026-02-05.md
+- raw_input_relative: raw-input/2026-02-20/substack-ritter-dead-at-27-2026-02-20.md
+  voice_date: '2026-02-20'
+  page_filename: ritter-page-2026-02-20.md
+  collision: false
+  slug: dead-at-27
+  mode: A
+  capture_mode: Mode A — Substack
+  preamble_label: Published
+  preamble_date: '2026-02-20'
+  display_title: Dead at 27
+  source_url: https://scottritter.substack.com/p/dead-at-27
+  href_verbatim: ../../raw-input/2026-02-20/substack-ritter-dead-at-27-2026-02-20.md
+- raw_input_relative: raw-input/2026-02-22/substack-ritter-the-flamingo-effect-2026-02-22.md
+  voice_date: '2026-02-22'
+  page_filename: ritter-page-2026-02-22.md
+  collision: false
+  slug: the-flamingo-effect
+  mode: A
+  capture_mode: Mode A — Substack
+  preamble_label: Published
+  preamble_date: '2026-02-22'
+  display_title: The Flamingo Effect
+  source_url: https://scottritter.substack.com/p/the-flamingo-effect
+  href_verbatim: ../../raw-input/2026-02-22/substack-ritter-the-flamingo-effect-2026-02-22.md
+- raw_input_relative: raw-input/2026-03-01/substack-ritter-regime-change-double-edged-sword-2026-03-01.md
+  voice_date: '2026-03-01'
+  page_filename: ritter-page-2026-03-01.md
+  collision: false
+  slug: regime-change-double-edged-sword
+  mode: A
+  capture_mode: Mode A — Substack
+  preamble_label: Published
+  preamble_date: '2026-03-01'
+  display_title: Regime Change, the Double-Edged Sword
+  source_url: https://scottritter.substack.com/p/regime-change-the-double-edged-sword
+  href_verbatim: ../../raw-input/2026-03-01/substack-ritter-regime-change-double-edged-sword-2026-03-01.md
+- raw_input_relative: raw-input/2026-03-14/substack-ritter-the-backpack-girls-2026-03-14.md
+  voice_date: '2026-03-14'
+  page_filename: ritter-page-2026-03-14.md
+  collision: false
+  slug: the-backpack-girls
+  mode: A
+  capture_mode: Mode A — Substack
+  preamble_label: Published
+  preamble_date: '2026-03-14'
+  display_title: The Backpack Girls
+  source_url: https://scottritter.substack.com/p/the-backpack-girls
+  href_verbatim: ../../raw-input/2026-03-14/substack-ritter-the-backpack-girls-2026-03-14.md
+- raw_input_relative: raw-input/2026-03-18/substack-ritter-zionism-human-parasitoid-revisited-2026-03-18.md
+  voice_date: '2026-03-18'
+  page_filename: ritter-page-2026-03-18.md
+  collision: false
+  slug: zionism-human-parasitoid-revisited
+  mode: A
+  capture_mode: Mode A — Substack
+  preamble_label: Published
+  preamble_date: '2026-03-18'
+  display_title: Zionism, the Human Parasitoid (Revisited)
+  source_url: https://scottritter.substack.com/p/zionism-the-human-parasitoid-revisited
+  href_verbatim: ../../raw-input/2026-03-18/substack-ritter-zionism-human-parasitoid-revisited-2026-03-18.md
+- raw_input_relative: raw-input/2026-03-25/substack-ritter-chechen-miracle-path-redemption-2026-03-25.md
+  voice_date: '2026-03-25'
+  page_filename: ritter-page-2026-03-25.md
+  collision: false
+  slug: chechen-miracle-path-redemption
+  mode: A
+  capture_mode: Mode A — Substack
+  preamble_label: Published
+  preamble_date: '2026-03-25'
+  display_title: How the Chechen miracle kick-started the Russian 'Path of Redemption'
+  source_url: https://scottritter.substack.com/p/how-the-chechen-miracle-kick-started
+  href_verbatim: ../../raw-input/2026-03-25/substack-ritter-chechen-miracle-path-redemption-2026-03-25.md
+- raw_input_relative: raw-input/2026-04-01/substack-ritter-why-i-no-longer-stand-with-israel-redux-2026-04-01.md
+  voice_date: '2026-04-01'
+  page_filename: ritter-page-2026-04-01.md
+  collision: false
+  slug: why-i-no-longer-stand-with-israel-redux
+  mode: A
+  capture_mode: Mode A — Substack
+  preamble_label: Published
+  preamble_date: '2026-04-01'
+  display_title: Why I no longer stand with Israel (Redux)
+  source_url: https://scottritter.substack.com/p/why-i-no-longer-stand-with-israel-fc2
+  href_verbatim: ../../raw-input/2026-04-01/substack-ritter-why-i-no-longer-stand-with-israel-redux-2026-04-01.md
+- raw_input_relative: raw-input/2026-04-03/substack-ritter-combat-search-and-rescue-prequel-2026-04-03.md
+  voice_date: '2026-04-03'
+  page_filename: ritter-page-2026-04-03.md
+  collision: false
+  slug: combat-search-and-rescue-prequel
+  mode: A
+  capture_mode: Mode A — Substack
+  preamble_label: Published
+  preamble_date: '2026-04-03'
+  display_title: Combat Search and Rescue, the Prequel
+  source_url: https://scottritter.substack.com/p/combat-search-and-rescue-the-prequel
+  href_verbatim: ../../raw-input/2026-04-03/substack-ritter-combat-search-and-rescue-prequel-2026-04-03.md
+- raw_input_relative: raw-input/2026-04-13/substack-ritter-blasphemy-american-style-2026-04-13.md
+  voice_date: '2026-04-13'
+  page_filename: ritter-page-2026-04-13.md
+  collision: false
+  slug: blasphemy-american-style
+  mode: A
+  capture_mode: Mode A — Substack
+  preamble_label: Published
+  preamble_date: '2026-04-13'
+  display_title: Blasphemy, American Style
+  source_url: https://scottritter.substack.com/p/blasphemy-american-style
+  href_verbatim: ../../raw-input/2026-04-13/substack-ritter-blasphemy-american-style-2026-04-13.md
+- raw_input_relative: raw-input/2026-04-20/judging-freedom-trump-hegseth-2026-04-20.md
+  voice_date: '2026-04-20'
+  page_filename: ritter-page-2026-04-20-judging-freedom-trump-hegseth.md
+  collision: true
+  slug: judging-freedom-trump-hegseth
+  mode: B
+  capture_mode: Mode B — Judging Freedom / interview (see raw-input series)
+  preamble_label: Aired
+  preamble_date: '2026-04-20'
+  display_title: Trump and Hegseth Haven't a Clue
+  source_url: https://www.youtube.com/watch?v=TBD-judging-freedom-ritter-2026-04-20
+  href_verbatim: ../../raw-input/2026-04-20/judging-freedom-trump-hegseth-2026-04-20.md
+- raw_input_relative: raw-input/2026-04-20/ritter-rant-shorting-america-7pXI52jKcOU.md
+  voice_date: '2026-04-20'
+  page_filename: ritter-page-2026-04-20-ritter-rant-shorting-america-7pXI52jKcOU.md
+  collision: true
+  slug: ritter-rant-shorting-america-7pXI52jKcOU
+  mode: C
+  capture_mode: Mode C — YouTube (see raw-input source_url)
+  preamble_label: Aired
+  preamble_date: '2026-04-20'
+  display_title: Ritter's Rant
+  source_url: https://www.youtube.com/watch?v=7pXI52jKcOU
+  href_verbatim: ../../raw-input/2026-04-20/ritter-rant-shorting-america-7pXI52jKcOU.md
