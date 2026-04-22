@@ -26,6 +26,9 @@ Pods/
 # Strategy notebook — optional local RSS fetch manifest (see raw-input/README.md)
 docs/skill-work/work-strategy/strategy-notebook/raw-input/fetch-sources.local.json
 
+# Strategy notebook — generated polyphony bundles (regenerate with scripts/compile_strategy_view.py)
+docs/skill-work/work-strategy/strategy-notebook/compiled-views/expert-polyphony-synthesis-*.md
+
 # Local companion-self checkout for multi-root workspace (grace-mar.code-workspace).
 # Remove this line if you use `git submodule add … companion-self` and want it tracked.
 /companion-self/

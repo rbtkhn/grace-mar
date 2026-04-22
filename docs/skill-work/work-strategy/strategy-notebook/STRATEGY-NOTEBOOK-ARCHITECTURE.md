@@ -189,6 +189,12 @@ A **cumulative, page-organized record** of how the operator reads signals, weigh
 
 **Symphony of Civilization** is the notebook’s **polyphonic** image: **multiple civilizational and expert registers** (voice planes in briefs, indexed commentators in [strategy-commentator-threads.md](strategy-commentator-threads.md)) sound **together** without **collapsing** into one melody. Each **page** (per expert thread) is a **movement** on the **score**; **`batch-analysis`** names **convergence vs tension** between **parts**. **Experts** (indexed voices) supply **instrument lines**; the **operator** sets **balance and tempo** (**EOD strategy session**, Thesis A/B, **`verify:`** discipline)—not the experts.
 
+### Operator as conductor (short pointer)
+
+The operator is the **conductor**, not another instrument: they **do not** replace expert voices or raw inputs; they **shape** **Journal-layer** judgment, **emphasis**, and **promotion** while scripts maintain the **Machine** layer. **Polyphony** (preserved tensions) beats false consensus. Full role contract, orchestra comparison, and **master-conductor technique** shorthand live in [SYNTHESIS-OPERATING-MODEL.md § Operator as conductor](SYNTHESIS-OPERATING-MODEL.md#8-operator-as-conductor) — practical “modes” (precision, expression, economy) under **Techniques inspired by the masters** there. **Derived** multi-expert snapshots: [compiled-views/README.md](compiled-views/README.md).
+
+**Concrete workflow map** (where polyphony vs conducting happen on disk and in session): [SYNTHESIS-OPERATING-MODEL.md § Where this shows up in your workflow](SYNTHESIS-OPERATING-MODEL.md#where-this-shows-up-in-your-workflow).
+
 ### Primary output (work-strategy)
 
 **Thread-embedded strategy pages** (`strategy-page` blocks in `experts/<id>/thread.md`) are the **primary written units** of the work-strategy lane: **synthesized judgment** composed in the **EOD strategy session**. `days.md` + `meta.md` provide chronology and month-level state. When you use a calendar block in `days.md`, prefer **one `## YYYY-MM-DD` section per day you actually commit** — not a mandatory stub every day. **Inputs** that feed it — daily briefs, transcript digests, sessions, weak-signal notes, framework drafts — are **not** substitutes for the notebook; they inform **composed** pages after the **EOD session**.
@@ -636,7 +642,7 @@ Pedagogical shorthand only — **fingerprint rules** and section contracts above
 
 - **Score** — The month’s arc (and on daily pages, **K** / L0 intent) that every **part** interprets; not three pasted summaries of the same wire file.
 - **Parts** — Three lines (Mercouris / Mearsheimer / Barnes in the **spirit** of `strategy-notebook/minds/CIV-MIND-*.md`).
-- **Conductor** — Operator: 0–3 lenses, [SYNTHESIS-OPERATING-MODEL.md](SYNTHESIS-OPERATING-MODEL.md) session types A–D, when to **promote** vs leave **dissonance** open.
+- **Conductor** — Operator: 0–3 lenses, [SYNTHESIS-OPERATING-MODEL.md](SYNTHESIS-OPERATING-MODEL.md) session types A–D, when to **promote** vs leave **dissonance** open; full **Operator as conductor** + **Techniques inspired by the masters** in [SYNTHESIS-OPERATING-MODEL.md § 8](SYNTHESIS-OPERATING-MODEL.md#8-operator-as-conductor).
 - **Dissonance** — The **tension line** (below): Mercouris vs Mearsheimer disagreement **by design**; unresolved until a `strategy` pass **promotes** a settled watch to STRATEGY.md.
 - **Rehearsal vs performance** — Notebook + `meta` § Polyphony are accountable **rehearsal**; public or ship-risk claims follow **Web verification** and **analogy-audit** where this architecture flags them.
 
@@ -663,6 +669,18 @@ Pedagogical shorthand only — **fingerprint rules** and section contracts above
 - Reuse a **short bold label** for a recurring arc (**Islamabad scope**) so search across `days.md` reconstructs the arc.
 
 **Anti-wiring:** If it matters tomorrow, put a line in **Open** or **meta** Open questions — do not rely on chat memory alone.
+
+## Compiled views (derived)
+
+The directory [`compiled-views/`](compiled-views/) holds **refreshable, non-authoritative** markdown snapshots for browsing (e.g. Obsidian) and handoff. They **do not** replace the source of truth: [`daily-strategy-inbox.md`](daily-strategy-inbox.md), [`raw-input/`](raw-input/README.md), expert [`transcript.md`](strategy-expert-template.md) files, journal-layer **`strategy-page`** blocks in expert thread files, or [`chapters/YYYY-MM/days.md`](chapters/2026-04/days.md) / `meta.md`.
+
+- **Polyphony + conductor discipline** — [SYNTHESIS-OPERATING-MODEL.md § Polyphony synthesis rules](SYNTHESIS-OPERATING-MODEL.md#7-polyphony-synthesis-rules) and § [Operator as conductor](SYNTHESIS-OPERATING-MODEL.md#8-operator-as-conductor).
+- **Recipes** live under [`compiled-views/recipes/`](compiled-views/recipes/).
+- **Outputs** such as `compiled-views/expert-polyphony-synthesis-YYYY-MM-DD.md` — **do not hand-edit**; fix sources and regenerate.
+- **Tooling:** `python3 scripts/compile_strategy_view.py` produces a deterministic **source bundle** (and optional skeleton). Narrative synthesis per the recipe is **operator- or assistant-governed**; the operator remains the **conductor** — see [compiled-views/README.md](compiled-views/README.md).
+- **Promotion:** WORK only; not recursion-gate/Record unless explicitly escalated.
+
+First recipe: [`compiled-views/recipes/expert-polyphony-synthesis.md`](compiled-views/recipes/expert-polyphony-synthesis.md).
 
 ## Related
 
