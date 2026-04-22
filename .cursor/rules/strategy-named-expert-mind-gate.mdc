@@ -1,0 +1,23 @@
+---
+description: Named-expert strategy analysis must load mind SSOT before in-voice substantive reply (chat or disk).
+globs:
+  - docs/skill-work/work-strategy/strategy-notebook/**/*.md
+  - .cursor/skills/skill-strategy/SKILL.md
+alwaysApply: false
+---
+
+# Strategy — named-expert mind gate
+
+**Triggers:** Operator pairs **`strategy`** (or clear strategy-lane intent) with a **named commentator** / **`thread:<expert_id>`** and asks for **that expert’s** analysis, lens, or “what would X say” — including **meta-theory** questions (“X analyze Y”) where **X** is a mapped expert.
+
+**Before** any **substantive** reply framed as that expert’s judgment (more than a one-line pointer):
+
+1. **Resolve mind path** (first hit wins):
+   - `docs/skill-work/work-strategy/strategy-notebook/strategy-expert-<expert_id>-mind.md`
+   - `docs/skill-work/work-strategy/strategy-notebook/experts/<expert_id>/mind.md`
+2. **Read** that file (at least **LINGUISTIC FINGERPRINT** + **core identity / role** sections — expand if the question is theory-heavy).
+3. If **neither** path exists: **say so**, name the missing paths, and **do not** impersonate corpus expertise from model prior alone.
+
+**Not gated:** Generic structural realism / IR lecture with **no** “Mearsheimer says” framing; operator explicitly asks **tacet** or **no expert voice**.
+
+**Disk writes:** EOD compose involving that expert still follows **`skill-strategy`** pre-write checklist (profile + mind as already specified).

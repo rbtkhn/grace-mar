@@ -69,6 +69,7 @@ Under the matching `## YYYY-MM-DD` in [`transcript.md`](transcript.md), add (whe
 
 - `Verbatim:` → relative link to the `raw-input` capture.
 - `Refined day page:` → `mercouris-page-YYYY-MM-DD.md`.
+- `Template:` → [`mercouris-page-template.md`](mercouris-page-template.md) (optional header pointer).
 
 ---
 

@@ -1797,6 +1797,36 @@ An intense battle for the city may be imminent, and Ukrainian defences there do 
     
     <!-- pruned 2026-04-16 (operator A): §2c RSS mirror blocks for 2026-04-13 and 2026-04-14 removed — canonical rows remain in [daily-brief-2026-04-13.md](../daily-brief-2026-04-13.md) §2c and [daily-brief-2026-04-14.md](../daily-brief-2026-04-14.md) §2c. Paste-grade **04-14** expert `thread:` + `batch-analysis` block (Parsi×Davis, Ritter, Sánchez–Xi, Davis×Jermy, Diesen×Sachs, Blumenthal×Parsi) removed after weave into [chapters/2026-04/days.md](chapters/2026-04/days.md) **`## 2026-04-14`**; recover from **git** history on this file if needed. -->
 
+## 2026-04-15
+
+**The Duran** · Alexander Mercouris · air date **2026-04-15**.
+
+Verbatim: [`raw-input/2026-04-15/duran-mercouris-russia-intensify-china-tankers-putin-xi-2026-04-15.md`](../../raw-input/2026-04-15/duran-mercouris-russia-intensify-china-tankers-putin-xi-2026-04-15.md).
+
+Refined day page: [`mercouris-page-2026-04-15.md`](mercouris-page-2026-04-15.md).
+
+- YT | cold: **Alexander Mercouris** (*The Duran* — *Russia Warns US Will 'Intensify' Iran War; China Warns Navy Will Protect China Oil Tankers; Putin-Xi Trip* — **operator** **transcript** **aired** **2026-04-15**) — **Hormuz** **blockade** **facts** **contested;** **22** **Apr** **ceasefire** **fork;** **Islamabad** **×** **Burns–Naryshkin** **analogy;** **U.S.** **fuel** **if** **zero** **enrichment** **(bizarre);** **Lavrov–Xi** **/** **Putin** **China** **trip;** **PRC** **Defence** **trade** **/** **seizure** **red** **line;** **East** **China** **Sea** **posture;** **Bloomberg** **blockade→China** **(voice** **unread);** **Treasury** **RUS** **oil** **relief** **withdrawn;** **RMB** **toll** **/** **dollar** **speculation;** **Gulf** **architecture** **RU/CN/PK/TR;** **Saudi** **deputy** **FM** **+** **PK** **troops;** **RU** **Security** **Council** **commentary** **(ORBAT,** **Boxer,** **George** **Bush** **CSG,** **intensity);** **FT** **PRC** **satellite→IRGC;** **Ukraine** **Geran** **manoeuvre** **thesis** // hook: **`thread:mercouris`** **×** **§1e** **Islamabad** **/** **Hormuz** **+** **§1d** **RU/CN** **—** **deferred-batch** **`aired:2026-04-15`;** **verbatim** + **day** **page** **on** **disk** | https://www.youtube.com/watch?v=TBD-duran-mercouris-2026-04-15 | verify:full-text+raw-input+aired:2026-04-15+operator-transcript+ingest:2026-04-21 | thread:mercouris | IRAN | RU | PRC | UKR | grep:Mercouris+2026-04-15+Lavrov+Putin+Xi+Security+Council+Hormuz
+
+## 2026-04-07
+
+**The Duran** · Alexander Mercouris · air date **2026-04-07**.
+
+Verbatim: [`raw-input/2026-04-07/duran-mercouris-hormuz-deadline-satellites-oreshnik-2026-04-07.md`](../../raw-input/2026-04-07/duran-mercouris-hormuz-deadline-satellites-oreshnik-2026-04-07.md).
+
+Refined day page: [`mercouris-page-2026-04-07.md`](mercouris-page-2026-04-07.md).
+
+- YT | cold: **Alexander Mercouris** (*The Duran* — *US Prepares Huge Iran Strike; Russian Spy Satellite Data Helps Iran; Kiev Fears Big Oreshnik Strike* — **operator** **transcript** **aired** **2026-04-07**) — **Hormuz** **deadline** **×** **RMB** **$2M** **toll** **/** **~10%** **traffic;** **Iran** **counter-offer** **(Pakistan/NYT):** **non-aggression,** **sanctions** **lift,** **proxy** **ceasefire,** **reparations** **/** **toll** **kept;** **Graham** **dollar-reserve** **frame;** **war-crimes** **rhetoric** **/** **Hegseth** **impeachment** **mention;** **FT** **resilience** **/** **mobile** **launchers;** **Telegraph** **Sharpe** **Hormuz** **naval** **op** **impossible;** **Tripoli** **drone** **(caveated);** **missile** **cities** **/** **penetrators;** **informant** **rescue** **not** **uranium** **grab;** **UnHerd** **aircraft** **losses;** **Mearsheimer** **LBJ** **/** **Vance** **mediation** **pitch;** **IEA** **energy** **shock;** **Reuters** **RU** **satellite** **intel** **→** **Iran;** **Taiwan** **KMT** **/** **PRC;** **EU** **Jørgensen** **/** **Fico** **/** **fuel** **levy** **story;** **Putin–Erdogan** **Gulf** **+** **Black** **Sea;** **Ukraine** **Oreshnik** **rumor** **/** **Konstantinovka** **logistics** **/** **spring** **offensive** **rhyme** // hook: **`thread:mercouris`** **×** **§1e** **Hormuz** **+** **§1d** **RU/CN** **—** **deferred-batch** **`aired:2026-04-07`;** **verbatim** + **day** **page** **on** **disk** | https://www.youtube.com/watch?v=TBD-duran-mercouris-2026-04-07 | verify:full-text+raw-input+aired:2026-04-07+operator-transcript+ingest:2026-04-25 | thread:mercouris | IRAN | RU | PRC | UKR | grep:Mercouris+2026-04-07+Hormuz+satellite+Oreshnik
+
+## 2026-04-05
+
+**The Duran** · Alexander Mercouris · air date **2026-04-05**.
+
+Verbatim: [`raw-input/2026-04-05/duran-mercouris-f15-rescue-hormuz-nato-kiev-2026-04-05.md`](../../raw-input/2026-04-05/duran-mercouris-f15-rescue-hormuz-nato-kiev-2026-04-05.md).
+
+Refined day page: [`mercouris-page-2026-04-05.md`](mercouris-page-2026-04-05.md).
+
+- YT | cold: **Alexander Mercouris** (*The Duran* — aired **2026-04-05**) — F-15 navigator rescue × Chaharmahal–Bakhtiari; IRI claims 2× C-130 + 2× Black Hawk; Jack Murphy FARP/Delta; A-10 + F-15 damage; FT insertion-liability thread; casualty-aversion signal; airstrip seizure reconstruction; Easter Truth Social × Tuesday Hormuz/infrastructure threat; Rolling Thunder; 48h ceasefire spurned; quagmire frame; humanitarian Hormuz as control signal; Japan–Russia energy; NATO stress × Rubio × AfD; Witkoff–Kushner–Graham Kiev = aid haircut; Medvedev EU; Thiệu analogy // hook: **`thread:mercouris`** · §1e / §1h / §1d · `verify:full-text+raw-input+aired:2026-04-05` | thread:mercouris
+
 ## 2026-03-31
 
 **The Duran** · Alexander Mercouris · air date **2026-03-31**.
@@ -1806,3 +1836,23 @@ Verbatim: [`raw-input/2026-03-31/duran-mercouris-trump-iran-talks-lavrov-chechen
 Refined day page: [`mercouris-page-2026-03-31.md`](mercouris-page-2026-03-31.md).
 
 - YT | cold: **Alexander Mercouris** (*The Duran* — aired **2026-03-31**) — Telegraph / markets “Trump loses control” frame; Trump TS “alternative Iranian government” + “fire and thunder” read as plea + bluff; WSJ two-week exit + Hormuz stays closed; Rubio military-objectives pivot; Gulf / Israel / Europe betrayal arc; Saudi 2023 Iran reproachment reassessed; Lavrov mediation + “world war” warning; Chechen deploy rumor (Iranian media only, not Russian); NPT exit debate; Ukraine receipts + Sumy approach + Cuba oil coda // hook: **`thread:mercouris`** · §1e / §1h · `verify:full-text+raw-input+aired:2026-03-31` | thread:mercouris
+
+## 2026-03-01
+
+**The Duran** · Alexander Mercouris · air date **2026-03-01**.
+
+Verbatim: [`raw-input/2026-03-01/duran-mercouris-khamenei-strike-hormuz-russia-2026-03-01.md`](../../raw-input/2026-03-01/duran-mercouris-khamenei-strike-hormuz-russia-2026-03-01.md).
+
+Refined day page: [`mercouris-page-2026-03-01.md`](mercouris-page-2026-03-01.md).
+
+- YT | cold: **Alexander Mercouris** (*The Duran* — aired **2026-03-01**) — Khamenei + senior deaths / residence meeting puzzle; delayed IRI disclosure + Larijani; interim rahbar name; martyrdom–FT hunt; regime survival vs regime-change aim; nuclear fatwa / BRICS / RU air defense fork; Gulf bases + Hormuz de facto close + tanker; WaPo MBS private egg-on; missile volume + attrition; Trump TS frightened read; RU MFA + Putin telegram + Israel brokered understanding breach; Budanov vs RU guarantees; Sumy foothold + Donbass cauldron geometry (Lyman, Ray-Alexandrovka, Gushchino, Konstantinovka); IRGC June ceasefire regret // hook: **`thread:mercouris`** · §1e / §1h / §1d · `verify:full-text+raw-input+aired:2026-03-01` | thread:mercouris
+
+## 2026-02-27
+
+**The Duran** · Alexander Mercouris · air date **2026-02-27**.
+
+Verbatim: [`raw-input/2026-02-27/duran-mercouris-us-iran-geneva-embassies-konstantinovka-uk-2026-02-27.md`](../../raw-input/2026-02-27/duran-mercouris-us-iran-geneva-embassies-konstantinovka-uk-2026-02-27.md).
+
+Refined day page: [`mercouris-page-2026-02-27.md`](mercouris-page-2026-02-27.md).
+
+- YT | cold: **Alexander Mercouris** (*The Duran* — aired **2026-02-27**) — Geneva Witkoff/Kushner × Araghchi; IRI nuclear consortium offer vs WSJ maximal US terms; HEU/stockpile read post–June 2025; Vienna “technical talks” skepticism; Sonar21 evacuations × UK Tehran + US Israel; Vance “no long war” as strike signal; Caine/Ratcliffe doubt; Konstantinovka collapse / FAB-3000 dam; Gishchino–Pokrovsk–Slavyansk cauldron; Ray-Alexandrovka; no RU trilateral Geneva / Dmitriev–Witkoff; Foreign Affairs land-for-peace; Meduza casualties; Putin quiet / harder demands forecast; Azarov; Gorton & Denton by-election // hook: **`thread:mercouris`** · §1e / §1h / UK politics · `verify:full-text+raw-input+aired:2026-02-27` | thread:mercouris

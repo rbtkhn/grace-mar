@@ -64,8 +64,7 @@ Under **`## YYYY-MM-DD`** in [`transcript.md`](transcript.md) (aired date), add 
 
 - **`Verbatim:`** → link to primary `raw-input` file (same label for all modes; X captures are still “verbatim” text on disk).
 - **`Refined day page:`** → `pape-page-YYYY-MM-DD.md`.
-
-Add **Template:** [`pape-page-template.md`](pape-page-template.md) in the transcript header metadata (see [`experts/mercouris/transcript.md`](../mercouris/transcript.md) pattern).
+- **`Template:`** → [`pape-page-template.md`](pape-page-template.md) (optional header pointer).
 
 ---
 
