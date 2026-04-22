@@ -47,6 +47,9 @@ WORK only; not Record.
 ## 2026-04-17
 - YT | cold: **Glenn Diesen** — **host** / interviewer; **same** **episode** **as** **verbatim** **above** (Baltic/Finland, Article 5, Trump, Iran↔Ukraine spillover) // hook: **paired** **`expert_id`** **per** **commentator-threads** **two-speaker** **rule** | https://www.youtube.com/watch?v=TBD-diesen-ritter-finland-baltic-2026-04 | verify:paired-host+pin-canonical-URL | thread:diesen | grep:Diesen+Greater-Eurasia+Ritter
 
+## 2026-04-10
+- YT | cold: **Glenn Diesen** × **John Mearsheimer** — *World Changed Forever as Iran Defeated the U.S.* — **aired** **2026-04-10** — **host** **paired** **`thread:mearsheimer`** **verbatim** [raw-input/2026-04-10/transcript-diesen-mearsheimer-world-changed-forever-2026-04-10.md](../../raw-input/2026-04-10/transcript-diesen-mearsheimer-world-changed-forever-2026-04-10.md) // hook: **two-speaker** **rule** **×** **Hormuz** **/** **10-point** **/** **NATO** **week** | https://www.youtube.com/watch?v=H2K3qDshr70 | verify:operator-transcript+raw-input+aired:2026-04-10+pin-canonical-URL | thread:diesen | grep:Diesen+Mearsheimer+Hormuz+2026-04-10
+
 
 
 

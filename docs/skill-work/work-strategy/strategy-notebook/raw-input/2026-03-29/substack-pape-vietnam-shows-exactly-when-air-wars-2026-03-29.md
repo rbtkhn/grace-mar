@@ -5,6 +5,7 @@ thread: pape
 source_url: https://escalationtrap.substack.com/p/vietnam-shows-exactly-when-air-wars
 capture_note: Operator paste; public Substack essay. Vietnam/Iraq chronology is analytic framing; current ORBAT (~5k Marines, 82nd, 10k preparing, 300+ wounded / 13+ killed, Prince Sultan, WSJ on ground contingencies, NYT/Mossad reporting) is in-voice — verify DOD/wire/primary press if promoted to §1.
 related_same_series:
+  - ./substack-mearsheimer-will-trump-go-kamikaze-2026-03-29.md
   - ../../raw-input/2026-03-23/substack-pape-the-questions-that-matter-now-2026-03-23.md
   - ../../raw-input/2026-03-24/substack-pape-trumps-words-dont-predict-war-his-2026-03-24.md
   - ../../raw-input/2026-03-25/substack-pape-why-iran-prefers-vance-2026-03-25.md

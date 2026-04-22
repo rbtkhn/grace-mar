@@ -81,3 +81,21 @@ So this is one of the reasons I find it hard to imagine that you’re ever going
 ~~~
 
 _(Continues in raw-input file: ship-seizure / blockade spiral, lobby discourse vs policy, WSJ White House tantrum episode, global economy / fertilizer / jet fuel, Suez analogy rejection, etc.)_
+
+## 2026-04-10
+
+Verbatim: [`raw-input/2026-04-10/transcript-diesen-mearsheimer-world-changed-forever-2026-04-10.md`](../../raw-input/2026-04-10/transcript-diesen-mearsheimer-world-changed-forever-2026-04-10.md).
+
+Refined day page: [`mearsheimer-page-2026-04-10.md`](mearsheimer-page-2026-04-10.md).
+
+## 2026-03-29
+
+Verbatim: [`raw-input/2026-03-29/substack-mearsheimer-will-trump-go-kamikaze-2026-03-29.md`](../../raw-input/2026-03-29/substack-mearsheimer-will-trump-go-kamikaze-2026-03-29.md).
+
+Refined day page: [`mearsheimer-page-2026-03-29.md`](mearsheimer-page-2026-03-29.md).
+
+## 2026-01-20
+
+Verbatim: [`raw-input/2026-01-20/substack-mearsheimer-the-tag-team-fails-in-iran-2026-01-20.md`](../../raw-input/2026-01-20/substack-mearsheimer-the-tag-team-fails-in-iran-2026-01-20.md).
+
+Refined day page: [`mearsheimer-page-2026-01-20.md`](mearsheimer-page-2026-01-20.md).
