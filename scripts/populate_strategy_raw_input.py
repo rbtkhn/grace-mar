@@ -121,13 +121,6 @@ def _transcript_frontmatter(
     )
 
 
-def _raw_input_mirror_basename(expert_id: str, date_str: str) -> str:
-    """Mirror transcript sections into raw-input; Mercouris uses ``mercouris-page-…``."""
-    if expert_id == "mercouris":
-        return f"mercouris-page-{date_str}.md"
-    return f"{date_str}-{expert_id}.md"
-
-
 def _verbatim_frontmatter(*, air_date: str, source_path: str, kind: str = "verbatim-sidecar") -> str:
     return (
         "---\n"
@@ -193,7 +186,7 @@ def run(
                     section_date=date_str,
                     source_path=src_rel,
                 ) + section_text
-                dest = raw_root / date_str / _raw_input_mirror_basename(expert_id, date_str)
+                dest = raw_root / date_str / f"{date_str}-{expert_id}.md"
                 planned.append((dest, out_text, _word_count(out_text)))
 
     # --- X PNG index (one file per day in window that has PNGs) ---

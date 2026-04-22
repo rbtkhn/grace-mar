@@ -6,7 +6,7 @@ source_url: https://www.youtube.com/watch?v=TBD-duran-mercouris-2026-04-21
 kind: operator-transcript
 series: The Duran
 speaker: Alexander Mercouris
-source_note: Clean readable operator transcript; pin canonical The Duran YouTube watch?v= when available.
+source_note: Full operator transcript; pin canonical The Duran YouTube watch?v= when available.
 title_slug: mercouris-iran-islamabad-ceasefire-donbass-baltic-2026-04-21
 ---
 

@@ -86,9 +86,9 @@ def test_atom_items() -> None:
     assert items[0]["link"] == "https://example.com/a/2"
 
 
-def test_threaded_raw_input_filename_mercouris_vs_other() -> None:
+def test_threaded_raw_input_filename_same_pattern_all_experts() -> None:
     assert _threaded_raw_input_filename(air=date(2026, 4, 21), expert_id="mercouris") == (
-        "mercouris-page-2026-04-21.md"
+        "2026-04-21-mercouris.md"
     )
     assert _threaded_raw_input_filename(air=date(2026, 4, 21), expert_id="simplicius") == (
         "2026-04-21-simplicius.md"

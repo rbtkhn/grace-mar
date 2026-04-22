@@ -9,9 +9,10 @@ Supported source kinds (extend over time):
 
 Config: JSON next to raw-input (see ``fetch-sources.example.json``).
 Each feed may set optional ``"thread": "<expert_id>"`` (must match
-``CANONICAL_EXPERT_IDS``); items append into one file per expert per air date
-(``mercouris`` → ``mercouris-page-<aired_date>.md``; others →
-``<aired_date>-<expert_id>.md``), multiple ``---`` YAML blocks. Feeds **without** ``thread`` keep
+``CANONICAL_EXPERT_IDS``); items append into
+``raw-input/<aired_date>/<aired_date>-<expert_id>.md`` (one file per expert per
+calendar day, multiple ``---`` YAML blocks). **Refined day pages** live under
+``experts/<expert_id>/``, not in ``raw-input``. Feeds **without** ``thread`` keep
 per-item slug filenames under the date folder.
 
 Override path with ``FETCH_STRATEGY_SOURCES`` env or ``--config``.
@@ -266,14 +267,8 @@ def _build_rss_item_document(
 
 
 def _threaded_raw_input_filename(*, air: date, expert_id: str) -> str:
-    """Basename for RSS items merged by ``thread`` (one file per expert per air date).
-
-    ``mercouris`` uses ``mercouris-page-YYYY-MM-DD.md``; other experts use
-    ``YYYY-MM-DD-<expert_id>.md``.
-    """
+    """Basename for RSS items merged by ``thread`` (raw capture only)."""
     day = air.isoformat()
-    if expert_id == "mercouris":
-        return f"mercouris-page-{day}.md"
     return f"{day}-{expert_id}.md"
 
 

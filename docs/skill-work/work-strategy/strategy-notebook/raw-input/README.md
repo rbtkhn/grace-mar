@@ -6,7 +6,7 @@
 
 ## Automated fetch (RSS → raw-input)
 
-**Script:** [`scripts/fetch_strategy_raw_input.py`](../../../../scripts/fetch_strategy_raw_input.py) — pulls **RSS/Atom** items (e.g. Substack `/feed`) into **`raw-input/<aired_date>/`** as markdown with YAML frontmatter (`kind: rss-item`). When a feed sets **`"thread": "<expert_id>"`**, new items **append** into one daily file: **`mercouris-page-<aired_date>.md`** for **`mercouris`**, otherwise **`<aired_date>-<expert_id>.md`** (multiple ingests = multiple `---` … `---` blocks; duplicates skipped by `guid:`). Feeds **without** `thread` still write **one markdown file per RSS item** (slug + hash basename). Optional **`thread:`** in YAML drives **`python3 scripts/strategy_thread.py`** triage: one-line RSS stubs merge into that expert’s **`experts/<id>/transcript.md`** (after inbox lines for the same date).
+**Script:** [`scripts/fetch_strategy_raw_input.py`](../../../../scripts/fetch_strategy_raw_input.py) — pulls **RSS/Atom** items (e.g. Substack `/feed`) into **`raw-input/<aired_date>/`** as markdown with YAML frontmatter (`kind: rss-item`). When a feed sets **`"thread": "<expert_id>"`**, new items **append** into **`raw-input/<aired_date>/<aired_date>-<expert_id>.md`** (multiple ingests = multiple `---` … `---` blocks; duplicates skipped by `guid:`). **Refined day pages** (operator judgment artifacts) live under **`experts/<expert_id>/`** — e.g. **`mercouris-page-YYYY-MM-DD.md`** — not in this tree. Feeds **without** `thread` still write **one markdown file per RSS item** (slug + hash basename). Optional **`thread:`** in YAML drives **`python3 scripts/strategy_thread.py`** triage: one-line RSS stubs merge into that expert’s **`experts/<id>/transcript.md`** (after inbox lines for the same date).
 
 **Setup:**
 
@@ -49,14 +49,13 @@ Use **one subdirectory per local ingest day** (the day you save the file — typ
 raw-input/
   README.md          ← this file
   YYYY-MM-DD/        ← e.g. 2026-04-20/
-    mercouris-page-YYYY-MM-DD.md   ← Mercouris: one evidence page per air day (append ingests)
-    YYYY-MM-DD-<expert_id>.md      ← other threaded experts (RSS `thread:`) + populate mirror default
-    <slug>.md        ← other captures: RSS without thread:, bundles, sidecars, indexes
+    YYYY-MM-DD-<expert_id>.md   ← raw capture: RSS `thread:` merge target + populate mirror (append ingests)
+    <slug>.md        ← other captures: verbatim sidecars, RSS without thread:, bundles, indexes
 ```
 
-**Mercouris daily file:** `mercouris-page-2026-04-21.md` under `2026-04-21/` — **append** further ingests (second show, RSS + manual) as additional **`---`** YAML / body blocks in the same file.
+**Refined day page (not here):** **`experts/<expert_id>/mercouris-page-YYYY-MM-DD.md`** (Mercouris) — Signal / Judgment / Open; links back to **verbatim** in this tree. Distinct from **`strategy-page`** in `thread.md` unless mirrored during EOD compose.
 
-**Operator vocabulary (Mercouris):** That path is the **raw-input page** for the day — the default unit of “what aired / what we captured” before the **end-of-day strategy session**. It is **not** a **`strategy-page`** fence in [`experts/<id>/thread.md`](../strategy-page-template.md) (those hold **Signal / Judgment / Open** after compose). Say “Mercouris page” or `mercouris-page-YYYY-MM-DD` to disambiguate from `strategy-page`.
+**Raw capture:** e.g. **`2026-04-21-mercouris-verbatim.md`** for full operator transcript; RSS **`thread: mercouris`** appends to **`2026-04-21-mercouris.md`**.
 
 **Other slugs:** `kebab-case`, unique within that day — e.g. `ritter-judging-freedom-2026-04-20.md`, `substack-simplicius-….md`, `davis-johnson-hormuz-full.md`.
 
@@ -117,6 +116,6 @@ Default root: `docs/skill-work/work-strategy/strategy-notebook/raw-input`. Overr
 
 ## Assistant default
 
-When the operator asks for **full transcript on disk** or **store everything**, prefer **`raw-input/YYYY-MM-DD/mercouris-page-YYYY-MM-DD.md`** for **Mercouris**, **`raw-input/YYYY-MM-DD/YYYY-MM-DD-<expert_id>.md`** for other indexed commentators (append if the file already exists), or **`raw-input/YYYY-MM-DD/<slug>.md`** for non-expert bundles. Keep [daily-strategy-inbox.md](../daily-strategy-inbox.md) to a **stub line** (canonical URL + `verify:` pointer to this path; **`thread:`** only when the capture maps to an indexed commentator), e.g. `verify:full-text+raw-input/2026-04-21/mercouris-page-2026-04-21.md`.
+When the operator asks for **full transcript on disk**, write **verbatim** under **`raw-input/YYYY-MM-DD/<descriptive-slug>.md`** (or **`YYYY-MM-DD-<expert_id>.md`** when matching RSS merge). Place **refined day pages** under **`experts/<expert_id>/mercouris-page-YYYY-MM-DD.md`** (or an equivalent convention per expert). Keep [daily-strategy-inbox.md](../daily-strategy-inbox.md) to **stub lines** pointing at **verbatim** for `verify:` and optionally at the **expert page** for composed judgment, e.g. `verify:full-text+raw-input/2026-04-21/2026-04-21-mercouris-verbatim.md`.
 
 Full contract: [STRATEGY-NOTEBOOK-ARCHITECTURE.md](../STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *Raw input archive (7-day full retention)*.
