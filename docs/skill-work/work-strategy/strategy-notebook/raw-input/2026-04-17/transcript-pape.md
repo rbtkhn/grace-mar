@@ -1,6 +1,6 @@
 ---
 ingest_date: 2026-04-17
-aired_date: 2026-04-17
+published_date: 2026-04-17
 thread: pape
 kind: transcript
 source_path: docs/skill-work/work-strategy/strategy-notebook/experts/pape/transcript.md

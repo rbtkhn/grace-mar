@@ -13,6 +13,14 @@ WORK only; not Record.
 
 <!-- Triage appends new date sections below. Do not add content above this line. -->
 
+## 2026-04-22
+
+Verbatim: [`raw-input/2026-04-22/substack-pape-within-10-days-shortages-already-2026-04-22.md`](../../raw-input/2026-04-22/substack-pape-within-10-days-shortages-already-2026-04-22.md).
+
+Verbatim: [`raw-input/2026-04-22/substack-pape-the-first-move-has-begun-2026-04-22.md`](../../raw-input/2026-04-22/substack-pape-the-first-move-has-begun-2026-04-22.md).
+
+Refined day page: [`pape-page-2026-04-22.md`](pape-page-2026-04-22.md).
+
 ## 2026-04-21
 
 Verbatim: [`raw-input/2026-04-21/x-pape-zero-sum-escalation-ladder-2026-04-21.md`](../../raw-input/2026-04-21/x-pape-zero-sum-escalation-ladder-2026-04-21.md).
@@ -2267,3 +2275,141 @@ Refined day page: [`pape-page-2026-04-16.md`](pape-page-2026-04-16.md).
     `batch-analysis | 2026-04-18 | **Davis × Pape** (tri-mind **1**) | **Tension-first:** **`thread:davis`** **Hormuz** **/** **blockade** **/** **cost** **accrual** **+** **bargaining** **asymmetry** **vs** **`thread:pape`** **escalation-trap** **/** **binary** **(nuclear** **+** **strait** **control)** **/** **pause-not-deal** **(04-18** **X)** — **material** **plane** **vs** **structural** **theory** **plane**; **do** **not** **collapse** **AIS** **rows** **into** **zero-sum** **Judgment** **without** **tags.** | crosses:davis+pape`
     
     `batch-analysis | 2026-04-18 | **Davis × Freeman** (tri-mind **2**) | **Tension-first:** **`thread:davis`** **dual-register** **+** **Iranian** **memory** **frame** **vs** **`thread:freeman`** **career-diplomat** **staging** **(door/padlock,** **Islamabad** **performative,** **GCC/China/Lebanon** **segments**)** **—** **run** **after** **Davis×Pape**; **pin** **Freeman** **Diesen** **2026-04-18** **YT** **when** **stable.** | crosses:davis+freeman`
+
+## 2026-02-25
+
+Verbatim: [`raw-input/2026-02-25/substack-pape-the-smart-bomb-trap-2026-02-25.md`](../../raw-input/2026-02-25/substack-pape-the-smart-bomb-trap-2026-02-25.md).
+
+Refined day page: [`pape-page-2026-02-25.md`](pape-page-2026-02-25.md).
+
+## 2026-02-27
+
+Verbatim: [`raw-input/2026-02-27/substack-pape-from-kosovo-to-iran-the-smart-bomb-2026-02-27.md`](../../raw-input/2026-02-27/substack-pape-from-kosovo-to-iran-the-smart-bomb-2026-02-27.md).
+
+Refined day page: [`pape-page-2026-02-27.md`](pape-page-2026-02-27.md).
+
+## 2026-02-28
+
+Verbatim: [`raw-input/2026-02-28/substack-pape-the-illusion-of-control-2026-02-28.md`](../../raw-input/2026-02-28/substack-pape-the-illusion-of-control-2026-02-28.md).
+
+Verbatim: [`raw-input/2026-02-28/substack-pape-the-day-1-mirage-2026-02-28.md`](../../raw-input/2026-02-28/substack-pape-the-day-1-mirage-2026-02-28.md).
+
+Refined day page: [`pape-page-2026-02-28.md`](pape-page-2026-02-28.md).
+
+## 2026-03-01
+
+Verbatim: [`raw-input/2026-03-01/substack-pape-smart-bomb-trap-confirmed-decapitation-2026-03-01.md`](../../raw-input/2026-03-01/substack-pape-smart-bomb-trap-confirmed-decapitation-2026-03-01.md).
+
+Verbatim: [`raw-input/2026-03-01/substack-pape-what-vox-couldnt-publish-2026-03-01.md`](../../raw-input/2026-03-01/substack-pape-what-vox-couldnt-publish-2026-03-01.md).
+
+Refined day page: [`pape-page-2026-03-01.md`](pape-page-2026-03-01.md).
+
+## 2026-03-02
+
+Verbatim: [`raw-input/2026-03-02/substack-pape-the-escalation-ledger-iran-day-3-2026-03-02.md`](../../raw-input/2026-03-02/substack-pape-the-escalation-ledger-iran-day-3-2026-03-02.md).
+
+Refined day page: [`pape-page-2026-03-02.md`](pape-page-2026-03-02.md).
+
+## 2026-03-03
+
+Verbatim: [`raw-input/2026-03-03/substack-pape-the-air-power-illusion-2026-03-03.md`](../../raw-input/2026-03-03/substack-pape-the-air-power-illusion-2026-03-03.md).
+
+Refined day page: [`pape-page-2026-03-03.md`](pape-page-2026-03-03.md).
+
+## 2026-03-04
+
+Verbatim: [`raw-input/2026-03-04/substack-pape-the-smart-bomb-trap-is-becoming-a-dumb-bomb-2026-03-04.md`](../../raw-input/2026-03-04/substack-pape-the-smart-bomb-trap-is-becoming-a-dumb-bomb-2026-03-04.md).
+
+Refined day page: [`pape-page-2026-03-04.md`](pape-page-2026-03-04.md).
+
+## 2026-03-05
+
+Verbatim: [`raw-input/2026-03-05/substack-pape-the-nation-building-trap-2026-03-05.md`](../../raw-input/2026-03-05/substack-pape-the-nation-building-trap-2026-03-05.md).
+
+Verbatim: [`raw-input/2026-03-05/substack-pape-day-5-the-war-is-widening-from-gulf-2026-03-05.md`](../../raw-input/2026-03-05/substack-pape-day-5-the-war-is-widening-from-gulf-2026-03-05.md).
+
+Verbatim: [`raw-input/2026-03-05/substack-pape-parallel-strategic-attack-stage-ii-2026-03-05.md`](../../raw-input/2026-03-05/substack-pape-parallel-strategic-attack-stage-ii-2026-03-05.md).
+
+Refined day page: [`pape-page-2026-03-05.md`](pape-page-2026-03-05.md).
+
+## 2026-03-06
+
+Verbatim: [`raw-input/2026-03-06/substack-pape-victory-narrative-vs-escalation-reality-2026-03-06.md`](../../raw-input/2026-03-06/substack-pape-victory-narrative-vs-escalation-reality-2026-03-06.md).
+
+Verbatim: [`raw-input/2026-03-06/substack-pape-victory-narratives-are-not-noise-2026-03-06.md`](../../raw-input/2026-03-06/substack-pape-victory-narratives-are-not-noise-2026-03-06.md).
+
+Refined day page: [`pape-page-2026-03-06.md`](pape-page-2026-03-06.md).
+
+## 2026-03-07
+
+Verbatim: [`raw-input/2026-03-07/substack-pape-the-escalation-trap-widens-russias-2026-03-07.md`](../../raw-input/2026-03-07/substack-pape-the-escalation-trap-widens-russias-2026-03-07.md).
+
+Refined day page: [`pape-page-2026-03-07.md`](pape-page-2026-03-07.md).
+
+## 2026-03-08
+
+Verbatim: [`raw-input/2026-03-08/substack-pape-three-signals-to-watch-after-irans-2026-03-08.md`](../../raw-input/2026-03-08/substack-pape-three-signals-to-watch-after-irans-2026-03-08.md).
+
+Refined day page: [`pape-page-2026-03-08.md`](pape-page-2026-03-08.md).
+
+## 2026-03-09
+
+Verbatim: [`raw-input/2026-03-09/substack-pape-answers-to-questions-our-community-2026-03-09.md`](../../raw-input/2026-03-09/substack-pape-answers-to-questions-our-community-2026-03-09.md).
+
+Refined day page: [`pape-page-2026-03-09.md`](pape-page-2026-03-09.md).
+
+## 2026-03-12
+
+Verbatim: [`raw-input/2026-03-12/substack-pape-four-strategic-patterns-now-visible-2026-03-12.md`](../../raw-input/2026-03-12/substack-pape-four-strategic-patterns-now-visible-2026-03-12.md).
+
+Refined day page: [`pape-page-2026-03-12.md`](pape-page-2026-03-12.md).
+
+## 2026-03-13
+
+Verbatim: [`raw-input/2026-03-13/substack-pape-strategic-briefings-iran-war-and-2026-03-13.md`](../../raw-input/2026-03-13/substack-pape-strategic-briefings-iran-war-and-2026-03-13.md).
+
+Refined day page: [`pape-page-2026-03-13.md`](pape-page-2026-03-13.md).
+
+## 2026-03-16
+
+Verbatim: [`raw-input/2026-03-16/substack-pape-irans-new-battlefield-the-global-2026-03-16.md`](../../raw-input/2026-03-16/substack-pape-irans-new-battlefield-the-global-2026-03-16.md).
+
+Refined day page: [`pape-page-2026-03-16.md`](pape-page-2026-03-16.md).
+
+## 2026-03-23
+
+Verbatim: [`raw-input/2026-03-23/substack-pape-the-questions-that-matter-now-2026-03-23.md`](../../raw-input/2026-03-23/substack-pape-the-questions-that-matter-now-2026-03-23.md).
+
+Refined day page: [`pape-page-2026-03-23.md`](pape-page-2026-03-23.md).
+
+## 2026-03-24
+
+Verbatim: [`raw-input/2026-03-24/substack-pape-trumps-words-dont-predict-war-his-2026-03-24.md`](../../raw-input/2026-03-24/substack-pape-trumps-words-dont-predict-war-his-2026-03-24.md).
+
+Verbatim: [`raw-input/2026-03-24/substack-pape-the-gamblers-conceit-in-war-2026-03-24.md`](../../raw-input/2026-03-24/substack-pape-the-gamblers-conceit-in-war-2026-03-24.md) **(**paid** **tier** **;** **operator** **paste** **)** **.**
+
+Refined day page: [`pape-page-2026-03-24.md`](pape-page-2026-03-24.md).
+
+## 2026-03-25
+
+Verbatim: [`raw-input/2026-03-25/substack-pape-why-iran-prefers-vance-2026-03-25.md`](../../raw-input/2026-03-25/substack-pape-why-iran-prefers-vance-2026-03-25.md).
+
+Refined day page: [`pape-page-2026-03-25.md`](pape-page-2026-03-25.md).
+
+## 2026-03-27
+
+Verbatim: [`raw-input/2026-03-27/substack-pape-the-marine-threshold-5000-marines-2026-03-27.md`](../../raw-input/2026-03-27/substack-pape-the-marine-threshold-5000-marines-2026-03-27.md).
+
+Refined day page: [`pape-page-2026-03-27.md`](pape-page-2026-03-27.md).
+
+## 2026-03-29
+
+Verbatim: [`raw-input/2026-03-29/substack-pape-vietnam-shows-exactly-when-air-wars-2026-03-29.md`](../../raw-input/2026-03-29/substack-pape-vietnam-shows-exactly-when-air-wars-2026-03-29.md).
+
+Refined day page: [`pape-page-2026-03-29.md`](pape-page-2026-03-29.md).
+
+## 2026-04-02
+
+Verbatim: [`raw-input/2026-04-02/substack-pape-trump-accelerated-the-crisis-2026-04-02.md`](../../raw-input/2026-04-02/substack-pape-trump-accelerated-the-crisis-2026-04-02.md).
+
+Refined day page: [`pape-page-2026-04-02.md`](pape-page-2026-04-02.md).

@@ -1,6 +1,6 @@
 ---
 ingest_date: 2026-04-20
-aired_date: 2026-04-20
+published_date: 2026-04-20
 thread: pape
 source_url: https://www.youtube.com/watch?v=WemB-vfoMaw
 kind: transcript
