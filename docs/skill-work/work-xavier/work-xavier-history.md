@@ -74,6 +74,7 @@
 
 ### 2026-04-08
 
+- **Cici Telegram bot — Tier C advisor note:** [evidence/cici-telegram-bot-tier-c-advisor-note-2026-04-08.md](evidence/cici-telegram-bot-tier-c-advisor-note-2026-04-08.md) — auto-injected MCP `search` on branch [`claude/telegram-bot-integration-Dvbdw`](https://github.com/Xavier-x01/Cici/tree/claude/telegram-bot-integration-Dvbdw) inherits **recall-as-context** risk; align with companion **no retrieval-as-truth**; optional `CICI_SYSTEM` tightening ([`ba709f3`](https://github.com/Xavier-x01/Cici/commit/ba709f37897b32168fb72ea628bed69a1163c114)). [INDEX.md](INDEX.md) row + [xavier-progress-log.md](xavier-progress-log.md) evidence index.
 - **xavier-journal:** Added [xavier-journal/README.md](xavier-journal/README.md) (OB1 learning log — WORK) and [xavier-journal/2026-04-06.md](xavier-journal/2026-04-06.md) (Day 1 seed entry, anchor 2026-04-06). [INDEX.md](INDEX.md) row.
 - **Evidence — GitHub profile:** [evidence/github-profile-xavier-x01-2026-04-08.png](evidence/github-profile-xavier-x01-2026-04-08.png) + [evidence/github-profile-ingest-2026-04-08.md](evidence/github-profile-ingest-2026-04-08.md) — public [@Xavier-x01](https://github.com/xavier-x01), repo list + disambiguation vs grace-mar `work-xavier/` advisor folder. [xavier-progress-log.md](xavier-progress-log.md) index + burst updated.
 

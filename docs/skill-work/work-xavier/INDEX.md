@@ -2,6 +2,7 @@
 
 | Doc | Role |
 |-----|------|
+| [evidence/cici-telegram-bot-tier-c-advisor-note-2026-04-08.md](evidence/cici-telegram-bot-tier-c-advisor-note-2026-04-08.md) | **Advisor note** — Telegram bot auto-injected MCP `search` = Tier C recall; strengthen `CICI_SYSTEM` / abstention vs public promises |
 | [evidence/cici-rtf-session-ingest-2026-04-26-productive-feature-source-priority.md](evidence/cici-rtf-session-ingest-2026-04-26-productive-feature-source-priority.md) | **Cici session RTF** — source-priority `policy.json` PR [#3](https://github.com/Xavier-x01/Cici/pull/3) [`4dba0f3`](https://github.com/Xavier-x01/Cici/commit/4dba0f3); `main` [`3b25703`](https://github.com/Xavier-x01/Cici/commit/3b25703) |
 | [evidence/cici-neural-sandbox-pt2-rtf-ingest-2026-04-21.md](evidence/cici-neural-sandbox-pt2-rtf-ingest-2026-04-21.md) | **Neural Sandbox pt.2** — Technical Onboarding draft (prereqs, fork Cici); RTF |
 | [evidence/cici-neural-sandbox-rtf-ingest-2026-04-21.md](evidence/cici-neural-sandbox-rtf-ingest-2026-04-21.md) | **Neural Sandbox Telegram (2026-04-21)** — rules + onboarding RTF; `main` unchanged vs `b02b5da` |
