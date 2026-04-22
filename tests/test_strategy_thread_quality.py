@@ -77,7 +77,11 @@ def _write_transcript(notebook_dir: Path, expert_id: str, dates: dict[str, list[
 
 def _write_thread(notebook_dir: Path, expert_id: str, machine_lines: list[str]) -> None:
     _expert_dir(notebook_dir, expert_id)
-    inner = "\n".join(machine_lines) if machine_lines else "_(No transcript or knot material for extraction.)_"
+    inner = (
+        "\n".join(machine_lines)
+        if machine_lines
+        else "_(No transcript, page, or knot material for extraction.)_"
+    )
     (notebook_dir / "experts" / expert_id / "thread.md").write_text(
         f"# Expert thread — `{expert_id}`\n\n"
         f"{THREAD_MARKER_START}\n"

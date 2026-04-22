@@ -1,6 +1,6 @@
 # Strategy expert — templates (WORK only)
 
-**Single source** for the **four** on-disk files each commentator uses (profile, thread, transcript, **mind**). When adding someone new, either copy **each** section below into its own file (name on the section heading) or run `python3 scripts/expand_strategy_expert_template.py --expert-id <slug> [--full-name "..."]` from the repo root (`--dry-run` to preview). `validate_expert_profiles.py` validates real `strategy-expert-<id>.md` profiles only (this bundle file is skipped; `-mind.md` companions are skipped too). `validate_strategy_expert_threads.py` checks on-disk `experts/<id>/thread.md` (or flat `strategy-expert-<id>-thread.md`) **journal-layer** month blocks (prose vs list-only hints, and **≥500 words** of **prose + blockquotes** per `## YYYY-MM` unless opted out — **verbatim-forward** policy). Use `--month MM` (`01`–`12`) to scope checks to one calendar month across all expert-thread files; omit for a full audit.
+**Single source** for the **four** on-disk files each commentator uses (profile, thread, transcript, **mind**). When adding someone new, either copy **each** section below into its own file (name on the section heading) or run `python3 scripts/expand_strategy_expert_template.py --expert-id <slug> [--full-name "..."]` from the repo root (`--dry-run` to preview). `validate_expert_profiles.py` validates real `strategy-expert-<id>.md` profiles only (this bundle file is skipped; `-mind.md` companions are skipped too). `validate_strategy_expert_threads.py` checks on-disk **`experts/<id>/thread.md`**, **`experts/<id>/<id>-thread-YYYY-MM.md`** (and flat `strategy-expert-<id>-thread.md` / `…-thread-YYYY-MM.md`) **journal-layer** month blocks (prose vs list-only hints, and **≥500 words** of **prose + blockquotes** per `## YYYY-MM` unless opted out — **verbatim-forward** policy). Use `--month MM` (`01`–`12`) to scope checks to one calendar month across all expert-thread files; omit for a full audit.
 
 **Voice tier policy (defaults):** Tier **B** — compact **voice fingerprint** in profile — is the default once **`thread:`** ingests support it (typically ≥2 month blocks with ingest lines). Tier **C** — roster index + minimal profile — applies to **sparse** lanes until promoted. Tier **A** — long-form fingerprint in **`strategy-expert-<id>-mind.md`** (and/or legacy **`minds/CIV-MIND-*** for Tri-Frame). Numeric promotion defaults and **last reviewed** discipline live under [Profile → **Voice fingerprint (compact)**](#voice-fingerprint-compact).
 
@@ -126,7 +126,7 @@ _Omit or leave “roster-only (Tier C)” until **`thread:`** density supports a
 
 <a id="thread-template"></a>
 
-## Thread → `strategy-expert-<expert_id>-thread.md`
+## Thread → `strategy-expert-<expert_id>-thread.md` (or `experts/<expert_id>/<expert_id>-thread-YYYY-MM.md`)
 
 # Expert thread — `<expert_id>`
 
@@ -143,13 +143,13 @@ WORK only; not Record.
 
 _Write here in full sentences. Dated arcs are welcome (e.g. **2026-04-12 → 04-15**). Cover: what this voice did this week, how it **intersects** named **knots**, convergence/tension with other **`thread:`** experts, and **Open** pins. The **journal layer** is **not** overwritten by the **`thread`** script._
 
-**Layout:** Stay on **one** `strategy-expert-<expert_id>-thread.md` file. Within the **journal layer**, each **`## YYYY-MM`** heading is a **month segment**. For **2026:** **Segment 1** = January (`## 2026-01`), **Segment 2** = February (`## 2026-02`), **Segment 3** = March (`## 2026-03`), **Segment 4** = April (`## 2026-04`, ongoing). The **machine layer** (script-maintained) is **only** the fenced block between the **strategy-expert-thread** HTML start and end comments — do not call that “Segment 2” in the month sense.
+**Layout:** **Legacy:** one **`experts/<expert_id>/thread.md`** (or flat `strategy-expert-<expert_id>-thread.md`) with multiple **`## YYYY-MM`** segments. **Monthly chapters (preferred for large journals):** one file per month — **`experts/<expert_id>/<expert_id>-thread-YYYY-MM.md`** (optional flat **`strategy-expert-<expert_id>-thread-YYYY-MM.md`**). In each monthly file the journal covers **that month only**; an optional **`## YYYY-MM`** heading matching the filename keeps grep / validator continuity. For **2026** in a **single** legacy file: **Segment 1** = January (`## 2026-01`), **Segment 2** = February, **Segment 3** = March, **Segment 4** = April (ongoing). The **machine layer** (script-maintained) is **only** the fenced block between the **strategy-expert-thread** HTML start and end comments — do not call that “Segment 2” in the month sense.
 
 _(No narrative distillation yet — add prose above the markers, not inside them.)_
 
 ### Thread-embedded `strategy-page` blocks (journal layer)
 
-Woven pages use the scaffold in [strategy-page-template.md](strategy-page-template.md): marker-fenced **`<!-- strategy-page:start` … `end` →`** under the correct **`## YYYY-MM`** in **`experts/<expert_id>/thread.md`** (same layout as this template’s **Thread** section when using the per-folder model). After edits, run **`python3 scripts/validate_strategy_pages.py`** from repo root (optional **`--strict-prose`** per that template’s **Machine checks**). Full section rules, optional **`### Technical appendix`**, and shared-`id` peer guidance live in **strategy-page-template.md** — not duplicated here.
+Woven pages use the scaffold in [strategy-page-template.md](strategy-page-template.md): marker-fenced **`<!-- strategy-page:start` … `end` →`** under the correct **`## YYYY-MM`** in the **thread file for that month** — e.g. **`experts/<expert_id>/<expert_id>-thread-YYYY-MM.md`** (or legacy **`thread.md`** when still on a single file). After edits, run **`python3 scripts/validate_strategy_pages.py`** from repo root (optional **`--strict-prose`** per that template’s **Machine checks**). Full section rules, optional **`### Technical appendix`**, and shared-`id` peer guidance live in **strategy-page-template.md** — not duplicated here.
 
 **Optional journal-layer extensions (still above the thread start HTML comment):**
 
@@ -175,7 +175,7 @@ _(Populated by `strategy_expert_corpus.py` / `strategy_thread.py` when transcrip
 
 _(Populated when knot index references this expert.)_
 
-_(No transcript or knot material for extraction.)_
+_(No transcript, page, or knot material for extraction.)_
 
 <!-- strategy-expert-thread:end -->
 
@@ -204,6 +204,8 @@ WORK only; not Record.
 **Retention:** 7-day rolling window; date sections older than 7 days are pruned automatically.
 **Editing:** Operator may lightly edit for clarity after triage. Edits are preserved across triage runs (append-only, not overwrite).
 **Companion files:** [`strategy-expert-<expert_id>.md`](strategy-expert-template.md#profile-template) (profile), [`strategy-expert-<expert_id>-thread.md`](strategy-expert-template.md#thread-template) (distilled thread), and [`strategy-expert-<expert_id>-mind.md`](strategy-expert-template.md#mind-template) (optional long-form mind).
+
+**Optional refined day page (same folder):** `experts/<expert_id>/<expert_id>-page-YYYY-MM-DD.md` (e.g. Mercouris: `mercouris-page-2026-04-21.md`) — Signal / Judgment / Open artifact; **not** a substitute for full **verbatim** in [`raw-input/`](raw-input/README.md). Distinct from **`strategy-page`** fences in the expert **thread file(s)** unless you mirror judgment during EOD compose.
 
 <a id="thesis-scaffold-pattern"></a>
 

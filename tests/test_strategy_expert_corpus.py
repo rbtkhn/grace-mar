@@ -2,12 +2,15 @@
 
 from __future__ import annotations
 
+import re
 from datetime import date
 from pathlib import Path
 
 from scripts.strategy_expert_corpus import (
     CANONICAL_EXPERT_IDS,
     extract_thread_ingests,
+    month_thread_paths_by_month,
+    parse_transcript_by_month,
     rebuild_threads,
     render_thread_extraction,
 )
@@ -83,3 +86,45 @@ def test_rebuild_threads_returns_one_path_per_canonical_expert(tmp_path: Path) -
     paths = rebuild_threads(out_dir=tmp_path, knot_index_path=knot, dry_run=True)
     assert len(paths) == len(CANONICAL_EXPERT_IDS)
     assert all(p.name == "thread.md" for p in paths)
+
+
+def test_rebuild_threads_monthly_extra_paths_for_expert_with_month_files(tmp_path: Path) -> None:
+    knot = tmp_path / "knot-index.yaml"
+    knot.write_text("knots: []\n", encoding="utf-8")
+    nb = tmp_path
+    eid = "pape"
+    d = nb / "experts" / eid
+    d.mkdir(parents=True)
+    (d / f"{eid}-thread-2026-04.md").write_text(
+        "# Expert thread\n\n## 2026-04\n\n"
+        "<!-- strategy-expert-thread:start -->\n"
+        "x\n<!-- strategy-expert-thread:end -->\n",
+        encoding="utf-8",
+    )
+    (d / "transcript.md").write_text(
+        "# t\n\n"
+        "<!-- Triage appends new date sections below. Do not add content above this line. -->\n\n"
+        "## 2026-04-14\n- line a\n",
+        encoding="utf-8",
+    )
+    for other in CANONICAL_EXPERT_IDS:
+        if other == eid:
+            continue
+        od = nb / "experts" / other
+        od.mkdir(parents=True)
+        (od / "thread.md").write_text(
+            "<!-- strategy-expert-thread:start -->\n"
+            "<!-- strategy-expert-thread:end -->\n",
+            encoding="utf-8",
+        )
+
+    paths = rebuild_threads(out_dir=nb, knot_index_path=knot, dry_run=True)
+    assert len(paths) == len(CANONICAL_EXPERT_IDS)
+    month_re = re.compile(r"-thread-\d{4}-\d{2}\.md$")
+    pape_monthly = [p for p in paths if p.parent.name == eid and month_re.search(p.name)]
+    assert len(pape_monthly) == 1
+    assert not any(p.name == "thread.md" for p in paths if p.parent.name == eid)
+    assert month_thread_paths_by_month(nb, eid) == {"2026-04": d / f"{eid}-thread-2026-04.md"}
+    by_m = parse_transcript_by_month(d / "transcript.md")
+    assert "2026-04" in by_m
+    assert any("line a" in ln for ln in by_m["2026-04"])

@@ -156,6 +156,36 @@ class TestPageReader:
         assert pape_pages[0].expert_id == "pape"
         assert ritter_pages[0].expert_id == "ritter"
 
+    def test_discover_all_pages_aggregates_monthly_thread_files(self, tmp_path: Path):
+        from strategy_page_reader import discover_all_pages
+
+        nb = tmp_path / "nb"
+        eid = "pape"
+        d = nb / "experts" / eid
+        d.mkdir(parents=True)
+        fence_march = (
+            '<!-- strategy-page:start id="march-only" date="2026-03-15" watch="" -->\n'
+            "### Page: march-only\n<!-- strategy-page:end -->"
+        )
+        (d / f"{eid}-thread-2026-03.md").write_text(
+            f"## 2026-03\n\n{fence_march}\n\n"
+            "<!-- strategy-expert-thread:start -->\n<!-- strategy-expert-thread:end -->\n",
+            encoding="utf-8",
+        )
+        fence_april = (
+            '<!-- strategy-page:start id="april-only" date="2026-04-01" watch="" -->\n'
+            "### Page: april-only\n<!-- strategy-page:end -->"
+        )
+        (d / f"{eid}-thread-2026-04.md").write_text(
+            f"## 2026-04\n\n{fence_april}\n\n"
+            "<!-- strategy-expert-thread:start -->\n<!-- strategy-expert-thread:end -->\n",
+            encoding="utf-8",
+        )
+        all_p = discover_all_pages(nb)
+        assert eid in all_p
+        ids = {p.id for p in all_p[eid]}
+        assert ids == {"march-only", "april-only"}
+
 
 # ---------------------------------------------------------------------------
 # Page composition (strategy_page.py)
@@ -207,6 +237,30 @@ class TestPageComposer:
         text = thread_path.read_text(encoding="utf-8")
         assert '<!-- strategy-page:start id="new-page"' in text
         assert text.index("new-page") < text.index("strategy-expert-thread:start")
+
+    def test_insert_page_targets_monthly_thread_file(self, tmp_path: Path):
+        from strategy_expert_corpus import thread_path_for_page_month
+        from strategy_page import insert_page
+
+        nb = tmp_path / "nb"
+        eid = "pape"
+        d = nb / "experts" / eid
+        d.mkdir(parents=True)
+        (d / f"{eid}-thread-2026-04.md").write_text(
+            "# Expert thread\n\n## 2026-04\n\n"
+            "<!-- strategy-expert-thread:start -->\n"
+            "<!-- strategy-expert-thread:end -->\n",
+            encoding="utf-8",
+        )
+        tp = thread_path_for_page_month(nb, eid, "2026-04")
+        assert tp == d / f"{eid}-thread-2026-04.md"
+        page_block = (
+            '<!-- strategy-page:start id="monthly-page" date="2026-04-20" watch="" -->\n'
+            "### Page: monthly-page\n<!-- strategy-page:end -->"
+        )
+        insert_page(tp, "2026-04", page_block, dry_run=False)
+        text = tp.read_text(encoding="utf-8")
+        assert 'id="monthly-page"' in text
 
 
 # ---------------------------------------------------------------------------

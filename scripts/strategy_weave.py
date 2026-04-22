@@ -35,6 +35,7 @@ from strategy_expert_corpus import (
     THREAD_MARKER_START,
     _EXPERT_IDS_SET,
     expert_paths,
+    expert_thread_paths_for_discovery,
     read_transcript_content,
 )
 from strategy_page_reader import (
@@ -154,16 +155,19 @@ def _extract_machine_layer(experts: list[str], notebook_dir: Path) -> dict[str, 
     """Read the machine layer extraction from expert thread files."""
     result: dict[str, str] = {}
     for eid in experts:
-        tp = expert_paths(eid, notebook_dir)["thread"]
-        if not tp.is_file():
-            continue
-        text = tp.read_text(encoding="utf-8")
-        if THREAD_MARKER_START in text and THREAD_MARKER_END in text:
-            _, after = text.split(THREAD_MARKER_START, 1)
-            inner, _ = after.split(THREAD_MARKER_END, 1)
-            stripped = inner.strip()
-            if stripped:
-                result[eid] = stripped
+        chunks: list[str] = []
+        for tp in expert_thread_paths_for_discovery(notebook_dir, eid):
+            if not tp.is_file():
+                continue
+            text = tp.read_text(encoding="utf-8")
+            if THREAD_MARKER_START in text and THREAD_MARKER_END in text:
+                _, after = text.split(THREAD_MARKER_START, 1)
+                inner, _ = after.split(THREAD_MARKER_END, 1)
+                stripped = inner.strip()
+                if stripped:
+                    chunks.append(stripped)
+        if chunks:
+            result[eid] = "\n\n".join(chunks)
     return result
 
 

@@ -16,6 +16,9 @@ import sys
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(REPO_ROOT / "scripts"))
+
+from strategy_expert_corpus import RE_IN_FOLDER_MONTH_THREAD  # noqa: E402
 
 DEFAULT_DIR = (
     REPO_ROOT
@@ -71,6 +74,15 @@ def _extract_headings(text: str) -> set[str]:
     return headings
 
 
+def _has_thread_companion(expert_dir: Path, expert_id: str) -> bool:
+    if (expert_dir / "thread.md").is_file():
+        return True
+    return any(
+        p.is_file() and RE_IN_FOLDER_MONTH_THREAD.match(p.name)
+        for p in expert_dir.glob(f"{expert_id}-thread-*.md")
+    )
+
+
 def _validate_voice_profile(path: Path, text: str, headings: set[str]) -> list[str]:
     """Lighter schema for official-voice folders under `voices/*/profile.md`."""
     errs: list[str] = []
@@ -78,9 +90,11 @@ def _validate_voice_profile(path: Path, text: str, headings: set[str]) -> list[s
         found = any(req.lower() in h.lower() for h in headings)
         if not found:
             errs.append(f"missing required heading: {req!r}")
-    thread_path = path.parent / "thread.md"
-    if not thread_path.is_file():
-        errs.append(f"companion file missing: {thread_path}")
+    if not _has_thread_companion(path.parent, path.parent.name):
+        errs.append(
+            f"companion thread missing (expected thread.md or "
+            f"{path.parent.name}-thread-YYYY-MM.md under {path.parent})"
+        )
     return errs
 
 
@@ -110,13 +124,18 @@ def validate_expert_file(path: Path) -> list[str]:
             )
 
     if path.name == "profile.md" and path.parent.parent.name == "experts":
-        thread_path = path.parent / "thread.md"
+        expert_id = path.parent.name
         transcript_path = path.parent / "transcript.md"
+        if not _has_thread_companion(path.parent, expert_id):
+            errs.append(
+                f"companion thread missing (expected thread.md or "
+                f"{expert_id}-thread-YYYY-MM.md under {path.parent})"
+            )
     else:
         thread_path = path.parent / path.name.replace(".md", "-thread.md")
         transcript_path = path.parent / path.name.replace(".md", "-transcript.md")
-    if not thread_path.is_file():
-        errs.append(f"companion file missing: {thread_path}")
+        if not thread_path.is_file():
+            errs.append(f"companion file missing: {thread_path}")
 
     if not transcript_path.is_file():
         print(

@@ -86,14 +86,15 @@ def discover_pages(thread_path: Path, expert_id: str = "") -> list[PageBlock]:
 
 def discover_all_pages(notebook_dir: Path) -> dict[str, list[PageBlock]]:
     """Scan all expert thread files and return ``{expert_id: [pages]}``."""
-    from strategy_expert_corpus import CANONICAL_EXPERT_IDS, expert_paths
+    from strategy_expert_corpus import CANONICAL_EXPERT_IDS, expert_thread_paths_for_discovery
 
     result: dict[str, list[PageBlock]] = {}
     for expert_id in CANONICAL_EXPERT_IDS:
-        thread_path = expert_paths(expert_id, notebook_dir)["thread"]
-        pages = discover_pages(thread_path, expert_id=expert_id)
-        if pages:
-            result[expert_id] = pages
+        combined: list[PageBlock] = []
+        for thread_path in expert_thread_paths_for_discovery(notebook_dir, expert_id):
+            combined.extend(discover_pages(thread_path, expert_id=expert_id))
+        if combined:
+            result[expert_id] = combined
     return result
 
 

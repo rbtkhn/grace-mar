@@ -25,7 +25,14 @@ import sys
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(REPO / "scripts"))
 NOTEBOOK = REPO / "docs/skill-work/work-strategy/strategy-notebook"
+
+from strategy_expert_corpus import (  # noqa: E402
+    RE_FLAT_MONTH_THREAD,
+    RE_IN_FOLDER_MONTH_THREAD,
+    collect_strategy_thread_paths,
+)
 MARKER_START = "<!-- strategy-expert-thread:start -->"
 # Split only on marker as its own line — never match the substring inside **Process:** prose.
 MARKER_BLOCK_START = "\n" + MARKER_START + "\n"
@@ -45,7 +52,7 @@ def canonical_process_updated() -> str:
     )
 
 
-def canonical_journal_intro(expert_id: str) -> str:
+def canonical_journal_intro(expert_id: str, *, month_ym: str | None = None) -> str:
     lines: list[str] = [
         "## Journal layer — Narrative (operator)",
         "",
@@ -54,15 +61,29 @@ def canonical_journal_intro(expert_id: str) -> str:
         "convergence/tension with other **`thread:`** experts, and **Open** pins. "
         "The **journal layer** is **not** overwritten by the **`thread`** script._",
         "",
-        "**Layout:** Stay on **one** `strategy-expert-"
-        f"{expert_id}-thread.md` file. Within the **journal layer**, each **`## YYYY-MM`** "
-        "heading is a **month segment**. For **2026:** **Segment 1** = January (`## 2026-01`), "
-        "**Segment 2** = February (`## 2026-02`), **Segment 3** = March (`## 2026-03`), "
-        "**Segment 4** = April (`## 2026-04`, ongoing). The **machine layer** (script-maintained) "
-        "is **only** the fenced block between the **strategy-expert-thread** HTML start and end "
-        'comments — do not call that "Segment 2" in the month sense.',
-        "",
     ]
+    if month_ym:
+        lines += [
+            "**Layout:** This file is **one calendar month** "
+            f"(`{month_ym}`): `experts/{expert_id}/{expert_id}-thread-{month_ym}.md` "
+            "(or flat `strategy-expert-"
+            f"{expert_id}-thread-{month_ym}.md`). Optional **`## {month_ym}`** matches the "
+            "filename for grep / validators. The **machine layer** (script-maintained) is **only** "
+            "the fenced block between the **strategy-expert-thread** HTML start and end comments.",
+            "",
+        ]
+    else:
+        lines += [
+            "**Layout:** Stay on **one** `strategy-expert-"
+            f"{expert_id}-thread.md` file (or legacy `experts/{expert_id}/thread.md`). "
+            "Within the **journal layer**, each **`## YYYY-MM`** "
+            "heading is a **month segment**. For **2026:** **Segment 1** = January (`## 2026-01`), "
+            "**Segment 2** = February (`## 2026-02`), **Segment 3** = March (`## 2026-03`), "
+            "**Segment 4** = April (`## 2026-04`, ongoing). The **machine layer** (script-maintained) "
+            "is **only** the fenced block between the **strategy-expert-thread** HTML start and end "
+            'comments — do not call that "Segment 2" in the month sense.',
+            "",
+        ]
     if expert_id == "pape":
         lines += [
             "**Expert note (pape):** **`## 2026-04`** may also hold a partial-month ledger + "
@@ -82,7 +103,8 @@ def canonical_journal_intro(expert_id: str) -> str:
         "**Optional journal-layer extensions (still above the thread start HTML comment):**",
         "",
         "- **`## YYYY-MM` month headings** — each heading opens **one month-segment** of the "
-        "readable journal (quarter-scale or ongoing). **Default:** **at least ~500 words** of "
+        "readable journal (one segment per file when using **monthly thread files**). "
+        "**Default:** **at least ~500 words** of "
         "**prose** per month-segment (words on non-bullet substantive lines; see "
         "`validate_strategy_expert_threads.py`), then optional bullets. A short lede alone is not "
         "enough when tooling expects a full segment. Bullet stacks with `[strength: …]` hooks are "
@@ -188,13 +210,24 @@ def rebuild_preamble(old_preamble: str, expert_id: str) -> str:
 
 
 def process_file(path: Path, apply: bool) -> bool:
-    if path.name == "thread.md" and path.parent.parent.name == "experts":
+    month_ym: str | None = None
+    if path.name == "thread.md" and path.parent.parent.name in ("experts", "voices"):
         expert_id = path.parent.name
     else:
         m = re.match(r"^strategy-expert-(.+)-thread\.md$", path.name)
-        if not m:
-            return False
-        expert_id = m.group(1)
+        if m:
+            expert_id = m.group(1)
+        else:
+            m2 = RE_IN_FOLDER_MONTH_THREAD.match(path.name)
+            if m2 and m2.group(1) == path.parent.name:
+                expert_id = m2.group(1)
+                month_ym = m2.group(2)
+            else:
+                m3 = RE_FLAT_MONTH_THREAD.match(path.name)
+                if not m3:
+                    return False
+                expert_id = m3.group(1)
+                month_ym = m3.group(2)
     text = path.read_text(encoding="utf-8")
     parts = split_file(text)
     if parts is None:
@@ -202,7 +235,7 @@ def process_file(path: Path, apply: bool) -> bool:
         return False
     preamble_old, month_onward, machine_suffix = parts
     preamble_new = rebuild_preamble(preamble_old, expert_id)
-    intro = canonical_journal_intro(expert_id)
+    intro = canonical_journal_intro(expert_id, month_ym=month_ym)
     new_text = preamble_new + intro
     if month_onward.strip():
         new_text += month_onward.rstrip() + "\n"
@@ -224,9 +257,7 @@ def main() -> int:
     )
     args = ap.parse_args()
     updated = 0
-    paths = sorted(NOTEBOOK.glob("experts/*/thread.md"))
-    if not paths:
-        paths = sorted(NOTEBOOK.glob("strategy-expert-*-thread.md"))
+    paths = collect_strategy_thread_paths(NOTEBOOK)
     for path in paths:
         if process_file(path, args.apply):
             updated += 1

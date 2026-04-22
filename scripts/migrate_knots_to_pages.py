@@ -30,6 +30,7 @@ from strategy_expert_corpus import (
     THREAD_MARKER_START,
     _EXPERT_IDS_SET,
     expert_paths,
+    thread_path_for_page_month,
 )
 
 NOTEBOOK_DIR = (
@@ -352,7 +353,12 @@ def phase_pages(dry_run: bool) -> list[str]:
             continue
 
         for expert_id in experts:
-            thread_path = expert_paths(expert_id, NOTEBOOK_DIR)["thread"]
+            if len(knot_date) >= 7 and knot_date[4] == "-":
+                thread_path = thread_path_for_page_month(
+                    NOTEBOOK_DIR, expert_id, knot_date[:7]
+                )
+            else:
+                thread_path = expert_paths(expert_id, NOTEBOOK_DIR)["thread"]
             if thread_path.is_file():
                 existing = thread_path.read_text(encoding="utf-8")
                 if _page_id_in_thread(existing, knot_label):

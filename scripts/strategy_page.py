@@ -30,7 +30,7 @@ from strategy_expert_corpus import (
     CANONICAL_EXPERT_IDS,
     THREAD_MARKER_START,
     _EXPERT_IDS_SET,
-    expert_paths,
+    thread_path_for_page_month,
 )
 from strategy_page_reader import discover_pages
 
@@ -212,7 +212,7 @@ def main() -> int:
             current_expert=eid,
             inbox_lines=inbox_lines,
         )
-        thread_path = expert_paths(eid, args.notebook)["thread"]
+        thread_path = thread_path_for_page_month(args.notebook, eid, month)
         result = insert_page(thread_path, month, page_block, args.dry_run)
         print(f"  {result}")
 

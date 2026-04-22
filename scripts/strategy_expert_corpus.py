@@ -83,6 +83,13 @@ _EXPERT_IDS_SET = frozenset(CANONICAL_EXPERT_IDS)
 THREAD_MARKER_START = "<!-- strategy-expert-thread:start -->"
 THREAD_MARKER_END = "<!-- strategy-expert-thread:end -->"
 
+# Monthly thread chapters: ``experts/<id>/<id>-thread-YYYY-MM.md`` (and optional flat
+# ``strategy-expert-<id>-thread-YYYY-MM.md``). Journal: that month only; optional ``## YYYY-MM``
+# heading matching the filename for validators / grep.
+RE_IN_FOLDER_MONTH_THREAD = re.compile(r"^(.+)-thread-(\d{4}-\d{2})\.md$")
+RE_FLAT_MONTH_THREAD = re.compile(r"^strategy-expert-(.+)-thread-(\d{4}-\d{2})\.md$")
+RE_TRANSCRIPT_DATE_SECTION = re.compile(r"^##\s+(\d{4}-\d{2}-\d{2})\s*$")
+
 
 def expert_paths(expert_id: str, notebook_dir: Path) -> dict[str, Path]:
     """Resolve per-expert file paths under ``experts/<id>/``."""
@@ -93,6 +100,135 @@ def expert_paths(expert_id: str, notebook_dir: Path) -> dict[str, Path]:
         "thread": base / "thread.md",
         "mind": base / "mind.md",
     }
+
+
+def expert_id_from_thread_path(path: Path) -> str | None:
+    """Resolve ``expert_id`` from a thread file path (folder, flat, or monthly)."""
+    if path.name == "thread.md" and path.parent.parent.name in ("experts", "voices"):
+        return path.parent.name
+    m = re.match(r"^strategy-expert-(.+)-thread\.md$", path.name)
+    if m:
+        return m.group(1)
+    m = RE_FLAT_MONTH_THREAD.match(path.name)
+    if m:
+        return m.group(1)
+    m = RE_IN_FOLDER_MONTH_THREAD.match(path.name)
+    if m and path.parent.name == m.group(1):
+        return m.group(1)
+    return None
+
+
+def month_thread_paths_by_month(notebook_dir: Path, expert_id: str) -> dict[str, Path]:
+    """Map ``YYYY-MM`` → thread path; prefer ``experts/<id>/`` over flat root."""
+    by_m: dict[str, Path] = {}
+    expert_dir = notebook_dir / "experts" / expert_id
+    if expert_dir.is_dir():
+        for p in expert_dir.glob(f"{expert_id}-thread-*.md"):
+            m = RE_IN_FOLDER_MONTH_THREAD.match(p.name)
+            if m and m.group(1) == expert_id:
+                by_m[m.group(2)] = p
+    for p in notebook_dir.glob(f"strategy-expert-{expert_id}-thread-*.md"):
+        m = RE_FLAT_MONTH_THREAD.match(p.name)
+        if m:
+            ym = m.group(2)
+            if ym not in by_m:
+                by_m[ym] = p
+    return {k: by_m[k] for k in sorted(by_m.keys())}
+
+
+def uses_monthly_thread_layout(notebook_dir: Path, expert_id: str) -> bool:
+    return bool(month_thread_paths_by_month(notebook_dir, expert_id))
+
+
+def expert_thread_paths_for_discovery(notebook_dir: Path, expert_id: str) -> list[Path]:
+    """Ordered thread paths for page discovery / validation (monthly or legacy)."""
+    mmap = month_thread_paths_by_month(notebook_dir, expert_id)
+    if mmap:
+        return [mmap[k] for k in sorted(mmap.keys())]
+    legacy = notebook_dir / "experts" / expert_id / "thread.md"
+    if legacy.is_file():
+        return [legacy]
+    flat = notebook_dir / f"strategy-expert-{expert_id}-thread.md"
+    if flat.is_file():
+        return [flat]
+    return [legacy]
+
+
+def collect_strategy_thread_paths(notebook_dir: Path) -> list[Path]:
+    """All thread files: legacy, monthly in-folder, monthly flat (for validate / sync)."""
+    out: list[Path] = []
+    seen: set[Path] = set()
+
+    def add(p: Path) -> None:
+        resolved = p.resolve()
+        if resolved not in seen:
+            seen.add(resolved)
+            out.append(p)
+
+    for p in sorted(notebook_dir.glob("experts/*/thread.md")):
+        add(p)
+    for p in sorted(notebook_dir.glob("voices/*/thread.md")):
+        add(p)
+    for d in sorted(notebook_dir.glob("experts/*")):
+        if d.is_dir():
+            eid = d.name
+            for p in sorted(d.glob(f"{eid}-thread-*.md")):
+                if RE_IN_FOLDER_MONTH_THREAD.match(p.name):
+                    add(p)
+    for d in sorted(notebook_dir.glob("voices/*")):
+        if d.is_dir():
+            eid = d.name
+            for p in sorted(d.glob(f"{eid}-thread-*.md")):
+                if RE_IN_FOLDER_MONTH_THREAD.match(p.name):
+                    add(p)
+    for p in sorted(notebook_dir.glob("strategy-expert-*-thread.md")):
+        add(p)
+    for p in sorted(notebook_dir.glob("strategy-expert-*-thread-*.md")):
+        if RE_FLAT_MONTH_THREAD.match(p.name):
+            add(p)
+    return out
+
+
+def thread_path_for_page_month(notebook_dir: Path, expert_id: str, page_month_yyyy_mm: str) -> Path:
+    """Target thread file for a ``strategy-page`` dated in ``page_month_yyyy_mm``."""
+    mmap = month_thread_paths_by_month(notebook_dir, expert_id)
+    if mmap:
+        if page_month_yyyy_mm in mmap:
+            return mmap[page_month_yyyy_mm]
+        return notebook_dir / "experts" / expert_id / (
+            f"{expert_id}-thread-{page_month_yyyy_mm}.md"
+        )
+    return expert_paths(expert_id, notebook_dir)["thread"]
+
+
+def transcript_body_lines(transcript_path: Path) -> list[str]:
+    """Lines below the transcript triage marker (including blanks)."""
+    if not transcript_path.is_file():
+        return []
+    text = transcript_path.read_text(encoding="utf-8")
+    marker = "<!-- Triage appends new date sections below. Do not add content above this line. -->"
+    idx = text.find(marker)
+    body = text[idx + len(marker):] if idx != -1 else text
+    return body.splitlines()
+
+
+def parse_transcript_by_month(transcript_path: Path) -> dict[str, list[str]]:
+    """Group transcript lines under ``## YYYY-MM-DD`` by calendar month ``YYYY-MM``."""
+    by_month: dict[str, list[str]] = defaultdict(list)
+    current_month: str | None = None
+    for line in transcript_body_lines(transcript_path):
+        m = RE_TRANSCRIPT_DATE_SECTION.match(line.strip())
+        if m:
+            day = m.group(1)
+            current_month = day[:7]
+            by_month[current_month].append(line.rstrip())
+            continue
+        if current_month is None:
+            continue
+        if line.strip():
+            by_month[current_month].append(line.rstrip())
+    return dict(by_month)
+
 
 # Legacy markers kept for backward compat (extract_thread_ingests)
 CORPUS_MARKER_START = "<!-- strategy-expert-corpus:start -->"
@@ -583,29 +719,57 @@ def rebuild_threads(
     knot_index_path: Path,
     dry_run: bool = False,
 ) -> list[Path]:
-    """Extract transcript + knot material → thread files for all experts."""
+    """Extract transcript + knot material → thread files for all experts.
+
+    When any ``<expert_id>-thread-YYYY-MM.md`` exists for an expert (in-folder or flat),
+    machine layers are written **per month**; legacy knot references attach to the
+    **current UTC calendar month** file only. Otherwise behavior is unchanged (single
+    ``thread.md``).
+    """
     written: list[Path] = []
+    today_ym = datetime.now(timezone.utc).date().strftime("%Y-%m")
 
     for expert_id in CANONICAL_EXPERT_IDS:
         paths = expert_paths(expert_id, out_dir)
         transcript_path = paths["transcript"]
-        thread_path = paths["thread"]
+        legacy_thread = paths["thread"]
+        mmap = month_thread_paths_by_month(out_dir, expert_id)
 
-        transcript_lines = read_transcript_content(transcript_path)
-        knot_refs = find_knot_references(expert_id, knot_index_path=knot_index_path)
-        page_blocks = discover_pages(thread_path, expert_id=expert_id)
+        if not mmap:
+            transcript_lines = read_transcript_content(transcript_path)
+            knot_refs = find_knot_references(expert_id, knot_index_path=knot_index_path)
+            page_blocks = discover_pages(legacy_thread, expert_id=expert_id)
+            inner = render_thread_extraction(
+                expert_id,
+                transcript_lines=transcript_lines,
+                knot_refs=knot_refs,
+                page_blocks=page_blocks,
+            )
+            if not dry_run:
+                write_thread_file(legacy_thread, inner)
+            written.append(legacy_thread)
+            continue
 
-        inner = render_thread_extraction(
-            expert_id,
-            transcript_lines=transcript_lines,
-            knot_refs=knot_refs,
-            page_blocks=page_blocks,
-        )
+        by_m_transcript = parse_transcript_by_month(transcript_path)
+        months = sorted(set(mmap.keys()) | set(by_m_transcript.keys()))
+        knot_refs_all = find_knot_references(expert_id, knot_index_path=knot_index_path)
 
-        if not dry_run:
-            write_thread_file(thread_path, inner)
-
-        written.append(thread_path)
+        for ym in months:
+            dest = mmap.get(ym)
+            if dest is None:
+                dest = out_dir / "experts" / expert_id / f"{expert_id}-thread-{ym}.md"
+            tlines = by_m_transcript.get(ym, [])
+            pages = discover_pages(dest, expert_id=expert_id) if dest.is_file() else []
+            knots = knot_refs_all if ym == today_ym else []
+            inner = render_thread_extraction(
+                expert_id,
+                transcript_lines=tlines,
+                knot_refs=knots,
+                page_blocks=pages,
+            )
+            if not dry_run:
+                write_thread_file(dest, inner)
+            written.append(dest)
 
     return written
 

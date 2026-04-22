@@ -110,7 +110,11 @@ def _check_missing_files(expert_id: str, notebook_dir: Path) -> ExpertDiagnostic
     """Check whether profile, transcript, and thread files exist."""
     diag = ExpertDiagnostic(expert_id=expert_id)
 
-    from strategy_expert_corpus import expert_paths as _expert_paths
+    from strategy_expert_corpus import (
+        expert_paths as _expert_paths,
+        expert_thread_paths_for_discovery,
+        uses_monthly_thread_layout,
+    )
     ep = _expert_paths(expert_id, notebook_dir)
     profile = ep["profile"]
     transcript = ep["transcript"]
@@ -122,7 +126,13 @@ def _check_missing_files(expert_id: str, notebook_dir: Path) -> ExpertDiagnostic
     if not transcript.is_file():
         diag.transcript_exists = False
         diag.issues.append("missing transcript file")
-    if not thread.is_file():
+    if uses_monthly_thread_layout(notebook_dir, expert_id):
+        diag.thread_exists = all(
+            p.is_file() for p in expert_thread_paths_for_discovery(notebook_dir, expert_id)
+        )
+        if not diag.thread_exists:
+            diag.issues.append("missing one or more monthly thread files")
+    elif not thread.is_file():
         diag.thread_exists = False
         diag.issues.append("missing thread file")
 
@@ -164,30 +174,32 @@ def _check_transcript_content(diag: ExpertDiagnostic, notebook_dir: Path, cutoff
 
 def _check_machine_layer(diag: ExpertDiagnostic, notebook_dir: Path) -> None:
     """Count machine layer lines and detect coverage gaps."""
-    from strategy_expert_corpus import expert_paths as _expert_paths
-    thread_path = _expert_paths(diag.expert_id, notebook_dir)["thread"]
-    if not thread_path.is_file():
-        return
+    from strategy_expert_corpus import expert_thread_paths_for_discovery
 
-    text = thread_path.read_text(encoding="utf-8")
-    if THREAD_MARKER_START not in text or THREAD_MARKER_END not in text:
-        diag.machine_layer_line_count = 0
-        if diag.transcript_line_count > 0:
-            diag.coverage_gap = True
-            diag.issues.append("coverage gap: transcript has content but thread has no machine-layer markers")
-        return
+    total_lines = 0
+    any_markers = False
+    no_material_marker = "_(No transcript, page, or knot material for extraction.)_"
+    for thread_path in expert_thread_paths_for_discovery(notebook_dir, diag.expert_id):
+        if not thread_path.is_file():
+            continue
+        text = thread_path.read_text(encoding="utf-8")
+        if THREAD_MARKER_START not in text or THREAD_MARKER_END not in text:
+            continue
+        any_markers = True
+        _, after_start = text.split(THREAD_MARKER_START, 1)
+        inner, _ = after_start.split(THREAD_MARKER_END, 1)
+        machine_lines = [ln for ln in inner.strip().splitlines() if ln.strip()]
+        if len(machine_lines) == 1 and no_material_marker in machine_lines[0]:
+            continue
+        total_lines += len(machine_lines)
 
-    _, after_start = text.split(THREAD_MARKER_START, 1)
-    inner, _ = after_start.split(THREAD_MARKER_END, 1)
-    machine_lines = [ln for ln in inner.strip().splitlines() if ln.strip()]
-
-    no_material_marker = "_(No transcript or knot material for extraction.)_"
-    if len(machine_lines) == 1 and no_material_marker in machine_lines[0]:
-        diag.machine_layer_line_count = 0
-    else:
-        diag.machine_layer_line_count = len(machine_lines)
-
-    if diag.transcript_line_count > 0 and diag.machine_layer_line_count == 0:
+    diag.machine_layer_line_count = total_lines
+    if diag.transcript_line_count > 0 and not any_markers:
+        diag.coverage_gap = True
+        diag.issues.append(
+            "coverage gap: transcript has content but thread file(s) have no machine-layer markers"
+        )
+    elif diag.transcript_line_count > 0 and total_lines == 0:
         diag.coverage_gap = True
         diag.issues.append("coverage gap: transcript has content but machine layer is empty")
 

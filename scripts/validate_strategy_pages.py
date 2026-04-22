@@ -22,7 +22,7 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO_ROOT / "scripts"))
 
-from strategy_expert_corpus import CANONICAL_EXPERT_IDS, expert_paths
+from strategy_expert_corpus import CANONICAL_EXPERT_IDS, expert_thread_paths_for_discovery
 from strategy_page_reader import PAGE_END_RE, PAGE_MARKER_RE, discover_pages
 
 NOTEBOOK_DIR = REPO_ROOT / "docs/skill-work/work-strategy/strategy-notebook"
@@ -78,27 +78,27 @@ def validate_notebook(
     warnings: list[str] = []
 
     for expert_id in CANONICAL_EXPERT_IDS:
-        thread_path = expert_paths(expert_id, notebook_dir)["thread"]
-        if not thread_path.is_file():
-            continue
-        text = thread_path.read_text(encoding="utf-8")
-        human = _human_layer(text)
-        for msg in find_unclosed_page_markers(human):
-            errors.append(f"{thread_path.relative_to(REPO_ROOT)}: {msg}")
+        for thread_path in expert_thread_paths_for_discovery(notebook_dir, expert_id):
+            if not thread_path.is_file():
+                continue
+            text = thread_path.read_text(encoding="utf-8")
+            human = _human_layer(text)
+            for msg in find_unclosed_page_markers(human):
+                errors.append(f"{thread_path.relative_to(REPO_ROOT)}: {msg}")
 
-        pages = discover_pages(thread_path, expert_id=expert_id)
-        for pb in pages:
-            ratio, pw, tw = prose_ratio_before_appendix(pb.content)
-            if tw > 0 and ratio < min_prose_ratio:
-                msg = (
-                    f"{thread_path.relative_to(REPO_ROOT)}: page `{pb.id}` — "
-                    f"prose ratio {ratio:.2f} < {min_prose_ratio:.2f} "
-                    f"(words before `### Technical appendix` = {pw} / all = {tw})"
-                )
-                if strict_prose:
-                    errors.append(msg)
-                elif warn_prose:
-                    warnings.append(msg + " (optional)")
+            pages = discover_pages(thread_path, expert_id=expert_id)
+            for pb in pages:
+                ratio, pw, tw = prose_ratio_before_appendix(pb.content)
+                if tw > 0 and ratio < min_prose_ratio:
+                    msg = (
+                        f"{thread_path.relative_to(REPO_ROOT)}: page `{pb.id}` — "
+                        f"prose ratio {ratio:.2f} < {min_prose_ratio:.2f} "
+                        f"(words before `### Technical appendix` = {pw} / all = {tw})"
+                    )
+                    if strict_prose:
+                        errors.append(msg)
+                    elif warn_prose:
+                        warnings.append(msg + " (optional)")
 
     for w in warnings:
         print(f"warning: {w}", file=sys.stderr)

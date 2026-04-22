@@ -38,7 +38,13 @@ import sys
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(REPO_ROOT / "scripts"))
 NOTEBOOK_DIR = REPO_ROOT / "docs/skill-work/work-strategy/strategy-notebook"
+
+from strategy_expert_corpus import (  # noqa: E402
+    collect_strategy_thread_paths,
+    expert_id_from_thread_path,
+)
 
 THREAD_MARKER_START = "<!-- strategy-expert-thread:start -->"
 
@@ -51,13 +57,6 @@ OPT_OUT_BULLETS_LEDGER = "<!-- strategy-expert-thread:segment-1-month-bullets-le
 OPT_OUT_VERBATIM_FORWARD = "<!-- strategy-expert-thread:verbatim-forward-journal-ok -->"
 
 MIN_PROSE_WORDS = 500
-
-
-def expert_id_from_thread_path(path: Path) -> str | None:
-    if path.name == "thread.md" and path.parent.parent.name in ("experts", "voices"):
-        return path.parent.name
-    m = re.match(r"^strategy-expert-(.+)-thread\.md$", path.name)
-    return m.group(1) if m else None
 
 
 def extract_human_layer(thread_text: str) -> str:
@@ -183,7 +182,11 @@ def validate_thread_file(path: Path, month_mm: str | None = None) -> list[str]:
     text = path.read_text(encoding="utf-8")
     eid = expert_id_from_thread_path(path)
     if not eid:
-        return [f"unexpected filename (expected experts/<id>/thread.md or strategy-expert-<id>-thread.md): {path}"]
+        return [
+            "unexpected filename (expected experts/<id>/thread.md, "
+            "experts/<id>/<id>-thread-YYYY-MM.md, or strategy-expert-<id>-thread*.md): "
+            f"{path}"
+        ]
 
     human = extract_human_layer(text)
     if OPT_OUT_BULLETS_LEDGER in human:
@@ -250,13 +253,13 @@ def main() -> int:
             )
             return 1
 
-    paths = sorted(args.dir.glob("experts/*/thread.md"))
+    paths = collect_strategy_thread_paths(args.dir)
     if not paths:
-        paths = sorted(args.dir.glob("voices/*/thread.md"))
-    if not paths:
-        paths = sorted(args.dir.glob("strategy-expert-*-thread.md"))
-    if not paths:
-        print("error: no thread files found (experts/*/thread.md or strategy-expert-*-thread.md)", file=sys.stderr)
+        print(
+            "error: no thread files found (experts|voices/*/thread.md, "
+            "*/*-thread-YYYY-MM.md, strategy-expert-*-thread.md)",
+            file=sys.stderr,
+        )
         return 1
 
     all_warnings: list[str] = []

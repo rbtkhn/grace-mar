@@ -2,7 +2,7 @@
 
 WORK only; not Record.
 
-**Where:** Add a `<!-- strategy-page:start … -->` … `<!-- strategy-page:end -->` block under the correct **`## YYYY-MM`** in **`experts/<expert_id>/thread.md`**. For the same logical analysis across experts, **duplicate** the block into each expert’s file with the same **`id=`** and **`date=`** (see [watches/README.md](watches/README.md)).
+**Where:** Add a `<!-- strategy-page:start … -->` … `<!-- strategy-page:end -->` block under the correct **`## YYYY-MM`** in the expert’s **thread file for that month** — **`experts/<expert_id>/<expert_id>-thread-YYYY-MM.md`** when using monthly thread files, or **`experts/<expert_id>/thread.md`** under the matching month heading when using a single legacy file. The page’s **`date="YYYY-MM-DD"`** must fall in that **`YYYY-MM`**. For the same logical analysis across experts, **duplicate** the block into each expert’s file with the same **`id=`** and **`date=`** (see [watches/README.md](watches/README.md)). Thread layout details: [strategy-expert-template.md § Thread](strategy-expert-template.md#thread-template).
 
 **Required prose scaffold:** **`### Signal`**, **`### Judgment`**, and **`### Open`** — **grammatical prose only** in each (facts framing, judgment, falsifiers / resume / doubt). This is the contract for a woven page; list dumps and machinery belong elsewhere (appendix when used, or overflow — see below).
 
@@ -18,7 +18,7 @@ WORK only; not Record.
 
 ## Shared logical page across experts
 
-When the same analysis is **duplicated** into multiple **`experts/<expert_id>/thread.md`** files, keep **`id=`**, **`date=`**, and **`watch=`** **identical**. Set **`Also in:`** to the peer **`expert_id`**s. **Judgment** (and, where it helps, a line or two of **Signal** framing) should reflect **that file’s voice** — same thesis object, **different perspective**, not copy-pasted identical prose across experts unless you intend verbatim reuse.
+When the same analysis is **duplicated** into multiple expert **thread** files (same **`<expert_id>-thread-YYYY-MM.md`** per expert when using monthly thread files), keep **`id=`**, **`date=`**, and **`watch=`** **identical**. Set **`Also in:`** to the peer **`expert_id`**s. **Judgment** (and, where it helps, a line or two of **Signal** framing) should reflect **that file’s voice** — same thesis object, **different perspective**, not copy-pasted identical prose across experts unless you intend verbatim reuse.
 
 ---
 
@@ -26,7 +26,7 @@ When the same analysis is **duplicated** into multiple **`experts/<expert_id>/th
 
 [`scripts/validate_strategy_pages.py`](../../../../scripts/validate_strategy_pages.py) enforces the following (mirror of the script; extend the script first if you want new rules):
 
-1. **Fences:** Every `<!-- strategy-page:start … -->` has a matching `<!-- strategy-page:end -->` in the **human layer** of `thread.md` (above `<!-- strategy-expert-thread:start -->`).
+1. **Fences:** Every `<!-- strategy-page:start … -->` has a matching `<!-- strategy-page:end -->` in the **human layer** of the expert **thread** file (above `<!-- strategy-expert-thread:start -->`).
 2. **Start tag shape:** The opener must carry **`id="…"`**, **`date="…"`**, **`watch="…"`** (empty **`watch=""`** is valid). Parsed by [`strategy_page_reader.py`](../../../../scripts/strategy_page_reader.py).
 3. **Prose vs appendix (optional `--strict-prose`):** With **`--strict-prose`**, words **before** the first **`### Technical appendix`** heading must be **≥ `--min-prose-ratio`** (default **0.90**) of **all** words in the page inner. If there is **no** appendix heading, the **entire** block counts as prose for that ratio. So: put machinery in the appendix when you use one; otherwise keep the page lean so the ratio stays meaningful if you run strict mode.
 4. **No other structural checks** in this script (no regex for mandatory `### Signal` — the **required scaffold** is policy in **this** template and weave discipline).

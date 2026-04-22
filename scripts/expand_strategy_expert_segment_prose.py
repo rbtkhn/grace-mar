@@ -19,7 +19,10 @@ import sys
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(REPO_ROOT / "scripts"))
 NOTEBOOK_DIR = REPO_ROOT / "docs/skill-work/work-strategy/strategy-notebook"
+
+from strategy_expert_corpus import RE_FLAT_MONTH_THREAD, RE_IN_FOLDER_MONTH_THREAD  # noqa: E402
 
 THREAD_MARKER_START = "<!-- strategy-expert-thread:start -->"
 RE_MONTH_H2 = re.compile(r"^##\s+(\d{4}-\d{2})\s*$")
@@ -268,13 +271,17 @@ def process_thread(path: Path, *, apply: bool) -> tuple[int, int]:
     if OPT_OUT_BULLETS_LEDGER in extract_human_layer(text):
         return 0, 0
 
-    if path.name == "thread.md" and path.parent.parent.name == "experts":
+    if path.name == "thread.md" and path.parent.parent.name in ("experts", "voices"):
         expert_id = path.parent.name
     else:
         expert_m = re.match(r"^strategy-expert-(.+)-thread\.md$", path.name)
-        if not expert_m:
-            return 0, 0
-        expert_id = expert_m.group(1)
+        if expert_m:
+            expert_id = expert_m.group(1)
+        else:
+            m_mo = RE_IN_FOLDER_MONTH_THREAD.match(path.name)
+            if not m_mo or path.parent.name != m_mo.group(1):
+                return 0, 0
+            expert_id = m_mo.group(1)
     profile = load_profile(expert_id)
 
     if THREAD_MARKER_START not in text:
@@ -323,9 +330,40 @@ def main() -> int:
         print("error: specify --dry-run or --apply", file=sys.stderr)
         return 1
 
-    paths = sorted(NOTEBOOK_DIR.glob("experts/*/thread.md"))
+    paths: list[Path] = []
+    seen: set[Path] = set()
+    for p in sorted(NOTEBOOK_DIR.glob("experts/*/thread.md")):
+        if p.resolve() not in seen:
+            seen.add(p.resolve())
+            paths.append(p)
+    for p in sorted(NOTEBOOK_DIR.glob("voices/*/thread.md")):
+        if p.resolve() not in seen:
+            seen.add(p.resolve())
+            paths.append(p)
+    for d in sorted(NOTEBOOK_DIR.glob("experts/*")):
+        if d.is_dir():
+            eid = d.name
+            for p in sorted(d.glob(f"{eid}-thread-*.md")):
+                if RE_IN_FOLDER_MONTH_THREAD.match(p.name) and p.resolve() not in seen:
+                    seen.add(p.resolve())
+                    paths.append(p)
+    for d in sorted(NOTEBOOK_DIR.glob("voices/*")):
+        if d.is_dir():
+            eid = d.name
+            for p in sorted(d.glob(f"{eid}-thread-*.md")):
+                if RE_IN_FOLDER_MONTH_THREAD.match(p.name) and p.resolve() not in seen:
+                    seen.add(p.resolve())
+                    paths.append(p)
     if not paths:
-        paths = sorted(NOTEBOOK_DIR.glob("strategy-expert-*-thread.md"))
+        for p in sorted(NOTEBOOK_DIR.glob("strategy-expert-*-thread.md")):
+            if p.resolve() not in seen:
+                seen.add(p.resolve())
+                paths.append(p)
+        for p in sorted(NOTEBOOK_DIR.glob("strategy-expert-*-thread-*.md")):
+            if RE_FLAT_MONTH_THREAD.match(p.name) and p.resolve() not in seen:
+                seen.add(p.resolve())
+                paths.append(p)
+    paths = sorted(paths, key=lambda x: (str(x.parent), x.name))
     total_m = 0
     total_u = 0
     for path in paths:
