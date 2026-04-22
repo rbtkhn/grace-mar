@@ -66,26 +66,55 @@ def canonical_transcript_header(expert_id: str) -> str:
 
 
 _RE_DATE_HEADING = re.compile(r"^## (\d{4}-\d{2}-\d{2})\s*$")
+_YAML_DOC_NEXT = re.compile(r"^[A-Za-z0-9_]+:\s")
 
 
-def _split_simple_frontmatter(text: str) -> tuple[dict[str, str], str]:
-    """Parse leading YAML-style ``key: value`` block after first ``---``."""
-    if not text.startswith("---"):
-        return {}, text
-    end = text.find("\n---\n", 1)
-    if end == -1:
-        return {}, text
-    fm_raw = text[4:end].strip()
-    body = text[end + 5 :]
+def _parse_fm_keyvals(fm_raw: str) -> dict[str, str]:
     fm: dict[str, str] = {}
     for line in fm_raw.splitlines():
         line = line.strip()
-        if not line:
+        if not line or line.startswith("#"):
             continue
         if ":" in line:
             k, _, v = line.partition(":")
             fm[k.strip()] = v.strip().strip('"').strip("'")
-    return fm, body
+    return fm
+
+
+def iter_raw_input_yaml_documents(text: str):
+    """Yield ``(frontmatter_dict, body)`` for each ``---`` / YAML / ``---`` / body block in a file.
+
+    Supports **multiple ingests in one markdown file** (append further ``---`` … ``---``
+    blocks). A line that is only ``---`` starts a new document only when the next
+    non-empty line looks like ``key:`` (YAML), so horizontal rules in the body are
+    not treated as document boundaries unless followed by YAML keys.
+    """
+    lines = text.splitlines()
+    i = 0
+    n = len(lines)
+    while i < n:
+        if lines[i].strip() != "---":
+            i += 1
+            continue
+        i += 1
+        fm_start = i
+        while i < n and lines[i].strip() != "---":
+            i += 1
+        if i >= n:
+            break
+        fm_raw = "\n".join(lines[fm_start:i])
+        i += 1
+        body_start = i
+        while i < n:
+            if lines[i].strip() == "---":
+                j = i + 1
+                while j < n and not lines[j].strip():
+                    j += 1
+                if j < n and _YAML_DOC_NEXT.match(lines[j].strip()):
+                    break
+            i += 1
+        body_raw = "\n".join(lines[body_start:i])
+        yield _parse_fm_keyvals(fm_raw), body_raw
 
 
 def _extract_markdown_h1_title(body: str) -> str:
@@ -138,22 +167,22 @@ def collect_rss_thread_ingests(
     nested: dict[str, dict[date, list[str]]] = defaultdict(lambda: defaultdict(list))
     for path in _iter_raw_input_md_paths(raw_root, cutoff):
         text = path.read_text(encoding="utf-8")
-        fm, body = _split_simple_frontmatter(text)
-        if fm.get("kind") != "rss-item":
-            continue
-        tid = (fm.get("thread") or "").strip()
-        if not tid or tid not in expert_ids_set:
-            continue
-        d = _rss_row_air_date(fm, path)
-        if d is None or d <= cutoff:
-            continue
-        title = _extract_markdown_h1_title(body)
-        url = (fm.get("source_url") or "").strip()
-        verbatim = (
-            f"- RSS | cold: **{title}** // raw-input `{path.name}`"
-            f" | {url} | verify:rss-fetch | thread:{tid}"
-        )
-        nested[tid][d].append(verbatim)
+        for fm, body in iter_raw_input_yaml_documents(text):
+            if fm.get("kind") != "rss-item":
+                continue
+            tid = (fm.get("thread") or "").strip()
+            if not tid or tid not in expert_ids_set:
+                continue
+            d = _rss_row_air_date(fm, path)
+            if d is None or d <= cutoff:
+                continue
+            title = _extract_markdown_h1_title(body)
+            url = (fm.get("source_url") or "").strip()
+            verbatim = (
+                f"- RSS | cold: **{title}** // raw-input `{path.name}`"
+                f" | {url} | verify:rss-fetch | thread:{tid}"
+            )
+            nested[tid][d].append(verbatim)
     return {e: dict(dm) for e, dm in nested.items()}
 
 

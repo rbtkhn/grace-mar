@@ -8,10 +8,12 @@ from datetime import date
 from pathlib import Path
 
 from scripts.fetch_strategy_raw_input import (
-    _build_markdown,
+    _build_rss_item_document,
     _iter_rss_items,
     _parse_pub_date,
+    _rss_no_thread_filename,
     _strip_html,
+    _threaded_raw_input_filename,
     load_config,
     run,
 )
@@ -84,8 +86,28 @@ def test_atom_items() -> None:
     assert items[0]["link"] == "https://example.com/a/2"
 
 
-def test_build_markdown_filename_stable() -> None:
-    fname, body = _build_markdown(
+def test_threaded_raw_input_filename_mercouris_vs_other() -> None:
+    assert _threaded_raw_input_filename(air=date(2026, 4, 21), expert_id="mercouris") == (
+        "mercouris-page-2026-04-21.md"
+    )
+    assert _threaded_raw_input_filename(air=date(2026, 4, 21), expert_id="simplicius") == (
+        "2026-04-21-simplicius.md"
+    )
+
+
+def test_rss_no_thread_filename_stable() -> None:
+    fname = _rss_no_thread_filename(
+        slug_prefix="rss-test",
+        air=date(2026, 4, 21),
+        title="Hello World",
+        guid="https://example.com/p/1",
+    )
+    assert fname.startswith("rss-test-2026-04-21-")
+    assert fname.endswith(".md")
+
+
+def test_build_rss_item_document_content() -> None:
+    _guid, body = _build_rss_item_document(
         ingest_date=date(2026, 4, 25),
         aired_date=date(2026, 4, 21),
         feed_url="https://example.com/feed",
@@ -96,17 +118,15 @@ def test_build_markdown_filename_stable() -> None:
             "summary_html": "<p>Short</p>",
             "guid": "https://example.com/p/1",
         },
-        slug_prefix="rss-test",
+        thread=None,
     )
-    assert fname.startswith("rss-test-2026-04-21-")
-    assert fname.endswith(".md")
     assert "Hello World" in body
     assert "https://example.com/p/1" in body
     assert "ingest_date: 2026-04-25" in body
 
 
-def test_build_markdown_includes_optional_thread_in_yaml() -> None:
-    _, body = _build_markdown(
+def test_build_rss_item_document_includes_optional_thread_in_yaml() -> None:
+    _, body = _build_rss_item_document(
         ingest_date=date(2026, 4, 25),
         aired_date=date(2026, 4, 21),
         feed_url="https://example.com/feed",
@@ -117,7 +137,6 @@ def test_build_markdown_includes_optional_thread_in_yaml() -> None:
             "summary_html": None,
             "guid": "g",
         },
-        slug_prefix="rss-test",
         thread="simplicius",
     )
     assert "thread: simplicius" in body
@@ -151,10 +170,10 @@ def test_fetch_sources_json_substack_feeds() -> None:
     assert threads == {"simplicius", "bigserge", "greenwald"}
 
 
-def test_run_apply_writes_one_markdown_per_feed_with_mock_fetch(
+def test_run_apply_writes_per_expert_daily_file_with_mock_fetch(
     tmp_path: Path, monkeypatch
 ) -> None:
-    """Each enabled feed produces planned markdown under raw-input date dirs (no network)."""
+    """Feeds with ``thread`` share one ``YYYY-MM-DD-<expert_id>.md`` per air date (no network)."""
     cfg_path = tmp_path / "fetch-sources.json"
     cfg_path.write_text(
         json.dumps(
@@ -201,10 +220,73 @@ def test_run_apply_writes_one_markdown_per_feed_with_mock_fetch(
     )
     mds = sorted(raw_root.rglob("*.md"))
     assert len(mds) == 3
-    for prefix in ("rss-simplicius", "rss-bigserge", "rss-greenwald"):
-        assert sum(p.name.startswith(prefix + "-") for p in mds) == 1
+    names = {p.name for p in mds}
+    assert names == {
+        "2026-04-21-simplicius.md",
+        "2026-04-21-bigserge.md",
+        "2026-04-21-greenwald.md",
+    }
     for path in mds:
         t = path.read_text(encoding="utf-8")
         assert "kind: rss-item" in t
         assert "feed_url:" in t
         assert "thread:" in t
+
+
+_SUBSTACK_RSS_TWO_ITEMS = b"""<?xml version="1.0"?>
+<rss version="2.0"><channel>
+  <item>
+    <title>First</title>
+    <link>https://example.com/p/a</link>
+    <pubDate>Mon, 21 Apr 2026 00:00:00 GMT</pubDate>
+    <guid>https://example.com/p/a</guid>
+    <description>&lt;p&gt;A&lt;/p&gt;</description>
+  </item>
+  <item>
+    <title>Second</title>
+    <link>https://example.com/p/b</link>
+    <pubDate>Mon, 21 Apr 2026 00:00:00 GMT</pubDate>
+    <guid>https://example.com/p/b</guid>
+    <description>&lt;p&gt;B&lt;/p&gt;</description>
+  </item>
+</channel></rss>"""
+
+
+def test_run_appends_second_rss_item_into_same_expert_daily_file(
+    tmp_path: Path, monkeypatch
+) -> None:
+    cfg_path = tmp_path / "fetch-sources.json"
+    cfg_path.write_text(
+        json.dumps(
+            {
+                "version": 1,
+                "rss_feeds": [
+                    {
+                        "enabled": True,
+                        "url": "https://simplicius76.substack.com/feed",
+                        "slug_prefix": "rss-simplicius",
+                        "max_items": 2,
+                        "thread": "simplicius",
+                    },
+                ],
+            }
+        ),
+        encoding="utf-8",
+    )
+    raw_root = tmp_path / "raw-input"
+    monkeypatch.setattr(
+        "scripts.fetch_strategy_raw_input._fetch_url",
+        lambda _url, timeout=45: _SUBSTACK_RSS_TWO_ITEMS,
+    )
+    run(
+        config_path=cfg_path,
+        raw_root=raw_root,
+        ingest_date=date(2026, 4, 25),
+        apply=True,
+        global_max=None,
+    )
+    path = raw_root / "2026-04-21" / "2026-04-21-simplicius.md"
+    assert path.is_file()
+    t = path.read_text(encoding="utf-8")
+    assert t.count("kind: rss-item") == 2
+    assert "First" in t and "Second" in t

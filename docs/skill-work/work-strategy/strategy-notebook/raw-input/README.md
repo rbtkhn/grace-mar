@@ -6,7 +6,7 @@
 
 ## Automated fetch (RSS → raw-input)
 
-**Script:** [`scripts/fetch_strategy_raw_input.py`](../../../../scripts/fetch_strategy_raw_input.py) — pulls **RSS/Atom** items (e.g. Substack `/feed`) into **`raw-input/<aired_date>/`** as markdown with YAML frontmatter (`kind: rss-item`). Optional per-feed **`"thread": "<expert_id>"`** adds a **`thread:`** line to YAML so **`python3 scripts/strategy_thread.py`** triage merges a one-line RSS stub into that expert’s **`experts/<id>/transcript.md`** (after inbox lines for the same date).
+**Script:** [`scripts/fetch_strategy_raw_input.py`](../../../../scripts/fetch_strategy_raw_input.py) — pulls **RSS/Atom** items (e.g. Substack `/feed`) into **`raw-input/<aired_date>/`** as markdown with YAML frontmatter (`kind: rss-item`). When a feed sets **`"thread": "<expert_id>"`**, new items **append** into one daily file: **`mercouris-page-<aired_date>.md`** for **`mercouris`**, otherwise **`<aired_date>-<expert_id>.md`** (multiple ingests = multiple `---` … `---` blocks; duplicates skipped by `guid:`). Feeds **without** `thread` still write **one markdown file per RSS item** (slug + hash basename). Optional **`thread:`** in YAML drives **`python3 scripts/strategy_thread.py`** triage: one-line RSS stubs merge into that expert’s **`experts/<id>/transcript.md`** (after inbox lines for the same date).
 
 **Setup:**
 
@@ -49,10 +49,16 @@ Use **one subdirectory per local ingest day** (the day you save the file — typ
 raw-input/
   README.md          ← this file
   YYYY-MM-DD/        ← e.g. 2026-04-20/
-    <slug>.md        ← one file per capture (or per bundle)
+    mercouris-page-YYYY-MM-DD.md   ← Mercouris: one evidence page per air day (append ingests)
+    YYYY-MM-DD-<expert_id>.md      ← other threaded experts (RSS `thread:`) + populate mirror default
+    <slug>.md        ← other captures: RSS without thread:, bundles, sidecars, indexes
 ```
 
-**Slug:** `kebab-case`, unique within that day — e.g. `ritter-judging-freedom-2026-04-20.md`, `davis-johnson-hormuz-full.md`.
+**Mercouris daily file:** `mercouris-page-2026-04-21.md` under `2026-04-21/` — **append** further ingests (second show, RSS + manual) as additional **`---`** YAML / body blocks in the same file.
+
+**Operator vocabulary (Mercouris):** That path is the **raw-input page** for the day — the default unit of “what aired / what we captured” before the **end-of-day strategy session**. It is **not** a **`strategy-page`** fence in [`experts/<id>/thread.md`](../strategy-page-template.md) (those hold **Signal / Judgment / Open** after compose). Say “Mercouris page” or `mercouris-page-YYYY-MM-DD` to disambiguate from `strategy-page`.
+
+**Other slugs:** `kebab-case`, unique within that day — e.g. `ritter-judging-freedom-2026-04-20.md`, `substack-simplicius-….md`, `davis-johnson-hormuz-full.md`.
 
 **Optional:** Add non-markdown payloads next to the `.md` file in the same folder (e.g. `.txt` exports) if you truly need byte-identical dumps; keep filenames descriptive.
 
@@ -111,6 +117,6 @@ Default root: `docs/skill-work/work-strategy/strategy-notebook/raw-input`. Overr
 
 ## Assistant default
 
-When the operator asks for **full transcript on disk** or **store everything**, write the body under **`raw-input/YYYY-MM-DD/<slug>.md`** and keep [daily-strategy-inbox.md](../daily-strategy-inbox.md) to a **stub line** (canonical URL + `verify:` pointer to this path; **`thread:`** only when the capture maps to an indexed commentator), e.g. `verify:full-text+raw-input/2026-04-20/slug.md`.
+When the operator asks for **full transcript on disk** or **store everything**, prefer **`raw-input/YYYY-MM-DD/mercouris-page-YYYY-MM-DD.md`** for **Mercouris**, **`raw-input/YYYY-MM-DD/YYYY-MM-DD-<expert_id>.md`** for other indexed commentators (append if the file already exists), or **`raw-input/YYYY-MM-DD/<slug>.md`** for non-expert bundles. Keep [daily-strategy-inbox.md](../daily-strategy-inbox.md) to a **stub line** (canonical URL + `verify:` pointer to this path; **`thread:`** only when the capture maps to an indexed commentator), e.g. `verify:full-text+raw-input/2026-04-21/mercouris-page-2026-04-21.md`.
 
 Full contract: [STRATEGY-NOTEBOOK-ARCHITECTURE.md](../STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *Raw input archive (7-day full retention)*.

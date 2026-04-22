@@ -1,11 +1,12 @@
 ---
 ingest_date: 2026-04-21
 aired_date: 2026-04-21
+thread: mercouris
+source_url: https://www.youtube.com/watch?v=TBD-duran-mercouris-2026-04-21
 kind: operator-transcript
-show: The Duran
+series: The Duran
 speaker: Alexander Mercouris
-thread_expert: mercouris
-source_note: Clean readable operator transcript; pin canonical YouTube (The Duran) URL.
+source_note: Clean readable operator transcript; pin canonical The Duran YouTube watch?v= when available.
 title_slug: mercouris-iran-islamabad-ceasefire-donbass-baltic-2026-04-21
 ---
 
@@ -164,3 +165,5 @@ This is where I am going to finish today’s program.
 Let me remind you again, you can find all our programs on our other platforms: Locals, Rumble, X, and Substack. Please remember to check out our shop, and to support our work via Patreon and SubscribeStar links under this video. Last but not least, if you’ve liked this video, please remember to hit the like button and to check your subscription to this channel.
 
 That’s me for today. More from me soon. Have a very good day.
+
+_WORK only; not Record._

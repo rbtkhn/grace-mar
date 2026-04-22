@@ -8,6 +8,7 @@ from pathlib import Path
 from scripts.strategy_expert_transcript import (
     canonical_transcript_header,
     collect_rss_thread_ingests,
+    iter_raw_input_yaml_documents,
     triage_to_transcripts,
 )
 
@@ -142,6 +143,52 @@ def test_triage_merges_rss_raw_input_into_transcript(tmp_path: Path) -> None:
     assert "verify:rss-fetch" in text
     assert "thread:rss-merge-expert" in text
     assert "Example RSS Title" in text
+
+
+def test_iter_raw_input_yaml_documents_multiple_ingests_in_one_file() -> None:
+    text = (
+        "---\nkind: rss-item\nthread: e\nguid: g1\nsource_url: u1\naired_date: 2026-01-19\n---\n\n"
+        "# One\n\n"
+        "---\nkind: rss-item\nthread: e\nguid: g2\nsource_url: u2\naired_date: 2026-01-19\n---\n\n"
+        "# Two\n"
+    )
+    docs = list(iter_raw_input_yaml_documents(text))
+    assert len(docs) == 2
+    assert docs[0][0].get("guid") == "g1"
+    assert "One" in docs[0][1]
+    assert docs[1][0].get("guid") == "g2"
+
+
+def test_collect_rss_thread_ingests_multi_doc_file(tmp_path: Path) -> None:
+    raw_root = tmp_path / "raw-input"
+    day = raw_root / "2026-01-19"
+    day.mkdir(parents=True)
+    day.joinpath("2026-01-19-e.md").write_text(
+        "---\n"
+        "kind: rss-item\n"
+        "thread: e\n"
+        "source_url: https://example.com/a\n"
+        "guid: ga\n"
+        "aired_date: 2026-01-19\n"
+        "---\n\n"
+        "# Title A\n\n"
+        "---\n"
+        "kind: rss-item\n"
+        "thread: e\n"
+        "source_url: https://example.com/b\n"
+        "guid: gb\n"
+        "aired_date: 2026-01-19\n"
+        "---\n\n"
+        "# Title B\n",
+        encoding="utf-8",
+    )
+    got = collect_rss_thread_ingests(
+        raw_root, cutoff=date(2026, 1, 10), expert_ids_set=frozenset({"e"})
+    )
+    lines = got["e"][date(2026, 1, 19)]
+    assert len(lines) == 2
+    assert any("Title A" in ln for ln in lines)
+    assert any("Title B" in ln for ln in lines)
 
 
 def test_collect_rss_thread_ingests_respects_cutoff(tmp_path: Path) -> None:

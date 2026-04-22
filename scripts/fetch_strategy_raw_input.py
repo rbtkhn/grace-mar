@@ -9,8 +9,10 @@ Supported source kinds (extend over time):
 
 Config: JSON next to raw-input (see ``fetch-sources.example.json``).
 Each feed may set optional ``"thread": "<expert_id>"`` (must match
-``CANONICAL_EXPERT_IDS``); written into YAML so ``strategy_thread.py`` triage
-can merge ``kind: rss-item`` rows into that expert's transcript.
+``CANONICAL_EXPERT_IDS``); items append into one file per expert per air date
+(``mercouris`` → ``mercouris-page-<aired_date>.md``; others →
+``<aired_date>-<expert_id>.md``), multiple ``---`` YAML blocks. Feeds **without** ``thread`` keep
+per-item slug filenames under the date folder.
 
 Override path with ``FETCH_STRATEGY_SOURCES`` env or ``--config``.
 
@@ -29,6 +31,7 @@ import hashlib
 import json
 import re
 import sys
+from collections import defaultdict
 import textwrap
 import urllib.error
 import urllib.request
@@ -45,6 +48,7 @@ if str(_SCRIPTS) not in sys.path:
     sys.path.insert(0, str(_SCRIPTS))
 
 from strategy_expert_corpus import _EXPERT_IDS_SET  # noqa: E402
+from strategy_expert_transcript import iter_raw_input_yaml_documents  # noqa: E402
 DEFAULT_NOTEBOOK = REPO_ROOT / "docs/skill-work/work-strategy/strategy-notebook"
 DEFAULT_RAW_ROOT = DEFAULT_NOTEBOOK / "raw-input"
 DEFAULT_CONFIG = DEFAULT_RAW_ROOT / "fetch-sources.json"
@@ -199,22 +203,38 @@ def _iter_rss_items(root: ET.Element) -> list[dict[str, str | None]]:
     return []
 
 
-def _build_markdown(
+def _rss_item_guid(item: dict[str, str | None]) -> str:
+    title = item.get("title") or "untitled"
+    link = item.get("link") or ""
+    raw = item.get("guid") or link or title
+    return str(raw).strip()
+
+
+def _rss_no_thread_filename(
+    *,
+    slug_prefix: str,
+    air: date,
+    title: str,
+    guid: str,
+) -> str:
+    h = hashlib.sha256((guid or title).encode("utf-8")).hexdigest()[:8]
+    slug_core = _slugify(str(title))
+    return f"{slug_prefix}-{air.isoformat()}-{slug_core}-{h}.md"
+
+
+def _build_rss_item_document(
     *,
     ingest_date: date,
     aired_date: date | None,
     feed_url: str,
     item: dict[str, str | None],
-    slug_prefix: str,
     thread: str | None = None,
 ) -> tuple[str, str]:
+    """Return ``(guid_key, markdown_document)`` for one RSS item."""
     title = item.get("title") or "untitled"
     link = item.get("link") or ""
-    guid = item.get("guid") or link
-    h = hashlib.sha256((guid or title).encode("utf-8")).hexdigest()[:8]
+    guid = _rss_item_guid(item)
     air = aired_date or ingest_date
-    slug_core = _slugify(str(title))
-    filename = f"{slug_prefix}-{air.isoformat()}-{slug_core}-{h}.md"
     summary = _strip_html(str(item.get("summary_html") or ""))
 
     thread_line = f"thread: {thread}\n" if thread else ""
@@ -242,7 +262,31 @@ def _build_markdown(
         body_lines.append("")
     body_lines.append("_Fetched by `scripts/fetch_strategy_raw_input.py`; not Record._")
     body_lines.append("")
-    return filename, front + "\n".join(body_lines)
+    return guid, front + "\n".join(body_lines)
+
+
+def _threaded_raw_input_filename(*, air: date, expert_id: str) -> str:
+    """Basename for RSS items merged by ``thread`` (one file per expert per air date).
+
+    ``mercouris`` uses ``mercouris-page-YYYY-MM-DD.md``; other experts use
+    ``YYYY-MM-DD-<expert_id>.md``.
+    """
+    day = air.isoformat()
+    if expert_id == "mercouris":
+        return f"mercouris-page-{day}.md"
+    return f"{day}-{expert_id}.md"
+
+
+def _existing_guids_in_raw_file(path: Path) -> set[str]:
+    if not path.is_file():
+        return set()
+    text = path.read_text(encoding="utf-8")
+    out: set[str] = set()
+    for fm, _ in iter_raw_input_yaml_documents(text):
+        g = (fm.get("guid") or "").strip()
+        if g:
+            out.add(g)
+    return out
 
 
 def load_config(path: Path) -> dict[str, Any]:
@@ -263,7 +307,7 @@ def run(
 ) -> int:
     cfg = load_config(config_path)
     feeds = cfg.get("rss_feeds") or []
-    planned: list[tuple[Path, str]] = []
+    planned: dict[Path, list[tuple[str, str]]] = defaultdict(list)
 
     for feed in feeds:
         if not feed.get("enabled", True):
@@ -304,41 +348,74 @@ def run(
         items = _iter_rss_items(root)[:max_items]
         for item in items:
             pub = _parse_pub_date(str(item.get("pub_raw") or "") or None)
-            fname, content = _build_markdown(
+            air = pub or ingest_date
+            guid_key, content = _build_rss_item_document(
                 ingest_date=ingest_date,
                 aired_date=pub,
                 feed_url=str(url),
                 item=item,
-                slug_prefix=str(slug_prefix),
                 thread=thread_str,
             )
-            air = pub or ingest_date
-            dest = raw_root / air.isoformat() / fname
-            planned.append((dest, content))
+            if thread_str:
+                dest = raw_root / air.isoformat() / _threaded_raw_input_filename(
+                    air=air, expert_id=thread_str
+                )
+            else:
+                title = item.get("title") or "untitled"
+                fname = _rss_no_thread_filename(
+                    slug_prefix=str(slug_prefix),
+                    air=air,
+                    title=str(title),
+                    guid=guid_key,
+                )
+                dest = raw_root / air.isoformat() / fname
+            planned[dest].append((guid_key, content))
 
-    for dest, content in sorted(planned, key=lambda x: str(x[0])):
+    total_writes = 0
+    for dest in sorted(planned.keys(), key=lambda x: str(x)):
+        blocks_with_guids = planned[dest]
+        existing_guids = _existing_guids_in_raw_file(dest) if dest.is_file() else set()
+        new_blocks: list[str] = []
+        seen_batch: set[str] = set()
+        for guid_key, content in blocks_with_guids:
+            g = guid_key.strip()
+            if g and (g in existing_guids or g in seen_batch):
+                continue
+            if g:
+                seen_batch.add(g)
+            new_blocks.append(content.rstrip())
+
         rel = dest.relative_to(REPO_ROOT) if dest.is_relative_to(REPO_ROOT) else dest
         exists = dest.is_file()
+        if not new_blocks:
+            if exists:
+                print(f"skip (no new items): {rel}")
+            continue
+
+        if exists:
+            base = dest.read_text(encoding="utf-8").rstrip()
+            content = base + "\n\n" + "\n\n".join(new_blocks) + "\n"
+        else:
+            content = "\n\n".join(new_blocks) + "\n"
+
         same = exists and dest.read_text(encoding="utf-8") == content
         if same:
             print(f"skip (unchanged): {rel}")
             continue
         if not apply:
-            action = "would write" if not exists else "would update"
-            print(f"{action}: {rel}")
+            action = "would append to" if exists else "would write"
+            print(f"{action}: {rel}  (+{len(new_blocks)} ingest(s))")
+            total_writes += 1
             continue
         dest.parent.mkdir(parents=True, exist_ok=True)
-        if exists:
-            dest.write_text(content, encoding="utf-8")
-            print(f"updated: {rel}")
-        else:
-            dest.write_text(content, encoding="utf-8")
-            print(f"wrote: {rel}")
+        dest.write_text(content, encoding="utf-8")
+        print(f"{'updated' if exists else 'wrote'}: {rel}  (+{len(new_blocks)} ingest(s))")
+        total_writes += 1
 
     if not planned:
         print("No items planned (empty feeds or fetch errors).")
     elif not apply:
-        print(f"\nDry-run: {len(planned)} file(s). Pass --apply to write.")
+        print(f"\nDry-run: {len(planned)} path(s), {total_writes} would change. Pass --apply to write.")
 
     return 0
 
