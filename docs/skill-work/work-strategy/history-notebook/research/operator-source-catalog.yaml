@@ -1,6 +1,6 @@
 # History Notebook — operator source catalog (title-level seed)
 # WORK only; not Record. Does not replace book-architecture.yaml or cross-book-map.yaml.
-# Self-library pointer: LIB-0158 — users/grace-mar/self-library.md#personal-physical-library (owned HNSRC-* shelf; not operator_book / operator_analytical).
+# Self-library pointer: LIB-0158 — users/grace-mar/self-library.md#bookshelf (owned HNSRC-* shelf; not operator_book / operator_analytical). Human overview: BOOKSHELF.md (same directory).
 #
 # Schema (items[]):
 #   id: HNSRC-NNNN (zero-padded 4 digits, unique)
@@ -25,6 +25,7 @@
 # Era "colonial" (Vol III) = post-1453 through ~1789 AD (French Revolution); straddles into Vol IV use eras/notes.
 # Era "industrial" (Vol IV) = post-1789 through ~1945 AD (end of WWII); straddles into Vol V use eras/notes.
 # Ancient / medieval / modern (operator) 2026-04-18: shelf photos — Landmark (a); Assyria/Persians (b); Everitt/Goldsworthy/Oxford (c); late Rome–Byzantine (d); Roman lives–empire (e); Everyman Library canons (f); Penguin Clothbound epics (g). Medieval/early modern batches 2026-04-18: shelf-batch-a/b (Europe + Ottoman), batch-c (Weatherford + Khazaria), batch-d (Penguin Clothbound medieval canon). Colonial batches 2026-04-18: colonial-shelf-a (Wilson TYW + dedupe note vs HNSRC-0065/0066), b (Voltaire/French Rev), c (US founders), d (Atlantic), e (Library of America), f (Everyman Shakespeare + Enlightenment), g (Russia/Spain/Europe). Industrial/modern fiction + philosophy shelf (batch 2026-04-18-modern-shelf-photos-12): Penguin Clothbound / Everyman's / Little Black Classics / Library of America — see HNSRC-0129+. Assets: .cursor/projects/.../assets/photo_2026-04-18_11.*–12.*.png (incl. 22 files photo_2026-04-18_12.15.*–12.17.*).
+# 2026-04-21 shelf photos: US history, Crowley, LOA, Bradbury, Vonnegut, Narnia, etc. — HNSRC-0241+ (see assets/photo_2026-04-21_13.15.*).
 
 version: 1
 items:
@@ -2805,3 +2806,490 @@ items:
     hn_volume: vol-iv
     candidate_hn_chapters:
     - hn-iv-anglia-imperial
+  # --- Shelf photos 2026-04-21 batch 2 (assets photo_2026-04-21_13.15*) — 56 rows ---
+
+  - id: HNSRC-0241
+    title: "The Crisis of the Old Order, 1919-1923"
+    author: "Arthur M. Schlesinger Jr."
+    era: industrial
+    added_batch: "2026-04-21-bookshelf-photos-2"
+    tags: ['America', 'FDR', 'New Deal', 'Age of Roosevelt', 'Houghton Mifflin', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
+    primary_arc: america
+    hn_volume: vol-iv
+    candidate_hn_chapters: ['hn-iv-america']
+  - id: HNSRC-0242
+    title: "The Coming of the New Deal"
+    author: "Arthur M. Schlesinger Jr."
+    era: industrial
+    added_batch: "2026-04-21-bookshelf-photos-2"
+    tags: ['America', 'FDR', 'New Deal', 'Age of Roosevelt', 'Houghton Mifflin', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
+    primary_arc: america
+    hn_volume: vol-iv
+    candidate_hn_chapters: ['hn-iv-america']
+  - id: HNSRC-0243
+    title: "The Politics of Upheaval"
+    author: "Arthur M. Schlesinger Jr."
+    era: industrial
+    added_batch: "2026-04-21-bookshelf-photos-2"
+    tags: ['America', 'FDR', 'New Deal', 'Age of Roosevelt', 'Houghton Mifflin', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
+    primary_arc: america
+    hn_volume: vol-iv
+    candidate_hn_chapters: ['hn-iv-america']
+  - id: HNSRC-0244
+    title: "1453: The Holy War for Constantinople and the Clash of Islam and the West"
+    author: "Roger Crowley"
+    era: medieval
+    added_batch: "2026-04-21-bookshelf-photos-2"
+    tags: ['Byzantium', 'Ottoman', 'Mediterranean', 'Hyperion', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
+    hn_volume: vol-ii
+    candidate_hn_chapters: ['hn-ii-rome-byzantine', 'hn-iii-ottoman']
+  - id: HNSRC-0245
+    title: "Conquerors: How Portugal Forged the First Global Empire"
+    author: "Roger Crowley"
+    era: colonial
+    added_batch: "2026-04-21-bookshelf-photos-2"
+    tags: ['Portugal', 'Indian Ocean', 'empire', 'age of sail', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
+    hn_volume: vol-iii
+    candidate_hn_chapters: ['hn-iii-ottoman', 'hn-iv-anglia-imperial']
+    notes: "Spine Conquerors; full title may vary by edition."
+  - id: HNSRC-0246
+    title: "Empires of the Sea: The Siege of Malta, the Battle of Lepanto, and the Contest for the Center of the World"
+    author: "Roger Crowley"
+    era: colonial
+    added_batch: "2026-04-21-bookshelf-photos-2"
+    tags: ['Mediterranean', 'naval', 'Habsburg', 'Ottoman', 'Random House', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
+    hn_volume: vol-iii
+    candidate_hn_chapters: ['hn-iii-ottoman', 'hn-iii-france']
+  - id: HNSRC-0247
+    title: "City of Fortune: How Venice Ruled the Seas"
+    author: "Roger Crowley"
+    era: colonial
+    added_batch: "2026-04-21-bookshelf-photos-2"
+    tags: ['Venice', 'trade', 'Mediterranean', 'navy', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
+    hn_volume: vol-iii
+    candidate_hn_chapters: ['hn-iii-ottoman', 'hn-iv-anglia-imperial']
+  - id: HNSRC-0248
+    title: "Spice: The 16th-Century Contest that Shaped the Modern World"
+    author: "Roger Crowley"
+    era: colonial
+    added_batch: "2026-04-21-bookshelf-photos-2"
+    tags: ['Dutch', 'spice trade', 'Indian Ocean', 'age of exploration', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
+    hn_volume: vol-iii
+    candidate_hn_chapters: ['hn-iii-ottoman', 'hn-iv-anglia-imperial']
+    notes: "Confirm subtitle on your edition; spine may read SPICE only."
+  - id: HNSRC-0249
+    title: "The Accursed Tower: The Fall of Acre and the End of the Crusades"
+    author: "Roger Crowley"
+    era: medieval
+    added_batch: "2026-04-21-bookshelf-photos-2"
+    tags: ['Crusades', 'Acre', 'Levant', '1291', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
+    hn_volume: vol-ii
+    candidate_hn_chapters: ['hn-ii-rome-byzantine', 'hn-iii-ottoman']
+  - id: HNSRC-0250
+    title: "Alfred the Great: The Man Who Made England"
+    author: "Justin Pollard"
+    era: medieval
+    added_batch: "2026-04-21-bookshelf-photos-2"
+    tags: ['England', 'Anglo-Saxon', 'Wessex', 'biography', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
+    hn_volume: vol-ii
+    candidate_hn_chapters: ['hn-iii-anglia', 'hn-ii-rome-byzantine']
+  - id: HNSRC-0251
+    title: "The Years of Lyndon Johnson: The Path to Power"
+    author: "Robert A. Caro"
+    era: industrial
+    added_batch: "2026-04-21-bookshelf-photos-2"
+    tags: ['America', 'LBJ', 'biography', 'Knopf', 'Caro vol. 1', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
+    primary_arc: america
+    hn_volume: vol-iv
+    candidate_hn_chapters: ['hn-iv-america']
+    notes: "Caro vol. 1"
+  - id: HNSRC-0252
+    title: "The Years of Lyndon Johnson: Means of Ascent"
+    author: "Robert A. Caro"
+    era: industrial
+    added_batch: "2026-04-21-bookshelf-photos-2"
+    tags: ['America', 'LBJ', 'biography', 'Knopf', 'Caro vol. 2', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
+    primary_arc: america
+    hn_volume: vol-iv
+    candidate_hn_chapters: ['hn-iv-america']
+    notes: "Caro vol. 2"
+  - id: HNSRC-0253
+    title: "The Years of Lyndon Johnson: Master of the Senate"
+    author: "Robert A. Caro"
+    era: industrial
+    added_batch: "2026-04-21-bookshelf-photos-2"
+    tags: ['America', 'LBJ', 'biography', 'Knopf', 'Caro vol. 3', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
+    primary_arc: america
+    hn_volume: vol-iv
+    candidate_hn_chapters: ['hn-iv-america']
+    notes: "Caro vol. 3"
+  - id: HNSRC-0254
+    title: "The Years of Lyndon Johnson: The Passage of Power"
+    author: "Robert A. Caro"
+    era: industrial
+    added_batch: "2026-04-21-bookshelf-photos-2"
+    tags: ['America', 'LBJ', 'biography', 'Knopf', 'Caro vol. 4', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
+    primary_arc: america
+    hn_volume: vol-iv
+    candidate_hn_chapters: ['hn-iv-america']
+    notes: "Caro vol. 4"
+  - id: HNSRC-0255
+    title: "George Marshall: Defender of the Republic"
+    author: "David L. Roll"
+    era: industrial
+    added_batch: "2026-04-21-bookshelf-photos-2"
+    tags: ['America', 'WWII', 'Cold War', 'biography', 'Caliber', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
+    primary_arc: america
+    hn_volume: vol-iv
+    candidate_hn_chapters: ['hn-iv-america']
+  - id: HNSRC-0256
+    title: "The General vs. the President: MacArthur and Truman at the Brink of Nuclear War"
+    author: "H. W. Brands"
+    era: industrial
+    added_batch: "2026-04-21-bookshelf-photos-2"
+    tags: ['America', 'Korean War', 'Truman', 'MacArthur', 'Doubleday', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
+    primary_arc: america
+    hn_volume: vol-iv
+    candidate_hn_chapters: ['hn-iv-america']
+  - id: HNSRC-0257
+    title: "Truman"
+    author: "David McCullough"
+    era: industrial
+    added_batch: "2026-04-21-bookshelf-photos-2"
+    tags: ['America', 'presidency', 'WWII', 'biography', 'Simon and Schuster', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
+    primary_arc: america
+    hn_volume: vol-iv
+    candidate_hn_chapters: ['hn-iv-america']
+  - id: HNSRC-0258
+    title: "Eisenhower: Soldier and President"
+    author: "Stephen E. Ambrose"
+    era: industrial
+    added_batch: "2026-04-21-bookshelf-photos-2"
+    tags: ['America', 'WWII', 'presidency', 'biography', 'Simon and Schuster', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
+    primary_arc: america
+    hn_volume: vol-iv
+    candidate_hn_chapters: ['hn-iv-america']
+    notes: "Abridged S&S one-volume; two printings (spine color variants) on shelf—dedupe on ISBN."
+  - id: HNSRC-0259
+    title: "Nixon: The Education of a Politician, 1913-1962"
+    author: "Stephen E. Ambrose"
+    era: industrial
+    added_batch: "2026-04-21-bookshelf-photos-2"
+    tags: ['America', 'Nixon', 'biography', 'S&S', 'Ambrose vol. 1', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
+    primary_arc: america
+    hn_volume: vol-iv
+    candidate_hn_chapters: ['hn-iv-america']
+  - id: HNSRC-0260
+    title: "Nixon: The Triumph of a Politician, 1962-1972"
+    author: "Stephen E. Ambrose"
+    era: industrial
+    added_batch: "2026-04-21-bookshelf-photos-2"
+    tags: ['America', 'Nixon', 'biography', 'S&S', 'Ambrose vol. 2', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
+    primary_arc: america
+    hn_volume: vol-iv
+    candidate_hn_chapters: ['hn-iv-america']
+  - id: HNSRC-0261
+    title: "Nixon: Ruin and Recovery, 1973-1990"
+    author: "Stephen E. Ambrose"
+    era: industrial
+    added_batch: "2026-04-21-bookshelf-photos-2"
+    tags: ['America', 'Nixon', 'Watergate', 'biography', 'S&S', 'Ambrose vol. 3', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
+    primary_arc: america
+    hn_volume: vol-iv
+    candidate_hn_chapters: ['hn-iv-america']
+  - id: HNSRC-0262
+    title: "Democracy in America"
+    author: "Alexis de Tocqueville"
+    era: industrial
+    added_batch: "2026-04-21-bookshelf-photos-2"
+    tags: ['America', 'political thought', 'Library of America', 'nineteenth century', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
+    hn_volume: vol-iv
+    candidate_hn_chapters: ['hn-iv-america', 'hn-iii-france']
+  - id: HNSRC-0263
+    title: "T. R.: The Last Romantic"
+    author: "H. W. Brands"
+    era: industrial
+    added_batch: "2026-04-21-bookshelf-photos-2"
+    tags: ['America', 'Theodore Roosevelt', 'Gilded Age', 'biography', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
+    primary_arc: america
+    hn_volume: vol-iv
+    candidate_hn_chapters: ['hn-iv-america']
+  - id: HNSRC-0264
+    title: "Traitor to His Class: The Privileged Life and Radical Presidency of Franklin Delano Roosevelt"
+    author: "H. W. Brands"
+    era: industrial
+    added_batch: "2026-04-21-bookshelf-photos-2"
+    tags: ['America', 'FDR', 'New Deal', 'biography', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
+    primary_arc: america
+    hn_volume: vol-iv
+    candidate_hn_chapters: ['hn-iv-america']
+  - id: HNSRC-0265
+    title: "Kissinger: 1923-1968: The Idealist"
+    author: "Niall Ferguson"
+    era: modern
+    added_batch: "2026-04-21-bookshelf-photos-2"
+    tags: ['America', 'diplomacy', 'Cold War', 'biography', 'Ferguson', 'Kissinger', 'Volume I', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
+    primary_arc: america
+    hn_volume: vol-v
+    candidate_hn_chapters: ['hn-v-america-hegemonic', 'hn-iv-germany']
+    notes: "Publication 2010s; era=modern, vol-v. Volume 2 if purchased later—add new HNSRC."
+  - id: HNSRC-0266
+    title: "A Week, Walden, Maine Woods, Cape Cod"
+    author: "Henry David Thoreau"
+    era: industrial
+    added_batch: "2026-04-21-bookshelf-photos-2"
+    tags: ['America', 'essays', 'transcendentalism', 'Library of America', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
+    hn_volume: vol-iv
+    candidate_hn_chapters: ['hn-iv-america']
+  - id: HNSRC-0267
+    title: "Tales and Sketches"
+    author: "Nathaniel Hawthorne"
+    era: industrial
+    added_batch: "2026-04-21-bookshelf-photos-2"
+    tags: ['America', 'short fiction', 'Library of America', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
+    hn_volume: vol-iv
+    candidate_hn_chapters: ['hn-iv-america']
+  - id: HNSRC-0268
+    title: "Novels"
+    author: "Nathaniel Hawthorne"
+    era: industrial
+    added_batch: "2026-04-21-bookshelf-photos-2"
+    tags: ['America', 'fiction', 'Library of America', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
+    hn_volume: vol-iv
+    candidate_hn_chapters: ['hn-iv-america']
+  - id: HNSRC-0269
+    title: "Revolutionary Writings 1755-1775"
+    author: "John Adams"
+    era: industrial
+    added_batch: "2026-04-21-bookshelf-photos-2"
+    tags: ['America', 'founding', 'Library of America', 'LOA vol. 1 of 2', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
+    hn_volume: vol-iv
+    candidate_hn_chapters: ['hn-iv-america']
+  - id: HNSRC-0270
+    title: "Revolutionary Writings 1775-1783"
+    author: "John Adams"
+    era: industrial
+    added_batch: "2026-04-21-bookshelf-photos-2"
+    tags: ['America', 'founding', 'Library of America', 'LOA vol. 2 of 2', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
+    hn_volume: vol-iv
+    candidate_hn_chapters: ['hn-iv-america']
+  - id: HNSRC-0271
+    title: "Collected Poems & Translations"
+    author: "Ralph Waldo Emerson"
+    era: industrial
+    added_batch: "2026-04-21-bookshelf-photos-2"
+    tags: ['America', 'poetry', 'transcendentalism', 'Library of America', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
+    hn_volume: vol-iv
+    candidate_hn_chapters: ['hn-iv-america']
+  - id: HNSRC-0272
+    title: "Typee, Omoo, Mardi"
+    author: "Herman Melville"
+    era: industrial
+    added_batch: "2026-04-21-bookshelf-photos-2"
+    tags: ['America', 'fiction', 'Library of America', 'maritime', 'LOA tranche 1', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
+    hn_volume: vol-iv
+    candidate_hn_chapters: ['hn-iv-america']
+  - id: HNSRC-0273
+    title: "Redburn, White-Jacket, Moby-Dick"
+    author: "Herman Melville"
+    era: industrial
+    added_batch: "2026-04-21-bookshelf-photos-2"
+    tags: ['America', 'fiction', 'Library of America', 'whaling', 'LOA tranche 2', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
+    hn_volume: vol-iv
+    candidate_hn_chapters: ['hn-iv-america']
+  - id: HNSRC-0274
+    title: "The Grapes of Wrath & Other Writings 1936-1941"
+    author: "John Steinbeck"
+    era: industrial
+    added_batch: "2026-04-21-bookshelf-photos-2"
+    tags: ['America', 'fiction', 'Great Depression', 'Library of America', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
+    hn_volume: vol-iv
+    candidate_hn_chapters: ['hn-iv-america']
+    notes: "Distinct LOA dateline vs HNSRC-0234/0235 Steinbeck set."
+  - id: HNSRC-0275
+    title: "The Guns of August, The Proud Tower"
+    author: "Barbara W. Tuchman"
+    era: industrial
+    added_batch: "2026-04-21-bookshelf-photos-2"
+    tags: ['America', 'WWI', 'narrative history', 'Library of America', 'Guns of August', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
+    hn_volume: vol-iv
+    candidate_hn_chapters: ['hn-iv-america', 'hn-iv-germany', 'hn-iv-anglia-imperial']
+  - id: HNSRC-0276
+    title: "Tales, Sketches, Speeches, & Essays 1852-1890"
+    author: "Mark Twain"
+    era: industrial
+    added_batch: "2026-04-21-bookshelf-photos-2"
+    tags: ['America', 'nonfiction', 'Library of America', 'Mark Twain', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
+    hn_volume: vol-iv
+    candidate_hn_chapters: ['hn-iv-america']
+    notes: "Complements HNSRC-0229-0233 Twain LOA; date-sliced 1852-1890 vol."
+  - id: HNSRC-0277
+    title: "The Sun Also Rises & Other Writings 1918-1926"
+    author: "Ernest Hemingway"
+    era: industrial
+    added_batch: "2026-04-21-bookshelf-photos-2"
+    tags: ['America', 'fiction', 'Library of America', 'modernism', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
+    hn_volume: vol-iv
+    candidate_hn_chapters: ['hn-iv-america', 'hn-iii-france']
+  - id: HNSRC-0278
+    title: "A Farewell to Arms & Other Writings 1927-1932"
+    author: "Ernest Hemingway"
+    era: industrial
+    added_batch: "2026-04-21-bookshelf-photos-2"
+    tags: ['America', 'fiction', 'Library of America', 'LOA compendium', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
+    hn_volume: vol-iv
+    candidate_hn_chapters: ['hn-iv-america', 'hn-iii-france']
+    notes: "Distinct from HNSRC-0258 Everyman A Farewell to Arms; LOA compendia."
+  - id: HNSRC-0279
+    title: "The Illustrated Man, The October Country, Other Stories"
+    author: "Ray Bradbury"
+    era: industrial
+    added_batch: "2026-04-21-bookshelf-photos-2"
+    tags: ['America', 'science fiction', 'Library of America', 'slipcase', 'LOA 1/2 box', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
+    hn_volume: vol-iv
+    candidate_hn_chapters: ['hn-iv-america']
+  - id: HNSRC-0280
+    title: "Novels & Story Cycles"
+    author: "Ray Bradbury"
+    era: industrial
+    added_batch: "2026-04-21-bookshelf-photos-2"
+    tags: ['America', 'science fiction', 'Library of America', 'slipcase', 'LOA 2/2 box', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
+    hn_volume: vol-iv
+    candidate_hn_chapters: ['hn-iv-america']
+  - id: HNSRC-0281
+    title: "Novels & Stories 1950-1962"
+    author: "Kurt Vonnegut"
+    era: industrial
+    added_batch: "2026-04-21-bookshelf-photos-2"
+    tags: ['America', 'science fiction', 'Library of America', 'slipcase', 'LOA 1/4 box', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
+    hn_volume: vol-iv
+    candidate_hn_chapters: ['hn-iv-america']
+  - id: HNSRC-0282
+    title: "Novels & Stories 1963-1973"
+    author: "Kurt Vonnegut"
+    era: industrial
+    added_batch: "2026-04-21-bookshelf-photos-2"
+    tags: ['America', 'science fiction', 'Library of America', 'slipcase', 'LOA 2/4 box', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
+    hn_volume: vol-iv
+    candidate_hn_chapters: ['hn-iv-america']
+  - id: HNSRC-0283
+    title: "Novels 1976-1985"
+    author: "Kurt Vonnegut"
+    era: industrial
+    added_batch: "2026-04-21-bookshelf-photos-2"
+    tags: ['America', 'science fiction', 'Library of America', 'slipcase', 'LOA 3/4 box', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
+    hn_volume: vol-iv
+    candidate_hn_chapters: ['hn-iv-america']
+  - id: HNSRC-0284
+    title: "Novels 1987-1997"
+    author: "Kurt Vonnegut"
+    era: industrial
+    added_batch: "2026-04-21-bookshelf-photos-2"
+    tags: ['America', 'science fiction', 'Library of America', 'slipcase', 'LOA 4/4 box', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
+    hn_volume: vol-iv
+    candidate_hn_chapters: ['hn-iv-america']
+  - id: HNSRC-0285
+    title: "The Magician's Nephew"
+    author: "C. S. Lewis"
+    era: industrial
+    added_batch: "2026-04-21-bookshelf-photos-2"
+    tags: ['England', 'fantasy', 'Narnia', 'childrens', 'Narnia 1 of 7', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
+    hn_volume: vol-iv
+    candidate_hn_chapters: ['hn-iv-anglia-imperial']
+    notes: "Narnia box set; publication-order shelf index 1/7."
+  - id: HNSRC-0286
+    title: "The Lion, the Witch and the Wardrobe"
+    author: "C. S. Lewis"
+    era: industrial
+    added_batch: "2026-04-21-bookshelf-photos-2"
+    tags: ['England', 'fantasy', 'Narnia', 'childrens', 'Narnia 2 of 7', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
+    hn_volume: vol-iv
+    candidate_hn_chapters: ['hn-iv-anglia-imperial']
+    notes: "Narnia box set; publication-order shelf index 2/7."
+  - id: HNSRC-0287
+    title: "The Horse and His Boy"
+    author: "C. S. Lewis"
+    era: industrial
+    added_batch: "2026-04-21-bookshelf-photos-2"
+    tags: ['England', 'fantasy', 'Narnia', 'childrens', 'Narnia 3 of 7', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
+    hn_volume: vol-iv
+    candidate_hn_chapters: ['hn-iv-anglia-imperial']
+    notes: "Narnia box set; publication-order shelf index 3/7."
+  - id: HNSRC-0288
+    title: "Prince Caspian"
+    author: "C. S. Lewis"
+    era: industrial
+    added_batch: "2026-04-21-bookshelf-photos-2"
+    tags: ['England', 'fantasy', 'Narnia', 'childrens', 'Narnia 4 of 7', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
+    hn_volume: vol-iv
+    candidate_hn_chapters: ['hn-iv-anglia-imperial']
+    notes: "Narnia box set; publication-order shelf index 4/7."
+  - id: HNSRC-0289
+    title: "The Voyage of the Dawn Treader"
+    author: "C. S. Lewis"
+    era: industrial
+    added_batch: "2026-04-21-bookshelf-photos-2"
+    tags: ['England', 'fantasy', 'Narnia', 'childrens', 'Narnia 5 of 7', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
+    hn_volume: vol-iv
+    candidate_hn_chapters: ['hn-iv-anglia-imperial']
+    notes: "Narnia box set; publication-order shelf index 5/7."
+  - id: HNSRC-0290
+    title: "The Silver Chair"
+    author: "C. S. Lewis"
+    era: industrial
+    added_batch: "2026-04-21-bookshelf-photos-2"
+    tags: ['England', 'fantasy', 'Narnia', 'childrens', 'Narnia 6 of 7', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
+    hn_volume: vol-iv
+    candidate_hn_chapters: ['hn-iv-anglia-imperial']
+    notes: "Narnia box set; publication-order shelf index 6/7."
+  - id: HNSRC-0291
+    title: "The Last Battle"
+    author: "C. S. Lewis"
+    era: industrial
+    added_batch: "2026-04-21-bookshelf-photos-2"
+    tags: ['England', 'fantasy', 'Narnia', 'childrens', 'Narnia 7 of 7', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
+    hn_volume: vol-iv
+    candidate_hn_chapters: ['hn-iv-anglia-imperial']
+    notes: "Narnia box set; publication-order shelf index 7/7."
+  - id: HNSRC-0292
+    title: "Einstein: His Life and Universe"
+    author: "Walter Isaacson"
+    era: industrial
+    added_batch: "2026-04-21-bookshelf-photos-2"
+    tags: ['science', 'physics', 'biography', 'twentieth century', 'S&S', 'Isaacson', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
+    hn_volume: vol-iv
+    candidate_hn_chapters: ['hn-iv-america', 'hn-iv-germany']
+  - id: HNSRC-0293
+    title: "The Road to Stalingrad: Stalin's War with Germany, Vol. 1"
+    author: "John Erickson"
+    era: industrial
+    added_batch: "2026-04-21-bookshelf-photos-2"
+    tags: ['Eastern Front', 'WWII', 'Soviet', 'military', 'Erickson', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
+    hn_volume: vol-iv
+    candidate_hn_chapters: ['hn-iv-russia-imperial', 'hn-iv-germany']
+  - id: HNSRC-0294
+    title: "The Road to Berlin: Stalin's War with Germany, Vol. 2"
+    author: "John Erickson"
+    era: industrial
+    added_batch: "2026-04-21-bookshelf-photos-2"
+    tags: ['Eastern Front', 'WWII', 'Soviet', 'military', 'Erickson', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
+    hn_volume: vol-iv
+    candidate_hn_chapters: ['hn-iv-russia-imperial', 'hn-iv-germany']
+  - id: HNSRC-0295
+    title: "Mark Twain"
+    author: "Ron Chernow"
+    era: industrial
+    added_batch: "2026-04-21-bookshelf-photos-2"
+    tags: ['America', 'biography', 'Gilded Age', 'Penguin Press', 'not Samuel Clemens writings', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
+    primary_arc: america
+    hn_volume: vol-iv
+    candidate_hn_chapters: ['hn-iv-america']
+    notes: "Biography of Twain; distinct from HNSRC-0229+ Twain first-person works."
+  - id: HNSRC-0296
+    title: "The Templars: The Rise and Spectacular Fall of God's Holy Warriors"
+    author: "Dan Jones"
+    era: medieval
+    added_batch: "2026-04-21-bookshelf-photos-2"
+    tags: ['Crusades', 'Templars', 'military orders', 'Viking', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
+    hn_volume: vol-ii
+    candidate_hn_chapters: ['hn-iii-ottoman', 'hn-iv-anglia-imperial', 'hn-ii-rome-byzantine']

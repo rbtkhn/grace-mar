@@ -1,6 +1,6 @@
 # History Notebook
 
-**Discoverability:** Linked from **`users/grace-mar/SELF-LIBRARY/history-notebook`** (repo-relative symlink when created). **LIB:** [LIB-0156](../../../../users/grace-mar/self-library.md#operator-analytical-books) (operator-authored chapters) · [LIB-0158](../../../../users/grace-mar/self-library.md#personal-physical-library) (owned print catalog `HNSRC-*`) in [`self-library.md`](../../../../users/grace-mar/self-library.md).
+**Discoverability:** Linked from **`users/grace-mar/SELF-LIBRARY/history-notebook`** (repo-relative symlink when created). **LIB:** [LIB-0156](../../../../users/grace-mar/self-library.md#operator-analytical-books) (operator-authored chapters) · [LIB-0158 — Bookshelf](../../../../users/grace-mar/self-library.md#bookshelf) (owned print `HNSRC-*` — [BOOKSHELF.md](research/BOOKSHELF.md) vs [operator books](../../../../users/grace-mar/self-library.md#operator-analytical-books)) in [`self-library.md`](../../../../users/grace-mar/self-library.md).
 
 **Operator-authored compressed chapters** distilling civilizational patterns into strategy-ready reference. Five temporal volumes; **target 20 chapters per volume (100 main-era chapters)**; each chapter ~500–1000 words. Not a mirror of CIV-MEM — an independent analytical layer the operator writes and the agent reads.
 
@@ -12,7 +12,8 @@ Book identity and chapter IDs remain **SSOT** in [book-architecture.yaml](book-a
 |-------|----------|------|
 | **Chapters** | [chapters/](chapters/) + YAML ids | Primary deliverable: comparative chapters (~500–1000w); cite **chapter ids** (`hn-i-v1-04`, …) from strategy-notebook **`### History resonance`** |
 | **Distillation queue** | [STATUS.md](STATUS.md) | **Single SSOT** for next `hn-*` to draft; strategy **`meta.md`** links here — see [STRATEGY-NOTEBOOK-ARCHITECTURE § Parallel to History notebook](../strategy-notebook/STRATEGY-NOTEBOOK-ARCHITECTURE.md#parallel-to-history-notebook-lib-0156) |
-| **Operator source catalog** (optional) | [research/operator-source-catalog.yaml](research/operator-source-catalog.yaml) + [research/OPERATOR-SOURCE-CATALOG.md](research/OPERATOR-SOURCE-CATALOG.md) | Title-level **reference shelf** (e.g. batched by era) that **informs** drafting; not chapter SSOT. Run `python3 scripts/validate_hn_source_catalog.py` after edits. |
+| **Bookshelf** (bibliography) | [research/BOOKSHELF.md](research/BOOKSHELF.md) | **Enhanced bib** for owned print — not full text; distinct from operator-authored [books in self-library](../../../../users/grace-mar/self-library.md#operator-analytical-books) |
+| **Operator source catalog** (optional) | [research/operator-source-catalog.yaml](research/operator-source-catalog.yaml) + [research/OPERATOR-SOURCE-CATALOG.md](research/OPERATOR-SOURCE-CATALOG.md) | Machine-readable `HNSRC-*` rows for Bookshelf; **informs** drafting; not chapter SSOT. Run `python3 scripts/validate_hn_source_catalog.py` after edits. |
 | **Vol I library scaffold** (optional) | [research/VOL-I-LIBRARY-SCAFFOLD.md](research/VOL-I-LIBRARY-SCAFFOLD.md) | Maps **HNSRC-*** rows to `hn-i-v1-01`…`20` for problem-spine drafting; see also [VOL-I-PROBLEM-CHAPTERS.md](research/VOL-I-PROBLEM-CHAPTERS.md). |
 | **Civilization threads** (optional) | [threads/](threads/) — `history-civ-*.md` | Longitudinal lanes: continuity, mechanism candidates, candidate chapter targets — **scaffolding** for drafting, not a parallel codex |
 

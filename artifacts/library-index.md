@@ -28,7 +28,7 @@ _High-value WORK lanes: Predictive History, strategy notebook, journals, etc. So
 _Last commit date on repo path from `url` when it points at this repository — proxy for “hot” docs._
 
 - 2026-04-20 — **LIB-0153** — Strategy notebook
-- 2026-04-19 — **LIB-0158** — Personal history shelf (owned books catalog)
+- 2026-04-19 — **LIB-0158** — Bookshelf (owned print catalog)
 - 2026-04-19 — **LIB-0156** — History notebook
 - 2026-04-18 — **LIB-0151** — Predictive History — YouTube transcript library
 - 2026-04-13 — **LIB-0149** — Predictive History
@@ -295,5 +295,5 @@ _Complete list for completeness checks; the sections above are for daily navigat
 - **LIB-0155** — Dev journal
 - **LIB-0156** — History notebook
 - **LIB-0157** — Civilization Memory (upstream repository)
-- **LIB-0158** — Personal history shelf (owned books catalog)
+- **LIB-0158** — Bookshelf (owned print catalog)
 

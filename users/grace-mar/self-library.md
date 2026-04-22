@@ -6,7 +6,7 @@ A governed retrieval substrate for reference-facing knowledge. Active entries sh
 
 **Schema:** [docs/library-schema.md](../../docs/library-schema.md)
 
-**Contents:** [Operator analytical books](#operator-analytical-books) · [Personal physical library](#personal-physical-library) · [Entries](#entries) · [Theology](#theology) · [Physics, chemistry & biology](#physics-chemistry--biology) · [History](#history) · [Computer Science](#computer-science) · [Metadata](#metadata)
+**Contents:** [Operator analytical books](#operator-analytical-books) · [Bookshelf](#bookshelf) · [Entries](#entries) · [Theology](#theology) · [Physics, chemistry & biology](#physics-chemistry--biology) · [History](#history) · [Computer Science](#computer-science) · [Metadata](#metadata)
 
 **Library-first preference:** [LIB-0149 — Predictive History](#operator-analytical-books) uses `lookup_priority: preferred` so it sorts **above** `high` in the analyst library summary (see [library-schema.md](../../docs/library-schema.md) · `lookup_priority`).
 
@@ -31,15 +31,17 @@ A governed retrieval substrate for reference-facing knowledge. Active entries sh
 
 ---
 
-## Personal physical library
+## Bookshelf
 
-**Purpose:** A **separate container** from [Operator analytical books](#operator-analytical-books). Here live **third-party books the operator physically owns** — cataloged as **`HNSRC-*`** seed rows for drafting and shelf order, **not** operator-authored corpora. SSOT: [`docs/skill-work/work-strategy/history-notebook/research/operator-source-catalog.yaml`](../../docs/skill-work/work-strategy/history-notebook/research/operator-source-catalog.yaml) + runbook [`OPERATOR-SOURCE-CATALOG.md`](../../docs/skill-work/work-strategy/history-notebook/research/OPERATOR-SOURCE-CATALOG.md). **Do not** tag these with **`shelf_intent: operator_book`** or **`scope: operator_analytical`**; use **[LIB-0158](#personal-physical-library)**.
+**Purpose:** A **separate container** from [Operator analytical books](#operator-analytical-books). **Concept & contrast** (enhanced bibliography, not full text, not operator books): [`BOOKSHELF.md`](../../docs/skill-work/work-strategy/history-notebook/research/BOOKSHELF.md).
+
+**Bookshelf** holds **third-party books the operator physically owns** — cataloged as **`HNSRC-*`** seed rows for drafting and shelf order, **not** operator-authored corpora. **Enumerated list (SSOT):** [`docs/skill-work/work-strategy/history-notebook/research/operator-source-catalog.yaml`](../../docs/skill-work/work-strategy/history-notebook/research/operator-source-catalog.yaml) · runbook [`OPERATOR-SOURCE-CATALOG.md`](../../docs/skill-work/work-strategy/history-notebook/research/OPERATOR-SOURCE-CATALOG.md). **Do not** tag these with **`shelf_intent: operator_book`** or **`scope: operator_analytical`**; use **[LIB-0158](#bookshelf)**.
 
 | ID | Title | SSOT |
 |----|--------|------|
-| **LIB-0158** | Personal history shelf (owned books catalog) | [`operator-source-catalog.yaml`](../../docs/skill-work/work-strategy/history-notebook/research/operator-source-catalog.yaml) · [runbook](../../docs/skill-work/work-strategy/history-notebook/research/OPERATOR-SOURCE-CATALOG.md) |
+| **LIB-0158** | Bookshelf (owned print catalog) | [BOOKSHELF.md](../../docs/skill-work/work-strategy/history-notebook/research/BOOKSHELF.md) · [`operator-source-catalog.yaml`](../../docs/skill-work/work-strategy/history-notebook/research/operator-source-catalog.yaml) · [runbook](../../docs/skill-work/work-strategy/history-notebook/research/OPERATOR-SOURCE-CATALOG.md) |
 
-**Contrast:** [LIB-0156](#operator-analytical-books) is the **History Notebook** project (your compressed **chapters**). [LIB-0158](#personal-physical-library) is the **owned print library** that **informs** those chapters.
+**Contrast:** [LIB-0156](#operator-analytical-books) is the **History Notebook** project (your compressed **chapters**). [LIB-0158](#bookshelf) is the **owned print** set on the **bookshelf** that **informs** those chapters.
 
 ---
 
@@ -132,10 +134,10 @@ entries:
     url: "https://github.com/rbtkhn/grace-mar/blob/main/docs/skill-work/work-strategy/history-notebook/README.md"
     reviewed_at: 2026-04-18
     added_at: 2026-04-18
-    notes: "Operator analytical book: compressed civilizational chapters (hn-*), book-architecture.yaml SSOT. Distinct from LIB-0158 (third-party owned books in operator-source-catalog.yaml). WORK; not Record until gated."
+    notes: "Operator analytical book: compressed civilizational chapters (hn-*), book-architecture.yaml SSOT. Distinct from LIB-0158 (Bookshelf / third-party owned books in operator-source-catalog.yaml). WORK; not Record until gated."
 
   - id: LIB-0158
-    title: "Personal history shelf (owned books catalog)"
+    title: "Bookshelf (owned print catalog)"
     author: "operator"
     lane: "reference"
     type: "reference"
@@ -148,7 +150,7 @@ entries:
     url: "https://github.com/rbtkhn/grace-mar/blob/main/docs/skill-work/work-strategy/history-notebook/research/operator-source-catalog.yaml"
     reviewed_at: 2026-04-18
     added_at: 2026-04-18
-    notes: "Third-party print books the operator owns; HNSRC-* rows in operator-source-catalog.yaml. Separate from operator_analytical shelf (LIB-0149, LIB-0153, LIB-0156, …). Informs History Notebook drafting; not companion Record. Runbook: OPERATOR-SOURCE-CATALOG.md."
+    notes: "Third-party print books the operator owns; HNSRC-* rows in operator-source-catalog.yaml. Concept: BOOKSHELF.md (enhanced bibliography, not full text). Separate from operator_analytical shelf (LIB-0149, LIB-0153, LIB-0156, …). Informs History Notebook drafting; not companion Record. Runbook: OPERATOR-SOURCE-CATALOG.md."
 
   - id: LIB-0157
     title: "Civilization Memory (upstream repository)"
