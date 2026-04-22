@@ -1,16 +1,16 @@
-# Operator source catalog (History Notebook)
+# Bookshelf runbook (History Notebook)
 
-**WORK only;** not Record. This runbook describes the **title-level seed catalog** for building a personal reference shelf (target ~500 works) that **informs** [History Notebook](../README.md) chapter drafting. **Human overview (Bookshelf vs operator books):** [BOOKSHELF.md](BOOKSHELF.md). **Self-library container:** [LIB-0158 — Bookshelf](../../../../users/grace-mar/self-library.md#bookshelf) (owned print catalog — separate from [LIB-0156](../../../../users/grace-mar/self-library.md#operator-analytical-books) operator-authored chapters). It does **not** replace:
+**WORK only;** not Record. This runbook describes **Bookshelf** — the **title-level seed catalog** (`bookshelf-catalog.yaml`) for building a personal reference shelf (target ~500 works) that **informs** [History Notebook](../README.md) chapter drafting. **Human overview (Bookshelf vs operator books):** [BOOKSHELF.md](BOOKSHELF.md). **Self-library container:** [LIB-0158 — Bookshelf](../../../../users/grace-mar/self-library.md#bookshelf) (owned print catalog — separate from [LIB-0156](../../../../users/grace-mar/self-library.md#operator-analytical-books) operator-authored chapters). It does **not** replace:
 
 - [`book-architecture.yaml`](../book-architecture.yaml) — chapter SSOT  
 - [`cross-book-map.yaml`](../cross-book-map.yaml) — Predictive History ↔ HN coverage truth  
 - [`STATUS.md`](../STATUS.md) — **distillation queue** for the **next `hn-*` chapters to draft**
 
-## What the catalog is
+## What the Bookshelf files are
 
 | Artifact | Role |
 |----------|------|
-| [`operator-source-catalog.yaml`](operator-source-catalog.yaml) | Bibliographic rows (`HNSRC-*`), **era** (+ optional **eras**), optional hints to `hn-*` and PH — **planning shelf** |
+| [`bookshelf-catalog.yaml`](bookshelf-catalog.yaml) | Bibliographic rows (`HNSRC-*`), **era** (+ optional **eras**), optional hints to `hn-*` and PH — **planning shelf** |
 | [VOL-I-LIBRARY-SCAFFOLD.md](VOL-I-LIBRARY-SCAFFOLD.md) | Vol I only: **chapter × shelf** matrix + gap notes (drafting aid; not chapter SSOT) |
 | **HN chapters** (`chapters/`, `hn-*`) | Operator-distilled ~500–1000w prose — **deliverable** |
 | **STATUS.md** | Single queue for **which chapter to write next**; link from strategy-notebook `meta.md` |
@@ -37,7 +37,7 @@ Process the shelf in this **fixed sequence** (batches of **five titles** within 
 
 **Multiple temporal categories:** When a work **logically belongs** in more than one bucket (e.g. Gibbon’s narrative spans late antiquity and medieval Europe), set **`eras`** to the full list and keep **`era`** as the **primary** bucket (upload order, default shelf file). Example: `era: medieval` + `eras: [ancient, medieval]`. Omit **`eras`** when a single category is enough.
 
-### Era boundaries (operator rule)
+### Era boundaries (Bookshelf rule)
 
 **Year labels:** use **BC** and **AD** (traditional system), not BCE or CE — see [STYLE-GUIDE § Dating](../STYLE-GUIDE.md#dating-years).
 
@@ -62,11 +62,11 @@ If a title straddles (e.g. one volume covers 400–600 AD, or 1400–1500 AD acr
 ## Per-batch workflow (five titles)
 
 1. Confirm the **active era** (next in the sequence above).
-2. Add five new `items` in `operator-source-catalog.yaml` (or paste a block for the agent to merge):
+2. Add five new `items` in `bookshelf-catalog.yaml` (or paste a block for the agent to merge):
    - Next sequential `id`: `HNSRC-NNNN`.
    - Required: `title`, `author`, **`era`**.
    - Optional: `eras`, `year`, `isbn`, `added_batch`, `tags`, `hn_volume`, `primary_arc`, `candidate_hn_chapters`, `ph_thesis_hints`, `ph_concept_hints`, `notes`.
-3. Run validation: `python3 scripts/validate_hn_source_catalog.py` (use `--strict` in CI if wired).
+3. Run validation: `python3 scripts/validate_bookshelf_catalog.py` (use `--strict` in CI if wired).
 4. **Within-era pass:** dedupe, cluster tags, adjust `candidate_hn_chapters` only as **planning** hints.
 5. **When an era slice feels complete:** optional short summary in this file (dated bullet) or in git commit message — not required for v1.
 
@@ -105,8 +105,8 @@ When you upload **whole book text** (PDF, EPUB, or extracted markdown):
 ## Validation
 
 ```bash
-python3 scripts/validate_hn_source_catalog.py
-python3 scripts/validate_hn_source_catalog.py --strict
+python3 scripts/validate_bookshelf_catalog.py
+python3 scripts/validate_bookshelf_catalog.py --strict
 ```
 
 Checks: unique `HNSRC-*` ids, required `era`, `candidate_hn_chapters` ⊆ `book-architecture.yaml`, duplicate `(title, author)` warnings.

@@ -69,8 +69,8 @@ jobs:
       - name: Validate strategy expert predictions ledger
         run: python3 scripts/validate_expert_predictions.py
 
-      - name: Validate history-notebook operator source catalog
-        run: python3 scripts/validate_hn_source_catalog.py
+      - name: Validate history-notebook Bookshelf catalog
+        run: python3 scripts/validate_bookshelf_catalog.py
 
       - name: Strategy notebook knot weave_count drift check
         run: python3 scripts/knot_seam_metrics.py --strict-drift

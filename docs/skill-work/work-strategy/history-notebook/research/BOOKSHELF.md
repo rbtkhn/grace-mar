@@ -18,11 +18,11 @@
 
 The **full, enumerated Bookshelf** (every volume row) is **only** in:
 
-- [`operator-source-catalog.yaml`](operator-source-catalog.yaml) — `HNSRC-*` items (title, author, era, tags, optional `candidate_hn_chapters`, etc.).
+- [`bookshelf-catalog.yaml`](bookshelf-catalog.yaml) — `HNSRC-*` items (title, author, era, tags, optional `candidate_hn_chapters`, etc.).
 
 This file is the **bibliography database**. It does **not** store scanned text; optional `content_path` in schema is for a future **phase 2** (see comments in the YAML header).
 
-**Runbook** (batches, era rules, upload order): [OPERATOR-SOURCE-CATALOG.md](OPERATOR-SOURCE-CATALOG.md).
+**Runbook** (batches, era rules, upload order): [BOOKSHELF-RUNBOOK.md](BOOKSHELF-RUNBOOK.md).
 
 ## How it connects to History Notebook
 
@@ -30,5 +30,5 @@ Bookshelf rows **inform** [History Notebook](../README.md) chapter drafting (whi
 
 ## See also
 
-- [History Notebook — STYLE-GUIDE § Operator catalog era buckets](../STYLE-GUIDE.md#operator-catalog-era-buckets) — era vocabulary in prose.
+- [History Notebook — STYLE-GUIDE § Bookshelf era buckets](../STYLE-GUIDE.md#bookshelf-era-buckets) — era vocabulary in prose.
 - [artifacts/library-index.md](../../../../../artifacts/library-index.md) — operator dashboard; includes **LIB-0158** in entry summaries, not the HNSRC title list.

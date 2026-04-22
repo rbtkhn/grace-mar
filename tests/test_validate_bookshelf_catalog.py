@@ -1,4 +1,4 @@
-"""Tests for scripts/validate_hn_source_catalog.py."""
+"""Tests for scripts/validate_bookshelf_catalog.py."""
 
 from __future__ import annotations
 
@@ -9,7 +9,7 @@ from pathlib import Path
 import pytest
 
 REPO = Path(__file__).resolve().parent.parent
-SCRIPT = REPO / "scripts" / "validate_hn_source_catalog.py"
+SCRIPT = REPO / "scripts" / "validate_bookshelf_catalog.py"
 CATALOG = (
     REPO
     / "docs"
@@ -17,7 +17,7 @@ CATALOG = (
     / "work-strategy"
     / "history-notebook"
     / "research"
-    / "operator-source-catalog.yaml"
+    / "bookshelf-catalog.yaml"
 )
 HN_ARCH = (
     REPO

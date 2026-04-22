@@ -1,4 +1,4 @@
-# History Notebook — operator source catalog (title-level seed)
+# History Notebook — Bookshelf catalog (title-level seed; HNSRC-* rows)
 # WORK only; not Record. Does not replace book-architecture.yaml or cross-book-map.yaml.
 # Self-library pointer: LIB-0158 — users/grace-mar/self-library.md#bookshelf (owned HNSRC-* shelf; not operator_book / operator_analytical). Human overview: BOOKSHELF.md (same directory).
 #
@@ -19,7 +19,7 @@
 #   lib_id: optional — if promoted to users/grace-mar self-library LIB-* entry
 #   content_path: optional — phase 2: gitignored file or absolute path (not committed)
 #
-# Upload order: ancient → medieval → colonial → industrial → modern (see OPERATOR-SOURCE-CATALOG.md).
+# Upload order: ancient → medieval → colonial → industrial → modern (see BOOKSHELF-RUNBOOK.md).
 # Era "ancient" = through fall of Western Roman Empire (~476 AD); late Roman / fall-of-the-West titles stay ancient.
 # Era "medieval" = post-476 AD formations through fall of Constantinople (~1453 AD); straddles into Vol III use eras/notes.
 # Era "colonial" (Vol III) = post-1453 through ~1789 AD (French Revolution); straddles into Vol IV use eras/notes.

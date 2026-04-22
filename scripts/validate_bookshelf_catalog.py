@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate History Notebook operator-source-catalog.yaml (HNSRC-* seed rows).
+"""Validate History Notebook bookshelf-catalog.yaml (HNSRC-* seed rows).
 
 Checks: unique ids, required era, optional eras (multi-bucket; must include era),
 candidate_hn_chapters ⊆ book-architecture.yaml, duplicate (title, author) warnings,
@@ -30,7 +30,7 @@ CATALOG = (
     / "work-strategy"
     / "history-notebook"
     / "research"
-    / "operator-source-catalog.yaml"
+    / "bookshelf-catalog.yaml"
 )
 HN_ARCH = REPO / "docs" / "skill-work" / "work-strategy" / "history-notebook" / "book-architecture.yaml"
 
@@ -164,7 +164,7 @@ def main() -> int:
         "--catalog",
         type=Path,
         default=CATALOG,
-        help="Path to operator-source-catalog.yaml",
+        help="Path to bookshelf-catalog.yaml",
     )
     ap.add_argument(
         "--architecture",
@@ -187,13 +187,13 @@ def main() -> int:
         print(e, file=sys.stderr)
 
     if errors:
-        print(f"validate_hn_source_catalog: {len(errors)} error(s)", file=sys.stderr)
+        print(f"validate_bookshelf_catalog: {len(errors)} error(s)", file=sys.stderr)
         return 1
     if args.strict and warnings:
-        print(f"validate_hn_source_catalog: {len(warnings)} warning(s) (--strict)", file=sys.stderr)
+        print(f"validate_bookshelf_catalog: {len(warnings)} warning(s) (--strict)", file=sys.stderr)
         return 1
 
-    print("ok: operator-source-catalog.yaml")
+    print("ok: bookshelf-catalog.yaml")
     return 0
 
 

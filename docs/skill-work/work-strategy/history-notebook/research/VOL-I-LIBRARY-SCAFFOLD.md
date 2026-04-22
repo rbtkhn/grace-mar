@@ -6,7 +6,7 @@
 |------|------|
 | [book-architecture.yaml](../book-architecture.yaml) | Chapter **IDs**, public **titles**, `file` paths, arcs |
 | [VOL-I-PROBLEM-CHAPTERS.md](VOL-I-PROBLEM-CHAPTERS.md) | Problem spine: **Q-bundles**, registers |
-| [operator-source-catalog.yaml](operator-source-catalog.yaml) | **HNSRC-*** shelf rows; `candidate_hn_chapters` planning hints |
+| [bookshelf-catalog.yaml](bookshelf-catalog.yaml) | **HNSRC-*** shelf rows; `candidate_hn_chapters` planning hints |
 
 **Schema decision (locked for Vol I):** Keep **generic problem titles** from `book-architecture.yaml` (e.g. “Parity, Buffers…”); do not rename chapters to book-specific hooks without a deliberate migration plan.
 
@@ -27,7 +27,7 @@ Not required for architecture; pick by taste:
 1. **China — one survey** of classical / early imperial state formation and institutions (e.g. Warring States → Qin/Han themes) to pair with **Analects** / **Tao Te Ching** as political context.
 2. **South Asia — one survey** of early imperial or post-Vedic political orders (e.g. Maurya/Gupta framing) to pair with **Hindu Scriptures** as more than textual ethics.
 
-Add rows to [operator-source-catalog.yaml](operator-source-catalog.yaml) when purchased.
+Add rows to [bookshelf-catalog.yaml](bookshelf-catalog.yaml) when purchased.
 
 ---
 
@@ -87,7 +87,7 @@ Anchor links above jump to **HNSRC** rows in the next section.
 
 ## HNSRC index (Vol I planning)
 
-Use [operator-source-catalog.yaml](operator-source-catalog.yaml) as the authoritative row for each id. Listed `candidate_hn_chapters` are aligned to this scaffold (validator: `python3 scripts/validate_hn_source_catalog.py --strict`).
+Use [bookshelf-catalog.yaml](bookshelf-catalog.yaml) as the authoritative row for each id. Listed `candidate_hn_chapters` are aligned to this scaffold (validator: `python3 scripts/validate_bookshelf_catalog.py --strict`).
 
 ### HNSRC-0001 — HNSRC-0010
 
@@ -156,5 +156,5 @@ Medieval-era rows (**HNSRC-0021**–**0026**, etc.) remain in the catalog for ot
 
 ## Maintenance
 
-- After changing [operator-source-catalog.yaml](operator-source-catalog.yaml), run `python3 scripts/validate_hn_source_catalog.py --strict`.
+- After changing [bookshelf-catalog.yaml](bookshelf-catalog.yaml), run `python3 scripts/validate_bookshelf_catalog.py --strict`.
 - When **HNSRC-0050** is identified, update the YAML row and add `candidate_hn_chapters` if appropriate; trim this file’s placeholder section.
