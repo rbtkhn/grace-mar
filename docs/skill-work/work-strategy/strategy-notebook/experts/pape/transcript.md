@@ -3,6 +3,7 @@
 WORK only; not Record.
 
 **Source:** Verbatim blocks from [`daily-strategy-inbox.md`](daily-strategy-inbox.md) that include `thread:pape` (first line + optional continuation paragraphs), routed on ingest.
+**Day page (refined):** **`experts/pape/pape-page-YYYY-MM-DD.md`** — Signal / Judgment / Open artifact; points to **verbatim** in [`raw-input/`](../../raw-input/README.md). Distinct from a **`strategy-page`** fence in [`thread.md`](thread.md) unless you duplicate judgment there during EOD compose. **Template:** [`pape-page-template.md`](pape-page-template.md).
 **Length:** Target **≤ 2000 words** per ingest block; whole file soft **≤ 20000 words** after prune (7-day window makes overrun unlikely).
 **Retention:** 7-day rolling window; date sections older than 7 days are pruned automatically.
 **Editing:** Operator may lightly edit for clarity after triage. Edits are preserved across triage runs (append-only, not overwrite).
@@ -11,6 +12,12 @@ WORK only; not Record.
 ---
 
 <!-- Triage appends new date sections below. Do not add content above this line. -->
+
+## 2026-04-21
+
+Verbatim: [`raw-input/2026-04-21/x-pape-zero-sum-escalation-ladder-2026-04-21.md`](../../raw-input/2026-04-21/x-pape-zero-sum-escalation-ladder-2026-04-21.md).
+
+Refined day page: [`pape-page-2026-04-21.md`](pape-page-2026-04-21.md).
 
 ## 2026-04-20
 - YT | cold: **Robert A. Pape** × **Clayton Morris & Natali Morris** (*Redacted* — *The Collapse is Now "Ahead of Schedule"*) — **aired 2026-04-20** — **04-12** **10-day** **shortage** **prediction** **→** **“ahead** **of** **schedule”** **(~4–5** **days** **post);** **Escalation** **Trap** **Substack** **/** **sanctions** **stages** **(≈45d** **prices,** **45–60d** **shortages,** **60–90d** **contraction** **→** **May** **31);** **jet** **fuel** **Europe** **/** **Air** **Canada** **LaGuardia;** **Australia** **/** **India** **stress;** **Hormuz** **~20%** **oil** **+** **dual** **closure** **(Iran** **+** **US)** **frame;** **China** **visit** **—** **stockpile** **/** **~80%** **non-oil** **energy** **/** **quagmire** **helps** **China** **thesis;** **US** **energy** **independence** **vs** **policies** **hastening** **China** **#1;** **SPR** **/** **171** **tankers** **/** **~200M** **bbl** **hypothesis;** **Islamabad** **48h** **paper** **deal** **possible** **but** **low** **stickiness** **/** **Lebanon** **48h** **unwind** **parallel;** **zero-sum** **Hormuz** **+** **nuclear** **/** **Bombing** **to** **Win** **/** **~$40T** **debt** **risk;** **working** **class** **/** **truckers** **/** **gas** **relief** **pitch** **/** **Bessent** **/** **poll** **/** **Erie** **frame;** **consequences** **over** **conspiracy** // hook: **`thread:pape`** **supply** **/** **sanctions** **theory** **×** **`thread:davis`** **`thread:ritter`** **`thread:johnson`** **Hormuz** **week** **—** **not** **§1e** **without** **primaries** | https://www.youtube.com/watch?v=WemB-vfoMaw | verify:full-text+raw-input+aired:2026-04-20+canonical-URL | thread:pape | grep:Pape+Redacted+Hormuz+Escalation+Trap+collapse+Bessent
@@ -21,7 +28,7 @@ WORK only; not Record.
 
 Verbatim: [`raw-input/2026-04-20/redacted-pape-collapse-ahead-of-schedule-2026-04-20.md`](../../raw-input/2026-04-20/redacted-pape-collapse-ahead-of-schedule-2026-04-20.md).
 
-
+Refined day page: [`pape-page-2026-04-20.md`](pape-page-2026-04-20.md).
 
 Host: Professor Robert Pape is the director of the Chicago Project on Security and Threats at the University of Chicago and the author of Escalation Trap on Substack.
 Professor, great to have you here on the show. Welcome.
@@ -117,6 +124,11 @@ Professor Robert Pape: Me too. Thanks for everything you're doing.
 
 
 ## 2026-04-18
+
+Verbatim: [`raw-input/2026-04-18/transcript-pape.md`](../../raw-input/2026-04-18/transcript-pape.md).
+
+Refined day page: [`pape-page-2026-04-18.md`](pape-page-2026-04-18.md).
+
 - X | cold: @ProfessorPape (**2026-04-17** ~08:07) — Israel–Lebanon truce as **signal of shifting global power** (more than ceasefire); claims **Iran** demanded end to **Israeli attacks in Lebanon** and **U.S. delivered**; amplifies **NYT Opinion** card on Iran as **major world power** (“4th” framing in card) // hook: **seam** vs **04-14** sectarian worst-case fork + vs Janssen **04-16** **“fourth center”** (different object); **op-ed tier** — not Pape independent ORBAT/power rank | https://x.com/ProfessorPape | verify:pin-exact-status-URL+nytimes-opinion-card+screenshot | thread:pape | grep:Lebanon+Pape+NYT+2026-04-17
 - batch-analysis | 2026-04-17 | **Pape X — 04-14 Lebanon fork × 04-17 truce / NYT power thesis** | **Tension-first:** **04-14** indexed ingest = **downside** / **civil-war** fork + **AP** Washington talks **seam**; **04-17** = **settlement / power-shift** read + **NYT** secondary thesis Pape spotlights — use **dated evolution**, not silent merge. **Homophone risk:** Janssen **04-16** **“fourth center”** (negotiation fork) ≠ NYT headline **“major world power”** / **“4th”** — **do not** equate in Judgment. **Membership:** `thread:pape` only.
 - X | cold: @ProfessorPape (**2026-04-18** ~11:30) — multi-post **IRAN**: brief **de-escalation** seam (Lebanon truce / Hormuz / diplomacy) then **re-escalation**; argues **not** pain→compromise but **zero-sum relative power**; **two indivisible binaries**: (1) nuclear — has it or not; (2) Hormuz — open vs Iranian control; **revealed preferences** → both prefer **escalation to losing** → ceasefires as **pauses**, not stable deals // hook: **§1e–§1h**; pair × **Mearsheimer** / × **Davis** without merging mechanisms; falsify with **durable partial constraints** | https://x.com/ProfessorPape | verify:screenshot+per-post-archive | thread:pape | grep:Pape+zero-sum+ceasefire+2026-04-18
@@ -144,6 +156,11 @@ Professor Robert Pape: Me too. Thanks for everything you're doing.
 
 
 ## 2026-04-17
+
+Verbatim: [`raw-input/2026-04-17/transcript-pape.md`](../../raw-input/2026-04-17/transcript-pape.md).
+
+Refined day page: [`pape-page-2026-04-17.md`](pape-page-2026-04-17.md).
+
 - X | cold: @ProfessorPape (**2026-04-17** ~08:07) — Israel–Lebanon truce as **signal of shifting global power** (more than ceasefire); claims **Iran** demanded end to **Israeli attacks in Lebanon** and **U.S. delivered**; amplifies **NYT Opinion** card on Iran as **major world power** (“4th” framing in card) // hook: **seam** vs **04-14** sectarian worst-case fork + vs Janssen **04-16** **“fourth center”** (different object); **op-ed tier** — not Pape independent ORBAT/power rank | https://x.com/ProfessorPape | verify:pin-exact-status-URL+nytimes-opinion-card+screenshot | thread:pape | grep:Lebanon+Pape+NYT+2026-04-17
 - batch-analysis | 2026-04-17 | **Pape X — 04-14 Lebanon fork × 04-17 truce / NYT power thesis** | **Tension-first:** **04-14** indexed ingest = **downside** / **civil-war** fork + **AP** Washington talks **seam**; **04-17** = **settlement / power-shift** read + **NYT** secondary thesis Pape spotlights — use **dated evolution**, not silent merge. **Homophone risk:** Janssen **04-16** **“fourth center”** (negotiation fork) ≠ NYT headline **“major world power”** / **“4th”** — **do not** equate in Judgment. **Membership:** `thread:pape` only.
 
@@ -173,6 +190,11 @@ Professor Robert Pape: Me too. Thanks for everything you're doing.
 
 
 ## 2026-04-16
+
+Verbatim: [`raw-input/2026-04-16/transcript-pape.md`](../../raw-input/2026-04-16/transcript-pape.md).
+
+Refined day page: [`pape-page-2026-04-16.md`](pape-page-2026-04-16.md).
+
 - `YT | cold: IRAN | Pape (Cyrus Janssen studio, uploaded 2026-04-16) — escalation trap: bombing for regime change failed; US cannot accept defeat; Trump needs clean win vs Obama frame; Iran unlikely to bail him out // hook: §1d–§1e week-seven arc; pairs uranium/Hormuz Judgment rows | https://www.youtube.com/@CyrusJanssen/videos | verify:operator-transcript+youtube-watch-id-to-pin | thread:pape`
 - `YT | cold: IRAN | Pape — blockade **framework**: price rise → ~45d shortages → 60–90d commodity production contraction; claims **day 46**; checkpoints **May 1** shortages reporting / **Jun 1** contraction; compares 1973 shock + WWII Japan blockade // hook: §1c macro + Hormuz logistics; **do not** cite IMF / four-day-week / Asia claims without primaries | https://www.youtube.com/@CyrusJanssen/videos | verify:operator-transcript+primary-econ-data-needed | thread:pape`
 - `YT | cold: IRAN | Pape — escalation **stages** + fork: withdrawal under Hormuz leverage → **“fourth center”** branch; **Vance** enriched-uranium-out framing; subjective **~80%+** ground op (up from ~70% Diary CEO) // hook: §1e demands vs §1h nuclear; **hypothesis-grade** probabilities—not ORBAT | https://www.youtube.com/@CyrusJanssen/videos | verify:operator-transcript+opinion-forecast | thread:pape`

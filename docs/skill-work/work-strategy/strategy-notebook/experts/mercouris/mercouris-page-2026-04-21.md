@@ -27,6 +27,6 @@ In this lane the episode reads as a **single coherent escalation narrative**: di
 ### Technical appendix
 
 - **Full verbatim (capture):** [raw-input/2026-04-21/2026-04-21-mercouris-verbatim.md](../../raw-input/2026-04-21/2026-04-21-mercouris-verbatim.md)
-- **Inbox stub:** [daily-strategy-inbox.md](../../daily-strategy-inbox.md) (Mercouris row, 2026-04-21)
+- **Inbox / triage:** [daily-strategy-inbox.md](../../daily-strategy-inbox.md) (search `thread:mercouris`, 2026-04-21)
 - **`thread:mercouris`** · **verify:** full-text + verbatim path + operator-transcript tier
-- **Canonical video:** `source_url` in verbatim frontmatter (pin when known)
+- **Canonical video:** Pin when known — see raw-input frontmatter or episode cold line (replace TBD placeholder)

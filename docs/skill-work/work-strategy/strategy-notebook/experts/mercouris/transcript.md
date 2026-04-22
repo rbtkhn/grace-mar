@@ -3,7 +3,7 @@
 WORK only; not Record.
 
 **Source:** Verbatim blocks from [`daily-strategy-inbox.md`](daily-strategy-inbox.md) that include `thread:mercouris` (first line + optional continuation paragraphs), routed on ingest.
-**Day page (refined):** **`experts/mercouris/mercouris-page-YYYY-MM-DD.md`** — Signal / Judgment / Open artifact; points to **verbatim** in [`raw-input/`](../../raw-input/README.md). **Verbatim capture** stays under **`raw-input/<date>/`** (e.g. `*-mercouris-verbatim.md` or RSS-merge **`YYYY-MM-DD-mercouris.md`**). Distinct from a **`strategy-page`** fence in [`thread.md`](strategy-expert-mercouris-thread.md) unless you duplicate judgment there during EOD compose.
+**Day page (refined):** **`experts/mercouris/mercouris-page-YYYY-MM-DD.md`** — Signal / Judgment / Open artifact; points to **verbatim** in [`raw-input/`](../../raw-input/README.md). **Verbatim capture** stays under **`raw-input/<date>/`** (e.g. `*-mercouris-verbatim.md` or RSS-merge **`YYYY-MM-DD-mercouris.md`**). Distinct from a **`strategy-page`** fence in [`thread.md`](strategy-expert-mercouris-thread.md) unless you duplicate judgment there during EOD compose. **Template:** [`mercouris-page-template.md`](mercouris-page-template.md).
 **Length:** Target **≤ 2000 words** per ingest block; whole file soft **≤ 20000 words** after prune (7-day window makes overrun unlikely).
 **Retention:** 7-day rolling window; date sections older than 7 days are pruned automatically.
 **Editing:** Operator may lightly edit for clarity after triage. Edits are preserved across triage runs (append-only, not overwrite).
@@ -22,7 +22,7 @@ WORK only; not Record.
 
 Verbatim: [`raw-input/2026-04-20/duran-mercouris-russia-blockade-40-ships-hormuz-2026-04-20.md`](../../raw-input/2026-04-20/duran-mercouris-russia-blockade-40-ships-hormuz-2026-04-20.md).
 
-
+Refined day page: [`mercouris-page-2026-04-20.md`](mercouris-page-2026-04-20.md).
 
 Good day. Today is Monday, 20th April 2026.
 First, I want to thank everyone again for your kind words about my recent bout of ill health. Today I feel much better — not perhaps fully myself again, as I still get occasional moments of dizziness — but a great deal better. Today is the first day I generally feel essentially myself again, so from today moving forward it will be business as usual as far as videos are concerned.
@@ -130,6 +130,10 @@ Thank you.
 
 _Inbox **`notebook |`** ingest date (triaged from [daily-strategy-inbox.md](daily-strategy-inbox.md)) — **not** a `chapters/…/days.md` **`##`** calendar block. Related notebook Judgment for this seam: [`days.md` § **2026-04-16**](chapters/2026-04/days.md#2026-04-16)._
 
+Verbatim: [`raw-input/2026-04-18/transcript-mercouris.md`](../../raw-input/2026-04-18/transcript-mercouris.md).
+
+Refined day page: [`mercouris-page-2026-04-18.md`](mercouris-page-2026-04-18.md).
+
 - `notebook | cold: Mercouris lane — Hormuz as precedent-for-Beijing problem (U.S. maritime-denial grammar portable beyond Iran); escalation risk as friction-thickening (insurance, routing, posture, rhetoric) before any notional fleet clash // hook: tri-mind narrow pass (Hormuz + PRC escalation); notebook lens fold, not Duran primary | verify:lens-fold+mercouris | thread:mercouris | membrane:single | grep:Hormuz+PRC+precedent`
 
 
@@ -176,6 +180,10 @@ _Inbox **`notebook |`** ingest date (triaged from [daily-strategy-inbox.md](dail
 ## 2026-04-16
 
 **The Duran** · Alexander Mercouris · air date **2026-04-16**.
+
+Verbatim: [`raw-input/2026-04-16/transcript-mercouris.md`](../../raw-input/2026-04-16/transcript-mercouris.md).
+
+Refined day page: [`mercouris-page-2026-04-16.md`](mercouris-page-2026-04-16.md).
 
 Thesis-scaffold verbatim (≤2000 words; **markdown below matches `~~~text` below**). [strategy-expert-template.md#thesis-scaffold-pattern](strategy-expert-template.md#thesis-scaffold-pattern).
 
