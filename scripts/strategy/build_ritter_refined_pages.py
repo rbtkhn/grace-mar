@@ -149,10 +149,7 @@ def build_entries(paths: list[Path]) -> list[dict]:
         if not re.match(r"^\d{4}-\d{2}-\d{2}$", vd):
             vd = _folder_date(p)
         collision = len(by_date[vd]) > 1
-        if collision:
-            page_name = f"ritter-page-{vd}-{slug}.md"
-        else:
-            page_name = f"ritter-page-{vd}.md"
+        page_name = f"ritter-page-{vd}-{slug}.md"
         rel_raw = f"raw-input/{p.parent.name}/{p.name}"
         href = f"../../{rel_raw}"
         title = _display_title(fm, stem, body)
@@ -187,7 +184,7 @@ def build_entries(paths: list[Path]) -> list[dict]:
 
 def render_scaffold(e: dict) -> str:
     vd = e["voice_date"]
-    title_suffix = f" (*{e['display_title']}*)" if e["collision"] else ""
+    title_suffix = f" (*{e['display_title']}*)" if e.get("display_title") else ""
     prem = e["preamble_label"]
     pdate = e["preamble_date"]
     cap = e["capture_mode"]

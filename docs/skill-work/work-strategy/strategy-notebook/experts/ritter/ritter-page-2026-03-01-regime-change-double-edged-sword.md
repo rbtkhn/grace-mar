@@ -1,10 +1,10 @@
-# Ritter strategy page — 2026-03-01
+# Ritter strategy page — 2026-03-01 (*Regime Change, the Double-Edged Sword*)
 
 WORK only; not Record.
 
 **Expert:** `ritter` · **Published:** 2026-03-01 · **Capture:** Mode A — Substack · **Artifact:** strategy-page file (`ritter-page-…` under `experts/ritter/`). Optional: echo in `thread.md` fence for watches / cross-expert duplication.
 
-**Words:** 2278 (soft cap 3000)
+**Words:** 2283 (soft cap 3000)
 
 ---
 

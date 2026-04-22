@@ -1,10 +1,10 @@
-# Ritter strategy page — 2026-01-20
+# Ritter strategy page — 2026-01-20 (*Getting it Wrong on Russia*)
 
 WORK only; not Record.
 
 **Expert:** `ritter` · **Published:** 2026-01-20 · **Capture:** Mode A — Substack · **Artifact:** strategy-page file (`ritter-page-…` under `experts/ritter/`). Optional: echo in `thread.md` fence for watches / cross-expert duplication.
 
-**Words:** 4446 (soft cap 3000; **over cap** — see **Soft cap — pruning** in Reflection)
+**Words:** 4451 (soft cap 3000; **over cap** — see **Soft cap — pruning** in Reflection)
 
 ---
 
@@ -250,7 +250,7 @@ I just want to bring this to the attention of my good friend, and hope that he a
 **Prompts:** Falsifiable claim this week? Delta vs prior Ritter on same lane? Wire boundary before chapter synthesis?
 
 
-**Soft cap — pruning.** This file is about **4360** words before this note; the notebook **soft cap is 3000**. Linked `raw-input` remains the SSOT for the full capture. To bring this page under cap, consider: **remove** paragraphs that restate the same beat; **consolidate** overlapping arguments into one passage; **trim** side trails you will not weave into `days.md`; **avoid** duplicating long quotations already in `raw-input`; **relocate** extended material to a `thread.md` `<!-- strategy-page:start … -->` fence or a sibling note. Keep one sharp through-line for cross-expert work.
+**Soft cap — pruning.** This file is about **4365** words before this note; the notebook **soft cap is 3000**. Linked `raw-input` remains the SSOT for the full capture. To bring this page under cap, consider: **remove** paragraphs that restate the same beat; **consolidate** overlapping arguments into one passage; **trim** side trails you will not weave into `days.md`; **avoid** duplicating long quotations already in `raw-input`; **relocate** extended material to a `thread.md` `<!-- strategy-page:start … -->` fence or a sibling note. Keep one sharp through-line for cross-expert work.
 
 ### Foresight
 

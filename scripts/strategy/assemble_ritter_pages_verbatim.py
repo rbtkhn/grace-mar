@@ -176,9 +176,8 @@ def _build_open(mode: str) -> str:
 
 def render_page(entry: dict, fm: dict, body: str) -> str:
     vd = entry["voice_date"]
-    collision = entry.get("collision")
-    display_title = entry.get("display_title") or ""
-    title_suffix = f" (*{display_title}*)" if collision else ""
+    display_title = (entry.get("display_title") or "").strip()
+    title_suffix = f" (*{display_title}*)" if display_title else ""
     prem = entry["preamble_label"]
     pdate = entry["preamble_date"]
     cap = entry["capture_mode"]

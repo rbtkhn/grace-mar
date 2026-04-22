@@ -1,10 +1,10 @@
-# Ritter strategy page — 2026-01-13
+# Ritter strategy page — 2026-01-13 (*Losing the Republic*)
 
 WORK only; not Record.
 
 **Expert:** `ritter` · **Published:** 2026-01-13 · **Capture:** Mode A — Substack · **Artifact:** strategy-page file (`ritter-page-…` under `experts/ritter/`). Optional: echo in `thread.md` fence for watches / cross-expert duplication.
 
-**Words:** 1070 (soft cap 3000)
+**Words:** 1073 (soft cap 3000)
 
 ---
 

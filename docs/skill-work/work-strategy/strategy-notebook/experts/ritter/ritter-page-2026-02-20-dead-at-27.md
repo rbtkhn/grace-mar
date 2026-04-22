@@ -1,10 +1,10 @@
-# Ritter strategy page — 2026-02-20
+# Ritter strategy page — 2026-02-20 (*Dead at 27*)
 
 WORK only; not Record.
 
 **Expert:** `ritter` · **Published:** 2026-02-20 · **Capture:** Mode A — Substack · **Artifact:** strategy-page file (`ritter-page-…` under `experts/ritter/`). Optional: echo in `thread.md` fence for watches / cross-expert duplication.
 
-**Words:** 2075 (soft cap 3000)
+**Words:** 2078 (soft cap 3000)
 
 ---
 

@@ -204,7 +204,7 @@ Template: [`ritter-page-template.md`](ritter-page-template.md).
 
 Verbatim: [`raw-input/2026-04-13/substack-ritter-blasphemy-american-style-2026-04-13.md`](../../raw-input/2026-04-13/substack-ritter-blasphemy-american-style-2026-04-13.md).
 
-Refined day page: [`ritter-page-2026-04-13.md`](ritter-page-2026-04-13.md).
+Refined day page: [`ritter-page-2026-04-13-blasphemy-american-style.md`](ritter-page-2026-04-13-blasphemy-american-style.md).
 
 Template: [`ritter-page-template.md`](ritter-page-template.md).
 
@@ -215,7 +215,7 @@ Template: [`ritter-page-template.md`](ritter-page-template.md).
 
 Verbatim: [`raw-input/2026-04-03/substack-ritter-combat-search-and-rescue-prequel-2026-04-03.md`](../../raw-input/2026-04-03/substack-ritter-combat-search-and-rescue-prequel-2026-04-03.md).
 
-Refined day page: [`ritter-page-2026-04-03.md`](ritter-page-2026-04-03.md).
+Refined day page: [`ritter-page-2026-04-03-combat-search-and-rescue-prequel.md`](ritter-page-2026-04-03-combat-search-and-rescue-prequel.md).
 
 Template: [`ritter-page-template.md`](ritter-page-template.md).
 
@@ -226,7 +226,7 @@ Template: [`ritter-page-template.md`](ritter-page-template.md).
 
 Verbatim (~50k chars; over per-block triage budget): [`raw-input/2026-04-01/substack-ritter-why-i-no-longer-stand-with-israel-redux-2026-04-01.md`](../../raw-input/2026-04-01/substack-ritter-why-i-no-longer-stand-with-israel-redux-2026-04-01.md).
 
-Refined day page: [`ritter-page-2026-04-01.md`](ritter-page-2026-04-01.md).
+Refined day page: [`ritter-page-2026-04-01-why-i-no-longer-stand-with-israel-redux.md`](ritter-page-2026-04-01-why-i-no-longer-stand-with-israel-redux.md).
 
 Template: [`ritter-page-template.md`](ritter-page-template.md).
 
@@ -237,7 +237,7 @@ Template: [`ritter-page-template.md`](ritter-page-template.md).
 
 Verbatim: [`raw-input/2026-03-25/substack-ritter-chechen-miracle-path-redemption-2026-03-25.md`](../../raw-input/2026-03-25/substack-ritter-chechen-miracle-path-redemption-2026-03-25.md).
 
-Refined day page: [`ritter-page-2026-03-25.md`](ritter-page-2026-03-25.md).
+Refined day page: [`ritter-page-2026-03-25-chechen-miracle-path-redemption.md`](ritter-page-2026-03-25-chechen-miracle-path-redemption.md).
 
 Template: [`ritter-page-template.md`](ritter-page-template.md).
 
@@ -248,7 +248,7 @@ Template: [`ritter-page-template.md`](ritter-page-template.md).
 
 Verbatim: [`raw-input/2026-03-18/substack-ritter-zionism-human-parasitoid-revisited-2026-03-18.md`](../../raw-input/2026-03-18/substack-ritter-zionism-human-parasitoid-revisited-2026-03-18.md).
 
-Refined day page: [`ritter-page-2026-03-18.md`](ritter-page-2026-03-18.md).
+Refined day page: [`ritter-page-2026-03-18-zionism-human-parasitoid-revisited.md`](ritter-page-2026-03-18-zionism-human-parasitoid-revisited.md).
 
 Template: [`ritter-page-template.md`](ritter-page-template.md).
 
@@ -259,7 +259,7 @@ Template: [`ritter-page-template.md`](ritter-page-template.md).
 
 Verbatim: [`raw-input/2026-03-14/substack-ritter-the-backpack-girls-2026-03-14.md`](../../raw-input/2026-03-14/substack-ritter-the-backpack-girls-2026-03-14.md).
 
-Refined day page: [`ritter-page-2026-03-14.md`](ritter-page-2026-03-14.md).
+Refined day page: [`ritter-page-2026-03-14-the-backpack-girls.md`](ritter-page-2026-03-14-the-backpack-girls.md).
 
 Template: [`ritter-page-template.md`](ritter-page-template.md).
 
@@ -270,7 +270,7 @@ Template: [`ritter-page-template.md`](ritter-page-template.md).
 
 Verbatim: [`raw-input/2026-03-01/substack-ritter-regime-change-double-edged-sword-2026-03-01.md`](../../raw-input/2026-03-01/substack-ritter-regime-change-double-edged-sword-2026-03-01.md).
 
-Refined day page: [`ritter-page-2026-03-01.md`](ritter-page-2026-03-01.md).
+Refined day page: [`ritter-page-2026-03-01-regime-change-double-edged-sword.md`](ritter-page-2026-03-01-regime-change-double-edged-sword.md).
 
 Template: [`ritter-page-template.md`](ritter-page-template.md).
 
@@ -281,7 +281,7 @@ Template: [`ritter-page-template.md`](ritter-page-template.md).
 
 Verbatim: [`raw-input/2026-02-22/substack-ritter-the-flamingo-effect-2026-02-22.md`](../../raw-input/2026-02-22/substack-ritter-the-flamingo-effect-2026-02-22.md).
 
-Refined day page: [`ritter-page-2026-02-22.md`](ritter-page-2026-02-22.md).
+Refined day page: [`ritter-page-2026-02-22-the-flamingo-effect.md`](ritter-page-2026-02-22-the-flamingo-effect.md).
 
 Template: [`ritter-page-template.md`](ritter-page-template.md).
 
@@ -292,7 +292,7 @@ Template: [`ritter-page-template.md`](ritter-page-template.md).
 
 Verbatim: [`raw-input/2026-02-20/substack-ritter-dead-at-27-2026-02-20.md`](../../raw-input/2026-02-20/substack-ritter-dead-at-27-2026-02-20.md).
 
-Refined day page: [`ritter-page-2026-02-20.md`](ritter-page-2026-02-20.md).
+Refined day page: [`ritter-page-2026-02-20-dead-at-27.md`](ritter-page-2026-02-20-dead-at-27.md).
 
 Template: [`ritter-page-template.md`](ritter-page-template.md).
 
@@ -303,7 +303,7 @@ Template: [`ritter-page-template.md`](ritter-page-template.md).
 
 Verbatim: [`raw-input/2026-02-05/substack-ritter-alas-babylon-2026-02-05.md`](../../raw-input/2026-02-05/substack-ritter-alas-babylon-2026-02-05.md).
 
-Refined day page: [`ritter-page-2026-02-05.md`](ritter-page-2026-02-05.md).
+Refined day page: [`ritter-page-2026-02-05-alas-babylon.md`](ritter-page-2026-02-05-alas-babylon.md).
 
 Template: [`ritter-page-template.md`](ritter-page-template.md).
 
@@ -314,7 +314,7 @@ Template: [`ritter-page-template.md`](ritter-page-template.md).
 
 Verbatim: [`raw-input/2026-01-20/substack-ritter-getting-it-wrong-on-russia-2026-01-20.md`](../../raw-input/2026-01-20/substack-ritter-getting-it-wrong-on-russia-2026-01-20.md).
 
-Refined day page: [`ritter-page-2026-01-20.md`](ritter-page-2026-01-20.md).
+Refined day page: [`ritter-page-2026-01-20-getting-it-wrong-on-russia.md`](ritter-page-2026-01-20-getting-it-wrong-on-russia.md).
 
 Template: [`ritter-page-template.md`](ritter-page-template.md).
 
@@ -325,7 +325,7 @@ Template: [`ritter-page-template.md`](ritter-page-template.md).
 
 Verbatim: [`raw-input/2026-01-18/substack-ritter-dont-drink-the-water-2026-01-18.md`](../../raw-input/2026-01-18/substack-ritter-dont-drink-the-water-2026-01-18.md).
 
-Refined day page: [`ritter-page-2026-01-18.md`](ritter-page-2026-01-18.md).
+Refined day page: [`ritter-page-2026-01-18-dont-drink-the-water.md`](ritter-page-2026-01-18-dont-drink-the-water.md).
 
 Template: [`ritter-page-template.md`](ritter-page-template.md).
 
@@ -357,7 +357,7 @@ Template: [`ritter-page-template.md`](ritter-page-template.md).
 
 Verbatim: [`raw-input/2026-01-13/substack-ritter-losing-the-republic-2026-01-13.md`](../../raw-input/2026-01-13/substack-ritter-losing-the-republic-2026-01-13.md).
 
-Refined day page: [`ritter-page-2026-01-13.md`](ritter-page-2026-01-13.md).
+Refined day page: [`ritter-page-2026-01-13-losing-the-republic.md`](ritter-page-2026-01-13-losing-the-republic.md).
 
 Template: [`ritter-page-template.md`](ritter-page-template.md).
 
@@ -368,7 +368,7 @@ Template: [`ritter-page-template.md`](ritter-page-template.md).
 
 Verbatim: [`raw-input/2026-01-12/substack-ritter-iranian-resilience-2026-01-12.md`](../../raw-input/2026-01-12/substack-ritter-iranian-resilience-2026-01-12.md).
 
-Refined day page: [`ritter-page-2026-01-12.md`](ritter-page-2026-01-12.md).
+Refined day page: [`ritter-page-2026-01-12-iranian-resilience.md`](ritter-page-2026-01-12-iranian-resilience.md).
 
 Template: [`ritter-page-template.md`](ritter-page-template.md).
 
@@ -379,7 +379,7 @@ Template: [`ritter-page-template.md`](ritter-page-template.md).
 
 Verbatim: [`raw-input/2026-01-10/substack-ritter-the-end-of-a-dream-2026-01-10.md`](../../raw-input/2026-01-10/substack-ritter-the-end-of-a-dream-2026-01-10.md).
 
-Refined day page: [`ritter-page-2026-01-10.md`](ritter-page-2026-01-10.md).
+Refined day page: [`ritter-page-2026-01-10-the-end-of-a-dream.md`](ritter-page-2026-01-10-the-end-of-a-dream.md).
 
 Template: [`ritter-page-template.md`](ritter-page-template.md).
 
@@ -390,7 +390,7 @@ Template: [`ritter-page-template.md`](ritter-page-template.md).
 
 Verbatim: [`raw-input/2026-01-09/substack-ritter-the-camels-bloody-nose-2026-01-09.md`](../../raw-input/2026-01-09/substack-ritter-the-camels-bloody-nose-2026-01-09.md).
 
-Refined day page: [`ritter-page-2026-01-09.md`](ritter-page-2026-01-09.md).
+Refined day page: [`ritter-page-2026-01-09-the-camels-bloody-nose.md`](ritter-page-2026-01-09-the-camels-bloody-nose.md).
 
 Template: [`ritter-page-template.md`](ritter-page-template.md).
 
@@ -401,7 +401,7 @@ Template: [`ritter-page-template.md`](ritter-page-template.md).
 
 Verbatim: [`raw-input/2026-01-06/substack-ritter-the-battle-of-new-york-2026-01-06.md`](../../raw-input/2026-01-06/substack-ritter-the-battle-of-new-york-2026-01-06.md).
 
-Refined day page: [`ritter-page-2026-01-06.md`](ritter-page-2026-01-06.md).
+Refined day page: [`ritter-page-2026-01-06-the-battle-of-new-york.md`](ritter-page-2026-01-06-the-battle-of-new-york.md).
 
 Template: [`ritter-page-template.md`](ritter-page-template.md).
 
@@ -412,7 +412,7 @@ Template: [`ritter-page-template.md`](ritter-page-template.md).
 
 Verbatim: [`raw-input/2026-01-05/substack-ritter-the-sanctions-shield-2026-01-05.md`](../../raw-input/2026-01-05/substack-ritter-the-sanctions-shield-2026-01-05.md).
 
-Refined day page: [`ritter-page-2026-01-05.md`](ritter-page-2026-01-05.md).
+Refined day page: [`ritter-page-2026-01-05-the-sanctions-shield.md`](ritter-page-2026-01-05-the-sanctions-shield.md).
 
 Template: [`ritter-page-template.md`](ritter-page-template.md).
 
@@ -423,7 +423,7 @@ Template: [`ritter-page-template.md`](ritter-page-template.md).
 
 Verbatim (~3k words; over per-block triage budget): [`raw-input/2026-01-03/substack-ritter-russia-dark-sage-karaganov-2026-01-03.md`](../../raw-input/2026-01-03/substack-ritter-russia-dark-sage-karaganov-2026-01-03.md).
 
-Refined day page: [`ritter-page-2026-01-03.md`](ritter-page-2026-01-03.md).
+Refined day page: [`ritter-page-2026-01-03-russia-dark-sage-karaganov.md`](ritter-page-2026-01-03-russia-dark-sage-karaganov.md).
 
 Template: [`ritter-page-template.md`](ritter-page-template.md).
 

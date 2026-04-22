@@ -1,10 +1,10 @@
-# Ritter strategy page — 2026-01-09
+# Ritter strategy page — 2026-01-09 (*The Camel’s Bloody Nose*)
 
 WORK only; not Record.
 
 **Expert:** `ritter` · **Published:** 2026-01-09 · **Capture:** Mode A — Substack · **Artifact:** strategy-page file (`ritter-page-…` under `experts/ritter/`). Optional: echo in `thread.md` fence for watches / cross-expert duplication.
 
-**Words:** 656 (soft cap 3000)
+**Words:** 660 (soft cap 3000)
 
 ---
 

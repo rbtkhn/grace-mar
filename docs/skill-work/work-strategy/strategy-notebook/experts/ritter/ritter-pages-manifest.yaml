@@ -9,7 +9,7 @@ backlog:
 pages:
 - raw_input_relative: raw-input/2026-01-03/substack-ritter-russia-dark-sage-karaganov-2026-01-03.md
   voice_date: '2026-01-03'
-  page_filename: ritter-page-2026-01-03.md
+  page_filename: ritter-page-2026-01-03-russia-dark-sage-karaganov.md
   collision: false
   slug: russia-dark-sage-karaganov
   mode: A
@@ -21,7 +21,7 @@ pages:
   href_verbatim: ../../raw-input/2026-01-03/substack-ritter-russia-dark-sage-karaganov-2026-01-03.md
 - raw_input_relative: raw-input/2026-01-05/substack-ritter-the-sanctions-shield-2026-01-05.md
   voice_date: '2026-01-05'
-  page_filename: ritter-page-2026-01-05.md
+  page_filename: ritter-page-2026-01-05-the-sanctions-shield.md
   collision: false
   slug: the-sanctions-shield
   mode: A
@@ -33,7 +33,7 @@ pages:
   href_verbatim: ../../raw-input/2026-01-05/substack-ritter-the-sanctions-shield-2026-01-05.md
 - raw_input_relative: raw-input/2026-01-06/substack-ritter-the-battle-of-new-york-2026-01-06.md
   voice_date: '2026-01-06'
-  page_filename: ritter-page-2026-01-06.md
+  page_filename: ritter-page-2026-01-06-the-battle-of-new-york.md
   collision: false
   slug: the-battle-of-new-york
   mode: A
@@ -45,7 +45,7 @@ pages:
   href_verbatim: ../../raw-input/2026-01-06/substack-ritter-the-battle-of-new-york-2026-01-06.md
 - raw_input_relative: raw-input/2026-01-09/substack-ritter-the-camels-bloody-nose-2026-01-09.md
   voice_date: '2026-01-09'
-  page_filename: ritter-page-2026-01-09.md
+  page_filename: ritter-page-2026-01-09-the-camels-bloody-nose.md
   collision: false
   slug: the-camels-bloody-nose
   mode: A
@@ -57,7 +57,7 @@ pages:
   href_verbatim: ../../raw-input/2026-01-09/substack-ritter-the-camels-bloody-nose-2026-01-09.md
 - raw_input_relative: raw-input/2026-01-10/substack-ritter-the-end-of-a-dream-2026-01-10.md
   voice_date: '2026-01-10'
-  page_filename: ritter-page-2026-01-10.md
+  page_filename: ritter-page-2026-01-10-the-end-of-a-dream.md
   collision: false
   slug: the-end-of-a-dream
   mode: A
@@ -69,7 +69,7 @@ pages:
   href_verbatim: ../../raw-input/2026-01-10/substack-ritter-the-end-of-a-dream-2026-01-10.md
 - raw_input_relative: raw-input/2026-01-12/substack-ritter-iranian-resilience-2026-01-12.md
   voice_date: '2026-01-12'
-  page_filename: ritter-page-2026-01-12.md
+  page_filename: ritter-page-2026-01-12-iranian-resilience.md
   collision: false
   slug: iranian-resilience
   mode: A
@@ -81,7 +81,7 @@ pages:
   href_verbatim: ../../raw-input/2026-01-12/substack-ritter-iranian-resilience-2026-01-12.md
 - raw_input_relative: raw-input/2026-01-13/substack-ritter-losing-the-republic-2026-01-13.md
   voice_date: '2026-01-13'
-  page_filename: ritter-page-2026-01-13.md
+  page_filename: ritter-page-2026-01-13-losing-the-republic.md
   collision: false
   slug: losing-the-republic
   mode: A
@@ -117,7 +117,7 @@ pages:
   href_verbatim: ../../raw-input/2026-01-16/substack-ritter-reflections-on-a-war-2026-01-16.md
 - raw_input_relative: raw-input/2026-01-18/substack-ritter-dont-drink-the-water-2026-01-18.md
   voice_date: '2026-01-18'
-  page_filename: ritter-page-2026-01-18.md
+  page_filename: ritter-page-2026-01-18-dont-drink-the-water.md
   collision: false
   slug: dont-drink-the-water
   mode: A
@@ -129,7 +129,7 @@ pages:
   href_verbatim: ../../raw-input/2026-01-18/substack-ritter-dont-drink-the-water-2026-01-18.md
 - raw_input_relative: raw-input/2026-01-20/substack-ritter-getting-it-wrong-on-russia-2026-01-20.md
   voice_date: '2026-01-20'
-  page_filename: ritter-page-2026-01-20.md
+  page_filename: ritter-page-2026-01-20-getting-it-wrong-on-russia.md
   collision: false
   slug: getting-it-wrong-on-russia
   mode: A
@@ -141,7 +141,7 @@ pages:
   href_verbatim: ../../raw-input/2026-01-20/substack-ritter-getting-it-wrong-on-russia-2026-01-20.md
 - raw_input_relative: raw-input/2026-02-05/substack-ritter-alas-babylon-2026-02-05.md
   voice_date: '2026-02-05'
-  page_filename: ritter-page-2026-02-05.md
+  page_filename: ritter-page-2026-02-05-alas-babylon.md
   collision: false
   slug: alas-babylon
   mode: A
@@ -153,7 +153,7 @@ pages:
   href_verbatim: ../../raw-input/2026-02-05/substack-ritter-alas-babylon-2026-02-05.md
 - raw_input_relative: raw-input/2026-02-20/substack-ritter-dead-at-27-2026-02-20.md
   voice_date: '2026-02-20'
-  page_filename: ritter-page-2026-02-20.md
+  page_filename: ritter-page-2026-02-20-dead-at-27.md
   collision: false
   slug: dead-at-27
   mode: A
@@ -165,7 +165,7 @@ pages:
   href_verbatim: ../../raw-input/2026-02-20/substack-ritter-dead-at-27-2026-02-20.md
 - raw_input_relative: raw-input/2026-02-22/substack-ritter-the-flamingo-effect-2026-02-22.md
   voice_date: '2026-02-22'
-  page_filename: ritter-page-2026-02-22.md
+  page_filename: ritter-page-2026-02-22-the-flamingo-effect.md
   collision: false
   slug: the-flamingo-effect
   mode: A
@@ -177,7 +177,7 @@ pages:
   href_verbatim: ../../raw-input/2026-02-22/substack-ritter-the-flamingo-effect-2026-02-22.md
 - raw_input_relative: raw-input/2026-03-01/substack-ritter-regime-change-double-edged-sword-2026-03-01.md
   voice_date: '2026-03-01'
-  page_filename: ritter-page-2026-03-01.md
+  page_filename: ritter-page-2026-03-01-regime-change-double-edged-sword.md
   collision: false
   slug: regime-change-double-edged-sword
   mode: A
@@ -189,7 +189,7 @@ pages:
   href_verbatim: ../../raw-input/2026-03-01/substack-ritter-regime-change-double-edged-sword-2026-03-01.md
 - raw_input_relative: raw-input/2026-03-14/substack-ritter-the-backpack-girls-2026-03-14.md
   voice_date: '2026-03-14'
-  page_filename: ritter-page-2026-03-14.md
+  page_filename: ritter-page-2026-03-14-the-backpack-girls.md
   collision: false
   slug: the-backpack-girls
   mode: A
@@ -201,7 +201,7 @@ pages:
   href_verbatim: ../../raw-input/2026-03-14/substack-ritter-the-backpack-girls-2026-03-14.md
 - raw_input_relative: raw-input/2026-03-18/substack-ritter-zionism-human-parasitoid-revisited-2026-03-18.md
   voice_date: '2026-03-18'
-  page_filename: ritter-page-2026-03-18.md
+  page_filename: ritter-page-2026-03-18-zionism-human-parasitoid-revisited.md
   collision: false
   slug: zionism-human-parasitoid-revisited
   mode: A
@@ -213,7 +213,7 @@ pages:
   href_verbatim: ../../raw-input/2026-03-18/substack-ritter-zionism-human-parasitoid-revisited-2026-03-18.md
 - raw_input_relative: raw-input/2026-03-25/substack-ritter-chechen-miracle-path-redemption-2026-03-25.md
   voice_date: '2026-03-25'
-  page_filename: ritter-page-2026-03-25.md
+  page_filename: ritter-page-2026-03-25-chechen-miracle-path-redemption.md
   collision: false
   slug: chechen-miracle-path-redemption
   mode: A
@@ -225,7 +225,7 @@ pages:
   href_verbatim: ../../raw-input/2026-03-25/substack-ritter-chechen-miracle-path-redemption-2026-03-25.md
 - raw_input_relative: raw-input/2026-04-01/substack-ritter-why-i-no-longer-stand-with-israel-redux-2026-04-01.md
   voice_date: '2026-04-01'
-  page_filename: ritter-page-2026-04-01.md
+  page_filename: ritter-page-2026-04-01-why-i-no-longer-stand-with-israel-redux.md
   collision: false
   slug: why-i-no-longer-stand-with-israel-redux
   mode: A
@@ -237,7 +237,7 @@ pages:
   href_verbatim: ../../raw-input/2026-04-01/substack-ritter-why-i-no-longer-stand-with-israel-redux-2026-04-01.md
 - raw_input_relative: raw-input/2026-04-03/substack-ritter-combat-search-and-rescue-prequel-2026-04-03.md
   voice_date: '2026-04-03'
-  page_filename: ritter-page-2026-04-03.md
+  page_filename: ritter-page-2026-04-03-combat-search-and-rescue-prequel.md
   collision: false
   slug: combat-search-and-rescue-prequel
   mode: A
@@ -249,7 +249,7 @@ pages:
   href_verbatim: ../../raw-input/2026-04-03/substack-ritter-combat-search-and-rescue-prequel-2026-04-03.md
 - raw_input_relative: raw-input/2026-04-13/substack-ritter-blasphemy-american-style-2026-04-13.md
   voice_date: '2026-04-13'
-  page_filename: ritter-page-2026-04-13.md
+  page_filename: ritter-page-2026-04-13-blasphemy-american-style.md
   collision: false
   slug: blasphemy-american-style
   mode: A

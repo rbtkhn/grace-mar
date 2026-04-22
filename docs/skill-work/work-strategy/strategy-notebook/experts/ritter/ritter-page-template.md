@@ -6,9 +6,9 @@ WORK only; not Record.
 
 **Alternate surface (thread):** HTML-comment fences in `thread.md` per [`strategy-page-template.md`](../../strategy-page-template.md).
 
-**Filename date:** Prefer the **voice / publication** date in the title (`ritter-page-YYYY-MM-DD.md`)—the date the capture attributes to the episode or essay. If the `raw-input/` folder date differs (ingest batching), note it only in the **`### Appendix`**.
+**Filename:** Every manifest-backed refined page uses **`ritter-page-YYYY-MM-DD-<slug>.md`**, where **`YYYY-MM-DD`** is the **voice / publication** date and **`<slug>`** comes from the raw-input stem (see **Same-day collision**). If the `raw-input/` folder date differs (ingest batching), note it only in the **`### Appendix`**.
 
-**Same-day collision:** When more than one primary capture shares the same voice date (e.g. two Substack essays on one calendar day, or **Judging Freedom** plus **Ritter’s Rant** on the same air date), use a **slug suffix**: `ritter-page-YYYY-MM-DD-<short-slug>.md`. Derive `<short-slug>` from the raw-input basename (drop the `substack-ritter-` prefix and trailing `-YYYY-MM-DD` if present, or use the whole stem for `judging-freedom-…` / `ritter-rant-…`). In the H1 title, add a parenthetical disambiguator: `# Ritter strategy page — YYYY-MM-DD (*Essay or episode title*)`. Under [`transcript.md`](transcript.md), add one **`Refined day page:`** line per `ritter-page` file for that date.
+**Same-day collision:** `<slug>` must be unique per capture. Derive it from the raw-input basename (drop the `substack-ritter-` prefix and trailing `-YYYY-MM-DD` if present, or use the whole stem for `judging-freedom-…` / `ritter-rant-…`). When more than one primary shares the same voice date (e.g. two essays or **Judging Freedom** plus **Ritter’s Rant**), distinct raw stems keep filenames distinct automatically. The generated H1 includes **`# Ritter strategy page — YYYY-MM-DD (*Essay or episode title*)`** when a display title is set. Under [`transcript.md`](transcript.md), add one **`Refined day page:`** line per `ritter-page` file for that date.
 
 **Prose budget:** **Chronicle** embeds the full operator-ingested capture body (often thousands of words for Substack / long interviews). **Reflection** and **Foresight** stay comparatively short so the page stays roughly **~80% expert verbatim / ~20% WORK analysis** (short captures may skew slightly while boilerplate floors exist). **Mode D** (thin X / registry-only rows) may be much shorter if the capture is thin. No path dumps or `verify:` machinery in **Chronicle** body text—those belong in **`### Appendix`**.
 
@@ -99,7 +99,7 @@ Verbatim lives under `raw-input/<date>/`. Ritter strategy-page files (`ritter-pa
 Under the matching `## YYYY-MM-DD` in [`transcript.md`](transcript.md), add when missing:
 
 - **`Verbatim:`** → relative link to the `raw-input` capture (or stub note if over triage budget).
-- **`Refined day page:`** → `ritter-page-YYYY-MM-DD.md` (or `ritter-page-YYYY-MM-DD-<slug>.md` when the date has multiple pages). Transcript field label; the linked file **is** the strategy-page for that capture.
+- **`Refined day page:`** → `ritter-page-YYYY-MM-DD-<slug>.md` (from manifest / [`build_ritter_refined_pages.py`](../../../../scripts/strategy/build_ritter_refined_pages.py)). Transcript field label; the linked file **is** the strategy-page for that capture.
 - **`Template:`** → [`ritter-page-template.md`](ritter-page-template.md) (optional header pointer).
 
 ---
@@ -141,7 +141,7 @@ WORK only; not Record.
 
 ## Compliance checklist (retrofit / review)
 
-1. Title: `# Ritter strategy page — YYYY-MM-DD` (voice date); add `(*…*)` when the filename uses a same-day slug suffix.
+1. Title: `# Ritter strategy page — YYYY-MM-DD (*…*)` (voice date + display title when present); filename is always `ritter-page-YYYY-MM-DD-<slug>.md`.
 2. `WORK only; not Record.` on its own line after the title.
 3. Preamble identifies **Mode A–D**; **Artifact:** strategy-page file (`ritter-page-…` under `experts/ritter/`); **`**Words:**`** line (full file, soft cap 3000) before the first `---`.
 4. `---` before `### Chronicle`; prose-only in Chronicle / Reflection / Foresight.

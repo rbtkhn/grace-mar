@@ -1,10 +1,10 @@
-# Ritter strategy page — 2026-03-18
+# Ritter strategy page — 2026-03-18 (*Zionism, the Human Parasitoid (Revisited)*)
 
 WORK only; not Record.
 
 **Expert:** `ritter` · **Published:** 2026-03-18 · **Capture:** Mode A — Substack · **Artifact:** strategy-page file (`ritter-page-…` under `experts/ritter/`). Optional: echo in `thread.md` fence for watches / cross-expert duplication.
 
-**Words:** 2045 (soft cap 3000)
+**Words:** 2050 (soft cap 3000)
 
 ---
 
