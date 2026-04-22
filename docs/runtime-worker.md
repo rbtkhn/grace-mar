@@ -14,7 +14,8 @@
 |--------|------|------|
 | Proposal | `runtime/runtime-worker/proposals/<run_id>.md` | Operator paste / review; gitignored |
 | Trace | `runtime/runtime-worker/traces/index.jsonl` | Append-only audit line per run; gitignored |
-| Execution receipt | `runtime/runtime-worker/receipts/<run_id>.json` | One JSON summary per run; links trace + proposal; gitignored; [doc](runtime/execution-receipts.md) |
+| Execution receipt | `runtime/runtime-worker/receipts/<run_id>.json` | One JSON summary per run; links trace + proposal; optional `scope_verification`; gitignored; [doc](runtime/execution-receipts.md) |
+| Worker peer review | `runtime/runtime-worker/peer_reviews/<review_run_id>.json` | Optional follow-on artifact from [`run_runtime_peer_review.py`](../../scripts/runtime/run_runtime_peer_review.py); not the [orchestrator](orchestration/review-orchestrator.md) path; [doc](runtime/worker-peer-review.md) |
 
 **Default CI / no-secret posture:** `--dry-run` skips the LLM and still writes proposal + trace (file list and excerpts). No API key required.
 

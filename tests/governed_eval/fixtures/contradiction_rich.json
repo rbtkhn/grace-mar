@@ -1,0 +1,8 @@
+{
+  "fixture_id": "contradiction_rich",
+  "receipt_path": "runtime/runtime-worker/receipts/gov_eval_contradiction_rich.json",
+  "expected": {
+    "epistemic_decision": "allow_with_review",
+    "abstention_expected": false
+  }
+}

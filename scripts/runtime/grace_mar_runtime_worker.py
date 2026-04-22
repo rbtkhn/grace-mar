@@ -39,6 +39,7 @@ from worker_overlays import (  # noqa: E402
     get_overlay,
 )
 from model_policy import resolve_model_policy  # noqa: E402
+from scope_verification import build_scope_verification_block  # noqa: E402
 from worker_router import (  # noqa: E402
     TASK_TYPE_TO_ROUTED,
     UnknownTaskTypeError,
@@ -168,27 +169,36 @@ def _collect_files(scope: Path, max_files: int) -> list[Path]:
     return out
 
 
-def _read_bundle(files: list[Path], scope: Path, max_chars: int) -> tuple[str, int]:
+def _read_bundle(files: list[Path], scope: Path, max_chars: int) -> tuple[str, int, int, int, list[str]]:
+    """Return bundle text, used chars, files opened successfully, chunk count, warnings."""
     parts: list[str] = []
     used = 0
+    files_opened = 0
+    warnings: list[str] = []
     for p in files:
         try:
             txt = p.read_text(encoding="utf-8", errors="replace")
-        except OSError:
+        except OSError as e:
+            warnings.append(f"read failed for {p}: {e}")
             continue
         rel = p.relative_to(scope)
         header = f"### {rel}\n\n"
         budget = max_chars - used - len(header)
         if budget <= 0:
+            warnings.append("bundle truncated: max_chars reached before reading remaining files")
             break
         chunk = txt[:budget]
         if len(txt) > budget:
             chunk += "\n\n… [truncated per --max-chars]\n"
         parts.append(header + chunk)
+        files_opened += 1
         used += len(header) + len(chunk)
         if used >= max_chars:
+            if files_opened < len(files):
+                warnings.append("bundle truncated: max_chars reached; not all files included in bundle")
             break
-    return "\n".join(parts), used
+    chunks_read = len(parts)
+    return "\n".join(parts), used, files_opened, chunks_read, warnings
 
 
 def _compose_argv(repo_root: Path, script_rel: str, scope_path: Path) -> list[str]:
@@ -248,6 +258,7 @@ def build_execution_receipt(
     status: str,
     error: str | None,
     model_policy: dict[str, Any],
+    scope_verification: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
     """Projected non-canonical summary for one worker run (schema: execution-receipt.v1)."""
     if routing_payload:
@@ -292,6 +303,7 @@ def build_execution_receipt(
             "error": error,
         },
         "model_policy": model_policy,
+        "scope_verification": scope_verification,
         "non_canonical": True,
     }
 
@@ -339,8 +351,9 @@ def task_inspect_work_area(
     _ensure_worker_writable(trace_path, repo_root)
 
     files = _collect_files(scope, max_files)
+    files_seen = len(files)
     rel_paths = [str(p.relative_to(repo_root)) for p in files]
-    bundle, used_chars = _read_bundle(files, scope, max_chars)
+    bundle, used_chars, files_opened, chunks_read, bundle_warnings = _read_bundle(files, scope, max_chars)
 
     tools_used: list[str] = ["filesystem.read", "pathlib.rglob"]
     compose_stdout = ""
@@ -407,6 +420,18 @@ def task_inspect_work_area(
 
     body = "\n".join(lines)
     proposal_path.write_text(body, encoding="utf-8")
+
+    sv_warn = list(bundle_warnings)
+    if files_opened < files_seen:
+        sv_warn.append(f"files_opened ({files_opened}) is less than files_seen ({files_seen})")
+    scope_verification: dict[str, Any] = build_scope_verification_block(
+        files_seen=files_seen,
+        rel_paths=rel_paths,
+        files_opened=files_opened,
+        chunks_read=chunks_read,
+        proposal_body=body,
+        base_warnings=sv_warn,
+    )
 
     provenance: dict[str, object] = {
         "script": "scripts/runtime/grace_mar_runtime_worker.py",
@@ -488,6 +513,7 @@ def task_inspect_work_area(
         status=trace_status,
         error=None,
         model_policy=model_policy,
+        scope_verification=scope_verification,
     )
     receipt_path = write_execution_receipt(worker_home, repo_root, run_id, receipt)
 

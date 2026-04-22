@@ -52,6 +52,11 @@ RECOMMENDED_HEADINGS = [
     "History resonance defaults",
 ]
 
+# strategy-state-iran official `voices/*/profile.md` — office-holder routing, not full cognitive profile.
+VOICE_REQUIRED_HEADINGS = [
+    "Identity",
+]
+
 _RE_HEADING = re.compile(r"^#{1,3}\s+(.+?)(?:\s*\(.*\))?\s*$", re.MULTILINE)
 
 
@@ -66,11 +71,30 @@ def _extract_headings(text: str) -> set[str]:
     return headings
 
 
+def _validate_voice_profile(path: Path, text: str, headings: set[str]) -> list[str]:
+    """Lighter schema for official-voice folders under `voices/*/profile.md`."""
+    errs: list[str] = []
+    for req in VOICE_REQUIRED_HEADINGS:
+        found = any(req.lower() in h.lower() for h in headings)
+        if not found:
+            errs.append(f"missing required heading: {req!r}")
+    thread_path = path.parent / "thread.md"
+    if not thread_path.is_file():
+        errs.append(f"companion file missing: {thread_path}")
+    return errs
+
+
 def validate_expert_file(path: Path) -> list[str]:
     """Return a list of error strings for one expert file."""
     errs: list[str] = []
     text = path.read_text(encoding="utf-8")
     headings = _extract_headings(text)
+
+    is_voice_profile = (
+        path.name == "profile.md" and path.parent.parent.name == "voices"
+    )
+    if is_voice_profile:
+        return _validate_voice_profile(path, text, headings)
 
     for req in REQUIRED_HEADINGS:
         found = any(req.lower() in h.lower() for h in headings)
@@ -114,6 +138,8 @@ def main() -> int:
     args = ap.parse_args()
 
     expert_files = sorted(args.dir.glob("experts/*/profile.md"))
+    if not expert_files:
+        expert_files = sorted(args.dir.glob("voices/*/profile.md"))
     if not expert_files:
         expert_files = sorted(
             p

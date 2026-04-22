@@ -105,6 +105,61 @@
       }
     },
 
+    "scope_verification": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "required": ["traversal", "stated_coverage", "coverage_ratio", "status", "warnings"],
+      "properties": {
+        "traversal": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["files_seen", "files_opened", "chunks_read", "paths_sample"],
+          "properties": {
+            "files_seen": { "type": "integer", "minimum": 0 },
+            "files_opened": { "type": "integer", "minimum": 0 },
+            "chunks_read": { "type": "integer", "minimum": 0 },
+            "paths_sample": {
+              "type": "array",
+              "items": { "type": "string" },
+              "maxItems": 20
+            }
+          }
+        },
+        "stated_coverage": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["files_claimed", "source"],
+          "properties": {
+            "files_claimed": {
+              "anyOf": [
+                { "type": "integer", "minimum": 0 },
+                { "type": "null" }
+              ]
+            },
+            "source": {
+              "type": "string",
+              "enum": ["proposal_regex", "absent", "parse_failed"]
+            }
+          }
+        },
+        "coverage_ratio": { "type": ["number", "null"], "minimum": 0, "maximum": 1 },
+        "status": {
+          "type": "string",
+          "enum": [
+            "aligned",
+            "unstated",
+            "overclaim_suspected",
+            "underclaim_suspected",
+            "parse_failed"
+          ]
+        },
+        "warnings": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+
     "non_canonical": { "type": "boolean", "const": true }
   }
 }

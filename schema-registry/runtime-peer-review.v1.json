@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schema-registry/runtime-peer-review.v1.json",
+  "title": "Grace-Mar runtime worker peer review result (non-canonical)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "non_canonical",
+    "review_run_id",
+    "draft_run_id",
+    "linkage",
+    "inputs",
+    "verdict",
+    "flags",
+    "overclaim",
+    "evidence_discipline"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "1.0-runtime-peer-review"
+    },
+    "non_canonical": { "type": "boolean", "const": true },
+    "review_run_id": { "type": "string", "minLength": 1 },
+    "draft_run_id": { "type": "string", "minLength": 1 },
+    "linkage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["draft_receipt_relpath", "review_artifact_relpath"],
+      "properties": {
+        "draft_receipt_relpath": { "type": "string", "minLength": 1 },
+        "review_artifact_relpath": { "type": ["string", "null"] }
+      }
+    },
+    "inputs": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["original_task", "draft_output_relpath", "draft_receipt_relpath"],
+      "properties": {
+        "original_task": { "type": "string" },
+        "draft_output_relpath": { "type": "string", "minLength": 1 },
+        "draft_receipt_relpath": { "type": "string", "minLength": 1 }
+      }
+    },
+    "verdict": {
+      "type": "string",
+      "enum": ["ok", "review_recommended", "hold", "flagged"]
+    },
+    "flags": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "overclaim": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["detected", "detail"],
+      "properties": {
+        "detected": { "type": "boolean" },
+        "detail": { "type": ["string", "null"] }
+      }
+    },
+    "evidence_discipline": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["assessment", "notes"],
+      "properties": {
+        "assessment": { "type": "string" },
+        "notes": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    }
+  }
+}

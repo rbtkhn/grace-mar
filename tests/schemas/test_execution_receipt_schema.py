@@ -58,6 +58,7 @@ def _minimal_valid_receipt() -> dict:
             "fallback_chain": ["B", "A"],
             "requires_human_review": False,
         },
+        "scope_verification": None,
         "non_canonical": True,
     }
 
@@ -114,6 +115,17 @@ def test_dry_run_writes_receipt(tmp_path: Path, worker_env: dict[str, str]) -> N
     receipt = json.loads(receipt_path.read_text(encoding="utf-8"))
     v.validate(receipt)
     assert receipt["artifacts"]["proposal_path"].endswith(f"{run_id}.md")
+    sv = receipt.get("scope_verification")
+    assert isinstance(sv, dict)
+    assert sv["traversal"]["files_seen"] >= 1
+    assert sv["traversal"]["files_opened"] >= 1
+    assert sv.get("status") in (
+        "aligned",
+        "unstated",
+        "overclaim_suspected",
+        "underclaim_suspected",
+        "parse_failed",
+    )
 
 
 def test_task_type_strategy_receipt_routing(tmp_path: Path, worker_env: dict[str, str]) -> None:

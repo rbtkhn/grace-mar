@@ -1,0 +1,8 @@
+{
+  "fixture_id": "tier_c_justified",
+  "receipt_path": "runtime/runtime-worker/receipts/gov_eval_tier_c.json",
+  "expected": {
+    "epistemic_decision": "allow_with_review",
+    "abstention_expected": false
+  }
+}

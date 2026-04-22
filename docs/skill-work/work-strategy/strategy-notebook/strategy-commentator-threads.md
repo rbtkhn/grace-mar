@@ -71,6 +71,7 @@ Run operator **`thread`**: **`bin/thread`** or **`python3 scripts/strategy_threa
 - `davis`
 - `macgregor`
 - `baud`
+- `bigserge`
 - `johnson`
 - `pape`
 - `ritter`
@@ -89,6 +90,7 @@ Run operator **`thread`**: **`bin/thread`** or **`python3 scripts/strategy_threa
 - `diesen`
 - `sachs`
 - `armstrong`
+- `greenwald`
 - `ritter`
 - `jermy`
 
@@ -98,8 +100,11 @@ Run operator **`thread`**: **`bin/thread`** or **`python3 scripts/strategy_threa
 - `crooke`
 - `mercouris`
 - `blumenthal`
+- `greenwald`
 - `marandi`
 - `parsi`
+- `simplicius`
+- `bigserge`
 
 ### `historicize`
 
@@ -135,6 +140,7 @@ Run operator **`thread`**: **`bin/thread`** or **`python3 scripts/strategy_threa
 | `mate` | Aaron Maté (`@aaronjmate`) | **Grayzone** / **investigative** lane: **media ownership**, **corporate skin**, and **propaganda** framing; **Israel/Palestine** vocabulary (**colonization** thesis); **CBS** / **billionaire** / outlet **lineage** claims — **tier verify** (filings, corporate docs) before **Links-grade** | `Mate`, `Maté`, `Grayzone`, or `aaronjmate` in cold | × `blumenthal`, × `parsi`, × `mercouris`, × `marandi` |
 | `johnson` | Larry Johnson | Ex-CIA / **material** and **ORBAT** emphasis: force structure, **Hormuz** geometry, **F-15/Isfahan** raid narrative reconstructions (Haiphong–Ritter roundtables) | `Johnson` or `LarryJohnson` in cold | × `ritter`, × `davis`; see [transcript digest](../transcript-analysis-haiphong-ritter-johnson-iran-2026-04.md) |
 | `freeman` | Charles (“Chas”) Freeman | **Primary civ-china (strategy) expert**: **U.S.–China** **diplomatic** **memory** **&** **PRC** **order** **talk**; **inconclusive** talks + **alliance/material** framing; **seam** from **`jiang`** **PH** **by** **default** | `Freeman` or `ChasFreeman` in cold | × `parsi`, × `mercouris`, × [rome-persia-legitimacy-signal-check.md](rome-persia-legitimacy-signal-check.md) (**seam**, not merge); × `diesen`, × `jiang`, × `sachs` |
+| `greenwald` | Glenn Greenwald ([`@ggreenwald`](https://x.com/ggreenwald)) | **Substack** / video long-form — **U.S. executive** claims, **Middle East** war **politics**, **media** and **Truth Social** narrative seams; **civil-libertarian** **antiwar** register; **not** a wire primary — pair **`mate`**, **`blumenthal`**, **`parsi`**, **`davis`**, **`mercouris`**, **`barnes`** with **tier seams** | `Greenwald`, `greenwald`, or `ggreenwald` in cold | × `mate`, × `blumenthal`, × `parsi`, × `davis`, × `mercouris`, × `barnes` |
 | `crooke` | Alastair Crooke | Former diplomat / **Levant–Islamabad** “room” and **spoiler** reads; often beside **Davis** in digests | `Crooke` in cold | × `davis`, × `marandi`, × `parsi` |
 | `diesen` | Glenn Diesen | **Eurasia / multipolar** discourse; **non-Western** institutional / rationality frames when distinct from **Mearsheimer**’s structural-realist register | `Diesen` in cold | × `mearsheimer`, × `macgregor`, × `pape`, × `sachs` |
 | `sachs` | Jeffrey Sachs | **UN / development–macro + DC institutions** pole: **deinstitutionalization** thesis (group process vs personalized executive); **relative decline** and **multipolar** misrecognition; **Congress** war-and-peace **vacuum**; cites **NYT** “room” narratives — **hypothesis-grade** capacity/health claims stay **tier-C** unless clinical primary | `Sachs`, `IRAN`, or `Hormuz` in cold | × `diesen`, × `mearsheimer`, × `mercouris` |
@@ -142,6 +148,8 @@ Run operator **`thread`**: **`bin/thread`** or **`python3 scripts/strategy_threa
 | `armstrong` | Martin A. Armstrong (`@ArmstrongEcon`) | **Cycle / timing** models (Socrates-style), **sovereign debt** stress, **energy–food system** shocks (diesel, fertilizer) framed with **geopolitical war**; critiques **“perpetual wealth” vs “dollar crash”** as headline distractions | `Armstrong`, `debt`, `IRAN`, or `Hormuz` in cold | × `jermy`, × `diesen`, × `sachs`, × `pape` |
 | `baud` | Jacques Baud | **NATO / UN / intelligence-adjacent** framing: **law-of-war**, **HUMINT vs OSINT** limits, **European security** and **cross-theater** reads; **convergence vs tension** between **official narrative** and **evidential** claims — **complements** **ORBAT** lanes without duplicating them | `Baud`, `NATO`, `UN`, or `EU` in cold | × `ritter`, × `macgregor`, × `davis`, × `barnes` |
 | `berletic` | Brian Berletic (`@BrianJBerletic`, The New Atlas) | **Industrial capacity**, **sanctions**, **proxy-war** logistics, **force-generation** vs **headline** battlefield narratives; **long-run production** and **material** constraints as a distinct fingerprint | `Berletic`, `NewAtlas`, `sanctions`, or `IRAN` in cold | × `ritter`, × `jermy`, × `diesen`, × `davis`, × `mearsheimer` |
+| `bigserge` | Big Serge ([`@witte_sergei`](https://x.com/witte_sergei); *Big Serge Thought*) | **Substack** long-form **strategy / war studies** — **campaign** and **theater-level** synthesis, **OSINT- and media-thread** reads; **not** a wire or ORBAT primary — pair **`berletic`**, **`ritter`**, **`johnson`**, **`baud`**, **`mercouris`** with **tier seams** | `Big Serge`, `bigserge`, `witte_sergei`, or `Big Serge Thought` in cold | × `berletic`, × `ritter`, × `johnson`, × `baud`, × `mercouris` |
+| `simplicius` | Simplicius (pseudonym; *Garden of Knowledge* / [`@simpatico771`](https://x.com/simpatico771)) | **Substack** long-form **conflict analysis** — U.S.–Iran **ceasefire/blockade** narratives, **media/wire** synthesis, polemical register; **not** a wire primary — pair **`mercouris`**, **`parsi`**, **`davis`**, **`marandi`** with **tier seams** | `Simplicius`, `simplicius76`, or `simpatico771` in cold | × `mercouris`, × `parsi`, × `davis`, × `marandi`, × `blumenthal` |
 
 **Special routing rule — Predictive History:** PH-derived notebook-facing ingest must use `thread:jiang`. Do not route PH directly into other expert lanes or directly into knots. See [strategy-notebook/README.md](README.md) § **Predictive History routing rule**.
 
@@ -156,6 +164,12 @@ Run operator **`thread`**: **`bin/thread`** or **`python3 scripts/strategy_threa
 - **`baud`:** **Law + intel + NATO/Europe** spine for **why narratives cohere or crack** — **not** a substitute for **`ritter`** **sea-control** **mechanics** or **`barnes`** **domestic liability** **chain**; use **`batch-analysis`** when the same week needs **evidential tension** across **Pentagon/Western** claims vs **treaty / mandate** framing.
 
 - **`berletic`:** **Production and sanctions** as **strategic variables** — **not** a second **`ritter`** **ORBAT** voice; pairs when **headline** **kinetic** **wins** need a **factory / stockpile / resupply** **counter-narrative** (**`jermy`** for **closure economics**, **`diesen`** for **multipolar** **institutions**).
+
+- **`simplicius`:** **Substack-length** **synthesis** and **narrative combat** — **not** a substitute for **`mercouris`** **institutional** **room** reads, **`parsi`** **Beltway** **scope** claims, or **`marandi`** **IRI-adjacent** **English** register; **batch-analysis** when the same week needs **“second-read of wires”** tension with explicit **tier** tags (**opinion** / **secondary**).
+
+- **`bigserge`:** **Campaign- and theater-level** **Substack** essays — **not** a second **`ritter`**/**`johnson`** **ORBAT** voice or **`berletic`** **production** ledger; **batch-analysis** when the week needs **operations narrative** beside **material** lanes, with **hypothesis-grade** labels on forward-looking **battle** claims.
+
+- **`greenwald`:** **Legal–media** and **antiwar** **Substack** (plus video) — **executive**–**press** tension and **deadline / ceasefire** storylines — **not** a substitute for **`parsi`** **Beltway** scope reads, **`marandi`** **negotiation** register, or **`davis`** **extension-game** mechanics without **labeled** seams; **batch-analysis** when the week needs **“claims vs confirmation”** hygiene beside **`mate`**/**`blumenthal`**.
 
 ### Quantitative thread metrics (illustrative — civ-mem–style calibration)
 
@@ -183,6 +197,7 @@ Run operator **`thread`**: **`bin/thread`** or **`python3 scripts/strategy_threa
 | `mate` | 0.75 | 0.34 | 0.64 | Media-structure and ownership critiques are a steady lane—outlet naming and corporate parentage need primary documents to close. Often read beside the same Grayzone-adjacent week as Blumenthal but keeps a distinct thread id for routing. |
 | `johnson` | 0.80 | 0.46 | 0.63 | Order-of-battle and material detail keep him in a narrow lane—useful when the question is what forces could actually do. Raid and battle narratives take time and sources to check. He shines on panels and roundtables more than as the universal hub for every thread. |
 | `freeman` | 0.83 | 0.41 | 0.66 | Veteran diplomat’s habit—“talks are inconclusive by nature”—matches a careful separation between moral language and hard security, which keeps the voice steady. Diplomatic time horizons mean many calls stay unresolved for a long while. Pairings happen, but he is not the busiest crossover node. |
+| `greenwald` | 0.76 | 0.38 | 0.68 | Executive-claims vs media-narrative framing is a steady lane—strong on juxtaposing official statements with what wires next confirm. Closure on “what was really agreed” often waits on primaries. Frequently read beside other antiwar or Beltway-facing lanes as interpretive tension, not as ORBAT. |
 | `crooke` | 0.75 | 0.39 | 0.70 | Levant room and spoiler logic hang together as a worldview. Spoiler readings often stay open until events force a fork. He appears often enough next to other specialists that the bridge score stays solid. |
 | `diesen` | 0.77 | 0.43 | 0.79 | Multipolar language is clearly his own—not a copy of standard U.S. structural realism—so you can tell when Diesen is speaking. Closure looks like his peer group: partly about time and evidence. He is frequently read alongside other realist commentators when the week demands comparison. |
 | `sachs` | 0.73 | 0.38 | 0.71 | Institutional-decay and macro-development framing is recognizable—UN/DC process contrasted to personalized executive behavior. Many strongest claims (war-room origin stories, capacity) need primaries before they close. Often paired with **Diesen** on multipolar episodes rather than as the widest mechanics hub. |
@@ -190,6 +205,8 @@ Run operator **`thread`**: **`bin/thread`** or **`python3 scripts/strategy_threa
 | `armstrong` | 0.68 | 0.32 | 0.55 | Cycle-timing and macro-war convergence claims are a recognizable brand; falsifiable windows need dated model outputs or method disclosure, not vibes. Useful beside energy-logistics or sovereign-debt weeks when Hormuz or fiscal stress is the question. |
 | `baud` | 0.76 | 0.40 | 0.62 | Law-of-war and alliance-mandate framing stays recognizable across crises; many claims hinge on classified or contested sourcing, so closure is slow. Often pulled in when the notebook needs European or UN-adjacent tension beside U.S. military-dissent lanes. |
 | `berletic` | 0.74 | 0.36 | 0.58 | Industrial and sanctions-throughput arguments are a clear signature; headline battle maps age faster than factory counts, so pair him when logistics and attrition matter. Bridges to energy-system and realist lanes without replacing hull-level ORBAT work. |
+| `bigserge` | 0.72 | 0.34 | 0.60 | Long-form war-studies register on Substack—campaign framing and narrative-of-operations that readers recognize week to week. Event-linked claims often need wire or imagery to close. Pairs naturally with industrial-capacity and ORBAT lanes as interpretive tension, not as duplicate primaries. |
+| `simplicius` | 0.70 | 0.32 | 0.62 | Pseudonymous Substack voice with a recognizable “bluff, blockade, media read” bundle on Middle East crises; falsification often waits on primaries behind the cited wires. Frequently read beside institutional or Beltway lanes as synthesis tension, not as a second wire. |
 
 ---
 

@@ -14,7 +14,10 @@ or::
 This runs **two automatic steps**:
 
 1. **Triage** (``strategy_expert_transcript.py``) — routes ``thread:`` lines
-   from the inbox to per-expert transcript files (append-only, 7-day prune).
+   from the inbox to per-expert transcript files (append-only, 7-day prune),
+   and appends lines derived from ``raw-input/**`` markdown with
+   ``kind: rss-item`` + ``thread:`` in YAML (see ``fetch-sources.json`` /
+   ``fetch_strategy_raw_input.py``).
 2. **Extraction** (``strategy_expert_corpus.py``) — reads each expert's
    transcript + relevant knots + existing pages, writes raw material to
    thread files between script markers. Prefers pages over knots when both

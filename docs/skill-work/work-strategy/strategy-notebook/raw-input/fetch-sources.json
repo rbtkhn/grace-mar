@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "rss_feeds": [
+    {
+      "enabled": true,
+      "url": "https://simplicius76.substack.com/feed",
+      "slug_prefix": "rss-simplicius",
+      "max_items": 10,
+      "thread": "simplicius"
+    },
+    {
+      "enabled": true,
+      "url": "https://bigserge.substack.com/feed",
+      "slug_prefix": "rss-bigserge",
+      "max_items": 10,
+      "thread": "bigserge"
+    },
+    {
+      "enabled": true,
+      "url": "https://greenwald.substack.com/feed",
+      "slug_prefix": "rss-greenwald",
+      "max_items": 10,
+      "thread": "greenwald"
+    }
+  ]
+}

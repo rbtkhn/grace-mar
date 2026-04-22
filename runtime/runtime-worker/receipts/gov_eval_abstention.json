@@ -1,0 +1,41 @@
+{
+  "run_id": "gov_eval_abstention",
+  "timestamp": "2026-04-10T12:04:00Z",
+  "task_mode": "inspect_work_area",
+  "task_subtype": "external_claim",
+  "scope": {
+    "root": "docs/skill-work",
+    "max_files": 3,
+    "max_chars": 500
+  },
+  "worker_route": {
+    "resolved": false,
+    "task_type": null,
+    "shared_workers": [],
+    "routed_worker": null,
+    "entrypoints": {}
+  },
+  "epistemic": {
+    "decision": "abstain",
+    "abstained": true,
+    "evidence_state": "outside_boundary",
+    "notes": "Synthetic benchmark: no in-Record basis for a factual claim; abstain per policy."
+  },
+  "artifacts": {
+    "trace_path": "runtime/runtime-worker/traces/index.jsonl",
+    "proposal_path": "runtime/runtime-worker/proposals/gov_eval_abstention.md"
+  },
+  "outcome": {
+    "status": "partial",
+    "error": null
+  },
+  "model_policy": {
+    "allowed_tier": "A",
+    "resolved_provider": null,
+    "resolved_model": null,
+    "fallback_chain": ["B", "A"],
+    "requires_human_review": false
+  },
+  "scope_verification": null,
+  "non_canonical": true
+}

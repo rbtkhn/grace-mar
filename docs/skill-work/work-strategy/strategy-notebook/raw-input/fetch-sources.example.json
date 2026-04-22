@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "comment": "Copy to fetch-sources.json beside this file and edit. Run: python3 scripts/fetch_strategy_raw_input.py --apply. Optional \"thread\" must be a CANONICAL_EXPERT_IDS slug so thread triage merges RSS rows into that expert transcript.",
+  "rss_feeds": [
+    {
+      "enabled": true,
+      "url": "https://simplicius76.substack.com/feed",
+      "slug_prefix": "rss-simplicius",
+      "max_items": 5,
+      "thread": "simplicius"
+    },
+    {
+      "enabled": true,
+      "url": "https://bigserge.substack.com/feed",
+      "slug_prefix": "rss-bigserge",
+      "max_items": 5,
+      "thread": "bigserge"
+    },
+    {
+      "enabled": true,
+      "url": "https://greenwald.substack.com/feed",
+      "slug_prefix": "rss-greenwald",
+      "max_items": 5,
+      "thread": "greenwald"
+    }
+  ]
+}

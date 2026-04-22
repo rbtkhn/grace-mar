@@ -1,0 +1,8 @@
+{
+  "fixture_id": "weak_evidence_hold",
+  "receipt_path": "runtime/runtime-worker/receipts/gov_eval_weak_evidence_hold.json",
+  "expected": {
+    "epistemic_decision": "hold",
+    "abstention_expected": false
+  }
+}

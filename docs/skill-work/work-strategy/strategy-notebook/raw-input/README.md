@@ -2,6 +2,33 @@
 
 **Purpose:** Store **complete** transcripts and **all** strategy-ingest source material you want kept verbatim — without bloating [daily-strategy-inbox.md](../daily-strategy-inbox.md) or hitting the **~2000 word** per-block budget on [experts/*/transcript.md](../experts/ritter/transcript.md) that **`thread`** triage targets.
 
+**Expert-agnostic:** This tree is **raw material for analysis**, not only dumps tied to a [strategy-commentator-threads.md](../strategy-commentator-threads.md) **`expert_id`**. Substack essays, wire bundles, institutional statements, screenshot indexes, and mixed paste-bundles belong here even when there is **no** `thread:` lane yet (or ever). The inbox stub may use **`membrane:single`** and omit **`thread:`**; frontmatter **`thread:`** is optional (see § File template).
+
+## Automated fetch (RSS → raw-input)
+
+**Script:** [`scripts/fetch_strategy_raw_input.py`](../../../../scripts/fetch_strategy_raw_input.py) — pulls **RSS/Atom** items (e.g. Substack `/feed`) into **`raw-input/<aired_date>/`** as markdown with YAML frontmatter (`kind: rss-item`). Optional per-feed **`"thread": "<expert_id>"`** adds a **`thread:`** line to YAML so **`python3 scripts/strategy_thread.py`** triage merges a one-line RSS stub into that expert’s **`experts/<id>/transcript.md`** (after inbox lines for the same date).
+
+**Setup:**
+
+1. Edit **`fetch-sources.json`** in this directory (default includes Simplicius, Big Serge, Greenwald with `thread` set). To add feeds, copy from [fetch-sources.example.json](fetch-sources.example.json) or append another object under `rss_feeds` (`url`, `slug_prefix`, `max_items`, `enabled`, optional `thread`).
+2. Preview: `python3 scripts/fetch_strategy_raw_input.py` (dry-run by default).
+3. Write: `python3 scripts/fetch_strategy_raw_input.py --apply`.
+
+**Config path override:** set env **`FETCH_STRATEGY_SOURCES`** to an absolute path, or pass **`--config`**.
+
+**Scheduling:** use **cron**, **launchd**, or a personal runner — e.g. daily at 06:00 local:
+
+`0 6 * * * cd /path/to/grace-mar && /usr/bin/python3 scripts/fetch_strategy_raw_input.py --apply >> ~/logs/strategy-fetch.log 2>&1`
+
+Optional local override file (gitignored): **`fetch-sources.local.json`** — merge story is manual (copy entries into `fetch-sources.json` or swap path via env); the repo does not auto-merge two JSON files.
+
+**Backfill / mirror (no network):** unchanged — [`scripts/populate_strategy_raw_input.py`](../../../../scripts/populate_strategy_raw_input.py) copies existing transcripts and verbatim sidecars into `raw-input/`; run it after local edits when you want a unified archive layout.
+
+**Substack year backfill (full post body):** [`scripts/backfill_substack_raw_input.py`](../../../../scripts/backfill_substack_raw_input.py) — paginates `api/v1/archive`, fetches `api/v1/posts/{slug}`, writes `raw-input/<date>/substack-*.md` with optional YAML `thread: simplicius` (or other id). Example:  
+`python3 scripts/backfill_substack_raw_input.py --hostname simplicius76.substack.com --year 2026 --thread simplicius --apply`
+
+**Future extensions (not implemented yet):** authenticated X/YouTube/API pulls, wire paywall fetchers, and inbox stub append — each needs its own gate (tokens, ToS, tier tags).
+
 **Relation to other surfaces:**
 
 | Surface | Role |
@@ -84,6 +111,6 @@ Default root: `docs/skill-work/work-strategy/strategy-notebook/raw-input`. Overr
 
 ## Assistant default
 
-When the operator asks for **full transcript on disk** or **store everything**, write the body under **`raw-input/YYYY-MM-DD/<slug>.md`** and keep [daily-strategy-inbox.md](../daily-strategy-inbox.md) to a **stub line** (with `thread:` + URL + `verify:`) pointing at this file, e.g. `verify:full-text+raw-input/2026-04-20/slug.md`.
+When the operator asks for **full transcript on disk** or **store everything**, write the body under **`raw-input/YYYY-MM-DD/<slug>.md`** and keep [daily-strategy-inbox.md](../daily-strategy-inbox.md) to a **stub line** (canonical URL + `verify:` pointer to this path; **`thread:`** only when the capture maps to an indexed commentator), e.g. `verify:full-text+raw-input/2026-04-20/slug.md`.
 
 Full contract: [STRATEGY-NOTEBOOK-ARCHITECTURE.md](../STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *Raw input archive (7-day full retention)*.

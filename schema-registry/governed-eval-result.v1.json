@@ -2,27 +2,52 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "schema-registry/governed-eval-result.v1.json",
   "title": "Grace-Mar governed eval harness result (non-canonical)",
+  "description": "Advisory, receipt-grounded quality snapshot. Not raw intelligence. total = mean of non-null axis scores in scores (0-1); null if all axes are null.",
   "type": "object",
   "additionalProperties": false,
   "required": [
     "schema_version",
-    "scenario_id",
-    "receipt_run_id",
+    "run_id",
+    "fixture_id",
+    "setup",
     "scores",
+    "total",
     "notes",
+    "receipt_path",
     "non_canonical"
   ],
   "properties": {
     "schema_version": {
       "type": "string",
-      "const": "1.0-governed-eval-result"
+      "const": "1.1-governed-eval-result"
     },
-    "scenario_id": { "type": "string", "minLength": 1 },
-    "receipt_run_id": { "type": "string", "minLength": 1 },
-    "receipt_path": { "type": ["string", "null"] },
+    "run_id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Execution receipt run_id (same as the receipt file evaluated)."
+    },
+    "fixture_id": { "type": "string", "minLength": 1 },
+    "setup": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["task_type", "task_subtype", "model_tier"],
+      "properties": {
+        "task_type": { "type": ["string", "null"] },
+        "task_subtype": { "type": ["string", "null"] },
+        "model_tier": { "type": ["string", "null"] }
+      }
+    },
+    "receipt_path": { "type": "string", "minLength": 1 },
     "scores": {
       "type": "object",
       "additionalProperties": false,
+      "required": [
+        "boundary_obedience",
+        "epistemic_discipline",
+        "abstention_correctness",
+        "candidate_reviewability",
+        "cost_adjusted_usefulness"
+      ],
       "properties": {
         "boundary_obedience": { "type": ["number", "null"] },
         "epistemic_discipline": { "type": ["number", "null"] },
@@ -31,6 +56,7 @@
         "cost_adjusted_usefulness": { "type": ["number", "null"] }
       }
     },
+    "total": { "type": ["number", "null"] },
     "notes": {
       "type": "array",
       "items": { "type": "string" }

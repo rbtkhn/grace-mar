@@ -1,0 +1,8 @@
+{
+  "fixture_id": "safe_synthesis",
+  "receipt_path": "runtime/runtime-worker/receipts/gov_eval_safe_synthesis.json",
+  "expected": {
+    "epistemic_decision": "allow",
+    "abstention_expected": false
+  }
+}

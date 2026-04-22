@@ -1,0 +1,41 @@
+{
+  "run_id": "gov_eval_contradiction_rich",
+  "timestamp": "2026-04-10T12:02:00Z",
+  "task_mode": "inspect_work_area",
+  "task_subtype": "contradiction_review",
+  "scope": {
+    "root": "docs/skill-work/work-strategy/strategy-notebook",
+    "max_files": 12,
+    "max_chars": 4000
+  },
+  "worker_route": {
+    "resolved": true,
+    "task_type": "strategy",
+    "shared_workers": [],
+    "routed_worker": null,
+    "entrypoints": {}
+  },
+  "epistemic": {
+    "decision": "allow_with_review",
+    "abstained": false,
+    "evidence_state": "contradictory",
+    "notes": "Synthetic benchmark: two primary sources conflict; human review before any gate-adjacent action."
+  },
+  "artifacts": {
+    "trace_path": "runtime/runtime-worker/traces/index.jsonl",
+    "proposal_path": "runtime/runtime-worker/proposals/gov_eval_contradiction_rich.md"
+  },
+  "outcome": {
+    "status": "ok",
+    "error": null
+  },
+  "model_policy": {
+    "allowed_tier": "C",
+    "resolved_provider": null,
+    "resolved_model": null,
+    "fallback_chain": ["B", "A"],
+    "requires_human_review": true
+  },
+  "scope_verification": null,
+  "non_canonical": true
+}

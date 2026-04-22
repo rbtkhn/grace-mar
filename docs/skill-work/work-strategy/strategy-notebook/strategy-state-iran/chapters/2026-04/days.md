@@ -45,4 +45,4 @@ WORK only; not Record.
 | 2026-04-29 | [daily/2026-04-29.md](daily/2026-04-29.md) | Calendar stub |
 | 2026-04-30 | [daily/2026-04-30.md](daily/2026-04-30.md) | Calendar stub |
 
-**Cross-weave:** Iran-lane **`daily/`** pages are **seams** into main [`chapters/2026-04/days.md`](../../../chapters/2026-04/days.md), not replacements for **`thread:`** expert Judgment or wire primaries.
+**Cross-weave:** Iran-lane **`daily/`** pages are **seams** into main [`chapters/2026-04/days.md`](../../../chapters/2026-04/days.md), not replacements for **`thread:`** commentator Judgment or wire primaries.

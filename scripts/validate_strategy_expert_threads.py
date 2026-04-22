@@ -54,7 +54,7 @@ MIN_PROSE_WORDS = 500
 
 
 def expert_id_from_thread_path(path: Path) -> str | None:
-    if path.name == "thread.md" and path.parent.parent.name == "experts":
+    if path.name == "thread.md" and path.parent.parent.name in ("experts", "voices"):
         return path.parent.name
     m = re.match(r"^strategy-expert-(.+)-thread\.md$", path.name)
     return m.group(1) if m else None
@@ -251,6 +251,8 @@ def main() -> int:
             return 1
 
     paths = sorted(args.dir.glob("experts/*/thread.md"))
+    if not paths:
+        paths = sorted(args.dir.glob("voices/*/thread.md"))
     if not paths:
         paths = sorted(args.dir.glob("strategy-expert-*-thread.md"))
     if not paths:

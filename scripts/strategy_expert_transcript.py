@@ -16,6 +16,7 @@ from __future__ import annotations
 
 import argparse
 import re
+from collections import defaultdict
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
@@ -67,6 +68,103 @@ def canonical_transcript_header(expert_id: str) -> str:
 _RE_DATE_HEADING = re.compile(r"^## (\d{4}-\d{2}-\d{2})\s*$")
 
 
+def _split_simple_frontmatter(text: str) -> tuple[dict[str, str], str]:
+    """Parse leading YAML-style ``key: value`` block after first ``---``."""
+    if not text.startswith("---"):
+        return {}, text
+    end = text.find("\n---\n", 1)
+    if end == -1:
+        return {}, text
+    fm_raw = text[4:end].strip()
+    body = text[end + 5 :]
+    fm: dict[str, str] = {}
+    for line in fm_raw.splitlines():
+        line = line.strip()
+        if not line:
+            continue
+        if ":" in line:
+            k, _, v = line.partition(":")
+            fm[k.strip()] = v.strip().strip('"').strip("'")
+    return fm, body
+
+
+def _extract_markdown_h1_title(body: str) -> str:
+    for line in body.splitlines():
+        s = line.strip()
+        if s.startswith("# ") and not s.startswith("## "):
+            return s[2:].strip()
+    return "RSS item"
+
+
+def _iter_raw_input_md_paths(raw_root: Path, cutoff: date) -> list[Path]:
+    """Markdown files under ``raw-input/YYYY-MM-DD/`` with folder date strictly after ``cutoff``."""
+    if not raw_root.is_dir():
+        return []
+    out: list[Path] = []
+    for child in sorted(raw_root.iterdir()):
+        if not child.is_dir():
+            continue
+        try:
+            d = date.fromisoformat(child.name)
+        except ValueError:
+            continue
+        if d <= cutoff:
+            continue
+        out.extend(sorted(child.glob("*.md")))
+    return out
+
+
+def _rss_row_air_date(fm: dict[str, str], path: Path) -> date | None:
+    for key in ("aired_date", "ingest_date"):
+        raw = (fm.get(key) or "").strip()
+        if raw and len(raw) >= 10:
+            try:
+                return _parse_date(raw[:10])
+            except ValueError:
+                pass
+    try:
+        return date.fromisoformat(path.parent.name)
+    except ValueError:
+        return None
+
+
+def collect_rss_thread_ingests(
+    raw_root: Path,
+    *,
+    cutoff: date,
+    expert_ids_set: frozenset[str],
+) -> dict[str, dict[date, list[str]]]:
+    """Build ``expert_id -> date -> verbatim`` from ``raw-input`` RSS markdown with ``thread:``."""
+    nested: dict[str, dict[date, list[str]]] = defaultdict(lambda: defaultdict(list))
+    for path in _iter_raw_input_md_paths(raw_root, cutoff):
+        text = path.read_text(encoding="utf-8")
+        fm, body = _split_simple_frontmatter(text)
+        if fm.get("kind") != "rss-item":
+            continue
+        tid = (fm.get("thread") or "").strip()
+        if not tid or tid not in expert_ids_set:
+            continue
+        d = _rss_row_air_date(fm, path)
+        if d is None or d <= cutoff:
+            continue
+        title = _extract_markdown_h1_title(body)
+        url = (fm.get("source_url") or "").strip()
+        verbatim = (
+            f"- RSS | cold: **{title}** // raw-input `{path.name}`"
+            f" | {url} | verify:rss-fetch | thread:{tid}"
+        )
+        nested[tid][d].append(verbatim)
+    return {e: dict(dm) for e, dm in nested.items()}
+
+
+def _merge_date_ingest_maps(
+    inbox_map: dict[date, list[str]],
+    rss_map: dict[date, list[str]],
+) -> dict[date, list[str]]:
+    dates = set(inbox_map) | set(rss_map)
+    return {d: inbox_map.get(d, []) + rss_map.get(d, []) for d in dates}
+
+
 def _parse_date(s: str) -> date:
     return datetime.strptime(s, "%Y-%m-%d").date()
 
@@ -116,12 +214,19 @@ def triage_to_transcripts(
     today: date | None = None,
     dry_run: bool = False,
     expert_ids: frozenset[str] | None = None,
+    raw_input_root: Path | None = None,
 ) -> list[Path]:
     """Route inbox thread lines to transcript files, append-only + prune.
+
+    Also merges ``raw-input/**/*.md`` files with ``kind: rss-item`` and a
+    ``thread:`` line in YAML front matter (from :func:`collect_rss_thread_ingests`),
+    after inbox lines for the same date.
 
     Args:
         expert_ids: If provided, only process these experts. Otherwise imports
                     CANONICAL_EXPERT_IDS from strategy_expert_corpus.
+        raw_input_root: Defaults to ``out_dir / "raw-input"``. Set to a nonexistent
+                    path to skip RSS merge.
     """
     today = today or datetime.now(timezone.utc).date()
     cutoff = today - timedelta(days=keep_days)
@@ -137,13 +242,23 @@ def triage_to_transcripts(
     inbox_text = inbox_path.read_text(encoding="utf-8")
     extracted = extract_thread_ingests(inbox_text, today=today)
 
+    raw_root = raw_input_root if raw_input_root is not None else (out_dir / "raw-input")
+    rss_by_expert = (
+        collect_rss_thread_ingests(raw_root, cutoff=cutoff, expert_ids_set=expert_ids_set)
+        if raw_root.is_dir()
+        else {}
+    )
+
     written: list[Path] = []
     warn_ingest: list[str] = []
 
     for expert_id in all_ids:
         transcript_path = expert_paths(expert_id, out_dir)["transcript"]
 
-        new_by_date = extracted.get(expert_id, {})
+        new_by_date = _merge_date_ingest_maps(
+            extracted.get(expert_id, {}),
+            rss_by_expert.get(expert_id, {}),
+        )
 
         if transcript_path.is_file():
             header, existing_sections = parse_transcript_file(transcript_path)

@@ -1,0 +1,8 @@
+{
+  "fixture_id": "record_truth_confusion",
+  "receipt_path": "runtime/runtime-worker/receipts/gov_eval_record_truth_confusion.json",
+  "expected": {
+    "epistemic_decision": "allow",
+    "abstention_expected": false
+  }
+}

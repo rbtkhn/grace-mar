@@ -1,0 +1,41 @@
+{
+  "run_id": "gov_eval_weak_evidence_hold",
+  "timestamp": "2026-04-10T12:01:00Z",
+  "task_mode": "inspect_work_area",
+  "task_subtype": "evidence_triage",
+  "scope": {
+    "root": "docs/skill-work/work-strategy",
+    "max_files": 8,
+    "max_chars": 2000
+  },
+  "worker_route": {
+    "resolved": true,
+    "task_type": "tacit",
+    "shared_workers": [],
+    "routed_worker": null,
+    "entrypoints": {}
+  },
+  "epistemic": {
+    "decision": "hold",
+    "abstained": false,
+    "evidence_state": "weak",
+    "notes": "Synthetic benchmark: insufficient corroboration to act."
+  },
+  "artifacts": {
+    "trace_path": "runtime/runtime-worker/traces/index.jsonl",
+    "proposal_path": "runtime/runtime-worker/proposals/gov_eval_weak_evidence_hold.md"
+  },
+  "outcome": {
+    "status": "ok",
+    "error": null
+  },
+  "model_policy": {
+    "allowed_tier": "B",
+    "resolved_provider": null,
+    "resolved_model": null,
+    "fallback_chain": ["B", "A"],
+    "requires_human_review": false
+  },
+  "scope_verification": null,
+  "non_canonical": true
+}

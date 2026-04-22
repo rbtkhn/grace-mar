@@ -12,7 +12,7 @@ WORK only; not Record.
 
 **Cadence:** Prefer **one end-of-day page session** per day—do not create or extend `strategy-page` blocks continuously during the day; daytime capture stays in [daily-strategy-inbox.md](daily-strategy-inbox.md).
 
-**strategy-state-iran (voices):** Under each **`## YYYY-MM`**, add **`### Month ledger (YYYY-MM)`** once per month (ingest span, seam targets, open hooks) — **month-gate** accumulation, not a daily ledger. See [strategy-state-iran/README.md](strategy-state-iran/README.md). Per-day consolidation lives in [`strategy-state-iran/chapters/YYYY-MM/daily/`](strategy-state-iran/chapters/2026-04/daily/).
+**strategy-state-iran (institutional tri-voice):** Under **`## YYYY-MM`** in [`strategy-state-iran/voices/iri-institutional/thread.md`](strategy-state-iran/voices/iri-institutional/thread.md), use **`### Voice — …`** subsections (FM / president / Majlis); inside each voice, **`### Month ledger (YYYY-MM)`** + optional **`strategy-page`** — **month-gate** accumulation, not a daily ledger. See [strategy-state-iran/README.md](strategy-state-iran/README.md). Per-day consolidation lives in [`strategy-state-iran/chapters/YYYY-MM/daily/`](strategy-state-iran/chapters/2026-04/daily/).
 
 ---
 

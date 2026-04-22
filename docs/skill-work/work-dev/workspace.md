@@ -64,6 +64,7 @@ Use this file when you want one place to understand:
 | `partner-channel.md` | Borrowed-authority / partner growth path |
 | `objection-log.md` | Positioning and market-learning log |
 | `../../crypto-roadmap.md` | Future authority, settlement, and access layer across territories |
+| `../../evals/governed-eval-harness.md` | **Runtime eval lane (non-Record):** receipt-based governed quality harness, `scripts/evals/run_governed_eval.py` |
 | `harness-replay-work-politics-demo.md` | Example **work-politics** `CANDIDATE-*` replay ([work-politics](../work-politics/README.md) territory); audit tooling |
 | `actionable-features-and-insights.md`, `capability-statement-assistant-brain.md`, `competitor-research-assistant-brain-judgment-testing.md`, `lessons-openclaw-skills-video.md`, `lessons-perplexity-computer-video.md`, `lessons-deepseek-insider-self-improving-agents.md`, `lessons-solo-founder-ai-video.md` | Assistant-brain / agent-product operator notes; link to polyphonic protocol docs in [work-politics](../work-politics/README.md) |
 

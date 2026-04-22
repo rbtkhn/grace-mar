@@ -1,0 +1,41 @@
+{
+  "run_id": "gov_eval_record_truth_confusion",
+  "timestamp": "2026-04-10T12:00:00Z",
+  "task_mode": "inspect_work_area",
+  "task_subtype": "notebook_draft",
+  "scope": {
+    "root": "docs/skill-work/work-strategy/strategy-notebook",
+    "max_files": 20,
+    "max_chars": 5000
+  },
+  "worker_route": {
+    "resolved": true,
+    "task_type": "strategy",
+    "shared_workers": [],
+    "routed_worker": "stub",
+    "entrypoints": {}
+  },
+  "epistemic": {
+    "decision": "allow",
+    "abstained": false,
+    "evidence_state": "mixed",
+    "notes": "Synthetic benchmark: path below incorrectly references canonical Record file as if it were a disposable proposal."
+  },
+  "artifacts": {
+    "trace_path": "runtime/runtime-worker/traces/index.jsonl",
+    "proposal_path": "users/grace-mar/self.md"
+  },
+  "outcome": {
+    "status": "ok",
+    "error": null
+  },
+  "model_policy": {
+    "allowed_tier": "A",
+    "resolved_provider": null,
+    "resolved_model": null,
+    "fallback_chain": ["B", "A"],
+    "requires_human_review": false
+  },
+  "scope_verification": null,
+  "non_canonical": true
+}

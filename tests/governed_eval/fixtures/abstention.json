@@ -1,0 +1,8 @@
+{
+  "fixture_id": "abstention",
+  "receipt_path": "runtime/runtime-worker/receipts/gov_eval_abstention.json",
+  "expected": {
+    "epistemic_decision": "abstain",
+    "abstention_expected": true
+  }
+}

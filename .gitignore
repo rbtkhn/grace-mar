@@ -23,6 +23,9 @@ Pods/
 # Operator-local Voice runtime (optional constitutional critique); copy from runtime_config.example.json
 /runtime_config.json
 
+# Strategy notebook — optional local RSS fetch manifest (see raw-input/README.md)
+docs/skill-work/work-strategy/strategy-notebook/raw-input/fetch-sources.local.json
+
 # Local companion-self checkout for multi-root workspace (grace-mar.code-workspace).
 # Remove this line if you use `git submodule add … companion-self` and want it tracked.
 /companion-self/
@@ -135,6 +138,10 @@ runtime/runtime-worker/traces/*
 !runtime/runtime-worker/traces/.gitkeep
 runtime/runtime-worker/receipts/*
 !runtime/runtime-worker/receipts/.gitkeep
+# Governed eval harness: committed sample receipts (synthetic; see docs/evals/governed-eval-harness.md)
+!runtime/runtime-worker/receipts/gov_eval_*.json
+runtime/runtime-worker/peer_reviews/*
+!runtime/runtime-worker/peer_reviews/.gitkeep
 
 # Workflow depth receipts (append-only; see runtime/workflow-depth/README.md)
 runtime/workflow-depth/index.jsonl

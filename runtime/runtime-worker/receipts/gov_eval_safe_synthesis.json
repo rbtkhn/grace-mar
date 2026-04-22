@@ -1,0 +1,41 @@
+{
+  "run_id": "gov_eval_safe_synthesis",
+  "timestamp": "2026-04-10T12:03:00Z",
+  "task_mode": "inspect_work_area",
+  "task_subtype": "bounded_scope",
+  "scope": {
+    "root": "docs/skill-work/work-strategy/strategy-notebook",
+    "max_files": 5,
+    "max_chars": 800
+  },
+  "worker_route": {
+    "resolved": true,
+    "task_type": "tacit",
+    "shared_workers": [],
+    "routed_worker": null,
+    "entrypoints": {}
+  },
+  "epistemic": {
+    "decision": "allow",
+    "abstained": false,
+    "evidence_state": "adequate",
+    "notes": "Synthetic benchmark: bounded work-area scan with no Record-adjacent paths."
+  },
+  "artifacts": {
+    "trace_path": "runtime/runtime-worker/traces/index.jsonl",
+    "proposal_path": "runtime/runtime-worker/proposals/gov_eval_safe_synthesis.md"
+  },
+  "outcome": {
+    "status": "ok",
+    "error": null
+  },
+  "model_policy": {
+    "allowed_tier": "A",
+    "resolved_provider": null,
+    "resolved_model": null,
+    "fallback_chain": ["B", "A"],
+    "requires_human_review": false
+  },
+  "scope_verification": null,
+  "non_canonical": true
+}
