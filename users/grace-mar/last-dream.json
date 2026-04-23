@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-22T05:31:49.624902+00:00",
+  "generated_at": "2026-04-23T04:56:27.339020+00:00",
   "user_id": "grace-mar",
   "agent_surface": {
     "cursor_model": "unknown"
@@ -9,7 +9,7 @@
   "ok": true,
   "integrity_ok": true,
   "governance_ok": true,
-  "self_memory_changed": false,
+  "self_memory_changed": true,
   "reviewable_count": 0,
   "contradiction_count": 0,
   "artifact_draft_count": 0,
@@ -17,7 +17,7 @@
   "followups": [],
   "phases": {
     "recent": {
-      "self_memory_changed": false,
+      "self_memory_changed": true,
       "entry_count": 0,
       "relation_counts": {}
     },
@@ -29,19 +29,19 @@
     }
   },
   "coffee_rollup_24h": {
-    "window_start_utc": "2026-04-21T05:31:46.732594+00:00",
-    "window_end_utc": "2026-04-22T05:31:46.732594+00:00",
+    "window_start_utc": "2026-04-22T04:56:22.964069+00:00",
+    "window_end_utc": "2026-04-23T04:56:22.964069+00:00",
     "window_hours": 24.0,
-    "count": 5,
-    "first_ts": "2026-04-21T14:39:00+00:00",
-    "last_ts": "2026-04-22T04:32:00+00:00",
-    "span_hours": 13.88,
+    "count": 3,
+    "first_ts": "2026-04-22T14:49:00+00:00",
+    "last_ts": "2026-04-23T01:18:00+00:00",
+    "span_hours": 10.48,
     "by_mode": {
-      "work-start": 5
+      "work-start": 3
     },
     "runs": [
       {
-        "ts_iso": "2026-04-21T14:39:00+00:00",
+        "ts_iso": "2026-04-22T14:49:00+00:00",
         "ok": true,
         "mode": "work-start",
         "kv": {
@@ -50,7 +50,7 @@
         }
       },
       {
-        "ts_iso": "2026-04-21T18:02:00+00:00",
+        "ts_iso": "2026-04-22T17:44:00+00:00",
         "ok": true,
         "mode": "work-start",
         "kv": {
@@ -59,25 +59,7 @@
         }
       },
       {
-        "ts_iso": "2026-04-21T19:02:00+00:00",
-        "ok": true,
-        "mode": "work-start",
-        "kv": {
-          "cursor_model": "unknown",
-          "model_tier": "unknown"
-        }
-      },
-      {
-        "ts_iso": "2026-04-22T04:31:00+00:00",
-        "ok": true,
-        "mode": "work-start",
-        "kv": {
-          "cursor_model": "unknown",
-          "model_tier": "unknown"
-        }
-      },
-      {
-        "ts_iso": "2026-04-22T04:32:00+00:00",
+        "ts_iso": "2026-04-23T01:18:00+00:00",
         "ok": true,
         "mode": "work-start",
         "kv": {
@@ -86,8 +68,16 @@
         }
       }
     ],
-    "picks": [],
-    "by_picked": {}
+    "picks": [
+      {
+        "ts_iso": "2026-04-22T15:10:00+00:00",
+        "picked": "B",
+        "steward": "template"
+      }
+    ],
+    "by_picked": {
+      "B": 1
+    }
   },
   "execution_paths": [
     {
@@ -95,9 +85,7 @@
       "title": "Daily Brief (generator + watch slices; optional KY-4 intel when chosen)",
       "first_move": "python3 scripts/operator_coffee.py -u grace-mar \u2014 then coffee menu C \u2014 Strategy (daily brief)",
       "stop_rule": "One slice: daily brief path opened or optional intel pass started \u2014 enough for first block.",
-      "signals_used": [
-        "reentry_heavy"
-      ]
+      "signals_used": []
     },
     {
       "id": "build",
@@ -114,9 +102,9 @@
       "signals_used": []
     }
   ],
-  "suggested_execution_path_index": 1,
+  "suggested_execution_path_index": 2,
   "execution_path_suggestion_reason": "calendar_mod3",
-  "tomorrow_inherits": "Tomorrow inherits (hint): **Build / integrate (repo + work-dev)** \u2014 calendar rotation; not policy or Record.",
+  "tomorrow_inherits": "Tomorrow inherits (hint): **Steward / membrane (gate + template parity)** \u2014 calendar rotation; not policy or Record.",
   "civmem_echoes": [
     {
       "path": "book/APPLIED-THEOLOGY-INSIGHTS-MERCOURIS-LENS.md",
@@ -143,7 +131,7 @@
     "category": "model",
     "sources_checked": 6,
     "sources_total": 6,
-    "alert_count": 13,
+    "alert_count": 11,
     "review_count": 0,
     "monitor_count": 1,
     "variant_count": 0,
@@ -152,9 +140,13 @@
   "dream_catchup": {
     "semantics": "since_previous_dream",
     "timezone": "UTC",
-    "previous_dream_generated_at": "2026-04-22T05:31:35.189877+00:00",
-    "local_calendar_dates": [],
-    "strategy_notebook_missing_day_headers": []
+    "previous_dream_generated_at": "2026-04-22T05:31:49.624902+00:00",
+    "local_calendar_dates": [
+      "2026-04-23"
+    ],
+    "strategy_notebook_missing_day_headers": [
+      "2026-04-23"
+    ]
   },
   "handoffSchemaVersion": 2,
   "topActionReason": "calendar_mod3",
