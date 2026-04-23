@@ -1,5 +1,13 @@
 # strategy-state-iran — institutional thread (tri-voice, **official** — not commentator `experts`)
 
+### Migration / redirect (read first)
+
+- **New work (preferred):** Author month-level **signaling** in [`weave/`](../../weave/) — [`weave/2026-04-institutional-ledger.md`](../../weave/2026-04-institutional-ledger.md) (what was signaled) and [`weave/2026-04-institutional-weave.md`](../../weave/2026-04-institutional-weave.md) (what it means) — and route by [**channels/**](../../channels/README.md) (`diplomacy`, `presidency`, `majlis`, `amplification`, `material-check`). Use [**signal class**](../../templates/INSTITUTIONAL-LEDGER-SIGNAL-CLASSES.md) headings, not person-primary organization, for **new** ledger text.
+- **This file (legacy, retained):** Same-path **`strategy-page`** blocks and **`### Voice — …`** month structure below stay **as history** and for **inbound links** (inbox lines, `raw-input` bundles, operator bookmarks). **Do not** remove April 2026 (or other) content in favor of a silent redirect.
+- **Seam to main notebook** is unchanged: fold Iran-lane lines into [main `chapters/…/days.md`](../../../chapters/2026-04/days.md) as **seams**, with **tier** tags.
+
+---
+
 WORK only; not Record.
 
 **Purpose:** **Single** monthly journal + `strategy-page` surface for the three **Iranian official / state** voices in this lane (**FM Araghchi**, **President Pezeshkian**, **Majlis speaker Ghalibaf**). These are **office-holders**, not Western-style **`thread:`** commentators. Voice-specific **identity / routing** remains in each folder’s [`../araghchi/profile.md`](../araghchi/profile.md), [`../drpezeshkian/profile.md`](../drpezeshkian/profile.md), [`../mb_ghalibaf/profile.md`](../mb_ghalibaf/profile.md). Per-voice `thread.md` files are **redirect stubs** only.

@@ -1,6 +1,6 @@
 # strategy-state-iran — voice — `mb_ghalibaf`
 
-**Lane:** [strategy-state-iran](../../README.md) — Iranian institutional / elite **official** voices (parallel to main-notebook **commentator** tree [`experts/`](../../../experts/), not the same category).
+**Lane:** [strategy-state-iran](../../README.md) — Iranian institutional / elite **official** voices (parallel to main-notebook **commentator** tree [`experts/`](../../../experts/), not the same category). **Primary routing (2026+):** [channels/majlis](../../channels/majlis/profile.md) + [weave/](../../weave/); this folder is **emitter** metadata, not the top-level **institutional** routing axis ([README](../../README.md)).
 
 ## Identity
 

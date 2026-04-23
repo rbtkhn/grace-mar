@@ -1,6 +1,8 @@
 # strategy-state-iran — voice — `drpezeshkian`
 
-**Lane:** [strategy-state-iran](../../README.md) — Iranian institutional / elite voices.
+**Lane:** [strategy-state-iran](../../README.md) — Iranian institutional / elite voices (emitter metadata).
+
+**Primary routing (2026+):** [channels/presidency](../../channels/presidency/profile.md) + [weave/](../../weave/); this folder is a **shim** for **identity** and **links** — not the top-level **channel** model ([README](../../README.md)).
 
 ## Identity
 

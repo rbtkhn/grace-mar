@@ -1,25 +1,42 @@
-# strategy-state-iran (institutional / elite lane)
+# strategy-state-iran (institutional signaling notebook)
 
-**Purpose:** Parallel notebook tree for **Iranian institutional and elite-authored** material (Majlis, MFA-adjacent social, Tasnim-class republication, repost chains) that **complements** Western **`thread:`** **commentators** (main notebook [`experts/`](../experts/) — analysts / hosts, **not** office-holders here). Same **chapters + per-official-voice folder** shape, **not** the same ingestion scripts until wired. **Terminology:** these are **official** / **state** voices — **not** “experts” in the notebook’s commentator sense.
+**Purpose:** A **parallel WORK lane** for **Iranian institutional and elite-authored** signaling — MFA, presidency, Majlis, state-adjacent amplification chains, and **material** readouts (AIS, shipping) — that **complements** the main notebook’s **commentator** [`experts/`](../experts/) **without** imitating the same routing story.
 
-**Relation to the main notebook:**
+| Layer | What it is |
+|-------|------------|
+| **Main strategy-notebook** | **Commentator-centric:** [`experts/<expert_id>/`](../experts/) (`thread:`), `strategy-page` in **analyst** threads, main [`chapters/YYYY-MM/days.md`](../chapters/2026-04/days.md) for time and cross-lane arc. **Who** = indexed commentators, not IRI office-holders. |
+| **strategy-state-iran (this tree)** | **Institution-centric, signal-centric, contradiction-aware:** **primary container = [channel](channels/README.md)**, not an expert-like person thread. **What** = institutional registers, **tiers** (FM vs Majlis vs republication), **announced vs material** tension. **Where to write** = [`weave/`](weave/) (ledger + interpretation), [channels](channels/) (routing and judgment aids), [clusters](clusters/) (multi-day objects); chronology stays in `chapters/`. |
+| **Shared** | Same [`raw-input/`](../raw-input/) paths — **point here**; do not duplicate verbatim. |
 
-| Main strategy-notebook | strategy-state-iran (this tree) |
-|------------------------|----------------------------------|
-| [`experts/<expert_id>/`](../experts/) — indexed **commentators** (`thread:`) | [`voices/<voice_id>/`](voices/) — Iranian **official** / institutional **voices** (e.g. `mb_ghalibaf`, `araghchi`, `drpezeshkian`) — **monthly journal + `strategy-page` blocks** live in **one** file: [`voices/iri-institutional/thread.md`](voices/iri-institutional/thread.md) (tri-voice subsections); per-voice folders keep **profile** + redirect **`thread.md`** stub |
-| [`chapters/YYYY-MM/days.md`](../chapters/2026-04/days.md) — full chronology | [`chapters/YYYY-MM/days.md`](chapters/2026-04/days.md) — **thin calendar index** → **[`daily/YYYY-MM-DD.md`](chapters/2026-04/daily/)** per day |
-| [`raw-input/`](../raw-input/) | Same [`raw-input/`](../raw-input/) paths — **point here**, do not duplicate verbatim |
+**WORK only; not Record.** Durable identity surfaces stay in the companion-gated pipeline (see [AGENTS.md](../../../../../AGENTS.md)); this lane is **governed judgment** only.
 
-**Rules:** WORK only; not Record. **Cross-weave** with main `days.md` and [`daily-strategy-inbox.md`](../daily-strategy-inbox.md); **do not** collapse MFA primaries, Majlis rhetoric, and U.S.-side **`thread:`** commentator lanes without **tier** and **seam** tags.
+## Why this diverges from `experts/`
 
-## Workflow (v1 — docs-first)
+- **Who speaks:** Commentators = **analytic** `thread:`; this lane = **offices and institutions** (or their official accounts) — **not** the same `expert_id` story.
+- **What counts as evidence:** Expert pages privilege **transcript and analysis**; here we privilege **registers and tiers** (e.g. FM X vs field AIS) and **never** treat one tier as a substitute for another without labeling.
+- **What must not collapse:** MFA **announcements**, **Majlis** rhetoric, **Tasnim-class** reposts, and **U.S.-side** commentator lanes are **separate seam objects** — tag **tier** and **seam** when folding into the main notebook.
+- **What sews outward:** [Main `chapters/…/days.md`](../chapters/2026-04/days.md) and [`daily-strategy-inbox.md`](../daily-strategy-inbox.md) get **seams** (explicit references), not silent merges of Iran-lane into `thread:` primaries.
 
-1. **Raw-input first:** Tables and captures live under **`raw-input/`** with stable **slice anchors** (see bundle footers). **Grep fallback:** first table cell `| YYYY-MM-DD |` in any bundle row.
-2. **Institutional thread / strategy-page:** Prefer **`<!-- strategy-page:start … -->`** blocks under **`## YYYY-MM`**, inside **`### Voice — …`** subsections, in [`voices/iri-institutional/thread.md`](voices/iri-institutional/thread.md) (same fence pattern as [strategy-page-template.md](../strategy-page-template.md)).
-3. **Seam to main notebook:** Fold Iran-lane Judgment into main [`chapters/…/days.md`](../chapters/2026-04/days.md) as **seams**, not replacements for **`thread:`** or wire primaries.
-4. **Split-both discipline:** **[`daily/`](chapters/2026-04/daily/)** holds **institutional tri-voice** consolidation; main **`days.md`** keeps the **full** arc — duplicate **only** what the seam needs, with explicit **tier** awareness.
-5. **Month-gate ledger (not daily):** Under **`## YYYY-MM`** in [`voices/iri-institutional/thread.md`](voices/iri-institutional/thread.md) (**### Voice — …** each), keep **one** **`### Month ledger (YYYY-MM)`** block per office — ingest span, seam objects, refresh hooks. **Light metrics** (optional): word budget sanity, link depth to bundles, **seam** score to main notebook (operator judgment, not automation).
+## Primary surfaces (new work)
 
-**Pages:** Optional standalone notes may live under [`pages/`](pages/) when a capture is not yet assigned to a voice folder.
+1. **Channels** — [`channels/`](channels/) — `profile.md` per **institutional lane** (diplomacy, presidency, majlis, amplification, material-check): what each channel is **strong/weak** evidence for, **seam priority**, **contradiction risks** (see each profile). **Grep:** `channels/diplomacy/`, etc.
+2. **Weave** — [`weave/`](weave/) — per month: **`*-institutional-ledger.md`** = what was **signaled** (by [signal class](templates/INSTITUTIONAL-LEDGER-SIGNAL-CLASSES.md), not by voice as the top heading); **`*-institutional-weave.md`** = what the **constellation** means and where **tensions** are.
+3. **Clusters** — [`clusters/`](clusters/) — multi-day, multi-institution **objects** (e.g. Islamabad track, Hormuz commercial passage) with links to `daily/`, `raw-input`, and main-notebook **seam** targets.
+4. **Chronology (unchanged role)** — [`chapters/YYYY-MM/days.md`](chapters/2026-04/days.md) → [`daily/YYYY-MM-DD.md`](chapters/2026-04/daily/) per day.
 
-**April 2026 chapter:** [`chapters/2026-04/`](chapters/2026-04/) — [`days.md`](chapters/2026-04/days.md), [`daily/`](chapters/2026-04/daily/), [`april-2026-slice-registry.md`](chapters/2026-04/april-2026-slice-registry.md), [`meta.md`](chapters/2026-04/meta.md).
+**Templates:** [templates/ANNOUNCED-VS-MATERIAL-BLOCK.md](templates/ANNOUNCED-VS-MATERIAL-BLOCK.md) (formal **announced vs material**), [templates/INSTITUTIONAL-SCORECARD.md](templates/INSTITUTIONAL-SCORECARD.md) (lane **scorecard** — normal here, **not** part of the main expert-thread grammar). **Translation / republication:** [translation-provenance/](translation-provenance/). **Ad-hoc:** [`pages/`](pages/README.md).
+
+## Legacy and compatibility
+
+- [`voices/iri-institutional/thread.md`](voices/iri-institutional/thread.md) — **Tri-voice** month journal and embedded **`strategy-page`** blocks; **inbound links preserved**. For **new** work, prefer **weave** + **channels**; the institutional thread file carries a **migration** note at the top.
+- [`voices/<voice_id>/`](voices/) — **Emitter shims** (profile + redirect `thread.md`); use [**channels**](channels/) for **primary routing** when composing new month material.
+
+**Rules:** **Cross-weave** with main `days.md` and the inbox; **do not** collapse tiers without **seam** tags.
+
+## End-of-day strategy session (EOD) — this lane
+
+1. **Raw-input / slice anchors** as today (bundle footers, [slice registry](chapters/2026-04/april-2026-slice-registry.md) when used).
+2. **Update** `daily/` if that is your per-day home for tri-voice consolidation; **update** the month’s **weave/ledger** and/or **weave** when you close the day’s **institutional** picture.
+3. **Fold** Iran-lane **Judgment** into [main `chapters/…/days.md`](../chapters/2026-04/days.md) as **seams** (explicit), not as a replacement for **`thread:`** or wire.
+
+**April 2026:** [`chapters/2026-04/`](chapters/2026-04/) — [`days.md`](chapters/2026-04/days.md), [`daily/`](chapters/2026-04/daily/); **weave:** [`weave/2026-04-institutional-ledger.md`](weave/2026-04-institutional-ledger.md), [`weave/2026-04-institutional-weave.md`](weave/2026-04-institutional-weave.md). [`april-2026-slice-registry.md`](chapters/2026-04/april-2026-slice-registry.md), [`meta.md`](chapters/2026-04/meta.md).
