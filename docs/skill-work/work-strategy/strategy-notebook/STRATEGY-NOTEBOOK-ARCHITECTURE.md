@@ -690,7 +690,7 @@ The directory [`compiled-views/`](compiled-views/) holds **refreshable, non-auth
 - **Tooling:** `python3 scripts/compile_strategy_view.py` produces a deterministic **source bundle** (and optional skeleton). Narrative synthesis per the recipe is **operator- or assistant-governed**; the operator remains the **conductor** — see [compiled-views/README.md](compiled-views/README.md).
 - **Promotion:** WORK only; not recursion-gate/Record unless explicitly escalated.
 
-First recipe: [`compiled-views/recipes/expert-polyphony-synthesis.md`](compiled-views/recipes/expert-polyphony-synthesis.md).
+Recipes: [`compiled-views/recipes/expert-polyphony-synthesis-five-conductors.md`](compiled-views/recipes/expert-polyphony-synthesis-five-conductors.md) (default narrative pass for bundles) and [`compiled-views/recipes/expert-polyphony-synthesis.md`](compiled-views/recipes/expert-polyphony-synthesis.md) (original six-section starter).
 
 ## Related
 

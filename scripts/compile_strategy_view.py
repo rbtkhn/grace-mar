@@ -4,7 +4,8 @@
 Emits a deterministic markdown **source bundle**: machine layers, strategy-page
 blocks, and optional inbox / chapter tails. Does **not** call an LLM.
 
-Default recipe: expert polyphony (RECIPE-STRATEGY-POLYPHONY-2026-04-22-001).
+Default recipe: five-conductors expert polyphony
+(``RECIPE-STRATEGY-POLYPHONY-FIVE-CONDUCTORS-2026-04-23-003``).
 
 Usage::
 
@@ -42,7 +43,7 @@ from strategy_notebook.receipts import (  # noqa: E402
 )
 from strategy_page_reader import discover_pages  # noqa: E402
 
-RECIPE_ID = "RECIPE-STRATEGY-POLYPHONY-2026-04-22-001"
+RECIPE_ID = "RECIPE-STRATEGY-POLYPHONY-FIVE-CONDUCTORS-2026-04-23-003"
 RE_FLAT_THREAD = re.compile(r"^strategy-expert-(.+)-thread(?:-(\d{4}-\d{2}))?\.md$")
 
 
@@ -104,6 +105,7 @@ def build_bundle(
     inbox_tail_lines: int,
     max_journal_chars: int,
     max_machine_chars: int,
+    unhobbling_tail_lines: int = 80,
 ) -> str:
     """Return full markdown bundle."""
     ymd = bundle_date.isoformat()
@@ -153,6 +155,19 @@ def build_bundle(
         lines.append("")
         lines.append("```")
         lines.append(tail_lines(meta_path, 120, 16000))
+        lines.append("```")
+        lines.append("")
+        lines.append("---")
+        lines.append("")
+
+    unhobbling_q = notebook_dir / "unhobbling-queue.md"
+    if unhobbling_q.is_file():
+        lines.append(
+            f"## Unhobbling queue tail (`{unhobbling_q.name}`, last {unhobbling_tail_lines} lines)"
+        )
+        lines.append("")
+        lines.append("```")
+        lines.append(tail_lines(unhobbling_q, unhobbling_tail_lines, 12000))
         lines.append("```")
         lines.append("")
         lines.append("---")
@@ -221,7 +236,9 @@ def build_bundle(
 
     lines.append("## Symphony Snapshot skeleton (fill per recipe)")
     lines.append("")
-    lines.append("Use [expert-polyphony-synthesis.md](recipes/expert-polyphony-synthesis.md) Step 3.")
+    lines.append(
+        "Use [expert-polyphony-synthesis-five-conductors.md](recipes/expert-polyphony-synthesis-five-conductors.md) Step 3."
+    )
     lines.append("")
     lines.append(f"## Symphony Snapshot — {ymd}")
     lines.append("")
@@ -229,17 +246,28 @@ def build_bundle(
     lines.append("**Time Window:** ")
     lines.append("**Generation Note:** ")
     lines.append("")
-    lines.append("### 1. Executive Summary")
+    lines.append("### Movement 1 — Precision (Toscanini)")
     lines.append("")
-    lines.append("### 2. Key Convergences")
+    lines.append("### Movement 2 — Flow (Furtwängler)")
     lines.append("")
-    lines.append("### 3. Preserved Tensions & Contradictions")
+    lines.append("### Movement 3 — Vitality (Bernstein)")
     lines.append("")
-    lines.append("### 4. Emerging Operator Judgment")
+    lines.append("### Movement 4 — Elegance & Polish (Karajan)")
     lines.append("")
-    lines.append("### 5. Recommended Next Actions")
+    lines.append("### Movement 5 — Selectivity & Depth (Kleiber)")
     lines.append("")
-    lines.append("### 6. Cross-References")
+    lines.append("### Unhobbling (frontier and tools) — v1.2")
+    lines.append("")
+    lines.append(
+        "*(If the queue in the bundle has no active rows: one line — "
+        "Unhobbling — N/A (queue empty).)*"
+    )
+    lines.append("")
+    lines.append("### Conductor’s Summary")
+    lines.append("")
+    lines.append("### Strategic utility & next actions")
+    lines.append("")
+    lines.append("### Cross-References")
     lines.append("")
     lines.append("### Change Log")
     lines.append("")
@@ -267,6 +295,9 @@ def collect_source_paths_for_bundle(
         raw.append(days_path)
     if meta_path.is_file():
         raw.append(meta_path)
+    uq = notebook_dir / "unhobbling-queue.md"
+    if uq.is_file():
+        raw.append(uq)
     thread_paths = collect_strategy_thread_paths(notebook_dir)
     filtered: list[Path] = []
     for p in sorted(thread_paths, key=lambda x: str(x)):
@@ -318,6 +349,12 @@ def main() -> None:
         help="Comma-separated expert/voice ids to include (default: all discovered threads)",
     )
     parser.add_argument("--inbox-tail-lines", type=int, default=40)
+    parser.add_argument(
+        "--unhobbling-tail-lines",
+        type=int,
+        default=80,
+        help="Lines from unhobbling-queue.md to include in the bundle (if file exists)",
+    )
     parser.add_argument("--max-journal-chars", type=int, default=8000)
     parser.add_argument("--max-machine-chars", type=int, default=12000)
     parser.add_argument(
@@ -350,6 +387,7 @@ def main() -> None:
         inbox_tail_lines=args.inbox_tail_lines,
         max_journal_chars=args.max_journal_chars,
         max_machine_chars=args.max_machine_chars,
+        unhobbling_tail_lines=args.unhobbling_tail_lines,
     )
     out_path.write_text(md, encoding="utf-8")
     print(out_path)

@@ -53,12 +53,12 @@ python3 scripts/compile_strategy_view.py --notebook-dir docs/skill-work/work-str
 
 Optional: `--date YYYY-MM-DD`, `--out path`, `--experts mercouris,marandi`.
 
-**Narrative “Symphony Snapshot”** sections (Executive Summary, convergences, tensions) follow the recipe in [`recipes/expert-polyphony-synthesis.md`](recipes/expert-polyphony-synthesis.md), using the bundle as input — operator- or assistant-governed.
+**Narrative “Symphony Snapshot”** (operator- or assistant-governed, using the bundle as input) usually follows **[`recipes/expert-polyphony-synthesis-five-conductors.md`](recipes/expert-polyphony-synthesis-five-conductors.md)** (**003** — **preferred** for multi-lens reads + **prioritization** via the five movement map, plus optional **Unhobbling** from `unhobbling-queue.md`). The original **[`recipes/expert-polyphony-synthesis.md`](recipes/expert-polyphony-synthesis.md)** (**001**) remains available for the **Executive Summary** / six-section step structure. `compile_strategy_view.py` embeds the **003** recipe id and points its skeleton at **003** Step 3.
 
 ## See also
 
 - [STRATEGY-NOTEBOOK-ARCHITECTURE.md § Compiled views (derived)](../STRATEGY-NOTEBOOK-ARCHITECTURE.md#compiled-views-derived)
 - [SYNTHESIS-OPERATING-MODEL.md § Polyphony synthesis rules](../SYNTHESIS-OPERATING-MODEL.md#7-polyphony-synthesis-rules)
 - [SYNTHESIS-OPERATING-MODEL.md § Operator as conductor](../SYNTHESIS-OPERATING-MODEL.md#8-operator-as-conductor)
-- Recipe: [`recipes/expert-polyphony-synthesis.md`](recipes/expert-polyphony-synthesis.md)
+- Recipes: [`recipes/expert-polyphony-synthesis-five-conductors.md`](recipes/expert-polyphony-synthesis-five-conductors.md) (003, preferred) · [`recipes/expert-polyphony-synthesis.md`](recipes/expert-polyphony-synthesis.md) (001, starter)
 - Examples: [`examples/expert-polyphony-synthesis-EXAMPLE.md`](examples/expert-polyphony-synthesis-EXAMPLE.md), [`examples/conductor-eod-session-EXAMPLE.md`](examples/conductor-eod-session-EXAMPLE.md)

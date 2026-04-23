@@ -265,7 +265,7 @@ Historical accounts emphasize **rigor**, **clarity**, and **concert-level seriou
 | Tiers A→D, Full vs Fast | [STRATEGY-NOTEBOOK-ARCHITECTURE.md § Condense-to-target](STRATEGY-NOTEBOOK-ARCHITECTURE.md#condense-to-target-mechanism-fit-1000-words) |
 | Daily synthesis division of labor | [STRATEGY-NOTEBOOK-ARCHITECTURE.md § Daily synthesis](STRATEGY-NOTEBOOK-ARCHITECTURE.md#daily-synthesis-briefs-transcripts-other-work-strategy) |
 | Ensemble metaphor (score / parts / conductor) | [STRATEGY-NOTEBOOK-ARCHITECTURE.md § Ensemble metaphor](STRATEGY-NOTEBOOK-ARCHITECTURE.md#ensemble-metaphor-chamber-group-gloss) |
-| **Polyphony + compiled views** | [compiled-views/README.md](compiled-views/README.md) · [expert-polyphony recipe](compiled-views/recipes/expert-polyphony-synthesis.md) |
+| **Polyphony + compiled views** | [compiled-views/README.md](compiled-views/README.md) · [expert-polyphony 001](compiled-views/recipes/expert-polyphony-synthesis.md) · [five-conductors 003](compiled-views/recipes/expert-polyphony-synthesis-five-conductors.md) |
 | Minds recipes | [MINDS-SKILL-STRATEGY-PATTERNS.md](../minds/MINDS-SKILL-STRATEGY-PATTERNS.md) |
 | Skill behavior | [.cursor/skills/skill-strategy/SKILL.md](../../../../.cursor/skills/skill-strategy/SKILL.md) |
 

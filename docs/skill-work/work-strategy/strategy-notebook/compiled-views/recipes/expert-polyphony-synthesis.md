@@ -5,6 +5,10 @@
 **Last Generated:** *(set when you run the bundler or finish a narrative pass)*  
 **Purpose:** Generate a browsable, derived **Symphony Snapshot** that weaves multiple expert voices from the strategy-notebook into coherent convergences, preserved tensions, and operator-guided judgment — without ever replacing the source thread files or strategy-page blocks.
 
+**Default / upgraded narrative:** For the **Symphony Snapshot** *narrative pass*, the operator and assistants typically use **[expert-polyphony-synthesis-five-conductors.md](expert-polyphony-synthesis-five-conductors.md)** (RECIPE-STRATEGY-POLYPHONY-FIVE-CONDUCTORS-2026-04-23-003) — **five movements** (Toscanini → Kleiber) plus Conductor’s Summary, optional Unhobbling (queue-backed) per that recipe, aligned with the Coffee Cadence. **This file (001)** remains the **starter recipe**: clear **Step 1–3** flow and **Executive Summary** / six-section output structure when you want that layout instead.
+
+---
+
 **Source of Truth:**
 
 - `experts/<expert_id>/thread.md` (or `experts/<expert_id>/<expert_id>-thread-YYYY-MM.md`), and lane-specific `voices/<voice_id>/thread.md` where used — **Journal** layer above the machine fence + **Machine** layer inside the fence  

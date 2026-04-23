@@ -44,7 +44,7 @@ Operator stub: “Hold **Thesis A / B** in parallel this week; prioritize **veri
 
 - Hypothetical: `experts/analyst_alpha/thread.md` — Journal + Machine  
 - Hypothetical: `chapters/2026-04/days.md` — `## 2026-04-21`  
-- Recipe: [expert-polyphony-synthesis.md](../recipes/expert-polyphony-synthesis.md)
+- Recipe (001 six-section shape, as in this example): [expert-polyphony-synthesis.md](../recipes/expert-polyphony-synthesis.md) — default bundle narrative: [expert-polyphony-synthesis-five-conductors.md](../recipes/expert-polyphony-synthesis-five-conductors.md)
 
 ### Change Log
 

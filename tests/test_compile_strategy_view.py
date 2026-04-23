@@ -45,6 +45,9 @@ def test_build_bundle_fixture(tmp_path: Path) -> None:
     assert "fixture-page" in md
     assert "Symphony Snapshot — 2026-04-01" in md
     assert "### `demo`" in md
+    assert "Unhobbling queue tail" in md
+    assert "fixture-tool" in md
+    assert "### Unhobbling (frontier and tools)" in md
 
 
 def test_build_bundle_expert_filter_excludes() -> None:
