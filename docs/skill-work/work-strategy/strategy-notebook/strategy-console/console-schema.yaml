@@ -1,0 +1,72 @@
+# Strategy Console — generated view schema (v1, documentation-only)
+# Human-readable; not enforced at runtime by default.
+# The canonical artifact is console-view.md; this maps section intent to fields.
+
+version: 1
+description: >
+  Orientation snapshot written by scripts/strategy_console.py.
+  All fields are derived heuristics; not canonical notebook truth.
+
+fields:
+  generated_at: { type: string, example: "2026-04-24T12:00:00Z" }
+  mode: { type: string, enum: [eod, morning, crisis] }
+  watch_filter: { type: string, nullable: true, example: "iran" }
+  notebook_root: { type: string, example: "docs/skill-work/work-strategy/strategy-notebook" }
+  current_month: { type: string, example: "2026-04" }
+  current_day: { type: string, example: "2026-04-24" }
+  output_status: { type: string, enum: [ok, degraded] }
+
+  fresh_inputs:
+    type: list
+    item: { type: string, description: "Bullet or path line for What changed / Fresh inputs" }
+  recent_movements:
+    type: list
+    item: { type: string, description: "Recent mtime or activity bullet" }
+  input_gaps:
+    type: list
+    item: { type: string, description: "Missing path or empty surface" }
+
+  expert_movements:
+    type: list
+    item:
+      expert_lane: { type: string }
+      movement_signal: { type: string }
+      suggested_handling: { type: string }
+
+  state_watch_pressure:
+    type: list
+    item:
+      watch_or_lane: { type: string }
+      signal: { type: string }
+      suggested_handling: { type: string }
+
+  tightening_tensions:
+    type: list
+    item:
+      tension: { type: string }
+      evidence_pointers: { type: string }
+      suggested_handling: { type: string }
+
+  emerging_decision_points:
+    type: list
+    item:
+      decision_question: { type: string }
+      source_signals: { type: string }
+      recommended_eod_route: { type: string }
+
+  recommended_eod_route:
+    session_type: { type: string, description: "MCQ menu 1 style recommendation" }
+    active_lanes: { type: string }
+    promotion_threshold: { type: string, description: "Conservative default or defer" }
+    page_shape: { type: string }
+    optional_page_action: { type: string, description: "Often defer to full MCQ" }
+    days_md_continuity_mode: { type: string }
+    rationale: { type: string }
+
+  review_queue:
+    type: list
+    item: { type: string, description: "Ordered path or step for Tonight review queue" }
+
+  guardrails:
+    type: list
+    item: { type: string, description: "Fixed contract bullets" }
