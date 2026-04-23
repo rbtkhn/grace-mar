@@ -86,6 +86,18 @@ python3 scripts/strategy_watch.py --watch hormuz --json   # machine-readable
 python3 scripts/strategy_watch.py --tensions-only         # only disagreements
 ```
 
+<a id="recovery-quick-path"></a>
+
+## Recovery quick path (“what is live?”)
+
+Use this when you need **situational recovery** (crisis, fast re-entry) without re-reading the full [architecture doc](../STRATEGY-NOTEBOOK-ARCHITECTURE.md).
+
+1. **Named situation → pages across experts** — run `python3 scripts/strategy_watch.py` to list `watch=` ids, then `... --watch <id>` to see pages; optional `--tensions-only` for disagreement-focused recovery.
+2. **Chronology and open threads** — tail the current [`chapters/YYYY-MM/days.md`](../chapters/2026-04/days.md) (especially **`### Open`** and latest **`## YYYY-MM-DD`**).
+3. **Bundled long read (optional, derived)** — [compiled-views — Browse intent → mechanism](../compiled-views/README.md#browse-intent--mechanism) for `compile_strategy_view.py` when a single file helps; **SSOT** remains expert threads + `days.md`.
+
+A **human-curated** per-watch index (if you ever need one) would be **not SSOT** and is **not** required by default — this section + `strategy_watch.py` are enough for recovery.
+
 ## Daily rhythm
 
 1. **thread** — triage inbox, extract to machine layers, see page candidates

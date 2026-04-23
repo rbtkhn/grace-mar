@@ -1,6 +1,6 @@
 # skill-strategy transcript demo — results log (audit)
 
-**Source playbook:** [`../DEMO-SKILL-STRATEGY-TRANSCRIPTS.md`](../DEMO-SKILL-STRATEGY-TRANSCRIPTS.md)  
+**Source playbook:** [`../notes/DEMO-SKILL-STRATEGY-TRANSCRIPTS.md`](../notes/DEMO-SKILL-STRATEGY-TRANSCRIPTS.md)  
 **Primary notebook surface:** [`../chapters/2026-04/days.md`](../chapters/2026-04/days.md) — section `### DEMO — skill-strategy calibration (2026-04-10 session)`
 
 ---

@@ -445,7 +445,7 @@ Barnes says both sides face material clocks and the question is which clock runs
 ### EXERCISE — baseline + headline-collapse pointer (2026-04-12)
 
 - **Exercise series:** [`demo-runs/skill-strategy-exercise-log.md`](../../demo-runs/skill-strategy-exercise-log.md) (first row: Ex **0+1** validation). **Prompts:** [`demo-runs/EXERCISE-PROMPTS.md`](../../demo-runs/EXERCISE-PROMPTS.md).
-- **Exercise 0:** DEMO Phases 1–5 — [`DEMO-SKILL-STRATEGY-TRANSCRIPTS.md`](../../DEMO-SKILL-STRATEGY-TRANSCRIPTS.md); scored audit [`demo-runs/skill-strategy-results-2026-04-10.md`](../../demo-runs/skill-strategy-results-2026-04-10.md) + supplemental **FT/HS** note.
+- **Exercise 0:** DEMO Phases 1–5 — [`DEMO-SKILL-STRATEGY-TRANSCRIPTS.md`](../../notes/DEMO-SKILL-STRATEGY-TRANSCRIPTS.md); scored audit [`demo-runs/skill-strategy-results-2026-04-10.md`](../../demo-runs/skill-strategy-results-2026-04-10.md) + supplemental **FT/HS** note.
 - **Exercise 1** (clean-room example): [`demo-runs/skill-strategy-exercise-headline-collapse-2026-04-12.md`](../../demo-runs/skill-strategy-exercise-headline-collapse-2026-04-12.md).
 
 ### Tri-mind ingest — Kelly (AZ) vs Trump on Leo / Iran (operator screenshot)

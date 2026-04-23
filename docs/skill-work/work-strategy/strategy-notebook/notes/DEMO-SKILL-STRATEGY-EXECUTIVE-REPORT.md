@@ -9,7 +9,7 @@
 
 ## Executive summary
 
-1. **Delivered:** A single operator playbook ([`DEMO-SKILL-STRATEGY-TRANSCRIPTS.md`](DEMO-SKILL-STRATEGY-TRANSCRIPTS.md)), a **read-only preflight script** ([`scripts/demo_skill_strategy_transcripts_check.sh`](../../../../scripts/demo_skill_strategy_transcripts_check.sh)), and **discoverability** links from the strategy-notebook [`README.md`](README.md) and [`work-strategy-history.md`](../work-strategy-history.md). Baseline commit: `601be32`.
+1. **Delivered:** A single operator playbook ([`DEMO-SKILL-STRATEGY-TRANSCRIPTS.md`](DEMO-SKILL-STRATEGY-TRANSCRIPTS.md)), a **read-only preflight script** ([`scripts/demo_skill_strategy_transcripts_check.sh`](../../../../scripts/demo_skill_strategy_transcripts_check.sh)), and **discoverability** links from the strategy-notebook [`README.md`](../README.md) and [`work-strategy-history.md`](../../work-strategy-history.md). Baseline commit: `601be32`.
 
 2. **Corpus:** Three **2026-04-10** transcript digests are present and indexed (Diesen × Mearsheimer; Mercouris Good Friday; Davis × Crooke). The preflight script confirms on-disk presence; it does **not** judge analytical quality.
 

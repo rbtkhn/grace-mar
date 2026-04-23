@@ -5,7 +5,7 @@
 **Log:** append a row to [`skill-strategy-exercise-log.md`](skill-strategy-exercise-log.md).  
 **Rubric:** [`skill-strategy-exercise-rubric-reference.md`](skill-strategy-exercise-rubric-reference.md).
 
-**Exercise 0 (baseline):** use Phases 1–5 of [`../DEMO-SKILL-STRATEGY-TRANSCRIPTS.md`](../DEMO-SKILL-STRATEGY-TRANSCRIPTS.md) — prompts inline there; score with extended rubric (include **FT**, **HS**).
+**Exercise 0 (baseline):** use Phases 1–5 of [`../notes/DEMO-SKILL-STRATEGY-TRANSCRIPTS.md`](../notes/DEMO-SKILL-STRATEGY-TRANSCRIPTS.md) — prompts inline there; score with extended rubric (include **FT**, **HS**).
 
 ---
 

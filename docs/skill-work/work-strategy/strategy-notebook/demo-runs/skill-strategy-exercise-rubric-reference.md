@@ -2,7 +2,7 @@
 
 **Use:** Score each run (demo, exercise, or combined session). Pair with [`skill-strategy-exercise-log.md`](skill-strategy-exercise-log.md) and [`EXERCISE-PROMPTS.md`](EXERCISE-PROMPTS.md).
 
-**Baseline demo:** [`../DEMO-SKILL-STRATEGY-TRANSCRIPTS.md`](../DEMO-SKILL-STRATEGY-TRANSCRIPTS.md) — Phases 0–5. Filled example: [`skill-strategy-results-2026-04-10.md`](skill-strategy-results-2026-04-10.md).
+**Baseline demo:** [`../notes/DEMO-SKILL-STRATEGY-TRANSCRIPTS.md`](../notes/DEMO-SKILL-STRATEGY-TRANSCRIPTS.md) — Phases 0–5. Filled example: [`skill-strategy-results-2026-04-10.md`](skill-strategy-results-2026-04-10.md).
 
 ---
 

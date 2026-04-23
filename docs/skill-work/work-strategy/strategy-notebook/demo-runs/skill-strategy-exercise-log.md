@@ -31,7 +31,7 @@
 
 | date | ex | model | rubric | top failure | git | notebook / artifact link | SKILL candidate |
 |------|----|-------|--------|-------------|-----|---------------------------|-----------------|
-| 2026-04-12 | 0+1 | doc-validation (Ex0 retro + Ex1 template) | Ex0: NB VF LK TF CP NS WB AT **FT HS** — see [`skill-strategy-results-2026-04-10.md`](skill-strategy-results-2026-04-10.md) + retro note; Ex1: tagged bullets + **HS** pass | none | `3b432c6` | Ex0: [`../DEMO-SKILL-STRATEGY-TRANSCRIPTS.md`](../DEMO-SKILL-STRATEGY-TRANSCRIPTS.md) + [`skill-strategy-results-2026-04-10.md`](skill-strategy-results-2026-04-10.md); Ex1: [`skill-strategy-exercise-headline-collapse-2026-04-12.md`](skill-strategy-exercise-headline-collapse-2026-04-12.md); pointer: [`../chapters/2026-04/days.md`](../chapters/2026-04/days.md) (2026-04-12) | none — loop validated; rerun after model/session for scored **FT** on fresh Judgment |
+| 2026-04-12 | 0+1 | doc-validation (Ex0 retro + Ex1 template) | Ex0: NB VF LK TF CP NS WB AT **FT HS** — see [`skill-strategy-results-2026-04-10.md`](skill-strategy-results-2026-04-10.md) + retro note; Ex1: tagged bullets + **HS** pass | none | `3b432c6` | Ex0: [`../notes/DEMO-SKILL-STRATEGY-TRANSCRIPTS.md`](../notes/DEMO-SKILL-STRATEGY-TRANSCRIPTS.md) + [`skill-strategy-results-2026-04-10.md`](skill-strategy-results-2026-04-10.md); Ex1: [`skill-strategy-exercise-headline-collapse-2026-04-12.md`](skill-strategy-exercise-headline-collapse-2026-04-12.md); pointer: [`../chapters/2026-04/days.md`](../chapters/2026-04/days.md) (2026-04-12) | none — loop validated; rerun after model/session for scored **FT** on fresh Judgment |
 
 ---
 

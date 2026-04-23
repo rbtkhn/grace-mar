@@ -35,6 +35,18 @@ Think top-down; **stop** when the day’s job is done — do not fill every opti
 
 **Embodied stance (optional):** For a repeatable **morning** warm-up that chooses *how* you show up to the same session types (precision vs. flow vs. polish vs. selectivity) — the **conductor** vocabulary and five “movements” — see [COFFEE-CADENCE-CONDUCTOR-PROTOCOL.md](COFFEE-CADENCE-CONDUCTOR-PROTOCOL.md). That protocol is **WORK-only** seeds, separate from the Cursor **`coffee`** skill; it does not replace the A–D table above.
 
+<a id="acceptable-finish-shapes"></a>
+
+### 2.1 Acceptable finish shapes (minimum viable “done”)
+
+These are **outcome sketches**, not a second L2 spec. **EOD default loop** (capture → one thesis → one `days.md` block → 0–1 `strategy-page` → stop): [README — Start here (EOD)](README.md) + [DEFAULT-PATH.md](../DEFAULT-PATH.md) for the full `strategy` pass.
+
+| Shape | You can stop when… |
+|-------|--------------------|
+| **Thin day** | Inbox (and `raw-input/` if used) holds the day; **either** a very short `days.md` block (Chronicle/Reflection/References present but may be one line each) **or** explicit deferral; **no** new `strategy-page` required. |
+| **Normal day** | One composed **`## YYYY-MM-DD`** in `days.md` with L2 spine satisfied for that day; **at most one** new or revised `strategy-page` if judgment needed it. |
+| **High-signal / crisis** | Same **stop rule** as normal — you do **not** owe every overlay (L3). Heavier **Signal** / **Links**; optional [EOD-MCQ-PROTOCOL](EOD-MCQ-PROTOCOL.md) or session type **C** only if bulk demands it. Still: one primary thesis, avoid duplicate narratives. |
+
 ---
 
 ## 3. Section router (where content goes)
