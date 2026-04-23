@@ -1,0 +1,6 @@
+{
+  "type": "approval_pattern",
+  "source_runtime": "thoth",
+  "pattern": "local-first assistant produces a proposed action, then routes it through an approval step before persistent change",
+  "possible_grace_mar_use": "Inspiration for runtime approval UX only; does not alter Grace-Mar gate."
+}

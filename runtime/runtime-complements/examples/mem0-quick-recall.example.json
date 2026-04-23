@@ -1,0 +1,12 @@
+{
+  "type": "quick_recall",
+  "source_runtime": "mem0",
+  "query": "strategy notebook EOD",
+  "results": [
+    {
+      "memory": "Example quick recall result. Must be verified against Grace-Mar surfaces.",
+      "score": 0.82
+    }
+  ],
+  "boundary": "Quick recall is advisory and non-canonical."
+}

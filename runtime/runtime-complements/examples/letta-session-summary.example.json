@@ -1,0 +1,10 @@
+{
+  "type": "session_summary",
+  "source_runtime": "letta",
+  "conversation_id": "example-letta-conversation",
+  "summary": "Example runtime session summary. This is not canonical memory.",
+  "candidate_observations": [
+    "The operator asked about strategy-console before EOD."
+  ],
+  "recommended_review": "Review only if the operator wants to stage this as candidate evidence."
+}

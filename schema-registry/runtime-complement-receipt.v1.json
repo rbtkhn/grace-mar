@@ -1,0 +1,82 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schema-registry/runtime-complement-receipt.v1.json",
+  "title": "Grace-Mar runtime complement import receipt (membrane v1)",
+  "description": "Receipt for a runtime observation ingested into runtime/runtime-complements/inbox. Non-canonical; not Record truth.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "receipt_id",
+    "generated_at",
+    "source_runtime",
+    "import_mode",
+    "input_file",
+    "output_files",
+    "canonical_surfaces_touched",
+    "promotion_status",
+    "human_review_required",
+    "notes"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "1.0.0"
+    },
+    "receipt_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "source_runtime": {
+      "type": "string",
+      "enum": ["letta", "mem0", "openmemory", "thoth", "other"]
+    },
+    "import_mode": {
+      "type": "string",
+      "enum": [
+        "observation",
+        "session_summary",
+        "quick_recall",
+        "approval_pattern",
+        "candidate_memory",
+        "other"
+      ]
+    },
+    "input_file": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Repo-relative POSIX path to the input JSON"
+    },
+    "output_files": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "canonical_surfaces_touched": {
+      "type": "boolean",
+      "description": "Compliant import script sets false — no SELF/EVIDENCE/SKILLS/LIBRARY merge"
+    },
+    "promotion_status": {
+      "type": "string",
+      "enum": [
+        "runtime_only",
+        "staged_for_review",
+        "rejected",
+        "promoted_elsewhere"
+      ]
+    },
+    "human_review_required": {
+      "type": "boolean"
+    },
+    "notes": {
+      "type": "string"
+    },
+    "source_session_id": {
+      "type": ["string", "null"],
+      "description": "Vendor session or conversation id when available"
+    }
+  }
+}

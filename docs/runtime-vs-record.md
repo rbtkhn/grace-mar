@@ -43,6 +43,11 @@ These change only through the **gated pipeline** and companion-approved merge ([
 | **Chunk indexes** | `runtime/chunks/**/*.chunks.jsonl` | Generated retrieval-aid chunks; rebuildable; [doc](chunked-retrieval.md); not Record |
 | **Runtime worker** | `runtime/runtime-worker/` (`proposals/`, `traces/index.jsonl`, `receipts/`) | Disposable inspect / optional LLM summary; [doc](runtime-worker.md), [execution receipts](runtime/execution-receipts.md); not Record |
 | **Workflow depth receipts** | `runtime/workflow-depth/index.jsonl` | Halt/continue log for adaptive `build_budgeted_context` runs; [context-budgeting](runtime/context-budgeting.md); not Record |
+| **Runtime complements (membrane v1)** | `runtime/runtime-complements/` (`exports/`, `inbox/`, `receipts/`, `examples/`); [export](../scripts/runtime/export_runtime_context.py) / [import](../scripts/runtime/import_runtime_observation.py) | Bundles and inbox imports for external harnesses; receipts are audit-only; not Record; [doctrine](runtime/runtime-complements.md) |
+
+### Runtime complements (membrane v1)
+
+External runtimes (Letta, Mem0, Thoth, etc.) exchange material with this repo only through **explicit export bundles** and **inbox + receipt** imports, not by walking Record trees. The membrane extends live interaction and operator workflow; it does **not** change what counts as governed Record. Anything that should become SELF, EVIDENCE, or prompt still stages and passes through the normal gate. See [docs/runtime/runtime-complements.md](runtime/runtime-complements.md).
 
 ---
 

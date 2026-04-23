@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "receipt_id": "rcr_example_20260424T000000Z_a1b2c3d4",
+  "generated_at": "2026-04-24T00:00:00+00:00",
+  "source_runtime": "letta",
+  "import_mode": "session_summary",
+  "input_file": "runtime/runtime-complements/examples/letta-session-summary.example.json",
+  "output_files": [
+    "runtime/runtime-complements/inbox/runtime-complement-inbox_20260424T000000Z_import_example.json",
+    "runtime/runtime-complements/receipts/runtime-complement-receipt_20260424T000000Z_rcr_example.json"
+  ],
+  "canonical_surfaces_touched": false,
+  "promotion_status": "runtime_only",
+  "human_review_required": true,
+  "notes": "Example only — valid shape for import_runtime_observation.py output.",
+  "source_session_id": "example-letta-conversation"
+}

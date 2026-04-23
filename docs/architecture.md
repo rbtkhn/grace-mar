@@ -4,6 +4,8 @@
 
 Terminology primer: see [glossary.md](glossary.md) for canonical definitions of Grace-Mar terms (Record, Voice, companion, recursion-gate).
 
+**Runtime complements** (membrane v1) are adjunct harness components: they live under `runtime/runtime-complements/`, support export/import of bounded context for external runtimes, and do **not** change Record sovereignty or merge authority. Staging and promotion follow the same human gate as any other candidate. See [docs/runtime/runtime-complements.md](runtime/runtime-complements.md).
+
 ---
 
 ## Guarantees at a glance
