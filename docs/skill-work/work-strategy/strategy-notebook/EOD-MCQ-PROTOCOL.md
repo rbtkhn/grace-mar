@@ -26,11 +26,7 @@ The EOD session is where **capture is promoted into judgment**. It should **synt
 
 ---
 
-## Optional — Strategy Console (before Stage 0)
-
-The operator may run a **read-only, derived** orientation pass first (does **not** replace the evidence pile or the menus below):
-
-`python3 scripts/strategy_console.py --mode eod` → rewrites [strategy-console/console-view.md](strategy-console/console-view.md) with structural heuristics (mtimes, markers, state lanes) and a **conservative** suggested EOD route. **EOD-MCQ** remains the authorized decision procedure; the console is **WORK**, not Record. See [strategy-console/README.md](strategy-console/README.md).
+**Optional pre-Stage 0 orientation:** run `python3 scripts/strategy_console.py --mode eod` to refresh [`strategy-console/console-view.md`](strategy-console/console-view.md). This is a derived orientation surface only. It may suggest a conservative EOD route, but it does **not** replace the evidence pile, MCQ choices, or authorized drafting process.
 
 ---
 
