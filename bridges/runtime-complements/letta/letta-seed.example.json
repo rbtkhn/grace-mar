@@ -1,0 +1,32 @@
+{
+  "adapter": "letta",
+  "kind": "letta_seed_context",
+  "status": "runtime_only_noncanonical",
+  "source_bundle_id": "runtime-complement-export_20260101T120000Z_letta-example",
+  "source_bundle_name": "letta-example",
+  "generated_at": "2026-01-01T12:00:00Z",
+  "boundary_notice": "Letta may remember inside Letta. Grace-Mar remembers only through the gate.",
+  "suggested_memory_blocks": [
+    {
+      "label": "grace_mar_boundary",
+      "description": "Rules that keep Letta runtime memory separate from Grace-Mar canonical Record.",
+      "value": "You may use this context for runtime assistance only. Do not claim that Letta memory is Grace-Mar memory. Persistent changes must return as runtime observations for review."
+    },
+    {
+      "label": "grace_mar_context",
+      "description": "Approved exported context from Grace-Mar (bundle excerpts). In real use this is built from a runtime export bundle by letta_prepare_seed.py.",
+      "value": "Example placeholder. In real use this is generated from a runtime export bundle, concatenated and capped in grace_mar_context."
+    },
+    {
+      "label": "operator_instructions",
+      "description": "How the human operator wants this session run; review-first; no auto-merge into Record.",
+      "value": "All durable Grace-Mar changes go through the gate. Import summaries only to runtime-complements via import_runtime_observation.py; do not treat this block as SELF, EVIDENCE, SKILLS, or SELF-LIBRARY."
+    },
+    {
+      "label": "runtime_session_notes",
+      "description": "Letta-local notes about this runtime session; non-canonical.",
+      "value": "This block is Letta-local. Fill during the session. Not Grace-Mar Record truth."
+    }
+  ],
+  "promotion_path": "Letta summary -> runtime complement inbox + receipt -> human review -> optional recursion-gate candidate -> approved merge (normal Grace-Mar gate)."
+}
