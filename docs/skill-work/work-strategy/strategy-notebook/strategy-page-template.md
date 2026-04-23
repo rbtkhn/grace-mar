@@ -2,18 +2,18 @@
 
 WORK only; not Record.
 
-**Contract:** A **strategy-page** is any notebook page that uses the **same prose scaffold** below: **`### Chronicle`**, **`### Reflection`**, **`### Foresight`**, optional **`### Appendix`**, and the **length / cadence** rules. Experts implement that contract in one or both **surfaces**:
+**Contract:** A **strategy-page** is any notebook page that uses the **same scaffold** below: **`### Chronicle`**, **`### Reflection`**, **`### Foresight`**, optional **`### Appendix`**, and the **length / cadence** rules. By default **`### Chronicle`** carries the **full verbatim** capture (lightly cleaned and formatted); **`### Reflection`** and **`### Foresight`** are **operator analysis** and **may be stubbed** on first write. Experts implement that contract in one or both **surfaces**:
 
 1. **Thread fence (HTML comments):** `<!-- strategy-page:start … -->` … `<!-- strategy-page:end -->` in the expert’s **`thread.md`** (or monthly **`*-thread-YYYY-MM.md`**) under the correct **`## YYYY-MM`**. This is what [`validate_strategy_pages.py`](../../../../scripts/validate_strategy_pages.py) parses.
 2. **Expert file (standalone):** **`experts/<expert_id>/<expert_id>-page-*.md`** — e.g. [`ritter-page-template.md`](experts/ritter/ritter-page-template.md), `mercouris-page-*.md`. Same strategy-page contract; file usually sits beside **`raw-input/`** with capture preamble and appendix links. **Not** checked by `validate_strategy_pages.py` unless you **duplicate** the same logical page into a thread fence (e.g. cross-expert **`id` / `date` / `watch`**).
 
 **Where (thread fence):** Add a `<!-- strategy-page:start … -->` … `<!-- strategy-page:end -->` block under the correct **`## YYYY-MM`** in the expert’s **thread file for that month** — **`experts/<expert_id>/<expert_id>-thread-YYYY-MM.md`** when using monthly thread files, or **`experts/<expert_id>/thread.md`** under the matching month heading when using a single legacy file. The page’s **`date="YYYY-MM-DD"`** must fall in that **`YYYY-MM`**. For the same logical analysis across experts, **duplicate** the block into each expert’s file with the same **`id=`** and **`date=`** (see [watches/README.md](watches/README.md)). Thread layout details: [strategy-expert-template.md § Thread](strategy-expert-template.md#thread-template).
 
-**Required prose scaffold:** **`### Chronicle`**, **`### Reflection`**, and **`### Foresight`** — **grammatical prose only** in each (facts framing, judgment, falsifiers / resume / doubt). This is the contract for a woven page; list dumps and machinery belong elsewhere (appendix when used, or overflow — see below).
+**Required sections:** **`### Chronicle`**, **`### Reflection`**, and **`### Foresight`**. **`### Chronicle`** is normally the **full verbatim** body (expert speech / essay text), lightly cleaned—**not** a paraphrase digest. **`### Reflection`** / **`### Foresight`** are **operator analysis** (judgment, falsifiers, resume lines—grammatical prose when filled in); **stubs are OK** until a later pass. List dumps and machinery belong in **`### Appendix`** when used, or overflow — see below.
 
 **Optional `### Appendix`:** Omit when the page is short and has **no** paste-ready machinery (URLs, `thread:`, `verify:`, `batch-analysis` tails, bare paths). When you **do** need that material, add **`### Appendix`** and keep **machinery only** there — see **Rules** and **Machine checks** below. **Do not** rename this heading: [`validate_strategy_pages.py`](../../../../scripts/validate_strategy_pages.py) splits prose vs appendix on the exact string **`### Appendix`** (match is case-insensitive in the script). “Optional” means **omit the section entirely**, not use a different title.
 
-**Length:** Target **500–1000 words** across **Chronicle + Reflection + Foresight** only. Words in **`### Appendix`** (when present) are **outside** that prose budget. Overflow → `days.md`, a second page **`id`**, or **References** in the notebook sense.
+**Length:** **No** enforced word limit on a single page; very long one-file captures are uncommon in practice. Words in **`### Appendix`** (when present) are **outside** readable “body” weighting for compose discipline. If a thread-fence page grows unwieldy, split logically → `days.md`, a second page **`id`**, or **References** in the notebook sense.
 
 **Cadence:** Prefer **one end-of-day page session** per day—do not create or extend `strategy-page` blocks continuously during the day; daytime capture stays in [daily-strategy-inbox.md](daily-strategy-inbox.md).
 
@@ -23,7 +23,7 @@ WORK only; not Record.
 
 ## Shared logical page across experts
 
-When the same analysis is **duplicated** into multiple expert **thread** files (same **`<expert_id>-thread-YYYY-MM.md`** per expert when using monthly thread files), keep **`id=`**, **`date=`**, and **`watch=`** **identical**. Set **`Also in:`** to the peer **`expert_id`**s. **Reflection** (and, where it helps, a line or two of **Chronicle** framing) should reflect **that file’s voice** — same thesis object, **different perspective**, not copy-pasted identical prose across experts unless you intend verbatim reuse.
+When the same analysis is **duplicated** into multiple expert **thread** files (same **`<expert_id>-thread-YYYY-MM.md`** per expert when using monthly thread files), keep **`id=`**, **`date=`**, and **`watch=`** **identical**. Set **`Also in:`** to the peer **`expert_id`**s. **Chronicle** may duplicate shared verbatim where intended; **Reflection** should reflect **that file’s voice** — same thesis object, **different operator read**, not copy-pasted identical analysis across experts unless you intend reuse.
 
 ---
 
@@ -58,15 +58,15 @@ python3 scripts/validate_strategy_pages.py --strict-prose --min-prose-ratio 0.90
 
 ### Chronicle
 
-<!-- Grammatical prose only. -->
+<!-- Full verbatim capture (lightly cleaned / formatted). Not a summary. -->
 
 ### Reflection
 
-<!-- Grammatical prose only. -->
+<!-- Operator analysis — may be stubbed until later. Grammatical prose when filled in. -->
 
 ### Foresight
 
-<!-- Falsifiers, resume lines, honest doubt — still prose. -->
+<!-- Operator analysis — falsifiers, resume lines, honest doubt; stubs OK initially. -->
 
 ---
 
