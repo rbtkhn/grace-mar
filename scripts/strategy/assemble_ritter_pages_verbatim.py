@@ -5,8 +5,8 @@ Reads ritter-pages-manifest.yaml; pulls capture body from each raw-input file (Y
 stripped); embeds full body under ### Chronicle. Reflection scales toward ~25% of verbatim words
 (operator note + mode/topic boilerplate + prompts) so total page approximates 80/20.
 
-Soft cap: **3000 words** per `ritter-page` file (full markdown). Above the cap, a **Soft cap — pruning**
-paragraph is appended to Reflection with consolidation guidance; Appendix lists machinery.
+Inserts a preamble **`**Words:**`** line (full-file count). There is **no** notebook word ceiling;
+very long single pages are uncommon in practice.
 
 Run from repo root:
   python3 scripts/strategy/assemble_ritter_pages_verbatim.py
@@ -27,9 +27,6 @@ REPO_ROOT = Path(__file__).resolve().parents[2]
 NOTEBOOK = REPO_ROOT / "docs/skill-work/work-strategy/strategy-notebook"
 RITTER = NOTEBOOK / "experts" / "ritter"
 MANIFEST_PATH = RITTER / "ritter-pages-manifest.yaml"
-
-# Notebook soft cap: suggest pruning/consolidation above this (full file, all sections).
-SOFT_CAP_WORDS = 3000
 
 
 def _word_count(s: str) -> int:
@@ -229,50 +226,18 @@ def render_page(entry: dict, fm: dict, body: str) -> str:
     return "\n".join(lines)
 
 
-def _soft_cap_paragraph(total_w_before: int) -> str:
-    return (
-        f"\n**Soft cap — pruning.** This file is about **{total_w_before}** words before this note; "
-        f"the notebook **soft cap is {SOFT_CAP_WORDS}**. Linked `raw-input` remains the SSOT for the "
-        "full capture. To bring this page under cap, consider: **remove** paragraphs that restate the "
-        "same beat; **consolidate** overlapping arguments into one passage; **trim** side trails you "
-        "will not weave into `days.md`; **avoid** duplicating long quotations already in `raw-input`; "
-        "**relocate** extended material to a `thread.md` "
-        "`<!-- strategy-page:start … -->` fence or a sibling note. Keep one sharp through-line for "
-        "cross-expert work.\n"
-    )
-
-
-def _inject_soft_cap_judgment(page: str, total_w: int) -> str:
-    if total_w <= SOFT_CAP_WORDS:
-        return page
-    sep = "\n### Foresight\n"
-    if sep not in page:
-        return page
-    head, tail = page.split(sep, 1)
-    return head + _soft_cap_paragraph(total_w) + sep + tail
-
-
 def _inject_header_word_count(page: str, total_w: int) -> str:
     """Insert **Words:** after Expert preamble, before first `---` / ### Chronicle."""
     marker = "\n\n---\n\n### Chronicle\n"
     if marker not in page:
         return page
-    extra = ""
-    if total_w > SOFT_CAP_WORDS:
-        extra = "; **over cap** — see **Soft cap — pruning** in Reflection"
-    replacement = (
-        f"\n\n**Words:** {total_w} (soft cap {SOFT_CAP_WORDS}{extra})\n\n"
-        "---\n\n### Chronicle\n"
-    )
+    replacement = f"\n\n**Words:** {total_w}\n\n" "---\n\n### Chronicle\n"
     return page.replace(marker, replacement, 1)
 
 
 def finalize_page(page: str) -> str:
-    """Apply soft-cap Reflection note (if over cap) and header word-count line."""
-    w0 = _word_count(page)
-    page = _inject_soft_cap_judgment(page, w0)
-    w1 = _word_count(page)
-    return _inject_header_word_count(page, w1)
+    """Insert header **Words:** line matching full-file count."""
+    return _inject_header_word_count(page, _word_count(page))
 
 
 def main() -> int:
@@ -298,8 +263,7 @@ def main() -> int:
         out.write_text(final, encoding="utf-8")
         vw = _word_count(body)
         tw = _word_count(final)
-        flag = f" → {tw} on-page words (soft cap {SOFT_CAP_WORDS})" if tw > SOFT_CAP_WORDS else ""
-        print(f"Wrote {out.relative_to(REPO_ROOT)} ({vw} verbatim words{flag})")
+        print(f"Wrote {out.relative_to(REPO_ROOT)} ({vw} verbatim words, {tw} on-page words)")
     return 0
 
 

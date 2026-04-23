@@ -1,8 +1,11 @@
 #!/usr/bin/env python3
-"""Fail if manifest-listed Ritter primaries lack refined page files or transcript backlinks.
+"""Fail if manifest-listed strategy expert primaries lack refined page files or transcript backlinks.
 
-Also checks each ritter-page for required spine headings, **Words:** line, optional word-count
-match, soft-cap advisory (warn only), and optional Reflection+Foresight share heuristic.
+Default **Ritter**; use `--expert mearsheimer` for Mearsheimer. Checks each refined page file for
+required spine headings. When a **`**Words:**`** line is present, validates word-count match (±5
+tokens) and optional Reflection+Foresight share advisory for legacy verbatim-leaning pages; when
+omitted (optional bookkeeping), those checks are skipped. There is **no** word-count ceiling or soft-cap
+warning on page length.
 """
 
 from __future__ import annotations
@@ -20,10 +23,24 @@ except ImportError:  # pragma: no cover
 REPO_ROOT = Path(__file__).resolve().parents[2]
 NOTEBOOK = REPO_ROOT / "docs/skill-work/work-strategy/strategy-notebook"
 RITTER = NOTEBOOK / "experts" / "ritter"
-MANIFEST_PATH = RITTER / "ritter-pages-manifest.yaml"
-TRANSCRIPT_PATH = RITTER / "transcript.md"
+MEARSHEIMER = NOTEBOOK / "experts" / "mearsheimer"
 
-SOFT_CAP_WORDS = 3000
+
+def _expert_paths(expert: str) -> tuple[Path, Path, str]:
+    if expert == "ritter":
+        return (
+            RITTER / "ritter-pages-manifest.yaml",
+            RITTER / "transcript.md",
+            "verify_ritter_refined_pages",
+        )
+    if expert == "mearsheimer":
+        return (
+            MEARSHEIMER / "mearsheimer-pages-manifest.yaml",
+            MEARSHEIMER / "transcript.md",
+            "verify_mearsheimer_refined_pages",
+        )
+    raise ValueError(expert)
+
 WORDS_DECL_RE = re.compile(r"^\*\*Words:\*\*\s*(\d+)", re.MULTILINE)
 WORDS_LINE_RE = re.compile(r"(?m)^\*\*Words:\*\*\s*\d+.*\n?", re.MULTILINE)
 REQUIRED_H3 = (
@@ -116,9 +133,7 @@ def verify_page_content(page_fn: str, raw: str) -> tuple[list[str], list[str]]:
             errors.append(f"{page_fn}: missing {h3} (or accepted legacy heading)")
 
     m = WORDS_DECL_RE.search(raw)
-    if not m:
-        errors.append(f"{page_fn}: missing **Words:** line in preamble")
-    else:
+    if m:
         declared = int(m.group(1))
         without_words = WORDS_LINE_RE.sub("", raw, count=1)
         actual = _word_count(without_words)
@@ -128,31 +143,23 @@ def verify_page_content(page_fn: str, raw: str) -> tuple[list[str], list[str]]:
                 f"(±5 tolerance; strip **Words:** line for count)"
             )
 
-    total_w = _word_count(raw)
-    if total_w > SOFT_CAP_WORDS:
-        refl = _reflection_block(raw) or ""
-        if "Soft cap" not in refl and "pruning" not in refl.lower():
-            warnings.append(
-                f"{page_fn}: over soft cap ({total_w} > {SOFT_CAP_WORDS}) "
-                f"without **Soft cap — pruning** cue in Reflection"
-            )
-
-    # Advisory: Reflection+Foresight share vs Chronicle (heuristic ~35% ceiling)
-    chronicle = _chronicle_body(raw)
-    refl_b = _reflection_block(raw)
-    fore_b = _foresight_block(raw)
-    if chronicle is not None and refl_b is not None and fore_b is not None:
-        c_w = _word_count(chronicle)
-        r_w = _word_count(refl_b)
-        f_w = _word_count(fore_b)
-        denom = c_w + r_w + f_w
-        if denom > 0:
-            share = (r_w + f_w) / denom
-            if share > 0.35:
-                warnings.append(
-                    f"{page_fn}: Reflection+Foresight ~{share:.0%} of "
-                    f"(Chronicle+Reflection+Foresight) words — check ~80/20 target (advisory)"
-                )
+    # Advisory: Reflection+Foresight share vs Chronicle (only when **Words:** present—long Chronicle is expected)
+    if m is not None:
+        chronicle = _chronicle_body(raw)
+        refl_b = _reflection_block(raw)
+        fore_b = _foresight_block(raw)
+        if chronicle is not None and refl_b is not None and fore_b is not None:
+            c_w = _word_count(chronicle)
+            r_w = _word_count(refl_b)
+            f_w = _word_count(fore_b)
+            denom = c_w + r_w + f_w
+            if denom > 0:
+                share = (r_w + f_w) / denom
+                if share > 0.35:
+                    warnings.append(
+                        f"{page_fn}: Reflection+Foresight ~{share:.0%} of "
+                        f"(Chronicle+Reflection+Foresight) words — check ~80/20 target (advisory)"
+                    )
 
     return errors, warnings
 
@@ -160,21 +167,30 @@ def verify_page_content(page_fn: str, raw: str) -> tuple[list[str], list[str]]:
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument(
+        "--expert",
+        choices=("ritter", "mearsheimer"),
+        default="ritter",
+        help="Which expert manifest + transcript to verify (default: ritter).",
+    )
+    ap.add_argument(
         "--no-page-shape",
         action="store_true",
         help="Only check manifest files + transcript backlinks (legacy behavior).",
     )
     args = ap.parse_args()
 
+    manifest_path, transcript_path, tool_label = _expert_paths(args.expert)
+    expert_dir = manifest_path.parent
+
     if yaml is None:
-        print("verify_ritter_refined_pages: need PyYAML", file=sys.stderr)
+        print(f"{tool_label}: need PyYAML", file=sys.stderr)
         return 1
-    if not MANIFEST_PATH.is_file():
-        print(f"verify_ritter_refined_pages: missing {MANIFEST_PATH}", file=sys.stderr)
+    if not manifest_path.is_file():
+        print(f"{tool_label}: missing {manifest_path}", file=sys.stderr)
         return 1
-    manifest = yaml.safe_load(MANIFEST_PATH.read_text(encoding="utf-8"))
+    manifest = yaml.safe_load(manifest_path.read_text(encoding="utf-8"))
     pages = manifest.get("pages") or []
-    transcript = TRANSCRIPT_PATH.read_text(encoding="utf-8")
+    transcript = transcript_path.read_text(encoding="utf-8")
     errors: list[str] = []
     warnings: list[str] = []
 
@@ -182,7 +198,7 @@ def main() -> int:
         raw_rel = entry.get("raw_input_relative", "")
         page_fn = entry.get("page_filename", "")
         raw_path = NOTEBOOK / raw_rel
-        page_path = RITTER / page_fn
+        page_path = expert_dir / page_fn
         if not raw_path.is_file():
             errors.append(f"missing raw-input: {raw_rel}")
         if not page_path.is_file():
@@ -196,7 +212,7 @@ def main() -> int:
             page_fn = entry.get("page_filename", "")
             if not page_fn:
                 continue
-            page_path = RITTER / page_fn
+            page_path = expert_dir / page_fn
             if not page_path.is_file():
                 continue
             text = page_path.read_text(encoding="utf-8")
@@ -205,14 +221,14 @@ def main() -> int:
             warnings.extend(w2)
 
     for w in warnings:
-        print(f"verify_ritter_refined_pages: warning: {w}", file=sys.stderr)
+        print(f"{tool_label}: warning: {w}", file=sys.stderr)
 
     if errors:
-        print("verify_ritter_refined_pages: FAILED", file=sys.stderr)
+        print(f"{tool_label}: FAILED", file=sys.stderr)
         for line in errors:
             print(f"  {line}", file=sys.stderr)
         return 1
-    print("verify_ritter_refined_pages: OK")
+    print(f"{tool_label}: OK")
     return 0
 
 

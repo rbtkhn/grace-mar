@@ -1,16 +1,23 @@
-# Ritter strategy page — template (`ritter-page`)
+# Ritter refined day page — template
 
 WORK only; not Record.
 
-**Purpose:** A **`ritter-page-*.md`** file **is** Ritter’s **strategy-page** — same contract as [`strategy-page-template.md`](../../strategy-page-template.md) (**Chronicle / Reflection / Foresight**, optional **`### Appendix`**). This is the **file surface** for Ritter; it is **not** a separate artifact *kind*. **`Chronicle` carries the expert’s text from the linked `raw-input` capture (target ~80% of on-page words).** **`Reflection` / `Foresight` are WORK analysis (~20%)**—tier discipline, seams, falsifiers—not a substitute for the archived verbatim file. Regenerate from manifest captures with [`scripts/strategy/assemble_ritter_pages_verbatim.py`](../../../../scripts/strategy/assemble_ritter_pages_verbatim.py). **Optional:** duplicate or compress the same logical page into a **`<!-- strategy-page:start … -->`** fence in [`thread.md`](thread.md) when you need cross-expert **`id` / `date` / `watch`** or [`validate_strategy_pages.py`](../../../../scripts/validate_strategy_pages.py) checks.
+**Purpose:** Standalone refined day page for the `ritter` expert. **`### Chronicle`** carries the **full verbatim** from linked [`raw-input/`](../../raw-input/README.md)—**lightly cleaned and formatted**; **`### Reflection`** and **`### Foresight`** are **operator analysis** (**may be stubbed** on ingest, completed in a later pass). Distinct from a **`strategy-page`** HTML fence in [`thread.md`](thread.md) unless you duplicate judgment there during EOD compose.
 
-**Alternate surface (thread):** HTML-comment fences in `thread.md` per [`strategy-page-template.md`](../../strategy-page-template.md).
+**Thread-embedded pages:** For `<!-- strategy-page:start … -->` blocks in monthly or legacy thread files, use [`strategy-page-template.md`](../../strategy-page-template.md) instead of this file.
 
-**Filename:** Every manifest-backed refined page uses **`ritter-page-YYYY-MM-DD-<slug>.md`**, where **`YYYY-MM-DD`** is the **voice / publication** date and **`<slug>`** comes from the raw-input stem (see **Same-day collision**). If the `raw-input/` folder date differs (ingest batching), note it only in the **`### Appendix`**.
+**Filename:** Default **`ritter-page-YYYY-MM-DD.md`** (voice / publication date). When more than one primary shares that date, use **`ritter-page-YYYY-MM-DD-<slug>.md`** with **`<slug>`** from the raw-input stem so filenames stay unique. If the `raw-input/` folder date differs (ingest batching), note it in **`### Appendix`**. Under [`transcript.md`](transcript.md), add one **`Refined day page:`** line per file for that date.
 
-**Same-day collision:** `<slug>` must be unique per capture. Derive it from the raw-input basename (drop the `substack-ritter-` prefix and trailing `-YYYY-MM-DD` if present, or use the whole stem for `judging-freedom-…` / `ritter-rant-…`). When more than one primary shares the same voice date (e.g. two essays or **Judging Freedom** plus **Ritter’s Rant**), distinct raw stems keep filenames distinct automatically. The generated H1 includes **`# Ritter strategy page — YYYY-MM-DD (*Essay or episode title*)`** when a display title is set. Under [`transcript.md`](transcript.md), add one **`Refined day page:`** line per `ritter-page` file for that date.
+**Length:** No enforced word limit. **Chronicle** is typically long (full verbatim) for Mode A–C; **Reflection** / **Foresight** may be stubbed until operator analysis. Mode D may be short. No path dumps or `verify:` in body sections—**`### Appendix`** only.
 
-**Prose budget:** **Chronicle** embeds the full operator-ingested capture body (often thousands of words for Substack / long interviews). **Reflection** and **Foresight** stay comparatively short so the page stays roughly **~80% expert verbatim / ~20% WORK analysis** (short captures may skew slightly while boilerplate floors exist). **Mode D** (thin X / registry-only rows) may be much shorter if the capture is thin. No path dumps or `verify:` machinery in **Chronicle** body text—those belong in **`### Appendix`**.
+### Prose emphasis (Chronicle / Reflection / Foresight)
+
+Do not scatter `**inline bold**` through running paragraphs for rhetorical stress, “beat” words, or decoration. Use normal weight for body copy. Bold is allowed for:
+
+- Line-leading labels in the preamble (e.g. **Expert:**, **Published:**) and for the required appendix bullet titles (see Appendix bullet order below).
+- Optional bold for the short title of a bullet inside **Foresight** when the bullet is a labeled stub (title only—not the whole sentence).
+
+Section titles use `###` headings, not bold.
 
 ---
 
@@ -21,7 +28,7 @@ WORK only; not Record.
 Long-form essay with **published** date; pin `source_url` in raw-input frontmatter.
 
 ```markdown
-**Expert:** `ritter` · **Published:** YYYY-MM-DD · **Capture:** Mode A — Substack · **Artifact:** strategy-page file (`ritter-page-…` under `experts/ritter/`). Optional: echo in `thread.md` fence for watches / cross-expert duplication.
+**Expert:** `ritter` · **Published:** YYYY-MM-DD · **Capture:** Mode A — Substack · **Artifact:** refined day page (standalone file under `experts/ritter/`). Not a `strategy-page` HTML fence in `thread.md` unless you duplicate the same judgment there during EOD compose.
 ```
 
 ### Mode B — Judging Freedom (or third-party interview)
@@ -29,7 +36,7 @@ Long-form essay with **published** date; pin `source_url` in raw-input frontmatt
 Host-dated conversation; use **aired** or **host date** per inbox / raw-input convention.
 
 ```markdown
-**Expert:** `ritter` · **Aired:** YYYY-MM-DD · **Capture:** Mode B — Judging Freedom / interview (see raw-input `series`) · **Artifact:** strategy-page file (`ritter-page-…` under `experts/ritter/`). Optional: echo in `thread.md` fence for watches / cross-expert duplication.
+**Expert:** `ritter` · **Aired:** YYYY-MM-DD · **Capture:** Mode B — Judging Freedom / interview (see raw-input `series`) · **Artifact:** refined day page (standalone file under `experts/ritter/`). Not a `strategy-page` HTML fence in `thread.md` unless you duplicate the same judgment there during EOD compose.
 ```
 
 ### Mode C — YouTube / standalone video
@@ -37,7 +44,7 @@ Host-dated conversation; use **aired** or **host date** per inbox / raw-input co
 Ritter monologue or guest spot with canonical `watch?v=` when pinned.
 
 ```markdown
-**Expert:** `ritter` · **Aired:** YYYY-MM-DD · **Capture:** Mode C — YouTube (see raw-input `source_url`) · **Artifact:** strategy-page file (`ritter-page-…` under `experts/ritter/`). Optional: echo in `thread.md` fence for watches / cross-expert duplication.
+**Expert:** `ritter` · **Aired:** YYYY-MM-DD · **Capture:** Mode C — YouTube (see raw-input `source_url`) · **Artifact:** refined day page (standalone file under `experts/ritter/`). Not a `strategy-page` HTML fence in `thread.md` unless you duplicate the same judgment there during EOD compose.
 ```
 
 ### Mode D — Notebook / X stub
@@ -45,73 +52,59 @@ Ritter monologue or guest spot with canonical `watch?v=` when pinned.
 [`transcript.md`](transcript.md) holds mostly **`X | cold`** or registry lines without a long verbatim block for that date.
 
 ```markdown
-**Expert:** `ritter` · **Ingest:** YYYY-MM-DD · **Capture:** Mode D — notebook / X stub · **Artifact:** strategy-page file (`ritter-page-…` under `experts/ritter/`). **Note:** May lack a single long capture—point to `days.md` / chapter seam when the lens hangs off a woven day.
+**Expert:** `ritter` · **Ingest:** YYYY-MM-DD · **Capture:** Mode D — notebook / X stub · **Artifact:** refined day page (standalone file under `experts/ritter/`). **Note:** May lack a single long capture—point to `days.md` / chapter seam when the lens hangs off a woven day.
 ```
-
----
-
-### Prose emphasis (Chronicle / Reflection / Foresight)
-
-Do not scatter `**inline bold**` through running paragraphs for rhetorical stress, “beat” words, or decoration. Use normal weight for body copy. Bold is allowed for:
-
-- Line-leading labels in the preamble (e.g. **Expert:**, **Published:**) and for the required appendix bullet titles.
-- Optional bold for the short title of a bullet inside **Foresight** when the bullet is a labeled stub (title only—not the whole sentence).
-
-Section titles use `###` headings, not bold.
 
 ---
 
 ## Body scaffold
 
-1. Preamble ends with **Expert:** … then **`**Words:** N (soft cap 3000)`** (full-file word count; over-cap suffix when needed). Regenerate via [`assemble_ritter_pages_verbatim.py`](../../../../scripts/strategy/assemble_ritter_pages_verbatim.py).
-2. Horizontal rule `---` after the preamble block (before **Signal**).
-3. `### Chronicle` — **expert verbatim**: full capture body from linked `raw-input` (after frontmatter), preserving Ritter’s wording; optional one-line label that this is operator-ingested text.
-4. `### Reflection` — WORK-only notebook analysis (~20%): Ritter-lane arc, IHL/coercion reads, Hormuz or Russia–U.S. seams; **commentator vs wire** tier discipline on load-bearing claims.
-5. `### Foresight` — falsifiers, resume lines, tier tags (bullets allowed).
-6. Horizontal rule `---` before appendix.
-7. `### Appendix` — machinery only.
+1. Horizontal rule `---` after the preamble.
+2. `### Chronicle` — **Full verbatim** from the linked `raw-input` capture (after YAML frontmatter when present): **lightly cleaned and formatted** only—paragraphing, spacing, obvious ingest artifacts, optional speaker labels; **do not** replace the expert’s words with summary or paraphrase. The file under `raw-input/` remains the archived capture; **Chronicle** is the readable full text on this page. **Mode B** (no long capture): brief stub or pointer only.
+3. `### Reflection` — **Operator analysis:** Ritter-lane arc; IHL / coercion reads, Hormuz or Russia–U.S. seams; **commentator vs wire** tier discipline on load-bearing claims. **May be stubbed** until a later operator pass.
+4. `### Foresight` — **Operator analysis:** falsifiers, resume lines, tier tags (bullets allowed). **May be stubbed** until a later operator pass.
+5. Horizontal rule `---` before appendix.
+6. `### Appendix` — machinery only (paths, inbox grep, `thread:ritter`, canonical primary).
 
 **Appendix bullet order (required):**
 
 1. **Full verbatim (capture):** link under `raw-input/<YYYY-MM-DD>/` (slug examples: `substack-ritter-…`, `judging-freedom-…`, `ritter-rant-…`, etc.).
-2. **Inbox / triage:** [`daily-strategy-inbox.md`](../../daily-strategy-inbox.md) — search `thread:ritter`, date, and capture-specific `verify:` / `SS |` / `JF |` / `YT |` hints.
-3. **`thread:ritter`** · **verify:** one consolidated verify line.
+2. **Inbox / triage:** link to [`daily-strategy-inbox.md`](../../daily-strategy-inbox.md) with grep hints (`thread:ritter`, date, and capture-specific `verify:` / `SS |` / `JF |` / `YT |` tails).
+3. **`thread:ritter`** · **verify:** one line consolidating verify tier for this page.
 4. **Canonical primary:** Substack URL, `watch?v=`, **Judging Freedom** link, or **X** permalink as applicable; **Not applicable** for pure Mode D stubs unless one URL is pinned.
 
 ---
 
 ## Raw-input naming (Ritter)
 
-Verbatim lives under `raw-input/<date>/`. Ritter strategy-page files (`ritter-page-*.md`) live only under `experts/ritter/`. Machine-readable map (primary capture → `ritter-page-*.md`, modes, URLs): [`ritter-pages-manifest.yaml`](ritter-pages-manifest.yaml). Regenerate scaffolds with [`scripts/strategy/build_ritter_refined_pages.py`](../../../../scripts/strategy/build_ritter_refined_pages.py); CI check: [`scripts/strategy/verify_ritter_refined_pages.py`](../../../../scripts/strategy/verify_ritter_refined_pages.py).
+Verbatim lives under `raw-input/<date>/`. Refined pages live only under `experts/ritter/`. Optional machine index (capture → page file, modes, URLs): [`ritter-pages-manifest.yaml`](ritter-pages-manifest.yaml). Legacy tooling (verbatim-heavy page bodies): [`scripts/strategy/assemble_ritter_pages_verbatim.py`](../../../../scripts/strategy/assemble_ritter_pages_verbatim.py), [`scripts/strategy/build_ritter_refined_pages.py`](../../../../scripts/strategy/build_ritter_refined_pages.py).
 
 ## Machine checks (`verify_ritter_refined_pages.py`)
 
-[`scripts/strategy/verify_ritter_refined_pages.py`](../../../../scripts/strategy/verify_ritter_refined_pages.py) (repo root):
-
-- **Fail (exit 1):** each manifest row has `raw-input` on disk, matching `ritter-page-*.md`, and `transcript.md` contains that filename; each page has **`### Chronicle`**, **`### Reflection`**, **`### Foresight`**, **`### Appendix`** (legacy `### Signal` / `### Judgment` / `### Open` / `### Technical appendix` still accepted until regenerated); preamble has **`**Words:** N`** and **N** matches a full-file word count with the entire **`**Words:** …`** line removed (±5 tokens).
-- **Warn (stderr, exit 0):** full-file count **> 3000** without **`Soft cap — pruning`** in **Reflection**; optional advisory if **Reflection + Foresight** share of (Chronicle + Reflection + Foresight) words exceeds **~35%**.
-- **Soft cap:** **3000** is guidance only — full verbatim may stay on the page; re-running [`assemble_ritter_pages_verbatim.py`](../../../../scripts/strategy/assemble_ritter_pages_verbatim.py) overwrites page bodies from `raw-input`. Use `--no-page-shape` on the verifier for manifest/transcript-only checks.
+[`scripts/strategy/verify_ritter_refined_pages.py`](../../../../scripts/strategy/verify_ritter_refined_pages.py) (repo root): manifest rows, `raw-input` on disk, `transcript.md` backlinks, and page spine **`### Chronicle`**, **`### Reflection`**, **`### Foresight`**, **`### Appendix`** (legacy `### Signal` / `### Judgment` / `### Open` / `### Technical appendix` still accepted until regenerated). **`**Words:** N`** is **optional**: when present it must match full-file word count with that line stripped (±5 tokens); when omitted, **`**Words:**`** bookkeeping is skipped (Chronicle may still be full verbatim). An optional Reflection+Foresight **share** advisory runs only when **`**Words:**`** is present (legacy verbatim-leaning pages). **No** word-count ceiling. Use `--no-page-shape` for manifest/transcript-only checks.
 
 ---
 
 ## Transcript wiring
 
-Under the matching `## YYYY-MM-DD` in [`transcript.md`](transcript.md), add when missing:
+Under the matching `## YYYY-MM-DD` in [`transcript.md`](transcript.md), add (when not already present):
 
-- **`Verbatim:`** → relative link to the `raw-input` capture (or stub note if over triage budget).
-- **`Refined day page:`** → `ritter-page-YYYY-MM-DD-<slug>.md` (from manifest / [`build_ritter_refined_pages.py`](../../../../scripts/strategy/build_ritter_refined_pages.py)). Transcript field label; the linked file **is** the strategy-page for that capture.
+- **`Verbatim:`** → relative link to the `raw-input` capture.
+- **`Refined day page:`** → `ritter-page-YYYY-MM-DD.md` or `ritter-page-YYYY-MM-DD-<slug>.md`.
 - **`Template:`** → [`ritter-page-template.md`](ritter-page-template.md) (optional header pointer).
 
 ---
 
 ## Paste scaffold (replace placeholders)
 
+**Mode A example:**
+
 ```markdown
-# Ritter strategy page — YYYY-MM-DD
+# Ritter day page — YYYY-MM-DD
 
 WORK only; not Record.
 
-**Expert:** `ritter` · **Published:** YYYY-MM-DD · **Capture:** Mode A — Substack · **Artifact:** strategy-page file (`ritter-page-…` under `experts/ritter/`). Optional: echo in `thread.md` fence for watches / cross-expert duplication.
+**Expert:** `ritter` · **Published:** YYYY-MM-DD · **Capture:** Mode A — Substack · **Artifact:** refined day page (standalone file under `experts/ritter/`). Not a `strategy-page` HTML fence in `thread.md` unless you duplicate the same judgment there during EOD compose.
 
 ---
 
@@ -133,18 +126,19 @@ WORK only; not Record.
 
 - **Full verbatim (capture):** [raw-input/YYYY-MM-DD/…](../../raw-input/YYYY-MM-DD/….md)
 - **Inbox / triage:** [daily-strategy-inbox.md](../../daily-strategy-inbox.md) (search `thread:ritter`, YYYY-MM-DD)
-- **`thread:ritter`** · **verify:** …
-- **Canonical primary:** …
+- **`thread:ritter`** · **verify:** full-text + raw-input + published:YYYY-MM-DD
+- **Canonical primary:** pin when known (see raw-input frontmatter / cold line)
 ```
 
 ---
 
 ## Compliance checklist (retrofit / review)
 
-1. Title: `# Ritter strategy page — YYYY-MM-DD (*…*)` (voice date + display title when present); filename is always `ritter-page-YYYY-MM-DD-<slug>.md`.
+1. Title: `# Ritter day page — YYYY-MM-DD` (or include a short parenthetical title when helpful); filename `ritter-page-YYYY-MM-DD.md` or with `-<slug>` when needed.
 2. `WORK only; not Record.` on its own line after the title.
-3. Preamble identifies **Mode A–D**; **Artifact:** strategy-page file (`ritter-page-…` under `experts/ritter/`); **`**Words:**`** line (full file, soft cap 3000) before the first `---`.
-4. `---` before `### Chronicle`; prose-only in Chronicle / Reflection / Foresight.
-5. `---` before `### Appendix`.
-6. Appendix bullets in order: capture → inbox → `thread:ritter` verify → canonical primary.
-7. Relative links resolve from `experts/ritter/` (`../../raw-input/…`, `../../daily-strategy-inbox.md`).
+3. Preamble matches Mode A–D; **Artifact:** uses “refined day page (standalone file under `experts/ritter/`)” verbatim.
+4. `---` before `### Chronicle`.
+5. `### Chronicle`, `### Reflection`, `### Foresight` present; **Chronicle** = full verbatim (lightly cleaned)—no `verify:` / path machinery there; **Reflection** / **Foresight** = operator analysis (stubs OK). No decorative bold except lane rules.
+6. `---` before `### Appendix`.
+7. Appendix bullets in order: Full verbatim (capture) → Inbox / triage → `thread:ritter` · verify → Canonical primary.
+8. Relative links resolve from `experts/ritter/` (typically `../../raw-input/…`, `../../daily-strategy-inbox.md`, `../../chapters/…` when citing `days.md`).

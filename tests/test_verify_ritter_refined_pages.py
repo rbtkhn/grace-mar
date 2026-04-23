@@ -30,6 +30,21 @@ def test_verify_ritter_refined_pages_exits_zero() -> None:
     assert proc.returncode == 0, proc.stderr
 
 
+def test_verify_mearsheimer_refined_pages_exits_zero() -> None:
+    proc = subprocess.run(
+        [
+            sys.executable,
+            str(REPO / "scripts/strategy/verify_ritter_refined_pages.py"),
+            "--expert",
+            "mearsheimer",
+        ],
+        cwd=str(REPO),
+        capture_output=True,
+        text=True,
+    )
+    assert proc.returncode == 0, proc.stderr
+
+
 def test_verify_page_content_minimal_passes() -> None:
     mod = _load_verifier()
     ch = " ".join(f"w{i}" for i in range(20))
@@ -54,7 +69,20 @@ def test_verify_page_content_missing_chronicle_fails() -> None:
     assert any("Chronicle" in e for e in errs)
 
 
-def test_verify_page_soft_cap_warns_without_pruning_note() -> None:
+def test_verify_page_content_digest_without_words_passes() -> None:
+    mod = _load_verifier()
+    md = (
+        "# T\n\n---\n\n### Chronicle\n\n"
+        "one two three four five.\n\n"
+        "### Reflection\n\nsix seven.\n\n### Foresight\n\n- eight\n\n---\n\n"
+        "### Appendix\n\n- nine\n"
+    )
+    errs, warns = mod.verify_page_content("digest.md", md)
+    assert not errs
+    assert not warns
+
+
+def test_verify_page_long_file_no_soft_cap_warning() -> None:
     mod = _load_verifier()
     long_ch = "word " * 3200
     tail = (
@@ -65,4 +93,4 @@ def test_verify_page_soft_cap_warns_without_pruning_note() -> None:
     md = f"# T\n\n**Words:** {n}\n\n---\n\n### Chronicle\n\n{long_ch}\n\n{tail}"
     errs, warns = mod.verify_page_content("long.md", md)
     assert not errs
-    assert any("soft cap" in w.lower() for w in warns)
+    assert not any("soft cap" in w.lower() for w in warns)

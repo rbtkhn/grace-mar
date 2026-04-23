@@ -4,7 +4,7 @@ WORK only; not Record.
 
 **Expert:** `ritter` · **Aired:** 2026-04-20 · **Capture:** Mode C — YouTube (see raw-input source_url) · **Artifact:** strategy-page file (`ritter-page-…` under `experts/ritter/`). Optional: echo in `thread.md` fence for watches / cross-expert duplication.
 
-**Words:** 2196 (soft cap 3000)
+**Words:** 2196
 
 ---
 
