@@ -99,6 +99,20 @@ artifacts/rejection_analysis.json
 # Forecast observability report (rebuildable; scripts/build_forecast_observability_report.py)
 artifacts/forecast/observability-report.md
 
+# Strategy notebook extension (rebuildable; see artifacts/work-strategy/strategy-notebook/README.md)
+artifacts/work-strategy/strategy-notebook/receipts/*
+!artifacts/work-strategy/strategy-notebook/receipts/.gitkeep
+artifacts/work-strategy/strategy-notebook/graph.json
+artifacts/work-strategy/strategy-notebook/views/*
+!artifacts/work-strategy/strategy-notebook/views/.gitkeep
+
+# Strategy run wrapper (rebuildable; see docs/skill-work/work-strategy/STRATEGY-RUN-ARCHITECTURE.md)
+artifacts/strategy-runs/*
+!artifacts/strategy-runs/.gitkeep
+artifacts/run-receipts/*
+!artifacts/run-receipts/.gitkeep
+artifacts/strategy-run-report.md
+
 # Large companion artifacts (optional local-only; use Git LFS if committed)
 # users/*/artifacts/**/*.png
 # users/*/artifacts/**/*.mp4

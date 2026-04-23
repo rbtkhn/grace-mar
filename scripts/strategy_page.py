@@ -26,6 +26,12 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO_ROOT / "scripts"))
 
+from strategy_notebook.receipts import (
+    NotebookReceipt,
+    PageOperation,
+    append_receipt,
+    rel_posix,
+)
 from strategy_expert_corpus import (
     CANONICAL_EXPERT_IDS,
     THREAD_MARKER_START,
@@ -184,6 +190,17 @@ def main() -> int:
     ap.add_argument("--inbox", type=Path, default=DEFAULT_INBOX)
     ap.add_argument("--notebook", type=Path, default=DEFAULT_NOTEBOOK)
     ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument(
+        "--operation",
+        choices=[e.value for e in PageOperation],
+        default=PageOperation.APPEND.value,
+        help="Declared page operation for receipts (default: APPEND for new scaffolds)",
+    )
+    ap.add_argument(
+        "--no-receipt",
+        action="store_true",
+        help="Do not append a line to strategy notebook receipts JSONL",
+    )
     args = ap.parse_args()
 
     expert_ids = [e.lower().strip() for e in args.experts]
@@ -203,6 +220,10 @@ def main() -> int:
 
     inbox_lines = _gather_inbox_material(expert_ids, args.inbox)
 
+    sources_read: list[str] = []
+    if args.inbox.is_file():
+        sources_read.append(rel_posix(REPO_ROOT, args.inbox.resolve()))
+    outputs_touched: list[str] = []
     for eid in expert_ids:
         page_block = build_page_block(
             page_id=page_id,
@@ -213,13 +234,42 @@ def main() -> int:
             inbox_lines=inbox_lines,
         )
         thread_path = thread_path_for_page_month(args.notebook, eid, month)
+        thread_path = thread_path.resolve()
+        sources_read.append(rel_posix(REPO_ROOT, thread_path))
         result = insert_page(thread_path, month, page_block, args.dry_run)
+        if not args.dry_run:
+            outputs_touched.append(rel_posix(REPO_ROOT, thread_path))
         print(f"  {result}")
 
     if args.dry_run:
         print(f"\nDry run: page '{page_id}' for {', '.join(expert_ids)} (not written)")
     else:
         print(f"\nCreated page '{page_id}' for {', '.join(expert_ids)}")
+
+    if not args.no_receipt:
+        ts = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+        status = "dry_run" if args.dry_run else "ok"
+        rec = NotebookReceipt(
+            ts=ts,
+            entrypoint="strategy_page",
+            page_operation=args.operation,
+            status=status,
+            sources_read=sorted(set(sources_read)),
+            outputs_touched=outputs_touched,
+            decision=(
+                "dry-run new strategy-page scaffolds (not written)"
+                if args.dry_run
+                else "inserted new strategy-page scaffolds"
+            ),
+            details={
+                "page_id": page_id,
+                "expert_ids": ",".join(expert_ids),
+                "watch": args.watch or "",
+                "month": month,
+            },
+        )
+        log = append_receipt(REPO_ROOT, rec)
+        print(f"receipt: {log.relative_to(REPO_ROOT)}", flush=True)
 
     return 0
 

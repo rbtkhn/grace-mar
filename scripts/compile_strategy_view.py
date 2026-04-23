@@ -21,16 +21,24 @@ from __future__ import annotations
 
 import argparse
 import re
-from datetime import date
+import sys
+from datetime import date, datetime, timezone
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(REPO_ROOT / "scripts"))
 
 from strategy_expert_corpus import (  # noqa: E402
     RE_IN_FOLDER_MONTH_THREAD,
     THREAD_MARKER_END,
     THREAD_MARKER_START,
     collect_strategy_thread_paths,
+)
+from strategy_notebook.receipts import (  # noqa: E402
+    NotebookReceipt,
+    PageOperation,
+    append_receipt,
+    rel_posix,
 )
 from strategy_page_reader import discover_pages  # noqa: E402
 
@@ -241,6 +249,40 @@ def build_bundle(
     return "\n".join(lines)
 
 
+def collect_source_paths_for_bundle(
+    notebook_dir: Path,
+    bundle_date: date,
+    expert_filter: frozenset[str] | None,
+) -> list[str]:
+    """Paths read when building a bundle (mirrors :func:`build_bundle` file reads)."""
+    ymd = bundle_date.isoformat()
+    ym = ymd[:7]
+    raw: list[Path] = []
+    inbox = notebook_dir / "daily-strategy-inbox.md"
+    if inbox.is_file():
+        raw.append(inbox)
+    days_path = notebook_dir / "chapters" / ym / "days.md"
+    meta_path = notebook_dir / "chapters" / ym / "meta.md"
+    if days_path.is_file():
+        raw.append(days_path)
+    if meta_path.is_file():
+        raw.append(meta_path)
+    thread_paths = collect_strategy_thread_paths(notebook_dir)
+    filtered: list[Path] = []
+    for p in sorted(thread_paths, key=lambda x: str(x)):
+        eid = expert_id_from_thread_path(p, notebook_dir)
+        if eid is None:
+            continue
+        if expert_filter is not None and eid.lower() not in expert_filter:
+            continue
+        filtered.append(p)
+    raw.extend(filtered)
+    return sorted(
+        {rel_posix(REPO_ROOT, p.resolve()) for p in raw},
+        key=lambda s: s.lower(),
+    )
+
+
 def default_out_path(notebook_dir: Path, bundle_date: date) -> Path:
     return (
         notebook_dir
@@ -278,6 +320,11 @@ def main() -> None:
     parser.add_argument("--inbox-tail-lines", type=int, default=40)
     parser.add_argument("--max-journal-chars", type=int, default=8000)
     parser.add_argument("--max-machine-chars", type=int, default=12000)
+    parser.add_argument(
+        "--no-receipt",
+        action="store_true",
+        help="Do not append a line to strategy notebook receipts JSONL",
+    )
     args = parser.parse_args()
 
     notebook_dir = args.notebook_dir.resolve()
@@ -306,6 +353,25 @@ def main() -> None:
     )
     out_path.write_text(md, encoding="utf-8")
     print(out_path)
+
+    if not args.no_receipt:
+        ts = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+        sources = collect_source_paths_for_bundle(
+            notebook_dir, bundle_date, expert_filter
+        )
+        out_rel = rel_posix(REPO_ROOT, out_path)
+        rec = NotebookReceipt(
+            ts=ts,
+            entrypoint="compile_strategy_view",
+            page_operation=PageOperation.NOOP.value,
+            status="ok",
+            sources_read=sources,
+            outputs_touched=[out_rel],
+            decision="wrote compiled-view source bundle (read-only on threads)",
+            details={"recipe_id": RECIPE_ID, "bundle_date": bundle_date.isoformat()},
+        )
+        log = append_receipt(REPO_ROOT, rec)
+        print(f"receipt: {log.relative_to(REPO_ROOT)}", flush=True)
 
 
 if __name__ == "__main__":

@@ -28,5 +28,5 @@ Calendar **`## YYYY-MM`** blocks in **`strategy-expert-*-thread.md`** (inside th
 
 ## Next actions
 
-1. When adding new work, append a **`## YYYY-MM-DD`** block (or an episodic `##` section) at the bottom of [`chapters/2026-04/days.md`](chapters/2026-04/days.md) when ready — target **~1000 words** of consolidated analysis per **weave** where applicable (see [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *Entry model*); bump **Last substantive entry** here.
+1. When adding new work, append a **`## YYYY-MM-DD`** block (or an episodic `##` section) at the bottom of [`chapters/2026-04/days.md`](chapters/2026-04/days.md) **if** that helps your continuity—thin or pointer-only is fine; primary work may live in expert pages + inbox (see [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *Daily length and prose*). Bump **Last substantive entry** here when you touch the notebook spine.
 2. Refresh this file when the active month changes or after notable closes.

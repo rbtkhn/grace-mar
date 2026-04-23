@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schema-registry/strategy-page-proposal.v1.json",
+  "title": "Strategy page proposal (sidecar, v1)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "run_id",
+    "page_id",
+    "operation",
+    "target_thread",
+    "watch_ids",
+    "experts",
+    "thesis",
+    "references",
+    "approval_required"
+  ],
+  "properties": {
+    "run_id": { "type": "string", "minLength": 1 },
+    "page_id": { "type": "string", "minLength": 1 },
+    "operation": {
+      "type": "string",
+      "enum": ["new", "append", "refine"]
+    },
+    "target_thread": { "type": "string", "minLength": 1 },
+    "watch_ids": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "experts": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "thesis": { "type": "string", "minLength": 1 },
+    "references": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "approval_required": { "type": "boolean" }
+  }
+}

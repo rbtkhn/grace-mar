@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schema-registry/run-receipt.v1.json",
+  "title": "Run receipt (strategy lane event, v1)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "timestamp",
+    "command",
+    "run_id",
+    "files_read",
+    "files_touched",
+    "result_status",
+    "warnings",
+    "error"
+  ],
+  "properties": {
+    "timestamp": { "type": "string", "minLength": 1 },
+    "command": { "type": "string", "minLength": 1 },
+    "run_id": { "type": "string", "minLength": 1 },
+    "files_read": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "files_touched": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "result_status": {
+      "type": "string",
+      "enum": ["ok", "failed"]
+    },
+    "warnings": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "error": { "type": ["string", "null"] },
+    "model": { "type": ["string", "null"] },
+    "provider": { "type": ["string", "null"] }
+  }
+}

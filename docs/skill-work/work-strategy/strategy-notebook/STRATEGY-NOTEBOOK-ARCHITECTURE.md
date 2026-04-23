@@ -439,15 +439,17 @@ Paste under `## YYYY-MM-DD` in `days.md` (newest at bottom), **or** create `chap
 - 1–3 bullets testable against STRATEGY §II-A or future review.
 ```
 
-## Daily length and prose (operator target)
+## Daily length and prose (`days.md` — optional hygiene)
 
-- **Daily page target:** **~1000 words** per dated page (all sections of that day combined: Signal through Bets) — **consolidated best analysis**, not a full dump of every source. Prefer judgment, warrants, and what changed; park raw quotes and long extracts in linked briefs or digests.
-- **Compress if over ~1200 words** before committing; **hard ceiling ~1500 words** for routine practice (if you hit it, you are still carrying too much raw material in-page).
+**Operator stance:** `days.md` exists to **support priorities** (dated continuity, what moved, where to look next). The bullets below are **optional** guidance for operators who want a **tight** daily block—not a requirement to hit a word band every session. Primary analysis may live in **`strategy-page`** / expert refined pages + **`raw-input/`**; `days.md` can stay **minimal** or **absent** for a day when that serves you better.
+
+- **When you do compose a dated `days.md` block:** prefer **consolidated** analysis over dumping every source; park raw quotes and long extracts in linked briefs or digests.
+- **If a block grows unwieldy:** compress before commit using the condense mechanism below—or **link out** and stop rather than forcing a word target.
 - **Register:** **Academic prose** — explicit theses, defined terms where needed, qualified claims when evidence is partial; avoid filler and conversational throat-clearing unless you are deliberately archiving tone in a linked artifact.
 
-## Condense-to-target mechanism (fit ~1000 words)
+## Condense-to-target mechanism (optional; fit a readable daily block)
 
-**Goal:** A daily page of **~1000 words** (band **~900–1100**) that keeps **strategic** content and drops **bulk** — by **routing** long work elsewhere, then **tiers A–D** on what stays.
+**Goal (when used):** A **readable** dated `days.md` section that keeps **strategic** content and drops **bulk** — by **routing** long work elsewhere, then **tiers A–D** on what stays. Historical note: this section used a **~1000w** band as a convenience target; that is **not** an obligation—use the steps when tightening helps, ignore when it does not.
 
 **Two paths (pick one per session):**
 
@@ -481,7 +483,7 @@ Paste under `## YYYY-MM-DD` in `days.md` (newest at bottom), **or** create `chap
 
 **One-sentence check:** After condensing, the day’s **operative thesis** fits **one sentence** (strategic read, not headline noise). If not, compress **Signal**, not Judgment’s core claim.
 
-**Agent (`strategy` pass):** Over **~1200 words**, run **A → D** — or **Full** algorithm if DEMO/lens bulk is present. **No new analysis** while condensing — only move, merge, cut, tighten.
+**Agent (`strategy` pass):** When the operator wants a tighter `days.md` block and it is **over ~1200 words**, run **A → D** — or **Full** algorithm if DEMO/lens bulk is present. **No new analysis** while condensing — only move, merge, cut, tighten. If **`days.md` is deprioritized**, skip condense and keep pointers only.
 
 ---
 

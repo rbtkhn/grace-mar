@@ -19,6 +19,9 @@ WORK only; not Record.
 | Validation | From repo root: `python3 scripts/validate_strategy_pages.py` — [validate_strategy_pages.py](../../../../scripts/validate_strategy_pages.py) |
 | Machine **`### Page references`** | [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md#thread-terminology) (machine layer) |
 | Bundled read-only multi-expert snapshots | [compiled-views/README.md](compiled-views/README.md) — **derived**, not SSOT |
+| Trace and receipts (script runs) | [STRATEGY-NOTEBOOK-TRACE-CONTRACT.md](STRATEGY-NOTEBOOK-TRACE-CONTRACT.md) |
+| Page update operations (script / propose) | [STRATEGY-NOTEBOOK-PAGE-UPDATE-CONTRACT.md](STRATEGY-NOTEBOOK-PAGE-UPDATE-CONTRACT.md) |
+| Derived graph (rebuild) | [GRAPH-SCHEMA.md](GRAPH-SCHEMA.md), `build_strategy_notebook_graph.py` |
 
 ## Multi-expert pages
 

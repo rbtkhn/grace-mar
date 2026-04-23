@@ -1,0 +1,84 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schema-registry/strategy-run-state.v1.json",
+  "title": "Strategy run state (work-strategy session envelope, v1)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "run_id",
+    "lane",
+    "intent",
+    "session_type",
+    "target_date",
+    "status",
+    "approval_state",
+    "inputs",
+    "proposed_outputs",
+    "receipt_refs",
+    "warnings",
+    "created_at",
+    "updated_at"
+  ],
+  "properties": {
+    "run_id": { "type": "string", "minLength": 1, "pattern": "^stratrun-" },
+    "lane": { "type": "string", "const": "work-strategy" },
+    "intent": { "type": "string", "minLength": 1 },
+    "session_type": { "type": "string", "minLength": 1 },
+    "target_date": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+      "description": "Calendar date for this run (local strategy day)"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "started",
+        "inputs_resolved",
+        "thesis_selected",
+        "days_only",
+        "page_proposed",
+        "blocked_for_review",
+        "completed",
+        "noop",
+        "failed"
+      ]
+    },
+    "approval_state": {
+      "type": "string",
+      "enum": ["none", "pending", "approved", "rejected"]
+    },
+    "inputs": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["notebook_dir", "inbox_path", "days_md_path", "raw_input_dir", "inbox_exists", "days_md_exists", "raw_input_exists"],
+      "properties": {
+        "notebook_dir": { "type": "string", "minLength": 1 },
+        "inbox_path": { "type": "string", "minLength": 1 },
+        "days_md_path": { "type": "string", "minLength": 1 },
+        "raw_input_dir": { "type": "string", "minLength": 1 },
+        "inbox_exists": { "type": "boolean" },
+        "days_md_exists": { "type": "boolean" },
+        "raw_input_exists": { "type": "boolean" }
+      }
+    },
+    "proposed_outputs": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["day_proposal_path", "page_proposal_path"],
+      "properties": {
+        "day_proposal_path": { "type": ["string", "null"] },
+        "page_proposal_path": { "type": ["string", "null"] }
+      }
+    },
+    "receipt_refs": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "warnings": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "created_at": { "type": "string", "minLength": 1 },
+    "updated_at": { "type": "string", "minLength": 1 }
+  }
+}

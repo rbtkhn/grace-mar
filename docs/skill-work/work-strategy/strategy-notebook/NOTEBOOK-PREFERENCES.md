@@ -2,7 +2,7 @@
 
 **Status:** ACTIVE  
 **Set:** 2026-04 (from multiple-choice questionnaire)  
-**Governed by:** [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md) — this file **narrows** daily practice; it does not replace architecture for repo-wide defaults (e.g. architecture still describes a **~1000w** consolidated **`days.md`** daily target where no override applies; **`strategy-page`** and expert refined pages have **no** word target or ceiling). **`weave` (operator token) is deprecated** — use **end-of-day strategy session** / **EOD notebook compose**; see architecture § *End-of-day strategy session*.  
+**Governed by:** [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md) — this file **narrows** daily practice; it does not replace architecture for repo-wide defaults. **`days.md`** is a **continuity / chronology** file—use it when it **helps operator priorities** (cross-links, what carried, what to revisit); it is **not** a separate product you must optimize for word count. Architecture still documents an **optional** condense habit for tight daily blocks when you want that shape. **`strategy-page`** and expert refined pages have **no** word target or ceiling. **`weave` (operator token) is deprecated** — use **end-of-day strategy session** / **EOD notebook compose**; see architecture § *End-of-day strategy session*.  
 **Skill contract:** Together with the architecture doc and [daily-strategy-inbox.md](daily-strategy-inbox.md), this file is **part of** [`skill-strategy`](../../../../.cursor/skills/skill-strategy/SKILL.md) — operator defaults the skill **must** apply on a **`strategy`** pass; not optional flavor beside the skill.
 
 ---
@@ -12,6 +12,7 @@
 | Area | Preference |
 |------|------------|
 | **Canonical model** | Same five-part read as [README](README.md) and [STRATEGY-NOTEBOOK-ARCHITECTURE.md § Current canonical model](STRATEGY-NOTEBOOK-ARCHITECTURE.md#current-canonical-model): **experts** = who; **watches** = what; **days** = when; **minds** = interpretive lens; **pages** = primary analytical unit. This file **narrows** practice on that ontology, it does not replace it. |
+| **`days.md` stance** | **Support surface** for continuity—append or tighten when it **facilitates priorities**; skip or keep thin when expert **`strategy-page`** / refined pages + inbox already hold the work. **No** default obligation to match a daily word band. |
 | **Daily length** | **Variable by day** — no fixed default word budget. |
 | **Minimum `days.md` sections** | **`### Chronicle` · `### Reflection` · `### References`** only. |
 | **EOD compose prose register** | **Popular-academic** by default — reader-facing **Chronicle / Reflection** in `days.md` after the **EOD strategy session**; avoid **internal repo nicknames**, **operator-only path tokens**, and **backend shorthand** in the **notebook spine** (spell out ideas or use public equivalents). Operator docs and inbox may keep technical labels. Aligns with [skill-strategy Session hygiene](../../../../.cursor/skills/skill-strategy/SKILL.md) § *Session hygiene*. |
@@ -164,6 +165,7 @@ Operator notebook prefs: variable daily length; minimum Chronicle / Reflection /
 |------|--------|
 | 2026-04-21 | **`strategy-page` / expert refined pages:** **No** word-count band or ceiling; align architecture, templates, verifier, assemblers, `skill-strategy`. |
 | 2026-04-22 | **Page length:** Removed residual **500–1000** word band language for **`strategy-page`** / EOD stubs (prefs, architecture, EOD-MCQ, `skill-strategy`). |
+| 2026-04-22 | **`days.md`:** Reframed as **optional** continuity that serves operator priorities; softened architecture daily-length / condense / STATUS next-actions language; `skill-strategy` default moves. |
 | 2026-04-18 | **EOD strategy session:** Deprecate operator **`weave`** token for notebook composition; default **once-per-day** **`days.md` + `strategy-page`** from inbox + **`raw-input/`**; **`weave` → EOD compose** across summary, architecture pointer, `skill-strategy`, `dream`, DEFAULT-PATH, rules. |
 | 2026-04-18 | **Pages replace knots:** Summary table — **EOD page-shape menu**, **Page length**, inbox vs notebook, expert corpus, compose skeleton, short paste block; word band **500–1000** for **`strategy-page`**; architecture § *Page design and notebook-use jobs* (was page-shape / knot design). |
 | 2026-04-14 | **`days.md` date semantics (anti-split):** Summary table row **`days.md` heading dates**; **Relation to assistants** bullet + **Short paste block** line; pointers to [STRATEGY-NOTEBOOK-ARCHITECTURE.md § `days.md` date keys](STRATEGY-NOTEBOOK-ARCHITECTURE.md#days-md-date-semantics) and [.cursor/rules/strategy-notebook-days-date-semantics.mdc](../../../../.cursor/rules/strategy-notebook-days-date-semantics.mdc). |
