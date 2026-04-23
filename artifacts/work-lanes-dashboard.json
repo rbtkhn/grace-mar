@@ -1,11 +1,11 @@
 {
   "schemaVersion": "1.0.0-work-lanes-dashboard",
-  "generatedAt": "2026-04-20T18:55:45.354991+00:00",
+  "generatedAt": "2026-04-23T02:21:39.056211+00:00",
   "recordMergeAuthority": "RECURSION-GATE and companion approval only \u2014 never implied by lane metrics.",
   "lanes": {
     "work_strategy": {
       "schemaVersion": "2.0.0-work-strategy",
-      "generatedAt": "2026-04-20T17:48:46.782751+00:00",
+      "generatedAt": "2026-04-23T02:21:22.049008+00:00",
       "lane": "work-strategy",
       "metrics": {
         "structure": {
@@ -15,12 +15,13 @@
           "promotion_policy_present": true
         },
         "judgment_quality": {
-          "notebook_entries_total": 12,
+          "notebook_entries_total": 13,
           "inbox_pending_lines": 0,
           "promotion_date_mentions": 22,
           "months": {
             "2026-01": {
               "dated_entries": 0,
+              "legacy_chapter_stubs": 0,
               "knot_pages": 0,
               "avg_sections_per_entry": 4.0,
               "avg_links_per_entry": 3.0,
@@ -28,6 +29,7 @@
             },
             "2026-02": {
               "dated_entries": 0,
+              "legacy_chapter_stubs": 0,
               "knot_pages": 0,
               "avg_sections_per_entry": 4.0,
               "avg_links_per_entry": 3.0,
@@ -35,23 +37,25 @@
             },
             "2026-03": {
               "dated_entries": 0,
+              "legacy_chapter_stubs": 0,
               "knot_pages": 0,
               "avg_sections_per_entry": 4.0,
               "avg_links_per_entry": 3.0,
               "open_carry_forward": 0
             },
             "2026-04": {
-              "dated_entries": 12,
+              "dated_entries": 13,
+              "legacy_chapter_stubs": 0,
               "knot_pages": 0,
-              "avg_sections_per_entry": 3.62,
-              "avg_links_per_entry": 15.3,
-              "open_carry_forward": 5
+              "avg_sections_per_entry": 3.64,
+              "avg_links_per_entry": 15.2,
+              "open_carry_forward": 6
             }
           }
         }
       },
       "interpretation": {
-        "avg_sections_per_entry": "4.0 = all tracked sections (Signal/Judgment/Links/Open) present; <3.0 = sections skipped regularly",
+        "avg_sections_per_entry": "4.0 = Chronicle/Reflection/References/Foresight (or legacy headings) present; <3.0 = sections skipped regularly",
         "avg_links_per_entry": ">2 healthy; <1 = judgment may be under-cited",
         "open_carry_forward": "High = active threads; very high relative to entries = unresolved debt",
         "inbox_pending_lines": "0 = clean; >30 = overdue weave; >50 = prune candidate",
@@ -61,7 +65,21 @@
         "Recommendation acceptance/rejection rates: need operator workflow.",
         "Cross-lane references: manual until automated extract.",
         "judgment_quality metrics are computed from on-disk notebook state."
-      ]
+      ],
+      "workflowMetricContract": {
+        "schemaVersion": "1.0.0",
+        "lane": "work-strategy",
+        "workflowCount": 15,
+        "acceptedCount": 0,
+        "revisionCount": 0,
+        "staleCount": 0,
+        "medianContextTokens": null,
+        "compressionRate": null,
+        "retrievalMissRate": null,
+        "medianReviewCycles": null,
+        "partialMetrics": true,
+        "notes": ""
+      }
     },
     "work_dev": {
       "schemaVersion": "1.0.0-work-dev",

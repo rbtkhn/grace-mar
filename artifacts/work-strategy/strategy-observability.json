@@ -1,6 +1,6 @@
 {
   "schemaVersion": "2.0.0-work-strategy",
-  "generatedAt": "2026-04-20T21:16:34.609287+00:00",
+  "generatedAt": "2026-04-23T02:21:22.049008+00:00",
   "lane": "work-strategy",
   "metrics": {
     "structure": {
@@ -16,6 +16,7 @@
       "months": {
         "2026-01": {
           "dated_entries": 0,
+          "legacy_chapter_stubs": 0,
           "knot_pages": 0,
           "avg_sections_per_entry": 4.0,
           "avg_links_per_entry": 3.0,
@@ -23,6 +24,7 @@
         },
         "2026-02": {
           "dated_entries": 0,
+          "legacy_chapter_stubs": 0,
           "knot_pages": 0,
           "avg_sections_per_entry": 4.0,
           "avg_links_per_entry": 3.0,
@@ -30,6 +32,7 @@
         },
         "2026-03": {
           "dated_entries": 0,
+          "legacy_chapter_stubs": 0,
           "knot_pages": 0,
           "avg_sections_per_entry": 4.0,
           "avg_links_per_entry": 3.0,
@@ -37,6 +40,7 @@
         },
         "2026-04": {
           "dated_entries": 13,
+          "legacy_chapter_stubs": 0,
           "knot_pages": 0,
           "avg_sections_per_entry": 3.64,
           "avg_links_per_entry": 15.2,
@@ -46,7 +50,7 @@
     }
   },
   "interpretation": {
-    "avg_sections_per_entry": "4.0 = all tracked sections (Signal/Judgment/Links/Open) present; <3.0 = sections skipped regularly",
+    "avg_sections_per_entry": "4.0 = Chronicle/Reflection/References/Foresight (or legacy headings) present; <3.0 = sections skipped regularly",
     "avg_links_per_entry": ">2 healthy; <1 = judgment may be under-cited",
     "open_carry_forward": "High = active threads; very high relative to entries = unresolved debt",
     "inbox_pending_lines": "0 = clean; >30 = overdue weave; >50 = prune candidate",

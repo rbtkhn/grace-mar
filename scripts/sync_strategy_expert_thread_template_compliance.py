@@ -57,7 +57,7 @@ def canonical_journal_intro(expert_id: str, *, month_ym: str | None = None) -> s
         "## Journal layer — Narrative (operator)",
         "",
         "_Write here in full sentences. Dated arcs are welcome (e.g. **2026-04-12 → 04-15**). "
-        "Cover: what this voice did this week, how it **intersects** named **knots**, "
+        "Cover: what this voice did this week, how it **intersects** named **strategy-pages** "
         "convergence/tension with other **`thread:`** experts, and **Open** pins. "
         "The **journal layer** is **not** overwritten by the **`thread`** script._",
         "",
@@ -148,7 +148,7 @@ def default_source_line(expert_id: str) -> str:
     return (
         f"**Source:** Human **narrative journal** (below) + [`strategy-expert-{expert_id}"
         f"-transcript.md`](strategy-expert-{expert_id}-transcript.md) (verbatim ingests) + "
-        "relevant **knot** files (where this expert's material was used)."
+        "relevant **`strategy-page`** work (where this expert's material was used)."
     )
 
 

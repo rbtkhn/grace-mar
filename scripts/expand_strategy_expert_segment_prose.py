@@ -140,7 +140,7 @@ def template_pool(ctx: dict[str, str]) -> list[str]:
             f"as centered on {role}. That one-line role is not a substitute for transcript truth; it is "
             f"a **routing label** so batch-analysis passes know which mechanism vocabulary to expect "
             f"when dated material lands. When this month is still partial or ingest-light, the prose "
-            f"layer still records **where verification should attach** (knot cites, transcript rows, "
+            f"layer still records **where verification should attach** (page cites, transcript rows, "
             f"or hub URLs) without pretending those pins are already closed."
         ),
         (
@@ -156,7 +156,7 @@ def template_pool(ctx: dict[str, str]) -> list[str]:
             f"is human prose; the **machine layer** is script-maintained extraction. For {mid}, the point of a long prose "
             f"block is to prevent the month from collapsing into a **compressed ledger** that *looks* "
             f"like analysis but is really a hook list. Hooks are valuable; they are also incomplete "
-            f"without the surrounding sentences that say **why** the hook matters for knots, for "
+            f"without the surrounding sentences that say **why** the hook matters for pages, for "
             f"open pins, or for the next verify pass."
         ),
         (
@@ -179,7 +179,7 @@ def template_pool(ctx: dict[str, str]) -> list[str]:
             f"The `{eid}` lane’s role ({role}) also implies **failure-mode awareness**: where this "
             f"voice tends to overread incentives, flatten complexity, or overweight a single domain. "
             f"This segment is a place to name that risk in calm language when the month’s material "
-            f"invites it, especially before weave work pulls the voice into a knot as primary "
+            f"invites it, especially before weave work pulls the voice into a page as primary "
             f"commentator. Naming failure mode is WORK hygiene; it is not an attack on the voice."
         ),
         (
@@ -190,10 +190,10 @@ def template_pool(ctx: dict[str, str]) -> list[str]:
             f"subject to update when new evidence changes the shape of disagreement."
         ),
         (
-            f"If knots named this expert during {mid}, the narrative should eventually say **which "
-            f"knot** and **what job** the voice did (pressure, validate, narrate) in plain English. "
-            f"If knot index lines are still empty, say that plainly too—absence matters for pipeline "
-            f"honesty. The machine block below the marker will populate knot references when the "
+            f"If strategy-pages named this expert during {mid}, the narrative should eventually say **which "
+            f"page** and **what job** the voice did (pressure, validate, narrate) in plain English. "
+            f"If index rows are still empty, say that plainly too—absence matters for pipeline "
+            f"honesty. The machine block below the marker will populate page references when the "
             f"index points here; the journal layer should still record what the operator noticed at human "
             f"speed before automation catches up."
         ),

@@ -15,7 +15,7 @@ If scope is ambiguous, ask once or default to **LIB-0149** when the hyphenated f
 
 ## `strategy-notebook`
 
-When the operator writes **`strategy-notebook`** (hyphenated) or clearly means **the SELF-LIBRARY strategy notebook book**, interpret that as **LIB-0153**: **`docs/skill-work/work-strategy/strategy-notebook/`**, indexed from **`users/grace-mar/SELF-LIBRARY/strategy-notebook`** (symlink). Primary artifacts: **`README.md`**, **`STRATEGY-NOTEBOOK-ARCHITECTURE.md`**, **`STATUS.md`**, **`chapters/YYYY-MM/knots/`** (pages) + **`days.md`** (continuity) + **`meta.md`** (month scaffold).
+When the operator writes **`strategy-notebook`** (hyphenated) or clearly means **the SELF-LIBRARY strategy notebook book**, interpret that as **LIB-0153**: **`docs/skill-work/work-strategy/strategy-notebook/`**, indexed from **`users/grace-mar/SELF-LIBRARY/strategy-notebook`** (symlink). Primary artifacts: **`README.md`**, **`STRATEGY-NOTEBOOK-ARCHITECTURE.md`**, **`STATUS.md`**, **`chapters/YYYY-MM/days.md`** (continuity) + **`meta.md`** (month scaffold) + expert **`thread.md`** files (**`strategy-page`** units).
 
 **Do not** treat **`strategy-notebook`** as **`STRATEGY.md`** (work-strategy milestone / watches ledger — different file, optional promotion target from the notebook). Do not substitute the whole **`work-strategy/`** lane for the notebook unless the operator names that scope.
 

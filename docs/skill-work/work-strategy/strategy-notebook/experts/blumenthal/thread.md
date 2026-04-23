@@ -2,7 +2,7 @@
 
 WORK only; not Record.
 
-**Source:** Distilled from [`strategy-expert-blumenthal-transcript.md`](strategy-expert-blumenthal-transcript.md) (what the expert said recently) and relevant knots (where that material was used in strategy work).
+**Source:** Distilled from [`strategy-expert-blumenthal-transcript.md`](strategy-expert-blumenthal-transcript.md) (what the expert said recently) and relevant pages (where that material was used in strategy work).
 **Process:** `python3 scripts/strategy_thread.py` triages inbox → transcript, then fills **only** the **machine layer** between the **strategy-expert-thread** HTML start and end comments. Operator / assistant maintains the **journal layer** above the start marker in **readable prose** (optional **ledger** after the end marker).
 **Updated:** Narrative — when you distill; **machine layer** — when you run **`thread`**.
 **Companion files:** [`strategy-expert-blumenthal.md`](strategy-expert-blumenthal.md) (profile) and [`strategy-expert-blumenthal-transcript.md`](strategy-expert-blumenthal-transcript.md) (7-day verbatim).
@@ -10,7 +10,7 @@ WORK only; not Record.
 ---
 ## Journal layer — Narrative (operator)
 
-_Write here in full sentences. Dated arcs are welcome (e.g. **2026-04-12 → 04-15**). Cover: what this voice did this week, how it **intersects** named **knots**, convergence/tension with other **`thread:`** experts, and **Open** pins. The **journal layer** is **not** overwritten by the **`thread`** script._
+_Write here in full sentences. Dated arcs are welcome (e.g. **2026-04-12 → 04-15**). Cover: what this voice did this week, how it **intersects** named **pages**, convergence/tension with other **`thread:`** experts, and **Open** pins. The **journal layer** is **not** overwritten by the **`thread`** script._
 
 **Layout:** Stay on **one** `strategy-expert-blumenthal-thread.md` file. Within the **journal layer**, each **`## YYYY-MM`** heading is a **month segment**. For **2026:** **Segment 1** = January (`## 2026-01`), **Segment 2** = February (`## 2026-02`), **Segment 3** = March (`## 2026-03`), **Segment 4** = April (`## 2026-04`, ongoing). The **machine layer** (script-maintained) is **only** the fenced block between the **strategy-expert-thread** HTML start and end comments — do not call that "Segment 2" in the month sense.
 
@@ -30,13 +30,13 @@ _(No narrative distillation yet — add prose above the markers, not inside them
 January has **no dated** notebook ingest for Blumenthal in this Q1 snapshot; the lane is **Grayzone / elite-access / Middle East policy critique** — distinct from **`mate`** investigative ownership focus — per roster.
 
 
-The `blumenthal` lane’s role (Grayzone / antiwar pole: U.S. Middle East policy and elite-access critique; Lebanon/Gulf narrative framing; media-layer “who engineered what” — access and backchannel claims stay hypothesis-grade until primary tape or on-record source) also implies **failure-mode awareness**: where this voice tends to overread incentives, flatten complexity, or overweight a single domain. This segment is a place to name that risk in calm language when the month’s material invites it, especially before weave work pulls the voice into a knot as primary commentator. Naming failure mode is WORK hygiene; it is not an attack on the voice.
+The `blumenthal` lane’s role (Grayzone / antiwar pole: U.S. Middle East policy and elite-access critique; Lebanon/Gulf narrative framing; media-layer “who engineered what” — access and backchannel claims stay hypothesis-grade until primary tape or on-record source) also implies **failure-mode awareness**: where this voice tends to overread incentives, flatten complexity, or overweight a single domain. This segment is a place to name that risk in calm language when the month’s material invites it, especially before weave work pulls the voice into a page as primary commentator. Naming failure mode is WORK hygiene; it is not an attack on the voice.
 
-The 2026-01 segment for the Max Blumenthal (@MaxBlumenthal) lane (`blumenthal`) exists so the notebook keeps a **prose spine** alongside any strength-tagged bullets. The roster describes this voice as centered on Grayzone / antiwar pole: U.S. Middle East policy and elite-access critique; Lebanon/Gulf narrative framing; media-layer “who engineered what” — access and backchannel claims stay hypothesis-grade until primary tape or on-record source. That one-line role is not a substitute for transcript truth; it is a **routing label** so batch-analysis passes know which mechanism vocabulary to expect when dated material lands. When this month is still partial or ingest-light, the prose layer still records **where verification should attach** (knot cites, transcript rows, or hub URLs) without pretending those pins are already closed.
+The 2026-01 segment for the Max Blumenthal (@MaxBlumenthal) lane (`blumenthal`) exists so the notebook keeps a **prose spine** alongside any strength-tagged bullets. The roster describes this voice as centered on Grayzone / antiwar pole: U.S. Middle East policy and elite-access critique; Lebanon/Gulf narrative framing; media-layer “who engineered what” — access and backchannel claims stay hypothesis-grade until primary tape or on-record source. That one-line role is not a substitute for transcript truth; it is a **routing label** so batch-analysis passes know which mechanism vocabulary to expect when dated material lands. When this month is still partial or ingest-light, the prose layer still records **where verification should attach** (page cites, transcript rows, or hub URLs) without pretending those pins are already closed.
 
 Typical pairings on file for `blumenthal` emphasize contrast surfaces: × mate, × parsi, × mercouris, × marandi, × freeman. In WORK, those pairings are **operational**: they tell the operator which other `thread:` lanes to open when a claim needs a second fingerprint, not a second opinion dressed as neutrality. This 2026-01 segment should be read as **mesh navigation**—which lanes to pull into the same batch pass—rather than as a claim that those voices agreed or disagreed on any particular day unless a dated bullet below says so explicitly.
 
-If knots named this expert during 2026-01, the narrative should eventually say **which knot** and **what job** the voice did (pressure, validate, narrate) in plain English. If knot index lines are still empty, say that plainly too—absence matters for pipeline honesty. The machine block below the marker will populate knot references when the index points here; Segment 1 should still record what the operator noticed at human speed before automation catches up.
+If pages named this expert during 2026-01, the narrative should eventually say **which page** and **what job** the voice did (pressure, validate, narrate) in plain English. If legacy index lines are still empty, say that plainly too—absence matters for pipeline honesty. The machine block below the marker will populate page references when the index points here; Segment 1 should still record what the operator noticed at human speed before automation catches up.
 
 Open pins belong in prose, not only as bullets. For this `blumenthal` month segment, explicitly reserve space for **what remains unresolved**: which claims await transcript confirmation, which geopolitical sub-claims depend on translation or primary document access, and which institutional facts are stable enough to reuse in weave scaffolding. That habit keeps later strategy passes from mistaking silence for certainty.
 
@@ -59,9 +59,9 @@ Cross-lane convergence and tension are notebook-native concepts. For 2026-02, re
 
 When historical expert context artifacts exist for `blumenthal` (per-month files or rollups under `artifacts/skill-work/work-strategy/historical-expert-context/`), this 2026-02 narrative should be read as **adjacent** to those summaries: the artifact compresses stance for handoff; the thread segment preserves operator-facing **arc and intent**. If the two ever diverge, treat dated ingests and explicit ledger lines as the stricter ground, and use prose to explain tension rather than smoothing it away.
 
-Segment discipline here follows the strategy-notebook contract: Segment 1 is human journal prose; Segment 2 is machine extraction. For 2026-02, the point of a long prose block is to prevent the month from collapsing into a **compressed ledger** that *looks* like analysis but is really a hook list. Hooks are valuable; they are also incomplete without the surrounding sentences that say **why** the hook matters for knots, for open pins, or for the next verify pass.
+Segment discipline here follows the strategy-notebook contract: Segment 1 is human journal prose; Segment 2 is machine extraction. For 2026-02, the point of a long prose block is to prevent the month from collapsing into a **compressed ledger** that *looks* like analysis but is really a hook list. Hooks are valuable; they are also incomplete without the surrounding sentences that say **why** the hook matters for pages, for open pins, or for the next verify pass.
 
-If knots named this expert during 2026-02, the narrative should eventually say **which knot** and **what job** the voice did (pressure, validate, narrate) in plain English. If knot index lines are still empty, say that plainly too—absence matters for pipeline honesty. The machine block below the marker will populate knot references when the index points here; Segment 1 should still record what the operator noticed at human speed before automation catches up.
+If pages named this expert during 2026-02, the narrative should eventually say **which page** and **what job** the voice did (pressure, validate, narrate) in plain English. If legacy index lines are still empty, say that plainly too—absence matters for pipeline honesty. The machine block below the marker will populate page references when the index points here; Segment 1 should still record what the operator noticed at human speed before automation catches up.
 
 - [strength: low] **Support hub:** Patreon — not a dated February post list.  
   [patreon.com/grayzone](https://www.patreon.com/grayzone)
@@ -74,13 +74,13 @@ Cross-lane convergence and tension are notebook-native concepts. For 2026-03, re
 
 Verification stance for Max Blumenthal (@MaxBlumenthal) in 2026-03 should stay tier-honest: web-index rows, newsletter dates, and YouTube upload metadata differ in **claim strength**. The notebook uses `[strength: low|medium|high]` precisely because not every cite supports the same inference. Prose here can narrate **what kind of mistake** would happen if a low-strength hook were promoted to a headline judgment—without turning that caution into a substitute for fresh primary checks when the operator needs cite-grade output.
 
-The 2026-03 segment for the Max Blumenthal (@MaxBlumenthal) lane (`blumenthal`) exists so the notebook keeps a **prose spine** alongside any strength-tagged bullets. The roster describes this voice as centered on Grayzone / antiwar pole: U.S. Middle East policy and elite-access critique; Lebanon/Gulf narrative framing; media-layer “who engineered what” — access and backchannel claims stay hypothesis-grade until primary tape or on-record source. That one-line role is not a substitute for transcript truth; it is a **routing label** so batch-analysis passes know which mechanism vocabulary to expect when dated material lands. When this month is still partial or ingest-light, the prose layer still records **where verification should attach** (knot cites, transcript rows, or hub URLs) without pretending those pins are already closed.
+The 2026-03 segment for the Max Blumenthal (@MaxBlumenthal) lane (`blumenthal`) exists so the notebook keeps a **prose spine** alongside any strength-tagged bullets. The roster describes this voice as centered on Grayzone / antiwar pole: U.S. Middle East policy and elite-access critique; Lebanon/Gulf narrative framing; media-layer “who engineered what” — access and backchannel claims stay hypothesis-grade until primary tape or on-record source. That one-line role is not a substitute for transcript truth; it is a **routing label** so batch-analysis passes know which mechanism vocabulary to expect when dated material lands. When this month is still partial or ingest-light, the prose layer still records **where verification should attach** (page cites, transcript rows, or hub URLs) without pretending those pins are already closed.
 
-If knots named this expert during 2026-03, the narrative should eventually say **which knot** and **what job** the voice did (pressure, validate, narrate) in plain English. If knot index lines are still empty, say that plainly too—absence matters for pipeline honesty. The machine block below the marker will populate knot references when the index points here; Segment 1 should still record what the operator noticed at human speed before automation catches up.
+If pages named this expert during 2026-03, the narrative should eventually say **which page** and **what job** the voice did (pressure, validate, narrate) in plain English. If legacy index lines are still empty, say that plainly too—absence matters for pipeline honesty. The machine block below the marker will populate page references when the index points here; Segment 1 should still record what the operator noticed at human speed before automation catches up.
 
 Typical pairings on file for `blumenthal` emphasize contrast surfaces: × mate, × parsi, × mercouris, × marandi, × freeman. In WORK, those pairings are **operational**: they tell the operator which other `thread:` lanes to open when a claim needs a second fingerprint, not a second opinion dressed as neutrality. This 2026-03 segment should be read as **mesh navigation**—which lanes to pull into the same batch pass—rather than as a claim that those voices agreed or disagreed on any particular day unless a dated bullet below says so explicitly.
 
-The `blumenthal` lane’s role (Grayzone / antiwar pole: U.S. Middle East policy and elite-access critique; Lebanon/Gulf narrative framing; media-layer “who engineered what” — access and backchannel claims stay hypothesis-grade until primary tape or on-record source) also implies **failure-mode awareness**: where this voice tends to overread incentives, flatten complexity, or overweight a single domain. This segment is a place to name that risk in calm language when the month’s material invites it, especially before weave work pulls the voice into a knot as primary commentator. Naming failure mode is WORK hygiene; it is not an attack on the voice.
+The `blumenthal` lane’s role (Grayzone / antiwar pole: U.S. Middle East policy and elite-access critique; Lebanon/Gulf narrative framing; media-layer “who engineered what” — access and backchannel claims stay hypothesis-grade until primary tape or on-record source) also implies **failure-mode awareness**: where this voice tends to overread incentives, flatten complexity, or overweight a single domain. This segment is a place to name that risk in calm language when the month’s material invites it, especially before weave work pulls the voice into a page as primary commentator. Naming failure mode is WORK hygiene; it is not an attack on the voice.
 
 - [strength: low] **Repeat anchor:** Grayzone author page — scope unchanged.
 
@@ -121,22 +121,22 @@ The `blumenthal` lane’s role (Grayzone / antiwar pole: U.S. Middle East policy
 _Partial month — no April machine line for Blumenthal in-repo; **Grayzone / elite-access** lane — hub anchors only._
 
 
-Segment discipline here follows the strategy-notebook contract: Segment 1 is human journal prose; Segment 2 is machine extraction. For 2026-04, the point of a long prose block is to prevent the month from collapsing into a **compressed ledger** that *looks* like analysis but is really a hook list. Hooks are valuable; they are also incomplete without the surrounding sentences that say **why** the hook matters for knots, for open pins, or for the next verify pass.
+Segment discipline here follows the strategy-notebook contract: Segment 1 is human journal prose; Segment 2 is machine extraction. For 2026-04, the point of a long prose block is to prevent the month from collapsing into a **compressed ledger** that *looks* like analysis but is really a hook list. Hooks are valuable; they are also incomplete without the surrounding sentences that say **why** the hook matters for pages, for open pins, or for the next verify pass.
 
-The 2026-04 segment for the Max Blumenthal (@MaxBlumenthal) lane (`blumenthal`) exists so the notebook keeps a **prose spine** alongside any strength-tagged bullets. The roster describes this voice as centered on Grayzone / antiwar pole: U.S. Middle East policy and elite-access critique; Lebanon/Gulf narrative framing; media-layer “who engineered what” — access and backchannel claims stay hypothesis-grade until primary tape or on-record source. That one-line role is not a substitute for transcript truth; it is a **routing label** so batch-analysis passes know which mechanism vocabulary to expect when dated material lands. When this month is still partial or ingest-light, the prose layer still records **where verification should attach** (knot cites, transcript rows, or hub URLs) without pretending those pins are already closed.
+The 2026-04 segment for the Max Blumenthal (@MaxBlumenthal) lane (`blumenthal`) exists so the notebook keeps a **prose spine** alongside any strength-tagged bullets. The roster describes this voice as centered on Grayzone / antiwar pole: U.S. Middle East policy and elite-access critique; Lebanon/Gulf narrative framing; media-layer “who engineered what” — access and backchannel claims stay hypothesis-grade until primary tape or on-record source. That one-line role is not a substitute for transcript truth; it is a **routing label** so batch-analysis passes know which mechanism vocabulary to expect when dated material lands. When this month is still partial or ingest-light, the prose layer still records **where verification should attach** (page cites, transcript rows, or hub URLs) without pretending those pins are already closed.
 
 When historical expert context artifacts exist for `blumenthal` (per-month files or rollups under `artifacts/skill-work/work-strategy/historical-expert-context/`), this 2026-04 narrative should be read as **adjacent** to those summaries: the artifact compresses stance for handoff; the thread segment preserves operator-facing **arc and intent**. If the two ever diverge, treat dated ingests and explicit ledger lines as the stricter ground, and use prose to explain tension rather than smoothing it away.
 
 Verification stance for Max Blumenthal (@MaxBlumenthal) in 2026-04 should stay tier-honest: web-index rows, newsletter dates, and YouTube upload metadata differ in **claim strength**. The notebook uses `[strength: low|medium|high]` precisely because not every cite supports the same inference. Prose here can narrate **what kind of mistake** would happen if a low-strength hook were promoted to a headline judgment—without turning that caution into a substitute for fresh primary checks when the operator needs cite-grade output.
 
-If knots named this expert during 2026-04, the narrative should eventually say **which knot** and **what job** the voice did (pressure, validate, narrate) in plain English. If knot index lines are still empty, say that plainly too—absence matters for pipeline honesty. The machine block below the marker will populate knot references when the index points here; Segment 1 should still record what the operator noticed at human speed before automation catches up.
+If pages named this expert during 2026-04, the narrative should eventually say **which page** and **what job** the voice did (pressure, validate, narrate) in plain English. If legacy index lines are still empty, say that plainly too—absence matters for pipeline honesty. The machine block below the marker will populate page references when the index points here; Segment 1 should still record what the operator noticed at human speed before automation catches up.
 
 Open pins belong in prose, not only as bullets. For this `blumenthal` month segment, explicitly reserve space for **what remains unresolved**: which claims await transcript confirmation, which geopolitical sub-claims depend on translation or primary document access, and which institutional facts are stable enough to reuse in weave scaffolding. That habit keeps later strategy passes from mistaking silence for certainty.
 
 - [strength: low] **Identity anchor:** [Grayzone — Blumenthal](https://thegrayzone.com/author/blumenthal/) · [X @MaxBlumenthal](https://x.com/MaxBlumenthal) — not a dated April appearance list.
 - [strength: low] **Note:** Distinct from **mate** investigative ownership focus — roster seam.
 
-Canonical knot paths and raw ingest lines live in **Segment 2** below (regenerated each **`thread`** run).
+Canonical page paths and raw ingest lines live in **Segment 2** below (regenerated each **`thread`** run).
 
 ---
 <!-- strategy-page:start id="marandi-blumenthal-jf-primary" date="2026-04-16" watch="" -->
@@ -153,7 +153,7 @@ WORK only; not Record.
 | Field | Value |
 |--------|--------|
 | **Date** | 2026-04-16 |
-| **knot_label** (machine slug) | `marandi-blumenthal-jf-primary` — matches basename and [`knot-index.yaml`](../../../knot-index.yaml) |
+| **page_id** (machine slug) | `marandi-blumenthal-jf-primary` — matches basename and the legacy index file [`knot-index.yaml`](../../../knot-index.yaml) |
 | **Day block** | [`days.md` § 2026-04-16](../days.md#2026-04-16) |
 | **Primary expert (`thread:`)** | `marandi` — **Chronicle / Reflection** follow **Iranian English process + red-line register** first. |
 
@@ -163,7 +163,7 @@ WORK only; not Record.
 
 ### Lineage
 
-- **Weave option C** (strategy session): Marandi-primary; Blumenthal = domestic/media amplifier; **Pape** = **validate fork** only → pointer to **same-day** Pape × Janssen knot (page id `pape-janssen-escalation-blockade`), **not** merged analysis here.
+- **Weave option C** (strategy session): Marandi-primary; Blumenthal = domestic/media amplifier; **Pape** = **validate fork** only → pointer to **same-day** Pape × Janssen page (page id `pape-janssen-escalation-blockade`), **not** merged analysis here.
 - **Inbox:** [`daily-strategy-inbox.md`](../../../daily-strategy-inbox.md) **`## 2026-04-16`** — **`- BP |`** Marandi row; **Judging Freedom — Max Blumenthal — 2026-04-16** (operator session; paste to inbox when ready).
 - **Expert threads:** `thread:marandi` · `thread:blumenthal`
 - **Sister:** 04-13 Marandi × Ritter × Mercouris scaffold (page id `marandi-ritter-mercouris-hormuz-scaffold`)
@@ -184,7 +184,7 @@ WORK only; not Record.
 
 **Primary spine:** **Tehran register** leads — **what the Iranian side was optimizing for** in **public diplomacy** (non-rejectionist **presentation**, **authority** to negotiate, **Hormuz** **leverage**) versus **military** and **blockade** **clock**. **Blumenthal** **colors** **why** **Washington** **cannot** **hold** a **stable negotiation story** (**humiliation**, **faction**, **media** **calls** **targeting** **diplomats**) **without** becoming the **same** claim as **Marandi’s** **in-room** **authority** **read**.
 
-**Pape (fork):** **Ratchet / checkpoints / third-player spoiler** **validate** whether **short pauses** **re-price** **next escalation** — see **D** knot; **C** **does not** **answer** **“exitless ratchet?”** **as** **primary** **thesis**.
+**Pape (fork):** **Ratchet / checkpoints / third-player spoiler** **validate** whether **short pauses** **re-price** **next escalation** — see **D** page; **C** **does not** **answer** **“exitless ratchet?”** **as** **primary** **thesis**.
 
 **Lattice:** **Ritter** / **Davis** **ORBAT**, **Mercouris** **institutional** — 04-13 (page id `marandi-ritter-mercouris-hormuz-scaffold`) / 04-14 Ritter (page id `ritter-blockade-hormuz-weave`); **do not** **merge** **registers**.
 
@@ -194,7 +194,7 @@ WORK only; not Record.
 
 ### References
 
-- **Weave D (same day, separate knot):** `pape-janssen-escalation-blockade`
+- **Weave D (same day, separate page):** `pape-janssen-escalation-blockade`
 - **Scaffold:** `marandi-ritter-mercouris-hormuz-scaffold`
 - **Threads:** [`strategy-expert-marandi-thread.md`](../../../strategy-expert-marandi-thread.md) · [`strategy-expert-blumenthal-thread.md`](../../../strategy-expert-blumenthal-thread.md)
 - **Inbox:** [`daily-strategy-inbox.md`](../../../daily-strategy-inbox.md) **`## 2026-04-16`**
@@ -209,7 +209,7 @@ WORK only; not Record.
 
 ---
 
-### Index row (YAML — `knot-index.yaml`)
+### Index row (optional YAML — `knot-index.yaml`)
 
 ```yaml
   - page_id: `marandi-blumenthal-jf-primary` (legacy path removed)
@@ -252,7 +252,7 @@ Pape stacks four public claims in one appearance:
 
 - **Pape × Davis:** **Davis** tests **ultimatum vs negotiation**, **resumption clock**, **U.S.-side macro hurt** if talks read as final offer (`thread:davis`). Pape tests **commodity-shock staging**, **third-player killing talks**, **Trump exit narrative**. **Weak bridge:** both model **why talks break under pressure** — **different falsifiers** (process vs domestic ratchet + shocks).
 
-**Falsifier:** If **White House / State** readouts show **sustained** Islamabad rounds **without** Rubio-attributed Israeli spoiler behavior **and** commodity checkpoints **miss** Pape’s calendar, downgrade the **spoiler + calendar** spine for this knot (keep escalation-trap vocabulary if demand structure still ratchets).
+**Falsifier:** If **White House / State** readouts show **sustained** Islamabad rounds **without** Rubio-attributed Israeli spoiler behavior **and** commodity checkpoints **miss** Pape’s calendar, downgrade the **spoiler + calendar** spine for this page (keep escalation-trap vocabulary if demand structure still ratchets).
 
 **Weave D — same-day evidence streams (do not merge registers):** **Marandi — Breaking Points (page id `marandi-blumenthal-jf-primary`)** (Tehran **process** / **delegation authority** / **Hormuz leverage** — `thread:marandi`) and **Blumenthal — Judging Freedom (page id `marandi-blumenthal-jf-primary`)** (US **domestic** / **media** **amplifier** on **Vance**, **Islamabad optics**, **delegation targeting** — `thread:blumenthal`, operator session) feed **stress-test** **questions** for this **trap** page: *does the room failure look like **ratchet + audience lock-in** (Pape) rather than only **Tehran framing** (Marandi) or **DC humiliation** (Blumenthal)?* **Three lanes** — **three falsifiers**; cite **sister** weave C (page id `marandi-blumenthal-jf-primary`) for **non-Pape** **primary** **Judgment**.
 
@@ -277,7 +277,7 @@ WORK only; not Record.
 | Field | Value |
 |--------|--------|
 | **Date** | 2026-04-16 |
-| **knot_label** (machine slug) | `pape-janssen-escalation-blockade` — matches basename and [`knot-index.yaml`](../../../knot-index.yaml) |
+| **page_id** (machine slug) | `pape-janssen-escalation-blockade` — matches basename and the legacy index file [`knot-index.yaml`](../../../knot-index.yaml) |
 | **Day block** | [`days.md` § 2026-04-16](../days.md#2026-04-16) |
 | **Primary expert (`thread:`)** | `pape` — **escalation trap / staged blockade / spoiler** mechanism; **not** Tehran process register (see weave C (page id `marandi-blumenthal-jf-primary`)). |
 
@@ -290,7 +290,7 @@ WORK only; not Record.
 
 - **Inbox:** [`daily-strategy-inbox.md`](../../../daily-strategy-inbox.md) — **Expert ingest — 2026-04-16** (Pape × Cyrus Janssen YT lines + `batch-analysis | 2026-04-16 | Pape (Janssen) × Mearsheimer` + `× Davis`); **X** Lebanon map + **AP** Washington talks context (`wire | cold: LEBANON | AP 14 Apr`)
 - **Expert threads:** `thread:pape` — operator transcript + channel URL until **`watch?v=`** pinned
-- **Sister knots:** `islamabad-hormuz-thesis-weave` (Thesis A/B + escalation-trap vocabulary), `kremlin-iri-uranium-dual-register` (enrichment / grand-bargain scope trap), `mercouris-mearsheimer-lebanon-split` (Lebanon fork + Pape sectarian map lane)
+- **Related pages:** `islamabad-hormuz-thesis-weave` (Thesis A/B + escalation-trap vocabulary), `kremlin-iri-uranium-dual-register` (enrichment / grand-bargain scope trap), `mercouris-mearsheimer-lebanon-split` (Lebanon fork + Pape sectarian map lane)
 
 ---
 
@@ -301,15 +301,15 @@ WORK only; not Record.
 - **YT (channel until pin):** [Cyrus Janssen — videos](https://www.youtube.com/@CyrusJanssen/videos)
 - **X (Lebanon map):** [ProfessorPape](https://x.com/ProfessorPape) — `verify:pin-exact-status-URL` in inbox
 - **Wire:** [AP — Israel–Lebanon talks Washington (14 Apr)](https://apnews.com/article/lebanon-israel-negotiations-hezbollah-rubio-washington-88f5123bfcf4c00625e98ea14a16eef9)
-- **Weave C (same day):** `marandi-blumenthal-jf-primary` — Marandi-primary + Blumenthal amplifier; **this** knot is **weave D** (Pape-primary).
-- **Sister knots:** 2026-04-12 islamabad-hormuz-thesis-weave (page id `islamabad-hormuz-thesis-weave`) · 2026-04-15 kremlin-iri-uranium-dual-register (page id `kremlin-iri-uranium-dual-register`) · 2026-04-14 mercouris-mearsheimer-lebanon-split (page id `mercouris-mearsheimer-lebanon-split`)
+- **Weave C (same day):** `marandi-blumenthal-jf-primary` — Marandi-primary + Blumenthal amplifier; **this** page is **weave D** (Pape-primary).
+- **Related pages:** 2026-04-12 islamabad-hormuz-thesis-weave (page id `islamabad-hormuz-thesis-weave`) · 2026-04-15 kremlin-iri-uranium-dual-register (page id `kremlin-iri-uranium-dual-register`) · 2026-04-14 mercouris-mearsheimer-lebanon-split (page id `mercouris-mearsheimer-lebanon-split`)
 
 ---
 <!-- strategy-page:end -->
 <!-- strategy-expert-thread:start -->
 ## Machine layer — Extraction (script-maintained)
 
-_Auto-generated from `-transcript.md` + `strategy-page` blocks in this thread + optional knot-index rows (legacy). **Journal layer** (narrative) lives **above** the **strategy-expert-thread** start HTML comment. The machine-layer HTML block is replaced on each `thread` run._
+_Auto-generated from `-transcript.md` + `strategy-page` blocks in this thread + optional empty legacy on-disk index rows. **Journal layer** (narrative) lives **above** the **strategy-expert-thread** start HTML comment. The machine-layer HTML block is replaced on each `thread` run._
 
 ### Page references
 

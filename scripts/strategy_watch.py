@@ -2,8 +2,9 @@
 """Watch tool: cross-expert page views grouped by watch tags.
 
 Reads pages from expert thread files (via ``strategy_page_reader``),
-groups them by ``watch=`` attributes, and uses ``knot-connections.yaml``
-tension relations to surface cross-expert disagreements.
+groups them by ``watch=`` attributes, and uses the optional connection file
+(``knot-connections.yaml`` on disk) tension relations to surface cross-expert
+disagreements.
 
 Usage::
 
@@ -45,7 +46,7 @@ DEFAULT_CONNECTIONS = DEFAULT_NOTEBOOK / "knot-connections.yaml"
 # ---------------------------------------------------------------------------
 
 def _load_tensions(connections_path: Path) -> list[dict]:
-    """Load tension relations from knot-connections.yaml."""
+    """Load tension relations from the optional connections YAML."""
     if not connections_path.is_file():
         return []
     data = yaml.safe_load(connections_path.read_text(encoding="utf-8"))
@@ -57,11 +58,13 @@ def _load_tensions(connections_path: Path) -> list[dict]:
     ]
 
 
-def _page_id_to_knot_path(page_id: str, pages: list[PageBlock]) -> str | None:
-    """Try to find the source knot path from a page's content."""
+def _page_id_to_source_basename(page_id: str, pages: list[PageBlock]) -> str | None:
+    """Return basename from **Source page:** or legacy **Source knot:** in page body."""
     for p in pages:
         if p.id == page_id:
             for line in p.content.splitlines():
+                if line.startswith("**Source page:**"):
+                    return line.split("**Source page:**", 1)[1].strip()
                 if line.startswith("**Source knot:**"):
                     return line.split("**Source knot:**", 1)[1].strip()
     return None

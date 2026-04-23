@@ -178,7 +178,7 @@ def _check_machine_layer(diag: ExpertDiagnostic, notebook_dir: Path) -> None:
 
     total_lines = 0
     any_markers = False
-    no_material_marker = "_(No transcript, page, or knot material for extraction.)_"
+    no_material_marker = "_(No transcript or page material for extraction.)_"
     for thread_path in expert_thread_paths_for_discovery(notebook_dir, diag.expert_id):
         if not thread_path.is_file():
             continue

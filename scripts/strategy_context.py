@@ -58,7 +58,7 @@ STRATEGY_KEYWORDS = (
     "strategy",
     "strategy-context",
     "weave",
-    "knot",
+    "strategy-page",
     "batch-analysis",
     "thread",
     "inbox",
@@ -227,7 +227,7 @@ def format_history_section(events: list[HistoryEvent]) -> str:
     lines.extend(
         [
             "",
-            "_Indicative only; canonical state remains days.md, knots, and git._",
+            "_Indicative only; canonical state remains days.md, expert pages, and git._",
             "",
         ]
     )
@@ -422,7 +422,7 @@ def health_summary() -> str | None:
         avg_lnk = m.get("avg_links_per_entry", 0)
         carry = m.get("open_carry_forward", 0)
         dated = m.get("dated_entries", 0)
-        knots = m.get("knot_pages", 0)
+        knots = m.get("legacy_chapter_stubs", m.get("knot_pages", 0))
 
         def _rate(val: float, green: float, yellow: float) -> str:
             if val >= green:
@@ -437,7 +437,7 @@ def health_summary() -> str | None:
         carry_rating = "green" if carry_pct < 50 else ("yellow" if carry_pct < 75 else "red")
 
         lines.append(
-            f"  {month}: {dated} entries, {knots} knots | sections={avg_sec} ({sec_rating}) | "
+            f"  {month}: {dated} entries, {knots} legacy chapter stubs | sections={avg_sec} ({sec_rating}) | "
             f"links={avg_lnk} ({lnk_rating}) | open_carry={carry}/{dated} ({carry_rating})"
         )
 
@@ -497,7 +497,9 @@ def build_paragraph(
     knot_dir = _knots_dir(day)
     knot_files = list(knot_dir.glob("strategy-notebook-knot-*.md")) if knot_dir.is_dir() else []
     if knot_files:
-        parts.append(f"Knots this month: {len(knot_files)} pages.")
+        parts.append(
+            f"Legacy chapter markdown files this month: {len(knot_files)} (superseded layout)."
+        )
     if expert_rows:
         parts.append(
             f"Commentator index lists {expert_rows} `expert_id` rows (strategy-commentator-threads.md)."
@@ -551,7 +553,9 @@ def run_compact(
     lines_out.append(
         f"- days.md § {day}: {'present' if day_block else 'missing'}; Open bullets parsed: {len(open_bullets)}"
     )
-    lines_out.append(f"- knots this month: {len(knot_files)} pages")
+    lines_out.append(
+        f"- legacy chapter .md under chapters/.../knots/: {len(knot_files)} (if any; superseded)"
+    )
     lines_out.append(
         f"- inbox accumulator: {accum or '?'}; scratch below append (pre-Retained): {scratch_chars} chars"
     )

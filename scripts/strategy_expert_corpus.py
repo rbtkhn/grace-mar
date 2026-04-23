@@ -2,17 +2,17 @@
 """Extract raw material for per-expert thread distillation.
 
 Reads from ``strategy-expert-<id>-transcript.md`` (recent verbatim) and
-relevant knot files (where expert material was used), writes structured
+``strategy-page`` blocks, optional legacy on-disk index rows, writes structured
 extraction to ``strategy-expert-<id>-thread.md`` between script markers.
 
 The output is **raw material** for assistant refinement — the assistant
 distills it into a curated analytical thread (convergences, tensions,
-drift, knot impact).
+drift, page impact).
 
 **Two-step ``thread`` flow:**
 
 1. ``strategy_expert_transcript.py`` triages inbox → transcripts (automatic)
-2. This script extracts transcript + knot material → thread files
+2. This script extracts transcript + page material → thread files
 3. Assistant refines the extraction into curated thread prose
 
 Imported by ``strategy_expert_transcript.py`` for shared constants and
@@ -633,7 +633,7 @@ def render_thread_extraction(
     parts.append("## Machine layer — Extraction (script-maintained)\n")
     parts.append(
         "_Auto-generated from `-transcript.md` + `strategy-page` blocks in this thread "
-        "+ optional knot-index rows (legacy). "
+        "+ optional empty legacy on-disk index rows. "
         "**Journal layer** (narrative) lives **above** the **strategy-expert-thread** "
         "start HTML comment. The machine-layer HTML block is replaced on each `thread` run._\n"
     )
@@ -652,9 +652,9 @@ def render_thread_extraction(
         parts.append("")
 
     if knot_refs:
-        parts.append("### Legacy knot references (deprecated)\n")
+        parts.append("### Legacy file-index rows (optional)\n")
         parts.append(
-            "_Standalone `chapters/…/knots/` files; prefer **Page references** above._\n"
+            "_On-disk index only; prefer **Page references** above._\n"
         )
         for knot in knot_refs:
             knot_path = knot.get("path", "?")
@@ -669,7 +669,7 @@ def render_thread_extraction(
 
     if not transcript_lines and not knot_refs and not page_blocks:
         parts.append(
-            "_(No transcript, page, or knot material for extraction.)_\n"
+            "_(No transcript or page material for extraction.)_\n"
         )
 
     return "\n".join(parts).rstrip() + "\n"
@@ -786,7 +786,7 @@ def main() -> int:
         "--knot-index",
         type=Path,
         default=DEFAULT_KNOT_INDEX,
-        help="Path to knot-index.yaml",
+        help="Path to legacy on-disk index file (default: knot-index.yaml)",
     )
     p.add_argument("--dry-run", action="store_true", help="Parse only; do not write files")
     args = p.parse_args()

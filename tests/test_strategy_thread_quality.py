@@ -80,7 +80,7 @@ def _write_thread(notebook_dir: Path, expert_id: str, machine_lines: list[str]) 
     inner = (
         "\n".join(machine_lines)
         if machine_lines
-        else "_(No transcript, page, or knot material for extraction.)_"
+        else "_(No transcript or page material for extraction.)_"
     )
     (notebook_dir / "experts" / expert_id / "thread.md").write_text(
         f"# Expert thread — `{expert_id}`\n\n"

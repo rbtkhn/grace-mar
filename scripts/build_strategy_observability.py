@@ -175,6 +175,7 @@ def main() -> int:
         total_entries += count
         month_summaries[month] = {
             "dated_entries": count,
+            "legacy_chapter_stubs": knot_count,
             "knot_pages": knot_count,
             "avg_sections_per_entry": density["avg_sections"],
             "avg_links_per_entry": links_avg,

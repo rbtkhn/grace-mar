@@ -13,7 +13,7 @@ strategy-notebook/experts/<id>/thread.md
 strategy-notebook/experts/<id>/mind.md       (if exists)
 ```
 
-Pages replaced knots as the primary analytical unit. Instead of standalone files under `chapters/YYYY-MM/knots/`, pages live inside expert thread files as marker-fenced blocks within monthly chapters.
+**Pages** are the primary analytical unit. Standalone files under the old `chapters/YYYY-MM/knots/` tree (git history) are superseded; current work uses marker-fenced **`strategy-page`** blocks in expert **thread** files.
 
 ## Page format
 
@@ -77,7 +77,7 @@ python3 scripts/strategy_page.py davis barnes --dry-run
 
 ### `watch` — cross-expert watch views
 
-Lists watches or shows detail for one watch, including optional tension relations from `knot-connections.yaml` (legacy schema; often empty — page-level graph TBD).
+Lists watches or shows detail for one watch, including optional tension relations from the connections YAML (on-disk name `knot-connections.yaml`; often empty — page-level graph TBD).
 
 ```
 python3 scripts/strategy_watch.py                        # list all watches
@@ -107,11 +107,11 @@ A **human-curated** per-watch index (if you ever need one) would be **not SSOT**
 
 ## Migration
 
-Standalone knot files under `chapters/YYYY-MM/knots/` were **removed** after `scripts/migrate_knots_to_pages.py` transfigured them into **`strategy-page`** blocks; git history retains old files. Flat expert files may still exist in some trees—per-expert folders under `experts/<id>/` are canonical for new work.
+Legacy standalone markdown under `chapters/YYYY-MM/knots/` was folded into expert **`strategy-page`** blocks via `scripts/migrate_knots_to_pages.py`; git may retain old paths. Flat expert files may still exist in some trees—per-expert folders under `experts/<id>/` are canonical for new work.
 
 ## What this does NOT replace
 
 - The machine layer (`strategy-expert-thread:start/end` markers) is unchanged
 - `strategy_thread.py` still writes the machine layer
-- **`knot-index.yaml` / `knot-connections.yaml`** are **deprecated** (empty lists); page inventory comes from expert threads + validators
+- On-disk `knot-index.yaml` / `knot-connections.yaml` (legacy filenames) are not live inventory; page inventory comes from expert threads + validators
 - No new Python packages, JSON stores, or state directories

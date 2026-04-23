@@ -2,7 +2,7 @@
 
 WORK only; not Record.
 
-**Source:** Human **narrative journal** (below) + [`strategy-expert-davis-transcript.md`](strategy-expert-davis-transcript.md) (verbatim ingests) + relevant **knot** files (where this expert’s material was used).
+**Source:** Human **narrative journal** (below) + [`strategy-expert-davis-transcript.md`](strategy-expert-davis-transcript.md) (verbatim ingests) + relevant **`strategy-page`** work (where this expert’s material was used).
 **Process:** `python3 scripts/strategy_thread.py` triages inbox → transcript, then fills **only** the **machine layer** between the **strategy-expert-thread** HTML start and end comments. Operator / assistant maintains the **journal layer** above the start marker in **readable prose** (optional **ledger** after the end marker).
 **Updated:** Narrative — when you distill; **machine layer** — when you run **`thread`**.
 **Companion files:** [`strategy-expert-davis.md`](strategy-expert-davis.md) (profile) and [`strategy-expert-davis-transcript.md`](strategy-expert-davis-transcript.md) (7-day verbatim).
@@ -10,7 +10,7 @@ WORK only; not Record.
 ---
 ## Journal layer — Narrative (operator)
 
-_Write here in full sentences. Dated arcs are welcome (e.g. **2026-04-12 → 04-15**). Cover: what this voice did this week, how it **intersects** named **knots**, convergence/tension with other **`thread:`** experts, and **Open** pins. The **journal layer** is **not** overwritten by the **`thread`** script._
+_Write here in full sentences. Dated arcs are welcome (e.g. **2026-04-12 → 04-15**). Cover: what this voice did this week, how it **intersects** named **pages**, convergence/tension with other **`thread:`** experts, and **Open** pins. The **journal layer** is **not** overwritten by the **`thread`** script._
 
 **Layout:** Stay on **one** `strategy-expert-davis-thread.md` file. Within the **journal layer**, each **`## YYYY-MM`** heading is a **month segment**. For **2026:** **Segment 1** = January (`## 2026-01`), **Segment 2** = February (`## 2026-02`), **Segment 3** = March (`## 2026-03`), **Segment 4** = April (`## 2026-04`, ongoing). The **machine layer** (script-maintained) is **only** the fenced block between the **strategy-expert-thread** HTML start and end comments — do not call that "Segment 2" in the month sense.
 
@@ -34,13 +34,13 @@ When historical expert context artifacts exist for `davis` (per-month files or r
 
 Finally, 2026-01 should remain safe for **operator rotation**: someone returning after weeks should be able to read this segment and recover **lane orientation** (role: Retired U.S. Army Lieutenant Colonel (21 years active), Senior Fellow & military expert at Defense Priorities; combat-veteran analyst focused on realistic grand strategy and restraint in U.S. foreign policy.), **pairing map** (× mearsheimer, × pape, × marandi, × jermy, × sachs, × mercouris (restraint / multipolar overlaps)), and **next verification moves** without loading the entire quarter. That recoverability is why the minimum prose budget exists—not to pad, but to force a minimum coherent account of what this month was for in the notebook.
 
-Segment discipline here follows the strategy-notebook contract: Segment 1 is human journal prose; Segment 2 is machine extraction. For 2026-01, the point of a long prose block is to prevent the month from collapsing into a **compressed ledger** that *looks* like analysis but is really a hook list. Hooks are valuable; they are also incomplete without the surrounding sentences that say **why** the hook matters for knots, for open pins, or for the next verify pass.
+Segment discipline here follows the strategy-notebook contract: Segment 1 is human journal prose; Segment 2 is machine extraction. For 2026-01, the point of a long prose block is to prevent the month from collapsing into a **compressed ledger** that *looks* like analysis but is really a hook list. Hooks are valuable; they are also incomplete without the surrounding sentences that say **why** the hook matters for pages, for open pins, or for the next verify pass.
 
 Open pins belong in prose, not only as bullets. For this `davis` month segment, explicitly reserve space for **what remains unresolved**: which claims await transcript confirmation, which geopolitical sub-claims depend on translation or primary document access, and which institutional facts are stable enough to reuse in weave scaffolding. That habit keeps later strategy passes from mistaking silence for certainty.
 
 Verification stance for Daniel L. Davis (Lt Col (ret.)) in 2026-01 should stay tier-honest: web-index rows, newsletter dates, and YouTube upload metadata differ in **claim strength**. The notebook uses `[strength: low|medium|high]` precisely because not every cite supports the same inference. Prose here can narrate **what kind of mistake** would happen if a low-strength hook were promoted to a headline judgment—without turning that caution into a substitute for fresh primary checks when the operator needs cite-grade output.
 
-The 2026-01 segment for the Daniel L. Davis (Lt Col (ret.)) lane (`davis`) exists so the notebook keeps a **prose spine** alongside any strength-tagged bullets. The roster describes this voice as centered on Retired U.S. Army Lieutenant Colonel (21 years active), Senior Fellow & military expert at Defense Priorities; combat-veteran analyst focused on realistic grand strategy and restraint in U.S. foreign policy.. That one-line role is not a substitute for transcript truth; it is a **routing label** so batch-analysis passes know which mechanism vocabulary to expect when dated material lands. When this month is still partial or ingest-light, the prose layer still records **where verification should attach** (knot cites, transcript rows, or hub URLs) without pretending those pins are already closed.
+The 2026-01 segment for the Daniel L. Davis (Lt Col (ret.)) lane (`davis`) exists so the notebook keeps a **prose spine** alongside any strength-tagged bullets. The roster describes this voice as centered on Retired U.S. Army Lieutenant Colonel (21 years active), Senior Fellow & military expert at Defense Priorities; combat-veteran analyst focused on realistic grand strategy and restraint in U.S. foreign policy.. That one-line role is not a substitute for transcript truth; it is a **routing label** so batch-analysis passes know which mechanism vocabulary to expect when dated material lands. When this month is still partial or ingest-light, the prose layer still records **where verification should attach** (page cites, transcript rows, or hub URLs) without pretending those pins are already closed.
 
 - [strength: medium] **Through-line:** Iran as **acute strike / regime-change risk** week-to-week — Davis frames a **dangerous Washington narrative** on using force over domestic unrest and “red lines” while rhetoric spikes ([*Iran & America’s Interest*](https://danieldavisdeepdive.substack.com/p/iran-and-americas-interest-lt-col), **2026-01-13**; paid — thesis from public preview).
 - [strength: medium] **Mechanism:** Links **Mearsheimer**’s “**classic U.S.–Israeli regime‑change**” read ([*CLASSIC U.S. REGIME CHANGE in IRAN*](https://danieldavisdeepdive.substack.com/p/prof-mearsheimer-classic-us), **2026-01-14**; paid — preview) to a separate **imminent-strike / sudden-pause** episode ([*Trump Hasn’t Attacked Iran — Yet*](https://danieldavisdeepdive.substack.com/p/trump-hasnt-attacked-iran-yet), **2026-01-16**; paid — preview) — same escalation window, different emphasis (playbook vs decision clock).
@@ -49,17 +49,17 @@ The 2026-01 segment for the Daniel L. Davis (Lt Col (ret.)) lane (`davis`) exist
 ## 2026-02
 
 
-The 2026-02 segment for the Daniel L. Davis (Lt Col (ret.)) lane (`davis`) exists so the notebook keeps a **prose spine** alongside any strength-tagged bullets. The roster describes this voice as centered on Retired U.S. Army Lieutenant Colonel (21 years active), Senior Fellow & military expert at Defense Priorities; combat-veteran analyst focused on realistic grand strategy and restraint in U.S. foreign policy.. That one-line role is not a substitute for transcript truth; it is a **routing label** so batch-analysis passes know which mechanism vocabulary to expect when dated material lands. When this month is still partial or ingest-light, the prose layer still records **where verification should attach** (knot cites, transcript rows, or hub URLs) without pretending those pins are already closed.
+The 2026-02 segment for the Daniel L. Davis (Lt Col (ret.)) lane (`davis`) exists so the notebook keeps a **prose spine** alongside any strength-tagged bullets. The roster describes this voice as centered on Retired U.S. Army Lieutenant Colonel (21 years active), Senior Fellow & military expert at Defense Priorities; combat-veteran analyst focused on realistic grand strategy and restraint in U.S. foreign policy.. That one-line role is not a substitute for transcript truth; it is a **routing label** so batch-analysis passes know which mechanism vocabulary to expect when dated material lands. When this month is still partial or ingest-light, the prose layer still records **where verification should attach** (page cites, transcript rows, or hub URLs) without pretending those pins are already closed.
 
 Cross-lane convergence and tension are notebook-native concepts. For 2026-02, read × mearsheimer, × pape, × marandi, × jermy, × sachs, × mercouris (restraint / multipolar overlaps) as the default **short list** of other experts whose fingerprints commonly collide with `davis` on batch passes. Convergence is not friendship; tension is not feud. Both are **pattern labels** for what repeated comparative reading tends to show, subject to update when new evidence changes the shape of disagreement.
 
 Verification stance for Daniel L. Davis (Lt Col (ret.)) in 2026-02 should stay tier-honest: web-index rows, newsletter dates, and YouTube upload metadata differ in **claim strength**. The notebook uses `[strength: low|medium|high]` precisely because not every cite supports the same inference. Prose here can narrate **what kind of mistake** would happen if a low-strength hook were promoted to a headline judgment—without turning that caution into a substitute for fresh primary checks when the operator needs cite-grade output.
 
-The `davis` lane’s role (Retired U.S. Army Lieutenant Colonel (21 years active), Senior Fellow & military expert at Defense Priorities; combat-veteran analyst focused on realistic grand strategy and restraint in U.S. foreign policy.) also implies **failure-mode awareness**: where this voice tends to overread incentives, flatten complexity, or overweight a single domain. This segment is a place to name that risk in calm language when the month’s material invites it, especially before weave work pulls the voice into a knot as primary commentator. Naming failure mode is WORK hygiene; it is not an attack on the voice.
+The `davis` lane’s role (Retired U.S. Army Lieutenant Colonel (21 years active), Senior Fellow & military expert at Defense Priorities; combat-veteran analyst focused on realistic grand strategy and restraint in U.S. foreign policy.) also implies **failure-mode awareness**: where this voice tends to overread incentives, flatten complexity, or overweight a single domain. This segment is a place to name that risk in calm language when the month’s material invites it, especially before weave work pulls the voice into a page as primary commentator. Naming failure mode is WORK hygiene; it is not an attack on the voice.
 
 Typical pairings on file for `davis` emphasize contrast surfaces: × mearsheimer, × pape, × marandi, × jermy, × sachs, × mercouris (restraint / multipolar overlaps). In WORK, those pairings are **operational**: they tell the operator which other `thread:` lanes to open when a claim needs a second fingerprint, not a second opinion dressed as neutrality. This 2026-02 segment should be read as **mesh navigation**—which lanes to pull into the same batch pass—rather than as a claim that those voices agreed or disagreed on any particular day unless a dated bullet below says so explicitly.
 
-If knots named this expert during 2026-02, the narrative should eventually say **which knot** and **what job** the voice did (pressure, validate, narrate) in plain English. If knot index lines are still empty, say that plainly too—absence matters for pipeline honesty. The machine block below the marker will populate knot references when the index points here; Segment 1 should still record what the operator noticed at human speed before automation catches up.
+If pages named this expert during 2026-02, the narrative should eventually say **which page** and **what job** the voice did (pressure, validate, narrate) in plain English. If legacy index lines are still empty, say that plainly too—absence matters for pipeline honesty. The machine block below the marker will populate page references when the index points here; Segment 1 should still record what the operator noticed at human speed before automation catches up.
 
 - [strength: medium] **Through-line:** **Escalation-if-attacked** framing — Macgregor warns **unrestrained** Iranian retaliation (ballistic reach, bases/ships/Israel) and a **severe first-24h** missile exchange if the U.S. hits ([*Iran’s Missile Storm Incoming?*](https://danieldavisdeepdive.substack.com/p/irans-missile-storm-incoming), **2026-02-10**; public post body excerpt).
 - [strength: medium] **Mechanism:** **U.S. “red lines”** vs an **Iran that will not surrender** — solo on why a **regime-change war** hits a **prepared adversary** with **no surprise** ([*U.S. RED LINES / IRAN RESISTS*](https://danieldavisdeepdive.substack.com/p/us-red-linesiran-resists-lt-col-daniel), **2026-02-18**; paid — preview only).
@@ -68,9 +68,9 @@ If knots named this expert during 2026-02, the narrative should eventually say *
 ## 2026-03
 
 
-If knots named this expert during 2026-03, the narrative should eventually say **which knot** and **what job** the voice did (pressure, validate, narrate) in plain English. If knot index lines are still empty, say that plainly too—absence matters for pipeline honesty. The machine block below the marker will populate knot references when the index points here; Segment 1 should still record what the operator noticed at human speed before automation catches up.
+If pages named this expert during 2026-03, the narrative should eventually say **which page** and **what job** the voice did (pressure, validate, narrate) in plain English. If legacy index lines are still empty, say that plainly too—absence matters for pipeline honesty. The machine block below the marker will populate page references when the index points here; Segment 1 should still record what the operator noticed at human speed before automation catches up.
 
-The `davis` lane’s role (Retired U.S. Army Lieutenant Colonel (21 years active), Senior Fellow & military expert at Defense Priorities; combat-veteran analyst focused on realistic grand strategy and restraint in U.S. foreign policy.) also implies **failure-mode awareness**: where this voice tends to overread incentives, flatten complexity, or overweight a single domain. This segment is a place to name that risk in calm language when the month’s material invites it, especially before weave work pulls the voice into a knot as primary commentator. Naming failure mode is WORK hygiene; it is not an attack on the voice.
+The `davis` lane’s role (Retired U.S. Army Lieutenant Colonel (21 years active), Senior Fellow & military expert at Defense Priorities; combat-veteran analyst focused on realistic grand strategy and restraint in U.S. foreign policy.) also implies **failure-mode awareness**: where this voice tends to overread incentives, flatten complexity, or overweight a single domain. This segment is a place to name that risk in calm language when the month’s material invites it, especially before weave work pulls the voice into a page as primary commentator. Naming failure mode is WORK hygiene; it is not an attack on the voice.
 
 Typical pairings on file for `davis` emphasize contrast surfaces: × mearsheimer, × pape, × marandi, × jermy, × sachs, × mercouris (restraint / multipolar overlaps). In WORK, those pairings are **operational**: they tell the operator which other `thread:` lanes to open when a claim needs a second fingerprint, not a second opinion dressed as neutrality. This 2026-03 segment should be read as **mesh navigation**—which lanes to pull into the same batch pass—rather than as a claim that those voices agreed or disagreed on any particular day unless a dated bullet below says so explicitly.
 
@@ -81,9 +81,9 @@ Verification stance for Daniel L. Davis (Lt Col (ret.)) in 2026-03 should stay t
 When historical expert context artifacts exist for `davis` (per-month files or rollups under `artifacts/skill-work/work-strategy/historical-expert-context/`), this 2026-03 narrative should be read as **adjacent** to those summaries: the artifact compresses stance for handoff; the thread segment preserves operator-facing **arc and intent**. If the two ever diverge, treat dated ingests and explicit ledger lines as the stricter ground, and use prose to explain tension rather than smoothing it away.
 
 
-If knots named this expert during 2026-03, the narrative should eventually say **which knot** and **what job** the voice did (pressure, validate, narrate) in plain English. If knot index lines are still empty, say that plainly too—absence matters for pipeline honesty. The machine block below the marker will populate knot references when the index points here; Segment 1 should still record what the operator noticed at human speed before automation catches up.
+If pages named this expert during 2026-03, the narrative should eventually say **which page** and **what job** the voice did (pressure, validate, narrate) in plain English. If legacy index lines are still empty, say that plainly too—absence matters for pipeline honesty. The machine block below the marker will populate page references when the index points here; Segment 1 should still record what the operator noticed at human speed before automation catches up.
 
-The `davis` lane’s role (Retired U.S. Army Lieutenant Colonel (21 years active), Senior Fellow & military expert at Defense Priorities; combat-veteran analyst focused on realistic grand strategy and restraint in U.S. foreign policy.) also implies **failure-mode awareness**: where this voice tends to overread incentives, flatten complexity, or overweight a single domain. This segment is a place to name that risk in calm language when the month’s material invites it, especially before weave work pulls the voice into a knot as primary commentator. Naming failure mode is WORK hygiene; it is not an attack on the voice.
+The `davis` lane’s role (Retired U.S. Army Lieutenant Colonel (21 years active), Senior Fellow & military expert at Defense Priorities; combat-veteran analyst focused on realistic grand strategy and restraint in U.S. foreign policy.) also implies **failure-mode awareness**: where this voice tends to overread incentives, flatten complexity, or overweight a single domain. This segment is a place to name that risk in calm language when the month’s material invites it, especially before weave work pulls the voice into a page as primary commentator. Naming failure mode is WORK hygiene; it is not an attack on the voice.
 
 - [strength: medium] **Through-line:** **Strategic trap** language — “**no viable off-ramp**,” Hormuz closure, and **nuclear tail risk** if leaders reach for “easy” escapes ([*GRAVE WARNING…*](https://danieldavisdeepdive.substack.com/p/grave-warning-no-good-outcome-left), **2026-03-16**; public excerpt).
 - [strength: medium] **Mechanism:** **Ground troops** in Iran as **catastrophic mistake** — hosts **Defense Priorities** analysts Kavanaugh + Kelanic on boots-on-ground risks ([*IRAN WAR: There’s More Joining the Fight*](https://danieldavisdeepdive.substack.com/p/iran-war-theres-more-joining-the), **2026-03-20**; paid — preview only).
@@ -151,13 +151,13 @@ April stress-tests **ultimatum vs negotiation** and **resumption clock** on X al
 
 Verification stance for Daniel L. Davis (Lt Col (ret.)) in 2026-04 should stay tier-honest: web-index rows, newsletter dates, and YouTube upload metadata differ in **claim strength**. The notebook uses `[strength: low|medium|high]` precisely because not every cite supports the same inference. Prose here can narrate **what kind of mistake** would happen if a low-strength hook were promoted to a headline judgment—without turning that caution into a substitute for fresh primary checks when the operator needs cite-grade output.
 
-The `davis` lane’s role (Retired U.S. Army Lieutenant Colonel (21 years active), Senior Fellow & military expert at Defense Priorities; combat-veteran analyst focused on realistic grand strategy and restraint in U.S. foreign policy.) also implies **failure-mode awareness**: where this voice tends to overread incentives, flatten complexity, or overweight a single domain. This segment is a place to name that risk in calm language when the month’s material invites it, especially before weave work pulls the voice into a knot as primary commentator. Naming failure mode is WORK hygiene; it is not an attack on the voice.
+The `davis` lane’s role (Retired U.S. Army Lieutenant Colonel (21 years active), Senior Fellow & military expert at Defense Priorities; combat-veteran analyst focused on realistic grand strategy and restraint in U.S. foreign policy.) also implies **failure-mode awareness**: where this voice tends to overread incentives, flatten complexity, or overweight a single domain. This segment is a place to name that risk in calm language when the month’s material invites it, especially before weave work pulls the voice into a page as primary commentator. Naming failure mode is WORK hygiene; it is not an attack on the voice.
 
-If knots named this expert during 2026-04, the narrative should eventually say **which knot** and **what job** the voice did (pressure, validate, narrate) in plain English. If knot index lines are still empty, say that plainly too—absence matters for pipeline honesty. The machine block below the marker will populate knot references when the index points here; Segment 1 should still record what the operator noticed at human speed before automation catches up.
+If pages named this expert during 2026-04, the narrative should eventually say **which page** and **what job** the voice did (pressure, validate, narrate) in plain English. If legacy index lines are still empty, say that plainly too—absence matters for pipeline honesty. The machine block below the marker will populate page references when the index points here; Segment 1 should still record what the operator noticed at human speed before automation catches up.
 
 Finally, 2026-04 should remain safe for **operator rotation**: someone returning after weeks should be able to read this segment and recover **lane orientation** (role: Retired U.S. Army Lieutenant Colonel (21 years active), Senior Fellow & military expert at Defense Priorities; combat-veteran analyst focused on realistic grand strategy and restraint in U.S. foreign policy.), **pairing map** (× mearsheimer, × pape, × marandi, × jermy, × sachs, × mercouris (restraint / multipolar overlaps)), and **next verification moves** without loading the entire quarter. That recoverability is why the minimum prose budget exists—not to pad, but to force a minimum coherent account of what this month was for in the notebook.
 
-The 2026-04 segment for the Daniel L. Davis (Lt Col (ret.)) lane (`davis`) exists so the notebook keeps a **prose spine** alongside any strength-tagged bullets. The roster describes this voice as centered on Retired U.S. Army Lieutenant Colonel (21 years active), Senior Fellow & military expert at Defense Priorities; combat-veteran analyst focused on realistic grand strategy and restraint in U.S. foreign policy.. That one-line role is not a substitute for transcript truth; it is a **routing label** so batch-analysis passes know which mechanism vocabulary to expect when dated material lands. When this month is still partial or ingest-light, the prose layer still records **where verification should attach** (knot cites, transcript rows, or hub URLs) without pretending those pins are already closed.
+The 2026-04 segment for the Daniel L. Davis (Lt Col (ret.)) lane (`davis`) exists so the notebook keeps a **prose spine** alongside any strength-tagged bullets. The roster describes this voice as centered on Retired U.S. Army Lieutenant Colonel (21 years active), Senior Fellow & military expert at Defense Priorities; combat-veteran analyst focused on realistic grand strategy and restraint in U.S. foreign policy.. That one-line role is not a substitute for transcript truth; it is a **routing label** so batch-analysis passes know which mechanism vocabulary to expect when dated material lands. When this month is still partial or ingest-light, the prose layer still records **where verification should attach** (page cites, transcript rows, or hub URLs) without pretending those pins are already closed.
 
 - [strength: medium] **Signal:** X line **2026-04-12** — “last, best chance” read as surrender bar; Vietnam/Korea timeline analogy; Hormuz / fertilizer / macro pressure — [X @DanielLDavis1](https://x.com/DanielLDavis1) — verify:screenshot-ingest-status-id-unknown.
 - [strength: medium] **Cross:** `crosses:ritter+davis` — Ritter ORBAT skepticism vs Davis negotiation frame — [`chapters/2026-04/days.md`](chapters/2026-04/days.md) **2026-04-14**.
@@ -199,10 +199,10 @@ Operator-ingested **long-form** **Davis** monologue (title in verbatim header). 
 | Field | Value |
 |--------|--------|
 | **Date** | 2026-04-12 |
-| **knot_label** (machine slug) | `islamabad-hormuz-thesis-weave` — matches basename and [`knot-index.yaml`](../../../knot-index.yaml) |
+| **page_id** (machine slug) | `islamabad-hormuz-thesis-weave` — matches basename and the legacy index file [`knot-index.yaml`](../../../knot-index.yaml) |
 | **Day block** | [`days.md` § 2026-04-12](../days.md#2026-04-12) |
 
-### Page type (**pick per knot** — mixed types allowed)
+### Page type (**pick per strategy-page** — mixed types allowed)
 
 - [x] **Thesis page**
 - [ ] **Synthesis page**
@@ -230,7 +230,7 @@ none this pass
 |-----------|--------|----------|
 | **Next day** | [`days.md` § 2026-04-13](../days.md#2026-04-13) | Long-form **Deep Dive** ingests (**Freeman**, **Mearsheimer**, **Marandi**, **Ritter**, **Mercouris**) — **mechanics + room** layer thickens; still **not** CENTCOM substitute. |
 | **Later weave** | `marandi-ritter-mercouris-hormuz-scaffold` | **Marandi × Ritter × Mercouris** shared scaffold. |
-| **Later weave** | `ritter-blockade-hormuz-weave` | **04-14** **`thread:`** **batch-analysis** lattice (Davis×Jermy, Diesen×Sachs, Parsi×Davis knots). |
+| **Later weave** | `ritter-blockade-hormuz-weave` | **04-14** **`thread:`** **batch-analysis** lattice (Davis×Jermy, Diesen×Sachs, Parsi×Davis weaves). |
 
 ### References
 
@@ -274,10 +274,10 @@ none this pass
 | Field | Value |
 |--------|--------|
 | **Date** | 2026-04-13 |
-| **knot_label** (machine slug) | `marandi-ritter-mercouris-hormuz-scaffold` — matches basename and [`knot-index.yaml`](../../../knot-index.yaml) |
+| **page_id** (machine slug) | `marandi-ritter-mercouris-hormuz-scaffold` — matches basename and the legacy index file [`knot-index.yaml`](../../../knot-index.yaml) |
 | **Day block** | [`days.md` § 2026-04-13](../days.md#2026-04-13) |
 
-### Page type (**pick per knot** — mixed types allowed)
+### Page type (**pick per strategy-page** — mixed types allowed)
 
 - [ ] **Thesis page**
 - [x] **Synthesis page**
@@ -309,7 +309,7 @@ none this pass
 | Direction | Target | Relation |
 |-----------|--------|----------|
 | **Prior day** | `islamabad-hormuz-thesis-weave` | **Thesis A/B** + **Pape/Parsi/Freeman** **fork** **before** this **scaffold** **densifies**. |
-| **Next day** | `ritter-blockade-hormuz-weave` | **Ritter**-centered **04-14** lattice + **Parsi×Davis** / **Diesen×Sachs** / **Mercouris×Mearsheimer** **knot** files. |
+| **Next day** | `ritter-blockade-hormuz-weave` | **Ritter**-centered **04-14** lattice + **Parsi×Davis** / **Diesen×Sachs** / **Mercouris×Mearsheimer** **legacy** files. |
 | **Day prose** | [`days.md` § 2026-04-14](../days.md#2026-04-14) | **Continuity spine** **explicitly** **stacks** **04-12–04-14** **`thread:`** **carries**. |
 
 ### References
@@ -345,7 +345,7 @@ See [`days.md` § Signal — `parsi` / `davis`](../days.md) and **Weave** lead b
 
 ### Reflection
 
-See [`days.md` § Judgment — *Parsi × Davis (Judgment seam)*](../days.md). This knot does not duplicate it; it **hubs** sources for accountability **language** across **two institutions** (EU HR speech-act vs U.S. constitutional lane).
+See [`days.md` § Judgment — *Parsi × Davis (Judgment seam)*](../days.md). This page does not duplicate it; it **hubs** sources for accountability **language** across **two institutions** (EU HR speech-act vs U.S. constitutional lane).
 
 ### Foresight
 
@@ -362,10 +362,10 @@ See [`days.md` § Judgment — *Parsi × Davis (Judgment seam)*](../days.md). Th
 | Field | Value |
 |--------|--------|
 | **Date** | 2026-04-14 |
-| **knot_label** (machine slug) | `parsi-davis-war-powers` — matches basename and [`knot-index.yaml`](../../../knot-index.yaml) |
+| **page_id** (machine slug) | `parsi-davis-war-powers` — matches basename and the legacy index file [`knot-index.yaml`](../../../knot-index.yaml) |
 | **Day block** | [`days.md` § 2026-04-14](../days.md) |
 
-### Page type (**pick per knot** — mixed types allowed)
+### Page type (**pick per strategy-page** — mixed types allowed)
 
 - [ ] **Thesis page**
 - [ ] **Synthesis page**
@@ -398,7 +398,7 @@ Pins keep **Trita Parsi** (EU / **Kallas** speech-act lane) and **Daniel Davis**
 | **3** | **Davis** war-powers / blockade line (quote-grade **X** when pinned) | `https://x.com/DanielLDavis1/status/TBD-pin-exact` |
 | **4** | Same-week **Congress** procedure context (wire) | [Roll Call — Iran war powers + expulsion talk](https://rollcall.com/2026/04/13/this-week-iran-war-powers-and-expulsion-talk/) |
 
-**Falsifier:** This knot fails if **Parsi**/**Kallas** **naming** rhetoric is used as **proof** of **Davis**-class **war-powers** **votes** or **floor** outcomes (or the reverse)—**false merge** unless **Roll Call** / committee / roll-call primaries **couple** the institutions.
+**Falsifier:** This page fails if **Parsi**/**Kallas** **naming** rhetoric is used as **proof** of **Davis**-class **war-powers** **votes** or **floor** outcomes (or the reverse)—**false merge** unless **Roll Call** / committee / roll-call primaries **couple** the institutions.
 <!-- strategy-page:end -->
 
 <!-- strategy-page:start id="ritter-blockade-hormuz-weave" date="2026-04-14" watch="" -->
@@ -414,7 +414,7 @@ Pins keep **Trita Parsi** (EU / **Kallas** speech-act lane) and **Daniel Davis**
 
 ### Reflection
 
-**Weave (this knot):** **`ritter`** carries **Hormuz** **sea-control** / **blockade** **mechanics** (semantics, hull burden, third-party **hull** behavior, **time** / **storage**). **Same topic**, **non-interchangeable** **expert** **objects:** **`davis`** + **`jermy`** = **executive** **clock** + **systemic** **energy** **lag**; **`diesen`** + **`sachs`** = **talks**/**institutions** **collapse** **frame** on **blockade** (**orthogonal** to **vi-14** per sister knot); **`parsi`** + **`davis`** = **EU** **naming** vs **Congress** **lane**; **`barnes`** = **domestic** **TS** **liability** **pole** (inbox **Disclose**/**Truth Social** **chain**) — **not** **Navy** **facts**; **`johnson`** = **digest** **ORBAT** **Haiphong** **roundtable** path ([transcript digest](../../../transcript-analysis-haiphong-ritter-johnson-iran-2026-04.md)); **`marandi`** / **`mercouris`** / **`mearsheimer`** = **continuity spine** **room** / **geometry** — **triangulate**, **do not** **collapse** into **one** **Ritter** **paragraph** without **labeled** **seams**.
+**Weave (this page):** **`ritter`** carries **Hormuz** **sea-control** / **blockade** **mechanics** (semantics, hull burden, third-party **hull** behavior, **time** / **storage**). **Same topic**, **non-interchangeable** **expert** **objects:** **`davis`** + **`jermy`** = **executive** **clock** + **systemic** **energy** **lag**; **`diesen`** + **`sachs`** = **talks**/**institutions** **collapse** **frame** on **blockade** (**orthogonal** to **vi-14** per related weave); **`parsi`** + **`davis`** = **EU** **naming** vs **Congress** **lane**; **`barnes`** = **domestic** **TS** **liability** **pole** (inbox **Disclose**/**Truth Social** **chain**) — **not** **Navy** **facts**; **`johnson`** = **digest** **ORBAT** **Haiphong** **roundtable** path ([transcript digest](../../../transcript-analysis-haiphong-ritter-johnson-iran-2026-04.md)); **`marandi`** / **`mercouris`** / **`mearsheimer`** = **continuity spine** **room** / **geometry** — **triangulate**, **do not** **collapse** into **one** **Ritter** **paragraph** without **labeled** **seams**.
 
 ### Foresight
 
@@ -430,10 +430,10 @@ Pins keep **Trita Parsi** (EU / **Kallas** speech-act lane) and **Daniel Davis**
 | Field | Value |
 |--------|--------|
 | **Date** | 2026-04-14 |
-| **knot_label** (machine slug) | `ritter-blockade-hormuz-weave` — matches basename and [`knot-index.yaml`](../../../knot-index.yaml) |
+| **page_id** (machine slug) | `ritter-blockade-hormuz-weave` — matches basename and the legacy index file [`knot-index.yaml`](../../../knot-index.yaml) |
 | **Day block** | [`days.md` § 2026-04-14](../days.md) |
 
-### Page type (**pick per knot** — mixed types allowed)
+### Page type (**pick per strategy-page** — mixed types allowed)
 
 - [ ] **Thesis page**
 - [x] **Synthesis page**
@@ -445,7 +445,7 @@ Pins keep **Trita Parsi** (EU / **Kallas** speech-act lane) and **Daniel Davis**
 ### Lineage — **`thread:ritter`** (anchor)
 
 - **Primary ingest:** [`daily-strategy-inbox.md`](../../../daily-strategy-inbox.md) — **`YT | cold: Scott Ritter — Ritter's Rant 085: The Blockade`** (`thread:ritter`) — **blockade** vs **quarantine**, hull count, **Kennedy** analogy, **China/Russia/India** exceptions thesis, porous / political blockade read — URL `TBD-canonical-085` until pinned; **verify** vs **AP/Reuters** hull + **MFA** lines per inbox tail.
-- **Same-topic expert threads (indexed only — no new anchors):** pull **`davis`**, **`jermy`**, **`diesen`**, **`sachs`**, **`parsi`**, **`mearsheimer`**, **`mercouris`**, **`barnes`**, **`johnson`**, **`marandi`** only where **`daily-strategy-inbox.md`** / **`days.md`** already carries a **`thread:`** or **continuity-spine** line for **2026-04-12–14** **Hormuz** / **blockade** — this knot **weaves**; it does **not** mint **new** **`expert_id`** rows.
+- **Same-topic expert threads (indexed only — no new anchors):** pull **`davis`**, **`jermy`**, **`diesen`**, **`sachs`**, **`parsi`**, **`mearsheimer`**, **`mercouris`**, **`barnes`**, **`johnson`**, **`marandi`** only where **`daily-strategy-inbox.md`** / **`days.md`** already carries a **`thread:`** or **continuity-spine** line for **2026-04-12–14** **Hormuz** / **blockade** — this page **weaves**; it does **not** mint **new** **`expert_id`** rows.
 
 ### Prior days (same Hormuz arc — cross-links)
 
@@ -454,9 +454,9 @@ Pins keep **Trita Parsi** (EU / **Kallas** speech-act lane) and **Daniel Davis**
 | **2026-04-12** | `islamabad-hormuz-thesis-weave` | **Islamabad → Hormuz** **Thesis A/B** + **Pape/Parsi/Freeman** **fork** |
 | **2026-04-13** | `marandi-ritter-mercouris-hormuz-scaffold` | **Marandi × Ritter × Mercouris** **scaffold** **before** **04-14** **`batch-analysis`** **density** |
 
-### Sister knots (same calendar day — cross-links)
+### Related weaves (same calendar day — cross-links)
 
-| Knot | `knot_label` | Experts (from those files) | Relation to **Ritter** blockade |
+| Knot | `page_id` | Experts (from those files) | Relation to **Ritter** blockade |
 |------|----------------|------------------------------|--------------------------------|
 | `parsi-davis-war-powers` | `parsi-davis-war-powers` | **`parsi`**, **`davis`** | **Speech-act** / **war-powers** **accountability** vs **Ritter** **sea-control** mechanics — **orthogonal** planes; **Parsi × Davis** `batch-analysis` names **Mercouris**/**Barnes**/**Mearsheimer** as **layers**, not substitutes for **hull** facts. |
 | `diesen-vi14-petrodollar-vs-sachs-hormuz` | `diesen-vi14-petrodollar-vs-sachs-hormuz` | **`diesen`**, **`sachs`** | **Diesen × Sachs** **Hormuz blockade** episode ([YouTube `S6mlCuvKKIQ`](https://www.youtube.com/watch?v=S6mlCuvKKIQ)) — **institutional** / **chaos** thesis; **do not** merge **PH vi-14** petrodollar lane with **Ritter** **ORBAT** without **seam**; **Ritter** = **operations** vocabulary, **Sachs** = **DC process** **hypothesis** tier. |
@@ -486,7 +486,7 @@ Pins keep **`ritter`** **mechanics** **distinct** from **speech**/**institution*
 |-----|--------|-----|
 | **1** | **Ritter** **Rant 085** (canonical episode) | `TBD` — [inbox `thread:ritter`](../../../daily-strategy-inbox.md) |
 | **2** | **Davis × Jermy** Deep Dive (blockade **same week**) | [YouTube](https://www.youtube.com/watch?v=etxmqrdm3V0) |
-| **3** | **Sister knot** registry (this file’s **cross-links**) | [knot-index.yaml](../../../knot-index.yaml) — search `2026-04-14` |
+| **3** | **Related weave** registry (this file’s **cross-links**) | [knot-index.yaml](../../../knot-index.yaml) — search `2026-04-14` |
 
 **Falsifier:** This weave fails if **one** **merged** **Judgment** treats **Ritter** **hull**/**interdiction** **claims** as **fully** **confirmed** by **`parsi`** **EU** **wording**, **`sachs`** **NYT** **room** **hypotheses**, or **`jermy`** **GDP** **slides** **without** **tiered** **verify** — **expert** **lattice** **collapsed** into **mood**.
 <!-- strategy-page:end -->
@@ -510,7 +510,7 @@ Pins keep **`ritter`** **mechanics** **distinct** from **speech**/**institution*
 
 - Pin **primary** **Fink** paragraph or **CNBC** transcript line if **social** repost chain is load-bearing.
 - Add **dedicated** shipping / **UNCTAD** or **commodity shipping** primary if **“through Hormuz”** **fertilizer %** is needed at **Links** tier.
-- Optional inbox: one **`batch-analysis`** line naming **this knot** + **`crosses:`** none — or **crosses** to a future **`thread:`** expert if **money** and **Hormuz** lanes are **explicitly** coupled with evidence.
+- Optional inbox: one **`batch-analysis`** line naming **this page** + **`crosses:`** none — or **crosses** to a future **`thread:`** expert if **money** and **Hormuz** lanes are **explicitly** coupled with evidence.
 
 ### Appendix
 
@@ -519,32 +519,32 @@ Pins keep **`ritter`** **mechanics** **distinct** from **speech**/**institution*
 | Field | Value |
 |--------|--------|
 | **Date** | 2026-04-14 |
-| **knot_label** (machine slug) | `armstrong-cash-hormuz-digital-dollar-arc` — matches basename and [`knot-index.yaml`](../../../knot-index.yaml) |
+| **page_id** (machine slug) | `armstrong-cash-hormuz-digital-dollar-arc` — matches basename and the legacy index file [`knot-index.yaml`](../../../knot-index.yaml) |
 | **Day block** | [`days.md` § 2026-04-14](../days.md) |
 
-### Page type (**pick per knot** — mixed types allowed)
+### Page type (**pick per strategy-page** — mixed types allowed)
 
 - [ ] **Thesis page**
 - [x] **Synthesis page**
 - [ ] **Case page**
 - [ ] **Mechanism page**
 - [ ] **Watch page**
-- [x] **Link hub** (secondary — primaries + sister knots)
+- [x] **Link hub** (secondary — primaries + related weaves)
 
 ### Lineage
 
 - **Ingest:** Operator **Cursor session weave** (option **D**) — not gated on a single [`daily-strategy-inbox.md`](../../../daily-strategy-inbox.md) paste line; **optional follow-up:** add a cold line + `batch-analysis` tail if this arc is folded into the inbox accumulator.
-- **Indexed expert threads (`thread:<expert_id>`):** **none** for this knot — provocation is **social + documentary** sources, not a named **strategy-commentator** transcript row. Same-day **Hormuz** work on **2026-04-14** uses **`thread:ritter`**, **`thread:davis`**, **`thread:jermy`**, etc.; this page is a **different plane** (money, statute, attribution).
+- **Indexed expert threads (`thread:<expert_id>`):** **none** for this page — provocation is **social + documentary** sources, not a named **strategy-commentator** transcript row. Same-day **Hormuz** work on **2026-04-14** uses **`thread:ritter`**, **`thread:davis`**, **`thread:jermy`**, etc.; this page is a **different plane** (money, statute, attribution).
 - **Analytical lenses (work-strategy mind files — not `thread:` experts):** [CIV-MIND-BARNES.md](../../../minds/CIV-MIND-BARNES.md) (statute, Federal Reserve Act, Congress as chokepoint), [CIV-MIND-MERCOURIS.md](../../../minds/CIV-MIND-MERCOURIS.md) (legitimacy of cash, civilizational “story” of money), [CIV-MIND-MEARSHEIMER.md](../../../minds/CIV-MIND-MEARSHEIMER.md) (who gains if retail central-bank digital currency stalls while private digital dollars advance).
 - **Source objects woven:** **Martin Armstrong** posts on X (`@ArmstrongEcon`) — **emotional / percentage** provocation (cash vs digital split; adjacent commodity claims); **Larry Fink / BlackRock** — chairman letters and public interviews on **tokenization** and **market plumbing** (primary pulls in Links); **U.S. Congress** — stablecoin and retail central-bank digital currency bills (text in Links); **Statista** (citing **Signal Group**) — **Arabian Gulf** share of **seaborne fertilizer** exports (definition: **origin**, not automatically **Strait of Hormuz transit**).
 - **History resonance:** deferred — no **history-notebook** chapter wired this pass.
 - **Civilizational bridge:** optional fit — **Chokepoint coercion** family on [`civilizational-strategy-surface.md`](../../../../civilizational-strategy-surface.md) **echoes** the **fertilizer / Hormuz** thread **only** when **verify** separates **Gulf-origin** trade from **transit** metrics; **do not** merge with **04-14** **`thread:`** **ORBAT** facts without a labeled seam.
 
-### Sister knots (same calendar day — cross-links)
+### Related weaves (same calendar day — cross-links)
 
 | Knot | Relation |
 |------|-----------|
-| `ritter-blockade-hormuz-weave` | **Hormuz** expert mechanics — **orthogonal** to this knot’s **U.S. payment-law** arc; **fertilizer** language may **overlap in mood** with **`jermy`** cascade lines in [`days.md`](../days.md), not as proof of the same **quantity**. |
+| `ritter-blockade-hormuz-weave` | **Hormuz** expert mechanics — **orthogonal** to this page’s **U.S. payment-law** arc; **fertilizer** language may **overlap in mood** with **`jermy`** cascade lines in [`days.md`](../days.md), not as proof of the same **quantity**. |
 
 ### References
 
@@ -552,14 +552,14 @@ Pins keep **`ritter`** **mechanics** **distinct** from **speech**/**institution*
 - **BlackRock — Larry Fink chairman letters (primary hub):** [Investor relations — annual chairman’s letter](https://www.blackrock.com/corporate/investor-relations/larry-fink-annual-chairmans-letter)
 - **U.S. Congress (119th) — illustrative statutory objects:** [H.R.1919 — Anti-CBDC Surveillance State Act](https://www.congress.gov/bill/119th-congress/house-bill/1919) (retail CBDC restrictions — read current status on Congress.gov) · [S.394 — GENIUS Act](https://www.congress.gov/bill/119th-congress/senate-bill/394/text) (payment **stablecoin** framework — not interchangeable with retail CBDC bans)
 - **Fertilizer / Gulf (origin share — not identical to Hormuz transit %):** [Statista chart — Gulf fertilizer / Signal Group chain](https://www.statista.com/chart/35981/share-of-global-seaborne-fertilizer-trade-from-the-arabian-gulf-and-destination-breakdown/) · [Signal Group — market insights (fertilizer)](https://www.thesignalgroup.com/newsroom/market-insights-fertiliser-markets-suffer-from-arabian-gulf-conflict/)
-- **Martin Armstrong (provocation source):** operator to pin **exact** `x.com` status URL(s) when this knot is cited publicly — **not** tier-A fact without **screenshot hash** / **archive** discipline.
+- **Martin Armstrong (provocation source):** operator to pin **exact** `x.com` status URL(s) when this page is cited publicly — **not** tier-A fact without **screenshot hash** / **archive** discipline.
 - **Same-day Hormuz lattice (expert plane):** `ritter-blockade-hormuz-weave`
 
 ### Optional satellite — @ArmstrongEcon negotiation posts (2026-04-17)
 
 **Not** load-bearing for the **2026-04-14** thesis above (cash / statute / Gulf-origin fertilizer definition; **BlackRock** / **Congress** primaries). A **separate** pair of X posts from Martin Armstrong raises **Pakistan–nuclear analogy**, attacks **Kushner** and **Witkoff** as negotiators (with **Vance** named), and uses **“religious war”** framing.
 
-**Tie to this knot only** when an operator weave **explicitly** couples **negotiation-trust**, **personnel mood**, or **“who speaks for Washington”** to the **war-economy + payment-plumbing** arc. **Default:** keep that content on the **`thread:armstrong`** journal in [`strategy-expert-armstrong-thread.md`](../../../strategy-expert-armstrong-thread.md) and use **expert crosses** (`barnes`, `davis`, `mearsheimer`, `marandi`) — **do not** merge **fertilizer share**, **bill text**, or **Fink** lines with those **X** claims without a **labeled seam**. Pin **exact** status URL(s) / screenshot if this satellite is cited outside WORK.
+**Tie to this page only** when an operator weave **explicitly** couples **negotiation-trust**, **personnel mood**, or **“who speaks for Washington”** to the **war-economy + payment-plumbing** arc. **Default:** keep that content on the **`thread:armstrong`** journal in [`strategy-expert-armstrong-thread.md`](../../../strategy-expert-armstrong-thread.md) and use **expert crosses** (`barnes`, `davis`, `mearsheimer`, `marandi`) — **do not** merge **fertilizer share**, **bill text**, or **Fink** lines with those **X** claims without a **labeled seam**. Pin **exact** status URL(s) / screenshot if this satellite is cited outside WORK.
 
 ---
 <!-- strategy-page:end -->
@@ -596,7 +596,7 @@ Pape stacks four public claims in one appearance:
 
 - **Pape × Davis:** **Davis** tests **ultimatum vs negotiation**, **resumption clock**, **U.S.-side macro hurt** if talks read as final offer (`thread:davis`). Pape tests **commodity-shock staging**, **third-player killing talks**, **Trump exit narrative**. **Weak bridge:** both model **why talks break under pressure** — **different falsifiers** (process vs domestic ratchet + shocks).
 
-**Falsifier:** If **White House / State** readouts show **sustained** Islamabad rounds **without** Rubio-attributed Israeli spoiler behavior **and** commodity checkpoints **miss** Pape’s calendar, downgrade the **spoiler + calendar** spine for this knot (keep escalation-trap vocabulary if demand structure still ratchets).
+**Falsifier:** If **White House / State** readouts show **sustained** Islamabad rounds **without** Rubio-attributed Israeli spoiler behavior **and** commodity checkpoints **miss** Pape’s calendar, downgrade the **spoiler + calendar** spine for this page (keep escalation-trap vocabulary if demand structure still ratchets).
 
 **Weave D — same-day evidence streams (do not merge registers):** **Marandi — Breaking Points (page id `marandi-blumenthal-jf-primary`)** (Tehran **process** / **delegation authority** / **Hormuz leverage** — `thread:marandi`) and **Blumenthal — Judging Freedom (page id `marandi-blumenthal-jf-primary`)** (US **domestic** / **media** **amplifier** on **Vance**, **Islamabad optics**, **delegation targeting** — `thread:blumenthal`, operator session) feed **stress-test** **questions** for this **trap** page: *does the room failure look like **ratchet + audience lock-in** (Pape) rather than only **Tehran framing** (Marandi) or **DC humiliation** (Blumenthal)?* **Three lanes** — **three falsifiers**; cite **sister** weave C (page id `marandi-blumenthal-jf-primary`) for **non-Pape** **primary** **Judgment**.
 
@@ -621,7 +621,7 @@ WORK only; not Record.
 | Field | Value |
 |--------|--------|
 | **Date** | 2026-04-16 |
-| **knot_label** (machine slug) | `pape-janssen-escalation-blockade` — matches basename and [`knot-index.yaml`](../../../knot-index.yaml) |
+| **page_id** (machine slug) | `pape-janssen-escalation-blockade` — matches basename and the legacy index file [`knot-index.yaml`](../../../knot-index.yaml) |
 | **Day block** | [`days.md` § 2026-04-16](../days.md#2026-04-16) |
 | **Primary expert (`thread:`)** | `pape` — **escalation trap / staged blockade / spoiler** mechanism; **not** Tehran process register (see weave C (page id `marandi-blumenthal-jf-primary`)). |
 
@@ -634,7 +634,7 @@ WORK only; not Record.
 
 - **Inbox:** [`daily-strategy-inbox.md`](../../../daily-strategy-inbox.md) — **Expert ingest — 2026-04-16** (Pape × Cyrus Janssen YT lines + `batch-analysis | 2026-04-16 | Pape (Janssen) × Mearsheimer` + `× Davis`); **X** Lebanon map + **AP** Washington talks context (`wire | cold: LEBANON | AP 14 Apr`)
 - **Expert threads:** `thread:pape` — operator transcript + channel URL until **`watch?v=`** pinned
-- **Sister knots:** `islamabad-hormuz-thesis-weave` (Thesis A/B + escalation-trap vocabulary), `kremlin-iri-uranium-dual-register` (enrichment / grand-bargain scope trap), `mercouris-mearsheimer-lebanon-split` (Lebanon fork + Pape sectarian map lane)
+- **Related pages:** `islamabad-hormuz-thesis-weave` (Thesis A/B + escalation-trap vocabulary), `kremlin-iri-uranium-dual-register` (enrichment / grand-bargain scope trap), `mercouris-mearsheimer-lebanon-split` (Lebanon fork + Pape sectarian map lane)
 
 ---
 
@@ -645,8 +645,8 @@ WORK only; not Record.
 - **YT (channel until pin):** [Cyrus Janssen — videos](https://www.youtube.com/@CyrusJanssen/videos)
 - **X (Lebanon map):** [ProfessorPape](https://x.com/ProfessorPape) — `verify:pin-exact-status-URL` in inbox
 - **Wire:** [AP — Israel–Lebanon talks Washington (14 Apr)](https://apnews.com/article/lebanon-israel-negotiations-hezbollah-rubio-washington-88f5123bfcf4c00625e98ea14a16eef9)
-- **Weave C (same day):** `marandi-blumenthal-jf-primary` — Marandi-primary + Blumenthal amplifier; **this** knot is **weave D** (Pape-primary).
-- **Sister knots:** 2026-04-12 islamabad-hormuz-thesis-weave (page id `islamabad-hormuz-thesis-weave`) · 2026-04-15 kremlin-iri-uranium-dual-register (page id `kremlin-iri-uranium-dual-register`) · 2026-04-14 mercouris-mearsheimer-lebanon-split (page id `mercouris-mearsheimer-lebanon-split`)
+- **Weave C (same day):** `marandi-blumenthal-jf-primary` — Marandi-primary + Blumenthal amplifier; **this** page is **weave D** (Pape-primary).
+- **Related pages:** 2026-04-12 islamabad-hormuz-thesis-weave (page id `islamabad-hormuz-thesis-weave`) · 2026-04-15 kremlin-iri-uranium-dual-register (page id `kremlin-iri-uranium-dual-register`) · 2026-04-14 mercouris-mearsheimer-lebanon-split (page id `mercouris-mearsheimer-lebanon-split`)
 
 ---
 <!-- strategy-page:end -->
@@ -694,7 +694,7 @@ When macro or petroleum lines in Davis’s post read as **multi-year** stress te
 <!-- strategy-expert-thread:start -->
 ## Machine layer — Extraction (script-maintained)
 
-_Auto-generated from `-transcript.md` + `strategy-page` blocks in this thread + optional knot-index rows (legacy). **Journal layer** (narrative) lives **above** the **strategy-expert-thread** start HTML comment. The machine-layer HTML block is replaced on each `thread` run._
+_Auto-generated from `-transcript.md` + `strategy-page` blocks in this thread + optional empty legacy on-disk index rows. **Journal layer** (narrative) lives **above** the **strategy-expert-thread** start HTML comment. The machine-layer HTML block is replaced on each `thread` run._
 
 ### Recent transcript material
 

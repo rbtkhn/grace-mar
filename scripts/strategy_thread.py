@@ -19,9 +19,8 @@ This runs **two automatic steps**:
    ``kind: rss-item`` + ``thread:`` in YAML (see ``fetch-sources.json`` /
    ``fetch_strategy_raw_input.py``).
 2. **Extraction** (``strategy_expert_corpus.py``) — reads each expert's
-   transcript + relevant knots + existing pages, writes raw material to
-   thread files between script markers. Prefers pages over knots when both
-   cover the same content.
+   transcript + existing ``strategy-page`` blocks (+ optional legacy index rows),
+   writes raw material to thread files between script markers.
 
 After extraction, prints **page-candidate suggestions** when cross-expert
 material or tension-bearing content is detected.
@@ -118,7 +117,7 @@ def main() -> int:
         print(f"  transcript: {path.relative_to(REPO_ROOT)}")
 
     # Step 2: Extract transcript + knots + pages → thread files
-    print("--- Step 2: Extraction (transcripts + knots + pages → threads) ---")
+    print("--- Step 2: Extraction (transcripts + pages → threads) ---")
     from strategy_expert_corpus import rebuild_threads
     thread_paths = rebuild_threads(
         out_dir=args.out,

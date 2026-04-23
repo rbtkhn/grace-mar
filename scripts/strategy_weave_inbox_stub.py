@@ -9,7 +9,7 @@ Example::
 
     python3 scripts/strategy_weave_inbox_stub.py \\
       --date 2026-04-14 \\
-      --knot-label armstrong-cash-hormuz-digital-dollar-arc \\
+      --page-id armstrong-cash-hormuz-digital-dollar-arc \\
       --cold 'Martin Armstrong (@ArmstrongEcon) X — …' \\
       --batch-theme 'Armstrong cash × Gulf fertilizer × U.S. digital-dollar law' \\
       --batch-body '**Tension-first:** …'
@@ -23,17 +23,20 @@ import argparse
 import sys
 
 
-def _build_basename(date: str, knot_label: str) -> str:
-    return f"strategy-notebook-knot-{date}-{knot_label}.md"
+def _build_basename(date: str, page_id: str) -> str:
+    return f"strategy-notebook-knot-{date}-{page_id}.md"
 
 
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--date", required=True, help="Calendar day YYYY-MM-DD")
     ap.add_argument(
+        "--page-id",
         "--knot-label",
         required=True,
-        help="knot_label / basename slug (kebab-case, matches knot-index.yaml)",
+        dest="page_id",
+        metavar="ID",
+        help="Page id / basename slug (kebab-case; legacy index filename on disk is unchanged).",
     )
     ap.add_argument(
         "--cold",
@@ -73,15 +76,15 @@ def main() -> int:
     args = ap.parse_args()
 
     date = args.date.strip()
-    knot_label = args.knot_label.strip()
+    page_id = args.page_id.strip()
     if not date or len(date) != 10:
         print("error: --date must be YYYY-MM-DD", file=sys.stderr)
         return 1
-    if not knot_label:
-        print("error: --knot-label required", file=sys.stderr)
+    if not page_id:
+        print("error: --page-id required", file=sys.stderr)
         return 1
 
-    basename = _build_basename(date, knot_label)
+    basename = _build_basename(date, page_id)
     cold = args.cold.strip()
     if not cold:
         cold = "(operator: paste cold — who / what / URL)"
@@ -91,13 +94,13 @@ def main() -> int:
     else:
         weave_part = f" (weave {args.weave_tag.strip()})" if args.weave_tag.strip() else ""
         hook = (
-            f"landed knot {basename}{weave_part}; "
+            f"landed page basename {basename}{weave_part}; "
             f"lenses from CIV-MIND {args.minds} — not a thread: expert row"
         )
 
     verify_tail = (
-        "verify:knot-on-disk | membrane:single | "
-        f"grep:{knot_label}"
+        "verify:basename-on-disk | membrane:single | "
+        f"grep:{page_id}"
     )
     weave_line = (
         f"`notebook-weave | cold: {cold} // hook: {hook} | {verify_tail}`"

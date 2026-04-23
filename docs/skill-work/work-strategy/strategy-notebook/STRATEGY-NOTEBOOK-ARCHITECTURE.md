@@ -8,7 +8,7 @@
 
 ## Current canonical model
 
-**One-sentence model:** **experts** = who; **watches** = what (evolving situation); **days** = when (`chapters/YYYY-MM/days.md` chronology and continuity); **minds** = interpretive lens ([`minds/`](minds/) and optional Links-only lines); **pages** = primary analytical unit — **`strategy-page`** marker blocks stored in expert **`thread.md`** files (and optionally duplicated across experts with the same `id=`). **Threads** are containers and continuity lanes; **pages** are the portable analytical objects. **Knot**-named files under `chapters/…/knots/` and standalone knot-first workflow are **historical** (git may retain); current inventory is page-based. **Link hub** (pointers, not duplicate spec): [PAGE-CONTRACT.md](PAGE-CONTRACT.md).
+**One-sentence model:** **experts** = who; **watches** = what (evolving situation); **days** = when (`chapters/YYYY-MM/days.md` chronology and continuity); **minds** = interpretive lens ([`minds/`](minds/) and optional Links-only lines); **pages** = primary analytical unit — **`strategy-page`** marker blocks stored in expert **`thread.md`** files (and optionally duplicated across experts with the same `id=`). **Threads** are containers and continuity lanes; **pages** are the portable analytical objects. Older standalone files under `chapters/…/knots/` (git history) are **not** the current model; inventory is page-based. **Link hub** (pointers, not duplicate spec): [PAGE-CONTRACT.md](PAGE-CONTRACT.md).
 
 <a id="default-operating-path-ssot"></a>
 
@@ -42,7 +42,7 @@
 
 Older grep/git and JSONL fields may keep `fold` (e.g. `fold_kind` in [FOLD-LEARNING.md](FOLD-LEARNING.md)). **Long-horizon “weaving”** language in § *Daily strategy inbox* (Rome, Putin, §1 watches) means **integrating a watch channel over months** — **not** the EOD compose session.
 
-**Legacy:** Standalone files under `chapters/…/knots/` were **deprecated** in favor of pages; git history retains old knots. See [strategy-page-template.md](strategy-page-template.md).
+**Legacy:** Standalone files under `chapters/…/knots/` were **superseded** in favor of pages; git may retain them. See [strategy-page-template.md](strategy-page-template.md).
 
 ## Thread (terminology)
 
@@ -51,14 +51,14 @@ Older grep/git and JSONL fields may keep `fold` (e.g. `fold_kind` in [FOLD-LEARN
 **`thread`** (operator command — use backticks in prose so it is **not** confused with the inbox verify tail **`thread:<expert_id>`**) runs the expert pipeline via **`bin/thread`** or **`python3 scripts/strategy_thread.py`** (same flags; from repo root):
 
 1. **Triage** (internal, not operator-facing) — routes **`thread:<expert_id>`** lines from **`daily-strategy-inbox.md`** to per-expert **`experts/<expert_id>/transcript.md`** files (append-only, 7-day rolling window, auto-pruned). Operator may lightly edit transcripts for clarity; edits are preserved across runs.
-2. **Extraction** — reads each expert's **`transcript.md`** (what the expert said recently) and lists **`strategy-page`** blocks already in that expert's **thread file(s)**, then writes **machine-maintained** material **between** the HTML comment markers (see below). **Default path:** **`experts/<expert_id>/thread.md`**. **Monthly layout:** one file per calendar month — **`experts/<expert_id>/<expert_id>-thread-YYYY-MM.md`** (optional flat **`strategy-expert-<expert_id>-thread-YYYY-MM.md`**); transcript lines are partitioned by date into the matching month file; legacy **knot** references attach to the **current UTC month** file only. **Human narrative** lives **outside** that block.
+2. **Extraction** — reads each expert's **`transcript.md`** (what the expert said recently) and lists **`strategy-page`** blocks already in that expert's **thread file(s)**, then writes **machine-maintained** material **between** the HTML comment markers (see below). **Default path:** **`experts/<expert_id>/thread.md`**. **Monthly layout:** one file per calendar month — **`experts/<expert_id>/<expert_id>-thread-YYYY-MM.md`** (optional flat **`strategy-expert-<expert_id>-thread-YYYY-MM.md`**); transcript lines are partitioned by date into the matching month file; optional legacy **index** file rows (if any) attach to the **current UTC month** file only. **Human narrative** lives **outside** that block.
 
 **`-thread.md` is layered (in order top to bottom).** **Do not** overload the word **Segment** for these layers — reserve **Segment 1–4** for the **2026 month index** (below).
 
 | Layer | Location in file | Who maintains | Purpose |
 |-------|------------------|----------------|---------|
 | **Journal layer — Narrative** | **Above** `<!-- strategy-expert-thread:start -->` | Operator / assistant | **Verbatim-forward (default):** the **expert’s voice** in bulk lives in **`transcript.md`** (SSOT) and in the **machine layer** echo below — **not** as long paraphrase in the journal. The journal holds **light gloss** only: month stubs, source/date pins, optional **short** cross-check scope lines, pointers, tension notes — **not** a full analytical rewrite of what the expert said. Heading **`## Journal layer — Narrative (operator)`**; dated **`## YYYY-MM`** segments. The **`thread`** script **never overwrites** this layer. If empty, a one-line stub is fine. |
-| **Machine layer — Extraction** | **Between** `<!-- strategy-expert-thread:start -->` and `<!-- strategy-expert-thread:end -->` | `strategy_expert_corpus.py` on each **`thread`** run | **`## Machine layer — Extraction (script-maintained)`** with **`### Recent transcript material`** and **`### Page references`** (and optional **Legacy knot references** if `knot-index.yaml` still lists rows). Overwritten each run. |
+| **Machine layer — Extraction** | **Between** `<!-- strategy-expert-thread:start -->` and `<!-- strategy-expert-thread:end -->` | `strategy_expert_corpus.py` on each **`thread`** run | **`## Machine layer — Extraction (script-maintained)`** with **`### Recent transcript material`** and **`### Page references`** (and optional **Legacy file-index rows** if `knot-index.yaml` still lists rows). Overwritten each run. |
 | **Optional ledger** | **After** `<!-- strategy-expert-thread:end -->` | Operator or future tooling | Optional fenced **`thread-ledger`** YAML/JSON — **not** touched by the default extractor unless a future script is added. |
 
 **2026 month segments (operator index — inside the journal layer):** **`Segment 1`** = **January 2026** (`## 2026-01`); **`Segment 2`** = **February 2026** (`## 2026-02`); **`Segment 3`** = **March 2026** (`## 2026-03`); **`Segment 4`** = **April 2026** (`## 2026-04`, **ongoing**). Later months continue as **`## YYYY-MM`** headings in order. These **month segments** are **not** the machine layer.
@@ -274,7 +274,7 @@ The word **“page”** is overloaded in this lane. Use the table below as the d
 
 **Page design and notebook-use jobs:** In addition to thesis and section emphasis, each page-shape stub should **signal which analyst job(s)** the resulting page would foreground — align with the seven **Notebook-use** vocations in [strategy-commentator-threads.md](strategy-commentator-threads.md) § *Notebook-use tags (reverse index)* (`orient`, `negotiate`, `validate`, `authorize`, `stress-test`, `narrate`, `historicize`). Examples: a page centered on **throughput and material break points** reads as a **stress-test** move; one on **talks room and sequencing** reads as **negotiate**. Write each option **thesis-first**; add the implied job as a **short clause or parenthetical**, not as a standalone tag picker. A single page may **combine** jobs (e.g. **orient** to open the frame, **validate** to close on falsifiers); that sequence should **inform** Signal vs Judgment vs Open weighting once the operator picks.
 
-**Legacy note:** Older text referred to a “knot-shape” menu or the deprecated **`weave`** token; the **page-shape** fork above is the **default** assistant contract for the **EOD session** unless the operator opts out.
+**Legacy note:** Older text referred to a “page-shape” menu or the deprecated **`weave`** token; the **page-shape** fork above is the **default** assistant contract for the **EOD session** unless the operator opts out.
 
 **Compose skeletons (S1–S5):** When the operator picks a **primary `strategy-expert`** for the EOD session (or accepts a menu default), [NOTEBOOK-PREFERENCES.md](NOTEBOOK-PREFERENCES.md) § *Weave skeletons (S1–S5)* (name unchanged for grep) defines **five** optional **spines** (operations, power/incentives, legitimacy/room, domestic machinery, markets/macro) and a **failure mode** per spine — **orthogonal** to the **page-shape menu** above; combine both when useful.
 
@@ -567,7 +567,7 @@ An **EOD compose pass** is a **promotion decision**: which scratch lines (and **
 
 **Optional compose ledger (recursive learning):** *Legacy:* “weave ledger”. Append-only JSONL + CLI under `users/<id>/strategy-fold-events.jsonl` — compression proxies and optional self-ratings; **not** Record. CLI filenames still use **`fold`** for backward compatibility. See [FOLD-LEARNING.md](FOLD-LEARNING.md).
 
-**Legacy knot index:** [knot-index.yaml](knot-index.yaml) is **deprecated** (empty **`knots:`** list); git history preserved standalone knot files. **Machine inventory** of pages is derived from expert threads (`discover_pages` / **`### Page references`** in the machine layer) and optional **`validate_strategy_pages.py`**.
+**Legacy index file:** [knot-index.yaml](knot-index.yaml) is **not** used for live inventory (typically empty). **Machine inventory** of pages is derived from expert threads (`discover_pages` / **`### Page references`** in the machine layer) and optional **`validate_strategy_pages.py`**.
 
 **Optional tag pass (mental shorthand, not schema):** `watch`, `analogy`, `framework`, `defer` — operator labels only; not machine-enforced.
 

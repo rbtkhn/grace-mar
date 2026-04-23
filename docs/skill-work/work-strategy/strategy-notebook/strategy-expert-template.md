@@ -132,7 +132,7 @@ _Omit or leave “roster-only (Tier C)” until **`thread:`** density supports a
 
 WORK only; not Record.
 
-**Source:** Human **narrative journal** (below) + [`strategy-expert-<expert_id>-transcript.md`](strategy-expert-template.md#transcript-template) (verbatim ingests) + relevant **knot** files (where this expert’s material was used).
+**Source:** Human **narrative journal** (below) + [`strategy-expert-<expert_id>-transcript.md`](strategy-expert-template.md#transcript-template) (verbatim ingests) + relevant **`strategy-page`** work (where this expert’s material was used).
 **Process:** `python3 scripts/strategy_thread.py` triages inbox → transcript, then fills **only** the **machine layer** between the **strategy-expert-thread** HTML start and end comments. Operator / assistant maintains the **journal layer** above the start marker in **readable prose** (optional **ledger** after the end marker).
 **Updated:** Narrative — when you distill; **machine layer** — when you run **`thread`**.
 **Companion files:** [`strategy-expert-<expert_id>.md`](strategy-expert-template.md#profile-template) (profile), [`strategy-expert-<expert_id>-transcript.md`](strategy-expert-template.md#transcript-template) (7-day verbatim), and [`strategy-expert-<expert_id>-mind.md`](strategy-expert-template.md#mind-template) (optional long-form mind).
@@ -141,7 +141,7 @@ WORK only; not Record.
 
 ## Journal layer — Narrative (operator)
 
-_Write here in full sentences. Dated arcs are welcome (e.g. **2026-04-12 → 04-15**). Cover: what this voice did this week, how it **intersects** named **knots**, convergence/tension with other **`thread:`** experts, and **Open** pins. The **journal layer** is **not** overwritten by the **`thread`** script._
+_Write here in full sentences. Dated arcs are welcome (e.g. **2026-04-12 → 04-15**). Cover: what this voice did this week, how it **intersects** named **pages**, convergence/tension with other **`thread:`** experts, and **Open** pins. The **journal layer** is **not** overwritten by the **`thread`** script._
 
 **Layout:** **Legacy:** one **`experts/<expert_id>/thread.md`** (or flat `strategy-expert-<expert_id>-thread.md`) with multiple **`## YYYY-MM`** segments. **Monthly chapters (preferred for large journals):** one file per month — **`experts/<expert_id>/<expert_id>-thread-YYYY-MM.md`** (optional flat **`strategy-expert-<expert_id>-thread-YYYY-MM.md`**). In each monthly file the journal covers **that month only**; an optional **`## YYYY-MM`** heading matching the filename keeps grep / validator continuity. For **2026** in a **single** legacy file: **Segment 1** = January (`## 2026-01`), **Segment 2** = February, **Segment 3** = March, **Segment 4** = April (ongoing). The **machine layer** (script-maintained) is **only** the fenced block between the **strategy-expert-thread** HTML start and end comments — do not call that “Segment 2” in the month sense.
 
@@ -167,17 +167,17 @@ Woven pages use the scaffold in [strategy-page-template.md](strategy-page-templa
 
 ## Machine layer — Extraction (script-maintained)
 
-_Auto-generated from `-transcript.md` + knot index. **Journal layer** (narrative) lives **above** the **strategy-expert-thread** start HTML comment. The machine-layer HTML block is replaced on each `thread` run._
+_Auto-generated from `-transcript.md` + `strategy-page` blocks (+ optional empty legacy on-disk index). **Journal layer** (narrative) lives **above** the **strategy-expert-thread** start HTML comment. The machine-layer HTML block is replaced on each `thread` run._
 
 ### Recent transcript material
 
 _(Populated by `strategy_expert_corpus.py` / `strategy_thread.py` when transcript lines exist.)_
 
-### Knot references
+### Page references
 
-_(Populated when knot index references this expert.)_
+_(Populated from `strategy-page` blocks; optional legacy index rows if present on disk.)_
 
-_(No transcript, page, or knot material for extraction.)_
+_(No transcript or page material for extraction.)_
 
 <!-- strategy-expert-thread:end -->
 
@@ -186,7 +186,7 @@ _(No transcript, page, or knot material for extraction.)_
 ```thread-ledger
 expert_id: <expert_id>
 last_thread_run: null
-knot_paths: []
+legacy_index_paths: []
 ```
 
 -->
