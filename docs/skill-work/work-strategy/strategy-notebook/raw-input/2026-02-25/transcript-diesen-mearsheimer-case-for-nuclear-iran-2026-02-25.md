@@ -12,6 +12,8 @@ cross_host_thread: diesen
 source_url: https://www.youtube.com/watch?v=vx1KnspP1gM
 capture_note: Operator paste; speaker boundary after JCPOA optimism graf restored (Mearsheimer continues “It appears, Glenn…”). In-voice anchors include State of the Union, Iranian FM “crystal clear” no nuclear weapon quote, Jan 14 Caine/military advice, Witkoff “week or two” claim, Netanyahu White House visits, Iraq 2003 / Israel Lobby chapter, April/Oct 2024 Israel-Iran strikes as retaliation frame, anti-Semitism / lobby caveat block, Merz/Macron/Europe boot-licking frame — analyst tier; verify SOTU text, FM quotes, and wire primaries if promoted.
 related_same_series:
+  - ../2026-01-07/transcript-diesen-mearsheimer-venezuela-greenland-nato-2026-01-07.md
+  - ../2026-01-31/transcript-diesen-mearsheimer-cold-war-nato-ukraine-2026-01-31.md
   - ../2026-03-10/transcript-diesen-mearsheimer-us-already-lost-no-offramp-2026-03-10.md
   - ../2026-03-27/transcript-diesen-mearsheimer-iran-holds-all-the-cards-2026-03-27.md
   - ../2026-04-10/transcript-diesen-mearsheimer-world-changed-forever-2026-04-10.md

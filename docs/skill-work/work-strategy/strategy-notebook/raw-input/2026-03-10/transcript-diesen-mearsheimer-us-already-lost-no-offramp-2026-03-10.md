@@ -12,6 +12,8 @@ cross_host_thread: diesen
 source_url: https://www.youtube.com/watch?v=1e9NhLfPNKU
 capture_note: Operator paste. In-voice anchors include “11 days of the war,” Hegseth “heaviest bombardment” on a Tuesday, WSJ/advisers quick-exit frame, Israel concern in U.S. media, desalination percentages (Riyadh 90%, KSA 70%, Kuwait 90%, Oman 76% in voice), Navy escort “not possible” anecdote, Trump Hormuz / 20× tweet, Macron defensive Hormuz — Mearsheimer-voice analyst tier; verify wire/official primaries if promoted.
 related_same_series:
+  - ../2026-01-07/transcript-diesen-mearsheimer-venezuela-greenland-nato-2026-01-07.md
+  - ../2026-01-31/transcript-diesen-mearsheimer-cold-war-nato-ukraine-2026-01-31.md
   - ../2026-02-25/transcript-diesen-mearsheimer-case-for-nuclear-iran-2026-02-25.md
   - ../2026-03-27/transcript-diesen-mearsheimer-iran-holds-all-the-cards-2026-03-27.md
   - ../2026-04-10/transcript-diesen-mearsheimer-world-changed-forever-2026-04-10.md

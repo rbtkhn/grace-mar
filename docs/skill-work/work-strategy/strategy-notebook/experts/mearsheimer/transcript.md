@@ -112,8 +112,20 @@ Verbatim: [`raw-input/2026-02-25/transcript-diesen-mearsheimer-case-for-nuclear-
 
 Refined day page: [`mearsheimer-page-2026-02-25.md`](mearsheimer-page-2026-02-25.md).
 
+## 2026-01-31
+
+Verbatim: [`raw-input/2026-01-31/transcript-diesen-mearsheimer-cold-war-nato-ukraine-2026-01-31.md`](../../raw-input/2026-01-31/transcript-diesen-mearsheimer-cold-war-nato-ukraine-2026-01-31.md).
+
+Refined day page: [`mearsheimer-page-2026-01-31.md`](mearsheimer-page-2026-01-31.md).
+
 ## 2026-01-20
 
 Verbatim: [`raw-input/2026-01-20/substack-mearsheimer-the-tag-team-fails-in-iran-2026-01-20.md`](../../raw-input/2026-01-20/substack-mearsheimer-the-tag-team-fails-in-iran-2026-01-20.md).
 
 Refined day page: [`mearsheimer-page-2026-01-20.md`](mearsheimer-page-2026-01-20.md).
+
+## 2026-01-07
+
+Verbatim: [`raw-input/2026-01-07/transcript-diesen-mearsheimer-venezuela-greenland-nato-2026-01-07.md`](../../raw-input/2026-01-07/transcript-diesen-mearsheimer-venezuela-greenland-nato-2026-01-07.md).
+
+Refined day page: [`mearsheimer-page-2026-01-07.md`](mearsheimer-page-2026-01-07.md).

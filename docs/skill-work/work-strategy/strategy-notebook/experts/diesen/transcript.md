@@ -67,6 +67,16 @@ WORK only; not Record.
 
 
 
+## 2026-01-31
+- YT | cold: **Glenn Diesen** × **John Mearsheimer** — *Cold War 2.0 & NATO's Defeat in Ukraine* — **aired** **2026-01-31** **(**YouTube** **metadata** **)** — **host** **paired** **`thread:mearsheimer`** **verbatim** [raw-input/2026-01-31/transcript-diesen-mearsheimer-cold-war-nato-ukraine-2026-01-31.md](../../raw-input/2026-01-31/transcript-diesen-mearsheimer-cold-war-nato-ukraine-2026-01-31.md) // hook: **two-speaker** **×** **multipolar** **cold** **war** **/** **transatlantic** **/** **Ukraine** **kabuki** **/** **2026** **conventional** **finish** **(**verbatim** **tail** **trimmed** **—** **see** **capture_note** **)** | https://www.youtube.com/watch?v=OV75YsYnE8U | verify:operator-transcript+raw-input+aired:2026-01-31+pin-canonical-URL | thread:diesen | grep:Diesen+Mearsheimer+cold+war+Ukraine+NATO+2026-01-31
+
+
+
+## 2026-01-07
+- YT | cold: **Glenn Diesen** × **John Mearsheimer** — *Venezuela, Greenland & the End of NATO* — **aired** **2026-01-07** **(**YouTube** **metadata** **)** — **host** **paired** **`thread:mearsheimer`** **verbatim** [raw-input/2026-01-07/transcript-diesen-mearsheimer-venezuela-greenland-nato-2026-01-07.md](../../raw-input/2026-01-07/transcript-diesen-mearsheimer-venezuela-greenland-nato-2026-01-07.md) // hook: **two-speaker** **×** **VEN** **/** **Greenland** **/** **NATO** **/** **transatlantic** **/** **UKR** **(**Greenland** **Q** **merged** **—** **see** **`capture_note`** **)** | https://www.youtube.com/watch?v=-NQ3lnuYcXs | verify:operator-transcript+raw-input+aired:2026-01-07+pin-canonical-URL | thread:diesen | grep:Diesen+Mearsheimer+Venezuela+Greenland+NATO+2026-01-07
+
+
+
 
 
 

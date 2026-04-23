@@ -13,6 +13,8 @@ source_url: https://www.youtube.com/watch?v=DBOVT0UdHXg
 capture_note: Operator paste; cleaned for readability. In-voice anchors include March 23 Trump pause (5d then 10d countdown), Judging Freedom optimism arc, 15-point / unconditional-surrender frame, escalation ladder vs Hormuz oil flow (~5% of pre-war strait volume in voice), Kharg Island, Desert Storm ground-prep timeline — Mearsheimer-voice analyst tier; verify wire/market primaries if promoted.
 related_same_series:
   - ../2026-04-10/transcript-diesen-mearsheimer-world-changed-forever-2026-04-10.md
+  - ../2026-01-31/transcript-diesen-mearsheimer-cold-war-nato-ukraine-2026-01-31.md
+  - ../2026-01-07/transcript-diesen-mearsheimer-venezuela-greenland-nato-2026-01-07.md
   - ../2026-02-25/transcript-diesen-mearsheimer-case-for-nuclear-iran-2026-02-25.md
   - ../2026-03-10/transcript-diesen-mearsheimer-us-already-lost-no-offramp-2026-03-10.md
   - ../2026-03-29/substack-mearsheimer-will-trump-go-kamikaze-2026-03-29.md
