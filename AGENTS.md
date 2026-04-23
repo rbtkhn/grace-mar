@@ -2,6 +2,8 @@
 
 This file defines rules for any AI coding assistant working on this repository.
 
+**Instance vs template:** The upstream [`companion-self/AGENTS.md`](companion-self/AGENTS.md) is a minimal portable stub for the template repo. This file is the **authoritative** Layer-1 contract for the grace-mar instance. When companion-self changes, merge **selective** updates by hand; do not overwrite this file with the template on bulk sync — see [`docs/merging-from-companion-self.md`](docs/merging-from-companion-self.md) §1.
+
 **For conceptual clarity:** Read `docs/conceptual-framework.md` — Record vs. fork, Voice vs. bot, fork vs. twin, terminology. **Prime directive:** The Record belongs to the companion (GRACE-MAR-CORE §I).
 
 **For system design:** Read `docs/architecture.md` (includes forced-absorption risk pattern and convenience-path defenses). For the formal skill modularity model (THINK/WRITE boundaries, separate work/execution layer, Voice and profile as functions of skill-write, invariants), see `docs/skills-modularity.md`.
@@ -63,7 +65,7 @@ This system uses a **four-layer instruction architecture**. Later layers may nar
 | **3. Lane Overlays** | `docs/skill-work/work-*/` | work-dev, work-politics, work-business, work-jiang, seed-phase |
 | **4. Mode Overlays** | `.cursor/skills/*/SKILL.md` | coffee, dream, bridge, harvest, thanks, gate-review, strategy, skill-write, tri-mind, and other listed skills |
 
-**`coffee` menu (A–E):** **D** = **Conductor** (symphony / strategy coffee cadence); **E** = system choice, including **self-skill-write** and PRP. See `.cursor/skills/coffee/SKILL.md` and [COFFEE-CADENCE-CONDUCTOR-PROTOCOL.md](docs/skill-work/work-strategy/strategy-notebook/COFFEE-CADENCE-CONDUCTOR-PROTOCOL.md).
+**`coffee` menu (A–D2–E):** **D1** / **D2** = **Conductor** (symphony / strategy coffee cadence — continue vs system); **E** = system choice, including **self-skill-write** and PRP. See `.cursor/skills/coffee/SKILL.md`, [CONDUCTOR-PASS.md](docs/skill-work/work-coffee/CONDUCTOR-PASS.md), and [COFFEE-CADENCE-CONDUCTOR-PROTOCOL.md](docs/skill-work/work-strategy/strategy-notebook/COFFEE-CADENCE-CONDUCTOR-PROTOCOL.md).
 
 **Operator publishing (Locals / X / Predictive History comments):** [`docs/skill-write/README.md`](docs/skill-write/README.md) — calibrates paste-ready public copy; **not** the companion Record `users/[id]/skill-write.md` (capability evidence). SSOT: [`docs/skill-write/write-operator-preferences.md`](docs/skill-write/write-operator-preferences.md).
 

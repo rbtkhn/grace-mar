@@ -1,6 +1,10 @@
 {
   "doc": "Paths here differ from companion-self by documented policy, not accidental drift. They are listed under 'Expected drift' in template_diff output and omitted from the actionable 'differ' bucket. See docs/merging-from-companion-self.md (IFP short form vs full spec).",
   "paths": {
+    "AGENTS.md": {
+      "reason": "companion-self ships a short portable AGENTS.md (template baseline). Grace-mar holds the full Layer 1 core doctrine, operator menus, coffee/conductor/gate language, and instance rules. Intentional expansion — do not replace this file with the template stub on bulk sync. When upgrading, merge selective guardrail updates from companion-self by hand per MERGING-FROM-COMPANION-SELF.",
+      "merging_pointer": "MERGING-FROM-COMPANION-SELF — §1 Sync classes; canonical template vs instance-only surfaces"
+    },
     "docs/identity-fork-protocol.md": {
       "reason": "Grace-mar holds IFP v1.0 full reference spec; companion-self ships the short form with a link to the full spec. Do not overwrite the instance file with the template short form on bulk sync.",
       "merging_pointer": "MERGING-FROM-COMPANION-SELF — Identity Fork Protocol (IFP) — short form vs full spec"
