@@ -187,7 +187,7 @@ Only after Menus **1–6** are complete (or the **fast path** below) should the 
 - Do **not** mirror **`raw-input/`**; use transcript context as **evidence**, not as finished judgment.
 - If the operator chose **transcript-only** or **defer**, do **not** smuggle in a full page.
 
-**Word band:** Target **500–1000 words** per **`strategy-page`** body (Chronicle / Reflection / Foresight) per architecture — [NOTEBOOK-PREFERENCES.md](NOTEBOOK-PREFERENCES.md).
+**Word count:** **No** target band per **`strategy-page`** body—see [NOTEBOOK-PREFERENCES.md](NOTEBOOK-PREFERENCES.md) (**Page length**).
 
 ---
 

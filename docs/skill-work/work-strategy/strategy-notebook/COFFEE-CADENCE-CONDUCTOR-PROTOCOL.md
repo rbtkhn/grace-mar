@@ -3,7 +3,7 @@
 **Status:** WORK (operator practice)  
 **Not** companion Record. **Not** SELF. Promotions to Record use [AGENTS.md](../../../../AGENTS.md) / `recursion-gate.md` only when the operator stages and approves.
 
-**Disambiguation — not Cursor `coffee`:** The [`.cursor/skills/coffee/SKILL.md`](../../../../.cursor/skills/coffee/SKILL.md) trigger **`coffee`** is the short Grace-Mar reorientation ritual (`operator_coffee.py`, **A–E** menu, harness). **This** document is a **separate, longer, embodied** morning practice for the **strategy-notebook** Expert Thread pipeline. Use both as needed: Cursor **`coffee`** for session framing; **this protocol** for notebook conducting.
+**Disambiguation — Cursor `coffee` vs this protocol:** The [`.cursor/skills/coffee/SKILL.md`](../../../../.cursor/skills/coffee/SKILL.md) trigger **`coffee`** runs Step 1 (`operator_coffee.py`, harness) then a fixed **A–E** menu; **D — Conductor** is the **same** strategy cadence *lane* as this document — a short orienting reply in chat, not a substitute for the full **15–45 minute** embodied morning block. **This** file is the SSOT for the five movements, patterns, and WORK-only seeds. Use **Step 1 + D** when you want the assistant to meet you at the protocol; use **offline time** for the full ritual.
 
 **Related:** [SYNTHESIS-OPERATING-MODEL.md](SYNTHESIS-OPERATING-MODEL.md) (session types A–D, L0–L4) · [NOTEBOOK-PREFERENCES.md](NOTEBOOK-PREFERENCES.md) (operator-as-conductor, polyphony) · [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md) (`days.md`, expert threads)
 
@@ -93,4 +93,4 @@ This ritual is rehearsal, not performance. The operator-conductor remains the fi
 
 ---
 
-**Cadence hooks (repo):** Optional **`thanks`** `park=` slugs (e.g. `conductor-bernstein-pulse`) bookmark pauses after a movement — see [thanks SKILL](../../../../.cursor/skills/thanks/SKILL.md). **Dream** EOD can acknowledge the day arc without auto-composing the notebook; see [dream SKILL](../../../../.cursor/skills/dream/SKILL.md) § Strategy notebook.
+**Cadence hooks (repo):** **`coffee` menu D — Conductor** is the in-chat entry to this protocol (short orientation; full ritual stays operator-timed). Optional **`thanks`** `park=` slugs (e.g. `conductor-bernstein-pulse`) bookmark pauses after a movement — see [thanks SKILL](../../../../.cursor/skills/thanks/SKILL.md). **Dream** EOD can acknowledge the day arc without auto-composing the notebook; see [dream SKILL](../../../../.cursor/skills/dream/SKILL.md) § Strategy notebook.

@@ -25,6 +25,8 @@ At the **start of a new chat** when work touches **instance state** (pipeline, R
 
 **`coffee`:** Follow `.cursor/skills/coffee/SKILL.md` — single source of truth for triggers, Step 1 scripts (work-start vs signing-off weight), Step 2 **A–E** menu (five options; **no** micro-hints line under the menu), cadence modifiers (`light`, `minimal`, `survey`), and re-offer rules. Legacy **`hey`** still works. **Step 0 recent rhythm:** plain prose **with concrete details** from the last four log lines (not generic filler); **do not** put **timestamps** in that prose; do not lead with raw `key=value`; script output below carries the rest.
 
+**Menu anchor (one line, optional with warmup paste):** **`coffee` Step 2** — **A** Build, **B** Steward, **C** Strategy (daily brief), **D** Conductor, **E** system choice (skill-write, PRP, `write` without `coffee`, etc. live under **E** or out-of-band). Use when a thread is operator-cadence cold; not required on every run.
+
 **`dream` (end-of-day maintenance):** Follow `.cursor/skills/dream/SKILL.md` — bounded maintenance pass (memory normalization, integrity, governance, contradiction digest). Usually once per day near end of day. **End-of-day bundle:** `python3 scripts/operator_end_of_day.py -u grace-mar` runs dream + handoff-check in one pass.
 
 ## When you may skip

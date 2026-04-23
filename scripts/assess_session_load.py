@@ -221,7 +221,7 @@ def _compute_option_weights(
         "A": {"cost": "moderate", "note": "Build — work-dev + skills"},
         "B": {"cost": "light", "note": "Steward — gate / template / integrity / git"},
         "C": {"cost": "light", "note": "Strategy — daily brief + tri-frame"},
-        "D": {"cost": "moderate", "note": "Write — skill-write / prompts / prose"},
+        "D": {"cost": "moderate", "note": "Conductor — strategy coffee cadence (notebook)"},
         "E": {"cost": "moderate", "note": "System choice — xavier / dev / jiang / rome slice"},
     }
 
@@ -309,7 +309,7 @@ def format_annotated_menu(result: dict) -> str:
         "A": "Build",
         "B": "Steward",
         "C": "Strategy (daily brief)",
-        "D": "Write",
+        "D": "Conductor",
         "E": "System choice",
     }
 

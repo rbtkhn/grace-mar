@@ -1,8 +1,10 @@
 # Coffee — menu and protocol reference
 
-**Canonical Step 2 menu (grace-mar):** **five options A–E** only — **A** Build, **B** Steward, **C** Strategy (daily brief), **D** Write, **E** (system choice). **No** micro-hints line under the menu. Executable contract: [.cursor/skills/coffee/SKILL.md](../../../.cursor/skills/coffee/SKILL.md).
+**Canonical Step 2 menu (grace-mar):** **five options A–E** only — **A** Build, **B** Steward, **C** Strategy (daily brief), **D** Conductor, **E** (system choice). **No** micro-hints line under the menu. Executable contract: [.cursor/skills/coffee/SKILL.md](../../../.cursor/skills/coffee/SKILL.md).
 
-The sections below retain **legacy A–G workload detail** (seven letters) for **scope** descriptions; map to A–E as in the coffee SKILL (**Daily Brief → C**, **Build → A**, **Steward → B**, **Compass/Book/F/G** → usually **E** or folded into **C**/**D**). **Signing-off** add-ons, cadence tables, explicit phrase modifiers, and companion survey track follow.
+**D — Conductor** is the **strategy coffee cadence** (operator-as-conductor for the strategy-notebook “Symphony of Civilization”): [COFFEE-CADENCE-CONDUCTOR-PROTOCOL.md](../work-strategy/strategy-notebook/COFFEE-CADENCE-CONDUCTOR-PROTOCOL.md). On pick, a **short** chat orientation (link + movement for today); full embodied block stays operator-timed. **self-skill-write** / PRP / Lexile / prompt proposals → **E** (system choice) or explicit **`write`** / **`skill-write`** without opening **`coffee`**.
+
+The sections below retain **legacy A–G workload detail** (seven letters) for **scope** descriptions; map to A–E as in the coffee SKILL (**Daily Brief → C**, **Build → A**, **Steward → B**, **Compass/Book/F/G** → usually **E** or folded into **C**; **old** legacy **D Book** (Jiang) → **E** or **`work-jiang`**, not current menu **D**). **Signing-off** add-ons, cadence tables, explicit phrase modifiers, and companion survey track follow.
 
 **Exit:** There is **no** “close hub” letter. The operator leaves coffee by **C** / **D** (normal workflow unless **`stay in coffee`**), by **Later** on the [steward follow-up fork](#steward-follow-up-fork-implement-now-vs-later) (which returns to the full **A–E** menu), or by starting a non-coffee task. The coffee ritual does **not** use a **no menu** opt-out.
 
@@ -62,7 +64,7 @@ If the operator says **`coffee`** on a **Sunday** (or legacy **`hey`**), default
 
 ## Legacy A–G workload table (detail; canonical menu is A–E)
 
-**Canonical Step 2** today: [.cursor/skills/coffee/SKILL.md](../../../.cursor/skills/coffee/SKILL.md) — **five options A–E** only. The **rows below** keep **historical seven-letter labels** for workload scope. **Map:** old **Daily Brief → current C**; old **Build → current A**; old **Steward → current B**; old **Compass / Book / F / G → current E** (system choice) or fold into **C** / **D** as appropriate.
+**Canonical Step 2** today: [.cursor/skills/coffee/SKILL.md](../../../.cursor/skills/coffee/SKILL.md) — **five options A–E** only. The **rows below** keep **historical seven-letter labels** for workload scope. **Map:** old **Daily Brief → current C**; old **Build → current A**; old **Steward → current B**; old **Compass / F / G → current E** (system choice) or fold into **C**; old **Book (legacy D) →** **`work-jiang` / E**, **not** current **D — Conductor** (see above).
 
 The **first** coffee reply ends **Step 2** with the fixed menu (present: **A–E**). **Follow-up behavior (canonical letters):** **A**, **B**, and **E** re-offer the full menu by default; **B** uses the [steward follow-up fork](#steward-follow-up-fork-implement-now-vs-later) (full menu only after **Later** or when nothing actionable surfaced); **C** and **D** exit to normal workflow by default after the reply. Wording may vary; **roles must not**.
 
