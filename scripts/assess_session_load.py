@@ -3,8 +3,8 @@
 Session load assessment — aggregate cadence, gate, capture gap, and dream
 quality signals into a cognitive load level for the operator.
 
-Designed to annotate the coffee **A–E** menu with per-option cost hints and a
-recommended pick.
+Designed to annotate the coffee **A–D2–E** menu with per-option cost hints and a
+recommended pick (A / B / C only — not D1 / D2 / E).
 
 Exposes assess_load() for import by operator_coffee.py.
 
@@ -214,14 +214,15 @@ def _compute_option_weights(
     gate: dict | None,
     branch_count: int,
 ) -> dict[str, dict[str, str]]:
-    """Assign cost and note to each A–E option (coffee five-option menu)."""
+    """Assign cost and note to each A–D2–E option (coffee six-line menu)."""
     pending = gate.get("pending", 0) if gate else 0
 
     weights: dict[str, dict[str, str]] = {
         "A": {"cost": "moderate", "note": "Build — work-dev + skills"},
         "B": {"cost": "light", "note": "Steward — gate / template / integrity / git"},
         "C": {"cost": "light", "note": "Strategy — daily brief + tri-frame"},
-        "D": {"cost": "moderate", "note": "Conductor — strategy coffee cadence (notebook)"},
+        "D1": {"cost": "moderate", "note": "Conductor — continue last emphasis (notebook)"},
+        "D2": {"cost": "moderate", "note": "Conductor — system-recommended stack (notebook)"},
         "E": {"cost": "moderate", "note": "System choice — xavier / dev / jiang / rome slice"},
     }
 
@@ -245,8 +246,8 @@ def _pick_recommendation(
     weights: dict[str, dict[str, str]],
     signals: list[str],
 ) -> tuple[str, str]:
-    """Select the recommended option and reason (A–E five-option menu)."""
-    w = {k: weights[k] for k in "ABCDE" if k in weights}
+    """Select the recommended option and reason (A / B / C only; see menu skill)."""
+    w = {k: weights[k] for k in ("A", "B", "C") if k in weights}
     if load_level == "heavy":
         return "C", "heavy load — strategy / daily brief pass is highest leverage"
     if load_level == "moderate":
@@ -301,7 +302,7 @@ def format_load_one_liner(result: dict) -> str:
 
 
 def format_annotated_menu(result: dict) -> str:
-    """Format the A–E coffee menu with load annotations (optional; not printed by default)."""
+    """Format the A–D2–E coffee menu with load annotations (optional; not printed by default)."""
     weights = result.get("option_weights", {})
     rec = result.get("recommended", "")
 
@@ -309,12 +310,13 @@ def format_annotated_menu(result: dict) -> str:
         "A": "Build",
         "B": "Steward",
         "C": "Strategy (daily brief)",
-        "D": "Conductor",
+        "D1": "Conductor — continue",
+        "D2": "Conductor — system",
         "E": "System choice",
     }
 
     lines = []
-    for letter in "ABCDE":
+    for letter in ("A", "B", "C", "D1", "D2", "E"):
         w = weights.get(letter, {"cost": "?", "note": ""})
         label = labels[letter]
         tag = f"({w['cost']})"

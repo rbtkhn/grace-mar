@@ -298,7 +298,7 @@ Usually one `dream` session per day is normal.
 
 | Time | Ritual | What it does |
 |------|--------|-------------|
-| **Morning** | `coffee` (work-start) | Read dream handoff, grounding scripts, **A–E** menu |
+| **Morning** | `coffee` (work-start) | Read dream handoff, grounding scripts, **A–D2–E** menu |
 | **During day** | `coffee` (reorientation) | Re-sip as needed — many per day is normal |
 | **During day** | `thanks` (micro-pause) | Synthesis of the most recent cadence line (recent rhythm) + two-block reply + optional park + one telemetry line — no maintenance stack |
 | **End of day** | `dream` | Memory normalization, integrity, governance, contradiction digest; optional strategy-notebook **FYI** + **Xavier journal** day file generation (see §§ Strategy notebook, Xavier journal) |

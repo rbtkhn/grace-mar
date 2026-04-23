@@ -3,9 +3,9 @@
 **Status:** WORK (operator practice)  
 **Not** companion Record. **Not** SELF. Promotions to Record use [AGENTS.md](../../../../AGENTS.md) / `recursion-gate.md` only when the operator stages and approves.
 
-**Disambiguation — Cursor `coffee` vs this protocol:** The [`.cursor/skills/coffee/SKILL.md`](../../../../.cursor/skills/coffee/SKILL.md) trigger **`coffee`** runs Step 1 (`operator_coffee.py`, harness) then a fixed **A–E** menu; **D — Conductor** is the **same** strategy cadence *lane* as this document — a short orienting reply in chat, not a substitute for the full **15–45 minute** embodied morning block. **This** file is the SSOT for the five movements, patterns, and WORK-only seeds. Use **Step 1 + D** when you want the assistant to meet you at the protocol; use **offline time** for the full ritual.
+**Disambiguation — Cursor `coffee` vs this protocol:** The [`.cursor/skills/coffee/SKILL.md`](../../../../.cursor/skills/coffee/SKILL.md) trigger **`coffee`** runs Step 1 (`operator_coffee.py`, harness) then a fixed **A–D2–E** menu; **D1 / D2 — Conductor** (two lines on that menu) are the **same** strategy cadence *lane* as this document — a short orienting reply in chat, not a substitute for the full **15–45 minute** embodied morning block. **This** file is the SSOT for the five movements, patterns, and WORK-only seeds. Use **Step 1 + D1** or **D2** when you want the assistant to meet you at the protocol; use **offline time** for the full ritual.
 
-**Related:** [SYNTHESIS-OPERATING-MODEL.md](SYNTHESIS-OPERATING-MODEL.md) (session types A–D, L0–L4) · [NOTEBOOK-PREFERENCES.md](NOTEBOOK-PREFERENCES.md) (operator-as-conductor, polyphony) · [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md) (`days.md`, expert threads)
+**Related:** [SYNTHESIS-OPERATING-MODEL.md](SYNTHESIS-OPERATING-MODEL.md) (session types A–D, L0–L4) · [NOTEBOOK-PREFERENCES.md](NOTEBOOK-PREFERENCES.md) (operator-as-conductor, polyphony) · [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md) (`days.md`, expert threads) · **Generic spine (all territories):** [CONDUCTOR-PASS.md](../../work-coffee/CONDUCTOR-PASS.md)
 
 ---
 

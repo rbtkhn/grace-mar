@@ -57,6 +57,8 @@ This log is WORK-only. It is not the Record, not MEMORY, and not a substitute fo
 
 - **Canonical menu:** **A** Build, **B** Steward, **C** Strategy (daily brief), **D** Conductor (strategy coffee cadence / [COFFEE-CADENCE-CONDUCTOR-PROTOCOL.md](../work-strategy/strategy-notebook/COFFEE-CADENCE-CONDUCTOR-PROTOCOL.md)), **E** (system choice — **self-skill-write** / PRP / Xavier / Dev / Rome / Jiang live here or explicit `write` without `coffee`). **D — Write** removed as a menu letter; write-shaped work is **E** or out-of-band **`skill-write`**.
 
+## 2026-04-23 — coffee **A–D2–E** (six lines: **D1** / **D2** Conductor on main menu; no conductor submenu)
+
 ## 2026-04-11 — coffee **A–E** (five options); no micro-hints line
 
 - **Canonical menu:** **A** Build, **B** Steward, **C** Strategy (daily brief), **D** Write, **E** (system choice — one assistant-filled line per session). **Removed** the separate **micro-hints** row under the menu; **removed** dedicated **F/G** letters (Xavier / Dev next fold into **E** or Step 1 lane context).

@@ -153,7 +153,7 @@ Choreography operates in **Maintenance / operational** territory. It does **not*
 
 ### Where to read the executable spec
 
-- [.cursor/skills/coffee/SKILL.md](../../../.cursor/skills/coffee/SKILL.md) — Step 0 recent rhythm, Step 1 scripts, A–E menu
+- [.cursor/skills/coffee/SKILL.md](../../../.cursor/skills/coffee/SKILL.md) — Step 0 recent rhythm, Step 1 scripts, A–D2–E menu
 - [.cursor/skills/thanks/SKILL.md](../../../.cursor/skills/thanks/SKILL.md) — pause beat + last cadence line + two-block reply
 - [.cursor/skills/dream/SKILL.md](../../../.cursor/skills/dream/SKILL.md) — Step 0 recent rhythm (4 default / 8 full closeout), `auto_dream.py`, handoff
 - [.cursor/skills/bridge/SKILL.md](../../../.cursor/skills/bridge/SKILL.md) — Step 0 recent rhythm (4), seal + transfer prompt

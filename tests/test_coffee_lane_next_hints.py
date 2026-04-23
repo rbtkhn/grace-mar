@@ -77,10 +77,10 @@ def test_format_lane_next_hints_two_lines(tmp_path: Path) -> None:
     assert "Alpha" in lines[1]
 
 
-def test_assess_session_load_includes_abcde_weights() -> None:
+def test_assess_session_load_includes_menu_weights() -> None:
     from scripts.assess_session_load import assess_load
 
     r = assess_load("grace-mar")
     ow = r.get("option_weights") or {}
-    assert set(ow.keys()) == {"A", "B", "C", "D", "E"}
-    assert r.get("recommended") in ("A", "B", "C", "D", "E")
+    assert set(ow.keys()) == {"A", "B", "C", "D1", "D2", "E"}
+    assert r.get("recommended") in ("A", "B", "C")
