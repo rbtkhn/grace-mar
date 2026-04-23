@@ -2,17 +2,17 @@
 
 WORK only; not Record.
 
-**Purpose:** Standalone **Chronicle / Reflection / Foresight** artifact for the `pape` expert. **Not** a substitute for full **verbatim** in [`raw-input/`](../../raw-input/README.md). Distinct from a **`strategy-page`** HTML fence in [`thread.md`](thread.md) unless you duplicate judgment there during EOD compose.
+**Purpose:** Standalone refined day page for the `pape` expert. **`### Chronicle`** carries the **full verbatim** from linked [`raw-input/`](../../raw-input/README.md)—**lightly cleaned and formatted**; **`### Reflection`** and **`### Foresight`** are **operator analysis** (**may be stubbed** on ingest, completed in a later pass). Distinct from a **`strategy-page`** HTML fence in [`thread.md`](thread.md) unless you duplicate judgment there during EOD compose.
 
 **Thread-embedded pages:** Use [`strategy-page-template.md`](../../strategy-page-template.md) for `<!-- strategy-page:start … -->` blocks in thread files.
 
 **Filename date:** Always use **`published_date`** (Substack byline / operator publication stamp) for `pape-page-YYYY-MM-DD.md`. If `ingest_date` or the `raw-input/` folder date differs, note it only in the preamble (**Ingest** logged …) or appendix; capture paths still reflect on-disk location.
 
-**Prose budget:** Target ~500–1000 words **equivalent** in **Chronicle** (often as **compressed beat lines**—see below)—plus proportionate **Reflection** / **Foresight**. **Mode C** (X / social) is often much shorter. Keep **`verify:`** tails, path dumps, and inbox machinery out of Chronicle / Reflection / Foresight body text—those belong in **`### Appendix`**.
+**Length:** No enforced word limit. **Chronicle** carries **full verbatim** (lightly cleaned); it is often long. **Reflection** / **Foresight** are operator analysis—**may be stubbed** at first; **Mode C** may still be shorter overall. Keep **`verify:`** tails, path dumps, and inbox machinery out of body sections—**`### Appendix`** only.
 
 ### Prose emphasis (Pape Chronicle convention)
 
-Pape refined pages typically use **heavy token-level bold** in **Chronicle** (and sometimes **Reflection**)—a `**word** **word**` beat pattern for compression, scan, and grep. That is **intentional** for this lane and **differs** from the Mercouris “normal weight body” rule. Do not “normalize” existing Pape pages to Mercouris prose style unless you are deliberately changing lane contract.
+Pape refined pages may use **heavy token-level bold** in **Chronicle** (and sometimes **Reflection**) **on top of** full verbatim—a `**word** **word**` beat pattern for compression, scan, and grep. That is **intentional** for this lane and **differs** from the Mercouris “normal weight body” rule. Do not “normalize” existing Pape pages to Mercouris prose style unless you are deliberately changing lane contract.
 
 Section titles use `###` headings, not bold. Line-leading preamble labels (**Expert:**, **Published:**) stay bold per repo habit.
 
@@ -73,9 +73,9 @@ When **more than one** primary Substack (or mixed) capture shares **`published_d
 ## Body scaffold
 
 1. Horizontal rule `---` after the preamble.
-2. `### Chronicle` — compressed thesis / ledger / beats from the capture(s).
-3. `### Reflection` — Pape-lane arc (escalation trap, Hormuz / blockade stages, Stage I–III, domestic pocketbook, etc.); **homophone** and **tier** discipline (e.g. negotiation fork vs press shorthand—do not merge distinct phrases in Judgment).
-4. `### Foresight` — falsifiers, resume lines, tier tags (bullets allowed); **Cross-weave** bullets welcome.
+2. `### Chronicle` — **Full verbatim** from the linked `raw-input` capture(s) (after frontmatter): same cleanup rule as other experts—**lightly cleaned and formatted** only. Multi-post days: ordered **A —** / **B —** blocks per [Same-day multiple posts](#same-day-multiple-posts-one-publish-date). **Pape beat-bold** in Chronicle is optional formatting on top of full text, not a substitute for pasting the capture (see Prose emphasis).
+3. `### Reflection` — **Operator analysis:** Pape-lane arc (escalation trap, Hormuz / blockade stages, Stage I–III, domestic pocketbook, etc.); **homophone** and **tier** discipline (e.g. negotiation fork vs press shorthand—do not merge distinct phrases in Reflection). **May be stubbed** until a later operator pass.
+4. `### Foresight` — **Operator analysis:** falsifiers, resume lines, tier tags (bullets allowed); **Cross-weave** bullets welcome. **May be stubbed** until a later operator pass.
 5. Horizontal rule `---` before appendix.
 6. `### Appendix` — **machinery only**.
 
@@ -150,7 +150,7 @@ Same scaffold as Mode D but shorter body; fourth appendix bullet may be **X** pe
 1. Title `# Pape day page — YYYY-MM-DD` matches **`published_date`** (one file per publish date, including multi-post days).
 2. `WORK only; not Record.`
 3. Preamble identifies capture mode (**Substack** / Mode A–C) and **Artifact:** **standalone file under `experts/pape/`**.
-4. `---` before `### Chronicle`; Chronicle / Reflection / Foresight contain no `verify:` machinery or path dumps.
+4. `---` before `### Chronicle`; **Chronicle** = full verbatim (no `verify:` / path dumps); **Reflection** / **Foresight** = operator analysis (stubs OK).
 5. `---` before `### Appendix`.
 6. Appendix bullets in order: **Full verbatim** (A/B/C if needed) → **Adjacent arc** (if any) → **Inbox** → **`thread:pape` verify** → **Canonical URL(s)**.
 7. Relative links from `experts/pape/` (`../../raw-input/…`, `../../daily-strategy-inbox.md`).

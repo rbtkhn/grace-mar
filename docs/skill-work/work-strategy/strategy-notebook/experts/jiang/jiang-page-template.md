@@ -2,18 +2,18 @@
 
 WORK only; not Record.
 
-**Purpose:** Standalone Chronicle / Reflection / Foresight artifact for the `jiang` expert. Not a substitute for full verbatim in [`raw-input/`](../../raw-input/README.md). Distinct from a `strategy-page` HTML fence in [`thread.md`](thread.md) unless you duplicate judgment there during EOD compose.
+**Purpose:** Standalone refined day page for the `jiang` expert. **`### Chronicle`** carries the **full verbatim** from linked [`raw-input/`](../../raw-input/README.md)—**lightly cleaned and formatted**; **`### Reflection`** and **`### Foresight`** are **operator analysis** (**may be stubbed** on ingest, completed in a later pass). Distinct from a `strategy-page` HTML fence in [`thread.md`](thread.md) unless you duplicate judgment there during EOD compose.
 
 **Thread-embedded pages:** For `<!-- strategy-page:start … -->` blocks in monthly or legacy thread files, use [`strategy-page-template.md`](../../strategy-page-template.md) instead of this file.
 
-**Prose budget:** Target ~500–1000 words combined across Signal, Judgment, and Open for Mode A (primary long-form capture for this expert). Mode B (`notebook |` stub or short social ingest) may be much shorter. Grammatical prose only in those sections—no path dumps or `verify:` machinery there.
+**Length:** No enforced word limit. **Chronicle** is often long (full verbatim). **Reflection** / **Foresight** start as stubs or short notes until operator analysis—still no `verify:` machinery in those sections except as grammatical prose (path dumps belong in **`### Appendix`**). Mode B without a capture may be mostly appendix + stubs.
 
 ### Prose emphasis (Chronicle / Reflection / Foresight)
 
 Do not scatter `**inline bold**` through running paragraphs for rhetorical stress, “beat” words, or decoration. Use normal weight for body copy. Bold is allowed for:
 
-- Line-leading labels in the preamble (e.g. **Expert:**, **Aired:**) and for the required appendix bullet titles (see Technical appendix pattern below).
-- Optional bold for the short title of a bullet inside Open when the bullet is a labeled stub (title only—not the whole sentence).
+- Line-leading labels in the preamble (e.g. **Expert:**, **Aired:**) and for the required appendix bullet titles (see Appendix bullet order below).
+- Optional bold for the short title of a bullet inside Foresight when the bullet is a labeled stub (title only—not the whole sentence).
 
 Section titles use `###` headings, not bold.
 
@@ -23,7 +23,7 @@ Section titles use `###` headings, not bold.
 
 ### Mode A — Primary dated capture
 
-Use when the page summarizes this expert’s main artifact for that calendar day (broadcast, interview, essay, or long transcript) with a canonical **aired** or **published** date.
+Use when **Chronicle** carries the full verbatim for this expert’s main artifact for that calendar day (broadcast, interview, essay, or long transcript) with a canonical **aired** or **published** date.
 
 ```markdown
 **Expert:** `jiang` · **Aired / published:** YYYY-MM-DD · **Artifact:** refined day page (standalone file under `experts/jiang/`). Not a `strategy-page` HTML fence in `thread.md` unless you duplicate the same judgment there during EOD compose.
@@ -42,9 +42,9 @@ Use when [`transcript.md`](transcript.md) holds only a `notebook |` row or thin 
 ## Body scaffold
 
 1. Horizontal rule `---` after the preamble.
-2. `### Chronicle` — fact framing and episode (or stub) content.
-3. `### Reflection` — Jiang-lane arc; keep verification discipline explicit where load-bearing claims sit in commentator tier.
-4. `### Foresight` — falsifiers, resume lines, tier tags (bullets allowed).
+2. `### Chronicle` — **Full verbatim** from the linked `raw-input` capture (after YAML frontmatter when present): **lightly cleaned and formatted** only—paragraphing, spacing, obvious ingest artifacts, optional speaker labels; **do not** replace the expert’s words with summary or paraphrase. The file under `raw-input/` remains the archived capture; **Chronicle** is the readable full text on this page. **Mode B** (no long capture): brief stub or pointer only.
+3. `### Reflection` — **Operator analysis:** Jiang-lane arc; keep verification discipline explicit where load-bearing claims sit in commentator tier. **May be stubbed** until a later operator pass.
+4. `### Foresight` — **Operator analysis:** falsifiers, resume lines, tier tags (bullets allowed). **May be stubbed** until a later operator pass.
 5. Horizontal rule `---` before appendix.
 6. `### Appendix` — machinery only (paths, inbox grep, `thread:jiang`, canonical URL).
 
@@ -116,7 +116,7 @@ WORK only; not Record.
 2. `WORK only; not Record.` on its own line after the title.
 3. Preamble matches Mode A or Mode B; **Artifact:** uses “refined day page (standalone file under `experts/jiang/`)” verbatim.
 4. `---` before `### Chronicle`.
-5. `### Chronicle`, `### Reflection`, `### Foresight` present; prose-only (no machinery in those sections); no decorative bold in body paragraphs (see Prose emphasis above).
+5. `### Chronicle`, `### Reflection`, `### Foresight` present; **Chronicle** = full verbatim (lightly cleaned)—no `verify:` / path machinery there; **Reflection** / **Foresight** = operator analysis (stubs OK). No decorative bold except lane rules (see Prose emphasis).
 6. `---` before `### Appendix`.
 7. Appendix bullets in order: Full verbatim (capture) → Inbox / triage → `thread:jiang` · verify → Canonical primary.
 8. Relative links resolve from `experts/jiang/` (typically `../../raw-input/…`, `../../daily-strategy-inbox.md`, `../../chapters/…` when citing `days.md`).
