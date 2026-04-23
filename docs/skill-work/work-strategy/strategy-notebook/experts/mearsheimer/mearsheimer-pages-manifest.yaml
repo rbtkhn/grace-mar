@@ -1,0 +1,123 @@
+generated_by: scripts/strategy/assemble_mearsheimer_pages_verbatim.py
+primary_capture_count: 10
+pages:
+- raw_input_relative: raw-input/2026-01-07/transcript-diesen-mearsheimer-venezuela-greenland-nato-2026-01-07.md
+  voice_date: '2026-01-07'
+  page_filename: mearsheimer-page-2026-01-07-venezuela-greenland-nato.md
+  collision: false
+  slug: venezuela-greenland-nato
+  mode: B
+  capture_mode: Mode B — interview (Glenn Diesen)
+  preamble_label: Aired
+  preamble_date: '2026-01-07'
+  display_title: Venezuela, Greenland & the End of NATO
+  source_url: https://www.youtube.com/watch?v=-NQ3lnuYcXs
+  href_verbatim: ../../raw-input/2026-01-07/transcript-diesen-mearsheimer-venezuela-greenland-nato-2026-01-07.md
+- raw_input_relative: raw-input/2026-01-20/substack-mearsheimer-the-tag-team-fails-in-iran-2026-01-20.md
+  voice_date: '2026-01-20'
+  page_filename: mearsheimer-page-2026-01-20-the-tag-team-fails-in-iran.md
+  collision: false
+  slug: the-tag-team-fails-in-iran
+  mode: A
+  capture_mode: Mode A — Substack
+  preamble_label: Published
+  preamble_date: '2026-01-20'
+  display_title: The Tag Team Fails in Iran
+  source_url: https://mearsheimer.substack.com/p/the-tag-team-fails-in-iran
+  href_verbatim: ../../raw-input/2026-01-20/substack-mearsheimer-the-tag-team-fails-in-iran-2026-01-20.md
+- raw_input_relative: raw-input/2026-01-31/transcript-diesen-mearsheimer-cold-war-nato-ukraine-2026-01-31.md
+  voice_date: '2026-01-31'
+  page_filename: mearsheimer-page-2026-01-31-cold-war-nato-ukraine.md
+  collision: false
+  slug: cold-war-nato-ukraine
+  mode: B
+  capture_mode: Mode B — interview (Glenn Diesen)
+  preamble_label: Aired
+  preamble_date: '2026-01-31'
+  display_title: Cold War 2.0 & NATO's Defeat in Ukraine
+  source_url: https://www.youtube.com/watch?v=OV75YsYnE8U
+  href_verbatim: ../../raw-input/2026-01-31/transcript-diesen-mearsheimer-cold-war-nato-ukraine-2026-01-31.md
+- raw_input_relative: raw-input/2026-02-25/transcript-diesen-mearsheimer-case-for-nuclear-iran-2026-02-25.md
+  voice_date: '2026-02-25'
+  page_filename: mearsheimer-page-2026-02-25-case-for-nuclear-iran.md
+  collision: false
+  slug: case-for-nuclear-iran
+  mode: B
+  capture_mode: Mode B — interview (Glenn Diesen)
+  preamble_label: Aired
+  preamble_date: '2026-02-25'
+  display_title: The Case for a Nuclear Iran
+  source_url: https://www.youtube.com/watch?v=vx1KnspP1gM
+  href_verbatim: ../../raw-input/2026-02-25/transcript-diesen-mearsheimer-case-for-nuclear-iran-2026-02-25.md
+- raw_input_relative: raw-input/2026-03-10/transcript-diesen-mearsheimer-us-already-lost-no-offramp-2026-03-10.md
+  voice_date: '2026-03-10'
+  page_filename: mearsheimer-page-2026-03-10-us-already-lost-no-offramp.md
+  collision: false
+  slug: us-already-lost-no-offramp
+  mode: B
+  capture_mode: Mode B — interview (Glenn Diesen)
+  preamble_label: Aired
+  preamble_date: '2026-03-10'
+  display_title: U.S. Already Lost Iran War — No Off-Ramp in Sight
+  source_url: https://www.youtube.com/watch?v=1e9NhLfPNKU
+  href_verbatim: ../../raw-input/2026-03-10/transcript-diesen-mearsheimer-us-already-lost-no-offramp-2026-03-10.md
+- raw_input_relative: raw-input/2026-03-27/transcript-diesen-mearsheimer-iran-holds-all-the-cards-2026-03-27.md
+  voice_date: '2026-03-27'
+  page_filename: mearsheimer-page-2026-03-27-iran-holds-all-the-cards.md
+  collision: false
+  slug: iran-holds-all-the-cards
+  mode: B
+  capture_mode: Mode B — interview (Glenn Diesen)
+  preamble_label: Aired
+  preamble_date: '2026-03-27'
+  display_title: Iran Holds All the Cards — The Strategic Defeat of the U.S.
+  source_url: https://www.youtube.com/watch?v=DBOVT0UdHXg
+  href_verbatim: ../../raw-input/2026-03-27/transcript-diesen-mearsheimer-iran-holds-all-the-cards-2026-03-27.md
+- raw_input_relative: raw-input/2026-03-29/substack-mearsheimer-will-trump-go-kamikaze-2026-03-29.md
+  voice_date: '2026-03-29'
+  page_filename: mearsheimer-page-2026-03-29-will-trump-go-kamikaze.md
+  collision: false
+  slug: will-trump-go-kamikaze
+  mode: A
+  capture_mode: Mode A — Substack
+  preamble_label: Published
+  preamble_date: '2026-03-29'
+  display_title: Will Trump Go Kamikaze?
+  source_url: https://mearsheimer.substack.com/p/will-trump-go-kamikaze
+  href_verbatim: ../../raw-input/2026-03-29/substack-mearsheimer-will-trump-go-kamikaze-2026-03-29.md
+- raw_input_relative: raw-input/2026-04-10/transcript-diesen-mearsheimer-world-changed-forever-2026-04-10.md
+  voice_date: '2026-04-10'
+  page_filename: mearsheimer-page-2026-04-10-world-changed-forever.md
+  collision: false
+  slug: world-changed-forever
+  mode: B
+  capture_mode: Mode B — interview (Glenn Diesen)
+  preamble_label: Aired
+  preamble_date: '2026-04-10'
+  display_title: World Changed Forever as Iran Defeated the U.S.
+  source_url: https://www.youtube.com/watch?v=H2K3qDshr70
+  href_verbatim: ../../raw-input/2026-04-10/transcript-diesen-mearsheimer-world-changed-forever-2026-04-10.md
+- raw_input_relative: raw-input/2026-04-20/transcript-hedges-mearsheimer-iran-2026-04-20.md
+  voice_date: '2026-04-20'
+  page_filename: mearsheimer-page-2026-04-20-hedges-mearsheimer-iran.md
+  collision: false
+  slug: hedges-mearsheimer-iran
+  mode: B
+  capture_mode: Mode B — interview (The Chris Hedges Report)
+  preamble_label: Aired
+  preamble_date: '2026-04-20'
+  display_title: Iran, Islamabad & Hormuz
+  source_url: Not yet pinned — see raw-input source_note
+  href_verbatim: ../../raw-input/2026-04-20/transcript-hedges-mearsheimer-iran-2026-04-20.md
+- raw_input_relative: raw-input/2026-04-21/transcript-mearsheimer-redacted-trump-iran-2026-04-21.md
+  voice_date: '2026-04-21'
+  page_filename: mearsheimer-page-2026-04-21-redacted-trump-iran.md
+  collision: false
+  slug: redacted-trump-iran
+  mode: B
+  capture_mode: Mode B — interview (Redacted News)
+  preamble_label: Aired
+  preamble_date: '2026-04-21'
+  display_title: Trump's ONLY option is surrender
+  source_url: Not yet pinned — see raw-input source_note
+  href_verbatim: ../../raw-input/2026-04-21/transcript-mearsheimer-redacted-trump-iran-2026-04-21.md

@@ -12,6 +12,12 @@ WORK only; not Record.
 
 <!-- Triage appends new date sections below. Do not add content above this line. -->
 
+## 2026-04-21
+
+Verbatim: [`raw-input/2026-04-21/transcript-mearsheimer-redacted-trump-iran-2026-04-21.md`](../../raw-input/2026-04-21/transcript-mearsheimer-redacted-trump-iran-2026-04-21.md).
+
+Refined day page: [`mearsheimer-page-2026-04-21-redacted-trump-iran.md`](mearsheimer-page-2026-04-21-redacted-trump-iran.md).
+
 ## 2026-04-20
 
 **The Chris Hedges Report** · **John Mearsheimer** · operator transcript **2026-04-20**. Full verbatim (all exchanges): [`raw-input/2026-04-20/transcript-hedges-mearsheimer-iran-2026-04-20.md`](../../raw-input/2026-04-20/transcript-hedges-mearsheimer-iran-2026-04-20.md). [strategy-expert-template.md § Thesis-first verbatim scaffold](../../strategy-expert-template.md#thesis-scaffold-pattern)
@@ -82,50 +88,52 @@ So this is one of the reasons I find it hard to imagine that you’re ever going
 
 _(Continues in raw-input file: ship-seizure / blockade spiral, lobby discourse vs policy, WSJ White House tantrum episode, global economy / fertilizer / jet fuel, Suez analogy rejection, etc.)_
 
+Refined day page: [`mearsheimer-page-2026-04-20-hedges-mearsheimer-iran.md`](mearsheimer-page-2026-04-20-hedges-mearsheimer-iran.md).
+
 ## 2026-04-10
 
 Verbatim: [`raw-input/2026-04-10/transcript-diesen-mearsheimer-world-changed-forever-2026-04-10.md`](../../raw-input/2026-04-10/transcript-diesen-mearsheimer-world-changed-forever-2026-04-10.md).
 
-Refined day page: [`mearsheimer-page-2026-04-10.md`](mearsheimer-page-2026-04-10.md).
+Refined day page: [`mearsheimer-page-2026-04-10-world-changed-forever.md`](mearsheimer-page-2026-04-10-world-changed-forever.md).
 
 ## 2026-03-29
 
 Verbatim: [`raw-input/2026-03-29/substack-mearsheimer-will-trump-go-kamikaze-2026-03-29.md`](../../raw-input/2026-03-29/substack-mearsheimer-will-trump-go-kamikaze-2026-03-29.md).
 
-Refined day page: [`mearsheimer-page-2026-03-29.md`](mearsheimer-page-2026-03-29.md).
+Refined day page: [`mearsheimer-page-2026-03-29-will-trump-go-kamikaze.md`](mearsheimer-page-2026-03-29-will-trump-go-kamikaze.md).
 
 ## 2026-03-27
 
 Verbatim: [`raw-input/2026-03-27/transcript-diesen-mearsheimer-iran-holds-all-the-cards-2026-03-27.md`](../../raw-input/2026-03-27/transcript-diesen-mearsheimer-iran-holds-all-the-cards-2026-03-27.md).
 
-Refined day page: [`mearsheimer-page-2026-03-27.md`](mearsheimer-page-2026-03-27.md).
+Refined day page: [`mearsheimer-page-2026-03-27-iran-holds-all-the-cards.md`](mearsheimer-page-2026-03-27-iran-holds-all-the-cards.md).
 
 ## 2026-03-10
 
 Verbatim: [`raw-input/2026-03-10/transcript-diesen-mearsheimer-us-already-lost-no-offramp-2026-03-10.md`](../../raw-input/2026-03-10/transcript-diesen-mearsheimer-us-already-lost-no-offramp-2026-03-10.md).
 
-Refined day page: [`mearsheimer-page-2026-03-10.md`](mearsheimer-page-2026-03-10.md).
+Refined day page: [`mearsheimer-page-2026-03-10-us-already-lost-no-offramp.md`](mearsheimer-page-2026-03-10-us-already-lost-no-offramp.md).
 
 ## 2026-02-25
 
 Verbatim: [`raw-input/2026-02-25/transcript-diesen-mearsheimer-case-for-nuclear-iran-2026-02-25.md`](../../raw-input/2026-02-25/transcript-diesen-mearsheimer-case-for-nuclear-iran-2026-02-25.md).
 
-Refined day page: [`mearsheimer-page-2026-02-25.md`](mearsheimer-page-2026-02-25.md).
+Refined day page: [`mearsheimer-page-2026-02-25-case-for-nuclear-iran.md`](mearsheimer-page-2026-02-25-case-for-nuclear-iran.md).
 
 ## 2026-01-31
 
 Verbatim: [`raw-input/2026-01-31/transcript-diesen-mearsheimer-cold-war-nato-ukraine-2026-01-31.md`](../../raw-input/2026-01-31/transcript-diesen-mearsheimer-cold-war-nato-ukraine-2026-01-31.md).
 
-Refined day page: [`mearsheimer-page-2026-01-31.md`](mearsheimer-page-2026-01-31.md).
+Refined day page: [`mearsheimer-page-2026-01-31-cold-war-nato-ukraine.md`](mearsheimer-page-2026-01-31-cold-war-nato-ukraine.md).
 
 ## 2026-01-20
 
 Verbatim: [`raw-input/2026-01-20/substack-mearsheimer-the-tag-team-fails-in-iran-2026-01-20.md`](../../raw-input/2026-01-20/substack-mearsheimer-the-tag-team-fails-in-iran-2026-01-20.md).
 
-Refined day page: [`mearsheimer-page-2026-01-20.md`](mearsheimer-page-2026-01-20.md).
+Refined day page: [`mearsheimer-page-2026-01-20-the-tag-team-fails-in-iran.md`](mearsheimer-page-2026-01-20-the-tag-team-fails-in-iran.md).
 
 ## 2026-01-07
 
 Verbatim: [`raw-input/2026-01-07/transcript-diesen-mearsheimer-venezuela-greenland-nato-2026-01-07.md`](../../raw-input/2026-01-07/transcript-diesen-mearsheimer-venezuela-greenland-nato-2026-01-07.md).
 
-Refined day page: [`mearsheimer-page-2026-01-07.md`](mearsheimer-page-2026-01-07.md).
+Refined day page: [`mearsheimer-page-2026-01-07-venezuela-greenland-nato.md`](mearsheimer-page-2026-01-07-venezuela-greenland-nato.md).
