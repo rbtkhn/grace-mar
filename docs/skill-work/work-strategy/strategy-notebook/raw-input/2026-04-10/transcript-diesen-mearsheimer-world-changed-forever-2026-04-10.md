@@ -13,6 +13,9 @@ source_url: https://www.youtube.com/watch?v=H2K3qDshr70
 capture_note: Operator paste; host date Friday 10 April 2026 in voice. Trump tweets, ceasefire/Hormuz/Lebanon sequencing, four war demands, NATO/Ukraine spillover — Mearsheimer-voice analyst tier; verify wire/social primaries if promoted to §1.
 related_same_series:
   - ../2026-04-20/transcript-hedges-mearsheimer-iran-2026-04-20.md
+  - ../2026-03-27/transcript-diesen-mearsheimer-iran-holds-all-the-cards-2026-03-27.md
+  - ../2026-03-10/transcript-diesen-mearsheimer-us-already-lost-no-offramp-2026-03-10.md
+  - ../2026-02-25/transcript-diesen-mearsheimer-case-for-nuclear-iran-2026-02-25.md
   - ../../freeman-diesen-2026-04-18-verbatim.md
 ---
 

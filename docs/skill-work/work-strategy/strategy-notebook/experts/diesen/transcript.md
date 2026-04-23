@@ -52,6 +52,21 @@ WORK only; not Record.
 
 
 
+## 2026-03-27
+- YT | cold: **Glenn Diesen** × **John Mearsheimer** — *Iran Holds All the Cards* — **aired** **2026-03-27** **(**YouTube** **upload** **timestamp** **)** — **host** **paired** **`thread:mearsheimer`** **verbatim** [raw-input/2026-03-27/transcript-diesen-mearsheimer-iran-holds-all-the-cards-2026-03-27.md](../../raw-input/2026-03-27/transcript-diesen-mearsheimer-iran-holds-all-the-cards-2026-03-27.md) // hook: **two-speaker** **×** **escalation** **ladder** **/** **15-point** **/** **March** **23** **pause** **/** **Hormuz** **oil** **fraction** **in** **voice** | https://www.youtube.com/watch?v=DBOVT0UdHXg | verify:operator-transcript+raw-input+aired:2026-03-27+pin-canonical-URL | thread:diesen | grep:Diesen+Mearsheimer+Iran+cards+Hormuz+2026-03-27
+
+
+
+## 2026-03-10
+- YT | cold: **Glenn Diesen** × **John Mearsheimer** — *U.S. Already Lost Iran War — No Off-Ramp in Sight* — **aired** **2026-03-10** **(**YouTube** **metadata** **)** — **host** **paired** **`thread:mearsheimer`** **verbatim** [raw-input/2026-03-10/transcript-diesen-mearsheimer-us-already-lost-no-offramp-2026-03-10.md](../../raw-input/2026-03-10/transcript-diesen-mearsheimer-us-already-lost-no-offramp-2026-03-10.md) // hook: **two-speaker** **×** **off-ramp** **/** **escalation** **dominance** **/** **GCC** **desalination** **/** **Hormuz** **(**~**11d** **war** **in** **voice** **)** | https://www.youtube.com/watch?v=1e9NhLfPNKU | verify:operator-transcript+raw-input+aired:2026-03-10+pin-canonical-URL | thread:diesen | grep:Diesen+Mearsheimer+off-ramp+Iran+2026-03-10
+
+
+
+## 2026-02-25
+- YT | cold: **Glenn Diesen** × **John Mearsheimer** — *The Case for a Nuclear Iran* — **aired** **2026-02-25** **(**YouTube** **metadata** **)** — **host** **paired** **`thread:mearsheimer`** **verbatim** [raw-input/2026-02-25/transcript-diesen-mearsheimer-case-for-nuclear-iran-2026-02-25.md](../../raw-input/2026-02-25/transcript-diesen-mearsheimer-case-for-nuclear-iran-2026-02-25.md) // hook: **two-speaker** **×** **SOTU** **/** **JCPOA** **fork** **/** **lobby** **thesis** **/** **rational** **NW** **case** **(**pre-strike** **frame** **in** **voice** **)** | https://www.youtube.com/watch?v=vx1KnspP1gM | verify:operator-transcript+raw-input+aired:2026-02-25+pin-canonical-URL | thread:diesen | grep:Diesen+Mearsheimer+nuclear+Iran+JCPOA+2026-02-25
+
+
+
 
 
 

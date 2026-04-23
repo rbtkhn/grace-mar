@@ -94,6 +94,24 @@ Verbatim: [`raw-input/2026-03-29/substack-mearsheimer-will-trump-go-kamikaze-202
 
 Refined day page: [`mearsheimer-page-2026-03-29.md`](mearsheimer-page-2026-03-29.md).
 
+## 2026-03-27
+
+Verbatim: [`raw-input/2026-03-27/transcript-diesen-mearsheimer-iran-holds-all-the-cards-2026-03-27.md`](../../raw-input/2026-03-27/transcript-diesen-mearsheimer-iran-holds-all-the-cards-2026-03-27.md).
+
+Refined day page: [`mearsheimer-page-2026-03-27.md`](mearsheimer-page-2026-03-27.md).
+
+## 2026-03-10
+
+Verbatim: [`raw-input/2026-03-10/transcript-diesen-mearsheimer-us-already-lost-no-offramp-2026-03-10.md`](../../raw-input/2026-03-10/transcript-diesen-mearsheimer-us-already-lost-no-offramp-2026-03-10.md).
+
+Refined day page: [`mearsheimer-page-2026-03-10.md`](mearsheimer-page-2026-03-10.md).
+
+## 2026-02-25
+
+Verbatim: [`raw-input/2026-02-25/transcript-diesen-mearsheimer-case-for-nuclear-iran-2026-02-25.md`](../../raw-input/2026-02-25/transcript-diesen-mearsheimer-case-for-nuclear-iran-2026-02-25.md).
+
+Refined day page: [`mearsheimer-page-2026-02-25.md`](mearsheimer-page-2026-02-25.md).
+
 ## 2026-01-20
 
 Verbatim: [`raw-input/2026-01-20/substack-mearsheimer-the-tag-team-fails-in-iran-2026-01-20.md`](../../raw-input/2026-01-20/substack-mearsheimer-the-tag-team-fails-in-iran-2026-01-20.md).

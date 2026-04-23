@@ -10,6 +10,7 @@ author: John J. Mearsheimer
 capture_note: Operator paste; public Substack essay. Published date per operator (2026-03-29); Substack byline may read Mar 30, 2026 by timezone. ORBAT counts (~40k regional vs organized combat troops, 82nd ~2k, 31st MEU ~2.5k, 11th MEU mid-April, hypothetical +10k → ~17k), “13 major US installations” damage, million-man Iranian mobilization, USS Iwo Jima / Boxer — in-voice; verify DOD/wire/press if promoted to §1. Paste had “President Troop”; normalized to Trump below.
 related_same_series:
   - ./substack-pape-vietnam-shows-exactly-when-air-wars-2026-03-29.md
+  - ../2026-03-27/transcript-diesen-mearsheimer-iran-holds-all-the-cards-2026-03-27.md
   - ../../raw-input/2026-03-27/substack-pape-the-marine-threshold-5000-marines-2026-03-27.md
 ---
 
