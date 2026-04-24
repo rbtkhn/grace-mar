@@ -1,0 +1,182 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schema-registry/counterfactual-simulation-report.v1.json",
+  "title": "Counterfactual simulation report",
+  "description": "Advisory-only report for a scratch counterfactual proposal simulation. Not Record, not approval, not a merge receipt.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "type",
+    "proposal_id",
+    "generated_at",
+    "authority",
+    "input_summary",
+    "affected_paths",
+    "affected_surfaces",
+    "possible_contradictions",
+    "doctrine_drift_risks",
+    "follow_up_required",
+    "tests_or_audits_to_run",
+    "recommendation",
+    "warnings"
+  ],
+  "properties": {
+    "type": {
+      "const": "counterfactual-simulation-report-v1"
+    },
+    "proposal_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "authority": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "recordAuthority",
+        "gateEffect",
+        "mergeAuthority",
+        "simulationOnly"
+      ],
+      "properties": {
+        "recordAuthority": {
+          "const": "none"
+        },
+        "gateEffect": {
+          "const": "none"
+        },
+        "mergeAuthority": {
+          "const": "none"
+        },
+        "simulationOnly": {
+          "const": true
+        }
+      }
+    },
+    "input_summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "proposal_kind",
+        "target_paths",
+        "target_surfaces",
+        "proposed_change_summary",
+        "evidence_refs",
+        "operator_question",
+        "has_patch_text"
+      ],
+      "properties": {
+        "proposal_kind": {
+          "type": "string",
+          "enum": [
+            "record_change",
+            "doctrine_change",
+            "skill_update",
+            "interface_artifact",
+            "portable_emulation",
+            "strategy_doctrine",
+            "other"
+          ]
+        },
+        "target_paths": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "target_surfaces": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "proposed_change_summary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "evidence_refs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "operator_question": {
+          "type": "string"
+        },
+        "has_patch_text": {
+          "type": "boolean"
+        }
+      }
+    },
+    "affected_paths": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "affected_surfaces": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "possible_contradictions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "doctrine_drift_risks": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "follow_up_required": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "tests_or_audits_to_run": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "recommendation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "decision",
+        "rationale"
+      ],
+      "properties": {
+        "decision": {
+          "type": "string",
+          "enum": [
+            "accept",
+            "revise",
+            "split",
+            "defer",
+            "reject",
+            "needs_review"
+          ]
+        },
+        "rationale": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "warnings": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

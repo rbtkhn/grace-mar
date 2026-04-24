@@ -50,3 +50,5 @@ That means:
 - a violation is a review prompt, not automatic truth
 
 The point is early visibility. If doctrine starts drifting, the radar should make the drift easy to see while it is still cheap to correct.
+
+See also: [counterfactual-fork-simulator.md](counterfactual-fork-simulator.md) for the forward-looking companion tool that asks what doctrine drift a proposed change might introduce before it is accepted.
