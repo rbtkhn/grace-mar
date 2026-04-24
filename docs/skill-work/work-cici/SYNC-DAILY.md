@@ -19,7 +19,7 @@ Date: **2026-04-12**
   - `docs/skill-work/work-dev/workspace.md`
   - `docs/skill-work/work-dev/implementation-ledger.md`
   - `docs/skill-work/work-dev/handback-analysis-checklist.md`
-  - `docs/skill-work/work-dev/dev-journal/README.md`, `daily-dev-journal-inbox.md`
+  - `docs/skill-work/work-dev/dev-notebook/journal/README.md`, `daily-dev-journal-inbox.md`
   - _(optional)_ `known-gaps.md` / `work-dev-history.md` if tracking GAP-005/006 alignment
 - action today:
   - Logged 2026-04-12 row; pick a minimal copy set into [work-dev-mirror](work-dev-mirror/) on next advisor pass—skip deep CI/scenario-only churn unless needed.

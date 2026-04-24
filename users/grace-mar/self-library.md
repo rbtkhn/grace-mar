@@ -23,7 +23,7 @@ A governed retrieval substrate for reference-facing knowledge. Active entries sh
 | **LIB-0149** | Predictive History (work-jiang multivolume spine) | [`research/external/work-jiang/BOOK-ARCHITECTURE.md`](../../research/external/work-jiang/BOOK-ARCHITECTURE.md) |
 | **LIB-0153** | Strategy notebook | [`docs/skill-work/work-strategy/strategy-notebook/README.md`](../../docs/skill-work/work-strategy/strategy-notebook/README.md) |
 | **LIB-0154** | Cici notebook | [`docs/skill-work/work-cici/cici-notebook/README.md`](../../docs/skill-work/work-cici/cici-notebook/README.md) |
-| **LIB-0155** | Dev journal | [`docs/skill-work/work-dev/dev-journal/README.md`](../../docs/skill-work/work-dev/dev-journal/README.md) |
+| **LIB-0155** | Dev journal | [`docs/skill-work/work-dev/dev-notebook/journal/README.md`](../../docs/skill-work/work-dev/dev-notebook/journal/README.md) |
 | **LIB-0156** | History notebook — **operator-authored** `hn-*` chapters (deliverable) | [`docs/skill-work/work-strategy/history-notebook/README.md`](../../docs/skill-work/work-strategy/history-notebook/README.md) |
 | **LIB-0157** | Civilization Memory (upstream repository) | Local: [`research/repos/civilization_memory/`](../../research/repos/civilization_memory/README.md) · symlink: [`SELF-LIBRARY/civilization_memory`](SELF-LIBRARY/civilization_memory) |
 
@@ -114,7 +114,7 @@ entries:
     lookup_priority: "high"
     scope: ["work_dev", "dev_journal", "operator_analytical", "journal"]
     source: "url"
-    url: "https://github.com/rbtkhn/grace-mar/blob/main/docs/skill-work/work-dev/dev-journal/README.md"
+    url: "https://github.com/rbtkhn/grace-mar/blob/main/docs/skill-work/work-dev/dev-notebook/journal/README.md"
     reviewed_at: 2026-04-16
     added_at: 2026-04-09
     notes: "Operator analytical book: work-dev integration and tooling learning log. WORK; not Record or Voice knowledge until gated. Contrast work-dev-history.md (milestones) vs narrative journal."

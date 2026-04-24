@@ -8,7 +8,7 @@
 
 **Missed `dream`:** Before appending on a new day, fold or merge stale content into the correct dated `*-day-NN.md` page.
 
-**Contrast:** [work-dev-history.md](../work-dev-history.md) stays the **milestone** log; this inbox is a **volatile buffer** — same pattern as [strategy-notebook daily-strategy-inbox](../../work-strategy/strategy-notebook/daily-strategy-inbox.md).
+**Contrast:** [work-dev-history.md](../../work-dev-history.md) stays the **milestone** log; this inbox is a **volatile buffer** — same pattern as [strategy-notebook daily-strategy-inbox](../../../work-strategy/strategy-notebook/daily-strategy-inbox.md).
 
 **Git:** Commits preserve history.
 

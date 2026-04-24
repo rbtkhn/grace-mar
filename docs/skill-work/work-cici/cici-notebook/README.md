@@ -10,11 +10,11 @@
 
 ### Routing: dev-journal vs cici-notebook
 
-**One line:** **cici-notebook** = **outward-facing** — understanding, coaching, or tracking **Cici’s** OB1 path from inside grace-mar (instance, upstream, BrewMind, GitHub digest). **dev-journal** = **inward-facing** — building grace-mar’s **own** work-dev lane. See [dev-journal README](../../work-dev/dev-journal/README.md#routing-dev-journal-vs-cici-notebook).
+**One line:** **cici-notebook** = **outward-facing** — understanding, coaching, or tracking **Cici’s** OB1 path from inside grace-mar (instance, upstream, BrewMind, GitHub digest). **dev-journal** = **inward-facing** — building grace-mar’s **own** work-dev lane. See [dev-journal README (dev-notebook/journal)](../../work-dev/dev-notebook/journal/README.md#routing-dev-journal-vs-cici-notebook).
 
 **Center of gravity belongs here** when the note is about **Cici’s** stack and your relationship to it as operator: Cici commits, OB1 direction, instance vs upstream comparison, `cici_journal_ob1_digest.py` day files, inbox coaching notes, same-day synthesis with strategy-notebook when that’s **about Cici’s trajectory**.
 
-**Write in [dev-journal](../../work-dev/dev-journal/README.md)** when the center of gravity is grace-mar **internal** tooling: export–stage–merge in *this* repo, harness wiring, capability contracts, portable skills, OpenClaw integration work — reflective narrative about **this** codebase’s work-dev path.
+**Write in [dev-journal](../../work-dev/dev-notebook/journal/README.md)** when the center of gravity is grace-mar **internal** tooling: export–stage–merge in *this* repo, harness wiring, capability contracts, portable skills, OpenClaw integration work — reflective narrative about **this** codebase’s work-dev path.
 
 **Quick test**
 

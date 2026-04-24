@@ -1,18 +1,24 @@
 # Dev notebook — work-dev
 
-**Territory:** `docs/skill-work/work-dev/dev-notebook/` — durable **prompts, specs, and reference captures** for work-dev and adjacent operator infrastructure (OB1, Cici, harnesses). **WORK**; not Record, not Voice knowledge.
+**Territory:** `docs/skill-work/work-dev/dev-notebook/` — work-dev **WORK** surface: **(1)** durable **prompts** and **spec snapshots**; **(2)** the **day-scale dev journal** (reflective log) and rolling inbox under [journal/](journal/README.md). Not Record, not Voice knowledge.
+
+**Layout**
+
+| Part | Role |
+|------|------|
+| **[journal/README.md](journal/README.md)** | **Dev journal** (LIB-0155): `YYYY-MM-DD-day-NN.md` entries, [daily dev journal inbox](journal/daily-dev-journal-inbox.md), routing vs cici-notebook. Inward-facing grace-mar work-dev. |
+| **Markdown files in this directory (below)** | Reusable **prompts** and **spec captures** (e.g. Cici Phase 1). |
 
 **Contrast**
 
 | Surface | Role |
 |---------|------|
-| **This notebook** | Reusable **prompts** and **spec snapshots** worth keeping in-repo. |
-| [dev-journal/](../dev-journal/README.md) | **Day-scale** reflective journal (operator learning log). |
 | [work-dev-history.md](../work-dev-history.md) | Milestone / artifact log. |
+| [workspace.md](../workspace.md) | Canonical entrypoint, blockers, next actions. |
 
 **No secrets** — reference env vars and paths only.
 
-## Entries
+## Prompts & spec entries (this folder)
 
 | File | Summary |
 |------|---------|
