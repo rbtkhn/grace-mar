@@ -57,6 +57,13 @@ Runtime vs Record: treat Workbench as **work-dev / runtime lab** work. Nothing h
 
 v1 does **not** require placing receipts under `users/<id>/` canonical files.
 
+## Script support
+
+- **`scripts/work_dev/new_workbench_receipt.py`** — create a new receipt JSON (defaults: `receiptKind` `workbench`, `status` `draft`, `recordAuthority` / `gateEffect` `none`; default file under `artifacts/work-dev/workbench-receipts/`).
+- **`scripts/work_dev/validate_workbench_receipt.py`** — validate one receipt; exits non-zero on errors.
+
+Details and copy-paste examples: [SCRIPT-USAGE.md](SCRIPT-USAGE.md). Spec field list: [WORKBENCH-RECEIPT-SPEC.md](WORKBENCH-RECEIPT-SPEC.md).
+
 ## Non-goals (explicit)
 
 - Does **not** by itself satisfy [claim-proof-standard.md](../claim-proof-standard.md) for an **implemented** capability row — use tests, [verification-runs](../verification-runs/README.md), or demos when elevating that claim. Workbench can still be cited as *supporting* “we ran it and saw X.”
@@ -67,6 +74,7 @@ v1 does **not** require placing receipts under `users/<id>/` canonical files.
 | Doc | Role |
 |-----|------|
 | [WORKBENCH-RECEIPT-SPEC.md](WORKBENCH-RECEIPT-SPEC.md) | JSON field definitions (`receiptKind: "workbench"`, camelCase). |
+| [SCRIPT-USAGE.md](SCRIPT-USAGE.md) | `new_workbench_receipt.py` and `validate_workbench_receipt.py` (examples, non-staging). |
 | [VISUAL-INSPECTION-PROTOCOL.md](VISUAL-INSPECTION-PROTOCOL.md) | Required steps for **visual** artifacts. |
 | [CANDIDATE-COMPARISON-PROTOCOL.md](CANDIDATE-COMPARISON-PROTOCOL.md) | Compare multiple generated **candidates** (A/B) before choosing a path. |
 

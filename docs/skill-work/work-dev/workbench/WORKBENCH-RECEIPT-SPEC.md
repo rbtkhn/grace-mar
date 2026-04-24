@@ -32,7 +32,7 @@ Every workbench JSON object must include:
 | `launchCommand` | string | Primary command the operator (or script) used to start the artifact. |
 | `inspection` | object | See below. |
 | `revisionSummary` | string | What changed between attempts (empty string if first pass). |
-| `status` | string | e.g. `pass`, `fail`, `inconclusive`, `revoked` (enum is informal v0.1). |
+| `status` | string | **Workflow** (enforced by `validate_workbench_receipt.py`): `draft`, `runs`, `inspected`, `needs_revision`, `ready_for_review`, `rejected`. **Legacy** hand-edited values (`pass`, `fail`, `inconclusive`, `revoked`) may still appear in old files; prefer migrating to the workflow set for tooling. |
 | `recordAuthority` | string | Must be `"none"` for v0.1 workbench receipts. |
 | `gateEffect` | string | Must be `"none"` for v0.1 workbench receipts. |
 
@@ -73,11 +73,13 @@ Every workbench JSON object must include:
     "acceptanceChecklist": ["Exits 0: ok"]
   },
   "revisionSummary": "",
-  "status": "pass",
+  "status": "draft",
   "recordAuthority": "none",
   "gateEffect": "none"
 }
 ```
+
+**Scripts:** [SCRIPT-USAGE.md](SCRIPT-USAGE.md) — `new_workbench_receipt.py` (generate) and `validate_workbench_receipt.py` (check).
 
 ## Full example (fixture)
 

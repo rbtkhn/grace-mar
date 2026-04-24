@@ -37,7 +37,7 @@
     ]
   },
   "revisionSummary": "Attempt 1: layout overflow. Attempt 2: flex wrap + min-width; key warning removed.",
-  "status": "pass",
+  "status": "ready_for_review",
   "recordAuthority": "none",
   "gateEffect": "none"
 }
