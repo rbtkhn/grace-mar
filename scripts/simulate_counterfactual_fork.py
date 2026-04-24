@@ -398,6 +398,11 @@ def main() -> int:
         default="",
         help="Repo root to read from (default: current working directory)",
     )
+    parser.add_argument(
+        "--json",
+        action="store_true",
+        help="Print the generated report JSON to stdout instead of only printing the output path",
+    )
     args = parser.parse_args()
 
     repo_root = Path(args.repo_root).resolve() if args.repo_root else Path.cwd().resolve()
@@ -415,8 +420,12 @@ def main() -> int:
         return 1
 
     output_path.parent.mkdir(parents=True, exist_ok=True)
-    output_path.write_text(json.dumps(report, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-    print(output_path)
+    rendered = json.dumps(report, indent=2, ensure_ascii=False) + "\n"
+    output_path.write_text(rendered, encoding="utf-8")
+    if args.json:
+        print(rendered, end="")
+    else:
+        print(output_path)
     return 0
 
 

@@ -78,6 +78,15 @@ This keeps interface-artifact review aligned with the existing non-authority con
 - dynamic path mutation missed
 - stale repo state used
 
+## How to interpret recommendations
+
+- `accept` = no obvious risk detected in this narrow pass; still not approval
+- `revise` = fix wording, scope, or authority-risk language before routing the proposal onward
+- `split` = the proposal appears too broad and should become smaller governed changes
+- `defer` = the proposal likely needs more narrowing, context, or follow-up before it is worth routing
+- `reject` = the proposal appears to violate a core authority boundary
+- `needs_review` = the proposal is underspecified, especially around target surfaces
+
 ## Scope for Phase 1
 
 Phase 1 is intentionally narrow:
@@ -90,3 +99,7 @@ Phase 1 is intentionally narrow:
 - no autonomous proposal acceptance
 
 This tool exists to make consequence review cheaper and more legible before a human decides what to do next.
+
+## Example input
+
+See [`../examples/diagnostics/counterfactual-proposal.example.json`](../examples/diagnostics/counterfactual-proposal.example.json) for a small proposal payload that exercises the Phase 1 input shape without touching canonical Record paths.

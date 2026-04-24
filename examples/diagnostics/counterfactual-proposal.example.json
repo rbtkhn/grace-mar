@@ -1,0 +1,14 @@
+{
+  "proposal_id": "counterfactual-doc-clarification",
+  "proposal_kind": "doctrine_change",
+  "target_paths": [
+    "docs/counterfactual-fork-simulator.md"
+  ],
+  "target_surfaces": [
+    "SELF-LIBRARY"
+  ],
+  "proposed_change_summary": "Clarify the counterfactual simulator authority model and recommendation semantics.",
+  "proposed_patch_text": "Add a short section explaining that accept means no obvious risk, not approval.",
+  "evidence_refs": [],
+  "operator_question": "Would this change require additional doctrine or documentation follow-up if accepted?"
+}

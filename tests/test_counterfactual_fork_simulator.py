@@ -161,6 +161,21 @@ def test_report_validates_against_schema_when_jsonschema_available(tmp_path: Pat
     jsonschema.validate(instance=report, schema=schema)
 
 
+def test_json_pretty_output_is_stable_and_matches_written_report(tmp_path: Path) -> None:
+    _build_repo(tmp_path)
+    proposal_path = tmp_path / "proposal.json"
+    _write_json(proposal_path, _proposal())
+
+    result = _run(tmp_path, proposal_path, "--json")
+    assert result.returncode == 0, result.stderr
+    out = tmp_path / "artifacts" / "counterfactual-simulations" / "example-proposal-simulation.json"
+    expected = out.read_text(encoding="utf-8")
+    assert result.stdout == expected
+    payload = json.loads(result.stdout)
+    assert payload["type"] == "counterfactual-simulation-report-v1"
+    assert payload["proposal_id"] == "example-proposal"
+
+
 def test_script_does_not_modify_gate_or_canonical_record_files(tmp_path: Path) -> None:
     _build_repo(tmp_path)
     proposal_path = tmp_path / "proposal.json"
