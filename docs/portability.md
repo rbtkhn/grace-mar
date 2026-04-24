@@ -85,6 +85,8 @@ Use the **runtime-complements membrane bundle** when you want a narrow, allow-li
 
 That membrane path is smaller on purpose. It is for bounded runtime exchange, not full emulation-oriented loading.
 
+For the concentrated contract and behavior-spec layer around this bundle, see [portability/emulation/README.md](portability/emulation/README.md).
+
 ---
 
 ## 4. Revocation Guidance

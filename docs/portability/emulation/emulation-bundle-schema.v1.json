@@ -1,0 +1,243 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "docs/portability/emulation/emulation-bundle-schema.v1.json",
+  "title": "Portable emulation bundle contract",
+  "description": "Docs-facing formal contract for a Grace-Mar emulation-ready bundle. This schema is richer than the current emitted envelope and is intended to define the full authority-bounded contract for downstream runtimes.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "metadata",
+    "source",
+    "authority",
+    "bundle",
+    "behavior_spec",
+    "governance",
+    "audit"
+  ],
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "fork_id",
+        "bundle_version",
+        "exported_at",
+        "checksum"
+      ],
+      "properties": {
+        "fork_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "bundle_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "exported_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "checksum": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "repo",
+        "branch",
+        "commit",
+        "exporter",
+        "export_mode"
+      ],
+      "properties": {
+        "repo": {
+          "type": "string",
+          "minLength": 1
+        },
+        "branch": {
+          "type": "string",
+          "minLength": 1
+        },
+        "commit": {
+          "type": "string",
+          "minLength": 1
+        },
+        "exporter": {
+          "type": "string",
+          "minLength": 1
+        },
+        "export_mode": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "authority": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "recordAuthority",
+        "gateEffect",
+        "canonicalRecordAccess",
+        "mergeAuthority",
+        "proposalAuthority",
+        "contradictionAuthority",
+        "workLaneAuthority"
+      ],
+      "properties": {
+        "recordAuthority": {
+          "const": "none"
+        },
+        "gateEffect": {
+          "const": "none"
+        },
+        "canonicalRecordAccess": {
+          "enum": ["read-only", "none"]
+        },
+        "mergeAuthority": {
+          "const": "none"
+        },
+        "proposalAuthority": {
+          "const": "stage-only"
+        },
+        "contradictionAuthority": {
+          "const": "proposal-only"
+        },
+        "workLaneAuthority": {
+          "const": "local-runtime-only"
+        }
+      }
+    },
+    "bundle": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "record_snapshot",
+        "runtime_bundle",
+        "portable_record_prompt",
+        "authority_map",
+        "proposal_schema_ref"
+      ],
+      "properties": {
+        "record_snapshot": {
+          "type": "string",
+          "minLength": 1
+        },
+        "runtime_bundle": {
+          "type": "string",
+          "minLength": 1
+        },
+        "portable_record_prompt": {
+          "type": "string",
+          "minLength": 1
+        },
+        "authority_map": {
+          "type": "string",
+          "minLength": 1
+        },
+        "proposal_schema_ref": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "behavior_spec": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "core_constitution",
+        "record_boundaries",
+        "contradiction_policy",
+        "proposal_envelope",
+        "work_lane_policy"
+      ],
+      "properties": {
+        "core_constitution": {
+          "type": "string",
+          "minLength": 1
+        },
+        "record_boundaries": {
+          "type": "string",
+          "minLength": 1
+        },
+        "contradiction_policy": {
+          "type": "string",
+          "minLength": 1
+        },
+        "proposal_envelope": {
+          "type": "string",
+          "minLength": 1
+        },
+        "work_lane_policy": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "governance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "proposal_schema_ref",
+        "authority_map_ref",
+        "import_path_ref",
+        "review_path_ref"
+      ],
+      "properties": {
+        "proposal_schema_ref": {
+          "type": "string",
+          "minLength": 1
+        },
+        "authority_map_ref": {
+          "type": "string",
+          "minLength": 1
+        },
+        "import_path_ref": {
+          "type": "string",
+          "minLength": 1
+        },
+        "review_path_ref": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "audit": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "manifest",
+        "checksums",
+        "export_receipt",
+        "warnings"
+      ],
+      "properties": {
+        "manifest": {
+          "type": "string",
+          "minLength": 1
+        },
+        "checksums": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "export_receipt": {
+          "type": "string",
+          "minLength": 1
+        },
+        "warnings": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

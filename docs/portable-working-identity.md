@@ -36,6 +36,8 @@ Portable working identity maps to four layers. Each layer has a canonical Grace-
 
 New portability work must extend the existing PRP / export / prepared-context architecture. It must not create a second parallel portability stack. The existing surfaces and scripts are the portability system — not a predecessor to be replaced. Emulation-oriented exports are allowed only as a thin composition over those existing surfaces.
 
+Portable working identity may be packaged into an emulation-ready bundle, but that package still grants **no** merge authority to a foreign runtime; see [portability/emulation/README.md](portability/emulation/README.md).
+
 ---
 
 ## Completeness
@@ -52,3 +54,4 @@ All documented export classes are operational. The portability stack — content
 - [EXPORT-CLI.md](EXPORT-CLI.md) — unified export CLI
 - [portable-record/current-capability-map.md](portable-record/current-capability-map.md) — current-state capability inventory
 - [portable-record/export-contract.md](portable-record/export-contract.md) — export classes and the portability surface
+- [portability/emulation/README.md](portability/emulation/README.md) — formal portable-emulation contract layer over the live export
