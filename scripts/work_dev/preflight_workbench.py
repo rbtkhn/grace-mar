@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """Workbench preflight: read-only checks for the Workbench + visualizer pilot chain.
 
-Validates doc paths, visualizer files, committed fixture shape, example workbench
-receipts (delegates to validate_workbench_receipt rules), and optionally
-``generate_strategy_notebook_visualizer_fixture.py --check``.
+Validates doc paths, visualizer files, committed fixture shape, static HTML smoke
+(``smoke_strategy_visualizer.py``), example workbench receipts (delegates to
+``validate_workbench_receipt``), and optionally ``generate_strategy_notebook_visualizer_fixture.py --check``.
 
 Does not read or write users/, recursion-gate, or Record. Does not stage or merge.
 Standard library only.
@@ -41,6 +41,26 @@ FIXTURE_REL = (
     "workbench-visualizer/strategy-notebook-visualizer.fixture.json"
 )
 GENERATOR_SCRIPT = "scripts/work_strategy/generate_strategy_notebook_visualizer_fixture.py"
+SMOKE_SCRIPT = "scripts/work_dev/smoke_strategy_visualizer.py"
+
+
+def check_visualizer_smoke(*, skip: bool) -> tuple[str, str]:
+    """Run static HTML smoke. Returns (pass|skip|fail, tail for diagnostics)."""
+    if skip:
+        return "skip", ""
+    s = REPO_ROOT / SMOKE_SCRIPT
+    if not s.is_file():
+        return "fail", f"missing {SMOKE_SCRIPT}"
+    proc = subprocess.run(
+        [sys.executable, str(s)],
+        cwd=REPO_ROOT,
+        capture_output=True,
+        text=True,
+    )
+    tail = ((proc.stdout or "") + (proc.stderr or "")).strip()
+    if proc.returncode == 0:
+        return "pass", tail[:2000] if tail else ""
+    return "fail", tail[:4000]
 
 
 def _load_validate_receipt():
@@ -220,7 +240,7 @@ def check_freshness(*, skip: bool) -> tuple[str, int | None, str]:
 
 
 def run_preflight(
-    *, strict: bool, skip_freshness: bool, as_json: bool
+    *, strict: bool, skip_freshness: bool, skip_smoke: bool, as_json: bool
 ) -> int:
     validate_receipt = _load_validate_receipt()
 
@@ -231,6 +251,7 @@ def run_preflight(
         "fixture_schema": "unknown",
         "fixture_graph": "unknown",
         "example_receipts": "unknown",
+        "visualizer_smoke": "unknown",
         "freshness": "unknown",
     }
     all_warnings: list[str] = []
@@ -297,6 +318,13 @@ def run_preflight(
     if estatus == "fail":
         has_fail = True
 
+    sm_st, sm_tail = check_visualizer_smoke(skip=skip_smoke)
+    results["visualizer_smoke"] = sm_st
+    if sm_tail:
+        results["visualizer_smoke_output_tail"] = sm_tail
+    if sm_st == "fail":
+        has_fail = True
+
     fstat, fcode, ftail = check_freshness(skip=skip_freshness)
     results["freshness"] = fstat
     if fcode is not None:
@@ -336,6 +364,11 @@ def run_preflight(
             "example receipts",
             "PASS" if results["example_receipts"] == "pass" else "FAIL",
         )
+        vsm = results.get("visualizer_smoke", "—")
+        if vsm == "skip":
+            line("visualizer html smoke", "SKIPPED")
+        else:
+            line("visualizer html smoke", "PASS" if vsm == "pass" else "FAIL")
         fr = results["freshness"]
         if fr == "skip":
             line("generated fixture --check", "SKIPPED")
@@ -350,6 +383,10 @@ def run_preflight(
         if fstat == "fail" and ftail and not as_json:
             print("  Freshness stderr/stdout (tail):")
             for ln in ftail.splitlines()[:15]:
+                print(f"    {ln}")
+        if vsm == "fail" and results.get("visualizer_smoke_output_tail") and not as_json:
+            print("  Visualizer smoke (tail):")
+            for ln in sm_tail.splitlines()[:20]:
                 print(f"    {ln}")
         if has_fail:
             print("\nRESULT: FAIL")
@@ -372,6 +409,11 @@ def main() -> int:
         help="Do not run generate_strategy_notebook_visualizer_fixture.py --check",
     )
     p.add_argument(
+        "--skip-smoke",
+        action="store_true",
+        help="Do not run smoke_strategy_visualizer.py (static HTML check)",
+    )
+    p.add_argument(
         "--json",
         action="store_true",
         dest="as_json",
@@ -381,6 +423,7 @@ def main() -> int:
     return run_preflight(
         strict=args.strict,
         skip_freshness=args.skip_freshness,
+        skip_smoke=args.skip_smoke,
         as_json=args.as_json,
     )
 
