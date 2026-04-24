@@ -38,6 +38,10 @@ When several derived surfaces may have drifted at once, use the repo-owned regen
 python3 scripts/regenerate_all_derived.py --changed --dry-run
 ```
 
+Covered dashboard outputs also gain sibling rebuild-provenance sidecars such as
+`artifacts/review-dashboard.md.derived-rationale.json`. Those sidecars are derived metadata only;
+they do not add authority beyond the dashboard itself.
+
 **CI:** On push and pull requests to `main`, [`.github/workflows/library-index.yml`](../.github/workflows/library-index.yml) runs `build_library_index.py` and fails if `artifacts/library-index.md` is out of date — regenerate locally and commit with `self-library.md` changes.
 
 ## Design notes

@@ -4,7 +4,7 @@
 
 **Derived operator artifact.** Work territories do not redefine the Record; this file only surfaces runtime + WORK telemetry for navigation.
 
-- **Generated:** 2026-04-14T15:45:32Z
+- **Generated:** 2026-04-24T16:19:11Z
 - **Ledger:** `/Users/robertkuhne/Documents/grace-mar/runtime/observations/index.jsonl` (missing — no runtime observations yet)
 
 ## work-lanes-dashboard.json snapshot
@@ -14,23 +14,86 @@ From `artifacts/work-lanes-dashboard.json` (run `build_work_lanes_dashboard.py` 
 ```json
 {
   "schemaVersion": "1.0.0-work-lanes-dashboard",
-  "generatedAt": "2026-04-14T00:07:07.887493+00:00",
+  "generatedAt": "2026-04-24T16:19:10.931129+00:00",
   "recordMergeAuthority": "RECURSION-GATE and companion approval only \u2014 never implied by lane metrics.",
   "lanes": {
     "work_strategy": {
-      "schemaVersion": "1.0.0-work-strategy",
-      "generatedAt": "2026-04-11T04:23:35.084601+00:00",
+      "schemaVersion": "2.0.0-work-strategy",
+      "generatedAt": "2026-04-23T02:21:22.049008+00:00",
       "lane": "work-strategy",
       "metrics": {
-        "decision_point_files": 1,
-        "decision_points_open": 0,
-        "authorized_sources_yaml_entries": 5,
-        "promotion_policy_present": true
+        "structure": {
+          "decision_point_files": 2,
+          "decision_points_open": 0,
+          "authorized_sources_yaml_entries": 16,
+          "promotion_policy_present": true
+        },
+        "judgment_quality": {
+          "notebook_entries_total": 13,
+          "inbox_pending_lines": 0,
+          "promotion_date_mentions": 22,
+          "months": {
+            "2026-01": {
+              "dated_entries": 0,
+              "legacy_chapter_stubs": 0,
+              "knot_pages": 0,
+              "avg_sections_per_entry": 4.0,
+              "avg_links_per_entry": 3.0,
+              "open_carry_forward": 1
+            },
+            "2026-02": {
+              "dated_entries": 0,
+              "legacy_chapter_stubs": 0,
+              "knot_pages": 0,
+              "avg_sections_per_entry": 4.0,
+              "avg_links_per_entry": 3.0,
+              "open_carry_forward": 1
+            },
+            "2026-03": {
+              "dated_entries": 0,
+              "legacy_chapter_stubs": 0,
+              "knot_pages": 0,
+              "avg_sections_per_entry": 4.0,
+              "avg_links_per_entry": 3.0,
+              "open_carry_forward": 0
+            },
+            "2026-04": {
+              "dated_entries": 13,
+              "legacy_chapter_stubs": 0,
+              "knot_pages": 0,
+              "avg_sections_per_entry": 3.64,
+              "avg_links_per_entry": 15.2,
+              "open_carry_forward": 6
+            }
+          }
+        }
+      },
+      "interpretation": {
+        "avg_sections_per_entry": "4.0 = Chronicle/Reflection/References/Foresight (or legacy headings) present; <3.0 = sections skipped regularly",
+        "avg_links_per_entry": ">2 healthy; <1 = judgment may be under-cited",
+        "open_carry_forward": "High = active threads; very high relative to entries = unresolved debt",
+        "inbox_pending_lines": "0 = clean; >30 = overdue weave; >50 = prune candidate",
+        "promotion_date_mentions": "0 is fine early; sustained 0 over months = notebook may not be feeding STRATEGY.md"
       },
       "notes": [
-        "Recommendation acceptance/rejection rates are phase-2 (need operator workflow).",
-        "Cross-lane references: manual until automated extract."
-      ]
+        "Recommendation acceptance/rejection rates: need operator workflow.",
+        "Cross-lane references: manual until automated extract.",
+        "judgment_quality metrics are computed from on-disk notebook state."
+      ],
+      "workflowMetricContract": {
+        "schemaVersion": "1.0.0",
+        "lane": "work-strategy",
+        "workflowCount": 15,
+        "acceptedCount": 0,
+        "revisionCount": 0,
+        "staleCount": 0,
+        "medianContextTokens": null,
+        "compressionRate": null,
+        "retrievalMissRate": null,
+        "medianReviewCycles": null,
+        "partialMetrics": true,
+        "notes": ""
+      }
     },
     "work_dev": {
       "schemaVersion": "1.0.0-work-dev",
@@ -157,30 +220,19 @@ From `artifacts/work-lanes-dashboard.json` (run `build_work_lanes_dashboard.py` 
       ]
     },
     "work_dev_dashboard_legacy": {
-      "generated_at": "2026-04-13T05:22:38Z",
+      "generated_at": "2026-04-20T18:55:44Z",
       "integration_status_counts": {
         "implemented": 11,
         "partial": 2,
         "documented_only": 1
       },
       "pipeline_event_counts": {
-        "staged": 22,
-        "applied": 43,
-        "intent_constitutional_critique": 20,
-        "approved": 2,
-        "dyad:checkpoint_request": 2,
-        "validation_failed": 8,
-        "openclaw_export": 1,
-        "rejected": 4,
-        "maintenance": 14,
-        "dyad:grounded_query": 1,
-        "sandbox_execution_pre": 1,
-        "sandbox_execution_post": 1
+        "maintenance": 6
       },
       "provenance_completeness_score": 1.0,
       "provenance_from_gate": false,
       "lane_violation_count": 0,
-      "continuity_block_count": 23,
+      "continuity_block_count": 33,
       "gap_ids_open": [],
       "notes": [
         "Lane / continuity counts come from runtime/observability/*.jsonl when present (local or CI); empty feeds => 0.",
@@ -212,7 +264,15 @@ From `artifacts/work-lanes-dashboard.json` (run `build_work_lanes_dashboard.py` 
 
 Per-lane receipts from `build_budgeted_context.py`. Not Record truth — see [`docs/runtime/context-budgeting.md`](../../docs/runtime/context-budgeting.md).
 
-_No receipt yet._ Run `python3 scripts/prepared_context/build_budgeted_context.py` after lane work.
+- **Receipt file:** `prepared-context/last-budget-builds.json`
+
+### work-strategy
+
+- **Last build:** `/private/tmp/budget-wd-demo.md`
+- **Budget class:** `medium` — **budget target (chars):** `2500`
+- **Policy mode:** `operator_only`
+- **Built:** 2026-04-19T23:20:35Z
+- **Exclusions occurred:** no
 
 ## Runtime observations by lane (recent)
 

@@ -15,11 +15,14 @@ from derived_regeneration import (
     REPO_ROOT,
     TARGETS,
     TARGETS_BY_ID,
+    build_rationale_payload,
+    cleanup_owned_outputs,
     default_receipt_path,
     detect_git_changed_paths,
     expand_with_downstream,
     matched_paths_for_target,
     normalize_rel_path,
+    sidecar_path_for_artifact,
     select_targets_for_paths,
     topologically_sort_targets,
     write_receipt,
@@ -111,6 +114,29 @@ def _selected_targets(args: argparse.Namespace, changed_paths: list[str]):
     return topologically_sort_targets(selected), "changed"
 
 
+def _build_receipt_payload(
+    *,
+    now: datetime,
+    mode: str,
+    user: str,
+    changed_paths: list[str],
+    target_rows: list[dict],
+    overall_status: str,
+) -> dict:
+    return {
+        "receiptKind": "derived_rebuild",
+        "receiptId": f"drb-{now:%Y%m%d-%H%M%S}",
+        "createdAt": now.strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "mode": mode,
+        "user": user,
+        "changedPaths": changed_paths,
+        "targets": target_rows,
+        "resultStatus": overall_status,
+        "recordAuthority": "none",
+        "gateEffect": "none",
+    }
+
+
 def main() -> int:
     args = build_parser().parse_args()
     changed_paths = _expand(args.paths) or detect_git_changed_paths(REPO_ROOT)
@@ -133,13 +159,18 @@ def main() -> int:
         print("No derived rebuild targets selected.")
     for target in selected:
         commands = target.commands_for_user(args.user)
+        outputs = target.outputs_for_user(args.user)
         matched_paths = matched_paths_for_target(changed_paths, target)
+        rationale_sidecars = [sidecar_path_for_artifact(output) for output in outputs]
         row: dict[str, object] = {
             "targetId": target.target_id,
             "description": target.description,
+            "producerScript": target.producer_script,
+            "policyMode": target.policy_mode,
             "matchedPaths": matched_paths,
             "commands": [" ".join(cmd) for cmd in commands],
-            "outputs": list(target.outputs),
+            "outputs": outputs,
+            "rationaleSidecars": rationale_sidecars,
         }
         if args.dry_run:
             row["status"] = "dry_run"
@@ -152,6 +183,9 @@ def main() -> int:
 
         overall_status = "ok"
         start = time.monotonic()
+        cleaned_outputs = cleanup_owned_outputs(REPO_ROOT, target=target, user=args.user)
+        if cleaned_outputs:
+            row["cleanedOwnedOutputs"] = cleaned_outputs
         for cmd in commands:
             print(f"[run] {' '.join(cmd)}", flush=True)
             proc = subprocess.run(
@@ -172,38 +206,70 @@ def main() -> int:
                 target_rows.append(row)
                 overall_status = "failed"
                 if receipt_path is not None:
-                    payload = {
-                        "receiptKind": "derived_rebuild",
-                        "receiptId": f"drb-{now:%Y%m%d-%H%M%S}",
-                        "createdAt": now.strftime("%Y-%m-%dT%H:%M:%SZ"),
-                        "mode": mode,
-                        "user": args.user,
-                        "changedPaths": changed_paths,
-                        "targets": target_rows,
-                        "resultStatus": overall_status,
-                        "recordAuthority": "none",
-                        "gateEffect": "none",
-                    }
+                    payload = _build_receipt_payload(
+                        now=now,
+                        mode=mode,
+                        user=args.user,
+                        changed_paths=changed_paths,
+                        target_rows=target_rows,
+                        overall_status=overall_status,
+                    )
                     write_receipt(receipt_path, payload)
                     print(f"wrote receipt: {receipt_path}")
                 return proc.returncode
+        missing_outputs = [
+            output for output in outputs if not (REPO_ROOT / output).is_file()
+        ]
+        if missing_outputs:
+            row["status"] = "failed"
+            row["missingOutputs"] = missing_outputs
+            row["elapsedMs"] = int((time.monotonic() - start) * 1000)
+            target_rows.append(row)
+            overall_status = "failed"
+            if receipt_path is not None:
+                payload = _build_receipt_payload(
+                    now=now,
+                    mode=mode,
+                    user=args.user,
+                    changed_paths=changed_paths,
+                    target_rows=target_rows,
+                    overall_status=overall_status,
+                )
+                write_receipt(receipt_path, payload)
+                print(f"wrote receipt: {receipt_path}")
+            print(
+                f"missing expected outputs for {target.target_id}: {', '.join(missing_outputs)}",
+                file=sys.stderr,
+            )
+            return 1
+        written_sidecars: list[str] = []
+        generated_at = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+        rationale_inputs = matched_paths if mode in {"changed", "incremental"} else []
+        for output in outputs:
+            sidecar_rel = sidecar_path_for_artifact(output)
+            payload = build_rationale_payload(
+                target=target,
+                user=args.user,
+                artifact_path=output,
+                generated_at=generated_at,
+                matched_paths=rationale_inputs,
+            )
+            write_receipt(REPO_ROOT / sidecar_rel, payload)
+            written_sidecars.append(sidecar_rel)
         row["status"] = "ok"
         row["elapsedMs"] = int((time.monotonic() - start) * 1000)
+        row["writtenRationaleSidecars"] = written_sidecars
         target_rows.append(row)
 
     if receipt_path is not None:
-        payload = {
-            "receiptKind": "derived_rebuild",
-            "receiptId": f"drb-{now:%Y%m%d-%H%M%S}",
-            "createdAt": now.strftime("%Y-%m-%dT%H:%M:%SZ"),
-            "mode": mode,
-            "user": args.user,
-            "changedPaths": changed_paths,
-            "targets": target_rows,
-            "resultStatus": overall_status,
-            "recordAuthority": "none",
-            "gateEffect": "none",
-        }
+        payload = _build_receipt_payload(
+            now=now,
+            mode=mode,
+            user=args.user,
+            changed_paths=changed_paths,
+            target_rows=target_rows,
+            overall_status=overall_status,
+        )
         write_receipt(receipt_path, payload)
         print(f"wrote receipt: {receipt_path}")
 

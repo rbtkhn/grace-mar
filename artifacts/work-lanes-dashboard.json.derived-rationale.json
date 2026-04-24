@@ -1,0 +1,18 @@
+{
+  "$schema": "schema-registry/derived-artifact-rationale.v1.json",
+  "schemaVersion": "1.0.0-derived-artifact-rationale",
+  "producer_script": "scripts/build_work_lanes_dashboard.py",
+  "policy_mode": "Rebuild",
+  "generated_at": "2026-04-24T16:19:10Z",
+  "artifact_path": "artifacts/work-lanes-dashboard.json",
+  "canonical_surfaces_touched": false,
+  "rebuild_command": "python3 scripts/build_work_lanes_dashboard.py",
+  "inputs": [
+    "artifacts/work-dev/work-dev-status-summary.json",
+    "artifacts/work-strategy/strategy-observability.json",
+    "artifacts/work-cadence/cadence-pressure-report.json",
+    "scripts/build_work_lanes_dashboard.py"
+  ],
+  "rationale": "Aggregate lane telemetry into a machine-readable feed that downstream operator dashboards can rebuild from without touching Record files.",
+  "human_review_required": false
+}

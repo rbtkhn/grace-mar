@@ -1,0 +1,17 @@
+{
+  "$schema": "schema-registry/derived-artifact-rationale.v1.json",
+  "schemaVersion": "1.0.0-derived-artifact-rationale",
+  "producer_script": "scripts/build_library_index.py",
+  "policy_mode": "Surface",
+  "generated_at": "2026-04-24T16:19:10Z",
+  "artifact_path": "artifacts/library-index.md",
+  "canonical_surfaces_touched": false,
+  "rebuild_command": "python3 scripts/build_library_index.py",
+  "inputs": [
+    "users/*/self-library.md",
+    "scripts/build_library_index.py",
+    "docs/operator-dashboards.md"
+  ],
+  "rationale": "Surface SELF-LIBRARY coverage as a derived navigation dashboard without changing canonical library truth.",
+  "human_review_required": false
+}

@@ -6,7 +6,7 @@
 
 ## At a glance
 
-- **Generated:** 2026-04-19T17:41:55Z
+- **Generated:** 2026-04-24T14:04:30Z
 - **Entries:** 153 total · canon: 127 · influence: 2 · reference: 24
 - **Operator-analytical shelf** (tag or `shelf_intent: operator_book`): **8** entries
 
@@ -27,13 +27,13 @@ _High-value WORK lanes: Predictive History, strategy notebook, journals, etc. So
 
 _Last commit date on repo path from `url` when it points at this repository — proxy for “hot” docs._
 
-- 2026-04-20 — **LIB-0153** — Strategy notebook
-- 2026-04-19 — **LIB-0158** — Bookshelf (owned print catalog)
-- 2026-04-19 — **LIB-0156** — History notebook
+- 2026-04-24 — **LIB-0155** — Dev journal
+- 2026-04-24 — **LIB-0154** — Cici notebook
+- 2026-04-24 — **LIB-0153** — Strategy notebook
+- 2026-04-21 — **LIB-0158** — Bookshelf (owned print catalog)
+- 2026-04-21 — **LIB-0156** — History notebook
 - 2026-04-18 — **LIB-0151** — Predictive History — YouTube transcript library
 - 2026-04-13 — **LIB-0149** — Predictive History
-- 2026-04-12 — **LIB-0154** — Cici notebook
-- 2026-04-11 — **LIB-0155** — Dev journal
 - 2026-04-11 — **LIB-0146** — Polyphonic cognition
 - 2026-04-11 — **LIB-0132** — Civilization Memory Codex
 - 2026-04-03 — **LIB-0152** — Tucker Carlson Network — curated transcript book

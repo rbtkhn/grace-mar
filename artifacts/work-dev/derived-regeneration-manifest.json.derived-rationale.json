@@ -1,0 +1,17 @@
+{
+  "$schema": "schema-registry/derived-artifact-rationale.v1.json",
+  "schemaVersion": "1.0.0-derived-artifact-rationale",
+  "producer_script": "scripts/build_derived_regeneration_manifest.py",
+  "policy_mode": "Rebuild",
+  "generated_at": "2026-04-24T16:19:05Z",
+  "artifact_path": "artifacts/work-dev/derived-regeneration-manifest.json",
+  "canonical_surfaces_touched": false,
+  "rebuild_command": "python3 scripts/build_derived_regeneration_manifest.py",
+  "inputs": [
+    "scripts/derived_regeneration.py",
+    "scripts/build_derived_regeneration_manifest.py",
+    "docs/skill-work/work-dev/derived-regeneration.md"
+  ],
+  "rationale": "Capture the current rebuild target registry in one inspectable manifest so incremental regeneration stays explicit and bounded.",
+  "human_review_required": false
+}

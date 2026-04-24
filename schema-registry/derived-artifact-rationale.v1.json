@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schema-registry/derived-artifact-rationale.v1.json",
+  "title": "Derived artifact rationale",
+  "description": "Rebuild provenance for a derived, non-canonical artifact under /artifacts/. This schema is separate from portable-record artifact rationale.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "producer_script",
+    "policy_mode",
+    "generated_at",
+    "artifact_path",
+    "canonical_surfaces_touched",
+    "rebuild_command",
+    "inputs",
+    "rationale",
+    "human_review_required"
+  ],
+  "properties": {
+    "producer_script": {
+      "type": "string",
+      "description": "Repo-relative script path responsible for producing this artifact."
+    },
+    "policy_mode": {
+      "type": "string",
+      "enum": ["Surface", "Deep", "Ephemeral", "Forecast", "Strategy", "Rebuild"],
+      "description": "Policy mode describing how this derived artifact should be interpreted."
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "UTC timestamp for when the artifact rationale sidecar was generated."
+    },
+    "artifact_path": {
+      "type": "string",
+      "description": "Repo-relative path to the derived artifact described by this rationale."
+    },
+    "canonical_surfaces_touched": {
+      "type": "boolean",
+      "const": false,
+      "description": "Must remain false; derived artifact generation does not modify canonical Record surfaces."
+    },
+    "rebuild_command": {
+      "type": "string",
+      "description": "Exact shell command used to rebuild this artifact in the repo-owned regeneration flow."
+    },
+    "inputs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Repo-relative paths or declared watched inputs relevant to this artifact build."
+    },
+    "rationale": {
+      "type": "string",
+      "description": "Why this artifact exists and what navigational or observability role it plays."
+    },
+    "human_review_required": {
+      "type": "boolean",
+      "description": "Whether a human should review the artifact before relying on it in an operator workflow."
+    },
+    "version": {
+      "type": "string",
+      "description": "Optional producer or contract version for the artifact."
+    }
+  }
+}

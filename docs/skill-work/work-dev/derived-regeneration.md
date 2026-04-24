@@ -1,12 +1,13 @@
-# Derived regeneration (work-dev roadmap)
+# Derived regeneration (work-dev contract)
 
-**Status:** Phase 1 foundation — **partial** and intentionally small.
+**Status:** Phase 1 foundation plus rationale sidecars — still **bounded** and intentionally small.
 
 This doc turns the current rebuildability line into a repo-owned `work-dev` surface:
 
 - **repo-owned change detection**
 - **repo-owned derived regeneration entrypoint**
 - **derived rebuild receipts**
+- **per-artifact rebuild rationale sidecars**
 
 It does **not** change canonical Record authority. All regeneration remains on the **derived** side of the membrane in [../../runtime-vs-record.md](../../runtime-vs-record.md).
 
@@ -35,6 +36,10 @@ Current health summary home:
 
 - `artifacts/work-dev/rebuild-health/`
 
+Current derived-artifact rationale schema:
+
+- `schema-registry/derived-artifact-rationale.v1.json`
+
 Current initial target set:
 
 - derived-regeneration manifest
@@ -47,6 +52,22 @@ Current initial target set:
 - strategy-notebook graph
 
 This is a **small initial set**, not a claim that all rebuildable surfaces are already orchestrated.
+
+## What the engine now writes
+
+For covered targets, repo-owned regeneration writes four distinct families:
+
+1. **The derived artifact itself** — Markdown or JSON output under `artifacts/`
+2. **A sibling rationale sidecar** — `<artifact>.derived-rationale.json`
+3. **A rebuild receipt** — one JSON receipt per regeneration run
+4. **A target manifest / health summary** — aggregate machine-readable views of the rebuild layer
+
+These are deliberately separate:
+
+- portable-record `artifact-rationale.v1.json` is about **demonstrated capability**
+- derived-artifact rationale sidecars are about **rebuild provenance**
+- rebuild receipts are about **what happened during a run**
+- the manifest is about **declared target coverage**
 
 ## Canonical commands
 
@@ -92,6 +113,47 @@ Run a specific target:
 python3 scripts/regenerate_all_derived.py --target governance-posture
 ```
 
+## Sidecar contract
+
+Sidecars are written next to covered outputs using a literal suffix:
+
+- `artifacts/review-dashboard.md`
+- `artifacts/review-dashboard.md.derived-rationale.json`
+
+Schema:
+
+- `schema-registry/derived-artifact-rationale.v1.json`
+
+Required rebuild fields:
+
+- `producer_script`
+- `policy_mode`
+- `generated_at`
+- `artifact_path`
+- `canonical_surfaces_touched` = `false`
+- `rebuild_command`
+- `inputs`
+- `rationale`
+- `human_review_required`
+
+Policy mode is target-scoped, not Record authority:
+
+- `Surface` for operator-facing dashboards and one-pagers
+- `Strategy` for strategy-notebook derived graph views
+- `Rebuild` for machine-readable regeneration plumbing
+
+## Ownership and cleanup
+
+This layer does **not** do a blanket wipe of `/artifacts/`.
+
+Rule:
+
+- single-file outputs are rewritten by their producer
+- if a target later owns a dynamic directory, cleanup must be restricted to that target's declared owned patterns only
+- `.gitkeep` and unrelated artifact families must survive any cleanup pass
+
+That keeps regeneration safe for mixed-use `artifacts/` trees where many families are intentionally outside the current target registry.
+
 ## Ranked roadmap
 
 ### 1. Rebuildability foundation
@@ -133,9 +195,9 @@ Only add it after the foundation produces real telemetry:
 - skips / failures
 - cache hit rate if incremental rebuild lands
 
-Likely artifact home:
+Current artifact home:
 
-- `artifacts/rebuild-health/` or a sibling `work-dev` derived dashboard path
+- `artifacts/work-dev/rebuild-health/`
 
 ### 4. Runtime rebuild requests later
 
@@ -165,6 +227,7 @@ OB1 chunking remains a demand-triggered spike for bridge/exporter work, not the 
 - Do not let rebuildability become a second orchestration platform with implicit authority.
 - Do not collapse receipt families unless their fields and authority model really align.
 - Do not treat regenerated files as canonical truth because they are fresh.
+- Do not repurpose portable-record `artifact-rationale.v1.json` for `/artifacts/` rebuild metadata.
 - Keep `workspace.md`, `known-gaps.md`, and related status docs honest as the rebuild layer grows.
 
 ## Relationship model

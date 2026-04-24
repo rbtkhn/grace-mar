@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0-work-lanes-dashboard",
-  "generatedAt": "2026-04-23T02:21:39.056211+00:00",
+  "generatedAt": "2026-04-24T16:19:10.931129+00:00",
   "recordMergeAuthority": "RECURSION-GATE and companion approval only \u2014 never implied by lane metrics.",
   "lanes": {
     "work_strategy": {

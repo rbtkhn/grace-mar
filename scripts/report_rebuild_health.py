@@ -45,6 +45,9 @@ def build_health_payload(receipts: list[dict], manifest: dict | None) -> dict:
     total_elapsed_ms = 0
     total_target_runs = 0
     newest_created_at = None
+    latest_successful_full_regen_at = None
+    latest_successful_incremental_at = None
+    written_rationale_sidecars = 0
 
     for receipt in receipts:
         result_counter[str(receipt.get("resultStatus") or "unknown")] += 1
@@ -52,6 +55,15 @@ def build_health_payload(receipts: list[dict], manifest: dict | None) -> dict:
         if isinstance(created_at, str) and created_at:
             if newest_created_at is None or created_at > newest_created_at:
                 newest_created_at = created_at
+            if receipt.get("resultStatus") == "ok" and receipt.get("mode") == "all":
+                if latest_successful_full_regen_at is None or created_at > latest_successful_full_regen_at:
+                    latest_successful_full_regen_at = created_at
+            if receipt.get("resultStatus") == "ok" and receipt.get("mode") in {"changed", "incremental", "targeted"}:
+                if (
+                    latest_successful_incremental_at is None
+                    or created_at > latest_successful_incremental_at
+                ):
+                    latest_successful_incremental_at = created_at
         for target in receipt.get("targets", []):
             if not isinstance(target, dict):
                 continue
@@ -61,10 +73,19 @@ def build_health_payload(receipts: list[dict], manifest: dict | None) -> dict:
             elapsed_ms = target.get("elapsedMs")
             if isinstance(elapsed_ms, int):
                 total_elapsed_ms += elapsed_ms
+            sidecars = target.get("writtenRationaleSidecars")
+            if isinstance(sidecars, list):
+                written_rationale_sidecars += len([sidecar for sidecar in sidecars if isinstance(sidecar, str)])
 
     manifest_target_count = 0
+    manifest_rationale_sidecar_count = 0
     if manifest and isinstance(manifest.get("targets"), list):
         manifest_target_count = len(manifest["targets"])
+        for target in manifest["targets"]:
+            if isinstance(target, dict) and isinstance(target.get("rationaleSidecars"), list):
+                manifest_rationale_sidecar_count += len(
+                    [sidecar for sidecar in target["rationaleSidecars"] if isinstance(sidecar, str)]
+                )
 
     avg_elapsed_ms = 0
     if total_target_runs:
@@ -77,13 +98,17 @@ def build_health_payload(receipts: list[dict], manifest: dict | None) -> dict:
         "gateEffect": "none",
         "receiptCount": len(receipts),
         "latestReceiptAt": newest_created_at,
+        "latestSuccessfulFullRegenAt": latest_successful_full_regen_at,
+        "latestSuccessfulIncrementalAt": latest_successful_incremental_at,
         "manifestTargetCount": manifest_target_count,
+        "manifestRationaleSidecarCount": manifest_rationale_sidecar_count,
         "resultStatusCounts": dict(result_counter),
         "topTargets": [
             {"targetId": target_id, "runs": count}
             for target_id, count in target_counter.most_common(10)
         ],
         "avgTargetElapsedMs": avg_elapsed_ms,
+        "writtenRationaleSidecarCount": written_rationale_sidecars,
     }
 
 

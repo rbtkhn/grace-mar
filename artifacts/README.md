@@ -6,6 +6,11 @@ Primary doctrine stays **derived / rebuildable / non-canonical**. If you use `sh
 
 **Important distinction:** the portable-record schema [`schema-registry/artifact-rationale.v1.json`](../schema-registry/artifact-rationale.v1.json) is about **demonstrated capability rationale** alongside EVIDENCE. It is **not** the schema for everything under `/artifacts/`.
 
+Repo-owned derived regeneration may also emit per-artifact rebuild sidecars such as
+`artifacts/library-index.md.derived-rationale.json`. Those sidecars follow
+[`schema-registry/derived-artifact-rationale.v1.json`](../schema-registry/derived-artifact-rationale.v1.json)
+and describe **how to rebuild a derived file**, not why an EVIDENCE artifact was good.
+
 **Repo root `prepared-context/`** (not under `artifacts/`) may hold operator drafts and `last-budget-builds.json`; see [prepared-context/README.md](../prepared-context/README.md) and [context-budgeting.md](../docs/runtime/context-budgeting.md). **Policy mode defaults** (not Record): [`config/policy_modes/defaults.json`](../config/policy_modes/defaults.json), [docs/policy-modes.md](../docs/policy-modes.md).
 
 | Path | Produced by | Policy |
@@ -38,5 +43,51 @@ Primary doctrine stays **derived / rebuildable / non-canonical**. If you use `sh
 | `prepared-context/last-budget-builds.json` | `build_budgeted_context.py` | **Optional** per-lane receipt for last budgeted build (repo root); see [context-budgeting.md](../docs/runtime/context-budgeting.md). |
 
 **Companion-specific large blobs** (e.g. under `users/<id>/artifacts/`) follow separate rules in `.gitignore` and instance docs — not this folder.
+
+## Regeneration contract
+
+For the current repo-owned target set, use:
+
+```bash
+python3 scripts/regenerate_all_derived.py --changed --dry-run
+python3 scripts/regenerate_all_derived.py --all
+```
+
+That flow writes three distinct non-canonical metadata families:
+
+- **Rebuild receipts** under `artifacts/work-dev/rebuild-receipts/` — one receipt per regeneration run
+- **Target manifest** at `artifacts/work-dev/derived-regeneration-manifest.json` — the declared target registry
+- **Derived-artifact rationale sidecars** next to covered outputs — one sidecar per rebuilt artifact path
+
+## Derived-artifact rationale sidecars
+
+Sidecar naming is intentionally literal:
+
+- `artifacts/library-index.md`
+- `artifacts/library-index.md.derived-rationale.json`
+
+The sidecar records rebuild provenance only:
+
+- `producer_script`
+- `policy_mode`
+- `generated_at`
+- `artifact_path`
+- `canonical_surfaces_touched` (always `false`)
+- `rebuild_command`
+- `inputs`
+- `rationale`
+- `human_review_required`
+
+Schema: [`schema-registry/derived-artifact-rationale.v1.json`](../schema-registry/derived-artifact-rationale.v1.json)
+
+## Cleanup rule
+
+Derived regeneration is **target-owned**, not whole-tree destructive:
+
+- single-file outputs are overwritten by their producer scripts
+- directory cleanup is allowed only for files explicitly owned by the selected rebuild target
+- `.gitkeep` and unrelated artifact families must be preserved
+
+This is why repo-owned regeneration stays narrower than “delete all of `/artifacts/` and hope.”
 
 See also: [docs/skills/skill-card-spec.md](../docs/skills/skill-card-spec.md), [docs/skill-work/active-lane-compression.md](../docs/skill-work/active-lane-compression.md), [docs/operator-dashboards.md](../docs/operator-dashboards.md) (Library / lane / review Markdown dashboards).

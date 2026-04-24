@@ -1,0 +1,20 @@
+{
+  "$schema": "schema-registry/derived-artifact-rationale.v1.json",
+  "schemaVersion": "1.0.0-derived-artifact-rationale",
+  "producer_script": "scripts/build_lane_dashboards.py",
+  "policy_mode": "Surface",
+  "generated_at": "2026-04-24T16:19:11Z",
+  "artifact_path": "artifacts/lane-dashboards/README.md",
+  "canonical_surfaces_touched": false,
+  "rebuild_command": "python3 scripts/build_work_lanes_dashboard.py && python3 scripts/build_lane_dashboards.py",
+  "inputs": [
+    "runtime/observations/**",
+    "artifacts/work-lanes-dashboard.json",
+    "artifacts/handoffs/**",
+    "prepared-context/last-budget-builds.json",
+    "scripts/build_lane_dashboards.py",
+    "scripts/build_work_lanes_dashboard.py"
+  ],
+  "rationale": "Compose runtime observations and work-lane telemetry into a derived operator dashboard for navigation across active lanes.",
+  "human_review_required": false
+}

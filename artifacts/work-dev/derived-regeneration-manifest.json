@@ -1,0 +1,226 @@
+{
+  "schemaVersion": "1.0.0-derived-regeneration-manifest",
+  "generatedAt": "2026-04-24T16:19:05Z",
+  "recordAuthority": "none",
+  "gateEffect": "none",
+  "targets": [
+    {
+      "targetId": "derived-regeneration-manifest",
+      "description": "Machine-readable manifest of repo-owned derived rebuild targets",
+      "producerScript": "scripts/build_derived_regeneration_manifest.py",
+      "policyMode": "Rebuild",
+      "humanReviewRequired": false,
+      "watchPatterns": [
+        "scripts/derived_regeneration.py",
+        "scripts/build_derived_regeneration_manifest.py",
+        "docs/skill-work/work-dev/derived-regeneration.md"
+      ],
+      "commands": [
+        "python3 scripts/build_derived_regeneration_manifest.py"
+      ],
+      "outputs": [
+        "artifacts/work-dev/derived-regeneration-manifest.json"
+      ],
+      "rationaleSidecars": [
+        "artifacts/work-dev/derived-regeneration-manifest.json.derived-rationale.json"
+      ],
+      "dependsOn": [],
+      "ownedOutputPatterns": [
+        "artifacts/work-dev/derived-regeneration-manifest.json"
+      ]
+    },
+    {
+      "targetId": "library-index",
+      "description": "SELF-LIBRARY-derived operator dashboard",
+      "producerScript": "scripts/build_library_index.py",
+      "policyMode": "Surface",
+      "humanReviewRequired": false,
+      "watchPatterns": [
+        "users/*/self-library.md",
+        "scripts/build_library_index.py",
+        "docs/operator-dashboards.md"
+      ],
+      "commands": [
+        "python3 scripts/build_library_index.py"
+      ],
+      "outputs": [
+        "artifacts/library-index.md"
+      ],
+      "rationaleSidecars": [
+        "artifacts/library-index.md.derived-rationale.json"
+      ],
+      "dependsOn": [],
+      "ownedOutputPatterns": [
+        "artifacts/library-index.md"
+      ]
+    },
+    {
+      "targetId": "work-lanes-dashboard-json",
+      "description": "work-lane JSON aggregate for lane dashboards",
+      "producerScript": "scripts/build_work_lanes_dashboard.py",
+      "policyMode": "Rebuild",
+      "humanReviewRequired": false,
+      "watchPatterns": [
+        "artifacts/work-dev/work-dev-status-summary.json",
+        "artifacts/work-strategy/strategy-observability.json",
+        "artifacts/work-cadence/cadence-pressure-report.json",
+        "scripts/build_work_lanes_dashboard.py"
+      ],
+      "commands": [
+        "python3 scripts/build_work_lanes_dashboard.py"
+      ],
+      "outputs": [
+        "artifacts/work-lanes-dashboard.json"
+      ],
+      "rationaleSidecars": [
+        "artifacts/work-lanes-dashboard.json.derived-rationale.json"
+      ],
+      "dependsOn": [],
+      "ownedOutputPatterns": [
+        "artifacts/work-lanes-dashboard.json"
+      ]
+    },
+    {
+      "targetId": "lane-dashboards",
+      "description": "Markdown lane dashboard derived from runtime observations and JSON feeds",
+      "producerScript": "scripts/build_lane_dashboards.py",
+      "policyMode": "Surface",
+      "humanReviewRequired": false,
+      "watchPatterns": [
+        "runtime/observations/**",
+        "artifacts/work-lanes-dashboard.json",
+        "artifacts/handoffs/**",
+        "prepared-context/last-budget-builds.json",
+        "scripts/build_lane_dashboards.py",
+        "scripts/build_work_lanes_dashboard.py"
+      ],
+      "commands": [
+        "python3 scripts/build_work_lanes_dashboard.py",
+        "python3 scripts/build_lane_dashboards.py"
+      ],
+      "outputs": [
+        "artifacts/lane-dashboards/README.md"
+      ],
+      "rationaleSidecars": [
+        "artifacts/lane-dashboards/README.md.derived-rationale.json"
+      ],
+      "dependsOn": [
+        "work-lanes-dashboard-json"
+      ],
+      "ownedOutputPatterns": [
+        "artifacts/lane-dashboards/README.md"
+      ]
+    },
+    {
+      "targetId": "review-dashboard",
+      "description": "Review dashboard derived from recursion-gate",
+      "producerScript": "scripts/build_review_dashboard.py",
+      "policyMode": "Surface",
+      "humanReviewRequired": false,
+      "watchPatterns": [
+        "users/*/recursion-gate.md",
+        "scripts/build_review_dashboard.py"
+      ],
+      "commands": [
+        "python3 scripts/build_review_dashboard.py"
+      ],
+      "outputs": [
+        "artifacts/review-dashboard.md"
+      ],
+      "rationaleSidecars": [
+        "artifacts/review-dashboard.md.derived-rationale.json"
+      ],
+      "dependsOn": [],
+      "ownedOutputPatterns": [
+        "artifacts/review-dashboard.md"
+      ]
+    },
+    {
+      "targetId": "gate-board",
+      "description": "Kanban-style gate board derived from recursion-gate",
+      "producerScript": "scripts/build_gate_board.py",
+      "policyMode": "Surface",
+      "humanReviewRequired": false,
+      "watchPatterns": [
+        "users/*/recursion-gate.md",
+        "scripts/build_gate_board.py"
+      ],
+      "commands": [
+        "python3 scripts/build_gate_board.py"
+      ],
+      "outputs": [
+        "artifacts/gate-board.md"
+      ],
+      "rationaleSidecars": [
+        "artifacts/gate-board.md.derived-rationale.json"
+      ],
+      "dependsOn": [],
+      "ownedOutputPatterns": [
+        "artifacts/gate-board.md"
+      ]
+    },
+    {
+      "targetId": "governance-posture",
+      "description": "Governance posture one-pager derived from audit-facing user files",
+      "producerScript": "scripts/report_governance_posture.py",
+      "policyMode": "Surface",
+      "humanReviewRequired": true,
+      "watchPatterns": [
+        "users/*/self.md",
+        "users/*/self-archive.md",
+        "users/*/self-evidence.md",
+        "users/*/recursion-gate.md",
+        "users/*/merge-receipts.jsonl",
+        "users/*/pipeline-events.jsonl",
+        "users/*/harness-events.jsonl",
+        "users/*/session-log.md",
+        "scripts/report_governance_posture.py",
+        "docs/skill-work/work-dev/safety-story-ux.md",
+        "docs/runtime-vs-record.md"
+      ],
+      "commands": [
+        "python3 scripts/report_governance_posture.py -u {user}"
+      ],
+      "outputs": [
+        "artifacts/governance-posture.md"
+      ],
+      "rationaleSidecars": [
+        "artifacts/governance-posture.md.derived-rationale.json"
+      ],
+      "dependsOn": [],
+      "ownedOutputPatterns": [
+        "artifacts/governance-posture.md"
+      ]
+    },
+    {
+      "targetId": "strategy-notebook-graph",
+      "description": "Strategy-notebook graph and derived views",
+      "producerScript": "scripts/build_strategy_notebook_graph.py",
+      "policyMode": "Strategy",
+      "humanReviewRequired": false,
+      "watchPatterns": [
+        "docs/skill-work/work-strategy/strategy-notebook/**",
+        "scripts/build_strategy_notebook_graph.py"
+      ],
+      "commands": [
+        "python3 scripts/build_strategy_notebook_graph.py"
+      ],
+      "outputs": [
+        "artifacts/work-strategy/strategy-notebook/graph.json",
+        "artifacts/work-strategy/strategy-notebook/views/watch-clusters.json",
+        "artifacts/work-strategy/strategy-notebook/views/expert-convergence.json"
+      ],
+      "rationaleSidecars": [
+        "artifacts/work-strategy/strategy-notebook/graph.json.derived-rationale.json",
+        "artifacts/work-strategy/strategy-notebook/views/watch-clusters.json.derived-rationale.json",
+        "artifacts/work-strategy/strategy-notebook/views/expert-convergence.json.derived-rationale.json"
+      ],
+      "dependsOn": [],
+      "ownedOutputPatterns": [
+        "artifacts/work-strategy/strategy-notebook/graph.json",
+        "artifacts/work-strategy/strategy-notebook/views/watch-clusters.json",
+        "artifacts/work-strategy/strategy-notebook/views/expert-convergence.json"
+      ]
+    }
+  ]
+}

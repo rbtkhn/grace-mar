@@ -14,9 +14,11 @@ if str(_SCRIPTS) not in sys.path:
 
 from derived_regeneration import (  # noqa: E402
     TARGETS_BY_ID,
+    build_rationale_payload,
     build_manifest_payload,
     expand_with_downstream,
     select_targets_for_paths,
+    sidecar_path_for_artifact,
     topologically_sort_targets,
 )
 
@@ -93,6 +95,27 @@ def test_regenerate_all_derived_dry_run_writes_receipt(tmp_path: Path) -> None:
     assert payload["recordAuthority"] == "none"
     assert payload["gateEffect"] == "none"
     assert payload["targets"][0]["targetId"] == "library-index"
+    assert payload["targets"][0]["rationaleSidecars"] == [
+        "artifacts/library-index.md.derived-rationale.json"
+    ]
+
+
+def test_build_rationale_payload_uses_sidecar_contract() -> None:
+    target = TARGETS_BY_ID["library-index"]
+    payload = build_rationale_payload(
+        target=target,
+        user="grace-mar",
+        artifact_path="artifacts/library-index.md",
+        generated_at="2026-04-24T12:00:00Z",
+        matched_paths=["users/grace-mar/self-library.md"],
+    )
+    assert payload["producer_script"] == "scripts/build_library_index.py"
+    assert payload["policy_mode"] == "Surface"
+    assert payload["canonical_surfaces_touched"] is False
+    assert payload["artifact_path"] == "artifacts/library-index.md"
+    assert payload["rebuild_command"] == "python3 scripts/build_library_index.py"
+    assert payload["inputs"] == ["users/grace-mar/self-library.md"]
+    assert payload["human_review_required"] is False
 
 
 def test_build_manifest_payload_has_dependency_data() -> None:
@@ -101,6 +124,10 @@ def test_build_manifest_payload_has_dependency_data() -> None:
     targets = {row["targetId"]: row for row in payload["targets"]}
     assert "derived-regeneration-manifest" in targets
     assert targets["lane-dashboards"]["dependsOn"] == ["work-lanes-dashboard-json"]
+    assert targets["library-index"]["policyMode"] == "Surface"
+    assert targets["library-index"]["rationaleSidecars"] == [
+        "artifacts/library-index.md.derived-rationale.json"
+    ]
 
 
 def test_build_manifest_script_writes_manifest(tmp_path: Path) -> None:
@@ -118,7 +145,14 @@ def test_report_rebuild_health_summarizes_receipts(tmp_path: Path) -> None:
     receipt = {
         "receiptKind": "derived_rebuild",
         "createdAt": "2026-04-24T12:00:00Z",
-        "targets": [{"targetId": "library-index", "elapsedMs": 12}],
+        "mode": "all",
+        "targets": [
+            {
+                "targetId": "library-index",
+                "elapsedMs": 12,
+                "writtenRationaleSidecars": ["artifacts/library-index.md.derived-rationale.json"],
+            }
+        ],
         "resultStatus": "ok",
         "recordAuthority": "none",
         "gateEffect": "none",
@@ -144,6 +178,9 @@ def test_report_rebuild_health_summarizes_receipts(tmp_path: Path) -> None:
     assert payload["gateEffect"] == "none"
     assert payload["receiptCount"] == 1
     assert payload["manifestTargetCount"] >= 1
+    assert payload["manifestRationaleSidecarCount"] >= 1
+    assert payload["writtenRationaleSidecarCount"] == 1
+    assert payload["latestSuccessfulFullRegenAt"] == "2026-04-24T12:00:00Z"
 
 
 def test_target_registry_contains_expected_foundation_targets() -> None:
@@ -158,3 +195,9 @@ def test_target_registry_contains_expected_foundation_targets() -> None:
         "strategy-notebook-graph",
     }
     assert expected.issubset(TARGETS_BY_ID.keys())
+
+
+def test_sidecar_path_suffix() -> None:
+    assert sidecar_path_for_artifact("artifacts/review-dashboard.md") == (
+        "artifacts/review-dashboard.md.derived-rationale.json"
+    )
