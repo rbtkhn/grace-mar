@@ -1,0 +1,198 @@
+{
+  "version": 1,
+  "title": "Strategy notebook (fixture map — PR3 pilot)",
+  "nodes": [
+    {
+      "id": "strategy-notebook",
+      "label": "Strategy Notebook",
+      "kind": "hub",
+      "path": "docs/skill-work/work-strategy/strategy-notebook/README.md",
+      "description": "Root of the work-strategy strategy-notebook tree; experts, days, minds, state threads, demo runs, and contracts.",
+      "authority": "work-only"
+    },
+    {
+      "id": "experts",
+      "label": "Experts",
+      "kind": "area",
+      "path": "docs/skill-work/work-strategy/strategy-notebook/experts/",
+      "description": "Per-expert threads, profiles, and strategy-page units.",
+      "authority": "work-only"
+    },
+    {
+      "id": "minds",
+      "label": "Minds",
+      "kind": "area",
+      "path": "docs/skill-work/work-strategy/strategy-notebook/minds/",
+      "description": "Lens files (Barnes, Mearsheimer, Mercouris, etc.) for tri-frame / voice work.",
+      "authority": "work-only"
+    },
+    {
+      "id": "knots",
+      "label": "Knots (graph model)",
+      "kind": "model",
+      "path": "docs/skill-work/work-strategy/strategy-notebook/GRAPH-SCHEMA.md",
+      "description": "Graph schema and knot language for pages and links (structural, not ad-hoc folder name).",
+      "authority": "work-only"
+    },
+    {
+      "id": "knot-connections",
+      "label": "Knot connections",
+      "kind": "data",
+      "path": "docs/skill-work/work-strategy/strategy-notebook/knot-connections.yaml",
+      "description": "Optional page-to-page edge list; often sparse.",
+      "authority": "work-only"
+    },
+    {
+      "id": "strategy-state-iran",
+      "label": "State thread — Iran",
+      "kind": "state-thread",
+      "path": "docs/skill-work/work-strategy/strategy-notebook/strategy-state-iran/README.md",
+      "description": "Institution-centric parallel lane: channels, weave, clusters, translation provenance.",
+      "authority": "work-only"
+    },
+    {
+      "id": "watches",
+      "label": "Watches",
+      "kind": "area",
+      "path": "docs/skill-work/work-strategy/strategy-notebook/watches/README.md",
+      "description": "Evolving situation hooks feeding expert threads and days.",
+      "authority": "work-only"
+    },
+    {
+      "id": "compiled-views",
+      "label": "Compiled views",
+      "kind": "area",
+      "path": "docs/skill-work/work-strategy/strategy-notebook/compiled-views/README.md",
+      "description": "Polyphony and conductor-style compiled outputs and examples.",
+      "authority": "work-only"
+    },
+    {
+      "id": "demo-runs",
+      "label": "Demo runs",
+      "kind": "run",
+      "path": "docs/skill-work/work-strategy/strategy-notebook/demo-runs/",
+      "description": "Skill-strategy exercises, rubrics, and this Workbench visualizer pilot folder.",
+      "authority": "work-only"
+    },
+    {
+      "id": "daily-strategy-inbox",
+      "label": "Daily strategy inbox",
+      "kind": "inbox",
+      "path": "docs/skill-work/work-strategy/strategy-notebook/daily-strategy-inbox.md",
+      "description": "Accumulator SSOT for ingest cadence and weave lines; feeds expert selection.",
+      "authority": "work-only"
+    },
+    {
+      "id": "graph-schema",
+      "label": "GRAPH-SCHEMA",
+      "kind": "contract",
+      "path": "docs/skill-work/work-strategy/strategy-notebook/GRAPH-SCHEMA.md",
+      "description": "Knot and edge vocabulary for the strategy notebook graph.",
+      "authority": "work-only"
+    },
+    {
+      "id": "page-contract",
+      "label": "PAGE-CONTRACT",
+      "kind": "contract",
+      "path": "docs/skill-work/work-strategy/strategy-notebook/PAGE-CONTRACT.md",
+      "description": "Machine layer and page-in-thread link contract.",
+      "authority": "work-only"
+    },
+    {
+      "id": "trace-contract",
+      "label": "STRATEGY-NOTEBOOK-TRACE-CONTRACT",
+      "kind": "contract",
+      "path": "docs/skill-work/work-strategy/strategy-notebook/STRATEGY-NOTEBOOK-TRACE-CONTRACT.md",
+      "description": "Script JSONL and trace contract for tools (e.g. strategy console, compile).",
+      "authority": "work-only"
+    },
+    {
+      "id": "synthesis-operating-model",
+      "label": "SYNTHESIS-OPERATING-MODEL",
+      "kind": "protocol",
+      "path": "docs/skill-work/work-strategy/strategy-notebook/SYNTHESIS-OPERATING-MODEL.md",
+      "description": "L0–L4 synthesis stack, session types A–D, finish shapes.",
+      "authority": "work-only"
+    },
+    {
+      "id": "eod-mcq-protocol",
+      "label": "EOD-MCQ-PROTOCOL",
+      "kind": "protocol",
+      "path": "docs/skill-work/work-strategy/strategy-notebook/EOD-MCQ-PROTOCOL.md",
+      "description": "Optional decision-first EOD menu before page shape / days work.",
+      "authority": "work-only"
+    }
+  ],
+  "edges": [
+    {
+      "source": "strategy-notebook",
+      "target": "experts",
+      "relation": "contains"
+    },
+    {
+      "source": "strategy-notebook",
+      "target": "minds",
+      "relation": "contains"
+    },
+    {
+      "source": "strategy-notebook",
+      "target": "knots",
+      "relation": "models"
+    },
+    {
+      "source": "knots",
+      "target": "knot-connections",
+      "relation": "serializes_to"
+    },
+    {
+      "source": "strategy-notebook",
+      "target": "strategy-state-iran",
+      "relation": "contains"
+    },
+    {
+      "source": "strategy-notebook",
+      "target": "watches",
+      "relation": "contains"
+    },
+    {
+      "source": "strategy-notebook",
+      "target": "compiled-views",
+      "relation": "contains"
+    },
+    {
+      "source": "strategy-notebook",
+      "target": "demo-runs",
+      "relation": "contains"
+    },
+    {
+      "source": "daily-strategy-inbox",
+      "target": "experts",
+      "relation": "routes_toward"
+    },
+    {
+      "source": "experts",
+      "target": "synthesis-operating-model",
+      "relation": "guided_by"
+    },
+    {
+      "source": "graph-schema",
+      "target": "knot-connections",
+      "relation": "informs"
+    },
+    {
+      "source": "page-contract",
+      "target": "compiled-views",
+      "relation": "constrains_inputs_to"
+    },
+    {
+      "source": "trace-contract",
+      "target": "compiled-views",
+      "relation": "constrains_outputs_from"
+    },
+    {
+      "source": "eod-mcq-protocol",
+      "target": "synthesis-operating-model",
+      "relation": "optional_preface_to"
+    }
+  ]
+}

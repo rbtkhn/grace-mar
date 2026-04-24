@@ -69,6 +69,10 @@ Details and copy-paste examples: [SCRIPT-USAGE.md](SCRIPT-USAGE.md). Spec field 
 - Does **not** by itself satisfy [claim-proof-standard.md](../claim-proof-standard.md) for an **implemented** capability row — use tests, [verification-runs](../verification-runs/README.md), or demos when elevating that claim. Workbench can still be cited as *supporting* “we ran it and saw X.”
 - Does **not** replace harness replay, observability, or gate hygiene.
 
+## Pilot artifacts
+
+- **Strategy notebook (static):** [demo-runs/workbench-visualizer/README.md](../../work-strategy/strategy-notebook/demo-runs/workbench-visualizer/README.md) — fixture + HTML over `http.server`; `recordAuthority: none` / `gateEffect: none`; example receipt: [examples/strategy-notebook-visualizer-workbench-receipt.example.json](examples/strategy-notebook-visualizer-workbench-receipt.example.json). Optional screenshot staging: [artifacts/work-dev/workbench-screenshots/](../../../../artifacts/work-dev/workbench-screenshots/README.md).
+
 ## Specs and protocols
 
 | Doc | Role |

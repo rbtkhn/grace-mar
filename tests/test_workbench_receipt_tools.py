@@ -19,6 +19,15 @@ EXAMPLE = (
     / "examples"
     / "strategy-notebook-visualizer-receipt.example.json"
 )
+PILOT_EXAMPLE = (
+    REPO
+    / "docs"
+    / "skill-work"
+    / "work-dev"
+    / "workbench"
+    / "examples"
+    / "strategy-notebook-visualizer-workbench-receipt.example.json"
+)
 
 
 def _run(args: list[str | Path], *, check: bool = True) -> subprocess.CompletedProcess:
@@ -33,6 +42,12 @@ def _run(args: list[str | Path], *, check: bool = True) -> subprocess.CompletedP
 
 def test_validate_example_fixture_passes() -> None:
     p = _run([VALIDATE, EXAMPLE])
+    assert p.returncode == 0, p.stderr
+    assert "ok" in p.stdout
+
+
+def test_validate_pilot_workbench_receipt_passes() -> None:
+    p = _run([VALIDATE, PILOT_EXAMPLE])
     assert p.returncode == 0, p.stderr
     assert "ok" in p.stdout
 

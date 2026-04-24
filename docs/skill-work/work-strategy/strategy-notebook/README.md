@@ -4,6 +4,12 @@
 
 **Optional session wrapper (derived, does not auto-edit this tree):** [STRATEGY-RUN-OPERATOR.md](../STRATEGY-RUN-OPERATOR.md) — `run_id` + `state.json` under `artifacts/`; see also [STRATEGY-NOTEBOOK-TRACE-CONTRACT.md](STRATEGY-NOTEBOOK-TRACE-CONTRACT.md) (per-script JSONL).
 
+## Workbench visualizer pilot
+
+**Workbench (WORK-only):** static structure map + fixture (no build, no Record authority) for operator inspection: [demo-runs/workbench-visualizer/README.md](demo-runs/workbench-visualizer/README.md) — part of the [work-dev Workbench](../../work-dev/workbench/README.md) loop.
+
+---
+
 **Current canonical model (one line):** **experts** = who; **watches** = what (evolving situation); **days** = when (chronology and continuity in `chapters/YYYY-MM/days.md`); **minds** = interpretive lens; **pages** = primary analytical unit (`strategy-page` in expert **thread** files). **Page-in-thread contract (links):** [PAGE-CONTRACT.md](PAGE-CONTRACT.md). Full spec: [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md#current-canonical-model).
 
 **Start here (EOD — default day):** Capture in [daily-strategy-inbox.md](daily-strategy-inbox.md) and [`raw-input/`](raw-input/README.md) as needed → choose **one** thesis (or an explicit “carry”) → in the **end-of-day strategy session**, compose **one** `chapters/YYYY-MM/days.md` day block (minimum sections per [NOTEBOOK-PREFERENCES](NOTEBOOK-PREFERENCES.md)) → add **zero or one** new or revised `strategy-page` in `experts/<id>/thread.md` → **stop**. **Full** `strategy` pass (read frontier → inbox → menu): [DEFAULT-PATH.md](../DEFAULT-PATH.md). **L0–L4 stack:** [SYNTHESIS-OPERATING-MODEL.md §1](SYNTHESIS-OPERATING-MODEL.md#1-synthesis-stack-five-levels). **Session types A–D:** [SYNTHESIS-OPERATING-MODEL.md §2](SYNTHESIS-OPERATING-MODEL.md#2-ergonomic-session-types-pick-one). **Minimum “done” sketches:** [SYNTHESIS-OPERATING-MODEL.md §2.1](SYNTHESIS-OPERATING-MODEL.md#acceptable-finish-shapes). **EOD mechanics** (compose window, `strategy page` phrasing): [STRATEGY-NOTEBOOK-ARCHITECTURE.md § End-of-day strategy session](STRATEGY-NOTEBOOK-ARCHITECTURE.md#end-of-day-strategy-session-terminology). **Optional** decision-first stack: [EOD-MCQ-PROTOCOL.md](EOD-MCQ-PROTOCOL.md).

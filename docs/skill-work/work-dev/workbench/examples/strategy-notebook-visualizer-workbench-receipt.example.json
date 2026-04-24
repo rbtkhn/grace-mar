@@ -1,0 +1,43 @@
+{
+  "metaNote": "EXAMPLE — pilot (PR3); hypothetical inspection run; screenshot path is illustrative only.",
+  "receiptKind": "workbench",
+  "receiptId": "wb-2026-04-23-strategy-nb-pilot-01",
+  "createdAt": "2026-04-23T20:00:00Z",
+  "workbenchRunId": "wb-2026-04-23-strategy-nb-pilot-01",
+  "lane": "work-dev",
+  "artifactType": "strategy-visualizer",
+  "artifactCandidateLabel": "pilot-v1",
+  "relatedGateCandidateId": null,
+  "sourcePromptRef": "docs/skill-work/work-strategy/strategy-notebook/demo-runs/workbench-visualizer/README.md",
+  "pathsTouched": [
+    "docs/skill-work/work-strategy/strategy-notebook/demo-runs/workbench-visualizer/README.md",
+    "docs/skill-work/work-strategy/strategy-notebook/demo-runs/workbench-visualizer/strategy-notebook-visualizer.html",
+    "docs/skill-work/work-strategy/strategy-notebook/demo-runs/workbench-visualizer/strategy-notebook-visualizer.fixture.json",
+    "artifacts/work-dev/workbench-screenshots/README.md"
+  ],
+  "commandsRun": [
+    "python3 -m http.server 8765 --directory docs/skill-work/work-strategy/strategy-notebook/demo-runs/workbench-visualizer"
+  ],
+  "launchCommand": "python3 -m http.server 8765 --directory docs/skill-work/work-strategy/strategy-notebook/demo-runs/workbench-visualizer",
+  "inspection": {
+    "method": "manual-browser",
+    "screenshots": [
+      "artifacts/work-dev/workbench-screenshots/strategy-notebook-visualizer-pilot.png"
+    ],
+    "observedFailures": [
+      "Hypothetical: zoom at 200% on small laptop — edge table wrapped as expected; no app bug."
+    ],
+    "acceptanceChecklist": [
+      "Served over http.server (not file://): ok",
+      "Fixture JSON loaded in browser: ok",
+      "Node cards grouped by kind: ok",
+      "Edge / relationship list rendered: ok",
+      "Workbench boundary panel (recordAuthority/gateEffect) visible: ok",
+      "No write to SELF, EVIDENCE, or recursion-gate: ok"
+    ]
+  },
+  "revisionSummary": "N/A (example only — one-pass pilot inspection).",
+  "status": "inspected",
+  "recordAuthority": "none",
+  "gateEffect": "none"
+}

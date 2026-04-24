@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Strategy Notebook — structure visualizer (Workbench pilot)</title>
+  <style>
+    :root {
+      --bg: #0f1419;
+      --card: #1a2332;
+      --border: #2a3a52;
+      --text: #e6edf3;
+      --muted: #8b9cb3;
+      --accent: #58a6ff;
+      --warn: #d4a72c;
+      --ok: #3fb950;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      margin: 0;
+      padding: 1rem 1.25rem 3rem;
+      max-width: 1200px;
+    }
+    h1 { font-size: 1.35rem; margin: 0 0 0.5rem; }
+    h2 { font-size: 1.05rem; color: var(--muted); font-weight: 600; margin: 1.5rem 0 0.5rem; }
+    h3 { font-size: 0.9rem; margin: 0.75rem 0 0.25rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted); }
+    a { color: var(--accent); }
+    p.lead { color: var(--muted); margin: 0 0 1rem; }
+    .panel {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1rem 1.1rem;
+      margin: 0.75rem 0;
+    }
+    .panel pre, .mono { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: 0.8rem; }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+    @media (max-width: 800px) { .grid { grid-template-columns: 1fr; } }
+    .alert {
+      background: #2d1f00;
+      border: 1px solid var(--warn);
+      color: #f0d78c;
+      padding: 0.75rem 1rem;
+      border-radius: 8px;
+      margin: 0.5rem 0 1rem;
+    }
+    .row-kv { display: flex; flex-wrap: wrap; gap: 0.35rem 1rem; margin: 0.25rem 0; }
+    .row-kv span:first-child { color: var(--muted); min-width: 10rem; }
+    #search {
+      width: 100%;
+      max-width: 32rem;
+      padding: 0.5rem 0.75rem;
+      font-size: 1rem;
+      background: #0d1117;
+      border: 1px solid var(--border);
+      color: var(--text);
+      border-radius: 6px;
+    }
+    .kind-section { margin-top: 1.25rem; }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 0.6rem;
+    }
+    .card {
+      background: #131c28;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 0.65rem 0.75rem;
+      display: none;
+    }
+    .card.visible { display: block; }
+    .card .id { font-size: 0.75rem; color: var(--accent); }
+    .card .path { font-size: 0.72rem; color: var(--muted); word-break: break-all; }
+    .edges-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+    }
+    .edges-table th, .edges-table td {
+      border: 1px solid var(--border);
+      padding: 0.35rem 0.5rem;
+      text-align: left;
+    }
+    .edges-table th { background: #131c28; color: var(--muted); font-weight: 600; }
+    .bar { height: 2px; background: var(--border); margin: 1.25rem 0; }
+  </style>
+</head>
+<body>
+  <h1>Strategy notebook — structure map (static fixture)</h1>
+  <p class="lead">
+    Workbench pilot: <strong>structure only</strong>. Does not show live repo state. Derives from
+    <code>strategy-notebook-visualizer.fixture.json</code>.
+  </p>
+
+  <div id="load-error" class="alert" style="display:none" role="alert"></div>
+
+  <div class="grid">
+    <div class="panel" id="panel-boundary">
+      <h2>Workbench boundary</h2>
+      <div class="row-kv"><span>recordAuthority</span><code>none</code></div>
+      <div class="row-kv"><span>gateEffect</span><code>none</code></div>
+      <div class="row-kv"><span>truthScope</span><span>structure visualization only (not geostrategic truth)</span></div>
+    </div>
+    <div class="panel" id="panel-launch">
+      <h2>Launch / inspect / receipt</h2>
+      <p class="mono" style="margin:0 0 0.5rem">From repo root:</p>
+      <pre style="white-space:pre-wrap;margin:0 0 0.5rem;overflow:auto">python3 -m http.server 8765 --directory docs/skill-work/work-strategy/strategy-notebook/demo-runs/workbench-visualizer</pre>
+      <p class="mono" style="margin:0.25rem 0">Open: <a href="http://localhost:8765/strategy-notebook-visualizer.html">http://localhost:8765/strategy-notebook-visualizer.html</a></p>
+      <p class="mono" style="color:var(--muted);font-size:0.8rem;margin:0.5rem 0 0">
+        Suggested screenshot: <code>artifacts/work-dev/workbench-screenshots/strategy-notebook-visualizer-pilot.png</code><br />
+        Suggested receipt: <code>artifacts/work-dev/workbench-receipts/</code> (use
+        <code>scripts/work_dev/new_workbench_receipt.py</code> after inspection; see
+        <a href="../../../../work-dev/workbench/SCRIPT-USAGE.md">work-dev/workbench/SCRIPT-USAGE.md</a>)
+      </p>
+    </div>
+  </div>
+
+  <h2>Filter</h2>
+  <input type="search" id="search" placeholder="Filter by id, label, kind, path, description…" autocomplete="off" />
+
+  <div class="bar"></div>
+  <h2>Nodes by kind</h2>
+  <div id="nodes-root"></div>
+
+  <div class="bar"></div>
+  <h2>Edges (relationships)</h2>
+  <div class="panel" style="overflow-x:auto">
+    <table class="edges-table" id="edges-table" aria-label="edge list">
+      <thead><tr><th>source</th><th>target</th><th>relation</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <script>
+(function () {
+  var state = { nodes: [], edges: [] };
+
+  function setLoadError(msg) {
+    var el = document.getElementById("load-error");
+    el.style.display = "block";
+    el.textContent = msg;
+  }
+
+  function renderEdges() {
+    var tb = document.querySelector("#edges-table tbody");
+    tb.innerHTML = "";
+    (state.edges || []).forEach(function (e) {
+      var tr = document.createElement("tr");
+      tr.innerHTML = "<td><code>" + esc(e.source) + "</code></td><td><code>" + esc(e.target) + "</code></td><td>" + esc(e.relation) + "</td>";
+      tb.appendChild(tr);
+    });
+  }
+
+  function esc(s) {
+    if (s == null) return "";
+    return String(s)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;");
+  }
+
+  function renderNodes(filter) {
+    var f = (filter || "").toLowerCase().trim();
+    var byKind = {};
+    (state.nodes || []).forEach(function (n) {
+      var text = (n.id + " " + n.label + " " + n.kind + " " + n.path + " " + (n.description || "")).toLowerCase();
+      var vis = !f || text.indexOf(f) !== -1;
+      n._visible = vis;
+      if (!byKind[n.kind]) byKind[n.kind] = [];
+      byKind[n.kind].push(n);
+    });
+    var root = document.getElementById("nodes-root");
+    root.innerHTML = "";
+    Object.keys(byKind).sort().forEach(function (kind) {
+      var section = document.createElement("div");
+      section.className = "kind-section";
+      var h3 = document.createElement("h3");
+      h3.textContent = kind;
+      var cards = document.createElement("div");
+      cards.className = "cards";
+      byKind[kind].forEach(function (n) {
+        var c = document.createElement("div");
+        c.className = "card" + (n._visible ? " visible" : "");
+        c.innerHTML =
+          '<div class="id">' + esc(n.id) + "</div>" +
+          "<strong>" + esc(n.label) + "</strong>" +
+          '<div class="path">' + esc(n.path) + "</div>" +
+          "<p style='font-size:0.85rem;margin:0.35rem 0 0'>" + esc(n.description || "") + "</p>" +
+          '<p style="font-size:0.72rem;color:#8b9cb3;margin:0.25rem 0 0">authority: ' + esc(n.authority) + "</p>";
+        if (n._visible) c.classList.add("visible");
+        cards.appendChild(c);
+      });
+      section.appendChild(h3);
+      section.appendChild(cards);
+      root.appendChild(section);
+    });
+  }
+
+  function fileProtocol() {
+    return window.location.protocol === "file:";
+  }
+
+  function init() {
+    if (fileProtocol()) {
+      setLoadError(
+        "Opened as file:// — browsers block fetch() to local JSON. Run from repo root: " +
+        "python3 -m http.server 8765 --directory docs/skill-work/work-strategy/strategy-notebook/demo-runs/workbench-visualizer " +
+        "then open http://localhost:8765/strategy-notebook-visualizer.html"
+      );
+      return;
+    }
+    fetch("strategy-notebook-visualizer.fixture.json", { cache: "no-store" })
+      .then(function (r) {
+        if (!r.ok) throw new Error("HTTP " + r.status);
+        return r.json();
+      })
+      .then(function (data) {
+        state.nodes = data.nodes || [];
+        state.edges = data.edges || [];
+        renderNodes("");
+        renderEdges();
+        var inp = document.getElementById("search");
+        inp.addEventListener("input", function () { renderNodes(inp.value); });
+      })
+      .catch(function (err) {
+        setLoadError("Could not load fixture: " + (err && err.message ? err.message : String(err)) + " — use http.server as above.");
+      });
+  }
+  init();
+})();
+  </script>
+</body>
+</html>
