@@ -6,7 +6,11 @@ Optional, file-based, **runtime-only**, **non-canonical**. Not a live Letta inte
 
 ## Purpose
 
-This adapter **prepares** Grace-Mar [runtime export bundles](../../../runtime/runtime-complements/exports/) for use in a **Letta-style** (or similar) stateful agent runtime, and **imports** Letta session summaries back into Grace‑Mar’s **runtime complement** [inbox](../../../runtime/runtime-complements/inbox/) through the [import script](../../../scripts/runtime/import_runtime_observation.py).
+This adapter **prepares** Grace-Mar [runtime export bundles](../../../runtime/runtime-complements/exports/)
+for use in a **Letta-style** (or similar) stateful agent runtime. It **imports** Letta session
+summaries back into Grace‑Mar’s **runtime complement**
+[inbox](../../../runtime/runtime-complements/inbox/) through the
+[import script](../../../scripts/runtime/import_runtime_observation.py).
 
 ## Boundary rule
 
@@ -24,13 +28,19 @@ A Letta or similar runtime may use memory block labels such as:
 
 These are **Letta-local** (runtime) context blocks. They are **not** Grace‑Mar Record surfaces and must not be treated as SELF, EVIDENCE, SKILLS, or SELF-LIBRARY.
 
-**Promotion path (short):** Letta summary → runtime complement **inbox** + **receipt** → **human review** → optional **recursion-gate** candidate → normal **gate** / approved merge. Full contract: [LETTA-ADAPTER-CONTRACT.md](LETTA-ADAPTER-CONTRACT.md).
+**Promotion path (short):** Letta summary → runtime complement **inbox** + **receipt** →
+**human review** → optional **recursion-gate** candidate → normal **gate** / approved merge.
+
+Full contract: [LETTA-ADAPTER-CONTRACT.md](LETTA-ADAPTER-CONTRACT.md).
 
 ## What this adapter does
 
 - Reads an export bundle from [`export_runtime_context.py`](../../../scripts/runtime/export_runtime_context.py)
-- Produces a **Letta seed** JSON (`kind: letta_seed_context`) with `suggested_memory_blocks` and bundle provenance ([`letta_prepare_seed.py`](../../../scripts/runtime/letta_prepare_seed.py))
-- Documents example session summaries; imports an example (or your file) through [`letta_import_summary.py`](../../../scripts/runtime/letta_import_summary.py) → `import_runtime_observation.py`
+- Produces a **Letta seed** JSON (`kind: letta_seed_context`) with `suggested_memory_blocks`
+  and bundle provenance ([`letta_prepare_seed.py`](../../../scripts/runtime/letta_prepare_seed.py))
+- Documents example session summaries; imports an example (or your file) through
+  [`letta_import_summary.py`](../../../scripts/runtime/letta_import_summary.py) →
+  `import_runtime_observation.py`
 
 ## What this adapter does not do
 

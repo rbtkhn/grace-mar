@@ -58,7 +58,10 @@ def read_doc(root: Path, rel: str) -> tuple[dict[str, Any], str | None]:
 
 def main() -> int:
     ap = argparse.ArgumentParser(
-        description="Write a namespaced export bundle for runtime complements (read-only, explicit paths)."
+        description=(
+            "Write a namespaced export bundle for runtime complements "
+            "(read-only, explicit paths)."
+        )
     )
     ap.add_argument(
         "--name",

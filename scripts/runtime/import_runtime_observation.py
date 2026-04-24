@@ -55,7 +55,9 @@ def normalize_source(cli: str) -> str:
 
 def main() -> int:
     ap = argparse.ArgumentParser(
-        description="Import a runtime JSON observation into inbox + write a v1 receipt."
+        description=(
+            "Import a runtime JSON observation into inbox + write a v1 receipt."
+        )
     )
     ap.add_argument(
         "--source",

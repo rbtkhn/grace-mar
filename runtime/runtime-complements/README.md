@@ -11,7 +11,11 @@
 | `receipts/` | **Receipts** proving each import (JSON) — [schema](../../schema-registry/runtime-complement-receipt.v1.json) |
 | `examples/` | **Sample** payloads; not live secrets — safe to commit |
 
-**Guardrails:** Files here are **not** canonical truth. Inbox files are **candidate** material. **Promotion** to SELF, EVIDENCE, SKILLS, or the Voice goes only through the **existing** [recursion-gate](../../users/grace-mar/recursion-gate.md) and companion-approved merge. This directory is **not** a second Record.
+**Guardrails:** Files here are **not** canonical truth. Inbox files are **candidate** material.
+
+**Promotion** to SELF, EVIDENCE, SKILLS, or the Voice goes only through the **existing**
+[recursion-gate](../../users/grace-mar/recursion-gate.md) and companion-approved merge. This
+directory is **not** a second Record.
 
 ## Export (bundle for a runtime)
 

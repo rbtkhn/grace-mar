@@ -98,7 +98,11 @@ Every imported runtime observation should have a **receipt** (see schema) with a
 | **Mem0 / OpenMemory** | Fast recall, personalization **cache** outside Record | Example only; **verify** any suggestion against on-disk **WORK/Record** |
 | **Thoth-style local assistant** | Local-first “propose then approve” UX pattern | **Inspiration** for routing; does **not** change Grace-Mar’s **recursion-gate** mechanics |
 
-These are **illustrations**, not dependencies or endorsements. Future adapters may call the same import/export CLIs with JSON payloads. Letta adapter example: [bridges/runtime-complements/letta/](../../bridges/runtime-complements/letta/) prepares Letta seed files and imports Letta summaries through the runtime complement membrane.
+These are **illustrations**, not dependencies or endorsements. Future adapters may call the same
+import/export CLIs with JSON payloads.
+
+**Letta adapter example:** [bridges/runtime-complements/letta/](../../bridges/runtime-complements/letta/)
+prepares Letta seed files and imports Letta summaries through the runtime complement membrane.
 
 ## Boundary statement
 
