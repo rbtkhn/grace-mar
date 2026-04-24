@@ -2,7 +2,7 @@
 
 **Status:** **Workbench pilot artifact** (WORK / demo). **Not** the Record, **not** EVIDENCE, **not** a merge path, **not** a gate effect.
 
-**Purpose:** A **static, dependency-free** map of how major strategy-notebook surfaces relate (experts, minds, knots / graph, state threads, watches, compiled views, demo runs, inbox, and key contracts). The map is **fixture-driven**; it does **not** live-parse the repo. Use it to **see structure** and to practice the Workbench loop: generate → run → inspect → revise → [workbench receipt](../../../../work-dev/workbench/WORKBENCH-RECEIPT-SPEC.md) → operator review.
+**Purpose:** A **static, dependency-free** map of how major strategy-notebook surfaces relate (experts, minds, knots / graph, state threads, watches, compiled views, demo runs, inbox, and key contracts). The browser loads a **pre-built JSON fixture**; it does not walk the tree at runtime. The fixture is **generated** from the live notebook tree (see [GENERATED-FIXTURE.md](GENERATED-FIXTURE.md)). Use it to **see structure** and to practice the Workbench loop: generate → run → inspect → revise → [workbench receipt](../../../../work-dev/workbench/WORKBENCH-RECEIPT-SPEC.md) → operator review.
 
 - **`recordAuthority`:** `none` — the HTML does not assert SELF, EVIDENCE, or external truth.
 - **`gateEffect`:** `none` — nothing here stages candidates or merges to the Record.
@@ -15,7 +15,16 @@
 | File | Role |
 |------|--------|
 | [strategy-notebook-visualizer.html](strategy-notebook-visualizer.html) | Single-page UI (fetches the fixture; **requires HTTP** for `fetch`). |
-| [strategy-notebook-visualizer.fixture.json](strategy-notebook-visualizer.fixture.json) | Nodes, edges, paths (repo-root-relative), `authority: "work-only"`. |
+| [strategy-notebook-visualizer.fixture.json](strategy-notebook-visualizer.fixture.json) | Nodes, edges, paths (repo-root-relative), `authority: "work-only"`. Regenerate with the script below. |
+
+## Regenerating the fixture
+
+```bash
+python3 scripts/work_strategy/generate_strategy_notebook_visualizer_fixture.py
+python3 scripts/work_strategy/generate_strategy_notebook_visualizer_fixture.py --check
+```
+
+Details: [GENERATED-FIXTURE.md](GENERATED-FIXTURE.md).
 
 ## Launch (from repository root)
 

@@ -1,198 +1,656 @@
 {
-  "version": 1,
-  "title": "Strategy notebook (fixture map — PR3 pilot)",
-  "nodes": [
-    {
-      "id": "strategy-notebook",
-      "label": "Strategy Notebook",
-      "kind": "hub",
-      "path": "docs/skill-work/work-strategy/strategy-notebook/README.md",
-      "description": "Root of the work-strategy strategy-notebook tree; experts, days, minds, state threads, demo runs, and contracts.",
-      "authority": "work-only"
-    },
-    {
-      "id": "experts",
-      "label": "Experts",
-      "kind": "area",
-      "path": "docs/skill-work/work-strategy/strategy-notebook/experts/",
-      "description": "Per-expert threads, profiles, and strategy-page units.",
-      "authority": "work-only"
-    },
-    {
-      "id": "minds",
-      "label": "Minds",
-      "kind": "area",
-      "path": "docs/skill-work/work-strategy/strategy-notebook/minds/",
-      "description": "Lens files (Barnes, Mearsheimer, Mercouris, etc.) for tri-frame / voice work.",
-      "authority": "work-only"
-    },
-    {
-      "id": "knots",
-      "label": "Knots (graph model)",
-      "kind": "model",
-      "path": "docs/skill-work/work-strategy/strategy-notebook/GRAPH-SCHEMA.md",
-      "description": "Graph schema and knot language for pages and links (structural, not ad-hoc folder name).",
-      "authority": "work-only"
-    },
-    {
-      "id": "knot-connections",
-      "label": "Knot connections",
-      "kind": "data",
-      "path": "docs/skill-work/work-strategy/strategy-notebook/knot-connections.yaml",
-      "description": "Optional page-to-page edge list; often sparse.",
-      "authority": "work-only"
-    },
-    {
-      "id": "strategy-state-iran",
-      "label": "State thread — Iran",
-      "kind": "state-thread",
-      "path": "docs/skill-work/work-strategy/strategy-notebook/strategy-state-iran/README.md",
-      "description": "Institution-centric parallel lane: channels, weave, clusters, translation provenance.",
-      "authority": "work-only"
-    },
-    {
-      "id": "watches",
-      "label": "Watches",
-      "kind": "area",
-      "path": "docs/skill-work/work-strategy/strategy-notebook/watches/README.md",
-      "description": "Evolving situation hooks feeding expert threads and days.",
-      "authority": "work-only"
-    },
-    {
-      "id": "compiled-views",
-      "label": "Compiled views",
-      "kind": "area",
-      "path": "docs/skill-work/work-strategy/strategy-notebook/compiled-views/README.md",
-      "description": "Polyphony and conductor-style compiled outputs and examples.",
-      "authority": "work-only"
-    },
-    {
-      "id": "demo-runs",
-      "label": "Demo runs",
-      "kind": "run",
-      "path": "docs/skill-work/work-strategy/strategy-notebook/demo-runs/",
-      "description": "Skill-strategy exercises, rubrics, and this Workbench visualizer pilot folder.",
-      "authority": "work-only"
-    },
-    {
-      "id": "daily-strategy-inbox",
-      "label": "Daily strategy inbox",
-      "kind": "inbox",
-      "path": "docs/skill-work/work-strategy/strategy-notebook/daily-strategy-inbox.md",
-      "description": "Accumulator SSOT for ingest cadence and weave lines; feeds expert selection.",
-      "authority": "work-only"
-    },
-    {
-      "id": "graph-schema",
-      "label": "GRAPH-SCHEMA",
-      "kind": "contract",
-      "path": "docs/skill-work/work-strategy/strategy-notebook/GRAPH-SCHEMA.md",
-      "description": "Knot and edge vocabulary for the strategy notebook graph.",
-      "authority": "work-only"
-    },
-    {
-      "id": "page-contract",
-      "label": "PAGE-CONTRACT",
-      "kind": "contract",
-      "path": "docs/skill-work/work-strategy/strategy-notebook/PAGE-CONTRACT.md",
-      "description": "Machine layer and page-in-thread link contract.",
-      "authority": "work-only"
-    },
-    {
-      "id": "trace-contract",
-      "label": "STRATEGY-NOTEBOOK-TRACE-CONTRACT",
-      "kind": "contract",
-      "path": "docs/skill-work/work-strategy/strategy-notebook/STRATEGY-NOTEBOOK-TRACE-CONTRACT.md",
-      "description": "Script JSONL and trace contract for tools (e.g. strategy console, compile).",
-      "authority": "work-only"
-    },
-    {
-      "id": "synthesis-operating-model",
-      "label": "SYNTHESIS-OPERATING-MODEL",
-      "kind": "protocol",
-      "path": "docs/skill-work/work-strategy/strategy-notebook/SYNTHESIS-OPERATING-MODEL.md",
-      "description": "L0–L4 synthesis stack, session types A–D, finish shapes.",
-      "authority": "work-only"
-    },
-    {
-      "id": "eod-mcq-protocol",
-      "label": "EOD-MCQ-PROTOCOL",
-      "kind": "protocol",
-      "path": "docs/skill-work/work-strategy/strategy-notebook/EOD-MCQ-PROTOCOL.md",
-      "description": "Optional decision-first EOD menu before page shape / days work.",
-      "authority": "work-only"
-    }
-  ],
   "edges": [
     {
-      "source": "strategy-notebook",
-      "target": "experts",
-      "relation": "contains"
-    },
-    {
-      "source": "strategy-notebook",
-      "target": "minds",
-      "relation": "contains"
-    },
-    {
-      "source": "strategy-notebook",
-      "target": "knots",
-      "relation": "models"
-    },
-    {
-      "source": "knots",
-      "target": "knot-connections",
-      "relation": "serializes_to"
-    },
-    {
-      "source": "strategy-notebook",
-      "target": "strategy-state-iran",
-      "relation": "contains"
-    },
-    {
-      "source": "strategy-notebook",
-      "target": "watches",
-      "relation": "contains"
-    },
-    {
-      "source": "strategy-notebook",
-      "target": "compiled-views",
-      "relation": "contains"
-    },
-    {
-      "source": "strategy-notebook",
-      "target": "demo-runs",
-      "relation": "contains"
-    },
-    {
-      "source": "daily-strategy-inbox",
-      "target": "experts",
-      "relation": "routes_toward"
-    },
-    {
-      "source": "experts",
-      "target": "synthesis-operating-model",
-      "relation": "guided_by"
-    },
-    {
-      "source": "graph-schema",
-      "target": "knot-connections",
-      "relation": "informs"
-    },
-    {
-      "source": "page-contract",
-      "target": "compiled-views",
-      "relation": "constrains_inputs_to"
-    },
-    {
-      "source": "trace-contract",
-      "target": "compiled-views",
-      "relation": "constrains_outputs_from"
-    },
-    {
+      "relation": "optional_preface_to",
       "source": "eod-mcq-protocol",
-      "target": "synthesis-operating-model",
-      "relation": "optional_preface_to"
+      "target": "synthesis-operating-model"
+    },
+    {
+      "relation": "contains",
+      "source": "experts",
+      "target": "expert-armstrong"
+    },
+    {
+      "relation": "contains",
+      "source": "experts",
+      "target": "expert-barnes"
+    },
+    {
+      "relation": "contains",
+      "source": "experts",
+      "target": "expert-baud"
+    },
+    {
+      "relation": "contains",
+      "source": "experts",
+      "target": "expert-berletic"
+    },
+    {
+      "relation": "contains",
+      "source": "experts",
+      "target": "expert-bigserge"
+    },
+    {
+      "relation": "contains",
+      "source": "experts",
+      "target": "expert-blumenthal"
+    },
+    {
+      "relation": "contains",
+      "source": "experts",
+      "target": "expert-crooke"
+    },
+    {
+      "relation": "contains",
+      "source": "experts",
+      "target": "expert-davis"
+    },
+    {
+      "relation": "contains",
+      "source": "experts",
+      "target": "expert-diesen"
+    },
+    {
+      "relation": "contains",
+      "source": "experts",
+      "target": "expert-freeman"
+    },
+    {
+      "relation": "contains",
+      "source": "experts",
+      "target": "expert-greenwald"
+    },
+    {
+      "relation": "contains",
+      "source": "experts",
+      "target": "expert-jermy"
+    },
+    {
+      "relation": "contains",
+      "source": "experts",
+      "target": "expert-jiang"
+    },
+    {
+      "relation": "contains",
+      "source": "experts",
+      "target": "expert-johnson"
+    },
+    {
+      "relation": "contains",
+      "source": "experts",
+      "target": "expert-macgregor"
+    },
+    {
+      "relation": "contains",
+      "source": "experts",
+      "target": "expert-marandi"
+    },
+    {
+      "relation": "contains",
+      "source": "experts",
+      "target": "expert-mate"
+    },
+    {
+      "relation": "contains",
+      "source": "experts",
+      "target": "expert-mearsheimer"
+    },
+    {
+      "relation": "contains",
+      "source": "experts",
+      "target": "expert-mercouris"
+    },
+    {
+      "relation": "contains",
+      "source": "experts",
+      "target": "expert-pape"
+    },
+    {
+      "relation": "contains",
+      "source": "experts",
+      "target": "expert-parsi"
+    },
+    {
+      "relation": "contains",
+      "source": "experts",
+      "target": "expert-ritter"
+    },
+    {
+      "relation": "contains",
+      "source": "experts",
+      "target": "expert-sachs"
+    },
+    {
+      "relation": "contains",
+      "source": "experts",
+      "target": "expert-simplicius"
+    },
+    {
+      "relation": "informs",
+      "source": "graph-schema",
+      "target": "knot-connections"
+    },
+    {
+      "relation": "serializes_to",
+      "source": "knot-index",
+      "target": "knot-connections"
+    },
+    {
+      "relation": "contains",
+      "source": "minds",
+      "target": "mind-civ-mind-barnes"
+    },
+    {
+      "relation": "contains",
+      "source": "minds",
+      "target": "mind-civ-mind-mearsheimer"
+    },
+    {
+      "relation": "contains",
+      "source": "minds",
+      "target": "mind-civ-mind-mercouris"
+    },
+    {
+      "relation": "contains",
+      "source": "minds",
+      "target": "mind-readme"
+    },
+    {
+      "relation": "constrains_inputs_to",
+      "source": "page-contract",
+      "target": "compiled-views"
+    },
+    {
+      "relation": "contains",
+      "source": "strategy-notebook",
+      "target": "compiled-views"
+    },
+    {
+      "relation": "contains",
+      "source": "strategy-notebook",
+      "target": "daily-strategy-inbox"
+    },
+    {
+      "relation": "contains",
+      "source": "strategy-notebook",
+      "target": "demo-runs"
+    },
+    {
+      "relation": "contains",
+      "source": "strategy-notebook",
+      "target": "eod-mcq-protocol"
+    },
+    {
+      "relation": "contains",
+      "source": "strategy-notebook",
+      "target": "experts"
+    },
+    {
+      "relation": "contains",
+      "source": "strategy-notebook",
+      "target": "graph-schema"
+    },
+    {
+      "relation": "contains",
+      "source": "strategy-notebook",
+      "target": "knot-connections"
+    },
+    {
+      "relation": "contains",
+      "source": "strategy-notebook",
+      "target": "knot-index"
+    },
+    {
+      "relation": "contains",
+      "source": "strategy-notebook",
+      "target": "minds"
+    },
+    {
+      "relation": "contains",
+      "source": "strategy-notebook",
+      "target": "page-contract"
+    },
+    {
+      "relation": "contains",
+      "source": "strategy-notebook",
+      "target": "strategy-state-iran"
+    },
+    {
+      "relation": "contains",
+      "source": "strategy-notebook",
+      "target": "synthesis-operating-model"
+    },
+    {
+      "relation": "contains",
+      "source": "strategy-notebook",
+      "target": "trace-contract"
+    },
+    {
+      "relation": "contains",
+      "source": "strategy-notebook",
+      "target": "watches"
+    },
+    {
+      "relation": "contains",
+      "source": "strategy-state-iran",
+      "target": "strategy-state-iran-chapters"
+    },
+    {
+      "relation": "contains",
+      "source": "strategy-state-iran",
+      "target": "strategy-state-iran-daily"
+    },
+    {
+      "relation": "contains",
+      "source": "strategy-state-iran",
+      "target": "strategy-state-iran-iri-institutional"
+    },
+    {
+      "relation": "contains",
+      "source": "strategy-state-iran",
+      "target": "strategy-state-iran-voices"
+    },
+    {
+      "relation": "constrains_outputs_from",
+      "source": "trace-contract",
+      "target": "compiled-views"
+    },
+    {
+      "relation": "contains",
+      "source": "watches",
+      "target": "watch-readme"
     }
-  ]
+  ],
+  "gateEffect": "none",
+  "generatedAt": "2026-04-24T05:29:41Z",
+  "nodes": [
+    {
+      "authority": "work-only",
+      "description": "Polyphony and compiled orientation outputs.",
+      "id": "compiled-views",
+      "kind": "area",
+      "label": "Compiled views",
+      "path": "docs/skill-work/work-strategy/strategy-notebook/compiled-views/"
+    },
+    {
+      "authority": "work-only",
+      "description": "Accumulator for ingest cadence and weave lines.",
+      "id": "daily-strategy-inbox",
+      "kind": "inbox",
+      "label": "Daily strategy inbox",
+      "path": "docs/skill-work/work-strategy/strategy-notebook/daily-strategy-inbox.md"
+    },
+    {
+      "authority": "work-only",
+      "description": "Exercises, rubrics, and the workbench visualizer folder.",
+      "id": "demo-runs",
+      "kind": "area",
+      "label": "Demo runs",
+      "path": "docs/skill-work/work-strategy/strategy-notebook/demo-runs/"
+    },
+    {
+      "authority": "work-only",
+      "description": "Optional decision-first EOD menu.",
+      "id": "eod-mcq-protocol",
+      "kind": "protocol",
+      "label": "EOD-MCQ-PROTOCOL",
+      "path": "docs/skill-work/work-strategy/strategy-notebook/EOD-MCQ-PROTOCOL.md"
+    },
+    {
+      "authority": "work-only",
+      "description": "Expert lane (armstrong).",
+      "id": "expert-armstrong",
+      "kind": "expert",
+      "label": "armstrong",
+      "path": "docs/skill-work/work-strategy/strategy-notebook/experts/armstrong/"
+    },
+    {
+      "authority": "work-only",
+      "description": "Expert lane (barnes).",
+      "id": "expert-barnes",
+      "kind": "expert",
+      "label": "barnes",
+      "path": "docs/skill-work/work-strategy/strategy-notebook/experts/barnes/"
+    },
+    {
+      "authority": "work-only",
+      "description": "Expert lane (baud).",
+      "id": "expert-baud",
+      "kind": "expert",
+      "label": "baud",
+      "path": "docs/skill-work/work-strategy/strategy-notebook/experts/baud/"
+    },
+    {
+      "authority": "work-only",
+      "description": "Expert lane (berletic).",
+      "id": "expert-berletic",
+      "kind": "expert",
+      "label": "berletic",
+      "path": "docs/skill-work/work-strategy/strategy-notebook/experts/berletic/"
+    },
+    {
+      "authority": "work-only",
+      "description": "Expert lane (bigserge).",
+      "id": "expert-bigserge",
+      "kind": "expert",
+      "label": "bigserge",
+      "path": "docs/skill-work/work-strategy/strategy-notebook/experts/bigserge/"
+    },
+    {
+      "authority": "work-only",
+      "description": "Expert lane (blumenthal).",
+      "id": "expert-blumenthal",
+      "kind": "expert",
+      "label": "blumenthal",
+      "path": "docs/skill-work/work-strategy/strategy-notebook/experts/blumenthal/"
+    },
+    {
+      "authority": "work-only",
+      "description": "Expert lane (crooke).",
+      "id": "expert-crooke",
+      "kind": "expert",
+      "label": "crooke",
+      "path": "docs/skill-work/work-strategy/strategy-notebook/experts/crooke/"
+    },
+    {
+      "authority": "work-only",
+      "description": "Expert lane (davis).",
+      "id": "expert-davis",
+      "kind": "expert",
+      "label": "davis",
+      "path": "docs/skill-work/work-strategy/strategy-notebook/experts/davis/"
+    },
+    {
+      "authority": "work-only",
+      "description": "Expert lane (diesen).",
+      "id": "expert-diesen",
+      "kind": "expert",
+      "label": "diesen",
+      "path": "docs/skill-work/work-strategy/strategy-notebook/experts/diesen/"
+    },
+    {
+      "authority": "work-only",
+      "description": "Expert lane (freeman).",
+      "id": "expert-freeman",
+      "kind": "expert",
+      "label": "freeman",
+      "path": "docs/skill-work/work-strategy/strategy-notebook/experts/freeman/"
+    },
+    {
+      "authority": "work-only",
+      "description": "Expert lane (greenwald).",
+      "id": "expert-greenwald",
+      "kind": "expert",
+      "label": "greenwald",
+      "path": "docs/skill-work/work-strategy/strategy-notebook/experts/greenwald/"
+    },
+    {
+      "authority": "work-only",
+      "description": "Expert lane (jermy).",
+      "id": "expert-jermy",
+      "kind": "expert",
+      "label": "jermy",
+      "path": "docs/skill-work/work-strategy/strategy-notebook/experts/jermy/"
+    },
+    {
+      "authority": "work-only",
+      "description": "Expert lane (jiang).",
+      "id": "expert-jiang",
+      "kind": "expert",
+      "label": "jiang",
+      "path": "docs/skill-work/work-strategy/strategy-notebook/experts/jiang/"
+    },
+    {
+      "authority": "work-only",
+      "description": "Expert lane (johnson).",
+      "id": "expert-johnson",
+      "kind": "expert",
+      "label": "johnson",
+      "path": "docs/skill-work/work-strategy/strategy-notebook/experts/johnson/"
+    },
+    {
+      "authority": "work-only",
+      "description": "Expert lane (macgregor).",
+      "id": "expert-macgregor",
+      "kind": "expert",
+      "label": "macgregor",
+      "path": "docs/skill-work/work-strategy/strategy-notebook/experts/macgregor/"
+    },
+    {
+      "authority": "work-only",
+      "description": "Expert lane (marandi).",
+      "id": "expert-marandi",
+      "kind": "expert",
+      "label": "marandi",
+      "path": "docs/skill-work/work-strategy/strategy-notebook/experts/marandi/"
+    },
+    {
+      "authority": "work-only",
+      "description": "Expert lane (mate).",
+      "id": "expert-mate",
+      "kind": "expert",
+      "label": "mate",
+      "path": "docs/skill-work/work-strategy/strategy-notebook/experts/mate/"
+    },
+    {
+      "authority": "work-only",
+      "description": "Expert lane (mearsheimer).",
+      "id": "expert-mearsheimer",
+      "kind": "expert",
+      "label": "mearsheimer",
+      "path": "docs/skill-work/work-strategy/strategy-notebook/experts/mearsheimer/"
+    },
+    {
+      "authority": "work-only",
+      "description": "Expert lane (mercouris).",
+      "id": "expert-mercouris",
+      "kind": "expert",
+      "label": "mercouris",
+      "path": "docs/skill-work/work-strategy/strategy-notebook/experts/mercouris/"
+    },
+    {
+      "authority": "work-only",
+      "description": "Expert lane (pape).",
+      "id": "expert-pape",
+      "kind": "expert",
+      "label": "pape",
+      "path": "docs/skill-work/work-strategy/strategy-notebook/experts/pape/"
+    },
+    {
+      "authority": "work-only",
+      "description": "Expert lane (parsi).",
+      "id": "expert-parsi",
+      "kind": "expert",
+      "label": "parsi",
+      "path": "docs/skill-work/work-strategy/strategy-notebook/experts/parsi/"
+    },
+    {
+      "authority": "work-only",
+      "description": "Expert lane (ritter).",
+      "id": "expert-ritter",
+      "kind": "expert",
+      "label": "ritter",
+      "path": "docs/skill-work/work-strategy/strategy-notebook/experts/ritter/"
+    },
+    {
+      "authority": "work-only",
+      "description": "Expert lane (sachs).",
+      "id": "expert-sachs",
+      "kind": "expert",
+      "label": "sachs",
+      "path": "docs/skill-work/work-strategy/strategy-notebook/experts/sachs/"
+    },
+    {
+      "authority": "work-only",
+      "description": "Expert lane (simplicius).",
+      "id": "expert-simplicius",
+      "kind": "expert",
+      "label": "simplicius",
+      "path": "docs/skill-work/work-strategy/strategy-notebook/experts/simplicius/"
+    },
+    {
+      "authority": "work-only",
+      "description": "Per-expert threads, profiles, and strategy-page units.",
+      "id": "experts",
+      "kind": "area",
+      "label": "Experts",
+      "path": "docs/skill-work/work-strategy/strategy-notebook/experts/"
+    },
+    {
+      "authority": "work-only",
+      "description": "Graph and knot vocabulary.",
+      "id": "graph-schema",
+      "kind": "contract",
+      "label": "GRAPH-SCHEMA",
+      "path": "docs/skill-work/work-strategy/strategy-notebook/GRAPH-SCHEMA.md"
+    },
+    {
+      "authority": "work-only",
+      "description": "Governed edge layer between knot paths (may be empty).",
+      "id": "knot-connections",
+      "kind": "data",
+      "label": "knot-connections.yaml",
+      "path": "docs/skill-work/work-strategy/strategy-notebook/knot-connections.yaml"
+    },
+    {
+      "authority": "work-only",
+      "description": "Machine-readable knot inventory (legacy; may be empty).",
+      "id": "knot-index",
+      "kind": "data",
+      "label": "knot-index.yaml",
+      "path": "docs/skill-work/work-strategy/strategy-notebook/knot-index.yaml"
+    },
+    {
+      "authority": "work-only",
+      "description": "Mind / lens file.",
+      "id": "mind-civ-mind-barnes",
+      "kind": "mind",
+      "label": "CIV-MIND-BARNES",
+      "path": "docs/skill-work/work-strategy/strategy-notebook/minds/CIV-MIND-BARNES.md"
+    },
+    {
+      "authority": "work-only",
+      "description": "Mind / lens file.",
+      "id": "mind-civ-mind-mearsheimer",
+      "kind": "mind",
+      "label": "CIV-MIND-MEARSHEIMER",
+      "path": "docs/skill-work/work-strategy/strategy-notebook/minds/CIV-MIND-MEARSHEIMER.md"
+    },
+    {
+      "authority": "work-only",
+      "description": "Mind / lens file.",
+      "id": "mind-civ-mind-mercouris",
+      "kind": "mind",
+      "label": "CIV-MIND-MERCOURIS",
+      "path": "docs/skill-work/work-strategy/strategy-notebook/minds/CIV-MIND-MERCOURIS.md"
+    },
+    {
+      "authority": "work-only",
+      "description": "Mind / lens file.",
+      "id": "mind-readme",
+      "kind": "mind",
+      "label": "README",
+      "path": "docs/skill-work/work-strategy/strategy-notebook/minds/README.md"
+    },
+    {
+      "authority": "work-only",
+      "description": "Lens files for tri-frame / voice work.",
+      "id": "minds",
+      "kind": "area",
+      "label": "Minds",
+      "path": "docs/skill-work/work-strategy/strategy-notebook/minds/"
+    },
+    {
+      "authority": "work-only",
+      "description": "Page-in-thread link contract.",
+      "id": "page-contract",
+      "kind": "contract",
+      "label": "PAGE-CONTRACT",
+      "path": "docs/skill-work/work-strategy/strategy-notebook/PAGE-CONTRACT.md"
+    },
+    {
+      "authority": "work-only",
+      "description": "Root of the work-strategy strategy-notebook tree.",
+      "id": "strategy-notebook",
+      "kind": "hub",
+      "label": "Strategy Notebook",
+      "path": "docs/skill-work/work-strategy/strategy-notebook/README.md"
+    },
+    {
+      "authority": "work-only",
+      "description": "Institution-centric parallel lane (channels, weave, clusters).",
+      "id": "strategy-state-iran",
+      "kind": "state-thread",
+      "label": "State thread — Iran",
+      "path": "docs/skill-work/work-strategy/strategy-notebook/strategy-state-iran/README.md"
+    },
+    {
+      "authority": "work-only",
+      "description": "Month chapters and days.",
+      "id": "strategy-state-iran-chapters",
+      "kind": "state-thread",
+      "label": "chapters",
+      "path": "docs/skill-work/work-strategy/strategy-notebook/strategy-state-iran/chapters/"
+    },
+    {
+      "authority": "work-only",
+      "description": "Day-scale files under a chapter month.",
+      "id": "strategy-state-iran-daily",
+      "kind": "state-thread",
+      "label": "daily (chapters/…/daily)",
+      "path": "docs/skill-work/work-strategy/strategy-notebook/strategy-state-iran/chapters/2026-04/daily/"
+    },
+    {
+      "authority": "work-only",
+      "description": "IRI institutional voice (under voices).",
+      "id": "strategy-state-iran-iri-institutional",
+      "kind": "state-thread",
+      "label": "iri-institutional",
+      "path": "docs/skill-work/work-strategy/strategy-notebook/strategy-state-iran/voices/iri-institutional/"
+    },
+    {
+      "authority": "work-only",
+      "description": "Institutional / expert voices under Iran lane.",
+      "id": "strategy-state-iran-voices",
+      "kind": "state-thread",
+      "label": "voices",
+      "path": "docs/skill-work/work-strategy/strategy-notebook/strategy-state-iran/voices/"
+    },
+    {
+      "authority": "work-only",
+      "description": "L0–L4 stack and session types.",
+      "id": "synthesis-operating-model",
+      "kind": "protocol",
+      "label": "SYNTHESIS-OPERATING-MODEL",
+      "path": "docs/skill-work/work-strategy/strategy-notebook/SYNTHESIS-OPERATING-MODEL.md"
+    },
+    {
+      "authority": "work-only",
+      "description": "Trace / JSONL contract for tools.",
+      "id": "trace-contract",
+      "kind": "contract",
+      "label": "STRATEGY-NOTEBOOK-TRACE-CONTRACT",
+      "path": "docs/skill-work/work-strategy/strategy-notebook/STRATEGY-NOTEBOOK-TRACE-CONTRACT.md"
+    },
+    {
+      "authority": "work-only",
+      "description": "Watch file.",
+      "id": "watch-readme",
+      "kind": "watch",
+      "label": "README",
+      "path": "docs/skill-work/work-strategy/strategy-notebook/watches/README.md"
+    },
+    {
+      "authority": "work-only",
+      "description": "Evolving situation hooks and watch surfaces.",
+      "id": "watches",
+      "kind": "area",
+      "label": "Watches",
+      "path": "docs/skill-work/work-strategy/strategy-notebook/watches/"
+    }
+  ],
+  "recordAuthority": "none",
+  "schemaVersion": "strategy-notebook-visualizer-fixture/v1",
+  "sourceRoot": "docs/skill-work/work-strategy/strategy-notebook",
+  "truthScope": "derived structure visualization only"
 }

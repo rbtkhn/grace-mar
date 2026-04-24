@@ -13,9 +13,12 @@
     "docs/skill-work/work-strategy/strategy-notebook/demo-runs/workbench-visualizer/README.md",
     "docs/skill-work/work-strategy/strategy-notebook/demo-runs/workbench-visualizer/strategy-notebook-visualizer.html",
     "docs/skill-work/work-strategy/strategy-notebook/demo-runs/workbench-visualizer/strategy-notebook-visualizer.fixture.json",
+    "scripts/work_strategy/generate_strategy_notebook_visualizer_fixture.py",
     "artifacts/work-dev/workbench-screenshots/README.md"
   ],
   "commandsRun": [
+    "python3 scripts/work_strategy/generate_strategy_notebook_visualizer_fixture.py",
+    "python3 scripts/work_strategy/generate_strategy_notebook_visualizer_fixture.py --check",
     "python3 -m http.server 8765 --directory docs/skill-work/work-strategy/strategy-notebook/demo-runs/workbench-visualizer"
   ],
   "launchCommand": "python3 -m http.server 8765 --directory docs/skill-work/work-strategy/strategy-notebook/demo-runs/workbench-visualizer",
