@@ -6,8 +6,8 @@ show: Glenn Diesen (channel / program — pin canonical series title when known)
 host: Glenn Diesen
 guest: Douglas Macgregor
 thread_expert: macgregor
-source_note: Operator paste. Canonical watch URL pinned. Publish / air date not pinned; in-episode framing is “day three” of a US–Israel–Iran war scenario — treat operational claims as Macgregor analysis tier, not wire truth.
-title_slug: macgregor-diesen-iran-new-world-israel-survival-2026-04-25
+source_note: Operator paste. Filed in raw-input/_aired-pending/ until a publish/air date is pinned. Canonical watch URL in filename (yd_uJiRcl0Q). In-episode framing is “day three” of a US–Israel–Iran war scenario — treat operational claims as Macgregor analysis tier, not wire truth.
+title_slug: macgregor-diesen-iran-new-world-yd_uJiRcl0Q
 ---
 
 # Douglas Macgregor × Glenn Diesen — A New World Emerges: Iran Will Win & Israel May Not Survive (operator transcript)
