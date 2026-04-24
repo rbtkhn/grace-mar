@@ -25,14 +25,17 @@ This lane was previously named `work-xavier`. It has been renamed to `work-cici`
 
 | Legacy / historical artifact | Current interpretation |
 |------------------------------|------------------------|
-| [xavier-work-profile.md](xavier-work-profile.md) | Cici work profile / legacy Xavier filename |
+| [cici-work-profile.md](cici-work-profile.md) | Cici work profile (was `xavier-work-profile.md`) |
 | [xavier-progress-log.md](xavier-progress-log.md) | Cici progress log / legacy Xavier filename |
 | [TERMS-XAVIER.md](TERMS-XAVIER.md) | Cici terms / legacy Xavier filename |
 | [xavier-instance-two-step.md](xavier-instance-two-step.md) | Cici instance two-step / legacy Xavier filename |
 | [xavier-smm-capability-rubric.md](xavier-smm-capability-rubric.md) | Cici SMM capability rubric / legacy Xavier filename |
 | `COMPANION-XAVIER-*` ([e.g. DELETION-READINESS](COMPANION-XAVIER-DELETION-READINESS.md)) | Cici companion-instance planning / legacy Xavier filename pattern |
 
-**Read first:** [INDEX.md](INDEX.md) · [ALIGNMENT.md](ALIGNMENT.md) · [LANES.md](LANES.md) · [TERMS-XAVIER.md](TERMS-XAVIER.md) · Template baseline (canonical): [work-companion-self/TEMPLATE-BASELINE.md](../work-companion-self/TEMPLATE-BASELINE.md) · Boundaries: [audit-boundary-grace-mar-companion-self.md](../../audit-boundary-grace-mar-companion-self.md) (grace-mar · template); her instance follows the same rules **in her repo**.
+**Read first:** [INDEX.md](INDEX.md) · [ALIGNMENT.md](ALIGNMENT.md) · [LANES.md](LANES.md) · [TERMS-XAVIER.md](TERMS-XAVIER.md).
+
+Template baseline (canonical): [work-companion-self/TEMPLATE-BASELINE.md](../work-companion-self/TEMPLATE-BASELINE.md).  
+Boundaries: [audit-boundary-grace-mar-companion-self.md](../../audit-boundary-grace-mar-companion-self.md) (grace-mar · template); her instance follows the same rules **in her repo**.
 
 **Never copy** `users/grace-mar/**` into another companion’s instance tree. See [LEAKAGE-CHECKLIST.md](LEAKAGE-CHECKLIST.md).
 

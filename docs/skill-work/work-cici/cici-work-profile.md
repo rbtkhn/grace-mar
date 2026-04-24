@@ -1,5 +1,6 @@
-# Xavier — work profile and skills portfolio (operator)
+# Cici — work profile and skills portfolio (operator)
 
+**Filename:** was `xavier-work-profile.md` (renamed to match active lane).  
 **Audience:** Operator (employer / advisor) in grace-mar.  
 **Purpose:** Single **WORK** place for **employee Xavier’s** role snapshot, **skills portfolio**, and **learning in flight** — including tooling upskill (e.g. AI-assisted coding).  
 **Not:** Cici’s **Record** (`self.md`, IX, evidence) in **Xavier**’s **repository** (employee name). Identity truth there enters only through **her** [RECURSION-GATE](INSTANCE-PATHS.md) and merge script. This file may **point** at her repo; it does **not** replace it.
@@ -16,6 +17,7 @@
 | Field | Content |
 |--------|--------|
 | **Relationship** | Employee / business partner (SMM and related execution; BrewMind and advisor workflows per [README.md](README.md)). |
+| **Born (operator-stated)** | **Cebu City, Philippines** — official WORK reference for the Cici / work-cici lane; not a substitute for her instance Record. |
 | **GitHub (operator-confirmed)** | [@Xavier-x01](https://github.com/xavier-x01) — public profile; **companion-xavier** (template instance) may or may not exist yet under this account (see also public repos on profile, e.g. site work). |
 | **Primary WORK lane** | `docs/skill-work/work-cici/` in grace-mar; her **cognitive-fork** instance is intended under **her** GitHub (often repo name **`companion-xavier`**) — not inside grace-mar `users/`. |
 | **Last reviewed** | 2026-04-08 — Public repos snapshot + evidence: [github-profile-ingest-2026-04-08.md](evidence/github-profile-ingest-2026-04-08.md) (`xavier_self`, `brew_mind`, `OB1`). |

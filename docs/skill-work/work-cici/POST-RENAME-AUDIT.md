@@ -68,9 +68,9 @@ Ongoing “Xavier” uses that are **intentional** (not drift): GitHub `Xavier-x
 
 ## Recommended next PR
 
-**C. add CI grep guard for active-prose drift** — e.g. fail or warn on patterns such as `Advisor / Xavier` or `module for Xavier` in `docs/skill-work/work-cici/README.md`, `INDEX.md` (root description rows), and `LANES.md`, with allowlists for `work-xavier` rename line and `Xavier-x01` URLs. One small grep step in existing CI is enough; no new automation that writes to Cici.
+**C. add CI grep guard for active-prose drift** — **done** in a follow-up: `python3 scripts/check_work_cici_drift.py` in [scripts/](../../scripts/check_work_cici_drift.py), wired into [`.github/workflows/naming-check.yml`](../../.github/workflows/naming-check.yml) and documented in [LANE-CI](LANE-CI.md#drift-guard). Fails the build on disallowed active-prose substrings, with an allowlist for `formerly Xavier`, `Xavier-x01`, `work-xavier`, `users/xavier/`, `xavier-` filenames, `TERMS-XAVIER`, `COMPANION-XAVIER`, and legacy SMM / digest script names. No new automation that writes to Cici.
 
-(Alternatives not chosen: **A** wrapper scripts, **B** full INDEX/LANES nav pass — partial refresh done in this audit; **D** — C is cheap insurance.)
+(Alternatives not chosen for that hardening: **A** wrapper scripts, **B** full INDEX/LANES nav only — reflows shipped alongside C.)
 
 ---
 

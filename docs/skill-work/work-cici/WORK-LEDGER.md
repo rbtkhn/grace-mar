@@ -34,12 +34,12 @@
 ### Current focus
 
 - See [SYNC-DAILY.md](SYNC-DAILY.md) and [DAILY-OPS-CARD.md](DAILY-OPS-CARD.md).  
-- Employee profile / skills portfolio: [xavier-work-profile.md](xavier-work-profile.md) (update on hiring milestones, scope changes, or tooling upskill).
+- Employee profile / skills portfolio: [cici-work-profile.md](cici-work-profile.md) (update on hiring milestones, scope changes, or tooling upskill).
 
 ### Active priorities / capabilities / constraints
 
 - Content plans and KPI logs: [INDEX.md](INDEX.md) (BrewMind + week plans).  
-- Work profile / portfolio: [xavier-work-profile.md](xavier-work-profile.md).  
+- Work profile / portfolio: [cici-work-profile.md](cici-work-profile.md).  
 - Capability evaluation: [xavier-smm-capability-rubric.md](xavier-smm-capability-rubric.md).  
 - Mirrors: [work-dev-mirror/SYNC-LOG.md](work-dev-mirror/SYNC-LOG.md), [work-politics-mirror/SYNC-LOG.md](work-politics-mirror/SYNC-LOG.md).
 

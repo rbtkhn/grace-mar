@@ -1,6 +1,10 @@
 # work-cici — quick index
 
-**Rename / continuity:** Lane was **work-xavier**; see [README — Rename note](README.md#rename-note), [Naming and continuity](README.md#naming-and-continuity), and the **Legacy filename aliases** table in [README.md](README.md#legacy-filename-aliases) (kept in one place; not duplicated here).
+Use [README](README.md) for narrative order; this table is a flat lookup.
+
+**Rename / continuity:** Lane was **work-xavier**; see [README — Rename note](README.md#rename-note),
+[Naming and continuity](README.md#naming-and-continuity), and the **Legacy filename aliases** table in
+[README.md](README.md#legacy-filename-aliases) (single source of truth in README; not duplicated as a table here).
 
 | Doc | Role |
 |-----|------|
@@ -18,8 +22,8 @@
 | [cici-pilot-propagation-low-cost-operator.md](cici-pilot-propagation-low-cost-operator.md) | **10-pilot reach** — low-cost propagation checklist (referral, FB groups, Telegram, borrowed audiences) + citations |
 | [cici-community-mission-operator.md](cici-community-mission-operator.md) | **Cici / Neural Sandbox** — short-term mission, drop-off focus, funnel metrics (operator WORK) |
 | [README.md](README.md) | Advisor / project module for Cici (formerly Xavier) — vs her companion / instance repo and the external [Cici](https://github.com/Xavier-x01/Cici) OB1 repo; not Cici’s Record in grace-mar |
-| [POST-RENAME-AUDIT.md](POST-RENAME-AUDIT.md) | **Post-rename audit** — drift report after `work-xavier` → `work-cici` (status, scripts, boundaries; recommended: CI grep guard) |
-| [xavier-work-profile.md](xavier-work-profile.md) | Employee work profile + skills portfolio (operator WORK); not her Record |
+| [POST-RENAME-AUDIT.md](POST-RENAME-AUDIT.md) | **Post-rename audit** — drift report after `work-xavier` → `work-cici` (status, scripts, boundaries); **CI:** [check_work_cici_drift.py](../../scripts/check_work_cici_drift.py) in [naming-check workflow](../../.github/workflows/naming-check.yml) |
+| [cici-work-profile.md](cici-work-profile.md) | Employee work profile + skills portfolio (operator WORK); not her Record |
 | [xavier-progress-log.md](xavier-progress-log.md) | Operator progress / behavior notes + evidence index (paired with [work-cici-history.md](work-cici-history.md)) |
 | [`.cursor/skills/skill-cici/SKILL.md`](../../../.cursor/skills/skill-cici/SKILL.md) | **skill-cici** — Cursor ritual for journal rhythm (grace-mar vs Cici **Mode B**); baseline from cici-notebook |
 | [cici-notebook/README.md](cici-notebook/README.md) | **Cici notebook** — daily OB1 / Open Brain learning log ([2026-04-06](cici-notebook/2026-04-06.md)); WORK, not her Record |
@@ -33,7 +37,7 @@
 | [OB1 bridge mapping — Conceptual map](../../integrations/ob1/mapping.md#conceptual-map-ob1-cici-grace-mar) | **OB1 vs Cici vs grace-mar** — stack roles and where governed truth lives (avoids conflating instance repo with upstream platform or Record). |
 | [evidence/](evidence/) | Screenshots and exports for progress analysis (not partner-facing) — **policy & naming:** [evidence/README.md](evidence/README.md) |
 | [work-cici-sources.md](work-cici-sources.md) | Authorized sources index (feeds, URLs, pointers — [principle](../work-modules-sources-principle.md)) |
-| [LANE-CI.md](LANE-CI.md) | PR label `lane/work-cici`, cross-lane + gate notes |
+| [LANE-CI.md](LANE-CI.md) | PR label `lane/work-cici`, cross-lane + gate notes, [drift guard](LANE-CI.md#drift-guard) |
 | [WORK-LEDGER.md](WORK-LEDGER.md) | Compounding watches + [**medium-term roadmap** (§ II-B)](WORK-LEDGER.md#ii-b-medium-term-roadmap) + pointers ([work-template](../work-template/WORK-LEDGER.md) scaffold) |
 | [INSTANCE-PATHS.md](INSTANCE-PATHS.md) | Where her `users/xavier/` and seed survey live (**not** in grace-mar) |
 | [xavier-instance-two-step.md](xavier-instance-two-step.md) | **Instance checklist:** template → clone → Claude Code; then Seed Phase + validation (with operator) |

@@ -1,6 +1,6 @@
 # Xavier — operator progress log (WORK)
 
-**Audience:** Operator (employer / advisor). **Purpose:** **Qualitative** notes on **how Xavier works** — tools, bursts of activity, coaching hooks — alongside [xavier-work-profile.md](xavier-work-profile.md) (skills matrix) and [work-cici-history.md](work-cici-history.md) (territory milestones + dated evidence pointers).
+**Audience:** Operator (employer / advisor). **Purpose:** **Qualitative** notes on **how Cici / Xavier (employee) works** — tools, bursts of activity, coaching hooks — alongside [cici-work-profile.md](cici-work-profile.md) (skills matrix) and [work-cici-history.md](work-cici-history.md) (territory milestones + dated evidence pointers).
 
 **Not:** Performance review for her **Record**; not companion-facing Voice knowledge. Keep notes **actionable and respectful** (coaching, not surveillance-only framing).
 

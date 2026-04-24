@@ -65,5 +65,5 @@ One week where **at least two** BrewMind-tagged facts moved **evidence → propo
 ## Related (grace-mar advisor)
 
 - [brewmind-philippines-onboarding-guide.md](../../../docs/skill-work/work-cici/brewmind-philippines-onboarding-guide.md) — business bundle
-- [xavier-work-profile.md](../../../docs/skill-work/work-cici/xavier-work-profile.md) — Cici matrix row
+- [cici-work-profile.md](../../../docs/skill-work/work-cici/cici-work-profile.md) — Cici matrix row
 - [evidence/cici-rtf-sessions-ingest-2026-04-14.md](../../../docs/skill-work/work-cici/evidence/cici-rtf-sessions-ingest-2026-04-14.md) — `.claude/` + companion contract context

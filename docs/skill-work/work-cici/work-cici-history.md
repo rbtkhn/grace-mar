@@ -84,11 +84,11 @@
 
 ### 2026-04-07
 
-- **xavier-work-profile.md:** Recorded GitHub profile [https://github.com/xavier-x01](https://github.com/xavier-x01) (@Xavier-x01) in **Role snapshot** (operator-confirmed). [INSTANCE-PATHS.md](INSTANCE-PATHS.md) cross-link.
+- **cici-work-profile.md** (then `xavier-work-profile.md`): Recorded GitHub profile [https://github.com/xavier-x01](https://github.com/xavier-x01) (@Xavier-x01) in **Role snapshot** (operator-confirmed). [INSTANCE-PATHS.md](INSTANCE-PATHS.md) cross-link.
 
 ### 2026-04-06
 
-- **xavier-work-profile.md:** Skills matrix — **Claude Code** stays **learning** (evidence-backed notes: Sonnet 4.6, parallel threads, Firebase/site track); **Gemini** → **supported** for **narrow** slice (BrewMind copy + HTML/CSS FAQ handoff); **learning in flight** table filled; **Last reviewed** 2026-04-06.
+- **cici-work-profile.md** (then `xavier-work-profile.md`): Skills matrix — **Claude Code** stays **learning** (evidence-backed notes: Sonnet 4.6, parallel threads, Firebase/site track); **Gemini** → **supported** for **narrow** slice (BrewMind copy + HTML/CSS FAQ handoff); **learning in flight** table filled; **Last reviewed** 2026-04-06.
 - **Open Brain vs gate (EXECUTE):** [xavier-instance-two-step.md](xavier-instance-two-step.md) — tooling box + bridge link; [first-good-morning-runbook.md](first-good-morning-runbook.md) — operator subsection + checklist row **5b**; [SESSION-0-OPERATOR.md](SESSION-0-OPERATOR.md) — step **2a**; [LEAKAGE-CHECKLIST.md](LEAKAGE-CHECKLIST.md) — vector/RAG/MCP bullet; [ALIGNMENT.md](ALIGNMENT.md) — wire list; [INDEX.md](INDEX.md) — bridge row.
 - **Evidence policy (pick A):** [evidence/README.md](evidence/README.md) — binaries stay in-repo; naming + access assumption + soft size + index/history hooks.
 - **INDEX:** [evidence/](evidence/) row links [evidence/README.md](evidence/README.md) for policy discoverability.
@@ -108,9 +108,9 @@
 
 ### 2026-04-03
 
-- Added [xavier-work-profile.md](xavier-work-profile.md): operator **employee work profile + skills portfolio** (skills matrix, learning-in-flight log for Claude Code / Gemini, boundary vs SMM rubric + her Record). Linked from [README.md](README.md), [INDEX.md](INDEX.md), [WORK-LEDGER.md](WORK-LEDGER.md).
+- Added [cici-work-profile.md](cici-work-profile.md) (at the time `xavier-work-profile.md`): operator **employee work profile + skills portfolio** (skills matrix, learning-in-flight log for Claude Code / Gemini, boundary vs SMM rubric + her Record). Linked from [README.md](README.md), [INDEX.md](INDEX.md), [WORK-LEDGER.md](WORK-LEDGER.md).
 - Added [brewmind-b2b-prospects.md](brewmind-b2b-prospects.md): B2B **verify-before-outreach** pipeline table + **Appendix A** raw Claude export (BPO / tech / schools / hubs — unverified). Wired [brewmind-philippines-onboarding-guide.md](brewmind-philippines-onboarding-guide.md) (bundle map, Phase 4), [brewmind-business-plan.md](brewmind-business-plan.md) related surfaces, [INDEX.md](INDEX.md).
-- **Operator observations / evidence:** Added [xavier-progress-log.md](xavier-progress-log.md) (evidence index, burst notes, hypotheses, coaching slot; Claude thread title appendix) and [evidence/claude-mobile-chats-2026-04-03.png](evidence/claude-mobile-chats-2026-04-03.png) + [evidence/README.md](evidence/README.md). Extended **How to append** for evidence pointers. Linked [README.md](README.md), [INDEX.md](INDEX.md); cross-link from [xavier-work-profile.md](xavier-work-profile.md) §4.
+- **Operator observations / evidence:** Added [xavier-progress-log.md](xavier-progress-log.md) (evidence index, burst notes, hypotheses, coaching slot; Claude thread title appendix) and [evidence/claude-mobile-chats-2026-04-03.png](evidence/claude-mobile-chats-2026-04-03.png) + [evidence/README.md](evidence/README.md). Extended **How to append** for evidence pointers. Linked [README.md](README.md), [INDEX.md](INDEX.md); cross-link from [cici-work-profile.md](cici-work-profile.md) §4.
 
 ### 2026-04-01
 
