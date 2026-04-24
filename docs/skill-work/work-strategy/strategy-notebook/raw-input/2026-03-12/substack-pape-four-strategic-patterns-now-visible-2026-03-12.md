@@ -1,6 +1,6 @@
 ---
 ingest_date: 2026-04-21
-published_date: 2026-03-12
+pub_date: 2026-03-12
 thread: pape
 source_url: https://escalationtrap.substack.com/p/four-strategic-patterns-now-visible
 capture_note: Operator paste; public Substack essay (Mar 12, 2026). Operational claims (shipping, Bahrain/Oman/Saudi targets, oil/SPR, Russia intel) and succession/Mojtaba/fatwa framing are in-voice — verify against wire if promoted to §1.

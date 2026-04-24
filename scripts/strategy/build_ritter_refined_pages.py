@@ -65,16 +65,12 @@ def _slug_from_stem(stem: str) -> str:
 def _mode_and_preamble_date(fm: dict, stem: str) -> tuple[str, str, str]:
     """Returns (mode_letter, preamble_label, date_str YYYY-MM-DD)."""
     series = (fm.get("series") or "").strip()
-    published = fm.get("published_date")
-    pub = fm.get("pub_date")
+    pub = str((fm.get("pub_date") or "")).strip()
     if "judging freedom" in series.lower() or stem.startswith("judging-freedom"):
-        d = str(pub or published or "")
-        return "B", "Aired", d
+        return "B", "Aired", pub
     if "ritter's rant" in series.lower() or stem.startswith("ritter-rant"):
-        d = str(pub or published or "")
-        return "C", "Aired", d
-    d = str(published or pub or "")
-    return "A", "Published", d
+        return "C", "Aired", pub
+    return "A", "Published", pub
 
 
 def _display_title(fm: dict, stem: str, body: str) -> str:
@@ -121,10 +117,9 @@ def collect_primaries() -> list[Path]:
 
 
 def voice_date_for(p: Path, fm: dict) -> str:
-    pub = fm.get("published_date")
-    pub_day = fm.get("pub_date")
+    pub_day = (fm.get("pub_date") or "").strip()
     folder = _folder_date(p)
-    for candidate in (pub, pub_day, folder):
+    for candidate in (pub_day, folder):
         if candidate and re.match(r"^\d{4}-\d{2}-\d{2}$", str(candidate)):
             return str(candidate)
     return folder
@@ -159,9 +154,7 @@ def build_entries(paths: list[Path]) -> list[dict]:
             "B": "Mode B — Judging Freedom / interview (see raw-input series)",
             "C": "Mode C — YouTube (see raw-input source_url)",
         }[mode]
-        preamble_val = fm.get("published_date") if prem_label == "Published" else fm.get("pub_date")
-        if not preamble_val:
-            preamble_val = vd
+        preamble_val = (fm.get("pub_date") or "").strip() or vd
         entries.append(
             {
                 "raw_input_relative": str(p.relative_to(NOTEBOOK)).replace("\\", "/"),

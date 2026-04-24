@@ -1,7 +1,6 @@
 ---
 ingest_date: 2026-04-21
 pub_date: 2026-03-27
-published_date: 2026-03-27
 kind: operator-transcript
 show: Glenn Diesen (Greater Eurasia)
 episode_title: "John Mearsheimer: Iran Holds All the Cards — The Strategic Defeat of the U.S."

@@ -1,6 +1,6 @@
 ---
 ingest_date: 2026-04-21
-published_date: 2026-03-29
+pub_date: 2026-03-29
 kind: substack-post
 thread: mearsheimer
 source_url: https://mearsheimer.substack.com/p/will-trump-go-kamikaze

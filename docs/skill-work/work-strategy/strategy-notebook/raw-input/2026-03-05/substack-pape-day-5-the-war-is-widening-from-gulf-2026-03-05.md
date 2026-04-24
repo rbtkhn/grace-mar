@@ -1,6 +1,6 @@
 ---
 ingest_date: 2026-04-21
-published_date: 2026-03-05
+pub_date: 2026-03-05
 kind: substack-post
 thread: pape
 source_url: https://escalationtrap.substack.com/p/day-5-the-war-is-widening-from-gulf

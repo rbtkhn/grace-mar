@@ -1,6 +1,6 @@
 ---
 ingest_date: 2026-04-21
-published_date: 2026-04-02
+pub_date: 2026-04-02
 thread: pape
 source_url: https://escalationtrap.substack.com/p/trump-accelerated-the-crisis
 capture_note: Operator paste; public Substack essay. Trump speech interpretation, Hormuz/shipping/insurance market behavior, allied coordination, quoted timelines and “honor the dead” framing are in-voice — verify against primary remarks and wire if promoted to §1.

@@ -1,6 +1,6 @@
 ---
 ingest_date: 2026-04-21
-published_date: 2026-03-25
+pub_date: 2026-03-25
 thread: pape
 source_url: https://escalationtrap.substack.com/p/why-iran-prefers-vance
 capture_note: Operator paste; public Substack essay. Theory-heavy; Iran "preference" for Vance, U.S. faction map, Carlson/Kent references, and U.S.–Israel interest framing are interpretive — verify against IRI statements and reporting if promoted to §1.

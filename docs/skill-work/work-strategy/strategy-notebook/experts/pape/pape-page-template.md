@@ -6,7 +6,7 @@ WORK only; not Record.
 
 **Thread-embedded pages:** Use [`strategy-page-template.md`](../../strategy-page-template.md) for `<!-- strategy-page:start … -->` blocks in thread files.
 
-**Filename date:** Always use **`published_date`** (Substack byline / operator publication stamp) for `pape-page-YYYY-MM-DD.md`. If `ingest_date` or the `raw-input/` folder date differs, note it only in the preamble (**Ingest** logged …) or appendix; capture paths still reflect on-disk location.
+**Filename date:** Always use frontmatter **`pub_date`** (Substack byline / operator publication stamp) for `pape-page-YYYY-MM-DD.md`. If `ingest_date` or the `raw-input/` folder date differs, note it only in the preamble (**Ingest** logged …) or appendix; capture paths still reflect on-disk location.
 
 **Length:** No enforced word limit. **Chronicle** carries **full verbatim** (lightly cleaned); it is often long. **Reflection** / **Foresight** are operator analysis—**may be stubbed** at first; **Mode C** may still be shorter overall. Keep **`verify:`** tails, path dumps, and inbox machinery out of body sections—**`### Appendix`** only.
 
@@ -48,7 +48,7 @@ Guest spot with **pinned** canonical URL in raw-input frontmatter (`source_url`,
 
 ### Mode D — Substack (*Escalation Trap*)
 
-Essay or ledger post; pin **`source_url`** and **`published_date`** in raw-input frontmatter. Note **paid** vs public in preamble when it affects verify tier.
+Essay or ledger post; pin **`source_url`** and **`pub_date`** in raw-input frontmatter. Note **paid** vs public in preamble when it affects verify tier.
 
 ```markdown
 **Expert:** `pape` · **Published:** YYYY-MM-DD · **Capture:** Substack — *Escalation Trap* (*Post Title*; operator paste; **paid** tier when applicable) · **Artifact:** refined day page (standalone file under `experts/pape/`). **Not** a `strategy-page` HTML fence in `thread.md` unless you duplicate the same judgment there during EOD compose. **Ingest** logged YYYY-MM-DD.
@@ -58,7 +58,7 @@ Essay or ledger post; pin **`source_url`** and **`published_date`** in raw-input
 
 ## Same-day multiple posts (one publish date)
 
-When **more than one** primary Substack (or mixed) capture shares **`published_date`** (e.g. [pape-page-2026-03-05.md](pape-page-2026-03-05.md), [pape-page-2026-03-24.md](pape-page-2026-03-24.md)):
+When **more than one** primary Substack (or mixed) capture shares **`pub_date`** (e.g. [pape-page-2026-03-05.md](pape-page-2026-03-05.md), [pape-page-2026-03-24.md](pape-page-2026-03-24.md)):
 
 1. **Single** refined file: `pape-page-YYYY-MM-DD.md`.
 2. **`### Chronicle`:** ordered blocks **`A —`** *Title* **(**[Substack](https://…)**):** … **`B —`** … **`C —`** … as needed. Each letter matches one verbatim file.
@@ -81,7 +81,7 @@ When **more than one** primary Substack (or mixed) capture shares **`published_d
 
 **Appendix bullet order (required):**
 
-1. **Full verbatim (capture):** link under `raw-input/…` — for multi-post days use **(A)**, **(B)**, **(C)** sub-bullets (path uses **on-disk** folder date; may differ from `published_date`—call out if so).
+1. **Full verbatim (capture):** link under `raw-input/…` — for multi-post days use **(A)**, **(B)**, **(C)** sub-bullets (path uses **on-disk** folder date; may differ from `pub_date`—call out if so).
 2. **Adjacent arc:** neighbor day pages when helpful (`pape-page-…` · `pape-page-…`). Omit only when there is no natural seam.
 3. **Inbox / triage:** [`daily-strategy-inbox.md`](../../daily-strategy-inbox.md) — `search thread:pape`, publish date, capture-specific grep hints.
 4. **`thread:pape`** · **verify:** one consolidated verify line (include **paid-tier** / **DOD-tier** / **wire-tier** as appropriate).
@@ -147,7 +147,7 @@ Same scaffold as Mode D but shorter body; fourth appendix bullet may be **X** pe
 
 ## Compliance checklist
 
-1. Title `# Pape day page — YYYY-MM-DD` matches **`published_date`** (one file per publish date, including multi-post days).
+1. Title `# Pape day page — YYYY-MM-DD` matches **`pub_date`** (one file per publish date, including multi-post days).
 2. `WORK only; not Record.`
 3. Preamble identifies capture mode (**Substack** / Mode A–C) and **Artifact:** **standalone file under `experts/pape/`**.
 4. `---` before `### Chronicle`; **Chronicle** = full verbatim (no `verify:` / path dumps); **Reflection** / **Foresight** = operator analysis (stubs OK).

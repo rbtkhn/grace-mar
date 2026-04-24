@@ -1,7 +1,6 @@
 ---
 ingest_date: 2026-04-21
 pub_date: 2026-02-22
-published_date: 2026-02-22
 thread: ritter
 source_url: https://scottritter.substack.com/p/the-flamingo-effect
 kind: operator-transcript

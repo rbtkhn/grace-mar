@@ -1,6 +1,6 @@
 ---
 ingest_date: 2026-04-21
-published_date: 2026-03-27
+pub_date: 2026-03-27
 kind: substack-post
 thread: pape
 source_url: https://escalationtrap.substack.com/p/the-marine-threshold-5000-marines

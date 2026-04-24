@@ -1,6 +1,6 @@
 ---
 ingest_date: 2026-04-21
-published_date: 2026-01-20
+pub_date: 2026-01-20
 kind: substack-post
 thread: mearsheimer
 source_url: https://mearsheimer.substack.com/p/the-tag-team-fails-in-iran

@@ -1,6 +1,6 @@
 ---
 ingest_date: 2026-04-21
-published_date: 2026-03-13
+pub_date: 2026-03-13
 kind: substack-post
 thread: pape
 source_url: https://escalationtrap.substack.com/p/strategic-briefings-iran-war-and

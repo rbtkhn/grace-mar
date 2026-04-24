@@ -1,7 +1,6 @@
 ---
 ingest_date: 2026-04-21
 pub_date: 2026-01-09
-published_date: 2026-01-09
 thread: ritter
 source_url: https://scottritter.substack.com/p/the-camels-bloody-nose
 kind: operator-transcript

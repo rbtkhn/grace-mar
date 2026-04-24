@@ -144,7 +144,7 @@ def _iter_raw_input_md_paths(raw_root: Path, cutoff: date) -> list[Path]:
 
 
 def _rss_row_pub_date(fm: dict[str, str], path: Path) -> date | None:
-    for key in ("published_date", "pub_date", "ingest_date"):
+    for key in ("pub_date", "ingest_date"):
         raw = (fm.get(key) or "").strip()
         if raw and len(raw) >= 10:
             try:

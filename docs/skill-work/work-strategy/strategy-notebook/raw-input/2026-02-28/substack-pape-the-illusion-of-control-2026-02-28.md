@@ -1,6 +1,6 @@
 ---
 ingest_date: 2026-04-22
-published_date: 2026-02-28
+pub_date: 2026-02-28
 kind: substack-post
 thread: pape
 source_url: https://escalationtrap.substack.com/p/the-illusion-of-control

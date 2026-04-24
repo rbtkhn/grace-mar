@@ -1,7 +1,6 @@
 ---
 ingest_date: 2026-04-21
 pub_date: 2026-03-25
-published_date: 2026-03-25
 thread: ritter
 source_url: https://scottritter.substack.com/p/how-the-chechen-miracle-kick-started
 kind: operator-transcript

@@ -1,6 +1,6 @@
 ---
 ingest_date: 2026-04-22
-published_date: 2026-03-03
+pub_date: 2026-03-03
 kind: substack-post
 thread: pape
 source_url: https://escalationtrap.substack.com/p/the-air-power-illusion

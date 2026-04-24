@@ -1,6 +1,6 @@
 ---
 ingest_date: 2026-04-21
-published_date: 2026-03-24
+pub_date: 2026-03-24
 thread: pape
 source_url: https://escalationtrap.substack.com/p/trumps-words-dont-predict-war-his
 capture_note: Operator paste; public Substack essay. Published date per operator (2026-03-24); Substack byline may read Mar 25 by timezone. ORBAT figures (82nd 1,000, 150+ aircraft, 2 CSG, 50k+ regional, 2.5–5k Marines, Venezuela 12–15k, etc.) are in-voice — verify DOD/wire if promoted to §1.

@@ -1,7 +1,6 @@
 ---
 ingest_date: 2026-04-21
 pub_date: 2026-04-10
-published_date: 2026-04-10
 kind: operator-transcript
 show: Glenn Diesen (Greater Eurasia)
 episode_title: "John Mearsheimer: World Changed Forever as Iran Defeated the U.S."

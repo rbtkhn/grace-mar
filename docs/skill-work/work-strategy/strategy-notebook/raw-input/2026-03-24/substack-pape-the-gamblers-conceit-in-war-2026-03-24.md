@@ -1,6 +1,6 @@
 ---
 ingest_date: 2026-04-21
-published_date: 2026-03-24
+pub_date: 2026-03-24
 kind: substack-post
 thread: pape
 source_url: https://escalationtrap.substack.com/p/the-gamblers-conceit-in-war

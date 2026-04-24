@@ -1,6 +1,6 @@
 ---
 ingest_date: 2026-04-21
-published_date: 2026-03-29
+pub_date: 2026-03-29
 thread: pape
 source_url: https://escalationtrap.substack.com/p/vietnam-shows-exactly-when-air-wars
 capture_note: Operator paste; public Substack essay. Vietnam/Iraq chronology is analytic framing; current ORBAT (~5k Marines, 82nd, 10k preparing, 300+ wounded / 13+ killed, Prince Sultan, WSJ on ground contingencies, NYT/Mossad reporting) is in-voice — verify DOD/wire/primary press if promoted to §1.

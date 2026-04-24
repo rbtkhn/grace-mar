@@ -1,6 +1,6 @@
 ---
 ingest_date: 2026-04-22
-published_date: 2026-04-22
+pub_date: 2026-04-22
 kind: substack-post
 thread: pape
 source_url: https://escalationtrap.substack.com/p/the-first-move-has-begun

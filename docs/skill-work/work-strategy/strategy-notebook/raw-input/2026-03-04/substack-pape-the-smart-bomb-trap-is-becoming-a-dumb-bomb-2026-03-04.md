@@ -1,6 +1,6 @@
 ---
 ingest_date: 2026-04-21
-published_date: 2026-03-04
+pub_date: 2026-03-04
 kind: substack-post
 thread: pape
 source_url: https://escalationtrap.substack.com/p/the-smart-bomb-trap-is-becoming-a

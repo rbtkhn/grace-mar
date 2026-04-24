@@ -1,6 +1,6 @@
 ---
 ingest_date: 2026-04-21
-published_date: 2026-03-16
+pub_date: 2026-03-16
 thread: pape
 source_url: https://escalationtrap.substack.com/p/irans-new-battlefield-the-global
 capture_note: Operator paste; public Substack essay. Supreme Leader quoted speech (Mar 12 in voice) — verify primary text if load-bearing. Price paths ($85→$130), tanker/LNG fractions, and “16 days” timeline are in-voice; 1973 OPEC narrative is analytic precedent not current fact.

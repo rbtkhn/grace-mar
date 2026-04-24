@@ -1,7 +1,6 @@
 ---
 ingest_date: 2026-04-21
 pub_date: 2026-03-10
-published_date: 2026-03-10
 kind: operator-transcript
 show: Glenn Diesen (Greater Eurasia)
 episode_title: "John Mearsheimer: U.S. Already Lost Iran War — No Off-Ramp in Sight"
