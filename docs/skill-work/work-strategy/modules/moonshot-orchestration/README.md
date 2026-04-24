@@ -72,6 +72,20 @@ This module may produce a candidate proposal. It may not approve, merge, or exec
 | `moonshot-map-template.md` | Reusable contribution-map template |
 | `moonshot-dashboard.md` | Derived WORK dashboard |
 | `moonshot-source-policy.md` | Source and claim-tier discipline |
+| [`maps/`](maps/) | Dated Moonshot Contribution Map instances generated from the template |
+| [`scripts/new_moonshot_map.py`](../../../../../scripts/new_moonshot_map.py) | Helper for creating dated map instances; does not auto-edit the dashboard |
+
+## Helper script
+
+`new_moonshot_map.py` creates dated **WORK-only** contribution-map instances from `moonshot-map-template.md`.
+
+Example:
+
+```bash
+python3 scripts/new_moonshot_map.py --slug dyson-swarm-compute --title "Dyson Swarm Compute"
+```
+
+The helper does not edit `moonshot-dashboard.md`, does not stage proposals, and does not touch Record surfaces.
 
 ## Default operating path
 
