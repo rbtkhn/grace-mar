@@ -13,6 +13,7 @@
 | [control-plane/](../../control-plane/) (as indexed in README) | Contracts, checklists, tier policy. | See README Contents. |
 | [scripts/](../../../../../scripts/) (selected) | Cross-cutting scripts (`detect_capability_shift.py`, `emit_compute_ledger.py`, `journal_habit_snapshot.py`, …) | Many paths are cited in work-dev-history. |
 | [dev-notebook/journal/](./journal/) | Inward day journal (this tree). | Symlink: `users/grace-mar/SELF-LIBRARY/dev-journal` → here. |
+| [identity-fork-protocol-ifp-2026-04-24.md](./identity-fork-protocol-ifp-2026-04-24.md) | **IFP** spec snapshot (WORK): identity fork + merge sovereignty + membrane (links to gate, workbench). | Not SELF/EVIDENCE. |
 | [journal-metrics-habit.md](../../journal-metrics-habit.md) | Light habit / telemetry (optional). | — |
 
 **Regen:** None — this map is hand-maintained when you add a new “canonical” work-dev surface. Prefer linking the territory [README](../../README.md#contents) to avoid drift.
