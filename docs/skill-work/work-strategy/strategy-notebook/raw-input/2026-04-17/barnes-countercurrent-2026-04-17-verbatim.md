@@ -1,6 +1,6 @@
 ---
 ingest_date: 2026-04-17
-aired_date: 2026-04-17
+pub_date: 2026-04-17
 kind: verbatim-sidecar
 source_path: docs/skill-work/work-strategy/strategy-notebook/barnes-countercurrent-2026-04-17-verbatim.md
 ---

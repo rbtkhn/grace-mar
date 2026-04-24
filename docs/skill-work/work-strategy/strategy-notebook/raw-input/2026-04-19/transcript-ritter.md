@@ -1,6 +1,6 @@
 ---
 ingest_date: 2026-04-19
-aired_date: 2026-04-19
+pub_date: 2026-04-19
 thread: ritter
 kind: transcript
 source_path: docs/skill-work/work-strategy/strategy-notebook/experts/ritter/transcript.md

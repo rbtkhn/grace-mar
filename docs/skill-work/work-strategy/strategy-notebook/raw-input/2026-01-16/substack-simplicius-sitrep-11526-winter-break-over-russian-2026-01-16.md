@@ -1,6 +1,6 @@
 ---
 ingest_date: 2026-04-21
-aired_date: 2026-01-16
+pub_date: 2026-01-16
 kind: substack-post
 source_url: https://simplicius76.substack.com/p/sitrep-11526-winter-break-over-russian
 publication: simplicius76.substack.com

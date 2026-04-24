@@ -1,6 +1,6 @@
 ---
 ingest_date: 2026-04-25
-aired_date: 2026-04-21
+pub_date: 2026-04-21
 source_url: https://simplicius76.substack.com/p/left-with-nothing-but-gimmicks-trump
 kind: paste-bundle
 title: "Left With Nothing But Gimmicks, Trump Gets Bluff Called Again By Confident Iran"

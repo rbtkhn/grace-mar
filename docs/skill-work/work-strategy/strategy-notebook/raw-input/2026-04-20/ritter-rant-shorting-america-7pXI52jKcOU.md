@@ -1,6 +1,6 @@
 ---
 ingest_date: 2026-04-20
-aired_date: 2026-04-20
+pub_date: 2026-04-20
 thread: ritter
 source_url: https://www.youtube.com/watch?v=7pXI52jKcOU
 kind: transcript

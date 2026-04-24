@@ -1,6 +1,6 @@
 ---
 ingest_date: 2026-04-21
-aired_date: 2026-03-21
+pub_date: 2026-03-21
 kind: substack-post
 source_url: https://simplicius76.substack.com/p/whipsaw-effect-trump-again-signals
 publication: simplicius76.substack.com

@@ -1,6 +1,6 @@
 ---
 ingest_date: 2026-04-21
-aired_date: 2026-02-16
+pub_date: 2026-02-16
 kind: substack-post
 source_url: https://simplicius76.substack.com/p/reports-claim-us-readying-long-term
 publication: simplicius76.substack.com

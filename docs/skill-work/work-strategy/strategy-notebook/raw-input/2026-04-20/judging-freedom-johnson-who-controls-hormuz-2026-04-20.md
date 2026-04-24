@@ -1,6 +1,6 @@
 ---
 ingest_date: 2026-04-20
-aired_date: 2026-04-20
+pub_date: 2026-04-20
 thread: johnson
 source_url: https://www.youtube.com/watch?v=TBD-judging-freedom-johnson-hormuz-2026-04-20
 kind: transcript

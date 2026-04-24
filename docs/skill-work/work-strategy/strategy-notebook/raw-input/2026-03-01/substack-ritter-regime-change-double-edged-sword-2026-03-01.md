@@ -1,6 +1,6 @@
 ---
 ingest_date: 2026-04-21
-aired_date: 2026-03-01
+pub_date: 2026-03-01
 published_date: 2026-03-01
 thread: ritter
 source_url: https://scottritter.substack.com/p/regime-change-the-double-edged-sword

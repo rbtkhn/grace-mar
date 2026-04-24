@@ -1,6 +1,6 @@
 ---
 ingest_date: 2026-04-21
-aired_date: 2026-02-25
+pub_date: 2026-02-25
 kind: substack-post
 source_url: https://simplicius76.substack.com/p/as-russias-smo-heads-into-its-fifth
 publication: simplicius76.substack.com

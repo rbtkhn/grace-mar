@@ -1,6 +1,6 @@
 ---
 ingest_date: 2026-04-21
-aired_date: 2026-04-17
+pub_date: 2026-04-17
 kind: substack-post
 source_url: https://simplicius76.substack.com/p/serious-escalation-russian-mod-implies
 publication: simplicius76.substack.com

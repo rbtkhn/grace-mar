@@ -112,7 +112,7 @@ def test_triage_merges_rss_raw_input_into_transcript(tmp_path: Path) -> None:
     day_dir.joinpath("rss-example.md").write_text(
         "---\n"
         "ingest_date: 2026-01-19\n"
-        "aired_date: 2026-01-19\n"
+        "pub_date: 2026-01-19\n"
         "kind: rss-item\n"
         "feed_url: https://example.com/feed\n"
         "source_url: https://example.com/p/x\n"
@@ -147,9 +147,9 @@ def test_triage_merges_rss_raw_input_into_transcript(tmp_path: Path) -> None:
 
 def test_iter_raw_input_yaml_documents_multiple_ingests_in_one_file() -> None:
     text = (
-        "---\nkind: rss-item\nthread: e\nguid: g1\nsource_url: u1\naired_date: 2026-01-19\n---\n\n"
+        "---\nkind: rss-item\nthread: e\nguid: g1\nsource_url: u1\npub_date: 2026-01-19\n---\n\n"
         "# One\n\n"
-        "---\nkind: rss-item\nthread: e\nguid: g2\nsource_url: u2\naired_date: 2026-01-19\n---\n\n"
+        "---\nkind: rss-item\nthread: e\nguid: g2\nsource_url: u2\npub_date: 2026-01-19\n---\n\n"
         "# Two\n"
     )
     docs = list(iter_raw_input_yaml_documents(text))
@@ -169,7 +169,7 @@ def test_collect_rss_thread_ingests_multi_doc_file(tmp_path: Path) -> None:
         "thread: e\n"
         "source_url: https://example.com/a\n"
         "guid: ga\n"
-        "aired_date: 2026-01-19\n"
+        "pub_date: 2026-01-19\n"
         "---\n\n"
         "# Title A\n\n"
         "---\n"
@@ -177,7 +177,7 @@ def test_collect_rss_thread_ingests_multi_doc_file(tmp_path: Path) -> None:
         "thread: e\n"
         "source_url: https://example.com/b\n"
         "guid: gb\n"
-        "aired_date: 2026-01-19\n"
+        "pub_date: 2026-01-19\n"
         "---\n\n"
         "# Title B\n",
         encoding="utf-8",
@@ -196,7 +196,7 @@ def test_collect_rss_thread_ingests_respects_cutoff(tmp_path: Path) -> None:
     old = raw_root / "2026-01-10"
     old.mkdir(parents=True)
     old.joinpath("stale.md").write_text(
-        "---\nkind: rss-item\nthread: e\nsource_url: u\naired_date: 2026-01-10\n---\n\n# T\n",
+        "---\nkind: rss-item\nthread: e\nsource_url: u\npub_date: 2026-01-10\n---\n\n# T\n",
         encoding="utf-8",
     )
     got = collect_rss_thread_ingests(

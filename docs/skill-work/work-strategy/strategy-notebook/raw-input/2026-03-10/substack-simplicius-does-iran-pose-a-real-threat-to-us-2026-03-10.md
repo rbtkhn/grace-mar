@@ -1,6 +1,6 @@
 ---
 ingest_date: 2026-04-21
-aired_date: 2026-03-10
+pub_date: 2026-03-10
 kind: substack-post
 source_url: https://simplicius76.substack.com/p/does-iran-pose-a-real-threat-to-us
 publication: simplicius76.substack.com

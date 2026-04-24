@@ -66,14 +66,14 @@ def _mode_and_preamble_date(fm: dict, stem: str) -> tuple[str, str, str]:
     """Returns (mode_letter, preamble_label, date_str YYYY-MM-DD)."""
     series = (fm.get("series") or "").strip()
     published = fm.get("published_date")
-    aired = fm.get("aired_date")
+    pub = fm.get("pub_date")
     if "judging freedom" in series.lower() or stem.startswith("judging-freedom"):
-        d = str(aired or published or "")
+        d = str(pub or published or "")
         return "B", "Aired", d
     if "ritter's rant" in series.lower() or stem.startswith("ritter-rant"):
-        d = str(aired or published or "")
+        d = str(pub or published or "")
         return "C", "Aired", d
-    d = str(published or aired or "")
+    d = str(published or pub or "")
     return "A", "Published", d
 
 
@@ -122,9 +122,9 @@ def collect_primaries() -> list[Path]:
 
 def voice_date_for(p: Path, fm: dict) -> str:
     pub = fm.get("published_date")
-    air = fm.get("aired_date")
+    pub_day = fm.get("pub_date")
     folder = _folder_date(p)
-    for candidate in (pub, air, folder):
+    for candidate in (pub, pub_day, folder):
         if candidate and re.match(r"^\d{4}-\d{2}-\d{2}$", str(candidate)):
             return str(candidate)
     return folder
@@ -159,7 +159,7 @@ def build_entries(paths: list[Path]) -> list[dict]:
             "B": "Mode B — Judging Freedom / interview (see raw-input series)",
             "C": "Mode C — YouTube (see raw-input source_url)",
         }[mode]
-        preamble_val = fm.get("published_date") if prem_label == "Published" else fm.get("aired_date")
+        preamble_val = fm.get("published_date") if prem_label == "Published" else fm.get("pub_date")
         if not preamble_val:
             preamble_val = vd
         entries.append(

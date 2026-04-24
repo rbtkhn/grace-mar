@@ -1,6 +1,6 @@
 ---
 ingest_date: 2026-04-20
-aired_date: 2026-04-20
+pub_date: 2026-04-20
 thread: mercouris
 source_url: https://www.youtube.com/watch?v=TBD-mercouris-russia-blockade-hormuz-2026-04-20
 kind: transcript

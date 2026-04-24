@@ -1,6 +1,6 @@
 ---
 ingest_date: 2026-04-21
-aired_date: 2026-03-14
+pub_date: 2026-03-14
 published_date: 2026-03-14
 thread: ritter
 source_url: https://scottritter.substack.com/p/the-backpack-girls

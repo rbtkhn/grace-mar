@@ -1,6 +1,6 @@
 ---
 ingest_date: 2026-04-21
-aired_date: 2026-01-31
+pub_date: 2026-01-31
 published_date: 2026-01-31
 kind: operator-transcript
 show: Glenn Diesen (Greater Eurasia)

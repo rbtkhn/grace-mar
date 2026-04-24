@@ -143,8 +143,8 @@ def _iter_raw_input_md_paths(raw_root: Path, cutoff: date) -> list[Path]:
     return out
 
 
-def _rss_row_air_date(fm: dict[str, str], path: Path) -> date | None:
-    for key in ("published_date", "aired_date", "ingest_date"):
+def _rss_row_pub_date(fm: dict[str, str], path: Path) -> date | None:
+    for key in ("published_date", "pub_date", "ingest_date"):
         raw = (fm.get(key) or "").strip()
         if raw and len(raw) >= 10:
             try:
@@ -173,7 +173,7 @@ def collect_rss_thread_ingests(
             tid = (fm.get("thread") or "").strip()
             if not tid or tid not in expert_ids_set:
                 continue
-            d = _rss_row_air_date(fm, path)
+            d = _rss_row_pub_date(fm, path)
             if d is None or d <= cutoff:
                 continue
             title = _extract_markdown_h1_title(body)

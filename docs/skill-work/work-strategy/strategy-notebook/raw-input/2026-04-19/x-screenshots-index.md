@@ -1,6 +1,6 @@
 ---
 ingest_date: 2026-04-19
-aired_date: 2026-04-19
+pub_date: 2026-04-19
 kind: x-screenshots-index
 source: assets/**/*.png
 ---

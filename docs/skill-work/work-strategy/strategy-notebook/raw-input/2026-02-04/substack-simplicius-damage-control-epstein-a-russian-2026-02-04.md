@@ -1,6 +1,6 @@
 ---
 ingest_date: 2026-04-21
-aired_date: 2026-02-04
+pub_date: 2026-02-04
 kind: substack-post
 source_url: https://simplicius76.substack.com/p/damage-control-epstein-a-russian
 publication: simplicius76.substack.com

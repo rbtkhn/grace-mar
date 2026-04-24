@@ -1,6 +1,6 @@
 ---
 ingest_date: 2026-04-21
-aired_date: 2026-03-06
+pub_date: 2026-03-06
 kind: substack-post
 source_url: https://simplicius76.substack.com/p/iran-blinds-us-with-unprecedented
 publication: simplicius76.substack.com

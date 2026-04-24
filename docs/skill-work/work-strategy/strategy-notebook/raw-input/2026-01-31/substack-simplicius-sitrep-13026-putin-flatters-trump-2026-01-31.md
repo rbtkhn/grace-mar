@@ -1,6 +1,6 @@
 ---
 ingest_date: 2026-04-21
-aired_date: 2026-01-31
+pub_date: 2026-01-31
 kind: substack-post
 source_url: https://simplicius76.substack.com/p/sitrep-13026-putin-flatters-trump
 publication: simplicius76.substack.com

@@ -1,6 +1,6 @@
 ---
 ingest_date: 2026-04-21
-aired_date: 2026-01-08
+pub_date: 2026-01-08
 kind: substack-post
 source_url: https://simplicius76.substack.com/p/escalation-mad-trumps-coast-guard
 publication: simplicius76.substack.com

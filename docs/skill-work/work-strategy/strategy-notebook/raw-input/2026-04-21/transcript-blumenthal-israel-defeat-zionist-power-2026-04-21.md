@@ -1,6 +1,6 @@
 ---
 ingest_date: 2026-04-21
-aired_date: 2026-04-21
+pub_date: 2026-04-21
 kind: operator-transcript
 source_kind: youtube-auto-transcribe
 show: YouTube

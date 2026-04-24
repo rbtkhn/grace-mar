@@ -1,6 +1,6 @@
 ---
 ingest_date: 2026-04-21
-aired_date: 2026-02-10
+pub_date: 2026-02-10
 kind: substack-post
 source_url: https://simplicius76.substack.com/p/europes-triumvirate-of-lame-stooges
 publication: simplicius76.substack.com

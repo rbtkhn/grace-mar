@@ -1,6 +1,6 @@
 ---
 ingest_date: 2026-04-16
-aired_date: 2026-04-16
+pub_date: 2026-04-16
 thread: marandi
 kind: transcript
 source_path: docs/skill-work/work-strategy/strategy-notebook/experts/marandi/transcript.md

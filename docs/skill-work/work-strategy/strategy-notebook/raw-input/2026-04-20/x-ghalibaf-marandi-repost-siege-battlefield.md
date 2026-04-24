@@ -1,6 +1,6 @@
 ---
 ingest_date: 2026-04-20
-aired_date: 2026-04-20
+pub_date: 2026-04-20
 kind: x-post-text
 account_author: "@mb_ghalibaf"
 account_reposter: "@s_m_marandi"

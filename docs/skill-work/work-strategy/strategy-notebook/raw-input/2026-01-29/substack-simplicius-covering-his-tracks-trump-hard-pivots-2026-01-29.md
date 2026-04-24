@@ -1,6 +1,6 @@
 ---
 ingest_date: 2026-04-21
-aired_date: 2026-01-29
+pub_date: 2026-01-29
 kind: substack-post
 source_url: https://simplicius76.substack.com/p/covering-his-tracks-trump-hard-pivots
 publication: simplicius76.substack.com

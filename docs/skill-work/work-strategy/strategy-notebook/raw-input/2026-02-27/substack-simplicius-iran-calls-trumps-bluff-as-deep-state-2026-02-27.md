@@ -1,6 +1,6 @@
 ---
 ingest_date: 2026-04-21
-aired_date: 2026-02-27
+pub_date: 2026-02-27
 kind: substack-post
 source_url: https://simplicius76.substack.com/p/iran-calls-trumps-bluff-as-deep-state
 publication: simplicius76.substack.com

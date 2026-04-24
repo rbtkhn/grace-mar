@@ -1,6 +1,6 @@
 ---
 ingest_date: 2026-04-21
-aired_date: 2026-03-01
+pub_date: 2026-03-01
 kind: substack-post
 source_url: https://simplicius76.substack.com/p/all-hell-set-to-break-loose-irgc
 publication: simplicius76.substack.com

@@ -1,6 +1,6 @@
 ---
 ingest_date: 2026-04-21
-aired_date: 2026-01-09
+pub_date: 2026-01-09
 kind: substack-post
 source_url: https://simplicius76.substack.com/p/swift-retaliation-putin-launches
 publication: simplicius76.substack.com

@@ -1,6 +1,6 @@
 ---
 ingest_date: 2026-04-21
-aired_date: 2026-04-01
+pub_date: 2026-04-01
 published_date: 2026-04-01
 thread: ritter
 source_url: https://scottritter.substack.com/p/why-i-no-longer-stand-with-israel-fc2

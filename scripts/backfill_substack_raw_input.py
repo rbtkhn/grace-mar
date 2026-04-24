@@ -86,7 +86,7 @@ def _build_doc(
     canonical = post.get("canonical_url") or f"https://{publication_host}/p/{post['slug']}"
     front = {
         "ingest_date": ingest_date.isoformat(),
-        "aired_date": day.isoformat(),
+        "pub_date": day.isoformat(),
         "kind": "substack-post",
         "source_url": canonical,
         "publication": publication_host,

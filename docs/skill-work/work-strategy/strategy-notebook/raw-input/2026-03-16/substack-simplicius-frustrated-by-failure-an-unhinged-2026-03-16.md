@@ -1,6 +1,6 @@
 ---
 ingest_date: 2026-04-21
-aired_date: 2026-03-16
+pub_date: 2026-03-16
 kind: substack-post
 source_url: https://simplicius76.substack.com/p/frustrated-by-failure-an-unhinged
 publication: simplicius76.substack.com

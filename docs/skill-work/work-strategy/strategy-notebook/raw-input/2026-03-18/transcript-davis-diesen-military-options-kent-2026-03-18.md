@@ -1,6 +1,6 @@
 ---
 ingest_date: 2026-04-25
-aired_date: 2026-03-18
+pub_date: 2026-03-18
 kind: operator-transcript
 show: Glenn Diesen (channel / program — pin canonical series title when pinned)
 host: Glenn Diesen

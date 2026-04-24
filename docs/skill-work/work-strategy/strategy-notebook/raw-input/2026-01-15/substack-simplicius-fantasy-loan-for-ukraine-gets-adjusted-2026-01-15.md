@@ -1,6 +1,6 @@
 ---
 ingest_date: 2026-04-21
-aired_date: 2026-01-15
+pub_date: 2026-01-15
 kind: substack-post
 source_url: https://simplicius76.substack.com/p/fantasy-loan-for-ukraine-gets-adjusted
 publication: simplicius76.substack.com

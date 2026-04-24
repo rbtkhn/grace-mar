@@ -1,6 +1,6 @@
 ---
 ingest_date: 2026-04-21
-aired_date: 2026-03-14
+pub_date: 2026-03-14
 kind: substack-post
 source_url: https://simplicius76.substack.com/p/as-grasp-on-power-and-narrative-slips
 publication: simplicius76.substack.com

@@ -1,6 +1,6 @@
 ---
 ingest_date: 2026-04-21
-aired_date: 2026-01-05
+pub_date: 2026-01-05
 kind: substack-post
 source_url: https://simplicius76.substack.com/p/major-questions-finally-answered
 publication: simplicius76.substack.com

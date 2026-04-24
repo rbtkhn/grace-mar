@@ -1,6 +1,6 @@
 ---
 ingest_date: 2026-04-21
-aired_date: 2026-01-02
+pub_date: 2026-01-02
 kind: substack-post
 source_url: https://simplicius76.substack.com/p/did-cias-secret-aiding-of-ukraines
 publication: simplicius76.substack.com

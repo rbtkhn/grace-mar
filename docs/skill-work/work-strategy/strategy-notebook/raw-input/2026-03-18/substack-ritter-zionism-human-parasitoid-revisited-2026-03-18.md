@@ -1,6 +1,6 @@
 ---
 ingest_date: 2026-04-21
-aired_date: 2026-03-18
+pub_date: 2026-03-18
 published_date: 2026-03-18
 thread: ritter
 source_url: https://scottritter.substack.com/p/zionism-the-human-parasitoid-revisited

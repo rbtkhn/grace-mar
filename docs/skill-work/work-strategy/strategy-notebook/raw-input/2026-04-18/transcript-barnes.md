@@ -1,6 +1,6 @@
 ---
 ingest_date: 2026-04-18
-aired_date: 2026-04-18
+pub_date: 2026-04-18
 thread: barnes
 kind: transcript
 source_path: docs/skill-work/work-strategy/strategy-notebook/experts/barnes/transcript.md

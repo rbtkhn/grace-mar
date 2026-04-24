@@ -109,7 +109,7 @@ def test_rss_no_thread_filename_stable() -> None:
 def test_build_rss_item_document_content() -> None:
     _guid, body = _build_rss_item_document(
         ingest_date=date(2026, 4, 25),
-        aired_date=date(2026, 4, 21),
+        pub_date=date(2026, 4, 21),
         feed_url="https://example.com/feed",
         item={
             "title": "Hello World",
@@ -123,12 +123,13 @@ def test_build_rss_item_document_content() -> None:
     assert "Hello World" in body
     assert "https://example.com/p/1" in body
     assert "ingest_date: 2026-04-25" in body
+    assert "pub_date: 2026-04-21" in body
 
 
 def test_build_rss_item_document_includes_optional_thread_in_yaml() -> None:
     _, body = _build_rss_item_document(
         ingest_date=date(2026, 4, 25),
-        aired_date=date(2026, 4, 21),
+        pub_date=date(2026, 4, 21),
         feed_url="https://example.com/feed",
         item={
             "title": "T",

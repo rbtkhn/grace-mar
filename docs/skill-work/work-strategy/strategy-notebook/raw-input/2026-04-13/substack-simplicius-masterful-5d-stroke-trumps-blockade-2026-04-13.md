@@ -1,6 +1,6 @@
 ---
 ingest_date: 2026-04-21
-aired_date: 2026-04-13
+pub_date: 2026-04-13
 kind: substack-post
 source_url: https://simplicius76.substack.com/p/masterful-5d-stroke-trumps-blockade
 publication: simplicius76.substack.com

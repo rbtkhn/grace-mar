@@ -6,7 +6,7 @@
 
 ## Automated fetch (RSS → raw-input)
 
-**Script:** [`scripts/fetch_strategy_raw_input.py`](../../../../scripts/fetch_strategy_raw_input.py) — pulls **RSS/Atom** items (e.g. Substack `/feed`) into **`raw-input/<aired_date>/`** as markdown with YAML frontmatter (`kind: rss-item`). When a feed sets **`"thread": "<expert_id>"`**, new items **append** into **`raw-input/<aired_date>/<aired_date>-<expert_id>.md`** (multiple ingests = multiple `---` … `---` blocks; duplicates skipped by `guid:`). **Refined day pages** (operator judgment artifacts) live under **`experts/<expert_id>/`** — e.g. **`mercouris-page-YYYY-MM-DD.md`** — not in this tree. Feeds **without** `thread` still write **one markdown file per RSS item** (slug + hash basename). Optional **`thread:`** in YAML drives **`python3 scripts/strategy_thread.py`** triage: one-line RSS stubs merge into that expert’s **`experts/<id>/transcript.md`** (after inbox lines for the same date).
+**Script:** [`scripts/fetch_strategy_raw_input.py`](../../../../scripts/fetch_strategy_raw_input.py) — pulls **RSS/Atom** items (e.g. Substack `/feed`) into **`raw-input/<pub_date>/`** as markdown with YAML frontmatter (`kind: rss-item`). When a feed sets **`"thread": "<expert_id>"`**, new items **append** into **`raw-input/<pub_date>/<pub_date>-<expert_id>.md`** (multiple ingests = multiple `---` … `---` blocks; duplicates skipped by `guid:`). **Refined day pages** (operator judgment artifacts) live under **`experts/<expert_id>/`** — e.g. **`mercouris-page-YYYY-MM-DD.md`** — not in this tree. Feeds **without** `thread` still write **one markdown file per RSS item** (slug + hash basename). Optional **`thread:`** in YAML drives **`python3 scripts/strategy_thread.py`** triage: one-line RSS stubs merge into that expert’s **`experts/<id>/transcript.md`** (after inbox lines for the same date).
 
 **Setup:**
 
@@ -68,7 +68,7 @@ Each `.md` file should start with a short metadata block so greps and future too
 ```markdown
 ---
 ingest_date: YYYY-MM-DD
-aired_date: YYYY-MM-DD
+pub_date: YYYY-MM-DD
 thread: expert_id
 source_url: https://...
 kind: transcript | paste-bundle | screenshot-list | x-screenshots-index | x-post-text | mixed
@@ -79,7 +79,7 @@ kind: transcript | paste-bundle | screenshot-list | x-screenshots-index | x-post
 …full body…
 ```
 
-`thread:` may be omitted for non-expert material (e.g. raw wire paste with no `thread:` lane yet). `aired_date` is the show/publication day when it differs from ingest day. Prefer **`kind: x-post-text`** when you paste X copy directly; legacy screenshot captures are indexed as **`x-screenshots-index`** (links to `assets/**/*.png`, no OCR).
+`thread:` may be omitted for non-expert material (e.g. raw wire paste with no `thread:` lane yet). `pub_date` is the public-facing day (air, upload, or Substack/feed publish) when it differs from ingest day. Prefer **`kind: x-post-text`** when you paste X copy directly; legacy screenshot captures are indexed as **`x-screenshots-index`** (links to `assets/**/*.png`, no OCR).
 
 ## Harvest / backfill
 

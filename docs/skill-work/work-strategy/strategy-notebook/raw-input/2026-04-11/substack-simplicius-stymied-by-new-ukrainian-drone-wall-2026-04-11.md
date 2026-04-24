@@ -1,6 +1,6 @@
 ---
 ingest_date: 2026-04-21
-aired_date: 2026-04-11
+pub_date: 2026-04-11
 kind: substack-post
 source_url: https://simplicius76.substack.com/p/stymied-by-new-ukrainian-drone-wall
 publication: simplicius76.substack.com

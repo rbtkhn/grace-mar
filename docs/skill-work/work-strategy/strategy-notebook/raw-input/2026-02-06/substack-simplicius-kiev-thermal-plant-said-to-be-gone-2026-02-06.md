@@ -1,6 +1,6 @@
 ---
 ingest_date: 2026-04-21
-aired_date: 2026-02-06
+pub_date: 2026-02-06
 kind: substack-post
 source_url: https://simplicius76.substack.com/p/kiev-thermal-plant-said-to-be-gone
 publication: simplicius76.substack.com

@@ -1,6 +1,6 @@
 ---
 ingest_date: 2026-04-21
-aired_date: 2026-01-06
+pub_date: 2026-01-06
 published_date: 2026-01-06
 thread: ritter
 source_url: https://scottritter.substack.com/p/the-battle-of-new-york

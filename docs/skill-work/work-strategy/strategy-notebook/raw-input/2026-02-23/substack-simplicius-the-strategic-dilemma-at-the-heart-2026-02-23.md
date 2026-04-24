@@ -1,6 +1,6 @@
 ---
 ingest_date: 2026-04-21
-aired_date: 2026-02-23
+pub_date: 2026-02-23
 kind: substack-post
 source_url: https://simplicius76.substack.com/p/the-strategic-dilemma-at-the-heart
 publication: simplicius76.substack.com

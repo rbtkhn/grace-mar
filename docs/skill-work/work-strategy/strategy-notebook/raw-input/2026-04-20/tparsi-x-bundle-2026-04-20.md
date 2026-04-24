@@ -1,6 +1,6 @@
 ---
 ingest_date: 2026-04-20
-aired_date: 2026-04-20
+pub_date: 2026-04-20
 thread: parsi
 kind: x_bundle
 account: "@tparsi"

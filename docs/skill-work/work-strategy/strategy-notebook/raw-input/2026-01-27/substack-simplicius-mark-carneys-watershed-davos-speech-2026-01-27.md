@@ -1,6 +1,6 @@
 ---
 ingest_date: 2026-04-21
-aired_date: 2026-01-27
+pub_date: 2026-01-27
 kind: substack-post
 source_url: https://simplicius76.substack.com/p/mark-carneys-watershed-davos-speech
 publication: simplicius76.substack.com

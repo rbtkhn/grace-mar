@@ -1,6 +1,6 @@
 ---
 ingest_date: 2026-04-21
-aired_date: 2026-03-26
+pub_date: 2026-03-26
 kind: substack-post
 source_url: https://simplicius76.substack.com/p/russian-smo-enters-doldrums-under
 publication: simplicius76.substack.com

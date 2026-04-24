@@ -1,6 +1,6 @@
 ---
 ingest_date: 2026-04-21
-aired_date: 2026-01-03
+pub_date: 2026-01-03
 published_date: 2026-01-03
 thread: ritter
 source_url: https://scottritter.substack.com/p/russias-dark-sage

@@ -1,6 +1,6 @@
 ---
 ingest_date: 2026-04-21
-aired_date: 2026-03-12
+pub_date: 2026-03-12
 kind: substack-post
 source_url: https://simplicius76.substack.com/p/iran-cows-us-navy-into-submission
 publication: simplicius76.substack.com

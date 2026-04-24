@@ -1,6 +1,6 @@
 ---
 ingest_date: 2026-04-21
-aired_date: 2026-01-12
+pub_date: 2026-01-12
 published_date: 2026-01-12
 thread: ritter
 source_url: https://scottritter.substack.com/p/iranian-resilience

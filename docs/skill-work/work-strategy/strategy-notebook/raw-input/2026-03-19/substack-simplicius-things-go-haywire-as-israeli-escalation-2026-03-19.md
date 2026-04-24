@@ -1,6 +1,6 @@
 ---
 ingest_date: 2026-04-21
-aired_date: 2026-03-19
+pub_date: 2026-03-19
 kind: substack-post
 source_url: https://simplicius76.substack.com/p/things-go-haywire-as-israeli-escalation
 publication: simplicius76.substack.com

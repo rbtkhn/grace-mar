@@ -1,6 +1,6 @@
 ---
 ingest_date: 2026-04-21
-aired_date: 2026-03-31
+pub_date: 2026-03-31
 kind: substack-post
 source_url: https://simplicius76.substack.com/p/trump-signals-final-sadistic-punishment
 publication: simplicius76.substack.com

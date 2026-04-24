@@ -1,6 +1,6 @@
 ---
 ingest_date: 2026-04-21
-aired_date: 2026-01-23
+pub_date: 2026-01-23
 kind: substack-post
 source_url: https://simplicius76.substack.com/p/hoodwinks-and-hijinks-trump-nabs
 publication: simplicius76.substack.com

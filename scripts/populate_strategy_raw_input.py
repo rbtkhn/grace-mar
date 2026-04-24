@@ -82,7 +82,7 @@ def _x_index_markdown(*, day: date, pngs: list[Path], notebook_root: Path) -> st
     lines = [
         "---",
         f"ingest_date: {day.isoformat()}",
-        f"aired_date: {day.isoformat()}",
+        f"pub_date: {day.isoformat()}",
         "kind: x-screenshots-index",
         "source: assets/**/*.png",
         "---",
@@ -113,7 +113,7 @@ def _transcript_frontmatter(
     return (
         "---\n"
         f"ingest_date: {section_date}\n"
-        f"aired_date: {section_date}\n"
+        f"pub_date: {section_date}\n"
         f"thread: {expert_id}\n"
         "kind: transcript\n"
         f"source_path: {source_path}\n"
@@ -125,7 +125,7 @@ def _verbatim_frontmatter(*, air_date: str, source_path: str, kind: str = "verba
     return (
         "---\n"
         f"ingest_date: {air_date}\n"
-        f"aired_date: {air_date}\n"
+        f"pub_date: {air_date}\n"
         "kind: " + kind + "\n"
         f"source_path: {source_path}\n"
         "---\n\n"

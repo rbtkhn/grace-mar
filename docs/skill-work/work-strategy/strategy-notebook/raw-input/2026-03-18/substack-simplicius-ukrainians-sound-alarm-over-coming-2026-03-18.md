@@ -1,6 +1,6 @@
 ---
 ingest_date: 2026-04-21
-aired_date: 2026-03-18
+pub_date: 2026-03-18
 kind: substack-post
 source_url: https://simplicius76.substack.com/p/ukrainians-sound-alarm-over-coming
 publication: simplicius76.substack.com

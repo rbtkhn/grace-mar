@@ -1,6 +1,6 @@
 ---
 ingest_date: 2026-04-21
-aired_date: 2026-03-27
+pub_date: 2026-03-27
 kind: substack-post
 source_url: https://simplicius76.substack.com/p/nyt-admits-iran-rendered-virtually
 publication: simplicius76.substack.com

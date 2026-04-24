@@ -1,6 +1,6 @@
 ---
 ingest_date: 2026-04-25
-aired_date: 2026-04-21
+pub_date: 2026-04-21
 kind: x-post-text
 thread_expert: barnes
 source_url: https://x.com/barnes_law

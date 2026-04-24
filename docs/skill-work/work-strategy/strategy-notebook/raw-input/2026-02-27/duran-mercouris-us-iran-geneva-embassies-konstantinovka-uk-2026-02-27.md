@@ -1,6 +1,6 @@
 ---
 ingest_date: 2026-04-25
-aired_date: 2026-02-27
+pub_date: 2026-02-27
 thread: mercouris
 source_url: https://www.youtube.com/watch?v=TBD-duran-mercouris-2026-02-27
 kind: operator-transcript

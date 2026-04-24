@@ -1,6 +1,6 @@
 ---
 ingest_date: 2026-04-21
-aired_date: 2026-03-03
+pub_date: 2026-03-03
 kind: substack-post
 source_url: https://simplicius76.substack.com/p/us-suffers-worst-day-of-air-losses
 publication: simplicius76.substack.com

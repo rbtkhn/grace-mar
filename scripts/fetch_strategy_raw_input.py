@@ -10,7 +10,7 @@ Supported source kinds (extend over time):
 Config: JSON next to raw-input (see ``fetch-sources.example.json``).
 Each feed may set optional ``"thread": "<expert_id>"`` (must match
 ``CANONICAL_EXPERT_IDS``); items append into
-``raw-input/<aired_date>/<aired_date>-<expert_id>.md`` (one file per expert per
+``raw-input/<pub_date>/<pub_date>-<expert_id>.md`` (one file per expert per
 calendar day, multiple ``---`` YAML blocks). **Refined day pages** live under
 ``experts/<expert_id>/``, not in ``raw-input``. Feeds **without** ``thread`` keep
 per-item slug filenames under the date folder.
@@ -226,7 +226,7 @@ def _rss_no_thread_filename(
 def _build_rss_item_document(
     *,
     ingest_date: date,
-    aired_date: date | None,
+    pub_date: date | None,
     feed_url: str,
     item: dict[str, str | None],
     thread: str | None = None,
@@ -235,14 +235,14 @@ def _build_rss_item_document(
     title = item.get("title") or "untitled"
     link = item.get("link") or ""
     guid = _rss_item_guid(item)
-    air = aired_date or ingest_date
+    air = pub_date or ingest_date
     summary = _strip_html(str(item.get("summary_html") or ""))
 
     thread_line = f"thread: {thread}\n" if thread else ""
     front = (
         "---\n"
         f"ingest_date: {ingest_date.isoformat()}\n"
-        f"aired_date: {air.isoformat()}\n"
+        f"pub_date: {air.isoformat()}\n"
         f"kind: rss-item\n"
         f"feed_url: {feed_url}\n"
         f"source_url: {link}\n"
@@ -346,7 +346,7 @@ def run(
             air = pub or ingest_date
             guid_key, content = _build_rss_item_document(
                 ingest_date=ingest_date,
-                aired_date=pub,
+                pub_date=pub,
                 feed_url=str(url),
                 item=item,
                 thread=thread_str,

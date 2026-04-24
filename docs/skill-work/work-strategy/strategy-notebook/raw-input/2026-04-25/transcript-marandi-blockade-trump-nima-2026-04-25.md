@@ -1,6 +1,6 @@
 ---
 ingest_date: 2026-04-25
-aired_date: 2026-04-25
+pub_date: 2026-04-25
 kind: operator-transcript
 show: The Grayzone (Nima show)
 host: Nima
