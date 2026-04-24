@@ -1,6 +1,6 @@
 # Dev journal — work-dev learning log
 
-**Parent:** [Work notebook (multi-lane)](../../README.md) → **work-dev** lane — this subfolder is the **day-scale journal**; other lanes hold prompts/specs by territory.
+**Parent:** [Work notebook (multi-lane)](../../README.md) → **work-dev** lane — this subfolder is the **day-scale journal**; other lanes hold prompts/specs by territory. **Lane index (map + history):** [../README.md](../README.md).
 
 **Discoverability:** The same tree is linked from **`users/grace-mar/SELF-LIBRARY/dev-journal`** (repo-relative symlink) for agents and tools that prioritize the companion tree. **LIB:** [LIB-0155](../../../../../../users/grace-mar/self-library.md#operator-analytical-books) in [`self-library.md`](../../../../../../users/grace-mar/self-library.md) (Operator analytical books).
 

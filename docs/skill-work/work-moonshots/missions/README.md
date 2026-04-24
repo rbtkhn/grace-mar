@@ -7,5 +7,6 @@
 | [mission-spec-template.md](../mission-spec-template.md) | Copy when starting a mission |
 | `missions/<slug>/mission-spec.md` | Active mission definition |
 | `missions/<slug>/intake/` | Mission-relevant tacit candidate snapshots (non-authoritative) |
+| [cebu-ob1-resilience-mesh-2027/mission-spec.md](cebu-ob1-resilience-mesh-2027/mission-spec.md) | **Draft** — Cebu OB1 “resilience mesh” (Cici-class forks); WORK scratchpad |
 
 See also [tacit-capture README](../../../tacit-capture/README.md) for the raw → normalized → candidate pipeline.
