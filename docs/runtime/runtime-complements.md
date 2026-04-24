@@ -6,7 +6,11 @@ WORK / runtime / non-canonical / optional.
 
 ## Purpose
 
-**Runtime complements** are external or adjunct systems (e.g. future Letta, Mem0, OpenMemory, Thoth-style local tools, or bot runtimes) that may improve **live** interaction, quick recall, agent continuity, session summarization, or operator UX. They do **not** hold authority over Grace-Mar’s canonical **Record**.
+**Runtime complements** are external or adjunct systems
+(e.g. future Letta, Mem0, OpenMemory, Thoth-style local tools, or bot runtimes)
+that may improve **live** interaction, quick recall, agent continuity, session
+summarization, or operator UX. They do **not** hold authority over Grace-Mar’s
+canonical **Record**.
 
 ## Core rule
 

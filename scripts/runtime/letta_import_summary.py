@@ -22,7 +22,9 @@ IMPORT_SCRIPT = REPO_ROOT / "scripts" / "runtime" / "import_runtime_observation.
 
 def main() -> int:
     ap = argparse.ArgumentParser(
-        description="Import a Letta session summary JSON through the runtime complement membrane."
+        description=(
+            "Import a Letta session summary JSON through the runtime complement membrane."
+        )
     )
     ap.add_argument(
         "--input",

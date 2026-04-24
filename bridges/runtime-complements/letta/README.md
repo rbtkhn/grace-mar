@@ -62,9 +62,9 @@ python3 scripts/runtime/export_runtime_context.py \
   --include-doc docs/runtime/runtime-complements.md \
   --include-doc docs/runtime-vs-record.md
 
-# Copy the printed path from exports/, then:
+# After export, use the path printed to stdout. Example (placeholder):
 python3 scripts/runtime/letta_prepare_seed.py \
-  --bundle runtime/runtime-complements/exports/<bundle>.json \
+  --bundle <printed-bundle-path> \
   --out runtime/runtime-complements/exports/letta-seed-demo.json
 
 python3 scripts/runtime/letta_import_summary.py \

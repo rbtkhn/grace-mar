@@ -21,9 +21,16 @@ EXPORTS = REPO_ROOT / "runtime" / "runtime-complements" / "exports"
 
 GRACE_MAR_CONTEXT_CAP = 24_000
 
+# Explicit \n in source keeps string boundaries visible (no accidental line breaks in literals).
 MEMBRANE = (
-    "This seed is non-canonical runtime context. "
-    "Durable Grace-Mar state changes require the gate; import summaries only via import_runtime_observation.py."
+    "This seed is non-canonical runtime context.\n"
+    "Durable Grace-Mar state changes require the gate; import summaries only via "
+    "import_runtime_observation.py."
+)
+
+DEFAULT_BOUNDARY_FALLBACK = (
+    "Letta may remember inside Letta. "
+    "Grace-Mar remembers only through the gate."
 )
 
 OPERATOR_INSTRUCTIONS_VALUE = (
@@ -87,7 +94,9 @@ def _maybe_truncate(s: str, cap: int) -> str:
 
 def main() -> int:
     ap = argparse.ArgumentParser(
-        description="Build a Letta seed JSON from a runtime_complement_export bundle."
+        description=(
+            "Build a Letta seed JSON from a runtime_complement_export bundle."
+        )
     )
     ap.add_argument(
         "--bundle",
@@ -142,9 +151,7 @@ def main() -> int:
     bundle_id = str(data.get("bundle_id", ""))
     name = str(data.get("name", ""))
     gen_at = str(data.get("generated_at", ""))
-    boundary = str(
-        data.get("boundary_notice", "Letta may remember inside Letta. Grace-Mar remembers only through the gate.")
-    )
+    boundary = str(data.get("boundary_notice", DEFAULT_BOUNDARY_FALLBACK))
     included: list[dict[str, Any]] = data.get("included_files")
     if not isinstance(included, list):
         included = []
