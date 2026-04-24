@@ -42,8 +42,8 @@ volumes:
         chapters: [hn-ii-mongol, hn-ii-china-medieval]
 
   - id: vol-iii
-    title: "Early Modern (1453–1789 — French Revolution)"
-    thesis: "Post-Constantinople. Ottoman peak, European maritime expansion, Safavid revival, Muscovy emerges, colonial order begins."
+    title: "Colonial (1453–1815 — Congress of Vienna)"
+    thesis: "Post-Constantinople through the Napoleonic settlement. Ottoman peak, European maritime expansion, Safavid revival, Muscovy emerges, colonial and revolutionary-era orders through 1815."
     sub_groups:
       - label: "Expanding Orders"
         thesis: "Mature civilizations projecting power outward: one inherits Rome's claim, the other invents maritime empire."
@@ -53,8 +53,8 @@ volumes:
         chapters: [hn-iii-france, hn-iii-russia]
 
   - id: vol-iv
-    title: "Industrial & Imperial (1789–1945)"
-    thesis: "Revolution, industrial war, imperial collapse, world wars. The patterns that produced the current order."
+    title: "Industrial (1815–1945)"
+    thesis: "From the post-Napoleonic order: revolution, industrial war, imperial collapse, world wars. The patterns that produced the current order."
     sub_groups:
       - label: "New Contenders"
         thesis: "Powers that industrialize into dominance. One succeeds through geography and institutions; the other destroys itself through speed without restraint."
@@ -64,7 +64,7 @@ volumes:
         chapters: [hn-iv-russia-imperial, hn-iv-anglia-imperial]
 
   - id: vol-v
-    title: "Contemporary (1945–present)"
+    title: "Modern (1945–present)"
     thesis: "The world the operator analyzes every day. Cold War, decolonization, unipolarity, and the current crisis landscape."
     sub_groups:
       - label: "Architects"
@@ -99,16 +99,17 @@ arcs:
       - hn-i-v1-19
       - hn-i-v1-20
     thread: "Twenty problem-led chapters; ancient material distributed across the spine (see per-civilization arcs for emphasis)."
+  # `thread_file` is index-only: mechanism prose lives in threads/*.md. Anglia has no separate file; folded into America.
   - arc_id: persia
     title: "The Persian Arc"
     chapters: [hn-i-v1-19, hn-ii-persia-islamic, hn-v-persia-modern]
     thread: "Tolerance → compression → siege governance. Vol I entry via parity-buffer problem chapter; each rupture densifies doctrine."
+    thread_file: "threads/history-civ-persia.md"
   - arc_id: rome
     title: "The Roman Arc"
     chapters: [hn-i-v1-04, hn-i-v1-05, hn-ii-rome-byzantine]
     thread: "Institutional and legal long run → expansion → persistence after territorial loss."
-  # Optional index-only fields on an arc: pointers into thread markdown (SSOT). Do not duplicate
-  # mechanism or ladder prose here — keep a single line summary in `thread` at most.
+    thread_file: "threads/history-civ-rome.md"
   - arc_id: russia
     title: "The Russian Arc"
     chapters: [hn-iii-russia, hn-iv-russia-imperial, hn-v-russia-modern]
@@ -120,14 +121,32 @@ arcs:
     title: "The American Arc"
     chapters: [hn-iv-america, hn-v-america-hegemonic]
     thread: "Constitutional republic → industrial hegemon → overextension."
+    thread_file: "threads/history-civ-america.md"
   - arc_id: anglia
     title: "The English Arc"
     chapters: [hn-iii-anglia, hn-iv-anglia-imperial]
     thread: "Maritime hegemony → managed decline."
+    thread_file: "threads/history-civ-america.md"
   - arc_id: china
     title: "The Chinese Arc"
     chapters: [hn-i-v1-16, hn-i-v1-17, hn-i-v1-18, hn-ii-china-medieval, hn-v-china-modern]
     thread: "Cyclical reunification → bureaucratic maturity → patience as strategy. Vol I entry via synthesis and corridor problem chapters."
+    thread_file: "threads/history-civ-china.md"
+  - arc_id: islam
+    title: "The Islamic Arc"
+    chapters: [hn-ii-islam]
+    thread: "Religious-civilizational fusion; expansion, succession, and adaptive legitimacy across dynasties."
+    thread_file: "threads/history-civ-islam.md"
+  - arc_id: india
+    title: "The Indian Arc"
+    chapters: [hn-i-v1-10, hn-i-v1-12]
+    thread: "Plural incorporation and layered civilizational depth; Vol I problem hooks."
+    thread_file: "threads/history-civ-india.md"
+  - arc_id: germany
+    title: "The German Arc"
+    chapters: [hn-iv-germany]
+    thread: "Fragmentation vs. unity, continental balance, and strategic competition."
+    thread_file: "threads/history-civ-germania.md"
 
 chapters:
   # --- Vol I: Ancient (problem spine; legacy civ draft: chapters/vol-i/persia.md) ---
@@ -407,7 +426,7 @@ chapters:
     linked_skills: []
     cross_refs: [hn-i-v1-17, hn-v-china-modern]
 
-  # --- Vol III: Early Modern ---
+  # --- Vol III: Colonial ---
   - id: hn-iii-ottoman
     volume: iii
     title: "Ottoman — Rise to Stagnation"
@@ -432,7 +451,7 @@ chapters:
 
   - id: hn-iii-france
     volume: iii
-    title: "France — Bourbon to Revolution"
+    title: "France — Old Regime through 1815"
     file: chapters/vol-iii/france.md
     status: planned
     word_target: 800
@@ -452,7 +471,7 @@ chapters:
     linked_skills: []
     cross_refs: [hn-iv-russia-imperial, hn-v-russia-modern]
 
-  # --- Vol IV: Industrial & Imperial ---
+  # --- Vol IV: Industrial ---
   - id: hn-iv-america
     volume: iv
     title: "America — Republic to Global Hegemony"
@@ -477,7 +496,7 @@ chapters:
 
   - id: hn-iv-russia-imperial
     volume: iv
-    title: "Russia — Napoleonic Wars to Soviet"
+    title: "Russia — 1815 to Soviet"
     file: chapters/vol-iv/russia-imperial.md
     status: planned
     word_target: 800
@@ -497,7 +516,7 @@ chapters:
     linked_skills: []
     cross_refs: [hn-iii-anglia, hn-iv-america]
 
-  # --- Vol V: Contemporary ---
+  # --- Vol V: Modern ---
   - id: hn-v-america-hegemonic
     volume: v
     title: "America — Cold War to Overreach"

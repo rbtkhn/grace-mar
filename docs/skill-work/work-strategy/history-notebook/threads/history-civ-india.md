@@ -1,64 +1,53 @@
 # history-civ-india
 
-## Identity
+## Identity (immutable header)
 
-Civilization: India  
-Thread id: `history-civ-india`  
+Civilization: Indian  
+Arc ID: `history-civ-india`  
 Phase: 1  
-Function: Longitudinal civilizational thread for India inside `history-notebook`
+Folds: (none)  
+Last sovereign merge: 2026-04-12
 
-## Civilizational continuity
+## Civilizational Continuity (core longitudinal spine)
 
-Use this section to track durable Indian continuities across eras.
+Layered pluralism and civilizational depth enable remarkable cultural and social resilience. Incorporation occurs more through absorption and synthesis than centralized state conquest, creating durable multi-level identities.
 
-Focus on:
+## Contradiction Log (first-class)
 
-- civilizational endurance
-- plural incorporation
-- regional diversity and civilizational coherence
-- delay and optimization logics
-- trade and intellectual continuity
-- state formation versus civilizational depth
-- recurring strengths
-- recurring vulnerabilities
+- **C-IND-01** (preserved): Extreme pluralism vs. periodic impulses toward political unification.
+- **C-IND-02** (preserved): Civilizational continuity independent of state power.
 
-## Distilled learnings
+## Distilled Learnings (WORK → gated)
 
-Use this section to record what the notebook is learning from India as a reusable civilizational pattern set.
+[To be populated post-promotion from mechanism candidates and polyphony.]
 
-Prefer:
+## Mechanism Candidates (Promotion/Demotion Ladder)
 
-- short analytical paragraphs
-- explicit mechanisms
-- tensions or contradictions
-- lessons that may travel into later chapters
+- **MC-IND-01** [status: candidate]  
+  “Civilizational resilience achieved through plural incorporation and cultural layering rather than monolithic state control.”
+- **MC-IND-02** [status: candidate]  
+  “Social and religious institutions often outlast political regimes.”
 
-## Mechanism candidates
+## Polyphonic Expert Threads (new)
 
-- `MC-01:`
-- `MC-02:`
-- `MC-03:`
+- **Pluralism Lens**: Layered identities as strength.
+- **State Formation Lens**: Challenges of unification across diversity.
+- **Synthesis Proposal** (gated): Depth-over-breadth as endurance strategy.
 
-Write short, portable mechanism statements here.
+## Candidate Chapter Targets + Cross-Volume Bridges
 
-## Candidate chapter targets
+- Vol I: `hn-i-v1-10`, `hn-i-v1-12`
 
-- `hn-i-v1-12`
-- `hn-i-v1-16`
-- `hn-i-v1-18`
+## Reusable Resonance Lines (Strategy Notebook ready)
 
-List the current `history-notebook` chapters most likely to use India.
+- “Civilizational depth and resilience arise through plural incorporation and cultural layering rather than monolithic state control (MC-IND-01, candidate).”
+- “Social and religious institutions frequently outlast political regimes — a source of long-term continuity.”
 
-## Reusable resonance lines
+## Next Actions (governed, cadence-linked)
 
-- 
-- 
-- 
+- Distill additional CIV-MEM material
+- Develop first promoted mechanisms
 
-Write short lines that could later be cited in `strategy-notebook`.
+## Governance Receipt
 
-## Next actions
-
-- review relevant CIV-MEM India material
-- identify 3–5 durable mechanisms
-- connect India to likely Volume I chapters
+Last reviewed: 2026-04-12 | Proposals staged: 0 | Human sovereign: rbtkhn

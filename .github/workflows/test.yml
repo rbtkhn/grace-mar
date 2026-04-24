@@ -78,6 +78,9 @@ jobs:
       - name: Validate history-notebook Bookshelf catalog
         run: python3 scripts/validate_bookshelf_catalog.py
 
+      - name: Check history-notebook generated shelf bibliography
+        run: python3 scripts/build_hn_bookshelf_bibliography.py --check
+
       - name: Strategy notebook knot weave_count drift check
         run: python3 scripts/knot_seam_metrics.py --strict-drift
 

@@ -2,7 +2,7 @@
 
 **Naming:** `history-civ-<slug>.md` — longitudinal **working surfaces** for one civilization arc (see [../README.md](../README.md) § Civilization arcs). Not encyclopedia entries; not mirrors of `civilization_memory`.
 
-**Phase 1 roster (8 threads):** The **light** template (Identity through Next actions) in seven files. **Russia** uses the **governed** pilot template until [exit](README.md#russia-arc-pilot-and-exit). **Folds:** Francia and France fold into **Rome**; **Anglia** folds into **America** (see those threads’ Identity sections).
+**Phase 1 roster (8 threads):** All eight files use the same **9-section governed** template (identity, continuity, contradiction log, distilled learnings, mechanism ladder, polyphonic slots, chapter targets/bridges, resonance lines, next actions, governance receipt). **Russia** remains **Phase 1 (salience pilot)** in its Identity header — [operational exit](#russia-salience-pilot-phase-1) targets ladder, chapter, and strategy-use evidence for that arc first. **Folds:** Francia and France fold into **Rome**; **Anglia** folds into **America** (see those threads’ Identity sections).
 
 **Reservoir:** Read and distill from `users/grace-mar/SELF-LIBRARY/civilization_memory` (upstream `rbtkhn/civilization_memory`) — **pointers and patterns only**, no bulk copy.
 
@@ -19,11 +19,13 @@
 | [history-civ-germania.md](history-civ-germania.md) | Continental strategic, fragmentation vs unity |
 | [history-civ-india.md](history-civ-india.md) | Plural incorporation, civilizational depth |
 
-## Russia arc pilot and exit
+**Cross-arc patterns (optional):** [arc-resonance-matrix-light.md](arc-resonance-matrix-light.md) — top five cross-arc lines (Durant + Gibbon labels + one China hook); [cross-arc-resonance-lines.md](cross-arc-resonance-lines.md) — three even shorter lines. Use with **analogy-audit** when load-bearing. Per-arc vetted copy lives in each `history-civ-*.md` under **Reusable Resonance Lines**.
 
-**Pilot (active):** Only [history-civ-russia.md](history-civ-russia.md) uses the **governed** thread template (contradiction log, mechanism ladder, governance receipt, extended identity). The other seven threads stay on the **lighter** template until exit.
+## Russia salience pilot (phase 1)
 
-**Checklist — when the pilot is “done” and the governed template may roll to other arcs** (tune `N` with the operator; default **N = 8** weeks):
+**Template breadth:** The governed 9-section structure now applies to **all** `history-civ-*.md` files. The **pilot** label on Russia means **operational** focus: modern salience, [book-architecture.yaml](../book-architecture.yaml) `governed_pilot: true` on the Russia arc row, and the exit checklist below (not “wait to roll the template to other arcs” — that rollout is **done**).
+
+**Checklist — when the Russia salience pilot is “done” for operator purposes** (tune `N` with the operator; default **N = 8** weeks):
 
 - [ ] **Arc review once per quarter** *or* **N consecutive weeks** (documented) with a **governance receipt** at least every other week (pilot log in [history-civ-russia.md](history-civ-russia.md) § Governance receipt is enough).
 - [ ] **At least one** mechanism **promotion** or **rung change** on the Russia ladder, with a one-line receipt.
@@ -32,4 +34,4 @@
 
 **Optional stricter bar:** a **quarterly** “Russia arc” review note in the thread (even if the calendar quarter has no new chapter file).
 
-**After exit:** the operator may promote the same governed sections into other `history-civ-*.md` files one arc at a time. **Resonance matrix / scripts** stay **manual-only** until the operator has used a **manual** table in practice for **1–2 months** (separate plan).
+**Automation:** **Resonance matrix / scripts** stay **manual-only** until the operator has used a **manual** table in practice for **1–2 months** (separate plan).

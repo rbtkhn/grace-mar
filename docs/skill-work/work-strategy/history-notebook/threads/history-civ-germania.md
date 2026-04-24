@@ -1,64 +1,53 @@
 # history-civ-germania
 
-## Identity
+## Identity (immutable header)
 
 Civilization: Germania  
-Thread id: `history-civ-germania`  
+Arc ID: `history-civ-germania`  
 Phase: 1  
-Function: Longitudinal civilizational thread for Germania inside `history-notebook`
+Folds: (none)  
+Last sovereign merge: 2026-04-08
 
-## Civilizational continuity
+## Civilizational Continuity (core longitudinal spine)
 
-Use this section to track durable Germanic continuities across eras.
+Central European geography drives recurring dynamics of fragmentation vs. unity, power balancing, and continental strategic competition. Cultural and institutional continuity persists through shifting political forms.
 
-Focus on:
+## Contradiction Log (first-class)
 
-- fragmented versus unified power
-- military-administrative efficiency
-- continental centrality
-- organizational discipline
-- industrial and strategic capacity
-- relation to surrounding systems
-- recurring strengths
-- recurring vulnerabilities
+- **C-GER-01** (preserved): Fragmentation as source of innovation and competition vs. vulnerability to unified neighbors.
+- **C-GER-02** (preserved): Cultural cohesion vs. political division.
 
-## Distilled learnings
+## Distilled Learnings (WORK → gated)
 
-Use this section to record what the notebook is learning from Germania as a reusable civilizational pattern set.
+[To be populated post-promotion from mechanism candidates and polyphony.]
 
-Prefer:
+## Mechanism Candidates (Promotion/Demotion Ladder)
 
-- short analytical paragraphs
-- explicit mechanisms
-- tensions or contradictions
-- lessons that may travel into later chapters
+- **MC-GER-01** [status: candidate]  
+  “Fragmented political structure combined with cultural coherence produces high adaptability and competitive pressure.”
+- **MC-GER-02** [status: candidate]  
+  “Power balancing becomes default strategy in multi-polar continental environments.”
 
-## Mechanism candidates
+## Polyphonic Expert Threads (new)
 
-- `MC-01:`
-- `MC-02:`
-- `MC-03:`
+- **Fragmentation Lens**: Innovation through competition.
+- **Unity Lens**: Risks and opportunities of consolidation.
+- **Synthesis Proposal** (gated): Balanced federalism as recurring solution.
 
-Write short, portable mechanism statements here.
+## Candidate Chapter Targets + Cross-Volume Bridges
 
-## Candidate chapter targets
+- Vol IV: `hn-iv-germany`
 
-- `hn-i-v1-11`
-- `hn-i-v1-14`
-- `hn-iv-germany`
+## Reusable Resonance Lines (Strategy Notebook ready)
 
-List the current `history-notebook` chapters most likely to use Germania.
+- “Political fragmentation paired with cultural coherence generates high adaptability and competitive pressure (MC-GER-01, candidate).”
+- “Power balancing remains the default strategy in multi-polar continental environments (MC-GER-02).”
 
-## Reusable resonance lines
+## Next Actions (governed, cadence-linked)
 
-- 
-- 
-- 
+- Expand material for Vol IV chapter
+- Propose initial mechanisms
 
-Write short lines that could later be cited in `strategy-notebook`.
+## Governance Receipt
 
-## Next actions
-
-- review relevant CIV-MEM Germania material
-- identify 3–5 durable mechanisms
-- connect Germania to likely Volume I chapters
+Last reviewed: 2026-04-08 | Proposals staged: 0 | Human sovereign: rbtkhn

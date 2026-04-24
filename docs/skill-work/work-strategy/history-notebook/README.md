@@ -1,8 +1,8 @@
 # History Notebook
 
-**Discoverability:** Linked from **`users/grace-mar/SELF-LIBRARY/history-notebook`** (repo-relative symlink when created). **LIB:** [LIB-0156](../../../../users/grace-mar/self-library.md#operator-analytical-books) (operator-authored chapters) · [LIB-0158 — Bookshelf](../../../../users/grace-mar/self-library.md#bookshelf) (owned print `HNSRC-*` — [BOOKSHELF.md](research/BOOKSHELF.md) vs [operator books](../../../../users/grace-mar/self-library.md#operator-analytical-books)) in [`self-library.md`](../../../../users/grace-mar/self-library.md).
+**Discoverability:** Linked from **`users/grace-mar/SELF-LIBRARY/history-notebook`** (repo-relative symlink when created). **LIB:** [LIB-0156](../../../../users/grace-mar/self-library.md#operator-analytical-books) (operator-authored chapters) · [LIB-0158 — Bookshelf (self-library-bookshelf)](../../../../users/grace-mar/self-library.md#self-library-bookshelf) (owned print `HNSRC-*` — [BOOKSHELF.md](research/BOOKSHELF.md) vs [operator books](../../../../users/grace-mar/self-library.md#operator-analytical-books)) in [`self-library.md`](../../../../users/grace-mar/self-library.md).
 
-**Operator-authored compressed chapters** distilling civilizational patterns into strategy-ready reference. Five temporal volumes; **target 20 chapters per volume (100 main-era chapters)**; each chapter ~500–1000 words. Not a mirror of CIV-MEM — an independent analytical layer the operator writes and the agent reads.
+**Operator-authored compressed chapters** distilling civilizational patterns into strategy-ready reference. Five temporal volumes; **target 20 chapters per volume (100 main-era chapters)**; each chapter ~500–1000 words. **Curated fact base:** [SELF-LIBRARY](../../../../users/grace-mar/self-library.md) (governed shelf entries) is the **curated fact base** for history-notebook — the operator and agent should ground factual discipline and lookup in that index (with [CIV-MEM / LIB-0157](../../../../users/grace-mar/self-library.md#operator-analytical-books) as the MEM-reservoir layer where indexed), not the undifferentiated open web as default. Not a wholesale mirror of CIV-MEM — an independent analytical layer the operator writes and the agent reads.
 
 ### Model (chapter-first)
 
@@ -12,18 +12,19 @@ Book identity and chapter IDs remain **SSOT** in [book-architecture.yaml](book-a
 |-------|----------|------|
 | **Chapters** | [chapters/](chapters/) + YAML ids | Primary deliverable: comparative chapters (~500–1000w); cite **chapter ids** (`hn-i-v1-04`, …) from strategy-notebook **`### History resonance`** |
 | **Distillation queue** | [STATUS.md](STATUS.md) | **Single SSOT** for next `hn-*` to draft; strategy **`meta.md`** links here — see [STRATEGY-NOTEBOOK-ARCHITECTURE § Parallel to History notebook](../strategy-notebook/STRATEGY-NOTEBOOK-ARCHITECTURE.md#parallel-to-history-notebook-lib-0156) |
-| **Bookshelf** (bibliography) | [research/BOOKSHELF.md](research/BOOKSHELF.md) | **Enhanced bib** for owned print — not full text; distinct from operator-authored [books in self-library](../../../../users/grace-mar/self-library.md#operator-analytical-books) |
-| **Bookshelf catalog** (optional) | [research/bookshelf-catalog.yaml](research/bookshelf-catalog.yaml) + [research/BOOKSHELF-RUNBOOK.md](research/BOOKSHELF-RUNBOOK.md) | Machine-readable `HNSRC-*` rows for Bookshelf; **informs** drafting; not chapter SSOT. Run `python3 scripts/validate_bookshelf_catalog.py` after edits. |
+| **Bookshelf** / **self-library-bookshelf** | [research/BOOKSHELF.md](research/BOOKSHELF.md) | **Enhanced bib** for the operator’s **physical** collection — not full text; [LIB-0158 — self-library-bookshelf](../../../../users/grace-mar/self-library.md#self-library-bookshelf); distinct from operator-authored [books in self-library](../../../../users/grace-mar/self-library.md#operator-analytical-books) |
+| **Bookshelf catalog** (optional) | [research/bookshelf-catalog.yaml](research/bookshelf-catalog.yaml) + [research/BOOKSHELF-RUNBOOK.md](research/BOOKSHELF-RUNBOOK.md) | Machine-readable `HNSRC-*` rows (the **self-library-bookshelf** list); **informs** drafting; not chapter SSOT. After edits: `python3 scripts/validate_bookshelf_catalog.py` and `python3 scripts/build_hn_bookshelf_bibliography.py` |
+| **Generated shelf bibliography** | [research/bibliography/](research/bibliography/) | Chicago *author–date* (simplified) from the catalog; **read-only** exports — not chapter SSOT |
 | **Vol I library scaffold** (optional) | [research/VOL-I-LIBRARY-SCAFFOLD.md](research/VOL-I-LIBRARY-SCAFFOLD.md) | Maps **HNSRC-*** rows to `hn-i-v1-01`…`20` for problem-spine drafting; see also [VOL-I-PROBLEM-CHAPTERS.md](research/VOL-I-PROBLEM-CHAPTERS.md). |
-| **Civilization threads** (optional) | [threads/](threads/) — `history-civ-*.md` | Longitudinal lanes: continuity, mechanism candidates, candidate chapter targets — **scaffolding** for drafting, not a parallel codex |
+| **Civilization threads** (optional) | [threads/](threads/) — `history-civ-*.md` | 9-section governed **longitudinal** threads (continuity, contradictions, MC ladder, polyphony, bridges, …) — **scaffolding** for drafting, not a parallel codex |
 
 ### Work, Record, and the Strategy notebook
 
 - **History notebook `history-civ-*` threads and `hn-*` chapters** are **operator WORK** — analytical surfaces for drafting and strategy alignment. They are **not** the [Record](../../../../AGENTS.md) (`self.md` / companion identity) unless a fact is explicitly promoted through the **recursion-gate** pipeline; do not treat thread scratch as Voice truth.
 - **One-way interface:** [Strategy notebook](strategy-notebook/README.md) may **draw** from History notebook: **`### History resonance`** with `hn-*` chapter id(s) + a thin mechanism or warrant line (see [STRATEGY-NOTEBOOK-ARCHITECTURE § Parallel to History notebook](strategy-notebook/STRATEGY-NOTEBOOK-ARCHITECTURE.md#parallel-to-history-notebook-lib-0156)). **No** automatic path the other way — this book is **not** updated *because* `days.md`, knot pages, or daily judgment said so. **Operator-originated** edits in `docs/skill-work/work-strategy/history-notebook/` (and governed thread files) are the only authorized path from “today’s gap” to HN change.
-- **Governed Russia pilot** (thread template + exit criteria): [threads/README.md](threads/README.md#russia-arc-pilot-and-exit).
+- **Governed civilization threads:** All `history-civ-*.md` files use the same 9-section template. **Russia** remains the **annotated salience pilot** in [book-architecture.yaml](book-architecture.yaml) (`governed_pilot` on the Russia arc) with **phase-1 exit** criteria: [threads/README.md](threads/README.md#russia-salience-pilot-phase-1).
 
-Flow: **CIV-MEM (reservoir) → distill into HN chapters (`hn-*`) → strategy-notebook** cites ids + mechanisms in **`### History resonance`** (tiers + optional **`HN gap:`** back-pressure — [STATUS.md](STATUS.md)). Threads optional before drafting. Retired experiment: see [knots/README.md](knots/README.md).
+Flow: **SELF-LIBRARY (curated fact base) + CIV-MEM (MEM reservoir) → distill into HN chapters (`hn-*`) → strategy-notebook** cites ids + mechanisms in **`### History resonance`** (tiers + optional **`HN gap:`** back-pressure — [STATUS.md](STATUS.md)). Threads optional before drafting. Retired experiment: see [knots/README.md](knots/README.md).
 
 - **Chapter format:** See [STYLE-GUIDE.md](STYLE-GUIDE.md)
 - **Polyphonic drafting (operator):** [POLYPHONY-WORKFLOW.md](POLYPHONY-WORKFLOW.md) — CIV-MIND passes on a neutral spine, then public translation (no mind names in chapter prose)
@@ -40,9 +41,9 @@ Flow: **CIV-MEM (reservoir) → distill into HN chapters (`hn-*`) → strategy-n
 |--------|-----|----------|
 | **I — Ancient Empires** (to 476 AD) | Twenty **problem-led** chapters (comparative ancient evidence); see [research/VOL-I-PROBLEM-CHAPTERS.md](research/VOL-I-PROBLEM-CHAPTERS.md) | `hn-i-v1-01` … `hn-i-v1-20` (legacy civ draft: [chapters/vol-i/persia.md](chapters/vol-i/persia.md)) |
 | **II — Medieval** (476 AD–1453 AD) | Post-Roman reconfigurations: Islam, Byzantium, Mongol disruption | islam, rome-byzantine, persia-islamic, mongol, china-medieval |
-| **III — Early Modern** (1453–1789) | Ottoman peak, maritime expansion, continental consolidation | ottoman, anglia, france, russia |
-| **IV — Industrial & Imperial** (1789–1945) | Revolution, total war, imperial collapse | america, germany, russia-imperial, anglia-imperial |
-| **V — Contemporary** (1945–present) | Cold War, unipolarity, current crisis landscape | america-hegemonic, china-modern, russia-modern, persia-modern |
+| **III — Colonial** (1453–1815) | Ottoman peak, maritime expansion, continental consolidation through the Napoleonic settlement | ottoman, anglia, france, russia |
+| **IV — Industrial** (1815–1945) | Post-Vienna order, total war, imperial collapse | america, germany, russia-imperial, anglia-imperial |
+| **V — Modern** (1945–present) | Cold War, unipolarity, current crisis landscape | america-hegemonic, china-modern, russia-modern, persia-modern |
 | **Appendix** | Methodology | method |
 
 ---
@@ -118,11 +119,11 @@ One file to edit for wiring: `cross-book-map.yaml`. No changes to PH metadata; n
 | `hn-ii-china-medieval` | II | China — Tang to Ming | planned |
 | `hn-iii-ottoman` | III | Ottoman — Rise to Stagnation | planned |
 | `hn-iii-anglia` | III | England — Tudor to Colonial Order | planned |
-| `hn-iii-france` | III | France — Bourbon to Revolution | planned |
+| `hn-iii-france` | III | France — Old Regime through 1815 | planned |
 | `hn-iii-russia` | III | Russia — Muscovy to Catherine | planned |
 | `hn-iv-america` | IV | America — Republic to Global Hegemony | planned |
 | `hn-iv-germany` | IV | Germany — Unification to Catastrophe | planned |
-| `hn-iv-russia-imperial` | IV | Russia — Napoleonic Wars to Soviet | planned |
+| `hn-iv-russia-imperial` | IV | Russia — 1815 to Soviet | planned |
 | `hn-iv-anglia-imperial` | IV | England — Pax Britannica to World Wars | planned |
 | `hn-v-america-hegemonic` | V | America — Cold War to Overreach | planned |
 | `hn-v-russia-modern` | V | Russia — Soviet Collapse to Putin | planned |

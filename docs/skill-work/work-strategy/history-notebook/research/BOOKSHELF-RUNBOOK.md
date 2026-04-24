@@ -1,6 +1,6 @@
 # Bookshelf runbook (History Notebook)
 
-**WORK only;** not Record. This runbook describes **Bookshelf** — the **title-level seed catalog** (`bookshelf-catalog.yaml`) for building a personal reference shelf (target ~500 works) that **informs** [History Notebook](../README.md) chapter drafting. **Human overview (Bookshelf vs operator books):** [BOOKSHELF.md](BOOKSHELF.md). **Self-library container:** [LIB-0158 — Bookshelf](../../../../users/grace-mar/self-library.md#bookshelf) (owned print catalog — separate from [LIB-0156](../../../../users/grace-mar/self-library.md#operator-analytical-books) operator-authored chapters). It does **not** replace:
+**WORK only;** not Record. This runbook describes **Bookshelf** (collection name: **self-library-bookshelf**) — the **title-level seed catalog** (`bookshelf-catalog.yaml`) for the operator’s physical library (target ~500 works) that **informs** [History Notebook](../README.md) chapter drafting. **Human overview (Bookshelf vs operator books):** [BOOKSHELF.md](BOOKSHELF.md). **Self-library container:** [LIB-0158 — Bookshelf](../../../../users/grace-mar/self-library.md#bookshelf) (owned print catalog — separate from [LIB-0156](../../../../users/grace-mar/self-library.md#operator-analytical-books) operator-authored chapters). It does **not** replace:
 
 - [`book-architecture.yaml`](../book-architecture.yaml) — chapter SSOT  
 - [`cross-book-map.yaml`](../cross-book-map.yaml) — Predictive History ↔ HN coverage truth  
@@ -47,17 +47,17 @@ Process the shelf in this **fixed sequence** (batches of **five titles** within 
 
 **`medieval` ends with the fall of Constantinople** (traditional **1453 AD**), matching [History Notebook Vol II](../README.md) (476 AD–1453 AD). Works centered on **late Byzantine** or the **1453** transition may use **`eras: [medieval, colonial]`** (or **`notes`**) when the narrative runs into early modern **Ottoman** or maritime Europe — pick primary **`era`** for shelf sort.
 
-**`colonial`** (operator label → Vol III) picks up **post-1453** early modern / maritime–colonial themes for this book; use **`notes`** when a title straddles 1453.
+**`colonial`** (operator label → Vol III) picks up **post-1453** maritime–colonial themes for this book; use **`notes`** when a title straddles 1453.
 
-**`colonial` ends with the French Revolution** (traditional **1789 AD**), matching [History Notebook Vol III](../README.md) (1453 AD–1789 AD). Works whose narrative crosses into **industrial** war or state formation (e.g. long 18th–19th-century arcs) may use **`eras: [colonial, industrial]`** (or **`notes`**) — pick primary **`era`** for shelf sort.
+**`colonial` ends** with the **Congress of Vienna** settlement (traditional **1815 AD**), matching [History Notebook Vol III](../README.md) (1453 AD–1815 AD). Works whose narrative crosses into **industrial** war or state formation (e.g. long 18th–19th-century arcs) may use **`eras: [colonial, industrial]`** (or **`notes`**) — pick primary **`era`** for shelf sort.
 
-**`industrial`** (Vol IV) picks up **post-1789** themes for this book; use **`notes`** when a title straddles 1789.
+**`industrial`** (Vol IV) picks up **post-1815** themes for this book; use **`notes`** when a title straddles 1815.
 
-**`industrial` ends with the end of the Second World War** (traditional **1945 AD**), matching [History Notebook Vol IV](../README.md) (1789 AD–1945 AD). Works whose narrative crosses into the **contemporary** order (Cold War, decolonization, post-1945 institutions) may use **`eras: [industrial, modern]`** (or **`notes`**) — pick primary **`era`** for shelf sort.
+**`industrial` ends with the end of the Second World War** (traditional **1945 AD**), matching [History Notebook Vol IV](../README.md) (1815 AD–1945 AD). Works whose narrative crosses into the **modern** order (Cold War, decolonization, post-1945 institutions) may use **`eras: [industrial, modern]`** (or **`notes`**) — pick primary **`era`** for shelf sort.
 
 **`modern`** (Vol V) picks up **post-1945** themes for this book; use **`notes`** when a title straddles 1945.
 
-If a title straddles (e.g. one volume covers 400–600 AD, or 1400–1500 AD across 1453, or 1750–1850 AD across 1789, or 1930–1960 AD across 1945), set **`eras`** when multiple buckets apply; use **`notes`** for nuance; pick one **`era`** as primary for batch/sort, or split editions later.
+If a title straddles (e.g. one volume covers 400–600 AD, or 1400–1500 AD across 1453, or 1750–1850 AD across 1815, or 1930–1960 AD across 1945), set **`eras`** when multiple buckets apply; use **`notes`** for nuance; pick one **`era`** as primary for batch/sort, or split editions later.
 
 ## Per-batch workflow (five titles)
 
@@ -65,8 +65,10 @@ If a title straddles (e.g. one volume covers 400–600 AD, or 1400–1500 AD acr
 2. Add five new `items` in `bookshelf-catalog.yaml` (or paste a block for the agent to merge):
    - Next sequential `id`: `HNSRC-NNNN`.
    - Required: `title`, `author`, **`era`**.
-   - Optional: `eras`, `year`, `isbn`, `added_batch`, `tags`, `hn_volume`, `primary_arc`, `candidate_hn_chapters`, `ph_thesis_hints`, `ph_concept_hints`, `notes`.
-3. Run validation: `python3 scripts/validate_bookshelf_catalog.py` (use `--strict` in CI if wired).
+   - Optional: `eras`, `year`, `isbn`, `added_batch`, `tags`, `hn_volume`, `primary_arc`, `candidate_hn_chapters`, `ph_thesis_hints`, `ph_concept_hints`, `notes`, and (for formal bibliography) `cite_as`, `place`, `publisher`, `edition`, `series`, `editor`, `translator` — see YAML header in `bookshelf-catalog.yaml`.
+3. **Validate and refresh exports:**
+   - `python3 scripts/validate_bookshelf_catalog.py` (use `--strict` in CI if wired).
+   - `python3 scripts/build_hn_bookshelf_bibliography.py` — updates [bibliography/REFERENCES-shelf-by-era.md](bibliography/REFERENCES-shelf-by-era.md) and [bibliography/REFERENCES-shelf-by-hnsrc-id.md](bibliography/REFERENCES-shelf-by-hnsrc-id.md) (CI: `--check` — [test workflow](../../../../.github/workflows/test.yml)).
 4. **Within-era pass:** dedupe, cluster tags, adjust `candidate_hn_chapters` only as **planning** hints.
 5. **When an era slice feels complete:** optional short summary in this file (dated bullet) or in git commit message — not required for v1.
 

@@ -1,72 +1,53 @@
 # history-civ-rome
 
-## Identity
+## Identity (immutable header)
 
-Civilization: Rome  
-Thread id: `history-civ-rome`  
-Phase: 1  
-Function: Longitudinal civilizational thread for Rome inside `history-notebook`  
-Folded into this thread: Francia, France
+Civilization: Rome / Latin West  
+Arc ID: `history-civ-rome`  
+Phase: 2  
+Folds: Francia, France  
+Last sovereign merge: 2026-04-18
 
-## Civilizational continuity
+## Civilizational Continuity (core longitudinal spine)
 
-Use this section to track durable Roman continuities across eras.
+Legal and administrative institutions demonstrate exceptional persistence beyond territorial loss or imperial rupture. Center-periphery management and layered civic inheritance enable post-imperial continuity in successor states.
 
-Focus on:
+## Contradiction Log (first-class)
 
-- incorporation after conquest
-- law and administrative continuity
-- imperial and post-imperial persistence
-- civic and institutional inheritance
-- center-periphery management
-- western Latin continuities
-- recurring strengths
-- recurring vulnerabilities
+- **C-ROM-01** (refined): Republic vs. Empire legitimacy tension resolved through institutional layering rather than replacement.
 
-## Distilled learnings
+## Distilled Learnings (WORK → gated)
 
-Use this section to record what the notebook is learning from Rome as a reusable civilizational pattern set.
+[To be populated post-promotion from mechanism candidates and polyphony.]
 
-This thread may include:
+## Mechanism Candidates (Promotion/Demotion Ladder)
 
-- classical Rome
-- Roman imperial continuities
-- post-Roman Latin continuities
-- Francia and France where analytically relevant
+- **MC-ROM-01** [status: doctrine]  
+  “Legal and administrative continuity outlives emperors and territorial contraction when institutions are layered and inheritable.”  
+  Ladder stage: doctrine | Resonance count: 12
 
-Prefer:
+## Polyphonic Expert Threads (new)
 
-- short analytical paragraphs
-- explicit mechanisms
-- tensions or contradictions
-- lessons that may travel into later chapters
+- **Republican Lens**: Distributed authority and civic virtue.
+- **Imperial Lens**: Centralized scalability and incorporation after conquest.
+- **Synthesis Proposal** (gated): Hybrid institutional resilience as core Western inheritance.
 
-## Mechanism candidates
+## Candidate Chapter Targets + Cross-Volume Bridges
 
-- `MC-01:`
-- `MC-02:`
-- `MC-03:`
+- Vol I: `hn-i-v1-04`, `hn-i-v1-05`
+- Vol II: `hn-ii-rome-byzantine`
+- Bridge stub: “Incorporation mechanisms after conquest enable long-term Latin institutional survival.”
 
-Write short, portable mechanism statements here.
+## Reusable Resonance Lines (Strategy Notebook ready)
 
-## Candidate chapter targets
+- “Roman institutions survive emperors and territorial loss through layered legal-administrative continuity (MC-ROM-01, doctrine, hn-i-v1-04/05).”
+- “Incorporation after conquest, not erasure, enables Latin West persistence across ruptures (Rome/Francia/France fold).”
 
-- `hn-i-v1-04`
-- `hn-i-v1-05`
-- `hn-i-v1-07`
+## Next Actions (governed, cadence-linked)
 
-List the current `history-notebook` chapters most likely to use Rome.
+- Review CIV-MEM Rome/Francia material
+- Propose additional mechanism promotions
 
-## Reusable resonance lines
+## Governance Receipt
 
-- 
-- 
-- 
-
-Write short lines that could later be cited in `strategy-notebook`.
-
-## Next actions
-
-- review relevant CIV-MEM Rome, Francia, and France material
-- identify the main Roman continuity mechanisms
-- connect Rome to likely Volume I chapters
+Last reviewed: 2026-04-18 | Proposals staged: 0 | Human sovereign: rbtkhn

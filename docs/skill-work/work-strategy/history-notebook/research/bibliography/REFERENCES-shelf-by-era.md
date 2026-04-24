@@ -1,0 +1,327 @@
+# Working shelf bibliography (generated)
+
+**Do not edit by hand.** Source: [../bookshelf-catalog.yaml](../bookshelf-catalog.yaml).
+
+**Style:** Chicago *author–date* (simplified, machine-generated). The catalog `author` field is printed
+as given (not inverted to *Last, First*). For publication-grade lines, set optional YAML fields
+(`cite_as`, `place`, `publisher`, `edition`, `series`, `editor`, `translator`) or fix rows by hand
+in a **cited-ids** export.
+
+Regenerate: `python3 scripts/build_hn_bookshelf_bibliography.py`
+
+---
+
+## By era (Bookshelf `era`)
+
+### Ancient (`ancient`)
+
+- Adrian Goldsworthy. n.d. *Antony and Cleopatra*. `HNSRC-0029`
+- Adrian Goldsworthy. n.d. *Augustus: First Emperor of Rome*. `HNSRC-0031`
+- Adrian Goldsworthy. n.d. *Caesar: Life of a Colossus*. `HNSRC-0028`
+- Adrian Goldsworthy. n.d. *How Rome Fell*. `HNSRC-0020`
+- Adrian Goldsworthy. n.d. *Pax Romana: War, Peace and Conquest in the Roman World*. `HNSRC-0035`
+- Adrian Goldsworthy. n.d. *Philip and Alexander: Kings and Conquerors*. `HNSRC-0012`
+- Adrian Goldsworthy. n.d. *Rome and Persia: The Seven Hundred Year Rivalry*. `HNSRC-0034`
+- Adrian Goldsworthy. n.d. *The Punic Wars*. `HNSRC-0018`
+- Aeschylus. n.d. *Aeschylus: The Oresteia*. `HNSRC-0044`
+- Anthony Everitt. n.d. *Alexander the Great*. `HNSRC-0011`
+- Anthony Everitt. n.d. *Augustus: The Life of Rome's First Emperor*. `HNSRC-0032`
+- Anthony Everitt. n.d. *Cicero: The Life and Times of Rome's Greatest Politician*. `HNSRC-0030`
+- Anthony Everitt. n.d. *Hadrian and the Triumph of Rome*. `HNSRC-0033`
+- Anthony Everitt. n.d. *The Rise of Athens*. `HNSRC-0010`
+- Anthony Everitt. n.d. *The Rise of Rome*. `HNSRC-0017`
+- Arrian. n.d. *The Landmark Arrian: The Campaigns of Alexander*. `HNSRC-0006`
+- Barry Cunliffe. n.d. *The Scythians*. `HNSRC-0015`
+- Confucius. n.d. *Confucius: The Analects*. `HNSRC-0040`
+- Duane W. Roller. n.d. *Empire of the Black Sea*. `HNSRC-0016`
+- Eckart Frahm. n.d. *Assyria*. `HNSRC-0008`
+- Herodotus. n.d. *The Histories*. `HNSRC-0001`
+- Herodotus. n.d. *The Landmark Herodotus*. `HNSRC-0002`
+- Homer. n.d. *The Iliad*. `HNSRC-0046`
+- Homer. n.d. *The Odyssey*. `HNSRC-0047`
+- Islam Issa. n.d. *Alexandria*. `HNSRC-0013`
+- Julius Caesar. n.d. *The Landmark Julius Caesar*. `HNSRC-0007`
+- Lao Tzu. n.d. *Lao-Tzu: Tao Te Ching*. `HNSRC-0039`
+- Lloyd Llewellyn-Jones. n.d. *Persians*. `HNSRC-0009`
+- Lloyd Llewellyn-Jones. n.d. *The Cleopatras: The Forgotten Queens of Egypt*. `HNSRC-0014`
+- Lucretius. n.d. *On the Nature of Things*. `HNSRC-0052`
+- Marcus Aurelius. n.d. *Meditations*. `HNSRC-0051`
+- Ovid. n.d. *Metamorphoses*. `HNSRC-0049`
+- Plato. n.d. *Plato: Symposium and Phaedrus*. `HNSRC-0042`
+- Plato. n.d. *Plato: The Republic*. `HNSRC-0041`
+- Plutarch. n.d. *Plutarch's Lives*. `HNSRC-0027`
+- Richard A. Gabriel. n.d. *Hannibal*. `HNSRC-0019`
+- Seneca. n.d. *Letters from a Stoic*. `HNSRC-0053`
+- Sophocles. n.d. *Sophocles: The Theban Plays*. `HNSRC-0043`
+- Tacitus. n.d. *Tacitus: Annals and Histories*. `HNSRC-0045`
+- Thucydides. n.d. *The Landmark Thucydides*. `HNSRC-0003`
+- Unknown. n.d. *(Spine unread — operator fill)*. `HNSRC-0050`
+- Various. n.d. *Hindu Scriptures*. `HNSRC-0038`
+- Various. n.d. *The New Testament*. `HNSRC-0037`
+- Various. n.d. *The Old Testament*. `HNSRC-0036`
+- Virgil. n.d. *The Aeneid*. `HNSRC-0048`
+- Will Durant. n.d. *The Story of Civilization, Vol. I: Our Oriental Heritage*. `HNSRC-0055`
+- Will Durant. n.d. *The Story of Civilization, Vol. II: The Life of Greece*. `HNSRC-0056`
+- Will Durant. n.d. *The Story of Civilization, Vol. III: Caesar and Christ*. `HNSRC-0057`
+- Xenophon. n.d. *The Landmark Xenophon's Anabasis*. `HNSRC-0005`
+- Xenophon. n.d. *The Landmark Xenophon's Hellenika*. `HNSRC-0004`
+
+### Medieval (`medieval`)
+
+- Anna Comnena. n.d. *The Alexiad*. `HNSRC-0026`
+- Anthony Kaldellis. 2023. *The New Roman Empire: A History of Byzantium*. `HNSRC-0058`
+- Bart Van Loo. n.d. *The Burgundians*. `HNSRC-0070`
+- Dan Jones. n.d. *Henry V*. `HNSRC-0071`
+- Dan Jones. n.d. *The Templars: The Rise and Spectacular Fall of God's Holy Warriors*. `HNSRC-0296`
+- Dante Alighieri. n.d. *Inferno*. `HNSRC-0080`
+- Edward Gibbon. n.d. *The History of the Decline and Fall of the Roman Empire*. `HNSRC-0054`
+- Geoffrey Chaucer. n.d. *The Canterbury Tales*. `HNSRC-0081`
+- Hans-Ulrich Wiemer. n.d. *Theoderic the Great*. `HNSRC-0021`
+- Jack Weatherford. n.d. *Emperor of the Seas*. `HNSRC-0074`
+- Jack Weatherford. n.d. *Genghis Khan and the Making of the Modern World*. `HNSRC-0076`
+- Jack Weatherford. n.d. *The Secret History of the Mongol Queens*. `HNSRC-0075`
+- Johannes Fried. n.d. *Charlemagne*. `HNSRC-0067`
+- Jonathan Phillips. n.d. *The Life and Legend of the Sultan Saladin*. `HNSRC-0069`
+- Judith Herrin. n.d. *Ravenna*. `HNSRC-0023`
+- Justin Pollard. n.d. *Alfred the Great: The Man Who Made England*. `HNSRC-0250`
+- Justine Firnhaber-Baker. n.d. *House of Lilies: The Dynasty That Made Medieval France*. `HNSRC-0064`
+- Kevin Alan Brook. n.d. *The Jews of Khazaria*. `HNSRC-0077`
+- Marco Polo. n.d. *The Travels*. `HNSRC-0079`
+- Martyn Rady. n.d. *The Middle Kingdoms: A New History of Central Europe*. `HNSRC-0068`
+- Neil Price. n.d. *Children of Ash and Elm: A History of the Vikings*. `HNSRC-0073`
+- Peter Heather. n.d. *Christendom*. `HNSRC-0024`
+- Peter Sarris. n.d. *Justinian*. `HNSRC-0022`
+- Roger Crowley. n.d. *1453: The Holy War for Constantinople and the Clash of Islam and the West*. `HNSRC-0244`
+- Roger Crowley. n.d. *The Accursed Tower: The Fall of Acre and the End of the Crusades*. `HNSRC-0249`
+- Various. n.d. *Tales from 1,001 Nights*. `HNSRC-0078`
+- Wu Cheng'en. n.d. *Monkey King*. `HNSRC-0083`
+
+### Colonial (Vol III–style bucket) (`colonial`)
+
+- Alexander Hamilton. n.d. *Hamilton: Writings*. `HNSRC-0108`
+- Andrew Roberts. n.d. *The Last King of America: The Misunderstood Reign of George III*. `HNSRC-0099`
+- Arthur M. Schlesinger Jr.. n.d. *The Age of Jackson*. `HNSRC-0094`
+- Benjamin Franklin. n.d. *Franklin: Autobiography, Poor Richard, and Later Writings*. `HNSRC-0104`
+- Buddy Levy. n.d. *Conquistador: Hernán Cortés, King Montezuma, and the Last Stand of the Aztecs*. `HNSRC-0127`
+- Fred Anderson. n.d. *Crucible of War*. `HNSRC-0098`
+- George Washington. n.d. *Washington: Writings*. `HNSRC-0109`
+- H. W. Brands. n.d. *Andrew Jackson*. `HNSRC-0095`
+- H. W. Brands. n.d. *Founding Partisans*. `HNSRC-0091`
+- H. W. Brands. n.d. *Heirs of the Founders*. `HNSRC-0092`
+- Henry Kamen. n.d. *Empire: How Spain Became a World Power 1492–1763*. `HNSRC-0128`
+- James C. Bradley. n.d. *Martin Van Buren*. `HNSRC-0093`
+- James Madison. n.d. *Madison: Writings*. `HNSRC-0107`
+- Jean-Jacques Rousseau. n.d. *Confessions*. `HNSRC-0120`
+- Jean-Jacques Rousseau. n.d. *The Social Contract and The Discourses*. `HNSRC-0121`
+- Jeremy D. Popkin. n.d. *A New World Begins: The History of the French Revolution*. `HNSRC-0086`
+- John B. Boles. n.d. *Jefferson*. `HNSRC-0087`
+- Jonathan Healey. n.d. *The Blazing World*. `HNSRC-0096`
+- Jonathan Israel. n.d. *The Dutch Republic: Its Rise, Greatness, and Fall 1477–1806*. `HNSRC-0126`
+- Lisa Brooks & Kelly Wisecup. n.d. *Plymouth Colony: Narratives of English Settlement and Native Resistance from the Mayflower to King Philip's War*. `HNSRC-0101`
+- Marc David Baer. n.d. *The Ottomans: Khans, Caesars, and Caliphs*. `HNSRC-0059`
+- Martyn Rady. n.d. *The Habsburgs: To Rule the World*. `HNSRC-0065`
+- Michel de Montaigne. n.d. *The Complete Works*. `HNSRC-0110`
+- Miguel de Cervantes. n.d. *Don Quixote*. `HNSRC-0082`
+- Niall Ferguson. n.d. *Empire: How Britain Made the Modern World*. `HNSRC-0100`
+- Niccolò Machiavelli. n.d. *The Prince*. `HNSRC-0211`
+- Paul Strathern. n.d. *The Borgias*. `HNSRC-0062`
+- Paul Strathern. n.d. *The Florentines*. `HNSRC-0060`
+- Paul Strathern. n.d. *The Medici*. `HNSRC-0061`
+- Peter H. Wilson. n.d. *The Thirty Years War*. `HNSRC-0084`
+- Randall Woods. n.d. *John Quincy Adams*. `HNSRC-0090`
+- Robert K. Massie. n.d. *Catherine the Great*. `HNSRC-0124`
+- Robert K. Massie. n.d. *Peter the Great: His Life and World*. `HNSRC-0123`
+- Roger Crowley. n.d. *City of Fortune: How Venice Ruled the Seas*. `HNSRC-0247`
+- Roger Crowley. n.d. *Conquerors: How Portugal Forged the First Global Empire*. `HNSRC-0245`
+- Roger Crowley. n.d. *Empires of the Sea: The Siege of Malta, the Battle of Lepanto, and the Contest for the Center of the World*. `HNSRC-0246`
+- Roger Crowley. n.d. *Spice: The 16th-Century Contest that Shaped the Modern World*. `HNSRC-0248`
+- Roger Pearson. n.d. *Voltaire Almighty*. `HNSRC-0085`
+- Ron Chernow. n.d. *Alexander Hamilton*. `HNSRC-0088`
+- Thomas Jefferson. n.d. *Jefferson: Writings*. `HNSRC-0106`
+- Thomas More. n.d. *Utopia*. `HNSRC-0212`
+- Thomas Paine. n.d. *Paine: Collected Writings*. `HNSRC-0105`
+- Tim Blanning. n.d. *Frederick the Great*. `HNSRC-0097`
+- Tim McGrath. n.d. *James Monroe*. `HNSRC-0089`
+- Various. n.d. *The American Revolution: Writings from the Pamphlet Debate 1773–1776*. `HNSRC-0103`
+- Various. n.d. *The American Revolution: Writings from the War of Independence 1775–1783*. `HNSRC-0102`
+- Voltaire. n.d. *Candide and Other Stories*. `HNSRC-0119`
+- Walter Isaacson. n.d. *Leonardo da Vinci*. `HNSRC-0063`
+- William Manchester. n.d. *A World Lit Only by Fire*. `HNSRC-0072`
+- William Shakespeare. n.d. *Comedies Volume 2*. `HNSRC-0118`
+- William Shakespeare. n.d. *Comedies, Volume 1*. `HNSRC-0117`
+- William Shakespeare. n.d. *Histories Volume 1*. `HNSRC-0111`
+- William Shakespeare. n.d. *Histories Volume 2*. `HNSRC-0112`
+- William Shakespeare. n.d. *Romances*. `HNSRC-0113`
+- William Shakespeare. n.d. *The Sonnets and Narrative Poems*. `HNSRC-0114`
+- William Shakespeare. n.d. *Tragedies Volume 1*. `HNSRC-0115`
+- William Shakespeare. n.d. *Tragedies Volume 2*. `HNSRC-0116`
+
+### Industrial (Vol IV–style bucket) (`industrial`)
+
+- Adam Smith. n.d. *The Wealth of Nations*. `HNSRC-0199`
+- Albert Camus. n.d. *The Outsider*. `HNSRC-0175`
+- Alexander Pushkin. n.d. *Novels, Tales, Journeys*. `HNSRC-0149`
+- Alexander Pushkin. n.d. *The Collected Stories*. `HNSRC-0148`
+- Alexander Pushkin. n.d. *The Queen of Spades*. `HNSRC-0225`
+- Alexandre Dumas. n.d. *The Three Musketeers*. `HNSRC-0142`
+- Alexis de Tocqueville. n.d. *Democracy in America*. `HNSRC-0262`
+- Anne Brontë. n.d. *The Tenant of Wildfell Hall*. `HNSRC-0182`
+- Antoine de Saint-Exupéry. n.d. *The Little Prince*. `HNSRC-0176`
+- Anton Chekhov. n.d. *About Love*. `HNSRC-0226`
+- Anton Chekhov. n.d. *The Complete Short Novels*. `HNSRC-0198`
+- Arthur Conan Doyle. n.d. *The Adventure of the Blue Carbuncle*. `HNSRC-0221`
+- Arthur Conan Doyle. n.d. *The Adventures of Sherlock Holmes*. `HNSRC-0168`
+- Arthur Conan Doyle. n.d. *The Hound of the Baskervilles*. `HNSRC-0169`
+- Arthur Herman. n.d. *Gandhi & Churchill: The Epic Rivalry That Destroyed an Empire and Forged Our Age*. `HNSRC-0297`
+- Arthur M. Schlesinger Jr.. n.d. *The Coming of the New Deal*. `HNSRC-0242`
+- Arthur M. Schlesinger Jr.. n.d. *The Crisis of the Old Order, 1919-1923*. `HNSRC-0241`
+- Arthur M. Schlesinger Jr.. n.d. *The Politics of Upheaval*. `HNSRC-0243`
+- Arthur Schopenhauer. n.d. *Essays and Aphorisms*. `HNSRC-0213`
+- Barbara W. Tuchman. n.d. *The Guns of August, The Proud Tower*. `HNSRC-0275`
+- Bram Stoker. n.d. *Dracula*. `HNSRC-0170`
+- C. S. Lewis. n.d. *Prince Caspian*. `HNSRC-0288`
+- C. S. Lewis. n.d. *The Horse and His Boy*. `HNSRC-0287`
+- C. S. Lewis. n.d. *The Last Battle*. `HNSRC-0291`
+- C. S. Lewis. n.d. *The Lion, the Witch and the Wardrobe*. `HNSRC-0286`
+- C. S. Lewis. n.d. *The Magician's Nephew*. `HNSRC-0285`
+- C. S. Lewis. n.d. *The Silver Chair*. `HNSRC-0290`
+- C. S. Lewis. n.d. *The Voyage of the Dawn Treader*. `HNSRC-0289`
+- Carl von Clausewitz. n.d. *On War*. `HNSRC-0146`
+- Charles Darwin. n.d. *The Origin of Species and The Voyage of the Beagle*. `HNSRC-0188`
+- Charles Dickens. n.d. *A Christmas Carol and Other Christmas Writings*. `HNSRC-0167`
+- Charles Dickens. n.d. *A Tale of Two Cities*. `HNSRC-0165`
+- Charles Dickens. n.d. *Bleak House*. `HNSRC-0163`
+- Charles Dickens. n.d. *David Copperfield*. `HNSRC-0133`
+- Charles Dickens. n.d. *Great Expectations*. `HNSRC-0164`
+- Charles Dickens. n.d. *Hard Times*. `HNSRC-0166`
+- Charles Dickens. n.d. *Oliver Twist*. `HNSRC-0162`
+- Charlotte Brontë. n.d. *Jane Eyre*. `HNSRC-0179`
+- Charlotte Brontë. n.d. *Villette*. `HNSRC-0180`
+- Daniel Defoe. n.d. *Robinson Crusoe*. `HNSRC-0131`
+- David L. Roll. n.d. *George Marshall: Defender of the Republic*. `HNSRC-0255`
+- David McCullough. n.d. *Truman*. `HNSRC-0257`
+- E. T. A. Hoffmann. n.d. *The Nutcracker*. `HNSRC-0220`
+- Edmund Burke. n.d. *Reflections on the Revolution in France*. `HNSRC-0197`
+- Emily Brontë. n.d. *Wuthering Heights*. `HNSRC-0181`
+- Ernest Hemingway. n.d. *A Farewell to Arms & Other Writings 1927-1932*. `HNSRC-0278`
+- Ernest Hemingway. n.d. *The Sun Also Rises & Other Writings 1918-1926*. `HNSRC-0277`
+- F. Scott Fitzgerald. n.d. *Babylon Revisited*. `HNSRC-0218`
+- F. Scott Fitzgerald. n.d. *Novels and Stories 1920–1922*. `HNSRC-0227`
+- F. Scott Fitzgerald. n.d. *The Great Gatsby, All the Sad Young Men & Other Writings 1920–1926*. `HNSRC-0228`
+- Franz Kafka. n.d. *Metamorphosis*. `HNSRC-0224`
+- Friedrich Nietzsche. n.d. *Beyond Good and Evil*. `HNSRC-0214`
+- Fyodor Dostoevsky. n.d. *Crime and Punishment*. `HNSRC-0157`
+- Fyodor Dostoevsky. n.d. *Demons*. `HNSRC-0155`
+- Fyodor Dostoevsky. n.d. *Notes from a Dead House*. `HNSRC-0153`
+- Fyodor Dostoevsky. n.d. *Notes from Underground*. `HNSRC-0154`
+- Fyodor Dostoevsky. n.d. *The Adolescent*. `HNSRC-0196`
+- Fyodor Dostoevsky. n.d. *The Brothers Karamazov*. `HNSRC-0195`
+- Fyodor Dostoevsky. n.d. *The Double and The Gambler*. `HNSRC-0152`
+- Fyodor Dostoevsky. n.d. *The Idiot*. `HNSRC-0156`
+- Fyodor Dostoevsky. n.d. *White Nights*. `HNSRC-0210`
+- George Orwell. n.d. *Animal Farm*. `HNSRC-0177`
+- George Orwell. n.d. *Nineteen Eighty-Four*. `HNSRC-0171`
+- H. G. Wells. n.d. *The Time Machine, The Invisible Man, The War of the Worlds*. `HNSRC-0208`
+- H. G. Wells. n.d. *The War of the Worlds*. `HNSRC-0173`
+- H. W. Brands. n.d. *T. R.: The Last Romantic*. `HNSRC-0263`
+- H. W. Brands. n.d. *The General vs. the President: MacArthur and Truman at the Brink of Nuclear War*. `HNSRC-0256`
+- H. W. Brands. n.d. *Traitor to His Class: The Privileged Life and Radical Presidency of Franklin Delano Roosevelt*. `HNSRC-0264`
+- Henry David Thoreau. n.d. *A Week, Walden, Maine Woods, Cape Cod*. `HNSRC-0266`
+- Henry James. n.d. *The Turn of the Screw*. `HNSRC-0158`
+- Herman Melville. n.d. *Moby-Dick*. `HNSRC-0183`
+- Herman Melville. n.d. *Pierre, Israel Potter, The Confidence-Man, Tales, & Billy Budd*. `HNSRC-0236`
+- Herman Melville. n.d. *Redburn, White-Jacket, Moby-Dick*. `HNSRC-0273`
+- Herman Melville. n.d. *Typee, Omoo, Mardi*. `HNSRC-0272`
+- Ivan Turgenev. n.d. *Fathers and Children*. `HNSRC-0201`
+- Jane Austen. n.d. *Emma*. `HNSRC-0138`
+- Jane Austen. n.d. *Lady Susan*. `HNSRC-0223`
+- Jane Austen. n.d. *Love and Freindship*. `HNSRC-0134`
+- Jane Austen. n.d. *Mansfield Park*. `HNSRC-0137`
+- Jane Austen. n.d. *Northanger Abbey*. `HNSRC-0139`
+- Jane Austen. n.d. *Persuasion*. `HNSRC-0140`
+- Jane Austen. n.d. *Pride and Prejudice*. `HNSRC-0136`
+- Jane Austen. n.d. *Sense and Sensibility*. `HNSRC-0135`
+- Johann Wolfgang von Goethe. n.d. *Selected Works*. `HNSRC-0145`
+- John Adams. n.d. *Revolutionary Writings 1755-1775*. `HNSRC-0269`
+- John Adams. n.d. *Revolutionary Writings 1775-1783*. `HNSRC-0270`
+- John Erickson. n.d. *The Road to Berlin: Stalin's War with Germany, Vol. 2*. `HNSRC-0294`
+- John Erickson. n.d. *The Road to Stalingrad: Stalin's War with Germany, Vol. 1*. `HNSRC-0293`
+- John Keats. n.d. *The Poems*. `HNSRC-0200`
+- John le Carré. n.d. *Tinker Tailor Soldier Spy*. `HNSRC-0178`
+- John Milton. n.d. *Paradise Lost*. `HNSRC-0130`
+- John Steinbeck. n.d. *Novels 1942–1952*. `HNSRC-0235`
+- John Steinbeck. n.d. *Novels and Stories 1932–1937*. `HNSRC-0234`
+- John Steinbeck. n.d. *Of Mice and Men*. `HNSRC-0222`
+- John Steinbeck. n.d. *The Grapes of Wrath & Other Writings 1936-1941*. `HNSRC-0274`
+- John Steinbeck. n.d. *The Pearl*. `HNSRC-0174`
+- Joseph Conrad. n.d. *Heart of Darkness*. `HNSRC-0206`
+- Joseph Conrad. n.d. *Lord Jim*. `HNSRC-0205`
+- Joseph Conrad. n.d. *The Lagoon*. `HNSRC-0219`
+- Joseph Conrad. n.d. *Typhoon and Other Stories*. `HNSRC-0204`
+- Joseph Conrad. n.d. *Victory*. `HNSRC-0207`
+- Jules Verne. n.d. *Journey to the Centre of the Earth, Twenty Thousand Leagues Under the Sea, Around the World in Eighty Days*. `HNSRC-0203`
+- Jules Verne. n.d. *Three Novels*. `HNSRC-0202`
+- Karl Marx & Friedrich Engels. n.d. *The Communist Manifesto*. `HNSRC-0215`
+- Kurt Vonnegut. n.d. *Novels & Stories 1950-1962*. `HNSRC-0281`
+- Kurt Vonnegut. n.d. *Novels & Stories 1963-1973*. `HNSRC-0282`
+- Kurt Vonnegut. n.d. *Novels 1976-1985*. `HNSRC-0283`
+- Kurt Vonnegut. n.d. *Novels 1987-1997*. `HNSRC-0284`
+- Leo Tolstoy. n.d. *Anna Karenina*. `HNSRC-0194`
+- Leo Tolstoy. n.d. *Childhood, Boyhood, and Youth*. `HNSRC-0190`
+- Leo Tolstoy. n.d. *Collected Shorter Fiction Volume 1*. `HNSRC-0191`
+- Leo Tolstoy. n.d. *Collected Shorter Fiction Volume 2*. `HNSRC-0192`
+- Leo Tolstoy. n.d. *The Cossacks*. `HNSRC-0189`
+- Leo Tolstoy. n.d. *War and Peace*. `HNSRC-0193`
+- Lewis Carroll. n.d. *Alice's Adventures in Wonderland and Through the Looking-Glass*. `HNSRC-0184`
+- Lewis Carroll. n.d. *Jabberwocky and Other Nonsense*. `HNSRC-0185`
+- Lord Byron. n.d. *Byron's Travels*. `HNSRC-0147`
+- Marcel Proust. n.d. *In Search of Lost Time*. `HNSRC-0144`
+- Mark Twain. n.d. *A Tramp Abroad, Following the Equator, Other Travels*. `HNSRC-0229`
+- Mark Twain. n.d. *Collected Tales, Sketches, Speeches, & Essays 1891–1910*. `HNSRC-0231`
+- Mark Twain. n.d. *Historical Romances*. `HNSRC-0230`
+- Mark Twain. n.d. *Mississippi Writings*. `HNSRC-0232`
+- Mark Twain. n.d. *Tales, Sketches, Speeches, & Essays 1852-1890*. `HNSRC-0276`
+- Mark Twain. n.d. *The Adventures of Huckleberry Finn*. `HNSRC-0159`
+- Mark Twain. n.d. *The Gilded Age & Later Novels*. `HNSRC-0233`
+- Mary Shelley. n.d. *Frankenstein*. `HNSRC-0187`
+- Nathaniel Hawthorne. n.d. *Novels*. `HNSRC-0268`
+- Nathaniel Hawthorne. n.d. *Tales and Sketches*. `HNSRC-0267`
+- Nikolai Gogol. n.d. *Dead Souls*. `HNSRC-0150`
+- Nikolai Gogol. n.d. *The Collected Tales*. `HNSRC-0151`
+- Peter H. Wilson. n.d. *Iron and Blood*. `HNSRC-0066`
+- Philip Pullman. n.d. *Grimm Tales*. `HNSRC-0186`
+- Ralph Waldo Emerson. n.d. *Collected Poems & Translations*. `HNSRC-0271`
+- Ray Bradbury. n.d. *Novels & Story Cycles*. `HNSRC-0280`
+- Ray Bradbury. n.d. *The Illustrated Man, The October Country, Other Stories*. `HNSRC-0279`
+- Robert A. Caro. n.d. *The Years of Lyndon Johnson: Master of the Senate*. `HNSRC-0253`
+- Robert A. Caro. n.d. *The Years of Lyndon Johnson: Means of Ascent*. `HNSRC-0252`
+- Robert A. Caro. n.d. *The Years of Lyndon Johnson: The Passage of Power*. `HNSRC-0254`
+- Robert A. Caro. n.d. *The Years of Lyndon Johnson: The Path to Power*. `HNSRC-0251`
+- Robert K. Massie. n.d. *Nicholas and Alexandra*. `HNSRC-0125`
+- Robert Louis Stevenson. n.d. *Dr. Jekyll and Mr. Hyde and Other Stories*. `HNSRC-0143`
+- Robert Louis Stevenson. n.d. *The Strange Case of Dr Jekyll and Mr Hyde*. `HNSRC-0172`
+- Robert Louis Stevenson. n.d. *Treasure Island*. `HNSRC-0160`
+- Ron Chernow. n.d. *Mark Twain*. `HNSRC-0295`
+- Rudyard Kipling. n.d. *Collected Stories*. `HNSRC-0141`
+- Rudyard Kipling. n.d. *Kim*. `HNSRC-0209`
+- Rudyard Kipling. n.d. *The Jungle Books*. `HNSRC-0161`
+- Sigmund Freud. n.d. *Civilization and Its Discontents*. `HNSRC-0217`
+- Simon Sebag Montefiore. n.d. *The Romanovs: 1613–1918*. `HNSRC-0122`
+- Stephen E. Ambrose. n.d. *Eisenhower: Soldier and President*. `HNSRC-0258`
+- Stephen E. Ambrose. n.d. *Nixon: Ruin and Recovery, 1973-1990*. `HNSRC-0261`
+- Stephen E. Ambrose. n.d. *Nixon: The Education of a Politician, 1913-1962*. `HNSRC-0259`
+- Stephen E. Ambrose. n.d. *Nixon: The Triumph of a Politician, 1962-1972*. `HNSRC-0260`
+- Søren Kierkegaard. n.d. *Fear and Trembling*. `HNSRC-0216`
+- Thomas Hardy. n.d. *Far from the Madding Crowd*. `HNSRC-0238`
+- Thomas Hardy. n.d. *Jude the Obscure*. `HNSRC-0237`
+- Thomas Hardy. n.d. *Tess of the D'Urbervilles*. `HNSRC-0240`
+- Thomas Hardy. n.d. *The Mayor of Casterbridge*. `HNSRC-0239`
+- Victor Hugo. n.d. *Les Misérables*. `HNSRC-0132`
+- Walter Isaacson. n.d. *Einstein: His Life and Universe*. `HNSRC-0292`
+- William Manchester. n.d. *American Caesar: Douglas MacArthur 1880-1964*. `HNSRC-0298`
+- William Shakespeare. n.d. *The Sonnets and A Lover's Complaint*. `HNSRC-0129`
+
+### Modern (Vol V–style bucket) (`modern`)
+
+- Bartle Bull. n.d. *Land Between the Rivers*. `HNSRC-0025`
+- Niall Ferguson. n.d. *Kissinger: 1923-1968: The Idealist*. `HNSRC-0265`

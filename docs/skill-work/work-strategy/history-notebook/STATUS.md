@@ -4,7 +4,7 @@
 
 ## Volume priority (operator — pick one primary lane first)
 
-- [ ] **Vol V — Contemporary** (same-day strategy relevance): `hn-v-america-hegemonic`, `hn-v-china-modern`, `hn-v-russia-modern`, `hn-v-persia-modern`
+- [ ] **Vol V — Modern** (same-day strategy relevance): `hn-v-america-hegemonic`, `hn-v-china-modern`, `hn-v-russia-modern`, `hn-v-persia-modern`
 - [ ] **Vol I — Problem spine** (comparative ancient mechanisms): `hn-i-v1-01` … `hn-i-v1-20`
 
 **Active choice (edit when you commit):** _e.g. “Primary: Vol I spine through v1-05; Vol V when contemporary judgment dominates.”_

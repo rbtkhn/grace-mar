@@ -1,64 +1,53 @@
 # history-civ-islam
 
-## Identity
+## Identity (immutable header)
 
-Civilization: Islam  
-Thread id: `history-civ-islam`  
+Civilization: Islamic  
+Arc ID: `history-civ-islam`  
 Phase: 1  
-Function: Longitudinal civilizational thread for Islam inside `history-notebook`
+Folds: (none)  
+Last sovereign merge: 2026-04-15
 
-## Civilizational continuity
+## Civilizational Continuity (core longitudinal spine)
 
-Use this section to track durable Islamic continuities across eras.
+Religious-civilizational fusion creates exceptional continuity across conquests, dynastic changes, and empire succession. Faith-state integration provides both unifying legitimacy and adaptive institutional forms.
 
-Focus on:
+## Contradiction Log (first-class)
 
-- religious-civilizational legitimacy
-- legal and administrative forms
-- expansion and incorporation
-- trade-network integration
-- center-periphery coherence
-- unity versus fragmentation
-- recurring strengths
-- recurring vulnerabilities
+- **C-ISL-01** (preserved): Universal ummah ideal vs. repeated political fragmentation and competing caliphates.
+- **C-ISL-02** (preserved): Religious orthodoxy as stabilizer vs. constraint on technical/scientific renewal in later periods.
 
-## Distilled learnings
+## Distilled Learnings (WORK → gated)
 
-Use this section to record what the notebook is learning from Islam as a reusable civilizational pattern set.
+[To be populated post-promotion from mechanism candidates and polyphony.]
 
-Prefer:
+## Mechanism Candidates (Promotion/Demotion Ladder)
 
-- short analytical paragraphs
-- explicit mechanisms
-- tensions or contradictions
-- lessons that may travel into later chapters
+- **MC-ISL-01** [status: candidate]  
+  “Religious-civilizational fusion enables rapid expansion and durable identity continuity even after military-political rupture.”
+- **MC-ISL-02** [status: candidate]  
+  “Succession mechanisms based on scholarly and religious authority provide alternative legitimacy pathways.”
 
-## Mechanism candidates
+## Polyphonic Expert Threads (new)
 
-- `MC-01:`
-- `MC-02:`
-- `MC-03:`
+- **Early Expansion Lens**: Conquest + conversion dynamics.
+- **Classical Golden Age Lens**: Synthesis of knowledge and governance.
+- **Synthesis Proposal** (gated): Faith as civilizational operating system.
 
-Write short, portable mechanism statements here.
+## Candidate Chapter Targets + Cross-Volume Bridges
 
-## Candidate chapter targets
+- Vol II: `hn-ii-islam`
 
-- `hn-i-v1-01`
-- `hn-i-v1-07`
-- `hn-i-v1-08`
+## Reusable Resonance Lines (Strategy Notebook ready)
 
-List the current `history-notebook` chapters most likely to use Islam.
+- “Religious-civilizational fusion enables rapid expansion and durable identity continuity even after political rupture (MC-ISL-01, candidate).”
+- “Scholarly-religious authority offers alternative legitimacy pathways when dynastic power fragments.”
 
-## Reusable resonance lines
+## Next Actions (governed, cadence-linked)
 
-- 
-- 
-- 
+- Expand CIV-MEM distillation into Vol II chapter
+- Propose initial mechanisms via recursion-gate
 
-Write short lines that could later be cited in `strategy-notebook`.
+## Governance Receipt
 
-## Next actions
-
-- review relevant CIV-MEM Islam material
-- identify 3–5 durable mechanisms
-- connect Islam to likely Volume I chapters
+Last reviewed: 2026-04-15 | Proposals staged: 0 | Human sovereign: rbtkhn

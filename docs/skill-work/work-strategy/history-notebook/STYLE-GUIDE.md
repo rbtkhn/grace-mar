@@ -21,9 +21,9 @@ Public-facing sources cite historical authors and works (Herodotus, Ferdowsi, Pl
 Use the **traditional BC / AD** system everywhere in History Notebook prose, tables, and operator-facing metadata for this book. **Do not** use BCE or CE.
 
 - **Before the common era:** year + **BC** (e.g. `53 BC`, `445 BC`).  
-- **In the common era:** year + **AD** or **AD** + year (e.g. `476 AD`, `AD 476`); for ranges, repeat or mark once as needed (e.g. `476 AD–1453 AD`, `1453 AD–1789 AD`, `1789 AD–1945 AD`).
+- **In the common era:** year + **AD** or **AD** + year (e.g. `476 AD`, `AD 476`); for ranges, repeat or mark once as needed (e.g. `476 AD–1453 AD`, `1453 AD–1815 AD`, `1815 AD–1945 AD`).
 
-**Bookshelf era buckets** (shelf / `HNSRC` rows): **ancient** through ~476 AD (fall of Rome in the West); **medieval** through ~1453 AD (fall of Constantinople); **colonial** (early modern, Vol III) through ~1789 AD; **industrial** (Vol IV) through ~1945 AD; **modern** (Vol V) post-1945 — full rule in [BOOKSHELF-RUNBOOK.md](research/BOOKSHELF-RUNBOOK.md#era-boundaries-bookshelf-rule).
+**Bookshelf era buckets** (shelf / `HNSRC` rows): **ancient** through ~476 AD (fall of Rome in the West); **medieval** through ~1453 AD (fall of Constantinople); **colonial** (Vol III) through ~1815 AD (Congress of Vienna); **industrial** (Vol IV) through ~1945 AD; **modern** (Vol V) post-1945 — full rule in [BOOKSHELF-RUNBOOK.md](research/BOOKSHELF-RUNBOOK.md#era-boundaries-bookshelf-rule).
 
 ---
 

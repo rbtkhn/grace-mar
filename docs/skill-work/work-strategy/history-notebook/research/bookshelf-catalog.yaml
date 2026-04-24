@@ -1,4 +1,5 @@
 # History Notebook — Bookshelf catalog (title-level seed; HNSRC-* rows)
+# Operator collection name: self-library-bookshelf (physical library + this HNSRC list; LIB-0158 in self-library).
 # WORK only; not Record. Does not replace book-architecture.yaml or cross-book-map.yaml.
 # Self-library pointer: LIB-0158 — users/grace-mar/self-library.md#bookshelf (owned HNSRC-* shelf; not operator_book / operator_analytical). Human overview: BOOKSHELF.md (same directory).
 #
@@ -18,14 +19,19 @@
 #   notes: optional string
 #   lib_id: optional — if promoted to users/grace-mar self-library LIB-* entry
 #   content_path: optional — phase 2: gitignored file or absolute path (not committed)
+#   Citation-oriented (optional; backfill lazily for formal bibliography export):
+#   cite_as: optional string — sort/print name override (e.g. when author is Various)
+#   place, publisher, edition, series: optional strings — imprint / edition (Chicago-style export)
+#   editor, translator: optional strings — for build_hn_bookshelf_bibliography.py output
 #
 # Upload order: ancient → medieval → colonial → industrial → modern (see BOOKSHELF-RUNBOOK.md).
 # Era "ancient" = through fall of Western Roman Empire (~476 AD); late Roman / fall-of-the-West titles stay ancient.
 # Era "medieval" = post-476 AD formations through fall of Constantinople (~1453 AD); straddles into Vol III use eras/notes.
-# Era "colonial" (Vol III) = post-1453 through ~1789 AD (French Revolution); straddles into Vol IV use eras/notes.
-# Era "industrial" (Vol IV) = post-1789 through ~1945 AD (end of WWII); straddles into Vol V use eras/notes.
+# Era "colonial" (Vol III) = post-1453 through ~1815 AD (Congress of Vienna); straddles into Vol IV use eras/notes.
+# Era "industrial" (Vol IV) = post-1815 through ~1945 AD (end of WWII); straddles into Vol V use eras/notes.
 # Ancient / medieval / modern (operator) 2026-04-18: shelf photos — Landmark (a); Assyria/Persians (b); Everitt/Goldsworthy/Oxford (c); late Rome–Byzantine (d); Roman lives–empire (e); Everyman Library canons (f); Penguin Clothbound epics (g). Medieval/early modern batches 2026-04-18: shelf-batch-a/b (Europe + Ottoman), batch-c (Weatherford + Khazaria), batch-d (Penguin Clothbound medieval canon). Colonial batches 2026-04-18: colonial-shelf-a (Wilson TYW + dedupe note vs HNSRC-0065/0066), b (Voltaire/French Rev), c (US founders), d (Atlantic), e (Library of America), f (Everyman Shakespeare + Enlightenment), g (Russia/Spain/Europe). Industrial/modern fiction + philosophy shelf (batch 2026-04-18-modern-shelf-photos-12): Penguin Clothbound / Everyman's / Little Black Classics / Library of America — see HNSRC-0129+. Assets: .cursor/projects/.../assets/photo_2026-04-18_11.*–12.*.png (incl. 22 files photo_2026-04-18_12.15.*–12.17.*).
-# 2026-04-21 shelf photos: US history, Crowley, LOA, Bradbury, Vonnegut, Narnia, etc. — HNSRC-0241+ (see assets/photo_2026-04-21_13.15.*).
+# 2026-04-21 shelf photos: US history, Crowley, LOA, Bradbury, Vonnegut, Narnia, etc. — HNSRC-0241+.
+# Workspace assets (same batch): .cursor/projects/Users-robertkuhne-Documents-grace-mar/assets/photo_2026-04-21_13.15.*.png
 
 version: 1
 items:
@@ -927,7 +933,7 @@ items:
     tags: [France, Revolution, 1789]
     hn_volume: vol-iii
     candidate_hn_chapters: [hn-iii-france]
-    notes: "Revolution terminus 1789 — aligns colonial-era boundary."
+    notes: "Subject is 1789 French Revolution; shelved colonial (Vol III) per runbook. HN volume boundary to industrial is 1815 AD."
 
   - id: HNSRC-0087
     title: "Jefferson"
@@ -3292,4 +3298,25 @@ items:
     added_batch: "2026-04-21-bookshelf-photos-2"
     tags: ['Crusades', 'Templars', 'military orders', 'Viking', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
     hn_volume: vol-ii
-    candidate_hn_chapters: ['hn-iii-ottoman', 'hn-iv-anglia-imperial', 'hn-ii-rome-byzantine']
+    candidate_hn_chapters: ['hn-ii-rome-byzantine', 'hn-ii-islam', 'hn-iv-anglia-imperial']
+  - id: HNSRC-0297
+    title: "Gandhi & Churchill: The Epic Rivalry That Destroyed an Empire and Forged Our Age"
+    author: "Arthur Herman"
+    era: industrial
+    eras: [industrial, modern]
+    added_batch: "2026-04-21-bookshelf-photos-3-partial-spine"
+    tags: ['India', 'Britain', 'empire', 'World War', 'decolonization', 'Bantam', 'self-library-bookshelf add from shelf photo', 'shelf photo 2026-04-21']
+    primary_arc: anglia
+    hn_volume: vol-iv
+    candidate_hn_chapters: ['hn-iv-anglia-imperial', 'hn-v-america-hegemonic']
+    notes: "Spine from partial photo; confirm edition. Primary era industrial; content spans into Cold War / partition — use eras."
+  - id: HNSRC-0298
+    title: "American Caesar: Douglas MacArthur 1880-1964"
+    author: "William Manchester"
+    era: industrial
+    added_batch: "2026-04-21-bookshelf-photos-3-partial-spine"
+    tags: ['America', 'Pacific', 'World War', 'Korea', 'biography', 'Back Bay / Little Brown', 'self-library-bookshelf add from shelf photo', 'shelf photo 2026-04-21']
+    primary_arc: america
+    hn_volume: vol-iv
+    candidate_hn_chapters: ['hn-iv-america']
+    notes: "Common one-volume; matches MacArthur + Cold War back-cover blurb in partial shelf photo. Confirm your printing."

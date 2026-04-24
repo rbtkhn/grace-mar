@@ -1,73 +1,54 @@
 # history-civ-america
 
-## Identity
+## Identity (immutable header)
 
-Civilization: America  
-Thread id: `history-civ-america`  
-Phase: 1  
-Function: Longitudinal civilizational thread for America inside `history-notebook`  
-Folded into this thread: Anglia
+Civilization: American / Anglian  
+Arc ID: `history-civ-america`  
+Phase: 2  
+Folds: Anglia  
+Last sovereign merge: 2026-04-21
 
-## Civilizational continuity
+## Civilizational Continuity (core longitudinal spine)
 
-Use this section to track durable American continuities across eras.
+Maritime-continental synthesis produces constitutional resilience followed by industrial-scale hegemony, with recurring risks of overextension and institutional lag. Atlantic orientation enables global projection but creates late-stage maintenance challenges.
 
-Focus on:
+## Contradiction Log (first-class)
 
-- maritime hegemony
-- commercial-imperial inheritance
-- institutional expansion
-- ideological legitimacy
-- scale and projection
-- inherited Anglian mechanisms versus transformed American ones
-- recurring strengths
-- recurring vulnerabilities
+- **C-AME-01** (preserved): Universalist ideological claims vs. particularist power maintenance and resource realities.
+- **C-AME-02** (preserved): Constitutional forms as both strength and source of decision-making friction under pressure.
 
-## Distilled learnings
+## Distilled Learnings (WORK → gated)
 
-Use this section to record what the notebook is learning from America as a reusable civilizational pattern set.
+[To be populated post-promotion from mechanism candidates and polyphony.]
 
-This thread may include:
+## Mechanism Candidates (Promotion/Demotion Ladder)
 
-- Anglian continuities
-- British-imperial inheritance
-- American transformation and extension
+- **MC-AME-01** [status: watch]  
+  “Constitutional and republican forms provide durable resilience until industrial-scale overextension creates institutional lag and legitimacy strain.”  
+  Ladder stage: watch | Resonance count: 6
 
-Prefer:
+## Polyphonic Expert Threads (new)
 
-- short analytical paragraphs
-- explicit mechanisms
-- tensions or contradictions
-- lessons that may travel into later chapters
+- **Constitutional Lens**: Distributed authority and rule-of-law as long-term stabilizer.
+- **Hegemonic Lens**: Maritime projection and industrial base as power multipliers.
+- **Synthesis Proposal** (gated): Managed retrenchment as late-hegemony doctrine.
 
-## Mechanism candidates
+## Candidate Chapter Targets + Cross-Volume Bridges
 
-- `MC-01:`
-- `MC-02:`
-- `MC-03:`
-- `MC-04:` Sea roads / circulation — when drafting `hn-i-v1-06`, use ancient comparative cases first; folded Anglia material mainly for `hn-iii-anglia`, `hn-iv-anglia-imperial`.
+- Vol IV: `hn-iv-america`
+- Vol V: `hn-v-america-hegemonic`
+- Bridge stub: “Anglian maritime inheritance transitions into American continental-industrial hegemony with parallel overextension dynamics.”
 
-Write short, portable mechanism statements here.
+## Reusable Resonance Lines (Strategy Notebook ready)
 
-## Candidate chapter targets
+- “Constitutional forms provide resilience until industrial-scale overextension creates institutional lag and legitimacy strain (MC-AME-01, watch stage, hn-v-america-hegemonic).”
+- “Maritime-Anglian inheritance enables global projection but carries recurring late-hegemony maintenance costs.”
 
-- `hn-i-v1-06`
-- `hn-iii-anglia`
-- `hn-iv-america`
+## Next Actions (governed, cadence-linked)
 
-List the current `history-notebook` chapters most likely to use America (including folded Anglia).
+- Monthly review cadence active
+- Monitor current-events resonance for overextension signals
 
-## Reusable resonance lines
+## Governance Receipt
 
-- 
-- 
-- 
-
-Write short lines that could later be cited in `strategy-notebook`.
-
-## Next actions
-
-- review relevant CIV-MEM Anglia and America material
-- identify continuity versus transformation mechanisms
-- connect America to likely Volume I chapters
-- when drafting `hn-i-v1-06`, keep Vol I focus on ancient comparative sea-roads; use folded Anglia mainly for later-volume bridge prose per [STYLE-GUIDE.md](../STYLE-GUIDE.md)
+Last reviewed: 2026-04-21 | Proposals staged: 0 | Human sovereign: rbtkhn
