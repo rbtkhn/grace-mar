@@ -90,6 +90,7 @@ This PR adds a **formal portable-emulation contract schema** at:
 - [`emulation-bundle-schema.v1.json`](emulation-bundle-schema.v1.json)
 
 That contract schema is richer than the current emitted envelope. It documents the intended authority model and behavior-spec slots without changing the exporter in this PR.
+In short: [`../../../schema-registry/emulation-bundle-envelope.v1.json`](../../../schema-registry/emulation-bundle-envelope.v1.json) validates what the exporter ships today, while [`emulation-bundle-schema.v1.json`](emulation-bundle-schema.v1.json) describes the fuller downstream contract Grace-Mar intends to converge toward.
 
 ---
 

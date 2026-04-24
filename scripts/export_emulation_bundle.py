@@ -14,6 +14,7 @@ import json
 import sys
 import time
 from datetime import datetime, timezone
+from functools import lru_cache
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
@@ -59,6 +60,24 @@ def _write_json(path: Path, payload: dict) -> None:
 def _copy_json(src: Path, dst: Path) -> None:
     payload = json.loads(src.read_text(encoding="utf-8"))
     _write_json(dst, payload)
+
+
+@lru_cache(maxsize=1)
+def _emulation_envelope_validator():
+    try:
+        import jsonschema
+    except ImportError as exc:
+        raise RuntimeError(
+            "jsonschema is required to validate emulation bundle exports"
+        ) from exc
+
+    schema = json.loads(SCHEMA_PATH.read_text(encoding="utf-8"))
+    jsonschema.validators.validator_for(schema).check_schema(schema)
+    return jsonschema.Draft202012Validator(schema)
+
+
+def validate_emulation_envelope(payload: dict) -> None:
+    _emulation_envelope_validator().validate(payload)
 
 
 def build_emulation_envelope(
@@ -136,6 +155,7 @@ def export_emulation_bundle(
         runtime_mode=runtime_mode,
         generated_at=_utc_now_iso(),
     )
+    validate_emulation_envelope(envelope)
     _write_json(out_dir / "emulation-bundle.json", envelope)
 
     append_harness_event(
