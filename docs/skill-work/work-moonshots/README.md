@@ -1,6 +1,6 @@
 # work-moonshots — PMOS v0.1 templates
 
-**Scope:** WORK lane — Personal Moonshot Operating System **scaffold** (governance-first). Not a separate Record surface.
+**Scope:** WORK lane — **(1) Personal Moonshot Operating System (PMOS) v0.1** scaffolds and **(2) [Moonshot Orchestration](moonshot-orchestration/README.md)** (civilizational-signal → contribution maps, source tiers, boundary checks, dashboard, optional gated proposals). **Governance-first.** Not a separate Record surface.
 
 **Placement:** PMOS artifacts live **here** under `docs/skill-work/work-moonshots/` (and per-instance [`self-moonshots.md`](../../../users/grace-mar/self-moonshots.md)). Do not add a parallel top-level `moonshots/` tree—extend this lane instead.
 
@@ -12,7 +12,8 @@
 | [missions/](missions/README.md) | Mission-scale WORK folders (`missions/<slug>/`) + intake for tacit-derived snapshots |
 | [mission-spec-template.md](mission-spec-template.md) | Full mission spec scaffold (statement, success/failure, hypotheses, …) |
 | [swarm-spirit.md](swarm-spirit.md) | **Ritual only:** many modes of attention → one gate-ready bundle; no automation, no gate writes from scripts |
+| [moonshot-orchestration/README.md](moonshot-orchestration/README.md) | **Moonshot Orchestration** — source-tier and claim-strength discipline, contribution map template, boundaries, lifecycle, manual dashboard, optional **gate** candidates. **Not** Record truth; **not** a canonical skill. |
 
-**v0.1 limits:** No bot commands, no data-ingestion connectors — template + docs + gate pattern only.
+**v0.1 limits (PMOS / missions):** No bot commands, no data-ingestion connectors — template + docs + gate pattern only.
 
 **Tacit pipeline:** [docs/tacit-capture/README.md](../../tacit-capture/README.md) (raw note → normalized JSON → candidates → optional mission intake).
