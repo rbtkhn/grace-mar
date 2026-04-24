@@ -17,7 +17,7 @@ Do:
 Do not:
 - publish content
 - hand-edit identity truth into `self.md`
-- copy any `users/grace-mar/**` content into Xavier paths
+- copy any `users/grace-mar/**` content into Cici instance paths (e.g. template `users/xavier/`)
 
 ---
 
@@ -40,7 +40,7 @@ Your only goal today is to understand the structure and complete first setup saf
 
 ### What this space is not
 - It is not Grace-Mar’s Record.
-- Do not copy `users/grace-mar/**` into Xavier instance files.
+- Do not copy `users/grace-mar/**` into Cici instance files (template `users/xavier/`).
 - Durable identity updates go through the gate pipeline only.
 
 ### Non-negotiables

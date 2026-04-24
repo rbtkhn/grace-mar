@@ -18,6 +18,7 @@
 | [cici-pilot-propagation-low-cost-operator.md](cici-pilot-propagation-low-cost-operator.md) | **10-pilot reach** — low-cost propagation checklist (referral, FB groups, Telegram, borrowed audiences) + citations |
 | [cici-community-mission-operator.md](cici-community-mission-operator.md) | **Cici / Neural Sandbox** — short-term mission, drop-off focus, funnel metrics (operator WORK) |
 | [README.md](README.md) | Advisor / project module for Cici (formerly Xavier) — vs her companion / instance repo and the external [Cici](https://github.com/Xavier-x01/Cici) OB1 repo; not Cici’s Record in grace-mar |
+| [POST-RENAME-AUDIT.md](POST-RENAME-AUDIT.md) | **Post-rename audit** — drift report after `work-xavier` → `work-cici` (status, scripts, boundaries; recommended: CI grep guard) |
 | [xavier-work-profile.md](xavier-work-profile.md) | Employee work profile + skills portfolio (operator WORK); not her Record |
 | [xavier-progress-log.md](xavier-progress-log.md) | Operator progress / behavior notes + evidence index (paired with [work-cici-history.md](work-cici-history.md)) |
 | [`.cursor/skills/skill-cici/SKILL.md`](../../../.cursor/skills/skill-cici/SKILL.md) | **skill-cici** — Cursor ritual for journal rhythm (grace-mar vs Cici **Mode B**); baseline from cici-notebook |
@@ -53,7 +54,7 @@
 | [COMPANION-XAVIER-DRY-RUN-PROMPTS.md](COMPANION-XAVIER-DRY-RUN-PROMPTS.md) | Prompts for template-only bootstrap validation |
 | [LEARN-PATH.md](LEARN-PATH.md) | Progressive learning path |
 | [LEARNING-OBJECTIVES-CONTROL-PLANE.md](LEARNING-OBJECTIVES-CONTROL-PLANE.md) | Beginner-safe control plane |
-| [SYNC-DAILY.md](SYNC-DAILY.md) | Advisor / Xavier daily sync snapshot (work-dev + work-politics) |
+| [SYNC-DAILY.md](SYNC-DAILY.md) | Advisor / Cici daily sync snapshot (work-dev + work-politics) |
 | [UPLOAD-PREP.md](UPLOAD-PREP.md) | **Pre-upload checklist** — skill-cici → Cici (or share); leakage + manifest |
 | [DAILY-OPS-CARD.md](DAILY-OPS-CARD.md) | Final daily execution card |
 | [../self-work/sync-pack/README.md](../self-work/sync-pack/README.md) | Template sync-pack reference |
@@ -71,7 +72,7 @@
 | [content-spec-3-month-10000-budget.md](content-spec-3-month-10000-budget.md) | 12-week + budget spec |
 | [week2-execution-2026-03-31.md](week2-execution-2026-03-31.md) | Week 2 budget + KPI envelope (points at Week 2 content plan) |
 | [week2-kpi-budget-log-2026-03-31.md](week2-kpi-budget-log-2026-03-31.md) | Week 2 tracking sheet |
-| [xavier-smm-capability-rubric.md](xavier-smm-capability-rubric.md) | Operator rubric to evaluate Xavier vs the content plans |
+| [xavier-smm-capability-rubric.md](xavier-smm-capability-rubric.md) | Operator rubric to evaluate Cici against the content plans |
 | [brewmind-philippines-onboarding-guide.md](brewmind-philippines-onboarding-guide.md) | **Start here — BrewMind PH bundle:** hub, reading order, phase checklists, links to all BrewMind WORK docs |
 | [brewmind-business-plan.md](brewmind-business-plan.md) | BrewMind WORK draft: Cebu pilot, partner-network-first, ~$10k seed (see public [site](https://xavier-x01.github.io/brew_mind/)) |
 | [brewmind-visual-style.md](brewmind-visual-style.md) | BrewMind visual style — colors, type, UI patterns, print notes (align with site hero) |
