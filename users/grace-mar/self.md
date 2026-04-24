@@ -132,7 +132,7 @@ entries:
   - id: CUR-0007
     label: "Mentoring and teaching methodology"
     detail: "Xavier advisor module (OB1 instance, learning rhythm, skills portfolio), alpha-school lane. Cross-instance companion-self deployment as a teaching and coaching tool."
-    source: "lane: work-xavier, work-alpha-school"
+    source: "lane: work-cici, work-alpha-school"
     merged: 2026-04-17
 ```
 

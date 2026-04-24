@@ -223,7 +223,7 @@ def _compute_option_weights(
         "C": {"cost": "light", "note": "Strategy — daily brief + tri-frame"},
         "D1": {"cost": "moderate", "note": "Conductor — continue last emphasis (notebook)"},
         "D2": {"cost": "moderate", "note": "Conductor — system-recommended stack (notebook)"},
-        "E": {"cost": "moderate", "note": "System choice — xavier / dev / jiang / rome slice"},
+        "E": {"cost": "moderate", "note": "System choice — cici / dev / jiang / rome slice"},
     }
 
     if branch_count >= 3:

@@ -13,8 +13,8 @@ When an agent runs the full `dream` ritual, follow `.cursor/skills/dream/SKILL.m
 § Strategy notebook — end-of-day production closeout for that calendar day's page
 (read STATUS + days.md, stub / condense note / gap).
 
-Xavier journal (LIB-0154): this script does not run `xavier_journal_ob1_digest.py` (use `--catch-up-from-last-dream --write` per dream SKILL).
-Full `dream` includes § Xavier journal — generate the day file with `--write` (network).
+Cici notebook (LIB-0154): this script does not run `cici_journal_ob1_digest.py` (use `--catch-up-from-last-dream --write` per dream SKILL).
+Full `dream` includes § Cici notebook — generate the day file with `--write` (network).
 
 Usage:
     python3 scripts/operator_end_of_day.py -u grace-mar
@@ -43,7 +43,7 @@ def main() -> int:
         description=(
             "Run auto_dream + operator_handoff_check (read-only night-close stack). "
             "Full dream ritual also includes strategy-notebook closeout and "
-            "xavier-journal digest generation per .cursor/skills/dream/SKILL.md "
+            "cici-notebook digest generation per .cursor/skills/dream/SKILL.md "
             "(not run by this script)."
         )
     )

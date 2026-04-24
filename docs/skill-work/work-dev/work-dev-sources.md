@@ -109,4 +109,4 @@ Useful for the [fact-check skill](../../../.cursor/skills/fact-check/SKILL.md) a
 
 **Parallel (work-politics):** [../work-politics/work-politics-sources.md](../work-politics/work-politics-sources.md)
 
-**BrewMind (Philippines pilot):** These feeds are also bundled for **micro-lesson / curriculum depth** in [../work-xavier/brewmind-philippines-onboarding-guide.md](../work-xavier/brewmind-philippines-onboarding-guide.md) § *Operator depth — work-dev sources* — PH-facing AI content online is thin; **canonical list stays this file**.
+**BrewMind (Philippines pilot):** These feeds are also bundled for **micro-lesson / curriculum depth** in [../work-cici/brewmind-philippines-onboarding-guide.md](../work-cici/brewmind-philippines-onboarding-guide.md) § *Operator depth — work-dev sources* — PH-facing AI content online is thin; **canonical list stays this file**.

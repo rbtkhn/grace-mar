@@ -1,6 +1,6 @@
 # Islamabad Framework — operator index
 
-**Territory:** **work-strategy** (this folder) plus one **work-jiang** intake. **Not** work-xavier, not Record, not Voice knowledge.
+**Territory:** **work-strategy** (this folder) plus one **work-jiang** intake. **Not** work-cici, not Record, not Voice knowledge.
 
 **Use:** Open this file when you want one map of the Islamabad bundle without hunting cross-links.
 

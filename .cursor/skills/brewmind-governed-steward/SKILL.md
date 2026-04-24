@@ -12,7 +12,7 @@ description: "BrewMind × Cici: route business facts through evidence → prepar
 
 **Territory:** **WORK** (advisor + Xavier operator). **Not** grace-mar **Record** or **RECURSION-GATE** merges. **Canonical instance:** Xavier’s repo [Cici](https://github.com/Xavier-x01/Cici) — see [README](https://github.com/Xavier-x01/Cici#readme), [`docs/governed-state-doctrine.md`](https://github.com/Xavier-x01/Cici/blob/main/docs/governed-state-doctrine.md), `config/authority-map.json`.
 
-**Pairs with:** [skill-xavier](../skill-xavier/SKILL.md) (daily rhythm / journal) · [work-xavier](../../../docs/skill-work/work-xavier/README.md) · optional Cici slash commands (`/draft-proposal`, `/review-governed-change`, `/promote-to-governed-state`, `/session-start`).
+**Pairs with:** [skill-cici](../skill-cici/SKILL.md) (daily rhythm / journal) · [work-cici](../../../docs/skill-work/work-cici/README.md) · optional Cici slash commands (`/draft-proposal`, `/review-governed-change`, `/promote-to-governed-state`, `/session-start`).
 
 ---
 
@@ -64,6 +64,6 @@ One week where **at least two** BrewMind-tagged facts moved **evidence → propo
 
 ## Related (grace-mar advisor)
 
-- [brewmind-philippines-onboarding-guide.md](../../../docs/skill-work/work-xavier/brewmind-philippines-onboarding-guide.md) — business bundle
-- [xavier-work-profile.md](../../../docs/skill-work/work-xavier/xavier-work-profile.md) — Cici matrix row
-- [evidence/cici-rtf-sessions-ingest-2026-04-14.md](../../../docs/skill-work/work-xavier/evidence/cici-rtf-sessions-ingest-2026-04-14.md) — `.claude/` + companion contract context
+- [brewmind-philippines-onboarding-guide.md](../../../docs/skill-work/work-cici/brewmind-philippines-onboarding-guide.md) — business bundle
+- [xavier-work-profile.md](../../../docs/skill-work/work-cici/xavier-work-profile.md) — Cici matrix row
+- [evidence/cici-rtf-sessions-ingest-2026-04-14.md](../../../docs/skill-work/work-cici/evidence/cici-rtf-sessions-ingest-2026-04-14.md) — `.claude/` + companion contract context

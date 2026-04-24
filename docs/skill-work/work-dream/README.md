@@ -13,7 +13,7 @@
 | **Consolidation architecture** | Defines the shape of end-of-day maintenance: memory normalization, integrity, governance, contradiction digest, artifact drafts. |
 | **Night-to-morning handoff** | Documents the `last-dream.json` data contract that bridges dream output to coffee Step 1. |
 | **Strategy notebook (LIB-0153)** | **`dream` does not** own notebook production. Fold runs in **`strategy`** or on explicit **fold**; `auto_dream.py` may report **`strategy_notebook_missing_day_headers`** as optional FYI. See [STRATEGY-NOTEBOOK-ARCHITECTURE.md](../work-strategy/strategy-notebook/STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *Entry model* and [.cursor/skills/dream/SKILL.md](../../.cursor/skills/dream/SKILL.md) § *Strategy notebook*. |
-| **Xavier journal (LIB-0154)** | Dream **initiates generation** of the calendar day’s [`xavier-journal`](../work-xavier/xavier-journal/) file via [`xavier_journal_ob1_digest.py`](../../../scripts/xavier_journal_ob1_digest.py) `--write` (GitHub network; optional token). Not her Record; WORK lane. See dream SKILL § *Xavier journal*. |
+| **Cici notebook (LIB-0154)** | Dream **initiates generation** of the calendar day’s [`cici-notebook`](../work-cici/cici-notebook/) file via [`cici_journal_ob1_digest.py`](../../../scripts/cici_journal_ob1_digest.py) `--write` (GitHub network; optional token). Not her Record; WORK lane. See dream SKILL § *Cici notebook*. |
 | **Boundary surface** | Explains what belongs in WORK-only docs/history versus what must escalate to `RECURSION-GATE`. |
 | **Choreography with coffee** | Holds the rationale for the dream→coffee pairing: sequence, timing, data flow. |
 
@@ -76,7 +76,7 @@ audit_context_tax.py               approximate ritual paste line/char counts
 Strategy notebook (work-strategy) — not a subprocess inside auto_dream.py; use
 `dream_catchup` from `--json` / `last-dream.json` for local dates + missing `##` headers; agent stubs per dream SKILL.
 
-Xavier journal (work-xavier) — `xavier_journal_ob1_digest.py --catch-up-from-last-dream --write` (network); same date window as `dream_catchup`.
+Cici notebook (work-cici) — `cici_journal_ob1_digest.py --catch-up-from-last-dream --write` (network); same date window as `dream_catchup`.
 ```
 
 **Bundle:** `operator_end_of_day.py` runs `auto_dream.py` then `operator_handoff_check.py` — night-side counterpart to `operator_reentry_stack.py`.

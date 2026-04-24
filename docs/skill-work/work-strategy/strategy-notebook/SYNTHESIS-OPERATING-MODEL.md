@@ -269,6 +269,6 @@ Historical accounts emphasize **rigor**, **clarity**, and **concert-level seriou
 | Minds recipes | [MINDS-SKILL-STRATEGY-PATTERNS.md](../minds/MINDS-SKILL-STRATEGY-PATTERNS.md) |
 | Skill behavior | [.cursor/skills/skill-strategy/SKILL.md](../../../../.cursor/skills/skill-strategy/SKILL.md) |
 
-### Adjacent lane (Xavier journal)
+### Adjacent lane (Cici notebook)
 
-**Multi-source day digest** for OB1 / companion handoff (inbox, transcript, strategy-notebook block, artifacts) is a **different write surface** with overlapping *synthesis* vocabulary — see [xavier-journal/SYNTHESIS-SOURCES.md](../../work-xavier/xavier-journal/SYNTHESIS-SOURCES.md). Use that path when the deliverable is a **journal page**, not the strategy-notebook `days.md` block alone.
+**Multi-source day digest** for OB1 / companion handoff (inbox, transcript, strategy-notebook block, artifacts) is a **different write surface** with overlapping *synthesis* vocabulary — see [cici-notebook/SYNTHESIS-SOURCES.md](../../work-cici/cici-notebook/SYNTHESIS-SOURCES.md). Use that path when the deliverable is a **journal page**, not the strategy-notebook `days.md` block alone.

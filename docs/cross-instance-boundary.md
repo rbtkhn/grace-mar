@@ -10,7 +10,7 @@
 
 | Repository | Holds |
 |------------|--------|
-| **grace-mar** (mentor / operator) | `users/grace-mar/` Record, work territories (e.g. collaborative **work-xavier** module), template sync tooling. |
+| **grace-mar** (mentor / operator) | `users/grace-mar/` Record, work territories (e.g. collaborative **work-cici** module), template sync tooling. |
 | **Peer instance** (e.g. employee’s repo) | **Her** `users/<fork_id>/` tree, **her** gate, **her** merge script — not a subtree inside grace-mar. |
 
 “Similar companion-self type agents” here means: **same protocol**, **different forks**, **different repos** unless you explicitly choose otherwise.
@@ -58,4 +58,4 @@ With **one other person**, prefer **explicit habits** over heavy automation: who
 
 ---
 
-**Related:** [audit-boundary-grace-mar-companion-self.md](audit-boundary-grace-mar-companion-self.md), [skill-work/work-xavier/README.md](skill-work/work-xavier/README.md).
+**Related:** [audit-boundary-grace-mar-companion-self.md](audit-boundary-grace-mar-companion-self.md), [skill-work/work-cici/README.md](skill-work/work-cici/README.md).

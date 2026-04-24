@@ -29,22 +29,22 @@
 
 ---
 
-## work-xavier (advisor module)
+## work-cici (advisor module)
 
-Grace-mar **operator/advisor** lane for Xavier (mirrors, BrewMind, runbooks). Not her Record repo; see [work-xavier/README.md](../work-xavier/README.md).
+Grace-mar **operator/advisor** lane for Xavier (mirrors, BrewMind, runbooks). Not her Record repo; see [work-cici/README.md](../work-cici/README.md).
 
-| Template concept | work-xavier path |
+| Template concept | work-cici path |
 |------------------|------------------|
-| **README / lane hub** | [work-xavier/README.md](../work-xavier/README.md), [INDEX.md](../work-xavier/INDEX.md) |
-| **WORK-LEDGER** | [WORK-LEDGER.md](../work-xavier/WORK-LEDGER.md) + distributed mirror logs: [work-dev-mirror/SYNC-LOG.md](../work-xavier/work-dev-mirror/SYNC-LOG.md), [work-politics-mirror/SYNC-LOG.md](../work-xavier/work-politics-mirror/SYNC-LOG.md) |
-| **Daily horizon / brief** | [SYNC-DAILY.md](../work-xavier/SYNC-DAILY.md), [DAILY-OPS-CARD.md](../work-xavier/DAILY-OPS-CARD.md) |
-| **Lane focus** | Content plans, KPI logs, [xavier-smm-capability-rubric.md](../work-xavier/xavier-smm-capability-rubric.md); BrewMind hub [brewmind-philippines-onboarding-guide.md](../work-xavier/brewmind-philippines-onboarding-guide.md) |
+| **README / lane hub** | [work-cici/README.md](../work-cici/README.md), [INDEX.md](../work-cici/INDEX.md) |
+| **WORK-LEDGER** | [WORK-LEDGER.md](../work-cici/WORK-LEDGER.md) + distributed mirror logs: [work-dev-mirror/SYNC-LOG.md](../work-cici/work-dev-mirror/SYNC-LOG.md), [work-politics-mirror/SYNC-LOG.md](../work-cici/work-politics-mirror/SYNC-LOG.md) |
+| **Daily horizon / brief** | [SYNC-DAILY.md](../work-cici/SYNC-DAILY.md), [DAILY-OPS-CARD.md](../work-cici/DAILY-OPS-CARD.md) |
+| **Lane focus** | Content plans, KPI logs, [xavier-smm-capability-rubric.md](../work-cici/xavier-smm-capability-rubric.md); BrewMind hub [brewmind-philippines-onboarding-guide.md](../work-cici/brewmind-philippines-onboarding-guide.md) |
 | **Emerging patterns** | Week plans + rubric vs execution; informal until promoted in WORK-LEDGER II-A |
 | **Framing audit** | Not a dedicated file yet; use strategy/politics parent lanes when drafting campaign-adjacent copy |
-| **Multi-frame review** | Partial — [LANES.md](../work-xavier/LANES.md) + consumption of work-strategy / work-politics mirrors; no single `frames.md` |
-| **Background context** | PH market + operator depth: [work-xavier-sources.md](../work-xavier/work-xavier-sources.md), [work-dev/work-dev-sources.md](../work-dev/work-dev-sources.md) |
-| **History log** | [work-xavier-history.md](../work-xavier/work-xavier-history.md) |
-| **Gate / CI** | [LANE-CI.md](../work-xavier/LANE-CI.md); label `lane/work-xavier` in [.github/pull_request_template.md](../../../.github/pull_request_template.md) |
+| **Multi-frame review** | Partial — [LANES.md](../work-cici/LANES.md) + consumption of work-strategy / work-politics mirrors; no single `frames.md` |
+| **Background context** | PH market + operator depth: [work-cici-sources.md](../work-cici/work-cici-sources.md), [work-dev/work-dev-sources.md](../work-dev/work-dev-sources.md) |
+| **History log** | [work-cici-history.md](../work-cici/work-cici-history.md) |
+| **Gate / CI** | [LANE-CI.md](../work-cici/LANE-CI.md); label `lane/work-cici` in [.github/pull_request_template.md](../../../.github/pull_request_template.md) |
 
 ---
 

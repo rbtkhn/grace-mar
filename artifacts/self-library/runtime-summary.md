@@ -17,7 +17,7 @@ Active entries: 132
 | ID       | Title                                            | Shelf             | Subtype           | Reviewed   |
 | -------- | ------------------------------------------------ | ----------------- | ----------------- | ---------- |
 | LIB-0153 | Strategy notebook                                | operator_book     | operator_notebook | 2026-04-16 |
-| LIB-0154 | Xavier journal                                   | operator_book     | operator_journal  | 2026-04-16 |
+| LIB-0154 | Cici notebook                                   | operator_book     | operator_journal  | 2026-04-16 |
 | LIB-0155 | Dev journal                                      | operator_book     | operator_journal  | 2026-04-16 |
 | LIB-0157 | Civilization Memory (upstream repository)        | operator_book     | upstream_corpus   | 2026-04-16 |
 | LIB-0151 | Predictive History — YouTube transcript library  | operator_book     | upstream_corpus   | 2026-04-16 |
@@ -31,7 +31,7 @@ Active entries: 132
 
 | ID       | Title          | Priority | Reviewed   |
 | -------- | -------------- | -------- | ---------- |
-| LIB-0154 | Xavier journal | high     | 2026-04-16 |
+| LIB-0154 | Cici notebook | high     | 2026-04-16 |
 | LIB-0155 | Dev journal    | high     | 2026-04-16 |
 
 ### operator_notebook

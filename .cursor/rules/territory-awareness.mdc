@@ -29,7 +29,7 @@ When working in `docs/skill-work/`, treat each subdirectory as a **territory** â
 | work-health-fitness | `docs/skill-work/work-health-fitness/` | README, roadmap |
 | work-human-teacher | `docs/skill-work/work-human-teacher/` | README, roadmap |
 | work-companion-self | `docs/skill-work/work-companion-self/` | README, roadmap |
-| work-xavier | `docs/skill-work/work-xavier/` | INDEX, ALIGNMENT, LEAKAGE-CHECKLIST, xavier-journal/README; canonical OB1 instance repo **Cici**; `.cursor/rules/work-xavier-lane.mdc` |
+| work-cici | `docs/skill-work/work-cici/` | INDEX, ALIGNMENT, LEAKAGE-CHECKLIST, cici-notebook/README; canonical OB1 instance repo **Cici**; `.cursor/rules/work-cici-lane.mdc` |
 | work-alpha-school | `docs/skill-work/work-alpha-school/` | README |
 
 ---

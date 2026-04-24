@@ -18,7 +18,7 @@ _High-value WORK lanes: Predictive History, strategy notebook, journals, etc. So
 - **LIB-0151** — Predictive History — YouTube transcript library (`lookup_priority`: high)
 - **LIB-0152** — Tucker Carlson Network — curated transcript book (`lookup_priority`: high)
 - **LIB-0153** — Strategy notebook (`lookup_priority`: high)
-- **LIB-0154** — Xavier journal (`lookup_priority`: high)
+- **LIB-0154** — Cici notebook (`lookup_priority`: high)
 - **LIB-0155** — Dev journal (`lookup_priority`: high)
 - **LIB-0156** — History notebook (`lookup_priority`: high)
 - **LIB-0157** — Civilization Memory (upstream repository) (`lookup_priority`: high)
@@ -32,7 +32,7 @@ _Last commit date on repo path from `url` when it points at this repository — 
 - 2026-04-19 — **LIB-0156** — History notebook
 - 2026-04-18 — **LIB-0151** — Predictive History — YouTube transcript library
 - 2026-04-13 — **LIB-0149** — Predictive History
-- 2026-04-12 — **LIB-0154** — Xavier journal
+- 2026-04-12 — **LIB-0154** — Cici notebook
 - 2026-04-11 — **LIB-0155** — Dev journal
 - 2026-04-11 — **LIB-0146** — Polyphonic cognition
 - 2026-04-11 — **LIB-0132** — Civilization Memory Codex
@@ -78,7 +78,7 @@ _117 more in **canon** — see appendix._
 - **LIB-0151** — Predictive History — YouTube transcript library (`lookup_priority`: high)
 - **LIB-0152** — Tucker Carlson Network — curated transcript book (`lookup_priority`: high)
 - **LIB-0153** — Strategy notebook (`lookup_priority`: high)
-- **LIB-0154** — Xavier journal (`lookup_priority`: high)
+- **LIB-0154** — Cici notebook (`lookup_priority`: high)
 - **LIB-0155** — Dev journal (`lookup_priority`: high)
 - **LIB-0156** — History notebook (`lookup_priority`: high)
 - **LIB-0157** — Civilization Memory (upstream repository) (`lookup_priority`: high)
@@ -291,7 +291,7 @@ _Complete list for completeness checks; the sections above are for daily navigat
 - **LIB-0151** — Predictive History — YouTube transcript library
 - **LIB-0152** — Tucker Carlson Network — curated transcript book
 - **LIB-0153** — Strategy notebook
-- **LIB-0154** — Xavier journal
+- **LIB-0154** — Cici notebook
 - **LIB-0155** — Dev journal
 - **LIB-0156** — History notebook
 - **LIB-0157** — Civilization Memory (upstream repository)

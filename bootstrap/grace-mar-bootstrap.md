@@ -122,7 +122,7 @@ For a **cold Cursor thread** when instance state matters (gate, pipeline, `users
 |------|-------------------|
 | One paste (overlapping summaries by design) | `python3 scripts/operator_reentry_stack.py -u grace-mar` — add `--compact` for a shorter harness tail |
 | One-line snapshot | `python3 scripts/harness_warmup.py -u grace-mar --receipt` (optional `--territory work-politics` or `companion`) |
-| Coffee (work-start + signing-off; same **A–G**) | `.cursor/skills/coffee/SKILL.md` (fixed menu; **A–Today, B–Build, C–Compass, D–Book, E–Steward, F–Xavier next, G–Dev next**; **no** close letter; **C** includes work-strategy-rome) — not replaced by a universal “heartbeat first line” rule |
+| Coffee (work-start + signing-off; same **A–G**) | `.cursor/skills/coffee/SKILL.md` (fixed menu; **A–Today, B–Build, C–Compass, D–Book, E–Steward, F–Cici next, G–Dev next**; **no** close letter; **C** includes work-strategy-rome) — not replaced by a universal “heartbeat first line” rule |
 | Optional GWS | `docs/skill-work/work-dev/google-workspace-cli-operator.md` — attach `.cursor/rules/gws-cli-recipes.mdc` when using `gws` |
 | VS Code / Cursor Tasks | Copy tasks from `docs/skill-work/work-dev/cursor-vscode-grace-mar-tasks.json` into your local `.vscode/tasks.json` (`.vscode/` is gitignored here) |
 

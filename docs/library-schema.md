@@ -162,7 +162,7 @@ Optional field for entries with `shelf_intent: operator_book`. Distinguishes ret
 |-------|---------|
 | **operator_spine** | Multivolume interpretive corpus with a stable structure (e.g. Predictive History). Deep, slow-changing, high retrieval weight. |
 | **operator_notebook** | Active WORK-territory notebook with daily/episodic entries (e.g. strategy notebook). Fast-changing, session-coupled. |
-| **operator_journal** | Process/learning journal (e.g. Xavier journal, dev journal). Reflective, lower retrieval weight than notebooks. |
+| **operator_journal** | Process/learning journal (e.g. Cici notebook, dev journal). Reflective, lower retrieval weight than notebooks. |
 | **upstream_corpus** | Large external corpus maintained outside this instance (e.g. Civilization Memory). High volume, separate freshness cycle. |
 
 When omitted on an `operator_book` entry, the subtype is unspecified. The field helps review scripts and future UIs distinguish retrieval granularity, freshness expectations, and query suitability across operator-authored corpora.

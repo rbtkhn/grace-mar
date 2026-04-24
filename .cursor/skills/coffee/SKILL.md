@@ -110,9 +110,9 @@ D2. Conductor — system recommended
 E. (system choice) — <one short line: the single best alternate lane this session>
 ```
 
-**Filling E — (system choice):** Pick **one** concrete slice for this turn, using Step 1 context — e.g. **self-skill-write** (prompts, PRP, Lexile, bot/prompt **proposals** — not merge), **work-xavier** next (ground in `coffee_lane_next_hints` / SYNC-DAILY / INDEX), **work-dev** next from [workspace.md](../../../docs/skill-work/work-dev/workspace.md) § **Next actions**, **work-strategy-rome** / ROME-PASS (Compass-style), **work-jiang / PH** (Book-style), or match **`Dream → coffee menu`** when it points at a path not already covered by **A–C / D1 / D2**. **Write-shaped** work is **not** a seventh letter — it defaults here or when the operator says **`write`** / **`skill-write`** without **`coffee`**. State it plainly in the angle-bracket line; **do not** add a separate “micro-hints” row.
+**Filling E — (system choice):** Pick **one** concrete slice for this turn, using Step 1 context — e.g. **self-skill-write** (prompts, PRP, Lexile, bot/prompt **proposals** — not merge), **work-cici** next (ground in `coffee_lane_next_hints` / SYNC-DAILY / INDEX), **work-dev** next from [workspace.md](../../../docs/skill-work/work-dev/workspace.md) § **Next actions**, **work-strategy-rome** / ROME-PASS (Compass-style), **work-jiang / PH** (Book-style), or match **`Dream → coffee menu`** when it points at a path not already covered by **A–C / D1 / D2**. **Write-shaped** work is **not** a seventh letter — it defaults here or when the operator says **`write`** / **`skill-write`** without **`coffee`**. State it plainly in the angle-bracket line; **do not** add a separate “micro-hints” row.
 
-**Step 1 context for E:** `operator_coffee.py` prints **`Lane context (for menu E)`** — two lines from `scripts/coffee_lane_next_hints.py` (work-xavier + work-dev). Use when choosing **E** or when wording the **E** line.
+**Step 1 context for E:** `operator_coffee.py` prints **`Lane context (for menu E)`** — two lines from `scripts/coffee_lane_next_hints.py` (work-cici + work-dev). Use when choosing **E** or when wording the **E** line.
 
 **Optional load note:** Step 1 may print `Session load: … (recommended: X)` (**A** / **B** / **C**). You may mention that **one** recommended letter in prose before or after the **six** lines — **not** as a second labeled menu block and **not** as micro-hints under the list.
 
@@ -128,7 +128,7 @@ E. (system choice) — <one short line: the single best alternate lane this sess
 
 - **D2. Conductor — system** — Same protocol document; **D2** picks a **movement stack** from `last-dream.json`, **`Session load`**, and **`Dream → coffee menu`** per [CONDUCTOR-PASS.md — D1 vs D2](../../../docs/skill-work/work-coffee/CONDUCTOR-PASS.md#conductor-d1-d2). **Short** orienting reply + concrete next actions. **Not** a merge, **not** the full 15–45m embodied ritual in chat unless the operator extends. **Optional** after the turn: `log_cadence_event.py` **`coffee_pick`** with `--kv picked=D1 conductor=<slug>` or `picked=D2 conductor=<slug>`. **Not** work-dev implementation (**A**), not daily-brief + Tri-Frame alone (**C**; use **C** for brief). **Not** `self-skill-write` (use **E** for write slice).
 
-- **E. (system choice)** — As filled on the menu line; typically one of: **skill-write** / PRP, Xavier next, Dev next (workspace), Compass/Rome, Jiang/PH — **one** step.
+- **E. (system choice)** — As filled on the menu line; typically one of: **skill-write** / PRP, Cici next, Dev next (workspace), Compass/Rome, Jiang/PH — **one** step.
 
 **Exit / re-offer:** After **A**, **B**, or **E**, re-offer the full **A–D2–E** menu by default. After **C**, **D1**, or **D2**, **exit to normal workflow** unless **`stay in coffee`**. After **B** (Steward), see [menu-reference § Steward follow-up fork](../../../docs/skill-work/work-coffee/menu-reference.md#steward-follow-up-fork-implement-now-vs-later) (replace legacy **E** with **B** when reading that section). Synonyms **`B+ship`** / **`EXECUTE`** ≈ **Implement now** on steward track.
 

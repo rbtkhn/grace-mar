@@ -31,11 +31,11 @@ It is not a contact book and not a broad systems inventory.
 
 ### Xavier / Cici (OB1 adjacent instance)
 
-- Name / role: adjacent companion-self instance (work-xavier lane)
+- Name / role: adjacent companion-self instance (work-cici lane)
 - Why it matters: cross-instance learning, shared template evolution, OB1 upstream patterns
 - What is usually needed: GitHub digest, inbox review, journal sync
 - Timing sensitivity: daily or as events arise; not blocking for grace-mar core work
-- What happens if delayed: xavier journal falls behind; no grace-mar impact
+- What happens if delayed: cici journal falls behind; no grace-mar impact
 
 ## Systems and tools
 

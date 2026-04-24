@@ -28,6 +28,19 @@ A **lightweight vocabulary** for stress-testing long-horizon and moonshot-sized 
 - No **SKILL-0018 / SKILL-0019** or any canonical skill ID from this note.
 - No **Merkle**, **swarm**, or **runtime** wiring; no **merges** to Record from this file.
 
+## Heavier drafts (out of scope here)
+
+From time to time the same **Founder / Joiner / Investor** vocabulary shows up in **governance-heavy** variants: a canonical **boundary** doc, a numbered **SKILL** (e.g. orchestrator), **CIV-MEM** packaging, **recursion-gate** subsection templates, **0–100** triad or sovereignty scores, or **mandatory** mapping for every activation. **Those are not what this file is.** This lane keeps a **optional lens** only; it does not amend SELF, SKILLS, the gate file shape, or Moonshot Orchestration as SSOT.
+
+If you promote something stronger later, do it through the normal **companion + gate + skills** path and **revise or supersede** this note so operators are not asked to follow two contracts.
+
+**Alignments worth preserving:**
+
+- [Moonshot boundary (WORK)](../work-strategy/modules/moonshot-orchestration/moonshot-boundary.md) — the orchestration module does **not** create canonical `SKILL-0018` from WORK; treat any ad hoc **SKILL-0019**-style ID the same way until explicitly approved elsewhere.
+- [`users/grace-mar/recursion-gate.md`](../../../users/grace-mar/recursion-gate.md) — the live gate does **not** use numbered subsections like “4.5.8 / Swarm-Scale Extensions”; add optional triad **checklist or templates** in **docs** and link from the gate header, or add a new `##` where it fits—do not assume placeholder section numbers from drafts.
+- [Moonshot Orchestration README](../work-strategy/modules/moonshot-orchestration/README.md) — there is no “§7 / Evidence & References” in the current README; integrate optional triad pointers as a normal `##` section and keep **manual** dashboard discipline (no automatic weekly gate reports unless built as real tooling).
+- **Evidence:** a frontmatter `evidence_anchor` must point at a file that **exists** in-repo (e.g. transcript or raw capture); do not ship anchors to missing paths.
+
 ## Optional: one line in a map
 
 If you use the [work-strategy map template](../work-strategy/modules/moonshot-orchestration/moonshot-map-template.md), you may add (by hand) under **§1. Moonshot** or in notes:

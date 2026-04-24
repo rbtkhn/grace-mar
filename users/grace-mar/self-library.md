@@ -16,13 +16,13 @@ A governed retrieval substrate for reference-facing knowledge. Active entries sh
 
 **Purpose:** A named shelf for **operator-authored “books”** in grace-mar — structured corpora built for **analysis, judgment, and synthesis** (not third-party canon). Each has a canonical README under `docs/skill-work/` or `research/external/work-jiang/`; **`users/grace-mar/SELF-LIBRARY/`** may symlink the same tree for discoverability.
 
-**How it works:** Entries use normal **lanes** and **`type: book`** ([library-schema.md](../../docs/library-schema.md)). Tag **`scope`** with **`operator_analytical`** plus territory tags (`work_jiang`, `work_strategy`, `work_xavier`, `work_dev`, …). Nothing here bypasses the **gated pipeline** for companion-facing Record claims.
+**How it works:** Entries use normal **lanes** and **`type: book`** ([library-schema.md](../../docs/library-schema.md)). Tag **`scope`** with **`operator_analytical`** plus territory tags (`work_jiang`, `work_strategy`, `work_cici`, `work_dev`, …). Nothing here bypasses the **gated pipeline** for companion-facing Record claims.
 
 | ID | Title | Canonical README |
 |----|--------|-------------------|
 | **LIB-0149** | Predictive History (work-jiang multivolume spine) | [`research/external/work-jiang/BOOK-ARCHITECTURE.md`](../../research/external/work-jiang/BOOK-ARCHITECTURE.md) |
 | **LIB-0153** | Strategy notebook | [`docs/skill-work/work-strategy/strategy-notebook/README.md`](../../docs/skill-work/work-strategy/strategy-notebook/README.md) |
-| **LIB-0154** | Xavier journal | [`docs/skill-work/work-xavier/xavier-journal/README.md`](../../docs/skill-work/work-xavier/xavier-journal/README.md) |
+| **LIB-0154** | Cici notebook | [`docs/skill-work/work-cici/cici-notebook/README.md`](../../docs/skill-work/work-cici/cici-notebook/README.md) |
 | **LIB-0155** | Dev journal | [`docs/skill-work/work-dev/dev-journal/README.md`](../../docs/skill-work/work-dev/dev-journal/README.md) |
 | **LIB-0156** | History notebook — **operator-authored** `hn-*` chapters (deliverable) | [`docs/skill-work/work-strategy/history-notebook/README.md`](../../docs/skill-work/work-strategy/history-notebook/README.md) |
 | **LIB-0157** | Civilization Memory (upstream repository) | Local: [`research/repos/civilization_memory/`](../../research/repos/civilization_memory/README.md) · symlink: [`SELF-LIBRARY/civilization_memory`](SELF-LIBRARY/civilization_memory) |
@@ -86,7 +86,7 @@ entries:
     notes: "Operator analytical book: one dated page per day in chapters/YYYY-MM/days.md (~1000 words consolidated analysis per STRATEGY-NOTEBOOK-ARCHITECTURE) + meta.md. Tricameral polyphony in meta.md § Polyphony — parallel research/external/work-jiang/operator-polyphony.md (LIB-0149); update both when month or PH arc moves. WORK; discoverability symlink users/grace-mar/SELF-LIBRARY/strategy-notebook. Not companion Record or Voice knowledge until gated."
 
   - id: LIB-0154
-    title: "Xavier journal"
+    title: "Cici notebook"
     author: "grace-mar"
     lane: "reference"
     type: "book"
@@ -95,12 +95,12 @@ entries:
     operator_subtype: "operator_journal"
     engagement_status: "in_progress"
     lookup_priority: "high"
-    scope: ["work_xavier", "xavier_journal", "open_brain", "operator_analytical", "journal"]
+    scope: ["work_cici", "cici_notebook", "open_brain", "operator_analytical", "journal"]
     source: "url"
-    url: "https://github.com/rbtkhn/grace-mar/blob/main/docs/skill-work/work-xavier/xavier-journal/README.md"
+    url: "https://github.com/rbtkhn/grace-mar/blob/main/docs/skill-work/work-cici/cici-notebook/README.md"
     reviewed_at: 2026-04-16
     added_at: 2026-04-09
-    notes: "Operator analytical book: Open Brain / work-xavier learning day log in grace-mar. WORK coaching; symlink users/grace-mar/SELF-LIBRARY/xavier-journal. Not Xavier Record or Voice knowledge until gated."
+    notes: "Operator analytical book: Open Brain / work-cici learning day log in grace-mar. WORK coaching; symlink users/grace-mar/SELF-LIBRARY/cici-notebook. Not Xavier Record or Voice knowledge until gated."
 
   - id: LIB-0155
     title: "Dev journal"
@@ -2346,7 +2346,7 @@ entries:
 ```yaml
 total_entries: 151
 clone_source: "companion-self users/_template/self-library.md (2026-02-26)"
-grace_mar_additions: "… LIB-0135..0148 (Theology shelf: Simple Condition, Coordination Hypothesis, One Subject Many Tongues, face-category blade, See the Face exercise, AI Ethics, lens God's Debris, The Delusion of Separation, God is non-zero sum, Expand the light of consciousness, Polyphonic cognition, Universal Love and Mastery, Writing the Book and Death); LIB-0136 (essays index); Operator analytical books shelf: LIB-0149 (scope operator_analytical), LIB-0153 strategy-notebook, LIB-0154 xavier-journal, LIB-0155 dev-journal, LIB-0157 civilization_memory upstream"
+grace_mar_additions: "… LIB-0135..0148 (Theology shelf: Simple Condition, Coordination Hypothesis, One Subject Many Tongues, face-category blade, See the Face exercise, AI Ethics, lens God's Debris, The Delusion of Separation, God is non-zero sum, Expand the light of consciousness, Polyphonic cognition, Universal Love and Mastery, Writing the Book and Death); LIB-0136 (essays index); Operator analytical books shelf: LIB-0149 (scope operator_analytical), LIB-0153 strategy-notebook, LIB-0154 cici-notebook, LIB-0155 dev-journal, LIB-0157 civilization_memory upstream"
 maturity_levels: "1=young/all ages, 2=middle grade, 3=older/teen+"
 last_updated: 2026-04-10
 library_lanes: "reference, canon, influence"

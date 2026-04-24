@@ -47,9 +47,9 @@ This log is WORK-only. It is not the Record, not MEMORY, and not a substitute fo
 - **E → work-strategy** (non-Rome) no longer implied Vatican/Rome work; Rome is **menu I** only.
 - **Superseded 2026-04-02:** five-mode menu; Rome lives under **C — Compass** (no dedicated **I** letter).
 
-## 2026-04-08 — coffee **A–G**: **F — Xavier next**, **G — Dev next**
+## 2026-04-08 — coffee **A–G**: **F — Cici next**, **G — Dev next**
 
-- Extended Step 2 from five to **seven** letters: **F** = one **work-xavier** next task (ground in Step 1 **lane next hints** + SYNC-DAILY / WORK-LEDGER / INDEX); **G** = one **work-dev** next task from [workspace.md](../work-dev/workspace.md) § **Next actions** (narrower than **B — Build**).
+- Extended Step 2 from five to **seven** letters: **F** = one **work-cici** next task (ground in Step 1 **lane next hints** + SYNC-DAILY / WORK-LEDGER / INDEX); **G** = one **work-dev** next task from [workspace.md](../work-dev/workspace.md) § **Next actions** (narrower than **B — Build**).
 - Added `scripts/coffee_lane_next_hints.py`; `operator_coffee.py` prints **`lane next hints (F / G)`** after session load. `assess_session_load.py` annotates **F** and **G**; load **recommendation** stays **A–E** only.
 - Cross-refs: `menu-reference.md`, `operator-skills.md`, `operator-style.mdc`, harness-warmup, dream/bridge/harvest/thanks, handoff-check, cadence README, glossary, skills-portable README.
 

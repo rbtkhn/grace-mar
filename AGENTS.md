@@ -16,7 +16,7 @@ This file defines rules for any AI coding assistant working on this repository.
 
 **SKILLS (Record-bound):** **self-skill-think**, **self-skill-write**, **self-skill-work**, and **self-skill-steward** (STEWARD — governance literacy at the gate; optional split template; **not** merge authority) are capability surfaces under `users/[id]/`; see [id-taxonomy.md](docs/id-taxonomy.md), [skills-modularity.md](docs/skills-modularity.md). **THINK doctrine (intake vs identity vs WORK):** [docs/skill-think/README.md](docs/skill-think/README.md). **Skill lifecycle (discovery ladder):** `skills-portable/README.md` — pointer → draft → listed. **Skill validation:** `python3 scripts/validate_skills.py`.
 
-**Agent vocabulary (onboarding):** Many new AI users already use **agent** for “a tool-using runner.” **Work agent** and **skill-work agent** are **onboarding-friendly** names for that pattern on **WORK** surfaces: they **utilize** the Record (read; propose via the gate only) and may support the Voice (e.g. harnesses, PRP, prompt work) under **operator** control — they are **not** Mind, **not** the companion-facing Voice in chat, and **not** a fourth triad seat. **Skill-work agent** stresses the same idea scoped to **`docs/skill-work/`** and **WORK territories**, including **replicated / parallel** lanes. Precision term for the stack: **WORK execution layer**; beginner gloss: `docs/skill-work/work-xavier/GLOSSARY-FOR-BEGINNERS.md`.
+**Agent vocabulary (onboarding):** Many new AI users already use **agent** for “a tool-using runner.” **Work agent** and **skill-work agent** are **onboarding-friendly** names for that pattern on **WORK** surfaces: they **utilize** the Record (read; propose via the gate only) and may support the Voice (e.g. harnesses, PRP, prompt work) under **operator** control — they are **not** Mind, **not** the companion-facing Voice in chat, and **not** a fourth triad seat. **Skill-work agent** stresses the same idea scoped to **`docs/skill-work/`** and **WORK territories**, including **replicated / parallel** lanes. Precision term for the stack: **WORK execution layer**; beginner gloss: `docs/skill-work/work-cici/GLOSSARY-FOR-BEGINNERS.md`.
 
 ## Agent role boundaries — unbundled management functions
 
@@ -50,7 +50,7 @@ Four modes: **Session** (conversational, no merges — default), **Pipeline** (p
 
 ### Default WORK lane (operator)
 
-Unless the operator **explicitly** names another territory (e.g. **work-dev**, **work-cici**, **work-xavier**), assistants should treat the session as **work-strategy** by default: [work-strategy](docs/skill-work/work-strategy/) discipline, **skill-strategy** boundaries, strategy-notebook (inbox, `days.md`, expert threads) and verify tier. Other lanes apply when the task clearly belongs there or the operator labels it. Technical execution (fixes, scripts, CI) may still run under that default unless the operator asks for **hands-only** implementation with no strategy framing.
+Unless the operator **explicitly** names another territory (e.g. **work-dev**, **work-politics**, **work-cici**), assistants should treat the session as **work-strategy** by default: [work-strategy](docs/skill-work/work-strategy/) discipline, **skill-strategy** boundaries, strategy-notebook (inbox, `days.md`, expert threads) and verify tier. Other lanes apply when the task clearly belongs there or the operator labels it. Technical execution (fixes, scripts, CI) may still run under that default unless the operator asks for **hands-only** implementation with no strategy framing.
 
 ---
 

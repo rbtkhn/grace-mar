@@ -28,7 +28,7 @@ This section is **not** part of the bridge object schemas. It orients operators 
 | **Cici** | **Git-managed governed state** per [Cici doctrine](https://github.com/Xavier-x01/Cici/blob/main/docs/governed-state-doctrine.md) (if git and Supabase diverge, **governed files win**). | Supabase as **operational bridge** (search, MCP, etc.). |
 | **grace-mar** | **Record** under `users/grace-mar/` (and gated merge path) — **companion-self** authority model. | MEMORY, WORK drafts, exports; OB1 downstream of export is **not** canonical for identity. |
 
-**Structural caution:** Cici’s Phase 1 **folder names** resemble grace-mar’s **state-model vocabulary** (evidence, prepared context, governed state). In grace-mar, **root** [`evidence/`](../../../evidence/) and [`prepared-context/`](../../../prepared-context/) are **reserved placeholders** only — see [state model § Repo layout](../../state-model.md#repo-layout-grace-mar). Territory-scoped evidence (e.g. work-xavier) lives under `docs/skill-work/.../evidence/`. **Do not** assume Cici-style routing exists at the repo root without reading those docs.
+**Structural caution:** Cici’s Phase 1 **folder names** resemble grace-mar’s **state-model vocabulary** (evidence, prepared context, governed state). In grace-mar, **root** [`evidence/`](../../../evidence/) and [`prepared-context/`](../../../prepared-context/) are **reserved placeholders** only — see [state model § Repo layout](../../state-model.md#repo-layout-grace-mar). Territory-scoped evidence (e.g. work-cici) lives under `docs/skill-work/.../evidence/`. **Do not** assume Cici-style routing exists at the repo root without reading those docs.
 
 ---
 

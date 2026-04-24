@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Since-previous-dream catch-up window for dream ritual (WORK only; not Record).
 
-Computes which local calendar dates need strategy-notebook + xavier-journal production
+Computes which local calendar dates need strategy-notebook + cici-notebook production
 when moving from the last successful dream handoff to now.
 
 Semantics:

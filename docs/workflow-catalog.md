@@ -17,7 +17,7 @@
 
 - Habit + metrics: [journal-metrics-habit.md](skill-work/journal-metrics-habit.md), `scripts/journal_habit_snapshot.py`.
 - Dev journal: [work-dev/dev-journal/README.md](skill-work/work-dev/dev-journal/README.md).
-- Xavier journal: [work-xavier/xavier-journal/README.md](skill-work/work-xavier/xavier-journal/README.md).
+- Cici notebook: [work-cici/cici-notebook/README.md](skill-work/work-cici/cici-notebook/README.md).
 
 ## Read → Think → SELF
 
@@ -31,7 +31,7 @@
 
 ## Xavier digest
 
-- [work-xavier/INDEX.md](skill-work/work-xavier/INDEX.md), `scripts/xavier_journal_ob1_digest.py` (see xavier-journal README).
+- [work-cici/INDEX.md](skill-work/work-cici/INDEX.md), `scripts/cici_journal_ob1_digest.py` (see cici-notebook README).
 
 ## Work-dev verification
 

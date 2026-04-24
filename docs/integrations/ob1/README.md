@@ -15,7 +15,7 @@ Xavier’s OB1 **instance** repo **[Xavier-x01/Cici](https://github.com/Xavier-x
 
 **Scope:** That wording describes **Cici’s** repo. **This** integration still treats **companion-self** as the authority for the **Record** in grace-mar; the bridge ADR and [architecture.md](architecture.md) are unchanged. The pointer is for **alignment** (inspectable, review-gated durable state vs mixed-trust runtime DB)—not a merge of Cici’s files into grace-mar.
 
-**Advisor summary (OB1 vs Cici frontier):** One paragraph + pointer to the full conceptual map — [work-xavier/ALIGNMENT.md § OB1 vs Cici](../../skill-work/work-xavier/ALIGNMENT.md#ob1-vs-cici-development-frontier).
+**Advisor summary (OB1 vs Cici frontier):** One paragraph + pointer to the full conceptual map — [work-cici/ALIGNMENT.md § OB1 vs Cici](../../skill-work/work-cici/ALIGNMENT.md#ob1-vs-cici-development-frontier).
 
 ---
 

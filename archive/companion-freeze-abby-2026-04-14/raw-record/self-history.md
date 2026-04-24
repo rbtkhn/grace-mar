@@ -47,7 +47,7 @@ Choose one rhythm and stick to it (document changes here if you switch):
 ## Log — WORK (aggregate)
 
 - **WORK:work-dev — 2026-03-30** — Huang / Lex #494 digest + OpenClaw/Grace-Mar diff: `research/external/work-dev/transcripts/lex-fridman-494-jensen-huang-DIGEST.md`; README index row; commits through `51de012` (source: [work-dev-history.md](../../docs/skill-work/work-dev/work-dev-history.md)).
-- **WORK:meta — 2026-03-30** — No dated `## Log` entries yet in other `docs/skill-work/work-*/*-history.md` territories (work-politics, work-jiang, work-strategy, work-business, work-career, work-companion-self, work-curate-library, work-health-fitness, work-human-teacher, work-xavier, work-civ-mem, work-alpha-school).
+- **WORK:meta — 2026-03-30** — No dated `## Log` entries yet in other `docs/skill-work/work-*/*-history.md` territories (work-politics, work-jiang, work-strategy, work-business, work-career, work-companion-self, work-curate-library, work-health-fitness, work-human-teacher, work-cici, work-civ-mem, work-alpha-school).
 
 ---
 

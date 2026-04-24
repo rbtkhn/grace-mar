@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Coffee Step 1 — one-line "next task" hints for work-xavier and work-dev.
+Coffee Step 1 — one-line "next task" hints for work-cici and work-dev.
 
 Used by operator_coffee.py after session load. Sources are markdown on disk;
 operators maintain canonical surfaces (SYNC-DAILY, workspace § Next actions).
@@ -112,7 +112,7 @@ def _hint_from_sync_daily(text: str) -> str | None:
 
 
 def _first_active_watch(repo: Path) -> str | None:
-    path = repo / "docs/skill-work/work-xavier/WORK-LEDGER.md"
+    path = repo / "docs/skill-work/work-cici/WORK-LEDGER.md"
     if not path.is_file():
         return None
     text = path.read_text(encoding="utf-8")
@@ -125,34 +125,34 @@ def _first_active_watch(repo: Path) -> str | None:
     return None
 
 
-def next_work_xavier_line(repo: Path) -> str:
-    sync_path = repo / "docs/skill-work/work-xavier/SYNC-DAILY.md"
+def next_work_cici_line(repo: Path) -> str:
+    sync_path = repo / "docs/skill-work/work-cici/SYNC-DAILY.md"
     if sync_path.is_file():
         st = _hint_from_sync_daily(sync_path.read_text(encoding="utf-8"))
         if st:
             short = st.replace("\n", " ")
             if len(short) > 220:
                 short = short[:217] + "…"
-            return f"Next work-xavier (SYNC-DAILY): {short}"
+            return f"Next work-cici (SYNC-DAILY): {short}"
     w = _first_active_watch(repo)
     if w:
         short = w if len(w) <= 220 else w[:217] + "…"
-        return f"Next work-xavier (WORK-LEDGER watch): {short}"
+        return f"Next work-cici (WORK-LEDGER watch): {short}"
     return (
-        "Next work-xavier: fill SYNC-DAILY § Combined next action or WORK-LEDGER "
-        "— see docs/skill-work/work-xavier/INDEX.md"
+        "Next work-cici: fill SYNC-DAILY § Combined next action or WORK-LEDGER "
+        "— see docs/skill-work/work-cici/INDEX.md"
     )
 
 
 def format_lane_next_hints(repo: Path | None = None) -> str:
     root = repo or REPO_ROOT
-    x = next_work_xavier_line(root)
+    x = next_work_cici_line(root)
     d = next_work_dev_line(root)
     return f"{x}\n{d}"
 
 
 def main() -> int:
-    p = argparse.ArgumentParser(description="Print work-xavier + work-dev next-task hints for coffee.")
+    p = argparse.ArgumentParser(description="Print work-cici + work-dev next-task hints for coffee.")
     p.add_argument(
         "--repo",
         type=Path,

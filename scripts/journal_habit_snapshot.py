@@ -2,7 +2,7 @@
 """
 Journal habit snapshot — filename-based rhythm only.
 
-Scans dev-journal (*-day-*.md) and xavier-journal (YYYY-MM-DD.md) for calendar
+Scans dev-journal (*-day-*.md) and cici-notebook (YYYY-MM-DD.md) for calendar
 dates in filenames; prints active days in a rolling window and staleness.
 
 Does not parse frontmatter or prose. See docs/skill-work/journal-metrics-habit.md.
@@ -17,7 +17,7 @@ from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 DEV_JOURNAL = REPO_ROOT / "docs" / "skill-work" / "work-dev" / "dev-journal"
-XAVIER_JOURNAL = REPO_ROOT / "docs" / "skill-work" / "work-xavier" / "xavier-journal"
+CICI_JOURNAL = REPO_ROOT / "docs" / "skill-work" / "work-cici" / "cici-notebook"
 
 DEV_FILENAME = re.compile(r"(\d{4}-\d{2}-\d{2})-day-\d+\.md$")
 XAV_FILENAME = re.compile(r"^(\d{4}-\d{2}-\d{2})\.md$")
@@ -74,13 +74,13 @@ def main() -> int:
     today = datetime.now(timezone.utc).date() if args.utc else date.today()
 
     dev_dates = _parse_dates_journal(DEV_JOURNAL, DEV_FILENAME)
-    xav_dates = _parse_dates_journal(XAVIER_JOURNAL, XAV_FILENAME)
+    cici_dates = _parse_dates_journal(CICI_JOURNAL, XAV_FILENAME)
     w = args.window
 
     print(f"# Journal habit snapshot (today={today}, window={w}d)\n")
     for label, dates in (
         ("dev-journal", dev_dates),
-        ("xavier-journal", xav_dates),
+        ("cici-notebook", cici_dates),
     ):
         active = _count_active(dates, today, w)
         stale = _staleness_days(dates, today)

@@ -2,7 +2,7 @@
 
 **Purpose:** Marketing strategy and campaign tracking for operator-owned ventures. Per-venture marketing plans live alongside their venture docs (e.g. `grace-gems/marketing-plan.md`); this README covers shared principles and cross-venture marketing surfaces.
 
-**Not:** work-politics content plans or SMM execution (those serve public political content under `work-politics/`). Not BrewMind marketing (stays in `work-xavier/`).
+**Not:** work-politics content plans or SMM execution (those serve public political content under `work-politics/`). Not BrewMind marketing (stays in `work-cici/`).
 
 ---
 

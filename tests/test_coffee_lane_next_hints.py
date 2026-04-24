@@ -1,4 +1,4 @@
-"""Tests for coffee_lane_next_hints (work-xavier + work-dev one-liners)."""
+"""Tests for coffee_lane_next_hints (work-cici + work-dev one-liners)."""
 
 from __future__ import annotations
 
@@ -9,7 +9,7 @@ import pytest
 from scripts.coffee_lane_next_hints import (
     format_lane_next_hints,
     next_work_dev_line,
-    next_work_xavier_line,
+    next_work_cici_line,
 )
 
 
@@ -46,8 +46,8 @@ def test_next_work_dev_all_struck(tmp_path: Path) -> None:
     assert "no open item" in line
 
 
-def test_next_work_xavier_prefers_sync_daily_top_task(tmp_path: Path) -> None:
-    xdir = tmp_path / "docs/skill-work/work-xavier"
+def test_next_work_cici_prefers_sync_daily_top_task(tmp_path: Path) -> None:
+    xdir = tmp_path / "docs/skill-work/work-cici"
     xdir.mkdir(parents=True)
     (xdir / "SYNC-DAILY.md").write_text(
         """### 3) Combined next action
@@ -57,7 +57,7 @@ def test_next_work_xavier_prefers_sync_daily_top_task(tmp_path: Path) -> None:
         encoding="utf-8",
     )
     (xdir / "WORK-LEDGER.md").write_text("## II-A. ACTIVE WATCHES\n\n- **Watch:** fallback\n", encoding="utf-8")
-    line = next_work_xavier_line(tmp_path)
+    line = next_work_cici_line(tmp_path)
     assert "mirror scan" in line.lower()
 
 
@@ -65,7 +65,7 @@ def test_format_lane_next_hints_two_lines(tmp_path: Path) -> None:
     ws = tmp_path / "docs/skill-work/work-dev"
     ws.mkdir(parents=True)
     (ws / "workspace.md").write_text("## Next actions\n\n1. Alpha\n", encoding="utf-8")
-    xdir = tmp_path / "docs/skill-work/work-xavier"
+    xdir = tmp_path / "docs/skill-work/work-cici"
     xdir.mkdir(parents=True)
     (xdir / "SYNC-DAILY.md").write_text(
         "### 3) Combined next action\n- top sync task: Beta\n", encoding="utf-8"

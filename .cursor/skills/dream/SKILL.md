@@ -1,7 +1,7 @@
 ---
 name: dream
 preferred_activation: dream
-description: "Grace-Mar night-close maintenance ritual. Primary trigger: dream. Dream is the end-of-day consolidation pass: a bounded maintenance ritual that settles continuity, checks integrity and governance, refreshes contradiction visibility, and prepares governed follow-up without merge authority. Agent steps also cover strategy-notebook closeout and Xavier journal day-file generation (see skill body). Before auto_dream.py runs, synthesize the last four cadence lines (eight when the operator asks for full day-close rhythm) from work-cadence-events.md into **Recent rhythm** prose (no internal ops jargon or timestamps in chat). Usually one dream session per day."
+description: "Grace-Mar night-close maintenance ritual. Primary trigger: dream. Dream is the end-of-day consolidation pass: a bounded maintenance ritual that settles continuity, checks integrity and governance, refreshes contradiction visibility, and prepares governed follow-up without merge authority. Agent steps also cover strategy-notebook closeout and Cici notebook day-file generation (see skill body). Before auto_dream.py runs, synthesize the last four cadence lines (eight when the operator asks for full day-close rhythm) from work-cadence-events.md into **Recent rhythm** prose (no internal ops jargon or timestamps in chat). Usually one dream session per day."
 ---
 
 # Dream
@@ -136,10 +136,10 @@ Include only what matters this run:
 
 - Contradiction digest totals; **recent vs structural** entry counts when `phase=both`
 - Artifact drafts: none / count
-- **`dream_catchup`:** local dates, `strategy_notebook_missing_day_headers`, timezone, `previous_dream_generated_at` — FYI for calendar coverage; drives Xavier `--catch-up-from-last-dream` (operational; not Record)
+- **`dream_catchup`:** local dates, `strategy_notebook_missing_day_headers`, timezone, `previous_dream_generated_at` — FYI for calendar coverage; drives Cici notebook `--catch-up-from-last-dream` (operational; not Record)
 - Coffee **24h rollup**, **execution paths** + suggested index, **civ-mem echoes** (with **“Analogy candidate only — not evidence, not recommendation, not Record”** when cited)
 - **Capability shift** (sources, REVIEW / monitor alerts)
-- **Strategy notebook** / **Xavier journal** / **Dev journal:** one line each when relevant (strategy-notebook **deferred** unless operator asked **`strategy page`**, **`strategy page compose`**, or **EOD notebook compose** in-thread; Xavier per § below)
+- **Strategy notebook** / **Cici notebook** / **Dev journal:** one line each when relevant (strategy-notebook **deferred** unless operator asked **`strategy page`**, **`strategy page compose`**, or **EOD notebook compose** in-thread; Cici notebook per § below)
 
 If nothing important changed, say so plainly. A quiet run is success.
 
@@ -233,7 +233,7 @@ If **strict** dream halts for the **same** integrity or governance **reason** mo
 
 **Optional — thread touch on compose:** When composing inbox into **`days.md`**, if lines contain **`thread:<id>`**, the agent **may** add **one bullet** under **`### Foresight`** (from [strategy-commentator-threads.md](../../../docs/skill-work/work-strategy/strategy-notebook/strategy-commentator-threads.md)) **only when the operator directed that compose** — not by default at `dream`.
 
-**Other lanes:** Xavier and dev journals keep their own **inbox → compose / fold** habits — see **§ Xavier journal** and **§ Dev journal** below (`dream` may still run those when the operator expects it; strategy-notebook does not inherit that obligation).
+**Other lanes:** Cici and dev journals keep their own **inbox → compose / fold** habits — see **§ Cici notebook** and **§ Dev journal** below (`dream` may still run those when the operator expects it; strategy-notebook does not inherit that obligation).
 
 **Agent behavior when `dream` is invoked (strategy notebook)**
 
@@ -245,16 +245,16 @@ If **strict** dream halts for the **same** integrity or governance **reason** mo
 
 **Return brief:** **Strategy notebook:** `deferred` / `FYI missing headers: …` / `composed (operator asked)` — as applicable.
 
-## Xavier journal (LIB-0154) — page generation (**since previous dream**)
+## Cici notebook (LIB-0154) — page generation (**since previous dream**)
 
 **Purpose:** At **`dream`**, **generate** (or confirm) **one journal file per local day** in the **same since-previous-dream window** as strategy-notebook (see above). Different artifact; same temporal contract.
 
-**Mechanism:** [`scripts/xavier_journal_ob1_digest.py`](../../../scripts/xavier_journal_ob1_digest.py) builds **`YYYY-MM-DD.md`** from **Cici** (OB1) GitHub commits per calendar day (journal ordinal **Day N** inside the file), optional **`inbox/`** markdown (after any fold from [daily-xavier-journal-inbox.md](../../../docs/skill-work/work-xavier/xavier-journal/daily-xavier-journal-inbox.md)), optional **`--full-day-synthesis`** (strategy-notebook same-day block + session-transcript), per-flag includes, and optional **artifact** paths — see [xavier-journal README](../../../docs/skill-work/work-xavier/xavier-journal/README.md) and [SYNTHESIS-SOURCES.md](../../../docs/skill-work/work-xavier/xavier-journal/SYNTHESIS-SOURCES.md).
+**Mechanism:** [`scripts/cici_journal_ob1_digest.py`](../../../scripts/cici_journal_ob1_digest.py) builds **`YYYY-MM-DD.md`** from **Cici** (OB1) GitHub commits per calendar day (journal ordinal **Day N** inside the file), optional **`inbox/`** markdown (after any fold from [daily-cici-notebook-inbox.md](../../../docs/skill-work/work-cici/cici-notebook/daily-cici-notebook-inbox.md)), optional **`--full-day-synthesis`** (strategy-notebook same-day block + session-transcript), per-flag includes, and optional **artifact** paths — see [cici-notebook README](../../../docs/skill-work/work-cici/cici-notebook/README.md) and [SYNTHESIS-SOURCES.md](../../../docs/skill-work/work-cici/cici-notebook/SYNTHESIS-SOURCES.md).
 
 **Catch-up (formal):** From repo root, with operator `TZ` aligned to **`dream_catchup.timezone`** when possible:
 
 ```bash
-TZ=America/New_York python3 scripts/xavier_journal_ob1_digest.py --catch-up-from-last-dream --full-day-synthesis --write
+TZ=America/New_York python3 scripts/cici_journal_ob1_digest.py --catch-up-from-last-dream --full-day-synthesis --write
 ```
 
 This reads **`users/<id>/last-dream.json` before overwrite**, computes the same local dates as `dream_catchup`, and writes **one file per day** (skips existing files unless **`--force`**). **`--full-day-synthesis`** embeds **strategy-notebook** + **session-transcript** for each date (omit it for git+inbox only). Dry-run: omit `--write` to print the date list only. Each day picks up matching **`inbox/YYYY-MM-DD.md`** (and folder / artifacts) if present.
@@ -263,16 +263,16 @@ This reads **`users/<id>/last-dream.json` before overwrite**, computes the same 
 
 1. After **Step 0**, run Step 1 (`auto_dream.py`) so **`dream_catchup`** is fresh in JSON / handoff; then run the **catch-up** command above on a **network**-capable path (operator machine or agent with `full_network`).
 2. Optional: `GITHUB_TOKEN` / `GH_TOKEN` for API rate limits — public repo works for light use.
-3. Optional: operator drops Cursor exports or notes into **`docs/skill-work/work-xavier/xavier-journal/inbox/`** before catch-up (same-day file names). For **transcript + geopolitical synthesis** on the journal page, prefer **`--full-day-synthesis`** (or `XAVIER_JOURNAL_FULL_DAY_SYNTHESIS=1`) so **strategy-notebook** and **session-transcript** merge in; use inbox for spillover.
-4. If **GitHub API** or **network** fails, record **Xavier journal:** `skipped (API/network)` — do **not** fail the whole `dream` maintenance story on this alone.
+3. Optional: operator drops Cursor exports or notes into **`docs/skill-work/work-cici/cici-notebook/inbox/`** before catch-up (same-day file names). For **transcript + geopolitical synthesis** on the journal page, prefer **`--full-day-synthesis`** (or `CICI_JOURNAL_FULL_DAY_SYNTHESIS=1`) so **strategy-notebook** and **session-transcript** merge in; use inbox for spillover.
+4. If **GitHub API** or **network** fails, record **Cici notebook:** `skipped (API/network)` — do **not** fail the whole `dream` maintenance story on this alone.
 
 **Boundaries:** **WORK / operator coaching** — not Xavier’s **Record** in her repo, not grace-mar **SELF** / gate merge. **No secrets** in prose (generated overview + commit links are safe; inbox/session content is operator-vetted).
 
-**Return brief:** **Xavier journal:** `catch-up written N file(s)` / `skipped (exists|network)` — list paths or dates.
+**Return brief:** **Cici notebook:** `catch-up written N file(s)` / `skipped (exists|network)` — list paths or dates.
 
 ## Dev journal (LIB-0155) — optional fold
 
-**Purpose:** Same **rolling inbox → fold** contract as strategy-notebook and Xavier (no mandatory nightly reset; length-based prune) — see [daily-dev-journal-inbox.md](../../../docs/skill-work/work-dev/dev-journal/daily-dev-journal-inbox.md) and [dev-journal README](../../../docs/skill-work/work-dev/dev-journal/README.md). No digest script; the agent **synthesizes** into **`docs/skill-work/work-dev/dev-journal/YYYY-MM-DD-day-NN.md`** when the operator uses the buffer.
+**Purpose:** Same **rolling inbox → fold** contract as strategy-notebook and the Cici notebook (no mandatory nightly reset; length-based prune) — see [daily-dev-journal-inbox.md](../../../docs/skill-work/work-dev/dev-journal/daily-dev-journal-inbox.md) and [dev-journal README](../../../docs/skill-work/work-dev/dev-journal/README.md). No digest script; the agent **synthesizes** into **`docs/skill-work/work-dev/dev-journal/YYYY-MM-DD-day-NN.md`** when the operator uses the buffer.
 
 **Return brief:** **Dev journal:** `inbox folded` / `empty` / `deferred` — cite path if written.
 
@@ -301,7 +301,7 @@ Usually one `dream` session per day is normal.
 | **Morning** | `coffee` (work-start) | Read dream handoff, grounding scripts, **A–D2–E** menu |
 | **During day** | `coffee` (reorientation) | Re-sip as needed — many per day is normal |
 | **During day** | `thanks` (micro-pause) | Synthesis of the most recent cadence line (recent rhythm) + two-block reply + optional park + one telemetry line — no maintenance stack |
-| **End of day** | `dream` | Memory normalization, integrity, governance, contradiction digest; optional strategy-notebook **FYI** + **Xavier journal** day file generation (see §§ Strategy notebook, Xavier journal) |
+| **End of day** | `dream` | Memory normalization, integrity, governance, contradiction digest; optional strategy-notebook **FYI** + **Cici notebook** day file generation (see §§ Strategy notebook, Cici notebook) |
 | **Session close** | `bridge` | Seal repos (commit/push), synthesize transfer prompt for next session |
 
 **Dream's role is maintenance, not session closure.** Dream settles continuity and writes the handoff artifact. It does not commit, push, or produce a transfer prompt. If the operator is also closing the Cursor session, `bridge` follows dream.
