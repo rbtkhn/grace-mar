@@ -374,6 +374,10 @@ Dashed edge: operator-authored [history-notebook](../history-notebook/README.md)
 
 **North star:** civilization_memory is the **reservoir**; [History Notebook](../history-notebook/README.md) chapters (`hn-*` ids in [book-architecture.yaml](../history-notebook/book-architecture.yaml)) are **operator-distilled** mechanism text; this notebook holds **dated judgment** and **`### History resonance`** pointers (never full HN paste).
 
+### HN and strategy notebook: one-way citations
+
+**Draw only, no reverse path:** this notebook (daily pages, `days.md`, expert threads) may **cite** History notebook — `hn-*` chapter ids, a single mechanism or warrant line, and optionally a civilization-thread `MC-*` tag when that tag’s SSOT remains in a `history-civ-*.md` file. There is **no** automatic sync, merge, or back-pressure that **writes** HN threads or `hn-*` draft text from here. [History notebook’s governed surfaces](../history-notebook/README.md#work-record-and-the-strategy-notebook) change only through **operator-originated** edits in `docs/skill-work/work-strategy/history-notebook/` (WORK). Treat strategy judgment as a **reader** of HN, not an editor of it.
+
 **Independence vs routing:** HN prose is **not a mirror** of civ-mem. **Routing priority** is separate: as chapters exist, **`hn-*` is the default cite** for mechanism language in strategy; long MEM walks are **explicit fallback** (see tiers below)—not the silent default.
 
 | History notebook | Strategy notebook |

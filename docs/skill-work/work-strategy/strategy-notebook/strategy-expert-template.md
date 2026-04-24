@@ -107,6 +107,7 @@ _Omit or leave “roster-only (Tier C)” until **`thread:`** density supports a
 
 - Typical HN chapter families: <history-notebook chapter ids>
 - Typical mechanism hooks: <mechanism pointers>
+- **One-way boundary:** Cite HN (and optional `MC-*` when the civilization thread is SSOT) from this expert surface — do not treat daily or thread text as a driver of HN edits; that path is **operator-originated** in `history-notebook/`. See [STRATEGY-NOTEBOOK-ARCHITECTURE — HN and strategy notebook: one-way citations](STRATEGY-NOTEBOOK-ARCHITECTURE.md#hn-and-strategy-notebook-one-way-citations).
 
 ## Published sources (operator web index)
 

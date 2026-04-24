@@ -17,6 +17,12 @@ Book identity and chapter IDs remain **SSOT** in [book-architecture.yaml](book-a
 | **Vol I library scaffold** (optional) | [research/VOL-I-LIBRARY-SCAFFOLD.md](research/VOL-I-LIBRARY-SCAFFOLD.md) | Maps **HNSRC-*** rows to `hn-i-v1-01`…`20` for problem-spine drafting; see also [VOL-I-PROBLEM-CHAPTERS.md](research/VOL-I-PROBLEM-CHAPTERS.md). |
 | **Civilization threads** (optional) | [threads/](threads/) — `history-civ-*.md` | Longitudinal lanes: continuity, mechanism candidates, candidate chapter targets — **scaffolding** for drafting, not a parallel codex |
 
+### Work, Record, and the Strategy notebook
+
+- **History notebook `history-civ-*` threads and `hn-*` chapters** are **operator WORK** — analytical surfaces for drafting and strategy alignment. They are **not** the [Record](../../../../AGENTS.md) (`self.md` / companion identity) unless a fact is explicitly promoted through the **recursion-gate** pipeline; do not treat thread scratch as Voice truth.
+- **One-way interface:** [Strategy notebook](strategy-notebook/README.md) may **draw** from History notebook: **`### History resonance`** with `hn-*` chapter id(s) + a thin mechanism or warrant line (see [STRATEGY-NOTEBOOK-ARCHITECTURE § Parallel to History notebook](strategy-notebook/STRATEGY-NOTEBOOK-ARCHITECTURE.md#parallel-to-history-notebook-lib-0156)). **No** automatic path the other way — this book is **not** updated *because* `days.md`, knot pages, or daily judgment said so. **Operator-originated** edits in `docs/skill-work/work-strategy/history-notebook/` (and governed thread files) are the only authorized path from “today’s gap” to HN change.
+- **Governed Russia pilot** (thread template + exit criteria): [threads/README.md](threads/README.md#russia-arc-pilot-and-exit).
+
 Flow: **CIV-MEM (reservoir) → distill into HN chapters (`hn-*`) → strategy-notebook** cites ids + mechanisms in **`### History resonance`** (tiers + optional **`HN gap:`** back-pressure — [STATUS.md](STATUS.md)). Threads optional before drafting. Retired experiment: see [knots/README.md](knots/README.md).
 
 - **Chapter format:** See [STYLE-GUIDE.md](STYLE-GUIDE.md)

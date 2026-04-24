@@ -107,10 +107,15 @@ arcs:
     title: "The Roman Arc"
     chapters: [hn-i-v1-04, hn-i-v1-05, hn-ii-rome-byzantine]
     thread: "Institutional and legal long run → expansion → persistence after territorial loss."
+  # Optional index-only fields on an arc: pointers into thread markdown (SSOT). Do not duplicate
+  # mechanism or ladder prose here — keep a single line summary in `thread` at most.
   - arc_id: russia
     title: "The Russian Arc"
     chapters: [hn-iii-russia, hn-iv-russia-imperial, hn-v-russia-modern]
     thread: "Marginal resilience → rupture-regeneration → temporal compression."
+    thread_file: "threads/history-civ-russia.md"
+    governed_pilot: true
+    pilot_thread_phase: 1
   - arc_id: america
     title: "The American Arc"
     chapters: [hn-iv-america, hn-v-america-hegemonic]
