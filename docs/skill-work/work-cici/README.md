@@ -2,23 +2,24 @@
 
 ## Purpose
 
-WORK territory in the grace-mar repo for coordinating advisor/project work with **Cici**, formerly tracked as **Xavier**. This lane preserves the prior Xavier / BrewMind / SMM materials while normalizing the active workspace name to Cici.
+`work-cici` is a WORK territory in the grace-mar repo for coordinating advisor/project work with Cici, formerly tracked as Xavier. It preserves the prior Xavier / BrewMind / SMM materials while normalizing the active workspace name to Cici.
 
 This folder is the **operator/advisor layer:** contracts, mirrors, runbooks, content plans, operator navigation, work profile, capability rubric, handoffs, evidence pointers, and BrewMind pilot materials.
 
-It is **not** Cici’s sovereign Record repository and **not** a canonical Record surface.
+It is not Cici’s sovereign Record repository and not a canonical Record surface.
 
 ## Rename note
 
-This lane was previously named `work-xavier`. It has been renamed to `work-cici`. Older files may retain **Xavier** in filenames or historical notes when they refer to prior artifacts, continuity records, or legacy naming. **Active** references should prefer **Cici** unless the historical filename or artifact title requires **Xavier**.
+This lane was previously named `work-xavier`. It has been renamed to `work-cici`. Older files may retain **Xavier** in filenames or historical notes when they refer to prior artifacts, continuity records, or legacy naming. **Active** references should prefer **Cici** unless the historical filename, artifact title, or **archived note** requires **Xavier**.
 
 ## Naming and continuity
 
 - **Cici** is the active lane name.
 - **Xavier** may appear in legacy filenames, historical notes, and older artifacts.
-- **`work-cici`** is the grace-mar advisor/project workspace.
-- Cici’s **actual governed instance** (if any) lives in **her own repository** (companion / template fork — see below).
+- **`work-cici`** is the Grace-Mar advisor/project workspace.
+- Cici’s **actual governed instance**, if any, lives in **her own repository** (companion / template fork — see the section *Her instance repository* below).
 - **This folder must not host Cici’s Record.** Her cognitive-fork Record lives only under `users/<id>/` in **her** instance repo, behind **her** gate and merge script.
+- Legacy script names such as `build_xavier_handbook_bundle.py` may remain until a separate compatibility-safe rename PR.
 
 ## Legacy filename aliases
 
@@ -29,6 +30,7 @@ This lane was previously named `work-xavier`. It has been renamed to `work-cici`
 | [TERMS-XAVIER.md](TERMS-XAVIER.md) | Cici terms / legacy Xavier filename |
 | [xavier-instance-two-step.md](xavier-instance-two-step.md) | Cici instance two-step / legacy Xavier filename |
 | [xavier-smm-capability-rubric.md](xavier-smm-capability-rubric.md) | Cici SMM capability rubric / legacy Xavier filename |
+| `COMPANION-XAVIER-*` ([e.g. DELETION-READINESS](COMPANION-XAVIER-DELETION-READINESS.md)) | Cici companion-instance planning / legacy Xavier filename pattern |
 
 **Read first:** [INDEX.md](INDEX.md) · [ALIGNMENT.md](ALIGNMENT.md) · [LANES.md](LANES.md) · [TERMS-XAVIER.md](TERMS-XAVIER.md) · Template baseline (canonical): [work-companion-self/TEMPLATE-BASELINE.md](../work-companion-self/TEMPLATE-BASELINE.md) · Boundaries: [audit-boundary-grace-mar-companion-self.md](../../audit-boundary-grace-mar-companion-self.md) (grace-mar · template); her instance follows the same rules **in her repo**.
 
@@ -36,7 +38,7 @@ This lane was previously named `work-xavier`. It has been renamed to `work-cici`
 
 ## Her instance repository (Cici’s companion / template fork)
 
-Cici’s **companion instance** (Identity Fork Protocol paths under `users/<id>/`, gate, seed survey, Voice), when created from [companion-self](https://github.com/rbtkhn/companion-self), lives in **her own GitHub repository**. It is **often still named** `companion-xavier` on GitHub; she may choose another name. That code and **her** Record **do not** need to be copied into grace-mar. This folder documents how grace-mar interfaces with that work **without** hosting her fork.
+Cici’s **companion** or **chosen instance** repository (Identity Fork Protocol paths under `users/<id>/`, gate, seed survey, Voice), when created from [companion-self](https://github.com/rbtkhn/companion-self), lives in **her own GitHub repository**. The default or historical repo name is often still **`companion-xavier`** on GitHub; she may choose another name. That code and **her** Record **do not** need to be copied into grace-mar. This folder documents how grace-mar interfaces with that work **without** hosting her fork.
 
 **Session 0 / seed survey:** Lives **in her repository** (paths such as `docs/seed-survey/` or `users/xavier/` per her layout from the template) — not under `docs/skill-work/work-cici/` here. Operator docs: [GOOD-MORNING.md](GOOD-MORNING.md), [SESSION-0-OPERATOR.md](SESSION-0-OPERATOR.md). **Instance checklist (template → clone → Claude Code → Seed Phase):** [xavier-instance-two-step.md](xavier-instance-two-step.md) — send before first Good Morning if she does not have her repo yet; day-one steps are items 1–6.
 
@@ -51,6 +53,8 @@ Cici’s **companion instance** (Identity Fork Protocol paths under `users/<id>/
 **Template alignment:** [work-cici-sources.md](work-cici-sources.md) (feeds / pointers), [LANE-CI.md](LANE-CI.md) (PR labels), [WORK-LEDGER.md](WORK-LEDGER.md) (watches + compounding). Concept map: [work-template/MAPPING.md](../work-template/MAPPING.md) (section *work-cici (advisor module)*).
 
 ## Scripts (repo)
+
+**Naming** — for when legacy SMM entrypoints may be renamed, see **Naming and continuity** (legacy script bullet) above.
 
 **SMM handbooks (work-politics outputs):**
 
@@ -68,20 +72,20 @@ Cici’s **companion instance** (Identity Fork Protocol paths under `users/<id>/
 ## Words we use (avoid confusion)
 
 - **Cognitive fork / Record** — The governed self (Identity Fork Protocol). Not “a copy of someone else’s markdown tree.”
-- **Git repository / instance repo** — Where that Record lives (e.g. **Cici’s** companion instance repo, often still named `companion-xavier` on GitHub). “Fork” on GitHub is **hosting**; it is not the same word as **cognitive fork**.
+- **Git repository / instance repo** — Where that Record lives: **Cici’s companion or chosen instance repo** (on GitHub it is **often** still the literal name `companion-xavier`). “Fork” on GitHub is **hosting**; it is not the same word as **cognitive fork**.
 - **Mirror / track / sync** — Use for `work-*` **advisor** layouts you keep **aligned over time** with a golden source. Prefer this over **“fork once”** when you mean **ongoing** alignment.
 
-**External Open Brain / instance repo:** the [**Cici**](https://github.com/Xavier-x01/Cici) repo (OB1 **instance** layer on GitHub — config, docs, governed state) is **Xavier’s** public instance; digest and cross-links: [cici-notebook](cici-notebook/README.md), [work-cici-history](work-cici-history.md) `### 2026-04-10`. That is distinct from the **companion-self** `companion-*` Record repo and from **this** advisor folder.
+**External Open Brain / instance repo:** the [**Cici**](https://github.com/Xavier-x01/Cici) repo (OB1 **instance** layer on GitHub — config, docs, governed state) is Cici’s public instance (**@Xavier-x01** on GitHub); digest and cross-links: [cici-notebook](cici-notebook/README.md), [work-cici-history](work-cici-history.md) `### 2026-04-10`. That is distinct from the **companion-self** `companion-*` Record repo and from **this** advisor folder.
 
 ---
 
 ## Governance contract (compact)
 
 1. **Primary output (grace-mar):** `work-cici` = advisor project + operator artifacts; **not** Cici’s gated Record files in **her** repo.
-2. **Primary output (her repo):** Cici’s companion / instance repository (e.g. `companion-xavier` or her chosen name) = her instance; durable identity truth enters only through **her** gate and merge script.
+2. **Primary output (her repo):** Cici’s companion or chosen instance repository (when the literal name is `companion-xavier`, that is a legacy default—she may use another name) = her instance; durable identity truth enters only through **her** gate and merge script.
 3. **Mirror scope:** Mirror workflow docs and ops artifacts **here** for your advisory cadence; do **not** mirror identity Record prose across repos without her pipeline.
 4. **Directionality:** Approved patterns flow from grace-mar skill-work into mirrors; conflicts require human resolution.
-5. **Ownership (RACI):** operator / AI assistant drafts; Xavier (Cici) / operator review; companion approves gated merges **in her repo** for identity; you approve public ship for your content.
+5. **Ownership (RACI):** operator / AI assistant drafts; Cici (legal name **Xavier**) / operator review; companion approves gated merges **in her repo** for identity; you approve public ship for your content.
 6. **Promotion path (her repo):** candidate → `recursion-gate.md` → approval → `process_approved_candidates.py --apply`.
 7. **Security boundary:** no secrets in shared mirror docs.
 
