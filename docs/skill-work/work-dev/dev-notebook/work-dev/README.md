@@ -17,6 +17,7 @@
 | [journal/](journal/README.md) | **Day log** + [daily dev journal inbox](journal/daily-dev-journal-inbox.md) + `YYYY-MM-DD-day-NN.md` files. |
 | [SURFACE-MAP.md](SURFACE-MAP.md) | Canonical work-dev **paths in grace-mar** (workspace, control-plane, scripts, template mirror) — not an external API tree. |
 | [HISTORY-ANCHORS.md](HISTORY-ANCHORS.md) | Milestone table from [work-dev-history.md](../../work-dev-history.md) with artifact links. |
+| [constitutional-recursive-improvement-2026-04-24.md](constitutional-recursive-improvement-2026-04-24.md) | Architecture / positioning note: Grace-Mar's differentiator is **constitutional recursive improvement** rather than generic agent self-improvement. |
 | [identity-fork-protocol-ifp-2026-04-24.md](identity-fork-protocol-ifp-2026-04-24.md) | **Identity Fork Protocol (IFP)** — WORK spec capture: Sovereign Merge Rule, runtime/Record membrane, comparative research (not Record truth). |
 | [ifp-vs-clawsouls-technical-comparison-2026-04-24.md](ifp-vs-clawsouls-technical-comparison-2026-04-24.md) | **IFP vs. ClawSouls / SoulClaw / SoulSpec** — axis-by-axis technical comparison (operator research; not Record truth). |
 
