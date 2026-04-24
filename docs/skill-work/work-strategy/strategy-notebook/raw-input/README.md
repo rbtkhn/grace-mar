@@ -79,7 +79,7 @@ kind: transcript | paste-bundle | screenshot-list | x-screenshots-index | x-post
 …full body…
 ```
 
-`thread:` may be omitted for non-expert material (e.g. raw wire paste with no `thread:` lane yet). `pub_date` is the public-facing day (air, upload, or Substack/feed publish) when it differs from ingest day. Prefer **`kind: x-post-text`** when you paste X copy directly; legacy screenshot captures are indexed as **`x-screenshots-index`** (links to `assets/**/*.png`, no OCR).
+`thread:` may be omitted for non-expert material (e.g. raw wire paste with no `thread:` lane yet). **`pub_date` and `published_date` are the same field** in meaning: the calendar day the source went public (air, YouTube/Substack publish, RSS `pubDate`, etc.), as distinct from **`ingest_date`** (when you saved the file). Use **`pub_date`** in new frontmatter. Older files may still say **`published_date` only**; some older operator ingests have **both** with identical values—redundant, safe to delete one. RSS triage and related scripts read **`published_date` first, then `pub_date`, then `ingest_date`**, then the folder name. Prefer **`kind: x-post-text`** when you paste X copy directly; legacy screenshot captures are indexed as **`x-screenshots-index`** (links to `assets/**/*.png`, no OCR).
 
 ## Harvest / backfill
 
