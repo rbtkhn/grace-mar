@@ -17,6 +17,10 @@
 | [strategy-notebook-visualizer.html](strategy-notebook-visualizer.html) | Single-page UI (fetches the fixture; **requires HTTP** for `fetch`). |
 | [strategy-notebook-visualizer.fixture.json](strategy-notebook-visualizer.fixture.json) | Nodes, edges, paths (repo-root-relative), `authority: "work-only"`. Regenerate with the script below. |
 
+## UI affordances
+
+The single-page visualizer (after loading a fixture) includes: **search** (nodes and the edge list); **kind** and **relation** filter chips; a **selected-node** **detail** panel and **copy path**; an **edge** table (source, relation, target) with **unresolved** endpoint highlighting; a compact **adjacency** (hub) view for the selection; a **summary** of counts by kind and relation; **inspection** warnings; and a **Workbench boundary** panel. Use **reset** to clear filters and selection.
+
 ## Regenerating the fixture
 
 ```bash

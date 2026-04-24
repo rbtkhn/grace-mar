@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Strategy Notebook — structure visualizer (Workbench pilot)</title>
+  <title>Strategy Notebook Visualizer</title>
   <style>
     :root {
       --bg: #0f1419;
@@ -23,9 +23,8 @@
       line-height: 1.5;
       margin: 0;
       padding: 1rem 1.25rem 3rem;
-      max-width: 1200px;
+      max-width: 1280px;
     }
-    h1 { font-size: 1.35rem; margin: 0 0 0.5rem; }
     h2 { font-size: 1.05rem; color: var(--muted); font-weight: 600; margin: 1.5rem 0 0.5rem; }
     h3 { font-size: 0.9rem; margin: 0.75rem 0 0.25rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted); }
     a { color: var(--accent); }
@@ -37,9 +36,11 @@
       padding: 1rem 1.1rem;
       margin: 0.75rem 0;
     }
-    .panel pre, .mono { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: 0.8rem; }
-    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
-    @media (max-width: 800px) { .grid { grid-template-columns: 1fr; } }
+    .panel pre, .mono, code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: 0.8rem; }
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+    @media (max-width: 800px) { .grid-2 { grid-template-columns: 1fr; } }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.6rem; }
+    @media (max-width: 900px) { .grid-3 { grid-template-columns: 1fr; } }
     .alert {
       background: #2d1f00;
       border: 1px solid var(--warn);
@@ -47,12 +48,16 @@
       padding: 0.75rem 1rem;
       border-radius: 8px;
       margin: 0.5rem 0 1rem;
+      white-space: pre-wrap;
     }
+    .status-bar h1 { font-size: 1.35rem; margin: 0 0 0.35rem; }
+    .status-bar .meta-line { font-size: 0.8rem; color: var(--muted); margin: 0.2rem 0; word-break: break-all; }
+    .status-bar .boundary-peek { font-size: 0.85rem; color: var(--text); margin: 0.65rem 0 0; }
     .row-kv { display: flex; flex-wrap: wrap; gap: 0.35rem 1rem; margin: 0.25rem 0; }
-    .row-kv span:first-child { color: var(--muted); min-width: 10rem; }
-    #search {
+    .row-kv span:first-child { color: var(--muted); min-width: 9rem; }
+    #q {
       width: 100%;
-      max-width: 32rem;
+      max-width: 36rem;
       padding: 0.5rem 0.75rem;
       font-size: 1rem;
       background: #0d1117;
@@ -60,7 +65,30 @@
       color: var(--text);
       border-radius: 6px;
     }
-    .kind-section { margin-top: 1.25rem; }
+    .filter-tools { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 0.75rem; margin: 0.5rem 0; }
+    .filter-tools .group-label { color: var(--muted); font-size: 0.8rem; margin-right: 0.25rem; }
+    .chips { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+    .chips label {
+      display: inline-flex; align-items: center; gap: 0.3rem;
+      background: #131c28; border: 1px solid var(--border);
+      border-radius: 4px; padding: 0.2rem 0.45rem; font-size: 0.8rem; cursor: pointer; user-select: none;
+    }
+    .chips input { margin: 0; cursor: pointer; }
+    .btn {
+      display: inline-block; padding: 0.4rem 0.7rem; font-size: 0.85rem;
+      background: #212a38; border: 1px solid var(--border); color: var(--text);
+      border-radius: 6px; cursor: pointer; font-family: inherit;
+    }
+    .btn:hover { background: #2a3548; }
+    .main-split {
+      display: grid;
+      grid-template-columns: 1fr min(340px, 100%);
+      gap: 1rem;
+      align-items: start;
+    }
+    @media (max-width: 960px) { .main-split { grid-template-columns: 1fr; } }
+    .aside-col { position: sticky; top: 0.5rem; }
+    .kind-section { margin-top: 1.1rem; }
     .cards {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -72,10 +100,19 @@
       border-radius: 6px;
       padding: 0.65rem 0.75rem;
       display: none;
+      cursor: pointer;
+      text-align: left;
+      font: inherit;
+      color: inherit;
     }
     .card.visible { display: block; }
+    .card:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+    .card--selected { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent); }
     .card .id { font-size: 0.75rem; color: var(--accent); }
     .card .path { font-size: 0.72rem; color: var(--muted); word-break: break-all; }
+    .summary-panel h3 { margin-top: 0; }
+    .summary-panel .stat { font-size: 0.8rem; margin: 0.15rem 0; }
+    .summary-panel .warn-list { color: #f0d78c; font-size: 0.78rem; margin: 0.25rem 0 0; padding-left: 1.1rem; }
     .edges-table {
       width: 100%;
       border-collapse: collapse;
@@ -87,29 +124,52 @@
       text-align: left;
     }
     .edges-table th { background: #131c28; color: var(--muted); font-weight: 600; }
-    .bar { height: 2px; background: var(--border); margin: 1.25rem 0; }
+    tr.edge--hl { background: #1a2a3c; }
+    tr.edge--warn { background: #2a2110; }
+    tr.edge--dim { opacity: 0.45; }
+    .bar { height: 2px; background: var(--border); margin: 1.1rem 0; }
+    .detail-block { font-size: 0.86rem; margin: 0.4rem 0; }
+    .detail-block .lbl { color: var(--muted); min-width: 4.5rem; display: inline-block; }
+    .adj-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin-top: 0.5rem; }
+    @media (max-width: 400px) { .adj-wrap { grid-template-columns: 1fr; } }
+    .adj-box {
+      background: #131c28; border: 1px solid var(--border); border-radius: 6px; padding: 0.5rem 0.6rem;
+      font-size: 0.8rem; max-height: 11rem; overflow: auto;
+    }
+    .adj-box h4 { margin: 0 0 0.35rem; font-size: 0.75rem; color: var(--muted); }
+    .adj-line { margin: 0.15rem 0; }
+    .adj-line button { background: none; border: none; color: var(--accent); padding: 0; cursor: pointer; font: inherit; text-align: left; }
+    .adj-line button:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
-  <h1>Strategy notebook — structure map (static fixture)</h1>
-  <p class="lead">
-    Workbench pilot: <strong>structure only</strong>. Does not show live repo state. Derives from
-    <code>strategy-notebook-visualizer.fixture.json</code>.
-  </p>
-
   <div id="load-error" class="alert" style="display:none" role="alert"></div>
 
-  <div class="grid">
-    <div class="panel" id="panel-boundary">
+  <div class="panel status-bar" id="status-bar" style="display:none">
+    <h1>Strategy Notebook Visualizer</h1>
+    <div class="meta-line" id="status-meta"></div>
+    <p class="boundary-peek">
+      This is a <strong>Workbench structure map</strong> only. It has no Record authority and no gate effect.
+      Full scope: <a href="#workbench-boundary">Workbench boundary</a> below.
+    </p>
+  </div>
+
+  <div class="grid-2">
+    <div class="panel" id="workbench-boundary">
       <h2>Workbench boundary</h2>
-      <div class="row-kv"><span>recordAuthority</span><code>none</code></div>
-      <div class="row-kv"><span>gateEffect</span><code>none</code></div>
-      <div class="row-kv"><span>truthScope</span><span>structure visualization only (not geostrategic truth)</span></div>
+      <p style="font-size:0.86rem;margin:0 0 0.5rem">
+        <strong>recordAuthority</strong> <code id="wb-auth">—</code><br />
+        <strong>gateEffect</strong> <code id="wb-gate">—</code><br />
+        <strong>truthScope</strong> <span id="wb-truth">—</span>
+      </p>
+      <p style="font-size:0.8rem;color:var(--muted);margin:0">
+        Screenshots or inspection receipts describe artifact behavior only; they do not certify external or strategic truth.
+      </p>
     </div>
     <div class="panel" id="panel-launch">
       <h2>Launch / inspect / receipt</h2>
       <p class="mono" style="margin:0 0 0.5rem">From repo root:</p>
-      <pre style="white-space:pre-wrap;margin:0 0 0.5rem;overflow:auto">python3 -m http.server 8765 --directory docs/skill-work/work-strategy/strategy-notebook/demo-runs/workbench-visualizer</pre>
+      <pre id="http-recipe" style="white-space:pre-wrap;margin:0 0 0.5rem;overflow:auto"></pre>
       <p class="mono" style="margin:0.25rem 0">Open: <a href="http://localhost:8765/strategy-notebook-visualizer.html">http://localhost:8765/strategy-notebook-visualizer.html</a></p>
       <p class="mono" style="color:var(--muted);font-size:0.8rem;margin:0.5rem 0 0">
         Suggested screenshot: <code>artifacts/work-dev/workbench-screenshots/strategy-notebook-visualizer-pilot.png</code><br />
@@ -120,40 +180,109 @@
     </div>
   </div>
 
-  <h2>Filter</h2>
-  <input type="search" id="search" placeholder="Filter by id, label, kind, path, description…" autocomplete="off" />
+  <p class="lead" id="lead-para" style="display:none">
+    Loads <code>strategy-notebook-visualizer.fixture.json</code> (structure only; not live repo state).
+  </p>
+
+  <div class="grid-3" id="summary-row" style="display:none">
+    <div class="panel summary-panel" id="summary-kinds">
+      <h3>By kind (visible / total)</h3>
+      <div class="stat" id="summary-kinds-body"></div>
+    </div>
+    <div class="panel summary-panel" id="summary-rels">
+      <h3>By relation (visible / total)</h3>
+      <div class="stat" id="summary-rels-body"></div>
+    </div>
+    <div class="panel summary-panel" id="summary-warn-panel">
+      <h3>Warnings (fixture / inspection only)</h3>
+      <div class="stat" id="summary-warn-body"></div>
+    </div>
+  </div>
+
+  <h2>Search and filters</h2>
+  <input type="search" id="q" placeholder="Search id, label, kind, path, description — also narrows the edge list" autocomplete="off" />
+  <div class="filter-tools">
+    <span class="group-label">Kind</span>
+    <div class="chips" id="kind-filters" aria-label="Filter by node kind"></div>
+    <span class="group-label">Relation</span>
+    <div class="chips" id="rel-filters" aria-label="Filter by edge relation"></div>
+  </div>
+  <div class="filter-tools">
+    <label><input type="checkbox" id="conn-only" /> Show only nodes connected to selected</label>
+    <span id="conn-hint" class="mono" style="color:var(--warn);font-size:0.8rem;display:none">Select a node to use this filter.</span>
+  </div>
+  <p><button type="button" class="btn" id="btn-reset">Reset filters and selection</button></p>
 
   <div class="bar"></div>
-  <h2>Nodes by kind</h2>
-  <div id="nodes-root"></div>
 
-  <div class="bar"></div>
-  <h2>Edges (relationships)</h2>
-  <div class="panel" style="overflow-x:auto">
+  <div class="main-split" id="main-split" style="display:none">
+    <div>
+      <h2>Nodes by kind</h2>
+      <div id="nodes-root"></div>
+    </div>
+    <div class="aside-col">
+      <div class="panel" id="panel-detail">
+        <h2>Selected node</h2>
+        <div id="detail-empty">No node selected. Click a node card.</div>
+        <div id="detail-content" style="display:none">
+          <div class="detail-block"><span class="lbl">label</span> <strong id="d-label"></strong></div>
+          <div class="detail-block"><span class="lbl">id</span> <code id="d-id"></code></div>
+          <div class="detail-block"><span class="lbl">kind</span> <span id="d-kind"></span></div>
+          <div class="detail-block"><span class="lbl">path</span> <code id="d-path" style="word-break:break-all"></code>
+            <button type="button" class="btn" id="btn-copy" style="margin-top:0.35rem">Copy path</button>
+            <span id="copy-toast" class="mono" style="color:var(--ok);font-size:0.75rem;margin-left:0.5rem;display:none">Copied</span>
+          </div>
+          <div class="detail-block"><span class="lbl">description</span> <span id="d-desc"></span></div>
+          <div class="detail-block"><span class="lbl">authority</span> <code id="d-auth"></code></div>
+          <h3>Relationships</h3>
+          <p class="mono" style="font-size:0.8rem;margin:0" id="d-neigh-count"></p>
+          <div class="detail-block" id="d-out"></div>
+          <div class="detail-block" id="d-in"></div>
+        </div>
+      </div>
+      <div class="panel" id="panel-adj" style="display:none">
+        <h2>Adjacency (hub)</h2>
+        <p class="mono" style="font-size:0.75rem;color:var(--muted);margin:0 0 0.5rem">Deterministic list view — not a force layout.</p>
+        <div class="adj-wrap">
+          <div class="adj-box" id="adj-out"></div>
+          <div class="adj-box" id="adj-in"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bar" id="bar-edges" style="display:none"></div>
+  <h2 id="h-edges" style="display:none">Edges (relationships)</h2>
+  <div class="panel" style="overflow-x:auto;display:none" id="edges-wrap">
     <table class="edges-table" id="edges-table" aria-label="edge list">
-      <thead><tr><th>source</th><th>target</th><th>relation</th></tr></thead>
+      <thead><tr><th>source</th><th>relation</th><th>target</th></tr></thead>
       <tbody></tbody>
     </table>
   </div>
 
   <script>
 (function () {
-  var state = { nodes: [], edges: [] };
+  var HTTP_Serve = "python3 -m http.server 8765 --directory docs/skill-work/work-strategy/strategy-notebook/demo-runs/workbench-visualizer";
+  var HTTP_URL = "http://localhost:8765/strategy-notebook-visualizer.html";
+
+  var state = {
+    nodes: [],
+    edges: [],
+    idTo: Object.create(null),
+    meta: {},
+    kinds: [],
+    rels: [],
+    kindOn: Object.create(null),
+    relOn: Object.create(null),
+    selected: null,
+    loadWarnings: [],
+    _edgeVis: null,
+  };
 
   function setLoadError(msg) {
     var el = document.getElementById("load-error");
     el.style.display = "block";
     el.textContent = msg;
-  }
-
-  function renderEdges() {
-    var tb = document.querySelector("#edges-table tbody");
-    tb.innerHTML = "";
-    (state.edges || []).forEach(function (e) {
-      var tr = document.createElement("tr");
-      tr.innerHTML = "<td><code>" + esc(e.source) + "</code></td><td><code>" + esc(e.target) + "</code></td><td>" + esc(e.relation) + "</td>";
-      tb.appendChild(tr);
-    });
   }
 
   function esc(s) {
@@ -165,19 +294,177 @@
       .replace(/"/g, "&quot;");
   }
 
-  function renderNodes(filter) {
-    var f = (filter || "").toLowerCase().trim();
+  function fileProtocol() {
+    return window.location.protocol === "file:";
+  }
+
+  function nodeText(n) {
+    return (n.id + " " + n.label + " " + n.kind + " " + n.path + " " + (n.description || "")).toLowerCase();
+  }
+
+  function getQ() {
+    return (document.getElementById("q").value || "").toLowerCase().trim();
+  }
+
+  function textMatchNode(n, q) {
+    if (!q) return true;
+    return nodeText(n).indexOf(q) !== -1;
+  }
+
+  function textMatchEdge(e, q) {
+    if (!q) return true;
+    var t = (e.source + " " + e.relation + " " + e.target).toLowerCase();
+    return t.indexOf(q) !== -1;
+  }
+
+  function kindActive(kind) {
+    if (state.kindOn[kind] === false) return false;
+    return true;
+  }
+
+  function relActive(rel) {
+    if (state.relOn[rel] === false) return false;
+    return true;
+  }
+
+  function neighborIdsFor(selId) {
+    var s = new Set();
+    (state.edges || []).forEach(function (e) {
+      if (e.source === selId) s.add(e.target);
+      if (e.target === selId) s.add(e.source);
+    });
+    return s;
+  }
+
+  function buildVisibility() {
+    var q = getQ();
+    var sel = state.selected;
+    var conn = document.getElementById("conn-only").checked;
+    var nbr = sel ? neighborIdsFor(sel) : new Set();
+    if (conn && !sel) { conn = false; }
+
+    var visN = Object.create(null);
+    state.nodes.forEach(function (n) {
+      var id = n.id;
+      if (!kindActive(n.kind) || !textMatchNode(n, q)) { visN[id] = false; return; }
+      if (conn) {
+        visN[id] = id === sel || nbr.has(id);
+        return;
+      }
+      visN[id] = true;
+    });
+    return { visN: visN, q: q, conn: conn, sel: sel, nbr: nbr };
+  }
+
+  function buildEdgeVisibility(vis) {
+    return function (e) {
+      if (!relActive(e.relation) || !textMatchEdge(e, vis.q)) return false;
+      if (vis.conn && vis.sel) {
+        if (e.source !== vis.sel && e.target !== vis.sel) return false;
+        return true;
+      }
+      var a = state.idTo[e.source];
+      var b = state.idTo[e.target];
+      if (!a || !b) return true;
+      return !!vis.visN[a.id] && !!vis.visN[b.id];
+    };
+  }
+
+  function isUnresolved(e) {
+    return !state.idTo[e.source] || !state.idTo[e.target];
+  }
+
+  function countKindsFiltered(vis) {
+    var tot = Object.create(null);
+    var on = Object.create(null);
+    state.nodes.forEach(function (n) {
+      var k = n.kind;
+      if (!tot[k]) tot[k] = 0;
+      tot[k] += 1;
+      if (vis.visN[n.id]) { if (!on[k]) on[k] = 0; on[k] += 1; }
+    });
+    return { tot: tot, on: on };
+  }
+
+  function countRelsFiltered(vis, edgeVis) {
+    var tot = Object.create(null);
+    var on = Object.create(null);
+    state.edges.forEach(function (e) {
+      var r = e.relation;
+      if (!tot[r]) tot[r] = 0;
+      tot[r] += 1;
+      if (edgeVis(e)) { if (!on[r]) on[r] = 0; on[r] += 1; }
+    });
+    return { tot: tot, on: on };
+  }
+
+  function renderSummary(vis) {
+    var edgeVis = state._edgeVis;
+    if (!edgeVis) return;
+    var ck = countKindsFiltered(vis);
+    var elK = document.getElementById("summary-kinds-body");
+    elK.innerHTML = "";
+    state.kinds.forEach(function (k) {
+      var t = (ck.tot[k] || 0);
+      var o = (ck.on[k] == null ? 0 : ck.on[k]);
+      var row = document.createElement("div");
+      row.className = "stat";
+      row.textContent = k + ": " + o + " / " + t;
+      elK.appendChild(row);
+    });
+
+    var cr = countRelsFiltered(vis, edgeVis);
+    var elR = document.getElementById("summary-rels-body");
+    elR.innerHTML = "";
+    state.rels.forEach(function (r) {
+      var t = (cr.tot[r] || 0);
+      var o = (cr.on[r] == null ? 0 : cr.on[r]);
+      var row = document.createElement("div");
+      row.className = "stat";
+      row.textContent = r + ": " + o + " / " + t;
+      elR.appendChild(row);
+    });
+
+    var wbody = document.getElementById("summary-warn-body");
+    wbody.innerHTML = "";
+    var all = (state.loadWarnings || []).slice();
+    if (document.getElementById("conn-only").checked && !state.selected) {
+      all.push("“Connected to selected” is on but no node is selected; showing all nodes.");
+    }
+    if (all.length === 0) {
+      wbody.textContent = "None. (Warnings are for fixture/inspection, not strategic assessment.)";
+    } else {
+      var ul = document.createElement("ul");
+      ul.className = "warn-list";
+      all.forEach(function (m) {
+        var li = document.createElement("li");
+        li.textContent = m;
+        ul.appendChild(li);
+      });
+      wbody.appendChild(ul);
+    }
+  }
+
+  function selectNode(n) {
+    if (!n) {
+      state.selected = null;
+    } else {
+      state.selected = n.id;
+    }
+    fullRender();
+  }
+
+  function renderNodes(vis) {
+    if (!vis) return;
     var byKind = {};
-    (state.nodes || []).forEach(function (n) {
-      var text = (n.id + " " + n.label + " " + n.kind + " " + n.path + " " + (n.description || "")).toLowerCase();
-      var vis = !f || text.indexOf(f) !== -1;
-      n._visible = vis;
+    state.nodes.forEach(function (n) {
       if (!byKind[n.kind]) byKind[n.kind] = [];
       byKind[n.kind].push(n);
     });
     var root = document.getElementById("nodes-root");
     root.innerHTML = "";
     Object.keys(byKind).sort().forEach(function (kind) {
+      if (!kindActive(kind)) return;
       var section = document.createElement("div");
       section.className = "kind-section";
       var h3 = document.createElement("h3");
@@ -185,51 +472,332 @@
       var cards = document.createElement("div");
       cards.className = "cards";
       byKind[kind].forEach(function (n) {
-        var c = document.createElement("div");
-        c.className = "card" + (n._visible ? " visible" : "");
+        var c = document.createElement("button");
+        c.type = "button";
+        c.className = "card" + (vis.visN[n.id] ? " visible" : "");
+        c.className += state.selected === n.id ? " card--selected" : "";
         c.innerHTML =
           '<div class="id">' + esc(n.id) + "</div>" +
           "<strong>" + esc(n.label) + "</strong>" +
           '<div class="path">' + esc(n.path) + "</div>" +
           "<p style='font-size:0.85rem;margin:0.35rem 0 0'>" + esc(n.description || "") + "</p>" +
           '<p style="font-size:0.72rem;color:#8b9cb3;margin:0.25rem 0 0">authority: ' + esc(n.authority) + "</p>";
-        if (n._visible) c.classList.add("visible");
+        c.addEventListener("click", function () {
+          if (state.selected === n.id) { selectNode(null); return; }
+          selectNode(n);
+        });
         cards.appendChild(c);
       });
       section.appendChild(h3);
       section.appendChild(cards);
-      root.appendChild(section);
+      var any = false;
+      for (var i = 0; i < cards.children.length; i++) {
+        if (cards.children[i].classList.contains("visible")) { any = true; break; }
+      }
+      if (any) root.appendChild(section);
     });
   }
 
-  function fileProtocol() {
-    return window.location.protocol === "file:";
+  function renderEdges(vis) {
+    var edgeVis = state._edgeVis;
+    if (!edgeVis) return;
+    var sel = state.selected;
+    var tb = document.querySelector("#edges-table tbody");
+    tb.innerHTML = "";
+    (state.edges || []).forEach(function (e) {
+      if (!edgeVis(e)) return;
+      var tr = document.createElement("tr");
+      var un = isUnresolved(e);
+      var relSel = sel && (e.source === sel || e.target === sel);
+      if (un) { tr.className = "edge--warn"; tr.title = "Unresolved source or target id in fixture (inspection only)."; }
+      else if (relSel) { tr.className = "edge--hl"; tr.title = ""; }
+      tr.innerHTML = "<td><code>" + esc(e.source) + "</code></td><td>" + esc(e.relation) + "</td><td><code>" + esc(e.target) + "</code></td>";
+      tb.appendChild(tr);
+    });
+  }
+
+  function renderDetail() {
+    var n = state.selected ? state.idTo[state.selected] : null;
+    var empty = document.getElementById("detail-empty");
+    var cont = document.getElementById("detail-content");
+    var padj = document.getElementById("panel-adj");
+    if (!n) {
+      empty.style.display = "block";
+      cont.style.display = "none";
+      padj.style.display = "none";
+      return;
+    }
+    empty.style.display = "none";
+    cont.style.display = "block";
+    padj.style.display = "block";
+    document.getElementById("d-label").textContent = n.label;
+    document.getElementById("d-id").textContent = n.id;
+    document.getElementById("d-kind").textContent = n.kind;
+    document.getElementById("d-path").textContent = n.path;
+    document.getElementById("d-desc").textContent = n.description || "—";
+    document.getElementById("d-auth").textContent = n.authority || "—";
+    var out = [];
+    var inn = [];
+    (state.edges || []).forEach(function (e) {
+      if (e.source === n.id) {
+        out.push(e);
+        return;
+      }
+      if (e.target === n.id) inn.push(e);
+    });
+    var nbCount = 0;
+    var seen = Object.create(null);
+    out.forEach(function (e) { if (!seen[e.target]) { seen[e.target] = 1; nbCount++; } });
+    inn.forEach(function (e) { if (!seen[e.source]) { seen[e.source] = 1; nbCount++; } });
+    document.getElementById("d-neigh-count").textContent = "Neighboring nodes (distinct): " + nbCount + " | outgoing: " + out.length + " | incoming: " + inn.length;
+    var outH = "Outgoing: ";
+    if (out.length) {
+      outH = "<p style='font-size:0.8rem;margin:0' class='mono'>";
+      out.forEach(function (e, i) {
+        outH += (i ? "<br />" : "") + esc(e.relation) + " → <code>" + esc(e.target) + "</code>";
+      });
+      outH += "</p>";
+    } else { outH = "<p class='mono' style='font-size:0.8rem;margin:0'>None</p>"; }
+    document.getElementById("d-out").innerHTML = outH;
+    var inH = "Incoming: ";
+    if (inn.length) {
+      inH = "<p style='font-size:0.8rem;margin:0' class='mono'>";
+      inn.forEach(function (e, i) {
+        inH += (i ? "<br />" : "") + "<code>" + esc(e.source) + "</code> — " + esc(e.relation);
+      });
+      inH += "</p>";
+    } else { inH = "<p class='mono' style='font-size:0.8rem;margin:0'>None</p>"; }
+    document.getElementById("d-in").innerHTML = inH;
+    var ao = document.getElementById("adj-out");
+    var ai = document.getElementById("adj-in");
+    ao.innerHTML = "<h4>Outgoing</h4>";
+    if (out.length) {
+      out.forEach(function (e) {
+        var line = document.createElement("div");
+        line.className = "adj-line";
+        var btn = document.createElement("button");
+        var tgt = state.idTo[e.target];
+        btn.type = "button";
+        if (tgt) {
+          btn.textContent = e.relation + " → " + e.target;
+          btn.addEventListener("click", function () { selectNode(tgt); });
+        } else {
+          btn.textContent = e.relation + " → " + e.target + " (missing id)";
+          btn.disabled = true;
+        }
+        line.appendChild(btn);
+        ao.appendChild(line);
+      });
+    } else { ao.appendChild(document.createTextNode("—")); }
+    ai.innerHTML = "<h4>Incoming</h4>";
+    if (inn.length) {
+      inn.forEach(function (e) {
+        var line = document.createElement("div");
+        line.className = "adj-line";
+        var btn = document.createElement("button");
+        var src = state.idTo[e.source];
+        btn.type = "button";
+        if (src) {
+          btn.textContent = e.source + " ← " + e.relation;
+          btn.addEventListener("click", function () { selectNode(src); });
+        } else {
+          btn.textContent = e.source + " ← " + e.relation + " (missing id)";
+          btn.disabled = true;
+        }
+        line.appendChild(btn);
+        ai.appendChild(line);
+      });
+    } else { ai.appendChild(document.createTextNode("—")); }
+  }
+
+  function renderStatusBar() {
+    var m = state.meta;
+    var lines = [
+      "schemaVersion: " + (m.schemaVersion != null ? m.schemaVersion : "—") +
+        "  ·  generatedAt: " + (m.generatedAt != null ? m.generatedAt : "—") +
+        "  ·  sourceRoot: " + (m.sourceRoot != null ? m.sourceRoot : "—") +
+        "  ·  nodes: " + (state.nodes ? state.nodes.length : 0) +
+        "  ·  edges: " + (state.edges ? state.edges.length : 0) +
+        "  ·  recordAuthority: " + (m.recordAuthority != null ? m.recordAuthority : "—") +
+        "  ·  gateEffect: " + (m.gateEffect != null ? m.gateEffect : "—") +
+        "  ·  truthScope: " + (m.truthScope != null ? m.truthScope : "—")
+    ];
+    document.getElementById("status-meta").textContent = lines[0];
+    document.getElementById("wb-auth").textContent = m.recordAuthority != null ? m.recordAuthority : "— (missing in fixture)";
+    document.getElementById("wb-gate").textContent = m.gateEffect != null ? m.gateEffect : "— (missing in fixture)";
+    document.getElementById("wb-truth").textContent = m.truthScope != null ? m.truthScope : "— (missing in fixture)";
+  }
+
+  function fullRender() {
+    var vis = buildVisibility();
+    state._edgeVis = buildEdgeVisibility(vis);
+    document.getElementById("conn-hint").style.display =
+      (document.getElementById("conn-only").checked && !state.selected) ? "inline" : "none";
+    renderStatusBar();
+    renderSummary(vis);
+    renderNodes(vis);
+    renderEdges(vis);
+    renderDetail();
+  }
+
+  function applyFixture(data) {
+    state.loadWarnings = [];
+    if (!data || typeof data !== "object" || Array.isArray(data)) {
+      state.loadWarnings.push("Root JSON is not an object; no nodes/edges loaded.");
+      data = {};
+    }
+    var nodes = data.nodes;
+    var edges = data.edges;
+    if (!Array.isArray(nodes)) { state.loadWarnings.push("nodes is missing or not an array; using []."); nodes = []; }
+    if (!Array.isArray(edges)) { state.loadWarnings.push("edges is missing or not an array; using []."); edges = []; }
+    if (data.recordAuthority == null) state.loadWarnings.push("Top-level recordAuthority is missing in fixture JSON.");
+    if (data.gateEffect == null) state.loadWarnings.push("Top-level gateEffect is missing in fixture JSON.");
+    if (data.truthScope == null) state.loadWarnings.push("Top-level truthScope is missing in fixture JSON.");
+    if (data.schemaVersion == null) state.loadWarnings.push("Top-level schemaVersion is missing in fixture JSON.");
+    state.nodes = nodes;
+    state.edges = edges;
+    state.idTo = Object.create(null);
+    var dup = 0;
+    state.nodes.forEach(function (n) {
+      if (!n || n.id == null) return;
+      if (state.idTo[n.id]) dup++;
+      state.idTo[n.id] = n;
+    });
+    if (dup) state.loadWarnings.push("Duplicate node ids: " + dup + " (last wins; inspection only).");
+    state.meta = {
+      schemaVersion: data.schemaVersion,
+      generatedAt: data.generatedAt,
+      sourceRoot: data.sourceRoot,
+      recordAuthority: data.recordAuthority,
+      gateEffect: data.gateEffect,
+      truthScope: data.truthScope
+    };
+    var kindSet = Object.create(null);
+    var relSet = Object.create(null);
+    state.nodes.forEach(function (n) { if (n && n.kind) kindSet[n.kind] = true; });
+    state.edges.forEach(function (e) { if (e && e.relation) relSet[e.relation] = true; });
+    state.kinds = Object.keys(kindSet).sort();
+    state.rels = Object.keys(relSet).sort();
+    state.kindOn = Object.create(null);
+    state.relOn = Object.create(null);
+    state.rels.forEach(function (r) { state.relOn[r] = true; });
+    state.kinds.forEach(function (k) { state.kindOn[k] = true; });
+    (state.edges || []).forEach(function (e) {
+      if (state.idTo[e.source] && state.idTo[e.target]) return;
+      if (!e.source && !e.target) return;
+      var msg = "Edge references missing node id: " + e.source + " " + e.relation + " " + e.target;
+      if (state.loadWarnings.indexOf("Unresolved edge endpoints present (see edge table).") === -1) {
+        state.loadWarnings.push("Unresolved edge endpoints present (see edge table).");
+      }
+    });
+    showMainUi();
+  }
+
+  function showMainUi() {
+    document.getElementById("status-bar").style.display = "block";
+    document.getElementById("lead-para").style.display = "block";
+    document.getElementById("summary-row").style.display = "grid";
+    document.getElementById("main-split").style.display = "grid";
+    document.getElementById("bar-edges").style.display = "block";
+    document.getElementById("h-edges").style.display = "block";
+    document.getElementById("edges-wrap").style.display = "block";
+    buildFilterChips();
+    fullRender();
+  }
+
+  function buildFilterChips() {
+    var kf = document.getElementById("kind-filters");
+    kf.innerHTML = "";
+    state.kinds.forEach(function (k) {
+      var lab = document.createElement("label");
+      var cb = document.createElement("input");
+      cb.type = "checkbox";
+      cb.checked = state.kindOn[k] !== false;
+      cb.dataset.kind = k;
+      cb.addEventListener("change", function () { state.kindOn[k] = cb.checked; fullRender(); });
+      lab.appendChild(cb);
+      lab.appendChild(document.createTextNode(" " + k));
+      kf.appendChild(lab);
+    });
+    var rf = document.getElementById("rel-filters");
+    rf.innerHTML = "";
+    state.rels.forEach(function (r) {
+      var lab = document.createElement("label");
+      var cb = document.createElement("input");
+      cb.type = "checkbox";
+      cb.checked = state.relOn[r] !== false;
+      cb.addEventListener("change", function () { state.relOn[r] = cb.checked; fullRender(); });
+      lab.appendChild(cb);
+      lab.appendChild(document.createTextNode(" " + r));
+      rf.appendChild(lab);
+    });
+  }
+
+  function initListeners() {
+    var qin = document.getElementById("q");
+    qin.addEventListener("input", function () { fullRender(); });
+    document.getElementById("conn-only").addEventListener("change", function () { fullRender(); });
+    document.getElementById("btn-reset").addEventListener("click", function () {
+      document.getElementById("q").value = "";
+      document.getElementById("conn-only").checked = false;
+      state.kinds.forEach(function (k) { state.kindOn[k] = true; });
+      state.rels.forEach(function (r) { state.relOn[r] = true; });
+      state.selected = null;
+      buildFilterChips();
+      fullRender();
+    });
+    document.getElementById("btn-copy").addEventListener("click", function () {
+      var n = state.selected ? state.idTo[state.selected] : null;
+      if (!n) return;
+      var path = n.path;
+      var toast = document.getElementById("copy-toast");
+      var done = function () {
+        toast.style.display = "inline";
+        setTimeout(function () { toast.style.display = "none"; }, 2000);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(path).then(done).catch(function () { fallback(); });
+        return;
+      }
+      function fallback() {
+        var ta = document.createElement("textarea");
+        ta.value = path;
+        document.body.appendChild(ta);
+        ta.select();
+        try { document.execCommand("copy"); done(); } catch (e) { }
+        document.body.removeChild(ta);
+      }
+      fallback();
+    });
+  }
+
+  function preRecipe() {
+    var pre = document.getElementById("http-recipe");
+    if (pre) pre.textContent = HTTP_Serve;
   }
 
   function init() {
+    preRecipe();
     if (fileProtocol()) {
       setLoadError(
-        "Opened as file:// — browsers block fetch() to local JSON. Run from repo root: " +
-        "python3 -m http.server 8765 --directory docs/skill-work/work-strategy/strategy-notebook/demo-runs/workbench-visualizer " +
-        "then open http://localhost:8765/strategy-notebook-visualizer.html"
+        "Opened as file:// — browsers block fetch() to local JSON. From repo root run:\n" + HTTP_Serve + "\n…then open " + HTTP_URL
       );
       return;
     }
+    initListeners();
     fetch("strategy-notebook-visualizer.fixture.json", { cache: "no-store" })
-      .then(function (r) {
-        if (!r.ok) throw new Error("HTTP " + r.status);
-        return r.json();
-      })
+      .then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
       .then(function (data) {
-        state.nodes = data.nodes || [];
-        state.edges = data.edges || [];
-        renderNodes("");
-        renderEdges();
-        var inp = document.getElementById("search");
-        inp.addEventListener("input", function () { renderNodes(inp.value); });
+        try {
+          applyFixture(data);
+        } catch (e) {
+          setLoadError("Error applying fixture: " + (e && e.message ? e.message : String(e)) + " — " + HTTP_Serve);
+        }
       })
       .catch(function (err) {
-        setLoadError("Could not load fixture: " + (err && err.message ? err.message : String(err)) + " — use http.server as above.");
+        setLoadError(
+          "Could not load strategy-notebook-visualizer.fixture.json. Serve this directory with:\n" + HTTP_Serve
+        );
       });
   }
   init();
