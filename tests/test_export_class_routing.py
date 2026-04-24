@@ -20,6 +20,7 @@ def test_supported_classes_present():
     assert "tool_bootstrap" in EXPORT_CLASS_ROUTES
     assert "full" in EXPORT_CLASS_ROUTES
     assert "task_limited" in EXPORT_CLASS_ROUTES
+    assert "emulation" in EXPORT_CLASS_ROUTES
 
 
 def test_tool_bootstrap_routes_to_prp():
@@ -46,6 +47,13 @@ def test_capability_routes_to_export_capability():
     assert script == "export_capability.py"
 
 
+def test_emulation_routes_to_export_emulation_bundle():
+    script, args = EXPORT_CLASS_ROUTES["emulation"]
+    assert script == "export_emulation_bundle.py"
+    assert "--mode" in args
+    assert "portable_bundle_only" in args
+
+
 def test_unsupported_classes_defined():
     assert "internal" in EXPORT_CLASS_UNSUPPORTED
 
@@ -56,7 +64,14 @@ def test_unsupported_classes_not_in_routes():
 
 
 def test_all_classes_enumerated():
-    assert set(ALL_EXPORT_CLASSES) == {"tool_bootstrap", "full", "task_limited", "capability", "internal"}
+    assert set(ALL_EXPORT_CLASSES) == {
+        "tool_bootstrap",
+        "full",
+        "task_limited",
+        "capability",
+        "emulation",
+        "internal",
+    }
 
 
 def _run(args: list[str]) -> subprocess.CompletedProcess[str]:

@@ -25,6 +25,7 @@ A thin MCP server that lets external AI tools (Cursor, Claude Desktop, etc.) ret
 | `full` | Operational | Broad governed profile bundle (metadata + primary artifact + file manifest) |
 | `task_limited` | Operational | Filtered fork export for a specific task or role |
 | `capability` | Operational | SKILLS + EVIDENCE portfolio with artifact-rationale companions |
+| `emulation` | Operational | Emulation-ready package metadata + file manifest over the existing export stack |
 | `internal` | Not exportable | Internal-only content stays in the governed Record |
 
 The only non-exportable class (`internal`) returns a clear error with explanation.

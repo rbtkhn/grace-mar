@@ -3,8 +3,8 @@
 Read-only MCP adapter over Grace-Mar's governed export surface.
 
 Exposes operational export classes (tool_bootstrap, full, task_limited,
-capability) as MCP tools so external AI systems can retrieve governed views
-of the Record without bypassing the gate or touching raw files.
+capability, emulation) as MCP tools so external AI systems can retrieve
+governed views of the Record without bypassing the gate or touching raw files.
 
 This adapter wraps the existing export machinery — it does not create a second
 export stack.  Policy comes from scripts/export.py and the child exporters.
@@ -53,6 +53,11 @@ try:
 except ImportError:
     from scripts.export_capability import export_capability  # type: ignore[no-redef]
 
+try:
+    from export_emulation_bundle import export_emulation_bundle
+except ImportError:
+    from scripts.export_emulation_bundle import export_emulation_bundle  # type: ignore[no-redef]
+
 # --- Constants (derived from scripts/export.py to stay in sync) ----------
 
 SUPPORTED_CLASSES: dict[str, str] = {
@@ -60,6 +65,7 @@ SUPPORTED_CLASSES: dict[str, str] = {
     "full": "Broad governed profile across all approved surfaces (portable bundle)",
     "task_limited": "Filtered fork export for a specific task or role (coach handoff)",
     "capability": "SKILLS + EVIDENCE portfolio with artifact-rationale companions",
+    "emulation": "Thin emulation-ready package over the existing export stack",
 }
 
 UNSUPPORTED_CLASSES: dict[str, str] = {
@@ -177,11 +183,45 @@ def _retrieve_capability(user_id: str) -> dict:
     }
 
 
+def _retrieve_emulation(user_id: str) -> dict:
+    with tempfile.TemporaryDirectory(prefix="gm_mcp_emulation_") as tmpdir:
+        bundle_dir = Path(tmpdir)
+        payload = export_emulation_bundle(
+            user_id=user_id,
+            output_dir=bundle_dir,
+            runtime_mode="portable_bundle_only",
+        )
+
+        primary_artifact = ""
+        prp_path = bundle_dir / "record" / "grace-mar-llm.txt"
+        if prp_path.exists():
+            primary_artifact = prp_path.read_text(encoding="utf-8")
+
+        bundle_files: list[str] = []
+        for p in sorted(bundle_dir.rglob("*")):
+            if p.is_file():
+                bundle_files.append(str(p.relative_to(bundle_dir)))
+
+    return {
+        "user": user_id,
+        "export_class": "emulation",
+        "content_type": "application/json",
+        "content": {
+            "metadata": payload,
+            "primary_artifact": primary_artifact,
+            "bundle_files": bundle_files,
+        },
+        "generated_via": "export_emulation_bundle",
+        "warnings": [],
+    }
+
+
 _RETRIEVERS: dict[str, object] = {
     "tool_bootstrap": _retrieve_tool_bootstrap,
     "full": _retrieve_full,
     "task_limited": _retrieve_task_limited,
     "capability": _retrieve_capability,
+    "emulation": _retrieve_emulation,
 }
 
 
@@ -237,7 +277,7 @@ def _build_mcp_server():  # noqa: ANN202
     def mcp_get_export(user_id: str = "grace-mar", export_class: str = "tool_bootstrap") -> str:
         """Retrieve a governed export view by export class.
 
-        Supported classes: tool_bootstrap, full, task_limited, capability.
+        Supported classes: tool_bootstrap, full, task_limited, capability, emulation.
         Returns JSON with the export content or an error explanation.
         """
         result = retrieve_export(user_id=user_id, export_class=export_class)

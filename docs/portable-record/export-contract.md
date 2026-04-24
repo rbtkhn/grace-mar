@@ -20,6 +20,7 @@ Runtime-only material (warmup, memory briefs, skill cards, lane compression) may
 | **Task-limited profile** | Filtered slices from surfaces relevant to a specific task or role | Coach handoff, domain-specific onboarding |
 | **Tool bootstrap profile** | Compact prompt encoding the Record for bootstrapping a new tool session | Pasting into a new LLM, agent cold start |
 | **Demonstrated capability profile** | SKILLS + EVIDENCE focused — what this person can do and has done | Portfolio export, capability audit |
+| **Emulation-ready profile** | Thin composition over existing governed exports plus policy/review return references | Loading a foreign runtime or harness without creating a new portability ontology |
 | **Internal-only** | Content approved into the Record but marked non-portable | Never exported; stays in the governed Record only |
 
 ---
@@ -40,7 +41,7 @@ Sensitivity filtering: entries with `sensitivity_class: non_portable` or `portab
 
 ## Current export entry points
 
-Each export class maps to existing scripts. Four classes are operational via `--export-class`; one is not exported by definition. No second export system is needed.
+Each export class maps to existing scripts. Five classes are operational via `--export-class`; one is not exported by definition. No second export system is needed.
 
 | Class | Status | Script | `--export-class` | Subcommand equivalent |
 |---|---|---|---|---|
@@ -49,6 +50,7 @@ Each export class maps to existing scripts. Four classes are operational via `--
 | **Full governed profile (with runtime)** | Operational | [`export_runtime_bundle.py`](../../scripts/export_runtime_bundle.py) | — | `export.py bundle -- --mode adjunct_runtime` |
 | **Task-limited profile** | Operational | [`export_fork.py`](../../scripts/export_fork.py) | `export.py --export-class task_limited` | `export.py fork -- --format coach-handoff` |
 | **Demonstrated capability profile** | Operational | [`export_capability.py`](../../scripts/export_capability.py) | `export.py --export-class capability` | — |
+| **Emulation-ready profile** | Operational | [`export_emulation_bundle.py`](../../scripts/export_emulation_bundle.py) | `export.py --export-class emulation` | `export.py emulation -- --mode portable_bundle_only` |
 | **Internal-only** | Not exported | Content stays in governed Record | Rejects with explanation | — |
 
 Additional exporters: `export_user_identity.py` (identity sections), `export_manifest.py` (policy manifest), `export_view.py` (audience views: `school`, `public`).
@@ -62,6 +64,7 @@ This contract governs the existing export layer. It does not create a second exp
 - Export classes are **policy labels** over the existing `export.py` subcommands and their child scripts
 - Filtering logic lives in the child scripts, not in a separate portability stack
 - New export formats extend [`scripts/export.py`](../../scripts/export.py) as subcommands
+- Emulation packaging may compose existing exporters, but it must still return through existing review or membrane surfaces
 - New schemas go in `schema-registry/`
 
 ---
@@ -75,15 +78,16 @@ python scripts/export.py --export-class tool_bootstrap -- -o prompt.txt
 python scripts/export.py --export-class full -- -o /tmp/bundle
 python scripts/export.py -u grace-mar --export-class task_limited -- -o handoff.json
 python scripts/export.py --export-class capability -- -o capability.json
+python scripts/export.py --export-class emulation -- -o /tmp/emulation-bundle
 ```
 
-Four classes are operational: `tool_bootstrap`, `full`, `task_limited`, `capability`. The only non-exportable class (`internal`) exits with code 2 and an explanation. Existing subcommand invocations (`export.py fork`, `export.py prp`, etc.) continue to work unchanged.
+Five classes are operational: `tool_bootstrap`, `full`, `task_limited`, `capability`, `emulation`. The only non-exportable class (`internal`) exits with code 2 and an explanation. Existing subcommand invocations (`export.py fork`, `export.py prp`, etc.) continue to work unchanged.
 
 ---
 
 ## MCP adapter
 
-The same export classes are available programmatically via a read-only MCP server at [`integrations/mcp_adapter.py`](../../integrations/mcp_adapter.py). It wraps the existing export machinery over stdio transport — no second export stack, no write-back. Four operational classes (`tool_bootstrap`, `full`, `task_limited`, `capability`) are retrievable; `internal` rejects with explanation. See [mcp-adapter.md](../integrations/mcp-adapter.md) for configuration and response shapes.
+The same export classes are available programmatically via a read-only MCP server at [`integrations/mcp_adapter.py`](../../integrations/mcp_adapter.py). It wraps the existing export machinery over stdio transport — no second export stack, no write-back. Five operational classes (`tool_bootstrap`, `full`, `task_limited`, `capability`, `emulation`) are retrievable; `internal` rejects with explanation. See [mcp-adapter.md](../integrations/mcp-adapter.md) for configuration and response shapes.
 
 ---
 

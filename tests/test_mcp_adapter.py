@@ -43,7 +43,7 @@ def test_health_lists_supported_classes():
 
 def test_list_classes_includes_supported():
     result = list_export_classes()
-    for cls in ("tool_bootstrap", "full", "task_limited"):
+    for cls in ("tool_bootstrap", "full", "task_limited", "emulation"):
         assert cls in result["supported"]
         assert result["supported"][cls]["operational"] is True
 
@@ -105,6 +105,15 @@ def test_retrieve_capability():
     assert result["content_type"] == "application/json"
     assert isinstance(result["content"], dict)
     assert result["generated_via"] == "export_capability"
+
+
+def test_retrieve_emulation():
+    result = retrieve_export(user_id="grace-mar", export_class="emulation")
+    assert "error" not in result
+    assert result["export_class"] == "emulation"
+    assert result["content_type"] == "application/json"
+    assert isinstance(result["content"], dict)
+    assert result["generated_via"] == "export_emulation_bundle"
 
 
 def test_internal_class_not_exposed():

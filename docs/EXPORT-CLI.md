@@ -26,5 +26,6 @@ Omitting `--` still forwards any tokens after the subcommand (e.g. `export.py fo
 | `python scripts/export_fork.py -u grace-mar -o x.json` | `python scripts/export.py fork -- -u grace-mar -o x.json` |
 | `python scripts/export_prp.py -u grace-mar` | `python scripts/export.py prp --` (or add `-o` after `--`) |
 | `python scripts/export_runtime_bundle.py -u grace-mar` | `python scripts/export.py bundle --` or `python scripts/export.py all --` |
+| `python scripts/export_emulation_bundle.py -u grace-mar` | `python scripts/export.py emulation --` |
 
 Legacy scripts remain; they may emit `DeprecationWarning` when run as `__main__`.

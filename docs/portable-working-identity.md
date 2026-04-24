@@ -13,6 +13,7 @@ Grace-Mar already functions as a governed portable working-identity system. The 
 | Prepared selective retrieval | Progressive-disclosure index, budgeted context, memory briefs ([prepared-context/](../prepared-context/), [progressive-disclosure.md](prepared-context/progressive-disclosure.md)) |
 | PRP export | Single pasteable prompt encoding Record surfaces for any LLM ([portable-record-prompt.md](portable-record-prompt.md), [`scripts/export_prp.py`](../scripts/export_prp.py)) |
 | Runtime bundle export | Structured bundle with record/, policy/, runtime/, audit/ ([`scripts/export_runtime_bundle.py`](../scripts/export_runtime_bundle.py)) |
+| Emulation-ready export | Thin wrapper over PRP + fork + runtime bundle + existing review references ([`scripts/export_emulation_bundle.py`](../scripts/export_emulation_bundle.py), [portable-record/export-contract.md](portable-record/export-contract.md)) |
 | JSON fork export | Machine-readable Record snapshot ([`scripts/export_fork.py`](../scripts/export_fork.py), [EXPORT-CLI.md](EXPORT-CLI.md)) |
 | Approval-gated durable change | Staging in `recursion-gate.md` → companion approval → merge script ([AGENTS.md](../AGENTS.md) §2, [identity-fork-protocol.md](identity-fork-protocol.md)) |
 
@@ -33,7 +34,7 @@ Portable working identity maps to four layers. Each layer has a canonical Grace-
 
 ## Anti-duplication rule
 
-New portability work must extend the existing PRP / export / prepared-context architecture. It must not create a second parallel portability stack. The existing surfaces and scripts are the portability system — not a predecessor to be replaced.
+New portability work must extend the existing PRP / export / prepared-context architecture. It must not create a second parallel portability stack. The existing surfaces and scripts are the portability system — not a predecessor to be replaced. Emulation-oriented exports are allowed only as a thin composition over those existing surfaces.
 
 ---
 

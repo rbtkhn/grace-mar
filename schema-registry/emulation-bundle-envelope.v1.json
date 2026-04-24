@@ -1,0 +1,131 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schema-registry/emulation-bundle-envelope.v1.json",
+  "title": "Emulation bundle envelope",
+  "description": "Narrow wrapper around existing Grace-Mar export surfaces for foreign runtimes that need emulation-oriented loading without direct Record mutation.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "format",
+    "generatedAt",
+    "userId",
+    "runtimeMode",
+    "runtimeBundlePath",
+    "references",
+    "boundaryNotice",
+    "proposalReturn",
+    "runtimeObservationReturn"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "1.0.0"
+    },
+    "format": {
+      "const": "grace-mar-emulation-bundle"
+    },
+    "generatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "userId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "runtimeMode": {
+      "type": "string",
+      "enum": ["adjunct_runtime", "primary_runtime", "portable_bundle_only"]
+    },
+    "runtimeBundlePath": {
+      "type": "string",
+      "minLength": 1
+    },
+    "references": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "prpPath",
+        "forkExportPath",
+        "authorityMapPath",
+        "changeProposalSchemaPath"
+      ],
+      "properties": {
+        "prpPath": {
+          "type": "string",
+          "minLength": 1
+        },
+        "forkExportPath": {
+          "type": "string",
+          "minLength": 1
+        },
+        "authorityMapPath": {
+          "type": "string",
+          "minLength": 1
+        },
+        "changeProposalSchemaPath": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "boundaryNotice": {
+      "type": "string",
+      "minLength": 1
+    },
+    "proposalReturn": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schemaPath",
+        "humanReviewRequired",
+        "canonicalSurfacesTouched"
+      ],
+      "properties": {
+        "schemaPath": {
+          "type": "string",
+          "minLength": 1
+        },
+        "humanReviewRequired": {
+          "const": true
+        },
+        "canonicalSurfacesTouched": {
+          "const": false
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    },
+    "runtimeObservationReturn": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "importScript",
+        "humanReviewRequired",
+        "canonicalSurfacesTouched"
+      ],
+      "properties": {
+        "importScript": {
+          "type": "string",
+          "minLength": 1
+        },
+        "humanReviewRequired": {
+          "const": true
+        },
+        "canonicalSurfacesTouched": {
+          "const": false
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    },
+    "adapterExamples": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "default": []
+    }
+  }
+}

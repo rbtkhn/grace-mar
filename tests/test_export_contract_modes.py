@@ -21,18 +21,19 @@ def test_export_contract_exists():
 def test_export_contract_references_all_subcommands():
     """The contract doc should mention every unified CLI subcommand."""
     contract = _read(EXPORT_CONTRACT)
-    for sub in ("fork", "prp", "identity", "manifest", "bundle"):
+    for sub in ("fork", "prp", "identity", "manifest", "bundle", "emulation"):
         assert sub in contract, f"export-contract.md should reference subcommand '{sub}'"
 
 
 def test_export_contract_defines_all_classes():
-    """Five export classes should be named in the contract."""
+    """Export classes should be named in the contract."""
     contract = _read(EXPORT_CONTRACT)
     for cls in (
         "Full governed profile",
         "Task-limited profile",
         "Tool bootstrap profile",
         "Demonstrated capability profile",
+        "Emulation-ready profile",
         "Internal-only",
     ):
         assert cls in contract, f"export-contract.md should define class '{cls}'"

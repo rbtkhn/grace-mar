@@ -5,8 +5,8 @@ Unified export CLI (v1): subprocess dispatch to scripts/export_*.py.
 Contract: [docs/EXPORT-CLI.md](../docs/EXPORT-CLI.md) and README (Unified export CLI).
 Export classes: [docs/portable-record/export-contract.md](../docs/portable-record/export-contract.md).
 
-  python scripts/export.py [-u USER] {fork|prp|identity|manifest|bundle|all} [-- EXTRA...]
-  python scripts/export.py [-u USER] --export-class {tool_bootstrap|full|task_limited|capability} [-- EXTRA...]
+  python scripts/export.py [-u USER] {fork|prp|identity|manifest|bundle|emulation|all} [-- EXTRA...]
+  python scripts/export.py [-u USER] --export-class {tool_bootstrap|full|task_limited|capability|emulation} [-- EXTRA...]
 
 When EXTRA omits -u/--user, this CLI prepends -u <resolved> (env GRACE_MAR_USER_ID, else
 repo default: grace-mar when users/grace-mar exists, else _template).
@@ -31,6 +31,7 @@ SUBCOMMAND_SCRIPTS: dict[str, str] = {
     "identity": "export_user_identity.py",
     "manifest": "export_manifest.py",
     "bundle": "export_runtime_bundle.py",
+    "emulation": "export_emulation_bundle.py",
     "all": "export_runtime_bundle.py",
 }
 
@@ -39,6 +40,7 @@ EXPORT_CLASS_ROUTES: dict[str, tuple[str, list[str]]] = {
     "full": ("export_runtime_bundle.py", ["--mode", "portable_bundle_only"]),
     "task_limited": ("export_fork.py", ["--format", "coach-handoff"]),
     "capability": ("export_capability.py", []),
+    "emulation": ("export_emulation_bundle.py", ["--mode", "portable_bundle_only"]),
 }
 
 EXPORT_CLASS_UNSUPPORTED: dict[str, str] = {
@@ -127,8 +129,8 @@ def _print_help() -> None:
     du = _default_user_id()
     classes = ", ".join(ALL_EXPORT_CLASSES)
     print(
-        f"""usage: python scripts/export.py [-u USER] {{fork|prp|identity|manifest|bundle|all}} [-- EXTRA...]
-       python scripts/export.py [-u USER] --export-class {{tool_bootstrap|full|task_limited|capability}} [-- EXTRA...]
+        f"""usage: python scripts/export.py [-u USER] {{fork|prp|identity|manifest|bundle|emulation|all}} [-- EXTRA...]
+       python scripts/export.py [-u USER] --export-class {{tool_bootstrap|full|task_limited|capability|emulation}} [-- EXTRA...]
 
 Unified export CLI — runs the existing script under scripts/ via subprocess.
 Resolved default user when the child argv has no -u: GRACE_MAR_USER_ID, else {du!r} (repo heuristic).
@@ -139,6 +141,7 @@ Subcommands:
   identity  -> export_user_identity.py
   manifest  -> export_manifest.py
   bundle    -> export_runtime_bundle.py
+  emulation -> export_emulation_bundle.py
   all       -> export_runtime_bundle.py (G1: same as bundle)
 
 Export classes (--export-class):
@@ -146,6 +149,7 @@ Export classes (--export-class):
   full            -> export_runtime_bundle.py --mode portable_bundle_only (broad governed profile)
   task_limited    -> export_fork.py --format coach-handoff (filtered for a specific role)
   capability      -> export_capability.py (SKILLS + EVIDENCE portfolio with rationale companions)
+  emulation       -> export_emulation_bundle.py --mode portable_bundle_only (runtime-ready composition over existing exports)
   internal        -> not exportable by definition
 
 Known classes: {classes}
@@ -155,6 +159,7 @@ Examples:
   python scripts/export.py --export-class tool_bootstrap -- -o prompt.txt
   python scripts/export.py --export-class full -- -o /tmp/bundle
   python scripts/export.py -u grace-mar --export-class task_limited -- -o handoff.json
+  python scripts/export.py --export-class emulation -- -o /tmp/emulation-bundle
 
 Non-goals: export_view, export_gate_to_review_queue, … (invoke those scripts directly).
 """

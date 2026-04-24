@@ -52,6 +52,7 @@ What the companion gives to the new school depends on integration depth.
 | **Identity only** | Interests, personality, values, IX-A/B/C, linguistic style | `python scripts/export_user_identity.py -u grace-mar -o handoff-identity.md` |
 | **Full fork** | SELF, EVIDENCE, SKILLS, LIBRARY | `python scripts/export_fork.py -u grace-mar -o handoff-fork.json` |
 | **Runtime bundle** | Record + policy + optional runtime/audit lanes for a downstream harness | `python scripts/export_runtime_bundle.py -u grace-mar -o handoff-runtime-bundle` |
+| **Emulation-ready bundle** | Runtime bundle + PRP + fork export + authority map + change-proposal return contract | `python scripts/export.py emulation -- --mode portable_bundle_only -o handoff-emulation-bundle` |
 | **Light handoff** | Identity + SKILLS summary | Run `export_user_identity`; optionally append SKILLS container status (edges, gaps) from skills.md |
 
 **Recommended default:** Identity export (`export_user_identity`) is sufficient for most schools (Alpha/Incept, tutors, onboarding). Use full fork when the school needs full evidence history.
@@ -67,6 +68,22 @@ Runtime portability may be exported in one of three declared modes:
 | **`portable_bundle_only`** | Produce a transport package without assuming a live runtime |
 
 These modes change packaging and review rhythm only. They do **not** alter the Sovereign Merge Rule.
+
+### Emulation bundle vs membrane bundle
+
+Use the **emulation-ready bundle** when a foreign runtime needs a broad governed package to load Grace-Mar behavior under the existing export contract:
+
+- PRP for prompt/bootstrap loading
+- fork export for machine-readable inspection
+- runtime bundle lanes for policy/runtime continuity
+- explicit return references for `change-proposal.v1.json` and membrane imports
+
+Use the **runtime-complements membrane bundle** when you want a narrow, allow-listed runtime context exchange:
+
+- `scripts/runtime/export_runtime_context.py`
+- `scripts/runtime/import_runtime_observation.py`
+
+That membrane path is smaller on purpose. It is for bounded runtime exchange, not full emulation-oriented loading.
 
 ---
 
@@ -99,6 +116,7 @@ Exports include a generation timestamp. The Record schema (SELF, SKILLS, EVIDENC
 | `users/[id]/self-evidence.md` | Activity log (full fork export only) |
 | `users/[id]/self-memory.md` | Runtime continuity only; not canonical identity |
 | `users/[id]/runtime-bundle/` | Portable package for downstream runtimes; includes record/runtime/audit/policy lanes |
+| `users/[id]/emulation-bundle/` | Emulation-oriented wrapper over the existing runtime bundle plus proposal/membrane return references |
 | `users/[id]/pipeline-events.jsonl` | Audit trail for staging, merge, validation, export |
 | `users/[id]/merge-receipts.jsonl` | Merge provenance and approval replay |
 | `scripts/export_user_identity.py` | Produce identity handoff |

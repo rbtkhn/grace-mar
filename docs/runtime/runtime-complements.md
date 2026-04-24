@@ -77,6 +77,8 @@ They may **not** write into **canonical Record** paths (`users/<id>/self.md`, `s
 
 See [`scripts/runtime/export_runtime_context.py`](../../scripts/runtime/export_runtime_context.py).
 
+If the foreign runtime needs a broader governed identity package rather than a narrow membrane context, use `python3 scripts/export.py emulation -- --mode portable_bundle_only ...` instead. That emulation-oriented export is still non-authoritative, but it packages PRP + fork + runtime bundle surfaces together and is broader than the membrane bundle by design.
+
 ## Import path
 
 **Runtime complement** output (JSON) -> [import_runtime_observation.py](../../scripts/runtime/import_runtime_observation.py) -> **inbox** file + **receipt** -> **human/operator review** -> optional **manual** staging as `recursion-gate.md` **candidates** -> **companion approval** -> existing merge path.
