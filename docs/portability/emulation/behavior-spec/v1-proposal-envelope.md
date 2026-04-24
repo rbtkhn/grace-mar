@@ -36,7 +36,7 @@ Portable emulation may return durable-change suggestions in a proposal envelope 
 - This envelope is **not** an approved change.
 - This envelope is **not** a merge receipt.
 - This envelope is **not** Record.
-- Importing it into Grace-Mar still **REQUIRES** validation and review.
+- Importing it into Grace-Mar still **REQUIRES** validation and human review.
 
 ## Required behavior
 

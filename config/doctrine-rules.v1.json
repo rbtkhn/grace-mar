@@ -1,0 +1,138 @@
+{
+  "schemaVersion": "1.0.0",
+  "title": "Doctrine drift radar rules",
+  "notes": [
+    "Read-only audit rules for catching doctrinal drift across code, docs, and derived artifacts.",
+    "Rules are heuristic and should be treated as advisory until a human reviews the reported context."
+  ],
+  "rules": [
+    {
+      "id": "approved-canonical-writers",
+      "kind": "python_canonical_writer_allowlist",
+      "description": "No file outside approved scripts may write canonical Record paths.",
+      "targets": [
+        "scripts/**/*.py"
+      ],
+      "protectedNames": [
+        "self.md",
+        "self-archive.md",
+        "self-library.md",
+        "self-skills.md",
+        "skills.md",
+        "recursion-gate.md",
+        "session-log.md"
+      ],
+      "protectedExactPaths": [
+        "bot/prompt.py"
+      ],
+      "approvedWriters": [
+        "scripts/process_approved_candidates.py",
+        "scripts/backfill_session_log_from_pipeline_events.py",
+        "scripts/runtime/stage_candidate_from_observations.py",
+        "scripts/score_gate_candidates.py",
+        "scripts/seed_to_gate.py",
+        "scripts/calibrate_from_miss.py",
+        "scripts/cmc_lecture_helper.py",
+        "scripts/consolidate_archive.py",
+        "scripts/stage_gate_candidate.py",
+        "scripts/ingest_from_cmc.py",
+        "scripts/import_working_identity_candidates.py",
+        "scripts/import_inter_fork_package.py",
+        "scripts/batch_ingest_observations.py",
+        "scripts/reflection_cycle.py",
+        "scripts/gate_block_parser.py",
+        "scripts/score_gate_staleness.py",
+        "scripts/rotate_telegram_archive.py",
+        "scripts/library_shelf_tables.py",
+        "scripts/migrate_legacy_user_filenames.py",
+        "scripts/prune_self_memory.py",
+        "scripts/reorder_library_by_shelf.py"
+      ]
+    },
+    {
+      "id": "interface-artifact-non-authority",
+      "kind": "json_field_const",
+      "description": "Interface artifacts must have recordAuthority=none and gateEffect=none.",
+      "targets": [
+        "artifacts/**/*.json",
+        "docs/**/*.json"
+      ],
+      "appliesWhen": {
+        "allKeys": [
+          "artifactId",
+          "artifactKind",
+          "recordAuthority",
+          "gateEffect"
+        ]
+      },
+      "expected": {
+        "recordAuthority": "none",
+        "gateEffect": "none"
+      }
+    },
+    {
+      "id": "portable-emulation-no-merge-authority",
+      "kind": "json_field_const",
+      "description": "Portable emulation must have mergeAuthority=none.",
+      "targets": [
+        "docs/portability/emulation/emulation-bundle-schema.v1.json"
+      ],
+      "expected": {
+        "properties.authority.properties.mergeAuthority.const": "none"
+      }
+    },
+    {
+      "id": "workbench-receipts-no-evidence-truth",
+      "kind": "json_forbidden_text",
+      "description": "Workbench receipts must not claim evidence truth.",
+      "targets": [
+        "artifacts/**/*.json",
+        "docs/**/*.json"
+      ],
+      "appliesWhen": {
+        "fieldEquals": {
+          "receiptKind": "workbench"
+        }
+      },
+      "forbiddenSubstrings": [
+        "evidence truth",
+        "canonical evidence",
+        "proof of external facts",
+        "proves external facts",
+        "proof of world facts"
+      ]
+    },
+    {
+      "id": "work-docs-no-canonical-merge-authority",
+      "kind": "text_forbidden_regex",
+      "description": "WORK docs must not claim canonical merge authority.",
+      "targets": [
+        "docs/skill-work/**/*.md"
+      ],
+      "forbiddenRegex": "\\b(?:can|may|has|have|grants?|with)\\b[^\\n]{0,80}\\b(?:canonical )?merge authority\\b",
+      "ignoreIfLineContainsAny": [
+        "must not",
+        "does not",
+        "do not",
+        "not ",
+        "no ",
+        "never",
+        "without",
+        "forbidden",
+        "human-gated"
+      ]
+    },
+    {
+      "id": "proposal-envelopes-require-human-review",
+      "kind": "text_required_regex",
+      "description": "Proposal envelopes must require human review.",
+      "targets": [
+        "docs/portability/emulation/behavior-spec/v1-proposal-envelope.md"
+      ],
+      "requiredAllRegex": [
+        "requires_human_review\"\\s*:\\s*true",
+        "human review"
+      ]
+    }
+  ]
+}
