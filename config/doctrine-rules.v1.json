@@ -133,6 +133,20 @@
         "requires_human_review\"\\s*:\\s*true",
         "human review"
       ]
+    },
+    {
+      "id": "portable-emulation-proposal-envelope-authority",
+      "kind": "text_required_regex",
+      "description": "Portable-emulation proposal envelopes must preserve non-authority constants.",
+      "targets": [
+        "docs/portability/emulation/behavior-spec/v1-proposal-envelope.md"
+      ],
+      "requiredAllRegex": [
+        "recordAuthority\"\\s*:\\s*\"none\"",
+        "gateEffect\"\\s*:\\s*\"none\"",
+        "mergeAuthority\"\\s*:\\s*\"none\"",
+        "requires_human_review\"\\s*:\\s*true"
+      ]
     }
   ]
 }

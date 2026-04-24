@@ -32,6 +32,7 @@
 | **Cross-instance boundary** | [cross-instance-boundary.md](cross-instance-boundary.md) | Two-repo contract; optional `check_forbidden_path_strings.py` for **peer** repos only. |
 | **Inter-fork collaboration** | [inter-fork-collaboration.md](inter-fork-collaboration.md) | Recipient-gated package exchange between sovereign forks; no shared writable state, no merge shortcut. |
 | **Feedback loops** | [feedback-loops](feedback-loops.md) | Proposal brief, calibrate-on-miss, low-friction approval, closed-loop verification, oversight cadence. |
+| **Doctrine drift radar** | [doctrine-drift-radar](doctrine-drift-radar.md) | Read-only audit for high-leverage boundary drift across scripts, docs, and derived artifacts. |
 | **Gate traffic (tiers)** | [RECURSION-GATE-THREE-TIER](recursion-gate-three-tier.md) | Tier 1–3 lanes, Bronze vs future Silver/Gold, `ready_for_quick_merge`, escalation CLI, metrics. |
 | **OB1 / Open Brain bridge** | [START-HERE-OB1-USERS](start-here-ob1-users.md) | Translation table, Approval Inbox alias, imports — familiar entry without changing ontology. |
 | **Workflow catalog** | [WORKFLOW-CATALOG](workflow-catalog.md) | Link index for daily brief, journal, bridge, Xavier, work-dev, gate, observability. |

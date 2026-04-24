@@ -25,6 +25,7 @@ The radar is intentionally narrow. It does not try to prove the whole repo is do
 4. Workbench receipts must not claim evidence truth.
 5. WORK docs must not claim canonical merge authority.
 6. Proposal envelopes must require human review.
+7. Portable-emulation proposal envelopes must preserve `recordAuthority = none`, `gateEffect = none`, `mergeAuthority = none`, and `requires_human_review = true`.
 
 ## Usage
 

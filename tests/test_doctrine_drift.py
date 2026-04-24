@@ -72,6 +72,17 @@ def _base_config() -> dict:
                 "targets": ["docs/portability/emulation/behavior-spec/v1-proposal-envelope.md"],
                 "requiredAllRegex": ["requires_human_review\"\\s*:\\s*true", "human review"],
             },
+            {
+                "id": "portable-emulation-proposal-envelope-authority",
+                "kind": "text_required_regex",
+                "targets": ["docs/portability/emulation/behavior-spec/v1-proposal-envelope.md"],
+                "requiredAllRegex": [
+                    "recordAuthority\"\\s*:\\s*\"none\"",
+                    "gateEffect\"\\s*:\\s*\"none\"",
+                    "mergeAuthority\"\\s*:\\s*\"none\"",
+                    "requires_human_review\"\\s*:\\s*true",
+                ],
+            },
         ],
     }
 
@@ -125,7 +136,7 @@ def _build_repo(root: Path) -> Path:
     (root / "docs" / "portability" / "emulation" / "behavior-spec" / "v1-proposal-envelope.md").write_text(
         '# Proposal Envelope\n\n'
         '```json\n'
-        '{"requires_human_review": true}\n'
+        '{"authority": {"recordAuthority": "none", "gateEffect": "none", "mergeAuthority": "none"}, "requires_human_review": true}\n'
         '```\n\n'
         'Importing a proposal envelope still requires human review.\n',
         encoding="utf-8",
@@ -219,6 +230,17 @@ def test_doctrine_drift_clean_repo(tmp_repo: tuple[Path, Path]) -> None:
             ),
             "proposal-envelopes-require-human-review",
         ),
+        (
+            lambda root: (root / "docs" / "portability" / "emulation" / "behavior-spec" / "v1-proposal-envelope.md").write_text(
+                "# Proposal Envelope\n\n"
+                "```json\n"
+                '{"authority": {"recordAuthority": "none", "gateEffect": "none", "mergeAuthority": "review-required"}, "requires_human_review": true}\n'
+                "```\n\n"
+                "Importing a proposal envelope still requires human review.\n",
+                encoding="utf-8",
+            ),
+            "portable-emulation-proposal-envelope-authority",
+        ),
     ],
 )
 def test_doctrine_drift_reports_each_requested_rule(
@@ -258,4 +280,9 @@ def test_doctrine_drift_cli_json_reports_violations(tmp_repo: tuple[Path, Path])
     payload = json.loads(proc.stdout)
     assert payload["ok"] is False
     assert payload["violationCount"] >= 1
-    assert any(item["ruleId"] == "approved-canonical-writers" for item in payload["violations"])
+    violation = next(
+        item for item in payload["violations"] if item["ruleId"] == "approved-canonical-writers"
+    )
+    assert violation["path"] == "scripts/rogue_writer.py"
+    assert "message" in violation
+    assert violation["line"] == 2
