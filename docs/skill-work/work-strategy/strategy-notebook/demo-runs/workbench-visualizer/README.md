@@ -19,7 +19,7 @@
 
 ## UI affordances
 
-The single-page visualizer (after loading a fixture) includes: **search** (nodes and the edge list); **kind** and **relation** filter chips; a **selected-node** **detail** panel and **copy path**; an **edge** table (source, relation, target) with **unresolved** endpoint highlighting; a compact **adjacency** (hub) view for the selection; a **summary** of counts by kind and relation; **inspection** warnings; and a **Workbench boundary** panel. Use **reset** to clear filters and selection.
+The single-page visualizer (after loading a fixture) includes: **search** (nodes and the edge list); **kind** and **relation** filter chips; a **selected-node** **detail** panel and **copy path**; an **edge** table (source, relation, target) with **unresolved** endpoint highlighting; a compact **adjacency** (hub) view for the selection; a **summary** of counts by kind and relation; **inspection** warnings; and a **Workbench boundary** panel. Use **reset** to clear filters and selection. To guard against UI regressions in CI or before a demo, run: `python3 scripts/work_dev/smoke_strategy_visualizer.py` (read-only; static source scan only).
 
 ## Regenerating the fixture
 

@@ -32,3 +32,15 @@ python3 scripts/work_dev/preflight_workbench.py --json
 - **`--json`** — one JSON object on stdout (suitable for tooling); exit code still reflects pass/fail.
 
 Exit **0** only when all **required** checks pass (and, with `--strict`, when there are no edge id warnings). Exit **nonzero** on any required failure.
+
+## Visualizer smoke test
+
+Optional **read-only** static check on the strategy-notebook workbench **HTML** only (it does not run a browser, does not load the network, and does not certify any strategic or external truth). It only asserts that the committed visualizer is still a substantial static document with the expected `fetch(… strategy-notebook-visualizer.fixture.json …)` hook, Workbench boundary language, and UI affordance markers, and that no CDN / framework / package-manager drift appeared in the file.
+
+```bash
+python3 scripts/work_dev/smoke_strategy_visualizer.py
+python3 scripts/work_dev/smoke_strategy_visualizer.py --json
+```
+
+- **`--json`** — one JSON object on stdout (suitable for tooling). Exit code still reflects pass/fail.
+- **`--strict`** — if the file is at least the minimum size but still suspiciously few lines, treat that as a failure (not the default; see script help).
