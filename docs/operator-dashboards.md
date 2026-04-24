@@ -2,6 +2,8 @@
 
 Grace-Mar can emit **compact, regeneratable Markdown “dashboards”** for operator navigation. They borrow the *visibility* idea from Dataview-style vault tools without making the repo an Obsidian-style truth system.
 
+Dashboards are a **stable scripted subclass** of the [Interface Artifact Protocol](skill-work/work-dev/interface-artifacts/README.md): generated operator-facing views that remain **derived** and **non-canonical** even when they become reliable enough to script and regenerate routinely.
+
 ## What these are
 
 - **Derived artifacts** under [`artifacts/`](../artifacts/README.md), produced by scripts:

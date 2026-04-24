@@ -8,6 +8,14 @@
 
 **Workbench (WORK-only):** static structure map + fixture (no build, no Record authority) for operator inspection: [demo-runs/workbench-visualizer/README.md](demo-runs/workbench-visualizer/README.md) — part of the [work-dev Workbench](../../work-dev/workbench/README.md) loop.
 
+## Derived interface artifacts
+
+`strategy-notebook is markdown-canonical, with a growing family of derived interface artifacts for orientation, inspection, and navigation; those artifacts are WORK-only and non-canonical unless separately promoted through existing governed paths.`
+
+Use this framing for notebook-facing visualizers, console views, graph-derived maps, or other operator-facing surfaces that help with orientation before judgment. Workbench remains the inspection layer for those artifacts; canonical notebook judgment remains in `strategy-page` blocks and `days.md`.
+
+See [../../work-dev/interface-artifacts/README.md](../../work-dev/interface-artifacts/README.md).
+
 ---
 
 **Current canonical model (one line):** **experts** = who; **watches** = what (evolving situation); **days** = when (chronology and continuity in `chapters/YYYY-MM/days.md`); **minds** = interpretive lens; **pages** = primary analytical unit (`strategy-page` in expert **thread** files). **Page-in-thread contract (links):** [PAGE-CONTRACT.md](PAGE-CONTRACT.md). Full spec: [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md#current-canonical-model).

@@ -1,6 +1,6 @@
 # Claude Surface Contract
 
-This document defines the standard **invocation contract** for Grace-Mar’s operator-facing surfaces (commands, workflows, helpers, skills, and review-related docs).
+This document defines the standard **invocation contract** for Grace-Mar’s operator-facing surfaces (commands, workflows, helpers, skills, generated interface artifacts, and review-related docs).
 
 ## Why this exists
 
@@ -10,11 +10,11 @@ Grace-Mar is a governance-first system with four canonical Record surfaces and a
 
 Each surface doc can repeat this short block at the top:
 
-- **Surface type** — `command` | `workflow` | `helper` | `skill` | `review surface`
+- **Surface type** — `command` | `workflow` | `helper` | `skill` | `interface artifact` | `review surface`
 - **Primary purpose** — one-sentence description
 - **When to use** — short trigger condition
 - **Inputs** — arguments, ids, paths, or lane scope
-- **Outputs** — artifact, report, context file, or gate candidate
+- **Outputs** — artifact, generated interface surface, report, context file, or gate candidate
 - **Mutation scope** — see vocabulary below
 - **Canonical Record access** — `none` | `read-only` | `indirect via review flow`
 - **Typical next step** — what usually follows
