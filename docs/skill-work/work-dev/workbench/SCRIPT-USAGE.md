@@ -6,6 +6,7 @@ These scripts only create or validate **workbench** inspection receipts under [W
 
 - **Generator:** `scripts/work_dev/new_workbench_receipt.py` — JSON on disk, defaults `receiptKind: "workbench"`, `status: "draft"`, `recordAuthority: "none"`, `gateEffect: "none"`.
 - **Validator:** `scripts/work_dev/validate_workbench_receipt.py` — exit `0` if the file matches the spec; non-zero on errors.
+- **Preflight (pilot chain):** `scripts/work_dev/preflight_workbench.py` — read-only; rolls up docs, visualizer, fixture, `examples/*`, and optional generator `--check`. See [PREFLIGHT.md](PREFLIGHT.md).
 
 **CLI mapping:** `--candidate-id` populates `artifactCandidateLabel` (a free label for A/B runs, **not** a `CANDIDATE-nnnn` gate id).
 

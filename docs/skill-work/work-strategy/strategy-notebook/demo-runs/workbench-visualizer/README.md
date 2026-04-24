@@ -6,7 +6,7 @@
 
 - **`recordAuthority`:** `none` — the HTML does not assert SELF, EVIDENCE, or external truth.
 - **`gateEffect`:** `none` — nothing here stages candidates or merges to the Record.
-- **Truth scope:** **Notebook structure and paths only** (plus labels from the fixture). It does not validate strategic claims, wires, or production readiness.
+- **Truth scope:** **Notebook structure and paths only** (plus labels from the fixture). It does not validate strategic claims, wires, or production readiness. Before using this as an **operator demo**, run the [Workbench preflight](../../../../work-dev/workbench/PREFLIGHT.md) (`python3 scripts/work_dev/preflight_workbench.py` from repo root).
 
 **Inspection:** Use [VISUAL-INSPECTION-PROTOCOL.md](../../../../work-dev/workbench/VISUAL-INSPECTION-PROTOCOL.md) in spirit (browser, screenshots optional). For machine validation of receipt JSON, use `scripts/work_dev/validate_workbench_receipt.py`. To author a new receipt: [SCRIPT-USAGE.md](../../../../work-dev/workbench/SCRIPT-USAGE.md) and `new_workbench_receipt.py`.
 

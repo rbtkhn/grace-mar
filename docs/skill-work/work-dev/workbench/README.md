@@ -61,8 +61,13 @@ v1 does **not** require placing receipts under `users/<id>/` canonical files.
 
 - **`scripts/work_dev/new_workbench_receipt.py`** — create a new receipt JSON (defaults: `receiptKind` `workbench`, `status` `draft`, `recordAuthority` / `gateEffect` `none`; default file under `artifacts/work-dev/workbench-receipts/`).
 - **`scripts/work_dev/validate_workbench_receipt.py`** — validate one receipt; exits non-zero on errors.
+- **`scripts/work_dev/preflight_workbench.py`** — read-only **pilot chain** check: docs, visualizer files, committed fixture, example `workbench` receipts, and (by default) `generate_strategy_notebook_visualizer_fixture.py --check`. See [PREFLIGHT.md](PREFLIGHT.md).
 
 Details and copy-paste examples: [SCRIPT-USAGE.md](SCRIPT-USAGE.md). Spec field list: [WORKBENCH-RECEIPT-SPEC.md](WORKBENCH-RECEIPT-SPEC.md).
+
+## Preflight (operator, not CI)
+
+Before a demo or commit that touches the strategy visualizer or Workbench examples, run the preflight in [PREFLIGHT.md](PREFLIGHT.md) from the repo root. It does not modify the Record, does not touch `users/`, and does not stage the gate. It is **not** a claim that the UI is strategically correct—only that artifacts and **workbench** boundaries are structurally in range.
 
 ## Non-goals (explicit)
 
