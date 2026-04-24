@@ -23,6 +23,7 @@ dev-notebook/
     SURFACE-MAP.md
     HISTORY-ANCHORS.md
     identity-fork-protocol-ifp-2026-04-24.md   ← IFP spec (WORK)
+    ifp-vs-clawsouls-technical-comparison-2026-04-24.md
     journal/                 ← dev journal (LIB-0155) + inbox + day-*.md
   work-cici/
     README.md
@@ -46,6 +47,7 @@ dev-notebook/
 | [work-dev/SURFACE-MAP.md](work-dev/SURFACE-MAP.md) | work-dev **surface map** (workspace, control-plane, journal symlink, key scripts) — in-repo, not a Git `main` tree. |
 | [work-dev/HISTORY-ANCHORS.md](work-dev/HISTORY-ANCHORS.md) | work-dev milestones from [work-dev-history.md](../work-dev-history.md). |
 | [work-dev/identity-fork-protocol-ifp-2026-04-24.md](work-dev/identity-fork-protocol-ifp-2026-04-24.md) | **Identity Fork Protocol (IFP)** — structured spec + comparisons (WORK only; not Record). |
+| [work-dev/ifp-vs-clawsouls-technical-comparison-2026-04-24.md](work-dev/ifp-vs-clawsouls-technical-comparison-2026-04-24.md) | **IFP vs. ClawSouls** — technical axis comparison (ecosystem research; WORK only). |
 | [work-dev/journal/README.md](work-dev/journal/README.md) | Inward work-dev **day** learning log. |
 | [work-cici/README.md](work-cici/README.md) | work-cici subfolder: contract, handoff pointers, links into [work-cici/](../../work-cici/INDEX.md). |
 | [work-cici/UPSTREAM-MAP.md](work-cici/UPSTREAM-MAP.md) | Cici GitHub `main` path table (prompts, governed-state, `.claude/`, scripts) + regen recipe. |

@@ -14,6 +14,7 @@
 | [scripts/](../../../../../scripts/) (selected) | Cross-cutting scripts (`detect_capability_shift.py`, `emit_compute_ledger.py`, `journal_habit_snapshot.py`, …) | Many paths are cited in work-dev-history. |
 | [dev-notebook/journal/](./journal/) | Inward day journal (this tree). | Symlink: `users/grace-mar/SELF-LIBRARY/dev-journal` → here. |
 | [identity-fork-protocol-ifp-2026-04-24.md](./identity-fork-protocol-ifp-2026-04-24.md) | **IFP** spec snapshot (WORK): identity fork + merge sovereignty + membrane (links to gate, workbench). | Not SELF/EVIDENCE. |
+| [ifp-vs-clawsouls-technical-comparison-2026-04-24.md](./ifp-vs-clawsouls-technical-comparison-2026-04-24.md) | **IFP vs. ClawSouls** deep compare (ecosystem research as of 2026-04-24). | Paired with IFP spec. |
 | [journal-metrics-habit.md](../../journal-metrics-habit.md) | Light habit / telemetry (optional). | — |
 
 **Regen:** None — this map is hand-maintained when you add a new “canonical” work-dev surface. Prefer linking the territory [README](../../README.md#contents) to avoid drift.

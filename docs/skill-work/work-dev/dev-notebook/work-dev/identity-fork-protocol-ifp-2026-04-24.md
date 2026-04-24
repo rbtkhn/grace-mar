@@ -72,3 +72,7 @@ If you would like expansions (e.g., deeper technical comparison, proposed cross-
 - [Interface artifacts and derived-output policy](../../interface-artifacts/README.md)
 - [work-dev territory README](../../README.md)
 - [known-gaps / control plane](../../known-gaps.md)
+
+## See also
+
+- [IFP vs. ClawSouls / SoulClaw / SoulSpec (technical comparison, 2026-04-24)](ifp-vs-clawsouls-technical-comparison-2026-04-24.md)

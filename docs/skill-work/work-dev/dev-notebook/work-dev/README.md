@@ -18,6 +18,7 @@
 | [SURFACE-MAP.md](SURFACE-MAP.md) | Canonical work-dev **paths in grace-mar** (workspace, control-plane, scripts, template mirror) — not an external API tree. |
 | [HISTORY-ANCHORS.md](HISTORY-ANCHORS.md) | Milestone table from [work-dev-history.md](../../work-dev-history.md) with artifact links. |
 | [identity-fork-protocol-ifp-2026-04-24.md](identity-fork-protocol-ifp-2026-04-24.md) | **Identity Fork Protocol (IFP)** — WORK spec capture: Sovereign Merge Rule, runtime/Record membrane, comparative research (not Record truth). |
+| [ifp-vs-clawsouls-technical-comparison-2026-04-24.md](ifp-vs-clawsouls-technical-comparison-2026-04-24.md) | **IFP vs. ClawSouls / SoulClaw / SoulSpec** — axis-by-axis technical comparison (operator research; not Record truth). |
 
 ## Open next (territory)
 
