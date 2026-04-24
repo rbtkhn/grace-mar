@@ -2,7 +2,7 @@
 """
 Journal habit snapshot — filename-based rhythm only.
 
-Scans work-dev dev-notebook/journal (*-day-*.md) and cici-notebook (YYYY-MM-DD.md) for calendar
+Scans work-dev dev-notebook/work-dev/journal (*-day-*.md) and cici-notebook (YYYY-MM-DD.md) for calendar
 dates in filenames; prints active days in a rolling window and staleness.
 
 Does not parse frontmatter or prose. See docs/skill-work/journal-metrics-habit.md.
@@ -17,7 +17,13 @@ from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 DEV_JOURNAL = (
-    REPO_ROOT / "docs" / "skill-work" / "work-dev" / "dev-notebook" / "journal"
+    REPO_ROOT
+    / "docs"
+    / "skill-work"
+    / "work-dev"
+    / "dev-notebook"
+    / "work-dev"
+    / "journal"
 )
 CICI_JOURNAL = REPO_ROOT / "docs" / "skill-work" / "work-cici" / "cici-notebook"
 
@@ -81,7 +87,7 @@ def main() -> int:
 
     print(f"# Journal habit snapshot (today={today}, window={w}d)\n")
     for label, dates in (
-        ("dev-notebook/journal", dev_dates),
+        ("dev-notebook/work-dev/journal", dev_dates),
         ("cici-notebook", cici_dates),
     ):
         active = _count_active(dates, today, w)

@@ -16,7 +16,7 @@
 ## Journal
 
 - Habit + metrics: [journal-metrics-habit.md](skill-work/journal-metrics-habit.md), `scripts/journal_habit_snapshot.py`.
-- Dev journal: [work-dev/dev-notebook/journal/README.md](skill-work/work-dev/dev-notebook/journal/README.md) (see also [dev-journal pointer](skill-work/work-dev/dev-journal/README.md)).
+- Dev journal: [work-dev/dev-notebook/work-dev/journal/README.md](skill-work/work-dev/dev-notebook/work-dev/journal/README.md) (see also [dev-journal pointer](skill-work/work-dev/dev-journal/README.md)).
 - Cici notebook: [work-cici/cici-notebook/README.md](skill-work/work-cici/cici-notebook/README.md).
 
 ## Read → Think → SELF

@@ -1,25 +1,38 @@
-# Dev notebook — work-dev
+# Work notebook (`dev-notebook/`) — multi-lane spec vault
 
-**Territory:** `docs/skill-work/work-dev/dev-notebook/` — work-dev **WORK** surface: **(1)** durable **prompts** and **spec snapshots**; **(2)** the **day-scale dev journal** (reflective log) and rolling inbox under [journal/](journal/README.md). Not Record, not Voice knowledge.
+**Path (historical name):** `docs/skill-work/work-dev/dev-notebook/`. The directory is named **`dev-notebook`** for stable links; the **role** is a **cross-lane notebook**: durable **prompts**, **instruction captures**, and **spec snapshots** grouped by the WORK territory they serve, plus the **work-dev day journal** in one tree.
 
-**Layout**
+**Contract — read before adding files**
 
-| Part | Role |
-|------|------|
-| **[journal/README.md](journal/README.md)** | **Dev journal** (LIB-0155): `YYYY-MM-DD-day-NN.md` entries, [daily dev journal inbox](journal/daily-dev-journal-inbox.md), routing vs cici-notebook. Inward-facing grace-mar work-dev. |
-| **Markdown files in this directory (below)** | Reusable **prompts** and **spec captures** (e.g. Cici Phase 1). |
+This folder is **not** a second **strategy-notebook** or **cici-notebook**. **Day-scale, fold-at-dream surfaces** (days.md, `daily-*-inbox`, chapter threads) stay in their home territories. Here we only keep **reusable text** (paste-ready prompts, migration specs, “how we implemented X” references) and the **inward work-dev journal** (LIB-0155). **No secrets** in prose — env var names and paths only. **WORK only**; not Record, not Voice knowledge.
 
-**Contrast**
+| Lane subfolder | Holds | Does **not** replace |
+|----------------|-------|----------------------|
+| **[work-dev/journal/](work-dev/journal/README.md)** | `YYYY-MM-DD-day-NN.md` day log, [daily dev journal inbox](work-dev/journal/daily-dev-journal-inbox.md), routing vs cici-notebook. | [work-dev-history.md](../work-dev-history.md) (milestones), [workspace.md](../workspace.md) (entrypoint). |
+| **[work-cici/](work-cici/README.md)** | Cici/OB1 **prompts and spec PDFs** archived as markdown (e.g. Phase 1 governed-state). | [cici-notebook/](../../work-cici/cici-notebook/README.md) (daily coaching / digests). |
+| **[work-strategy/](work-strategy/README.md)** | Optional **paste-ready** strategy prompts, rubrics, or spec fragments. | [strategy-notebook/](../../work-strategy/strategy-notebook/) (inbox, days, raw-input, weave). |
 
-| Surface | Role |
-|---------|------|
-| [work-dev-history.md](../work-dev-history.md) | Milestone / artifact log. |
-| [workspace.md](../workspace.md) | Canonical entrypoint, blockers, next actions. |
+**Layout (tree)**
 
-**No secrets** — reference env vars and paths only.
+```text
+dev-notebook/
+  README.md                 ← this file (contract)
+  work-dev/
+    journal/                 ← dev journal (LIB-0155) + inbox + day-*.md
+  work-cici/
+    README.md
+    cici-phase-1-git-first-governed-state-prompt.md
+  work-strategy/
+    README.md                ← add *.md here when a prompt belongs to strategy-work but not the rolling notebook
+```
 
-## Prompts & spec entries (this folder)
+**Compatibility:** Older links to `dev-journal/` → [dev-journal/README.md](../dev-journal/README.md). **`SELF-LIBRARY/dev-journal`** symlink → `work-dev/journal/`.
 
-| File | Summary |
-|------|---------|
-| [cici-phase-1-git-first-governed-state-prompt.md](cici-phase-1-git-first-governed-state-prompt.md) | Full instruction prompt for **Cici** Phase 1 (Git-first governed state, companion-self–inspired); source PDF on operator machine — archived here as markdown. |
+## Index by lane
+
+| Location | Summary |
+|----------|---------|
+| [work-dev/journal/README.md](work-dev/journal/README.md) | Inward work-dev learning log. |
+| [work-cici/cici-phase-1-git-first-governed-state-prompt.md](work-cici/cici-phase-1-git-first-governed-state-prompt.md) | Cici Phase 1 — Git-first governed state (archived instruction prompt). |
+| [work-cici/README.md](work-cici/README.md) | work-cici lane note. |
+| [work-strategy/README.md](work-strategy/README.md) | work-strategy lane note (empty shell until you add files). |

@@ -1,6 +1,6 @@
 # Journal metrics habit (operator WORK)
 
-**Scope:** Optional **telemetry on journaling practice** for [dev-notebook/journal](work-dev/dev-notebook/journal/README.md) and [cici-notebook](work-cici/cici-notebook/README.md). **Not** Record truth, not gated merges, not a second history file (see [work-dev-history.md](work-dev/work-dev-history.md) / [work-cici-history.md](work-cici/work-cici-history.md)).
+**Scope:** Optional **telemetry on journaling practice** for [dev-notebook/work-dev/journal](work-dev/dev-notebook/work-dev/journal/README.md) and [cici-notebook](work-cici/cici-notebook/README.md). **Not** Record truth, not gated merges, not a second history file (see [work-dev-history.md](work-dev/work-dev-history.md) / [work-cici-history.md](work-cici/work-cici-history.md)).
 
 **Principle:** Measure **learning velocity, friction, and follow-through** without turning journals into milestone logs or long dashboards. Entries stay **short**; metrics stay **light**.
 
@@ -70,7 +70,7 @@ From repo root:
 python3 scripts/journal_habit_snapshot.py
 ```
 
-Prints **active days (last 14)** and **staleness** per journal from **filenames** (`*-day-*.md` under **dev-notebook/journal**; `YYYY-MM-DD.md` for cici-notebook). No frontmatter required.
+Prints **active days (last 14)** and **staleness** per journal from **filenames** (`*-day-*.md` under **dev-notebook/work-dev/journal**; `YYYY-MM-DD.md` for cici-notebook). No frontmatter required.
 
 ---
 

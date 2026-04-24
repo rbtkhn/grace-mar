@@ -272,7 +272,7 @@ This reads **`users/<id>/last-dream.json` before overwrite**, computes the same 
 
 ## Dev journal (LIB-0155) — optional fold
 
-**Purpose:** Same **rolling inbox → fold** contract as strategy-notebook and the Cici notebook (no mandatory nightly reset; length-based prune) — see [daily-dev-journal-inbox.md](../../../docs/skill-work/work-dev/dev-notebook/journal/daily-dev-journal-inbox.md) and [dev-journal README](../../../docs/skill-work/work-dev/dev-notebook/journal/README.md). No digest script; the agent **synthesizes** into **`docs/skill-work/work-dev/dev-notebook/journal/YYYY-MM-DD-day-NN.md`** when the operator uses the buffer.
+**Purpose:** Same **rolling inbox → fold** contract as strategy-notebook and the Cici notebook (no mandatory nightly reset; length-based prune) — see [daily-dev-journal-inbox.md](../../../docs/skill-work/work-dev/dev-notebook/work-dev/journal/daily-dev-journal-inbox.md) and [dev-journal README](../../../docs/skill-work/work-dev/dev-notebook/work-dev/journal/README.md). No digest script; the agent **synthesizes** into **`docs/skill-work/work-dev/dev-notebook/work-dev/journal/YYYY-MM-DD-day-NN.md`** when the operator uses the buffer.
 
 **Return brief:** **Dev journal:** `inbox folded` / `empty` / `deferred` — cite path if written.
 

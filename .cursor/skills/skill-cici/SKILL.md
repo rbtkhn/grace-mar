@@ -19,7 +19,7 @@ description: "Cici / OB1 learning rhythm and day journal — distilled from cici
 Answer one question:
 
 - **“In Xavier’s OB1 / Cici / BrewMind world, I am observing, coaching, or logging …”** → this skill (and **cici-notebook** paths in grace-mar if Mode A).
-- **“In grace-mar’s own work-dev / integration / harness, I am building …”** → [dev-journal (dev-notebook/journal)](../../../docs/skill-work/work-dev/dev-notebook/journal/README.md), not this skill.
+- **“In grace-mar’s own work-dev / integration / harness, I am building …”** → [dev-journal (work notebook / work-dev lane)](../../../docs/skill-work/work-dev/dev-notebook/work-dev/journal/README.md), not this skill.
 
 If a day touches **both**, split: Xavier trajectory **here**; grace-mar implementation reflection **dev-journal**.
 
