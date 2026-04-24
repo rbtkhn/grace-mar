@@ -1,8 +1,8 @@
 # Moonshot Boundary
 
-Status: WORK-only boundary  
-Record status: Not Record truth  
-Authority: Human operator + normal gate process  
+- **Status:** WORK-only boundary
+- **Record status:** Not Record truth
+- **Authority:** Human operator + normal gate process
 
 ## Purpose
 

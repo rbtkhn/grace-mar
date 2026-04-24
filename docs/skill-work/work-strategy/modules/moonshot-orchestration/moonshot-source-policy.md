@@ -1,7 +1,7 @@
 # Moonshot Source Policy
 
-Status: WORK-only source discipline  
-Record status: Not Record truth  
+- **Status:** WORK-only source discipline
+- **Record status:** Not Record truth
 
 ## Purpose
 
@@ -13,7 +13,7 @@ This policy classifies sources and claims so that inspiration can be captured wi
 
 ### Tier 1 — Primary technical / institutional sources
 
-Examples:
+**Examples:**
 
 - technical papers
 - official project documentation
@@ -24,13 +24,11 @@ Examples:
 - direct institutional announcements
 - primary datasets
 
-Use:
-
-Tier 1 sources may support serious experiment proposals if the claim is directly evidenced and boundary checks pass.
+**Use:** Tier 1 sources may support serious experiment proposals if the claim is directly evidenced and boundary checks pass.
 
 ### Tier 2 — Serious analytical synthesis
 
-Examples:
+**Examples:**
 
 - credible scientific analysis
 - credible economic analysis
@@ -39,13 +37,11 @@ Examples:
 - well-sourced market or industrial analysis
 - expert technical reviews
 
-Use:
-
-Tier 2 sources may support watch upgrades or experiment proposals when they are specific, sourced, and not merely visionary.
+**Use:** Tier 2 sources may support watch upgrades or experiment proposals when they are specific, sourced, and not merely visionary.
 
 ### Tier 3 — Visionary / speculative sources
 
-Examples:
+**Examples:**
 
 - futurist interviews
 - abundance framing
@@ -55,15 +51,11 @@ Examples:
 - long-horizon forecasts
 - conceptual essays
 
-Use:
-
-Tier 3 sources may inspire watch items, questions, and contribution maps.
-
-They may not independently justify capability claims or execution.
+**Use:** Tier 3 sources may inspire watch items, questions, and contribution maps. They may not independently justify capability claims or execution.
 
 ### Tier 4 — Inspiration only
 
-Examples:
+**Examples:**
 
 - viral clips
 - hype threads
@@ -73,11 +65,7 @@ Examples:
 - promotional decks without evidence
 - anonymous claims
 
-Use:
-
-Tier 4 sources may be logged as inspiration only.
-
-They may not justify serious proposals, capability claims, public assertions, or Record updates.
+**Use:** Tier 4 sources may be logged as inspiration only. They may not justify serious proposals, capability claims, public assertions, or Record updates.
 
 ## Claim-strength tiers
 

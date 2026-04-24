@@ -1,10 +1,10 @@
 # Moonshot Orchestration
 
-Status: WORK-only module  
-Surface: `docs/skill-work/work-strategy/modules/moonshot-orchestration/`  
-Record status: Not Record truth  
-Skill status: Not a canonical skill  
-Execution status: Not external infrastructure authority  
+- **Status:** WORK-only module
+- **Surface:** `docs/skill-work/work-strategy/modules/moonshot-orchestration/`
+- **Record status:** Not Record truth
+- **Skill status:** Not a canonical skill
+- **Execution status:** Not external infrastructure authority
 
 ## Purpose
 
@@ -33,7 +33,7 @@ Mentioning a moonshot here does not imply endorsement, feasibility, capability, 
 
 This module belongs under `work-strategy` because moonshot assessment is a form of governed strategic judgment.
 
-Allowed functions:
+**Allowed functions:**
 
 1. observe signals
 2. classify source strength
@@ -43,7 +43,7 @@ Allowed functions:
 6. propose small experiments
 7. stage candidate proposals for human review
 
-Forbidden functions:
+**Forbidden functions:**
 
 1. direct Record edits
 2. canonical skill creation
@@ -66,7 +66,7 @@ This module may produce a candidate proposal. It may not approve, merge, or exec
 ## Artifacts
 
 | File | Role |
-|---|---|
+| --- | --- |
 | `moonshot-boundary.md` | Hard boundaries and governance rules |
 | `moonshot-lifecycle.md` | Operating lifecycle from signal to possible proposal |
 | `moonshot-map-template.md` | Reusable contribution-map template |
