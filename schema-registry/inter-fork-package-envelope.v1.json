@@ -1,0 +1,208 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schema-registry/inter-fork-package-envelope.v1.json",
+  "title": "Inter-fork package envelope",
+  "description": "Recipient-gated transport envelope for bounded collaboration between sovereign forks. This schema describes package transport and routing only; it does not redefine canonical Record or merge semantics.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "format",
+    "packageId",
+    "createdAt",
+    "senderForkId",
+    "intendedRecipientForkId",
+    "packageKind",
+    "routingHint",
+    "summary",
+    "boundaryNotice",
+    "humanReviewRequired",
+    "canonicalSurfacesTouched",
+    "payload"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "schemaVersion": {
+      "const": "1.0.0"
+    },
+    "format": {
+      "const": "grace-mar-inter-fork-package"
+    },
+    "packageId": {
+      "type": "string",
+      "pattern": "^ifpkg-[a-zA-Z0-9._-]+$"
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "senderForkId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "intendedRecipientForkId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "packageKind": {
+      "type": "string",
+      "enum": [
+        "evidence_share",
+        "strategy_peer_review",
+        "pointer_bundle",
+        "change_proposal_review"
+      ]
+    },
+    "routingHint": {
+      "type": "string",
+      "enum": ["candidate_import", "change_proposal_review"]
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 1
+    },
+    "body": {
+      "type": "string"
+    },
+    "boundaryNotice": {
+      "type": "string",
+      "minLength": 1
+    },
+    "humanReviewRequired": {
+      "const": true
+    },
+    "canonicalSurfacesTouched": {
+      "const": false
+    },
+    "supportingRefs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "default": []
+    },
+    "payload": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "mode",
+            "suggestedTargetSurface"
+          ],
+          "properties": {
+            "mode": {
+              "const": "candidate_import"
+            },
+            "suggestedTargetSurface": {
+              "type": "string",
+              "enum": ["self", "self_library", "civ_mem", "skills", "evidence", "work_layer"]
+            },
+            "claim": {
+              "type": "string"
+            },
+            "reviewNotes": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "mode",
+            "primaryScope",
+            "changeType",
+            "targetSurface",
+            "materiality",
+            "reviewType",
+            "riskLevel",
+            "priorStateRef",
+            "proposedStateRef"
+          ],
+          "properties": {
+            "mode": {
+              "const": "change_proposal_review"
+            },
+            "primaryScope": {
+              "type": "string",
+              "enum": [
+                "identity",
+                "curiosity",
+                "pedagogy",
+                "expression",
+                "memory_governance",
+                "safety",
+                "preference",
+                "upgrade_collision"
+              ]
+            },
+            "secondaryScopes": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": [
+                  "identity",
+                  "curiosity",
+                  "pedagogy",
+                  "expression",
+                  "memory_governance",
+                  "safety",
+                  "preference",
+                  "upgrade_collision"
+                ]
+              },
+              "uniqueItems": true,
+              "default": []
+            },
+            "changeType": {
+              "type": "string",
+              "enum": [
+                "contradiction",
+                "refinement",
+                "expansion",
+                "deprecation",
+                "ambiguity",
+                "policy_collision",
+                "template_instance_collision"
+              ]
+            },
+            "targetSurface": {
+              "type": "string",
+              "enum": ["self", "self_library", "civ_mem", "skills", "evidence", "work_layer"]
+            },
+            "materiality": {
+              "type": "string",
+              "enum": ["low", "medium", "high", "critical"]
+            },
+            "reviewType": {
+              "type": "string",
+              "enum": ["routine", "extended", "boundary", "policy", "collision"]
+            },
+            "riskLevel": {
+              "type": "string",
+              "enum": ["low", "medium", "high"]
+            },
+            "priorStateRef": {
+              "type": "string",
+              "minLength": 1
+            },
+            "proposedStateRef": {
+              "type": "string",
+              "minLength": 1
+            },
+            "proposalClass": {
+              "type": "string",
+              "enum": ["identity", "library", "skills", "evidence", "policy", "work_politics"]
+            },
+            "notes": {
+              "type": "string"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

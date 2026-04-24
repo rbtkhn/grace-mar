@@ -58,4 +58,4 @@ With **one other person**, prefer **explicit habits** over heavy automation: who
 
 ---
 
-**Related:** [audit-boundary-grace-mar-companion-self.md](audit-boundary-grace-mar-companion-self.md), [skill-work/work-cici/README.md](skill-work/work-cici/README.md).
+**Related:** [audit-boundary-grace-mar-companion-self.md](audit-boundary-grace-mar-companion-self.md), [skill-work/work-cici/README.md](skill-work/work-cici/README.md), [inter-fork-collaboration.md](inter-fork-collaboration.md).

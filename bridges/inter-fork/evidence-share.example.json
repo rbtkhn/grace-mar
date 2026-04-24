@@ -1,0 +1,25 @@
+{
+  "$schema": "schema-registry/inter-fork-package-envelope.v1.json",
+  "schemaVersion": "1.0.0",
+  "format": "grace-mar-inter-fork-package",
+  "packageId": "ifpkg-example-evidence-share",
+  "createdAt": "2026-04-24T18:00:00Z",
+  "senderForkId": "grace-mar",
+  "intendedRecipientForkId": "demo",
+  "packageKind": "evidence_share",
+  "routingHint": "candidate_import",
+  "summary": "Share a short evidence note about a recurring review pattern.",
+  "body": "Observed a recurring pattern: concise summaries plus explicit risk framing improved review speed without reducing caution.",
+  "boundaryNotice": "This package is bounded inter-fork transport only. The recipient fork must import and review it locally; the sender has no recipient-side merge authority.",
+  "humanReviewRequired": true,
+  "canonicalSurfacesTouched": false,
+  "supportingRefs": [
+    "docs/fork-isolation-and-multi-tenant.md"
+  ],
+  "payload": {
+    "mode": "candidate_import",
+    "suggestedTargetSurface": "skills",
+    "claim": "Concise summary plus explicit risk framing may be a reusable review tactic.",
+    "reviewNotes": "Treat as a light candidate, not as approved skill truth."
+  }
+}

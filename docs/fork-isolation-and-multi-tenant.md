@@ -80,6 +80,7 @@ Retention is expressed in **fork config** (e.g. `memory_ttl_days`, `archive_rota
 - **Export:** All export scripts (`export_fork.py`, `export_prp.py`, `export_runtime_bundle.py`, `export_user_identity.py`, etc.) take `-u <fork_id>`. Export output is a snapshot of that fork only; no other fork’s data is included.
 - **Import:** Future “import fork” or “restore from backup” should write only under `users/<target_fork_id>/` and optionally create the fork if it does not exist. Import must validate and sanitize so one fork’s import cannot overwrite another’s.
 - **Portability:** Per [Portability](portability.md), the companion owns their Record; export is for transfer or consumption. Each fork’s export is self-contained and identifiable by `user_id` / `fork_id` in the manifest.
+- **Inter-fork package exchange:** If one fork sends collaboration material to another, treat it as a bounded package export plus a **recipient-owned import**. Do not let the sender write directly into the recipient namespace. See [inter-fork-collaboration.md](inter-fork-collaboration.md).
 
 ---
 
