@@ -20,18 +20,18 @@ from typing import Any
 REPO_ROOT = Path(__file__).resolve().parent.parent.parent
 EXPORTS = REPO_ROOT / "runtime" / "runtime-complements" / "exports"
 
-# Triple-quoted blocks avoid ambiguous line breaks in double-quoted strings.
-DEFAULT_BOUNDARY_NOTICE = """
-External runtimes may use this bundle for runtime context only. This bundle is not
-permission to write canonical Grace-Mar state. Any persistent change must return
-as a staged runtime observation and pass through the normal gate.
-""".strip()
+DEFAULT_BOUNDARY_NOTICE = (
+    "External runtimes may use this bundle for runtime context only. "
+    "This bundle is not permission to write canonical Grace-Mar state. "
+    "Any persistent change must return as a staged runtime observation "
+    "and pass through the normal gate."
+)
 
-DEFAULT_MEMBRANE = """
-Runtime complement export (membrane v1). This bundle is optional WORK/runtime
-context. Grace-Mar canonical memory remains the gated Record only. See
-docs/runtime/runtime-complements.md.
-""".strip()
+DEFAULT_MEMBRANE = (
+    "Runtime complement export (membrane v1). This bundle is optional WORK/runtime "
+    "context. Grace-Mar canonical memory remains the gated Record only. See "
+    "docs/runtime/runtime-complements.md."
+)
 
 
 def _ts_compact() -> str:

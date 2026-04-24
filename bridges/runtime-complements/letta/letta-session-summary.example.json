@@ -1,16 +1,1 @@
-{
-  "type": "session_summary",
-  "source_runtime": "letta",
-  "conversation_id": "example-letta-conversation",
-  "agent_id": "example-letta-agent",
-  "summary": "Example Letta runtime session summary. This is not canonical memory.",
-  "candidate_observations": [
-    "The operator used a Letta runtime to explore a Grace-Mar workflow.",
-    "The Letta runtime produced a summary for human review."
-  ],
-  "runtime_memory_notes": [
-    "Letta may retain its own runtime memory, but Grace-Mar does not treat this as Record truth."
-  ],
-  "recommended_review": "Review only if the operator wants to stage a candidate through Grace-Mar's existing gate.",
-  "boundary": "Runtime-only. Not SELF, EVIDENCE, SKILLS, or SELF-LIBRARY."
-}
+{"type":"session_summary","source_runtime":"letta","conversation_id":"example-letta-conversation","agent_id":"example-letta-agent","summary":"Example Letta runtime session summary. This is not canonical memory.","candidate_observations":["The operator used a Letta runtime to explore a Grace-Mar workflow.","The Letta runtime produced a summary for human review."],"runtime_memory_notes":["Letta may retain its own runtime memory, but Grace-Mar does not treat this as Record truth."],"recommended_review":"Review only if the operator wants to stage a candidate through Grace-Mar's existing gate.","boundary":"Runtime-only. Not SELF, EVIDENCE, SKILLS, or SELF-LIBRARY."}

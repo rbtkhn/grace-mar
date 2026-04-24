@@ -21,27 +21,25 @@ EXPORTS = REPO_ROOT / "runtime" / "runtime-complements" / "exports"
 
 GRACE_MAR_CONTEXT_CAP = 24_000
 
-MEMBRANE = """
-This seed is non-canonical runtime context.
+MEMBRANE = (
+    "This seed is non-canonical runtime context. Durable Grace-Mar state changes "
+    "require the gate; import summaries only via import_runtime_observation.py."
+)
 
-Durable Grace-Mar state changes require the gate; import summaries only via
-import_runtime_observation.py.
-""".strip()
+DEFAULT_BOUNDARY_FALLBACK = (
+    "Letta may remember inside Letta. Grace-Mar remembers only through the gate."
+)
 
-DEFAULT_BOUNDARY_FALLBACK = """
-Letta may remember inside Letta. Grace-Mar remembers only through the gate.
-""".strip()
+OPERATOR_INSTRUCTIONS_VALUE = (
+    "Operator rules: (1) Do not treat Letta memory as Grace-Mar Record. (2) Stage "
+    "any durable change through recursion-gate and companion-approved merge. (3) Use "
+    "letta_import_summary.py or import_runtime_observation.py for inbound JSON only."
+)
 
-OPERATOR_INSTRUCTIONS_VALUE = """
-Operator rules: (1) Do not treat Letta memory as Grace-Mar Record. (2) Stage any
-durable change through recursion-gate and companion-approved merge. (3) Use
-letta_import_summary.py or import_runtime_observation.py for inbound JSON only.
-""".strip()
-
-RUNTIME_NOTES_PLACEHOLDER = """
-Letta-local session notes (fill in outside Grace-Mar). Not SELF, EVIDENCE, SKILLS, or
-SELF-LIBRARY.
-""".strip()
+RUNTIME_NOTES_PLACEHOLDER = (
+    "Letta-local session notes (fill in outside Grace-Mar). Not SELF, EVIDENCE, "
+    "SKILLS, or SELF-LIBRARY."
+)
 
 
 def _ts_compact() -> str:
