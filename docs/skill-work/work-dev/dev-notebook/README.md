@@ -9,7 +9,7 @@ This folder is **not** a second **strategy-notebook** or **cici-notebook**. **Da
 | Lane subfolder | Holds | Does **not** replace |
 |----------------|-------|----------------------|
 | **[work-dev/journal/](work-dev/journal/README.md)** | `YYYY-MM-DD-day-NN.md` day log, [daily dev journal inbox](work-dev/journal/daily-dev-journal-inbox.md), routing vs cici-notebook. | [work-dev-history.md](../work-dev-history.md) (milestones), [workspace.md](../workspace.md) (entrypoint). |
-| **[work-cici/](work-cici/README.md)** | Cici/OB1 **prompts and spec PDFs** archived as markdown (e.g. Phase 1 governed-state). | [cici-notebook/](../../work-cici/cici-notebook/README.md) (daily coaching / digests). |
+| **[work-cici/](work-cici/README.md)** | Cici/OB1 **prompts** (e.g. Phase 1) + **Cici `main` map** and **milestone table**; pointers into [work-cici/](../../work-cici/). | [cici-notebook/](../../work-cici/cici-notebook/README.md) (daily coaching / digests). |
 | **[work-strategy/](work-strategy/README.md)** | Optional **paste-ready** strategy prompts, rubrics, or spec fragments. | [strategy-notebook/](../../work-strategy/strategy-notebook/) (inbox, days, raw-input, weave). |
 
 **Layout (tree)**
@@ -21,6 +21,8 @@ dev-notebook/
     journal/                 ← dev journal (LIB-0155) + inbox + day-*.md
   work-cici/
     README.md
+    UPSTREAM-MAP.md
+    HISTORY-ANCHORS.md
     cici-phase-1-git-first-governed-state-prompt.md
   work-strategy/
     README.md                ← add *.md here when a prompt belongs to strategy-work but not the rolling notebook
@@ -33,6 +35,8 @@ dev-notebook/
 | Location | Summary |
 |----------|---------|
 | [work-dev/journal/README.md](work-dev/journal/README.md) | Inward work-dev learning log. |
+| [work-cici/README.md](work-cici/README.md) | work-cici subfolder: contract, handoff pointers, links into [work-cici/](../../work-cici/INDEX.md). |
+| [work-cici/UPSTREAM-MAP.md](work-cici/UPSTREAM-MAP.md) | Cici GitHub `main` path table (prompts, governed-state, `.claude/`, scripts) + regen recipe. |
+| [work-cici/HISTORY-ANCHORS.md](work-cici/HISTORY-ANCHORS.md) | Milestone table keyed to [work-cici-history.md](../../work-cici/work-cici-history.md) with Cici and evidence links. |
 | [work-cici/cici-phase-1-git-first-governed-state-prompt.md](work-cici/cici-phase-1-git-first-governed-state-prompt.md) | Cici Phase 1 — Git-first governed state (archived instruction prompt). |
-| [work-cici/README.md](work-cici/README.md) | work-cici lane note. |
 | [work-strategy/README.md](work-strategy/README.md) | work-strategy lane note (empty shell until you add files). |
