@@ -1,0 +1,43 @@
+{
+  "metaNote": "EXAMPLE / HYPOTHETICAL — not from a real run; paths under mock/ are fictional; do not treat as EVIDENCE or Record.",
+  "receiptKind": "workbench",
+  "receiptId": "wb-2026-04-23-strategy-nb-viz-hype-01",
+  "createdAt": "2026-04-23T18:30:00Z",
+  "workbenchRunId": "run-2026-04-23-strategy-viz-attempt-2",
+  "lane": "work-dev",
+  "artifactType": "react",
+  "artifactCandidateLabel": "B",
+  "relatedGateCandidateId": null,
+  "sourcePromptRef": "session:2026-04-23:strategy-notebook-viz-prototype (hypothetical)",
+  "pathsTouched": [
+    "docs/skill-work/work-dev/workbench/examples/mock-strategy-notebook-viz/StrategyNotebookPanel.tsx",
+    "docs/skill-work/work-dev/workbench/examples/mock-strategy-notebook-viz/index.html",
+    "docs/skill-work/work-dev/workbench/examples/mock-strategy-notebook-viz/package.json"
+  ],
+  "commandsRun": [
+    "cd docs/skill-work/work-dev/workbench/examples/mock-strategy-notebook-viz && npm install",
+    "npm run build",
+    "npm run preview"
+  ],
+  "launchCommand": "npm run preview",
+  "inspection": {
+    "method": "manual_screenshot",
+    "screenshots": [
+      "docs/skill-work/work-dev/workbench/examples/mock-strategy-notebook-viz/snapshot-2026-04-23.png"
+    ],
+    "observedFailures": [
+      "Chips overflow container at 1280px width before v1.0 fix",
+      "Console: one benign React key warning on chapter list (fixed in attempt 2)"
+    ],
+    "acceptanceChecklist": [
+      "Renders without blank screen: ok",
+      "In-app links follow repo-relative paths: ok",
+      "No fetch to non-repo URLs on load: ok",
+      "Lighthouse perf >50 on dev server: fail (spike only — not a release gate)"
+    ]
+  },
+  "revisionSummary": "Attempt 1: layout overflow. Attempt 2: flex wrap + min-width; key warning removed.",
+  "status": "pass",
+  "recordAuthority": "none",
+  "gateEffect": "none"
+}

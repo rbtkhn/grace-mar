@@ -83,6 +83,7 @@ Products that advertise **100% local** models, **Docker** sandboxes, or **chat v
 ## Cross-references
 
 - [session-continuity-contract.md](session-continuity-contract.md) — continuity is explicit, not “the agent remembers.”
+- [workbench/README.md](workbench/README.md) — **artifact execution inspection** for generated UIs, CLIs, and visual outputs (run → inspect → workbench receipt); not Record truth, not a merge path—use before treating generated output as shippable.
 - [workspace.md](workspace.md) — operator entrypoint and file map.
 - [three-compounding-loops.md](three-compounding-loops.md) — Record vs WORK vs CI; drafts must not become canon.
 - [INTEGRATION-PROGRAM.md](INTEGRATION-PROGRAM.md) — one-loop export → stage → merge.

@@ -41,6 +41,7 @@ Cross-territory WORK architecture (tiers, optional scaffolds): [work-template/RE
 | **[gap-classification.md](gap-classification.md)** | Severity / status vocabulary for [known-gaps.md](known-gaps.md). |
 | **[claim-proof-standard.md](claim-proof-standard.md)** | Implemented capabilities must cite tests, scripts, receipts, or demos. |
 | **[verification-runs/](verification-runs/README.md)** | Manual/script verification receipts. |
+| **[workbench/README.md](workbench/README.md)** | **Workbench Harness** — run / inspect / revise / **workbench receipt** for generated UIs, CLIs, and scripts; `recordAuthority` and `gateEffect` are **none**; not action receipts or merge receipts. |
 | **[three-compounding-loops.md](three-compounding-loops.md)** | Record vs WORK vs CI — how compounding works in each loop and how they must interact (gate, no draft-as-truth). |
 | **[persistence-and-memory-surfaces.md](persistence-and-memory-surfaces.md)** | What persists where (gate, MEMORY, vendor agents, exports) vs outcome-agent dimensions; assumption-labeled efficiency note. |
 | **[delegation-spec-external-agents.md](delegation-spec-external-agents.md)** | External outcome agents: dimension map, 7-section delegation outline, copy-paste evaluation prompt (operator WORK). |
