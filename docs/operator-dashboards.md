@@ -32,6 +32,12 @@ python3 scripts/build_gate_board.py
 
 Use `-u grace-mar` where scripts support it (default user is usually `grace-mar`).
 
+When several derived surfaces may have drifted at once, use the repo-owned regeneration entrypoint first:
+
+```bash
+python3 scripts/regenerate_all_derived.py --changed --dry-run
+```
+
 **CI:** On push and pull requests to `main`, [`.github/workflows/library-index.yml`](../.github/workflows/library-index.yml) runs `build_library_index.py` and fails if `artifacts/library-index.md` is out of date — regenerate locally and commit with `self-library.md` changes.
 
 ## Design notes

@@ -2,6 +2,8 @@
 
 A lightweight format for recording not just *that* an artifact exists, but *why* it was judged good and *what transferable pattern* it demonstrates.
 
+This format is **separate** from `/artifacts/` directory policy. Here, `artifact` means a **demonstrated capability artifact** linked to EVIDENCE, not every rebuildable file under `artifacts/`.
+
 ---
 
 ## What it is

@@ -2,6 +2,8 @@
 
 **Purpose:** One-screen map of what is **canonical and governed** versus what is **temporary, derived, or operator-only** — so skill cards, lane compression, and harness output stay in the right bucket.
 
+Primary doctrine in this repo stays **derived / rebuildable / non-canonical**. If `shadow layer` is used informally for some rebuildable outputs, it is only a metaphor and does not replace the terms here.
+
 **Companion:** [operator-mental-model.md](operator-mental-model.md) (navigation-oriented summary).
 
 ---
@@ -55,6 +57,7 @@ External runtimes (Letta, Mem0, Thoth, etc.) exchange material with this repo on
 
 - No “helpful” merges into `self.md`, `self-archive.md`, or `bot/prompt.py` without **RECURSION-GATE** + documented merge path.
 - No treating **derived** summaries as new facts in the Voice or Record.
+- No collapsing portable-record rationale schemas, rebuild receipts, and `/artifacts/` directory policy into one undifferentiated “artifact” concept.
 
 ---
 

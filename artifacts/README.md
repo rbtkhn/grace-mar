@@ -2,6 +2,10 @@
 
 This tree holds **rebuildable, non-canonical** outputs from operator scripts. Nothing here is **Record truth**; recovery always points back to source files under `users/`, `docs/`, `skills-portable/`, etc.
 
+Primary doctrine stays **derived / rebuildable / non-canonical**. If you use `shadow layer` as an informal metaphor for these outputs, treat it as a glossary aid only, not a replacement term. It is **not** the same thing as `shadow-merges`, `shadow autonomy`, or any implied “shadow Record”.
+
+**Important distinction:** the portable-record schema [`schema-registry/artifact-rationale.v1.json`](../schema-registry/artifact-rationale.v1.json) is about **demonstrated capability rationale** alongside EVIDENCE. It is **not** the schema for everything under `/artifacts/`.
+
 **Repo root `prepared-context/`** (not under `artifacts/`) may hold operator drafts and `last-budget-builds.json`; see [prepared-context/README.md](../prepared-context/README.md) and [context-budgeting.md](../docs/runtime/context-budgeting.md). **Policy mode defaults** (not Record): [`config/policy_modes/defaults.json`](../config/policy_modes/defaults.json), [docs/policy-modes.md](../docs/policy-modes.md).
 
 | Path | Produced by | Policy |
@@ -12,6 +16,9 @@ This tree holds **rebuildable, non-canonical** outputs from operator scripts. No
 | `artifacts/skill-cards/` | `scripts/build_skill_cards.py` | **Rebuild** after portable skill edits. **Default:** contents are **gitignored** (see repo `.gitignore`); only `.gitkeep` preserves the directory. Optional CI snapshots if you want diff review. |
 | `artifacts/context/` | `scripts/compress_active_lane.py` | **Ephemeral operator memos** with source paths. **Default:** gitignored except `.gitkeep`. Regenerate as needed; not a substitute for lane READMEs or `self-work.md`. |
 | `artifacts/work-dev/interface-artifacts/` | operator or future tooling | **Derived** interface artifacts and metadata for cross-lane prototypes; WORK-only, non-canonical, delete/regenerate as needed. Prefer lane-specific buckets when a lane already has one. |
+| `artifacts/work-dev/rebuild-receipts/` | `scripts/regenerate_all_derived.py` | **Derived** receipts for repo-owned regeneration runs. Tracks changed paths, selected targets, and run status; not Record, not gate authority. |
+| `artifacts/work-dev/derived-regeneration-manifest.json` | `scripts/build_derived_regeneration_manifest.py` | **Derived** manifest for repo-owned rebuild targets, watch patterns, outputs, and dependencies. Not Record; supports incremental regeneration. |
+| `artifacts/work-dev/rebuild-health/` | `scripts/report_rebuild_health.py` | **Derived** rebuild-health telemetry from rebuild receipts and the regeneration manifest. Operator observability only; not Record truth. |
 | `artifacts/work-strategy/strategy-notebook/` | `scripts/strategy_page.py`, `scripts/compile_strategy_view.py`, `scripts/build_strategy_notebook_graph.py` | **Derived** JSONL receipts, `graph.json`, and `views/` for the strategy-notebook lane — not SSOT; see [work-strategy/strategy-notebook/README.md](work-strategy/strategy-notebook/README.md), [docs/runtime-vs-record.md](../docs/runtime-vs-record.md). |
 | `artifacts/strategy-runs/`, `artifacts/run-receipts/` | `scripts/strategy_run.py` | **Derived** per-run `state.json` and event receipts — session envelope for work-strategy, not SSOT; see [STRATEGY-RUN-ARCHITECTURE.md](../docs/skill-work/work-strategy/STRATEGY-RUN-ARCHITECTURE.md), [docs/run-contract.md](../docs/run-contract.md). |
 | `artifacts/strategy-run-report.md` | `scripts/build_strategy_run_report.py` | **Derived** markdown table of recent runs; delete and rebuild. |

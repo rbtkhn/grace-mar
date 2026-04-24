@@ -43,6 +43,7 @@ Cross-territory WORK architecture (tiers, optional scaffolds): [work-template/RE
 | **[verification-runs/](verification-runs/README.md)** | Manual/script verification receipts. |
 | **[workbench/README.md](workbench/README.md)** | **Workbench Harness** — run / inspect / revise / **workbench receipt** for generated UIs, CLIs, and scripts; `recordAuthority` and `gateEffect` are **none**; not action receipts or merge receipts. |
 | **[interface-artifacts/README.md](interface-artifacts/README.md)** | **Interface Artifact Protocol** — generated operator-facing views and prototypes as a first-class derived layer; defines what these artifacts are and what authority they do not have. |
+| **[derived-regeneration.md](derived-regeneration.md)** | Repo-owned derived regeneration roadmap and phase-1 foundation: change detector, regeneration entrypoint, rebuild receipts, and ranked next phases. |
 | **[workbench/SCRIPT-USAGE.md](workbench/SCRIPT-USAGE.md)** | **Workbench** CLIs: `new_workbench_receipt.py`, `validate_workbench_receipt.py` (create/validate JSON; no gate). |
 | **[three-compounding-loops.md](three-compounding-loops.md)** | Record vs WORK vs CI — how compounding works in each loop and how they must interact (gate, no draft-as-truth). |
 | **[persistence-and-memory-surfaces.md](persistence-and-memory-surfaces.md)** | What persists where (gate, MEMORY, vendor agents, exports) vs outcome-agent dimensions; assumption-labeled efficiency note. |
