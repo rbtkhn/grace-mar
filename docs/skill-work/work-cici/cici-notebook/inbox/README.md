@@ -33,7 +33,7 @@ Paths under **`artifacts`** must be **vouched by the operator** and must stay **
 ## Governance
 
 - **Redact** secrets before saving (tokens, keys, private URLs).
-- **WORK only** — not Xavier’s Record, not companion gate merge.
+- **WORK only** — not Cici’s Record, not companion gate merge.
 - **Ingest triage (accept / defer / reject):** keep quality high — defer snippets to a future date’s file if needed; reject material that should not live in the repo.
 
 ## `→ Promote to history:` (human convention)

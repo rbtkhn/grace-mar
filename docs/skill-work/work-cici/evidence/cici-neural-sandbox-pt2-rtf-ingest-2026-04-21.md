@@ -1,7 +1,7 @@
 # Neural Sandbox (Telegram) — pt.2 RTF transcript ingest (WORK)
 
 **Captured:** 2026-04-21 (ingest recorded when processed)  
-**Territory:** work-cici **evidence** — community onboarding content; not Xavier’s Record.
+**Territory:** work-cici **evidence** — community onboarding content; not Cici’s Record.
 
 | Source (Downloads) | Stored in-repo |
 |--------------------|----------------|

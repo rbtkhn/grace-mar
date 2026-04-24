@@ -1,6 +1,6 @@
 # BrewMind — B2B prospect worksheet (WORK)
 
-> **Purpose:** **Pipeline + verification** for **non–F&B** B2B outreach in Cebu (BPO, schools, tech, hubs). **Not** the canonical strategy doc — see [brewmind-business-plan.md](brewmind-business-plan.md). **Not** Xavier’s Record.  
+> **Purpose:** **Pipeline + verification** for **non–F&B** B2B outreach in Cebu (BPO, schools, tech, hubs). **Not** the canonical strategy doc — see [brewmind-business-plan.md](brewmind-business-plan.md). **Not** Cici’s Record.  
 > **Guardrail:** Do **not** treat contact details below as accurate until **verified** from an official company page, directory, or direct reply. LLM-assisted research mixes real names with **wrong numbers, stale roles, or invented scores**. See [LEAKAGE-CHECKLIST.md](LEAKAGE-CHECKLIST.md) before any partner-facing PDF.
 
 **Related:** F&B venue script stays in [brewmind-partner-survey-restaurants.md](brewmind-partner-survey-restaurants.md). Full **AI Learning Plan** curriculum: operator-held `.docx` (see onboarding [bundle map](brewmind-philippines-onboarding-guide.md)).

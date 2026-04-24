@@ -1,6 +1,6 @@
 # work-cici-history — operator log
 
-> **Append-only** log for the **work-cici** territory (advisor module, mirrors, runbooks — **not** Xavier’s Record). **Rotatable.**
+> **Append-only** log for the **work-cici** territory (advisor module, mirrors, runbooks — **not** Cici’s Record). **Rotatable.**
 
 **Distinct from:** [cici-notebook/README.md](cici-notebook/README.md) (optional **daily reflection** on OB1 / instance learning — narrative; milestones and artifact pointers still land **here** first). **Operator rhythm:** [coffee](../../../.cursor/skills/coffee/SKILL.md) (**`coffee`**; legacy **`hey`** still works). **Per-lane milestones:** this file — see [work-modules-history-principle.md](../work-modules-history-principle.md).
 

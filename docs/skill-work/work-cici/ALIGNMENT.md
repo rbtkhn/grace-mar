@@ -1,8 +1,8 @@
-# ALIGNMENT — companion-self · grace-mar · Xavier’s instance (external)
+# ALIGNMENT — companion-self · grace-mar · Cici’s companion / instance (external)
 
 **Goal:** One **Identity Fork Protocol**, one **canonical path** layout under `users/<id>/` in **each** instance repo, and **no** copying grace-mar’s Record into another companion’s tree.
 
-| Layer | companion-self (template) | grace-mar (this repo) | Xavier’s instance (`companion-xavier` repo) |
+| Layer | companion-self (template) | grace-mar (this repo) | Cici’s instance (`companion-xavier` or her chosen repo) |
 |-------|---------------------------|------------------------|-----------------------------------------------|
 | Role | Blueprint | Reference instance `users/grace-mar/` + **work-cici** advisor module | Her fork — **`users/xavier/`** (or template ID) **in her repository** |
 | Record | `users/_template/` scaffold only | Live grace-mar Record | Her Record — **hosted outside** grace-mar |

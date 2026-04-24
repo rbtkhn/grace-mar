@@ -1,6 +1,6 @@
 # Cici notebook — synthesis sources
 
-**Territory:** WORK / operator coaching — not Xavier’s Record, not companion gate merge.
+**Territory:** WORK / operator coaching — not Cici’s Record, not companion gate merge.
 
 This document describes **what feeds** the generated day file from [`scripts/cici_journal_ob1_digest.py`](../../../../scripts/cici_journal_ob1_digest.py) and **how recursive learning** stays visible.
 

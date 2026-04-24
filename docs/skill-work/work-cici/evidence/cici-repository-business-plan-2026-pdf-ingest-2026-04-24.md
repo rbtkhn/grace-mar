@@ -2,7 +2,7 @@
 
 **Captured in grace-mar:** [cici-repository-business-plan-2026.pdf](cici-repository-business-plan-2026.pdf) (operator export, 3 pages; footer: internal strategy 2026).
 
-**Territory:** [work-cici](../README.md) — WORK / advisor; **not** Xavier’s Record; business claims are pre–due diligence.
+**Territory:** [work-cici](../README.md) — WORK / advisor; **not** Cici’s Record; business claims are pre–due diligence.
 
 ## Summary (from document)
 

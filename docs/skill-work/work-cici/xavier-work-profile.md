@@ -2,7 +2,7 @@
 
 **Audience:** Operator (employer / advisor) in grace-mar.  
 **Purpose:** Single **WORK** place for **employee Xavier’s** role snapshot, **skills portfolio**, and **learning in flight** — including tooling upskill (e.g. AI-assisted coding).  
-**Not:** Xavier’s **Record** (`self.md`, IX, evidence) in **her** repository. Identity truth there enters only through **her** [RECURSION-GATE](INSTANCE-PATHS.md) and merge script. This file may **point** at her repo; it does **not** replace it.
+**Not:** Cici’s **Record** (`self.md`, IX, evidence) in **Xavier**’s **repository** (employee name). Identity truth there enters only through **her** [RECURSION-GATE](INSTANCE-PATHS.md) and merge script. This file may **point** at her repo; it does **not** replace it.
 
 **Related (different jobs):**
 

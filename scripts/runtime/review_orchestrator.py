@@ -383,7 +383,8 @@ def _candidate_synthetic_text(row: dict) -> str:
 
 def _pre_gate_boundary_notes(observations: list[dict], lane: str) -> list[str]:
     notes: list[str] = []
-    work_lanes = ("work-", "strategy", "politics", "jiang", "dev", "xavier")
+    # "work-" matches work-cici, work-dev, etc.; xavier retained for older lane tag strings; cici for current.
+    work_lanes = ("work-", "strategy", "politics", "jiang", "dev", "xavier", "cici")
     looks_work = any(w in (lane or "").lower() for w in work_lanes)
     any_mut = any(o.get("record_mutation_candidate") for o in observations)
     any_refs = any(o.get("source_refs") for o in observations)

@@ -1,7 +1,7 @@
 # Cici (`Xavier-x01/Cici`) — ingest summary (WORK)
 
 **Captured:** 2026-04-13  
-**Territory:** work-cici **evidence** — not Xavier’s Record; not a gate merge.  
+**Territory:** work-cici **evidence** — not Cici’s Record; not a gate merge.  
 **Canonical URL:** [https://github.com/Xavier-x01/Cici](https://github.com/Xavier-x01/Cici)
 
 ## Purpose

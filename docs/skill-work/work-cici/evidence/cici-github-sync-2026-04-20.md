@@ -1,7 +1,7 @@
 # Cici — GitHub sync (WORK)
 
 **Captured:** 2026-04-20  
-**Territory:** work-cici **evidence** — public API snapshot; not Xavier’s Record.
+**Territory:** work-cici **evidence** — public API snapshot; not Cici’s Record.
 
 **Purpose:** Record **`main`** delta since [cici-rtf-sessions-ingest-2026-04-17.md](cici-rtf-sessions-ingest-2026-04-17.md) (tip was [`d2358ce`](https://github.com/Xavier-x01/Cici/commit/d2358ce)).
 

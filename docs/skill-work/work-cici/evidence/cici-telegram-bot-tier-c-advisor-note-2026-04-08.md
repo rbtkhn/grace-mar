@@ -1,7 +1,7 @@
 # Cici Telegram bot — Tier C and injected memory (advisor note, WORK)
 
 **Captured:** 2026-04-08  
-**Territory:** work-cici **evidence** — operator coaching; not Xavier’s Record; not a gate merge.  
+**Territory:** work-cici **evidence** — operator coaching; not Cici’s Record; not a gate merge.  
 **Git context (external):** Branch [`claude/telegram-bot-integration-Dvbdw`](https://github.com/Xavier-x01/Cici/tree/claude/telegram-bot-integration-Dvbdw) (not on `main` as of this note); auto-search commit [`ba709f3`](https://github.com/Xavier-x01/Cici/commit/ba709f37897b32168fb72ea628bed69a1163c114).
 
 ---

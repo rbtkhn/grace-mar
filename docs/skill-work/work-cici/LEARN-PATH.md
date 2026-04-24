@@ -1,7 +1,7 @@
-# Xavier Learn Path (no-terminal first)
+# Cici learn path (no-terminal first)
 
-**Audience:** Xavier as a new Cursor user  
-**Goal:** Use **Xavier’s instance** (her `companion-xavier` repo) safely and effectively without requiring terminal skills on day one; use **work-cici** here in grace-mar for advisor runbooks.
+**Audience:** Cici, as a new Cursor user (employee / legal name **Xavier** in operator employment docs)  
+**Goal:** Use **Cici’s instance** (her `companion-xavier` repo) safely and effectively without requiring terminal skills on day one; use **work-cici** here in grace-mar for advisor runbooks.
 
 ---
 
@@ -43,9 +43,9 @@
 ## Completion signals
 
 - Stage A complete when Session 0 capture is filled and first candidate set is staged.
-- Stage B complete when Xavier can run one full post cycle with checklists and manual ship.
+- Stage B complete when Cici can run one full post cycle with checklists and manual ship.
 - Stage C complete when one full week closes with KPI + budget + retro entries.
-- Stage D complete when Xavier can explain mirror scope, gate flow, and escalation rules unaided.
+- Stage D complete when Cici can explain mirror scope, gate flow, and escalation rules unaided.
 
 ---
 
@@ -57,5 +57,5 @@ Use Session 0 outputs to choose the first learning objective in Stage B:
 - If Section F emphasizes delivery/growth goals, start with **LO-03** + **LO-05**.
 - If Section E/G signals risk or boundary uncertainty, start with **LO-02** + **LO-06**.
 
-This keeps early learning work aligned with Xavier's stated business goals and constraints.
+This keeps early learning work aligned with Cici’s stated business goals and constraints.
 

@@ -1,4 +1,4 @@
-# LEAKAGE-CHECKLIST — handoff to Xavier’s companion-xavier repo
+# LEAKAGE-CHECKLIST — handoff to Cici’s companion instance (legacy repo name `companion-xavier`)
 
 Use before publishing exports, paste-heavy handoffs, or opening PRs that touch **her** instance — so **grace-mar Record** never lands in her tree without pipeline.
 

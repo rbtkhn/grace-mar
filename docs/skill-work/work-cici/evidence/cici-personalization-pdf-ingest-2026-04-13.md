@@ -1,7 +1,7 @@
 # Cici — Claude Code personalization session (PDF ingest) (WORK)
 
 **Captured:** 2026-04-13  
-**Territory:** work-cici **evidence** — not Xavier’s Record; not a gate merge.  
+**Territory:** work-cici **evidence** — not Cici’s Record; not a gate merge.  
 **Source file (operator download):** `develop my Open Brain instance repo.pdfs=1 (1).pdf`  
 **Stored in-repo:** [cici-claude-personalization-session-2026-04-13.pdf](cici-claude-personalization-session-2026-04-13.pdf)
 

@@ -1,7 +1,7 @@
 # GitHub profile — ingest summary (WORK)
 
 **Captured:** 2026-04-08  
-**Territory:** work-cici **evidence** — not Xavier’s Record; not a gate merge.  
+**Territory:** work-cici **evidence** — not Cici’s Record; not a gate merge.  
 **Canonical URL:** [https://github.com/xavier-x01](https://github.com/xavier-x01)
 
 ## Purpose

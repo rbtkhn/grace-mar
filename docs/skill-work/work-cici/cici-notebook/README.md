@@ -1,27 +1,27 @@
 # Cici notebook — Open Brain (OB1) learning log
 
-**Book:** Daily notes on **learning and building** Xavier’s **Open Brain** stack: **instance** ([`Cici`](https://github.com/Xavier-x01/Cici)), upstream ([NateBJones-Projects/OB1](https://github.com/NateBJones-Projects/OB1)), and how that ties to **BrewMind** work.
+**Book:** Daily notes on **learning and building** the **Open Brain** / **Cici** stack: **instance** ([`Cici`](https://github.com/Xavier-x01/Cici)), upstream ([NateBJones-Projects/OB1](https://github.com/NateBJones-Projects/OB1)), and how that ties to **BrewMind** work.
 
 **Discoverability:** The same tree is linked from **`users/grace-mar/SELF-LIBRARY/cici-notebook`** (repo-relative symlink) for agents and tools that prioritize the companion tree. **LIB:** [LIB-0154](../../../../users/grace-mar/self-library.md#operator-analytical-books) in [`self-library.md`](../../../../users/grace-mar/self-library.md) (Operator analytical books).
 
-**Territory:** `docs/skill-work/work-cici/cici-notebook/` in grace-mar — **WORK / operator coaching**, not Xavier’s **Record**, not companion Voice knowledge.
+**Territory:** `docs/skill-work/work-cici/cici-notebook/` in grace-mar — **WORK / operator coaching**, not Cici’s **Record** in grace-mar, not companion Voice knowledge.
 
-**Cursor skill:** [`.cursor/skills/skill-cici/SKILL.md`](../../../../.cursor/skills/skill-cici/SKILL.md) — distilled journal rhythm (grace-mar **Mode A** vs Cici **Mode B**); hand off the skill folder to [Cici](https://github.com/Xavier-x01/Cici) for Xavier-only use.
+**Cursor skill:** [`.cursor/skills/skill-cici/SKILL.md`](../../../../.cursor/skills/skill-cici/SKILL.md) — distilled journal rhythm (grace-mar **Mode A** vs Cici **Mode B**); hand off the skill folder to [Cici](https://github.com/Xavier-x01/Cici) for use in the **Cici** instance repo only.
 
 ### Routing: dev-journal vs cici-notebook
 
-**One line:** **cici-notebook** = **outward-facing** — understanding, coaching, or tracking **Xavier’s** OB1 / Cici path from inside grace-mar (instance, upstream, BrewMind, GitHub digest). **dev-journal** = **inward-facing** — building grace-mar’s **own** work-dev lane. See [dev-journal README](../../work-dev/dev-journal/README.md#routing-dev-journal-vs-cici-notebook).
+**One line:** **cici-notebook** = **outward-facing** — understanding, coaching, or tracking **Cici’s** OB1 path from inside grace-mar (instance, upstream, BrewMind, GitHub digest). **dev-journal** = **inward-facing** — building grace-mar’s **own** work-dev lane. See [dev-journal README](../../work-dev/dev-journal/README.md#routing-dev-journal-vs-cici-notebook).
 
-**Center of gravity belongs here** when the note is about Xavier’s stack and your relationship to it as operator: Cici commits, OB1 direction, instance vs upstream comparison, `cici_journal_ob1_digest.py` day files, inbox coaching notes, same-day synthesis with strategy-notebook when that’s **about Xavier’s trajectory**.
+**Center of gravity belongs here** when the note is about **Cici’s** stack and your relationship to it as operator: Cici commits, OB1 direction, instance vs upstream comparison, `cici_journal_ob1_digest.py` day files, inbox coaching notes, same-day synthesis with strategy-notebook when that’s **about Cici’s trajectory**.
 
 **Write in [dev-journal](../../work-dev/dev-journal/README.md)** when the center of gravity is grace-mar **internal** tooling: export–stage–merge in *this* repo, harness wiring, capability contracts, portable skills, OpenClaw integration work — reflective narrative about **this** codebase’s work-dev path.
 
 **Quick test**
 
-- “In **Xavier’s** OB1/Cici world, I observed / coached / compared …” → **cici-notebook** (this folder).
+- “In **Cici’s** OB1 world, I observed / coached / compared …” → **cici-notebook** (this folder).
 - “In **Grace-Mar**, I changed / learned / wired …” → **dev-journal**.
 
-**When a day touches both:** split — Xavier/OB1 observation or coaching **here**; grace-mar implementation reflection **there**.
+**When a day touches both:** split — Cici/OB1 observation or coaching **here**; grace-mar implementation reflection **there**.
 
 **How to use**
 

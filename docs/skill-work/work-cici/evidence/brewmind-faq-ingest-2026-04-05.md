@@ -1,7 +1,7 @@
 # BrewMind FAQ — ingest summary (WORK)
 
 **Captured:** 2026-04-05  
-**Territory:** work-cici **evidence** — not Xavier’s Record; not a gate merge.  
+**Territory:** work-cici **evidence** — not Cici’s Record; not a gate merge.  
 **Sources:** Gemini mobile session (screenshot) + PDF export of the same conversation thread ([`brewmind-faq-gemini-transcript-2026-04-05.pdf`](brewmind-faq-gemini-transcript-2026-04-05.pdf)). Original download filename: `Brewmind FAQ transcipt.pdfs=1.pdf` (typo preserved in history only).
 
 ## What was produced

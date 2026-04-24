@@ -1,7 +1,7 @@
 # Cici — “Implement” Claude Code session (PDF ingest) + repo check (WORK)
 
 **Captured:** 2026-04-13  
-**Territory:** work-cici **evidence** — not Xavier’s Record; not a gate merge.  
+**Territory:** work-cici **evidence** — not Cici’s Record; not a gate merge.  
 **Source (operator download):** `Implement .pdfs=1.pdf`  
 **Stored in-repo:** [cici-implement-session-2026-04-13.pdf](cici-implement-session-2026-04-13.pdf)
 

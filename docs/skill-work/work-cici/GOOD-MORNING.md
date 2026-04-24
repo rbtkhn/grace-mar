@@ -1,8 +1,8 @@
-# COFFEE (daily rhythm) — Xavier instance (`fork_id`: xavier, **her repo**)
+# COFFEE (daily rhythm) — Cici instance (`fork_id` / template id: xavier, **her repo**)
 
 *Filename `GOOD-MORNING.md` is legacy; grace-mar operator activation is **coffee** (work-start vs **signing-off** intent — same **A–E** menu: Build, Steward, Strategy/daily brief, Conductor, system choice), with legacy **hey** still accepted — mirror the current vocabulary in chat.*
 
-**Where Record paths live:** [INSTANCE-PATHS.md](INSTANCE-PATHS.md). Run harness / integrity / gate steps **in Xavier’s `companion-xavier` repository**, not in grace-mar.
+**Where Record paths live:** [INSTANCE-PATHS.md](INSTANCE-PATHS.md). Run harness / integrity / gate steps **in Cici’s `companion-xavier` instance repository** (or her chosen repo name), not in grace-mar.
 
 **First-ever session?** Start with [DAY-1-NO-TERMINAL.md](DAY-1-NO-TERMINAL.md), then [first-good-morning-runbook.md](first-good-morning-runbook.md), then return here for normal rhythm.
 
@@ -10,7 +10,7 @@
 
 ## Daily rhythm (shape)
 
-Mirror grace-mar **coffee** cadence in *shape* — edit for Xavier’s lanes (companion-self build + EA/SMM client work when applicable):
+Mirror grace-mar **coffee** cadence in *shape* — edit for **Cici’s** lanes (companion-self build + EA/SMM client work when applicable):
 
 1. Optional: `python3 scripts/operator_daily_warmup.py -u xavier` (if bundled in template).
 2. `python3 scripts/harness_warmup.py -u xavier` — gate / session tail snapshot.
@@ -88,7 +88,7 @@ Each `coffee` should update [SYNC-DAILY.md](SYNC-DAILY.md) with:
 - top scored candidate updates
 - one combined next action
 
-Staleness rule (Xavier-only):
+Staleness rule (Cici instance / template `xavier` only):
 - if either sync log is older than 3 days, mark `stale sync state: yes` in `SYNC-DAILY.md` and run forced scans first.
 
 ## Required daily output: template alignment sync check
@@ -97,14 +97,14 @@ Each `coffee` should include:
 
 - `template upstream:` repo + ref used for this check
 - `template sync alignment status:` aligned / minor drift / major drift
-- any drift found between Xavier mirrors and template sync-pack expectations
+- any drift found between Cici’s work-cici mirrors and template sync-pack expectations
 - up to 3 proposed alignment edits (paths only) for same-day or weekly batch
 - one template-alignment block updated in [SYNC-DAILY.md](SYNC-DAILY.md)
 
 ### No-terminal alignment prompt (copy/paste)
 
 ```text
-Run my daily template-alignment sync check for Xavier.
+Run my daily template-alignment sync check for Cici.
 
 Use template upstream:
 - repo: https://github.com/rbtkhn/companion-self
@@ -132,7 +132,7 @@ Output:
 
 ## Required daily output: suggested development path
 
-Every `coffee` should include one **suggested change/development path** for `work-cici` that directs Xavier toward:
+Every `coffee` should include one **suggested change/development path** for `work-cici` that directs Cici toward:
 
 1. one **learning objective** from [LEARNING-OBJECTIVES-CONTROL-PLANE.md](LEARNING-OBJECTIVES-CONTROL-PLANE.md), and  
 2. one **business skill outcome** (content execution, sourcing discipline, stress-test judgment, KPI/budget ops, or escalation quality).
@@ -193,7 +193,7 @@ Rules:
 
 | # | Task |
 |---|------|
-| 1 | Open **Xavier’s `companion-xavier` repository** in Cursor (her instance repo, not grace-mar). |
+| 1 | Open **Cici’s `companion-xavier` instance repository** in Cursor (her companion Record repo, not grace-mar; she may use another repo name). |
 | 2 | Open her repo `README.md` (instance root); read top to bottom. |
 | 3 | Open `users/xavier/self.md`. Skim — **IX empty** until gate merges survey outputs. |
 | 4 | Command palette → Terminal → `pwd` / `ls` (or `dir` on Windows). |

@@ -6,7 +6,7 @@
 
 **Rule:** Additive-first. Do not silently rewrite durable lane memory.
 
-**Not:** Xavier’s Record (her repo); not Grace-Mar Record truth. Promotion to SELF / EVIDENCE / prompt uses the **appropriate** repo’s **RECURSION-GATE** + companion approval + merge script per [AGENTS.md](../../../AGENTS.md).
+**Not:** Cici’s Record in her repo; not Grace-Mar Record truth. Promotion to SELF / EVIDENCE / prompt uses the **appropriate** repo’s **RECURSION-GATE** + companion approval + merge script per [AGENTS.md](../../../AGENTS.md).
 
 ---
 
@@ -15,7 +15,7 @@
 ### Territory identity
 
 - **Lane name:** work-cici  
-- **Purpose:** Coordinate operator/advisor work with Xavier (SMM, BrewMind, mirrors, runbooks) in grace-mar — without hosting her cognitive fork.  
+- **Purpose:** Coordinate operator/advisor work with Cici (SMM, BrewMind, mirrors, runbooks) in grace-mar — without hosting her cognitive fork.  
 - **Primary operator use-case:** Daily sync, mirror alignment, employee work profile / skills portfolio, content plans vs capability rubric, template drift awareness.  
 - **Boundary summary:** See [README.md](README.md) governance block and [LANES.md](LANES.md).  
 - **Promotion gate (her Record):** Her `recursion-gate.md` + `process_approved_candidates.py` **in her repository**. **Grace-Mar** gate only if a change is explicitly for grace-mar identity/Voice.
@@ -59,7 +59,7 @@
 - **First noticed:** 2026-04-04  
 - **Current status:** watch  
 - **Latest evidence:** [SYNC-DAILY.md](SYNC-DAILY.md) — if either mirror has no new sync-log row for 3+ days, mark `stale sync state: yes` and run a forced relevance scan.  
-- **Framing note:** Mirrors are the operational spine for pulling work-dev / work-politics into Xavier-ready language.  
+- **Framing note:** Mirrors are the operational spine for pulling work-dev / work-politics into Cici-ready language.  
 - **Primary implication:** Stale logs hide drift and block trustworthy daily ops cards.  
 - **Contradiction / caution:** Operator may intentionally pause sync during travel; retire this watch row or add a dated exception rather than deleting the guardrail.
 
@@ -87,7 +87,7 @@ Horizon: **not** next week — revisit when bandwidth allows; does not block dai
 
 | Item | Intent | Notes |
 |------|--------|--------|
-| **Cici in grace-mar workspace** | Edit or cross-search **[Cici](https://github.com/Xavier-x01/Cici)** (Xavier’s OB1 **instance** repo) from the same Cursor workspace as grace-mar — e.g. sibling clone, `research/external/cici/` checkout, multi-root workspace, or symlink — plus optional **Cursor rule** (`globs` on that path) and/or **skill** for “Cici session” ritual (pull, branch, doc checklist). | Decide **submodule vs sibling clone** (avoid silent `git status` noise unless policy is clear). **Leakage / secrets** rules unchanged ([LEAKAGE-CHECKLIST.md](LEAKAGE-CHECKLIST.md)). Complements API digest; does not replace it. |
+| **Cici in grace-mar workspace** | Edit or cross-search **[Cici](https://github.com/Xavier-x01/Cici)** (Cici’s OB1 **instance** repo) from the same Cursor workspace as grace-mar — e.g. sibling clone, `research/external/cici/` checkout, multi-root workspace, or symlink — plus optional **Cursor rule** (`globs` on that path) and/or **skill** for “Cici session” ritual (pull, branch, doc checklist). | Decide **submodule vs sibling clone** (avoid silent `git status` noise unless policy is clear). **Leakage / secrets** rules unchanged ([LEAKAGE-CHECKLIST.md](LEAKAGE-CHECKLIST.md)). Complements API digest; does not replace it. |
 
 ---
 

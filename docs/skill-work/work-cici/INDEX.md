@@ -1,5 +1,7 @@
 # work-cici — quick index
 
+**Rename / continuity:** Lane was **work-xavier**; see [README — Rename note](README.md#rename-note), [Naming and continuity](README.md#naming-and-continuity), and the **Legacy filename aliases** table in [README.md](README.md#legacy-filename-aliases) (kept in one place; not duplicated here).
+
 | Doc | Role |
 |-----|------|
 | [evidence/cici-repository-business-plan-2026-pdf-ingest-2026-04-24.md](evidence/cici-repository-business-plan-2026-pdf-ingest-2026-04-24.md) | **Cici Repository business plan (PDF)** — 2026 strategy summary + [cici-repository-business-plan-2026.pdf](evidence/cici-repository-business-plan-2026.pdf) |
@@ -15,7 +17,7 @@
 | [handoffs/cici-brewmind-governed-steward.md](handoffs/cici-brewmind-governed-steward.md) | **Cici paste handoff** — `docs/skills/brewmind-governed-steward.md` body + optional `CLAUDE.md` line (canonical skill: [.cursor/skills/brewmind-governed-steward/SKILL.md](../../../.cursor/skills/brewmind-governed-steward/SKILL.md)) |
 | [cici-pilot-propagation-low-cost-operator.md](cici-pilot-propagation-low-cost-operator.md) | **10-pilot reach** — low-cost propagation checklist (referral, FB groups, Telegram, borrowed audiences) + citations |
 | [cici-community-mission-operator.md](cici-community-mission-operator.md) | **Cici / Neural Sandbox** — short-term mission, drop-off focus, funnel metrics (operator WORK) |
-| [README.md](README.md) | Advisor / project module vs Xavier’s external instance repo |
+| [README.md](README.md) | Advisor / project module for Cici (formerly Xavier) — vs her companion / instance repo and the external [Cici](https://github.com/Xavier-x01/Cici) OB1 repo; not Cici’s Record in grace-mar |
 | [xavier-work-profile.md](xavier-work-profile.md) | Employee work profile + skills portfolio (operator WORK); not her Record |
 | [xavier-progress-log.md](xavier-progress-log.md) | Operator progress / behavior notes + evidence index (paired with [work-cici-history.md](work-cici-history.md)) |
 | [`.cursor/skills/skill-cici/SKILL.md`](../../../.cursor/skills/skill-cici/SKILL.md) | **skill-cici** — Cursor ritual for journal rhythm (grace-mar vs Cici **Mode B**); baseline from cici-notebook |
@@ -37,7 +39,7 @@
 | [SEED-MANIFEST.md](SEED-MANIFEST.md) | What ships where (grace-mar mirror vs her `companion-xavier` repo) |
 | [LEAKAGE-CHECKLIST.md](LEAKAGE-CHECKLIST.md) | Pre-merge / handoff checks (no grace-mar Record in her tree) |
 | [companion-self-for-open-brain-users.md](../work-companion-self/companion-self-for-open-brain-users.md) | **Open Brain vs gate:** capture / search / RAG ≠ official Record — use with instance checklist, first Good Morning, Session 0, leakage |
-| [ALIGNMENT.md](ALIGNMENT.md) | Template · grace-mar · Xavier’s instance (external) |
+| [ALIGNMENT.md](ALIGNMENT.md) | Template · grace-mar · Cici’s companion / instance (external) |
 | [Boundary audit](../../audit-boundary-grace-mar-companion-self.md) | grace-mar · template normative boundaries |
 | [TEMPLATE-BASELINE.md](TEMPLATE-BASELINE.md) | Pointer → [work-companion-self/TEMPLATE-BASELINE.md](../work-companion-self/TEMPLATE-BASELINE.md) |
 | [LANES.md](LANES.md) | WORK (client) vs Record (fork) vs library |

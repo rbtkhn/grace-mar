@@ -1,6 +1,6 @@
-# First Good Morning Runbook — Xavier
+# First Good Morning Runbook — Cici
 
-**Scope:** First-ever load of **Xavier’s instance repo** (often named `companion-xavier` on GitHub) by a new Cursor user. Advisor docs (`work-cici` in grace-mar) live **here**; her Record lives **there**. See [INSTANCE-PATHS.md](INSTANCE-PATHS.md).  
+**Scope:** First-ever load of **Cici’s companion instance repo** (often named `companion-xavier` on GitHub) by a new Cursor user. Advisor docs (`work-cici` in grace-mar) live **here**; her Record lives **there**. See [INSTANCE-PATHS.md](INSTANCE-PATHS.md).  
 **Goal:** Safe orientation, Session 0 completion, and correct gate workflow.
 
 ---

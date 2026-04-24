@@ -1,6 +1,6 @@
 # Cici community — short-term mission (operator WORK)
 
-> **Audience:** Operator (advisor) + Xavier. **Purpose:** Single **WORK** anchor for **Neural Sandbox** / **Cici** community intent — not Xavier’s Record, not BrewMind partner-facing copy. **Canonical instance repo:** [Xavier-x01/Cici](https://github.com/Xavier-x01/Cici). **Related evidence:** [evidence/cici-neural-sandbox-rtf-ingest-2026-04-21.md](evidence/cici-neural-sandbox-rtf-ingest-2026-04-21.md) (Telegram Rules of Engagement).
+> **Audience:** Operator (advisor) + Xavier. **Purpose:** Single **WORK** anchor for **Neural Sandbox** / **Cici** community intent — not Cici’s Record, not BrewMind partner-facing copy. **Canonical instance repo:** [Xavier-x01/Cici](https://github.com/Xavier-x01/Cici). **Related evidence:** [evidence/cici-neural-sandbox-rtf-ingest-2026-04-21.md](evidence/cici-neural-sandbox-rtf-ingest-2026-04-21.md) (Telegram Rules of Engagement).
 
 ---
 

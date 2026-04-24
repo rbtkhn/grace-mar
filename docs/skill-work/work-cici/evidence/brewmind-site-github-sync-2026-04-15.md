@@ -1,7 +1,7 @@
 # BrewMind site + Cici — GitHub sync check (WORK)
 
 **Captured:** 2026-04-15  
-**Territory:** work-cici **evidence** — public API snapshot; not Xavier’s Record.
+**Territory:** work-cici **evidence** — public API snapshot; not Cici’s Record.
 
 **Purpose:** Record **remote delta** since grace-mar last documented Cici at [`901012d`](https://github.com/Xavier-x01/Cici/commit/901012d0da2be14b5b42acab1ce981ec30fe9a07) ([cici-rtf-sessions-ingest-2026-04-14.md](cici-rtf-sessions-ingest-2026-04-14.md)).
 

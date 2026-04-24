@@ -2,7 +2,7 @@
 
 **Captured in grace-mar:** 2026-04-26  
 **Session content date (transcript):** 2026-04-21  
-**Territory:** work-cici **evidence** — not Xavier’s Record; not a gate merge.
+**Territory:** work-cici **evidence** — not Cici’s Record; not a gate merge.
 
 | Source (Downloads) | Stored in-repo |
 |--------------------|----------------|
