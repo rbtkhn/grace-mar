@@ -21,27 +21,27 @@ EXPORTS = REPO_ROOT / "runtime" / "runtime-complements" / "exports"
 
 GRACE_MAR_CONTEXT_CAP = 24_000
 
-# Explicit \n in source keeps string boundaries visible (no accidental line breaks in literals).
-MEMBRANE = (
-    "This seed is non-canonical runtime context.\n"
-    "Durable Grace-Mar state changes require the gate; import summaries only via "
-    "import_runtime_observation.py."
-)
+MEMBRANE = """
+This seed is non-canonical runtime context.
 
-DEFAULT_BOUNDARY_FALLBACK = (
-    "Letta may remember inside Letta. "
-    "Grace-Mar remembers only through the gate."
-)
+Durable Grace-Mar state changes require the gate; import summaries only via
+import_runtime_observation.py.
+""".strip()
 
-OPERATOR_INSTRUCTIONS_VALUE = (
-    "Operator rules: (1) Do not treat Letta memory as Grace-Mar Record. "
-    "(2) Stage any durable change through recursion-gate and companion-approved merge. "
-    "(3) Use letta_import_summary.py or import_runtime_observation.py for inbound JSON only."
-)
+DEFAULT_BOUNDARY_FALLBACK = """
+Letta may remember inside Letta. Grace-Mar remembers only through the gate.
+""".strip()
 
-RUNTIME_NOTES_PLACEHOLDER = (
-    "Letta-local session notes (fill in outside Grace-Mar). Not SELF, EVIDENCE, SKILLS, or SELF-LIBRARY."
-)
+OPERATOR_INSTRUCTIONS_VALUE = """
+Operator rules: (1) Do not treat Letta memory as Grace-Mar Record. (2) Stage any
+durable change through recursion-gate and companion-approved merge. (3) Use
+letta_import_summary.py or import_runtime_observation.py for inbound JSON only.
+""".strip()
+
+RUNTIME_NOTES_PLACEHOLDER = """
+Letta-local session notes (fill in outside Grace-Mar). Not SELF, EVIDENCE, SKILLS, or
+SELF-LIBRARY.
+""".strip()
 
 
 def _ts_compact() -> str:
@@ -88,15 +88,15 @@ def _build_context_from_included(
 def _maybe_truncate(s: str, cap: int) -> str:
     if len(s) <= cap:
         return s
-    note = f"\n\n[Truncated from {len(s)} to {cap} characters for grace_mar_context cap.]"
+    note = (
+        f"\n\n[Truncated from {len(s)} to {cap} characters for grace_mar_context cap.]"
+    )
     return s[: max(0, cap - len(note))] + note
 
 
 def main() -> int:
     ap = argparse.ArgumentParser(
-        description=(
-            "Build a Letta seed JSON from a runtime_complement_export bundle."
-        )
+        description="Build a Letta seed JSON from a runtime_complement_export bundle."
     )
     ap.add_argument(
         "--bundle",
@@ -162,13 +162,21 @@ def main() -> int:
     blocks: list[dict[str, str]] = [
         {
             "label": "grace_mar_boundary",
-            "description": "Rules that keep Letta runtime memory separate from Grace-Mar canonical Record.",
+            "description": (
+                "Rules that keep Letta runtime memory separate from Grace-Mar canonical Record."
+            ),
             "value": boundary + "\n\n" + MEMBRANE,
         },
         {
             "label": "grace_mar_context",
-            "description": "Concatenated included bundle files (capped) from the export bundle.",
-            "value": ctx_value if ctx_value.strip() else "(no text content in bundle included_files)",
+            "description": (
+                "Concatenated included bundle files (capped) from the export bundle."
+            ),
+            "value": (
+                ctx_value
+                if ctx_value.strip()
+                else "(no text content in bundle included_files)"
+            ),
         },
         {
             "label": "operator_instructions",

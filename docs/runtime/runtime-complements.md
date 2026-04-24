@@ -9,7 +9,7 @@ WORK / runtime / non-canonical / optional.
 **Runtime complements** are external or adjunct systems
 (e.g. future Letta, Mem0, OpenMemory, Thoth-style local tools, or bot runtimes)
 that may improve **live** interaction, quick recall, agent continuity, session
-summarization, or operator UX. They do **not** hold authority over Grace-Mar’s
+summarization, or operator UX. They do **not** hold authority over Grace-Mar's
 canonical **Record**.
 
 ## Core rule
@@ -17,7 +17,9 @@ canonical **Record**.
 > External runtimes may remember for themselves.  
 > Grace-Mar remembers only through the **gate** ([`recursion-gate.md`](../../users/grace-mar/recursion-gate.md) → companion-approved merge; see [AGENTS.md](../../AGENTS.md)).
 
-Runtime complements may **accelerate** context, continuity, and interaction. They may not become **memory**, **evidence**, or **identity** until **staged**, **reviewed**, and **merged** through that gate.
+Runtime complements may **accelerate** context, continuity, and interaction.
+They may not become **memory**, **evidence**, or **identity** until **staged**,
+**reviewed**, and **merged** through that gate.
 
 ## What runtime complements may do
 
@@ -28,7 +30,7 @@ They may:
 - produce **summaries**, **observations**, **retrieval hints**, and **receipts**
 - produce **candidate** memory suggestions (still candidates until gated)
 - produce **operator-review drafts** as plain files or JSON in the runtime complement paths only
-- help route proposed actions through an **approval** step (pattern only; no bypass of Grace-Mar’s gate)
+- help route proposed actions through an **approval** step (pattern only; no bypass of Grace-Mar's gate)
 
 ## What runtime complements may not do
 
@@ -77,7 +79,7 @@ See [`scripts/runtime/export_runtime_context.py`](../../scripts/runtime/export_r
 
 ## Import path
 
-**Runtime complement** output (JSON) → [import_runtime_observation.py](../../scripts/runtime/import_runtime_observation.py) → **inbox** file + **receipt** → **human/operator review** → optional **manual** staging as `recursion-gate.md` **candidates** → **companion approval** → existing merge path.
+**Runtime complement** output (JSON) -> [import_runtime_observation.py](../../scripts/runtime/import_runtime_observation.py) -> **inbox** file + **receipt** -> **human/operator review** -> optional **manual** staging as `recursion-gate.md` **candidates** -> **companion approval** -> existing merge path.
 
 No new merge API: promotion follows the same **gated pipeline** as any other profile or evidence change.
 
@@ -102,14 +104,17 @@ Every imported runtime observation should have a **receipt** (see schema) with a
 | **Mem0 / OpenMemory** | Fast recall, personalization **cache** outside Record | Example only; **verify** any suggestion against on-disk **WORK/Record** |
 | **Thoth-style local assistant** | Local-first “propose then approve” UX pattern | **Inspiration** for routing; does **not** change Grace-Mar’s **recursion-gate** mechanics |
 
-These are **illustrations**, not dependencies or endorsements. Future adapters may call the same
-import/export CLIs with JSON payloads.
+These are **illustrations**, not dependencies or endorsements. Future adapters may call
+the same import/export CLIs with JSON payloads.
 
 **Letta adapter example:** [bridges/runtime-complements/letta/](../../bridges/runtime-complements/letta/)
-prepares Letta seed files and imports Letta summaries through the runtime complement membrane.
+prepares Letta seed files and imports Letta summaries through the runtime
+complement membrane.
 
 ## Boundary statement
 
-Runtime complements may **accelerate** context, continuity, and interaction. They may not become **memory**, **evidence**, or **identity** until **staged**, **reviewed**, and **merged** through Grace-Mar’s **existing gate**.
+Runtime complements may **accelerate** context, continuity, and interaction.
+They may not become **memory**, **evidence**, or **identity** until **staged**,
+**reviewed**, and **merged** through Grace-Mar's **existing gate**.
 
 **See also:** [runtime-vs-record.md](../runtime-vs-record.md) · [runtime/complements README](../../runtime/runtime-complements/README.md)

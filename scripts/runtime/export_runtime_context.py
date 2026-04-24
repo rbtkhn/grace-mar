@@ -20,17 +20,18 @@ from typing import Any
 REPO_ROOT = Path(__file__).resolve().parent.parent.parent
 EXPORTS = REPO_ROOT / "runtime" / "runtime-complements" / "exports"
 
-DEFAULT_BOUNDARY_NOTICE = (
-    "External runtimes may use this bundle for runtime context only. This bundle is not "
-    "permission to write canonical Grace-Mar state. Any persistent change must return "
-    "as a staged runtime observation and pass through the normal gate."
-)
+# Triple-quoted blocks avoid ambiguous line breaks in double-quoted strings.
+DEFAULT_BOUNDARY_NOTICE = """
+External runtimes may use this bundle for runtime context only. This bundle is not
+permission to write canonical Grace-Mar state. Any persistent change must return
+as a staged runtime observation and pass through the normal gate.
+""".strip()
 
-DEFAULT_MEMBRANE = (
-    "Runtime complement export (membrane v1). This bundle is optional WORK/runtime "
-    "context. Grace-Mar canonical memory remains the gated Record only. See "
-    "docs/runtime/runtime-complements.md."
-)
+DEFAULT_MEMBRANE = """
+Runtime complement export (membrane v1). This bundle is optional WORK/runtime
+context. Grace-Mar canonical memory remains the gated Record only. See
+docs/runtime/runtime-complements.md.
+""".strip()
 
 
 def _ts_compact() -> str:
@@ -84,7 +85,10 @@ def main() -> int:
     ap.add_argument(
         "--no-default-text",
         action="store_true",
-        help="Omit default membrane blurb when no files are included (boundary_notice still set).",
+        help=(
+            "Omit default membrane blurb when no files are included "
+            "(boundary_notice still set)."
+        ),
     )
     args = ap.parse_args()
 
@@ -93,7 +97,8 @@ def main() -> int:
     out_dir.mkdir(parents=True, exist_ok=True)
 
     ts = _ts_compact()
-    bundle_id = f"runtime-complement-export_{ts}_{re.sub(r'[^a-zA-Z0-9_.-]+', '-', args.name)}.json"
+    safe = re.sub(r"[^a-zA-Z0-9_.-]+", "-", args.name)
+    bundle_id = f"runtime-complement-export_{ts}_{safe}.json"
     out_path = out_dir / bundle_id
 
     included: list[dict[str, Any]] = []
@@ -103,7 +108,7 @@ def main() -> int:
         if not rel or ".." in rel:
             missing.append(f"(rejected): {rel!r}")
             continue
-        item, err = read_doc(root, rel)
+        item, _err = read_doc(root, rel)
         if item.get("missing"):
             missing.append(rel)
         included.append(item)
@@ -122,8 +127,7 @@ def main() -> int:
         "boundary_notice": DEFAULT_BOUNDARY_NOTICE,
     }
     out_path.write_text(
-        json.dumps(body, ensure_ascii=False, indent=2) + "\n",
-        encoding="utf-8",
+        json.dumps(body, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
     )
     print(_rel_posix(root, out_path))
     return 0
