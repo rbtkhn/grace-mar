@@ -47,7 +47,14 @@ Start with the README section **Claude Code surfaces in Grace-Mar**, then read [
 
 ### See it as a dashboard
 
-Grace-Mar is inspectable without trusting chat alone: **[observability.md](observability.md)** (reports and scripts), **`runtime/observability/`** JSONL feeds when present, and optional **web / family hub** surfaces ([simple-user-interface.md](simple-user-interface.md)). For a link-only map of workflows, see **[workflow-catalog.md](workflow-catalog.md)**.
+Grace-Mar is inspectable without trusting chat alone:
+**[observability.md](observability.md)** (reports and scripts),
+**`runtime/observability/`** JSONL feeds when present, and optional
+**web / family hub** surfaces
+([simple-user-interface.md](simple-user-interface.md)). For a link-only
+map of workflows, see **[workflow-catalog.md](workflow-catalog.md)**.
+For diagnostics and governance tooling, see
+**[diagnostics-and-governance-tools.md](diagnostics-and-governance-tools.md)**.
 
 ---
 
