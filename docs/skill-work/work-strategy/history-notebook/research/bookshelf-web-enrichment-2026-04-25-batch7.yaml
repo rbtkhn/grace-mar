@@ -1,0 +1,162 @@
+version: 1
+generated_on: "2026-04-25"
+scope: "HNSRC-0151 through HNSRC-0175"
+method:
+  sources:
+    - "Google Books volumes API"
+  policy: "Attach as candidate metadata; merge into bookshelf-catalog.yaml only when confidence is high and edition match is clear."
+
+items:
+  - id: HNSRC-0151
+    title: The Collected Tales
+    author: Nikolai Gogol
+    candidate_year: 2008
+    candidate_publisher: "Everyman's Library"
+    candidate_isbn13: "9780307269690"
+    confidence: high
+  - id: HNSRC-0152
+    title: The Double and The Gambler
+    author: Fyodor Dostoevsky
+    candidate_year: 2005
+    candidate_publisher: "Everyman's Library"
+    candidate_isbn13: "9781400044702"
+    confidence: high
+  - id: HNSRC-0153
+    title: Notes from a Dead House
+    author: Fyodor Dostoevsky
+    candidate_year: 2021
+    candidate_publisher: "Everyman's Library"
+    candidate_isbn13: "9780307959614"
+    confidence: high
+  - id: HNSRC-0154
+    title: Notes from Underground
+    author: Fyodor Dostoevsky
+    candidate_year: 2004
+    candidate_publisher: "Everyman's Library"
+    confidence: high
+    notes: "GB volume lists no ISBN-13; merged year + publisher only (Pevear intro edition)."
+  - id: HNSRC-0155
+    title: Demons
+    author: Fyodor Dostoevsky
+    candidate_year: 2000
+    candidate_publisher: "Everyman's Library"
+    candidate_isbn13: "9780375411229"
+    confidence: high
+    notes: "GB may mislabel publisher as National Geographic; isbn-lookup is Everyman."
+  - id: HNSRC-0156
+    title: The Idiot
+    author: Fyodor Dostoevsky
+    candidate_year: 2002
+    candidate_publisher: "Everyman's Library"
+    candidate_isbn13: "9780375413926"
+    confidence: high
+  - id: HNSRC-0157
+    title: Crime and Punishment
+    author: Fyodor Dostoevsky
+    candidate_year: 1993
+    candidate_publisher: "Everyman's Library"
+    candidate_isbn13: "9780679420293"
+    confidence: high
+    notes: "Shelf also lists Penguin Clothbound; merged row is the Everyman edition (see catalog notes)."
+
+  # --- Penguin Clothbound: noisy Google tops; not merged to catalog in this pass ---
+  - id: HNSRC-0158
+    title: The Turn of the Screw
+    author: Henry James
+    confidence: low
+    notes: "Penguin Clothbound; not merged (Delphi / alt imprints in generic search)."
+  - id: HNSRC-0159
+    title: The Adventures of Huckleberry Finn
+    author: Mark Twain
+    confidence: low
+    notes: "Penguin Clothbound; not merged."
+  - id: HNSRC-0160
+    title: Treasure Island
+    author: Robert Louis Stevenson
+    confidence: low
+    notes: "Penguin Clothbound; not merged."
+  - id: HNSRC-0161
+    title: The Jungle Books
+    author: Rudyard Kipling
+    confidence: low
+    notes: "Penguin Clothbound; not merged."
+  - id: HNSRC-0162
+    title: Oliver Twist
+    author: Charles Dickens
+    confidence: low
+    notes: "Penguin Clothbound; not merged."
+  - id: HNSRC-0163
+    title: Bleak House
+    author: Charles Dickens
+    confidence: low
+    notes: "Penguin Clothbound; not merged."
+  - id: HNSRC-0164
+    title: Great Expectations
+    author: Charles Dickens
+    confidence: low
+    notes: "Penguin Clothbound; not merged."
+  - id: HNSRC-0165
+    title: A Tale of Two Cities
+    author: Charles Dickens
+    confidence: low
+    notes: "Penguin Clothbound; not merged."
+  - id: HNSRC-0166
+    title: Hard Times
+    author: Charles Dickens
+    confidence: low
+    notes: "Penguin Clothbound; not merged."
+  - id: HNSRC-0167
+    title: A Christmas Carol and Other Christmas Writings
+    author: Charles Dickens
+    candidate_year: 2003
+    candidate_publisher: "Penguin UK (possible)"
+    candidate_isbn13: "9780141934730"
+    confidence: low
+    notes: "Penguin UK hit; not merged — confirm clothbound list vs UK classics."
+  - id: HNSRC-0168
+    title: The Adventures of Sherlock Holmes
+    author: Arthur Conan Doyle
+    confidence: low
+    notes: "Penguin Clothbound; not merged."
+  - id: HNSRC-0169
+    title: The Hound of the Baskervilles
+    author: Arthur Conan Doyle
+    confidence: low
+    notes: "Penguin Clothbound; not merged."
+  - id: HNSRC-0170
+    title: Dracula
+    author: Bram Stoker
+    confidence: low
+    notes: "Penguin Clothbound; not merged."
+  - id: HNSRC-0171
+    title: Nineteen Eighty-Four
+    author: George Orwell
+    candidate_isbn13: "9781784876555"
+    confidence: low
+    notes: "Penguin-style ISBN in search; GB mislabels publisher; not merged (clothbound unverified)."
+  - id: HNSRC-0172
+    title: The Strange Case of Dr Jekyll and Mr Hyde
+    author: Robert Louis Stevenson
+    confidence: low
+    notes: "Penguin Clothbound; not merged."
+  - id: HNSRC-0173
+    title: The War of the Worlds
+    author: H. G. Wells
+    confidence: low
+    notes: "Penguin Clothbound; not merged."
+  - id: HNSRC-0174
+    title: The Pearl
+    author: John Steinbeck
+    candidate_year: 1993
+    candidate_publisher: "Penguin (possible)"
+    candidate_isbn13: "9780140177374"
+    confidence: low
+    notes: "Penguin hit; not merged — not confirmed as clothbound ISBN."
+  - id: HNSRC-0175
+    title: The Outsider
+    author: Albert Camus
+    candidate_year: 2013
+    candidate_publisher: "Penguin UK (possible)"
+    candidate_isbn13: "9780141904252"
+    confidence: low
+    notes: "L'Étranger; not merged (clothbound line unverified)."

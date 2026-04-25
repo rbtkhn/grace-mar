@@ -14,6 +14,8 @@ Second candidate pass: [bookshelf-web-enrichment-2026-04-25-batch2.yaml](bookshe
 Third candidate pass: [bookshelf-web-enrichment-2026-04-25-batch3.yaml](bookshelf-web-enrichment-2026-04-25-batch3.yaml).
 Fourth candidate pass: [bookshelf-web-enrichment-2026-04-25-batch4.yaml](bookshelf-web-enrichment-2026-04-25-batch4.yaml).
 Fifth candidate pass: [bookshelf-web-enrichment-2026-04-25-batch5.yaml](bookshelf-web-enrichment-2026-04-25-batch5.yaml).
+Sixth candidate pass: [bookshelf-web-enrichment-2026-04-25-batch6.yaml](bookshelf-web-enrichment-2026-04-25-batch6.yaml).
+Seventh candidate pass: [bookshelf-web-enrichment-2026-04-25-batch7.yaml](bookshelf-web-enrichment-2026-04-25-batch7.yaml).
 
 ## Generate all outputs
 

@@ -102,13 +102,13 @@ Regenerate: `python3 scripts/build_hn_bookshelf_bibliography.py`
 - Andrew Roberts. 2021. *The Last King of America: The Misunderstood Reign of George III*. Penguin. ISBN 9781984879271. `HNSRC-0099`
 - Arthur M. Schlesinger Jr.. n.d. *The Age of Jackson*. `HNSRC-0094`
 - Benjamin Franklin. n.d. *Franklin: Autobiography, Poor Richard, and Later Writings*. `HNSRC-0104`
-- Buddy Levy. n.d. *Conquistador: Hernán Cortés, King Montezuma, and the Last Stand of the Aztecs*. `HNSRC-0127`
+- Buddy Levy. 2009. *Conquistador: Hernán Cortés, King Montezuma, and the Last Stand of the Aztecs*. Bantam. ISBN 9780553384710. `HNSRC-0127`
 - Fred Anderson. n.d. *Crucible of War*. `HNSRC-0098`
 - George Washington. n.d. *Washington: Writings*. `HNSRC-0109`
 - H. W. Brands. n.d. *Andrew Jackson*. `HNSRC-0095`
 - H. W. Brands. n.d. *Founding Partisans*. `HNSRC-0091`
 - H. W. Brands. n.d. *Heirs of the Founders*. `HNSRC-0092`
-- Henry Kamen. n.d. *Empire: How Spain Became a World Power 1492–1763*. `HNSRC-0128`
+- Henry Kamen. 2003. *Empire: How Spain Became a World Power 1492–1763*. Harper. ISBN 9780060194765. `HNSRC-0128`
 - James C. Bradley. n.d. *Martin Van Buren*. `HNSRC-0093`
 - James Madison. n.d. *Madison: Writings*. `HNSRC-0107`
 - Jean-Jacques Rousseau. n.d. *Confessions*. `HNSRC-0120`
@@ -116,7 +116,7 @@ Regenerate: `python3 scripts/build_hn_bookshelf_bibliography.py`
 - Jeremy D. Popkin. 2019. *A New World Begins: The History of the French Revolution*. Basic Books. ISBN 9780465096671. `HNSRC-0086`
 - John B. Boles. 2017. *Jefferson*. Basic Books. ISBN 9780465094691. `HNSRC-0087`
 - Jonathan Healey. n.d. *The Blazing World*. `HNSRC-0096`
-- Jonathan Israel. n.d. *The Dutch Republic: Its Rise, Greatness, and Fall 1477–1806*. `HNSRC-0126`
+- Jonathan Israel. 1998. *The Dutch Republic: Its Rise, Greatness, and Fall 1477–1806*. Oxford University Press. ISBN 9780198207344. `HNSRC-0126`
 - Lisa Brooks & Kelly Wisecup. 2022. *Plymouth Colony: Narratives of English Settlement and Native Resistance from the Mayflower to King Philip's War*. Library of America. ISBN 9781598536737. `HNSRC-0101`
 - Marc David Baer. 2021. *The Ottomans: Khans, Caesars, and Caliphs*. Basic Books. ISBN 9781541673779. `HNSRC-0059`
 - Martyn Rady. 2020. *The Habsburgs: To Rule the World*. Basic Books. ISBN 9781541644496. `HNSRC-0065`
@@ -160,10 +160,10 @@ Regenerate: `python3 scripts/build_hn_bookshelf_bibliography.py`
 
 - Adam Smith. n.d. *The Wealth of Nations*. `HNSRC-0199`
 - Albert Camus. n.d. *The Outsider*. `HNSRC-0175`
-- Alexander Pushkin. n.d. *Novels, Tales, Journeys*. `HNSRC-0149`
-- Alexander Pushkin. n.d. *The Collected Stories*. `HNSRC-0148`
+- Alexander Pushkin. 2024. *Novels, Tales, Journeys*. Everyman's Library. ISBN 9780307959645. `HNSRC-0149`
+- Alexander Pushkin. 1999. *The Collected Stories*. Everyman's Library. ISBN 9781857152517. `HNSRC-0148`
 - Alexander Pushkin. n.d. *The Queen of Spades*. `HNSRC-0225`
-- Alexandre Dumas. n.d. *The Three Musketeers*. `HNSRC-0142`
+- Alexandre Dumas. 2011. *The Three Musketeers*. Everyman's Library. ISBN 9780307594990. `HNSRC-0142`
 - Alexis de Tocqueville. n.d. *Democracy in America*. `HNSRC-0262`
 - Anne Brontë. n.d. *The Tenant of Wildfell Hall*. `HNSRC-0182`
 - Antoine de Saint-Exupéry. n.d. *The Little Prince*. `HNSRC-0176`
@@ -186,7 +186,7 @@ Regenerate: `python3 scripts/build_hn_bookshelf_bibliography.py`
 - C. S. Lewis. n.d. *The Magician's Nephew*. `HNSRC-0285`
 - C. S. Lewis. n.d. *The Silver Chair*. `HNSRC-0290`
 - C. S. Lewis. n.d. *The Voyage of the Dawn Treader*. `HNSRC-0289`
-- Carl von Clausewitz. n.d. *On War*. `HNSRC-0146`
+- Carl von Clausewitz. 1993. *On War*. Everyman's Library. ISBN 9780679420439. `HNSRC-0146`
 - Charles Darwin. n.d. *The Origin of Species and The Voyage of the Beagle*. `HNSRC-0188`
 - Charles Dickens. n.d. *A Christmas Carol and Other Christmas Writings*. `HNSRC-0167`
 - Charles Dickens. n.d. *A Tale of Two Cities*. `HNSRC-0165`
@@ -210,14 +210,14 @@ Regenerate: `python3 scripts/build_hn_bookshelf_bibliography.py`
 - F. Scott Fitzgerald. n.d. *The Great Gatsby, All the Sad Young Men & Other Writings 1920–1926*. `HNSRC-0228`
 - Franz Kafka. n.d. *Metamorphosis*. `HNSRC-0224`
 - Friedrich Nietzsche. n.d. *Beyond Good and Evil*. `HNSRC-0214`
-- Fyodor Dostoevsky. n.d. *Crime and Punishment*. `HNSRC-0157`
-- Fyodor Dostoevsky. n.d. *Demons*. `HNSRC-0155`
-- Fyodor Dostoevsky. n.d. *Notes from a Dead House*. `HNSRC-0153`
-- Fyodor Dostoevsky. n.d. *Notes from Underground*. `HNSRC-0154`
+- Fyodor Dostoevsky. 1993. *Crime and Punishment*. Everyman's Library. ISBN 9780679420293. `HNSRC-0157`
+- Fyodor Dostoevsky. 2000. *Demons*. Everyman's Library. ISBN 9780375411229. `HNSRC-0155`
+- Fyodor Dostoevsky. 2021. *Notes from a Dead House*. Everyman's Library. ISBN 9780307959614. `HNSRC-0153`
+- Fyodor Dostoevsky. 2004. *Notes from Underground*. Everyman's Library. `HNSRC-0154`
 - Fyodor Dostoevsky. n.d. *The Adolescent*. `HNSRC-0196`
 - Fyodor Dostoevsky. n.d. *The Brothers Karamazov*. `HNSRC-0195`
-- Fyodor Dostoevsky. n.d. *The Double and The Gambler*. `HNSRC-0152`
-- Fyodor Dostoevsky. n.d. *The Idiot*. `HNSRC-0156`
+- Fyodor Dostoevsky. 2005. *The Double and The Gambler*. Everyman's Library. ISBN 9781400044702. `HNSRC-0152`
+- Fyodor Dostoevsky. 2002. *The Idiot*. Everyman's Library. ISBN 9780375413926. `HNSRC-0156`
 - Fyodor Dostoevsky. n.d. *White Nights*. `HNSRC-0210`
 - George Orwell. n.d. *Animal Farm*. `HNSRC-0177`
 - George Orwell. n.d. *Nineteen Eighty-Four*. `HNSRC-0171`
@@ -241,7 +241,7 @@ Regenerate: `python3 scripts/build_hn_bookshelf_bibliography.py`
 - Jane Austen. n.d. *Persuasion*. `HNSRC-0140`
 - Jane Austen. n.d. *Pride and Prejudice*. `HNSRC-0136`
 - Jane Austen. n.d. *Sense and Sensibility*. `HNSRC-0135`
-- Johann Wolfgang von Goethe. n.d. *Selected Works*. `HNSRC-0145`
+- Johann Wolfgang von Goethe. 2000. *Selected Works*. Everyman's Library. `HNSRC-0145`
 - John Adams. n.d. *Revolutionary Writings 1755-1775*. `HNSRC-0269`
 - John Adams. n.d. *Revolutionary Writings 1775-1783*. `HNSRC-0270`
 - John Erickson. n.d. *The Road to Berlin: Stalin's War with Germany, Vol. 2*. `HNSRC-0294`
@@ -274,7 +274,7 @@ Regenerate: `python3 scripts/build_hn_bookshelf_bibliography.py`
 - Leo Tolstoy. n.d. *War and Peace*. `HNSRC-0193`
 - Lewis Carroll. n.d. *Alice's Adventures in Wonderland and Through the Looking-Glass*. `HNSRC-0184`
 - Lewis Carroll. n.d. *Jabberwocky and Other Nonsense*. `HNSRC-0185`
-- Lord Byron. n.d. *Byron's Travels*. `HNSRC-0147`
+- Lord Byron. 2024. *Byron's Travels*. Everyman's Library. ISBN 9781101908426. `HNSRC-0147`
 - Marcel Proust. n.d. *In Search of Lost Time*. `HNSRC-0144`
 - Mark Twain. n.d. *A Tramp Abroad, Following the Equator, Other Travels*. `HNSRC-0229`
 - Mark Twain. n.d. *Collected Tales, Sketches, Speeches, & Essays 1891–1910*. `HNSRC-0231`
@@ -286,8 +286,8 @@ Regenerate: `python3 scripts/build_hn_bookshelf_bibliography.py`
 - Mary Shelley. n.d. *Frankenstein*. `HNSRC-0187`
 - Nathaniel Hawthorne. n.d. *Novels*. `HNSRC-0268`
 - Nathaniel Hawthorne. n.d. *Tales and Sketches*. `HNSRC-0267`
-- Nikolai Gogol. n.d. *Dead Souls*. `HNSRC-0150`
-- Nikolai Gogol. n.d. *The Collected Tales*. `HNSRC-0151`
+- Nikolai Gogol. 1996. *Dead Souls*. Everyman's Library. ISBN 9781857152807. `HNSRC-0150`
+- Nikolai Gogol. 2008. *The Collected Tales*. Everyman's Library. ISBN 9780307269690. `HNSRC-0151`
 - Peter H. Wilson. n.d. *Iron and Blood*. `HNSRC-0066`
 - Philip Pullman. n.d. *Grimm Tales*. `HNSRC-0186`
 - Ralph Waldo Emerson. n.d. *Collected Poems & Translations*. `HNSRC-0271`
@@ -298,11 +298,11 @@ Regenerate: `python3 scripts/build_hn_bookshelf_bibliography.py`
 - Robert A. Caro. n.d. *The Years of Lyndon Johnson: The Passage of Power*. `HNSRC-0254`
 - Robert A. Caro. n.d. *The Years of Lyndon Johnson: The Path to Power*. `HNSRC-0251`
 - Robert K. Massie. 2000. *Nicholas and Alexandra*. Random House Trade Paperbacks. ISBN 9780345438317. `HNSRC-0125`
-- Robert Louis Stevenson. n.d. *Dr. Jekyll and Mr. Hyde and Other Stories*. `HNSRC-0143`
+- Robert Louis Stevenson. 1992. *Dr. Jekyll and Mr. Hyde and Other Stories*. Everyman's Library. `HNSRC-0143`
 - Robert Louis Stevenson. n.d. *The Strange Case of Dr Jekyll and Mr Hyde*. `HNSRC-0172`
 - Robert Louis Stevenson. n.d. *Treasure Island*. `HNSRC-0160`
 - Ron Chernow. n.d. *Mark Twain*. `HNSRC-0295`
-- Rudyard Kipling. n.d. *Collected Stories*. `HNSRC-0141`
+- Rudyard Kipling. 1994. *Collected Stories*. Everyman's Library. ISBN 9780679435921. `HNSRC-0141`
 - Rudyard Kipling. n.d. *Kim*. `HNSRC-0209`
 - Rudyard Kipling. n.d. *The Jungle Books*. `HNSRC-0161`
 - Sigmund Freud. n.d. *Civilization and Its Discontents*. `HNSRC-0217`

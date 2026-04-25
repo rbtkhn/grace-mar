@@ -138,9 +138,9 @@ Regenerate: `python3 scripts/build_hn_bookshelf_bibliography.py`
 - Robert K. Massie. 1980. *Peter the Great: His Life and World*. Modern Library. ISBN 9780679645603. `HNSRC-0123`
 - Robert K. Massie. 2011. *Catherine the Great*. Random House Digital, Inc.. ISBN 9780679456728. `HNSRC-0124`
 - Robert K. Massie. 2000. *Nicholas and Alexandra*. Random House Trade Paperbacks. ISBN 9780345438317. `HNSRC-0125`
-- Jonathan Israel. n.d. *The Dutch Republic: Its Rise, Greatness, and Fall 1477–1806*. `HNSRC-0126`
-- Buddy Levy. n.d. *Conquistador: Hernán Cortés, King Montezuma, and the Last Stand of the Aztecs*. `HNSRC-0127`
-- Henry Kamen. n.d. *Empire: How Spain Became a World Power 1492–1763*. `HNSRC-0128`
+- Jonathan Israel. 1998. *The Dutch Republic: Its Rise, Greatness, and Fall 1477–1806*. Oxford University Press. ISBN 9780198207344. `HNSRC-0126`
+- Buddy Levy. 2009. *Conquistador: Hernán Cortés, King Montezuma, and the Last Stand of the Aztecs*. Bantam. ISBN 9780553384710. `HNSRC-0127`
+- Henry Kamen. 2003. *Empire: How Spain Became a World Power 1492–1763*. Harper. ISBN 9780060194765. `HNSRC-0128`
 - William Shakespeare. n.d. *The Sonnets and A Lover's Complaint*. `HNSRC-0129`
 - John Milton. n.d. *Paradise Lost*. `HNSRC-0130`
 - Daniel Defoe. n.d. *Robinson Crusoe*. `HNSRC-0131`
@@ -153,23 +153,23 @@ Regenerate: `python3 scripts/build_hn_bookshelf_bibliography.py`
 - Jane Austen. n.d. *Emma*. `HNSRC-0138`
 - Jane Austen. n.d. *Northanger Abbey*. `HNSRC-0139`
 - Jane Austen. n.d. *Persuasion*. `HNSRC-0140`
-- Rudyard Kipling. n.d. *Collected Stories*. `HNSRC-0141`
-- Alexandre Dumas. n.d. *The Three Musketeers*. `HNSRC-0142`
-- Robert Louis Stevenson. n.d. *Dr. Jekyll and Mr. Hyde and Other Stories*. `HNSRC-0143`
+- Rudyard Kipling. 1994. *Collected Stories*. Everyman's Library. ISBN 9780679435921. `HNSRC-0141`
+- Alexandre Dumas. 2011. *The Three Musketeers*. Everyman's Library. ISBN 9780307594990. `HNSRC-0142`
+- Robert Louis Stevenson. 1992. *Dr. Jekyll and Mr. Hyde and Other Stories*. Everyman's Library. `HNSRC-0143`
 - Marcel Proust. n.d. *In Search of Lost Time*. `HNSRC-0144`
-- Johann Wolfgang von Goethe. n.d. *Selected Works*. `HNSRC-0145`
-- Carl von Clausewitz. n.d. *On War*. `HNSRC-0146`
-- Lord Byron. n.d. *Byron's Travels*. `HNSRC-0147`
-- Alexander Pushkin. n.d. *The Collected Stories*. `HNSRC-0148`
-- Alexander Pushkin. n.d. *Novels, Tales, Journeys*. `HNSRC-0149`
-- Nikolai Gogol. n.d. *Dead Souls*. `HNSRC-0150`
-- Nikolai Gogol. n.d. *The Collected Tales*. `HNSRC-0151`
-- Fyodor Dostoevsky. n.d. *The Double and The Gambler*. `HNSRC-0152`
-- Fyodor Dostoevsky. n.d. *Notes from a Dead House*. `HNSRC-0153`
-- Fyodor Dostoevsky. n.d. *Notes from Underground*. `HNSRC-0154`
-- Fyodor Dostoevsky. n.d. *Demons*. `HNSRC-0155`
-- Fyodor Dostoevsky. n.d. *The Idiot*. `HNSRC-0156`
-- Fyodor Dostoevsky. n.d. *Crime and Punishment*. `HNSRC-0157`
+- Johann Wolfgang von Goethe. 2000. *Selected Works*. Everyman's Library. `HNSRC-0145`
+- Carl von Clausewitz. 1993. *On War*. Everyman's Library. ISBN 9780679420439. `HNSRC-0146`
+- Lord Byron. 2024. *Byron's Travels*. Everyman's Library. ISBN 9781101908426. `HNSRC-0147`
+- Alexander Pushkin. 1999. *The Collected Stories*. Everyman's Library. ISBN 9781857152517. `HNSRC-0148`
+- Alexander Pushkin. 2024. *Novels, Tales, Journeys*. Everyman's Library. ISBN 9780307959645. `HNSRC-0149`
+- Nikolai Gogol. 1996. *Dead Souls*. Everyman's Library. ISBN 9781857152807. `HNSRC-0150`
+- Nikolai Gogol. 2008. *The Collected Tales*. Everyman's Library. ISBN 9780307269690. `HNSRC-0151`
+- Fyodor Dostoevsky. 2005. *The Double and The Gambler*. Everyman's Library. ISBN 9781400044702. `HNSRC-0152`
+- Fyodor Dostoevsky. 2021. *Notes from a Dead House*. Everyman's Library. ISBN 9780307959614. `HNSRC-0153`
+- Fyodor Dostoevsky. 2004. *Notes from Underground*. Everyman's Library. `HNSRC-0154`
+- Fyodor Dostoevsky. 2000. *Demons*. Everyman's Library. ISBN 9780375411229. `HNSRC-0155`
+- Fyodor Dostoevsky. 2002. *The Idiot*. Everyman's Library. ISBN 9780375413926. `HNSRC-0156`
+- Fyodor Dostoevsky. 1993. *Crime and Punishment*. Everyman's Library. ISBN 9780679420293. `HNSRC-0157`
 - Henry James. n.d. *The Turn of the Screw*. `HNSRC-0158`
 - Mark Twain. n.d. *The Adventures of Huckleberry Finn*. `HNSRC-0159`
 - Robert Louis Stevenson. n.d. *Treasure Island*. `HNSRC-0160`

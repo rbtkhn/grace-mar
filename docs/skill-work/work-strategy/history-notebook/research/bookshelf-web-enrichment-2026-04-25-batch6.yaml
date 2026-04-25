@@ -1,0 +1,171 @@
+version: 1
+generated_on: "2026-04-25"
+scope: "HNSRC-0126 through HNSRC-0150"
+method:
+  sources:
+    - "Google Books volumes API"
+    - "OpenLibrary search API"
+  policy: "Attach as candidate metadata; merge into bookshelf-catalog.yaml only when confidence is high and edition match is clear."
+
+items:
+  - id: HNSRC-0126
+    title: "The Dutch Republic: Its Rise, Greatness, and Fall 1477–1806"
+    author: "Jonathan Israel"
+    candidate_year: 1998
+    candidate_publisher: "Oxford University Press"
+    candidate_isbn13: "9780198207344"
+    confidence: high
+  - id: HNSRC-0127
+    title: "Conquistador: Hernán Cortés, King Montezuma, and the Last Stand of the Aztecs"
+    author: "Buddy Levy"
+    candidate_year: 2009
+    candidate_publisher: "Bantam"
+    candidate_isbn13: "9780553384710"
+    confidence: high
+  - id: HNSRC-0128
+    title: "Empire: How Spain Became a World Power 1492–1763"
+    author: "Henry Kamen"
+    candidate_year: 2003
+    candidate_publisher: "Harper"
+    candidate_isbn13: "9780060194765"
+    confidence: high
+    notes: "ISBN-lookup result 2003 hardcover; Google 'title+author' top also shows 2004 paper—merged on ISBN verification."
+
+  # --- Penguin Clothbound: Google top often wrong imprint / region; enrichment only unless ISBN matched to series ---
+  - id: HNSRC-0129
+    title: The Sonnets and A Lover's Complaint
+    author: William Shakespeare
+    candidate_year: 2004
+    candidate_publisher: "Penguin UK (possible)"
+    candidate_isbn13: "9780141914664"
+    confidence: low
+    notes: "Shelf tag Penguin Clothbound; not merged — verify print against UK vs US list."
+  - id: HNSRC-0130
+    title: Paradise Lost
+    author: John Milton
+    confidence: low
+    notes: "Noisy (DigiCat, undated, etc.); not merged."
+  - id: HNSRC-0131
+    title: Robinson Crusoe
+    author: Daniel Defoe
+    candidate_year: 2012
+    candidate_publisher: "Dover (possible)"
+    candidate_isbn13: "9780486131177"
+    confidence: low
+    notes: "Not Clothbound; not merged."
+  - id: HNSRC-0132
+    title: Les Misérables
+    author: Victor Hugo
+    confidence: low
+    notes: "Multi-volume and imprint noise; not merged."
+  - id: HNSRC-0133
+    title: David Copperfield
+    author: Charles Dickens
+    confidence: low
+    notes: "Aged/undated hits; not merged."
+  - id: HNSRC-0134
+    title: Love and Freindship
+    author: Jane Austen
+    confidence: low
+    notes: "POD/variant spellings; not merged."
+  - id: HNSRC-0135
+    title: Sense and Sensibility
+    author: Jane Austen
+    confidence: low
+    notes: "2025 Chartwell and other spurious; not merged."
+  - id: HNSRC-0136
+    title: Pride and Prejudice
+    author: Jane Austen
+    confidence: low
+    notes: "TNC/stage-reader noise; not merged."
+  - id: HNSRC-0137
+    title: Mansfield Park
+    author: Jane Austen
+    confidence: low
+    notes: "Not merged."
+  - id: HNSRC-0138
+    title: Emma
+    author: Jane Austen
+    confidence: low
+    notes: "Not merged."
+  - id: HNSRC-0139
+    title: Northanger Abbey
+    author: Jane Austen
+    confidence: low
+    notes: "Not merged."
+  - id: HNSRC-0140
+    title: Persuasion
+    author: Jane Austen
+    confidence: low
+    notes: "Not merged."
+  - id: HNSRC-0141
+    title: Collected Stories
+    author: Rudyard Kipling
+    candidate_year: 1994
+    candidate_publisher: "Everyman's Library"
+    candidate_isbn13: "9780679435921"
+    confidence: high
+    notes: "GB API sometimes labels publisher 'National Geographic Books' for 0679…; isbn-lookup is Everyman."
+  - id: HNSRC-0142
+    title: The Three Musketeers
+    author: Alexandre Dumas
+    candidate_year: 2011
+    candidate_publisher: "Everyman's Library"
+    candidate_isbn13: "9780307594990"
+    confidence: high
+  - id: HNSRC-0143
+    title: Dr. Jekyll and Mr. Hyde and Other Stories
+    author: Robert Louis Stevenson
+    candidate_year: 1992
+    candidate_publisher: "Everyman's Library"
+    confidence: high
+    notes: "No ISBN-13 in GB volume; merged year + publisher only."
+  - id: HNSRC-0144
+    title: In Search of Lost Time
+    author: Marcel Proust
+    confidence: low
+    notes: "Slipboxed set; volume-level results only — not merged."
+  - id: HNSRC-0145
+    title: Selected Works
+    author: Johann Wolfgang von Goethe
+    candidate_year: 2000
+    candidate_publisher: "Everyman's Library"
+    confidence: high
+    notes: "No stable ISBN-13 in GB; merged year + publisher only."
+  - id: HNSRC-0146
+    title: On War
+    author: Carl von Clausewitz
+    candidate_year: 1993
+    candidate_publisher: "Everyman's Library"
+    candidate_isbn13: "9780679420439"
+    confidence: high
+    notes: "Shelves as Everyman (not the Princeton 1984 trade); 0679 line; GB 'publisher' can mislabel as National Geographic."
+  - id: HNSRC-0147
+    title: Byron's Travels
+    author: Lord Byron
+    candidate_year: 2024
+    candidate_publisher: "Everyman's Library"
+    candidate_isbn13: "9781101908426"
+    confidence: high
+  - id: HNSRC-0148
+    title: The Collected Stories
+    author: Alexander Pushkin
+    candidate_year: 1999
+    candidate_publisher: "Everyman's Library"
+    candidate_isbn13: "9781857152517"
+    confidence: high
+  - id: HNSRC-0149
+    title: Novels, Tales, Journeys
+    author: Alexander Pushkin
+    candidate_year: 2024
+    candidate_publisher: "Everyman's Library"
+    candidate_isbn13: "9780307959645"
+    confidence: high
+  - id: HNSRC-0150
+    title: Dead Souls
+    author: Nikolai Gogol
+    candidate_year: 1996
+    candidate_publisher: "Everyman's Library"
+    candidate_isbn13: "9781857152807"
+    confidence: high
+    notes: "GB omits publisher string on 185715…; Everyman per ISBN series."

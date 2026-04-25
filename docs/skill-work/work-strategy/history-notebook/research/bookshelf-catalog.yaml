@@ -1455,6 +1455,9 @@ items:
   - id: HNSRC-0126
     title: "The Dutch Republic: Its Rise, Greatness, and Fall 1477–1806"
     author: "Jonathan Israel"
+    year: 1998
+    isbn: "9780198207344"
+    publisher: "Oxford University Press"
     era: colonial
     eras: [colonial, industrial]
     added_batch: "2026-04-18-colonial-shelf-g-europe-empires"
@@ -1465,6 +1468,9 @@ items:
   - id: HNSRC-0127
     title: "Conquistador: Hernán Cortés, King Montezuma, and the Last Stand of the Aztecs"
     author: "Buddy Levy"
+    year: 2009
+    isbn: "9780553384710"
+    publisher: "Bantam"
     era: colonial
     added_batch: "2026-04-18-colonial-shelf-g-europe-empires"
     tags: [Spain, Mexico, conquest, Aztec]
@@ -1475,6 +1481,9 @@ items:
   - id: HNSRC-0128
     title: "Empire: How Spain Became a World Power 1492–1763"
     author: "Henry Kamen"
+    year: 2003
+    isbn: "9780060194765"
+    publisher: "Harper"
     era: colonial
     added_batch: "2026-04-18-colonial-shelf-g-europe-empires"
     tags: [Spain, empire, Habsburg, maritime]
@@ -1641,6 +1650,9 @@ items:
   - id: HNSRC-0141
     title: Collected Stories
     author: Rudyard Kipling
+    year: 1994
+    isbn: "9780679435921"
+    publisher: "Everyman's Library"
     era: industrial
     added_batch: 2026-04-18-modern-shelf-photos-12
     tags:
@@ -1654,6 +1666,9 @@ items:
   - id: HNSRC-0142
     title: The Three Musketeers
     author: Alexandre Dumas
+    year: 2011
+    isbn: "9780307594990"
+    publisher: "Everyman's Library"
     era: industrial
     added_batch: 2026-04-18-modern-shelf-photos-12
     tags:
@@ -1667,6 +1682,8 @@ items:
   - id: HNSRC-0143
     title: Dr. Jekyll and Mr. Hyde and Other Stories
     author: Robert Louis Stevenson
+    year: 1992
+    publisher: "Everyman's Library"
     era: industrial
     added_batch: 2026-04-18-modern-shelf-photos-12
     tags:
@@ -1695,6 +1712,8 @@ items:
   - id: HNSRC-0145
     title: Selected Works
     author: Johann Wolfgang von Goethe
+    year: 2000
+    publisher: "Everyman's Library"
     era: industrial
     added_batch: 2026-04-18-modern-shelf-photos-12
     tags:
@@ -1708,6 +1727,9 @@ items:
   - id: HNSRC-0146
     title: On War
     author: Carl von Clausewitz
+    year: 1993
+    isbn: "9780679420439"
+    publisher: "Everyman's Library"
     era: industrial
     added_batch: 2026-04-18-modern-shelf-photos-12
     tags:
@@ -1721,6 +1743,9 @@ items:
   - id: HNSRC-0147
     title: Byron's Travels
     author: Lord Byron
+    year: 2024
+    isbn: "9781101908426"
+    publisher: "Everyman's Library"
     era: industrial
     added_batch: 2026-04-18-modern-shelf-photos-12
     tags:
@@ -1735,6 +1760,9 @@ items:
   - id: HNSRC-0148
     title: The Collected Stories
     author: Alexander Pushkin
+    year: 1999
+    isbn: "9781857152517"
+    publisher: "Everyman's Library"
     era: industrial
     added_batch: 2026-04-18-modern-shelf-photos-12
     tags:
@@ -1748,6 +1776,9 @@ items:
   - id: HNSRC-0149
     title: Novels, Tales, Journeys
     author: Alexander Pushkin
+    year: 2024
+    isbn: "9780307959645"
+    publisher: "Everyman's Library"
     era: industrial
     added_batch: 2026-04-18-modern-shelf-photos-12
     tags:
@@ -1761,6 +1792,9 @@ items:
   - id: HNSRC-0150
     title: Dead Souls
     author: Nikolai Gogol
+    year: 1996
+    isbn: "9781857152807"
+    publisher: "Everyman's Library"
     era: industrial
     added_batch: 2026-04-18-modern-shelf-photos-12
     tags:
@@ -1774,6 +1808,9 @@ items:
   - id: HNSRC-0151
     title: The Collected Tales
     author: Nikolai Gogol
+    year: 2008
+    isbn: "9780307269690"
+    publisher: "Everyman's Library"
     era: industrial
     added_batch: 2026-04-18-modern-shelf-photos-12
     tags:
@@ -1787,6 +1824,9 @@ items:
   - id: HNSRC-0152
     title: The Double and The Gambler
     author: Fyodor Dostoevsky
+    year: 2005
+    isbn: "9781400044702"
+    publisher: "Everyman's Library"
     era: industrial
     added_batch: 2026-04-18-modern-shelf-photos-12
     tags:
@@ -1800,6 +1840,9 @@ items:
   - id: HNSRC-0153
     title: Notes from a Dead House
     author: Fyodor Dostoevsky
+    year: 2021
+    isbn: "9780307959614"
+    publisher: "Everyman's Library"
     era: industrial
     added_batch: 2026-04-18-modern-shelf-photos-12
     tags:
@@ -1813,6 +1856,8 @@ items:
   - id: HNSRC-0154
     title: Notes from Underground
     author: Fyodor Dostoevsky
+    year: 2004
+    publisher: "Everyman's Library"
     era: industrial
     added_batch: 2026-04-18-modern-shelf-photos-12
     tags:
@@ -1826,6 +1871,9 @@ items:
   - id: HNSRC-0155
     title: Demons
     author: Fyodor Dostoevsky
+    year: 2000
+    isbn: "9780375411229"
+    publisher: "Everyman's Library"
     era: industrial
     added_batch: 2026-04-18-modern-shelf-photos-12
     tags:
@@ -1839,6 +1887,9 @@ items:
   - id: HNSRC-0156
     title: The Idiot
     author: Fyodor Dostoevsky
+    year: 2002
+    isbn: "9780375413926"
+    publisher: "Everyman's Library"
     era: industrial
     added_batch: 2026-04-18-modern-shelf-photos-12
     tags:
@@ -1852,6 +1903,9 @@ items:
   - id: HNSRC-0157
     title: Crime and Punishment
     author: Fyodor Dostoevsky
+    year: 1993
+    isbn: "9780679420293"
+    publisher: "Everyman's Library"
     era: industrial
     added_batch: 2026-04-18-modern-shelf-photos-12
     tags:
