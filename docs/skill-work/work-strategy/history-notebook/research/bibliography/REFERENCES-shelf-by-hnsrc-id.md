@@ -88,7 +88,7 @@ Regenerate: `python3 scripts/build_hn_bookshelf_bibliography.py`
 - Neil Price. 2020. *Children of Ash and Elm: A History of the Vikings*. Basic Books. ISBN 9780465096992. `HNSRC-0073`
 - Jack Weatherford. n.d. *Emperor of the Seas*. `HNSRC-0074`
 - Jack Weatherford. 2011. *The Secret History of the Mongol Queens*. Crown. ISBN 9780307407160. `HNSRC-0075`
-- Jack Weatherford. n.d. *Genghis Khan and the Making of the Modern World*. `HNSRC-0076`
+- Jack Weatherford. 2005. *Genghis Khan and the Making of the Modern World*. Crown. ISBN 9780609809648. `HNSRC-0076`
 - Kevin Alan Brook. n.d. *The Jews of Khazaria*. `HNSRC-0077`
 - Various. n.d. *Tales from 1,001 Nights*. `HNSRC-0078`
 - Marco Polo. n.d. *The Travels*. `HNSRC-0079`
@@ -96,11 +96,11 @@ Regenerate: `python3 scripts/build_hn_bookshelf_bibliography.py`
 - Geoffrey Chaucer. n.d. *The Canterbury Tales*. `HNSRC-0081`
 - Miguel de Cervantes. n.d. *Don Quixote*. `HNSRC-0082`
 - Wu Cheng'en. n.d. *Monkey King*. `HNSRC-0083`
-- Peter H. Wilson. n.d. *The Thirty Years War*. `HNSRC-0084`
-- Roger Pearson. n.d. *Voltaire Almighty*. `HNSRC-0085`
-- Jeremy D. Popkin. n.d. *A New World Begins: The History of the French Revolution*. `HNSRC-0086`
-- John B. Boles. n.d. *Jefferson*. `HNSRC-0087`
-- Ron Chernow. n.d. *Alexander Hamilton*. `HNSRC-0088`
+- Peter H. Wilson. 2019. *The Thirty Years War*. Harvard University Press. ISBN 9780674246256. `HNSRC-0084`
+- Roger Pearson. 2005. *Voltaire Almighty*. Bloomsbury Publishing USA. ISBN 9781582346304. `HNSRC-0085`
+- Jeremy D. Popkin. 2019. *A New World Begins: The History of the French Revolution*. Basic Books. ISBN 9780465096671. `HNSRC-0086`
+- John B. Boles. 2017. *Jefferson*. Basic Books. ISBN 9780465094691. `HNSRC-0087`
+- Ron Chernow. 2004. *Alexander Hamilton*. Penguin. ISBN 9781101200858. `HNSRC-0088`
 - Tim McGrath. n.d. *James Monroe*. `HNSRC-0089`
 - Randall Woods. n.d. *John Quincy Adams*. `HNSRC-0090`
 - H. W. Brands. n.d. *Founding Partisans*. `HNSRC-0091`
@@ -109,10 +109,10 @@ Regenerate: `python3 scripts/build_hn_bookshelf_bibliography.py`
 - Arthur M. Schlesinger Jr.. n.d. *The Age of Jackson*. `HNSRC-0094`
 - H. W. Brands. n.d. *Andrew Jackson*. `HNSRC-0095`
 - Jonathan Healey. n.d. *The Blazing World*. `HNSRC-0096`
-- Tim Blanning. n.d. *Frederick the Great*. `HNSRC-0097`
+- Tim Blanning. 2015. *Frederick the Great*. Random House. ISBN 9780812988734. `HNSRC-0097`
 - Fred Anderson. n.d. *Crucible of War*. `HNSRC-0098`
-- Andrew Roberts. n.d. *The Last King of America: The Misunderstood Reign of George III*. `HNSRC-0099`
-- Niall Ferguson. n.d. *Empire: How Britain Made the Modern World*. `HNSRC-0100`
+- Andrew Roberts. 2021. *The Last King of America: The Misunderstood Reign of George III*. Penguin. ISBN 9781984879271. `HNSRC-0099`
+- Niall Ferguson. 2003. *Empire: How Britain Made the Modern World*. Basic Books. ISBN 9780465013104. `HNSRC-0100`
 - Lisa Brooks & Kelly Wisecup. n.d. *Plymouth Colony: Narratives of English Settlement and Native Resistance from the Mayflower to King Philip's War*. `HNSRC-0101`
 - Various. n.d. *The American Revolution: Writings from the War of Independence 1775–1783*. `HNSRC-0102`
 - Various. n.d. *The American Revolution: Writings from the Pamphlet Debate 1773–1776*. `HNSRC-0103`

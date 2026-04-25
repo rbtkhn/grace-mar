@@ -906,6 +906,9 @@ items:
   - id: HNSRC-0076
     title: "Genghis Khan and the Making of the Modern World"
     author: "Jack Weatherford"
+    year: 2005
+    isbn: "9780609809648"
+    publisher: "Crown"
     era: medieval
     added_batch: "2026-04-18-medieval-shelf-batch-c"
     tags: [Mongol, Genghis, empire, synthesis]
@@ -984,6 +987,9 @@ items:
   - id: HNSRC-0084
     title: "The Thirty Years War"
     author: "Peter H. Wilson"
+    year: 2019
+    isbn: "9780674246256"
+    publisher: "Harvard University Press"
     era: colonial
     added_batch: "2026-04-18-colonial-shelf-a-europe"
     tags: [Germany, Habsburg, war, Belknap]
@@ -994,6 +1000,9 @@ items:
   - id: HNSRC-0085
     title: "Voltaire Almighty"
     author: "Roger Pearson"
+    year: 2005
+    isbn: "9781582346304"
+    publisher: "Bloomsbury Publishing USA"
     era: colonial
     added_batch: "2026-04-18-colonial-shelf-b-enlightenment"
     tags: [France, Enlightenment, biography]
@@ -1003,6 +1012,9 @@ items:
   - id: HNSRC-0086
     title: "A New World Begins: The History of the French Revolution"
     author: "Jeremy D. Popkin"
+    year: 2019
+    isbn: "9780465096671"
+    publisher: "Basic Books"
     era: colonial
     added_batch: "2026-04-18-colonial-shelf-b-enlightenment"
     tags: [France, Revolution, 1789]
@@ -1013,6 +1025,9 @@ items:
   - id: HNSRC-0087
     title: "Jefferson"
     author: "John B. Boles"
+    year: 2017
+    isbn: "9780465094691"
+    publisher: "Basic Books"
     era: colonial
     added_batch: "2026-04-18-colonial-shelf-c-us-founders"
     tags: [America, founding, biography, Basic Books]
@@ -1023,6 +1038,9 @@ items:
   - id: HNSRC-0088
     title: "Alexander Hamilton"
     author: "Ron Chernow"
+    year: 2004
+    isbn: "9781101200858"
+    publisher: "Penguin"
     era: colonial
     added_batch: "2026-04-18-colonial-shelf-c-us-founders"
     tags: [America, founding, biography, Penguin Press]
@@ -1116,6 +1134,9 @@ items:
   - id: HNSRC-0097
     title: "Frederick the Great"
     author: "Tim Blanning"
+    year: 2015
+    isbn: "9780812988734"
+    publisher: "Random House"
     era: colonial
     added_batch: "2026-04-18-colonial-shelf-d-atlantic"
     tags: [Prussia, biography, eighteenth century]
@@ -1135,6 +1156,9 @@ items:
   - id: HNSRC-0099
     title: "The Last King of America: The Misunderstood Reign of George III"
     author: "Andrew Roberts"
+    year: 2021
+    isbn: "9781984879271"
+    publisher: "Penguin"
     era: colonial
     added_batch: "2026-04-18-colonial-shelf-d-atlantic"
     tags: [Britain, monarchy, American Revolution, Viking]
@@ -1144,6 +1168,9 @@ items:
   - id: HNSRC-0100
     title: "Empire: How Britain Made the Modern World"
     author: "Niall Ferguson"
+    year: 2003
+    isbn: "9780465013104"
+    publisher: "Basic Books"
     era: colonial
     eras: [colonial, industrial]
     added_batch: "2026-04-18-colonial-shelf-d-atlantic"

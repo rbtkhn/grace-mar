@@ -12,6 +12,7 @@ Config: [AGENTIC-MVP-CONFIG.yaml](AGENTIC-MVP-CONFIG.yaml).
 Latest web metadata candidate pass (attach-then-merge workflow): [bookshelf-web-enrichment-2026-04-25.yaml](bookshelf-web-enrichment-2026-04-25.yaml).
 Second candidate pass: [bookshelf-web-enrichment-2026-04-25-batch2.yaml](bookshelf-web-enrichment-2026-04-25-batch2.yaml).
 Third candidate pass: [bookshelf-web-enrichment-2026-04-25-batch3.yaml](bookshelf-web-enrichment-2026-04-25-batch3.yaml).
+Fourth candidate pass: [bookshelf-web-enrichment-2026-04-25-batch4.yaml](bookshelf-web-enrichment-2026-04-25-batch4.yaml).
 
 ## Generate all outputs
 

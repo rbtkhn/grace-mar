@@ -27,6 +27,8 @@ Use [README](README.md) for narrative order; this table is a flat lookup.
 | [cici-pilot-propagation-low-cost-operator.md](cici-pilot-propagation-low-cost-operator.md) | **10-pilot reach** — low-cost propagation checklist (referral, FB groups, Telegram, borrowed audiences) + citations |
 | [cici-community-mission-operator.md](cici-community-mission-operator.md) | **Cici / Neural Sandbox** — **10** + **initiation** (OB1) + **7d** active; drop-off focus, funnel (operator WORK) |
 | [cici-ai-community-dashboard.md](cici-ai-community-dashboard.md) | **Operator dashboard** — cici-ai activation funnel, weekly snapshot, qualitative notes, and experiments (WORK-only; not Cici's Record) |
+| [cici-ai-first-task-proof-packet.md](cici-ai-first-task-proof-packet.md) | **Measurement template** — evidence-linked standard for \"first task completed\" with A/B/C confidence and graduation status |
+| [cici-ai-weekly-governance-review-template.md](cici-ai-weekly-governance-review-template.md) | **Review template** — weekly activation + proposal/governance health + drift flags + candidate actions |
 | [telegram-cici-ai-pinned-and-welcome-copy.md](telegram-cici-ai-pinned-and-welcome-copy.md) | **cici-ai Telegram** — paste-ready **pinned** message + **@all** intro (purpose, next steps, thanks, encourage) |
 | [handoffs/cici-cici-ai-launch-instructions.md](handoffs/cici-cici-ai-launch-instructions.md) | **Cici handoff** — `cici-ai` **pin + welcome** + **logo/avatar** (ordered steps, done-when checklists) |
 | [README.md](README.md) | Advisor / project module for Cici (formerly Xavier) — vs her companion / instance repo and the external [Cici](https://github.com/Xavier-x01/Cici) OB1 repo; not Cici’s Record in grace-mar |

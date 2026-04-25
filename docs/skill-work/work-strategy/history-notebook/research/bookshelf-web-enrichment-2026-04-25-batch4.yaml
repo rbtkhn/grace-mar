@@ -1,0 +1,169 @@
+version: 1
+generated_on: "2026-04-25"
+scope: "HNSRC-0076 through HNSRC-0100"
+method:
+  sources:
+    - "Google Books volumes API"
+    - "OpenLibrary search API"
+  policy: "Attach as candidate metadata; merge into bookshelf-catalog.yaml only when confidence is high and edition match is clear."
+
+items:
+  - id: HNSRC-0076
+    title: "Genghis Khan and the Making of the Modern World"
+    author: "Jack Weatherford"
+    candidate_year: 2005
+    candidate_publisher: "Crown"
+    candidate_isbn13: "9780609809648"
+    confidence: high
+  - id: HNSRC-0077
+    title: "The Jews of Khazaria"
+    author: "Kevin Alan Brook"
+    candidate_year: 1999
+    confidence: low
+  - id: HNSRC-0078
+    title: "Tales from 1,001 Nights"
+    author: "Various"
+    candidate_year: 2019
+    confidence: low
+  - id: HNSRC-0079
+    title: "The Travels"
+    author: "Marco Polo"
+    candidate_year: 1982
+    confidence: low
+  - id: HNSRC-0080
+    title: "Inferno"
+    author: "Dante Alighieri"
+    candidate_year: 2003
+    confidence: low
+  - id: HNSRC-0081
+    title: "The Canterbury Tales"
+    author: "Geoffrey Chaucer"
+    candidate_year: 2002
+    confidence: low
+  - id: HNSRC-0082
+    title: "Don Quixote"
+    author: "Miguel de Cervantes"
+    candidate_year: 2003
+    confidence: low
+  - id: HNSRC-0083
+    title: "Monkey King"
+    author: "Wu Cheng'en"
+    candidate_year: 2021
+    confidence: low
+  - id: HNSRC-0084
+    title: "The Thirty Years War"
+    author: "Peter H. Wilson"
+    candidate_year: 2019
+    candidate_publisher: "Harvard University Press"
+    candidate_isbn13: "9780674246256"
+    confidence: high
+  - id: HNSRC-0085
+    title: "Voltaire Almighty"
+    author: "Roger Pearson"
+    candidate_year: 2005
+    candidate_publisher: "Bloomsbury Publishing USA"
+    candidate_isbn13: "9781582346304"
+    confidence: high
+  - id: HNSRC-0086
+    title: "A New World Begins: The History of the French Revolution"
+    author: "Jeremy D. Popkin"
+    candidate_year: 2019
+    candidate_publisher: "Basic Books"
+    candidate_isbn13: "9780465096671"
+    confidence: high
+  - id: HNSRC-0087
+    title: "Jefferson"
+    author: "John B. Boles"
+    candidate_year: 2017
+    candidate_publisher: "Basic Books"
+    candidate_isbn13: "9780465094691"
+    confidence: high
+  - id: HNSRC-0088
+    title: "Alexander Hamilton"
+    author: "Ron Chernow"
+    candidate_year: 2004
+    candidate_publisher: "Penguin"
+    candidate_isbn13: "9781101200858"
+    confidence: high
+  - id: HNSRC-0089
+    title: "James Monroe"
+    author: "Tim McGrath"
+    candidate_year: 2020
+    candidate_publisher: "Penguin"
+    candidate_isbn13: "9780451477279"
+    confidence: medium
+  - id: HNSRC-0090
+    title: "John Quincy Adams"
+    author: "Randall Woods"
+    candidate_year: 2024
+    candidate_publisher: "Penguin"
+    candidate_isbn13: "9780593187258"
+    confidence: medium
+  - id: HNSRC-0091
+    title: "Founding Partisans"
+    author: "H. W. Brands"
+    candidate_year: 2024
+    candidate_publisher: "Random House"
+    candidate_isbn13: "9780593469033"
+    confidence: medium
+  - id: HNSRC-0092
+    title: "Heirs of the Founders"
+    author: "H. W. Brands"
+    candidate_year: 2019
+    candidate_publisher: "Anchor"
+    candidate_isbn13: "9780525433903"
+    confidence: medium
+  - id: HNSRC-0093
+    title: "Martin Van Buren"
+    author: "James C. Bradley"
+    candidate_year: 2024
+    candidate_publisher: "Oxford University Press"
+    candidate_isbn13: "9780190920524"
+    confidence: medium
+  - id: HNSRC-0094
+    title: "The Age of Jackson"
+    author: "Arthur M. Schlesinger Jr."
+    candidate_year: 1945
+    confidence: low
+  - id: HNSRC-0095
+    title: "Andrew Jackson"
+    author: "H. W. Brands"
+    candidate_year: 2006
+    candidate_publisher: "Anchor"
+    candidate_isbn13: "9781400030729"
+    confidence: medium
+  - id: HNSRC-0096
+    title: "The Blazing World"
+    author: "Jonathan Healey"
+    candidate_year: 2023
+    candidate_publisher: "Vintage"
+    candidate_isbn13: "9780593318362"
+    confidence: medium
+  - id: HNSRC-0097
+    title: "Frederick the Great"
+    author: "Tim Blanning"
+    candidate_year: 2015
+    candidate_publisher: "Random House"
+    candidate_isbn13: "9780812988734"
+    confidence: high
+  - id: HNSRC-0098
+    title: "Crucible of War"
+    author: "Fred Anderson"
+    candidate_year: 2000
+    candidate_publisher: "Vintage"
+    candidate_isbn13: "9780307425393"
+    confidence: medium
+  - id: HNSRC-0099
+    title: "The Last King of America: The Misunderstood Reign of George III"
+    author: "Andrew Roberts"
+    candidate_year: 2021
+    candidate_publisher: "Penguin"
+    candidate_isbn13: "9781984879271"
+    confidence: high
+  - id: HNSRC-0100
+    title: "Empire: How Britain Made the Modern World"
+    author: "Niall Ferguson"
+    candidate_year: 2003
+    candidate_publisher: "Basic Books"
+    candidate_isbn13: "9780465013104"
+    confidence: high

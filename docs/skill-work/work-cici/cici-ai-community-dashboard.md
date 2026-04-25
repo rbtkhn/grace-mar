@@ -10,6 +10,14 @@
 
 Track whether the cici-ai community is producing real companion / OB1 / coding / learning activation, not passive joins alone. This dashboard is a WORK surface for operator decisions, coaching focus, and next experiments.
 
+### Owner / cadence
+
+- Owner:
+- Review cadence: weekly
+- Review day:
+- Evidence window:
+- Review output:
+
 ## 2. Source pointers
 
 - [evidence/cici-telegram-cici-ai-group-operator-2026-04-25.md](evidence/cici-telegram-cici-ai-group-operator-2026-04-25.md)  
@@ -37,9 +45,9 @@ invited
 
 | Week of | Invited | Joined | Introduced | Goal stated | First task completed | Returned within 7d | Issue / PR / artifact | Helper behavior | Notes |
 |---------|---------|--------|------------|-------------|----------------------|--------------------|-----------------------|-----------------|-------|
-| YYYY-MM-DD |  |  |  |  |  |  |  |  |  |
-| YYYY-MM-DD |  |  |  |  |  |  |  |  |  |
-| YYYY-MM-DD |  |  |  |  |  |  |  |  |  |
+| YYYY-MM-DD |  |  |  |  |  |  |  |  | Source pointers: ; Confidence summary: |
+| YYYY-MM-DD |  |  |  |  |  |  |  |  | Source pointers: ; Confidence summary: |
+| YYYY-MM-DD |  |  |  |  |  |  |  |  | Source pointers: ; Confidence summary: |
 
 ### Weekly capture template (prefill)
 
@@ -47,7 +55,30 @@ Use this block as the weekly starting row and keep fields blank until evidence i
 
 | Week of | Invited | Joined | Introduced | Goal stated | First task completed | Returned within 7d | Issue / PR / artifact | Helper behavior | Notes |
 |---------|---------|--------|------------|-------------|----------------------|--------------------|-----------------------|-----------------|-------|
-| YYYY-MM-DD (Mon) |  |  |  |  |  |  |  |  | Evidence links reviewed:  |
+| YYYY-MM-DD (Mon) |  |  |  |  |  |  |  |  | Evidence links reviewed: ; Confidence summary: |
+
+### Evidence-linked row rule
+
+Every nonzero metric should be backed by a source pointer, artifact link, or review note.
+
+### Confidence tags
+
+- **A** = direct artifact or repo-visible evidence
+- **B** = direct operator observation or private evidence pointer
+- **C** = indirect/self-reported/inferred; requires confirmation
+
+### First task completed proof packet
+
+See [cici-ai-first-task-proof-packet.md](cici-ai-first-task-proof-packet.md).
+
+### Helper behavior graduation threshold
+
+- A member becomes **candidate helper** after one verified first task plus one observable support action.
+- A member becomes **helper** after two observable support actions or one successful onboarding/support action that helps another member complete a task.
+
+### Weekly governance review
+
+See [cici-ai-weekly-governance-review-template.md](cici-ai-weekly-governance-review-template.md).
 
 ## 5. Activation definitions
 
