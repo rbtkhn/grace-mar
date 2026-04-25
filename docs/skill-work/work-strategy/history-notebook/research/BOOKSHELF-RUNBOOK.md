@@ -69,6 +69,7 @@ If a title straddles (e.g. one volume covers 400–600 AD, or 1400–1500 AD acr
 3. **Validate and refresh exports:**
    - `python3 scripts/validate_bookshelf_catalog.py` (use `--strict` in CI if wired).
    - `python3 scripts/build_hn_bookshelf_bibliography.py` — updates [bibliography/REFERENCES-shelf-by-era.md](bibliography/REFERENCES-shelf-by-era.md) and [bibliography/REFERENCES-shelf-by-hnsrc-id.md](bibliography/REFERENCES-shelf-by-hnsrc-id.md) (CI: `--check` — [test workflow](../../../../.github/workflows/test.yml)).
+   - `python3 scripts/hn_shelf_anchors.py` — updates [SHELF-ANCHORS-BY-CHAPTER.md](SHELF-ANCHORS-BY-CHAPTER.md) (CI: `--check`). After `candidate_hn_chapters` or [book-architecture.yaml](../book-architecture.yaml) chapter list changes, run this too.
 4. **Within-era pass:** dedupe, cluster tags, adjust `candidate_hn_chapters` only as **planning** hints.
 5. **When an era slice feels complete:** optional short summary in this file (dated bullet) or in git commit message — not required for v1.
 

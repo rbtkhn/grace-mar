@@ -13,6 +13,7 @@ WORK only; not Record.
 from __future__ import annotations
 
 import argparse
+import re
 import sys
 from pathlib import Path
 
@@ -40,6 +41,8 @@ BIB_DIR = (
     / "research"
     / "bibliography"
 )
+
+RE_HNSRC = re.compile(r"^HNSRC-\d{4}$")
 
 ERA_ORDER = ["ancient", "medieval", "colonial", "industrial", "modern"]
 ERA_LABELS = {
@@ -181,6 +184,17 @@ def main() -> int:
         action="store_true",
         help="Exit 1 if on-disk files differ from generated content (CI freshness)",
     )
+    ap.add_argument(
+        "--cited-ids",
+        metavar="IDS",
+        help="Comma/space-separated HNSRC ids — print markdown bullet list to stdout and exit (bibliography-on-demand)",
+    )
+    ap.add_argument(
+        "--cited-ids-file",
+        type=Path,
+        metavar="PATH",
+        help="File with one HNSRC per line (# and blank lines ok) — same as --cited-ids",
+    )
     args = ap.parse_args()
 
     if not args.catalog.is_file():
@@ -191,6 +205,56 @@ def main() -> int:
     if not items:
         print("ERROR: no items in catalog", file=sys.stderr)
         return 1
+
+    if args.cited_ids is not None or args.cited_ids_file is not None:
+        id_list: list[str] = []
+        if args.cited_ids is not None and str(args.cited_ids).strip():
+            id_list.extend(
+                p
+                for p in re.split(r"[\s,]+", str(args.cited_ids).strip())
+                if p
+            )
+        if args.cited_ids_file is not None:
+            if not args.cited_ids_file.is_file():
+                print(
+                    f"ERROR: --cited-ids-file not found: {args.cited_ids_file}",
+                    file=sys.stderr,
+                )
+                return 1
+            for line in args.cited_ids_file.read_text(encoding="utf-8").splitlines():
+                line = line.split("#", 1)[0].strip()
+                if line:
+                    id_list.append(line)
+        seen: set[str] = set()
+        unique: list[str] = []
+        for h in id_list:
+            if h not in seen:
+                seen.add(h)
+                unique.append(h)
+        if not unique:
+            print(
+                "ERROR: no HNSRC ids (use --cited-ids or a non-empty file)",
+                file=sys.stderr,
+            )
+            return 1
+        by_id = {str(x.get("id")): x for x in items if x.get("id")}
+        for h in unique:
+            if not RE_HNSRC.match(h):
+                print(
+                    f"ERROR: id must look like HNSRC-NNNN, got {h!r}",
+                    file=sys.stderr,
+                )
+                return 1
+            if h not in by_id:
+                print(
+                    f"ERROR: unknown catalog id {h!r}",
+                    file=sys.stderr,
+                )
+                return 1
+        print("## Cited shelf works (fragment)\n")
+        for h in unique:
+            print(f"- {format_entry(by_id[h])}")
+        return 0
 
     out_dir = args.out_dir
     f_era = out_dir / "REFERENCES-shelf-by-era.md"

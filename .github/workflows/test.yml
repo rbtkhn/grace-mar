@@ -81,6 +81,9 @@ jobs:
       - name: Check history-notebook generated shelf bibliography
         run: python3 scripts/build_hn_bookshelf_bibliography.py --check
 
+      - name: Check history-notebook shelf anchors by chapter
+        run: python3 scripts/hn_shelf_anchors.py --check
+
       - name: Strategy notebook knot weave_count drift check
         run: python3 scripts/knot_seam_metrics.py --strict-drift
 

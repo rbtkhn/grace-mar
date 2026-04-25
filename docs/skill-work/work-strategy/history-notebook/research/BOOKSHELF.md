@@ -26,6 +26,8 @@ This file is the **bibliography database**. It does **not** store scanned text; 
 
 **Formal bibliography (generated, not a second hand-maintained list):** [research/bibliography/](bibliography/) — Chicago *author–date* (simplified) Markdown built from this YAML by `python3 scripts/build_hn_bookshelf_bibliography.py`. Optional fields (`place`, `publisher`, …) in the header comment; sparse `year` rows show as `n.d.`
 
+**Writer ergonomics (inverse index + lookups):** [SHELF-ANCHORS-BY-CHAPTER.md](SHELF-ANCHORS-BY-CHAPTER.md) — `hn-*` chapter id → HNSRC list. Regen: `python3 scripts/hn_shelf_anchors.py`. One-line **card** for a shelf id: `python3 scripts/hn_shelf_anchors.py --hnsrc HNSRC-0001`. **Paste line** for a chapter draft: `--stub-line hn-i-v1-01`. **Cited fragment** (subset bib): `python3 scripts/build_hn_bookshelf_bibliography.py --cited-ids …` — see [.cursor/skills/hn-bookshelf-lookup/SKILL.md](../../../../.cursor/skills/hn-bookshelf-lookup/SKILL.md).
+
 **Runbook** (batches, era rules, upload order): [BOOKSHELF-RUNBOOK.md](BOOKSHELF-RUNBOOK.md).
 
 ## How it connects to History Notebook
