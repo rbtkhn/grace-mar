@@ -29,6 +29,8 @@ Use [README](README.md) for narrative order; this table is a flat lookup.
 | [cici-ai-community-dashboard.md](cici-ai-community-dashboard.md) | **Operator dashboard** — cici-ai activation funnel, weekly snapshot, qualitative notes, and experiments (WORK-only; not Cici's Record) |
 | [cici-ai-first-task-proof-packet.md](cici-ai-first-task-proof-packet.md) | **Measurement template** — evidence-linked standard for \"first task completed\" with A/B/C confidence and graduation status |
 | [cici-ai-weekly-governance-review-template.md](cici-ai-weekly-governance-review-template.md) | **Review template** — weekly activation + proposal/governance health + drift flags + candidate actions |
+| [reviews/README.md](reviews/README.md) | **cici-ai reviews** — dated weekly review instances (WORK; not Cici’s Record) |
+| [reviews/cici-ai-weekly-review-2026-04-27.md](reviews/cici-ai-weekly-review-2026-04-27.md) | **Week of 2026-04-27** — first weekly instance (evidence pointers only; counts not invented) |
 | [telegram-cici-ai-pinned-and-welcome-copy.md](telegram-cici-ai-pinned-and-welcome-copy.md) | **cici-ai Telegram** — paste-ready **pinned** message + **@all** intro (purpose, next steps, thanks, encourage) |
 | [handoffs/cici-cici-ai-launch-instructions.md](handoffs/cici-cici-ai-launch-instructions.md) | **Cici handoff** — `cici-ai` **pin + welcome** + **logo/avatar** (ordered steps, done-when checklists) |
 | [README.md](README.md) | Advisor / project module for Cici (formerly Xavier) — vs her companion / instance repo and the external [Cici](https://github.com/Xavier-x01/Cici) OB1 repo; not Cici’s Record in grace-mar |

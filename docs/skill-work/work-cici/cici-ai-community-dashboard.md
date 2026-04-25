@@ -34,6 +34,8 @@ Track whether the cici-ai community is producing real companion / OB1 / coding /
 - [handoffs/cici-cici-ai-launch-instructions.md](handoffs/cici-cici-ai-launch-instructions.md)  
 - [cici-pilot-propagation-low-cost-operator.md](cici-pilot-propagation-low-cost-operator.md)  
 
+Weekly review instances: [reviews/](reviews/).
+
 ## 3. Funnel
 
 invited  
