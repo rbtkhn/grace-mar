@@ -2,7 +2,7 @@
 name: coffee
 preferred_activation: coffee
 requires: [handoff-check]
-description: "Grace-Mar operator cadence and tempo. Primary trigger: coffee. Coffee is a repeatable sip of coherence: a lightweight reorientation ritual that restores clarity, framing, and agency. Multiple coffee sessions per day are normal. Before Step 1 scripts run, synthesize the previous four events from work-cadence-events.md into plain-language **Recent rhythm** (no internal ops jargon or timestamps in chat). Work-start coffee runs the read-only grounding stack, then the **six-line** menu **A–D2–E** (Build, Steward, Strategy (daily brief), Conductor with **named** movement(s) continue, Conductor with **named** movement(s) system, system choice). No micro-hints line under the menu. Signing-off intent uses the same menu; closeout is merged into Step 1."
+description: "Grace-Mar operator cadence and tempo. Primary trigger: coffee. Coffee is a repeatable sip of coherence: a lightweight reorientation ritual that restores clarity, framing, and agency. Multiple coffee sessions per day are normal. Before Step 1 scripts run, synthesize the previous four events from work-cadence-events.md into plain-language **Recent rhythm** (no internal ops jargon or timestamps in chat). Work-start coffee runs the read-only grounding stack, then the **six-line** menu **A–D2–E** (Build, Steward, Strategy (daily brief), Conductor continue with **one** named movement, Conductor system with **one** named movement, system choice). No micro-hints line under the menu. Signing-off intent uses the same menu; closeout is merged into Step 1."
 ---
 
 # Coffee
@@ -101,19 +101,19 @@ The operator may say **`coffee`** **more than once per calendar day** for reorie
 
 Immediately **after** Step 1 content, output **only** this menu — **six lines** (**A, B, C, D1, D2, E**). **Do not** add a second row of micro-hints, fork shorthand, or F/G/Xavier/Dev tags under the list. **D1** and **D2** are **on the main menu** (not a follow-up submenu after a single “D”).
 
-**D1 / D2 must name the conductor(s):** Each **D1** and **D2** line **includes** the movement name(s) in **Title Case**, using the same slugs as `coffee_pick` / [CONDUCTOR-PASS.md](../../../docs/skill-work/work-coffee/CONDUCTOR-PASS.md#conductor-d1-d2). Expand `+` to ` + ` between two names (no slash). Slug → label: `toscanini` → **Toscanini**; `furtwangler` → **Furtwängler**; `bernstein` → **Bernstein**; `karajan` → **Karajan**; `kleiber` → **Kleiber**.
+**D1 / D2 must name exactly one conductor each:** Each **D1** and **D2** line **includes** a **single** movement name in **Title Case** — no `+`, no slash-joined pairs on the menu. Slugs for `coffee_pick` match [CONDUCTOR-PASS.md](../../../docs/skill-work/work-coffee/CONDUCTOR-PASS.md#conductor-d1-d2). Slug → label: `toscanini` → **Toscanini**; `furtwangler` → **Furtwängler**; `bernstein` → **Bernstein**; `karajan` → **Karajan**; `kleiber` → **Kleiber**. **Legacy cadence lines** with `conductor=a+b`: use the **first** slug only for the **D1** menu label; do **not** print combined names.
 
-- **D1:** Resolve from the **latest** `coffee_pick` for this user with `picked=D1` or `picked=D2` (legacy `picked=D`) and a `conductor=<slug>` in [work-cadence-events.md](../../../docs/skill-work/work-cadence/work-cadence-events.md). Format: `D1. Conductor — <Name(s)> — continue last emphasis`. If **no** `conductor=` exists yet: `D1. Conductor — no logged stack — continue last emphasis`.
-- **D2:** Resolve the **recommended stack** using Step 1 signals per [CONDUCTOR-PASS.md — D1 vs D2](../../../docs/skill-work/work-coffee/CONDUCTOR-PASS.md#conductor-d1-d2) (same slug vocabulary; one or two names). Format: `D2. Conductor — <Name(s)> — system recommended`.
+- **D1:** Resolve from the **latest** `coffee_pick` for this user with `picked=D1` or `picked=D2` (legacy `picked=D`) and a `conductor=<slug>` in [work-cadence-events.md](../../../docs/skill-work/work-cadence/work-cadence-events.md). Format: `D1. Conductor — <Name> — continue last emphasis`. If **no** `conductor=` exists yet: `D1. Conductor — no logged stack — continue last emphasis`.
+- **D2:** Resolve **one** recommended conductor using Step 1 signals per [CONDUCTOR-PASS.md — D1 vs D2](../../../docs/skill-work/work-coffee/CONDUCTOR-PASS.md#conductor-d1-d2). Format: `D2. Conductor — <Name> — system recommended`.
 
-**A, B, C, E** lines stay as below; **D1** and **D2** are filled per turn (example when last pick was `conductor=toscanini+karajan` and D2 resolves to Kleiber + Toscanini):
+**A, B, C, E** lines stay as below; **D1** and **D2** are filled per turn (example):
 
 ```
 A. Build
 B. Steward
 C. Strategy (daily brief)
-D1. Conductor — Toscanini + Karajan — continue last emphasis
-D2. Conductor — Kleiber + Toscanini — system recommended
+D1. Conductor — Toscanini — continue last emphasis
+D2. Conductor — Karajan — system recommended
 E. (system choice) — <one short line: the single best alternate lane this session>
 ```
 
@@ -133,7 +133,7 @@ E. (system choice) — <one short line: the single best alternate lane this sess
 
 - **D1. Conductor — continue** — **Strategy coffee cadence** (strategy-notebook) per [COFFEE-CADENCE-CONDUCTOR-PROTOCOL.md](../../../docs/skill-work/work-strategy/strategy-notebook/COFFEE-CADENCE-CONDUCTOR-PROTOCOL.md): same five movements, WORK-only seeds. **D1** reuses the last **`conductor=`** from the most recent **`coffee_pick`** with **`picked=D1`** or **`picked=D2`** (legacy: **`picked=D`**) in [work-cadence-events.md](../../../docs/skill-work/work-cadence/work-cadence-events.md). If **none**, state that in one line, then offer the same *short* pass using **D2** logic or a single operator-named movement. [CONDUCTOR-PASS.md](../../../docs/skill-work/work-coffee/CONDUCTOR-PASS.md#conductor-d1-d2).
 
-- **D2. Conductor — system** — Same protocol document; **D2** picks a **movement stack** from `last-dream.json`, **`Session load`**, and **`Dream → coffee menu`** per [CONDUCTOR-PASS.md — D1 vs D2](../../../docs/skill-work/work-coffee/CONDUCTOR-PASS.md#conductor-d1-d2). **Short** orienting reply + concrete next actions. **Not** a merge, **not** the full 15–45m embodied ritual in chat unless the operator extends. **Optional** after the turn: `log_cadence_event.py` **`coffee_pick`** with `--kv picked=D1 conductor=<slug>` or `picked=D2 conductor=<slug>`. **Not** work-dev implementation (**A**), not daily-brief + Tri-Frame alone (**C**; use **C** for brief). **Not** `self-skill-write` (use **E** for write slice).
+- **D2. Conductor — system** — Same protocol document; **D2** picks **one** recommended movement from `last-dream.json`, **`Session load`**, and **`Dream → coffee menu`** per [CONDUCTOR-PASS.md — D1 vs D2](../../../docs/skill-work/work-coffee/CONDUCTOR-PASS.md#conductor-d1-d2). **Short** orienting reply + concrete next actions. **Not** a merge, **not** the full 15–45m embodied ritual in chat unless the operator extends. **Optional** after the turn: `log_cadence_event.py` **`coffee_pick`** with `--kv picked=D1 conductor=<slug>` or `picked=D2 conductor=<slug>` (**single** slug). **Not** work-dev implementation (**A**), not daily-brief + Tri-Frame alone (**C**; use **C** for brief). **Not** `self-skill-write` (use **E** for write slice).
 
 - **E. (system choice)** — As filled on the menu line; typically one of: **skill-write** / PRP, Cici next, Dev next (workspace), Compass/Rome, Jiang/PH — **one** step.
 
@@ -155,7 +155,7 @@ Each successful coffee run appends one line to `docs/skill-work/work-cadence/wor
 
 **After the operator states their menu letter** (and steward track if **B**), the assistant may append a **`coffee_pick`** cadence line (same file) for rollup:  
 `python3 scripts/log_cadence_event.py --kind coffee_pick -u grace-mar --ok --kv picked=B steward=gate --cursor-model "<from Cursor UI>"`  
-(`steward=` only when `picked=B`; values: `gate`, `template`, `integrity`, `git`, `both`, or `all`.) For **Conductor**, `coffee_pick` may use **`picked=D1`** or **`picked=D2`** with `conductor=<slug>` (e.g. `kleiber`, `toscanini+karajan`) for **D1** continuity on the next run. Optional: `scripts/log_operator_choice.py --context COFFEE --picked B` for `session-transcript.md`.
+(`steward=` only when `picked=B`; values: `gate`, `template`, `integrity`, `git`, `both`, or `all`.) For **Conductor**, `coffee_pick` uses **`picked=D1`** or **`picked=D2`** with **`conductor=<single-slug>`** (e.g. `kleiber`, `toscanini`) for **D1** continuity on the next run — **no** `+` in new logs. Optional: `scripts/log_operator_choice.py --context COFFEE --picked B` for `session-transcript.md`.
 
 ## Related files
 

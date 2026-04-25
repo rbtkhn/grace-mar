@@ -65,7 +65,7 @@ This system uses a **four-layer instruction architecture**. Later layers may nar
 | **3. Lane Overlays** | `docs/skill-work/work-*/` | work-dev, work-politics, work-business, work-jiang, seed-phase |
 | **4. Mode Overlays** | `.cursor/skills/*/SKILL.md` | coffee, dream, bridge, harvest, thanks, gate-review, strategy, skill-write, tri-mind, and other listed skills |
 
-**`coffee` menu (A–D2–E):** **D1** / **D2** = **Conductor** (symphony / strategy coffee cadence — continue vs system); **D1** and **D2** menu lines **name** the movement(s) (e.g. Toscanini, Karajan) per the skill. **E** = system choice, including **self-skill-write** and PRP. See `.cursor/skills/coffee/SKILL.md`, [CONDUCTOR-PASS.md](docs/skill-work/work-coffee/CONDUCTOR-PASS.md), and [COFFEE-CADENCE-CONDUCTOR-PROTOCOL.md](docs/skill-work/work-strategy/strategy-notebook/COFFEE-CADENCE-CONDUCTOR-PROTOCOL.md).
+**`coffee` menu (A–D2–E):** **D1** / **D2** = **Conductor** (symphony / strategy coffee cadence — continue vs system); **D1** and **D2** menu lines each **name one** movement (e.g. Toscanini, Karajan) — not combined stacks on the menu. **E** = system choice, including **self-skill-write** and PRP. See `.cursor/skills/coffee/SKILL.md`, [CONDUCTOR-PASS.md](docs/skill-work/work-coffee/CONDUCTOR-PASS.md), and [COFFEE-CADENCE-CONDUCTOR-PROTOCOL.md](docs/skill-work/work-strategy/strategy-notebook/COFFEE-CADENCE-CONDUCTOR-PROTOCOL.md).
 
 **Operator publishing (Locals / X / Predictive History comments):** [`docs/skill-write/README.md`](docs/skill-write/README.md) — calibrates paste-ready public copy; **not** the companion Record `users/[id]/skill-write.md` (capability evidence). SSOT: [`docs/skill-write/write-operator-preferences.md`](docs/skill-write/write-operator-preferences.md).
 
