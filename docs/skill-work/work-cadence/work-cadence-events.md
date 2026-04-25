@@ -284,3 +284,5 @@ _(Append below this line.)_
 - **2026-04-24 14:56 UTC** — bridge (grace-mar) ok=true cursor_model=unknown model_tier=unknown refs=9f11ebe6,20f58ae
 - **2026-04-24 18:42 UTC** — thanks (grace-mar) ok=true cursor_model=unknown model_tier=unknown park=dev-notebook-ifp-pause
 - **2026-04-24 18:44 UTC** — thanks (grace-mar) ok=true cursor_model=unknown model_tier=unknown park=pr8-preflight-review-pause
+- **2026-04-25 00:24 UTC** — bridge (grace-mar) ok=true cursor_model=unknown model_tier=unknown refs=a72f3fad,20f58ae
+- **2026-04-25 00:26 UTC** — coffee (grace-mar) ok=true mode=work-start cursor_model=unknown model_tier=unknown
