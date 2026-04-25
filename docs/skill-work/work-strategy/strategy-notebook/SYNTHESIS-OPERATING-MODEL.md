@@ -231,29 +231,85 @@ Transferable shorthand — pedagogical only; fingerprint rules in architecture r
 
 | Figure | Grace-Mar anchor |
 |--------|------------------|
-| **Toscanini** | **Precision** — boundaries, verbatim-forward, validation, unambiguous convergences; see **extended map** below. |
-| **Bernstein** | **Journal / EOD** — embodied operator voice in Chronicle/Reflection/Foresight; heat without losing the threads-as-score. |
-| **Karajan** | **Long arc** — economical edits, `meta.md` themes, blended balance; avoid over-writing. |
-| **Kleiber** | **Selectivity** — deep prep before promote; minimal high-impact interventions; sparse `[promote]`. |
-| **Furtwängler / “grammar of conducting”** | **Flow vs ictus** — intuition and connection across threads; clarity of intent without mechanical bullet-stacking. |
+| **Toscanini** | **Precision** — truth-to-form, anti-indulgence, validation, and disciplined score architecture; see **extended map** below. |
+| **Furtwängler** | **Flow** — organic emergence, tension without forced closure, and line-before-grid listening; see **extended map** below. |
+| **Bernstein** | **Vitality** — embodied operator voice, communicative heat, and public intelligibility without losing the score; see **extended map** below. |
+| **Karajan** | **Long arc** — economical edits, `meta.md` themes, integrated balance, and the total effect of the whole; see **extended map** below. |
+| **Kleiber** | **Selectivity** — deep prep before promote, chosen hotspots, and sparse high-impact intervention; see **extended map** below. |
 
-**Cross-cutting:** Most work in **rehearsal** (EOD); **clarity of intent** beats flamboyance; **less is more** once the ensemble knows the interpretation; **score mastery** then freedom; sections retain **character** under your balance.
+**Cross-cutting:** Most work stays in **rehearsal** (EOD); **clarity of intent** beats flamboyance; **less is more** once the ensemble knows the interpretation; **score mastery** then freedom; sections retain **character** under your balance.
 
 **Transferable lessons:** Precision → clean Machine/Journal seams and verify discipline. Expression → authentic Judgment. Economy → selective promotion and light touch on derived snapshots. Listening → preserve polyphony and name tensions. Rehearsal vs performance → EOD vs promotion. Compiled views → safe, regeneratable performance **snapshots**, not SSOT.
 
 #### Toscanini — extended rehearsal map
 
-Historical accounts emphasize **rigor**, **clarity**, and **concert-level seriousness** — alongside a perfectionism that could show as harsh temper. In Grace-Mar we take the **disciplines** without glorifying abusive rehearsal culture: use **structured governance** (pause, gate, regenerate) instead of “volume” as a management tool.
+Historical accounts emphasize **rigor**, **clarity**, **dynamic intensity**, and a classical sense of form — plus open hostility to indulgent bad habits masquerading as tradition. In Grace-Mar we take the **disciplines** without glorifying abusive rehearsal culture: use **structured governance** (pause, gate, regenerate) instead of “volume” as a management tool.
 
 | # | Toscanini move | Grace-Mar application |
 |---|----------------|------------------------|
-| 1 | **From-memory / concert-serious rehearsal** | Pre-EOD **internalization**; optional **memory run** (7–30d convergences/tensions without files); session focuses on **judgment**, not re-reading raw walls. |
-| 2 | **Clear beat — “feel what I want”** | **Economical, unambiguous** Chronicle/Reflection/Foresight; convergence/tension labels a reader can grasp immediately; expressive flourishes **sparingly**. |
-| 3 | **Relentless precision** | Verify claims, visible seams, prose standards; if synthesis feels wrong, **direct frustration inward** first; **Toscanini pause** (stop, break, return) — no forced smoothing of contradictions. |
-| 4 | **Obsessive prep + Cantare** | Re-study even familiar voices; **read aloud** or mentally “sing” the rhythm of tensions before composing. |
-| 5 | **Economy of motion** | After solid rehearsal, **light interpretive overlay** on compiled views — interpretation should already live in the Journal. |
+| 1 | **Truth-to-form** | Ask what the source or thread actually supports before accepting the inherited reading of it. |
+| 2 | **Anti-indulgence** | Cut rhetoric, smoothing, or dramatic flourish when it outruns the available score. |
+| 3 | **Relentless seam enforcement** | Verify claims, visible seams, and prose standards; if synthesis feels wrong, pause instead of forcing a pretty convergence. |
+| 4 | **Concert-serious prep** | Pre-EOD **internalization**; optional **memory run** (7–30d convergences/tensions without files); session focuses on **judgment**, not re-reading raw walls. |
+| 5 | **Economy after mastery** | After solid rehearsal, keep the overlay light — interpretation should already live in the Journal. |
 
-**Takeaway:** Adopt **preparation, clarity, polyphony-preserving precision**; **soften** perfectionism’s costs via WORK rules and regeneratable derived artifacts.
+**Takeaway:** Adopt **preparation, anti-indulgence, and polyphony-preserving precision**; make the structure speak before decorating it.
+
+#### Furtwängler — extended rehearsal map
+
+Historical accounts emphasize **organic flow**, **agility of tempo and pressure**, and performance as something that **becomes** rather than something merely executed. In Grace-Mar this means protecting emergence before naming the verdict.
+
+| # | Furtwängler move | Grace-Mar application |
+|---|------------------|------------------------|
+| 1 | **Line before grid** | Read for the movement underneath the bullet stack: what arc is trying to emerge? |
+| 2 | **Tension without forced closure** | Let contradictions breathe long enough to show their real weight instead of settling them too early. |
+| 3 | **Organic pacing** | Use paragraph rhythm and section order to carry pressure, not only explicit analytic labels. |
+| 4 | **Meaning through relation** | Ask how this voice changes when heard beside the others, not in isolated summary. |
+| 5 | **Resolution by necessity** | Resolve only when the material itself has earned it; otherwise leave a live tension line or `[watch]`. |
+
+**Takeaway:** Use Furtwängler when the work needs **emergence, continuity, and unresolved pressure**, not a prematurely clean score.
+
+#### Bernstein — extended rehearsal map
+
+Historical accounts emphasize **flamboyance, pedagogy, and communicative force**. In Grace-Mar this is not permission for empty performance; it is a reminder that good judgment must also become **felt** and **legible**.
+
+| # | Bernstein move | Grace-Mar application |
+|---|----------------|------------------------|
+| 1 | **Pulse first** | Ask what the living urgency of this day or block actually is. |
+| 2 | **Public intelligibility** | Write so an informed outsider could feel why the issue matters, not just track the source list. |
+| 3 | **Heat with score discipline** | Bring vividness and operator voice without inventing facts or flattening the polyphony. |
+| 4 | **Story-bearing transitions** | Make Chronicle → Reflection → Foresight feel like one carried argument rather than three bins. |
+| 5 | **Pedagogic generosity** | Surface the stakes in language that teaches, not merely signals insider belonging. |
+
+**Takeaway:** Use Bernstein when the work needs **urgency, communicability, and living pulse** without losing the underlying score.
+
+#### Karajan — extended rehearsal map
+
+Historical accounts emphasize **overview, blend, control of total effect**, and architectural patience. In Grace-Mar this means editing for the shape of the whole, not polishing every local phrase.
+
+| # | Karajan move | Grace-Mar application |
+|---|--------------|------------------------|
+| 1 | **Whole before local** | Ask what overall arc this page, month, or synthesis is trying to become. |
+| 2 | **Blend and proportion** | Rebalance voices so one line carries the melody while the others support without vanishing. |
+| 3 | **Economy of surface** | Remove clutter, duplicated summary, and decorative over-explanation that muddies the total effect. |
+| 4 | **Architectural patience** | Prefer `meta.md` shaping, month arcs, and balanced compiled views over daily over-writing. |
+| 5 | **Polish through subtraction** | Improve elegance by cutting or aligning, not by adding more interpretive chrome. |
+
+**Takeaway:** Use Karajan when the work needs **balance, long arc, and integrated architecture** rather than immediate local force.
+
+#### Kleiber — extended rehearsal map
+
+Historical accounts emphasize **rarity, selectivity, and perfection through narrowing**. In Grace-Mar this means disproportionate attention to what truly merits it and explicit refusal everywhere else.
+
+| # | Kleiber move | Grace-Mar application |
+|---|--------------|------------------------|
+| 1 | **Choose the hotspot** | Name the one or two arcs that deserve deep attention this round. |
+| 2 | **Depth by refusal** | State what is *not* getting deepened so the session does not widen by drift. |
+| 3 | **High prep threshold** | Use `[promote]` sparingly; deep claims should feel over-prepared rather than merely timely. |
+| 4 | **Micro-focus with consequence** | Work the decisive seams intensely instead of spreading equal care across the whole surface. |
+| 5 | **Sparse, high-impact intervention** | Leave the rest untouched once the crucial hotspot has been clarified or stabilized. |
+
+**Takeaway:** Use Kleiber when the work needs **ruthless narrowing, depth concentration, and explicit non-prioritization**.
 
 ---
 

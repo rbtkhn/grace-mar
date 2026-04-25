@@ -1,34 +1,42 @@
 #!/usr/bin/env python3
 """
-Resolve **D1** continuation (conductor + optional focus) and **D2** conductor from
-operational signals.
+Resolve coffee-conductor helpers for the fixed **D1–D5** menu.
 
 Pure functions over event dicts shaped like ``audit_cadence_rhythm.parse_events()``
 output: ``{"dt", "kind", "user", "line", "kv"}``.
 
-**D2 cross-cuts D1:** D1 answers "which movement continues last emphasis"; D2 answers
-"what does the system recommend *this* session from dream + load" — orthogonal questions.
-Repetition of one D1 slug reinforces one *mode*; rotation changes the mode; D2 can still
-point elsewhere (e.g. Bernstein when ``recommended: C``).
+The menu letters are now stable:
 
-``last-dream.json`` keys read for layered D2 (aligned with
-``docs/skill-work/work-coffee/CONDUCTOR-PASS.md``):
+- ``D1`` → Toscanini
+- ``D2`` → Furtwangler
+- ``D3`` → Bernstein
+- ``D4`` → Karajan
+- ``D5`` → Kleiber
 
-- **Toscanini (1):** ``worktreeAdvice`` text suggesting seam/merge/worktree risk; or
-  synthetic ``risky_worktree=true`` for tests.
-- **Kleiber (5):** non-empty ``tomorrow_inherits``; or ``steward_hint`` / ``steward``
-  truthy strings; or ``summary`` containing both "steward" and "gate".
+This module still helps with two advisory questions:
 
-Optional: wire ``operator_coffee.py`` to print D2 from ``d2_conductor_resolved`` — not
-required for callers of this module.
+1. Which conductor was picked most recently on disk? (continuity)
+2. Which conductor does the system recommend from dream + load signals? (recommendation)
+
+Those helpers may be mentioned in prose around the menu, but they no longer determine the
+lettering itself.
 """
 
 from __future__ import annotations
 
 from typing import Any
 
-# D1 menu accepts these ``picked=`` values for conductor continuation.
-_PICKED_D1 = frozenset({"D1", "D2", "D"})
+MENU_PICK_TO_CONDUCTOR = {
+    "D1": "toscanini",
+    "D2": "furtwangler",
+    "D3": "bernstein",
+    "D4": "karajan",
+    "D5": "kleiber",
+}
+CONDUCTOR_TO_MENU_PICK = {slug: pick for pick, slug in MENU_PICK_TO_CONDUCTOR.items()}
+
+# Legacy logs may still contain ``picked=D`` from the older single-line conductor menu.
+_PICKED_CONDUCTOR = frozenset({"D", *MENU_PICK_TO_CONDUCTOR.keys()})
 
 
 def normalize_conductor_slug(value: str) -> str:
@@ -39,15 +47,25 @@ def normalize_conductor_slug(value: str) -> str:
     return s
 
 
+def conductor_slug_for_menu_pick(pick: str) -> str | None:
+    """Return conductor slug for ``D1``..``D5``; unknown picks → ``None``."""
+    return MENU_PICK_TO_CONDUCTOR.get(str(pick).strip().upper())
+
+
+def menu_pick_for_conductor_slug(slug: str) -> str | None:
+    """Return menu pick for a conductor slug, normalizing legacy ``a+b`` stacks."""
+    return CONDUCTOR_TO_MENU_PICK.get(normalize_conductor_slug(slug))
+
+
 def last_coffee_pick_conductor_event(events: list[dict[str, Any]]) -> dict[str, Any] | None:
-    """Most recent ``coffee_pick`` with ``picked`` in D1/D2/D and ``conductor=``."""
+    """Most recent ``coffee_pick`` with a conductor-bearing ``picked=`` value."""
     candidates: list[dict[str, Any]] = []
     for e in events:
         if e.get("kind") != "coffee_pick":
             continue
         kv = e.get("kv") or {}
         picked = str(kv.get("picked", "")).strip()
-        if picked not in _PICKED_D1:
+        if picked not in _PICKED_CONDUCTOR:
             continue
         cond = kv.get("conductor")
         if cond is None or not str(cond).strip():
@@ -58,7 +76,7 @@ def last_coffee_pick_conductor_event(events: list[dict[str, Any]]) -> dict[str, 
     return max(candidates, key=lambda x: x["dt"])
 
 
-def conductor_for_d1_continuation(events: list[dict[str, Any]]) -> str | None:
+def last_logged_conductor(events: list[dict[str, Any]]) -> str | None:
     """Normalized conductor slug from last qualifying ``coffee_pick``, or ``None``."""
     ev = last_coffee_pick_conductor_event(events)
     if ev is None:
@@ -69,7 +87,7 @@ def conductor_for_d1_continuation(events: list[dict[str, Any]]) -> str | None:
     return normalize_conductor_slug(str(c))
 
 
-def focus_for_d1_continuation(events: list[dict[str, Any]]) -> str | None:
+def focus_for_last_conductor(events: list[dict[str, Any]]) -> str | None:
     """Last ``focus=`` or ``arc=`` on a qualifying ``coffee_pick`` (``focus`` wins)."""
     ev = last_coffee_pick_conductor_event(events)
     if ev is None:
@@ -82,7 +100,7 @@ def focus_for_d1_continuation(events: list[dict[str, Any]]) -> str | None:
     return None
 
 
-def d2_conductor_from_menu_recommendation(letter: str) -> str:
+def recommended_conductor_from_menu_recommendation(letter: str) -> str:
     """Map session-load letter to conductor slug; unknown letter → ``furtwangler``."""
     m = {"A": "toscanini", "B": "kleiber", "C": "bernstein"}
     key = str(letter).strip().upper()[:1]
@@ -113,32 +131,83 @@ def _dream_implies_steward_or_tomorrow(dream: dict[str, Any]) -> bool:
     return "steward" in summary and "gate" in summary
 
 
-def d2_conductor_resolved(
+def _dream_implies_long_arc_balance(dream: dict[str, Any]) -> bool:
+    text = " ".join(
+        str(dream.get(key) or "")
+        for key in ("summary", "tomorrow_inherits", "dream_to_coffee_menu", "long_arc_hint")
+    ).lower()
+    if not text.strip():
+        return False
+    markers = ("month", "meta", "balance", "blend", "arc", "shape", "architecture", "polish")
+    return any(marker in text for marker in markers)
+
+
+def system_recommended_conductor(
     *,
     dream: dict[str, Any] | None = None,
     assess: dict[str, Any] | None = None,
 ) -> str:
-    """Layered D2 resolution: dream signals first, then ``assess['recommended']``, else default.
+    """Layered conductor recommendation from dream + load signals.
 
     Order: (1) risky worktree / ``worktreeAdvice`` → **toscanini**;
     (2) ``tomorrow_inherits`` or steward-style hint → **kleiber**;
-    (3) ``assess["recommended"]`` → A/B/C map;
-    (4) **furtwangler**.
+    (3) long-arc / balance hints → **karajan**;
+    (4) ``assess["recommended"]`` → A/B/C map;
+    (5) **furtwangler**.
     """
     if dream:
         if _dream_implies_risky_worktree_seam(dream):
             return "toscanini"
         if _dream_implies_steward_or_tomorrow(dream):
             return "kleiber"
+        if _dream_implies_long_arc_balance(dream):
+            return "karajan"
     if assess:
         rec = assess.get("recommended")
         if isinstance(rec, str) and rec.strip():
             letter = rec.strip().upper()[:1]
             if letter in ("A", "B", "C"):
-                return d2_conductor_from_menu_recommendation(letter)
+                return recommended_conductor_from_menu_recommendation(letter)
     return "furtwangler"
 
 
+def system_recommended_menu_pick(
+    *,
+    dream: dict[str, Any] | None = None,
+    assess: dict[str, Any] | None = None,
+) -> str:
+    """Menu pick for the current recommendation helper."""
+    slug = system_recommended_conductor(dream=dream, assess=assess)
+    pick = menu_pick_for_conductor_slug(slug)
+    if pick is None:
+        raise ValueError(f"Unknown conductor slug: {slug}")
+    return pick
+
+
+def conductor_for_d1_continuation(events: list[dict[str, Any]]) -> str | None:
+    """Backward-compatible alias for older D1 continuity wording."""
+    return last_logged_conductor(events)
+
+
+def focus_for_d1_continuation(events: list[dict[str, Any]]) -> str | None:
+    """Backward-compatible alias for older D1 continuity wording."""
+    return focus_for_last_conductor(events)
+
+
+def d2_conductor_from_menu_recommendation(letter: str) -> str:
+    """Backward-compatible alias for session-load recommendation helper."""
+    return recommended_conductor_from_menu_recommendation(letter)
+
+
+def d2_conductor_resolved(
+    *,
+    dream: dict[str, Any] | None = None,
+    assess: dict[str, Any] | None = None,
+) -> str:
+    """Backward-compatible alias for recommendation helper."""
+    return system_recommended_conductor(dream=dream, assess=assess)
+
+
 def d2_conductor_from_assess_load(assess: dict[str, Any]) -> str:
-    """D2 from session load only (no dream)."""
-    return d2_conductor_resolved(dream=None, assess=assess)
+    """Backward-compatible alias for assess-only recommendation helper."""
+    return system_recommended_conductor(dream=None, assess=assess)

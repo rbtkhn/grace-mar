@@ -3,8 +3,8 @@
 Session load assessment — aggregate cadence, gate, capture gap, and dream
 quality signals into a cognitive load level for the operator.
 
-Designed to annotate the coffee **A–D2–E** menu with per-option cost hints and a
-recommended pick (A / B / C only — not D1 / D2 / E).
+Designed to annotate the fixed coffee menu with per-option cost hints and a
+recommended pick (A / B / C only — not D1–D5 / E).
 
 Exposes assess_load() for import by operator_coffee.py.
 
@@ -214,15 +214,18 @@ def _compute_option_weights(
     gate: dict | None,
     branch_count: int,
 ) -> dict[str, dict[str, str]]:
-    """Assign cost and note to each A–D2–E option (coffee six-line menu)."""
+    """Assign cost and note to each coffee option."""
     pending = gate.get("pending", 0) if gate else 0
 
     weights: dict[str, dict[str, str]] = {
         "A": {"cost": "moderate", "note": "Build — work-dev + skills"},
         "B": {"cost": "light", "note": "Steward — gate / template / integrity / git"},
         "C": {"cost": "light", "note": "Strategy — daily brief + tri-frame"},
-        "D1": {"cost": "moderate", "note": "Conductor — continue last emphasis (notebook)"},
-        "D2": {"cost": "moderate", "note": "Conductor — system-recommended stack (notebook)"},
+        "D1": {"cost": "moderate", "note": "Conductor — Toscanini (precision)"},
+        "D2": {"cost": "moderate", "note": "Conductor — Furtwangler (flow)"},
+        "D3": {"cost": "moderate", "note": "Conductor — Bernstein (vitality)"},
+        "D4": {"cost": "moderate", "note": "Conductor — Karajan (elegance)"},
+        "D5": {"cost": "moderate", "note": "Conductor — Kleiber (selectivity)"},
         "E": {"cost": "moderate", "note": "System choice — cici / dev / jiang / rome slice"},
     }
 
@@ -302,7 +305,7 @@ def format_load_one_liner(result: dict) -> str:
 
 
 def format_annotated_menu(result: dict) -> str:
-    """Format the A–D2–E coffee menu with load annotations (optional; not printed by default)."""
+    """Format the coffee menu with load annotations (optional; not printed by default)."""
     weights = result.get("option_weights", {})
     rec = result.get("recommended", "")
 
@@ -310,13 +313,16 @@ def format_annotated_menu(result: dict) -> str:
         "A": "Build",
         "B": "Steward",
         "C": "Strategy (daily brief)",
-        "D1": "Conductor — continue",
-        "D2": "Conductor — system",
+        "D1": "Conductor — Toscanini",
+        "D2": "Conductor — Furtwangler",
+        "D3": "Conductor — Bernstein",
+        "D4": "Conductor — Karajan",
+        "D5": "Conductor — Kleiber",
         "E": "System choice",
     }
 
     lines = []
-    for letter in ("A", "B", "C", "D1", "D2", "E"):
+    for letter in ("A", "B", "C", "D1", "D2", "D3", "D4", "D5", "E"):
         w = weights.get(letter, {"cost": "?", "note": ""})
         label = labels[letter]
         tag = f"({w['cost']})"

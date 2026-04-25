@@ -1,6 +1,6 @@
 # work-coffee
 
-**Purpose:** Operator cadence, activation, re-entry, signing-off (merged into **`coffee`** Step 1 + same **A–D2–E** menu), and workflow-state design for Grace-Mar's `coffee` ritual. This territory is where the system explains and evolves the ritual architecture. The executable trigger surface lives in [.cursor/skills/coffee/SKILL.md](../../../.cursor/skills/coffee/SKILL.md).
+**Purpose:** Operator cadence, activation, re-entry, signing-off (merged into **`coffee`** Step 1 + same fixed menu with **D1–D5** explicit conductors), and workflow-state design for Grace-Mar's `coffee` ritual. This territory is where the system explains and evolves the ritual architecture. The executable trigger surface lives in [.cursor/skills/coffee/SKILL.md](../../../.cursor/skills/coffee/SKILL.md).
 
 **Not** Record truth. **Not** MEMORY. **Not** a second merge path. **Not** generic repo hygiene, and **not** a broad health/caffeine territory. `work-coffee` is a WORK lane for ritual architecture and operator ergonomics.
 
@@ -10,7 +10,7 @@
 
 | Role | Description |
 |------|-------------|
-| **Cadence architecture** | Defines work-start vs signing-off **Step 1** weight, **one** **A–D2–E** menu (Build, Steward, Strategy/daily brief, Conductor continue **with one movement name**, Conductor system **with one movement name**, system choice), re-entry behavior, and cadence modifiers. |
+| **Cadence architecture** | Defines work-start vs signing-off **Step 1** weight, **one** fixed coffee menu (Build, Steward, Strategy/daily brief, five explicit conductor picks, system choice), re-entry behavior, and cadence modifiers. |
 | **Operator activation** | Holds the rationale for why the `coffee` ritual exists: activation, rhythm, state shift, and workflow dopamine replacement. |
 | **Boundary surface** | Explains what belongs in WORK-only docs/history versus what must escalate to `RECURSION-GATE` or change review. |
 | **Session trail guidance** | Clarifies how `session-transcript`, `work-*-history.md`, and `self-memory` relate without collapsing into one another. |
@@ -19,7 +19,7 @@
 
 ## Relationship to `coffee`
 
-- **`coffee` skill** = executable ritual contract, trigger behavior, and exact **A–D2–E** menu semantics.
+- **`coffee` skill** = executable ritual contract, trigger behavior, and exact coffee-menu semantics.
 - **`work-coffee` territory** = prose home for rationale, boundaries, history, and evolution of the ritual.
 
 This split is intentional:
@@ -29,7 +29,7 @@ This split is intentional:
 
 **`coffee` C — Strategy (daily brief) (operator default for field intel):** Stage 1 = today’s brief file + Putin/Vance watches + optional KY-4 intel. Stage 2 = offer **three Tri-Frame mind lenses** (Barnes → Mearsheimer → Mercouris), then the operator **chooses which mind** and **A–D** prompts per [daily-brief-minds-menu.md](../work-strategy/daily-brief-minds-menu.md). Agents should **not** stop after markets/polls unless the operator opts out — see [menu-reference.md](menu-reference.md#tri-frame-daily-brief).
 
-**`coffee` D1 / D2 — Conductor** stay **strategy-notebook**–scoped in the menu (two main-menu lines, no submenu). The **generic** five-movement “conductor pass” pattern (all territories) lives in [CONDUCTOR-PASS.md](CONDUCTOR-PASS.md).
+**`coffee` D1–D5 — Conductor** stay **strategy-notebook**–scoped in the menu (five main-menu lines, no submenu). The **generic** five-movement “conductor pass” pattern (all territories) lives in [CONDUCTOR-PASS.md](CONDUCTOR-PASS.md).
 
 ---
 
@@ -102,7 +102,7 @@ Per [work-menu-conventions.md](../work-menu-conventions.md) and [work-modules-hi
 
 ## Conductor semantics (machine)
 
-Mechanical resolution (D1 continuation vs layered D2 from dream + session load) lives in
+Mechanical helpers (continuity from recent picks plus recommendation from dream + session load) live in
 [`scripts/cadence_conductor_resolution.py`](../../../scripts/cadence_conductor_resolution.py).
 Human contract and menu order: [CONDUCTOR-PASS.md](CONDUCTOR-PASS.md).
 
@@ -118,7 +118,7 @@ In scope:
 
 - operator cadence design
 - activation rituals
-- work-start / signing-off (merged into one **A–D2–E** flow; Rome / Jiang / Xavier / Dev / **skill-write** often land in **E**; **Conductor** is **D1** or **D2**; fold strategy-only into **C** per [coffee SKILL](../../../.cursor/skills/coffee/SKILL.md))
+- work-start / signing-off (merged into one fixed coffee flow; Rome / Jiang / Xavier / Dev / **skill-write** often land in **E**; **Conductor** is **D1–D5**; fold strategy-only into **C** per [coffee SKILL](../../../.cursor/skills/coffee/SKILL.md))
 - reorientation and multi-`coffee` behavior
 - survey/cadence workflow design
 - relationship between hub flow and territory execution

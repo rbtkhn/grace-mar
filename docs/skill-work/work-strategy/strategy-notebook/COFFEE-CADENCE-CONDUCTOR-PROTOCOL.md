@@ -3,7 +3,7 @@
 **Status:** WORK (operator practice)  
 **Not** companion Record. **Not** SELF. Promotions to Record use [AGENTS.md](../../../../AGENTS.md) / `recursion-gate.md` only when the operator stages and approves.
 
-**Disambiguation — Cursor `coffee` vs this protocol:** The [`.cursor/skills/coffee/SKILL.md`](../../../../.cursor/skills/coffee/SKILL.md) trigger **`coffee`** runs Step 1 (`operator_coffee.py`, harness) then a fixed **A–D2–E** menu; **D1 / D2 — Conductor** (two lines on that menu) are the **same** strategy cadence *lane* as this document — a short orienting reply in chat, not a substitute for the full **15–45 minute** embodied morning block. **This** file is the SSOT for the five movements, patterns, and WORK-only seeds. Use **Step 1 + D1** or **D2** when you want the assistant to meet you at the protocol; use **offline time** for the full ritual.
+**Disambiguation — Cursor `coffee` vs this protocol:** The [`.cursor/skills/coffee/SKILL.md`](../../../../.cursor/skills/coffee/SKILL.md) trigger **`coffee`** runs Step 1 (`operator_coffee.py`, harness) then a fixed menu with **five explicit conductor lines** (**D1–D5**) on the main list. Those five lines are the **same** strategy cadence lane as this document — a short orienting reply in chat, not a substitute for the full **15–45 minute** embodied morning block. **This** file is the SSOT for the five movements, their distinctions, and their WORK-only seeds. Use **Step 1 + one of D1–D5** when you want the assistant to meet you at the protocol; use **offline time** for the full ritual.
 
 **Related:** [SYNTHESIS-OPERATING-MODEL.md](SYNTHESIS-OPERATING-MODEL.md) (session types A–D, L0–L4) · [NOTEBOOK-PREFERENCES.md](NOTEBOOK-PREFERENCES.md) (operator-as-conductor, polyphony) · [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md) (`days.md`, expert threads) · **Generic spine (all territories):** [CONDUCTOR-PASS.md](../../work-coffee/CONDUCTOR-PASS.md)
 
@@ -26,39 +26,41 @@ All outputs are seeds only. Nothing is automatically promoted. Use `[watch]`, `[
 Choose one, combine two, or sequence as the day’s energy suggests.
 
 **1. Precision (Toscanini Mode)** — 8–12 minutes  
-Clear, drill-like focus on accuracy and seam enforcement.  
-- Scan recent Machine Layer extractions and new inbox material.  
-- Verify claims, proper nouns, and contradictions with ruthless clarity.  
-- Goal: Achieve a clean, precise mental score.  
-**Output:** Verification notes or flags.
+Truth-to-form, seam enforcement, and anti-indulgence.  
+- Scan recent Machine Layer extractions and new inbox material for what is actually supported.  
+- Verify claims, proper nouns, contradictions, and overextended phrasing with ruthless clarity.  
+- Cut rhetoric or habit that makes the score sound more dramatic than the underlying material warrants.  
+- Ask: "What is really written here, and where is the draft leaning on flourish, tradition, or wishful inference?"  
+**Output:** Verification notes, seam flags, or a stripped-clean framing line.
 
 **2. Flow (Furtwängler Mode)** — 10–15 minutes  
-Organic, intuitive listening.  
+Organic becoming, pressure without premature closure.  
 - Let expert voices breathe and tensions emerge naturally.  
-- Feel historical resonances and the overall temperature without forcing resolution.  
-**Output:** Loose Journal Layer seeds or “[watch]” markers.
+- Feel historical resonances, pacing shifts, and unresolved motives without forcing a clean verdict too early.  
+- Ask: "What is trying to emerge if I stop beating time and listen for the line underneath the line?"  
+**Output:** Loose Journal Layer seeds, tension notes, or `[watch]` markers that preserve motion.
 
 **3. Vitality (Bernstein Mode)** — 10–15 minutes  
-Passionate, theatrical, embodied conducting.  
-- “Sing” the strategic signals with energy and drama.  
-- Highlight convergences and tensions with vivid, motivating language.  
-- Infuse your own operator voice and sense of urgency.  
-**Output:** Energized strategy-page fragments or a “Pulse of the Symphony” paragraph.
+Communicative heat, pulse, and public legibility.  
+- "Sing" the strategic signals with energy and drama.  
+- Highlight convergences, tensions, and stakes in language that can actually carry urgency rather than merely announce it.  
+- Ask: "What must be felt here, and what would make this line intelligible to a live audience instead of only to an archive?"  
+**Output:** Energized strategy-page fragments, a "Pulse of the Symphony" paragraph, or a vivid line of operator judgment.
 
 **4. Elegance & Polish (Karajan Mode)** — 10–12 minutes  
-Controlled, economical, long-term architectural vision.  
-- Step back and shape the overall sonic balance and blend across voices.  
-- Focus on elegance, long arcs, and unified direction rather than immediate drama.  
-- Ask: “What is the cleanest, most polished version of this month’s movement?”  
-**Output:** High-level balance notes, emphasis decisions, or refined monthly `meta.md` seeds.
+Integrated whole, blend, and architectural finish.  
+- Step back and shape the overall balance, proportion, and blend across voices.  
+- Focus on long arcs, economy, and the total effect rather than local excitement.  
+- Ask: "What is the most coherent whole this material can become, and what should be removed so the arc can breathe?"  
+**Output:** High-level balance notes, emphasis decisions, refined monthly `meta.md` seeds, or a cleaner overall shape.
 
 **5. Selectivity & Depth (Kleiber Mode)** — 8–12 minutes  
-Intense preparation meets ruthless selectivity.  
+Ruthless narrowing, chosen hotspots, and perfection by refusal.  
 - Choose one or two threads/arcs worthy of deep focus.  
-- Dive deeply into them with profound concentration (like Kleiber studying a score for years).  
-- Ask: “Is this movement ready to stabilize, or does it still need more time?”  
+- Work those hotspots intensely instead of spreading tastefully across everything.  
+- Ask: "What deserves disproportionate energy, and what explicitly does not earn a deepening pass today?"  
 - Only invest full energy where it truly matters.  
-**Output:** Deep judgment notes on selected arcs + clear `[promote]` or `[watch]` decisions.
+**Output:** Deep judgment notes on selected arcs plus clear `[promote]`, `[decision]`, or `[watch]` boundaries.
 
 ### Recommended Daily Patterns
 
@@ -83,14 +85,14 @@ This ritual is rehearsal, not performance. The operator-conductor remains the fi
 
 ### Summary of the Five Conductors in Coffee Cadence
 
-| Conductor   | Mode         | Core Strength                    | Best Used When You Want To…            |
-|-------------|-------------|-----------------------------------|----------------------------------------|
-| Toscanini   | Precision   | Clarity & discipline             | Verify and clean the score             |
-| Furtwängler | Flow        | Organic intuition                 | Feel tensions and resonances freely     |
-| Bernstein   | Vitality    | Passion & dramatic energy         | Make the symphony feel alive and urgent |
-| Karajan     | Elegance    | Polish & long-term architecture  | Shape overall balance and unified direction |
-| Kleiber     | Selectivity | Depth & ruthless focus           | Decide what truly deserves deep investment |
+| Conductor   | Mode         | Core Strength                           | Best Used When You Want To… |
+|-------------|-------------|------------------------------------------|-----------------------------|
+| Toscanini   | Precision   | Truth-to-form, seam enforcement, anti-indulgence | Strip drift, verify the score, and make the structure speak |
+| Furtwängler | Flow        | Organic emergence and unresolved tension | Let the line breathe until the real shape reveals itself |
+| Bernstein   | Vitality    | Communicative heat and public pulse      | Make the stakes vivid and felt without losing the threads |
+| Karajan     | Elegance    | Integrated architecture and total balance | Shape the whole into a coherent, polished arc |
+| Kleiber     | Selectivity | Ruthless narrowing and chosen depth      | Decide what truly deserves disproportionate attention |
 
 ---
 
-**Cadence hooks (repo):** **`coffee` menu D1 / D2 — Conductor** is the in-chat entry to this protocol (short orientation; full ritual stays operator-timed). Step 2 lists **one** conductor name on **D1** and **one** on **D2** — combined stacks stay in the offline ritual, not on the menu (see [.cursor/skills/coffee/SKILL.md](../../../../.cursor/skills/coffee/SKILL.md) Step 2). Optional **`thanks`** `park=` slugs (e.g. `conductor-bernstein-pulse`) bookmark pauses after a movement — see [thanks SKILL](../../../../.cursor/skills/thanks/SKILL.md). **Dream** EOD can acknowledge the day arc without auto-composing the notebook; see [dream SKILL](../../../../.cursor/skills/dream/SKILL.md) § Strategy notebook.
+**Cadence hooks (repo):** **`coffee` menu D1–D5 — Conductor** is the in-chat entry to this protocol (short orientation; full ritual stays operator-timed). Step 2 lists the **five named conductors directly**: **D1 Toscanini**, **D2 Furtwängler**, **D3 Bernstein**, **D4 Karajan**, **D5 Kleiber**. Continuity and system recommendation may still be mentioned in prose, but they no longer determine the menu lettering. Optional **`thanks`** `park=` slugs (e.g. `conductor-bernstein-pulse`) bookmark pauses after a movement — see [thanks SKILL](../../../../.cursor/skills/thanks/SKILL.md). **Dream** EOD can acknowledge the day arc without auto-composing the notebook; see [dream SKILL](../../../../.cursor/skills/dream/SKILL.md) § Strategy notebook.

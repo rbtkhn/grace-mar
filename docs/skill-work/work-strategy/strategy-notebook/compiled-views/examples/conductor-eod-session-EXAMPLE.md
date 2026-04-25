@@ -11,19 +11,23 @@
 - [ ] **Session type** chosen (SYNTHESIS § 2 — A/B/C/D).
 - [ ] **Primary intent (L0):** one line — what Judgment must warrant tonight.
 - [ ] **Optional mode** (pick zero or one as emphasis):  
-  - **Toscanini** — precision / verify / unambiguous convergences before naming them.  
-  - **Bernstein** — embodied operator voice in Chronicle/Reflection/Foresight (still score-anchored).  
-  - **Karajan** — month-arc polish; economical edits; balance across voices.  
-  - **Kleiber** — selective pass only; minimal intervention; no promote unless deeply prepared.
+  - **Toscanini** — truth-to-form / verify / anti-indulgence before naming convergences.  
+  - **Furtwängler** — preserve tension and emergence; do not force the clean story too early.  
+  - **Bernstein** — embodied operator voice and heat in Chronicle/Reflection/Foresight (still score-anchored).  
+  - **Karajan** — month-arc polish; economical edits; total balance across voices.  
+  - **Kleiber** — selective pass only; chosen hotspots; no promote unless deeply prepared.
 
 ---
 
-## Toscanini moves (always optional; use as hygiene)
+## Conductor prompts (always optional; use as hygiene)
 
+- [ ] **Toscanini:** What is actually supported here, and where is rhetoric outrunning the score?
+- [ ] **Furtwängler:** Which tension still needs to breathe before I resolve it?
+- [ ] **Bernstein:** What must feel alive and legible here, not just accurate?
+- [ ] **Karajan:** What should be cut or rebalanced so the whole arc reads cleanly?
+- [ ] **Kleiber:** What deserves disproportionate attention, and what is explicitly not getting deepened tonight?
 - [ ] **Memory run:** 2–5 minutes — replay convergences/tensions from the last 7–30 days *before* re-opening raw walls.
 - [ ] **Score pass:** skim Machine layer + last `strategy-page` tails for involved `expert_id`s.
-- [ ] **Clarity pass:** after drafting, ask: “Would a future reader grasp Chronicle/Reflection/Foresight **without** insider context?”
-- [ ] **Toscanini pause:** if synthesis feels wrong, **stop** — short break — return; no forced merge of tensions.
 - [ ] **Read-aloud:** read Judgment once aloud (or subvocalize) for rhythm and overstuffed sentences.
 
 ---

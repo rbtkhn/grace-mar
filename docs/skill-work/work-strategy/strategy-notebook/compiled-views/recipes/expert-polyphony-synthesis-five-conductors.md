@@ -59,34 +59,37 @@ Fill the body using the **five movements** below. Each section should contain at
 
 ### Movement 1 — Precision (Toscanini)
 
-**Role:** Clean score, seams, and verifiability.  
+**Role:** Truth-to-form: clean score, seams, and anti-indulgent verifiability.  
 - What is unambiguous in the Machine/Journal material? (claims, names, time windows, explicit convergences.)  
-- What needs verification or is explicitly flagged as uncertain?  
+- What needs verification, is explicitly flagged as uncertain, or sounds rhetorically larger than the score supports?  
 - Short bullets; **no** smoothing of contradictions here — name them for Movement 2.
 
 ### Movement 2 — Flow (Furtwängler)
 
 **Role:** Let tensions and resonances show without forced resolution.  
 - Where do experts **disagree**, **hedge**, or **talk past** each other?  
-- What historical or thematic resonances appear in the threads (from source only)?
+- What historical or thematic resonances appear in the threads (from source only)?  
+- What feels emergent but not yet ripe for clean judgment?
 
 ### Movement 3 — Vitality (Bernstein)
 
-**Role:** Heat, stakes, and narrative energy — without inventing facts.  
+**Role:** Heat, stakes, narrative energy, and public intelligibility — without inventing facts.  
 - What is the **pulse of the day or week** across voices? (Urgency, risk framing, “what would change the story.”)  
-- One short paragraph is enough if bullets would flatten the drama.
+- One short paragraph is enough if bullets would flatten the drama or make the stakes feel inert.
 
 ### Movement 4 — Elegance & Polish (Karajan)
 
-**Role:** Long arc, balance, and monthly shape.  
+**Role:** Long arc, balance, monthly shape, and total effect.  
 - How does this week sit in **`meta.md` / `days.md`** themes?  
-- **Balance across experts:** who is driving the main melodic line for this window vs supporting lines?
+- **Balance across experts:** who is driving the main melodic line for this window vs supporting lines?  
+- What should be cut, merged, or moved so the overall arc reads cleanly?
 
 ### Movement 5 — Selectivity & Depth (Kleiber)
 
 **Role:** Ruthless focus — what deserves deep follow-up or promotion *as a decision*, not a wish.  
 - One or two threads/arcs that merit disproportionate next-session attention.  
-- Explicit **watch / decision / promote** style signals **only** if already present in source markers or strategy-page text.
+- Explicit **watch / decision / promote** style signals **only** if already present in source markers or strategy-page text.  
+- Name what is *not* being deepened this round when that omission is part of the judgment.
 
 ### Unhobbling (frontier and tools) — v1.2
 
