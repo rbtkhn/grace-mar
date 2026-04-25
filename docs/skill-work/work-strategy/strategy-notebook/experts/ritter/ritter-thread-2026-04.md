@@ -1,3 +1,4 @@
+
 <!-- strategy-expert-thread:start -->
 ## Machine layer — Extraction (script-maintained)
 
