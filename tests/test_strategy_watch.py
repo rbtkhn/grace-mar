@@ -186,6 +186,38 @@ class TestPageReader:
         ids = {p.id for p in all_p[eid]}
         assert ids == {"march-only", "april-only"}
 
+    def test_discover_all_pages_dedupes_same_id_monthly_over_legacy_thread(self, tmp_path: Path):
+        from strategy_page_reader import discover_all_pages
+
+        nb = tmp_path / "nb"
+        eid = "pape"
+        d = nb / "experts" / eid
+        d.mkdir(parents=True)
+        monthly_fence = (
+            '<!-- strategy-page:start id="dup-page" date="2026-01-10" watch="hormuz" -->\n'
+            "### Page: from-monthly\n<!-- strategy-page:end -->"
+        )
+        (d / f"{eid}-thread-2026-01.md").write_text(
+            f"## 2026-01\n\n{monthly_fence}\n"
+            "<!-- strategy-expert-thread:start -->\n<!-- strategy-expert-thread:end -->\n",
+            encoding="utf-8",
+        )
+        legacy_fence = (
+            '<!-- strategy-page:start id="dup-page" date="2026-01-20" watch="" -->\n'
+            "### Page: from-legacy\n<!-- strategy-page:end -->"
+        )
+        (d / "thread.md").write_text(
+            f"## 2026-01\n\n{legacy_fence}\n"
+            "<!-- strategy-expert-thread:start -->\n<!-- strategy-expert-thread:end -->\n",
+            encoding="utf-8",
+        )
+        all_p = discover_all_pages(nb)
+        assert eid in all_p
+        dups = [p for p in all_p[eid] if p.id == "dup-page"]
+        assert len(dups) == 1
+        assert dups[0].date == "2026-01-10"
+        assert "from-monthly" in dups[0].content
+
 
 # ---------------------------------------------------------------------------
 # Page composition (strategy_page.py)

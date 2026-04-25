@@ -141,10 +141,34 @@ def uses_monthly_thread_layout(notebook_dir: Path, expert_id: str) -> bool:
 
 
 def expert_thread_paths_for_discovery(notebook_dir: Path, expert_id: str) -> list[Path]:
-    """Ordered thread paths for page discovery / validation (monthly or legacy)."""
+    """Ordered thread paths for page discovery / validation (monthly, legacy, or both).
+
+    When a **phased** split is in progress, ``*-thread-YYYY-MM.md`` monthlies and
+    ``experts/<id>/thread.md`` may both exist. Return **all** of them: sorted
+    monthlies first, then ``thread.md`` if on disk, deduped by resolved path.
+    ``discover_all_pages`` in ``strategy_page_reader`` then dedupes
+    ``strategy-page`` by ``id=`` (see there), **preferring** a block from a
+    monthly file over the same id in ``thread.md``.
+    """
     mmap = month_thread_paths_by_month(notebook_dir, expert_id)
+    out: list[Path] = []
+    seen: set[Path] = set()
+
+    def add(p: Path) -> None:
+        if not p.is_file():
+            return
+        r = p.resolve()
+        if r in seen:
+            return
+        seen.add(r)
+        out.append(p)
+
     if mmap:
-        return [mmap[k] for k in sorted(mmap.keys())]
+        for k in sorted(mmap.keys()):
+            add(mmap[k])
+        add(notebook_dir / "experts" / expert_id / "thread.md")
+        if out:
+            return out
     legacy = notebook_dir / "experts" / expert_id / "thread.md"
     if legacy.is_file():
         return [legacy]

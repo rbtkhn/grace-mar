@@ -3,6 +3,7 @@ description: Expert thread journal layer — prose-first narrative (not bullet-d
 globs:
   - docs/skill-work/work-strategy/strategy-notebook/strategy-expert-*-thread.md
   - docs/skill-work/work-strategy/strategy-notebook/experts/*/thread.md
+  - docs/skill-work/work-strategy/strategy-notebook/experts/*/*-thread-*.md
 alwaysApply: false
 ---
 
@@ -10,7 +11,7 @@ alwaysApply: false
 
 Applies when **editing or drafting** the human layer **above** `<!-- strategy-expert-thread:start -->`.
 
-**Naming:** **Journal layer** = file-level human narrative (not overwritten by **`thread`**). **Segment 1–4** (2026) = month index — **January** (`## 2026-01`) through **April** (`## 2026-04`, ongoing). **Machine layer** = script block between HTML markers — **not** “Segment 2” in the month sense. Full spec: `docs/skill-work/work-strategy/strategy-notebook/STRATEGY-NOTEBOOK-ARCHITECTURE.md` § Thread.
+**Naming:** **Journal layer** = file-level human narrative (not overwritten by **`thread`**). **Segment 1–4** (2026) = month index in a **single** `thread.md` — **January** through **April**; with **one file per month** (`*-thread-YYYY-MM.md`) there is one **`## YYYY-MM`** (or a short month-true intro) per file. **Machine layer** = script block between HTML markers — **not** “Segment 2” in the month sense. **Partial split:** if both monthly and `thread.md` exist, the monthly chapter is the **canonical** file for that month; discovery unions paths per architecture § *Partial monthly layout*. Full spec: `docs/skill-work/work-strategy/strategy-notebook/STRATEGY-NOTEBOOK-ARCHITECTURE.md` § Thread.
 
 ## Default (do not invert)
 

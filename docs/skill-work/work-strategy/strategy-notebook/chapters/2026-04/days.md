@@ -728,7 +728,7 @@ Barnes says both sides face material clocks and the question is which clock runs
 - [Moneycontrol — Trump pool remarks 2026-04-17](https://www.moneycontrol.com/world/trump-says-iran-to-give-up-enriched-uranium-signals-deal-very-soon-article-13891392.html)
 - [`strategy-expert-davis-thread.md`](../../strategy-expert-davis-thread.md) — **2026-04** **bullets** **(Araghchi** **+** **Trump** **TS** **+** **2026-04-17** **Davis×Johnson** **YT** **+** **continuity** **map**)
 - [`strategy-expert-johnson-thread.md`](../../strategy-expert-johnson-thread.md) — **2026-04-17** **Davis×Johnson** **YT** **+** **Johnson** **×** **Ritter** **C-plane** **seam** **(see** **Judgment** **above**)
-- [`strategy-expert-ritter-thread.md`](../../strategy-expert-ritter-thread.md) — **2026-04-17** **Glenn** **Diesen** **ingest** **+** **journal** **continuity** **bullet** **(Baltic** **/** **NATO** **×** **Islamabad** **carryover** **seam)**
+- [`experts/ritter/thread.md`](../../experts/ritter/thread.md) · [`ritter-thread-2026-01.md`](../../experts/ritter/ritter-thread-2026-01.md) — **2026-04-17** **Glenn** **Diesen** **ingest** **+** **journal** **continuity** **bullet** **(Baltic** **/** **NATO** **×** **Islamabad** **carryover** **seam)**
 - [`daily-strategy-inbox.md`](../../daily-strategy-inbox.md) — **`thread:ritter`** **verbatim** **+** **`batch-analysis`** **`crosses:ritter+diesen`** **(2026-04-17)**
 - [`strategy-expert-parsi-thread.md`](../../strategy-expert-parsi-thread.md) · [`strategy-expert-marandi-thread.md`](../../strategy-expert-marandi-thread.md) · [`strategy-expert-mercouris-thread.md`](../../strategy-expert-mercouris-thread.md) — **04-17** **continuity** **bullets**
 - [`strategy-expert-freeman-thread.md`](../../strategy-expert-freeman-thread.md) — **04-17** **Grayzone** + **tri-mind** **`ab+c`** **resolve**
@@ -770,7 +770,7 @@ Barnes says both sides face material clocks and the question is which clock runs
 - [assets/davis/x-2026-04-17-araghchi-card-with-commentary.png](../../assets/davis/x-2026-04-17-araghchi-card-with-commentary.png) — **@araghchi** card + commentary (Davis lane weave; **not** a replacement for pinned **X** URL)
 - [`strategy-expert-davis-thread.md`](../../strategy-expert-davis-thread.md) — **screenshot weave** bullet + **04-18** Deep Dive + **tri-mind** **`davis`×`pape`** **`davis`×`freeman`**
 - [`strategy-expert-pape-thread.md`](../../strategy-expert-pape-thread.md) · [`strategy-expert-freeman-thread.md`](../../strategy-expert-freeman-thread.md) — **tri-mind** mirror notes (**2026-04-18**)
-- [strategy-expert-ritter-transcript.md](../../strategy-expert-ritter-transcript.md) · [strategy-expert-ritter-thread.md](../../strategy-expert-ritter-thread.md) (refresh after **`strategy_thread.py`**)
+- [experts/ritter/transcript.md](../../experts/ritter/transcript.md) · [experts/ritter/thread.md](../../experts/ritter/thread.md) · [ritter-thread-2026-01.md](../../experts/ritter/ritter-thread-2026-01.md) (refresh after **`strategy_thread.py`**)
 
 ### Foresight
 
@@ -809,8 +809,8 @@ Barnes says both sides face material clocks and the question is which clock runs
 - [assets/eu/x-2026-04-19-sanchez-eu-israel-association.png](../../assets/eu/x-2026-04-19-sanchez-eu-israel-association.png) — **screenshot** **receipt** **(operator)** **—** **pin** **canonical** **`x.com/.../status/...`** **when** **stable**
 - [assets/robert-pape/x-2026-04-19-pape-trump-escalation-trap-truth-social.png](../../assets/robert-pape/x-2026-04-19-pape-trump-escalation-trap-truth-social.png) — **`@ProfessorPape`** **×** **Truth** **Social** **screenshot** **(operator)** **—** **pin** **canonical** **X** **status**
 - [assets/davis/x-2026-04-19-davis-trump-iran-energy-strait.png](../../assets/davis/x-2026-04-19-davis-trump-iran-energy-strait.png) — **`@DanielLDavis1`** **commentary** **+** **Truth** **Social** **inset** **(operator)** **—** **pin** **canonical** **X** **status**
-- [`strategy-expert-ritter-thread.md`](../../strategy-expert-ritter-thread.md) — **§ 2026-04** journal + **`[strength: medium]`** Substack bullet
-- [`strategy-expert-ritter-thread.md`](../../strategy-expert-ritter-thread.md) — **Cross-check (Davis / Pape / §1e)** (`###` heading in **April** journal layer, above machine block)
+- [`experts/ritter/thread.md`](../../experts/ritter/thread.md) · [`ritter-thread-2026-01.md`](../../experts/ritter/ritter-thread-2026-01.md) — **§ 2026-04** journal + **`[strength: medium]`** Substack bullet
+- [`experts/ritter/thread.md`](../../experts/ritter/thread.md) · [`ritter-thread-2026-01.md`](../../experts/ritter/ritter-thread-2026-01.md) — **Cross-check (Davis / Pape / §1e)** (`###` heading in **April** journal layer, above machine block)
 - Primary: [The Consequences of Incompetence](https://scottritter.substack.com/p/the-consequences-of-incompetence) (Scott Ritter, Substack)
 
 ### Foresight

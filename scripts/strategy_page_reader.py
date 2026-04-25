@@ -85,16 +85,39 @@ def discover_pages(thread_path: Path, expert_id: str = "") -> list[PageBlock]:
 
 
 def discover_all_pages(notebook_dir: Path) -> dict[str, list[PageBlock]]:
-    """Scan all expert thread files and return ``{expert_id: [pages]}``."""
-    from strategy_expert_corpus import CANONICAL_EXPERT_IDS, expert_thread_paths_for_discovery
+    """Scan all expert thread files and return ``{expert_id: [pages]}``.
+
+    If the same ``strategy-page`` ``id=`` appears in a monthly
+    ``*-thread-YYYY-MM.md`` and in ``thread.md`` (partial split), keep **one**
+    block per id, **preferring** the path from a monthly file.
+    """
+    from strategy_expert_corpus import (
+        CANONICAL_EXPERT_IDS,
+        RE_FLAT_MONTH_THREAD,
+        RE_IN_FOLDER_MONTH_THREAD,
+        expert_thread_paths_for_discovery,
+    )
+
+    def _is_monthly_thread(p: Path, eid: str) -> bool:
+        m = RE_IN_FOLDER_MONTH_THREAD.match(p.name)
+        if m and m.group(1) == eid:
+            return True
+        m2 = RE_FLAT_MONTH_THREAD.match(p.name)
+        return bool(m2 and m2.group(1) == eid)
 
     result: dict[str, list[PageBlock]] = {}
     for expert_id in CANONICAL_EXPERT_IDS:
-        combined: list[PageBlock] = []
+        by_id: dict[str, PageBlock] = {}
         for thread_path in expert_thread_paths_for_discovery(notebook_dir, expert_id):
-            combined.extend(discover_pages(thread_path, expert_id=expert_id))
-        if combined:
-            result[expert_id] = combined
+            monthly = _is_monthly_thread(thread_path, expert_id)
+            for pb in discover_pages(thread_path, expert_id=expert_id):
+                cur = by_id.get(pb.id)
+                if cur is None:
+                    by_id[pb.id] = pb
+                elif monthly and not _is_monthly_thread(cur.source_path, expert_id):
+                    by_id[pb.id] = pb
+        if by_id:
+            result[expert_id] = list(by_id.values())
     return result
 
 

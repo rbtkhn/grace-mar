@@ -12,7 +12,7 @@ WORK only; not Record.
 
 _Write here in full sentences. Dated arcs are welcome (e.g. **2026-04-12 → 04-15**). Cover: what this voice did this week, how it **intersects** named **pages**, convergence/tension with other **`thread:`** experts, and **Open** pins. The **journal layer** is **not** overwritten by the **`thread`** script._
 
-**Layout:** Stay on **one** `strategy-expert-ritter-thread.md` file. Within the **journal layer**, each **`## YYYY-MM`** heading is a **month segment**. For **2026:** **Segment 1** = January (`## 2026-01`), **Segment 2** = February (`## 2026-02`), **Segment 3** = March (`## 2026-03`), **Segment 4** = April (`## 2026-04`, ongoing). The **machine layer** (script-maintained) is **only** the fenced block between the **strategy-expert-thread** HTML start and end comments — do not call that "Segment 2" in the month sense.
+**Layout (partial monthly split):** **January 2026** is **canonical** in [`ritter-thread-2026-01.md`](ritter-thread-2026-01.md) (this file may still hold a **duplicate** `## 2026-01` until the split is complete). In this file, each **`## YYYY-MM`** from **2026-02** onward is a **month segment**. For **2026** in this legacy file: **Segment 2** = February (`## 2026-02`), **Segment 3** = March (`## 2026-03`), **Segment 4** = April (`## 2026-04`, ongoing). The **machine layer** below is **not** updated by **`thread`** when monthly `ritter-thread-*.md` files exist; see monthly files + [`README.md`](README.md). Do not call the machine block "Segment 2" in the month sense.
 
 _(No narrative distillation yet — add prose above the markers, not inside them.)_
 

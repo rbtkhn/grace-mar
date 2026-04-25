@@ -70,4 +70,4 @@ Where **their** commentary is published and accessible (**no Wikipedia**). Re-ve
 
 ---
 
-**Companion files:** [`strategy-expert-ritter-transcript.md`](strategy-expert-ritter-transcript.md) (7-day rolling verbatim) and [`strategy-expert-ritter-thread.md`](strategy-expert-ritter-thread.md) (distilled analytical thread).
+**Companion files:** [`transcript.md`](transcript.md) (7-day rolling verbatim), [`thread.md`](thread.md) (analytical thread — multi-month during phased split), and [`ritter-thread-2026-01.md`](ritter-thread-2026-01.md) (January 2026 monthly chapter; canonical for that month when present).
