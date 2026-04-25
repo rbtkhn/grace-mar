@@ -22,22 +22,142 @@ The core distinction is:
 
 ## Tool map
 
-| Tool | Question it answers | Authority | Writes? | Typical command/path | Use when |
-|------|----------------------|-----------|---------|----------------------|----------|
-| **Doctrine Drift Radar** | Does the current repo violate stated doctrine? | read-only audit | no | [`doctrine-drift-radar.md`](doctrine-drift-radar.md), `python3 scripts/audit_doctrine_drift.py` | after adding scripts, schemas, authority language, or new runtime surfaces |
-| **Counterfactual Fork Simulator** | Would a proposed future change introduce drift, contradiction, or follow-up work? | advisory / scratch-only | `artifacts/counterfactual-simulations/` only | [`counterfactual-fork-simulator.md`](counterfactual-fork-simulator.md), `python3 scripts/simulate_counterfactual_fork.py --proposal <file>` | before accepting broad or authority-sensitive changes |
-| **Agent Sprawl Control Plane** | Are agent-like surfaces overlapping, unreceipted, or authority-confused? | read-only registry / audit | no | [`skill-work/work-dev/agent-sprawl-control-plane.md`](skill-work/work-dev/agent-sprawl-control-plane.md), `python3 scripts/work_dev/audit_agent_sprawl.py` | adding a new agent, runtime, harness, adapter, or automation surface |
-| **Workbench** | Does a generated artifact run or behave under inspection? | artifact-behavior only | receipts / artifacts only | [`skill-work/work-dev/workbench/README.md`](skill-work/work-dev/workbench/README.md) | testing generated HTML, React, SVG, CLI, or script artifacts |
-| **Interface Artifact Protocol** | Is this generated operator-facing artifact bounded and non-canonical? | WORK-only / derived artifact | metadata / artifacts only | [`skill-work/work-dev/interface-artifacts/README.md`](skill-work/work-dev/interface-artifacts/README.md) | creating dashboards, visualizers, review cockpits, or prototype views |
-| **Portable Emulation Contract** | Can a foreign runtime emulate Grace-Mar without gaining merge authority? | read-only Record context; proposal-only return | exported bundle / proposal envelope only | [`portability/emulation/README.md`](portability/emulation/README.md) | exporting Grace-Mar behavior to external agents or runtimes |
-| **Claim-Proof Standard** | Is a claimed capability supported by test, script, receipt, or demo? | capability-description audit | status / proof artifacts only | [`skill-work/work-dev/claim-proof-standard.md`](skill-work/work-dev/claim-proof-standard.md) | marking a feature implemented or capability-complete |
-| **Observability** | Are proposals, statuses, validation results, touched surfaces, and stale reviews visible? | inspection only | reports only | [`observability.md`](observability.md) | reviewing governance state |
-| **Workflow Observability** | Which workflows are expensive, stale, high-friction, or effective? | inspection only | workflow reports / events | [`workflow-observability.md`](workflow-observability.md) | improving process rather than content |
-| **Gate Board** | What is pending, blocked, ready, approved, rejected, or merged? | generated view only | generated board | [`gate-board.md`](gate-board.md), `python3 scripts/build_gate_board.py` | reviewing gate queue state |
-| **Harness Replay** | What audit context exists for a staged proposal, export, or event? | replay / inspection only | replay report | [`harness-replay.md`](harness-replay.md), `python3 scripts/replay_harness_event.py ...` | reconstructing what happened |
-| **Action Receipts** | What happened during a meaningful operation? | audit trail only | receipt JSON / logs | [`action-receipts.md`](action-receipts.md) | making meaningful operations inspectable |
-| **Context Budgeting** | What context was included, excluded, or escalated? | context-assembly receipt | budget receipts | [`runtime/context-budgeting.md`](runtime/context-budgeting.md), `python3 scripts/prepared_context/build_budgeted_context.py ...` | managing context depth and recovery |
-| **Retrieval-Miss Ledger** | What did retrieval fail to surface? | retrieval-improvement log | miss ledger | [`retrieval-miss-ledger.md`](retrieval-miss-ledger.md), `python3 scripts/runtime/log_retrieval_miss.py ...` | search or context retrieval fails |
+### Doctrine Drift Radar
+
+- **Question:** Does the current repo violate stated doctrine?
+- **Authority:** read-only audit
+- **Writes:** no
+- **Typical command/path:** [`doctrine-drift-radar.md`](doctrine-drift-radar.md),
+  `python3 scripts/audit_doctrine_drift.py`
+- **Use when:** after adding scripts, schemas, authority language, or new
+  runtime surfaces
+
+### Counterfactual Fork Simulator
+
+- **Question:** Would a proposed future change introduce drift,
+  contradiction, or follow-up work?
+- **Authority:** advisory / scratch-only
+- **Writes:** `artifacts/counterfactual-simulations/` only
+- **Typical command/path:**
+  [`counterfactual-fork-simulator.md`](counterfactual-fork-simulator.md),
+  `python3 scripts/simulate_counterfactual_fork.py --proposal <file>`
+- **Use when:** before accepting broad or authority-sensitive changes
+
+### Agent Sprawl Control Plane
+
+- **Question:** Are agent-like surfaces overlapping, unreceipted, or
+  authority-confused?
+- **Authority:** read-only registry / audit
+- **Writes:** no
+- **Typical command/path:**
+  [`skill-work/work-dev/agent-sprawl-control-plane.md`](skill-work/work-dev/agent-sprawl-control-plane.md),
+  `python3 scripts/work_dev/audit_agent_sprawl.py`
+- **Use when:** adding a new agent, runtime, harness, adapter, or
+  automation surface
+
+### Workbench
+
+- **Question:** Does a generated artifact run or behave under inspection?
+- **Authority:** artifact-behavior only
+- **Writes:** receipts / artifacts only
+- **Typical command/path:**
+  [`skill-work/work-dev/workbench/README.md`](skill-work/work-dev/workbench/README.md)
+- **Use when:** testing generated HTML, React, SVG, CLI, or script artifacts
+
+### Interface Artifact Protocol
+
+- **Question:** Is this generated operator-facing artifact bounded and
+  non-canonical?
+- **Authority:** WORK-only / derived artifact
+- **Writes:** metadata / artifacts only
+- **Typical command/path:**
+  [`skill-work/work-dev/interface-artifacts/README.md`](skill-work/work-dev/interface-artifacts/README.md)
+- **Use when:** creating dashboards, visualizers, review cockpits, or
+  prototype views
+
+### Portable Emulation Contract
+
+- **Question:** Can a foreign runtime emulate Grace-Mar without gaining
+  merge authority?
+- **Authority:** read-only Record context; proposal-only return
+- **Writes:** exported bundle / proposal envelope only
+- **Typical command/path:**
+  [`portability/emulation/README.md`](portability/emulation/README.md)
+- **Use when:** exporting Grace-Mar behavior to external agents or runtimes
+
+### Claim-Proof Standard
+
+- **Question:** Is a claimed capability supported by test, script, receipt,
+  or demo?
+- **Authority:** capability-description audit
+- **Writes:** status / proof artifacts only
+- **Typical command/path:**
+  [`skill-work/work-dev/claim-proof-standard.md`](skill-work/work-dev/claim-proof-standard.md)
+- **Use when:** marking a feature implemented or capability-complete
+
+### Observability
+
+- **Question:** Are proposals, statuses, validation results, touched
+  surfaces, and stale reviews visible?
+- **Authority:** inspection only
+- **Writes:** reports only
+- **Typical command/path:** [`observability.md`](observability.md)
+- **Use when:** reviewing governance state
+
+### Workflow Observability
+
+- **Question:** Which workflows are expensive, stale, high-friction, or
+  effective?
+- **Authority:** inspection only
+- **Writes:** workflow reports / events
+- **Typical command/path:** [`workflow-observability.md`](workflow-observability.md)
+- **Use when:** improving process rather than content
+
+### Gate Board
+
+- **Question:** What is pending, blocked, ready, approved, rejected, or
+  merged?
+- **Authority:** generated view only
+- **Writes:** generated board
+- **Typical command/path:** [`gate-board.md`](gate-board.md),
+  `python3 scripts/build_gate_board.py`
+- **Use when:** reviewing gate queue state
+
+### Harness Replay
+
+- **Question:** What audit context exists for a staged proposal, export, or
+  event?
+- **Authority:** replay / inspection only
+- **Writes:** replay report
+- **Typical command/path:** [`harness-replay.md`](harness-replay.md),
+  `python3 scripts/replay_harness_event.py ...`
+- **Use when:** reconstructing what happened
+
+### Action Receipts
+
+- **Question:** What happened during a meaningful operation?
+- **Authority:** audit trail only
+- **Writes:** receipt JSON / logs
+- **Typical command/path:** [`action-receipts.md`](action-receipts.md)
+- **Use when:** making meaningful operations inspectable
+
+### Context Budgeting
+
+- **Question:** What context was included, excluded, or escalated?
+- **Authority:** context-assembly receipt
+- **Writes:** budget receipts
+- **Typical command/path:** [`runtime/context-budgeting.md`](runtime/context-budgeting.md),
+  `python3 scripts/prepared_context/build_budgeted_context.py ...`
+- **Use when:** managing context depth and recovery
+
+### Retrieval-Miss Ledger
+
+- **Question:** What did retrieval fail to surface?
+- **Authority:** retrieval-improvement log
+- **Writes:** miss ledger
+- **Typical command/path:** [`retrieval-miss-ledger.md`](retrieval-miss-ledger.md),
+  `python3 scripts/runtime/log_retrieval_miss.py ...`
+- **Use when:** search or context retrieval fails
 
 ## Diagnostic selection guide
 

@@ -72,17 +72,67 @@ Claim-Proof Standard -> tests / receipts / demos -> work-dev status
 Use this path when a feature is being called implemented. The claim
 needs proof artifacts; README prose alone is not enough.
 
-## Decision table
+## Decision guide
 
-| If you are doing this | Start here | Then run/check | Do not confuse with |
-|---|---|---|---|
-| Adding a new script | [../../counterfactual-fork-simulator.md](../../counterfactual-fork-simulator.md) if scope is broad; otherwise [../../doctrine-drift-radar.md](../../doctrine-drift-radar.md) | Doctrine Drift Radar, relevant tests, Claim-Proof if capability status changes | a successful script run is not by itself a merge or approval |
-| Adding a new agent surface | [agent-sprawl-control-plane.md](agent-sprawl-control-plane.md) | Capability contract, sandbox or portable-emulation boundary, Doctrine Drift Radar | a new runtime surface is not automatically justified just because it can be built |
-| Adding a generated UI or artifact | [interface-artifacts/README.md](interface-artifacts/README.md) | Workbench, then Claim-Proof if capability claims are affected | Workbench receipts are not evidence truth and artifacts are not Record |
-| Adding an external runtime bridge | [../../portability/emulation/README.md](../../portability/emulation/README.md) or [sandbox-adapter-spec.md](sandbox-adapter-spec.md), depending on the runtime model | Capability contract, Agent Sprawl audit, Doctrine Drift Radar | foreign runtimes may propose; they may not merge |
-| Marking a capability implemented | [claim-proof-standard.md](claim-proof-standard.md) | tests, receipts, verification runs, or demos | README prose alone is not proof |
-| Reviewing a broad proposed change | [../../counterfactual-fork-simulator.md](../../counterfactual-fork-simulator.md) | Doctrine Drift Radar, then normal gate review | a counterfactual report is not approval |
-| Debugging governance state | [../../doctrine-drift-radar.md](../../doctrine-drift-radar.md), [../../harness-replay.md](../../harness-replay.md), or [../../observability.md](../../observability.md) depending on the question | Gate Board, workflow observability, action receipts | generated reports are not the canonical source of truth |
+### Adding a new script
+
+- **Start here:**
+  [../../counterfactual-fork-simulator.md](../../counterfactual-fork-simulator.md)
+  if scope is broad; otherwise
+  [../../doctrine-drift-radar.md](../../doctrine-drift-radar.md)
+- **Then run/check:** Doctrine Drift Radar, relevant tests, Claim-Proof if
+  capability status changes
+- **Do not confuse with:** a successful script run is not by itself a merge
+  or approval
+
+### Adding a new agent surface
+
+- **Start here:** [agent-sprawl-control-plane.md](agent-sprawl-control-plane.md)
+- **Then run/check:** Capability contract, sandbox or portable-emulation
+  boundary, Doctrine Drift Radar
+- **Do not confuse with:** a new runtime surface is not automatically
+  justified just because it can be built
+
+### Adding a generated UI or artifact
+
+- **Start here:** [interface-artifacts/README.md](interface-artifacts/README.md)
+- **Then run/check:** Workbench, then Claim-Proof if capability claims are
+  affected
+- **Do not confuse with:** Workbench receipts are not evidence truth and
+  artifacts are not Record
+
+### Adding an external runtime bridge
+
+- **Start here:**
+  [../../portability/emulation/README.md](../../portability/emulation/README.md)
+  or [sandbox-adapter-spec.md](sandbox-adapter-spec.md), depending on the
+  runtime model
+- **Then run/check:** Capability contract, Agent Sprawl audit, Doctrine
+  Drift Radar
+- **Do not confuse with:** foreign runtimes may propose; they may not merge
+
+### Marking a capability implemented
+
+- **Start here:** [claim-proof-standard.md](claim-proof-standard.md)
+- **Then run/check:** tests, receipts, verification runs, or demos
+- **Do not confuse with:** README prose alone is not proof
+
+### Reviewing a broad proposed change
+
+- **Start here:**
+  [../../counterfactual-fork-simulator.md](../../counterfactual-fork-simulator.md)
+- **Then run/check:** Doctrine Drift Radar, then normal gate review
+- **Do not confuse with:** a counterfactual report is not approval
+
+### Debugging governance state
+
+- **Start here:**
+  [../../doctrine-drift-radar.md](../../doctrine-drift-radar.md),
+  [../../harness-replay.md](../../harness-replay.md), or
+  [../../observability.md](../../observability.md) depending on the question
+- **Then run/check:** Gate Board, workflow observability, action receipts
+- **Do not confuse with:** generated reports are not the canonical source of
+  truth
 
 ## Non-goals
 
