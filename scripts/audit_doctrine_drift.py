@@ -62,7 +62,13 @@ def _applies_when(data: dict[str, Any], clause: dict[str, Any] | None) -> bool:
     return True
 
 
-def _violation(rule_id: str, path: Path, message: str, *, line: int | None = None) -> dict[str, Any]:
+def _violation(
+    rule_id: str,
+    path: Path,
+    message: str,
+    *,
+    line: int | None = None,
+) -> dict[str, Any]:
     payload = {
         "ruleId": rule_id,
         "path": path.as_posix(),
@@ -125,7 +131,11 @@ def _audit_python_canonical_writer_allowlist(
                         _violation(
                             rule["id"],
                             path.relative_to(repo_root),
-                            f"non-approved script writes protected Record target via {var_name} -> {target} (assigned line {assigned_at})",
+                            (
+                                "non-approved script writes protected "
+                                f"Record target via {var_name} -> {target} "
+                                f"(assigned line {assigned_at})"
+                            ),
                             line=idx,
                         )
                     )
@@ -134,7 +144,11 @@ def _audit_python_canonical_writer_allowlist(
                         _violation(
                             rule["id"],
                             path.relative_to(repo_root),
-                            f"non-approved script opens protected Record target for write via {var_name} -> {target} (assigned line {assigned_at})",
+                            (
+                                "non-approved script opens protected "
+                                f"Record target for write via {var_name} -> "
+                                f"{target} (assigned line {assigned_at})"
+                            ),
                             line=idx,
                         )
                     )
@@ -217,7 +231,10 @@ def _audit_text_forbidden_regex(repo_root: Path, rule: dict[str, Any]) -> list[d
 
 def _audit_text_required_regex(repo_root: Path, rule: dict[str, Any]) -> list[dict[str, Any]]:
     violations: list[dict[str, Any]] = []
-    required_patterns = [re.compile(item, re.IGNORECASE) for item in rule.get("requiredAllRegex", [])]
+    required_patterns = [
+        re.compile(item, re.IGNORECASE)
+        for item in rule.get("requiredAllRegex", [])
+    ]
     for path in _iter_target_files(repo_root, rule["targets"]):
         rel = path.relative_to(repo_root)
         text = path.read_text(encoding="utf-8")

@@ -101,7 +101,12 @@ def _validate_surface_shape(surface: dict[str, Any], index: int) -> list[dict[st
     for field in REQUIRED_FIELDS:
         if field not in surface:
             errors.append(
-                _issue("missing_required_field", f"missing required field: {field}", surface_id=sid, field=field)
+                _issue(
+                    "missing_required_field",
+                    f"missing required field: {field}",
+                    surface_id=sid,
+                    field=field,
+                )
             )
 
     for field in [
@@ -117,7 +122,12 @@ def _validate_surface_shape(surface: dict[str, Any], index: int) -> list[dict[st
     ]:
         if field in surface and _is_blank(surface[field]):
             errors.append(
-                _issue("missing_required_field", f"field must not be blank: {field}", surface_id=sid, field=field)
+                _issue(
+                    "missing_required_field",
+                    f"field must not be blank: {field}",
+                    surface_id=sid,
+                    field=field,
+                )
             )
 
     for field in ["reads", "writes"]:
@@ -163,7 +173,10 @@ def _validate_surface_shape(surface: dict[str, Any], index: int) -> list[dict[st
         errors.append(
             _issue(
                 "invalid_canonical_record_access",
-                f"canonical_record_access must be one of {sorted(ALLOWED_CANONICAL_RECORD_ACCESS)!r}",
+                    (
+                        "canonical_record_access must be one of "
+                        f"{sorted(ALLOWED_CANONICAL_RECORD_ACCESS)!r}"
+                    ),
                 surface_id=sid,
                 field="canonical_record_access",
             )
@@ -257,7 +270,11 @@ def audit_registry(registry_path: Path, repo_root: Path) -> dict[str, Any]:
                 errors.append(
                     _issue(
                         "missing_receipt_requirement",
-                        "implemented/partial non-audit surfaces must declare receipt_required: true or explicit exemption",
+                        (
+                            "implemented/partial non-audit surfaces must "
+                            "declare receipt_required: true or explicit "
+                            "exemption"
+                        ),
                         surface_id=sid,
                         field="receipt_required",
                     )
@@ -270,7 +287,11 @@ def audit_registry(registry_path: Path, repo_root: Path) -> dict[str, Any]:
                 errors.append(
                     _issue(
                         "missing_capability_contract",
-                        "implemented/partial integration surfaces must declare a capability_contract or explicit exemption",
+                        (
+                            "implemented/partial integration surfaces must "
+                            "declare a capability_contract or explicit "
+                            "exemption"
+                        ),
                         surface_id=sid,
                         field="capability_contract",
                     )
@@ -317,7 +338,10 @@ def audit_registry(registry_path: Path, repo_root: Path) -> dict[str, Any]:
                 warnings.append(
                     _issue(
                         "overlapping_writes_same_category",
-                        f"surfaces share category {category!r} and overlapping writes: {', '.join(overlap)}",
+                        (
+                            f"surfaces share category {category!r} and "
+                            f"overlapping writes: {', '.join(overlap)}"
+                        ),
                         surface_id=left_id,
                         other_surface_id=right_id,
                     )
@@ -370,9 +394,21 @@ def _render_text(report: dict[str, Any]) -> str:
 
 
 def main(argv: list[str] | None = None) -> int:
-    parser = argparse.ArgumentParser(description="Audit the Phase 1 agent-surface registry.")
-    parser.add_argument("--config", type=Path, default=DEFAULT_CONFIG, help="Path to agent-surfaces registry JSON")
-    parser.add_argument("--repo-root", type=Path, default=REPO_ROOT, help="Repository root for relative paths")
+    parser = argparse.ArgumentParser(
+        description="Audit the Phase 1 agent-surface registry."
+    )
+    parser.add_argument(
+        "--config",
+        type=Path,
+        default=DEFAULT_CONFIG,
+        help="Path to agent-surfaces registry JSON",
+    )
+    parser.add_argument(
+        "--repo-root",
+        type=Path,
+        default=REPO_ROOT,
+        help="Repository root for relative paths",
+    )
     parser.add_argument("--json", action="store_true", help="Print JSON report")
     args = parser.parse_args(argv)
 

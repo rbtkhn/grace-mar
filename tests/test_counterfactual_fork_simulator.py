@@ -120,7 +120,10 @@ def test_interface_artifact_non_none_record_authority_creates_drift_risk(tmp_pat
     out = tmp_path / "artifacts" / "counterfactual-simulations" / "example-proposal-simulation.json"
     report = json.loads(out.read_text(encoding="utf-8"))
     assert report["doctrine_drift_risks"]
-    assert any("recordAuthority" in item or "Interface artifact" in item for item in report["doctrine_drift_risks"])
+    assert any(
+        "recordAuthority" in item or "Interface artifact" in item
+        for item in report["doctrine_drift_risks"]
+    )
 
 
 def test_empty_target_surfaces_produces_needs_review(tmp_path: Path) -> None:

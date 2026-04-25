@@ -63,8 +63,19 @@ def _base_config() -> dict:
                 "id": "work-docs-no-canonical-merge-authority",
                 "kind": "text_forbidden_regex",
                 "targets": ["docs/skill-work/**/*.md"],
-                "forbiddenRegex": "\\b(?:can|may|has|have|grants?|with)\\b[^\\n]{0,80}\\b(?:canonical )?merge authority\\b",
-                "ignoreIfLineContainsAny": ["must not", "does not", "do not", "not ", "no ", "never", "without"],
+                "forbiddenRegex": (
+                    "\\b(?:can|may|has|have|grants?|with)\\b[^\\n]{0,80}"
+                    "\\b(?:canonical )?merge authority\\b"
+                ),
+                "ignoreIfLineContainsAny": [
+                    "must not",
+                    "does not",
+                    "do not",
+                    "not ",
+                    "no ",
+                    "never",
+                    "without",
+                ],
             },
             {
                 "id": "proposal-envelopes-require-human-review",
@@ -91,7 +102,10 @@ def _build_repo(root: Path) -> Path:
     (root / "scripts").mkdir(parents=True, exist_ok=True)
     (root / "artifacts" / "work-dev" / "interface-artifacts").mkdir(parents=True, exist_ok=True)
     (root / "artifacts" / "work-dev" / "workbench-receipts").mkdir(parents=True, exist_ok=True)
-    (root / "docs" / "portability" / "emulation" / "behavior-spec").mkdir(parents=True, exist_ok=True)
+    (root / "docs" / "portability" / "emulation" / "behavior-spec").mkdir(
+        parents=True,
+        exist_ok=True,
+    )
     (root / "docs" / "skill-work" / "work-dev").mkdir(parents=True, exist_ok=True)
     (root / "config").mkdir(parents=True, exist_ok=True)
 
@@ -133,10 +147,18 @@ def _build_repo(root: Path) -> Path:
             }
         },
     )
-    (root / "docs" / "portability" / "emulation" / "behavior-spec" / "v1-proposal-envelope.md").write_text(
+    (
+        root
+        / "docs"
+        / "portability"
+        / "emulation"
+        / "behavior-spec"
+        / "v1-proposal-envelope.md"
+    ).write_text(
         '# Proposal Envelope\n\n'
         '```json\n'
-        '{"authority": {"recordAuthority": "none", "gateEffect": "none", "mergeAuthority": "none"}, "requires_human_review": true}\n'
+        '{"authority": {"recordAuthority": "none", "gateEffect": "none", '
+        '"mergeAuthority": "none"}, "requires_human_review": true}\n'
         '```\n\n'
         'Importing a proposal envelope still requires human review.\n',
         encoding="utf-8",
@@ -224,17 +246,33 @@ def test_doctrine_drift_clean_repo(tmp_repo: tuple[Path, Path]) -> None:
             "work-docs-no-canonical-merge-authority",
         ),
         (
-            lambda root: (root / "docs" / "portability" / "emulation" / "behavior-spec" / "v1-proposal-envelope.md").write_text(
+            lambda root: (
+                root
+                / "docs"
+                / "portability"
+                / "emulation"
+                / "behavior-spec"
+                / "v1-proposal-envelope.md"
+            ).write_text(
                 "# Proposal Envelope\n\nNo review clause here.\n",
                 encoding="utf-8",
             ),
             "proposal-envelopes-require-human-review",
         ),
         (
-            lambda root: (root / "docs" / "portability" / "emulation" / "behavior-spec" / "v1-proposal-envelope.md").write_text(
+            lambda root: (
+                root
+                / "docs"
+                / "portability"
+                / "emulation"
+                / "behavior-spec"
+                / "v1-proposal-envelope.md"
+            ).write_text(
                 "# Proposal Envelope\n\n"
                 "```json\n"
-                '{"authority": {"recordAuthority": "none", "gateEffect": "none", "mergeAuthority": "review-required"}, "requires_human_review": true}\n'
+                '{"authority": {"recordAuthority": "none", "gateEffect": '
+                '"none", "mergeAuthority": "review-required"}, '
+                '"requires_human_review": true}\n'
                 "```\n\n"
                 "Importing a proposal envelope still requires human review.\n",
                 encoding="utf-8",

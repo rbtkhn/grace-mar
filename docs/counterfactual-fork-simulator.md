@@ -1,6 +1,8 @@
 # Counterfactual Fork Simulator
 
-**Purpose:** Counterfactual Fork Simulator is a scratch-only governance foresight tool. It simulates the consequences of accepting a proposed change without applying that change to canonical state.
+**Purpose:** Counterfactual Fork Simulator is a scratch-only governance
+foresight tool. It simulates the consequences of accepting a proposed
+change without applying that change to canonical state.
 
 ## What it is not
 
@@ -35,7 +37,10 @@ proposal / proposed change
 | resolve contradiction | forbidden |
 | recommend next action | allowed |
 
-The simulator may write only advisory output under `artifacts/counterfactual-simulations/`. A simulation report is WORK/audit-only and must not be mistaken for evidence, Record, approval, or a merge receipt.
+The simulator may write only advisory output under
+`artifacts/counterfactual-simulations/`. A simulation report is
+WORK/audit-only and must not be mistaken for evidence, Record,
+approval, or a merge receipt.
 
 ## Relationship to Doctrine Drift Radar
 
@@ -64,9 +69,13 @@ Counterfactual simulation is about bounded upstream review.
 
 ## Relationship to Interface Artifacts
 
-Interface artifacts can be simulated as proposed operator-facing additions. The simulator may report whether an artifact risks claiming Record authority, gate authority, or evidence truth.
+Interface artifacts can be simulated as proposed operator-facing
+additions. The simulator may report whether an artifact risks claiming
+Record authority, gate authority, or evidence truth.
 
-This keeps interface-artifact review aligned with the existing non-authority contract rather than letting a prototype silently drift into governance language it does not possess.
+This keeps interface-artifact review aligned with the existing
+non-authority contract rather than letting a prototype silently drift
+into governance language it does not possess.
 
 ## Failure modes
 
@@ -102,4 +111,7 @@ This tool exists to make consequence review cheaper and more legible before a hu
 
 ## Example input
 
-See [`../examples/diagnostics/counterfactual-proposal.example.json`](../examples/diagnostics/counterfactual-proposal.example.json) for a small proposal payload that exercises the Phase 1 input shape without touching canonical Record paths.
+See
+[`../examples/diagnostics/counterfactual-proposal.example.json`](../examples/diagnostics/counterfactual-proposal.example.json)
+for a small proposal payload that exercises the Phase 1 input shape
+without touching canonical Record paths.

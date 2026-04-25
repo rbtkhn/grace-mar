@@ -87,7 +87,8 @@ def validate_proposal(data: dict[str, Any]) -> dict[str, Any]:
     proposal_kind = _require_string(data, "proposal_kind")
     if proposal_kind not in ALLOWED_PROPOSAL_KINDS:
         raise ValueError(
-            f"proposal_kind must be one of {sorted(ALLOWED_PROPOSAL_KINDS)!r}, got {proposal_kind!r}"
+            "proposal_kind must be one of "
+            f"{sorted(ALLOWED_PROPOSAL_KINDS)!r}, got {proposal_kind!r}"
         )
     target_paths = _require_string_list(data, "target_paths")
     target_surfaces = _require_string_list(data, "target_surfaces")
@@ -102,7 +103,9 @@ def validate_proposal(data: dict[str, Any]) -> dict[str, Any]:
     evidence_refs = data.get("evidence_refs", [])
     if evidence_refs is None:
         evidence_refs = []
-    if not isinstance(evidence_refs, list) or not all(isinstance(item, str) for item in evidence_refs):
+    if not isinstance(evidence_refs, list) or not all(
+        isinstance(item, str) for item in evidence_refs
+    ):
         raise ValueError("evidence_refs must be a list of strings when present")
 
     operator_question = data.get("operator_question", "")
@@ -141,7 +144,15 @@ def _mentions_protected_write_without_human_review(text: str) -> bool:
     lowered = text.lower()
     if "human review" in lowered:
         return False
-    write_words = ("write", "writes", "update", "updates", "modify", "merge", "approve")
+    write_words = (
+        "write",
+        "writes",
+        "update",
+        "updates",
+        "modify",
+        "merge",
+        "approve",
+    )
     if not any(word in lowered for word in write_words):
         return False
     protected_tokens = [
@@ -192,14 +203,38 @@ def analyze_counterfactual(
 
     possible_contradictions: list[str] = []
     contradiction_keywords = {
-        "replace": "Proposal uses replacement language and may conflict with existing active wording or surface ownership.",
-        "rename": "Proposal uses rename language and may create path, doc, or cross-link drift if accepted incompletely.",
-        "deprecate": "Proposal uses deprecation language and may leave live references split between old and new doctrine.",
-        "remove": "Proposal uses removal language and may erase behavior or references other docs/scripts still assume exist.",
-        "canonical": "Proposal references canonical state directly; confirm it does not compress WORK analysis into Record truth.",
-        "memory": "Proposal references memory surfaces; confirm continuity, runtime memory, and Record are not being conflated.",
-        "record": "Proposal references Record surfaces directly; verify the target surface and merge path are explicit.",
-        "identity": "Proposal references identity semantics; check for contradiction with active SELF or governed doctrine.",
+        "replace": (
+            "Proposal uses replacement language and may conflict with "
+            "existing active wording or surface ownership."
+        ),
+        "rename": (
+            "Proposal uses rename language and may create path, doc, or "
+            "cross-link drift if accepted incompletely."
+        ),
+        "deprecate": (
+            "Proposal uses deprecation language and may leave live "
+            "references split between old and new doctrine."
+        ),
+        "remove": (
+            "Proposal uses removal language and may erase behavior or "
+            "references other docs/scripts still assume exist."
+        ),
+        "canonical": (
+            "Proposal references canonical state directly; confirm it does "
+            "not compress WORK analysis into Record truth."
+        ),
+        "memory": (
+            "Proposal references memory surfaces; confirm continuity, "
+            "runtime memory, and Record are not being conflated."
+        ),
+        "record": (
+            "Proposal references Record surfaces directly; verify the "
+            "target surface and merge path are explicit."
+        ),
+        "identity": (
+            "Proposal references identity semantics; check for contradiction "
+            "with active SELF or governed doctrine."
+        ),
     }
     for keyword, message in contradiction_keywords.items():
         if keyword in combined_lower:
@@ -211,7 +246,11 @@ def analyze_counterfactual(
         if _contains_non_none_authority(combined, key):
             authority_risk_found = True
             doctrine_drift_risks.append(
-                f"Proposed text appears to set {key} to a non-'none' value, which would drift from current doctrine boundaries."
+                (
+                    f"Proposed text appears to set {key} to a non-'none' "
+                    "value, which would drift from current doctrine "
+                    "boundaries."
+                )
             )
 
     protected_write_risk = _mentions_protected_write_without_human_review(combined)
@@ -221,40 +260,69 @@ def analyze_counterfactual(
             "Proposal appears to write canonical Record or gate surfaces without human review."
         )
 
-    if proposal["proposal_kind"] == "interface_artifact" and _interface_artifact_authority_risk(combined):
+    if proposal["proposal_kind"] == "interface_artifact" and _interface_artifact_authority_risk(
+        combined
+    ):
         doctrine_drift_risks.append(
-            "Interface artifact proposal appears to claim Record, gate, or evidence authority beyond its WORK-only role."
+            (
+                "Interface artifact proposal appears to claim Record, gate, "
+                "or evidence authority beyond its WORK-only role."
+            )
         )
 
-    if proposal["proposal_kind"] == "portable_emulation" and _portable_emulation_merge_risk(combined):
+    if proposal["proposal_kind"] == "portable_emulation" and _portable_emulation_merge_risk(
+        combined
+    ):
         doctrine_drift_risks.append(
-            "Portable emulation proposal appears to imply merge authority, which violates the non-authoritative emulation contract."
+            (
+                "Portable emulation proposal appears to imply merge "
+                "authority, which violates the non-authoritative emulation "
+                "contract."
+            )
         )
 
     follow_up_required: list[str] = []
     tests_or_audits_to_run: list[str] = []
     warnings: list[str] = [
-        "Advisory only: this simulation report is not evidence, not Record, not approval, and not a merge receipt."
+        (
+            "Advisory only: this simulation report is not evidence, not "
+            "Record, not approval, and not a merge receipt."
+        )
     ]
 
     if not patch.strip():
         warnings.append(
-            "No proposed_patch_text was supplied; this is a summary-only simulation and may miss structural or wording-level effects."
+            (
+                "No proposed_patch_text was supplied; this is a "
+                "summary-only simulation and may miss structural or "
+                "wording-level effects."
+            )
         )
     if not affected_surfaces:
-        warnings.append("No target_surfaces were supplied; consequence review is incomplete until surfaces are named.")
+        warnings.append(
+            "No target_surfaces were supplied; consequence review is "
+            "incomplete until surfaces are named."
+        )
 
     for target_path in affected_paths:
         resolved = (repo_root / target_path).resolve()
         if not resolved.exists():
-            warnings.append(f"Target path does not exist in current repo state: {target_path}")
+            warnings.append(
+                f"Target path does not exist in current repo state: {target_path}"
+            )
         if target_path.startswith("docs/") or target_path.endswith(".md"):
             follow_up_required.append(
-                f"Review nearby documentation cross-links and terminology alignment around {target_path}."
+                (
+                    "Review nearby documentation cross-links and "
+                    f"terminology alignment around {target_path}."
+                )
             )
         if target_path.startswith("scripts/"):
             follow_up_required.append(
-                f"Review doctrine drift and test coverage for script changes under {target_path}."
+                (
+                    "Review doctrine drift and test coverage for script "
+                    f"changes under {target_path}."
+                )
             )
             tests_or_audits_to_run.append("python3 scripts/audit_doctrine_drift.py")
             tests_or_audits_to_run.append("pytest tests/test_counterfactual_fork_simulator.py")
@@ -265,10 +333,14 @@ def analyze_counterfactual(
             tests_or_audits_to_run.append("pytest tests/test_counterfactual_fork_simulator.py")
         if target_path.startswith("docs/portability/emulation/"):
             follow_up_required.append(
-                f"Re-check portable emulation authority wording and validation around {target_path}."
+                (
+                    "Re-check portable emulation authority wording and "
+                    f"validation around {target_path}."
+                )
             )
             tests_or_audits_to_run.append(
-                "pytest tests/test_emulation_contract_schema.py tests/test_emulation_bundle_schema.py"
+                "pytest tests/test_emulation_contract_schema.py "
+                "tests/test_emulation_bundle_schema.py"
             )
 
     if authority_risk_found:
@@ -281,7 +353,10 @@ def analyze_counterfactual(
     warnings = _unique(warnings)
 
     decision = "accept"
-    rationale = "The proposal is narrow, non-authoritative, and does not trigger obvious doctrine or contradiction risks."
+    rationale = (
+        "The proposal is narrow, non-authoritative, and does not trigger "
+        "obvious doctrine or contradiction risks."
+    )
 
     fatal_authority_risk = authority_risk_found or any(
         "merge authority" in risk.lower() or "write canonical" in risk.lower()
@@ -289,20 +364,38 @@ def analyze_counterfactual(
     )
     if not affected_surfaces:
         decision = "needs_review"
-        rationale = "Target surfaces are unspecified, so the simulator cannot confidently map the proposal to the right governed boundaries."
+        rationale = (
+            "Target surfaces are unspecified, so the simulator cannot "
+            "confidently map the proposal to the right governed "
+            "boundaries."
+        )
     elif fatal_authority_risk:
         decision = "reject"
-        rationale = "The proposal appears to claim merge or canonical Record write authority that Grace-Mar doctrine forbids."
+        rationale = (
+            "The proposal appears to claim merge or canonical Record write "
+            "authority that Grace-Mar doctrine forbids."
+        )
     elif doctrine_drift_risks:
         if len(affected_paths) > 3 or len(affected_surfaces) > 1:
             decision = "split"
-            rationale = "The proposal mixes multiple paths or surfaces while carrying non-fatal doctrine risk; split it into smaller governed changes."
+            rationale = (
+                "The proposal mixes multiple paths or surfaces while "
+                "carrying non-fatal doctrine risk; split it into smaller "
+                "governed changes."
+            )
         else:
             decision = "revise"
-            rationale = "The proposal is plausible, but wording or authority signals should be tightened before it proceeds through the normal gate."
+            rationale = (
+                "The proposal is plausible, but wording or authority "
+                "signals should be tightened before it proceeds through "
+                "the normal gate."
+            )
     elif len(affected_paths) > 3 or len(affected_surfaces) > 1:
         decision = "defer"
-        rationale = "The proposal is broad for a Phase 1 heuristic pass; defer until it is narrowed or broken into smaller pieces."
+        rationale = (
+            "The proposal is broad for a Phase 1 heuristic pass; defer "
+            "until it is narrowed or broken into smaller pieces."
+        )
 
     report = {
         "type": "counterfactual-simulation-report-v1",
@@ -354,8 +447,12 @@ def validate_report(report: dict[str, Any]) -> None:
     if not isinstance(recommendation, dict):
         raise ValueError("recommendation must be an object")
     if recommendation.get("decision") not in ALLOWED_DECISIONS:
-        raise ValueError(f"recommendation.decision must be one of {sorted(ALLOWED_DECISIONS)!r}")
-    if not isinstance(recommendation.get("rationale"), str) or not recommendation["rationale"].strip():
+        raise ValueError(
+            f"recommendation.decision must be one of {sorted(ALLOWED_DECISIONS)!r}"
+        )
+    if not isinstance(recommendation.get("rationale"), str) or not recommendation[
+        "rationale"
+    ].strip():
         raise ValueError("recommendation.rationale must be a non-empty string")
     for key in (
         "affected_paths",
@@ -367,7 +464,9 @@ def validate_report(report: dict[str, Any]) -> None:
         "warnings",
     ):
         value = report.get(key)
-        if not isinstance(value, list) or not all(isinstance(item, str) for item in value):
+        if not isinstance(value, list) or not all(
+            isinstance(item, str) for item in value
+        ):
             raise ValueError(f"{key} must be a list of strings")
 
 
@@ -386,7 +485,9 @@ def resolve_output_path(repo_root: Path, output: str | None, proposal_id: str) -
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Generate a scratch-only counterfactual simulation report")
+    parser = argparse.ArgumentParser(
+        description="Generate a scratch-only counterfactual simulation report"
+    )
     parser.add_argument("--proposal", required=True, help="Path to proposal JSON")
     parser.add_argument(
         "--output",
@@ -401,11 +502,16 @@ def main() -> int:
     parser.add_argument(
         "--json",
         action="store_true",
-        help="Print the generated report JSON to stdout instead of only printing the output path",
+        help=(
+            "Print the generated report JSON to stdout instead of only "
+            "printing the output path"
+        ),
     )
     args = parser.parse_args()
 
-    repo_root = Path(args.repo_root).resolve() if args.repo_root else Path.cwd().resolve()
+    repo_root = (
+        Path(args.repo_root).resolve() if args.repo_root else Path.cwd().resolve()
+    )
     proposal_path = Path(args.proposal)
     if not proposal_path.is_absolute():
         proposal_path = Path.cwd() / proposal_path

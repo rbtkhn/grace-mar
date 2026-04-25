@@ -4,7 +4,10 @@
 
 ## Definition
 
-Agent Sprawl Control Plane is a registry and audit layer for agent-like surfaces already present in Grace-Mar. Its job is not to create new agents. Its job is to make existing or planned surfaces legible enough to ask:
+Agent Sprawl Control Plane is a registry and audit layer for agent-like
+surfaces already present in Grace-Mar. Its job is not to create new
+agents. Its job is to make existing or planned surfaces legible enough
+to ask:
 
 - do we already have something that does this
 - do two surfaces overlap unnecessarily
@@ -28,11 +31,15 @@ Uncontrolled agent multiplication creates:
 - authority confusion
 - doctrine drift
 
-Grace-Mar should prefer governed routing, capability contracts, receipts, and clear authority boundaries over unconstrained runtime proliferation.
+Grace-Mar should prefer governed routing, capability contracts,
+receipts, and clear authority boundaries over unconstrained runtime
+proliferation.
 
 ## What counts as an agent surface
 
-For this control plane, an **agent surface** is any repo-described surface that behaves like an agent, runtime, delegator, or operator-facing execution wrapper.
+For this control plane, an **agent surface** is any repo-described
+surface that behaves like an agent, runtime, delegator, or
+operator-facing execution wrapper.
 
 This includes:
 
@@ -69,7 +76,8 @@ Phase 1 assumptions:
 - merge authority must remain `none`
 - stage effects must stay explicit (`none`, `stage-only`, or `advisory-only`)
 - receipts should exist for implemented and partial surfaces unless the surface is a pure read-only audit
-- capability contracts should exist for implemented and partial integrations unless a registry row explicitly marks a narrow exemption
+- capability contracts should exist for implemented and partial
+  integrations unless a registry row explicitly marks a narrow exemption
 
 ## Registry fields
 
@@ -91,8 +99,10 @@ Each registry row records:
 
 Phase 1 also permits narrow optional fields:
 
-- `receipt_required_exempt` — explicit escape hatch for surfaces that are intentionally inventoried before a receipt policy is in place
-- `capability_contract_exempt` — explicit escape hatch for surfaces that are intentionally tracked without a capability contract yet
+- `receipt_required_exempt` — explicit escape hatch for surfaces that
+  are intentionally inventoried before a receipt policy is in place
+- `capability_contract_exempt` — explicit escape hatch for surfaces
+  that are intentionally tracked without a capability contract yet
 
 ## Audit checks
 
@@ -108,7 +118,8 @@ The Phase 1 audit checks for:
 - implemented/partial integrations missing a capability contract unless explicitly exempt
 - multiple surfaces in the same category writing to overlapping paths
 
-Overlapping writes are a **warning**, not an automatic failure. The point is to surface sprawl and duplication risk early.
+Overlapping writes are a **warning**, not an automatic failure. The
+point is to surface sprawl and duplication risk early.
 
 ## Failure modes
 
@@ -140,39 +151,60 @@ These are operator recommendations, not automatic actions.
 
 ### `agent-surface-template.yaml`
 
-The template defines comparison axes for runtime placement, orchestration, interface channels, and Grace-Mar trust fields. The sprawl control plane is narrower: it turns those judgments into a small registry and audit layer.
+The template defines comparison axes for runtime placement,
+orchestration, interface channels, and Grace-Mar trust fields. The
+sprawl control plane is narrower: it turns those judgments into a small
+registry and audit layer.
 
 ### Capability contracts
 
-Capability contracts are the strongest machine-readable statement of what an integration promises. The sprawl registry should point at them whenever a surface is implemented or partial.
+Capability contracts are the strongest machine-readable statement of
+what an integration promises. The sprawl registry should point at them
+whenever a surface is implemented or partial.
 
 ### Portable emulation
 
-Portable emulation is a bounded runtime surface. The control plane tracks it as a runtime class that must stay non-authoritative and non-merging.
+Portable emulation is a bounded runtime surface. The control plane
+tracks it as a runtime class that must stay non-authoritative and
+non-merging.
 
 ### Interface artifacts
 
-Interface artifacts are WORK-only derived surfaces. The control plane tracks them because they can still create sprawl when multiple artifact generators overlap or begin implying more authority than they possess.
+Interface artifacts are WORK-only derived surfaces. The control plane
+tracks them because they can still create sprawl when multiple artifact
+generators overlap or begin implying more authority than they possess.
 
 ### Workbench
 
-Workbench is an inspection and receipt layer, not a merge path. The control plane tracks it as a runner/audit-adjacent surface whose receipts are about artifact behavior, not Record truth.
+Workbench is an inspection and receipt layer, not a merge path. The
+control plane tracks it as a runner/audit-adjacent surface whose
+receipts are about artifact behavior, not Record truth.
 
 ### Doctrine Drift Radar
 
-Doctrine Drift Radar asks whether the current repo already violates boundary doctrine. Agent Sprawl Control Plane asks whether the surface inventory itself is becoming redundant, under-receipted, or authority-confused.
+Doctrine Drift Radar asks whether the current repo already violates
+boundary doctrine. Agent Sprawl Control Plane asks whether the surface
+inventory itself is becoming redundant, under-receipted, or
+authority-confused.
 
 ### Counterfactual Fork Simulator
 
-Counterfactual Fork Simulator is advisory foresight for proposed changes. Agent Sprawl Control Plane is inventory and overlap control for current/planned surfaces. One is about hypothetical consequence; the other is about control-plane hygiene.
+Counterfactual Fork Simulator is advisory foresight for proposed
+changes. Agent Sprawl Control Plane is inventory and overlap control for
+current/planned surfaces. One is about hypothetical consequence; the
+other is about control-plane hygiene.
 
 ### External-agent delegation
 
-External-agent delegation defines how to hand work to outside outcome agents without confusing their memory or outputs with Record truth. The control plane turns those surfaces into auditable rows.
+External-agent delegation defines how to hand work to outside outcome
+agents without confusing their memory or outputs with Record truth. The
+control plane turns those surfaces into auditable rows.
 
 ### OpenClaw integration
 
-OpenClaw export and OpenClaw stage are already the clearest examples of why this layer matters: one surface exports, another stages, both emit receipts, neither may merge.
+OpenClaw export and OpenClaw stage are already the clearest examples of
+why this layer matters: one surface exports, another stages, both emit
+receipts, neither may merge.
 
 ## Phase 1 posture
 

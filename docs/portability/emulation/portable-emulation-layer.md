@@ -15,7 +15,9 @@ Primary implementation surfaces:
 
 ## Problem
 
-Foreign runtimes need enough governed context to emulate Grace-Mar behavior, but they must not gain authority to mutate the source repo's canonical state.
+Foreign runtimes need enough governed context to emulate Grace-Mar
+behavior, but they must not gain authority to mutate the source repo's
+canonical state.
 
 Without a contract, downstream runtimes are likely to:
 
@@ -30,7 +32,9 @@ Without a contract, downstream runtimes are likely to:
 
 Portable emulation is a **read-governed, write-bounded** portability layer.
 
-The source repo exports enough context for a foreign runtime to emulate behavior, but the foreign runtime remains subordinate to source-repo sovereignty.
+The source repo exports enough context for a foreign runtime to emulate
+behavior, but the foreign runtime remains subordinate to source-repo
+sovereignty.
 
 The foreign runtime may **propose** durable change.
 The foreign runtime may **not** decide durable change.
@@ -56,7 +60,9 @@ The portable-emulation contract assumes these bundle elements:
 - audit manifest
 - checksums
 
-The current exporter already emits a **narrower operational envelope**. The richer contract described here is the docs-facing reference for downstream runtimes and later exporter tightening.
+The current exporter already emits a **narrower operational envelope**.
+The richer contract described here is the docs-facing reference for
+downstream runtimes and later exporter tightening.
 
 ---
 
@@ -159,7 +165,9 @@ Portable emulation should preserve auditability by carrying:
 - proposal schema reference
 - warnings when context is stale or incomplete
 
-Returned observations or proposal envelopes should retain source bundle metadata so the source repo can understand what state the foreign runtime reasoned from.
+Returned observations or proposal envelopes should retain source bundle
+metadata so the source repo can understand what state the foreign
+runtime reasoned from.
 
 ---
 

@@ -175,7 +175,10 @@ def test_missing_receipt_requirement_fails_unless_explicitly_exempt(tmp_path: Pa
 
     passing_report = mod.audit_registry(passing_config, tmp_path / "passing")
     assert passing_report["ok"] is True
-    assert not any(item["kind"] == "missing_receipt_requirement" for item in passing_report["errors"])
+    assert not any(
+        item["kind"] == "missing_receipt_requirement"
+        for item in passing_report["errors"]
+    )
 
 
 def test_overlapping_write_categories_warn_but_exit_zero(tmp_path: Path) -> None:
