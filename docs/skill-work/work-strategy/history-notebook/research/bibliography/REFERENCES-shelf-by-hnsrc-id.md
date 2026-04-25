@@ -71,23 +71,23 @@ Regenerate: `python3 scripts/build_hn_bookshelf_bibliography.py`
 - Will Durant. n.d. *The Story of Civilization, Vol. II: The Life of Greece*. `HNSRC-0056`
 - Will Durant. n.d. *The Story of Civilization, Vol. III: Caesar and Christ*. `HNSRC-0057`
 - Anthony Kaldellis. 2023. *The New Roman Empire: A History of Byzantium*. `HNSRC-0058`
-- Marc David Baer. n.d. *The Ottomans: Khans, Caesars, and Caliphs*. `HNSRC-0059`
-- Paul Strathern. n.d. *The Florentines*. `HNSRC-0060`
+- Marc David Baer. 2021. *The Ottomans: Khans, Caesars, and Caliphs*. Basic Books. ISBN 9781541673779. `HNSRC-0059`
+- Paul Strathern. 2021. *The Florentines*. Simon and Schuster. ISBN 9781643137339. `HNSRC-0060`
 - Paul Strathern. n.d. *The Medici*. `HNSRC-0061`
-- Paul Strathern. n.d. *The Borgias*. `HNSRC-0062`
-- Walter Isaacson. n.d. *Leonardo da Vinci*. `HNSRC-0063`
-- Justine Firnhaber-Baker. n.d. *House of Lilies: The Dynasty That Made Medieval France*. `HNSRC-0064`
-- Martyn Rady. n.d. *The Habsburgs: To Rule the World*. `HNSRC-0065`
+- Paul Strathern. 2019. *The Borgias*. Simon and Schuster. ISBN 9781643131832. `HNSRC-0062`
+- Walter Isaacson. 2017. *Leonardo da Vinci*. Simon and Schuster. ISBN 9781501139154. `HNSRC-0063`
+- Justine Firnhaber-Baker. 2024. *House of Lilies: The Dynasty That Made Medieval France*. Basic Books. ISBN 9781541604773. `HNSRC-0064`
+- Martyn Rady. 2020. *The Habsburgs: To Rule the World*. Basic Books. ISBN 9781541644496. `HNSRC-0065`
 - Peter H. Wilson. n.d. *Iron and Blood*. `HNSRC-0066`
-- Johannes Fried. n.d. *Charlemagne*. `HNSRC-0067`
-- Martyn Rady. n.d. *The Middle Kingdoms: A New History of Central Europe*. `HNSRC-0068`
-- Jonathan Phillips. n.d. *The Life and Legend of the Sultan Saladin*. `HNSRC-0069`
+- Johannes Fried. 2016. *Charlemagne*. Harvard University Press. ISBN 9780674973411. `HNSRC-0067`
+- Martyn Rady. 2023. *The Middle Kingdoms: A New History of Central Europe*. Basic Books. ISBN 9781541619777. `HNSRC-0068`
+- Jonathan Phillips. 2019. *The Life and Legend of the Sultan Saladin*. Yale University Press. ISBN 9780300249064. `HNSRC-0069`
 - Bart Van Loo. n.d. *The Burgundians*. `HNSRC-0070`
 - Dan Jones. n.d. *Henry V*. `HNSRC-0071`
 - William Manchester. n.d. *A World Lit Only by Fire*. `HNSRC-0072`
-- Neil Price. n.d. *Children of Ash and Elm: A History of the Vikings*. `HNSRC-0073`
+- Neil Price. 2020. *Children of Ash and Elm: A History of the Vikings*. Basic Books. ISBN 9780465096992. `HNSRC-0073`
 - Jack Weatherford. n.d. *Emperor of the Seas*. `HNSRC-0074`
-- Jack Weatherford. n.d. *The Secret History of the Mongol Queens*. `HNSRC-0075`
+- Jack Weatherford. 2011. *The Secret History of the Mongol Queens*. Crown. ISBN 9780307407160. `HNSRC-0075`
 - Jack Weatherford. n.d. *Genghis Khan and the Making of the Modern World*. `HNSRC-0076`
 - Kevin Alan Brook. n.d. *The Jews of Khazaria*. `HNSRC-0077`
 - Various. n.d. *Tales from 1,001 Nights*. `HNSRC-0078`

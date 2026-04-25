@@ -79,16 +79,16 @@ Regenerate: `python3 scripts/build_hn_bookshelf_bibliography.py`
 - Hans-Ulrich Wiemer. 2023. *Theoderic the Great*. Yale University Press. ISBN 9780300254433. `HNSRC-0021`
 - Jack Weatherford. n.d. *Emperor of the Seas*. `HNSRC-0074`
 - Jack Weatherford. n.d. *Genghis Khan and the Making of the Modern World*. `HNSRC-0076`
-- Jack Weatherford. n.d. *The Secret History of the Mongol Queens*. `HNSRC-0075`
-- Johannes Fried. n.d. *Charlemagne*. `HNSRC-0067`
-- Jonathan Phillips. n.d. *The Life and Legend of the Sultan Saladin*. `HNSRC-0069`
+- Jack Weatherford. 2011. *The Secret History of the Mongol Queens*. Crown. ISBN 9780307407160. `HNSRC-0075`
+- Johannes Fried. 2016. *Charlemagne*. Harvard University Press. ISBN 9780674973411. `HNSRC-0067`
+- Jonathan Phillips. 2019. *The Life and Legend of the Sultan Saladin*. Yale University Press. ISBN 9780300249064. `HNSRC-0069`
 - Judith Herrin. n.d. *Ravenna*. `HNSRC-0023`
 - Justin Pollard. n.d. *Alfred the Great: The Man Who Made England*. `HNSRC-0250`
-- Justine Firnhaber-Baker. n.d. *House of Lilies: The Dynasty That Made Medieval France*. `HNSRC-0064`
+- Justine Firnhaber-Baker. 2024. *House of Lilies: The Dynasty That Made Medieval France*. Basic Books. ISBN 9781541604773. `HNSRC-0064`
 - Kevin Alan Brook. n.d. *The Jews of Khazaria*. `HNSRC-0077`
 - Marco Polo. n.d. *The Travels*. `HNSRC-0079`
-- Martyn Rady. n.d. *The Middle Kingdoms: A New History of Central Europe*. `HNSRC-0068`
-- Neil Price. n.d. *Children of Ash and Elm: A History of the Vikings*. `HNSRC-0073`
+- Martyn Rady. 2023. *The Middle Kingdoms: A New History of Central Europe*. Basic Books. ISBN 9781541619777. `HNSRC-0068`
+- Neil Price. 2020. *Children of Ash and Elm: A History of the Vikings*. Basic Books. ISBN 9780465096992. `HNSRC-0073`
 - Peter Heather. n.d. *Christendom*. `HNSRC-0024`
 - Peter Sarris. 2023. *Justinian*. Basic Books. ISBN 9781541601345. `HNSRC-0022`
 - Roger Crowley. n.d. *1453: The Holy War for Constantinople and the Clash of Islam and the West*. `HNSRC-0244`
@@ -118,14 +118,14 @@ Regenerate: `python3 scripts/build_hn_bookshelf_bibliography.py`
 - Jonathan Healey. n.d. *The Blazing World*. `HNSRC-0096`
 - Jonathan Israel. n.d. *The Dutch Republic: Its Rise, Greatness, and Fall 1477–1806*. `HNSRC-0126`
 - Lisa Brooks & Kelly Wisecup. n.d. *Plymouth Colony: Narratives of English Settlement and Native Resistance from the Mayflower to King Philip's War*. `HNSRC-0101`
-- Marc David Baer. n.d. *The Ottomans: Khans, Caesars, and Caliphs*. `HNSRC-0059`
-- Martyn Rady. n.d. *The Habsburgs: To Rule the World*. `HNSRC-0065`
+- Marc David Baer. 2021. *The Ottomans: Khans, Caesars, and Caliphs*. Basic Books. ISBN 9781541673779. `HNSRC-0059`
+- Martyn Rady. 2020. *The Habsburgs: To Rule the World*. Basic Books. ISBN 9781541644496. `HNSRC-0065`
 - Michel de Montaigne. n.d. *The Complete Works*. `HNSRC-0110`
 - Miguel de Cervantes. n.d. *Don Quixote*. `HNSRC-0082`
 - Niall Ferguson. n.d. *Empire: How Britain Made the Modern World*. `HNSRC-0100`
 - Niccolò Machiavelli. n.d. *The Prince*. `HNSRC-0211`
-- Paul Strathern. n.d. *The Borgias*. `HNSRC-0062`
-- Paul Strathern. n.d. *The Florentines*. `HNSRC-0060`
+- Paul Strathern. 2019. *The Borgias*. Simon and Schuster. ISBN 9781643131832. `HNSRC-0062`
+- Paul Strathern. 2021. *The Florentines*. Simon and Schuster. ISBN 9781643137339. `HNSRC-0060`
 - Paul Strathern. n.d. *The Medici*. `HNSRC-0061`
 - Peter H. Wilson. n.d. *The Thirty Years War*. `HNSRC-0084`
 - Randall Woods. n.d. *John Quincy Adams*. `HNSRC-0090`
@@ -145,7 +145,7 @@ Regenerate: `python3 scripts/build_hn_bookshelf_bibliography.py`
 - Various. n.d. *The American Revolution: Writings from the Pamphlet Debate 1773–1776*. `HNSRC-0103`
 - Various. n.d. *The American Revolution: Writings from the War of Independence 1775–1783*. `HNSRC-0102`
 - Voltaire. n.d. *Candide and Other Stories*. `HNSRC-0119`
-- Walter Isaacson. n.d. *Leonardo da Vinci*. `HNSRC-0063`
+- Walter Isaacson. 2017. *Leonardo da Vinci*. Simon and Schuster. ISBN 9781501139154. `HNSRC-0063`
 - William Manchester. n.d. *A World Lit Only by Fire*. `HNSRC-0072`
 - William Shakespeare. n.d. *Comedies Volume 2*. `HNSRC-0118`
 - William Shakespeare. n.d. *Comedies, Volume 1*. `HNSRC-0117`

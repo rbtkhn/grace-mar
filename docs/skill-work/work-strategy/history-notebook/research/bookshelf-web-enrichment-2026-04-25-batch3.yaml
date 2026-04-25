@@ -1,0 +1,223 @@
+version: 1
+generated_on: "2026-04-25"
+scope: "HNSRC-0051 through HNSRC-0075"
+method:
+  sources:
+    - "Google Books volumes API"
+    - "OpenLibrary search API"
+  policy: "Attach as candidate metadata; merge into bookshelf-catalog.yaml only when confidence is high and edition match is clear."
+
+items:
+  - id: HNSRC-0051
+    title: "Meditations"
+    author: "Marcus Aurelius"
+    candidate_year: 1997
+    candidate_publisher: "Wordsworth Editions"
+    candidate_isbn13: "9781853264863"
+    confidence: low
+    note: "Classical text with many editions/translations; API hit may not be shelf copy."
+
+  - id: HNSRC-0052
+    title: "On the Nature of Things"
+    author: "Lucretius"
+    candidate_year: 2021
+    confidence: low
+    note: "API top hit appeared as modern reprint imprint; treat as hint only."
+
+  - id: HNSRC-0053
+    title: "Letters from a Stoic"
+    author: "Seneca"
+    candidate_year: 2016
+    candidate_publisher: "Courier Dover Publications"
+    candidate_isbn13: "9780486811246"
+    confidence: low
+    note: "Many editions; verify translator/imprint before merge."
+
+  - id: HNSRC-0054
+    title: "The History of the Decline and Fall of the Roman Empire"
+    author: "Edward Gibbon"
+    candidate_year: 1914
+    confidence: low
+    note: "Work has many sets/abridgments; keep as historical hint only."
+
+  - id: HNSRC-0055
+    title: "The Story of Civilization, Vol. I: Our Oriental Heritage"
+    author: "Will Durant"
+    candidate_year: 1935
+    confidence: medium
+    note: "OpenLibrary year aligns with canonical first publication; edition imprint unresolved."
+
+  - id: HNSRC-0056
+    title: "The Story of Civilization, Vol. II: The Life of Greece"
+    author: "Will Durant"
+    candidate_year: 1939
+    confidence: medium
+    note: "Year likely correct; edition imprint unresolved."
+
+  - id: HNSRC-0057
+    title: "The Story of Civilization, Vol. III: Caesar and Christ"
+    author: "Will Durant"
+    candidate_year: 1944
+    confidence: medium
+    note: "Year likely correct; edition imprint unresolved."
+
+  - id: HNSRC-0058
+    title: "The New Roman Empire: A History of Byzantium"
+    author: "Anthony Kaldellis"
+    candidate_year: 2024
+    candidate_publisher: "Oxford University Press"
+    candidate_isbn13: "9780197549322"
+    confidence: medium
+    note: "Catalog already has year 2023; likely hardcover vs paperback year variance."
+
+  - id: HNSRC-0059
+    title: "The Ottomans: Khans, Caesars, and Caliphs"
+    author: "Marc David Baer"
+    candidate_year: 2021
+    candidate_publisher: "Basic Books"
+    candidate_isbn13: "9781541673779"
+    confidence: high
+    note: "Strong title/author/imprint match; aligns with existing notes."
+
+  - id: HNSRC-0060
+    title: "The Florentines"
+    author: "Paul Strathern"
+    candidate_year: 2021
+    candidate_publisher: "Simon and Schuster"
+    candidate_isbn13: "9781643137339"
+    confidence: high
+    note: "Strong modern title match."
+
+  - id: HNSRC-0061
+    title: "The Medici"
+    author: "Paul Strathern"
+    candidate_year: 2003
+    candidate_publisher: "Vintage"
+    confidence: medium
+    note: "Publisher/year plausible; ISBN missing from retrieved hit."
+
+  - id: HNSRC-0062
+    title: "The Borgias"
+    author: "Paul Strathern"
+    candidate_year: 2019
+    candidate_publisher: "Simon and Schuster"
+    candidate_isbn13: "9781643131832"
+    confidence: high
+    note: "Strong modern title/author match."
+
+  - id: HNSRC-0063
+    title: "Leonardo da Vinci"
+    author: "Walter Isaacson"
+    candidate_year: 2017
+    candidate_publisher: "Simon and Schuster"
+    candidate_isbn13: "9781501139154"
+    confidence: high
+    note: "Strong modern title/author match."
+
+  - id: HNSRC-0064
+    title: "House of Lilies: The Dynasty That Made Medieval France"
+    author: "Justine Firnhaber-Baker"
+    candidate_year: 2024
+    candidate_publisher: "Basic Books"
+    candidate_isbn13: "9781541604773"
+    confidence: high
+    note: "Strong title/author/imprint match; aligns with shelf note."
+
+  - id: HNSRC-0065
+    title: "The Habsburgs: To Rule the World"
+    author: "Martyn Rady"
+    candidate_year: 2020
+    candidate_publisher: "Basic Books"
+    candidate_isbn13: "9781541644496"
+    confidence: high
+    note: "Strong title/author/imprint match."
+
+  - id: HNSRC-0066
+    title: "Iron and Blood"
+    author: "Peter H. Wilson"
+    candidate_year: 2023
+    candidate_publisher: "Harvard University Press"
+    candidate_isbn13: "9780674987623"
+    confidence: medium
+    note: "OpenLibrary suggested earlier year; likely edition variance."
+
+  - id: HNSRC-0067
+    title: "Charlemagne"
+    author: "Johannes Fried"
+    candidate_year: 2016
+    candidate_publisher: "Harvard University Press"
+    candidate_isbn13: "9780674973411"
+    confidence: high
+    note: "Strong title/author/imprint match."
+
+  - id: HNSRC-0068
+    title: "The Middle Kingdoms: A New History of Central Europe"
+    author: "Martyn Rady"
+    candidate_year: 2023
+    candidate_publisher: "Basic Books"
+    candidate_isbn13: "9781541619777"
+    confidence: high
+    note: "Strong title/author/imprint match."
+
+  - id: HNSRC-0069
+    title: "The Life and Legend of the Sultan Saladin"
+    author: "Jonathan Phillips"
+    candidate_year: 2019
+    candidate_publisher: "Yale University Press"
+    candidate_isbn13: "9780300249064"
+    confidence: high
+    note: "Strong title/author/imprint match."
+
+  - id: HNSRC-0070
+    title: "The Burgundians"
+    author: "Bart Van Loo"
+    candidate_year: 2021
+    candidate_publisher: "Bloomsbury Publishing"
+    candidate_isbn13: "9781789543452"
+    confidence: medium
+    note: "No corroborating OpenLibrary match; keep pending."
+
+  - id: HNSRC-0071
+    title: "Henry V"
+    author: "Dan Jones"
+    candidate_year: 2024
+    candidate_publisher: "Penguin"
+    candidate_isbn13: "9780593652732"
+    confidence: medium
+    note: "Likely correct modern edition; keep pending until shelf copy check."
+
+  - id: HNSRC-0072
+    title: "A World Lit Only by Fire"
+    author: "William Manchester"
+    candidate_year: 1991
+    candidate_publisher: "Little, Brown"
+    candidate_isbn13: "9780316082792"
+    confidence: medium
+    note: "Year varies by edition; verify copy."
+
+  - id: HNSRC-0073
+    title: "Children of Ash and Elm: A History of the Vikings"
+    author: "Neil Price"
+    candidate_year: 2020
+    candidate_publisher: "Basic Books"
+    candidate_isbn13: "9780465096992"
+    confidence: high
+    note: "Strong title/author/imprint match."
+
+  - id: HNSRC-0074
+    title: "Emperor of the Seas"
+    author: "Jack Weatherford"
+    candidate_year: 2024
+    candidate_publisher: "Bloomsbury Publishing"
+    candidate_isbn13: "9781399417709"
+    confidence: medium
+    note: "No corroborating OpenLibrary entry in pass; keep pending."
+
+  - id: HNSRC-0075
+    title: "The Secret History of the Mongol Queens"
+    author: "Jack Weatherford"
+    candidate_year: 2011
+    candidate_publisher: "Crown"
+    candidate_isbn13: "9780307407160"
+    confidence: high
+    note: "Strong title/author/imprint match."
