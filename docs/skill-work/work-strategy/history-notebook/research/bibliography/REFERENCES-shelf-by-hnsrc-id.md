@@ -113,31 +113,31 @@ Regenerate: `python3 scripts/build_hn_bookshelf_bibliography.py`
 - Fred Anderson. n.d. *Crucible of War*. `HNSRC-0098`
 - Andrew Roberts. 2021. *The Last King of America: The Misunderstood Reign of George III*. Penguin. ISBN 9781984879271. `HNSRC-0099`
 - Niall Ferguson. 2003. *Empire: How Britain Made the Modern World*. Basic Books. ISBN 9780465013104. `HNSRC-0100`
-- Lisa Brooks & Kelly Wisecup. n.d. *Plymouth Colony: Narratives of English Settlement and Native Resistance from the Mayflower to King Philip's War*. `HNSRC-0101`
-- Various. n.d. *The American Revolution: Writings from the War of Independence 1775–1783*. `HNSRC-0102`
-- Various. n.d. *The American Revolution: Writings from the Pamphlet Debate 1773–1776*. `HNSRC-0103`
+- Lisa Brooks & Kelly Wisecup. 2022. *Plymouth Colony: Narratives of English Settlement and Native Resistance from the Mayflower to King Philip's War*. Library of America. ISBN 9781598536737. `HNSRC-0101`
+- Various. 2001. *The American Revolution: Writings from the War of Independence 1775–1783*. Library of America. ISBN 9781598531398. `HNSRC-0102`
+- Various. 2015. *The American Revolution: Writings from the Pamphlet Debate 1773–1776*. Library of America. ISBN 9781598534429. `HNSRC-0103`
 - Benjamin Franklin. n.d. *Franklin: Autobiography, Poor Richard, and Later Writings*. `HNSRC-0104`
-- Thomas Paine. n.d. *Paine: Collected Writings*. `HNSRC-0105`
+- Thomas Paine. 1995. *Paine: Collected Writings*. Library of America. ISBN 9781598531794. `HNSRC-0105`
 - Thomas Jefferson. n.d. *Jefferson: Writings*. `HNSRC-0106`
 - James Madison. n.d. *Madison: Writings*. `HNSRC-0107`
 - Alexander Hamilton. n.d. *Hamilton: Writings*. `HNSRC-0108`
 - George Washington. n.d. *Washington: Writings*. `HNSRC-0109`
 - Michel de Montaigne. n.d. *The Complete Works*. `HNSRC-0110`
-- William Shakespeare. n.d. *Histories Volume 1*. `HNSRC-0111`
+- William Shakespeare. 1994. *Histories Volume 1*. Everyman's Library. ISBN 9780679433125. `HNSRC-0111`
 - William Shakespeare. n.d. *Histories Volume 2*. `HNSRC-0112`
 - William Shakespeare. n.d. *Romances*. `HNSRC-0113`
-- William Shakespeare. n.d. *The Sonnets and Narrative Poems*. `HNSRC-0114`
-- William Shakespeare. n.d. *Tragedies Volume 1*. `HNSRC-0115`
+- William Shakespeare. 2015. *The Sonnets and Narrative Poems*. Everyman's Library. ISBN 9780375712814. `HNSRC-0114`
+- William Shakespeare. 1992. *Tragedies Volume 1*. Everyman's Library. ISBN 9780679417422. `HNSRC-0115`
 - William Shakespeare. n.d. *Tragedies Volume 2*. `HNSRC-0116`
-- William Shakespeare. n.d. *Comedies, Volume 1*. `HNSRC-0117`
-- William Shakespeare. n.d. *Comedies Volume 2*. `HNSRC-0118`
-- Voltaire. n.d. *Candide and Other Stories*. `HNSRC-0119`
+- William Shakespeare. 1995. *Comedies, Volume 1*. Everyman's Library. ISBN 9780679443636. `HNSRC-0117`
+- William Shakespeare. 1996. *Comedies Volume 2*. Everyman's Library. ISBN 9780679447207. `HNSRC-0118`
+- Voltaire. 1992. *Candide and Other Stories*. Everyman's Library. ISBN 9780679417460. `HNSRC-0119`
 - Jean-Jacques Rousseau. n.d. *Confessions*. `HNSRC-0120`
 - Jean-Jacques Rousseau. n.d. *The Social Contract and The Discourses*. `HNSRC-0121`
-- Simon Sebag Montefiore. n.d. *The Romanovs: 1613–1918*. `HNSRC-0122`
-- Robert K. Massie. n.d. *Peter the Great: His Life and World*. `HNSRC-0123`
-- Robert K. Massie. n.d. *Catherine the Great*. `HNSRC-0124`
-- Robert K. Massie. n.d. *Nicholas and Alexandra*. `HNSRC-0125`
+- Simon Sebag Montefiore. 2017. *The Romanovs: 1613–1918*. Vintage. ISBN 9780307280510. `HNSRC-0122`
+- Robert K. Massie. 1980. *Peter the Great: His Life and World*. Modern Library. ISBN 9780679645603. `HNSRC-0123`
+- Robert K. Massie. 2011. *Catherine the Great*. Random House Digital, Inc.. ISBN 9780679456728. `HNSRC-0124`
+- Robert K. Massie. 2000. *Nicholas and Alexandra*. Random House Trade Paperbacks. ISBN 9780345438317. `HNSRC-0125`
 - Jonathan Israel. n.d. *The Dutch Republic: Its Rise, Greatness, and Fall 1477–1806*. `HNSRC-0126`
 - Buddy Levy. n.d. *Conquistador: Hernán Cortés, King Montezuma, and the Last Stand of the Aztecs*. `HNSRC-0127`
 - Henry Kamen. n.d. *Empire: How Spain Became a World Power 1492–1763*. `HNSRC-0128`

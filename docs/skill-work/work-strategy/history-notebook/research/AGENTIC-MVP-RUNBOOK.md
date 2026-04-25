@@ -13,6 +13,7 @@ Latest web metadata candidate pass (attach-then-merge workflow): [bookshelf-web-
 Second candidate pass: [bookshelf-web-enrichment-2026-04-25-batch2.yaml](bookshelf-web-enrichment-2026-04-25-batch2.yaml).
 Third candidate pass: [bookshelf-web-enrichment-2026-04-25-batch3.yaml](bookshelf-web-enrichment-2026-04-25-batch3.yaml).
 Fourth candidate pass: [bookshelf-web-enrichment-2026-04-25-batch4.yaml](bookshelf-web-enrichment-2026-04-25-batch4.yaml).
+Fifth candidate pass: [bookshelf-web-enrichment-2026-04-25-batch5.yaml](bookshelf-web-enrichment-2026-04-25-batch5.yaml).
 
 ## Generate all outputs
 

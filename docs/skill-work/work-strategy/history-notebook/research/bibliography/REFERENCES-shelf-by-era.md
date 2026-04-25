@@ -117,7 +117,7 @@ Regenerate: `python3 scripts/build_hn_bookshelf_bibliography.py`
 - John B. Boles. 2017. *Jefferson*. Basic Books. ISBN 9780465094691. `HNSRC-0087`
 - Jonathan Healey. n.d. *The Blazing World*. `HNSRC-0096`
 - Jonathan Israel. n.d. *The Dutch Republic: Its Rise, Greatness, and Fall 1477–1806*. `HNSRC-0126`
-- Lisa Brooks & Kelly Wisecup. n.d. *Plymouth Colony: Narratives of English Settlement and Native Resistance from the Mayflower to King Philip's War*. `HNSRC-0101`
+- Lisa Brooks & Kelly Wisecup. 2022. *Plymouth Colony: Narratives of English Settlement and Native Resistance from the Mayflower to King Philip's War*. Library of America. ISBN 9781598536737. `HNSRC-0101`
 - Marc David Baer. 2021. *The Ottomans: Khans, Caesars, and Caliphs*. Basic Books. ISBN 9781541673779. `HNSRC-0059`
 - Martyn Rady. 2020. *The Habsburgs: To Rule the World*. Basic Books. ISBN 9781541644496. `HNSRC-0065`
 - Michel de Montaigne. n.d. *The Complete Works*. `HNSRC-0110`
@@ -129,8 +129,8 @@ Regenerate: `python3 scripts/build_hn_bookshelf_bibliography.py`
 - Paul Strathern. n.d. *The Medici*. `HNSRC-0061`
 - Peter H. Wilson. 2019. *The Thirty Years War*. Harvard University Press. ISBN 9780674246256. `HNSRC-0084`
 - Randall Woods. n.d. *John Quincy Adams*. `HNSRC-0090`
-- Robert K. Massie. n.d. *Catherine the Great*. `HNSRC-0124`
-- Robert K. Massie. n.d. *Peter the Great: His Life and World*. `HNSRC-0123`
+- Robert K. Massie. 2011. *Catherine the Great*. Random House Digital, Inc.. ISBN 9780679456728. `HNSRC-0124`
+- Robert K. Massie. 1980. *Peter the Great: His Life and World*. Modern Library. ISBN 9780679645603. `HNSRC-0123`
 - Roger Crowley. n.d. *City of Fortune: How Venice Ruled the Seas*. `HNSRC-0247`
 - Roger Crowley. n.d. *Conquerors: How Portugal Forged the First Global Empire*. `HNSRC-0245`
 - Roger Crowley. n.d. *Empires of the Sea: The Siege of Malta, the Battle of Lepanto, and the Contest for the Center of the World*. `HNSRC-0246`
@@ -139,21 +139,21 @@ Regenerate: `python3 scripts/build_hn_bookshelf_bibliography.py`
 - Ron Chernow. 2004. *Alexander Hamilton*. Penguin. ISBN 9781101200858. `HNSRC-0088`
 - Thomas Jefferson. n.d. *Jefferson: Writings*. `HNSRC-0106`
 - Thomas More. n.d. *Utopia*. `HNSRC-0212`
-- Thomas Paine. n.d. *Paine: Collected Writings*. `HNSRC-0105`
+- Thomas Paine. 1995. *Paine: Collected Writings*. Library of America. ISBN 9781598531794. `HNSRC-0105`
 - Tim Blanning. 2015. *Frederick the Great*. Random House. ISBN 9780812988734. `HNSRC-0097`
 - Tim McGrath. n.d. *James Monroe*. `HNSRC-0089`
-- Various. n.d. *The American Revolution: Writings from the Pamphlet Debate 1773–1776*. `HNSRC-0103`
-- Various. n.d. *The American Revolution: Writings from the War of Independence 1775–1783*. `HNSRC-0102`
-- Voltaire. n.d. *Candide and Other Stories*. `HNSRC-0119`
+- Various. 2015. *The American Revolution: Writings from the Pamphlet Debate 1773–1776*. Library of America. ISBN 9781598534429. `HNSRC-0103`
+- Various. 2001. *The American Revolution: Writings from the War of Independence 1775–1783*. Library of America. ISBN 9781598531398. `HNSRC-0102`
+- Voltaire. 1992. *Candide and Other Stories*. Everyman's Library. ISBN 9780679417460. `HNSRC-0119`
 - Walter Isaacson. 2017. *Leonardo da Vinci*. Simon and Schuster. ISBN 9781501139154. `HNSRC-0063`
 - William Manchester. n.d. *A World Lit Only by Fire*. `HNSRC-0072`
-- William Shakespeare. n.d. *Comedies Volume 2*. `HNSRC-0118`
-- William Shakespeare. n.d. *Comedies, Volume 1*. `HNSRC-0117`
-- William Shakespeare. n.d. *Histories Volume 1*. `HNSRC-0111`
+- William Shakespeare. 1996. *Comedies Volume 2*. Everyman's Library. ISBN 9780679447207. `HNSRC-0118`
+- William Shakespeare. 1995. *Comedies, Volume 1*. Everyman's Library. ISBN 9780679443636. `HNSRC-0117`
+- William Shakespeare. 1994. *Histories Volume 1*. Everyman's Library. ISBN 9780679433125. `HNSRC-0111`
 - William Shakespeare. n.d. *Histories Volume 2*. `HNSRC-0112`
 - William Shakespeare. n.d. *Romances*. `HNSRC-0113`
-- William Shakespeare. n.d. *The Sonnets and Narrative Poems*. `HNSRC-0114`
-- William Shakespeare. n.d. *Tragedies Volume 1*. `HNSRC-0115`
+- William Shakespeare. 2015. *The Sonnets and Narrative Poems*. Everyman's Library. ISBN 9780375712814. `HNSRC-0114`
+- William Shakespeare. 1992. *Tragedies Volume 1*. Everyman's Library. ISBN 9780679417422. `HNSRC-0115`
 - William Shakespeare. n.d. *Tragedies Volume 2*. `HNSRC-0116`
 
 ### Industrial (Vol IV–style bucket) (`industrial`)
@@ -297,7 +297,7 @@ Regenerate: `python3 scripts/build_hn_bookshelf_bibliography.py`
 - Robert A. Caro. n.d. *The Years of Lyndon Johnson: Means of Ascent*. `HNSRC-0252`
 - Robert A. Caro. n.d. *The Years of Lyndon Johnson: The Passage of Power*. `HNSRC-0254`
 - Robert A. Caro. n.d. *The Years of Lyndon Johnson: The Path to Power*. `HNSRC-0251`
-- Robert K. Massie. n.d. *Nicholas and Alexandra*. `HNSRC-0125`
+- Robert K. Massie. 2000. *Nicholas and Alexandra*. Random House Trade Paperbacks. ISBN 9780345438317. `HNSRC-0125`
 - Robert Louis Stevenson. n.d. *Dr. Jekyll and Mr. Hyde and Other Stories*. `HNSRC-0143`
 - Robert Louis Stevenson. n.d. *The Strange Case of Dr Jekyll and Mr Hyde*. `HNSRC-0172`
 - Robert Louis Stevenson. n.d. *Treasure Island*. `HNSRC-0160`
@@ -306,7 +306,7 @@ Regenerate: `python3 scripts/build_hn_bookshelf_bibliography.py`
 - Rudyard Kipling. n.d. *Kim*. `HNSRC-0209`
 - Rudyard Kipling. n.d. *The Jungle Books*. `HNSRC-0161`
 - Sigmund Freud. n.d. *Civilization and Its Discontents*. `HNSRC-0217`
-- Simon Sebag Montefiore. n.d. *The Romanovs: 1613–1918*. `HNSRC-0122`
+- Simon Sebag Montefiore. 2017. *The Romanovs: 1613–1918*. Vintage. ISBN 9780307280510. `HNSRC-0122`
 - Stephen E. Ambrose. n.d. *Eisenhower: Soldier and President*. `HNSRC-0258`
 - Stephen E. Ambrose. n.d. *Nixon: Ruin and Recovery, 1973-1990*. `HNSRC-0261`
 - Stephen E. Ambrose. n.d. *Nixon: The Education of a Politician, 1913-1962*. `HNSRC-0259`

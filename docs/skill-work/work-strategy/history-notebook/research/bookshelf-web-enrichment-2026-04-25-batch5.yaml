@@ -1,0 +1,166 @@
+version: 1
+generated_on: "2026-04-25"
+scope: "HNSRC-0101 through HNSRC-0125"
+method:
+  sources:
+    - "Google Books volumes API"
+    - "OpenLibrary search API"
+  policy: "Attach as candidate metadata; merge into bookshelf-catalog.yaml only when confidence is high and edition match is clear."
+
+items:
+  - id: HNSRC-0101
+    title: "Plymouth Colony: Narratives of English Settlement and Native Resistance from the Mayflower to King Philip's War"
+    author: "Lisa Brooks & Kelly Wisecup"
+    candidate_year: 2022
+    candidate_publisher: "Library of America"
+    candidate_isbn13: "9781598536737"
+    confidence: high
+  - id: HNSRC-0102
+    title: "The American Revolution: Writings from the War of Independence 1775–1783"
+    author: "Various"
+    candidate_year: 2001
+    candidate_publisher: "Library of America"
+    candidate_isbn13: "9781598531398"
+    confidence: high
+  - id: HNSRC-0103
+    title: "The American Revolution: Writings from the Pamphlet Debate 1773–1776"
+    author: "Various"
+    candidate_year: 2015
+    candidate_publisher: "Library of America"
+    candidate_isbn13: "9781598534429"
+    confidence: high
+  - id: HNSRC-0104
+    title: "Franklin: Autobiography, Poor Richard, and Later Writings"
+    author: "Benjamin Franklin"
+    candidate_year: 1997
+    confidence: low
+  - id: HNSRC-0105
+    title: "Paine: Collected Writings"
+    author: "Thomas Paine"
+    candidate_year: 1995
+    candidate_publisher: "Library of America"
+    candidate_isbn13: "9781598531794"
+    confidence: high
+  - id: HNSRC-0106
+    title: "Jefferson: Writings"
+    author: "Thomas Jefferson"
+    candidate_year: 1998
+    confidence: low
+  - id: HNSRC-0107
+    title: "Madison: Writings"
+    author: "James Madison"
+    candidate_year: 1900
+    confidence: low
+  - id: HNSRC-0108
+    title: "Hamilton: Writings"
+    author: "Alexander Hamilton"
+    candidate_year: 1961
+    confidence: low
+  - id: HNSRC-0109
+    title: "Washington: Writings"
+    author: "George Washington"
+    candidate_year: 1839
+    confidence: low
+  - id: HNSRC-0110
+    title: "The Complete Works"
+    author: "Michel de Montaigne"
+    candidate_year: 2003
+    candidate_publisher: "Everyman's Library"
+    confidence: medium
+  - id: HNSRC-0111
+    title: "Histories Volume 1"
+    author: "William Shakespeare"
+    candidate_year: 1994
+    candidate_publisher: "Everyman's Library"
+    candidate_isbn13: "9780679433125"
+    confidence: high
+  - id: HNSRC-0112
+    title: "Histories Volume 2"
+    author: "William Shakespeare"
+    candidate_year: 1965
+    confidence: low
+  - id: HNSRC-0113
+    title: "Romances"
+    author: "William Shakespeare"
+    candidate_year: 2014
+    confidence: low
+  - id: HNSRC-0114
+    title: "The Sonnets and Narrative Poems"
+    author: "William Shakespeare"
+    candidate_year: 2015
+    candidate_publisher: "Everyman's Library"
+    candidate_isbn13: "9780375712814"
+    confidence: high
+  - id: HNSRC-0115
+    title: "Tragedies Volume 1"
+    author: "William Shakespeare"
+    candidate_year: 1992
+    candidate_publisher: "Everyman's Library"
+    candidate_isbn13: "9780679417422"
+    confidence: high
+  - id: HNSRC-0116
+    title: "Tragedies Volume 2"
+    author: "William Shakespeare"
+    candidate_year: 2014
+    confidence: low
+  - id: HNSRC-0117
+    title: "Comedies, Volume 1"
+    author: "William Shakespeare"
+    candidate_year: 1995
+    candidate_publisher: "Everyman's Library"
+    candidate_isbn13: "9780679443636"
+    confidence: high
+  - id: HNSRC-0118
+    title: "Comedies Volume 2"
+    author: "William Shakespeare"
+    candidate_year: 1996
+    candidate_publisher: "Everyman's Library"
+    candidate_isbn13: "9780679447207"
+    confidence: high
+  - id: HNSRC-0119
+    title: "Candide and Other Stories"
+    author: "Voltaire"
+    candidate_year: 1992
+    candidate_publisher: "Everyman's Library"
+    candidate_isbn13: "9780679417460"
+    confidence: high
+  - id: HNSRC-0120
+    title: "Confessions"
+    author: "Jean-Jacques Rousseau"
+    candidate_year: 2008
+    candidate_publisher: "OUP Oxford"
+    candidate_isbn13: "9780191069529"
+    confidence: medium
+  - id: HNSRC-0121
+    title: "The Social Contract and The Discourses"
+    author: "Jean-Jacques Rousseau"
+    candidate_year: 1973
+    confidence: low
+  - id: HNSRC-0122
+    title: "The Romanovs: 1613–1918"
+    author: "Simon Sebag Montefiore"
+    candidate_year: 2017
+    candidate_publisher: "Vintage"
+    candidate_isbn13: "9780307280510"
+    confidence: high
+  - id: HNSRC-0123
+    title: "Peter the Great: His Life and World"
+    author: "Robert K. Massie"
+    candidate_year: 1980
+    candidate_publisher: "Modern Library"
+    candidate_isbn13: "9780679645603"
+    confidence: high
+  - id: HNSRC-0124
+    title: "Catherine the Great"
+    author: "Robert K. Massie"
+    candidate_year: 2011
+    candidate_publisher: "Random House Digital, Inc."
+    candidate_isbn13: "9780679456728"
+    confidence: high
+  - id: HNSRC-0125
+    title: "Nicholas and Alexandra"
+    author: "Robert K. Massie"
+    candidate_year: 2000
+    candidate_publisher: "Random House Trade Paperbacks"
+    candidate_isbn13: "9780345438317"
+    confidence: high
