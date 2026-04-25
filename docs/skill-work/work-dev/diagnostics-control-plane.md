@@ -92,6 +92,12 @@ needs proof artifacts; README prose alone is not enough.
 - not a replacement for human review
 - not a new agent
 
+## How to run the stack locally
+
+```bash
+python3 scripts/run_deterministic_diagnostics.py
+```
+
 The work-dev diagnostics control plane exists to keep iteration legible
 and bounded. Governed merge remains the only path that updates canonical
 Record.

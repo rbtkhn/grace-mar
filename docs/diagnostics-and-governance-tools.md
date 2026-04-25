@@ -98,5 +98,11 @@ For a risky change:
 5. Apply **Claim-Proof**, if the capability claim changes
 6. Route durable change through **gate review**
 
+## Local deterministic diagnostics
+
+```bash
+python3 scripts/run_deterministic_diagnostics.py
+```
+
 Diagnostics help make review legible. They do not merge, do not approve,
 and do not mutate canonical Record on their own.
