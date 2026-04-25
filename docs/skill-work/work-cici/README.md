@@ -44,7 +44,11 @@ Active onboarding, coordination, and daily operating text should remain Cici-fir
 | [xavier-smm-capability-rubric.md](xavier-smm-capability-rubric.md) | Cici SMM capability rubric / legacy Xavier filename |
 | `COMPANION-XAVIER-*` ([e.g. DELETION-READINESS](COMPANION-XAVIER-DELETION-READINESS.md)) | Cici companion-instance planning / legacy Xavier filename pattern |
 
-**Read first:** [INDEX.md](INDEX.md) · [ALIGNMENT.md](ALIGNMENT.md) · [LANES.md](LANES.md) · [TERMS-XAVIER.md](TERMS-XAVIER.md).
+### Machine-readable manifest
+
+- **[legacy-aliases.yml](legacy-aliases.yml)** — Advisory YAML for audits and future rename-safe tooling: enumerates the **repo-root paths** in this table that stay **Xavier-**named for compatibility (three docs, two SMM scripts), plus `allowed_legacy_contexts` and `prohibited_contexts`. The human **table** above is the full picture (renames like `cici-work-profile` / `cici-progress-log`, and filename **patterns** such as `COMPANION-XAVIER-*`, are not duplicated in the YAML; pattern-level rows may get a later schema if tooling needs them).
+
+**Read first:** [INDEX.md](INDEX.md) · [ALIGNMENT.md](ALIGNMENT.md) · [LANES.md](LANES.md) · [TERMS-XAVIER.md](TERMS-XAVIER.md) · [legacy-aliases.yml](legacy-aliases.yml).
 
 Template baseline (canonical): [work-companion-self/TEMPLATE-BASELINE.md](../work-companion-self/TEMPLATE-BASELINE.md).  
 Boundaries: [audit-boundary-grace-mar-companion-self.md](../../audit-boundary-grace-mar-companion-self.md) (grace-mar · template); her instance follows the same rules **in her repo**.

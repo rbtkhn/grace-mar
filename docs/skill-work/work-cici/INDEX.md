@@ -4,10 +4,11 @@ Use [README](README.md) for narrative order; this table is a flat lookup.
 
 **Rename / continuity:** Lane was **work-xavier**; **Legacy note: formerly Xavier**. See [README — Rename note](README.md#rename-note),
 [Naming and continuity](README.md#naming-and-continuity), and the **Legacy filename aliases** table in
-[README.md](README.md#legacy-filename-aliases) (single source of truth in README; not duplicated as a table here).
+[README.md](README.md#legacy-filename-aliases) (policy + full human table, including renames and patterns). **Machine-readable** enumerated paths and context lists: [legacy-aliases.yml](legacy-aliases.yml) (pairs with the README; not a parallel prose SSOT — YAML is for tooling/audits).
 
 | Doc | Role |
 |-----|------|
+| [legacy-aliases.yml](legacy-aliases.yml) | **Legacy alias manifest** (YAML) — machine-readable allowlist for retained legacy **paths and scripts** + `allowed_` / `prohibited_` contexts; pairs with [README — Legacy filename aliases](README.md#legacy-filename-aliases) |
 | [evidence/cici-repository-business-plan-2026-pdf-ingest-2026-04-24.md](evidence/cici-repository-business-plan-2026-pdf-ingest-2026-04-24.md) | **Cici Repository business plan (PDF)** — 2026 strategy summary + [cici-repository-business-plan-2026.pdf](evidence/cici-repository-business-plan-2026.pdf) |
 | [evidence/cici-rtf-architect-enduser-prompts-session-ingest-2026-04-24.md](evidence/cici-rtf-architect-enduser-prompts-session-ingest-2026-04-24.md) | **RTF** — architect / end-user prompt session vs [Cici `docs/prompts/`](https://github.com/Xavier-x01/Cici/tree/main/docs/prompts) on `main`; [RTF](evidence/cici-rtf-architect-enduser-prompts-2026-04-24.rtf) |
 | [evidence/cici-telegram-bot-tier-c-advisor-note-2026-04-08.md](evidence/cici-telegram-bot-tier-c-advisor-note-2026-04-08.md) | **Advisor note** — Telegram bot auto-injected MCP `search` = Tier C recall; strengthen `CICI_SYSTEM` / abstention vs public promises |

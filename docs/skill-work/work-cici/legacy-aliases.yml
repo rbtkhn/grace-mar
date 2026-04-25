@@ -1,0 +1,56 @@
+# work-cici legacy alias manifest
+# Purpose: preserve historical Xavier continuity while keeping active prose Cici-first.
+# This file is advisory metadata for audits, docs, and future rename-safe tooling.
+
+lane: work-cici
+active_name: Cici
+legacy_name: Xavier
+canonical_policy: active-prose-cici-first
+legacy_note_phrase: "Legacy note: formerly Xavier."
+
+aliases:
+  - legacy_path: docs/skill-work/work-cici/TERMS-XAVIER.md
+    current_interpretation: Cici terms / legacy Xavier filename
+    status: retained_legacy_filename
+    reason: compatibility_and_historical_continuity
+    active_prose_allowed: false
+
+  - legacy_path: docs/skill-work/work-cici/xavier-instance-two-step.md
+    current_interpretation: Cici instance two-step / legacy Xavier filename
+    status: retained_legacy_filename
+    reason: compatibility_with_existing_links
+    active_prose_allowed: false
+
+  - legacy_path: docs/skill-work/work-cici/xavier-smm-capability-rubric.md
+    current_interpretation: Cici SMM capability rubric / legacy Xavier filename
+    status: retained_legacy_filename
+    reason: compatibility_with_existing_smm_materials
+    active_prose_allowed: false
+
+  - legacy_path: scripts/build_xavier_handbook_bundle.py
+    current_interpretation: Supported historical SMM handbook bundle entrypoint
+    status: retained_legacy_script
+    reason: downstream_invocation_stability
+    active_prose_allowed: false
+
+  - legacy_path: scripts/generate_smm_xavier_pdf.sh
+    current_interpretation: Supported historical SMM PDF generation entrypoint
+    status: retained_legacy_script
+    reason: downstream_invocation_stability
+    active_prose_allowed: false
+
+allowed_legacy_contexts:
+  - rename_continuity_sections
+  - explicit_legacy_alias_tables
+  - revision_history_logs
+  - immutable_evidence_records
+  - source_titles
+  - retained_legacy_filenames
+  - retained_legacy_script_names
+
+prohibited_contexts:
+  - active_onboarding_copy
+  - daily_operating_text
+  - new_progress_logs
+  - new_launch_materials
+  - new_community_copy
