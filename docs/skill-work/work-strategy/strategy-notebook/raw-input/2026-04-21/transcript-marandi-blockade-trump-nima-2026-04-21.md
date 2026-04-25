@@ -2,11 +2,11 @@
 ingest_date: 2026-04-25
 pub_date: 2026-04-21
 kind: operator-transcript
-show: The Grayzone (Nima show)
+show: Dialogue Works
 host: Nima
 guest: Seyed Mohammad Marandi
 thread_expert: marandi
-source_note: Operator paste; pin canonical YouTube (The Grayzone) watch URL when available. pub_date (air day) 2026-04-21 per operator; opening line in body still says April 25 as spoken.
+source_note: Operator paste; pin canonical Dialogue Works YouTube watch URL when available. (The Grayzone is Blumenthal / Maté’s publication — Nima’s interviews are Dialogue Works.) pub_date (air day) 2026-04-21 per operator; opening line in body still says April 25 as spoken.
 title_slug: marandi-blockade-trump-nima-2026-04-21
 ---
 

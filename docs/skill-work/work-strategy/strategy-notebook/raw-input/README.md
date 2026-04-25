@@ -43,19 +43,22 @@ WORK only; not Record.
 
 ## Layout
 
-Use **one subdirectory per local ingest day** (the day you save the file — typically “today” when you paste):
+Use **one subdirectory per publication / air day** — the folder name **`YYYY-MM-DD`** matches **`pub_date`** in the file’s frontmatter (when the source went public: air date, YouTube publish, Substack `pubDate`, RSS item date, etc.). This matches [`scripts/fetch_strategy_raw_input.py`](../../../../scripts/fetch_strategy_raw_input.py) (writes under **`raw-input/<pub_date>/`**) and [`scripts/populate_strategy_raw_input.py`](../../../../scripts/populate_strategy_raw_input.py) (uses section / filename air dates).
+
+**Not** the folder for “the day I saved the file” — that belongs in **`ingest_date`** in YAML only. If **`pub_date`** is still unknown (e.g. transcript paste before the canonical `watch?v=` is pinned), use **`_aired-pending/`** for the markdown file; move it into **`raw-input/<pub_date>/`** once the air day is fixed.
 
 ```text
 raw-input/
   README.md          ← this file
-  YYYY-MM-DD/        ← e.g. 2026-04-20/
+  _aired-pending/    ← optional: captures whose pub_date is not fixed yet (move when pinned)
+  YYYY-MM-DD/        ← = pub_date / air day (e.g. 2026-04-20/)
     YYYY-MM-DD-<expert_id>.md   ← raw capture: RSS `thread:` merge target + populate mirror (append ingests)
     <slug>.md        ← other captures: verbatim sidecars, RSS without thread:, bundles, indexes
 ```
 
 **Refined day page (not here):** **`experts/<expert_id>/mercouris-page-YYYY-MM-DD.md`** (Mercouris) — Chronicle / Reflection / Foresight; links back to **verbatim** in this tree. Distinct from **`strategy-page`** in `thread.md` unless mirrored during EOD compose.
 
-**Raw capture:** e.g. **`2026-04-21-mercouris-verbatim.md`** for full operator transcript; RSS **`thread: mercouris`** appends to **`2026-04-21-mercouris.md`**.
+**Raw capture:** e.g. **`2026-04-21-mercouris-verbatim.md`** under **`2026-04-21/`** because the episode **aired / published** on that calendar day; RSS **`thread: mercouris`** appends to **`2026-04-21-mercouris.md`** in that same folder.
 
 **Other slugs:** `kebab-case`, unique within that day — e.g. `ritter-judging-freedom-2026-04-20.md`, `substack-simplicius-….md`, `davis-johnson-hormuz-full.md`.
 
@@ -79,7 +82,7 @@ kind: transcript | paste-bundle | screenshot-list | x-screenshots-index | x-post
 …full body…
 ```
 
-`thread:` may be omitted for non-expert material (e.g. raw wire paste with no `thread:` lane yet). **`pub_date`** is the calendar day the source went public (air, YouTube/Substack publish, RSS `pubDate`, etc.), distinct from **`ingest_date`** (when you saved the file). The legacy key **`published_date`** is **removed** from this tree—use **`pub_date`** only. RSS triage reads **`pub_date`**, then **`ingest_date`**, then the folder name. Prefer **`kind: x-post-text`** when you paste X copy directly; legacy screenshot captures are indexed as **`x-screenshots-index`** (links to `assets/**/*.png`, no OCR).
+`thread:` may be omitted for non-expert material (e.g. raw wire paste with no `thread:` lane yet). **`pub_date`** is the calendar day the source went public (air, YouTube/Substack publish, RSS `pubDate`, etc.), distinct from **`ingest_date`** (when you saved or ingested the file into this tree). **On disk,** the parent folder `raw-input/YYYY-MM-DD/` **should match `pub_date`** once known (or **`_aired-pending/`** until then). The legacy key **`published_date`** is **removed** from this tree—use **`pub_date`** only. RSS triage reads **`pub_date`**, then **`ingest_date`**, then the folder name. Prefer **`kind: x-post-text`** when you paste X copy directly; legacy screenshot captures are indexed as **`x-screenshots-index`** (links to `assets/**/*.png`, no OCR).
 
 ## Harvest / backfill
 
@@ -118,4 +121,4 @@ Default root: `docs/skill-work/work-strategy/strategy-notebook/raw-input`. Overr
 
 When the operator asks for **full transcript on disk**, write **verbatim** under **`raw-input/YYYY-MM-DD/<descriptive-slug>.md`** (or **`YYYY-MM-DD-<expert_id>.md`** when matching RSS merge). Place **refined day pages** under **`experts/<expert_id>/mercouris-page-YYYY-MM-DD.md`** (or an equivalent convention per expert). Keep [daily-strategy-inbox.md](../daily-strategy-inbox.md) to **stub lines** pointing at **verbatim** for `verify:` and optionally at the **expert page** for composed judgment, e.g. `verify:full-text+raw-input/2026-04-21/2026-04-21-mercouris-verbatim.md`.
 
-Full contract: [STRATEGY-NOTEBOOK-ARCHITECTURE.md](../STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *Raw input archive (7-day full retention)*.
+Full contract: [STRATEGY-NOTEBOOK-ARCHITECTURE.md § Split ingest model](../STRATEGY-NOTEBOOK-ARCHITECTURE.md#split-ingest-model).

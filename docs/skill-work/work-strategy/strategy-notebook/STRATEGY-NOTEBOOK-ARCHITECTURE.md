@@ -16,7 +16,7 @@
 
 **Canonical long-form sequence** for work-strategy judgment (inbox-first; complements the three-move minimum in [DEFAULT-PATH.md](../DEFAULT-PATH.md)):
 
-1. **Accumulate** through the day in [`daily-strategy-inbox.md`](daily-strategy-inbox.md) (paste-ready stubs) and **[`raw-input/`](raw-input/README.md)** (full verbatim when needed) — see [Split ingest model](#split-ingest-model) and [raw input archive](#raw-input-archive-7d).
+1. **Accumulate** through the day in [`daily-strategy-inbox.md`](daily-strategy-inbox.md) (paste-ready stubs) and **[`raw-input/`](raw-input/README.md)** (full verbatim when needed) — see [Split ingest model](#split-ingest-model) and [raw-input/README.md](raw-input/README.md).
 2. **Once per local day (default): end-of-day strategy session** — **compose or revise** thread-embedded pages (`<!-- strategy-page:start` … in `experts/<expert_id>/thread.md` under `## YYYY-MM`) and the matching `chapters/YYYY-MM/days.md` continuity block. **Inputs:** that day’s **`raw-input/`** files (primary bulk), inbox lines, briefs, and (after operator **`thread`**) expert **`transcript.md`** / machine layer — **synthesis** (required **Chronicle / Reflection / Foresight** prose; **`### Appendix`** optional — see [strategy-page-template.md](strategy-page-template.md)), **not** an inbox or raw-input mirror. **Breaking glass:** rare intra-day notebook compose only when the operator explicitly overrides — same synthesis discipline.
 3. **Optionally mark** reusable material with lightweight escalation cues (`[watch]`, `[decision]`, `[promote]`) — definitions and sparing-use rules: [NOTEBOOK-PREFERENCES.md#escalation-marker-preference](NOTEBOOK-PREFERENCES.md#escalation-marker-preference).
 4. **Escalate artifacts** — watch support, analogy audit, or a **decision point** — only when a signal is maturing and **real options** are needed.
@@ -112,22 +112,16 @@ Apply **prospectively**; no obligation to backfill older months unless you expli
 |-------|------|
 | **[`daily-strategy-inbox.md`](daily-strategy-inbox.md)** | **Index / stub** — at minimum one paste-ready line per capture: **`thread:<expert_id>`**, **`aired:YYYY-MM-DD`** (or equivalent) when the event has a clear **air/publication date**, short **cold** / **hook**, **URL**, **`verify:`**. Same tags as today so **`rg`** across the inbox stays the primary “what did we file?” sweep. |
 | **`experts/<expert_id>/transcript.md`** | **Corpus** — long quoted speech under **`## YYYY-MM-DD`** where that date is the **air/publication day** (not only “the day I typed”). Continuation paragraphs follow the [long-form verbatim](daily-strategy-inbox.md#long-form-verbatim-thread) rules. Triage targets **≤ ~2000 words** per ingest block (soft caps). |
-| **[`raw-input/`](raw-input/README.md)** | **Full retention (7 days)** — **unabridged** capture (transcripts, RSS merge targets **`YYYY-MM-DD-<expert_id>.md`**, sidecars, bundles) in **`raw-input/YYYY-MM-DD/`**. **Refined day pages** (e.g. **`experts/mercouris/mercouris-page-YYYY-MM-DD.md`**) are **not** raw-input. Separate from the inbox. Same rolling calendar window as expert transcripts; **prune is operator-initiated** — **`prune_strategy_raw_input.py --apply`** is **blocked** while **[`raw-input/.pruning-suspended`](raw-input/.pruning-suspended)** exists unless **`--override`** (see [raw-input/README.md](raw-input/README.md) § Pruning). |
+| **[`raw-input/`](raw-input/README.md)** | **Unabridged SSOT** — full transcripts, RSS merge files **`YYYY-MM-DD-<expert_id>.md`**, sidecars, bundles. **On disk:** **`raw-input/<pub_date>/`** (air / publication day; **`ingest_date`** in YAML only). **`_aired-pending/`** when **`pub_date`** is not fixed yet ([§ Layout](raw-input/README.md)). **Refined day pages** (e.g. **`experts/mercouris/mercouris-page-YYYY-MM-DD.md`**) are **not** here — inbox stays **stubs** + **`verify:`** pointers. **Prune** only when **you** run **`prune_strategy_raw_input.py`** (default window aligns with expert transcript tooling); **`--apply`** is **blocked** while **[`.pruning-suspended`](raw-input/.pruning-suspended)** exists unless **`--override`** ([§ Pruning](raw-input/README.md)). |
 | **`python3 scripts/strategy_thread.py`** (today) | Triage + extraction from inbox → transcript → machine block; **until** a dedicated command ships, triage still assumes inbox-sourced `thread:` blocks. |
 
 **Unified search:** Treat **inbox + `experts/*/transcript.md` + `raw-input/`** as one habit: grep inbox for stubs; grep **`raw-input`** for full text when the operator stored it there; grep transcripts for triage-sized verbatim — **or** (future) a generated rollup listing pointers only. **Not** Record.
 
-<a id="raw-input-archive-7d"></a>
-
-### Raw input archive (7-day full retention)
-
-When you need the **entire** transcript or **all** pasted inputs on disk for roughly a week — without stuffing the inbox or splitting across **`thread`** word budgets — write under **[`raw-input/`](raw-input/README.md)** and keep **[`daily-strategy-inbox.md`](daily-strategy-inbox.md)** to a **stub** that points at the file (e.g. **`verify:`** tail with `raw-input/YYYY-MM-DD/slug.md`). **Prune** dated folders only when **you** run **`scripts/prune_strategy_raw_input.py`** (no CI automation). While **`raw-input/.pruning-suspended`** is present, **`--apply`** requires **`--override`**. **Git** may still recover pruned paths from history if committed.
-
-**Transition:** Current tooling remains valid; a future **`strategy_ingest`** (name TBD) would implement “one command” below without deleting the inbox as registry.
-
 <a id="planned-strategy-ingest-cli"></a>
 
 ### Planned unified ingest command (CLI sketch — not implemented)
+
+**Transition:** Current tooling remains valid; a future **`strategy_ingest`** (name TBD) would implement “one command” below without deleting the inbox as registry.
 
 Single entry point (working name **`strategy_ingest`** or fold into **`strategy_thread`**) — **one invocation** that updates stub + corpus + runs refresh as needed.
 
