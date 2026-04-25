@@ -1,13 +1,13 @@
 ---
 ingest_date: 2026-04-25
-pub_date: 2026-04-25
+pub_date: 2026-04-21
 kind: operator-transcript
 show: The Grayzone (Nima show)
 host: Nima
 guest: Seyed Mohammad Marandi
 thread_expert: marandi
-source_note: Operator paste; pin canonical YouTube (The Grayzone) watch URL when available.
-title_slug: marandi-blockade-trump-nima-2026-04-25
+source_note: Operator paste; pin canonical YouTube (The Grayzone) watch URL when available. pub_date (air day) 2026-04-21 per operator; opening line in body still says April 25 as spoken.
+title_slug: marandi-blockade-trump-nima-2026-04-21
 ---
 
 # Nima × Seyed Mohammad Marandi — “It’s Over” (Iran, blockade, Islamabad) (operator transcript)
