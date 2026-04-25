@@ -1,10 +1,12 @@
 # Cadence events
 
-> Append-only audit of **coffee**, **dream**, **bridge**, **thanks**, and optional **harvest** runs.
+> Append-only audit of **coffee**, **coffee_pick**, **coffee_conductor_outcome**, **dream**, **bridge**, **thanks**, and optional **harvest** runs.
 > **Not** Record truth. **Not** self-memory. **Not** a replacement for
 > handoff artifacts or `session-transcript.md`.
 >
 > **Format:** `- **YYYY-MM-DD HH:MM UTC** — kind (user) key=value …` (machine-audit line).
+> **coffee_conductor_outcome** — optional closure line (**verdict=** e.g. watch / promote / shelf).
+> **coffee_pick** may include optional **focus=** or **arc=** (named work object).
 > **Companion-facing:** Skills read this file and speak **Recent rhythm** in chat — plain
 > language, concrete specifics, no clock times in that prose. See [work-cadence README](README.md).
 
@@ -286,3 +288,11 @@ _(Append below this line.)_
 - **2026-04-24 18:44 UTC** — thanks (grace-mar) ok=true cursor_model=unknown model_tier=unknown park=pr8-preflight-review-pause
 - **2026-04-25 00:24 UTC** — bridge (grace-mar) ok=true cursor_model=unknown model_tier=unknown refs=a72f3fad,20f58ae
 - **2026-04-25 00:26 UTC** — coffee (grace-mar) ok=true mode=work-start cursor_model=unknown model_tier=unknown
+- **2026-04-25 02:02 UTC** — thanks (grace-mar) ok=true cursor_model=unknown model_tier=unknown park=deterministic-diagnostics-ci
+- **2026-04-25 02:28 UTC** — coffee (grace-mar) ok=true mode=work-start cursor_model=unknown model_tier=unknown
+- **2026-04-25 02:30 UTC** — coffee_pick (grace-mar) ok=true cursor_model=unknown model_tier=unknown picked=B steward=template
+- **2026-04-25 04:39 UTC** — coffee (grace-mar) ok=true mode=work-start cursor_model=unknown model_tier=unknown
+- **2026-04-25 04:40 UTC** — coffee_pick (grace-mar) ok=true cursor_model=unknown model_tier=unknown picked=D2 conductor=kleiber
+- **2026-04-25 04:41 UTC** — coffee_pick (grace-mar) ok=true cursor_model=unknown model_tier=unknown picked=D1 conductor=kleiber
+- **2026-04-25 13:18 UTC** — coffee (grace-mar) ok=true mode=work-start cursor_model=unknown model_tier=unknown
+- **2026-04-25 13:21 UTC** — coffee_pick (grace-mar) ok=true cursor_model=unknown model_tier=unknown picked=D1 conductor=kleiber

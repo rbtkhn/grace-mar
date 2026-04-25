@@ -100,6 +100,18 @@ Per [work-menu-conventions.md](../work-menu-conventions.md) and [work-modules-hi
 
 ---
 
+## Conductor semantics (machine)
+
+Mechanical resolution (D1 continuation vs layered D2 from dream + session load) lives in
+[`scripts/cadence_conductor_resolution.py`](../../../scripts/cadence_conductor_resolution.py).
+Human contract and menu order: [CONDUCTOR-PASS.md](CONDUCTOR-PASS.md).
+
+Run the illustration tests:
+
+`python3 -m pytest tests/test_conductor_coffee_illustration.py -k illustration -v`
+
+---
+
 ## Scope boundaries
 
 In scope:
