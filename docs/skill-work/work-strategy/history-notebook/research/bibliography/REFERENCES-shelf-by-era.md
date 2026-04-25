@@ -15,26 +15,26 @@ Regenerate: `python3 scripts/build_hn_bookshelf_bibliography.py`
 
 ### Ancient (`ancient`)
 
-- Adrian Goldsworthy. n.d. *Antony and Cleopatra*. `HNSRC-0029`
+- Adrian Goldsworthy. 2010. *Antony and Cleopatra*. Yale University Press. ISBN 9780300167009. `HNSRC-0029`
 - Adrian Goldsworthy. n.d. *Augustus: First Emperor of Rome*. `HNSRC-0031`
-- Adrian Goldsworthy. n.d. *Caesar: Life of a Colossus*. `HNSRC-0028`
-- Adrian Goldsworthy. n.d. *How Rome Fell*. `HNSRC-0020`
-- Adrian Goldsworthy. n.d. *Pax Romana: War, Peace and Conquest in the Roman World*. `HNSRC-0035`
-- Adrian Goldsworthy. n.d. *Philip and Alexander: Kings and Conquerors*. `HNSRC-0012`
-- Adrian Goldsworthy. n.d. *Rome and Persia: The Seven Hundred Year Rivalry*. `HNSRC-0034`
+- Adrian Goldsworthy. 2006. *Caesar: Life of a Colossus*. Yale University Press. ISBN 9780300126891. `HNSRC-0028`
+- Adrian Goldsworthy. 2009. *How Rome Fell*. Yale University Press. ISBN 9780300155600. `HNSRC-0020`
+- Adrian Goldsworthy. 2016. *Pax Romana: War, Peace and Conquest in the Roman World*. Yale University Press. ISBN 9780300222265. `HNSRC-0035`
+- Adrian Goldsworthy. 2020. *Philip and Alexander: Kings and Conquerors*. Basic Books. ISBN 9780465095506. `HNSRC-0012`
+- Adrian Goldsworthy. 2023. *Rome and Persia: The Seven Hundred Year Rivalry*. Basic Books. ISBN 9781541619944. `HNSRC-0034`
 - Adrian Goldsworthy. n.d. *The Punic Wars*. `HNSRC-0018`
 - Aeschylus. n.d. *Aeschylus: The Oresteia*. `HNSRC-0044`
 - Anthony Everitt. n.d. *Alexander the Great*. `HNSRC-0011`
-- Anthony Everitt. n.d. *Augustus: The Life of Rome's First Emperor*. `HNSRC-0032`
+- Anthony Everitt. 2007. *Augustus: The Life of Rome's First Emperor*. Random House Trade Paperbacks. ISBN 9780812970586. `HNSRC-0032`
 - Anthony Everitt. n.d. *Cicero: The Life and Times of Rome's Greatest Politician*. `HNSRC-0030`
-- Anthony Everitt. n.d. *Hadrian and the Triumph of Rome*. `HNSRC-0033`
+- Anthony Everitt. 2010. *Hadrian and the Triumph of Rome*. Random House Trade Paperbacks. ISBN 9780812978148. `HNSRC-0033`
 - Anthony Everitt. n.d. *The Rise of Athens*. `HNSRC-0010`
 - Anthony Everitt. n.d. *The Rise of Rome*. `HNSRC-0017`
 - Arrian. n.d. *The Landmark Arrian: The Campaigns of Alexander*. `HNSRC-0006`
 - Barry Cunliffe. n.d. *The Scythians*. `HNSRC-0015`
 - Confucius. n.d. *Confucius: The Analects*. `HNSRC-0040`
 - Duane W. Roller. n.d. *Empire of the Black Sea*. `HNSRC-0016`
-- Eckart Frahm. n.d. *Assyria*. `HNSRC-0008`
+- Eckart Frahm. 2023. *Assyria*. Basic Books. ISBN 9781541674394. `HNSRC-0008`
 - Herodotus. n.d. *The Histories*. `HNSRC-0001`
 - Herodotus. n.d. *The Landmark Herodotus*. `HNSRC-0002`
 - Homer. n.d. *The Iliad*. `HNSRC-0046`
@@ -42,8 +42,8 @@ Regenerate: `python3 scripts/build_hn_bookshelf_bibliography.py`
 - Islam Issa. n.d. *Alexandria*. `HNSRC-0013`
 - Julius Caesar. n.d. *The Landmark Julius Caesar*. `HNSRC-0007`
 - Lao Tzu. n.d. *Lao-Tzu: Tao Te Ching*. `HNSRC-0039`
-- Lloyd Llewellyn-Jones. n.d. *Persians*. `HNSRC-0009`
-- Lloyd Llewellyn-Jones. n.d. *The Cleopatras: The Forgotten Queens of Egypt*. `HNSRC-0014`
+- Lloyd Llewellyn-Jones. 2022. *Persians*. Basic Books. ISBN 9781541600355. `HNSRC-0009`
+- Lloyd Llewellyn-Jones. 2024. *The Cleopatras: The Forgotten Queens of Egypt*. Basic Books. ISBN 9781541602939. `HNSRC-0014`
 - Lucretius. n.d. *On the Nature of Things*. `HNSRC-0052`
 - Marcus Aurelius. n.d. *Meditations*. `HNSRC-0051`
 - Ovid. n.d. *Metamorphoses*. `HNSRC-0049`
@@ -76,7 +76,7 @@ Regenerate: `python3 scripts/build_hn_bookshelf_bibliography.py`
 - Dante Alighieri. n.d. *Inferno*. `HNSRC-0080`
 - Edward Gibbon. n.d. *The History of the Decline and Fall of the Roman Empire*. `HNSRC-0054`
 - Geoffrey Chaucer. n.d. *The Canterbury Tales*. `HNSRC-0081`
-- Hans-Ulrich Wiemer. n.d. *Theoderic the Great*. `HNSRC-0021`
+- Hans-Ulrich Wiemer. 2023. *Theoderic the Great*. Yale University Press. ISBN 9780300254433. `HNSRC-0021`
 - Jack Weatherford. n.d. *Emperor of the Seas*. `HNSRC-0074`
 - Jack Weatherford. n.d. *Genghis Khan and the Making of the Modern World*. `HNSRC-0076`
 - Jack Weatherford. n.d. *The Secret History of the Mongol Queens*. `HNSRC-0075`
@@ -90,7 +90,7 @@ Regenerate: `python3 scripts/build_hn_bookshelf_bibliography.py`
 - Martyn Rady. n.d. *The Middle Kingdoms: A New History of Central Europe*. `HNSRC-0068`
 - Neil Price. n.d. *Children of Ash and Elm: A History of the Vikings*. `HNSRC-0073`
 - Peter Heather. n.d. *Christendom*. `HNSRC-0024`
-- Peter Sarris. n.d. *Justinian*. `HNSRC-0022`
+- Peter Sarris. 2023. *Justinian*. Basic Books. ISBN 9781541601345. `HNSRC-0022`
 - Roger Crowley. n.d. *1453: The Holy War for Constantinople and the Clash of Islam and the West*. `HNSRC-0244`
 - Roger Crowley. n.d. *The Accursed Tower: The Fall of Acre and the End of the Crusades*. `HNSRC-0249`
 - Various. n.d. *Tales from 1,001 Nights*. `HNSRC-0078`
@@ -323,5 +323,5 @@ Regenerate: `python3 scripts/build_hn_bookshelf_bibliography.py`
 
 ### Modern (Vol V–style bucket) (`modern`)
 
-- Bartle Bull. n.d. *Land Between the Rivers*. `HNSRC-0025`
+- Bartle Bull. 2024. *Land Between the Rivers*. Grove Press. ISBN 9780802162519. `HNSRC-0025`
 - Niall Ferguson. n.d. *Kissinger: 1923-1968: The Idealist*. `HNSRC-0265`

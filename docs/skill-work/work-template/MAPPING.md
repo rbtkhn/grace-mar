@@ -31,7 +31,7 @@
 
 ## work-cici (advisor module)
 
-Grace-mar **operator/advisor** lane for Xavier (mirrors, BrewMind, runbooks). Not her Record repo; see [work-cici/README.md](../work-cici/README.md). **Generic pattern** (reference implementation, not copy-paste required): [external-companion-workspace-template.md](external-companion-workspace-template.md).
+Grace-Mar **operator/advisor** lane for Cici — legacy note: formerly Xavier (mirrors, BrewMind, runbooks). Not her Record repo; see [work-cici/README.md](../work-cici/README.md). **Generic pattern** (reference implementation, not copy-paste required): [external-companion-workspace-template.md](external-companion-workspace-template.md).
 
 | Template concept | work-cici path |
 |------------------|------------------|

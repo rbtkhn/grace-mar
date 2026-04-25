@@ -8,6 +8,7 @@ WORK only; not Record.
 
 - **`strategy-page` blocks** (marker-fenced in expert **`thread.md`** journal layers) are the **primary analytical unit** — portable by stable `id=` across experts and months.
 - **Thread file(s)** (`experts/<expert_id>/thread.md` or monthly `*-thread-YYYY-MM.md`) are **containers and continuity lanes**: month segments, machine extraction, and embedded pages.
+- **Month continuity** in the thread **journal layer** (above the machine markers) is **bookended synthesis** from that month’s thread-embedded pages when you fill it in: **lede** after `## YYYY-MM`, **`strategy-page`** bodies dated in the month, optional **closer** — see [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *Thread* and [strategy-expert-template.md](strategy-expert-template.md#thread-template). Read-only inventory: `python3 scripts/list_strategy_pages_by_month.py --year-month YYYY-MM` (optional `--expert-id`, `--chronicle-snippets`, `--json`).
 
 ## Where the rules live
 

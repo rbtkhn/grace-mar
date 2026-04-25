@@ -113,6 +113,9 @@ items:
   - id: HNSRC-0008
     title: "Assyria"
     author: "Eckart Frahm"
+    year: 2023
+    isbn: "9781541674394"
+    publisher: "Basic Books"
     era: ancient
     added_batch: "2026-04-18-ancient-shelf-b"
     tags: [Mesopotamia, empire, Assyria, Near East]
@@ -124,6 +127,9 @@ items:
   - id: HNSRC-0009
     title: "Persians"
     author: "Lloyd Llewellyn-Jones"
+    year: 2022
+    isbn: "9781541600355"
+    publisher: "Basic Books"
     era: ancient
     added_batch: "2026-04-18-ancient-shelf-b"
     tags: [Persia, Achaemenid, empire]
@@ -156,6 +162,9 @@ items:
   - id: HNSRC-0012
     title: "Philip and Alexander: Kings and Conquerors"
     author: "Adrian Goldsworthy"
+    year: 2020
+    isbn: "9780465095506"
+    publisher: "Basic Books"
     era: ancient
     added_batch: "2026-04-18-ancient-shelf-c"
     tags: [Macedon, monarchy, military]
@@ -177,6 +186,9 @@ items:
   - id: HNSRC-0014
     title: "The Cleopatras: The Forgotten Queens of Egypt"
     author: "Lloyd Llewellyn-Jones"
+    year: 2024
+    isbn: "9781541602939"
+    publisher: "Basic Books"
     era: ancient
     added_batch: "2026-04-18-ancient-shelf-c"
     tags: [Egypt, Ptolemaic, women, queens]
@@ -240,6 +252,9 @@ items:
   - id: HNSRC-0020
     title: "How Rome Fell"
     author: "Adrian Goldsworthy"
+    year: 2009
+    isbn: "9780300155600"
+    publisher: "Yale University Press"
     era: ancient
     added_batch: "2026-04-18-shelf-d-late-antiquity"
     tags: [Rome, late antiquity, decline, empire]
@@ -251,6 +266,9 @@ items:
   - id: HNSRC-0021
     title: "Theoderic the Great"
     author: "Hans-Ulrich Wiemer"
+    year: 2023
+    isbn: "9780300254433"
+    publisher: "Yale University Press"
     era: medieval
     added_batch: "2026-04-18-shelf-d-late-antiquity"
     tags: [Ostrogoths, Italy, post-Roman, early medieval]
@@ -262,6 +280,9 @@ items:
   - id: HNSRC-0022
     title: "Justinian"
     author: "Peter Sarris"
+    year: 2023
+    isbn: "9781541601345"
+    publisher: "Basic Books"
     era: medieval
     added_batch: "2026-04-18-shelf-d-late-antiquity"
     tags: [Byzantium, law, empire, mosaic]
@@ -292,6 +313,9 @@ items:
   - id: HNSRC-0025
     title: "Land Between the Rivers"
     author: "Bartle Bull"
+    year: 2024
+    isbn: "9780802162519"
+    publisher: "Grove Press"
     era: modern
     added_batch: "2026-04-18-shelf-d-late-antiquity"
     tags: [Iraq, Mesopotamia, Tigris, Euphrates, Middle East]
@@ -323,6 +347,9 @@ items:
   - id: HNSRC-0028
     title: "Caesar: Life of a Colossus"
     author: "Adrian Goldsworthy"
+    year: 2006
+    isbn: "9780300126891"
+    publisher: "Yale University Press"
     era: ancient
     added_batch: "2026-04-18-shelf-e-roman-biographies"
     tags: [Rome, biography, late republic]
@@ -334,6 +361,9 @@ items:
   - id: HNSRC-0029
     title: "Antony and Cleopatra"
     author: "Adrian Goldsworthy"
+    year: 2010
+    isbn: "9780300167009"
+    publisher: "Yale University Press"
     era: ancient
     added_batch: "2026-04-18-shelf-e-roman-biographies"
     tags: [Rome, Egypt, Ptolemaic, civil war]
@@ -367,6 +397,9 @@ items:
   - id: HNSRC-0032
     title: "Augustus: The Life of Rome's First Emperor"
     author: "Anthony Everitt"
+    year: 2007
+    isbn: "9780812970586"
+    publisher: "Random House Trade Paperbacks"
     era: ancient
     added_batch: "2026-04-18-shelf-e-roman-biographies"
     tags: [Rome, principate, biography]
@@ -378,6 +411,9 @@ items:
   - id: HNSRC-0033
     title: "Hadrian and the Triumph of Rome"
     author: "Anthony Everitt"
+    year: 2010
+    isbn: "9780812978148"
+    publisher: "Random House Trade Paperbacks"
     era: ancient
     added_batch: "2026-04-18-shelf-e-roman-biographies"
     tags: [Rome, empire, high empire, biography]
@@ -389,6 +425,9 @@ items:
   - id: HNSRC-0034
     title: "Rome and Persia: The Seven Hundred Year Rivalry"
     author: "Adrian Goldsworthy"
+    year: 2023
+    isbn: "9781541619944"
+    publisher: "Basic Books"
     era: ancient
     added_batch: "2026-04-18-shelf-e-roman-biographies"
     tags: [Rome, Persia, frontier, long war]
@@ -400,6 +439,9 @@ items:
   - id: HNSRC-0035
     title: "Pax Romana: War, Peace and Conquest in the Roman World"
     author: "Adrian Goldsworthy"
+    year: 2016
+    isbn: "9780300222265"
+    publisher: "Yale University Press"
     era: ancient
     added_batch: "2026-04-18-shelf-e-roman-biographies"
     tags: [Rome, empire, peace, military]

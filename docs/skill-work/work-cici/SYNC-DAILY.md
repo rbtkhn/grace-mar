@@ -1,6 +1,7 @@
 # SYNC-DAILY (Cici advisor lane)
 
 **Purpose:** Single daily sync control surface for the Cici advisor lane.
+Community activation tracking companion: [cici-ai-community-dashboard.md](cici-ai-community-dashboard.md).
 
 **Legacy note: formerly Xavier.** Historical snapshots in this file may still contain older labels.
 

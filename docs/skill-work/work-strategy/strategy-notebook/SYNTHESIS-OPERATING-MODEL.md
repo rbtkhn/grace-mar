@@ -112,7 +112,7 @@ This counters the failure mode of **wiki-style synthesis** that smooths contradi
 ### Rules (operational)
 
 1. **Preserve distinct voices (no flattening)**  
-   Each expert keeps a cognitive fingerprint (e.g. legitimacy/narrative vs power/incentives). In the **Journal layer** of `thread.md`: light gloss, source pins, pointers to verbatim `transcript.md` — not heavy paraphrase that rewrites the expert. Attribution stays explicit (“X frames…”, “Y counters…”). Do not merge planes/registers without tagging.
+   Each expert keeps a cognitive fingerprint (e.g. legitimacy/narrative vs power/incentives). In the **Journal layer** of `thread.md` **month** segments: **compose** readable prose from that month’s **`strategy-page`** bodies (and blockquotes/ Chronicle lifts), with optional **lede**/**closer**; use **`transcript.md`** for **bulk** speech and pointers, not as the default **quote source** for month bookends. Avoid heavy paraphrase that rewrites the expert. Attribution stays explicit (“X frames…”, “Y counters…”). Do not merge planes/registers without tagging. See [strategy-expert-template.md](strategy-expert-template.md#thread-template) (verbatim quote selection rubric).
 
 2. **Separate layers strictly (Journal vs Machine)**  
    **Journal** (above `<!-- strategy-expert-thread:start -->`): operator narrative, tension notes, `strategy-page` blocks — **never overwritten** by scripts. **Machine** (between the fences): script-maintained extraction — refreshed on `thread` runs. Interpretive synthesis belongs in EOD / compiled-view **recipes**, not in overwriting the Journal.

@@ -20,34 +20,34 @@ Regenerate: `python3 scripts/build_hn_bookshelf_bibliography.py`
 - Xenophon. n.d. *The Landmark Xenophon's Anabasis*. `HNSRC-0005`
 - Arrian. n.d. *The Landmark Arrian: The Campaigns of Alexander*. `HNSRC-0006`
 - Julius Caesar. n.d. *The Landmark Julius Caesar*. `HNSRC-0007`
-- Eckart Frahm. n.d. *Assyria*. `HNSRC-0008`
-- Lloyd Llewellyn-Jones. n.d. *Persians*. `HNSRC-0009`
+- Eckart Frahm. 2023. *Assyria*. Basic Books. ISBN 9781541674394. `HNSRC-0008`
+- Lloyd Llewellyn-Jones. 2022. *Persians*. Basic Books. ISBN 9781541600355. `HNSRC-0009`
 - Anthony Everitt. n.d. *The Rise of Athens*. `HNSRC-0010`
 - Anthony Everitt. n.d. *Alexander the Great*. `HNSRC-0011`
-- Adrian Goldsworthy. n.d. *Philip and Alexander: Kings and Conquerors*. `HNSRC-0012`
+- Adrian Goldsworthy. 2020. *Philip and Alexander: Kings and Conquerors*. Basic Books. ISBN 9780465095506. `HNSRC-0012`
 - Islam Issa. n.d. *Alexandria*. `HNSRC-0013`
-- Lloyd Llewellyn-Jones. n.d. *The Cleopatras: The Forgotten Queens of Egypt*. `HNSRC-0014`
+- Lloyd Llewellyn-Jones. 2024. *The Cleopatras: The Forgotten Queens of Egypt*. Basic Books. ISBN 9781541602939. `HNSRC-0014`
 - Barry Cunliffe. n.d. *The Scythians*. `HNSRC-0015`
 - Duane W. Roller. n.d. *Empire of the Black Sea*. `HNSRC-0016`
 - Anthony Everitt. n.d. *The Rise of Rome*. `HNSRC-0017`
 - Adrian Goldsworthy. n.d. *The Punic Wars*. `HNSRC-0018`
 - Richard A. Gabriel. n.d. *Hannibal*. `HNSRC-0019`
-- Adrian Goldsworthy. n.d. *How Rome Fell*. `HNSRC-0020`
-- Hans-Ulrich Wiemer. n.d. *Theoderic the Great*. `HNSRC-0021`
-- Peter Sarris. n.d. *Justinian*. `HNSRC-0022`
+- Adrian Goldsworthy. 2009. *How Rome Fell*. Yale University Press. ISBN 9780300155600. `HNSRC-0020`
+- Hans-Ulrich Wiemer. 2023. *Theoderic the Great*. Yale University Press. ISBN 9780300254433. `HNSRC-0021`
+- Peter Sarris. 2023. *Justinian*. Basic Books. ISBN 9781541601345. `HNSRC-0022`
 - Judith Herrin. n.d. *Ravenna*. `HNSRC-0023`
 - Peter Heather. n.d. *Christendom*. `HNSRC-0024`
-- Bartle Bull. n.d. *Land Between the Rivers*. `HNSRC-0025`
+- Bartle Bull. 2024. *Land Between the Rivers*. Grove Press. ISBN 9780802162519. `HNSRC-0025`
 - Anna Comnena. n.d. *The Alexiad*. `HNSRC-0026`
 - Plutarch. n.d. *Plutarch's Lives*. `HNSRC-0027`
-- Adrian Goldsworthy. n.d. *Caesar: Life of a Colossus*. `HNSRC-0028`
-- Adrian Goldsworthy. n.d. *Antony and Cleopatra*. `HNSRC-0029`
+- Adrian Goldsworthy. 2006. *Caesar: Life of a Colossus*. Yale University Press. ISBN 9780300126891. `HNSRC-0028`
+- Adrian Goldsworthy. 2010. *Antony and Cleopatra*. Yale University Press. ISBN 9780300167009. `HNSRC-0029`
 - Anthony Everitt. n.d. *Cicero: The Life and Times of Rome's Greatest Politician*. `HNSRC-0030`
 - Adrian Goldsworthy. n.d. *Augustus: First Emperor of Rome*. `HNSRC-0031`
-- Anthony Everitt. n.d. *Augustus: The Life of Rome's First Emperor*. `HNSRC-0032`
-- Anthony Everitt. n.d. *Hadrian and the Triumph of Rome*. `HNSRC-0033`
-- Adrian Goldsworthy. n.d. *Rome and Persia: The Seven Hundred Year Rivalry*. `HNSRC-0034`
-- Adrian Goldsworthy. n.d. *Pax Romana: War, Peace and Conquest in the Roman World*. `HNSRC-0035`
+- Anthony Everitt. 2007. *Augustus: The Life of Rome's First Emperor*. Random House Trade Paperbacks. ISBN 9780812970586. `HNSRC-0032`
+- Anthony Everitt. 2010. *Hadrian and the Triumph of Rome*. Random House Trade Paperbacks. ISBN 9780812978148. `HNSRC-0033`
+- Adrian Goldsworthy. 2023. *Rome and Persia: The Seven Hundred Year Rivalry*. Basic Books. ISBN 9781541619944. `HNSRC-0034`
+- Adrian Goldsworthy. 2016. *Pax Romana: War, Peace and Conquest in the Roman World*. Yale University Press. ISBN 9780300222265. `HNSRC-0035`
 - Various. n.d. *The Old Testament*. `HNSRC-0036`
 - Various. n.d. *The New Testament*. `HNSRC-0037`
 - Various. n.d. *Hindu Scriptures*. `HNSRC-0038`

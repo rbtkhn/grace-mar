@@ -134,6 +134,7 @@ _Omit or leave “roster-only (Tier C)” until **`thread:`** density supports a
 WORK only; not Record.
 
 **Source:** Human **narrative journal** (below) + [`strategy-expert-<expert_id>-transcript.md`](strategy-expert-template.md#transcript-template) (verbatim ingests) + relevant **`strategy-page`** work (where this expert’s material was used).
+**SSOT (month journal):** **Thread-embedded** **`strategy-page`** fences under the correct **`## YYYY-MM`** are the default **spine** for each month’s readable journal. Standalone **`experts/<expert_id>/*-page-*.md`** day files are **optional** overflow; mention or mirror them in a month only when **load-bearing** (or after duplicating the same logical page into a thread fence), not as the default month composition path.
 **Process:** `python3 scripts/strategy_thread.py` triages inbox → transcript, then fills **only** the **machine layer** between the **strategy-expert-thread** HTML start and end comments. Operator / assistant maintains the **journal layer** above the start marker in **readable prose** (optional **ledger** after the end marker).
 **Updated:** Narrative — when you distill; **machine layer** — when you run **`thread`**.
 **Companion files:** [`strategy-expert-<expert_id>.md`](strategy-expert-template.md#profile-template) (profile), [`strategy-expert-<expert_id>-transcript.md`](strategy-expert-template.md#transcript-template) (7-day verbatim), and [`strategy-expert-<expert_id>-mind.md`](strategy-expert-template.md#mind-template) (optional long-form mind).
@@ -142,7 +143,20 @@ WORK only; not Record.
 
 ## Journal layer — Narrative (operator)
 
-_Write here in full sentences. Dated arcs are welcome (e.g. **2026-04-12 → 04-15**). Cover: what this voice did this week, how it **intersects** named **pages**, convergence/tension with other **`thread:`** experts, and **Open** pins. The **journal layer** is **not** overwritten by the **`thread`** script._
+**Compose each `## YYYY-MM` from that month’s thread `strategy-page` set** (each fence’s `date=` falls in the month), not as a free-standing parallel essay and not as a long paraphrase of **`transcript.md`**. Dated week arcs are still welcome. Cover: how this voice **moves across the pages** you closed that month, convergence/tension with other **`thread:`** experts, and **Open** / **verify** pins. The **journal layer** is **not** overwritten by the **`thread`** script.
+
+**Month shape (70 / 30 norm):** about **70%** **expert-anchored** material ( **`### Chronicle`** and markdown **`>`** lines inside thread **`strategy-page`** blocks for that month), about **30%** **connective** prose in the **skill-write** register (topic-led glue, **lede**/**closer**, paste-ready lines where useful) — the glue is **not** a second full analysis *parallel* to the pages. *Norm only; not a validator threshold.*
+
+**Bookends (under each `## YYYY-MM`, above the machine layer):**
+
+- **Lede** — a short **chapter open** right after the month heading, **before** the first `<!-- strategy-page:start` …` fence: what **carries in**, the **dominant watch** (if one), and how you are reading the month. *(Placeholder: one paragraph, topic-led.)*
+- **Closer** — after the **last** `strategy-page` **end** fence for that month: what **stays open**, **verify** hooks, and one-line **arc** (what moved vs what repeated). *(Placeholder: one paragraph; may compress **Open** pins.)*
+
+**List pages in a calendar month (read-only):** from repo root:
+
+- `python3 scripts/list_strategy_pages_by_month.py --year-month YYYY-MM` — TSV (`expert_id`, `id`, `date`, `watch`, path); add `--expert-id <id>` for one lane.
+- `python3 scripts/list_strategy_pages_by_month.py --year-month YYYY-MM --chronicle-snippets` — same TSV, then **advisory** first-paragraph + `>` line candidates per page (dumb `### Chronicle` parse; **never** auto-inserts; rubric still governs operator picks).
+- `python3 scripts/list_strategy_pages_by_month.py --year-month YYYY-MM --json` — JSON array; add `--chronicle-snippets` to include a `snippets` object per row.
 
 **Layout:** **Legacy:** one **`experts/<expert_id>/thread.md`** (or flat `strategy-expert-<expert_id>-thread.md`) with multiple **`## YYYY-MM`** segments. **Monthly chapters (preferred for large journals):** one file per month — **`experts/<expert_id>/<expert_id>-thread-YYYY-MM.md`** (optional flat **`strategy-expert-<expert_id>-thread-YYYY-MM.md`**). In each monthly file the journal covers **that month only**; an optional **`## YYYY-MM`** heading matching the filename keeps grep / validator continuity. For **2026** in a **single** legacy file: **Segment 1** = January (`## 2026-01`), **Segment 2** = February, **Segment 3** = March, **Segment 4** = April (ongoing). The **machine layer** (script-maintained) is **only** the fenced block between the **strategy-expert-thread** HTML start and end comments — do not call that “Segment 2” in the month sense.
 
@@ -150,7 +164,22 @@ _Write here in full sentences. Dated arcs are welcome (e.g. **2026-04-12 → 04-
 
 **Partial split (monthly + legacy):** while adding monthly files one at a time, you may still keep **`## YYYY-MM`** content in **both** a **`...-thread-YYYY-MM.md`** and **`thread.md`**. The **monthly** file is the **canonical** chapter for that month; when **both** are on disk, page discovery (see [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *Thread* — *Partial monthly layout and union discovery*) **scans** both and **dedupes** ``strategy-page`` by ``id=``, preferring the **monthly** copy.
 
-_(No narrative distillation yet — add prose above the markers, not inside them.)_
+Add narrative **above** the `<!-- strategy-expert-thread:start -->` marker, **not** inside the machine block.
+
+### Verbatim quote selection (for month lede, closer, and in-month lifts)
+
+**Source order (strict):** (1) **`strategy-page`** in the **thread** for that `YYYY-MM` — primary pool **`### Chronicle`**; secondary: **`>`** lines **inside** that page (treat as *pre-elevated* month candidates; see [strategy-page-template.md](strategy-page-template.md) `### Chronicle`). (2) **Not default:** **`transcript.md`** for month bookend quotes (duplicates bulk SSOT); use only if **Chronicle** is empty/stub and you **name** the ingest day in the bookend.
+
+| Priority | Signal | Rationale |
+|----------|--------|------------|
+| P1 | **Thesis / mechanism** (1–3 sentences, causal) | Analytical spine for the month. |
+| P2 | **Watch-resonant** | Prefer pages whose `watch=` matches the month’s active **watches** in **`days.md` / [STATUS](STATUS.md)**. |
+| P3 | **Repetition** | Same claim appears on multiple days → **one** crisp excerpt, not every repeat. |
+| P4 | **Falsifier-linked** | If **Reflection** states a falsifier, prefer the **Chronicle** line the falsifier would test. |
+| P5 | **Week coverage** | In dense months, ~**one** strong excerpt per calendar week **cluster** (avoid quote spam). |
+| P6 | **Attribution** | Long lifts stay as blockquotes; short inline clips point to the same page (`date=` on the fence). |
+
+**Exclusions:** throat-clearing, redundant everyone-had-it wire, duplicating the machine **### Page references** block as prose.
 
 ### Thread-embedded `strategy-page` blocks (journal layer)
 
