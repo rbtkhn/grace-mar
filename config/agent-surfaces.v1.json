@@ -1,0 +1,226 @@
+{
+  "schemaVersion": "1.0.0",
+  "surfaces": [
+    {
+      "id": "openclaw-export",
+      "name": "OpenClaw identity export",
+      "status": "implemented",
+      "category": "external_runtime",
+      "reads": [
+        "users/[id]/SELF.md",
+        "users/[id]/EVIDENCE/",
+        "users/[id]/session-log.md",
+        "users/[id]/INTENT.md"
+      ],
+      "writes": [
+        "users/[id]/openclaw-user.md",
+        "users/[id]/runtime-bundle/",
+        "users/[id]/intent_snapshot.json",
+        "pipeline-events.jsonl",
+        "harness-events.jsonl",
+        "users/[id]/compute-ledger.jsonl"
+      ],
+      "canonical_record_access": "read-only",
+      "merge_authority": "none",
+      "gate_effect": "none",
+      "receipt_required": true,
+      "capability_contract": "docs/skill-work/work-dev/control-plane/capability-contract-openclaw-export.yaml",
+      "owner_lane": "work-dev",
+      "notes": "Grounded in docs/openclaw-integration.md and the OpenClaw export capability contract."
+    },
+    {
+      "id": "openclaw-stage",
+      "name": "OpenClaw stage-only handback",
+      "status": "implemented",
+      "category": "external_handback_agent",
+      "reads": [
+        "runtime/continuity/receipts/",
+        "users/[id]/INTENT.md"
+      ],
+      "writes": [
+        "users/[id]/recursion-gate.md",
+        "pipeline-events.jsonl",
+        "harness-events.jsonl",
+        "users/[id]/compute-ledger.jsonl"
+      ],
+      "canonical_record_access": "none",
+      "merge_authority": "none",
+      "gate_effect": "stage-only",
+      "receipt_required": true,
+      "capability_contract": "docs/skill-work/work-dev/control-plane/capability-contract-openclaw-stage.yaml",
+      "owner_lane": "work-dev",
+      "notes": "Grounded in docs/openclaw-integration.md and the OpenClaw stage-only capability contract."
+    },
+    {
+      "id": "portable-emulation",
+      "name": "Portable emulation bundle surface",
+      "status": "partial",
+      "category": "portable_emulation_runtime",
+      "reads": [
+        "users/[id]/SELF.md",
+        "users/[id]/EVIDENCE/",
+        "users/[id]/SKILLS/",
+        "users/[id]/INTENT.md"
+      ],
+      "writes": [
+        "artifacts/portability/emulation/"
+      ],
+      "canonical_record_access": "read-only",
+      "merge_authority": "none",
+      "gate_effect": "none",
+      "receipt_required": true,
+      "capability_contract": "docs/portability/emulation/README.md",
+      "owner_lane": "work-dev",
+      "notes": "Grounded in docs/portability/emulation/README.md and behavior-spec docs; bounded export surface, not a merge path."
+    },
+    {
+      "id": "workbench",
+      "name": "Workbench Harness",
+      "status": "implemented",
+      "category": "workbench_runner",
+      "reads": [
+        "artifacts/work-dev/interface-artifacts/",
+        "artifacts/work-strategy/strategy-notebook/",
+        "repo working tree"
+      ],
+      "writes": [
+        "artifacts/work-dev/workbench-receipts/",
+        "artifacts/work-dev/workbench-screenshots/"
+      ],
+      "canonical_record_access": "none",
+      "merge_authority": "none",
+      "gate_effect": "none",
+      "receipt_required": true,
+      "capability_contract": "",
+      "owner_lane": "work-dev",
+      "notes": "Grounded in docs/skill-work/work-dev/workbench/README.md; inspection layer for generated artifacts, not a merge path."
+    },
+    {
+      "id": "interface-artifacts",
+      "name": "Interface Artifact Protocol",
+      "status": "implemented",
+      "category": "interface_artifact_generator",
+      "reads": [
+        "strategy-notebook markdown",
+        "lane docs",
+        "artifact metadata"
+      ],
+      "writes": [
+        "artifacts/work-dev/interface-artifacts/",
+        "artifacts/work-strategy/strategy-notebook/"
+      ],
+      "canonical_record_access": "none",
+      "merge_authority": "none",
+      "gate_effect": "none",
+      "receipt_required": true,
+      "capability_contract": "",
+      "owner_lane": "work-dev",
+      "notes": "Grounded in docs/skill-work/work-dev/interface-artifacts/README.md; derived operator-facing surfaces only."
+    },
+    {
+      "id": "counterfactual-fork-simulator",
+      "name": "Counterfactual Fork Simulator",
+      "status": "implemented",
+      "category": "read_only_audit",
+      "reads": [
+        "repo working tree",
+        "proposal-like JSON input"
+      ],
+      "writes": [
+        "artifacts/counterfactual-simulations/"
+      ],
+      "canonical_record_access": "read-only",
+      "merge_authority": "none",
+      "gate_effect": "advisory-only",
+      "receipt_required": false,
+      "capability_contract": "",
+      "owner_lane": "work-dev",
+      "notes": "Grounded in docs/counterfactual-fork-simulator.md; advisory scratch-only simulation, not staging or merge."
+    },
+    {
+      "id": "doctrine-drift-radar",
+      "name": "Doctrine Drift Radar",
+      "status": "implemented",
+      "category": "read_only_audit",
+      "reads": [
+        "repo working tree",
+        "config/doctrine-rules.v1.json"
+      ],
+      "writes": [],
+      "canonical_record_access": "read-only",
+      "merge_authority": "none",
+      "gate_effect": "advisory-only",
+      "receipt_required": false,
+      "capability_contract": "",
+      "owner_lane": "work-dev",
+      "notes": "Grounded in docs/doctrine-drift-radar.md; current-state doctrine audit only."
+    },
+    {
+      "id": "sandbox-adapter",
+      "name": "Sandbox adapter layer",
+      "status": "implemented",
+      "category": "sandbox_adapter",
+      "reads": [
+        "repo working tree",
+        "files_in hashes",
+        "sandbox requests"
+      ],
+      "writes": [
+        "pipeline-events.jsonl",
+        "users/[id]/compute-ledger.jsonl"
+      ],
+      "canonical_record_access": "read-only",
+      "merge_authority": "none",
+      "gate_effect": "none",
+      "receipt_required": true,
+      "capability_contract": "docs/skill-work/work-dev/control-plane/capability-contract-sandbox-dry-run.yaml",
+      "owner_lane": "work-dev",
+      "notes": "Grounded in docs/skill-work/work-dev/sandbox-adapter-spec.md and sandbox capability contracts; governance wrapper, not a merge path."
+    },
+    {
+      "id": "external-agent-delegation",
+      "name": "External outcome-agent delegation",
+      "status": "documented_only",
+      "category": "delegation_protocol",
+      "reads": [
+        "exports",
+        "warmup digests",
+        "operator task spec"
+      ],
+      "writes": [
+        "WORK artifacts",
+        "gate candidates via existing shared paths"
+      ],
+      "canonical_record_access": "none",
+      "merge_authority": "none",
+      "gate_effect": "none",
+      "receipt_required": false,
+      "capability_contract": "",
+      "owner_lane": "work-dev",
+      "notes": "Grounded in docs/skill-work/work-dev/delegation-spec-external-agents.md; delegation policy, not a standalone governed integration."
+    },
+    {
+      "id": "auto-research",
+      "name": "Auto-research swarm bridge",
+      "status": "partial",
+      "category": "auto_research",
+      "reads": [
+        "auto-research/self-proposals/accepted/",
+        "auto-research/swarm/"
+      ],
+      "writes": [
+        "auto-research/swarm/swarm-state.json",
+        "derived debate artifacts",
+        "shared artifact promotion path"
+      ],
+      "canonical_record_access": "none",
+      "merge_authority": "none",
+      "gate_effect": "none",
+      "receipt_required": true,
+      "capability_contract": "",
+      "capability_contract_exempt": true,
+      "owner_lane": "work-dev",
+      "notes": "Grounded in auto-research/swarm/README.md; partial operator-facing swarm bridge that reuses existing promotion helpers."
+    }
+  ]
+}
