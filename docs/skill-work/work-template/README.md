@@ -93,6 +93,8 @@ Lanes may stop at any tier. Do not copy nine files into a thin lane “because t
 | **work-dev** | Architecture / product / tooling shifts | Benchmark or architecture comparison audit | Product / architecture / operations | Debt, constraints, roadmap, platform state ([workspace.md](../work-dev/workspace.md)) |
 | **work-politics** | Coalition / narrative / campaign shifts | Electoral or institutional precedent audit | Persuasion / coalition / institutional ([analytical-lenses/manifest.md](../work-politics/analytical-lenses/manifest.md)) | District, donors, legal timing, coalition structure |
 
+**External companion / advisor lanes** (supporting **another** person’s instance or governed workspace from grace-mar) need **stricter Record-boundary language** than a normal in-repo WORK lane: never host their canonical Record, never copy `users/grace-mar/**` outward, and keep promotion paths pointed at **their** gate. Pattern: [external-companion-workspace-template.md](external-companion-workspace-template.md).
+
 **Lane → file mapping:** [MAPPING.md](MAPPING.md).
 
 ---
@@ -112,6 +114,7 @@ Lanes may stop at any tier. Do not copy nine files into a thin lane “because t
 | File | Tier | Role |
 |------|------|------|
 | [README.md](README.md) | — | This index |
+| [external-companion-workspace-template.md](external-companion-workspace-template.md) | — (additive) | Advisor lane for **another** companion’s instance—Record boundaries, mirror rules, promotion path |
 | [BOUNDARY.md](BOUNDARY.md) | 1+ | Copy-paste boundary checklist |
 | [MAPPING.md](MAPPING.md) | — | Existing lanes ↔ template concepts |
 | [WORK-LEDGER.md](WORK-LEDGER.md) | 1+ | Generic ledger scaffold |

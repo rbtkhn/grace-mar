@@ -67,7 +67,7 @@ Cici’s **companion** or **chosen instance** repository (Identity Fork Protocol
 
 **BrewMind (Philippines pilot):** [brewmind-philippines-onboarding-guide.md](brewmind-philippines-onboarding-guide.md) — bundle hub for strategy, brand, field script, and PH market notes ([INDEX.md](INDEX.md) lists all BrewMind WORK files).
 
-**Portability:** Patterns in this module are intended to be **mirrored or adapted** for other companion-self operator/agent workspaces; the instance Record stays in each companion’s repo.
+**Portability:** Patterns in this module are intended to be **mirrored or adapted** for other companion-self operator/agent workspaces; the instance Record stays in each companion’s repo. Reusable pattern: see [docs/skill-work/work-template/external-companion-workspace-template.md](../work-template/external-companion-workspace-template.md) (generic advisor-lane template; this folder remains not Cici’s Record).
 
 **Template alignment:** [work-cici-sources.md](work-cici-sources.md) (feeds / pointers), [LANE-CI.md](LANE-CI.md) (PR labels), [WORK-LEDGER.md](WORK-LEDGER.md) (watches + compounding). Concept map: [work-template/MAPPING.md](../work-template/MAPPING.md) (section *work-cici (advisor module)*).
 
