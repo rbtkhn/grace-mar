@@ -84,6 +84,15 @@ jobs:
       - name: Check history-notebook shelf anchors by chapter
         run: python3 scripts/hn_shelf_anchors.py --check
 
+      - name: Check history-notebook autopriority queue
+        run: python3 scripts/build_hn_autopriority_queue.py --check
+
+      - name: Check history-notebook provenance packets
+        run: python3 scripts/build_hn_provenance_packets.py --check
+
+      - name: Check history-notebook red-team findings
+        run: python3 scripts/build_hn_redteam_findings.py --check
+
       - name: Strategy notebook knot weave_count drift check
         run: python3 scripts/knot_seam_metrics.py --strict-drift
 

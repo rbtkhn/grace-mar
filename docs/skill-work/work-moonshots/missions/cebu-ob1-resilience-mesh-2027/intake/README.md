@@ -7,3 +7,5 @@ Place tacit-derived snapshots or normalized excerpts here when this mission move
 **Source pipeline:** [docs/tacit-capture/README.md](../../../../../tacit-capture/README.md)
 
 **Parent spec:** [../mission-spec.md](../mission-spec.md)
+
+**Cohort skills (Tier C intake):** [work-cici evidence — GitHub Neural Sandbox cohort (2026-04-24)](../../../../work-cici/evidence/github-neural-sandbox-cohort-2026-04-24.md)

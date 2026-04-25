@@ -1,0 +1,217 @@
+version: 1
+generated_on: "2026-04-25"
+scope: "HNSRC-0001 through HNSRC-0025"
+method:
+  sources:
+    - "Google Books volumes API"
+    - "OpenLibrary search API"
+  policy: "Attach as candidate metadata; merge into bookshelf-catalog.yaml only when confidence is high and edition match is clear."
+
+items:
+  - id: HNSRC-0001
+    title: "The Histories"
+    author: "Herodotus"
+    candidate_year: 1978
+    confidence: low
+    note: "Classical text with many editions/translations; keep as hint only."
+
+  - id: HNSRC-0002
+    title: "The Landmark Herodotus"
+    author: "Herodotus"
+    candidate_year: 2009
+    candidate_publisher: "Vintage"
+    candidate_isbn13: "9781400031146"
+    confidence: medium
+    note: "Matches known Landmark modern edition family."
+
+  - id: HNSRC-0003
+    title: "The Landmark Thucydides"
+    author: "Thucydides"
+    candidate_year: 2008
+    candidate_publisher: "Simon and Schuster"
+    candidate_isbn13: "9781416590873"
+    confidence: medium
+    note: "Edition likely in Landmark line; verify imprint against your copy."
+
+  - id: HNSRC-0004
+    title: "The Landmark Xenophon's Hellenika"
+    author: "Xenophon"
+    candidate_year: 2009
+    confidence: low
+    note: "Publisher/ISBN hits were inconsistent across APIs."
+
+  - id: HNSRC-0005
+    title: "The Landmark Xenophon's Anabasis"
+    author: "Xenophon"
+    candidate_year: 2009
+    confidence: low
+    note: "No reliable title-level match from OpenLibrary; treat as year hint only."
+
+  - id: HNSRC-0006
+    title: "The Landmark Arrian: The Campaigns of Alexander"
+    author: "Arrian"
+    candidate_year: 2012
+    candidate_publisher: "Anchor"
+    candidate_isbn13: "9781400079674"
+    confidence: medium
+    note: "Modern trade edition likely; verify against shelf copy."
+
+  - id: HNSRC-0007
+    title: "The Landmark Julius Caesar"
+    author: "Julius Caesar"
+    candidate_year: 2017
+    confidence: low
+    note: "Google top hit looked mismatched (self-published reprint); do not merge without manual confirmation."
+
+  - id: HNSRC-0008
+    title: "Assyria"
+    author: "Eckart Frahm"
+    candidate_year: 2023
+    candidate_publisher: "Basic Books"
+    candidate_isbn13: "9781541674394"
+    confidence: high
+    note: "Publisher already aligns with shelf note."
+
+  - id: HNSRC-0009
+    title: "Persians"
+    author: "Lloyd Llewellyn-Jones"
+    candidate_year: 2022
+    candidate_publisher: "Basic Books"
+    candidate_isbn13: "9781541600355"
+    confidence: high
+    note: "Strong title/author match."
+
+  - id: HNSRC-0010
+    title: "The Rise of Athens"
+    author: "Anthony Everitt"
+    candidate_year: 2016
+    confidence: low
+    note: "Publisher hits conflict with shelf note (Random House)."
+
+  - id: HNSRC-0011
+    title: "Alexander the Great"
+    author: "Anthony Everitt"
+    candidate_year: 2021
+    candidate_publisher: "Random House Trade Paperbacks"
+    candidate_isbn13: "9780425286531"
+    confidence: medium
+    note: "Likely paperback reissue year; verify if your copy is this imprint."
+
+  - id: HNSRC-0012
+    title: "Philip and Alexander: Kings and Conquerors"
+    author: "Adrian Goldsworthy"
+    candidate_year: 2020
+    candidate_publisher: "Basic Books"
+    candidate_isbn13: "9780465095506"
+    confidence: high
+    note: "Publisher and date align well."
+
+  - id: HNSRC-0013
+    title: "Alexandria"
+    author: "Islam Issa"
+    candidate_year: 2024
+    candidate_publisher: "Simon and Schuster"
+    candidate_isbn13: "9781639365463"
+    confidence: medium
+    note: "Year differs from some catalog hits (2023/2024); verify edition."
+
+  - id: HNSRC-0014
+    title: "The Cleopatras: The Forgotten Queens of Egypt"
+    author: "Lloyd Llewellyn-Jones"
+    candidate_year: 2024
+    candidate_publisher: "Basic Books"
+    candidate_isbn13: "9781541602939"
+    confidence: high
+    note: "Strong modern title match."
+
+  - id: HNSRC-0015
+    title: "The Scythians"
+    author: "Barry Cunliffe"
+    candidate_year: 2019
+    candidate_isbn13: "9780198820123"
+    confidence: medium
+    note: "ISBN/year consistent; publisher not stable across APIs."
+
+  - id: HNSRC-0016
+    title: "Empire of the Black Sea"
+    author: "Duane W. Roller"
+    candidate_year: 2023
+    candidate_publisher: "Oxford University Press"
+    candidate_isbn13: "9780197673171"
+    confidence: medium
+    note: "Year may reflect edition/reprint; shelf note says OUP."
+
+  - id: HNSRC-0017
+    title: "The Rise of Rome"
+    author: "Anthony Everitt"
+    candidate_year: 2012
+    confidence: low
+    note: "Publisher mismatch across regions/imprints; do not merge without copy-level check."
+
+  - id: HNSRC-0018
+    title: "The Punic Wars"
+    author: "Adrian Goldsworthy"
+    candidate_year: 2000
+    candidate_publisher: "Weidenfeld & Nicolson"
+    candidate_isbn13: "9780304359677"
+    confidence: medium
+    note: "Could be UK edition; confirm against your copy."
+
+  - id: HNSRC-0019
+    title: "Hannibal"
+    author: "Richard A. Gabriel"
+    candidate_year: 2011
+    candidate_publisher: "Potomac Books"
+    candidate_isbn13: "9781597976862"
+    confidence: medium
+    note: "Strong match for Gabriel biography line."
+
+  - id: HNSRC-0020
+    title: "How Rome Fell"
+    author: "Adrian Goldsworthy"
+    candidate_year: 2009
+    candidate_publisher: "Yale University Press"
+    candidate_isbn13: "9780300155600"
+    confidence: high
+    note: "Publisher already matches shelf note."
+
+  - id: HNSRC-0021
+    title: "Theoderic the Great"
+    author: "Hans-Ulrich Wiemer"
+    candidate_year: 2023
+    candidate_publisher: "Yale University Press"
+    candidate_isbn13: "9780300254433"
+    confidence: high
+    note: "Strong modern match."
+
+  - id: HNSRC-0022
+    title: "Justinian"
+    author: "Peter Sarris"
+    candidate_year: 2023
+    candidate_publisher: "Basic Books"
+    candidate_isbn13: "9781541601345"
+    confidence: high
+    note: "Publisher aligns with shelf note."
+
+  - id: HNSRC-0023
+    title: "Ravenna"
+    author: "Judith Herrin"
+    candidate_year: 2016
+    confidence: low
+    note: "Conflicting imprint/year signals (Penguin vs Princeton records)."
+
+  - id: HNSRC-0024
+    title: "Christendom"
+    author: "Peter Heather"
+    candidate_year: 2020
+    confidence: low
+    note: "Multiple works/timelines under similar title; verify subtitle and edition before merge."
+
+  - id: HNSRC-0025
+    title: "Land Between the Rivers"
+    author: "Bartle Bull"
+    candidate_year: 2024
+    candidate_publisher: "Grove Press"
+    candidate_isbn13: "9780802162519"
+    confidence: high
+    note: "Strong modern match."

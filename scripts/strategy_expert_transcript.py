@@ -126,7 +126,11 @@ def _extract_markdown_h1_title(body: str) -> str:
 
 
 def _iter_raw_input_md_paths(raw_root: Path, cutoff: date) -> list[Path]:
-    """Markdown files under ``raw-input/YYYY-MM-DD/`` with folder date strictly after ``cutoff``."""
+    """Markdown files under ``raw-input/YYYY-MM-DD/`` with folder date strictly after ``cutoff``.
+
+    Folder names follow the notebook convention **publication / air day** (``pub_date``),
+    not ingest day; see ``raw-input/README.md`` § Layout.
+    """
     if not raw_root.is_dir():
         return []
     out: list[Path] = []

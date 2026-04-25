@@ -28,6 +28,8 @@ This file is the **bibliography database**. It does **not** store scanned text; 
 
 **Writer ergonomics (inverse index + lookups):** [SHELF-ANCHORS-BY-CHAPTER.md](SHELF-ANCHORS-BY-CHAPTER.md) — `hn-*` chapter id → HNSRC list. Regen: `python3 scripts/hn_shelf_anchors.py`. One-line **card** for a shelf id: `python3 scripts/hn_shelf_anchors.py --hnsrc HNSRC-0001`. **Paste line** for a chapter draft: `--stub-line hn-i-v1-01`. **Cited fragment** (subset bib): `python3 scripts/build_hn_bookshelf_bibliography.py --cited-ids …` — see [.cursor/skills/hn-bookshelf-lookup/SKILL.md](../../../../.cursor/skills/hn-bookshelf-lookup/SKILL.md).
 
+**Agentic drafting outputs:** [QUEUE-AUTOPRIORITY.md](QUEUE-AUTOPRIORITY.md), [PROVENANCE-PACKETS.md](PROVENANCE-PACKETS.md), and [REDTEAM-FINDINGS.md](REDTEAM-FINDINGS.md), regenerated with scripts in [AGENTIC-MVP-RUNBOOK.md](AGENTIC-MVP-RUNBOOK.md).
+
 **Runbook** (batches, era rules, upload order): [BOOKSHELF-RUNBOOK.md](BOOKSHELF-RUNBOOK.md).
 
 ## How it connects to History Notebook

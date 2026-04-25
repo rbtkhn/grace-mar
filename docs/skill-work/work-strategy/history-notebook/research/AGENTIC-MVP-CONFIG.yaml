@@ -1,0 +1,71 @@
+version: 1
+description: "History-notebook 2-week MVP config for queue scoring, provenance confidence, and red-team labels."
+
+autopriority:
+  weights:
+    shelf_anchor_count: 0.40
+    shelf_author_diversity: 0.20
+    chapter_readiness_gap: 0.25
+    strategic_urgency: 0.15
+  readiness:
+    status_to_readiness:
+      drafted: 0.15
+      in-progress: 0.45
+      planned: 0.80
+      unknown: 0.60
+    stub_markers:
+      - "*(TBD)*"
+      - "## Sources"
+      - "## Axioms"
+      - "## Formation dimensions"
+      - "## Compressed narrative"
+      - "## Contradictions"
+      - "## Strategy relevance"
+  strategic_urgency_defaults:
+    i: 1.00
+    ii: 0.90
+    iii: 0.85
+    iv: 0.95
+    v: 0.95
+  thresholds:
+    under_anchored_max_count: 2
+    buy_or_borrow_max_count: 1
+  queue:
+    top_n: 10
+
+provenance:
+  confidence_rules:
+    high:
+      min_hnsrc: 1
+      requires_nonempty_evidence_note: true
+      max_open_tasks: 1
+    medium:
+      min_hnsrc: 1
+      max_open_tasks: 3
+    low:
+      min_hnsrc: 0
+  default_open_verification_tasks:
+    - "Confirm claim wording against one specific owned source and add citation-ready note."
+    - "Add one counter-position source for dispute resilience."
+  max_claims_per_chapter: 3
+
+redteam:
+  classification_labels:
+    - supported
+    - disputed
+    - weakly-supported
+  heuristics:
+    supported:
+      min_hnsrc: 2
+      max_open_tasks: 1
+    disputed:
+      trigger_terms:
+        - always
+        - never
+        - inevitable
+        - proves
+        - all
+      min_open_tasks: 2
+    weakly_supported:
+      max_hnsrc: 1
+  per_chapter_counterclaims: 2

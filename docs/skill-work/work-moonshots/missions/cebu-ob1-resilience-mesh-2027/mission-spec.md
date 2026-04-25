@@ -80,6 +80,10 @@ Cebu’s economy faces **volatile electricity costs and reliability narratives**
 
 Optional: strategy tri-frame or operator economics pass before any public-facing claims; **not** merged into Record without gate.
 
+## Intake — cohort skills snapshot (WORK)
+
+**Neural Sandbox / GitHub evaluation (Tier C):** a normalized 10-account table and repo links from operator RTF (model-assisted) live in [github-neural-sandbox-cohort-2026-04-24.md](../../../work-cici/evidence/github-neural-sandbox-cohort-2026-04-24.md). Use for **draft** mesh role ideas only; reverified GitHub review required before any partner-facing claim.
+
 ## Current phase
 
 `draft` / **explore** — no execution mandate until owner and legal constraints are explicit.

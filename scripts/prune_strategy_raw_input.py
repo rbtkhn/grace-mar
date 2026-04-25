@@ -2,8 +2,9 @@
 """Remove strategy raw-input date folders older than N days (default 7).
 
 Scans ``docs/skill-work/work-strategy/strategy-notebook/raw-input/`` for
-subdirectories named ``YYYY-MM-DD`` and deletes those strictly before the
-cutoff date (local timezone).
+subdirectories named ``YYYY-MM-DD`` (by convention **pub_date** / air day — see
+``raw-input/README.md`` § Layout) and deletes those strictly before the cutoff
+date (local timezone). Non-date dirs (e.g. ``_aired-pending``) are skipped.
 
 If ``.pruning-suspended`` exists under the raw-input root, ``--apply`` refuses
 unless ``--override`` is passed (operator-initiated prune). Dry-run is

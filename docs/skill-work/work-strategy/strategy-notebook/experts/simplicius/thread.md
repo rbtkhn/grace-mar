@@ -27,7 +27,10 @@ _Write here in full sentences. Dated arcs are welcome._
 <!-- strategy-expert-thread:start -->
 ## Machine layer — Extraction (script-maintained)
 
-_Auto-generated from `transcript.md` + `strategy-page` blocks + optional empty legacy index rows. **Journal layer** lives **above** the start HTML comment._
+_Auto-generated from `-transcript.md` + `strategy-page` blocks in this thread + optional empty legacy on-disk index rows. **Journal layer** (narrative) lives **above** the **strategy-expert-thread** start HTML comment. The machine-layer HTML block is replaced on each `thread` run._
 
-_(No transcript or page material for extraction yet.)_
+### Recent transcript material
+
+## 2026-04-25
+- Substack | cold: **Simplicius** (*Garden of Knowledge*, `@simpatico771`) — **aired** **2026-04-21** — **Trump** **power-plant** **/** **bridge** **threat** **quote;** **Islamabad** **“fiasco”** **(Iran** **denies** **talks,** **Rubio** **stayed** **home,** **blockade** **lift** **as** **demand);** **indefinite** **ceasefire** **×** **IRI** **“did** **not** **request”** **frame;** **Strait** **/** **blockade** **order-of-events** **thesis;** **ISW** **Tifani** **Bay** **of** **Bengal;** **CNN** **“radio** **silence”** **/** **deal** **points** **no** **reply;** **FT** **/** **Vortexa** **34** **tankers** **bypass;** **CNN** **+** **CSIS** **munitions** **depletion;** **JASSM** **May** **2025** **mfr** **(Taghvaee);** **IRGC** **tunnel** **video** **/** **Iran** **War** **Message** **Centre** **quote** // hook: **`thread:simplicius`** **×** **§1e** **bluff** **/** **blockade** **/** **extension-game** **—** **full** **API** **backfill** **also** **on** **disk** **`raw-input/**/substack-simplicius-*-2026-04-*.md`** | https://simplicius76.substack.com/p/left-with-nothing-but-gimmicks-trump | verify:full-text+raw-input/2026-04-21/substack-simplicius-gimmicks-trump-iran-bluff-2026-04-21.md+operator-ingest+secondary-links-in-body | thread:simplicius | IRAN | grep:Simplicius+gimmicks+Trump+Iran+bluff+2026-04-21
 <!-- strategy-expert-thread:end -->
