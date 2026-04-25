@@ -8,13 +8,23 @@
 
 - **One `### YYYY-MM-DD` per calendar day** — multiple bullets under that heading (same-day sequence: earlier → later).
 - **`## YYYY-MM-DD`** at top level is not used here; the log uses `###` dates under **Log**.
-- **Evidence / progress (operator):** Screenshots and **behavior / coaching** notes — [evidence/](evidence/) + [xavier-progress-log.md](xavier-progress-log.md); add a **short pointer bullet** here on the same date when new artifacts land (keeps milestones and evidence discoverable together).
+- **Evidence / progress (operator):** Screenshots and **behavior / coaching** notes — [evidence/](evidence/) + [cici-progress-log.md](cici-progress-log.md); add a **short pointer bullet** here on the same date when new artifacts land (keeps milestones and evidence discoverable together).
 
 ## Log
+
+### 2026-04-28
+
+- **cici-ai Telegram copy (operator):** [telegram-cici-ai-pinned-and-welcome-copy.md](telegram-cici-ai-pinned-and-welcome-copy.md) — one **pinned** block (group info + rules/norms) + one **@all** intro (purpose, next steps, gratitude, encouragement) + optional Bisaya closer.
+
+### 2026-04-27
+
+- **Cici community short-term objective (operator):** [cici-community-mission-operator.md](cici-community-mission-operator.md) — **10** people in **cici-ai** who **complete OB1 instance** initiation and **≥7 days** active; [cici-work-profile.md](cici-work-profile.md) role snapshot + [evidence/cici-telegram-cici-ai-group-operator-2026-04-25.md](evidence/cici-telegram-cici-ai-group-operator-2026-04-25.md) cross-link.
+- **Telegram `cici-ai` member list snapshot:** [evidence/cici-telegram-cici-ai-members-snapshot-2026-04-27.md](evidence/cici-telegram-cici-ai-members-snapshot-2026-04-27.md) + [PNG](evidence/cici-telegram-cici-ai-members-2026-04-27.png) — **14** display names (headcount ≠ initiation metric).
 
 ### 2026-04-25
 
 - **Thanks park closure (`pr8-preflight-review-pause`):** [PR #8](https://github.com/Xavier-x01/Cici/pull/8) (janitor transient purge + spec) already **merged** to `main` (`f8676b9`); no further preflight action on grace-mar. Operator note only.
+- **Telegram group `cici-ai` (operator):** [evidence/cici-telegram-cici-ai-group-operator-2026-04-25.md](evidence/cici-telegram-cici-ai-group-operator-2026-04-25.md) — Cici **created** the group; hobbyists, OB1 build collaboration; operator **invite** [https://t.me/+ygaDSQxwXV1mMjA7](https://t.me/+ygaDSQxwXV1mMjA7) recorded. [cici-work-profile.md](cici-work-profile.md) role snapshot; [cici-community-mission-operator.md](cici-community-mission-operator.md) named-channel line.
 
 ### 2026-04-26
 
@@ -23,6 +33,7 @@
 ### 2026-04-24
 
 - **Cici Repository business plan (PDF) + architect/end-user RTF:** [evidence/cici-repository-business-plan-2026-pdf-ingest-2026-04-24.md](evidence/cici-repository-business-plan-2026-pdf-ingest-2026-04-24.md) + [cici-repository-business-plan-2026.pdf](evidence/cici-repository-business-plan-2026.pdf) (3-page 2026 strategy: SME problem, durability/GitHub/Supabase/Neural Sandbox, revenue streams, phased roadmap with BrewMind education). [evidence/cici-rtf-architect-enduser-prompts-session-ingest-2026-04-24.md](evidence/cici-rtf-architect-enduser-prompts-session-ingest-2026-04-24.md) + [cici-rtf-architect-enduser-prompts-2026-04-24.rtf](evidence/cici-rtf-architect-enduser-prompts-2026-04-24.rtf) — session export aligned with repo docs [architect-system-prompt.md](https://github.com/Xavier-x01/Cici/blob/main/docs/prompts/architect-system-prompt.md) / [end-user-prompt.md](https://github.com/Xavier-x01/Cici/blob/main/docs/prompts/end-user-prompt.md) (PR [#6](https://github.com/Xavier-x01/Cici/pull/6)), [session-bootstrap-prompt.md](https://github.com/Xavier-x01/Cici/blob/main/docs/session-bootstrap-prompt.md) (#7). **API check** — [Cici](https://github.com/Xavier-x01/Cici) `main` [`f8676b9`](https://github.com/Xavier-x01/Cici/commit/f8676b9) (PR [#8](https://github.com/Xavier-x01/Cici/pull/8) janitor: `scripts/janitor/purge_transient.py` + [janitor-spec](https://github.com/Xavier-x01/Cici/blob/main/users/cici/governed-state/operations/janitor-spec.md)).
+- **Neural Sandbox — GitHub cohort profile (RTF / Tier C):** [evidence/github-neural-sandbox-cohort-2026-04-24.md](evidence/github-neural-sandbox-cohort-2026-04-24.md) — 10-account evaluation table + sample repo links from `Make_a_report_that_will_be_a_profile_of_those_GitHub_accounts_that.rtf`; [cici-work-profile.md](cici-work-profile.md) §5 + [cebu-ob1 mission intake](../work-moonshots/missions/cebu-ob1-resilience-mesh-2027/intake/README.md) cross-links. Not reverified on grace-mar.
 
 ### 2026-04-23
 
@@ -82,9 +93,9 @@
 
 ### 2026-04-08
 
-- **Cici Telegram bot — Tier C advisor note:** [evidence/cici-telegram-bot-tier-c-advisor-note-2026-04-08.md](evidence/cici-telegram-bot-tier-c-advisor-note-2026-04-08.md) — auto-injected MCP `search` on branch [`claude/telegram-bot-integration-Dvbdw`](https://github.com/Xavier-x01/Cici/tree/claude/telegram-bot-integration-Dvbdw) inherits **recall-as-context** risk; align with companion **no retrieval-as-truth**; optional `CICI_SYSTEM` tightening ([`ba709f3`](https://github.com/Xavier-x01/Cici/commit/ba709f37897b32168fb72ea628bed69a1163c114)). [INDEX.md](INDEX.md) row + [xavier-progress-log.md](xavier-progress-log.md) evidence index.
+- **Cici Telegram bot — Tier C advisor note:** [evidence/cici-telegram-bot-tier-c-advisor-note-2026-04-08.md](evidence/cici-telegram-bot-tier-c-advisor-note-2026-04-08.md) — auto-injected MCP `search` on branch [`claude/telegram-bot-integration-Dvbdw`](https://github.com/Xavier-x01/Cici/tree/claude/telegram-bot-integration-Dvbdw) inherits **recall-as-context** risk; align with companion **no retrieval-as-truth**; optional `CICI_SYSTEM` tightening ([`ba709f3`](https://github.com/Xavier-x01/Cici/commit/ba709f37897b32168fb72ea628bed69a1163c114)). [INDEX.md](INDEX.md) row + [cici-progress-log.md](cici-progress-log.md) evidence index.
 - **cici-notebook:** Added [cici-notebook/README.md](cici-notebook/README.md) (OB1 learning log — WORK) and [cici-notebook/2026-04-06.md](cici-notebook/2026-04-06.md) (Day 1 seed entry, anchor 2026-04-06). [INDEX.md](INDEX.md) row.
-- **Evidence — GitHub profile:** [evidence/github-profile-xavier-x01-2026-04-08.png](evidence/github-profile-xavier-x01-2026-04-08.png) + [evidence/github-profile-ingest-2026-04-08.md](evidence/github-profile-ingest-2026-04-08.md) — public [@Xavier-x01](https://github.com/xavier-x01), repo list + disambiguation vs grace-mar `work-cici/` advisor folder. [xavier-progress-log.md](xavier-progress-log.md) index + burst updated.
+- **Evidence — GitHub profile:** [evidence/github-profile-xavier-x01-2026-04-08.png](evidence/github-profile-xavier-x01-2026-04-08.png) + [evidence/github-profile-ingest-2026-04-08.md](evidence/github-profile-ingest-2026-04-08.md) — public [@Xavier-x01](https://github.com/xavier-x01), repo list + disambiguation vs grace-mar `work-cici/` advisor folder. [cici-progress-log.md](cici-progress-log.md) index + burst updated.
 
 ### 2026-04-07
 
@@ -100,7 +111,7 @@
 
 ### 2026-04-05
 
-- **Evidence ingest — BrewMind FAQ (Gemini):** PDF transcript + mobile screenshot + [evidence/brewmind-faq-ingest-2026-04-05.md](evidence/brewmind-faq-ingest-2026-04-05.md); [xavier-progress-log.md](xavier-progress-log.md) updated (index, burst, coaching, revision).
+- **Evidence ingest — BrewMind FAQ (Gemini):** PDF transcript + mobile screenshot + [evidence/brewmind-faq-ingest-2026-04-05.md](evidence/brewmind-faq-ingest-2026-04-05.md); [cici-progress-log.md](cici-progress-log.md) updated (index, burst, coaching, revision).
 - **Evidence ingest — Claude app (Sonnet 4.6):** [evidence/claude-xavier-sidebar-starred-recents-2026-04-05.png](evidence/claude-xavier-sidebar-starred-recents-2026-04-05.png), [evidence/claude-xavier-recents-list-2026-04-05.png](evidence/claude-xavier-recents-list-2026-04-05.png), [evidence/claude-xavier-ui-ingest-2026-04-05.md](evidence/claude-xavier-ui-ingest-2026-04-05.md); progress log updated.
 
 ### 2026-04-04
@@ -114,7 +125,7 @@
 
 - Added [cici-work-profile.md](cici-work-profile.md) (at the time `xavier-work-profile.md`): operator **employee work profile + skills portfolio** (skills matrix, learning-in-flight log for Claude Code / Gemini, boundary vs SMM rubric + her Record). Linked from [README.md](README.md), [INDEX.md](INDEX.md), [WORK-LEDGER.md](WORK-LEDGER.md).
 - Added [brewmind-b2b-prospects.md](brewmind-b2b-prospects.md): B2B **verify-before-outreach** pipeline table + **Appendix A** raw Claude export (BPO / tech / schools / hubs — unverified). Wired [brewmind-philippines-onboarding-guide.md](brewmind-philippines-onboarding-guide.md) (bundle map, Phase 4), [brewmind-business-plan.md](brewmind-business-plan.md) related surfaces, [INDEX.md](INDEX.md).
-- **Operator observations / evidence:** Added [xavier-progress-log.md](xavier-progress-log.md) (evidence index, burst notes, hypotheses, coaching slot; Claude thread title appendix) and [evidence/claude-mobile-chats-2026-04-03.png](evidence/claude-mobile-chats-2026-04-03.png) + [evidence/README.md](evidence/README.md). Extended **How to append** for evidence pointers. Linked [README.md](README.md), [INDEX.md](INDEX.md); cross-link from [cici-work-profile.md](cici-work-profile.md) §4.
+- **Operator observations / evidence:** Added [cici-progress-log.md](cici-progress-log.md) (evidence index, burst notes, hypotheses, coaching slot; Claude thread title appendix) and [evidence/claude-mobile-chats-2026-04-03.png](evidence/claude-mobile-chats-2026-04-03.png) + [evidence/README.md](evidence/README.md). Extended **How to append** for evidence pointers. Linked [README.md](README.md), [INDEX.md](INDEX.md); cross-link from [cici-work-profile.md](cici-work-profile.md) §4.
 
 ### 2026-04-01
 

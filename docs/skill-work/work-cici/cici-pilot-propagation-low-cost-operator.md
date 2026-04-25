@@ -2,6 +2,8 @@
 
 > **Audience:** Operator + Xavier. **Purpose:** Practical **organic / near-zero-budget** ways to reach **many at-bats** for **10 real pilot users** in the **Neural Sandbox** / [Cici](https://github.com/Xavier-x01/Cici) cohort (Philippines context). **Pairs with:** [cici-community-mission-operator.md](cici-community-mission-operator.md) (mission + drop-off). **Not:** paid campaign playbook; not Record.
 
+**Count toward 10** only on the [short-term objective](cici-community-mission-operator.md#cicis-short-term-objective-operator-stated-measurable) bar: **initiation** (OB1 instance) + **at least one week** active—**not** “joined Telegram only.”
+
 **“Mass propagation” here** means **high reach per hour and per peso**, not TV-scale ads. Trust-heavy invites (fork + own Supabase) favor **referrals, local groups, and borrowed lists** over cold reach.
 
 ---

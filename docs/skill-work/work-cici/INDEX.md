@@ -2,7 +2,7 @@
 
 Use [README](README.md) for narrative order; this table is a flat lookup.
 
-**Rename / continuity:** Lane was **work-xavier**; see [README — Rename note](README.md#rename-note),
+**Rename / continuity:** Lane was **work-xavier**; **Legacy note: formerly Xavier**. See [README — Rename note](README.md#rename-note),
 [Naming and continuity](README.md#naming-and-continuity), and the **Legacy filename aliases** table in
 [README.md](README.md#legacy-filename-aliases) (single source of truth in README; not duplicated as a table here).
 
@@ -11,20 +11,28 @@ Use [README](README.md) for narrative order; this table is a flat lookup.
 | [evidence/cici-repository-business-plan-2026-pdf-ingest-2026-04-24.md](evidence/cici-repository-business-plan-2026-pdf-ingest-2026-04-24.md) | **Cici Repository business plan (PDF)** — 2026 strategy summary + [cici-repository-business-plan-2026.pdf](evidence/cici-repository-business-plan-2026.pdf) |
 | [evidence/cici-rtf-architect-enduser-prompts-session-ingest-2026-04-24.md](evidence/cici-rtf-architect-enduser-prompts-session-ingest-2026-04-24.md) | **RTF** — architect / end-user prompt session vs [Cici `docs/prompts/`](https://github.com/Xavier-x01/Cici/tree/main/docs/prompts) on `main`; [RTF](evidence/cici-rtf-architect-enduser-prompts-2026-04-24.rtf) |
 | [evidence/cici-telegram-bot-tier-c-advisor-note-2026-04-08.md](evidence/cici-telegram-bot-tier-c-advisor-note-2026-04-08.md) | **Advisor note** — Telegram bot auto-injected MCP `search` = Tier C recall; strengthen `CICI_SYSTEM` / abstention vs public promises |
+| [evidence/cici-telegram-cici-ai-group-operator-2026-04-25.md](evidence/cici-telegram-cici-ai-group-operator-2026-04-25.md) | **Telegram `cici-ai`** (2026-04-25) — Cici **created** group; hobbyists, OB1 build; [invite `t.me`](https://t.me/+ygaDSQxwXV1mMjA7) in evidence |
+| [evidence/cici-telegram-cici-ai-members-snapshot-2026-04-27.md](evidence/cici-telegram-cici-ai-members-snapshot-2026-04-27.md) | **Member list snapshot** (2026-04-27) — 14 display names + [PNG](evidence/cici-telegram-cici-ai-members-2026-04-27.png); not initiation scoreboard |
+| [evidence/cici-ai-github-telegram-match-report-2026-04-24.md](evidence/cici-ai-github-telegram-match-report-2026-04-24.md) | **Aggregate match report** — 10 GitHub accounts mapped to `cici-ai` Telegram names with confidence tiers (high / probable / unmatched) |
 | [evidence/cici-rtf-session-ingest-2026-04-26-productive-feature-source-priority.md](evidence/cici-rtf-session-ingest-2026-04-26-productive-feature-source-priority.md) | **Cici session RTF** — source-priority `policy.json` PR [#3](https://github.com/Xavier-x01/Cici/pull/3) [`4dba0f3`](https://github.com/Xavier-x01/Cici/commit/4dba0f3); `main` [`3b25703`](https://github.com/Xavier-x01/Cici/commit/3b25703) |
 | [evidence/cici-neural-sandbox-pt2-rtf-ingest-2026-04-21.md](evidence/cici-neural-sandbox-pt2-rtf-ingest-2026-04-21.md) | **Neural Sandbox pt.2** — Technical Onboarding draft (prereqs, fork Cici); RTF |
 | [evidence/cici-neural-sandbox-rtf-ingest-2026-04-21.md](evidence/cici-neural-sandbox-rtf-ingest-2026-04-21.md) | **Neural Sandbox Telegram (2026-04-21)** — rules + onboarding RTF; `main` unchanged vs `b02b5da` |
+| [evidence/github-neural-sandbox-cohort-2026-04-24.md](evidence/github-neural-sandbox-cohort-2026-04-24.md) | **GitHub cohort evaluation (2026-04-24)** — 10 accounts + RTF repo anchors; Tier C; Cebu-mesh / coordination intake |
 | [evidence/cici-github-sync-2026-04-20.md](evidence/cici-github-sync-2026-04-20.md) | **Cici GitHub sync (2026-04-20)** — `main` `b02b5da` memory-policy + prop-20260420-001 |
 | [evidence/cici-rtf-sessions-ingest-2026-04-17.md](evidence/cici-rtf-sessions-ingest-2026-04-17.md) | **RTF sessions (2026-04-17)** — proposals applied, `main` [`d2358ce`](https://github.com/Xavier-x01/Cici/commit/d2358ce); daily ship [`a602e3a`](https://github.com/Xavier-x01/Cici/commit/a602e3a) |
 | [handoffs/cici-claude-agent-self-directed-learning-prompt.md](handoffs/cici-claude-agent-self-directed-learning-prompt.md) | **Cici agent prompt** — self-directed learning + 10-pilot community; discover→develop loop; paste into `.claude/agents/` |
 | [handoffs/cici-claude-agent-grace-mar-discipline-prompt.md](handoffs/cici-claude-agent-grace-mar-discipline-prompt.md) | **Cici agent prompt** — lanes, boundary, proposals, leakage, grounding (paste into `.claude/agents/` or `CLAUDE.md`) |
 | [handoffs/cici-brewmind-governed-steward.md](handoffs/cici-brewmind-governed-steward.md) | **Cici paste handoff** — `docs/skills/brewmind-governed-steward.md` body + optional `CLAUDE.md` line (canonical skill: [.cursor/skills/brewmind-governed-steward/SKILL.md](../../../.cursor/skills/brewmind-governed-steward/SKILL.md)) |
 | [cici-pilot-propagation-low-cost-operator.md](cici-pilot-propagation-low-cost-operator.md) | **10-pilot reach** — low-cost propagation checklist (referral, FB groups, Telegram, borrowed audiences) + citations |
-| [cici-community-mission-operator.md](cici-community-mission-operator.md) | **Cici / Neural Sandbox** — short-term mission, drop-off focus, funnel metrics (operator WORK) |
+| [cici-community-mission-operator.md](cici-community-mission-operator.md) | **Cici / Neural Sandbox** — **10** + **initiation** (OB1) + **7d** active; drop-off focus, funnel (operator WORK) |
+| [telegram-cici-ai-pinned-and-welcome-copy.md](telegram-cici-ai-pinned-and-welcome-copy.md) | **cici-ai Telegram** — paste-ready **pinned** message + **@all** intro (purpose, next steps, thanks, encourage) |
+| [handoffs/cici-cici-ai-launch-instructions.md](handoffs/cici-cici-ai-launch-instructions.md) | **Cici handoff** — `cici-ai` **pin + welcome** + **logo/avatar** (ordered steps, done-when checklists) |
 | [README.md](README.md) | Advisor / project module for Cici (formerly Xavier) — vs her companion / instance repo and the external [Cici](https://github.com/Xavier-x01/Cici) OB1 repo; not Cici’s Record in grace-mar |
 | [POST-RENAME-AUDIT.md](POST-RENAME-AUDIT.md) | **Post-rename audit** — drift report after `work-xavier` → `work-cici` (status, scripts, boundaries); **CI:** [check_work_cici_drift.py](../../scripts/check_work_cici_drift.py) in [naming-check workflow](../../.github/workflows/naming-check.yml) |
+| [XAVIER-DECONFUSION-INVENTORY-2026-04-25.md](XAVIER-DECONFUSION-INVENTORY-2026-04-25.md) | `Xavier` reference inventory with category/action mapping (active vs legacy vs frozen evidence) |
+| [XAVIER-DECONFUSION-VERIFICATION-2026-04-25.md](XAVIER-DECONFUSION-VERIFICATION-2026-04-25.md) | Verification report for first-wave deconfusion pass (grep + drift-check outcome) |
 | [cici-work-profile.md](cici-work-profile.md) | Employee work profile + skills portfolio (operator WORK); not her Record |
-| [xavier-progress-log.md](xavier-progress-log.md) | Operator progress / behavior notes + evidence index (paired with [work-cici-history.md](work-cici-history.md)) |
+| [cici-progress-log.md](cici-progress-log.md) | Operator progress / behavior notes + evidence index (paired with [work-cici-history.md](work-cici-history.md)) |
 | [`.cursor/skills/skill-cici/SKILL.md`](../../../.cursor/skills/skill-cici/SKILL.md) | **skill-cici** — Cursor ritual for journal rhythm (grace-mar vs Cici **Mode B**); baseline from cici-notebook |
 | [cici-notebook/README.md](cici-notebook/README.md) | **Cici notebook** — daily OB1 / Open Brain learning log ([2026-04-06](cici-notebook/2026-04-06.md)); WORK, not her Record |
 | [cici-notebook/SYNTHESIS-SOURCES.md](cici-notebook/SYNTHESIS-SOURCES.md) | **Synthesis sources** — L1/L2/L3, CLI flags, recursive learning, Phase E backlog |
@@ -58,7 +66,7 @@ Use [README](README.md) for narrative order; this table is a flat lookup.
 | [COMPANION-XAVIER-DRY-RUN-PROMPTS.md](COMPANION-XAVIER-DRY-RUN-PROMPTS.md) | Prompts for template-only bootstrap validation |
 | [LEARN-PATH.md](LEARN-PATH.md) | Progressive learning path |
 | [LEARNING-OBJECTIVES-CONTROL-PLANE.md](LEARNING-OBJECTIVES-CONTROL-PLANE.md) | Beginner-safe control plane |
-| [SYNC-DAILY.md](SYNC-DAILY.md) | Advisor / Cici daily sync snapshot (work-dev + work-politics) |
+| [SYNC-DAILY.md](SYNC-DAILY.md) | Advisor / Cici daily sync snapshot (work-dev + work-politics); legacy labels retained only in historical blocks |
 | [UPLOAD-PREP.md](UPLOAD-PREP.md) | **Pre-upload checklist** — skill-cici → Cici (or share); leakage + manifest |
 | [DAILY-OPS-CARD.md](DAILY-OPS-CARD.md) | Final daily execution card |
 | [../self-work/sync-pack/README.md](../self-work/sync-pack/README.md) | Template sync-pack reference |

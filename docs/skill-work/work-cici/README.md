@@ -12,6 +12,8 @@ It is not Cici’s sovereign Record repository and not a canonical Record surfac
 
 This lane was previously named `work-xavier`. It has been renamed to `work-cici`. Older files may retain **Xavier** in filenames or historical notes when they refer to prior artifacts, continuity records, or legacy naming. **Active** references should prefer **Cici** unless the historical filename, artifact title, or **archived note** requires **Xavier**.
 
+**Legacy note: formerly Xavier.**
+
 ## Naming and continuity
 
 - **Cici** is the active lane name.
@@ -21,12 +23,22 @@ This lane was previously named `work-xavier`. It has been renamed to `work-cici`
 - **This folder must not host Cici’s Record.** Her cognitive-fork Record lives only under `users/<id>/` in **her** instance repo, behind **her** gate and merge script.
 - Legacy script names such as `build_xavier_handbook_bundle.py` may remain until a separate compatibility-safe rename PR.
 
+## Legacy-reference policy check
+
+Legacy mentions are allowed only in:
+- rename continuity sections
+- explicit legacy alias tables
+- revision/history logs
+- immutable evidence records and source titles
+
+Active onboarding, coordination, and daily operating text should remain Cici-first.
+
 ## Legacy filename aliases
 
 | Legacy / historical artifact | Current interpretation |
 |------------------------------|------------------------|
 | [cici-work-profile.md](cici-work-profile.md) | Cici work profile (was `xavier-work-profile.md`) |
-| [xavier-progress-log.md](xavier-progress-log.md) | Cici progress log / legacy Xavier filename |
+| [cici-progress-log.md](cici-progress-log.md) | Operator progress + evidence index (coaching notes) |
 | [TERMS-XAVIER.md](TERMS-XAVIER.md) | Cici terms / legacy Xavier filename |
 | [xavier-instance-two-step.md](xavier-instance-two-step.md) | Cici instance two-step / legacy Xavier filename |
 | [xavier-smm-capability-rubric.md](xavier-smm-capability-rubric.md) | Cici SMM capability rubric / legacy Xavier filename |
@@ -47,7 +59,7 @@ Cici’s **companion** or **chosen instance** repository (Identity Fork Protocol
 
 **Daily sync surface (advisor view):** [SYNC-DAILY.md](SYNC-DAILY.md). **Mirrors:** [work-dev-mirror/README.md](work-dev-mirror/README.md), [work-politics-mirror/README.md](work-politics-mirror/README.md).
 
-**Operator observations (progress / evidence):** [xavier-progress-log.md](xavier-progress-log.md) — qualitative notes, hypotheses, coaching hooks; artifacts in [evidence/](evidence/). **Milestones + dated pointers:** [work-cici-history.md](work-cici-history.md).
+**Operator observations (progress / evidence):** [cici-progress-log.md](cici-progress-log.md) — qualitative notes, hypotheses, coaching hooks; artifacts in [evidence/](evidence/). **Milestones + dated pointers:** [work-cici-history.md](work-cici-history.md).
 
 **BrewMind (Philippines pilot):** [brewmind-philippines-onboarding-guide.md](brewmind-philippines-onboarding-guide.md) — bundle hub for strategy, brand, field script, and PH market notes ([INDEX.md](INDEX.md) lists all BrewMind WORK files).
 
@@ -102,7 +114,7 @@ Per [work-template/README.md](../work-template/README.md) § *Risk-mitigation ch
 
 | Metric | Target | How to measure |
 |--------|--------|----------------|
-| Daily sync surface used | ≥1 operator touch / week when the Cici advisory loop is active | [SYNC-DAILY.md](SYNC-DAILY.md) checkboxes or [xavier-progress-log.md](xavier-progress-log.md) dated lines |
+| Daily sync surface used | ≥1 operator touch / week when the Cici advisory loop is active | [SYNC-DAILY.md](SYNC-DAILY.md) checkboxes or [cici-progress-log.md](cici-progress-log.md) dated lines |
 | Mirror drift | No silent staleness >30d on labeled “live” mirror paths | Spot-check [work-dev-mirror](work-dev-mirror/README.md) / [work-politics-mirror](work-politics-mirror/README.md) headers + `git log` on mirrored sources when in doubt |
 | Leakage discipline | Zero grace-mar Record paths in outbound advisor bundles | Run [LEAKAGE-CHECKLIST.md](LEAKAGE-CHECKLIST.md) before ship; CI label per [LANE-CI.md](LANE-CI.md) when applicable |
 

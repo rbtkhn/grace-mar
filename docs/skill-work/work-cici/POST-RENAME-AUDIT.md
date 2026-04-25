@@ -4,6 +4,7 @@
 
 - **Active lane name:** Cici (`work-cici`)
 - **Legacy lane name:** work-xavier
+- **Legacy fence phrase:** Legacy note: formerly Xavier.
 - **Date audited:** 2026-04-24
 - **Auditor:** Repository audit (assisted review)
 

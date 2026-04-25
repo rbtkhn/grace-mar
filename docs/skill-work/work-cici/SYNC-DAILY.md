@@ -1,6 +1,8 @@
-# SYNC-DAILY (xavier only)
+# SYNC-DAILY (Cici advisor lane)
 
-**Purpose:** Single daily sync control surface for Xavier.
+**Purpose:** Single daily sync control surface for the Cici advisor lane.
+
+**Legacy note: formerly Xavier.** Historical snapshots in this file may still contain older labels.
 
 Use this file during **`coffee`** (work-start or signing-off) to aggregate `work-dev` and `work-politics` sync status in one place. Legacy **`hey`** still works as an alias for the same ritual.
 
@@ -14,7 +16,7 @@ Date: **2026-04-12**
 
 ### 1) work-dev mirror
 - status: `relevant updates found`
-- score (impact + urgency + xavier-readiness): `5/9`
+- score (impact + urgency + cici-readiness): `5/9`
 - proposed updates (max 5):
   - `docs/skill-work/work-dev/workspace.md`
   - `docs/skill-work/work-dev/implementation-ledger.md`
@@ -26,12 +28,12 @@ Date: **2026-04-12**
 
 ### 2) work-politics mirror
 - status: `relevant updates found`
-- score (impact + urgency + xavier-readiness): `4/9`
+- score (impact + urgency + cici-readiness): `4/9`
 - proposed updates (max 5):
   - `docs/skill-work/work-politics/workspace.md`
   - `docs/skill-work/work-politics/polling-and-markets.md`
   - `docs/skill-work/work-politics/brief-source-registry.md`
-  - _(defer)_ campaign-only deltas unless Xavier is on KY-4 brief cadence this week
+  - _(defer)_ campaign-only deltas unless Cici is on KY-4 brief cadence this week
 - action today:
   - Logged 2026-04-12 row; refresh mirror copies when she is actively on Massie/brief workflow.
 
@@ -52,7 +54,7 @@ and run a forced relevance scan before any other optimization tasks.
 
 ---
 
-## Template alignment check (xavier only)
+## Template alignment check (Cici advisor lane)
 
 - template upstream repo: `https://github.com/rbtkhn/companion-self`
 - template upstream ref: `main` (or pinned tag/commit)

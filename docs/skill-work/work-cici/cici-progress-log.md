@@ -1,4 +1,6 @@
-# Xavier — operator progress log (WORK)
+# Cici — operator progress log (WORK)
+
+**Former filename:** `xavier-progress-log.md`.
 
 **Audience:** Operator (employer / advisor). **Purpose:** **Qualitative** notes on **how Cici / Xavier (employee) works** — tools, bursts of activity, coaching hooks — alongside [cici-work-profile.md](cici-work-profile.md) (skills matrix) and [work-cici-history.md](work-cici-history.md) (territory milestones + dated evidence pointers).
 
@@ -12,7 +14,11 @@
 
 | Date (captured) | Artifact | What it shows |
 |-----------------|----------|----------------|
+| 2026-04-28 | [telegram-cici-ai-pinned-and-welcome-copy.md](telegram-cici-ai-pinned-and-welcome-copy.md) | **cici-ai** — operator paste pack: **pinned** group info + **@all** welcome (purpose, next steps, thanks, encourage); optional Bisaya. |
 | 2026-04-26 | [evidence/cici-rtf-session-ingest-2026-04-26-productive-feature-source-priority.md](evidence/cici-rtf-session-ingest-2026-04-26-productive-feature-source-priority.md) | **RTF** — “next productive feature” → **`prop-20260421-001`** **source-priority** governed policy; PR [#3](https://github.com/Xavier-x01/Cici/pull/3) [`4dba0f3`](https://github.com/Xavier-x01/Cici/commit/4dba0f3); `main` tip [`3b25703`](https://github.com/Xavier-x01/Cici/commit/3b25703). [RTF](evidence/cici-rtf-what-productive-feature-next-2-2026-04-21.rtf). |
+| 2026-04-27 | [cici-community-mission-operator.md](cici-community-mission-operator.md) | **DOCSYNC** — Short-term objective: **10** in `cici-ai` with **initiation** (OB1 instance) + **≥1 week** active; funnel rows + [cici-work-profile.md](cici-work-profile.md) **Community target** row. |
+| 2026-04-27 | [evidence/cici-telegram-cici-ai-members-snapshot-2026-04-27.md](evidence/cici-telegram-cici-ai-members-snapshot-2026-04-27.md) | **Telegram** — `cici-ai` member list screenshot: **14** display names, [PNG](evidence/cici-telegram-cici-ai-members-2026-04-27.png); raw headcount vs [community mission](cici-community-mission-operator.md) success bar. |
+| 2026-04-25 | [evidence/cici-telegram-cici-ai-group-operator-2026-04-25.md](evidence/cici-telegram-cici-ai-group-operator-2026-04-25.md) | **Operator** — Telegram group **`cici-ai`** created by Cici; hobbyists, OB1 build; [cici-community-mission-operator.md](cici-community-mission-operator.md) + [cici-work-profile.md](cici-work-profile.md). Invite: [t.me `+yga…`](https://t.me/+ygaDSQxwXV1mMjA7) in evidence. |
 | 2026-04-24 | [evidence/cici-repository-business-plan-2026-pdf-ingest-2026-04-24.md](evidence/cici-repository-business-plan-2026-pdf-ingest-2026-04-24.md) | **PDF** — Cici Repository 2026 investor deck (3 pp.): positioning, technical bullets, revenue rows, Q2–Q4 roadmap. [cici-repository-business-plan-2026.pdf](evidence/cici-repository-business-plan-2026.pdf). |
 | 2026-04-24 | [evidence/cici-rtf-architect-enduser-prompts-session-ingest-2026-04-24.md](evidence/cici-rtf-architect-enduser-prompts-session-ingest-2026-04-24.md) | **RTF** — “senior architect + end users” prompt design session; aligns with Cici [architect-system-prompt.md](https://github.com/Xavier-x01/Cici/blob/main/docs/prompts/architect-system-prompt.md) + [end-user-prompt.md](https://github.com/Xavier-x01/Cici/blob/main/docs/prompts/end-user-prompt.md) (PR [#6](https://github.com/Xavier-x01/Cici/pull/6)). [RTF](evidence/cici-rtf-architect-enduser-prompts-2026-04-24.rtf). `main` at ingest [`f8676b9`](https://github.com/Xavier-x01/Cici/commit/f8676b9) (janitor #8). |
 | 2026-04-23 | [handoffs/cici-claude-agent-self-directed-learning-prompt.md](handoffs/cici-claude-agent-self-directed-learning-prompt.md) | **Cici handoff** — Claude Code agent prompt for **self-directed** learning + community pilot (autonomy, discover loop, outreach support). |
