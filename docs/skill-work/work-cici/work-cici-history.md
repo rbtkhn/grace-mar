@@ -12,6 +12,10 @@
 
 ## Log
 
+### 2026-04-25
+
+- **Thanks park closure (`pr8-preflight-review-pause`):** [PR #8](https://github.com/Xavier-x01/Cici/pull/8) (janitor transient purge + spec) already **merged** to `main` (`f8676b9`); no further preflight action on grace-mar. Operator note only.
+
 ### 2026-04-26
 
 - **Cici RTF — “productive feature next” / source-priority:** [evidence/cici-rtf-session-ingest-2026-04-26-productive-feature-source-priority.md](evidence/cici-rtf-session-ingest-2026-04-26-productive-feature-source-priority.md) + [cici-rtf-what-productive-feature-next-2-2026-04-21.rtf](evidence/cici-rtf-what-productive-feature-next-2-2026-04-21.rtf) — **`prop-20260421-001`** → **source-priority** `policy.json`; PR [#3](https://github.com/Xavier-x01/Cici/pull/3) squash-merge [`4dba0f3`](https://github.com/Xavier-x01/Cici/commit/4dba0f3); `main` later [`3b25703`](https://github.com/Xavier-x01/Cici/commit/3b25703) (daily-task #2), [`2e0f6ab`](https://github.com/Xavier-x01/Cici/commit/2e0f6ab) (self-directed-learning agent).

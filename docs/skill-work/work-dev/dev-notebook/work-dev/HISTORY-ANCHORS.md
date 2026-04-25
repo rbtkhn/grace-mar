@@ -5,7 +5,7 @@ Reverse chronological. Full log: [work-dev-history.md](../../work-dev-history.md
 | Date (log) | Theme | Links | Detail in history |
 |------------|------|--------|-------------------|
 | 2026-04-24d | **IFP vs. ClawSouls** technical comparison in dev-notebook | [ifp-vs-clawsouls-technical-comparison-2026-04-24.md](./ifp-vs-clawsouls-technical-comparison-2026-04-24.md) | Pairs with [IFP spec](./identity-fork-protocol-ifp-2026-04-24.md) |
-| 2026-04-24c | **IFP** spec capture in dev-notebook (Identity Fork Protocol report) | [identity-fork-protocol-ifp-2026-04-24.md](./identity-fork-protocol-ifp-2026-04-24.md) | Optional fold into [work-dev-history.md](../../work-dev-history.md) on next milestone pass |
+| 2026-04-24c | **IFP** spec capture in dev-notebook (Identity Fork Protocol report) | [identity-fork-protocol-ifp-2026-04-24.md](./identity-fork-protocol-ifp-2026-04-24.md) | Milestone log: [work-dev-history.md](../../work-dev-history.md) **2026-04-24f** |
 | 2026-04-24b | Work notebook **lanes** split (`work-dev/journal/`, work-cici, work-strategy) | [work-dev History](../../work-dev-history.md) (bullet `2026-04-24b`) | [work-dev-history.md](../../work-dev-history.md) |
 | 2026-04-24 | **Dev journal** under `dev-notebook/work-dev/journal/`; symlink, `journal_habit_snapshot.py`, LIB-0155 | [journal README](./journal/README.md) | [work-dev-history.md](../../work-dev-history.md) |
 | 2026-04-12 | GAP-005/006/007: scenarios matrix, `--check`, autonomy tiers, `shadow_autonomy_snapshot`, `build_dashboard` | [known-gaps / control plane](../../known-gaps.md) | [work-dev-history.md](../../work-dev-history.md) |
