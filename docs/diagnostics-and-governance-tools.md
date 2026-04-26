@@ -54,6 +54,10 @@ The core distinction is:
   `python3 scripts/work_dev/audit_agent_sprawl.py`
 - **Use when:** adding a new agent, runtime, harness, adapter, or
   automation surface
+- **Operator scan:** use the generated Agent Surfaces Table
+  (`python3 scripts/work_dev/render_agent_surfaces_table.py`) for a readable
+  inventory; the JSON registry and `audit_agent_sprawl.py` remain authoritative
+  for surface semantics and authority.
 
 ### Workbench
 

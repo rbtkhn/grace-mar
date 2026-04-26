@@ -206,6 +206,19 @@ OpenClaw export and OpenClaw stage are already the clearest examples of
 why this layer matters: one surface exports, another stages, both emit
 receipts, neither may merge.
 
+## Human-readable registry table
+
+The JSON registry remains authoritative. A derived operator table can be generated with:
+
+python3 scripts/work_dev/render_agent_surfaces_table.py
+
+and checked with:
+
+python3 scripts/work_dev/render_agent_surfaces_table.py --check
+
+The generated table lives at:
+artifacts/work-dev/agent-surfaces/agent-surfaces-table.md
+
 ## Phase 1 posture
 
 This is read-only control-plane work.

@@ -15,6 +15,8 @@ new authority, a new merge path, or a new agent.
 - **Agent Sprawl Control Plane** — registry and audit for agent-like
   surfaces  
   See [agent-sprawl-control-plane.md](agent-sprawl-control-plane.md).
+  Use the generated Agent Surfaces Table for quick operator review; use the
+  JSON registry and audit script for authority.
 - **Interface Artifact Protocol** — bounded doctrine for operator-facing
   generated views  
   See [interface-artifacts/README.md](interface-artifacts/README.md).
