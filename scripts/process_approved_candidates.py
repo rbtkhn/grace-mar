@@ -761,7 +761,8 @@ def merge_candidate_in_memory(
 
     # 2. Add to SELF
     cat = c["mind_category"].lower()
-    safe_entry = (c["suggested_entry"] or "")[:200].replace('"', "'")
+    # Long enough for full "Knows:" lines; keep a hard cap to avoid runaway pastes.
+    safe_entry = (c["suggested_entry"] or "")[:2000].replace('"', "'")
     intake_line = ""
     iid = (c.get("intake_evidence_id") or "").strip()
     if iid and re.match(r"^READ-[\w-]+$", iid, re.I):

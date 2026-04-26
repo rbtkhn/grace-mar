@@ -89,8 +89,25 @@ previous_companion: Abby (frozen — see archive/companion-freeze-abby-2026-04-1
 
 ## IX-A. KNOWLEDGE
 
+#### Facts (LEARN-nnn)
+
 ```yaml
-entries: []
+entries:
+  - id: LEARN-0001
+    date: 2026-04-26
+    topic: "Knows: the U.S. order combines separated federal powers, bicameralism, and a federalist division of authority; the Connecticut Compromise (Great Compromise) created dual representation; Federalist 10/51 classically argue the extended-republic and checks design against factional domination. Evidence: HNSRC-0087–HNSRC-0094."
+    source: pipeline merge
+    evidence_id: ACT-0007
+    warrant: "Revisit if I materially stop treating this founding canon as my reference set for U.S. constitutional questions."
+    provenance: human_approved
+
+  - id: LEARN-0002
+    date: 2026-04-26
+    topic: "Knows: the Library-of-America-anchored shelf is my primary American narrative-historical reference spine (HNSRC-0101–HNSRC-0108), used as canonical primary-text support for U.S. cultural and political history, distinct from the founding-law cluster (HNSRC-0087–HNSRC-0094)."
+    source: pipeline merge
+    evidence_id: ACT-0008
+    warrant: "Revisit if the LOA-anchored shelf is materially re-sorted or deprioritized as my American narrative spine."
+    provenance: human_approved
 ```
 
 ---

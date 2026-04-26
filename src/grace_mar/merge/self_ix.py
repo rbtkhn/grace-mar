@@ -5,16 +5,20 @@ from __future__ import annotations
 import re
 
 # IX-A: LEARN entries live under #### Facts (LEARN-nnn), not the earlier books_read block.
+# Close the list at the *Facts* block only: the fence immediately before `## IX-B`, so
+# a later `` ```yaml ``/`` entries:`` block under IX-B is never conflated with IX-A.
 IX_A_FACTS_ENTRIES = re.compile(
-    r"(#### Facts \(LEARN-nnn\)\s*\n\n```yaml\nentries:\s*\n)(.*?)(\n```)",
+    r"(#### Facts \(LEARN-nnn\)\s*\n\n```yaml\n)(entries:\s*\n)([\s\S]*?)(?=```\s*\n+(?:---\s*\n+)*#+\s*IX-B\.\s*CURIOSITY)",
     re.DOTALL,
 )
+# `##` / `###` profiles; end IX-B list at the fence before IX-C.
 IX_B_BLOCK = re.compile(
-    r"(### IX-B\. CURIOSITY.*?```yaml\nentries:\s*\n)(.*?)(\n```)",
+    r"(#+\s*IX-B\.\s*CURIOSITY.*?\n```yaml\n)(entries:\s*\n)([\s\S]*?)(?=```\s*\n+(?:---\s*\n+)*#+\s*IX-C\.)",
     re.DOTALL,
 )
+# Close IX-C at the fence before `---` + "END OF FILE" (reseeded profile) or end-of-string.
 IX_C_BLOCK = re.compile(
-    r"(### IX-C\..*?```yaml\nentries:\s*\n)(.*?)(\n```)",
+    r"(#+\s*IX-C\..*?\n```yaml\n)(entries:\s*\n)([\s\S]*?)(?=```\s*(?:\n+---\s*\n+END OF FILE|\s*$))",
     re.DOTALL,
 )
 
@@ -24,7 +28,7 @@ def insert_ix_a_entry(self_content: str, new_entry: str) -> str:
     m = IX_A_FACTS_ENTRIES.search(self_content)
     if not m:
         return self_content
-    return self_content[: m.end(2)] + new_entry + self_content[m.start(3) :]
+    return self_content[: m.end(3)] + new_entry + self_content[m.end(3) :]
 
 
 def insert_ix_b_entry(self_content: str, new_entry: str) -> str:
@@ -32,7 +36,7 @@ def insert_ix_b_entry(self_content: str, new_entry: str) -> str:
     m = IX_B_BLOCK.search(self_content)
     if not m:
         return self_content
-    return self_content[: m.end(2)] + new_entry + self_content[m.start(3) :]
+    return self_content[: m.end(3)] + new_entry + self_content[m.end(3) :]
 
 
 def insert_ix_c_entry(self_content: str, new_entry: str) -> str:
@@ -40,4 +44,4 @@ def insert_ix_c_entry(self_content: str, new_entry: str) -> str:
     m = IX_C_BLOCK.search(self_content)
     if not m:
         return self_content
-    return self_content[: m.end(2)] + new_entry + self_content[m.start(3) :]
+    return self_content[: m.end(3)] + new_entry + self_content[m.end(3) :]
