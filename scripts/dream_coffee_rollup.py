@@ -68,13 +68,24 @@ def parse_coffee_pick_cadence_lines(
         if ts < window_start or ts > window_end:
             continue
         _ok, _mode, kv = _parse_trailing_kv(m.group(4).strip())
-        picked = (kv.get("picked") or "").strip().upper()[:1]
-        steward = (kv.get("steward") or "").strip().lower() or None
-        if picked not in {"A", "B", "C", "D", "E"}:
+        raw_pick = (kv.get("picked") or "").strip()
+        if not raw_pick:
             continue
-        row: dict[str, Any] = {"ts_iso": ts.isoformat(), "picked": picked}
+        first = raw_pick[0].upper()
+        if first not in {"A", "B", "C", "D", "E"}:
+            continue
+        picked = first
+        steward = (kv.get("steward") or "").strip().lower() or None
+        cond = (kv.get("conductor") or "").strip() or None
+        row: dict[str, Any] = {
+            "ts_iso": ts.isoformat(),
+            "picked": picked,
+            "menu_label": raw_pick,
+        }
         if steward in {"gate", "template", "both"}:
             row["steward"] = steward
+        if cond:
+            row["conductor"] = cond
         out.append(row)
     out.sort(key=lambda r: r["ts_iso"])
     if len(out) > max_events:
@@ -194,4 +205,52 @@ def rollup_coffee_24h(
         "runs": runs,
         "picks": picks,
         "by_picked": by_picked,
+    }
+
+
+def _one_line_capped(s: str, max_len: int) -> str:
+    t = " ".join(s.split())
+    if len(t) <= max_len:
+        return t
+    return t[: max_len - 1] + "…"
+
+
+def build_last_coffee_echo(rollup: dict[str, Any]) -> dict[str, Any] | None:
+    """Derive a compact, single-line echo from a 24h coffee rollup; no cadence re-parse.
+
+    Returns None if there is no recent coffee *run* in the window (not Record).
+    """
+    runs = rollup.get("runs") or []
+    if not runs or int(rollup.get("count") or 0) <= 0:
+        return None
+    last = runs[-1]
+    ts = (last.get("ts_iso") or rollup.get("last_ts") or "") or None
+    if not ts:
+        return None
+    mode = str(last.get("mode") or "unknown")
+    picks = rollup.get("picks") or []
+    last_pick = picks[-1] if picks else None
+    conductor: str | None = None
+    menu_letter: str | None = None
+    if last_pick and isinstance(last_pick, dict):
+        c = (last_pick.get("conductor") or "").strip()
+        if c:
+            conductor = c
+        ml = (last_pick.get("menu_label") or last_pick.get("picked") or "").strip()
+        if ml:
+            menu_letter = ml
+    # Warm, bounded one-liner (no raw event text)
+    bits: list[str] = [f"Yesterday’s {mode} coffee is still the thread."]
+    if menu_letter:
+        bits.append(f"Menu pick: {menu_letter}.")
+    if conductor:
+        bits.append(f"Conductor line: {conductor}.")
+    highlight = _one_line_capped(" ".join(bits), 160)
+    return {
+        "timestamp": ts,
+        "conductor": conductor,
+        "mode": mode,
+        "menu_letter": menu_letter,
+        "highlight": highlight,
+        "source": "coffee_rollup_24h",
     }

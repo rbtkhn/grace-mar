@@ -24,7 +24,7 @@ for path in (REPO_ROOT / "scripts",):
 
 from contradiction_digest import default_digest_path, generate_contradiction_digest, write_artifact_drafts
 from dream_civmem_echoes import CIVMEM_DISCLAIMER, compute_civmem_echoes
-from dream_coffee_rollup import rollup_coffee_24h
+from dream_coffee_rollup import build_last_coffee_echo, rollup_coffee_24h
 from dream_execution_paths import build_execution_paths, format_tomorrow_inherits_line
 from fork_config import load_fork_config
 from emit_pipeline_event import append_pipeline_event
@@ -38,7 +38,8 @@ except ImportError:
     from scripts.dream_catchup import catch_up_window_dict, missing_strategy_notebook_days  # type: ignore
 
 LAST_DREAM_FILENAME = "last-dream.json"
-HANDOFF_SCHEMA_VERSION = 2
+# 3 = v2 handoff + optional last_coffee_echo; smart collapse is client-side (operator_daily_warmup), not in JSON.
+HANDOFF_SCHEMA_VERSION = 3
 VALID_PHASES = ("both", "recent", "structural")
 
 
@@ -497,8 +498,11 @@ def _write_last_dream_handoff(
         handoff["capability_shift"] = summary["capability_shift"]
     if summary.get("dream_catchup"):
         handoff["dream_catchup"] = summary["dream_catchup"]
+    lce = summary.get("last_coffee_echo")
+    if isinstance(lce, dict) and lce:
+        handoff["last_coffee_echo"] = lce
 
-    # Schema v2 alignment with companion-self night-handoff (operational; not Record).
+    # v3: v2 + optional last_coffee_echo; companion may ignore unknown fields (operational; not Record).
     handoff["handoffSchemaVersion"] = HANDOFF_SCHEMA_VERSION
     reason = (summary.get("execution_path_suggestion_reason") or "").strip()
     if not reason and summary.get("tomorrow_inherits"):
@@ -508,7 +512,14 @@ def _write_last_dream_handoff(
     )
     rc = int(handoff.get("reviewable_count", 0) or 0)
     cc = int(handoff.get("contradiction_count", 0) or 0)
-    handoff["quietRun"] = bool(handoff.get("ok")) and rc == 0 and cc == 0 and len(followups) == 0
+    adc = int(handoff.get("artifact_draft_count", 0) or 0)
+    handoff["quietRun"] = (
+        bool(handoff.get("ok"))
+        and rc == 0
+        and cc == 0
+        and adc == 0
+        and len(followups) == 0
+    )
     handoff["residueLedger"] = {
         "must_resume": (followups[0][:120] if followups else ""),
         "safe_to_drop": "",
@@ -703,8 +714,11 @@ def run_auto_dream(
         now_utc = datetime.now(timezone.utc)
         extra_followups: list[str] = []
         dream_budget = _load_dream_budget_dict()
-        coffee_rollup = rollup_coffee_24h(user_id=user_id, now_utc=now_utc)
-        coffee_rollup = _apply_coffee_rollup_budget(coffee_rollup, dream_budget)
+        coffee_rollup_raw = rollup_coffee_24h(user_id=user_id, now_utc=now_utc)
+        last_coffee_echo = build_last_coffee_echo(coffee_rollup_raw)
+        if last_coffee_echo:
+            summary["last_coffee_echo"] = last_coffee_echo
+        coffee_rollup = _apply_coffee_rollup_budget(coffee_rollup_raw, dream_budget)
         dc = summary.get("contradiction_digest") or {}
         rel_counts = dc.get("relation_counts") or {}
         gate_path = users_dir / user_id / "recursion-gate.md"

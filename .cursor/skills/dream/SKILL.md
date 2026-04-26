@@ -114,7 +114,7 @@ This is a maintenance pass, not a merge pass.
 
 **Done when:** `auto_dream.py` exits successfully (or `--strict` halts with a clear reason), and script output is captured for the return brief.
 
-**Morning handoff:** When `apply=True` (the default), dream writes `users/grace-mar/last-dream.json` — a compact summary that tomorrow's `coffee` Step 1 (`operator_daily_warmup.py`) automatically picks up and displays as **"Last dream (night handoff)"**. This closes the choreography gap: coffee knows what dream found without the operator carrying it across threads. The JSON includes **`agent_surface.cursor_model`** (same meaning as bridge/harvest **Agent surface** / cadence **`cursor_model=`**): pass **`--cursor-model`** to `auto_dream.py` or set **`CURSOR_MODEL`** in the environment when running from a context that knows the Cursor UI label; otherwise **`unknown`**.
+**Morning handoff:** When `apply=True` (the default), dream writes `users/grace-mar/last-dream.json` — a compact summary that tomorrow's `coffee` Step 1 (`operator_daily_warmup.py`) automatically picks up and displays as **"Last dream (night handoff)"** (or a **one-line quiet handoff** when there is nothing to surface). This closes the choreography gap: coffee knows what dream found without the operator carrying it across threads. The JSON may include optional **`last_coffee_echo`** (derived from the same 24h coffee rollup as `coffee_rollup_24h`—a short narrative hint about the last session, not canonical memory or Record). The JSON includes **`agent_surface.cursor_model`** (same meaning as bridge/harvest **Agent surface** / cadence **`cursor_model=`**): pass **`--cursor-model`** to `auto_dream.py` or set **`CURSOR_MODEL`** in the environment when running from a context that knows the Cursor UI label; otherwise **`unknown`**.
 
 ## What to return
 
@@ -314,7 +314,7 @@ Usually one `dream` session per day is normal.
 
 **One-command bundle:** `python3 scripts/operator_end_of_day.py -u grace-mar` runs dream + handoff-check. If also closing the session, say `bridge` afterward.
 
-**Morning pickup:** `operator_daily_warmup.py` reads `last-dream.json` and displays a **collapsed** “Last dream” block by default; use **`--verbose-dream`** for full paths, civ-mem snippets, and followups.
+**Morning pickup:** `operator_daily_warmup.py` reads `last-dream.json` and displays a **collapsed** “Last dream” block by default (a **one-line quiet handoff** when there is nothing to flag; a fuller “night handoff” when there are signals). Optional **`--verbose-dream`** expands paths, civ-mem snippets, followups, and still appends any **`last_coffee_echo`** line.
 
 For the full decision tree including signing-off **`coffee`** (lightweight alternative to bridge), see [bridge SKILL.md](../bridge/SKILL.md).
 

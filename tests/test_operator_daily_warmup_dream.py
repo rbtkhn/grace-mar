@@ -29,14 +29,74 @@ def _minimal_dream() -> dict:
     }
 
 
+def _quiet_dream() -> dict:
+    return {
+        "generated_at": "2026-04-02T00:00:00+00:00",
+        "ok": True,
+        "integrity_ok": True,
+        "governance_ok": True,
+        "self_memory_changed": False,
+        "reviewable_count": 0,
+        "contradiction_count": 0,
+        "artifact_draft_count": 0,
+        "followups": [],
+        "tomorrow_inherits": "Tomorrow inherits (hint): **Daily Brief** — hint.",
+        "civmem_echoes": [],
+        "civmem_index_missing": False,
+        "quietRun": True,
+    }
+
+
 def test_format_last_dream_collapsed_fewer_lines() -> None:
     lines = odu._format_last_dream_block(_minimal_dream(), verbose_dream=False)
     text = "\n".join(lines)
     assert "Last dream" in text
+    assert "night handoff" in text
     assert "Contradiction digest" in text
     assert "Tomorrow inherits" in text
     assert "Coffee (24h rollup)" not in text
     assert "Agent surface" not in text
+
+
+def test_quiet_handoff_one_line() -> None:
+    lines = odu._format_last_dream_block(_quiet_dream(), verbose_dream=False)
+    text = "\n".join(lines)
+    assert "quiet handoff" in text
+    assert "Last dream (quiet handoff) —" in text
+    assert "integrity: pass" in text
+    assert "tomorrow inherits:" in text
+    assert odu.should_collapse_dream_handoff(_quiet_dream(), verbose_dream=False) is True
+
+
+def test_quiet_handoff_includes_coffee_echo_line() -> None:
+    d = _quiet_dream()
+    d["last_coffee_echo"] = {
+        "highlight": "Yesterday’s work-start coffee is still the thread. Menu pick: A.",
+        "conductor": "toscanini",
+    }
+    lines = odu._format_last_dream_block(d, verbose_dream=False)
+    text = "\n".join(lines)
+    assert "Dream picked up yesterday’s" in text
+    assert "toscanini" in text
+
+
+def test_signal_handoff_not_collapsed() -> None:
+    d = _minimal_dream()
+    assert odu.should_collapse_dream_handoff(d, verbose_dream=False) is False
+    lines = odu._format_last_dream_block(d, verbose_dream=False)
+    text = "\n".join(lines)
+    assert "night handoff" in text
+    assert "Contradiction digest: reviewable=1" in text
+
+
+def test_should_collapse_respects_quietrun_false() -> None:
+    d = _quiet_dream()
+    d["quietRun"] = False
+    assert odu.should_collapse_dream_handoff(d, verbose_dream=False) is False
+
+
+def test_should_collapse_false_when_verbose() -> None:
+    assert odu.should_collapse_dream_handoff(_quiet_dream(), verbose_dream=True) is False
 
 
 def test_collapsed_includes_agent_surface_when_handoff_has_cursor_model() -> None:
@@ -57,6 +117,18 @@ def test_verbose_includes_agent_surface_when_present() -> None:
     assert "Ran:" in text
     assert "Agent surface" in text
     assert "VerboseModel" in text
+
+
+def test_verbose_appends_coffee_echo_line() -> None:
+    d = _quiet_dream()
+    d["reviewable_count"] = 1
+    d["last_coffee_echo"] = {
+        "highlight": "A short echo line for tests.",
+    }
+    lines = odu._format_last_dream_block(d, verbose_dream=True)
+    text = "\n".join(lines)
+    assert "Dream picked up yesterday’s" in text
+    assert "A short echo line for tests" in text
 
 
 def test_format_last_dream_verbose_includes_rollup_keys() -> None:

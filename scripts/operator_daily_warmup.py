@@ -87,6 +87,55 @@ def _agent_surface_line_from_dream(dream: dict) -> str | None:
     return f"- Agent surface: **Cursor model:** {display}"
 
 
+def should_collapse_dream_handoff(dream: dict, *, verbose_dream: bool = False) -> bool:
+    """True when the handoff is a quiet, no-signal run — show one-line summary in morning coffee."""
+    if verbose_dream:
+        return False
+    if "quietRun" in dream and dream.get("quietRun") is False:
+        return False
+    if not dream.get("integrity_ok", False):
+        return False
+    if not dream.get("governance_ok", False):
+        return False
+    if int(dream.get("contradiction_count", 0) or 0) > 0:
+        return False
+    if int(dream.get("reviewable_count", 0) or 0) > 0:
+        return False
+    if int(dream.get("artifact_draft_count", 0) or 0) > 0:
+        return False
+    fu = dream.get("followups")
+    if isinstance(fu, list) and len(fu) > 0:
+        return False
+    return True
+
+
+def _short_tomorrow_inherits(dream: dict, *, max_len: int = 110) -> str:
+    raw = str(dream.get("tomorrow_inherits") or "").strip()
+    if not raw:
+        return "see `last-dream.json` or `--verbose-dream`"
+    t = raw.replace("**", "").replace("`", "")
+    t = " ".join(t.split())
+    if len(t) > max_len:
+        return t[: max_len - 1] + "…"
+    return t
+
+
+def _last_coffee_echo_bullets(dream: dict) -> list[str]:
+    """Narrative echo from dream (rollup-derived); 0 or 1 line."""
+    le = dream.get("last_coffee_echo")
+    if not isinstance(le, dict):
+        return []
+    high = (le.get("highlight") or "").strip()
+    if not high:
+        return []
+    # Avoid repeating huge highlights (rollup caps at 160; enforce here too)
+    if len(high) > 160:
+        high = high[:159] + "…"
+    cond = (le.get("conductor") or "").strip()
+    label = cond if cond else "coffee"
+    return [f"- Dream picked up yesterday’s {label} coffee — {high}"]
+
+
 def _format_last_dream_block(
     dream: dict,
     *,
@@ -96,10 +145,6 @@ def _format_last_dream_block(
 ) -> list[str]:
     """Summarize last night's dream handoff. Default is collapsed (~3 lines + header)."""
     coffee_budget = _coffee_context_budget()
-    lines = [
-        "## Last dream (night handoff)",
-        "",
-    ]
     ok = dream.get("ok", False)
     status = "pass" if ok else "**issues detected**"
     integ = "pass" if dream.get("integrity_ok") else "FAIL"
@@ -114,148 +159,172 @@ def _format_last_dream_block(
     if show_rollup is None:
         show_rollup = get_bool(coffee_budget, "show_rollup_by_default", False)
 
-    if not verbose_dream:
-        body: list[str] = []
-        body.append(
-            f"- Status: {status}; integrity: {integ}; governance: {gov}"
-        )
+    if verbose_dream:
+        lines: list[str] = [
+            "## Last dream (night handoff)",
+            "",
+        ]
+        generated = dream.get("generated_at", "unknown")
+        lines.append(f"- Ran: {generated}")
         as_line = _agent_surface_line_from_dream(dream)
         if as_line:
-            body.append(as_line)
-        body.append(f"- Contradiction digest: reviewable={rc}, contradiction={cc}")
-        tar = str(dream.get("topActionReason") or "").strip()
-        if tar:
-            body.append(
-                f"- Top-action reason: {tar[:200]}{'…' if len(tar) > 200 else ''}"
-            )
-        wt = str(dream.get("worktreeState") or "").strip()
-        if wt:
-            wadv = str(dream.get("worktreeAdvice") or "").strip()
-            body.append(
-                f"- Worktree: {wt}"
-                + (f" — {wadv[:140]}{'…' if len(wadv) > 140 else ''}" if wadv else "")
-            )
-        if show_rollup:
-            cr = dream.get("coffee_rollup_24h")
-            if isinstance(cr, dict):
-                cnt = int(cr.get("count") or 0)
-                modes = cr.get("by_mode") or {}
-                mode_s = ", ".join(f"{k}={v}" for k, v in sorted(modes.items())) if modes else "—"
-                body.append(f"- Coffee (24h rollup): {cnt} run(s); modes: {mode_s}")
-        if tomorrow:
-            body.append(f"- {tomorrow}")
-        else:
-            paths = dream.get("execution_paths") or []
-            idx = int(dream.get("suggested_execution_path_index") or 0)
-            reason = str(dream.get("execution_path_suggestion_reason") or "calendar_mod3")
-            if (
-                isinstance(paths, list)
-                and paths
-                and all(isinstance(x, dict) for x in paths)
-            ):
-                body.append(format_tomorrow_inherits_line(paths, idx, reason))
-            else:
-                body.append(
-                    "- Tomorrow inherits: see `last-dream.json` or run warmup with `--verbose-dream`."
+            lines.append(as_line)
+        lines.append(f"- Status: {status}")
+        lines.append(f"- Integrity: {integ}")
+        lines.append(f"- Governance: {gov}")
+        lines.append(f"- Self-memory changed: {dream.get('self_memory_changed', False)}")
+        lines.append(f"- Contradiction digest: reviewable={rc}, contradiction={cc}")
+        dc = dream.get("artifact_draft_count", 0)
+        pc = dream.get("promotable_draft_count", 0)
+        if dc:
+            lines.append(f"- Artifact drafts: {pc}/{dc} promotable")
+
+        cr = dream.get("coffee_rollup_24h")
+        if isinstance(cr, dict):
+            cnt = int(cr.get("count") or 0)
+            modes = cr.get("by_mode") or {}
+            by_picked = cr.get("by_picked") or {}
+            mode_s = ", ".join(f"{k}={v}" for k, v in sorted(modes.items())) if modes else "—"
+            picked_s = ""
+            if by_picked:
+                picked_s = "; menu picks: " + ", ".join(
+                    f"{k}={v}" for k, v in sorted(by_picked.items())
                 )
-        if show_civ_mem:
-            suppressed = str(dream.get("civmem_suppressed_reason") or "").strip()
-            if suppressed:
-                body.append(f"- Civ-mem: suppressed ({suppressed}) — not Record.")
-            else:
-                echoes = dream.get("civmem_echoes") or []
-                civ_missing = dream.get("civmem_index_missing")
-                if civ_missing:
-                    body.append(
-                        "- Civ-mem: index missing (optional build) — no analogy echoes; not Record."
-                    )
-                elif isinstance(echoes, list) and echoes:
-                    body.append(
-                        f"- Civ-mem: {len(echoes)} analogy candidate(s) above overlap threshold — "
-                        "not evidence or Record; use `--verbose-dream` for path/snippet."
-                    )
+            first = cr.get("first_ts") or "—"
+            last = cr.get("last_ts") or "—"
+            note = cr.get("note")
+            extra = f" ({note})" if note else ""
+            lines.append(
+                f"- Coffee (24h rollup): {cnt} run(s); modes: {mode_s}{picked_s}; first={first} last={last}{extra}"
+            )
+
+        paths = dream.get("execution_paths")
+        idx = int(dream.get("suggested_execution_path_index") or 0)
+        if isinstance(paths, list) and paths:
+            lines.append("")
+            lines.append("**Execution paths (suggested uses integrity / gate backlog / calendar):**")
+            for i, p in enumerate(paths):
+                if not isinstance(p, dict):
+                    continue
+                mark = " — **suggested tomorrow**" if i == idx else ""
+                title = p.get("title") or p.get("id") or "path"
+                fm = str(p.get("first_move") or "").strip()
+                if fm:
+                    lines.append(f"- **{i + 1}.** {title}{mark}: `{fm}`")
                 else:
-                    body.append(
-                        "- Civ-mem: no echoes above overlap threshold — not Record."
-                    )
-        body = _compress_lines(body, max_lines=max_body)
-        lines.extend(body)
+                    lines.append(f"- **{i + 1}.** {title}{mark}")
+        if tomorrow:
+            lines.append("")
+            lines.append(f"- **Tomorrow inherits:** {tomorrow}")
+
+        echoes = dream.get("civmem_echoes") or []
+        disc = str(dream.get("civmem_disclaimer") or "").strip()
+        if isinstance(echoes, list) and echoes:
+            lines.append("")
+            lines.append(f"**Civ-mem echoes:** {disc}")
+            for e in echoes[:5]:
+                if not isinstance(e, dict):
+                    continue
+                ov = e.get("overlap", "")
+                pth = e.get("path", "")
+                lbl = str(e.get("analogy_label") or "").strip()
+                lbl_s = f" — {lbl}" if lbl else ""
+                lines.append(f"  - overlap={ov} `{pth}`{lbl_s}")
+
+        followups = dream.get("followups") or []
+        if followups:
+            lines.append("")
+            lines.append("**Follow-up from dream:**")
+            for item in followups:
+                lines.append(f"- {item}")
+        lines.extend(_last_coffee_echo_bullets(dream))
         lines.append("")
         return lines
 
-    generated = dream.get("generated_at", "unknown")
-    lines.append(f"- Ran: {generated}")
+    if should_collapse_dream_handoff(dream, verbose_dream=verbose_dream):
+        out: list[str] = [
+            "## Last dream (quiet handoff)",
+            "",
+        ]
+        short = _short_tomorrow_inherits(dream)
+        out.append(
+            f"- Last dream (quiet handoff) — integrity: {integ}; governance: {gov}; "
+            f"contradictions: {cc}; tomorrow inherits: {short}"
+        )
+        out.extend(_last_coffee_echo_bullets(dream))
+        out.append("")
+        return out
+
+    lines = [
+        "## Last dream (night handoff)",
+        "",
+    ]
+    body: list[str] = []
+    body.append(
+        f"- Status: {status}; integrity: {integ}; governance: {gov}"
+    )
     as_line = _agent_surface_line_from_dream(dream)
     if as_line:
-        lines.append(as_line)
-    lines.append(f"- Status: {status}")
-    lines.append(f"- Integrity: {integ}")
-    lines.append(f"- Governance: {gov}")
-    lines.append(f"- Self-memory changed: {dream.get('self_memory_changed', False)}")
-    lines.append(f"- Contradiction digest: reviewable={rc}, contradiction={cc}")
-    dc = dream.get("artifact_draft_count", 0)
-    pc = dream.get("promotable_draft_count", 0)
-    if dc:
-        lines.append(f"- Artifact drafts: {pc}/{dc} promotable")
-
-    cr = dream.get("coffee_rollup_24h")
-    if isinstance(cr, dict):
-        cnt = int(cr.get("count") or 0)
-        modes = cr.get("by_mode") or {}
-        by_picked = cr.get("by_picked") or {}
-        mode_s = ", ".join(f"{k}={v}" for k, v in sorted(modes.items())) if modes else "—"
-        picked_s = ""
-        if by_picked:
-            picked_s = "; menu picks: " + ", ".join(
-                f"{k}={v}" for k, v in sorted(by_picked.items())
-            )
-        first = cr.get("first_ts") or "—"
-        last = cr.get("last_ts") or "—"
-        note = cr.get("note")
-        extra = f" ({note})" if note else ""
-        lines.append(
-            f"- Coffee (24h rollup): {cnt} run(s); modes: {mode_s}{picked_s}; first={first} last={last}{extra}"
+        body.append(as_line)
+    body.append(f"- Contradiction digest: reviewable={rc}, contradiction={cc}")
+    tar = str(dream.get("topActionReason") or "").strip()
+    if tar:
+        body.append(
+            f"- Top-action reason: {tar[:200]}{'…' if len(tar) > 200 else ''}"
         )
-
-    paths = dream.get("execution_paths")
-    idx = int(dream.get("suggested_execution_path_index") or 0)
-    if isinstance(paths, list) and paths:
-        lines.append("")
-        lines.append("**Execution paths (suggested uses integrity / gate backlog / calendar):**")
-        for i, p in enumerate(paths):
-            if not isinstance(p, dict):
-                continue
-            mark = " — **suggested tomorrow**" if i == idx else ""
-            title = p.get("title") or p.get("id") or "path"
-            fm = str(p.get("first_move") or "").strip()
-            if fm:
-                lines.append(f"- **{i + 1}.** {title}{mark}: `{fm}`")
-            else:
-                lines.append(f"- **{i + 1}.** {title}{mark}")
+    wt = str(dream.get("worktreeState") or "").strip()
+    if wt:
+        wadv = str(dream.get("worktreeAdvice") or "").strip()
+        body.append(
+            f"- Worktree: {wt}"
+            + (f" — {wadv[:140]}{'…' if len(wadv) > 140 else ''}" if wadv else "")
+        )
+    if show_rollup:
+        cr = dream.get("coffee_rollup_24h")
+        if isinstance(cr, dict):
+            cnt = int(cr.get("count") or 0)
+            modes = cr.get("by_mode") or {}
+            mode_s = ", ".join(f"{k}={v}" for k, v in sorted(modes.items())) if modes else "—"
+            body.append(f"- Coffee (24h rollup): {cnt} run(s); modes: {mode_s}")
     if tomorrow:
-        lines.append("")
-        lines.append(f"- **Tomorrow inherits:** {tomorrow}")
-
-    echoes = dream.get("civmem_echoes") or []
-    disc = str(dream.get("civmem_disclaimer") or "").strip()
-    if isinstance(echoes, list) and echoes:
-        lines.append("")
-        lines.append(f"**Civ-mem echoes:** {disc}")
-        for e in echoes[:5]:
-            if not isinstance(e, dict):
-                continue
-            ov = e.get("overlap", "")
-            pth = e.get("path", "")
-            lbl = str(e.get("analogy_label") or "").strip()
-            lbl_s = f" — {lbl}" if lbl else ""
-            lines.append(f"  - overlap={ov} `{pth}`{lbl_s}")
-
-    followups = dream.get("followups") or []
-    if followups:
-        lines.append("")
-        lines.append("**Follow-up from dream:**")
-        for item in followups:
-            lines.append(f"- {item}")
+        body.append(f"- {tomorrow}")
+    else:
+        paths = dream.get("execution_paths") or []
+        idx = int(dream.get("suggested_execution_path_index") or 0)
+        reason = str(dream.get("execution_path_suggestion_reason") or "calendar_mod3")
+        if (
+            isinstance(paths, list)
+            and paths
+            and all(isinstance(x, dict) for x in paths)
+        ):
+            body.append(format_tomorrow_inherits_line(paths, idx, reason))
+        else:
+            body.append(
+                "- Tomorrow inherits: see `last-dream.json` or run warmup with `--verbose-dream`."
+            )
+    if show_civ_mem:
+        suppressed = str(dream.get("civmem_suppressed_reason") or "").strip()
+        if suppressed:
+            body.append(f"- Civ-mem: suppressed ({suppressed}) — not Record.")
+        else:
+            echoes = dream.get("civmem_echoes") or []
+            civ_missing = dream.get("civmem_index_missing")
+            if civ_missing:
+                body.append(
+                    "- Civ-mem: index missing (optional build) — no analogy echoes; not Record."
+                )
+            elif isinstance(echoes, list) and echoes:
+                body.append(
+                    f"- Civ-mem: {len(echoes)} analogy candidate(s) above overlap threshold — "
+                    "not evidence or Record; use `--verbose-dream` for path/snippet."
+                )
+            else:
+                body.append(
+                    "- Civ-mem: no echoes above overlap threshold — not Record."
+                )
+    body.extend(_last_coffee_echo_bullets(dream))
+    body = _compress_lines(body, max_lines=max_body)
+    lines.extend(body)
     lines.append("")
     return lines
 

@@ -188,6 +188,7 @@ Last rotated: 2026-01-01
     assert handoff_path.is_file()
     handoff = json.loads(handoff_path.read_text(encoding="utf-8"))
     assert handoff.get("agent_surface", {}).get("cursor_model") == "unknown"
+    assert handoff.get("handoffSchemaVersion") == 3
     assert summary.get("agent_surface", {}).get("cursor_model") == "unknown"
 
 

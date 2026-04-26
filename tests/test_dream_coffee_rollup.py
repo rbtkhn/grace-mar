@@ -7,7 +7,7 @@ from pathlib import Path
 
 import pytest
 
-from dream_coffee_rollup import parse_coffee_cadence_lines, rollup_coffee_24h
+from dream_coffee_rollup import build_last_coffee_echo, parse_coffee_cadence_lines, rollup_coffee_24h
 from dream_civmem_echoes import (
     ANALOGY_CANDIDATE_LABEL,
     CIVMEM_DISCLAIMER,
@@ -164,6 +164,39 @@ def test_parse_coffee_pick_in_rollup(tmp_path: Path) -> None:
     assert r["by_picked"]["E"] == 1
     assert r["by_picked"]["A"] == 1
     assert len(r["picks"]) == 2
+    assert r["picks"][-1].get("menu_label") == "A"
+
+
+def test_build_last_coffee_echo_none_without_runs() -> None:
+    assert build_last_coffee_echo({"count": 0, "runs": [], "picks": []}) is None
+
+
+def test_build_last_coffee_echo_cap_and_source() -> None:
+    rollup = {
+        "count": 1,
+        "last_ts": "2026-04-23T10:00:00+00:00",
+        "runs": [
+            {
+                "ts_iso": "2026-04-23T10:00:00+00:00",
+                "mode": "work-start",
+                "kv": {},
+            }
+        ],
+        "picks": [
+            {
+                "ts_iso": "2026-04-23T10:01:00+00:00",
+                "picked": "B",
+                "menu_label": "B",
+                "conductor": "kleiber",
+            }
+        ],
+    }
+    e = build_last_coffee_echo(rollup)
+    assert e is not None
+    assert e["source"] == "coffee_rollup_24h"
+    assert e["conductor"] == "kleiber"
+    assert e["mode"] == "work-start"
+    assert len(e["highlight"]) <= 160
 
 
 def test_compute_civmem_echoes_default_limit_one(monkeypatch: pytest.MonkeyPatch) -> None:

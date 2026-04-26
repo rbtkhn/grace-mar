@@ -83,7 +83,7 @@ If the operator **explicitly** wants **both** full warmup **and** signing-off in
 
 Add `--compact` for shorter harness output. Individual scripts (`operator_daily_warmup.py`, `harness_warmup.py`, `operator_handoff_check.py`, `operator_reentry_stack.py`) are still available.
 
-**Dream handoff:** If `dream` ran overnight, the daily warmup automatically includes a **"Last dream (night handoff)"** block from `users/grace-mar/last-dream.json`. **Default:** that block is **collapsed** (status, digest counts, tomorrow hint). After that block (or alone if the Last dream section is turned off), warmup prints one line **`Dream → coffee menu:`** mapping dream’s suggested execution path to **A / B / C** (Build / Steward / Strategy · daily brief) — operational hint only; see [dream/SKILL.md](../dream/SKILL.md) § *Five-second closeout*. Extra lines (civ-mem summary, coffee 24h rollup) are **off** by default; tune `config/context_budgets/coffee.json` or pass `--show-civ-mem` / `--show-rollup` on `operator_daily_warmup.py`, `operator_coffee.py`, or `operator_reentry_stack.py`. Approximate paste footprint: `python3 scripts/audit_context_tax.py -u grace-mar`. These files are operator scaffolding, not Record. For full paths / snippets / followups, use **`--verbose-dream`**. When pasting warmup for the operator, prefer **collapsed** unless they ask for detail.
+**Dream handoff:** If `dream` ran overnight, the daily warmup includes a last-dream block from `users/grace-mar/last-dream.json` (**"Last dream (night handoff)"** when there is something to read out, or a **one-line "quiet handoff"** when `integrity` / `governance` / digest counts are clean and there are no followups). A successful dream may add **`last_coffee_echo`**: a single warm line (from the 24h cadence rollup) that ties yesterday’s `coffee` into morning startup—**cadence / runtime only**, not Record. **Signal days** (issues, followups, or non-zero digests) still use the fuller collapsed block. Extra lines (civ-mem summary, coffee 24h rollup) are **off** by default; tune `config/context_budgets/coffee.json` or pass `--show-civ-mem` / `--show-rollup` on `operator_daily_warmup.py`, `operator_coffee.py`, or `operator_reentry_stack.py`. After that block (or alone if the Last dream section is turned off), warmup prints one line **`Dream → coffee menu:`** mapping dream’s suggested execution path to **A / B / C** (Build / Steward / Strategy · daily brief) — operational hint only; see [dream/SKILL.md](../dream/SKILL.md) § *Five-second closeout*. Approximate paste footprint: `python3 scripts/audit_context_tax.py -u grace-mar`. These files are operator scaffolding, not Record. For full paths / snippets / followups, use **`--verbose-dream`**. When pasting warmup for the operator, prefer **collapsed** unless they ask for detail.
 
 **Step 1 deliverables (work-start):** Warmup brief (priorities, gate, work-politics snapshot where relevant, integrity), branch snapshot, daily brief + intel defer line (path pattern + **menu C — Strategy (daily brief)** when ready), optional PH/Jiang line. **No** Polymarket / poll / Massie blocks in Step 1 unless the operator explicitly asked in the same message.
 
@@ -125,7 +125,18 @@ D5. Conductor — Kleiber
 E. (system choice) — <one short line: the single best alternate lane this session>
 ```
 
-**Filling E — (system choice):** Pick **one** concrete slice for this turn, using Step 1 context — e.g. **self-skill-write** (prompts, PRP, Lexile, bot/prompt **proposals** — not merge), **work-cici** next (ground in `coffee_lane_next_hints` / SYNC-DAILY / INDEX), **work-dev** next from [workspace.md](../../../docs/skill-work/work-dev/workspace.md) § **Next actions**, **work-strategy-rome** / ROME-PASS (Compass-style), **work-jiang / PH** (Book-style), or match **`Dream → coffee menu`** when it points at a path not already covered by **A–C / D1–D5**. **Write-shaped** work is **not** a tenth letter — it defaults here or when the operator says **`write`** / **`skill-write`** without **`coffee`**. State it plainly in the angle-bracket line; **do not** add a separate “micro-hints” row.
+**Filling E — (system choice):** Pick **one** concrete slice for this turn, using Step 1 context — e.g. **self-skill-write** (prompts, PRP, Lexile, bot/prompt **proposals** — not merge), **work-cici** next (ground in `coffee_lane_next_hints` / SYNC-DAILY / INDEX), **work-dev** next from [workspace.md](../../../docs/skill-work/work-dev/workspace.md) § **Next actions**, **work-strategy-rome** / ROME-PASS (Compass-style), **work-jiang / PH** (Book-style), or match **`Dream → coffee menu`** when it points at a path not already covered by **A–C / D1–D5**.
+
+**Fixed E option (always available):** **Self-knowledge quiz (bookshelf membrane)**.
+
+- Session is **multi-round**: 5–10 MCQs per round about bookshelf subject matter.
+- After each round, ask continue/stop.
+- On stop, produce:
+  - `docs/skill-work/work-strategy/history-notebook/research/BOOKSHELF-MEMBRANE-REPORT.md`
+  - `docs/skill-work/work-strategy/history-notebook/research/BOOKSHELF-MEMBRANE-CANDIDATE-DRAFTS.md`
+- Output is draft-only; no direct writes to `users/grace-mar/recursion-gate.md` unless explicitly requested.
+
+**Write-shaped** work is **not** a tenth letter — it defaults here or when the operator says **`write`** / **`skill-write`** without **`coffee`**. State it plainly in the angle-bracket line; **do not** add a separate “micro-hints” row.
 
 **Step 1 context for E:** `operator_coffee.py` prints **`Lane context (for menu E)`** — two lines from `scripts/coffee_lane_next_hints.py` (work-cici + work-dev). Use when choosing **E** or when wording the **E** line.
 
@@ -151,7 +162,7 @@ E. (system choice) — <one short line: the single best alternate lane this sess
 
 Each **D1–D5** choice gets a **short** orienting reply plus concrete next actions. **Not** a merge, **not** the full 15–45m embodied ritual in chat unless the operator extends. **Optional** after the turn: `log_cadence_event.py` **`coffee_pick`** with `--kv picked=D4 conductor=karajan` (or whichever explicit conductor was chosen). **Not** work-dev implementation (**A**), not daily-brief + Tri-Frame alone (**C**; use **C** for brief). **Not** `self-skill-write` (use **E** for write slice).
 
-- **E. (system choice)** — As filled on the menu line; typically one of: **skill-write** / PRP, Cici next, Dev next (workspace), Compass/Rome, Jiang/PH — **one** step.
+- **E. (system choice)** — As filled on the menu line; typically one of: **self-knowledge quiz (bookshelf membrane)**, **skill-write** / PRP, Cici next, Dev next (workspace), Compass/Rome, Jiang/PH — **one** step.
 
 **Exit / re-offer:** After **A**, **B**, or **E**, re-offer the full menu by default. After **C** or **any of D1–D5**, **exit to normal workflow** unless **`stay in coffee`**. After **B** (Steward), see [menu-reference § Steward follow-up fork](../../../docs/skill-work/work-coffee/menu-reference.md#steward-follow-up-fork-implement-now-vs-later) (replace legacy **E** with **B** when reading that section). Synonyms **`B+ship`** / **`EXECUTE`** ≈ **Implement now** on steward track.
 
