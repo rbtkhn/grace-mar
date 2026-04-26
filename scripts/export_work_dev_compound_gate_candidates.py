@@ -20,6 +20,7 @@ if str(_SCRIPT_DIR) not in sys.path:
 from work_dev.compound_notes import (  # noqa: E402
     NOTES_DIR,
     REPO_ROOT,
+    derived_compound_artifact_preamble,
     extract_h2_section,
     gate_candidate_truthy,
     parse_note_for_export,
@@ -67,6 +68,7 @@ def build_markdown(
     include_all: bool,
     empty_reason: str | None = None,
 ) -> str:
+    pre = derived_compound_artifact_preamble("work_dev_compound_gate_export")
     lines: list[str] = []
     lines.append("# Work-dev compound notes — gate candidate export")
     lines.append("")
@@ -86,7 +88,7 @@ def build_markdown(
         lines.append("")
         lines.append(empty_reason)
         lines.append("")
-        return "\n".join(lines) + "\n"
+        return pre + "\n".join(lines) + "\n"
 
     if not include_all:
         cands = [r for r in records if r.get("gate_candidate")]
@@ -99,7 +101,7 @@ def build_markdown(
                 "Re-run with `--include-all` to list every note with an explicit flag line."
             )
             lines.append("")
-            return "\n".join(lines) + "\n"
+            return pre + "\n".join(lines) + "\n"
 
     work: list[dict[str, Any]] = (
         records if include_all else [r for r in records if r.get("gate_candidate")]
@@ -160,7 +162,7 @@ def build_markdown(
         lines.append(STAGING_LINE)
         lines.append("")
 
-    return "\n".join(lines) + "\n"
+    return pre + "\n".join(lines) + "\n"
 
 
 def _gather_simplified(notes_dir: Path) -> tuple[list[dict[str, Any]], str | None]:

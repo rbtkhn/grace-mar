@@ -1,3 +1,9 @@
+---
+derived: true
+recordAuthority: none
+gateEffect: none
+artifact_kind: work_dev_compound_gate_export
+---
 # Work-dev compound notes — gate candidate export
 
 > **Boundary:** This file is a **derived staging aid**. It is not 

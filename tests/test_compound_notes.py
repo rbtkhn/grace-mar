@@ -18,6 +18,17 @@ def cn():
     return compound_notes
 
 
+def test_derived_compound_artifact_preamble(cn) -> None:
+    s = cn.derived_compound_artifact_preamble("work_dev_compound_refresh")
+    assert s.startswith("---\n")
+    assert "derived: true" in s
+    assert "recordAuthority: none" in s
+    assert "gateEffect: none" in s
+    assert "artifact_kind: work_dev_compound_refresh" in s
+    assert s.endswith("---\n")
+    assert "artifact_kind: unknown" in cn.derived_compound_artifact_preamble("!!!")
+
+
 def test_gate_candidate_truthy(cn) -> None:
     t = cn.gate_candidate_truthy
     assert t(True) is True

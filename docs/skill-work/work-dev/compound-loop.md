@@ -43,6 +43,7 @@ Related: [claim-proof-standard.md](claim-proof-standard.md) (proof bar for “im
 | `python3 scripts/new_work_dev_compound_note.py` | Create a new compound note from the template. |
 | `python3 scripts/work_dev_compound_refresh.py` | Derived report on existing notes; **regenerable**; see `artifacts/work-dev-compound-refresh.md`. |
 | `python3 scripts/export_work_dev_compound_gate_candidates.py` | Full-text export of `gate_candidate` notes for review; see [compound-gate-export.md](compound-gate-export.md) and `artifacts/work-dev-compound-gate-candidates.md`. |
+| `python3 scripts/build_work_dev_compound_dashboard.py` | Single-page operator dashboard; see [compound-dashboard.md](compound-dashboard.md) and `artifacts/work-dev-compound-dashboard.md`. |
 
 ## Operator index (where to look)
 
@@ -52,6 +53,7 @@ Related: [claim-proof-standard.md](claim-proof-standard.md) (proof bar for “im
 | Create a new note file | `python3 scripts/new_work_dev_compound_note.py` |
 | Inventory, staleness, duplicate hints (metadata) | `python3 scripts/work_dev_compound_refresh.py` → `artifacts/work-dev-compound-refresh.md` |
 | Full text of `gate_candidate` notes for review (derived markdown) | `python3 scripts/export_work_dev_compound_gate_candidates.py` → `artifacts/work-dev-compound-gate-candidates.md` — doctrine: [compound-gate-export.md](compound-gate-export.md) |
+| At-a-glance compound layer state (inventory, artifacts, docs, next actions) | `python3 scripts/build_work_dev_compound_dashboard.py` → `artifacts/work-dev-compound-dashboard.md` — [compound-dashboard.md](compound-dashboard.md) |
 
 ## Non-goals
 

@@ -44,6 +44,8 @@ Ship it
         "meta": {"reusable_pattern": "pat", "gate_candidate": True},
     }
     out = bm([rec], include_all=False, empty_reason=None)
+    assert "recordAuthority: none" in out
+    assert "artifact_kind: work_dev_compound_gate_export" in out
     assert "**Candidate:** One" in out
     assert "The lesson" in out
     assert "Ship it" in out

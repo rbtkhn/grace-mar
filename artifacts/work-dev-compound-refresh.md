@@ -1,3 +1,9 @@
+---
+derived: true
+recordAuthority: none
+gateEffect: none
+artifact_kind: work_dev_compound_refresh
+---
 # Work-dev compound notes — refresh report
 
 **Boundary:** This report is derived from work-dev compound notes. It does not

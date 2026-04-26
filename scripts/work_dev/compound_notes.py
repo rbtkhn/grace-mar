@@ -1,15 +1,38 @@
 """
 Shared parsing for work-dev compound notes. Stdlib only.
-Used by work_dev_compound_refresh.py and export_work_dev_compound_gate_candidates.py.
+Used by work_dev_compound_refresh.py, export_work_dev_compound_gate_candidates.py,
+and build_work_dev_compound_dashboard.py.
 """
 
 from __future__ import annotations
 
+import re
+from datetime import date, datetime
 from pathlib import Path
 from typing import Any
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 NOTES_DIR = REPO_ROOT / "docs" / "skill-work" / "work-dev" / "compound-notes"
+# Stale and duplicate heuristics — keep in sync with work_dev_compound_refresh / dashboard
+STALE_DAYS = 90
+
+
+def derived_compound_artifact_preamble(artifact_kind: str) -> str:
+    """
+    YAML front matter for derived work-dev compound markdown artifacts.
+    Aligns vocabulary with work-dev JSON surfaces (recordAuthority / gateEffect none), not a JSON schema.
+    """
+    k = (artifact_kind or "").strip()
+    if not k or not re.match(r"^[A-Za-z0-9_\-]+$", k):
+        k = "unknown"
+    return (
+        "---\n"
+        "derived: true\n"
+        "recordAuthority: none\n"
+        "gateEffect: none\n"
+        f"artifact_kind: {k}\n"
+        "---\n"
+    )
 
 
 def parse_front_matter(text: str) -> dict[str, Any]:
@@ -145,6 +168,90 @@ def parse_compound_note_record(
         "gate_candidate": gate,
         "record_status": str(meta.get("record_status", "")).strip("'\""),
     }
+
+
+def parse_date_ymd(s: str) -> date | None:
+    """Parse YYYY-MM-DD from the first 10 chars; None if invalid."""
+    s = (s or "")[:10]
+    if not s:
+        return None
+    try:
+        return datetime.strptime(s, "%Y-%m-%d").date()
+    except ValueError:
+        return None
+
+
+def normalize_dup_key(s: str) -> str:
+    return re.sub(r"\s+", " ", s.strip().lower()) if s else ""
+
+
+def compound_note_paths(notes_dir: Path) -> list[Path]:
+    if not notes_dir.is_dir():
+        return []
+    return sorted(notes_dir.glob("*.md"))
+
+
+def load_compound_records(notes_dir: Path, repo_root: Path) -> list[dict[str, Any]]:
+    return [parse_compound_note_record(p, repo_root) for p in compound_note_paths(notes_dir)]
+
+
+def duplicate_title_groups(records: list[dict[str, Any]]) -> dict[str, list[str]]:
+    title_groups: dict[str, list[str]] = {}
+    for r in records:
+        nk = normalize_dup_key(str(r.get("title", "")))
+        if nk and nk not in ("compound note", "untitled"):
+            title_groups.setdefault(nk, []).append(str(r.get("name", "")))
+    return {k: v for k, v in title_groups.items() if len(v) > 1}
+
+
+def duplicate_pattern_groups(records: list[dict[str, Any]]) -> dict[str, list[str]]:
+    pat_groups: dict[str, list[str]] = {}
+    for r in records:
+        p = str(r.get("reusable_pattern", "") or "")
+        if p:
+            pk = normalize_dup_key(p)
+            pat_groups.setdefault(pk, []).append(str(r.get("name", "")))
+    return {k: v for k, v in pat_groups.items() if len(v) > 1}
+
+
+def name_to_path_map(notes_dir: Path) -> dict[str, Path]:
+    return {p.name: p for p in compound_note_paths(notes_dir)}
+
+
+def stale_non_gate_records(
+    records: list[dict[str, Any]],
+    notes_dir: Path,
+    today: date,
+    *,
+    stale_days: int = STALE_DAYS,
+    mtime_if_no_date: bool = False,
+) -> list[dict[str, Any]]:
+    """
+    Notes with gate_candidate false and age > stale_days.
+    If mtime_if_no_date, use file mtime when front matter date is missing or unparseable.
+    Each item is the record plus _effective_date (ISO) and _date_source ('front matter' | 'file mtime').
+    """
+    nmap = name_to_path_map(notes_dir)
+    out: list[dict[str, Any]] = []
+    for r in records:
+        if r.get("gate_candidate"):
+            continue
+        d = parse_date_ymd(str(r.get("date") or ""))
+        src = "front matter"
+        if d is None and mtime_if_no_date:
+            p = nmap.get(str(r.get("name", "")))
+            if p is None or not p.is_file():
+                continue
+            d = date.fromtimestamp(p.stat().st_mtime)
+            src = "file mtime"
+        elif d is None:
+            continue
+        if (today - d).days > stale_days:
+            row = dict(r)
+            row["_effective_date"] = d.isoformat()
+            row["_date_source"] = src
+            out.append(row)
+    return sorted(out, key=lambda x: str(x.get("date") or x.get("_effective_date", "")))
 
 
 def _affected_list(meta: dict[str, Any]) -> list[str]:

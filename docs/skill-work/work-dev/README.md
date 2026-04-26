@@ -75,6 +75,8 @@ Use this order when actively working on the territory:
 | **[three-compounding-loops.md](three-compounding-loops.md)** | Record vs WORK vs CI — how compounding works in each loop and how they must interact (gate, no draft-as-truth). |
 | **[compound-loop.md](compound-loop.md)** | **Compound work loop** — Plan → Execute → Review → Compound → Gate for coding-agent work; compound notes are WORK-only; gate is the only path toward Record candidates. |
 | **[compound-gate-export.md](compound-gate-export.md)** | **Gate candidate export** — read-only `artifacts/work-dev-compound-gate-candidates.md` from `gate_candidate` notes; not approval; `python3 scripts/export_work_dev_compound_gate_candidates.py`. |
+| **[compound-dashboard.md](compound-dashboard.md)** | **Compound dashboard** — generated operator view of compound notes, refresh/export status, stale/duplicate hints, and related paths; `python3 scripts/build_work_dev_compound_dashboard.py` → `artifacts/work-dev-compound-dashboard.md`. |
+| **[work-dev-derived-markdown-authority.md](work-dev-derived-markdown-authority.md)** | **YAML `recordAuthority` / `gateEffect` on compound derived markdown** under `artifacts/work-dev-compound-*.md` (not the JSON interface-artifact schema). |
 | **[provenance-checklist.md](provenance-checklist.md)** | Repeatable verification path for export, handback, and audit integrity. |
 | **[record-diff-queue.md](../../record-diff-queue.md)** | **Record Diff Queue** (GAP-011): unified review surface for pending governed-state changes; standardized diff cards (old/new/evidence/confidence/conflict/recommended action); template-portable renderer + instance gate adapter. |
 

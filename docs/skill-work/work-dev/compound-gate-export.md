@@ -4,6 +4,8 @@
 
 **Boundary:** This export is **not** canonical memory. It is a **staging aid** for review. It does **not** approve anything, does **not** write to the Record, SELF, SKILLS, EVIDENCE, the Library, or `users/grace-mar/recursion-gate.md`, and it does **not** merge or promote by itself. **Repetition in the export is not approval.**
 
+**Authority metadata** on the generated file: YAML at the top with `recordAuthority: none` and `gateEffect: none` (see [work-dev-derived-markdown-authority.md](work-dev-derived-markdown-authority.md)); not a substitute for the gate process.
+
 ## Relation to other artifacts
 
 - **`python3 scripts/work_dev_compound_refresh.py`** — inventory, staleness heuristics, and duplicate-title hints; output: `artifacts/work-dev-compound-refresh.md`. Summarized **metadata**, not the full text of every candidate section.

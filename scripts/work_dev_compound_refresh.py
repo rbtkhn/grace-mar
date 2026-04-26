@@ -7,10 +7,9 @@ Read-only on notes. Writes only artifacts/work-dev-compound-refresh.md. Stdlib o
 from __future__ import annotations
 
 import argparse
-import re
 import sys
 from collections import Counter
-from datetime import date, datetime
+from datetime import date
 from pathlib import Path
 from typing import Any
 
@@ -18,27 +17,23 @@ _SCRIPT_DIR = Path(__file__).resolve().parent
 if str(_SCRIPT_DIR) not in sys.path:
     sys.path.insert(0, str(_SCRIPT_DIR))
 
-from work_dev.compound_notes import NOTES_DIR, REPO_ROOT, parse_compound_note_record
+from work_dev.compound_notes import (
+    NOTES_DIR,
+    REPO_ROOT,
+    STALE_DAYS,
+    derived_compound_artifact_preamble,
+    duplicate_pattern_groups,
+    duplicate_title_groups,
+    load_compound_records,
+    compound_note_paths,
+    stale_non_gate_records,
+)
 
 OUTPUT = REPO_ROOT / "artifacts" / "work-dev-compound-refresh.md"
-STALE_DAYS = 90
-
-
-def _parse_date_ymd(s: str) -> date | None:
-    s = s[:10] if s else ""
-    for fmt in ("%Y-%m-%d",):
-        try:
-            return datetime.strptime(s, fmt).date()
-        except ValueError:
-            return None
-    return None
-
-
-def _normalize_dup_key(s: str) -> str:
-    return re.sub(r"\s+", " ", s.strip().lower()) if s else ""
 
 
 def run_report() -> str:
+    pre = derived_compound_artifact_preamble("work_dev_compound_refresh")
     lines: list[str] = []
     lines.append("# Work-dev compound notes — refresh report")
     lines.append("")
@@ -57,17 +52,17 @@ def run_report() -> str:
         lines.append("python3 scripts/new_work_dev_compound_note.py --title \"...\"")
         lines.append("```")
         lines.append("")
-        return "\n".join(lines) + "\n"
+        return pre + "\n".join(lines) + "\n"
 
-    files = sorted(NOTES_DIR.glob("*.md"))
+    files = compound_note_paths(NOTES_DIR)
     if not files:
         lines.append("## Status")
         lines.append("")
         lines.append("No compound notes (`.md` files) in `compound-notes/`.")
         lines.append("")
-        return "\n".join(lines) + "\n"
+        return pre + "\n".join(lines) + "\n"
 
-    records = [parse_compound_note_record(f, REPO_ROOT) for f in files]
+    records = load_compound_records(NOTES_DIR, REPO_ROOT)
     n = len(records)
     lines.append("## Summary")
     lines.append("")
@@ -98,33 +93,22 @@ def run_report() -> str:
         lines.append(f"- [{r['name']}]({r['path']}) — {r['title'][:80]}")
     lines.append("")
 
-    # Stale: >90d, not gate
     today = date.today()
-    stale: list[dict] = []
-    for r in records:
-        d = _parse_date_ymd(r["date"])
-        if d is None or r["gate_candidate"]:
-            continue
-        if (today - d).days > STALE_DAYS:
-            stale.append(r)
+    stale = stale_non_gate_records(
+        records, NOTES_DIR, today, stale_days=STALE_DAYS, mtime_if_no_date=False
+    )
     lines.append("### Stale (heuristic: older than 90 days, not gate candidate)")
     lines.append("")
     if not stale:
         lines.append("_(none in this run)_")
     else:
-        for r in sorted(stale, key=lambda x: x["date"] or ""):
+        for r in stale:
             lines.append(
                 f"- review for staleness: [{r['name']}]({r['path']}) (date: {r['date']})"
             )
     lines.append("")
 
-    # Duplicates: normalized title
-    title_groups: dict[str, list[str]] = {}
-    for r in records:
-        nk = _normalize_dup_key(r["title"])
-        if nk and nk not in ("compound note", "untitled"):
-            title_groups.setdefault(nk, []).append(r["name"])
-    dups = {k: v for k, v in title_groups.items() if len(v) > 1}
+    dups = duplicate_title_groups(records)
     lines.append("### Possible duplicate titles (normalized)")
     lines.append("")
     if not dups:
@@ -133,13 +117,7 @@ def run_report() -> str:
         for k, v in sorted(dups.items(), key=lambda x: x[0]):
             lines.append(f"- `{k}`: {', '.join(v)}")
 
-    pat_groups: dict[str, list[str]] = {}
-    for r in records:
-        p = r["reusable_pattern"]
-        if p:
-            pk = _normalize_dup_key(p)
-            pat_groups.setdefault(pk, []).append(r["name"])
-    pdups = {k: v for k, v in pat_groups.items() if len(v) > 1}
+    pdups = duplicate_pattern_groups(records)
     lines.append("")
     lines.append("### Possible duplicate reusable_pattern (normalized)")
     lines.append("")
@@ -173,7 +151,7 @@ def run_report() -> str:
     if not stale and not dups and not pdups and not rec:
         lines.append("- Add compound notes as you finish work; re-run this script occasionally.")
     lines.append("")
-    return "\n".join(lines) + "\n"
+    return pre + "\n".join(lines) + "\n"
 
 
 def main() -> int:
