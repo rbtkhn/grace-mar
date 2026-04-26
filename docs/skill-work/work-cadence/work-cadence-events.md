@@ -5,7 +5,7 @@
 > handoff artifacts or `session-transcript.md`.
 >
 > **Format:** `- **YYYY-MM-DD HH:MM UTC** — kind (user) key=value …` (machine-audit line).
-> **coffee_conductor_outcome** — optional closure line (**verdict=** e.g. watch / promote / shelf).
+> **coffee_conductor_outcome** — optional closure after a conductor run (**verdict=** e.g. watch / promote / shelf / no_action); optional **notebook_ref=**, **falsify=**, **conductor=** (see [CONDUCTOR-IMPROVEMENT-LOOP](../work-strategy/strategy-notebook/CONDUCTOR-IMPROVEMENT-LOOP.md) § 3).
 > **coffee_pick** may include optional **focus=** or **arc=** (named work object).
 > **Companion-facing:** Skills read this file and speak **Recent rhythm** in chat — plain
 > language, concrete specifics, no clock times in that prose. See [work-cadence README](README.md).
@@ -302,3 +302,16 @@ _(Append below this line.)_
 - **2026-04-25 18:04 UTC** — coffee (grace-mar) ok=true mode=work-start cursor_model=unknown model_tier=unknown
 - **2026-04-25 18:06 UTC** — coffee_pick (grace-mar) ok=true cursor_model=unknown model_tier=unknown picked=D2 conductor=toscanini
 - **2026-04-26 00:28 UTC** — coffee (grace-mar) ok=true mode=work-start cursor_model=unknown model_tier=unknown
+- **2026-04-26 01:22 UTC** — thanks (grace-mar) ok=true cursor_model=unknown model_tier=unknown park=work-dev-examples-readme-push
+- **2026-04-26 01:39 UTC** — coffee (grace-mar) ok=true mode=work-start cursor_model=unknown model_tier=unknown
+- **2026-04-26 01:44 UTC** — coffee_pick (grace-mar) ok=true cursor_model=unknown model_tier=unknown picked=D3 conductor=bernstein
+- **2026-04-26 05:15 UTC** — dream (demo) ok=true mode=default cursor_model=unknown model_tier=unknown phase=both integrity=pass governance=pass mem_changed=true reviewable=0 contradictions=0 civmem_echo_count=0 civmem_suppressed=false handoff_written=true
+- **2026-04-26 05:16 UTC** — dream (demo) ok=true mode=default cursor_model=unknown model_tier=unknown phase=both integrity=pass governance=pass mem_changed=true reviewable=0 contradictions=0 civmem_echo_count=2 civmem_suppressed=false handoff_written=true
+- **2026-04-26 05:16 UTC** — dream (grace-mar) ok=false mode=default cursor_model=unknown model_tier=unknown phase=both integrity=fail governance=pass mem_changed=true reviewable=1 contradictions=0 civmem_echo_count=0 civmem_suppressed=true handoff_written=true
+- **2026-04-26 05:17 UTC** — dream (grace-mar) ok=false mode=default cursor_model=unknown model_tier=unknown phase=both integrity=fail governance=pass mem_changed=false reviewable=1 contradictions=0 civmem_echo_count=0 civmem_suppressed=true handoff_written=true
+- **2026-04-26 05:17 UTC** — dream (demo) ok=true mode=default cursor_model=unknown model_tier=unknown phase=both integrity=pass governance=pass mem_changed=true reviewable=0 contradictions=0 civmem_echo_count=0 civmem_suppressed=false handoff_written=true
+- **2026-04-26 05:17 UTC** — coffee (grace-mar) ok=true mode=work-start cursor_model=unknown model_tier=unknown
+- **2026-04-26 05:21 UTC** — dream (grace-mar) ok=false mode=default cursor_model=unknown model_tier=unknown phase=both integrity=fail governance=pass mem_changed=false reviewable=1 contradictions=0 civmem_echo_count=0 civmem_suppressed=true handoff_written=true
+- **2026-04-26 13:11 UTC** — coffee (grace-mar) ok=true mode=work-start cursor_model=unknown model_tier=unknown
+- **2026-04-26 13:21 UTC** — coffee_pick (grace-mar) ok=true cursor_model=unknown model_tier=unknown picked=D conductor=toscanini
+- **2026-04-26 13:28 UTC** — coffee_pick (grace-mar) ok=true cursor_model=unknown model_tier=unknown picked=D conductor=kleiber

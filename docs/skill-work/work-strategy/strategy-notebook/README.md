@@ -1,6 +1,11 @@
 # Strategy notebook
+<!-- word_count: 1347 -->
 
 **Discoverability:** The same tree is linked from **`users/grace-mar/SELF-LIBRARY/strategy-notebook`** (repo-relative symlink) for agents and tools that prioritize the companion tree. **LIB:** [LIB-0153](../../../../users/grace-mar/self-library.md#operator-analytical-books) in [`self-library.md`](../../../../users/grace-mar/self-library.md) (Operator analytical books).
+
+## Word counts (script-maintained)
+
+Many notebook markdown files carry a **`word_count: <integer>`** field in YAML front matter, or **`<!-- word_count: <integer> -->`** as an HTML comment after the first heading when the file has no front matter. This is **approximate, deterministic, and maintained by** `python3 scripts/strategy/update_strategy_notebook_word_counts.py` — for operator navigation and size awareness only; it is **not** editorial or analytical authority. **Do not hand-edit** the value. After large notebook edits, run the script from repo root; **`--check`** verifies counts (CI-friendly); **`--dry-run`** lists would-be updates. Large captures under **`raw-input/YYYY-MM-DD/`** are intentionally skipped.
 
 **Optional session wrapper (derived, does not auto-edit this tree):** [STRATEGY-RUN-OPERATOR.md](../STRATEGY-RUN-OPERATOR.md) — `run_id` + `state.json` under `artifacts/`; see also [STRATEGY-NOTEBOOK-TRACE-CONTRACT.md](STRATEGY-NOTEBOOK-TRACE-CONTRACT.md) (per-script JSONL).
 
@@ -42,6 +47,7 @@ The **primary written unit** of [work-strategy](../README.md) is a **`strategy-p
 - **EOD MCQ protocol (v1):** [EOD-MCQ-PROTOCOL.md](EOD-MCQ-PROTOCOL.md) — optional **decision-first** menu stack (session → lanes → promotion → page shape → page action → `days.md` mode) before drafting; **coexists** with the minimal **page-shape-only** fork in architecture
 - **Spec:** [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md) — includes **Primary output**, **page-first** model, **Condense-to-target** (**Fast** = tiers A→D; **Full** = summarize-and-condense + tiers), **condense checklist**, **Daily synthesis**, and **Accumulation and evolution** (persistent frontier / checkpointed loop)
 - **Synthesis (systematic entry):** [SYNTHESIS-OPERATING-MODEL.md](SYNTHESIS-OPERATING-MODEL.md) — five-level stack (L0–L4), session types A–D, section router, minds defaults (tacet / solo / duet / tutti), pre/post checklists; points to architecture for mechanics
+- **Conductor improvement loop (optional but optimal for recursive stance):** [CONDUCTOR-IMPROVEMENT-LOOP.md](CONDUCTOR-IMPROVEMENT-LOOP.md) — map `coffee_pick` + Conductor to `days.md` / `strategy-page`, falsify line, promotion ladder; [CONDUCTOR-CLOSE-TEMPLATE.md](CONDUCTOR-CLOSE-TEMPLATE.md) for paste
 - **Ensemble metaphor:** [STRATEGY-NOTEBOOK-ARCHITECTURE.md § Ensemble metaphor](STRATEGY-NOTEBOOK-ARCHITECTURE.md#ensemble-metaphor-chamber-group-gloss) — score, parts, conductor, dissonance (chamber-group gloss under month **Polyphony**)
 - **Cursor:** Say **`strategy`** to run the strategy pass — [`.cursor/skills/skill-strategy/SKILL.md`](../../../../.cursor/skills/skill-strategy/SKILL.md)
 - **Dashboard:** [STATUS.md](STATUS.md)

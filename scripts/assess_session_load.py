@@ -4,7 +4,7 @@ Session load assessment — aggregate cadence, gate, capture gap, and dream
 quality signals into a cognitive load level for the operator.
 
 Designed to annotate the fixed coffee menu with per-option cost hints and a
-recommended pick (A / B / C only — not D1–D5 / E).
+recommended pick (A / B / C only — not D / E).
 
 Exposes assess_load() for import by operator_coffee.py.
 
@@ -221,11 +221,13 @@ def _compute_option_weights(
         "A": {"cost": "moderate", "note": "Build — work-dev + skills"},
         "B": {"cost": "light", "note": "Steward — gate / template / integrity / git"},
         "C": {"cost": "light", "note": "Strategy — daily brief + tri-frame"},
-        "D1": {"cost": "moderate", "note": "Conductor — Toscanini (precision)"},
-        "D2": {"cost": "moderate", "note": "Conductor — Furtwangler (flow)"},
-        "D3": {"cost": "moderate", "note": "Conductor — Bernstein (vitality)"},
-        "D4": {"cost": "moderate", "note": "Conductor — Karajan (elegance)"},
-        "D5": {"cost": "moderate", "note": "Conductor — Kleiber (selectivity)"},
+        "D": {
+            "cost": "moderate",
+            "note": (
+                "Conductor — Toscanini / Furtwängler / Karajan / Kleiber / Bernstein "
+                "(D or name prefix; bare D continues last pick)"
+            ),
+        },
         "E": {"cost": "moderate", "note": "System choice — cici / dev / jiang / rome slice"},
     }
 
@@ -313,16 +315,12 @@ def format_annotated_menu(result: dict) -> str:
         "A": "Build",
         "B": "Steward",
         "C": "Strategy (daily brief)",
-        "D1": "Conductor — Toscanini",
-        "D2": "Conductor — Furtwangler",
-        "D3": "Conductor — Bernstein",
-        "D4": "Conductor — Karajan",
-        "D5": "Conductor — Kleiber",
+        "D": "Conductor (Toscanini / Furtwängler / Karajan / Kleiber / Bernstein)",
         "E": "System choice",
     }
 
     lines = []
-    for letter in ("A", "B", "C", "D1", "D2", "D3", "D4", "D5", "E"):
+    for letter in ("A", "B", "C", "D", "E"):
         w = weights.get(letter, {"cost": "?", "note": ""})
         label = labels[letter]
         tag = f"({w['cost']})"

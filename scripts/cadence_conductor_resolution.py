@@ -1,29 +1,26 @@
 #!/usr/bin/env python3
 """
-Resolve coffee-conductor helpers for the fixed **D1–D5** menu.
+Resolve coffee-conductor helpers for the **single D — Conductor** menu line.
+
+The Step 2 menu uses one **D**; the same resolution applies when the operator
+invokes **D** / a name fragment **without** a full **coffee** session (see
+``.cursor/skills/coffee/SKILL.md`` § *Conductor only*). The five masters are
+disambiguated by the **Conductor MCQ** letters **A.–E.**, by ``conductor=`` (cadence log), by **last pick** (bare **D**), or by **name prefix** after **D** in chat. Use ``format_conductor_mcq_block`` / ``build_conductor_mcq_for_user`` for the five selectable rows + continuity.
+
+Legacy ``D1``..``D5`` in old logs are still recognized.
 
 Pure functions over event dicts shaped like ``audit_cadence_rhythm.parse_events()``
 output: ``{"dt", "kind", "user", "line", "kv"}``.
-
-The menu letters are now stable:
-
-- ``D1`` → Toscanini
-- ``D2`` → Furtwangler
-- ``D3`` → Bernstein
-- ``D4`` → Karajan
-- ``D5`` → Kleiber
 
 This module still helps with two advisory questions:
 
 1. Which conductor was picked most recently on disk? (continuity)
 2. Which conductor does the system recommend from dream + load signals? (recommendation)
-
-Those helpers may be mentioned in prose around the menu, but they no longer determine the
-lettering itself.
 """
 
 from __future__ import annotations
 
+import unicodedata
 from typing import Any
 
 MENU_PICK_TO_CONDUCTOR = {
@@ -33,6 +30,30 @@ MENU_PICK_TO_CONDUCTOR = {
     "D4": "karajan",
     "D5": "kleiber",
 }
+# Display order in coffee menu text (Toscanini / Furtwängler / Karajan / Kleiber / Bernstein)
+_CONDUCTOR_MENU: list[tuple[str, str]] = [
+    ("Toscanini", "toscanini"),
+    ("Furtwängler", "furtwangler"),
+    ("Karajan", "karajan"),
+    ("Kleiber", "kleiber"),
+    ("Bernstein", "bernstein"),
+]
+KNOWN_CONDUCTOR_SLUGS = frozenset(s for _n, s in _CONDUCTOR_MENU)
+
+# Conductor MCQ: one row of **A**–**E** (not main `coffee` menu letters). Fixed order =
+# menu order (Toscanini … Bernstein).
+_CONDUCTOR_MCQ_ROWS: tuple[tuple[str, str, str, str], ...] = (
+    ("A", "toscanini", "Toscanini", "Precision — verify claims and seams; cut flourish that outruns the material."),
+    ("B", "furtwangler", "Furtwängler", "Flow — hold tension open; listen for the line under the line before closing."),
+    ("C", "karajan", "Karajan", "Elegance — long-arc balance and proportion; remove what blurs the whole."),
+    ("D", "kleiber", "Kleiber", "Selectivity — one or two deep hotspots; refuse the rest explicitly this round."),
+    ("E", "bernstein", "Bernstein", "Vitality — stakes, pulse, and language that can carry heat live."),
+)
+CONDUCTOR_SUBMENU_LETTER_TO_SLUG: dict[str, str] = {
+    letter: slug for letter, slug, _name, _attr in _CONDUCTOR_MCQ_ROWS
+}
+
+# Legacy: D1..D5 → different letters; new logs use picked=D with conductor=.
 CONDUCTOR_TO_MENU_PICK = {slug: pick for pick, slug in MENU_PICK_TO_CONDUCTOR.items()}
 
 # Legacy logs may still contain ``picked=D`` from the older single-line conductor menu.
@@ -48,13 +69,166 @@ def normalize_conductor_slug(value: str) -> str:
 
 
 def conductor_slug_for_menu_pick(pick: str) -> str | None:
-    """Return conductor slug for ``D1``..``D5``; unknown picks → ``None``."""
-    return MENU_PICK_TO_CONDUCTOR.get(str(pick).strip().upper())
+    """Map legacy ``D1``..``D5`` to slug. Bare ``D`` has no slug without ``conductor=``."""
+    p = str(pick).strip().upper()
+    if p == "D":
+        return None
+    return MENU_PICK_TO_CONDUCTOR.get(p)
+
+
+def _strip_accents(s: str) -> str:
+    return "".join(
+        c
+        for c in unicodedata.normalize("NFD", s)
+        if unicodedata.category(c) != "Mn"
+    )
+
+
+def conductor_submenu_letter_to_slug(letter: str) -> str | None:
+    """Map **Conductor MCQ** letter **A**–**E** to slug. Not main-menu **A**–**E**."""
+    k = str(letter).strip().upper()[:1]
+    return CONDUCTOR_SUBMENU_LETTER_TO_SLUG.get(k)
+
+
+def _display_name_for_slug(slug: str) -> str:
+    for _L, s, display, _attr in _CONDUCTOR_MCQ_ROWS:
+        if s == normalize_conductor_slug(slug):
+            return display
+    return slug
+
+
+def _continuity_kicker(
+    slug: str,
+    *,
+    last_slug: str | None,
+    recommended_slug: str | None,
+) -> str:
+    """One short clause for the MCQ line (continuity + advisory)."""
+    s = normalize_conductor_slug(slug)
+    last = normalize_conductor_slug(last_slug) if last_slug else None
+    rec = normalize_conductor_slug(recommended_slug) if recommended_slug else None
+    if last and last == s:
+        return "Continuity: same card as your last `coffee_pick`."
+    if last and last != s and rec == s:
+        return (
+            f"Continuity: pivot from **{_display_name_for_slug(last)}**; "
+            "advisory (dream/load) also leans here today."
+        )
+    if last and last != s:
+        return f"Continuity: pivot from last **{_display_name_for_slug(last)}** toward this mode."
+    if rec == s:
+        return "Advisory: dream / session-load tips this card today (no prior pick match)."
+    return "Open entry: no prior conductor in this chain."
+
+
+def format_conductor_mcq_block(
+    *,
+    last_slug: str | None = None,
+    focus_text: str | None = None,
+    recommended_slug: str | None = None,
+) -> str:
+    """Return the 5-line **Conductor MCQ** (markdown) with attribute + continuity kickers."""
+    lines: list[str] = [
+        "**Conductor MCQ** — letters **A**–**E** name the five masters (*not* the main Build/Steward/Strategy line). "
+        "Reply with one letter, a name prefix (`klei`, `tos`, …), or bare main-menu **D** to continue last.",
+    ]
+    if focus_text and str(focus_text).strip():
+        lines.append(
+            f"*Last cadence `focus` / `arc`:* **{str(focus_text).strip()}**"
+        )
+    for letter, slug, display, attr in _CONDUCTOR_MCQ_ROWS:
+        kick = _continuity_kicker(
+            slug,
+            last_slug=last_slug,
+            recommended_slug=recommended_slug,
+        )
+        lines.append(f"**{letter}.** **{display}** — {attr} *({kick})*")
+    return "\n".join(lines)
+
+
+def build_conductor_mcq_for_user(user_id: str) -> str:
+    """Load cadence (and optional dream + session load) and format the Conductor MCQ."""
+    import json
+    from pathlib import Path
+
+    try:
+        from audit_cadence_rhythm import parse_events
+    except ImportError:
+        from scripts.audit_cadence_rhythm import parse_events
+
+    events = parse_events(user_id)
+    last = last_logged_conductor(events)
+    focus = focus_for_last_conductor(events)
+
+    dream: dict[str, Any] | None = None
+    try:
+        p = Path(__file__).resolve().parent.parent / "users" / user_id / "last-dream.json"
+        if p.is_file():
+            dream = json.loads(p.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError, TypeError):
+        dream = None
+
+    try:
+        from assess_session_load import assess_load
+    except ImportError:
+        from scripts.assess_session_load import assess_load
+
+    assess = assess_load(user_id)
+    rec_slug = system_recommended_conductor(dream=dream, assess=assess)
+
+    return format_conductor_mcq_block(
+        last_slug=last,
+        focus_text=focus,
+        recommended_slug=rec_slug,
+    )
+
+
+def resolve_d_conductor(
+    name_fragment: str | None,
+    *,
+    last_conductor_slug: str | None = None,
+) -> tuple[str | None, str | None]:
+    """Resolve **D** in operator chat: empty fragment → last logged conductor; else prefix match on slug or name.
+
+    A **single** character **A**–**E** is the Conductor MCQ row (not main-menu letters).
+    Returns ``(slug, err)`` with ``err`` in ``(None, "no_prior", "no_match", "ambiguous")``.
+    """
+    frag = (name_fragment or "").strip()
+    if not frag:
+        if last_conductor_slug and str(last_conductor_slug).strip():
+            return normalize_conductor_slug(str(last_conductor_slug)), None
+        return None, "no_prior"
+    if len(frag) == 1 and frag.upper() in CONDUCTOR_SUBMENU_LETTER_TO_SLUG:
+        return CONDUCTOR_SUBMENU_LETTER_TO_SLUG[frag.upper()], None
+    frag_l = frag.lower()
+    fstrip = _strip_accents(frag).lower()
+    matches: list[str] = []
+    for display, slug in _CONDUCTOR_MENU:
+        s = normalize_conductor_slug(slug)
+        dnorm = _strip_accents(display).lower()
+        dcompact = dnorm.replace(" ", "")
+        if (
+            s.startswith(frag_l)
+            or s.startswith(frag_l.replace("w", "v"))
+            or dcompact.startswith(frag_l)
+            or dnorm.startswith(frag_l)
+            or (fstrip and s.startswith(fstrip))
+        ):
+            if s not in matches:
+                matches.append(s)
+    if len(matches) == 1:
+        return matches[0], None
+    if not matches:
+        return None, "no_match"
+    return None, "ambiguous"
 
 
 def menu_pick_for_conductor_slug(slug: str) -> str | None:
-    """Return menu pick for a conductor slug, normalizing legacy ``a+b`` stacks."""
-    return CONDUCTOR_TO_MENU_PICK.get(normalize_conductor_slug(slug))
+    """Return ``D`` for any known conductor slug (new log convention); else ``None``."""
+    s = normalize_conductor_slug(slug)
+    if s in KNOWN_CONDUCTOR_SLUGS:
+        return "D"
+    return None
 
 
 def last_coffee_pick_conductor_event(events: list[dict[str, Any]]) -> dict[str, Any] | None:

@@ -16,6 +16,11 @@ Usage:
       --kv refs=abc1234
   python3 scripts/log_cadence_event.py --kind harvest -u demo --ok \
       --mode default --kv packet=chat
+  python3 scripts/log_cadence_event.py --kind coffee_conductor_outcome -u grace-mar --ok \
+      --kv verdict=watch notebook_ref=chapters/2026-04/days.md
+
+**coffee_conductor_outcome (optional kvs, documented in CONDUCTOR-IMPROVEMENT-LOOP):**
+`verdict=`, and optionally `notebook_ref=`, `falsify=`, `conductor=` (quote values with spaces).
 
 **Agent surface (audit parity with bridge/harvest packets):** every line includes
 ``cursor_model=…`` and ``model_tier=…`` (frontier / fast / unknown).
@@ -49,7 +54,7 @@ HEADER = (
     "> handoff artifacts or `session-transcript.md`.\n"
     ">\n"
     "> **Format:** `- **YYYY-MM-DD HH:MM UTC** — kind (user) key=value …` (machine-audit line).\n"
-    "> **coffee_conductor_outcome** — optional closure after a conductor run (**verdict=** e.g. watch / promote / shelf).\n"
+    "> **coffee_conductor_outcome** — optional closure after a conductor run (**verdict=** e.g. watch / promote / shelf / no_action); optional **notebook_ref=**, **falsify=**, **conductor=** (see strategy-notebook **CONDUCTOR-IMPROVEMENT-LOOP** § 3).\n"
     "> **coffee_pick** may include optional **focus=** or **arc=** (named work object).\n"
     "> **Companion-facing:** Skills read this file and speak **Recent rhythm** in chat — plain\n"
     "> language, concrete specifics, no clock times in that prose. See [work-cadence README](README.md).\n"

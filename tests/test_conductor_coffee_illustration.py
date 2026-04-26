@@ -1,9 +1,8 @@
 """
-Illustrations for coffee conductor helpers under the fixed **D1–D5** menu.
+Illustrations for coffee conductor helpers under the **single D — Conductor** menu.
 
-The menu letters are stable, but helper signals still matter: the log can show which
-conductor was picked most recently, and dream/load can still point elsewhere
-(e.g. **Bernstein** when ``recommended: C``).
+Helper signals still matter: the log can show which conductor was picked most recently,
+and dream/load can still point elsewhere (e.g. **Bernstein** when ``recommended: C``).
 """
 
 from __future__ import annotations
@@ -11,16 +10,20 @@ from __future__ import annotations
 from datetime import datetime, timezone
 from scripts.audit_cadence_rhythm import parse_events
 from scripts.cadence_conductor_resolution import (
+    build_conductor_mcq_for_user,
     conductor_for_d1_continuation,
     conductor_slug_for_menu_pick,
+    conductor_submenu_letter_to_slug,
     d2_conductor_from_assess_load,
     d2_conductor_from_menu_recommendation,
     d2_conductor_resolved,
     focus_for_d1_continuation,
+    format_conductor_mcq_block,
     last_coffee_pick_conductor_event,
     last_logged_conductor,
     menu_pick_for_conductor_slug,
     normalize_conductor_slug,
+    resolve_d_conductor,
     system_recommended_menu_pick,
 )
 
@@ -55,15 +58,54 @@ def test_illustration_menu_exposes_five_named_conductors_directly():
     assert conductor_slug_for_menu_pick("D3") == "bernstein"
     assert conductor_slug_for_menu_pick("D4") == "karajan"
     assert conductor_slug_for_menu_pick("D5") == "kleiber"
+    assert conductor_slug_for_menu_pick("D") is None
 
 
 def test_illustration_menu_round_trip_is_stable():
-    assert menu_pick_for_conductor_slug("toscanini") == "D1"
-    assert menu_pick_for_conductor_slug("furtwangler") == "D2"
-    assert menu_pick_for_conductor_slug("bernstein") == "D3"
-    assert menu_pick_for_conductor_slug("karajan") == "D4"
-    assert menu_pick_for_conductor_slug("kleiber") == "D5"
-    assert menu_pick_for_conductor_slug("kleiber+toscanini") == "D5"
+    for slug in ("toscanini", "furtwangler", "bernstein", "karajan", "kleiber"):
+        assert menu_pick_for_conductor_slug(slug) == "D"
+    assert menu_pick_for_conductor_slug("kleiber+toscanini") == "D"
+
+
+def test_resolve_d_bare_uses_last():
+    slug, err = resolve_d_conductor("", last_conductor_slug="bernstein")
+    assert err is None and slug == "bernstein"
+    _s, err2 = resolve_d_conductor("", last_conductor_slug=None)
+    assert err2 == "no_prior"
+
+
+def test_resolve_d_prefix():
+    assert resolve_d_conductor("bern", last_conductor_slug=None) == ("bernstein", None)
+    assert resolve_d_conductor("kar", last_conductor_slug=None) == ("karajan", None)
+    assert resolve_d_conductor("k", last_conductor_slug=None)[1] == "ambiguous"
+
+
+def test_resolve_d_mcq_single_letter():
+    """Conductor MCQ **A**–**E** override single-char prefix rules (e.g. B = Furtwängler)."""
+    assert resolve_d_conductor("B", last_conductor_slug=None) == ("furtwangler", None)
+    assert resolve_d_conductor("b", last_conductor_slug=None) == ("furtwangler", None)
+    assert conductor_submenu_letter_to_slug("D") == "kleiber"
+    assert conductor_submenu_letter_to_slug("x") is None
+
+
+def test_format_conductor_mcq_continuity_and_lines():
+    text = format_conductor_mcq_block(
+        last_slug="kleiber",
+        focus_text="iran/hormuz",
+        recommended_slug="karajan",
+    )
+    assert "**A.** **Toscanini**" in text
+    assert "**D.** **Kleiber**" in text
+    assert "iran/hormuz" in text
+    assert "pivot from last **Kleiber**" in text or "pivot from" in text
+    assert text.count("**A.**") == 1
+    assert text.count("**E.**") == 1
+
+
+def test_build_conductor_mcq_for_user_runs():
+    s = build_conductor_mcq_for_user("grace-mar")
+    assert "Conductor MCQ" in s
+    assert "**E.** **Bernstein**" in s
 
 
 def test_illustration_three_kleiber_repetition():
@@ -102,7 +144,7 @@ def test_illustration_orthogonal_d1_kleiber_d2_bernstein():
         assess={"recommended": "C", "line": "Session load: … (recommended: C)"},
     )
     assert d2 == "bernstein"
-    assert system_recommended_menu_pick(assess={"recommended": "C"}) == "D3"
+    assert system_recommended_menu_pick(assess={"recommended": "C"}) == "D"
 
 
 def test_illustration_focus_tracks_like_conductor():
@@ -118,7 +160,7 @@ def test_illustration_dream_worktree_seam_overrides_assess_b():
     assess = {"recommended": "B"}
     assert d2_conductor_resolved(dream=dream, assess=assess) == "toscanini"
     assert d2_conductor_from_assess_load(assess) == "kleiber"
-    assert system_recommended_menu_pick(dream=dream, assess=assess) == "D1"
+    assert system_recommended_menu_pick(dream=dream, assess=assess) == "D"
 
 
 def test_illustration_dream_tomorrow_inherits_kleiber():
@@ -134,7 +176,7 @@ def test_illustration_dream_tomorrow_inherits_kleiber():
 def test_illustration_dream_long_arc_hint_prefers_karajan():
     dream = {"summary": "Shape the month arc and rebalance the meta architecture."}
     assert d2_conductor_resolved(dream=dream, assess={"recommended": "C"}) == "karajan"
-    assert system_recommended_menu_pick(dream=dream, assess={"recommended": "C"}) == "D4"
+    assert system_recommended_menu_pick(dream=dream, assess={"recommended": "C"}) == "D"
 
 
 def test_illustration_outcome_parsed_from_snippet(tmp_path):

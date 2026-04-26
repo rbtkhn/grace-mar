@@ -4,7 +4,7 @@
 
 **Default path (fast start):** [DEFAULT-PATH.md](DEFAULT-PATH.md) — three moves for a normal pass; everything else is optional. Start there if the full skill file feels heavy.
 
-**Full sequence (SSOT):** [STRATEGY-NOTEBOOK-ARCHITECTURE.md — Default operating path](strategy-notebook/STRATEGY-NOTEBOOK-ARCHITECTURE.md#default-operating-path-ssot) — inbox-first numbered path (weave, optional escalation markers, STRATEGY promotion when stable, no Record).
+**Full sequence (SSOT):** [STRATEGY-NOTEBOOK-ARCHITECTURE.md — Default operating path](strategy-notebook/STRATEGY-NOTEBOOK-ARCHITECTURE.md#default-operating-path-ssot) — inbox-first numbered path (weave, optional escalation markers, STRATEGY promotion when stable, no Record). **Conductor / cadence → durable notebook anchor:** [CONDUCTOR-IMPROVEMENT-LOOP.md](strategy-notebook/CONDUCTOR-IMPROVEMENT-LOOP.md) (optional close template: [CONDUCTOR-CLOSE-TEMPLATE.md](strategy-notebook/CONDUCTOR-CLOSE-TEMPLATE.md)).
 
 **Strategy run wrapper (optional):** [STRATEGY-RUN-OPERATOR.md](STRATEGY-RUN-OPERATOR.md) — session-scoped `run_id`, derived `state.json` + receipts under `artifacts/`; does not replace or auto-edit notebook files. Shared vocabulary: [run-contract.md](../../run-contract.md).
 

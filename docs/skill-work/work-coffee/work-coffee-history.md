@@ -59,6 +59,13 @@ This log is WORK-only. It is not the Record, not MEMORY, and not a substitute fo
 
 ## 2026-04-23 — coffee **A–D2–E** (six lines: **D1** / **D2** Conductor on main menu; no conductor submenu)
 
+- Two Conductor lines on the main menu; **superseded 2026-04-25** by a single **D** line (entry below). A later pass expanded to **D1–D5** (five lines) before consolidation.
+
+## 2026-04-25 — **one** **D — Conductor** (five names, prefix match, bare **D** = continue last)
+
+- **Menu D** is one line: **Toscanini / Furtwängler / Karajan / Kleiber / Bernstein**; operator types **D** + a name prefix, or bare **D** to continue the last `coffee_pick` conductor. **`coffee_pick`** uses **`picked=D` `conductor=<slug>`**; legacy **`D1`..`D5`** still parse from old logs.
+- **`assess_session_load.py`:** one **D** key in `option_weights` and `format_annotated_menu` (session-load recommendation remains **A–C** only).
+
 ## 2026-04-11 — coffee **A–E** (five options); no micro-hints line
 
 - **Canonical menu:** **A** Build, **B** Steward, **C** Strategy (daily brief), **D** Write, **E** (system choice — one assistant-filled line per session). **Removed** the separate **micro-hints** row under the menu; **removed** dedicated **F/G** letters (Xavier / Dev next fold into **E** or Step 1 lane context).

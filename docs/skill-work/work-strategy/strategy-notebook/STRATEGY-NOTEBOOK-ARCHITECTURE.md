@@ -1,4 +1,5 @@
 # Strategy notebook — architecture
+<!-- word_count: 11657 -->
 
 **Project:** Operator strategy notebook (grace-mar work-strategy)
 
@@ -58,7 +59,7 @@ Older grep/git and JSONL fields may keep `fold` (e.g. `fold_kind` in [FOLD-LEARN
 | Layer | Location in file | Who maintains | Purpose |
 |-------|------------------|----------------|---------|
 | **Journal layer — Narrative** | **Above** `<!-- strategy-expert-thread:start -->` | Operator / assistant | **Page-composed months (default):** each **`## YYYY-MM`** segment is **composed from** that month’s thread-embedded **`strategy-page`** blocks (`date=` in that `YYYY-MM`) — running prose, **blockquotes** of expert lines lifted from those pages, and **bookends** (short **lede** after the month heading; short **closer** after the last page in the month: synthesis, **Open** pins, **verify** pins). **Judgment** remains in **`### Reflection` / `### Foresight`** on each page; the month layer **aggregates** without replacing pages as the locus of analysis. **Durable bulk verbatim** for the expert is **[`raw-input/`](raw-input/README.md)** (and the pages); the **7-day** **`transcript.md`** and **machine layer** are **triage/echo** — the journal is **not** a long paraphrase of the rolling transcript or a second full essay parallel to the page set. **Verbatim-forward** still applies to **quote-led** months: pull quotes **from `### Chronicle` (or in-page `>` markers) inside those `strategy-page` fences** by default, not by re-mining **`transcript.md`** for month bookends (see [strategy-expert-template.md](strategy-expert-template.md) § Thread — quote selection rubric). Heading **`## Journal layer — Narrative (operator)`**; dated **`## YYYY-MM`** segments. The **`thread`** script **never overwrites** this layer. If empty, a one-line stub is fine. |
-| **Machine layer — Extraction** | **Between** `<!-- strategy-expert-thread:start -->` and `<!-- strategy-expert-thread:end -->` | `strategy_expert_corpus.py` on each **`thread`** run | **`## Machine layer — Extraction (script-maintained)`** with **`### Recent transcript material`**, **`### Raw-input pointers (inbox)`** (when the inbox links **`raw-input/…`** for this expert’s **`thread:`** lane), **`### Page references`**, and optional **Legacy file-index rows** if `knot-index.yaml` still lists rows. Overwritten each run. |
+| **Machine layer — Extraction** | **Between** `<!-- strategy-expert-thread:start -->` and `<!-- strategy-expert-thread:end -->` | `strategy_expert_corpus.py` on each **`thread`** run | **`## Machine layer — Extraction (script-maintained)`** with **`### Recent transcript material`**, **`### Recent raw-input (lane)`** (on-disk + inbox **`raw-input/…`**, de-duped by path; disk first), **`### Page references`**, and optional **Legacy file-index rows** if `knot-index.yaml` still lists rows. Overwritten each run. |
 | **Optional ledger** | **After** `<!-- strategy-expert-thread:end -->` | Operator or future tooling | Optional fenced **`thread-ledger`** YAML/JSON — **not** touched by the default extractor unless a future script is added. |
 
 **2026 month segments (operator index — inside the journal layer):** **`Segment 1`** = **January 2026** (`## 2026-01`); **`Segment 2`** = **February 2026** (`## 2026-02`); **`Segment 3`** = **March 2026** (`## 2026-03`); **`Segment 4`** = **April 2026** (`## 2026-04`, **ongoing**). Later months continue as **`## YYYY-MM`** headings in order. These **month segments** are **not** the machine layer.
@@ -694,6 +695,7 @@ Recipes: [`compiled-views/recipes/expert-polyphony-synthesis-five-conductors.md`
 
 ## Related
 
+- **Conductor → notebook improvement loop** — [CONDUCTOR-IMPROVEMENT-LOOP.md](CONDUCTOR-IMPROVEMENT-LOOP.md) (stance from `coffee` **D** / `coffee_pick` to `days.md` / pages, falsify line, promotion ladder, gate only for policy); paste block: [CONDUCTOR-CLOSE-TEMPLATE.md](CONDUCTOR-CLOSE-TEMPLATE.md).
 - **Strategy session helpers** — compact index in [work-strategy README](../README.md#strategy-session-helpers-skill-strategy): Grok daily-brief layer, Trump–religion–papacy arc, Rome–Persia legitimacy signal check, narrative-escalation stub, [skill-strategy SKILL](../../../../.cursor/skills/skill-strategy/SKILL.md).
 
 ## Boundaries
