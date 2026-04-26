@@ -14,77 +14,14 @@ from datetime import date, datetime
 from pathlib import Path
 from typing import Any
 
-REPO_ROOT = Path(__file__).resolve().parent.parent
-NOTES_DIR = REPO_ROOT / "docs" / "skill-work" / "work-dev" / "compound-notes"
+_SCRIPT_DIR = Path(__file__).resolve().parent
+if str(_SCRIPT_DIR) not in sys.path:
+    sys.path.insert(0, str(_SCRIPT_DIR))
+
+from work_dev.compound_notes import NOTES_DIR, REPO_ROOT, parse_compound_note_record
+
 OUTPUT = REPO_ROOT / "artifacts" / "work-dev-compound-refresh.md"
 STALE_DAYS = 90
-
-
-def _parse_front_matter(text: str) -> dict[str, Any]:
-    """Parse first --- ... --- block. Handles generated notes; no PyYAML."""
-    if not text.lstrip().startswith("---"):
-        return {}
-    first = text.find("\n", text.index("---")) + 1
-    end_idx = text.find("\n---\n", first)
-    if end_idx == -1:
-        return {}
-    block = text[first:end_idx]
-    data: dict[str, Any] = {}
-    lines = block.splitlines()
-    i = 0
-    while i < len(lines):
-        line = lines[i]
-        if ":" not in line or not line.split(":", 1)[0].strip():
-            i += 1
-            continue
-        key, rest = line.split(":", 1)
-        key = key.strip()
-        val = rest.strip()
-        if key == "affected_files" and not val:
-            j = i + 1
-            acc: list[str] = []
-            while j < len(lines) and lines[j].lstrip().startswith("- "):
-                raw = lines[j].lstrip()
-                if raw.startswith("- "):
-                    acc.append(raw[2:].strip().strip("'\""))
-                j += 1
-            i = j
-            data[key] = acc
-            continue
-        if key == "affected_files" and val == "[]":
-            data[key] = []
-        elif val == "[]":
-            data[key] = []
-        elif val == "true" or val == "false":
-            data[key] = val == "true"
-        else:
-            s = val
-            if len(s) >= 2 and ((s[0] == s[-1] == '"') or (s[0] == s[-1] == "'")):
-                s = s[1:-1]
-            data[key] = s
-        i += 1
-    return data
-
-
-def _parse_file(path: Path) -> dict[str, Any]:
-    text = path.read_text(encoding="utf-8", errors="replace")
-    meta = _parse_front_matter(text)
-    g = meta.get("gate_candidate", False)
-    if isinstance(g, str):
-        gate = g.lower() in ("true", "1", "yes")
-    else:
-        gate = bool(g)
-    return {
-        "path": str(path.relative_to(REPO_ROOT)),
-        "name": path.name,
-        "title": str(meta.get("title", path.stem)).strip("'\"") or path.stem,
-        "date": str(meta.get("date", "")),
-        "problem_type": str(meta.get("problem_type", "")).strip("'\""),
-        "reusable_pattern": str(meta.get("reusable_pattern", "")).strip("'\""),
-        "self_catching_test": str(meta.get("self_catching_test", "unknown")).strip("'\""),
-        "gate_candidate": gate,
-        "record_status": str(meta.get("record_status", "")).strip("'\""),
-    }
 
 
 def _parse_date_ymd(s: str) -> date | None:
@@ -130,7 +67,7 @@ def run_report() -> str:
         lines.append("")
         return "\n".join(lines) + "\n"
 
-    records = [_parse_file(f) for f in files]
+    records = [parse_compound_note_record(f, REPO_ROOT) for f in files]
     n = len(records)
     lines.append("## Summary")
     lines.append("")

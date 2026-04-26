@@ -42,6 +42,7 @@ Related: [claim-proof-standard.md](claim-proof-standard.md) (proof bar for “im
 | `compound-notes/*.md` | Append-only or additive notes (operator may archive/delete; not Record). |
 | `python3 scripts/new_work_dev_compound_note.py` | Create a new compound note from the template. |
 | `python3 scripts/work_dev_compound_refresh.py` | Derived report on existing notes; **regenerable**; see `artifacts/work-dev-compound-refresh.md`. |
+| `python3 scripts/export_work_dev_compound_gate_candidates.py` | Full-text export of `gate_candidate` notes for review; see [compound-gate-export.md](compound-gate-export.md) and `artifacts/work-dev-compound-gate-candidates.md`. |
 
 ## Non-goals
 

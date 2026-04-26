@@ -74,6 +74,7 @@ Use this order when actively working on the territory:
 | **[known-gaps.md](known-gaps.md)** | Work-dev small-seams backlog: concise inefficiencies, partials, and hardening follow-ups. |
 | **[three-compounding-loops.md](three-compounding-loops.md)** | Record vs WORK vs CI — how compounding works in each loop and how they must interact (gate, no draft-as-truth). |
 | **[compound-loop.md](compound-loop.md)** | **Compound work loop** — Plan → Execute → Review → Compound → Gate for coding-agent work; compound notes are WORK-only; gate is the only path toward Record candidates. |
+| **[compound-gate-export.md](compound-gate-export.md)** | **Gate candidate export** — read-only `artifacts/work-dev-compound-gate-candidates.md` from `gate_candidate` notes; not approval; `python3 scripts/export_work_dev_compound_gate_candidates.py`. |
 | **[provenance-checklist.md](provenance-checklist.md)** | Repeatable verification path for export, handback, and audit integrity. |
 | **[record-diff-queue.md](../../record-diff-queue.md)** | **Record Diff Queue** (GAP-011): unified review surface for pending governed-state changes; standardized diff cards (old/new/evidence/confidence/conflict/recommended action); template-portable renderer + instance gate adapter. |
 

@@ -1,1 +1,1 @@
-# work-dev operator scripts package (importable from repo scripts/).
+"""work-dev script helpers (stdlib; importable from scripts/)."""
