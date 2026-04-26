@@ -1,0 +1,161 @@
+version: 1
+generated_on: "2026-04-25"
+scope: "HNSRC-0201 through HNSRC-0225"
+method:
+  sources:
+    - "Google Books volumes API"
+    - "Trade-list cross-check (AbeBooks / Everyman omnibus titling)"
+  policy: "Attach as candidate metadata; merge into bookshelf-catalog.yaml only when confidence is high and edition match is clear."
+
+items:
+  - id: HNSRC-0201
+    title: Fathers and Children
+    author: Ivan Turgenev
+    candidate_year: 2011
+    candidate_publisher: "Everyman's Library"
+    candidate_isbn13: "9780307806628"
+    confidence: high
+    notes: "Also published 1991 Everyman 9780679405368; merged to 2011 reprint."
+  - id: HNSRC-0202
+    title: Three Novels
+    author: Jules Verne
+    candidate_year: 2013
+    candidate_publisher: "Everyman's Library"
+    candidate_isbn13: "9780307961488"
+    confidence: high
+    notes: "Spine/series title; same US omnibus as HNSRC-0203 (Journey / 20,000 Leagues / Around the World)."
+
+  - id: HNSRC-0203
+    title: Journey to the Centre of the Earth, Twenty Thousand Leagues Under the Sea, Around the World in Eighty Days
+    author: Jules Verne
+    candidate_year: 2013
+    candidate_publisher: "Everyman's Library"
+    candidate_isbn13: "9780307961488"
+    confidence: high
+    notes: "Same ISBN as HNSRC-0202; US Everyman; UK line also 9781841593517 (spelling/casing may differ on jacket)."
+
+  - id: HNSRC-0204
+    title: Typhoon and Other Stories
+    author: Joseph Conrad
+    candidate_year: 1991
+    candidate_publisher: "Everyman's Library"
+    candidate_isbn13: "9780679405474"
+    confidence: high
+  - id: HNSRC-0205
+    title: Lord Jim
+    author: Joseph Conrad
+    candidate_year: 1992
+    candidate_publisher: "Everyman's Library"
+    candidate_isbn13: "9780679405443"
+    confidence: high
+  - id: HNSRC-0206
+    title: Heart of Darkness
+    author: Joseph Conrad
+    candidate_year: 1993
+    candidate_publisher: "Everyman's Library"
+    candidate_isbn13: "9780679428015"
+    confidence: high
+  - id: HNSRC-0207
+    title: Victory
+    author: Joseph Conrad
+    candidate_year: 1998
+    candidate_publisher: "Everyman's Library"
+    candidate_isbn13: "9780375400476"
+    confidence: high
+  - id: HNSRC-0208
+    title: The Time Machine, The Invisible Man, The War of the Worlds
+    author: H. G. Wells
+    candidate_year: 2011
+    candidate_publisher: "Everyman's Library"
+    candidate_isbn13: "9780307806635"
+    confidence: high
+    notes: "2010 printing 9780307593849 same contents; picked 2011 to align with other 03078066x Everyman 2011 rows."
+  - id: HNSRC-0209
+    title: Kim
+    author: Rudyard Kipling
+    candidate_year: 1995
+    candidate_publisher: "Everyman's Library"
+    candidate_isbn13: "9780679443605"
+    confidence: high
+
+  - id: HNSRC-0210
+    title: White Nights
+    author: Fyodor Dostoevsky
+    confidence: low
+    notes: "Penguin Clothbound; not merged."
+  - id: HNSRC-0211
+    title: The Prince
+    author: Niccolò Machiavelli
+    confidence: low
+    notes: "Penguin Clothbound; not merged."
+  - id: HNSRC-0212
+    title: Utopia
+    author: Thomas More
+    confidence: low
+    notes: "Penguin Clothbound; not merged."
+  - id: HNSRC-0213
+    title: Essays and Aphorisms
+    author: Arthur Schopenhauer
+    confidence: low
+    notes: "Penguin Clothbound; not merged."
+  - id: HNSRC-0214
+    title: Beyond Good and Evil
+    author: Friedrich Nietzsche
+    confidence: low
+    notes: "Penguin Clothbound; not merged."
+  - id: HNSRC-0215
+    title: The Communist Manifesto
+    author: "Karl Marx & Friedrich Engels"
+    confidence: low
+    notes: "Penguin Clothbound; not merged."
+  - id: HNSRC-0216
+    title: Fear and Trembling
+    author: Søren Kierkegaard
+    confidence: low
+    notes: "Penguin Clothbound; not merged."
+  - id: HNSRC-0217
+    title: Civilization and Its Discontents
+    author: Sigmund Freud
+    confidence: low
+    notes: "Penguin Clothbound; not merged."
+
+  - id: HNSRC-0218
+    title: Babylon Revisited
+    author: F. Scott Fitzgerald
+    confidence: low
+    notes: "Penguin Little Black Classics; not merged (line-level ISBN unverified)."
+  - id: HNSRC-0219
+    title: The Lagoon
+    author: Joseph Conrad
+    confidence: low
+    notes: "Penguin Little Black Classics; not merged."
+  - id: HNSRC-0220
+    title: The Nutcracker
+    author: E. T. A. Hoffmann
+    confidence: low
+    notes: "Penguin Little Black Classics; not merged."
+  - id: HNSRC-0221
+    title: The Adventure of the Blue Carbuncle
+    author: Arthur Conan Doyle
+    confidence: low
+    notes: "Penguin Little Black Classics; not merged."
+  - id: HNSRC-0222
+    title: Of Mice and Men
+    author: John Steinbeck
+    confidence: low
+    notes: "Penguin Little Black Classics; not merged."
+  - id: HNSRC-0223
+    title: Lady Susan
+    author: Jane Austen
+    confidence: low
+    notes: "Penguin Little Black Classics; not merged."
+  - id: HNSRC-0224
+    title: Metamorphosis
+    author: Franz Kafka
+    confidence: low
+    notes: "Penguin Little Black Classics; not merged; catalog notes two copies on shelf."
+  - id: HNSRC-0225
+    title: The Queen of Spades
+    author: Alexander Pushkin
+    confidence: low
+    notes: "Penguin Little Black Classics; not merged."

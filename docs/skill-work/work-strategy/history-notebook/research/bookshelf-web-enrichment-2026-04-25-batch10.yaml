@@ -1,0 +1,184 @@
+version: 1
+generated_on: "2026-04-25"
+scope: "HNSRC-0226 through HNSRC-0250"
+method:
+  sources:
+    - "Google Books volumes API"
+    - "LOA.org / trade ISBN cross-check (Steinbeck 1942-1952, Melville LOA #24)"
+  policy: "Attach as candidate metadata; merge into bookshelf-catalog.yaml only when confidence is high and edition match is clear."
+
+items:
+  - id: HNSRC-0226
+    title: About Love
+    author: Anton Chekhov
+    confidence: low
+    notes: "Penguin Little Black Classics; not merged."
+
+  - id: HNSRC-0227
+    title: Novels and Stories 1920–1922
+    author: F. Scott Fitzgerald
+    candidate_year: 2000
+    candidate_publisher: "Library of America"
+    candidate_isbn13: "9781598532968"
+    confidence: high
+  - id: HNSRC-0228
+    title: "The Great Gatsby, All the Sad Young Men & Other Writings 1920–1926"
+    author: F. Scott Fitzgerald
+    candidate_year: 2022
+    candidate_publisher: "Library of America"
+    candidate_isbn13: "9781598537475"
+    confidence: high
+  - id: HNSRC-0229
+    title: A Tramp Abroad, Following the Equator, Other Travels
+    author: Mark Twain
+    candidate_year: 2010
+    candidate_publisher: "Library of America"
+    candidate_isbn13: "9781598530667"
+    confidence: high
+    notes: "GB sometimes mislabels LOA as National Geographic."
+  - id: HNSRC-0230
+    title: Historical Romances
+    author: Mark Twain
+    candidate_year: 1994
+    candidate_publisher: "Library of America"
+    candidate_isbn13: "9780940450820"
+    confidence: high
+  - id: HNSRC-0231
+    title: "Collected Tales, Sketches, Speeches, & Essays 1891–1910"
+    author: Mark Twain
+    candidate_year: 1992
+    candidate_publisher: "Library of America"
+    candidate_isbn13: "9780940450738"
+    confidence: high
+    notes: "LOA lists as volume 2 (1891–1910)."
+
+  - id: HNSRC-0232
+    title: Mississippi Writings
+    author: Mark Twain
+    candidate_year: 1982
+    candidate_publisher: "Library of America"
+    candidate_isbn13: "9780940450073"
+    confidence: high
+  - id: HNSRC-0233
+    title: "The Gilded Age & Later Novels"
+    author: Mark Twain
+    candidate_year: 2002
+    candidate_publisher: "Library of America"
+    candidate_isbn13: "9781931082105"
+    confidence: high
+  - id: HNSRC-0234
+    title: Novels and Stories 1932–1937
+    author: John Steinbeck
+    candidate_year: 1994
+    candidate_publisher: "Library of America"
+    candidate_isbn13: "9781883011017"
+    confidence: high
+  - id: HNSRC-0235
+    title: Novels 1942–1952
+    author: John Steinbeck
+    candidate_year: 2001
+    candidate_publisher: "Library of America"
+    candidate_isbn13: "9781931082075"
+    confidence: high
+  - id: HNSRC-0236
+    title: "Pierre, Israel Potter, The Confidence-Man, Tales, & Billy Budd"
+    author: Herman Melville
+    candidate_year: 1985
+    candidate_publisher: "Library of America"
+    candidate_isbn13: "9780940450240"
+    confidence: high
+    notes: "LOA #24 full title includes Piazza Tales and uncollected prose; shelf/catalog short string is the anchor set."
+
+  - id: HNSRC-0237
+    title: Jude the Obscure
+    author: Thomas Hardy
+    confidence: low
+    notes: "Penguin Clothbound; not merged."
+  - id: HNSRC-0238
+    title: Far from the Madding Crowd
+    author: Thomas Hardy
+    confidence: low
+    notes: "Penguin Clothbound; not merged."
+  - id: HNSRC-0239
+    title: The Mayor of Casterbridge
+    author: Thomas Hardy
+    confidence: low
+    notes: "Penguin Clothbound; not merged."
+  - id: HNSRC-0240
+    title: Tess of the D'Urbervilles
+    author: Thomas Hardy
+    confidence: low
+    notes: "Penguin Clothbound; not merged."
+
+  - id: HNSRC-0241
+    title: "The Crisis of the Old Order, 1919-1923"
+    author: "Arthur M. Schlesinger Jr."
+    candidate_year: 2003
+    candidate_publisher: "Houghton Mifflin Harcourt"
+    candidate_isbn13: "9780618340859"
+    confidence: high
+    notes: "Canonical HMH reprint date range 1919–1933; catalog year-end may read 1923 in error."
+  - id: HNSRC-0242
+    title: "The Coming of the New Deal"
+    author: "Arthur M. Schlesinger Jr."
+    candidate_year: 2003
+    candidate_publisher: "Houghton Mifflin Harcourt"
+    candidate_isbn13: "9780618340866"
+    confidence: high
+  - id: HNSRC-0243
+    title: "The Politics of Upheaval"
+    author: "Arthur M. Schlesinger Jr."
+    candidate_year: 2003
+    candidate_publisher: "Houghton Mifflin Harcourt"
+    candidate_isbn13: "9780547524252"
+    confidence: high
+  - id: HNSRC-0244
+    title: "1453: The Holy War for Constantinople and the Clash of Islam and the West"
+    author: "Roger Crowley"
+    candidate_year: 2006
+    candidate_publisher: "Hyperion"
+    candidate_isbn13: "9781401308506"
+    confidence: high
+    notes: "US subtitle on GB cover may show as 1453 + subtitle line."
+  - id: HNSRC-0245
+    title: "Conquerors: How Portugal Forged the First Global Empire"
+    author: "Roger Crowley"
+    candidate_year: 2015
+    candidate_publisher: "Random House"
+    candidate_isbn13: "9780812994018"
+    confidence: high
+  - id: HNSRC-0246
+    title: "Empires of the Sea: The Siege of Malta, the Battle of Lepanto, and the Contest for the Center of the World"
+    author: "Roger Crowley"
+    candidate_year: 2008
+    candidate_publisher: "Random House"
+    candidate_isbn13: "9781588367334"
+    confidence: high
+  - id: HNSRC-0247
+    title: "City of Fortune: How Venice Ruled the Seas"
+    author: "Roger Crowley"
+    candidate_year: 2012
+    candidate_publisher: "Random House"
+    candidate_isbn13: "9780679644262"
+    confidence: high
+  - id: HNSRC-0248
+    title: "Spice: The 16th-Century Contest that Shaped the Modern World"
+    author: "Roger Crowley"
+    candidate_year: 2024
+    candidate_publisher: "Yale University Press"
+    candidate_isbn13: "9780300267471"
+    confidence: high
+  - id: HNSRC-0249
+    title: "The Accursed Tower: The Fall of Acre and the End of the Crusades"
+    author: "Roger Crowley"
+    candidate_year: 2019
+    candidate_publisher: "Basic Books"
+    candidate_isbn13: "9781541699724"
+    confidence: high
+  - id: HNSRC-0250
+    title: "Alfred the Great: The Man Who Made England"
+    author: "Justin Pollard"
+    candidate_year: 2005
+    candidate_publisher: "John Murray Publishers"
+    candidate_isbn13: "9780719566653"
+    confidence: high

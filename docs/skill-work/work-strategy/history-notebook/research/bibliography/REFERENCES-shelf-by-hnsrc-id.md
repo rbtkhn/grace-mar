@@ -200,28 +200,28 @@ Regenerate: `python3 scripts/build_hn_bookshelf_bibliography.py`
 - Lewis Carroll. n.d. *Jabberwocky and Other Nonsense*. `HNSRC-0185`
 - Philip Pullman. n.d. *Grimm Tales*. `HNSRC-0186`
 - Mary Shelley. n.d. *Frankenstein*. `HNSRC-0187`
-- Charles Darwin. n.d. *The Origin of Species and The Voyage of the Beagle*. `HNSRC-0188`
-- Leo Tolstoy. n.d. *The Cossacks*. `HNSRC-0189`
-- Leo Tolstoy. n.d. *Childhood, Boyhood, and Youth*. `HNSRC-0190`
-- Leo Tolstoy. n.d. *Collected Shorter Fiction Volume 1*. `HNSRC-0191`
-- Leo Tolstoy. n.d. *Collected Shorter Fiction Volume 2*. `HNSRC-0192`
+- Charles Darwin. 2012. *The Origin of Species and The Voyage of the Beagle*. Everyman's Library. ISBN 9780307824202. `HNSRC-0188`
+- Leo Tolstoy. 1994. *The Cossacks*. Everyman's Library. ISBN 9780679431312. `HNSRC-0189`
+- Leo Tolstoy. 1991. *Childhood, Boyhood, and Youth*. Everyman's Library. ISBN 9780679405788. `HNSRC-0190`
+- Leo Tolstoy. 2001. *Collected Shorter Fiction Volume 1*. Everyman's Library. ISBN 9780375411724. `HNSRC-0191`
+- Leo Tolstoy. 2001. *Collected Shorter Fiction Volume 2*. Everyman's Library. ISBN 9780375412875. `HNSRC-0192`
 - Leo Tolstoy. n.d. *War and Peace*. `HNSRC-0193`
 - Leo Tolstoy. n.d. *Anna Karenina*. `HNSRC-0194`
 - Fyodor Dostoevsky. n.d. *The Brothers Karamazov*. `HNSRC-0195`
-- Fyodor Dostoevsky. n.d. *The Adolescent*. `HNSRC-0196`
-- Edmund Burke. n.d. *Reflections on the Revolution in France*. `HNSRC-0197`
-- Anton Chekhov. n.d. *The Complete Short Novels*. `HNSRC-0198`
-- Adam Smith. n.d. *The Wealth of Nations*. `HNSRC-0199`
-- John Keats. n.d. *The Poems*. `HNSRC-0200`
-- Ivan Turgenev. n.d. *Fathers and Children*. `HNSRC-0201`
-- Jules Verne. n.d. *Three Novels*. `HNSRC-0202`
-- Jules Verne. n.d. *Journey to the Centre of the Earth, Twenty Thousand Leagues Under the Sea, Around the World in Eighty Days*. `HNSRC-0203`
+- Fyodor Dostoevsky. 2003. *The Adolescent*. Everyman's Library. ISBN 9781400041183. `HNSRC-0196`
+- Edmund Burke. 2015. *Reflections on the Revolution in France*. Everyman's Library. ISBN 9780375712531. `HNSRC-0197`
+- Anton Chekhov. 2004. *The Complete Short Novels*. Everyman's Library. ISBN 9781400040490. `HNSRC-0198`
+- Adam Smith. 1991. *The Wealth of Nations*. Everyman's Library. `HNSRC-0199`
+- John Keats. 1992. *The Poems*. Everyman's Library. ISBN 9780679405535. `HNSRC-0200`
+- Ivan Turgenev. 2011. *Fathers and Children*. Everyman's Library. ISBN 9780307806628. `HNSRC-0201`
+- Jules Verne. 2013. *Three Novels*. Everyman's Library. ISBN 9780307961488. `HNSRC-0202`
+- Jules Verne. 2013. *Journey to the Centre of the Earth, Twenty Thousand Leagues Under the Sea, Around the World in Eighty Days*. Everyman's Library. ISBN 9780307961488. `HNSRC-0203`
 - Joseph Conrad. n.d. *Typhoon and Other Stories*. `HNSRC-0204`
-- Joseph Conrad. n.d. *Lord Jim*. `HNSRC-0205`
-- Joseph Conrad. n.d. *Heart of Darkness*. `HNSRC-0206`
+- Joseph Conrad. 1992. *Lord Jim*. Everyman's Library. ISBN 9780679405443. `HNSRC-0205`
+- Joseph Conrad. 1993. *Heart of Darkness*. Everyman's Library. ISBN 9780679428015. `HNSRC-0206`
 - Joseph Conrad. n.d. *Victory*. `HNSRC-0207`
-- H. G. Wells. n.d. *The Time Machine, The Invisible Man, The War of the Worlds*. `HNSRC-0208`
-- Rudyard Kipling. n.d. *Kim*. `HNSRC-0209`
+- H. G. Wells. 2011. *The Time Machine, The Invisible Man, The War of the Worlds*. Everyman's Library. ISBN 9780307806635. `HNSRC-0208`
+- Rudyard Kipling. 1995. *Kim*. Everyman's Library. ISBN 9780679443605. `HNSRC-0209`
 - Fyodor Dostoevsky. n.d. *White Nights*. `HNSRC-0210`
 - Niccolò Machiavelli. n.d. *The Prince*. `HNSRC-0211`
 - Thomas More. n.d. *Utopia*. `HNSRC-0212`
@@ -239,64 +239,64 @@ Regenerate: `python3 scripts/build_hn_bookshelf_bibliography.py`
 - Franz Kafka. n.d. *Metamorphosis*. `HNSRC-0224`
 - Alexander Pushkin. n.d. *The Queen of Spades*. `HNSRC-0225`
 - Anton Chekhov. n.d. *About Love*. `HNSRC-0226`
-- F. Scott Fitzgerald. n.d. *Novels and Stories 1920–1922*. `HNSRC-0227`
-- F. Scott Fitzgerald. n.d. *The Great Gatsby, All the Sad Young Men & Other Writings 1920–1926*. `HNSRC-0228`
-- Mark Twain. n.d. *A Tramp Abroad, Following the Equator, Other Travels*. `HNSRC-0229`
-- Mark Twain. n.d. *Historical Romances*. `HNSRC-0230`
-- Mark Twain. n.d. *Collected Tales, Sketches, Speeches, & Essays 1891–1910*. `HNSRC-0231`
+- F. Scott Fitzgerald. 2000. *Novels and Stories 1920–1922*. Library of America. ISBN 9781598532968. `HNSRC-0227`
+- F. Scott Fitzgerald. 2022. *The Great Gatsby, All the Sad Young Men & Other Writings 1920–1926*. Library of America. ISBN 9781598537475. `HNSRC-0228`
+- Mark Twain. 2010. *A Tramp Abroad, Following the Equator, Other Travels*. Library of America. ISBN 9781598530667. `HNSRC-0229`
+- Mark Twain. 1994. *Historical Romances*. Library of America. ISBN 9780940450820. `HNSRC-0230`
+- Mark Twain. 1992. *Collected Tales, Sketches, Speeches, & Essays 1891–1910*. Library of America. ISBN 9780940450738. `HNSRC-0231`
 - Mark Twain. n.d. *Mississippi Writings*. `HNSRC-0232`
-- Mark Twain. n.d. *The Gilded Age & Later Novels*. `HNSRC-0233`
-- John Steinbeck. n.d. *Novels and Stories 1932–1937*. `HNSRC-0234`
+- Mark Twain. 2002. *The Gilded Age & Later Novels*. Library of America. ISBN 9781931082105. `HNSRC-0233`
+- John Steinbeck. 1994. *Novels and Stories 1932–1937*. Library of America. ISBN 9781883011017. `HNSRC-0234`
 - John Steinbeck. n.d. *Novels 1942–1952*. `HNSRC-0235`
-- Herman Melville. n.d. *Pierre, Israel Potter, The Confidence-Man, Tales, & Billy Budd*. `HNSRC-0236`
+- Herman Melville. 1985. *Pierre, Israel Potter, The Confidence-Man, Tales, & Billy Budd*. Library of America. ISBN 9780940450240. `HNSRC-0236`
 - Thomas Hardy. n.d. *Jude the Obscure*. `HNSRC-0237`
 - Thomas Hardy. n.d. *Far from the Madding Crowd*. `HNSRC-0238`
 - Thomas Hardy. n.d. *The Mayor of Casterbridge*. `HNSRC-0239`
 - Thomas Hardy. n.d. *Tess of the D'Urbervilles*. `HNSRC-0240`
-- Arthur M. Schlesinger Jr.. n.d. *The Crisis of the Old Order, 1919-1923*. `HNSRC-0241`
-- Arthur M. Schlesinger Jr.. n.d. *The Coming of the New Deal*. `HNSRC-0242`
-- Arthur M. Schlesinger Jr.. n.d. *The Politics of Upheaval*. `HNSRC-0243`
-- Roger Crowley. n.d. *1453: The Holy War for Constantinople and the Clash of Islam and the West*. `HNSRC-0244`
-- Roger Crowley. n.d. *Conquerors: How Portugal Forged the First Global Empire*. `HNSRC-0245`
-- Roger Crowley. n.d. *Empires of the Sea: The Siege of Malta, the Battle of Lepanto, and the Contest for the Center of the World*. `HNSRC-0246`
+- Arthur M. Schlesinger Jr.. 2003. *The Crisis of the Old Order, 1919-1923*. Houghton Mifflin Harcourt. ISBN 9780618340859. `HNSRC-0241`
+- Arthur M. Schlesinger Jr.. 2003. *The Coming of the New Deal*. Houghton Mifflin Harcourt. ISBN 9780618340866. `HNSRC-0242`
+- Arthur M. Schlesinger Jr.. 2003. *The Politics of Upheaval*. Houghton Mifflin Harcourt. ISBN 9780547524252. `HNSRC-0243`
+- Roger Crowley. 2006. *1453: The Holy War for Constantinople and the Clash of Islam and the West*. Hyperion. ISBN 9781401308506. `HNSRC-0244`
+- Roger Crowley. 2015. *Conquerors: How Portugal Forged the First Global Empire*. Random House. ISBN 9780812994018. `HNSRC-0245`
+- Roger Crowley. 2008. *Empires of the Sea: The Siege of Malta, the Battle of Lepanto, and the Contest for the Center of the World*. Random House. ISBN 9781588367334. `HNSRC-0246`
 - Roger Crowley. n.d. *City of Fortune: How Venice Ruled the Seas*. `HNSRC-0247`
-- Roger Crowley. n.d. *Spice: The 16th-Century Contest that Shaped the Modern World*. `HNSRC-0248`
-- Roger Crowley. n.d. *The Accursed Tower: The Fall of Acre and the End of the Crusades*. `HNSRC-0249`
-- Justin Pollard. n.d. *Alfred the Great: The Man Who Made England*. `HNSRC-0250`
-- Robert A. Caro. n.d. *The Years of Lyndon Johnson: The Path to Power*. `HNSRC-0251`
-- Robert A. Caro. n.d. *The Years of Lyndon Johnson: Means of Ascent*. `HNSRC-0252`
-- Robert A. Caro. n.d. *The Years of Lyndon Johnson: Master of the Senate*. `HNSRC-0253`
-- Robert A. Caro. n.d. *The Years of Lyndon Johnson: The Passage of Power*. `HNSRC-0254`
-- David L. Roll. n.d. *George Marshall: Defender of the Republic*. `HNSRC-0255`
-- H. W. Brands. n.d. *The General vs. the President: MacArthur and Truman at the Brink of Nuclear War*. `HNSRC-0256`
-- David McCullough. n.d. *Truman*. `HNSRC-0257`
-- Stephen E. Ambrose. n.d. *Eisenhower: Soldier and President*. `HNSRC-0258`
-- Stephen E. Ambrose. n.d. *Nixon: The Education of a Politician, 1913-1962*. `HNSRC-0259`
-- Stephen E. Ambrose. n.d. *Nixon: The Triumph of a Politician, 1962-1972*. `HNSRC-0260`
-- Stephen E. Ambrose. n.d. *Nixon: Ruin and Recovery, 1973-1990*. `HNSRC-0261`
-- Alexis de Tocqueville. n.d. *Democracy in America*. `HNSRC-0262`
-- H. W. Brands. n.d. *T. R.: The Last Romantic*. `HNSRC-0263`
-- H. W. Brands. n.d. *Traitor to His Class: The Privileged Life and Radical Presidency of Franklin Delano Roosevelt*. `HNSRC-0264`
-- Niall Ferguson. n.d. *Kissinger: 1923-1968: The Idealist*. `HNSRC-0265`
-- Henry David Thoreau. n.d. *A Week, Walden, Maine Woods, Cape Cod*. `HNSRC-0266`
-- Nathaniel Hawthorne. n.d. *Tales and Sketches*. `HNSRC-0267`
-- Nathaniel Hawthorne. n.d. *Novels*. `HNSRC-0268`
-- John Adams. n.d. *Revolutionary Writings 1755-1775*. `HNSRC-0269`
-- John Adams. n.d. *Revolutionary Writings 1775-1783*. `HNSRC-0270`
-- Ralph Waldo Emerson. n.d. *Collected Poems & Translations*. `HNSRC-0271`
-- Herman Melville. n.d. *Typee, Omoo, Mardi*. `HNSRC-0272`
-- Herman Melville. n.d. *Redburn, White-Jacket, Moby-Dick*. `HNSRC-0273`
-- John Steinbeck. n.d. *The Grapes of Wrath & Other Writings 1936-1941*. `HNSRC-0274`
-- Barbara W. Tuchman. n.d. *The Guns of August, The Proud Tower*. `HNSRC-0275`
-- Mark Twain. n.d. *Tales, Sketches, Speeches, & Essays 1852-1890*. `HNSRC-0276`
-- Ernest Hemingway. n.d. *The Sun Also Rises & Other Writings 1918-1926*. `HNSRC-0277`
-- Ernest Hemingway. n.d. *A Farewell to Arms & Other Writings 1927-1932*. `HNSRC-0278`
-- Ray Bradbury. n.d. *The Illustrated Man, The October Country, Other Stories*. `HNSRC-0279`
-- Ray Bradbury. n.d. *Novels & Story Cycles*. `HNSRC-0280`
-- Kurt Vonnegut. n.d. *Novels & Stories 1950-1962*. `HNSRC-0281`
-- Kurt Vonnegut. n.d. *Novels & Stories 1963-1973*. `HNSRC-0282`
-- Kurt Vonnegut. n.d. *Novels 1976-1985*. `HNSRC-0283`
-- Kurt Vonnegut. n.d. *Novels 1987-1997*. `HNSRC-0284`
+- Roger Crowley. 2024. *Spice: The 16th-Century Contest that Shaped the Modern World*. Yale University Press. ISBN 9780300267471. `HNSRC-0248`
+- Roger Crowley. 2019. *The Accursed Tower: The Fall of Acre and the End of the Crusades*. Basic Books. ISBN 9781541699724. `HNSRC-0249`
+- Justin Pollard. 2005. *Alfred the Great: The Man Who Made England*. John Murray Publishers. ISBN 9780719566653. `HNSRC-0250`
+- Robert A. Caro. 1982. *The Years of Lyndon Johnson: The Path to Power*. Knopf. ISBN 9780394499734. `HNSRC-0251`
+- Robert A. Caro. 1990. *The Years of Lyndon Johnson: Means of Ascent*. Knopf. ISBN 9780394528359. `HNSRC-0252`
+- Robert A. Caro. 2002. *The Years of Lyndon Johnson: Master of the Senate*. Knopf. ISBN 9780394528366. `HNSRC-0253`
+- Robert A. Caro. 2012. *The Years of Lyndon Johnson: The Passage of Power*. Knopf. ISBN 9780679405078. `HNSRC-0254`
+- David L. Roll. 2019. *George Marshall: Defender of the Republic*. Penguin. ISBN 9781101990995. `HNSRC-0255`
+- H. W. Brands. 2017. *The General vs. the President: MacArthur and Truman at the Brink of Nuclear War*. Anchor. ISBN 9781101912171. `HNSRC-0256`
+- David McCullough. 1992. *Truman*. Simon and Schuster. ISBN 9780671456542. `HNSRC-0257`
+- Stephen E. Ambrose. 1991. *Eisenhower: Soldier and President*. Simon and Schuster. ISBN 9780671747589. `HNSRC-0258`
+- Stephen E. Ambrose. 1987. *Nixon: The Education of a Politician, 1913-1962*. Simon & Schuster. ISBN 9780671528362. `HNSRC-0259`
+- Stephen E. Ambrose. 1989. *Nixon: The Triumph of a Politician, 1962-1972*. Simon & Schuster. ISBN 9780671528379. `HNSRC-0260`
+- Stephen E. Ambrose. 1991. *Nixon: Ruin and Recovery, 1973-1990*. Simon & Schuster. ISBN 9780671691882. `HNSRC-0261`
+- Alexis de Tocqueville. 2004. *Democracy in America*. Library of America. ISBN 9781931082549. `HNSRC-0262`
+- H. W. Brands. 2019. *T. R.: The Last Romantic*. Basic Books. ISBN 9781541618039. `HNSRC-0263`
+- H. W. Brands. 2009. *Traitor to His Class: The Privileged Life and Radical Presidency of Franklin Delano Roosevelt*. Anchor. ISBN 9780307277947. `HNSRC-0264`
+- Niall Ferguson. 2015. *Kissinger: 1923-1968: The Idealist*. Penguin Press. ISBN 9781594206532. `HNSRC-0265`
+- Henry David Thoreau. 1989. *A Week, Walden, Maine Woods, Cape Cod*. Library of America. ISBN 9780940450271. `HNSRC-0266`
+- Nathaniel Hawthorne. 1982. *Tales and Sketches*. Library of America. ISBN 9780940450035. `HNSRC-0267`
+- Nathaniel Hawthorne. 1983. *Novels*. Library of America. ISBN 9780940450080. `HNSRC-0268`
+- John Adams. 2011. *Revolutionary Writings 1755-1775*. Library of America. ISBN 9781598530896. `HNSRC-0269`
+- John Adams. 2011. *Revolutionary Writings 1775-1783*. Library of America. ISBN 9781598530902. `HNSRC-0270`
+- Ralph Waldo Emerson. 1994. *Collected Poems & Translations*. Library of America. ISBN 9780940450288. `HNSRC-0271`
+- Herman Melville. 1982. *Typee, Omoo, Mardi*. Library of America. ISBN 9781598533453. `HNSRC-0272`
+- Herman Melville. 1983. *Redburn, White-Jacket, Moby-Dick*. Library of America. ISBN 9780940450097. `HNSRC-0273`
+- John Steinbeck. 1996. *The Grapes of Wrath & Other Writings 1936-1941*. Library of America. ISBN 9781883011154. `HNSRC-0274`
+- Barbara W. Tuchman. 2012. *The Guns of August, The Proud Tower*. Library of America. ISBN 9781598531459. `HNSRC-0275`
+- Mark Twain. 1992. *Tales, Sketches, Speeches, & Essays 1852-1890*. Library of America. ISBN 9780940450363. `HNSRC-0276`
+- Ernest Hemingway. 2020. *The Sun Also Rises & Other Writings 1918-1926*. Library of America. ISBN 9781598536676. `HNSRC-0277`
+- Ernest Hemingway. 2024. *A Farewell to Arms & Other Writings 1927-1932*. Library of America. ISBN 9781598537840. `HNSRC-0278`
+- Ray Bradbury. 2022. *The Illustrated Man, The October Country, Other Stories*. Library of America. ISBN 9781598537284. `HNSRC-0279`
+- Ray Bradbury. 2021. *Novels & Story Cycles*. Library of America. ISBN 9781598537000. `HNSRC-0280`
+- Kurt Vonnegut. 2012. *Novels & Stories 1950-1962*. Library of America. ISBN 9781598531503. `HNSRC-0281`
+- Kurt Vonnegut. 2011. *Novels & Stories 1963-1973*. Library of America. ISBN 9781598530988. `HNSRC-0282`
+- Kurt Vonnegut. 2014. *Novels 1976-1985*. Library of America. ISBN 9781598533040. `HNSRC-0283`
+- Kurt Vonnegut. 2016. *Novels 1987-1997*. Library of America. ISBN 9781598534641. `HNSRC-0284`
 - C. S. Lewis. n.d. *The Magician's Nephew*. `HNSRC-0285`
 - C. S. Lewis. n.d. *The Lion, the Witch and the Wardrobe*. `HNSRC-0286`
 - C. S. Lewis. n.d. *The Horse and His Boy*. `HNSRC-0287`
@@ -304,10 +304,10 @@ Regenerate: `python3 scripts/build_hn_bookshelf_bibliography.py`
 - C. S. Lewis. n.d. *The Voyage of the Dawn Treader*. `HNSRC-0289`
 - C. S. Lewis. n.d. *The Silver Chair*. `HNSRC-0290`
 - C. S. Lewis. n.d. *The Last Battle*. `HNSRC-0291`
-- Walter Isaacson. n.d. *Einstein: His Life and Universe*. `HNSRC-0292`
-- John Erickson. n.d. *The Road to Stalingrad: Stalin's War with Germany, Vol. 1*. `HNSRC-0293`
-- John Erickson. n.d. *The Road to Berlin: Stalin's War with Germany, Vol. 2*. `HNSRC-0294`
-- Ron Chernow. n.d. *Mark Twain*. `HNSRC-0295`
-- Dan Jones. n.d. *The Templars: The Rise and Spectacular Fall of God's Holy Warriors*. `HNSRC-0296`
-- Arthur Herman. n.d. *Gandhi & Churchill: The Epic Rivalry That Destroyed an Empire and Forged Our Age*. `HNSRC-0297`
-- William Manchester. n.d. *American Caesar: Douglas MacArthur 1880-1964*. `HNSRC-0298`
+- Walter Isaacson. 2008. *Einstein: His Life and Universe*. Simon and Schuster. ISBN 9780743264747. `HNSRC-0292`
+- John Erickson. 2003. *The Road to Stalingrad: Stalin's War with Germany, Vol. 1*. Cassell. ISBN 9780304365418. `HNSRC-0293`
+- John Erickson. 2003. *The Road to Berlin: Stalin's War with Germany, Vol. 2*. Cassell. ISBN 9780304365401. `HNSRC-0294`
+- Ron Chernow. 2025. *Mark Twain*. Penguin Group. ISBN 9780525561729. `HNSRC-0295`
+- Dan Jones. 2018. *The Templars: The Rise and Spectacular Fall of God's Holy Warriors*. Penguin. ISBN 9780143108962. `HNSRC-0296`
+- Arthur Herman. 2008. *Gandhi & Churchill: The Epic Rivalry That Destroyed an Empire and Forged Our Age*. Bantam. ISBN 9780553905045. `HNSRC-0297`
+- William Manchester. 2008. *American Caesar: Douglas MacArthur 1880-1964*. Little, Brown. ISBN 9780316032421. `HNSRC-0298`

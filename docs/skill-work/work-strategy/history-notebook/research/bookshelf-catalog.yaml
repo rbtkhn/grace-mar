@@ -2312,6 +2312,9 @@ items:
   - id: HNSRC-0188
     title: The Origin of Species and The Voyage of the Beagle
     author: Charles Darwin
+    year: 2012
+    isbn: "9780307824202"
+    publisher: "Everyman's Library"
     era: industrial
     added_batch: 2026-04-18-modern-shelf-photos-12
     tags:
@@ -2325,6 +2328,9 @@ items:
   - id: HNSRC-0189
     title: The Cossacks
     author: Leo Tolstoy
+    year: 1994
+    isbn: "9780679431312"
+    publisher: "Everyman's Library"
     era: industrial
     added_batch: 2026-04-18-modern-shelf-photos-12
     tags:
@@ -2341,6 +2347,9 @@ items:
   - id: HNSRC-0190
     title: Childhood, Boyhood, and Youth
     author: Leo Tolstoy
+    year: 1991
+    isbn: "9780679405788"
+    publisher: "Everyman's Library"
     era: industrial
     added_batch: 2026-04-18-modern-shelf-photos-12
     tags:
@@ -2354,6 +2363,9 @@ items:
   - id: HNSRC-0191
     title: Collected Shorter Fiction Volume 1
     author: Leo Tolstoy
+    year: 2001
+    isbn: "9780375411724"
+    publisher: "Everyman's Library"
     era: industrial
     added_batch: 2026-04-18-modern-shelf-photos-12
     tags:
@@ -2367,6 +2379,9 @@ items:
   - id: HNSRC-0192
     title: Collected Shorter Fiction Volume 2
     author: Leo Tolstoy
+    year: 2001
+    isbn: "9780375412875"
+    publisher: "Everyman's Library"
     era: industrial
     added_batch: 2026-04-18-modern-shelf-photos-12
     tags:
@@ -2419,6 +2434,9 @@ items:
   - id: HNSRC-0196
     title: The Adolescent
     author: Fyodor Dostoevsky
+    year: 2003
+    isbn: "9781400041183"
+    publisher: "Everyman's Library"
     era: industrial
     added_batch: 2026-04-18-modern-shelf-photos-12
     tags:
@@ -2432,6 +2450,9 @@ items:
   - id: HNSRC-0197
     title: Reflections on the Revolution in France
     author: Edmund Burke
+    year: 2015
+    isbn: "9780375712531"
+    publisher: "Everyman's Library"
     era: industrial
     added_batch: 2026-04-18-modern-shelf-photos-12
     tags:
@@ -2445,6 +2466,9 @@ items:
   - id: HNSRC-0198
     title: The Complete Short Novels
     author: Anton Chekhov
+    year: 2004
+    isbn: "9781400040490"
+    publisher: "Everyman's Library"
     era: industrial
     added_batch: 2026-04-18-modern-shelf-photos-12
     tags:
@@ -2458,6 +2482,8 @@ items:
   - id: HNSRC-0199
     title: The Wealth of Nations
     author: Adam Smith
+    year: 1991
+    publisher: "Everyman's Library"
     era: industrial
     added_batch: 2026-04-18-modern-shelf-photos-12
     tags:
@@ -2471,6 +2497,9 @@ items:
   - id: HNSRC-0200
     title: The Poems
     author: John Keats
+    year: 1992
+    isbn: "9780679405535"
+    publisher: "Everyman's Library"
     era: industrial
     added_batch: 2026-04-18-modern-shelf-photos-12
     tags:
@@ -2484,6 +2513,9 @@ items:
   - id: HNSRC-0201
     title: Fathers and Children
     author: Ivan Turgenev
+    year: 2011
+    isbn: "9780307806628"
+    publisher: "Everyman's Library"
     era: industrial
     added_batch: 2026-04-18-modern-shelf-photos-12
     tags:
@@ -2497,6 +2529,9 @@ items:
   - id: HNSRC-0202
     title: Three Novels
     author: Jules Verne
+    year: 2013
+    isbn: "9780307961488"
+    publisher: "Everyman's Library"
     era: industrial
     added_batch: 2026-04-18-modern-shelf-photos-12
     tags:
@@ -2512,6 +2547,9 @@ items:
     title: Journey to the Centre of the Earth, Twenty Thousand Leagues Under the Sea,
       Around the World in Eighty Days
     author: Jules Verne
+    year: 2013
+    isbn: "9780307961488"
+    publisher: "Everyman's Library"
     era: industrial
     added_batch: 2026-04-18-modern-shelf-photos-12
     tags:
@@ -2540,6 +2578,9 @@ items:
   - id: HNSRC-0205
     title: Lord Jim
     author: Joseph Conrad
+    year: 1992
+    isbn: "9780679405443"
+    publisher: "Everyman's Library"
     era: industrial
     added_batch: 2026-04-18-modern-shelf-photos-12
     tags:
@@ -2554,6 +2595,9 @@ items:
   - id: HNSRC-0206
     title: Heart of Darkness
     author: Joseph Conrad
+    year: 1993
+    isbn: "9780679428015"
+    publisher: "Everyman's Library"
     era: industrial
     added_batch: 2026-04-18-modern-shelf-photos-12
     tags:
@@ -2582,6 +2626,9 @@ items:
   - id: HNSRC-0208
     title: The Time Machine, The Invisible Man, The War of the Worlds
     author: H. G. Wells
+    year: 2011
+    isbn: "9780307806635"
+    publisher: "Everyman's Library"
     era: industrial
     added_batch: 2026-04-18-modern-shelf-photos-12
     tags:
@@ -2595,6 +2642,9 @@ items:
   - id: HNSRC-0209
     title: Kim
     author: Rudyard Kipling
+    year: 1995
+    isbn: "9780679443605"
+    publisher: "Everyman's Library"
     era: industrial
     added_batch: 2026-04-18-modern-shelf-photos-12
     tags:
@@ -2831,6 +2881,9 @@ items:
   - id: HNSRC-0227
     title: Novels and Stories 1920–1922
     author: F. Scott Fitzgerald
+    year: 2000
+    isbn: "9781598532968"
+    publisher: "Library of America"
     era: industrial
     added_batch: 2026-04-18-modern-shelf-photos-12
     tags:
@@ -2844,6 +2897,9 @@ items:
   - id: HNSRC-0228
     title: "The Great Gatsby, All the Sad Young Men & Other Writings 1920–1926"
     author: F. Scott Fitzgerald
+    year: 2022
+    isbn: "9781598537475"
+    publisher: "Library of America"
     era: industrial
     added_batch: 2026-04-18-modern-shelf-photos-12
     tags:
@@ -2857,6 +2913,9 @@ items:
   - id: HNSRC-0229
     title: A Tramp Abroad, Following the Equator, Other Travels
     author: Mark Twain
+    year: 2010
+    isbn: "9781598530667"
+    publisher: "Library of America"
     era: industrial
     added_batch: 2026-04-18-modern-shelf-photos-12
     tags:
@@ -2870,6 +2929,9 @@ items:
   - id: HNSRC-0230
     title: Historical Romances
     author: Mark Twain
+    year: 1994
+    isbn: "9780940450820"
+    publisher: "Library of America"
     era: industrial
     added_batch: 2026-04-18-modern-shelf-photos-12
     tags:
@@ -2883,6 +2945,9 @@ items:
   - id: HNSRC-0231
     title: "Collected Tales, Sketches, Speeches, & Essays 1891–1910"
     author: Mark Twain
+    year: 1992
+    isbn: "9780940450738"
+    publisher: "Library of America"
     era: industrial
     added_batch: 2026-04-18-modern-shelf-photos-12
     tags:
@@ -2909,6 +2974,9 @@ items:
   - id: HNSRC-0233
     title: "The Gilded Age & Later Novels"
     author: Mark Twain
+    year: 2002
+    isbn: "9781931082105"
+    publisher: "Library of America"
     era: industrial
     added_batch: 2026-04-18-modern-shelf-photos-12
     tags:
@@ -2922,6 +2990,9 @@ items:
   - id: HNSRC-0234
     title: Novels and Stories 1932–1937
     author: John Steinbeck
+    year: 1994
+    isbn: "9781883011017"
+    publisher: "Library of America"
     era: industrial
     added_batch: 2026-04-18-modern-shelf-photos-12
     tags:
@@ -2948,6 +3019,9 @@ items:
   - id: HNSRC-0236
     title: "Pierre, Israel Potter, The Confidence-Man, Tales, & Billy Budd"
     author: Herman Melville
+    year: 1985
+    isbn: "9780940450240"
+    publisher: "Library of America"
     era: industrial
     added_batch: 2026-04-18-modern-shelf-photos-12
     tags:
@@ -3015,6 +3089,9 @@ items:
   - id: HNSRC-0241
     title: "The Crisis of the Old Order, 1919-1923"
     author: "Arthur M. Schlesinger Jr."
+    year: 2003
+    isbn: "9780618340859"
+    publisher: "Houghton Mifflin Harcourt"
     era: industrial
     added_batch: "2026-04-21-bookshelf-photos-2"
     tags: ['America', 'FDR', 'New Deal', 'Age of Roosevelt', 'Houghton Mifflin', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
@@ -3024,6 +3101,9 @@ items:
   - id: HNSRC-0242
     title: "The Coming of the New Deal"
     author: "Arthur M. Schlesinger Jr."
+    year: 2003
+    isbn: "9780618340866"
+    publisher: "Houghton Mifflin Harcourt"
     era: industrial
     added_batch: "2026-04-21-bookshelf-photos-2"
     tags: ['America', 'FDR', 'New Deal', 'Age of Roosevelt', 'Houghton Mifflin', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
@@ -3033,6 +3113,9 @@ items:
   - id: HNSRC-0243
     title: "The Politics of Upheaval"
     author: "Arthur M. Schlesinger Jr."
+    year: 2003
+    isbn: "9780547524252"
+    publisher: "Houghton Mifflin Harcourt"
     era: industrial
     added_batch: "2026-04-21-bookshelf-photos-2"
     tags: ['America', 'FDR', 'New Deal', 'Age of Roosevelt', 'Houghton Mifflin', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
@@ -3042,6 +3125,9 @@ items:
   - id: HNSRC-0244
     title: "1453: The Holy War for Constantinople and the Clash of Islam and the West"
     author: "Roger Crowley"
+    year: 2006
+    isbn: "9781401308506"
+    publisher: "Hyperion"
     era: medieval
     added_batch: "2026-04-21-bookshelf-photos-2"
     tags: ['Byzantium', 'Ottoman', 'Mediterranean', 'Hyperion', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
@@ -3050,6 +3136,9 @@ items:
   - id: HNSRC-0245
     title: "Conquerors: How Portugal Forged the First Global Empire"
     author: "Roger Crowley"
+    year: 2015
+    isbn: "9780812994018"
+    publisher: "Random House"
     era: colonial
     added_batch: "2026-04-21-bookshelf-photos-2"
     tags: ['Portugal', 'Indian Ocean', 'empire', 'age of sail', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
@@ -3059,6 +3148,9 @@ items:
   - id: HNSRC-0246
     title: "Empires of the Sea: The Siege of Malta, the Battle of Lepanto, and the Contest for the Center of the World"
     author: "Roger Crowley"
+    year: 2008
+    isbn: "9781588367334"
+    publisher: "Random House"
     era: colonial
     added_batch: "2026-04-21-bookshelf-photos-2"
     tags: ['Mediterranean', 'naval', 'Habsburg', 'Ottoman', 'Random House', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
@@ -3075,6 +3167,9 @@ items:
   - id: HNSRC-0248
     title: "Spice: The 16th-Century Contest that Shaped the Modern World"
     author: "Roger Crowley"
+    year: 2024
+    isbn: "9780300267471"
+    publisher: "Yale University Press"
     era: colonial
     added_batch: "2026-04-21-bookshelf-photos-2"
     tags: ['Dutch', 'spice trade', 'Indian Ocean', 'age of exploration', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
@@ -3084,6 +3179,9 @@ items:
   - id: HNSRC-0249
     title: "The Accursed Tower: The Fall of Acre and the End of the Crusades"
     author: "Roger Crowley"
+    year: 2019
+    isbn: "9781541699724"
+    publisher: "Basic Books"
     era: medieval
     added_batch: "2026-04-21-bookshelf-photos-2"
     tags: ['Crusades', 'Acre', 'Levant', '1291', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
@@ -3092,6 +3190,9 @@ items:
   - id: HNSRC-0250
     title: "Alfred the Great: The Man Who Made England"
     author: "Justin Pollard"
+    year: 2005
+    isbn: "9780719566653"
+    publisher: "John Murray Publishers"
     era: medieval
     added_batch: "2026-04-21-bookshelf-photos-2"
     tags: ['England', 'Anglo-Saxon', 'Wessex', 'biography', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
@@ -3100,6 +3201,9 @@ items:
   - id: HNSRC-0251
     title: "The Years of Lyndon Johnson: The Path to Power"
     author: "Robert A. Caro"
+    year: 1982
+    isbn: "9780394499734"
+    publisher: "Knopf"
     era: industrial
     added_batch: "2026-04-21-bookshelf-photos-2"
     tags: ['America', 'LBJ', 'biography', 'Knopf', 'Caro vol. 1', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
@@ -3110,6 +3214,9 @@ items:
   - id: HNSRC-0252
     title: "The Years of Lyndon Johnson: Means of Ascent"
     author: "Robert A. Caro"
+    year: 1990
+    isbn: "9780394528359"
+    publisher: "Knopf"
     era: industrial
     added_batch: "2026-04-21-bookshelf-photos-2"
     tags: ['America', 'LBJ', 'biography', 'Knopf', 'Caro vol. 2', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
@@ -3120,6 +3227,9 @@ items:
   - id: HNSRC-0253
     title: "The Years of Lyndon Johnson: Master of the Senate"
     author: "Robert A. Caro"
+    year: 2002
+    isbn: "9780394528366"
+    publisher: "Knopf"
     era: industrial
     added_batch: "2026-04-21-bookshelf-photos-2"
     tags: ['America', 'LBJ', 'biography', 'Knopf', 'Caro vol. 3', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
@@ -3130,6 +3240,9 @@ items:
   - id: HNSRC-0254
     title: "The Years of Lyndon Johnson: The Passage of Power"
     author: "Robert A. Caro"
+    year: 2012
+    isbn: "9780679405078"
+    publisher: "Knopf"
     era: industrial
     added_batch: "2026-04-21-bookshelf-photos-2"
     tags: ['America', 'LBJ', 'biography', 'Knopf', 'Caro vol. 4', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
@@ -3140,6 +3253,9 @@ items:
   - id: HNSRC-0255
     title: "George Marshall: Defender of the Republic"
     author: "David L. Roll"
+    year: 2019
+    isbn: "9781101990995"
+    publisher: "Penguin"
     era: industrial
     added_batch: "2026-04-21-bookshelf-photos-2"
     tags: ['America', 'WWII', 'Cold War', 'biography', 'Caliber', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
@@ -3149,6 +3265,9 @@ items:
   - id: HNSRC-0256
     title: "The General vs. the President: MacArthur and Truman at the Brink of Nuclear War"
     author: "H. W. Brands"
+    year: 2017
+    isbn: "9781101912171"
+    publisher: "Anchor"
     era: industrial
     added_batch: "2026-04-21-bookshelf-photos-2"
     tags: ['America', 'Korean War', 'Truman', 'MacArthur', 'Doubleday', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
@@ -3158,6 +3277,9 @@ items:
   - id: HNSRC-0257
     title: "Truman"
     author: "David McCullough"
+    year: 1992
+    isbn: "9780671456542"
+    publisher: "Simon and Schuster"
     era: industrial
     added_batch: "2026-04-21-bookshelf-photos-2"
     tags: ['America', 'presidency', 'WWII', 'biography', 'Simon and Schuster', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
@@ -3167,6 +3289,9 @@ items:
   - id: HNSRC-0258
     title: "Eisenhower: Soldier and President"
     author: "Stephen E. Ambrose"
+    year: 1991
+    isbn: "9780671747589"
+    publisher: "Simon and Schuster"
     era: industrial
     added_batch: "2026-04-21-bookshelf-photos-2"
     tags: ['America', 'WWII', 'presidency', 'biography', 'Simon and Schuster', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
@@ -3177,6 +3302,9 @@ items:
   - id: HNSRC-0259
     title: "Nixon: The Education of a Politician, 1913-1962"
     author: "Stephen E. Ambrose"
+    year: 1987
+    isbn: "9780671528362"
+    publisher: "Simon & Schuster"
     era: industrial
     added_batch: "2026-04-21-bookshelf-photos-2"
     tags: ['America', 'Nixon', 'biography', 'S&S', 'Ambrose vol. 1', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
@@ -3186,6 +3314,9 @@ items:
   - id: HNSRC-0260
     title: "Nixon: The Triumph of a Politician, 1962-1972"
     author: "Stephen E. Ambrose"
+    year: 1989
+    isbn: "9780671528379"
+    publisher: "Simon & Schuster"
     era: industrial
     added_batch: "2026-04-21-bookshelf-photos-2"
     tags: ['America', 'Nixon', 'biography', 'S&S', 'Ambrose vol. 2', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
@@ -3195,6 +3326,9 @@ items:
   - id: HNSRC-0261
     title: "Nixon: Ruin and Recovery, 1973-1990"
     author: "Stephen E. Ambrose"
+    year: 1991
+    isbn: "9780671691882"
+    publisher: "Simon & Schuster"
     era: industrial
     added_batch: "2026-04-21-bookshelf-photos-2"
     tags: ['America', 'Nixon', 'Watergate', 'biography', 'S&S', 'Ambrose vol. 3', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
@@ -3204,6 +3338,9 @@ items:
   - id: HNSRC-0262
     title: "Democracy in America"
     author: "Alexis de Tocqueville"
+    year: 2004
+    isbn: "9781931082549"
+    publisher: "Library of America"
     era: industrial
     added_batch: "2026-04-21-bookshelf-photos-2"
     tags: ['America', 'political thought', 'Library of America', 'nineteenth century', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
@@ -3212,6 +3349,9 @@ items:
   - id: HNSRC-0263
     title: "T. R.: The Last Romantic"
     author: "H. W. Brands"
+    year: 2019
+    isbn: "9781541618039"
+    publisher: "Basic Books"
     era: industrial
     added_batch: "2026-04-21-bookshelf-photos-2"
     tags: ['America', 'Theodore Roosevelt', 'Gilded Age', 'biography', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
@@ -3221,6 +3361,9 @@ items:
   - id: HNSRC-0264
     title: "Traitor to His Class: The Privileged Life and Radical Presidency of Franklin Delano Roosevelt"
     author: "H. W. Brands"
+    year: 2009
+    isbn: "9780307277947"
+    publisher: "Anchor"
     era: industrial
     added_batch: "2026-04-21-bookshelf-photos-2"
     tags: ['America', 'FDR', 'New Deal', 'biography', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
@@ -3230,6 +3373,9 @@ items:
   - id: HNSRC-0265
     title: "Kissinger: 1923-1968: The Idealist"
     author: "Niall Ferguson"
+    year: 2015
+    isbn: "9781594206532"
+    publisher: "Penguin Press"
     era: modern
     added_batch: "2026-04-21-bookshelf-photos-2"
     tags: ['America', 'diplomacy', 'Cold War', 'biography', 'Ferguson', 'Kissinger', 'Volume I', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
@@ -3240,6 +3386,9 @@ items:
   - id: HNSRC-0266
     title: "A Week, Walden, Maine Woods, Cape Cod"
     author: "Henry David Thoreau"
+    year: 1989
+    isbn: "9780940450271"
+    publisher: "Library of America"
     era: industrial
     added_batch: "2026-04-21-bookshelf-photos-2"
     tags: ['America', 'essays', 'transcendentalism', 'Library of America', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
@@ -3248,6 +3397,9 @@ items:
   - id: HNSRC-0267
     title: "Tales and Sketches"
     author: "Nathaniel Hawthorne"
+    year: 1982
+    isbn: "9780940450035"
+    publisher: "Library of America"
     era: industrial
     added_batch: "2026-04-21-bookshelf-photos-2"
     tags: ['America', 'short fiction', 'Library of America', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
@@ -3256,6 +3408,9 @@ items:
   - id: HNSRC-0268
     title: "Novels"
     author: "Nathaniel Hawthorne"
+    year: 1983
+    isbn: "9780940450080"
+    publisher: "Library of America"
     era: industrial
     added_batch: "2026-04-21-bookshelf-photos-2"
     tags: ['America', 'fiction', 'Library of America', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
@@ -3264,6 +3419,9 @@ items:
   - id: HNSRC-0269
     title: "Revolutionary Writings 1755-1775"
     author: "John Adams"
+    year: 2011
+    isbn: "9781598530896"
+    publisher: "Library of America"
     era: industrial
     added_batch: "2026-04-21-bookshelf-photos-2"
     tags: ['America', 'founding', 'Library of America', 'LOA vol. 1 of 2', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
@@ -3272,6 +3430,9 @@ items:
   - id: HNSRC-0270
     title: "Revolutionary Writings 1775-1783"
     author: "John Adams"
+    year: 2011
+    isbn: "9781598530902"
+    publisher: "Library of America"
     era: industrial
     added_batch: "2026-04-21-bookshelf-photos-2"
     tags: ['America', 'founding', 'Library of America', 'LOA vol. 2 of 2', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
@@ -3280,6 +3441,9 @@ items:
   - id: HNSRC-0271
     title: "Collected Poems & Translations"
     author: "Ralph Waldo Emerson"
+    year: 1994
+    isbn: "9780940450288"
+    publisher: "Library of America"
     era: industrial
     added_batch: "2026-04-21-bookshelf-photos-2"
     tags: ['America', 'poetry', 'transcendentalism', 'Library of America', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
@@ -3288,6 +3452,9 @@ items:
   - id: HNSRC-0272
     title: "Typee, Omoo, Mardi"
     author: "Herman Melville"
+    year: 1982
+    isbn: "9781598533453"
+    publisher: "Library of America"
     era: industrial
     added_batch: "2026-04-21-bookshelf-photos-2"
     tags: ['America', 'fiction', 'Library of America', 'maritime', 'LOA tranche 1', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
@@ -3296,6 +3463,9 @@ items:
   - id: HNSRC-0273
     title: "Redburn, White-Jacket, Moby-Dick"
     author: "Herman Melville"
+    year: 1983
+    isbn: "9780940450097"
+    publisher: "Library of America"
     era: industrial
     added_batch: "2026-04-21-bookshelf-photos-2"
     tags: ['America', 'fiction', 'Library of America', 'whaling', 'LOA tranche 2', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
@@ -3304,6 +3474,9 @@ items:
   - id: HNSRC-0274
     title: "The Grapes of Wrath & Other Writings 1936-1941"
     author: "John Steinbeck"
+    year: 1996
+    isbn: "9781883011154"
+    publisher: "Library of America"
     era: industrial
     added_batch: "2026-04-21-bookshelf-photos-2"
     tags: ['America', 'fiction', 'Great Depression', 'Library of America', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
@@ -3313,6 +3486,9 @@ items:
   - id: HNSRC-0275
     title: "The Guns of August, The Proud Tower"
     author: "Barbara W. Tuchman"
+    year: 2012
+    isbn: "9781598531459"
+    publisher: "Library of America"
     era: industrial
     added_batch: "2026-04-21-bookshelf-photos-2"
     tags: ['America', 'WWI', 'narrative history', 'Library of America', 'Guns of August', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
@@ -3321,6 +3497,9 @@ items:
   - id: HNSRC-0276
     title: "Tales, Sketches, Speeches, & Essays 1852-1890"
     author: "Mark Twain"
+    year: 1992
+    isbn: "9780940450363"
+    publisher: "Library of America"
     era: industrial
     added_batch: "2026-04-21-bookshelf-photos-2"
     tags: ['America', 'nonfiction', 'Library of America', 'Mark Twain', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
@@ -3330,6 +3509,9 @@ items:
   - id: HNSRC-0277
     title: "The Sun Also Rises & Other Writings 1918-1926"
     author: "Ernest Hemingway"
+    year: 2020
+    isbn: "9781598536676"
+    publisher: "Library of America"
     era: industrial
     added_batch: "2026-04-21-bookshelf-photos-2"
     tags: ['America', 'fiction', 'Library of America', 'modernism', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
@@ -3338,6 +3520,9 @@ items:
   - id: HNSRC-0278
     title: "A Farewell to Arms & Other Writings 1927-1932"
     author: "Ernest Hemingway"
+    year: 2024
+    isbn: "9781598537840"
+    publisher: "Library of America"
     era: industrial
     added_batch: "2026-04-21-bookshelf-photos-2"
     tags: ['America', 'fiction', 'Library of America', 'LOA compendium', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
@@ -3347,6 +3532,9 @@ items:
   - id: HNSRC-0279
     title: "The Illustrated Man, The October Country, Other Stories"
     author: "Ray Bradbury"
+    year: 2022
+    isbn: "9781598537284"
+    publisher: "Library of America"
     era: industrial
     added_batch: "2026-04-21-bookshelf-photos-2"
     tags: ['America', 'science fiction', 'Library of America', 'slipcase', 'LOA 1/2 box', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
@@ -3355,6 +3543,9 @@ items:
   - id: HNSRC-0280
     title: "Novels & Story Cycles"
     author: "Ray Bradbury"
+    year: 2021
+    isbn: "9781598537000"
+    publisher: "Library of America"
     era: industrial
     added_batch: "2026-04-21-bookshelf-photos-2"
     tags: ['America', 'science fiction', 'Library of America', 'slipcase', 'LOA 2/2 box', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
@@ -3363,6 +3554,9 @@ items:
   - id: HNSRC-0281
     title: "Novels & Stories 1950-1962"
     author: "Kurt Vonnegut"
+    year: 2012
+    isbn: "9781598531503"
+    publisher: "Library of America"
     era: industrial
     added_batch: "2026-04-21-bookshelf-photos-2"
     tags: ['America', 'science fiction', 'Library of America', 'slipcase', 'LOA 1/4 box', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
@@ -3371,6 +3565,9 @@ items:
   - id: HNSRC-0282
     title: "Novels & Stories 1963-1973"
     author: "Kurt Vonnegut"
+    year: 2011
+    isbn: "9781598530988"
+    publisher: "Library of America"
     era: industrial
     added_batch: "2026-04-21-bookshelf-photos-2"
     tags: ['America', 'science fiction', 'Library of America', 'slipcase', 'LOA 2/4 box', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
@@ -3379,6 +3576,9 @@ items:
   - id: HNSRC-0283
     title: "Novels 1976-1985"
     author: "Kurt Vonnegut"
+    year: 2014
+    isbn: "9781598533040"
+    publisher: "Library of America"
     era: industrial
     added_batch: "2026-04-21-bookshelf-photos-2"
     tags: ['America', 'science fiction', 'Library of America', 'slipcase', 'LOA 3/4 box', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
@@ -3387,6 +3587,9 @@ items:
   - id: HNSRC-0284
     title: "Novels 1987-1997"
     author: "Kurt Vonnegut"
+    year: 2016
+    isbn: "9781598534641"
+    publisher: "Library of America"
     era: industrial
     added_batch: "2026-04-21-bookshelf-photos-2"
     tags: ['America', 'science fiction', 'Library of America', 'slipcase', 'LOA 4/4 box', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
@@ -3458,6 +3661,9 @@ items:
   - id: HNSRC-0292
     title: "Einstein: His Life and Universe"
     author: "Walter Isaacson"
+    year: 2008
+    isbn: "9780743264747"
+    publisher: "Simon and Schuster"
     era: industrial
     added_batch: "2026-04-21-bookshelf-photos-2"
     tags: ['science', 'physics', 'biography', 'twentieth century', 'S&S', 'Isaacson', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
@@ -3466,6 +3672,9 @@ items:
   - id: HNSRC-0293
     title: "The Road to Stalingrad: Stalin's War with Germany, Vol. 1"
     author: "John Erickson"
+    year: 2003
+    isbn: "9780304365418"
+    publisher: "Cassell"
     era: industrial
     added_batch: "2026-04-21-bookshelf-photos-2"
     tags: ['Eastern Front', 'WWII', 'Soviet', 'military', 'Erickson', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
@@ -3474,6 +3683,9 @@ items:
   - id: HNSRC-0294
     title: "The Road to Berlin: Stalin's War with Germany, Vol. 2"
     author: "John Erickson"
+    year: 2003
+    isbn: "9780304365401"
+    publisher: "Cassell"
     era: industrial
     added_batch: "2026-04-21-bookshelf-photos-2"
     tags: ['Eastern Front', 'WWII', 'Soviet', 'military', 'Erickson', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
@@ -3482,6 +3694,9 @@ items:
   - id: HNSRC-0295
     title: "Mark Twain"
     author: "Ron Chernow"
+    year: 2025
+    isbn: "9780525561729"
+    publisher: "Penguin Group"
     era: industrial
     added_batch: "2026-04-21-bookshelf-photos-2"
     tags: ['America', 'biography', 'Gilded Age', 'Penguin Press', 'not Samuel Clemens writings', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
@@ -3492,6 +3707,9 @@ items:
   - id: HNSRC-0296
     title: "The Templars: The Rise and Spectacular Fall of God's Holy Warriors"
     author: "Dan Jones"
+    year: 2018
+    isbn: "9780143108962"
+    publisher: "Penguin"
     era: medieval
     added_batch: "2026-04-21-bookshelf-photos-2"
     tags: ['Crusades', 'Templars', 'military orders', 'Viking', 'shelf photo 2026-04-21', '2026-04-21-bookshelf-photos-2']
@@ -3500,6 +3718,9 @@ items:
   - id: HNSRC-0297
     title: "Gandhi & Churchill: The Epic Rivalry That Destroyed an Empire and Forged Our Age"
     author: "Arthur Herman"
+    year: 2008
+    isbn: "9780553905045"
+    publisher: "Bantam"
     era: industrial
     eras: [industrial, modern]
     added_batch: "2026-04-21-bookshelf-photos-3-partial-spine"
@@ -3511,6 +3732,9 @@ items:
   - id: HNSRC-0298
     title: "American Caesar: Douglas MacArthur 1880-1964"
     author: "William Manchester"
+    year: 2008
+    isbn: "9780316032421"
+    publisher: "Little, Brown"
     era: industrial
     added_batch: "2026-04-21-bookshelf-photos-3-partial-spine"
     tags: ['America', 'Pacific', 'World War', 'Korea', 'biography', 'Back Bay / Little Brown', 'self-library-bookshelf add from shelf photo', 'shelf photo 2026-04-21']

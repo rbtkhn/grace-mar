@@ -1,0 +1,187 @@
+version: 1
+generated_on: "2026-04-25"
+scope: "HNSRC-0251 through HNSRC-0275"
+method:
+  sources:
+    - "Google Books volumes API"
+    - "LOA.org / publisher page cross-checks where Google omits publisher"
+  policy: "Attach as candidate metadata; merge into bookshelf-catalog.yaml only when confidence is high and edition match is clear."
+
+items:
+  - id: HNSRC-0251
+    title: "The Years of Lyndon Johnson: The Path to Power"
+    author: "Robert A. Caro"
+    candidate_year: 1982
+    candidate_publisher: "Knopf"
+    candidate_isbn13: "9780394499734"
+    confidence: high
+  - id: HNSRC-0252
+    title: "The Years of Lyndon Johnson: Means of Ascent"
+    author: "Robert A. Caro"
+    candidate_year: 1990
+    candidate_publisher: "Knopf"
+    candidate_isbn13: "9780394528359"
+    confidence: high
+  - id: HNSRC-0253
+    title: "The Years of Lyndon Johnson: Master of the Senate"
+    author: "Robert A. Caro"
+    candidate_year: 2002
+    candidate_publisher: "Knopf"
+    candidate_isbn13: "9780394528366"
+    confidence: high
+  - id: HNSRC-0254
+    title: "The Years of Lyndon Johnson: The Passage of Power"
+    author: "Robert A. Caro"
+    candidate_year: 2012
+    candidate_publisher: "Knopf"
+    candidate_isbn13: "9780679405078"
+    confidence: high
+    notes: "Google can surface UK/Anchor alternatives; merged to U.S. Knopf line."
+  - id: HNSRC-0255
+    title: "George Marshall: Defender of the Republic"
+    author: "David L. Roll"
+    candidate_year: 2019
+    candidate_publisher: "Penguin"
+    candidate_isbn13: "9781101990995"
+    confidence: high
+  - id: HNSRC-0256
+    title: "The General vs. the President: MacArthur and Truman at the Brink of Nuclear War"
+    author: "H. W. Brands"
+    candidate_year: 2017
+    candidate_publisher: "Anchor"
+    candidate_isbn13: "9781101912171"
+    confidence: high
+  - id: HNSRC-0257
+    title: "Truman"
+    author: "David McCullough"
+    candidate_year: 1992
+    candidate_publisher: "Simon and Schuster"
+    candidate_isbn13: "9780671456542"
+    confidence: high
+  - id: HNSRC-0258
+    title: "Eisenhower: Soldier and President"
+    author: "Stephen E. Ambrose"
+    candidate_year: 1991
+    candidate_publisher: "Simon and Schuster"
+    candidate_isbn13: "9780671747589"
+    confidence: high
+  - id: HNSRC-0259
+    title: "Nixon: The Education of a Politician, 1913-1962"
+    author: "Stephen E. Ambrose"
+    candidate_year: 1987
+    candidate_publisher: "Simon & Schuster"
+    candidate_isbn13: "9780671528362"
+    confidence: high
+  - id: HNSRC-0260
+    title: "Nixon: The Triumph of a Politician, 1962-1972"
+    author: "Stephen E. Ambrose"
+    candidate_year: 1989
+    candidate_publisher: "Simon & Schuster"
+    candidate_isbn13: "9780671528379"
+    confidence: high
+  - id: HNSRC-0261
+    title: "Nixon: Ruin and Recovery, 1973-1990"
+    author: "Stephen E. Ambrose"
+    candidate_year: 1991
+    candidate_publisher: "Simon & Schuster"
+    candidate_isbn13: "9780671691882"
+    confidence: high
+  - id: HNSRC-0262
+    title: "Democracy in America"
+    author: "Alexis de Tocqueville"
+    candidate_year: 2004
+    candidate_publisher: "Library of America"
+    candidate_isbn13: "9781931082549"
+    confidence: high
+  - id: HNSRC-0263
+    title: "T. R.: The Last Romantic"
+    author: "H. W. Brands"
+    candidate_year: 2019
+    candidate_publisher: "Basic Books"
+    candidate_isbn13: "9781541618039"
+    confidence: high
+  - id: HNSRC-0264
+    title: "Traitor to His Class: The Privileged Life and Radical Presidency of Franklin Delano Roosevelt"
+    author: "H. W. Brands"
+    candidate_year: 2009
+    candidate_publisher: "Anchor"
+    candidate_isbn13: "9780307277947"
+    confidence: high
+  - id: HNSRC-0265
+    title: "Kissinger: 1923-1968: The Idealist"
+    author: "Niall Ferguson"
+    candidate_year: 2015
+    candidate_publisher: "Penguin Press"
+    candidate_isbn13: "9781594206532"
+    confidence: high
+  - id: HNSRC-0266
+    title: "A Week, Walden, Maine Woods, Cape Cod"
+    author: "Henry David Thoreau"
+    candidate_year: 1989
+    candidate_publisher: "Library of America"
+    candidate_isbn13: "9780940450271"
+    confidence: high
+  - id: HNSRC-0267
+    title: "Tales and Sketches"
+    author: "Nathaniel Hawthorne"
+    candidate_year: 1982
+    candidate_publisher: "Library of America"
+    candidate_isbn13: "9780940450035"
+    confidence: high
+  - id: HNSRC-0268
+    title: "Novels"
+    author: "Nathaniel Hawthorne"
+    candidate_year: 1983
+    candidate_publisher: "Library of America"
+    candidate_isbn13: "9780940450080"
+    confidence: high
+  - id: HNSRC-0269
+    title: "Revolutionary Writings 1755-1775"
+    author: "John Adams"
+    candidate_year: 2011
+    candidate_publisher: "Library of America"
+    candidate_isbn13: "9781598530896"
+    confidence: high
+  - id: HNSRC-0270
+    title: "Revolutionary Writings 1775-1783"
+    author: "John Adams"
+    candidate_year: 2011
+    candidate_publisher: "Library of America"
+    candidate_isbn13: "9781598530902"
+    confidence: high
+    notes: "Google may label publisher as National Geographic Books for some LOA ISBNs."
+  - id: HNSRC-0271
+    title: "Collected Poems & Translations"
+    author: "Ralph Waldo Emerson"
+    candidate_year: 1994
+    candidate_publisher: "Library of America"
+    candidate_isbn13: "9780940450288"
+    confidence: high
+  - id: HNSRC-0272
+    title: "Typee, Omoo, Mardi"
+    author: "Herman Melville"
+    candidate_year: 1982
+    candidate_publisher: "Library of America"
+    candidate_isbn13: "9781598533453"
+    confidence: high
+  - id: HNSRC-0273
+    title: "Redburn, White-Jacket, Moby-Dick"
+    author: "Herman Melville"
+    candidate_year: 1983
+    candidate_publisher: "Library of America"
+    candidate_isbn13: "9780940450097"
+    confidence: high
+  - id: HNSRC-0274
+    title: "The Grapes of Wrath & Other Writings 1936-1941"
+    author: "John Steinbeck"
+    candidate_year: 1996
+    candidate_publisher: "Library of America"
+    candidate_isbn13: "9781883011154"
+    confidence: high
+  - id: HNSRC-0275
+    title: "The Guns of August, The Proud Tower"
+    author: "Barbara W. Tuchman"
+    candidate_year: 2012
+    candidate_publisher: "Library of America"
+    candidate_isbn13: "9781598531459"
+    confidence: high

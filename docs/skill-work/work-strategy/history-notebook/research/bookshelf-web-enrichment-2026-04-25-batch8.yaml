@@ -1,0 +1,164 @@
+version: 1
+generated_on: "2026-04-25"
+scope: "HNSRC-0176 through HNSRC-0200"
+method:
+  sources:
+    - "Google Books volumes API"
+  policy: "Attach as candidate metadata; merge into bookshelf-catalog.yaml only when confidence is high and edition match is clear."
+
+items:
+  - id: HNSRC-0176
+    title: The Little Prince
+    author: Antoine de Saint-Exupéry
+    confidence: low
+    notes: "Penguin Clothbound; not merged."
+  - id: HNSRC-0177
+    title: Animal Farm
+    author: George Orwell
+    confidence: low
+    notes: "Penguin Clothbound; not merged."
+  - id: HNSRC-0178
+    title: Tinker Tailor Soldier Spy
+    author: John le Carré
+    confidence: low
+    notes: "Penguin Clothbound; not merged."
+  - id: HNSRC-0179
+    title: Jane Eyre
+    author: Charlotte Brontë
+    confidence: low
+    notes: "Penguin Clothbound; not merged."
+  - id: HNSRC-0180
+    title: Villette
+    author: Charlotte Brontë
+    confidence: low
+    notes: "Penguin Clothbound; not merged."
+  - id: HNSRC-0181
+    title: Wuthering Heights
+    author: Emily Brontë
+    confidence: low
+    notes: "Penguin Clothbound; not merged."
+  - id: HNSRC-0182
+    title: The Tenant of Wildfell Hall
+    author: Anne Brontë
+    confidence: low
+    notes: "Penguin Clothbound; not merged."
+  - id: HNSRC-0183
+    title: Moby-Dick
+    author: Herman Melville
+    confidence: low
+    notes: "Penguin Clothbound; not merged."
+  - id: HNSRC-0184
+    title: Alice's Adventures in Wonderland and Through the Looking-Glass
+    author: Lewis Carroll
+    confidence: low
+    notes: "Penguin Clothbound; not merged."
+  - id: HNSRC-0185
+    title: Jabberwocky and Other Nonsense
+    author: Lewis Carroll
+    confidence: low
+    notes: "Penguin Clothbound; not merged; catalog has verify-title note."
+  - id: HNSRC-0186
+    title: Grimm Tales
+    author: Philip Pullman
+    confidence: low
+    notes: "Penguin Clothbound; not merged."
+  - id: HNSRC-0187
+    title: Frankenstein
+    author: Mary Shelley
+    confidence: low
+    notes: "Penguin Clothbound; not merged."
+
+  - id: HNSRC-0188
+    title: The Origin of Species and The Voyage of the Beagle
+    author: Charles Darwin
+    candidate_year: 2012
+    candidate_publisher: "Everyman's Library"
+    candidate_isbn13: "9780307824202"
+    confidence: high
+    notes: "Chosen 2012 Everyman (ISBN) over 2003 185715… for closer match to on-shelf title casing; 'Beagle' in quotes in GB title."
+  - id: HNSRC-0189
+    title: The Cossacks
+    author: Leo Tolstoy
+    candidate_year: 1994
+    candidate_publisher: "Everyman's Library"
+    candidate_isbn13: "9780679431312"
+    confidence: high
+    notes: "GB may mislabel publisher; catalog notes Little Black + Everyman on shelf—merged to Everyman row."
+  - id: HNSRC-0190
+    title: Childhood, Boyhood, and Youth
+    author: Leo Tolstoy
+    candidate_year: 1991
+    candidate_publisher: "Everyman's Library"
+    candidate_isbn13: "9780679405788"
+    confidence: high
+  - id: HNSRC-0191
+    title: Collected Shorter Fiction Volume 1
+    author: Leo Tolstoy
+    candidate_year: 2001
+    candidate_publisher: "Everyman's Library"
+    candidate_isbn13: "9780375411724"
+    confidence: high
+    notes: "Full GB title: Collected Shorter Fiction of Leo Tolstoy, Volume I."
+  - id: HNSRC-0192
+    title: Collected Shorter Fiction Volume 2
+    author: Leo Tolstoy
+    candidate_year: 2001
+    candidate_publisher: "Everyman's Library"
+    candidate_isbn13: "9780375412875"
+    confidence: high
+    notes: "Full GB title: Collected Shorter Fiction of Leo Tolstoy, Volume II."
+
+  - id: HNSRC-0193
+    title: War and Peace
+    author: Leo Tolstoy
+    confidence: low
+    notes: "Penguin Clothbound; not merged."
+  - id: HNSRC-0194
+    title: Anna Karenina
+    author: Leo Tolstoy
+    confidence: low
+    notes: "Penguin Clothbound; not merged."
+  - id: HNSRC-0195
+    title: The Brothers Karamazov
+    author: Fyodor Dostoevsky
+    confidence: low
+    notes: "Penguin Clothbound; not merged."
+
+  - id: HNSRC-0196
+    title: The Adolescent
+    author: Fyodor Dostoevsky
+    candidate_year: 2003
+    candidate_publisher: "Everyman's Library"
+    candidate_isbn13: "9781400041183"
+    confidence: high
+  - id: HNSRC-0197
+    title: Reflections on the Revolution in France
+    author: Edmund Burke
+    candidate_year: 2015
+    candidate_publisher: "Everyman's Library"
+    candidate_isbn13: "9780375712531"
+    confidence: high
+    notes: "Everyman 2015 volume also bundles other writings; shorter catalog title is the anchor work."
+  - id: HNSRC-0198
+    title: The Complete Short Novels
+    author: Anton Chekhov
+    candidate_year: 2004
+    candidate_publisher: "Everyman's Library"
+    candidate_isbn13: "9781400040490"
+    confidence: high
+    notes: "GB: The Complete Short Novels of Anton Chekhov."
+  - id: HNSRC-0199
+    title: The Wealth of Nations
+    author: Adam Smith
+    candidate_year: 1991
+    candidate_publisher: "Everyman's Library"
+    confidence: high
+    notes: "GB 1991 Everyman volume has no stable ISBN-13; merged year + publisher only."
+  - id: HNSRC-0200
+    title: The Poems
+    author: John Keats
+    candidate_year: 1992
+    candidate_publisher: "Everyman's Library"
+    candidate_isbn13: "9780679405535"
+    confidence: high
+    notes: "GB full title: The Poems of John Keats; publisher field sometimes mislabelled."

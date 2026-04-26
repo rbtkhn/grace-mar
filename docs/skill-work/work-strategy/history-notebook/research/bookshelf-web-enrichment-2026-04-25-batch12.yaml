@@ -1,0 +1,188 @@
+version: 1
+generated_on: "2026-04-25"
+scope: "HNSRC-0276 through HNSRC-0300"
+method:
+  sources:
+    - "Google Books volumes API"
+    - "LOA.org / publisher catalog pages"
+  policy: "Attach as candidate metadata; merge into bookshelf-catalog.yaml only when confidence is high and edition match is clear."
+
+items:
+  - id: HNSRC-0276
+    title: "Tales, Sketches, Speeches, & Essays 1852-1890"
+    author: "Mark Twain"
+    candidate_year: 1992
+    candidate_publisher: "Library of America"
+    candidate_isbn13: "9780940450363"
+    confidence: high
+  - id: HNSRC-0277
+    title: "The Sun Also Rises & Other Writings 1918-1926"
+    author: "Ernest Hemingway"
+    candidate_year: 2020
+    candidate_publisher: "Library of America"
+    candidate_isbn13: "9781598536676"
+    confidence: high
+    notes: "Google may label LOA ISBNs as National Geographic Books."
+  - id: HNSRC-0278
+    title: "A Farewell to Arms & Other Writings 1927-1932"
+    author: "Ernest Hemingway"
+    candidate_year: 2024
+    candidate_publisher: "Library of America"
+    candidate_isbn13: "9781598537840"
+    confidence: high
+  - id: HNSRC-0279
+    title: "The Illustrated Man, The October Country, Other Stories"
+    author: "Ray Bradbury"
+    candidate_year: 2022
+    candidate_publisher: "Library of America"
+    candidate_isbn13: "9781598537284"
+    confidence: high
+  - id: HNSRC-0280
+    title: "Novels & Story Cycles"
+    author: "Ray Bradbury"
+    candidate_year: 2021
+    candidate_publisher: "Library of America"
+    candidate_isbn13: "9781598537000"
+    confidence: high
+  - id: HNSRC-0281
+    title: "Novels & Stories 1950-1962"
+    author: "Kurt Vonnegut"
+    candidate_year: 2012
+    candidate_publisher: "Library of America"
+    candidate_isbn13: "9781598531503"
+    confidence: high
+  - id: HNSRC-0282
+    title: "Novels & Stories 1963-1973"
+    author: "Kurt Vonnegut"
+    candidate_year: 2011
+    candidate_publisher: "Library of America"
+    candidate_isbn13: "9781598530988"
+    confidence: high
+  - id: HNSRC-0283
+    title: "Novels 1976-1985"
+    author: "Kurt Vonnegut"
+    candidate_year: 2014
+    candidate_publisher: "Library of America"
+    candidate_isbn13: "9781598533040"
+    confidence: high
+  - id: HNSRC-0284
+    title: "Novels 1987-1997"
+    author: "Kurt Vonnegut"
+    candidate_year: 2016
+    candidate_publisher: "Library of America"
+    candidate_isbn13: "9781598534641"
+    confidence: high
+
+  - id: HNSRC-0285
+    title: "The Magician's Nephew"
+    author: "C. S. Lewis"
+    candidate_year: 1994
+    candidate_publisher: "HarperCollins"
+    candidate_isbn13: "9780064471107"
+    confidence: medium
+    notes: "Strong title-level HarperCollins ISBN, but shelf is a boxed set with possible mixed printings; not merged."
+  - id: HNSRC-0286
+    title: "The Lion, the Witch and the Wardrobe"
+    author: "C. S. Lewis"
+    candidate_year: 1994
+    candidate_publisher: "HarperCollins"
+    candidate_isbn13: "9780064471046"
+    confidence: medium
+    notes: "Strong title-level HarperCollins ISBN, but shelf is a boxed set with possible mixed printings; not merged."
+  - id: HNSRC-0287
+    title: "The Horse and His Boy"
+    author: "C. S. Lewis"
+    candidate_year: 1994
+    candidate_publisher: "HarperCollins"
+    candidate_isbn13: "9780064471060"
+    confidence: medium
+    notes: "Strong title-level HarperCollins ISBN, but shelf is a boxed set with possible mixed printings; not merged."
+  - id: HNSRC-0288
+    title: "Prince Caspian"
+    author: "C. S. Lewis"
+    candidate_year: 1994
+    candidate_publisher: "HarperCollins"
+    candidate_isbn13: "9780064471053"
+    confidence: medium
+    notes: "Strong title-level HarperCollins ISBN, but shelf is a boxed set with possible mixed printings; not merged."
+  - id: HNSRC-0289
+    title: "The Voyage of the Dawn Treader"
+    author: "C. S. Lewis"
+    candidate_year: 1994
+    candidate_publisher: "HarperCollins"
+    candidate_isbn13: "9780064471077"
+    confidence: medium
+    notes: "Strong title-level HarperCollins ISBN, but shelf is a boxed set with possible mixed printings; not merged."
+  - id: HNSRC-0290
+    title: "The Silver Chair"
+    author: "C. S. Lewis"
+    candidate_year: 1994
+    candidate_publisher: "HarperCollins"
+    candidate_isbn13: "9780064471091"
+    confidence: medium
+    notes: "Strong title-level HarperCollins ISBN, but shelf is a boxed set with possible mixed printings; not merged."
+  - id: HNSRC-0291
+    title: "The Last Battle"
+    author: "C. S. Lewis"
+    candidate_year: 1994
+    candidate_publisher: "HarperCollins"
+    candidate_isbn13: "9780064471084"
+    confidence: medium
+    notes: "Strong title-level HarperCollins ISBN, but shelf is a boxed set with possible mixed printings; not merged."
+
+  - id: HNSRC-0292
+    title: "Einstein: His Life and Universe"
+    author: "Walter Isaacson"
+    candidate_year: 2008
+    candidate_publisher: "Simon and Schuster"
+    candidate_isbn13: "9780743264747"
+    confidence: high
+  - id: HNSRC-0293
+    title: "The Road to Stalingrad: Stalin's War with Germany, Vol. 1"
+    author: "John Erickson"
+    candidate_year: 2003
+    candidate_publisher: "Cassell"
+    candidate_isbn13: "9780304365418"
+    confidence: high
+  - id: HNSRC-0294
+    title: "The Road to Berlin: Stalin's War with Germany, Vol. 2"
+    author: "John Erickson"
+    candidate_year: 2003
+    candidate_publisher: "Cassell"
+    candidate_isbn13: "9780304365401"
+    confidence: high
+  - id: HNSRC-0295
+    title: "Mark Twain"
+    author: "Ron Chernow"
+    candidate_year: 2025
+    candidate_publisher: "Penguin Group"
+    candidate_isbn13: "9780525561729"
+    confidence: high
+  - id: HNSRC-0296
+    title: "The Templars: The Rise and Spectacular Fall of God's Holy Warriors"
+    author: "Dan Jones"
+    candidate_year: 2018
+    candidate_publisher: "Penguin"
+    candidate_isbn13: "9780143108962"
+    confidence: high
+  - id: HNSRC-0297
+    title: "Gandhi & Churchill: The Epic Rivalry That Destroyed an Empire and Forged Our Age"
+    author: "Arthur Herman"
+    candidate_year: 2008
+    candidate_publisher: "Bantam"
+    candidate_isbn13: "9780553905045"
+    confidence: high
+  - id: HNSRC-0298
+    title: "American Caesar: Douglas MacArthur 1880-1964"
+    author: "William Manchester"
+    candidate_year: 2008
+    candidate_publisher: "Little, Brown"
+    candidate_isbn13: "9780316032421"
+    confidence: high
+
+  - id: HNSRC-0299
+    confidence: low
+    notes: "ID not present in current bookshelf-catalog.yaml; no merge target."
+  - id: HNSRC-0300
+    confidence: low
+    notes: "ID not present in current bookshelf-catalog.yaml; no merge target."
