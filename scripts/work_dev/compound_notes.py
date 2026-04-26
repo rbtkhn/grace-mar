@@ -104,16 +104,22 @@ def extract_h2_section(body: str, title: str) -> str:
     return "\n".join(buf).strip()
 
 
-def load_note_file(path: Path) -> dict[str, Any]:
+def load_note_file(
+    path: Path,
+    repo_root: Path | None = None,
+) -> dict[str, Any]:
     """
-    Return meta from front matter, body text, source_path, and str fields for export.
-    repo_root: used for relative path.
+    Return meta from front matter, body text, and paths relative to repo root.
+    `path` and `source_path` are the same relative path (duplicate keys for callers).
+    When repo_root is None, uses the package REPO_ROOT.
     """
+    root = (repo_root or REPO_ROOT).resolve()
     text = path.read_text(encoding="utf-8", errors="replace")
     meta = parse_front_matter(text)
-    rel = str(path.resolve().relative_to(REPO_ROOT))
+    rel = str(path.resolve().relative_to(root))
     return {
         "path": rel,
+        "source_path": rel,
         "name": path.name,
         "meta": meta,
         "body": body_after_front_matter(text),
@@ -152,11 +158,14 @@ def _affected_list(meta: dict[str, Any]) -> list[str]:
     return [str(raw)] if raw else []
 
 
-def parse_note_for_export(path: Path) -> dict[str, Any]:
+def parse_note_for_export(
+    path: Path,
+    repo_root: Path | None = None,
+) -> dict[str, Any]:
     """
     Rich record for gate export: meta, body, affected_files list, gate flag.
     """
-    raw = load_note_file(path)
+    raw = load_note_file(path, repo_root=repo_root)
     meta = raw["meta"]
     body = raw["body"]
     if not meta and not body.strip() and not path.name.startswith("."):

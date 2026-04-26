@@ -44,6 +44,15 @@ Related: [claim-proof-standard.md](claim-proof-standard.md) (proof bar for “im
 | `python3 scripts/work_dev_compound_refresh.py` | Derived report on existing notes; **regenerable**; see `artifacts/work-dev-compound-refresh.md`. |
 | `python3 scripts/export_work_dev_compound_gate_candidates.py` | Full-text export of `gate_candidate` notes for review; see [compound-gate-export.md](compound-gate-export.md) and `artifacts/work-dev-compound-gate-candidates.md`. |
 
+## Operator index (where to look)
+
+| Need | Where |
+|------|--------|
+| Shape of a compound note | [compound-note-template.md](compound-note-template.md) |
+| Create a new note file | `python3 scripts/new_work_dev_compound_note.py` |
+| Inventory, staleness, duplicate hints (metadata) | `python3 scripts/work_dev_compound_refresh.py` → `artifacts/work-dev-compound-refresh.md` |
+| Full text of `gate_candidate` notes for review (derived markdown) | `python3 scripts/export_work_dev_compound_gate_candidates.py` → `artifacts/work-dev-compound-gate-candidates.md` — doctrine: [compound-gate-export.md](compound-gate-export.md) |
+
 ## Non-goals
 
 - Replacing [implementation-ledger.md](implementation-ledger.md) JSON machinery or the recursion gate pipeline.
