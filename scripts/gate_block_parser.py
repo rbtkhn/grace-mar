@@ -33,14 +33,16 @@ def split_gate_sections(full_md: str) -> tuple[str, str]:
 
 
 def pending_candidates_region(full_md: str) -> str:
-    """Slice between ## Candidates and ## Processed (dashboard / metrics alignment)."""
-    idx_c = full_md.find("## Candidates")
-    idx_p = full_md.find("## Processed")
-    if idx_c >= 0 and idx_p > idx_c:
-        return full_md[idx_c:idx_p]
-    if idx_c >= 0:
-        return full_md[idx_c:]
-    return ""
+    """Slice between `## Candidates` and the real `## Processed` section heading.
+
+    Important: prose may mention ``## Processed`` in backticks (or inline) *before* the
+    actual section; use the same `^## Processed\\s*$` anchor as `split_gate_sections`.
+    """
+    active, _proc = split_gate_sections(full_md)
+    m = re.search(r"^## Candidates\s*$", active, re.MULTILINE)
+    if not m:
+        return ""
+    return active[m.start() :]
 
 
 def iter_candidate_yaml_blocks(text: str) -> Iterator[tuple[str, str, str]]:
