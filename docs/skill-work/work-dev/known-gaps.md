@@ -175,10 +175,12 @@ Make the generated table authoritative over the JSON registry.
 
 ### GAP-WD-008 — Authority constants are repeated
 
-Status: open
+Status: partially addressed
 Type: schema
 Severity: medium
 Affected paths:
+- `docs/authority-values.md`
+- `schema-registry/authority-values.v1.json`
 - `schema-registry/`
 - `config/doctrine-rules.v1.json`
 - `docs/portability/emulation/`
@@ -189,7 +191,9 @@ Values like `recordAuthority=none`, `gateEffect=none`, `mergeAuthority=none`, an
 Why it matters:
 Repeated authority constants can drift.
 Suggested next PR:
-Consider a small authority-values reference file or explicit note identifying source-of-truth constants.
+Completed in part: authority vocabulary now exists in `docs/authority-values.md`
+and `schema-registry/authority-values.v1.json`. Existing schemas, scripts,
+and tests still intentionally enforce local artifact-specific constraints.
 Do not:
 Over-engineer a dynamic schema compiler in the first pass.
 

@@ -192,6 +192,9 @@ These tools sit on different authority rungs:
 - **approved merge** — the governed merge path that updates canonical
   Record
 
+For the shared vocabulary behind repeated authority fields, see
+[`authority-values.md`](authority-values.md).
+
 Only the governed merge path updates canonical Record.
 
 ## Common failure modes

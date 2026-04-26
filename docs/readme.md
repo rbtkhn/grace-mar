@@ -34,6 +34,7 @@
 | **Feedback loops** | [feedback-loops](feedback-loops.md) | Proposal brief, calibrate-on-miss, low-friction approval, closed-loop verification, oversight cadence. |
 | **Doctrine drift radar** | [doctrine-drift-radar](doctrine-drift-radar.md) | Read-only audit for high-leverage boundary drift across scripts, docs, and derived artifacts. |
 | **Diagnostics and governance tools** | [diagnostics-and-governance-tools](diagnostics-and-governance-tools.md) | Map of read-only audits, scratch simulations, artifact inspections, receipts, and governance review tools. |
+| **Authority values** | [authority-values](authority-values.md) | Shared vocabulary for Grace-Mar authority fields, safe combinations, and explicitly unsafe values. |
 | **Gate traffic (tiers)** | [RECURSION-GATE-THREE-TIER](recursion-gate-three-tier.md) | Tier 1–3 lanes, Bronze vs future Silver/Gold, `ready_for_quick_merge`, escalation CLI, metrics. |
 | **OB1 / Open Brain bridge** | [START-HERE-OB1-USERS](start-here-ob1-users.md) | Translation table, Approval Inbox alias, imports — familiar entry without changing ontology. |
 | **Workflow catalog** | [WORKFLOW-CATALOG](workflow-catalog.md) | Link index for daily brief, journal, bridge, Xavier, work-dev, gate, observability. |
