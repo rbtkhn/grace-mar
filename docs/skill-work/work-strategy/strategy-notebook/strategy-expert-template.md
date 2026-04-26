@@ -133,9 +133,9 @@ _Omit or leave “roster-only (Tier C)” until **`thread:`** density supports a
 
 WORK only; not Record.
 
-**Source:** Human **narrative journal** (below) + [`strategy-expert-<expert_id>-transcript.md`](strategy-expert-template.md#transcript-template) (verbatim ingests) + relevant **`strategy-page`** work (where this expert’s material was used).
+**Source:** Human **narrative journal** (below) + **[`raw-input/`](raw-input/README.md)** (durable bulk verbatim when used) + [`strategy-expert-<expert_id>-transcript.md`](strategy-expert-template.md#transcript-template) (7-day triage / optional clips) + relevant **`strategy-page`** work (where this expert’s material was used).
 **SSOT (month journal):** **Thread-embedded** **`strategy-page`** fences under the correct **`## YYYY-MM`** are the default **spine** for each month’s readable journal. Standalone **`experts/<expert_id>/*-page-*.md`** day files are **optional** overflow; mention or mirror them in a month only when **load-bearing** (or after duplicating the same logical page into a thread fence), not as the default month composition path.
-**Process:** `python3 scripts/strategy_thread.py` triages inbox → transcript, then fills **only** the **machine layer** between the **strategy-expert-thread** HTML start and end comments. Operator / assistant maintains the **journal layer** above the start marker in **readable prose** (optional **ledger** after the end marker).
+**Process:** `python3 scripts/strategy_thread.py` triages inbox → transcript (optional body) + **inbox links to `raw-input/`** for the same `thread:` lane, then fills **only** the **machine layer** between the **strategy-expert-thread** HTML start and end comments. Operator / assistant maintains the **journal layer** above the start marker in **readable prose** (optional **ledger** after the end marker).
 **Updated:** Narrative — when you distill; **machine layer** — when you run **`thread`**.
 **Companion files:** [`strategy-expert-<expert_id>.md`](strategy-expert-template.md#profile-template) (profile), [`strategy-expert-<expert_id>-transcript.md`](strategy-expert-template.md#transcript-template) (7-day verbatim), and [`strategy-expert-<expert_id>-mind.md`](strategy-expert-template.md#mind-template) (optional long-form mind).
 
@@ -201,11 +201,15 @@ Woven pages use the scaffold in [strategy-page-template.md](strategy-page-templa
 
 ## Machine layer — Extraction (script-maintained)
 
-_Auto-generated from `-transcript.md` + `strategy-page` blocks (+ optional empty legacy on-disk index). **Journal layer** (narrative) lives **above** the **strategy-expert-thread** start HTML comment. The machine-layer HTML block is replaced on each `thread` run._
+_Auto-generated from `transcript.md` + (optional) **inbox `raw-input/` pointers** + `strategy-page` blocks (+ optional empty legacy on-disk index). **Journal layer** (narrative) lives **above** the **strategy-expert-thread** start HTML comment. The machine-layer HTML block is replaced on each `thread` run._
 
 ### Recent transcript material
 
-_(Populated by `strategy_expert_corpus.py` / `strategy_thread.py` when transcript lines exist.)_
+_(Populated by `strategy_expert_corpus.py` / `strategy_thread.py` when `transcript.md` body lines exist.)_
+
+### Raw-input pointers (inbox)
+
+_(When **`daily-strategy-inbox.md`** lines with this expert’s `thread:` tag reference paths under `raw-input/…`, a short pointer list is listed here so the machine layer can stay useful even if `transcript.md` is **thin** or **pointer-only**.)_
 
 ### Page references
 
@@ -234,6 +238,8 @@ legacy_index_paths: []
 # Expert transcript — `<expert_id>`
 
 WORK only; not Record.
+
+**Read path (operator):** **Durable dated bulk verbatim** for analysis and **Chronicle** lives in **[`raw-input/`](raw-input/README.md)** and in **thread-embedded** **`strategy-page`** (and optional standalone `*-page-*.md`). **Do not treat** this **7-day rolling** file as a **second SSOT** you must open to “get” the expert’s text. It is **pipeline plumbing**: an **inbox triage sink** plus what **`thread`** copies into the **machine layer**; it may hold **pointers** to `raw-input/`, one-line `thread:` **registry** rows, and **optional** short clips. **Empty or pointer-only** transcript is **valid** when full text lives under `raw-input/`.
 
 **Source:** Verbatim **blocks** from [`daily-strategy-inbox.md`](daily-strategy-inbox.md) whose **first line** includes `thread:<expert_id>` (optional **continuation paragraphs** on following lines until the next top-level `- ` bullet or `##` heading), routed on ingest by `strategy_expert_transcript.py`.
 **Length:** Target **≤ 2000 words** per ingest block; with **7-day** pruning, the whole file should stay near a **≤ ~20,000 word** soft ceiling (triage warns if exceeded).

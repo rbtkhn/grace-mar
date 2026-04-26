@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """Extract raw material for per-expert thread distillation.
 
-Reads from ``strategy-expert-<id>-transcript.md`` (recent verbatim) and
-``strategy-page`` blocks, optional legacy on-disk index rows, writes structured
+Reads from ``strategy-expert-<id>-transcript.md`` (recent verbatim),
+**inbox lines** that link ``raw-input/…`` for the same ``thread:<id>`` lane,
+``strategy-page`` blocks, optional legacy on-disk index rows; writes structured
 extraction to ``strategy-expert-<id>-thread.md`` between script markers.
 
 The output is **raw material** for assistant refinement — the assistant
@@ -89,6 +90,59 @@ THREAD_MARKER_END = "<!-- strategy-expert-thread:end -->"
 RE_IN_FOLDER_MONTH_THREAD = re.compile(r"^(.+)-thread-(\d{4}-\d{2})\.md$")
 RE_FLAT_MONTH_THREAD = re.compile(r"^strategy-expert-(.+)-thread-(\d{4}-\d{2})\.md$")
 RE_TRANSCRIPT_DATE_SECTION = re.compile(r"^##\s+(\d{4}-\d{2}-\d{2})\s*$")
+# Paths like raw-input/YYYY-MM-DD/slug.md (inbox / markdown links)
+RE_RAW_INPUT_MD_PATH = re.compile(
+    r"raw-input/(\d{4}-\d{2}-\d{2})/([A-Za-z0-9_./-]+\.md)"
+)
+
+
+def collect_inbox_raw_input_pointers(
+    notebook_dir: Path,
+    expert_id: str,
+    *,
+    inbox_path: Path | None = None,
+    month_filter_ym: str | None = None,
+    max_lines: int = 40,
+) -> list[str]:
+    """List markdown bullets for `raw-input/` paths on inbox lines for this `thread:` lane.
+
+    When `month_filter_ym` is set (e.g. ``2026-04``), only paths whose folder date
+    starts with that year-month are included (for monthly `…-thread-YYYY-MM.md` machine
+    blocks). When unset (legacy single `thread.md`), all matching pointers are listed
+    up to `max_lines`.
+    """
+    inbox = inbox_path or (notebook_dir / "daily-strategy-inbox.md")
+    if not inbox.is_file():
+        return []
+
+    try:
+        text = inbox.read_text(encoding="utf-8")
+    except OSError:
+        return []
+
+    out: list[str] = []
+    seen: set[str] = set()
+    needle = f"thread:{expert_id}"
+    for line in text.splitlines():
+        if needle not in line:
+            continue
+        for m in RE_RAW_INPUT_MD_PATH.finditer(line):
+            ymd, fname = m.group(1), m.group(2)
+            if month_filter_ym and not ymd.startswith(month_filter_ym + "-"):
+                continue
+            rel = f"raw-input/{ymd}/{fname}"
+            if rel in seen:
+                continue
+            seen.add(rel)
+            target = notebook_dir / rel
+            name = Path(fname).name
+            if target.is_file():
+                out.append(f"- [{name}]({rel})")
+            else:
+                out.append(f"- `{rel}` _(not found under strategy-notebook — verify path)_")
+            if len(out) >= max_lines:
+                return out
+    return out
 
 
 def expert_paths(expert_id: str, notebook_dir: Path) -> dict[str, Path]:
@@ -646,6 +700,7 @@ def render_thread_extraction(
     transcript_lines: list[str],
     knot_refs: list[dict],
     page_blocks: list | None = None,
+    raw_input_pointer_lines: list[str] | None = None,
 ) -> str:
     """Render machine-layer content between -thread.md markers (overwrite each run).
 
@@ -653,11 +708,12 @@ def render_thread_extraction(
     STRATEGY-NOTEBOOK-ARCHITECTURE.md § Thread (two layers).
     """
     page_blocks = page_blocks or []
+    raw_input_pointer_lines = raw_input_pointer_lines or []
     parts: list[str] = []
     parts.append("## Machine layer — Extraction (script-maintained)\n")
     parts.append(
-        "_Auto-generated from `-transcript.md` + `strategy-page` blocks in this thread "
-        "+ optional empty legacy on-disk index rows. "
+        "_Auto-generated from `transcript.md` + (optional) **inbox** links to `raw-input/` + "
+        "`strategy-page` blocks in this thread + optional empty legacy on-disk index rows. "
         "**Journal layer** (narrative) lives **above** the **strategy-expert-thread** "
         "start HTML comment. The machine-layer HTML block is replaced on each `thread` run._\n"
     )
@@ -665,6 +721,16 @@ def render_thread_extraction(
     if transcript_lines:
         parts.append("### Recent transcript material\n")
         for line in transcript_lines:
+            parts.append(line)
+        parts.append("")
+
+    if raw_input_pointer_lines:
+        parts.append("### Raw-input pointers (inbox)\n")
+        parts.append(
+            "_Paths on `daily-strategy-inbox.md` lines that include this expert’s `thread:` "
+            "tag and a `raw-input/YYYY-MM-DD/…` link; scoped by month for monthly thread files._\n"
+        )
+        for line in raw_input_pointer_lines:
             parts.append(line)
         parts.append("")
 
@@ -691,9 +757,14 @@ def render_thread_extraction(
             parts.append(f"- [{basename}]({basename}) {knot_date}{label_str}{note_str}")
         parts.append("")
 
-    if not transcript_lines and not knot_refs and not page_blocks:
+    if (
+        not transcript_lines
+        and not raw_input_pointer_lines
+        and not knot_refs
+        and not page_blocks
+    ):
         parts.append(
-            "_(No transcript or page material for extraction.)_\n"
+            "_(No transcript, raw-input pointers, or page material for extraction.)_\n"
         )
 
     return "\n".join(parts).rstrip() + "\n"
@@ -761,6 +832,9 @@ def rebuild_threads(
 
         if not mmap:
             transcript_lines = read_transcript_content(transcript_path)
+            raw_ptrs = collect_inbox_raw_input_pointers(
+                out_dir, expert_id, month_filter_ym=None
+            )
             knot_refs = find_knot_references(expert_id, knot_index_path=knot_index_path)
             page_blocks = discover_pages(legacy_thread, expert_id=expert_id)
             inner = render_thread_extraction(
@@ -768,6 +842,7 @@ def rebuild_threads(
                 transcript_lines=transcript_lines,
                 knot_refs=knot_refs,
                 page_blocks=page_blocks,
+                raw_input_pointer_lines=raw_ptrs,
             )
             if not dry_run:
                 write_thread_file(legacy_thread, inner)
@@ -783,6 +858,9 @@ def rebuild_threads(
             if dest is None:
                 dest = out_dir / "experts" / expert_id / f"{expert_id}-thread-{ym}.md"
             tlines = by_m_transcript.get(ym, [])
+            raw_ptrs = collect_inbox_raw_input_pointers(
+                out_dir, expert_id, month_filter_ym=ym
+            )
             pages = discover_pages(dest, expert_id=expert_id) if dest.is_file() else []
             knots = knot_refs_all if ym == today_ym else []
             inner = render_thread_extraction(
@@ -790,6 +868,7 @@ def rebuild_threads(
                 transcript_lines=tlines,
                 knot_refs=knots,
                 page_blocks=pages,
+                raw_input_pointer_lines=raw_ptrs,
             )
             if not dry_run:
                 write_thread_file(dest, inner)

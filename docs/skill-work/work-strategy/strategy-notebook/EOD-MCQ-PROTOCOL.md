@@ -32,13 +32,15 @@ The EOD session is where **capture is promoted into judgment**. It should **synt
 
 ## Stage 0 — Build the evidence pile
 
+**Operator read path (canonical):** **[`raw-input/`](raw-input/README.md)** (dated bulk verbatim) **+** expert **`strategy-page`** blocks in **`thread`**. The **7-day** **`transcript.md`** is **optional pipeline context** (inbox triage + machine echo); do **not** treat it as a second place the operator must **open** for long verbatim when **`raw-input/`** and pages already hold the work.
+
 The assistant gathers:
 
-- Today’s **`raw-input/YYYY-MM-DD/`** files (if any)
+- Today’s **`raw-input/YYYY-MM-DD/`** files (if any) — **primary bulk**
+- Current **`experts/<expert_id>/thread.md`** (journal + existing **`strategy-page`** markers) — **judgment locus**
 - Today’s lines in [daily-strategy-inbox.md](daily-strategy-inbox.md)
 - Relevant **`batch-analysis`** rows
-- Relevant **`experts/<expert_id>/transcript.md`** (when **`thread:`** ingests apply)
-- Current **`experts/<expert_id>/thread.md`** (journal + existing **`strategy-page`** markers)
+- Relevant **`experts/<expert_id>/transcript.md`** and **machine** block **only when** you need the rolling/triage view after **`thread`** (e.g. **`thread:`** ingests this session); **pointer-only** or **thin** transcript is normal when full text is under **`raw-input/`**
 - Current **`chapters/YYYY-MM/days.md`** context (tail + target **`## YYYY-MM-DD`** if composing)
 
 The assistant then says:

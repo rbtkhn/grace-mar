@@ -8,6 +8,7 @@ from pathlib import Path
 
 from scripts.strategy_expert_corpus import (
     CANONICAL_EXPERT_IDS,
+    collect_inbox_raw_input_pointers,
     extract_thread_ingests,
     month_thread_paths_by_month,
     parse_transcript_by_month,
@@ -78,6 +79,44 @@ def test_render_thread_extraction_includes_transcript_and_knots() -> None:
     assert "start HTML comment" in text
     assert "transcript line" in text
     assert "k.md" in text
+
+
+def test_render_thread_extraction_includes_raw_input_pointers() -> None:
+    text = render_thread_extraction(
+        "davis",
+        transcript_lines=[],
+        knot_refs=[],
+        page_blocks=[],
+        raw_input_pointer_lines=["- [a.md](raw-input/2026-04-24/a.md)"],
+    )
+    assert "Raw-input pointers" in text
+    assert "raw-input/2026-04-24/a.md" in text
+    assert "_(No transcript, raw-input pointers, or page material" not in text
+
+
+def test_collect_inbox_raw_input_pointers_respects_thread_tag_and_month(
+    tmp_path: Path,
+) -> None:
+    inbox = tmp_path / "daily-strategy-inbox.md"
+    ri = tmp_path / "raw-input" / "2026-04-20"
+    ri.mkdir(parents=True)
+    (ri / "foo.md").write_text("x", encoding="utf-8")
+    inbox.write_text(
+        "- x | [raw](raw-input/2026-04-20/foo.md) | thread:ritter\n"
+        "- y | [raw](raw-input/2026-03-01/bar.md) | thread:ritter\n",
+        encoding="utf-8",
+    )
+    all_ptrs = collect_inbox_raw_input_pointers(
+        tmp_path, "ritter", inbox_path=inbox, month_filter_ym=None
+    )
+    assert any("foo.md" in p for p in all_ptrs)
+    assert any("bar.md" in p for p in all_ptrs)
+
+    april = collect_inbox_raw_input_pointers(
+        tmp_path, "ritter", inbox_path=inbox, month_filter_ym="2026-04"
+    )
+    assert any("foo.md" in p for p in april)
+    assert not any("bar.md" in p for p in april)
 
 
 def test_rebuild_threads_returns_one_path_per_canonical_expert(tmp_path: Path) -> None:
