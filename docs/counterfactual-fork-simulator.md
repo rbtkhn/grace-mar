@@ -109,9 +109,26 @@ Phase 1 is intentionally narrow:
 
 This tool exists to make consequence review cheaper and more legible before a human decides what to do next.
 
-## Example input
+## Example proposal inputs
 
-See
-[`../examples/diagnostics/counterfactual-proposal.example.json`](../examples/diagnostics/counterfactual-proposal.example.json)
-for a small proposal payload that exercises the Phase 1 input shape
-without touching canonical Record paths.
+These JSON files are **inputs** for the simulator, not approved changes, not
+merge candidates, and not Record. The simulator still writes only scratch
+reports under `artifacts/counterfactual-simulations/`. Recommendations in a
+report are **advisory**; **human review** remains required before any durable
+change to the repo.
+
+| File | What it teaches |
+| --- | --- |
+| [`counterfactual-clean-docs.example.json`](../examples/diagnostics/counterfactual-clean-docs.example.json) | Safe docs-only cross-link proposal |
+| [`counterfactual-dangerous-merge-authority.example.json`](../examples/diagnostics/counterfactual-dangerous-merge-authority.example.json) | Intentionally unsafe authority-escalation proposal (expect drift risks; not approval) |
+| [`counterfactual-portable-emulation.example.json`](../examples/diagnostics/counterfactual-portable-emulation.example.json) | Safe authority-boundary clarification in the portable-emulation lane |
+| [`counterfactual-proposal.example.json`](../examples/diagnostics/counterfactual-proposal.example.json) | Original minimal smoke / shape check (e.g. deterministic diagnostics) |
+
+Run:
+
+```bash
+python3 scripts/simulate_counterfactual_fork.py --proposal examples/diagnostics/counterfactual-clean-docs.example.json
+python3 scripts/simulate_counterfactual_fork.py --proposal examples/diagnostics/counterfactual-dangerous-merge-authority.example.json
+python3 scripts/simulate_counterfactual_fork.py --proposal examples/diagnostics/counterfactual-portable-emulation.example.json
+python3 scripts/simulate_counterfactual_fork.py --proposal examples/diagnostics/counterfactual-proposal.example.json
+```

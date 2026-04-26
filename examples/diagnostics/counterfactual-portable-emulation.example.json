@@ -1,0 +1,19 @@
+{
+  "proposal_id": "example-portable-emulation-clarification",
+  "proposal_kind": "portable_emulation",
+  "target_paths": [
+    "docs/portability/emulation/README.md",
+    "docs/portability/emulation/behavior-spec/v1-proposal-envelope.md"
+  ],
+  "target_surfaces": [
+    "WORK"
+  ],
+  "proposed_change_summary": "Clarify that portable emulation proposal envelopes are proposal-only, require human review, and cannot claim Record, gate, or merge authority.",
+  "proposed_patch_text": "Add explicit language: recordAuthority: none, gateEffect: none, mergeAuthority: none, requires_human_review: true.",
+  "evidence_refs": [
+    "docs/portability/emulation/README.md",
+    "docs/authority-values.md",
+    "schema-registry/emulation-bundle-envelope.v1.json"
+  ],
+  "operator_question": "Does this clarification preserve portable-emulation authority boundaries?"
+}

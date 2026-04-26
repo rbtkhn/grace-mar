@@ -1,0 +1,17 @@
+{
+  "proposal_id": "example-clean-docs-map-link",
+  "proposal_kind": "doctrine_change",
+  "target_paths": [
+    "docs/diagnostics-and-governance-tools.md"
+  ],
+  "target_surfaces": [
+    "WORK"
+  ],
+  "proposed_change_summary": "Add a cross-link from the diagnostics map to the path and schema placement guide so contributors can find placement rules more easily.",
+  "proposed_patch_text": "Add one sentence: For placement questions, see docs/path-and-schema-placement.md.",
+  "evidence_refs": [
+    "docs/diagnostics-and-governance-tools.md",
+    "docs/path-and-schema-placement.md"
+  ],
+  "operator_question": "Does this docs-only cross-link introduce any authority or doctrine drift?"
+}

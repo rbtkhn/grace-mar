@@ -1,0 +1,17 @@
+{
+  "proposal_id": "example-dangerous-merge-authority",
+  "proposal_kind": "portable_emulation",
+  "target_paths": [
+    "docs/portability/emulation/behavior-spec/v1-core-constitution.md"
+  ],
+  "target_surfaces": [
+    "WORK"
+  ],
+  "proposed_change_summary": "Allow foreign runtimes to approve and merge low-risk Record updates automatically after local validation.",
+  "proposed_patch_text": "Set mergeAuthority: approve for portable emulation bundles when confidence is high. Allow foreign runtime to write SELF-LIBRARY after validation.",
+  "evidence_refs": [
+    "docs/portability/emulation/README.md",
+    "docs/authority-values.md"
+  ],
+  "operator_question": "Should portable emulation be allowed to approve low-risk changes without source-repo review?"
+}

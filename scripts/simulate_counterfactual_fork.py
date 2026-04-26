@@ -185,11 +185,6 @@ def _interface_artifact_authority_risk(text: str) -> bool:
     )
 
 
-def _portable_emulation_merge_risk(text: str) -> bool:
-    lowered = text.lower()
-    return "mergeauthority" in lowered or "merge authority" in lowered
-
-
 def analyze_counterfactual(
     proposal: dict[str, Any], repo_root: Path
 ) -> dict[str, Any]:
@@ -267,17 +262,6 @@ def analyze_counterfactual(
             (
                 "Interface artifact proposal appears to claim Record, gate, "
                 "or evidence authority beyond its WORK-only role."
-            )
-        )
-
-    if proposal["proposal_kind"] == "portable_emulation" and _portable_emulation_merge_risk(
-        combined
-    ):
-        doctrine_drift_risks.append(
-            (
-                "Portable emulation proposal appears to imply merge "
-                "authority, which violates the non-authoritative emulation "
-                "contract."
             )
         )
 

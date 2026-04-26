@@ -5,6 +5,9 @@ becoming agent sprawl, authority drift, or unverified capability claims.
 This page maps that stack as a composition guide. It does **not** create
 new authority, a new merge path, or a new agent.
 
+For a grouped navigational index of work-dev (including this stack), see
+[work-dev README](README.md#contents).
+
 ## Stack
 
 - **Doctrine Drift Radar** — current-state doctrine audit  

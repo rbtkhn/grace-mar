@@ -42,6 +42,9 @@ The core distinction is:
   [`counterfactual-fork-simulator.md`](counterfactual-fork-simulator.md),
   `python3 scripts/simulate_counterfactual_fork.py --proposal <file>`
 - **Use when:** before accepting broad or authority-sensitive changes
+- **Examples:** example proposal inputs live under
+  [`examples/diagnostics/`](examples/diagnostics/); see
+  [`counterfactual-fork-simulator.md#example-proposal-inputs`](counterfactual-fork-simulator.md#example-proposal-inputs)
 
 ### Agent Sprawl Control Plane
 
