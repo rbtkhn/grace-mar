@@ -39,6 +39,18 @@ dev-notebook/
 
 **Compatibility:** Older links to `dev-journal/` → [dev-journal/README.md](../dev-journal/README.md). **`SELF-LIBRARY/dev-journal`** symlink → `work-dev/journal/`.
 
+## Conductor (work-dev)
+
+**Wiring:** The [`.cursor/skills/conductor/SKILL.md`](../../../../.cursor/skills/conductor/SKILL.md) **Conductor** turn (pick a stance → one or two **on-disk** hotspots → falsify or outcome → optional cadence log) is the **work-dev** execution pattern for this repo. **Vocabulary** (Toscanini → Bernstein, `coffee` hub **D**, Conductor **MCQ** row) stays **SSOT** in [CONDUCTOR-PASS.md](../../work-coffee/CONDUCTOR-PASS.md) and the **Symphony** protocol in [COFFEE-CADENCE-CONDUCTOR-PROTOCOL.md](../../work-strategy/strategy-notebook/COFFEE-CADENCE-CONDUCTOR-PROTOCOL.md) — **this** section only names **where** **work-dev** Conductor **output** **lands** in the notebook tree.
+
+| Output | Land it here |
+|--------|----------------|
+| **Conductor close** (stance, object, falsify) for **harness** / **integration** / **workspace** wedges | [work-dev/journal/`YYYY-MM-DD-day-NN.md`](work-dev/journal/README.md) as `### Conductor close` (same **shape** as [CONDUCTOR-CLOSE-TEMPLATE.md](../../work-strategy/strategy-notebook/CONDUCTOR-CLOSE-TEMPLATE.md) — not strategy `days.md`, same **block**). |
+| **Kleiber**-style **action** choices | Ground options in [workspace.md](../workspace.md) and paths under `dev-notebook/work-dev/`; **one** **refusal** per option. |
+| **Cadence only** (no new prose) | `coffee_conductor_outcome` with `notebook_ref=` → path under this tree or [workspace.md](../workspace.md) — [CONDUCTOR-IMPROVEMENT-LOOP.md](../../work-strategy/strategy-notebook/CONDUCTOR-IMPROVEMENT-LOOP.md) § 3. |
+
+**Do not** treat **dev-notebook** as a second **strategy** rolling **days.md**; **day-scale** strategy weave stays in [strategy-notebook](../../work-strategy/strategy-notebook/README.md). **Milestones** still hit [work-dev-history.md](../work-dev-history.md) first for **shipped** facts.
+
 ## Index by lane
 
 | Location | Summary |
@@ -47,6 +59,7 @@ dev-notebook/
 | [work-dev/SURFACE-MAP.md](work-dev/SURFACE-MAP.md) | work-dev **surface map** (workspace, control-plane, journal symlink, key scripts) — in-repo, not a Git `main` tree. |
 | [work-dev/HISTORY-ANCHORS.md](work-dev/HISTORY-ANCHORS.md) | work-dev milestones from [work-dev-history.md](../work-dev-history.md). |
 | [work-dev/constitutional-recursive-improvement-2026-04-24.md](work-dev/constitutional-recursive-improvement-2026-04-24.md) | Architecture / positioning note: Grace-Mar's distinctive structure is **constitutional recursive improvement** under memory boundaries. |
+| **Conductor (work-dev)** | § [Conductor (work-dev)](#conductor-work-dev) above — [conductor skill](../../../../.cursor/skills/conductor/SKILL.md) ↔ journal / workspace landing. |
 | [work-dev/identity-fork-protocol-ifp-2026-04-24.md](work-dev/identity-fork-protocol-ifp-2026-04-24.md) | **Identity Fork Protocol (IFP)** — structured spec + comparisons (WORK only; not Record). |
 | [work-dev/ifp-vs-clawsouls-technical-comparison-2026-04-24.md](work-dev/ifp-vs-clawsouls-technical-comparison-2026-04-24.md) | **IFP vs. ClawSouls** — technical axis comparison (ecosystem research; WORK only). |
 | [work-dev/journal/README.md](work-dev/journal/README.md) | Inward work-dev **day** learning log. |

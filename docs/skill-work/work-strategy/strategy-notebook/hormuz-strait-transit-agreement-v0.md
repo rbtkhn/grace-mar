@@ -3,6 +3,7 @@ ingest_date: 2026-04-25
 pub_date: 2026-04-25
 kind: strategy-draft
 title: Hormuz Strait Transit Agreement (v0 strawman)
+word_count: 257
 thread: mercouris
 related_transcript: raw-input/2026-04-25/transcript-duran-mercouris-cristoforu-sea-blockade-iran-2026-04-25.md
 conformance_note: Shaped against Mercouris–Christoforou sea-blockade / stalemate diagnosis (WORK; not Record).
@@ -10,10 +11,9 @@ word_budget_words: 300
 word_budget_scope: Entire file ≤300 words. Longer HRTF scaffolds → separate paths.
 related_long_form: hormuz-reciprocal-transit-deescalation-framework-v2-1.md
 ---
-
 # Hormuz Strait Transit Agreement (v0 strawman)
 
-**HSTA** names both this **Hormuz Strait Transit Agreement** and the **Hormuz Strait Transit Authority**; context disambiguates. **WORK** only; not Record. **This path: 300-word cap.** **Phased negotiation scaffold (HRTF v2.1):** [hormuz-reciprocal-transit-deescalation-framework-v2-1.md](hormuz-reciprocal-transit-deescalation-framework-v2-1.md).
+**HSTA** names both this **Hormuz Strait Transit Agreement** and the **Hormuz Strait Transit Authority**; context disambiguates. **WORK** only; not Record. **This path: 300-word cap.** **Phased negotiation scaffold (HRTF v2.1):** [hormuz-reciprocal-transit-deescalation-framework-v2-1.md](hormuz-reciprocal-transit-deescalation-framework-v2-1.md). **Institutional** **passage** **signaling** (announced vs material; Kleiber falsify) → [Cluster — Hormuz commercial passage](strategy-state-iran/clusters/hormuz-commercial-passage.md).
 
 ## 1. Purpose
 

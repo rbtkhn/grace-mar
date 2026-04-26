@@ -45,6 +45,15 @@
 
 **vs [work-dev-history.md](../../../work-dev-history.md):** History = **milestones** (SHA, artifact, gap closed). Journal = **narrative** when useful — avoid copying every history bullet; link the date or commit and add friction / “what clicked” only the history line cannot carry.
 
+### Conductor in dev journal
+
+**When** you run [`.cursor/skills/conductor/SKILL.md`](../../../../../../.cursor/skills/conductor/SKILL.md) (or **`conductor`**) on **work-dev** **objects** (harness, export, `workspace` wedge, derived regen), **land** a **durable** pass in this folder:
+
+- Add **`### Conductor close`** to the **day file** you are closing (`YYYY-MM-DD-day-NN.md`) using the same bullet **shape** as [CONDUCTOR-CLOSE-TEMPLATE.md](../../../../work-strategy/strategy-notebook/CONDUCTOR-CLOSE-TEMPLATE.md) (**Stance / conductor**, **Object**, **What moved / seam**, **Falsify / next test**, **Escalation**). Strategy **chapters/…/days.md** is **not** the home for this lane — **this** **journal** (or a **spec** under [dev-notebook/work-dev/](../)) is.
+- **Optional** cadence only: `coffee_conductor_outcome` with `notebook_ref=` → path to this file — [CONDUCTOR-IMPROVEMENT-LOOP.md](../../../../work-strategy/strategy-notebook/CONDUCTOR-IMPROVEMENT-LOOP.md) § 3.
+
+**Kleiber** **action** **MCQ** options may **point** at [workspace.md](../../../workspace.md) and concrete paths under `dev-notebook/work-dev/`.
+
 ### Optional habit telemetry
 
 Light **follow-through** discipline (tomorrow line, blocker carryover, friction resolution) without turning this into a dashboard: [journal-metrics-habit.md](../../../../journal-metrics-habit.md). **Phase 0** = weekly 5‑minute check; **Phase 1** = optional YAML frontmatter. Rhythm snapshot (filename dates): `python3 scripts/journal_habit_snapshot.py`.
