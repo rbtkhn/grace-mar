@@ -73,6 +73,7 @@ Use this order when actively working on the territory:
 | **[path-placement-cleanup-investigation.md](path-placement-cleanup-investigation.md)** | **Path placement cleanup investigation** — factual note on the missing placement/path-friction artifacts and the narrower formatting scope confirmed in this checkout. |
 | **[known-gaps.md](known-gaps.md)** | Work-dev small-seams backlog: concise inefficiencies, partials, and hardening follow-ups. |
 | **[three-compounding-loops.md](three-compounding-loops.md)** | Record vs WORK vs CI — how compounding works in each loop and how they must interact (gate, no draft-as-truth). |
+| **[compound-loop.md](compound-loop.md)** | **Compound work loop** — Plan → Execute → Review → Compound → Gate for coding-agent work; compound notes are WORK-only; gate is the only path toward Record candidates. |
 | **[provenance-checklist.md](provenance-checklist.md)** | Repeatable verification path for export, handback, and audit integrity. |
 | **[record-diff-queue.md](../../record-diff-queue.md)** | **Record Diff Queue** (GAP-011): unified review surface for pending governed-state changes; standardized diff cards (old/new/evidence/confidence/conflict/recommended action); template-portable renderer + instance gate adapter. |
 

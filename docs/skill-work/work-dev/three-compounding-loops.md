@@ -36,6 +36,8 @@ Grace-Mar has **three** places where value can **compound** over time. Each has 
 
 **Point:** Speed and iteration without claiming “this is who the companion is.”
 
+**Coding-agent shape:** For a structured Plan → Execute → Review → Compound → **Gate** loop and WORK-only compound notes, see [compound-loop.md](compound-loop.md).
+
 **Risk:** Treating WORK as Record—e.g. merging campaign voice into `bot/prompt.py` or inserting unvetted facts into SELF without the gate.
 
 ---

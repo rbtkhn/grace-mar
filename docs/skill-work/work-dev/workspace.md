@@ -39,6 +39,7 @@ Use this file when you want one place to understand:
 | `INTEGRATION-PROGRAM.md` | Single-page OpenClaw ⟷ Grace-Mar loop (read / export / stage / merge) |
 | `PARALLEL-MACRO-ACTIONS.md` | Parallel macro-action branches + merge order discipline |
 | `three-compounding-loops.md` | Record vs WORK vs CI loops — how compounding works and where drafts must not become canon |
+| `compound-loop.md` | Coding-agent compound loop (Plan → Execute → Review → Compound → Gate); WORK notes under `compound-notes/`; no auto-Record |
 | `integration-status.md` | Honest implemented/partial/documented-only status table |
 | `known-gaps.md` | Current spec-to-implementation gaps and suggested fixes |
 | `provenance-checklist.md` | Repeatable verification path for export, handback, and audit |
