@@ -58,5 +58,7 @@ Define how [Cursor Automations](https://cursor.com/docs/cloud-agent/automations)
 
 - [README.md](README.md) — index and principle.
 - [cursor-safe-automation-contract.md](cursor-safe-automation-contract.md) — paste into every prompt.
+- [automation-readiness-policy.md](automation-readiness-policy.md) — R0–R5 readiness **classes** and **surfaces** (local / CI / Cursor); pairs with the contract for **governance** when designing new automations.
+- [automation-readiness-ledger.md](automation-readiness-ledger.md) — classifies this repo’s workflows, scripts, and prompt candidates (advisory).
 - [docs/skill-work/work-dev/cursor-automations-candidates.md](../skill-work/work-dev/cursor-automations-candidates.md) — prior friction/CI survey.
 - [cursor-pr-onboarding.md](cursor-pr-onboarding.md) — second live automation: PR shape / lane / sensitive paths (operator guide).

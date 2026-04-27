@@ -22,3 +22,7 @@
 ---
 
 **Short reminder for the model:** *Read and describe; do not govern the Record. The operator and companion own authority.*
+
+---
+
+**See also:** [automation-readiness-policy.md](automation-readiness-policy.md) (R0–R5 classification and which **surface** — local, GitHub CI, or Cursor — the maximum allowed authority applies to) and [automation-readiness-ledger.md](automation-readiness-ledger.md) (repo-native table of current workflows and candidates).

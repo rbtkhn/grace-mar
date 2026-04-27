@@ -29,6 +29,9 @@ That keeps Automations from becoming a second CI system. Deterministic checks st
 | [cursor-ci-failure-triage.md](cursor-ci-failure-triage.md) | **Operator guide** for the first live automation: triggers, allow/deny, failure taxonomy, **canonical comment template**. |
 | [cursor-pr-onboarding.md](cursor-pr-onboarding.md) | **Operator guide** for PR onboarding: triggers, lane/sensitive heuristics, **canonical PR comment template**. |
 | [cursor-safe-automation-contract.md](cursor-safe-automation-contract.md) | **Paste** at the top of any Automation prompt. |
+| [automation-readiness-policy.md](automation-readiness-policy.md) | **Readiness classes (R0–R5)**, **authority** rules, **surfaces** (local vs CI vs Cursor). |
+| [automation-readiness-ledger.md](automation-readiness-ledger.md) | **Table** of **current** **scripts**, **workflows**, **rituals**, **Cursor** **candidates** by **class** **(advisory** **).** |
+| [automation-classification-template.md](automation-classification-template.md) | **Form** for **proposing** **new** **automation**; **checklist** **before** **enable**. |
 | [prompts/](prompts/) | **Paste-ready** prompts per use case. |
 
 ## Intended automation classes (prompts, not running jobs)
@@ -37,7 +40,7 @@ That keeps Automations from becoming a second CI system. Deterministic checks st
 |-------|--------|--------------------------------------|
 | 1. CI failure triage | [cursor-ci-failure-triage.md](cursor-ci-failure-triage.md) (guide) + [prompts/cursor-ci-failure-triage.md](prompts/cursor-ci-failure-triage.md) (paste) | Workflow completed with failure |
 | 2. PR onboarding | [cursor-pr-onboarding.md](cursor-pr-onboarding.md) (guide) + [prompts/cursor-pr-onboarding.md](prompts/cursor-pr-onboarding.md) (paste) | PR opened, synchronized, or reopened |
-| 3. Integrity summary | [prompts/cursor-integrity-summary.md](prompts/cursor-integrity-summary.md) | Weekly schedule (or manual) |
+| 3. Integrity summary | [cursor-integrity-summary.md](cursor-integrity-summary.md) (guide) + [prompts/cursor-integrity-summary.md](prompts/cursor-integrity-summary.md) (paste) | Weekly schedule (or manual) — report only |
 | 4. Gate queue nudge | [prompts/cursor-gate-queue-nudge.md](prompts/cursor-gate-queue-nudge.md) | Weekly schedule — **medium priority**; not recommended as first live automation |
 
 **Rituals unchanged:** `coffee`, `dream`, `bridge`, **Steward / gate review**, and **companion approval** for merges remain **human/operator** responsibilities. Automations may **remind** or **summarize**; they do **not** complete those rituals.
@@ -45,6 +48,12 @@ That keeps Automations from becoming a second CI system. Deterministic checks st
 ## Prior work
 
 A broader opportunity probe (friction list, CI inventory) lives in [docs/skill-work/work-dev/cursor-automations-candidates.md](../skill-work/work-dev/cursor-automations-candidates.md). **Prompts SSOT** for paste-ready text is this `docs/automation/` tree.
+
+<a id="automation-readiness"></a>
+
+## Automation readiness
+
+Before adding or enabling a new automation (Cursor, CI-adjacent, or scheduled), classify it with [automation-readiness-policy.md](automation-readiness-policy.md) (R0–R5) and either cite a row in [automation-readiness-ledger.md](automation-readiness-ledger.md) or add one using [automation-classification-template.md](automation-classification-template.md). The ledger and template are **advisory** until a workflow or runbook references them. For the meaning of “unattended” on **local** vs **GitHub CI** vs **Cursor**, see [Surfaces: who runs what](automation-readiness-policy.md#surfaces-who-runs-what-unattended) in the policy.
 
 <a id="first-live-automation-ci-failure-triage"></a>
 
