@@ -1,6 +1,6 @@
 # Refined page template (all experts)
 
-<!-- word_count: ~2400 -->
+<!-- word_count: template ~3k target; see § Length -->
 
 WORK only; not Record.
 
@@ -8,16 +8,16 @@ WORK only; not Record.
 
 **SSOT hierarchy (two layers):**
 
-1. **[`raw-input/`](../raw-input/README.md)** is the **SSOT for literal capture** — the archived words (and capture metadata) of the source. If **`### Verbatim`** on a refined page ever disagrees with the linked raw file on **what was said**, **fix the page** (or the raw) so they match; do not treat the refined page as overriding the transcript for literal content.
+1. **[`raw-input/`](../raw-input/README.md)** is the **SSOT for literal capture** — the archived words (and capture metadata) of the source. The refined page’s **`### Verbatim`** is **always** excerpted *from* that file (or a defined lane of it) and may be **condensed for the page word budget** (see **§ Length**); the raw file remains the **unabridged** reference. If an on-page quote disagrees with the raw on **wording**, **fix the page** (or the raw); do not invent counterfactual lines.
 2. **This file shape** (`experts/…/ *-page-*.md`) is the **SSOT for notebook work** — the object you cite when composing **`strategy-page`** blocks, expert **`thread.md`**, and **`chapters/…/days.md`**: **lane**, **sibling links**, **Reflection** / **Foresight** judgment, and the readable **`### Verbatim`** copy. Downstream analysis should **default to refined pages** as the handle for “this capture / this expert-lane,” not re-derive structure by re-ingesting raw unless you are **auditing the literal** or **editing capture**.
 
-**Purpose:** Standalone **refined page** for expert **`{expert_id}`** (replace token everywhere below when pasting scaffolds). **`### Verbatim`** carries the **full verbatim** from linked [`raw-input/`](../raw-input/README.md)—**lightly cleaned and formatted**; **`### Reflection`** and **`### Foresight`** are **operator analysis** (**may be stubbed** on ingest, completed in a later pass). **Naming:** **`### Chronicle`** remains the verbatim-first heading inside **thread-embedded** **`strategy-page`** fences ([strategy-page-template.md](strategy-page-template.md)); **`### Verbatim`** is the refined-page heading so **Chronicle** names the **thread / `days.md` day-block** weave, not this standalone file. Distinct from a **`strategy-page`** HTML fence in **`thread.md`** (or **`*-thread-YYYY-MM.md`**) unless you duplicate judgment there during EOD compose.
+**Purpose:** Standalone **refined page** for expert **`{expert_id}`** (replace token everywhere below when pasting scaffolds). **`### Verbatim`** carries **expert (or host/guest lane) text from** linked [`raw-input/`](../raw-input/README.md)—**lightly cleaned and formatted**, and **sized to the page budget** in **§ Length** when the transcript is long; **`### Reflection`** and **`### Foresight`** are **operator analysis** (**may be stubbed** on ingest, completed in a later pass). **Naming:** **`### Chronicle`** remains the verbatim-first heading inside **thread-embedded** **`strategy-page`** fences ([strategy-page-template.md](strategy-page-template.md)); **`### Verbatim`** is the refined-page heading so **Chronicle** names the **thread / `days.md` day-block** weave, not this standalone file. Distinct from a **`strategy-page`** HTML fence in **`thread.md`** (or **`*-thread-YYYY-MM.md`**) unless you duplicate judgment there during EOD compose.
 
 **Thread-embedded pages:** For `<!-- strategy-page:start … -->` blocks in monthly or legacy thread files, use [`strategy-page-template.md`](strategy-page-template.md) instead of this file.
 
 **Filename:** Default **`{expert_id}-page-YYYY-MM-DD.md`** (publication / **`pub_date`** anchor). **Multiple refined pages for the same publication date are allowed:** **`{expert_id}-page-YYYY-MM-DD-<slug>.md`** with **`<slug>`** from the primary `raw-input` stem so filenames stay unique. **Alternatively,** consolidate same-day captures into **one** refined file with **A / B / C** Verbatim blocks when this template’s same-day pattern applies. If the `raw-input/` folder date differs (ingest batching), note it in **`### Appendix`**. Under **`experts/{expert_id}/transcript.md`** when used, add one **`Refined page:`** line per refined file for that date.
 
-**Length:** No enforced word limit. **Verbatim** is often long (full capture text) when a body exists; **Reflection** / **Foresight** may be stubbed until operator analysis. No path dumps or `verify:` in body sections—**`### Appendix`** only (unless grammatical prose in Reflection explicitly cites a tier).
+**Length (target budget):** **~3000 words** per refined page (soft target, not a hard cap). **~70–80%** of those words should live under **`### Verbatim`** (verbatim transcript text for this expert or lane). **~20–30%** = preamble, **`### Reflection`**, **`### Foresight`**, and **`### Appendix`**. When a lane’s transcript **exceeds** the verbatim share at ~3000 total words, **condense** the on-page **`### Verbatim`** by pruning (e.g. head+tail of the lane with a short omission line; never paraphrase into “Verbatim” — use **operator analysis** only in Reflection/Foresight). **Automation:** from repo root, `python3 scripts/strategy/refined_page_word_budget.py check <*page*>.md` and `python3 scripts/strategy/refined_page_word_budget.py condense <raw.md> --lane <key>`; composition passes that build **strategy expert** / refined pages (including EOD and assistants) should run **check** after large ingests. **Unabridged** text always remains in **`raw-input/`**; note omissions in **Appendix** (see bullet order). No path dumps or `verify:` in body sections—**`### Appendix`** only (unless grammatical prose in Reflection explicitly cites a tier).
 
 ### Prose emphasis (Verbatim / Reflection / Foresight)
 
@@ -93,7 +93,7 @@ Monologue or guest spot with canonical `watch?v=` when pinned.
 ## Body scaffold
 
 1. Horizontal rule `---` after the preamble.
-2. `### Verbatim` — **Full verbatim** from the linked `raw-input` capture (after YAML frontmatter when present): **lightly cleaned and formatted** only—paragraphing, spacing, obvious ingest artifacts, optional speaker labels; **do not** replace the expert’s words with summary or paraphrase. The file under `raw-input/` remains the archived capture; **Verbatim** is the readable full text on this page. **Notebook stub modes** (core Mode B, or extended Mode F for `ritter`): brief stub or pointer only.
+2. `### Verbatim` — **Transcript text** from the linked `raw-input` capture (after YAML frontmatter when present), for this **expert or lane** only: **lightly cleaned and formatted**—paragraphing, spacing, obvious ingest artifacts, optional speaker labels; **do not** replace the expert’s words with summary or paraphrase. If the lane is **longer than the § Length verbatim budget** allows, **prune/condense** (machine or operator) while keeping all remaining text **quote-faithful**; mark omissions (inline italic one-liner and/or **Appendix**). The file under `raw-input/` is always the **full** capture; on-page may be a **subset**. **Notebook stub modes** (core Mode B, or extended Mode F for `ritter`): brief stub or pointer only.
 3. `### Reflection` — **Operator analysis:** `{expert_id}`-lane arc; keep verification discipline explicit where load-bearing claims sit in commentator tier. _(When `{expert_id}` is `ritter`, add IHL / coercion / Hormuz or Russia–U.S. seams in prose when material.)_ **May be stubbed** until a later operator pass.
 4. `### Foresight` — **Operator analysis:** falsifiers, resume lines, tier tags (bullets allowed). **May be stubbed** until a later operator pass.
 5. Horizontal rule `---` before appendix.
@@ -101,10 +101,11 @@ Monologue or guest spot with canonical `watch?v=` when pinned.
 
 **Appendix bullet order (required):**
 
-1. **Full verbatim (capture):** link to the capture under `raw-input/<YYYY-MM-DD>/` (slug varies by ingest pipeline).
-2. **Inbox / triage:** link to [`daily-strategy-inbox.md`](daily-strategy-inbox.md) with grep hints (`thread:{expert_id}`, date, and for stub modes the `notebook |` / `verify:` / capture tails as used in inbox).
-3. **`thread:{expert_id}`** · **verify:** one line consolidating verify tier for this page (include **`pub_date:YYYY-MM-DD`** grep hint where load-bearing).
-4. **Canonical primary:** pin `source_url`, video ID, article URL, or X permalink when known; for pure stub modes use **Not applicable** unless one URL is pinned.
+1. **Full verbatim (capture):** link to the capture under `raw-input/<YYYY-MM-DD>/` (slug varies by ingest pipeline) — always the **unabridged** file, even if **`### Verbatim`** is condensed.
+2. **Omissions (if any):** when on-page `### Verbatim` is a **pruned** subset, one line: approximate **words omitted** and that the **full** text is the **Full verbatim (capture)** link. Omit this bullet if the page includes the full lane text.
+3. **Inbox / triage:** link to [`daily-strategy-inbox.md`](daily-strategy-inbox.md) with grep hints (`thread:{expert_id}`, date, and for stub modes the `notebook |` / `verify:` / capture tails as used in inbox).
+4. **`thread:{expert_id}`** · **verify:** one line consolidating verify tier for this page (include **`pub_date:YYYY-MM-DD`** grep hint where load-bearing).
+5. **Canonical primary:** pin `source_url`, video ID, article URL, or X permalink when known; for pure stub modes use **Not applicable** unless one URL is pinned.
 
 ---
 
@@ -112,7 +113,7 @@ Monologue or guest spot with canonical `watch?v=` when pinned.
 
 Verbatim lives under `raw-input/<date>/`. Refined pages live only under **`experts/{expert_id}/`**.
 
-**Multi-expert lane split:** `### Verbatim` on each refined page = **that speaker’s lines** from the shared raw file (concatenate turns), not a paraphrase. Helper: [`scripts/strategy/extract_transcript_speaker_lanes.py`](../../../scripts/strategy/extract_transcript_speaker_lanes.py) (`--list`, `--print glenn`, etc.). See [`.cursor/skills/strategy-notebook-lane-split/SKILL.md`](../../../.cursor/skills/strategy-notebook-lane-split/SKILL.md).
+**Multi-expert lane split:** `### Verbatim` on each refined page = **that speaker’s lines** from the shared raw file (concatenate turns), not a paraphrase; then **apply the § Length budget** (often **~70–80%** of **~3000** words in Verbatim — use [`refined_page_word_budget.py`](../../../scripts/strategy/refined_page_word_budget.py) **condense** if needed). Extract: [`scripts/strategy/extract_transcript_speaker_lanes.py`](../../../scripts/strategy/extract_transcript_speaker_lanes.py). See [`.cursor/skills/strategy-notebook-lane-split/SKILL.md`](../../../.cursor/skills/strategy-notebook-lane-split/SKILL.md).
 
 ---
 
@@ -131,7 +132,7 @@ Applies when **`{expert_id}`** is **`ritter`** (paths relative to **`experts/rit
 
 ### Machine checks (`verify_ritter_refined_pages.py`)
 
-[`scripts/strategy/verify_ritter_refined_pages.py`](../../../scripts/strategy/verify_ritter_refined_pages.py) (repo root): manifest rows, `raw-input` on disk, `transcript.md` backlinks, and page spine **`### Verbatim`**, **`### Reflection`**, **`### Foresight`**, **`### Appendix`** (legacy **`### Chronicle`** on older refined files; legacy `### Signal` / `### Judgment` / `### Open` / `### Technical appendix` still accepted until regenerated). **`**Words:** N`** is **optional**: when present it must match full-file word count with that line stripped (±5 tokens); when omitted, **`**Words:**`** bookkeeping is skipped. An optional Reflection+Foresight **share** advisory runs only when **`**Words:**`** is present. **No** word-count ceiling. Use `--no-page-shape` for manifest/transcript-only checks. Other experts may gain parallel scripts later; until then, apply this section only to **`ritter`**.
+[`scripts/strategy/verify_ritter_refined_pages.py`](../../../scripts/strategy/verify_ritter_refined_pages.py) (repo root): manifest rows, `raw-input` on disk, `transcript.md` backlinks, and page spine **`### Verbatim`**, **`### Reflection`**, **`### Foresight`**, **`### Appendix`** (legacy **`### Chronicle`** on older refined files; legacy `### Signal` / `### Judgment` / `### Open` / `### Technical appendix` still accepted until regenerated). **`**Words:** N`** is **optional** (Ritter): when present it must match full-file word count with that line stripped (±5 tokens); when omitted, that bookkeeping is skipped. **General** refined-page **target** is still **~3000 words** / **70–80% verbatim** per **§ Length**; use [`refined_page_word_budget.py`](../../../scripts/strategy/refined_page_word_budget.py) for all experts. An optional Reflection+Foresight **share** advisory in the Ritter script runs only when **`**Words:**`** is present. Use `--no-page-shape` for manifest/transcript-only checks. Other experts may gain full parity with the Ritter script later. Apply **`ritter` manifest** section only to **`ritter`**.
 
 ---
 
@@ -175,6 +176,7 @@ WORK only; not Record.
 ### Appendix
 
 - **Full verbatim (capture):** [raw-input/YYYY-MM-DD/…](../../raw-input/YYYY-MM-DD/….md)
+- **Omissions (if any):** — *omit bullet if `### Verbatim` is full lane text*
 - **Inbox / triage:** [daily-strategy-inbox.md](../../daily-strategy-inbox.md) (search `thread:{expert_id}`, YYYY-MM-DD)
 - **`thread:{expert_id}`** · **verify:** full-text + raw-input + pub_date:YYYY-MM-DD
 - **Canonical primary:** pin when known (see raw-input frontmatter / cold line)
@@ -190,9 +192,9 @@ Use **`# {ExpertTitle}`** as a human-facing title case of the expert display nam
 2. `WORK only; not Record.` on its own line after the title.
 3. Preamble matches one chosen mode; **Artifact:** line uses “refined page (standalone file under `experts/{expert_id}/`)” verbatim.
 4. `---` before `### Verbatim`.
-5. `### Verbatim`, `### Reflection`, `### Foresight` present; **Verbatim** = full expert capture (lightly cleaned)—no `verify:` / path machinery there; **Reflection** / **Foresight** = operator analysis (stubs OK). No decorative bold except lane rules (see Prose emphasis).
+5. `### Verbatim`, `### Reflection`, `### Foresight` present; **Verbatim** = transcript text (lightly cleaned, optionally condensed for **§ Length**; never paraphrase as Verbatim)—no `verify:` / path machinery there; **Reflection** / **Foresight** = operator analysis (stubs OK). No decorative bold except lane rules (see Prose emphasis). Prefer **~3000** total words, **~70–80%** in Verbatim (`refined_page_word_budget.py check`).
 6. `---` before `### Appendix`.
-7. Appendix bullets in order: Full verbatim (capture) → Inbox / triage → `thread:{expert_id}` · verify → Canonical primary.
+7. Appendix bullets in order: Full verbatim (capture) → Omissions (if pruned) → Inbox / triage → `thread:{expert_id}` · verify → Canonical primary.
 8. Relative links resolve from **`experts/{expert_id}/`** (typically `../../raw-input/…`, `../../daily-strategy-inbox.md`, `../../chapters/…` when citing `days.md`).
 
 ---

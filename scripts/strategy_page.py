@@ -12,6 +12,10 @@ Usage::
     python3 scripts/strategy_page.py pape --id zero-sum-hormuz
     python3 scripts/strategy_page.py davis barnes --dry-run
 
+**Refined pages (`experts/<id>/*-page-*.md`):** target **~3000** words, **~70–80%** verbatim; see
+`docs/skill-work/work-strategy/strategy-notebook/refined-page-template.md` and
+`python3 scripts/strategy/refined_page_word_budget.py check|condense`.
+
 WORK only; not Record.
 """
 
