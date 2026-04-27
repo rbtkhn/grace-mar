@@ -140,9 +140,10 @@ def test_triage_merges_rss_raw_input_into_transcript(tmp_path: Path) -> None:
 
     text = transcript.read_text(encoding="utf-8")
     assert "## 2026-01-19" in text
-    assert "verify:rss-fetch" in text
+    # RSS one-line stubs fold to a pointer when raw-input path is in the line.
+    assert "raw-input/2026-01-19/rss-example.md" in text
     assert "thread:rss-merge-expert" in text
-    assert "Example RSS Title" in text
+    assert "SSOT raw-input" in text or "verify:raw-input+thread-triage" in text
 
 
 def test_iter_raw_input_yaml_documents_multiple_ingests_in_one_file() -> None:

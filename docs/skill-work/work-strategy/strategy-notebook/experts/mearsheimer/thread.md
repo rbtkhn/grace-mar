@@ -1,4 +1,5 @@
 # Expert thread — `mearsheimer`
+<!-- word_count: 10005 -->
 
 WORK only; not Record.
 

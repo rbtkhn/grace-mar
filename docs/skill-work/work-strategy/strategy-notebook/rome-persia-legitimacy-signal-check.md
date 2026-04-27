@@ -1,4 +1,5 @@
 # Rome–Persia legitimacy alignment — perpetual signal check
+<!-- word_count: 859 -->
 
 **Purpose:** Track whether the **narrow thesis** below is **validated**, **falsified**, or **left ambiguous** by **future public events**. WORK / strategy-notebook only — not Record, not Voice knowledge.
 

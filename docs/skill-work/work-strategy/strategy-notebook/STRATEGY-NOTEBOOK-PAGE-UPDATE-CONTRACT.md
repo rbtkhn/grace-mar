@@ -1,4 +1,5 @@
 # Strategy notebook — page update operations contract
+<!-- word_count: 271 -->
 
 WORK only; not Record. **Source of truth** is still Markdown (`strategy-page` fences, `days.md`, etc.). This document names **governed operation labels** for scripted or proposed changes so evolution is testable and inspectable — not a license for silent bulk rewrites.
 

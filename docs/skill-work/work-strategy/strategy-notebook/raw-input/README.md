@@ -1,4 +1,5 @@
 # Strategy raw input (full retention, 7 days)
+<!-- word_count: 1309 -->
 
 **Purpose:** Store **complete** transcripts and **all** strategy-ingest source material you want kept verbatim — without bloating [daily-strategy-inbox.md](../daily-strategy-inbox.md) or hitting the **~2000 word** per-block budget on [experts/*/transcript.md](../experts/ritter/transcript.md) that **`thread`** triage targets.
 
@@ -27,15 +28,24 @@ Optional local override file (gitignored): **`fetch-sources.local.json`** — me
 **Substack year backfill (full post body):** [`scripts/backfill_substack_raw_input.py`](../../../../scripts/backfill_substack_raw_input.py) — paginates `api/v1/archive`, fetches `api/v1/posts/{slug}`, writes `raw-input/<date>/substack-*.md` with optional YAML `thread: simplicius` (or other id). Example:  
 `python3 scripts/backfill_substack_raw_input.py --hostname simplicius76.substack.com --year 2026 --thread simplicius --apply`
 
-**Future extensions (not implemented yet):** authenticated X/YouTube/API pulls, wire paywall fetchers, and inbox stub append — each needs its own gate (tokens, ToS, tier tags).
+**Future extensions (not implemented yet):** authenticated X/YouTube/API pulls and wire paywall fetchers — each needs its own gate (tokens, ToS, tier tags).
 
 **Relation to other surfaces:**
 
 | Surface | Role |
 |--------|------|
-| **daily-strategy-inbox.md** | Paste-ready **stubs** + grep registry; optional short excerpts only |
-| **experts/`<id>`/transcript.md** | 7-day rolling **triage** corpus from inbox `thread:` blocks (word caps per architecture) |
+| **daily-strategy-inbox.md** | Paste-ready **stubs** + grep registry; optional short excerpts only — **index before (or in the same step as)** full verbatim on disk |
+| **experts/`<id>`/transcript.md** | 7-day rolling **triage** corpus from inbox `thread:` blocks (word caps per architecture); **pointers** when the same material is already under **`raw-input/`** |
 | **`raw-input/` (this tree)** | **Unabridged** text and bundled inputs; **pruning is operator-initiated only** (see § Pruning). Nothing in CI auto-deletes this tree. |
+
+**`kind:` values (YAML) and automation** — files with **`thread: <expert_id>`** and a parseable publication day (folder + front matter) participate in **`thread`** triage and the **machine layer** “Recent raw-input” list, except **index-only** kinds that would duplicate assets without adding speech text:
+
+| `kind` | Merged into transcript (one-line stub) | Notes |
+|--------|----------------------------------------|--------|
+| `rss-item`, `transcript`, `paste-bundle`, `x-post-text`, `mixed`, `verbatim-sidecar`, … | **Yes** (if `thread:` set) | Default: any `kind` **except** the exclude list below. |
+| `screenshot-list`, `x-screenshots-index` | **No** | Image / index rolls only; not expert speech stubs. |
+
+**Transcript file optional (advanced):** The per-expert rolling **`experts/<id>/transcript.md`** can stay **empty or pointer-only** when **`thread`** is run regularly — the **machine layer** still gets **Recent raw-input (lane)** from on-disk + inbox. Fully **removing** `transcript.md` from the tree is a separate hygiene choice (only after the operator bakes in raw-input + inbox registry habits).
 
 **End-of-day strategy session (notebook compose):** Default **sole** window for writing **`strategy-page`** blocks + `days.md` judgment is the **once-per-day** session you open with **`strategy page`** or **`strategy page compose`** (operator phrases — see [STRATEGY-NOTEBOOK-ARCHITECTURE.md](../STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *End-of-day strategy session*). **Primary bulk evidence:** **this folder’s** dated files plus inbox stubs. The operator token **`weave`** is **deprecated** for that compose step.
 
@@ -56,7 +66,7 @@ raw-input/
     <slug>.md        ← other captures: verbatim sidecars, RSS without thread:, bundles, indexes
 ```
 
-**Refined day page (not here):** **`experts/<expert_id>/mercouris-page-YYYY-MM-DD.md`** (Mercouris) — Chronicle / Reflection / Foresight; links back to **verbatim** in this tree. Distinct from **`strategy-page`** in `thread.md` unless mirrored during EOD compose.
+**Refined day page (not here):** **`experts/<expert_id>/<expert_id>-page-YYYY-MM-DD.md`** — Chronicle / Reflection / Foresight; links back to **verbatim** in this tree. **Multiple refined pages for the same publication date are allowed:** **`…-page-YYYY-MM-DD-<slug>.md`** (slug from `raw-input` stem) **or** one consolidated file with **A / B / C** Chronicle blocks per that expert’s **`*-page-template.md`**. Distinct from **`strategy-page`** in `thread.md` unless mirrored during EOD compose.
 
 **Raw capture:** e.g. **`2026-04-21-mercouris-verbatim.md`** under **`2026-04-21/`** because the episode **aired / published** on that calendar day; RSS **`thread: mercouris`** appends to **`2026-04-21-mercouris.md`** in that same folder.
 
@@ -119,6 +129,6 @@ Default root: `docs/skill-work/work-strategy/strategy-notebook/raw-input`. Overr
 
 ## Assistant default
 
-When the operator asks for **full transcript on disk**, write **verbatim** under **`raw-input/YYYY-MM-DD/<descriptive-slug>.md`** (or **`YYYY-MM-DD-<expert_id>.md`** when matching RSS merge). Place **refined day pages** under **`experts/<expert_id>/mercouris-page-YYYY-MM-DD.md`** (or an equivalent convention per expert). Keep [daily-strategy-inbox.md](../daily-strategy-inbox.md) to **stub lines** pointing at **verbatim** for `verify:` and optionally at the **expert page** for composed judgment, e.g. `verify:full-text+raw-input/2026-04-21/2026-04-21-mercouris-verbatim.md`.
+When the operator asks for **full transcript on disk**, write **verbatim** under **`raw-input/YYYY-MM-DD/<descriptive-slug>.md`** (or **`YYYY-MM-DD-<expert_id>.md`** when matching RSS merge). Place **refined day pages** under **`experts/<expert_id>/<expert_id>-page-YYYY-MM-DD.md`** (and **`…-page-YYYY-MM-DD-<slug>.md`** when splitting multiple primaries on the same date — see [PAGE-CONTRACT.md](../PAGE-CONTRACT.md) § Refined day pages). Keep [daily-strategy-inbox.md](../daily-strategy-inbox.md) to **stub lines** pointing at **verbatim** for `verify:` and optionally at the **expert page** for composed judgment, e.g. `verify:full-text+raw-input/2026-04-21/2026-04-21-mercouris-verbatim.md`.
 
 Full contract: [STRATEGY-NOTEBOOK-ARCHITECTURE.md § Split ingest model](../STRATEGY-NOTEBOOK-ARCHITECTURE.md#split-ingest-model).

@@ -1,4 +1,5 @@
 # Expert transcript — `baud`
+<!-- word_count: 3781 -->
 
 WORK only; not Record.
 

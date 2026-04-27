@@ -1,4 +1,5 @@
 # Mearsheimer strategy page — 2026-04-10 (*World Changed Forever as Iran Defeated the U.S.*)
+<!-- word_count: 5201 -->
 
 WORK only; not Record.
 

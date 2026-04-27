@@ -1,4 +1,5 @@
 # Fold learning — metrics and recursive review
+<!-- word_count: 565 -->
 
 **Operator session:** **EOD strategy session** composes or revises **`strategy-page`** blocks from inbox + **`raw-input/`** and updates `days.md` continuity (JSONL still uses **`fold_kind`** as a legacy field name; log lines may say **fold** for grep).
 

@@ -1,4 +1,5 @@
 # Expert thread — `parsi`
+<!-- word_count: 10565 -->
 
 WORK only; not Record.
 

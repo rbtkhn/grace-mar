@@ -1,4 +1,5 @@
 # Strategy expert — `berletic`
+<!-- word_count: 385 -->
 
 WORK only; not Record.
 

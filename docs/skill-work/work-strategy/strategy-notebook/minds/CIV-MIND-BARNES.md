@@ -1,4 +1,5 @@
 # CIV-MIND-BARNES — redirect (stable path)
+<!-- word_count: 56 -->
 
 **Canonical long-form mind (SSOT):** [`../strategy-expert-barnes-mind.md`](../strategy-expert-barnes-mind.md)
 

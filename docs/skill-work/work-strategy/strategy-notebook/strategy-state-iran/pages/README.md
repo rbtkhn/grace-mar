@@ -1,4 +1,5 @@
 # strategy-state-iran — pages (ad-hoc)
+<!-- word_count: 83 -->
 
 **Use for:** scratch and special files that do not yet belong in [weave/](../weave/), [channels/](../channels/), or [clusters/](../clusters/).
 

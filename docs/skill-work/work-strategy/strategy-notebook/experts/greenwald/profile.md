@@ -1,4 +1,5 @@
 # Strategy expert — `greenwald`
+<!-- word_count: 669 -->
 
 WORK only; not Record.
 

@@ -1,4 +1,5 @@
 # Ritter strategy page — 2026-03-01 (*Regime Change, the Double-Edged Sword*)
+<!-- word_count: 2282 -->
 
 WORK only; not Record.
 

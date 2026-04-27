@@ -1,4 +1,5 @@
 # Mearsheimer strategy page — 2026-01-07 (*Venezuela, Greenland & the End of NATO*)
+<!-- word_count: 6596 -->
 
 WORK only; not Record.
 

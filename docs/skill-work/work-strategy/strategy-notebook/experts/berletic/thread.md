@@ -1,4 +1,5 @@
 # Expert thread — `berletic`
+<!-- word_count: 2854 -->
 
 WORK only; not Record.
 

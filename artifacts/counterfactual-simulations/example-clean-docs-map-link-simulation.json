@@ -1,0 +1,46 @@
+{
+  "type": "counterfactual-simulation-report-v1",
+  "proposal_id": "example-clean-docs-map-link",
+  "generated_at": "2026-04-26T01:04:25Z",
+  "authority": {
+    "recordAuthority": "none",
+    "gateEffect": "none",
+    "mergeAuthority": "none",
+    "simulationOnly": true
+  },
+  "input_summary": {
+    "proposal_kind": "doctrine_change",
+    "target_paths": [
+      "docs/diagnostics-and-governance-tools.md"
+    ],
+    "target_surfaces": [
+      "WORK"
+    ],
+    "proposed_change_summary": "Add a cross-link from the diagnostics map to the path and schema placement guide so contributors can find placement rules more easily.",
+    "evidence_refs": [
+      "docs/diagnostics-and-governance-tools.md",
+      "docs/path-and-schema-placement.md"
+    ],
+    "operator_question": "Does this docs-only cross-link introduce any authority or doctrine drift?",
+    "has_patch_text": true
+  },
+  "affected_paths": [
+    "docs/diagnostics-and-governance-tools.md"
+  ],
+  "affected_surfaces": [
+    "WORK"
+  ],
+  "possible_contradictions": [],
+  "doctrine_drift_risks": [],
+  "follow_up_required": [
+    "Review nearby documentation cross-links and terminology alignment around docs/diagnostics-and-governance-tools.md."
+  ],
+  "tests_or_audits_to_run": [],
+  "recommendation": {
+    "decision": "accept",
+    "rationale": "The proposal is narrow, non-authoritative, and does not trigger obvious doctrine or contradiction risks."
+  },
+  "warnings": [
+    "Advisory only: this simulation report is not evidence, not Record, not approval, and not a merge receipt."
+  ]
+}

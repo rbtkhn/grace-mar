@@ -1,0 +1,17 @@
+{
+  "session_id": "bookshelf-membrane-demo",
+  "rounds": [
+    {
+      "round_index": 1,
+      "answers": [
+        { "question_id": "q01-fiction", "option_id": "active-focus" },
+        { "question_id": "q02-america", "option_id": "enduring-core" },
+        { "question_id": "q03-england", "option_id": "active-focus" },
+        { "question_id": "q04-penguin-clothbound", "option_id": "light-interest" },
+        { "question_id": "q05-everyman-s-library", "option_id": "active-focus" },
+        { "question_id": "q06-library-of-america", "option_id": "enduring-core" },
+        { "question_id": "q07-biography", "option_id": "active-focus" }
+      ]
+    }
+  ]
+}

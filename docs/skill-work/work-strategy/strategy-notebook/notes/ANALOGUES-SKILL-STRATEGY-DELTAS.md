@@ -1,4 +1,5 @@
 # Analogue apps → skill-strategy: deltas after redundancy audit
+<!-- word_count: 369 -->
 
 **Purpose:** Filtered outcome of the “web analogues” brainstorm. Most ideas **duplicate** behavior already specified in [`skill-strategy`](../../../../.cursor/skills/skill-strategy/SKILL.md), [STRATEGY-NOTEBOOK-ARCHITECTURE.md](../STRATEGY-NOTEBOOK-ARCHITECTURE.md), and [NOTEBOOK-PREFERENCES.md](../NOTEBOOK-PREFERENCES.md). **Do not** paste long analogue narratives into the skill.
 

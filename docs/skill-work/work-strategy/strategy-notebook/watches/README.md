@@ -1,4 +1,5 @@
 # Watches — strategy-notebook
+<!-- word_count: 541 -->
 
 WORK only; not Record.
 

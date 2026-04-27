@@ -1,4 +1,5 @@
 # Strategy expert — `mate`
+<!-- word_count: 407 -->
 
 **Canonical index:** [strategy-commentator-threads.md](strategy-commentator-threads.md) — **`mate`** lane.
 

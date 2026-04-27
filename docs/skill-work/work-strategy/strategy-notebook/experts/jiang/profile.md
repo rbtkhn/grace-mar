@@ -1,4 +1,5 @@
 # Strategy expert — Jiang Xueqin (`jiang`)
+<!-- word_count: 686 -->
 
 WORK only; not Record.
 

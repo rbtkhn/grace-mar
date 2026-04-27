@@ -1,8 +1,8 @@
 {
   "format": "grace-mar-runtime-bundle",
   "version": "1.0",
-  "bundle_id": "586640105527",
-  "generated_at": "2026-04-25T00:29:08.990734+00:00",
+  "bundle_id": "7216f8f4f205",
+  "generated_at": "2026-04-26T13:55:21.569700+00:00",
   "user_id": "grace-mar",
   "runtime_mode": "adjunct_runtime",
   "runtime_mode_description": "Assistive runtime alongside the canonical repo.",
@@ -63,9 +63,9 @@
       "self": {
         "exists": true,
         "path": "/Users/robertkuhne/Documents/grace-mar/users/grace-mar/self.md",
-        "size_bytes": 6812,
-        "mtime": "2026-04-24T02:00:17.726181+00:00",
-        "sha256": "01429c4b9778744682ab85f3508e85782d8a43f8fbc551b0f1423b301e67ee74"
+        "size_bytes": 7962,
+        "mtime": "2026-04-26T13:54:15.302972+00:00",
+        "sha256": "8f2452120f0f0bb66d244a432f62adc80252ff89f97ee695cc8d8db6f53fcab1"
       },
       "skills": {
         "exists": true,
@@ -105,16 +105,16 @@
       "evidence": {
         "exists": true,
         "path": "/Users/robertkuhne/Documents/grace-mar/users/grace-mar/self-archive.md",
-        "size_bytes": 2964,
-        "mtime": "2026-04-24T02:00:17.497301+00:00",
-        "sha256": "9567c5a5bb996e6c0360ab176f39f9eb6a66fc17a3bb44f3930ff7cfe6573f39"
+        "size_bytes": 10348,
+        "mtime": "2026-04-26T13:52:22.869210+00:00",
+        "sha256": "78439da204969428ac8da058fc174d81321254e4702ea9b7651391e5b7a09af0"
       },
       "self_evidence": {
         "exists": true,
         "path": "/Users/robertkuhne/Documents/grace-mar/users/grace-mar/self-archive.md",
-        "size_bytes": 2964,
-        "mtime": "2026-04-24T02:00:17.497301+00:00",
-        "sha256": "9567c5a5bb996e6c0360ab176f39f9eb6a66fc17a3bb44f3930ff7cfe6573f39"
+        "size_bytes": 10348,
+        "mtime": "2026-04-26T13:52:22.869210+00:00",
+        "sha256": "78439da204969428ac8da058fc174d81321254e4702ea9b7651391e5b7a09af0"
       },
       "library": {
         "exists": true,
@@ -133,22 +133,22 @@
       "session_log": {
         "exists": true,
         "path": "/Users/robertkuhne/Documents/grace-mar/users/grace-mar/session-log.md",
-        "size_bytes": 99,
-        "mtime": "2026-04-24T02:00:17.760725+00:00",
-        "sha256": "c7cd9063c00be1cec824e16fc7fa1c7a37d562389cb65f7087da5e7b30a218ad"
+        "size_bytes": 769,
+        "mtime": "2026-04-26T13:52:22.869604+00:00",
+        "sha256": "261281fcf3ecca58e39161a7d853f829e61e64c648bc0afbf2c95ef23e7b7e78"
       },
       "memory": {
         "exists": true,
         "path": "/Users/robertkuhne/Documents/grace-mar/users/grace-mar/self-memory.md",
         "size_bytes": 4344,
-        "mtime": "2026-04-24T14:03:55.743290+00:00",
-        "sha256": "3937dc34884219ec9285af5a68e43fc7aef8e1c8da043f4711579cf240c85ea7"
+        "mtime": "2026-04-26T05:16:11.593350+00:00",
+        "sha256": "4c44a523922b371428d869d88ed8d575b4291df95698e60622bb9454c78fdbe1"
       },
       "prompt": {
         "exists": true,
         "path": "/Users/robertkuhne/Documents/grace-mar/bot/prompt.py",
         "size_bytes": 13588,
-        "mtime": "2026-04-17T19:47:23.382857+00:00",
+        "mtime": "2026-04-26T13:52:21.991439+00:00",
         "sha256": "c0f53da4b8b7b471e94bfb72739a40e3c8557fbe979c22098497b47f79c0c661"
       }
     },
@@ -157,120 +157,120 @@
         "exists": true,
         "path": "/Users/robertkuhne/Documents/grace-mar/users/grace-mar/runtime-bundle/record/USER.md",
         "size_bytes": 408,
-        "mtime": "2026-04-25T00:29:08.992723+00:00",
+        "mtime": "2026-04-26T13:55:21.574429+00:00",
         "sha256": "afc463a8b8a1d231c6284c10ae77904cd2de5853c67a1492e00055081455cfba"
       },
       "record/fork-export.json": {
         "exists": true,
         "path": "/Users/robertkuhne/Documents/grace-mar/users/grace-mar/runtime-bundle/record/fork-export.json",
-        "size_bytes": 208773,
-        "mtime": "2026-04-25T00:29:09.005312+00:00",
-        "sha256": "95d6cf3e1e4a1409483a13d9144082857c87288d98c0482cc16f0b03e86e5bb4"
+        "size_bytes": 225032,
+        "mtime": "2026-04-26T13:55:21.587580+00:00",
+        "sha256": "d1f2380b71530227c10a8936067cbc944c4b9e6a3b0b1c1327b4c356b2ac131c"
       },
       "record/grace-mar-llm.txt": {
         "exists": true,
         "path": "/Users/robertkuhne/Documents/grace-mar/users/grace-mar/runtime-bundle/record/grace-mar-llm.txt",
-        "size_bytes": 5441,
-        "mtime": "2026-04-25T00:29:09.014540+00:00",
-        "sha256": "363185ed94e64f73f67ccbbcca52098c15798e75b4362b867724ad9529c7f4ac"
+        "size_bytes": 6223,
+        "mtime": "2026-04-26T13:55:21.594619+00:00",
+        "sha256": "ca2704305c347863e47aa0fe8e435174b5923e0b984e034e970122d8a6f5e284"
       },
       "policy/manifest.json": {
         "exists": true,
         "path": "/Users/robertkuhne/Documents/grace-mar/users/grace-mar/runtime-bundle/policy/manifest.json",
         "size_bytes": 6432,
-        "mtime": "2026-04-25T00:29:09.018197+00:00",
-        "sha256": "ca87d476bfb0e9a6e7ebcbf51735cc6c872b6718c54dcf4f0d4c963c903953fc"
+        "mtime": "2026-04-26T13:55:21.597669+00:00",
+        "sha256": "fd8b0b4ba364311e0c59c56df621f580537bbadd18acb2d363bc553849afd6f0"
       },
       "policy/llms.txt": {
         "exists": true,
         "path": "/Users/robertkuhne/Documents/grace-mar/users/grace-mar/runtime-bundle/policy/llms.txt",
         "size_bytes": 1327,
-        "mtime": "2026-04-25T00:29:09.019207+00:00",
-        "sha256": "4b18f59df2a69226dd6a4ad7ea7fe3f25482f17c035ebef5a5dd578a1675047a"
+        "mtime": "2026-04-26T13:55:21.597926+00:00",
+        "sha256": "f766fff519ad82be9692278bdc1ebd61c8289d5df31cc8c384a8faff87d0e67b"
       },
       "policy/intent_snapshot.json": {
         "exists": true,
         "path": "/Users/robertkuhne/Documents/grace-mar/users/grace-mar/runtime-bundle/policy/intent_snapshot.json",
         "size_bytes": 2713,
-        "mtime": "2026-04-25T00:29:09.020276+00:00",
-        "sha256": "ccea8b753a73333e8313e47feffff285f909ddca291147a7315b64267cb1b27f"
+        "mtime": "2026-04-26T13:55:21.598710+00:00",
+        "sha256": "2839cb50c815e090bff781db8a12664c2ccf5bc4793ad6c1abf039c8fa5f8654"
       },
       "runtime/warmup.md": {
         "exists": true,
         "path": "/Users/robertkuhne/Documents/grace-mar/users/grace-mar/runtime-bundle/runtime/warmup.md",
-        "size_bytes": 485,
-        "mtime": "2026-04-25T00:29:09.021906+00:00",
-        "sha256": "0c818656ebe221bee631774acf97bcc1dcd17ebe4cf4790a823004a369760529"
+        "size_bytes": 1401,
+        "mtime": "2026-04-26T13:55:21.601173+00:00",
+        "sha256": "d1c96607657f93e2901b50fec5c9944c07742207140bf020dd3800857d900225"
       },
       "runtime/session-log-tail.md": {
         "exists": true,
         "path": "/Users/robertkuhne/Documents/grace-mar/users/grace-mar/runtime-bundle/runtime/session-log-tail.md",
-        "size_bytes": 195,
-        "mtime": "2026-04-25T00:29:09.022303+00:00",
-        "sha256": "db7804e3b6a0619a60ff808ecd9997b556a9789c3e1933bf11cd0d32aa229a7b"
+        "size_bytes": 863,
+        "mtime": "2026-04-26T13:55:21.601690+00:00",
+        "sha256": "c20e0bb893eb8694f9f27d11fa74d1f03507ba48936a7ddca1f1d24d5b2a2e86"
       },
       "runtime/self-memory.md": {
         "exists": true,
         "path": "/Users/robertkuhne/Documents/grace-mar/users/grace-mar/runtime-bundle/runtime/self-memory.md",
         "size_bytes": 4430,
-        "mtime": "2026-04-25T00:29:09.024042+00:00",
-        "sha256": "f24b7525e9a71098c3134e1011e83b4c6c467f7f1ab8ffa4dd110ecbd0c25e19"
+        "mtime": "2026-04-26T13:55:21.602280+00:00",
+        "sha256": "dba8d627970f3d2ae5ad11235db994fd223e74c5af253c224f7ec5a77b136981"
       },
       "audit/pipeline-events.jsonl": {
         "exists": true,
         "path": "/Users/robertkuhne/Documents/grace-mar/users/grace-mar/runtime-bundle/audit/pipeline-events.jsonl",
-        "size_bytes": 3636,
-        "mtime": "2026-04-25T00:29:09.024715+00:00",
-        "sha256": "8e763dd81079e6326b07045b46c2a61534a30733ce68ccf2318e7141a6afe85c"
+        "size_bytes": 14295,
+        "mtime": "2026-04-26T13:55:21.602932+00:00",
+        "sha256": "f48ac73449dc221c413da7ea770cc5373b304584d42f7741b2bcb2c8c647edaa"
       },
       "audit/merge-receipts.jsonl": {
         "exists": true,
         "path": "/Users/robertkuhne/Documents/grace-mar/users/grace-mar/runtime-bundle/audit/merge-receipts.jsonl",
-        "size_bytes": 0,
-        "mtime": "2026-04-25T00:29:09.025176+00:00",
-        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        "size_bytes": 4496,
+        "mtime": "2026-04-26T13:55:21.604109+00:00",
+        "sha256": "372df2a201900fc0a57509f310c15184be6c8fee07e80e90fc504c12862c194f"
       },
       "audit/compute-ledger.jsonl": {
         "exists": true,
         "path": "/Users/robertkuhne/Documents/grace-mar/users/grace-mar/runtime-bundle/audit/compute-ledger.jsonl",
-        "size_bytes": 49181,
-        "mtime": "2026-04-25T00:29:09.025981+00:00",
-        "sha256": "0e01bda70773c5504fb357e03885832d227e86a70028743b7f6aee0c81f90c23"
+        "size_bytes": 54902,
+        "mtime": "2026-04-26T13:55:21.605709+00:00",
+        "sha256": "65fd4ef91559c61af21ac16cfa2940cc5bdac7d8126b016564e3041482524fe0"
       },
       "audit/fork-manifest.json": {
         "exists": true,
         "path": "/Users/robertkuhne/Documents/grace-mar/users/grace-mar/runtime-bundle/audit/fork-manifest.json",
-        "size_bytes": 294,
-        "mtime": "2026-04-25T00:29:09.026618+00:00",
-        "sha256": "679da87d950a14655829025d6e0d5d34fd998844c99eb34b5af4279fcc6e7cb7"
+        "size_bytes": 318,
+        "mtime": "2026-04-26T13:55:21.606384+00:00",
+        "sha256": "2806eb5d4f5cac569fbf854a7c102538649e347a16d9a525a044e813570b49ca"
       },
       "audit/harness-events.jsonl": {
         "exists": true,
         "path": "/Users/robertkuhne/Documents/grace-mar/users/grace-mar/runtime-bundle/audit/harness-events.jsonl",
-        "size_bytes": 13648,
-        "mtime": "2026-04-25T00:29:09.031270+00:00",
-        "sha256": "39edf21ad9bd1c20a494e8d49d7a4dbd7a83ce2b8eac347beda14b83b644489f"
+        "size_bytes": 22562,
+        "mtime": "2026-04-26T13:55:21.607404+00:00",
+        "sha256": "2a8d8c25ca9e7e0a76b5d47560bbb27e39bf74f9de27ad9e0438da2074bda7cc"
       },
       "fork-history/fork_state.json": {
         "exists": true,
         "path": "/Users/robertkuhne/Documents/grace-mar/users/grace-mar/runtime-bundle/fork-history/fork_state.json",
-        "size_bytes": 77,
-        "mtime": "2026-04-25T00:29:09.032934+00:00",
-        "sha256": "e15cf2a4db1626314079aa7c3b9b1dd163a8e288f833c04e20e881e08ba337b3"
+        "size_bytes": 193,
+        "mtime": "2026-04-26T13:55:21.608913+00:00",
+        "sha256": "0725d9c2b2f6d36efda75b97306d0cccf94c9007028945ed97018f351ad583ca"
       },
       "fork-history/drift-report.json": {
         "exists": true,
         "path": "/Users/robertkuhne/Documents/grace-mar/users/grace-mar/runtime-bundle/fork-history/drift-report.json",
         "size_bytes": 2,
-        "mtime": "2026-04-25T00:29:09.033790+00:00",
+        "mtime": "2026-04-26T13:55:21.609889+00:00",
         "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
       },
       "fork-history/fork-lineage.jsonl": {
         "exists": true,
         "path": "/Users/robertkuhne/Documents/grace-mar/users/grace-mar/runtime-bundle/fork-history/fork-lineage.jsonl",
-        "size_bytes": 858,
-        "mtime": "2026-04-25T00:29:09.034441+00:00",
-        "sha256": "d61302232612b561803c506255e962dc59f2e7ab5e133b51a46036be3df52085"
+        "size_bytes": 1803,
+        "mtime": "2026-04-26T13:55:21.610826+00:00",
+        "sha256": "f539c2dd6e54c3bc9214185ed2012a39ea176a7b9a1b0b0e00a399a4b6ad8c5b"
       }
     }
   }

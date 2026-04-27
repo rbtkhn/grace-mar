@@ -1,4 +1,5 @@
 # Strategy-notebook minds (Grace-Mar canonical)
+<!-- word_count: 285 -->
 
 **Long-form fingerprints (SSOT)** live in the **strategy-expert `*-mind.md`** files at the [strategy-notebook](../) root (same bundle as `-thread` / `-transcript`). The **`CIV-MIND-*.md`** files in **this directory** are **stable redirect paths** to those bodies — naming parity with upstream `CIV–MIND–*.md` and with skills that still cite `strategy-notebook/minds/CIV-MIND-*.md`. **Do not duplicate** the corpus under `CIV-MIND-*.md`.
 

@@ -1,4 +1,5 @@
 # Compiled views (derived)
+<!-- word_count: 539 -->
 
 **Territory:** WORK — refreshable markdown **snapshots** for browsing (Obsidian, handoff). **Not** the source of truth.
 

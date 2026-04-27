@@ -1,4 +1,5 @@
 # Expert transcript — `armstrong`
+<!-- word_count: 461 -->
 
 WORK only; not Record.
 

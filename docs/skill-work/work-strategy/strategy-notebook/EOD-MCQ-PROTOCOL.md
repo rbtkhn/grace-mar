@@ -1,4 +1,5 @@
 # EOD strategy session — MCQ protocol (v1)
+<!-- word_count: 2005 -->
 
 **Status:** ACTIVE  
 **SSOT for:** Structured, decision-first **end-of-day strategy sessions** when the operator wants multiple-choice routing before prose.  

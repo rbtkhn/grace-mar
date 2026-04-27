@@ -1,4 +1,5 @@
 # Workbench — Strategy notebook visualizer (pilot)
+<!-- word_count: 389 -->
 
 **Status:** **Workbench pilot artifact** (WORK / demo). **Not** the Record, **not** EVIDENCE, **not** a merge path, **not** a gate effect.
 

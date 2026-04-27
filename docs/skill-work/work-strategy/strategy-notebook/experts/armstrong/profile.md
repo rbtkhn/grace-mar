@@ -1,4 +1,5 @@
 # Strategy expert — `armstrong`
+<!-- word_count: 386 -->
 
 WORK only; not Record.
 

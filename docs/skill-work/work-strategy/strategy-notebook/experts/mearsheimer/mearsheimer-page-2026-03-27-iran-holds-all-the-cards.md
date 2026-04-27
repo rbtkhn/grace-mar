@@ -1,4 +1,5 @@
 # Mearsheimer strategy page — 2026-03-27 (*Iran Holds All the Cards — The Strategic Defeat of the U.S.*)
+<!-- word_count: 5250 -->
 
 WORK only; not Record.
 

@@ -1,4 +1,5 @@
 # Page contract — strategy notebook
+<!-- word_count: 372 -->
 
 WORK only; not Record.
 
@@ -6,8 +7,8 @@ WORK only; not Record.
 
 ## Center of gravity
 
-- **`strategy-page` blocks** (marker-fenced in expert **`thread.md`** journal layers) are the **primary analytical unit** — portable by stable `id=` across experts and months.
-- **Thread file(s)** (`experts/<expert_id>/thread.md` or monthly `*-thread-YYYY-MM.md`) are **containers and continuity lanes**: month segments, machine extraction, and embedded pages.
+- **`strategy-page` blocks** (marker-fenced in expert **thread** journal layers) are the **primary analytical unit** — portable by stable `id=` across experts and months.
+- **Thread file(s)** are **temporally limited — one file per calendar month:** **`experts/<expert_id>/<expert_id>-thread-YYYY-MM.md`** (journal + machine layer for that month only). **Legacy:** a single **`experts/<expert_id>/thread.md`** may still hold multiple **`## YYYY-MM`** segments until migrated.
 - **Month continuity** in the thread **journal layer** (above the machine markers) is **bookended synthesis** from that month’s thread-embedded pages when you fill it in: **lede** after `## YYYY-MM`, **`strategy-page`** bodies dated in the month, optional **closer** — see [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *Thread* and [strategy-expert-template.md](strategy-expert-template.md#thread-template). Read-only inventory: `python3 scripts/list_strategy_pages_by_month.py --year-month YYYY-MM` (optional `--expert-id`, `--chronicle-snippets`, `--json`).
 
 ## Where the rules live
@@ -26,4 +27,8 @@ WORK only; not Record.
 
 ## Multi-expert pages
 
-When several experts address the same page, the **same `id=`** appears in each expert’s `thread.md` (see [watches/README.md](watches/README.md)). This is **intentional** duplication for per-lane reading; **not** multiple competing sources of truth.
+When several experts address the same page, the **same `id=`** appears in each expert’s **thread file for that month** (see [watches/README.md](watches/README.md)). This is **intentional** duplication for per-lane reading; **not** multiple competing sources of truth.
+
+## Refined day pages (standalone `*-page-*.md`)
+
+**Distinct from** thread-embedded **`strategy-page`** fences: standalone files under **`experts/<expert_id>/`** (Chronicle / Reflection / Foresight; link to **`raw-input/`** in **`### Appendix`**). **Multiple refined pages for the same publication date are allowed** for every expert: default **`<expert_id>-page-YYYY-MM-DD.md`**, or **`<expert_id>-page-YYYY-MM-DD-<slug>.md`** when splitting by primary capture (`<slug>` from the **`raw-input`** stem). **Alternatively,** one file may consolidate same-day captures with **A / B / C** Chronicle blocks where the expert template defines that pattern. Normative detail: [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md) (split ingest / refined day pages) and each expert’s **`*-page-template.md`**.

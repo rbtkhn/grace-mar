@@ -1,4 +1,5 @@
 # Renamed — use canonical file
+<!-- word_count: 38 -->
 
 This note was renamed for clarity.
 

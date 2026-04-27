@@ -1,4 +1,5 @@
 # Ritter strategy page — 2026-04-20 (*Ritter's Rant*)
+<!-- word_count: 2196 -->
 
 WORK only; not Record.
 

@@ -1,4 +1,5 @@
 # Expert transcript — `blumenthal`
+<!-- word_count: 219 -->
 
 WORK only; not Record.
 

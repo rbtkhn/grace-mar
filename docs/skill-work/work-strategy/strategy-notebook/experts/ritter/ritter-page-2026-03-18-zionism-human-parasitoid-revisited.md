@@ -1,4 +1,5 @@
 # Ritter strategy page — 2026-03-18 (*Zionism, the Human Parasitoid (Revisited)*)
+<!-- word_count: 2049 -->
 
 WORK only; not Record.
 

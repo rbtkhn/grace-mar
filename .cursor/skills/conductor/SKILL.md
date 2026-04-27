@@ -1,7 +1,7 @@
 ---
 name: conductor
 preferred_activation: conductor
-description: "Conductor: work-dev–associated execution pattern — pick → act on disk → falsify → log → compress. Triggers: conductor, D + prefix (klei, tos, …), coffee Step 2 after hub D. Five masters + cadence live in strategy-notebook + coffee; this skill is the short router. Optional Kleiber action MCQ."
+description: "Conductor: work-dev–associated execution — pick → act on disk → falsify → log → compress. After any resolved conductor=<slug>, emit Conductor action MCQ (five A–E repo-grounded next moves, master-shaped). Triggers: conductor, D + prefix, coffee Step 2 after hub D."
 ---
 
 # Conductor (work-dev — execution recursion)
@@ -16,7 +16,7 @@ description: "Conductor: work-dev–associated execution pattern — pick → ac
 
 - Operator says **`conductor`**, or **`D` +** fragment, with or without **`coffee`**.
 - **Hub** **D** then **second** **A**–**E** = **masters** row — [CONDUCTOR-PASS — Conductor MCQ](../../../docs/skill-work/work-coffee/CONDUCTOR-PASS.md#conductor-mcq).
-- **work-dev** **Build** (coffee **A**) often **feeds** the same session: [work-dev workspace Next actions](../../../docs/skill-work/work-dev/workspace.md) can **inform** **Kleiber** (or other) **action** **MCQ** **options** when the **object** is **ship** / **harness** / **derived** **regeneration** — still **one** **refusal** **wall** per pass.
+- **work-dev** **Build** (coffee **A**) often **feeds** the same session: [work-dev workspace Next actions](../../../docs/skill-work/work-dev/workspace.md) can **inform** **action** **MCQ** **options** when the **object** is **ship** / **harness** / **derived** **regeneration** — still **at least one** **explicit** **refusal** or **scope** line where **Kleiber**-style depth applies.
 
 ## Do / don’t
 
@@ -26,8 +26,7 @@ description: "Conductor: work-dev–associated execution pattern — pick → ac
 | **MCQ (masters):** [cadence_conductor_resolution.py](../../../scripts/cadence_conductor_resolution.py) `build_conductor_mcq_for_user` | Conflate **hub** **A**–**E** with **Conductor** **A**–**E**. |
 | **Log:** `coffee_pick` `picked=D` `conductor=<slug>`. [Cadence audit](../coffee/SKILL.md#cadence-audit) | Merge **Record** from Conductor. |
 | **Close (optional):** [CONDUCTOR-IMPROVEMENT-LOOP](../../../docs/skill-work/work-strategy/strategy-notebook/CONDUCTOR-IMPROVEMENT-LOOP.md) · [CONDUCTOR-CLOSE-TEMPLATE](../../../docs/skill-work/work-strategy/strategy-notebook/CONDUCTOR-CLOSE-TEMPLATE.md) · `coffee_conductor_outcome` | Treat log lines as full memory. |
-| **Kleiber** **action** **MCQ:** **five** **discriminating** **actions**; ground in **current** **repo** — **strategy-notebook** / **strategy-state-iran** **or** [workspace.md](../../../docs/skill-work/work-dev/workspace.md) + **work-dev** **paths** when the pass is **execution-heavy**; **one** **refusal** per option. | Generic lists; copy **master** row as “actions.” |
-| **Other masters:** orientation per [CONDUCTOR-PASS](../../../docs/skill-work/work-coffee/CONDUCTOR-PASS.md#conductor-d-menu) + [COFFEE-CADENCE](../../../docs/skill-work/work-strategy/strategy-notebook/COFFEE-CADENCE-CONDUCTOR-PROTOCOL.md); sub-MCQ **default** **Kleiber** | Replace **B** / **C** with Conductor. |
+| **Conductor action MCQ (required** unless **orientation only** / **no action menu**): for **every** resolved slug, **not** only **Kleiber** — **five** **A.–E.** **next** **moves** for **this** `conductor`; each line = **concrete** path, edit, or **explicit** **not-this-round**; ground in **current** **repo** — **strategy-notebook** (e.g. `chapters/…/days.md`, weave, `strategy-state-iran/`) and/or [workspace.md](../../../docs/skill-work/work-dev/workspace.md) + [dev-notebook](../../../docs/skill-work/work-dev/dev-notebook/README.md) when **ship**-heavy. See **§ Conductor action MCQ** below. | Generic lists; re-list **Toscanini…Bernstein** as if they were “actions.” |
 
 ## One-liner commands
 
@@ -45,4 +44,20 @@ python3 scripts/log_cadence_event.py --kind coffee_conductor_outcome -u grace-ma
 - [work-cadence-events.md](../../../docs/skill-work/work-cadence/work-cadence-events.md) (`conductor=`)
 - [STRATEGY-NOTEBOOK-ARCHITECTURE](../../../docs/skill-work/work-strategy/strategy-notebook/STRATEGY-NOTEBOOK-ARCHITECTURE.md) (when the object is `days.md` / weave)
 
-**Done when:** Master resolved; orientation delivered; `coffee_pick` if applicable; **Kleiber action MCQ** when **`conductor=kleiber`**; optional close; return to normal workflow (unless **`stay in coffee`**).
+**Done when:** Master resolved; orientation delivered; **Conductor action MCQ** (five **A.–E.**) unless operator opted out; `coffee_pick` if applicable; optional close; return to normal workflow (unless **`stay in coffee`**).
+
+## Conductor action MCQ (second **A.–E.** for the resolved slug)
+
+**When:** Immediately **after** short orientation, whenever `conductor=<slug>` is **known** — **coffee** path, **conductor-only** path, or **D** + letter/name **without** a prior “orientation only” opt-out. **SSOT** anchor: [CONDUCTOR-PASS — Conductor action MCQ](../../../docs/skill-work/work-coffee/CONDUCTOR-PASS.md#conductor-action-mcq).
+
+**What:** A **header** (e.g. **Conductor action MCQ** — **Reply A–E** for **this** `bernstein` pass) and **exactly five** lines **A.** … **E.** Each option is a **discriminating** next move: **file path** or **editing target**, **one** main **verb**, and **enough** **constraint** that **A** vs **B** vs **C** are **not** interchangeable. Re-use letters **A–E**; this is the **third** letter row in a full **coffee+Conductor** turn (hub → masters → **actions**), so **label** the block so it is not confused with **hub** or **master** rows.
+
+| Slug (anchor) | Shape hints (each of the 5 should reflect **this** row — mix as appropriate) |
+|---------------|-----------------------------------------------------------------------------|
+| **toscanini** | Verify or pin **receipt**; **split** a claim by **tier**; **one** falsify line; **seam** between thread and `days.md` / chapter; **one** “what would change the tag?” |
+| **furtwangler** | Hold **tension** without forced verdict; **watch** / **worry** lines; **one** paragraph that **stops** at **conditions**; **linkage** you are **not** closing; **contrast** two institutional voices |
+| **karajan** | **Month-arc** balance; **trim** or **dedupe** pointer; **across** two voices or channels; **one** long-horizon bet; **one** “what we are **not** optimizing this week” |
+| **kleiber** | **Hotspot** on disk; **depth**; **explicit** **refusals** / not-this-round; **falsify**; **harness** or **script** touch when the loop is **execution**-native |
+| **bernstein** | **Stakes** in **one** line; **pulse** in `days.md` or **Reflection**; **one** “live **Judgment**” or **public legibility** move; **Conductor close** with **heat**; **contrast** arc vs wire |
+
+**Stop making the mistake** = treat **Kleiber** as **exemplar**, **not** **exclusive** — the **action** **MCQ** is **contract** for **every** slug unless the operator opts out in the same message.

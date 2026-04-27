@@ -1,0 +1,273 @@
+{
+  "round_index": 2,
+  "round_size": 7,
+  "questions": [
+    {
+      "id": "q01-russia",
+      "tag": "Russia",
+      "prompt": "Which option best matches your current relationship to the \"Russia\" subject cluster?",
+      "support_ids": [
+        "HNSRC-0122",
+        "HNSRC-0123",
+        "HNSRC-0124",
+        "HNSRC-0125",
+        "HNSRC-0148",
+        "HNSRC-0149",
+        "HNSRC-0150",
+        "HNSRC-0151"
+      ],
+      "support_authors_count": 8,
+      "options": [
+        {
+          "id": "enduring-core",
+          "label": "This is a durable core lens I actively carry.",
+          "weight": 1.0
+        },
+        {
+          "id": "active-focus",
+          "label": "This is active right now and shaping current thinking.",
+          "weight": 0.75
+        },
+        {
+          "id": "light-interest",
+          "label": "Useful context, but not a current self-defining focus.",
+          "weight": 0.4
+        },
+        {
+          "id": "not-now",
+          "label": "Not a present focus in this phase.",
+          "weight": 0.0
+        }
+      ]
+    },
+    {
+      "id": "q02-rome",
+      "tag": "Rome",
+      "prompt": "Which option best matches your current relationship to the \"Rome\" subject cluster?",
+      "support_ids": [
+        "HNSRC-0007",
+        "HNSRC-0017",
+        "HNSRC-0018",
+        "HNSRC-0019",
+        "HNSRC-0020",
+        "HNSRC-0028",
+        "HNSRC-0029",
+        "HNSRC-0030"
+      ],
+      "support_authors_count": 13,
+      "options": [
+        {
+          "id": "enduring-core",
+          "label": "This is a durable core lens I actively carry.",
+          "weight": 1.0
+        },
+        {
+          "id": "active-focus",
+          "label": "This is active right now and shaping current thinking.",
+          "weight": 0.75
+        },
+        {
+          "id": "light-interest",
+          "label": "Useful context, but not a current self-defining focus.",
+          "weight": 0.4
+        },
+        {
+          "id": "not-now",
+          "label": "Not a present focus in this phase.",
+          "weight": 0.0
+        }
+      ]
+    },
+    {
+      "id": "q03-empire",
+      "tag": "empire",
+      "prompt": "Which option best matches your current relationship to the \"empire\" subject cluster?",
+      "support_ids": [
+        "HNSRC-0001",
+        "HNSRC-0003",
+        "HNSRC-0006",
+        "HNSRC-0008",
+        "HNSRC-0009",
+        "HNSRC-0011",
+        "HNSRC-0020",
+        "HNSRC-0022"
+      ],
+      "support_authors_count": 17,
+      "options": [
+        {
+          "id": "enduring-core",
+          "label": "This is a durable core lens I actively carry.",
+          "weight": 1.0
+        },
+        {
+          "id": "active-focus",
+          "label": "This is active right now and shaping current thinking.",
+          "weight": 0.75
+        },
+        {
+          "id": "light-interest",
+          "label": "Useful context, but not a current self-defining focus.",
+          "weight": 0.4
+        },
+        {
+          "id": "not-now",
+          "label": "Not a present focus in this phase.",
+          "weight": 0.0
+        }
+      ]
+    },
+    {
+      "id": "q04-france",
+      "tag": "France",
+      "prompt": "Which option best matches your current relationship to the \"France\" subject cluster?",
+      "support_ids": [
+        "HNSRC-0064",
+        "HNSRC-0070",
+        "HNSRC-0085",
+        "HNSRC-0086",
+        "HNSRC-0110",
+        "HNSRC-0119",
+        "HNSRC-0120",
+        "HNSRC-0121"
+      ],
+      "support_authors_count": 13,
+      "options": [
+        {
+          "id": "enduring-core",
+          "label": "This is a durable core lens I actively carry.",
+          "weight": 1.0
+        },
+        {
+          "id": "active-focus",
+          "label": "This is active right now and shaping current thinking.",
+          "weight": 0.75
+        },
+        {
+          "id": "light-interest",
+          "label": "Useful context, but not a current self-defining focus.",
+          "weight": 0.4
+        },
+        {
+          "id": "not-now",
+          "label": "Not a present focus in this phase.",
+          "weight": 0.0
+        }
+      ]
+    },
+    {
+      "id": "q05-poetry",
+      "tag": "poetry",
+      "prompt": "Which option best matches your current relationship to the \"poetry\" subject cluster?",
+      "support_ids": [
+        "HNSRC-0046",
+        "HNSRC-0047",
+        "HNSRC-0048",
+        "HNSRC-0049",
+        "HNSRC-0052",
+        "HNSRC-0080",
+        "HNSRC-0081",
+        "HNSRC-0114"
+      ],
+      "support_authors_count": 12,
+      "options": [
+        {
+          "id": "enduring-core",
+          "label": "This is a durable core lens I actively carry.",
+          "weight": 1.0
+        },
+        {
+          "id": "active-focus",
+          "label": "This is active right now and shaping current thinking.",
+          "weight": 0.75
+        },
+        {
+          "id": "light-interest",
+          "label": "Useful context, but not a current self-defining focus.",
+          "weight": 0.4
+        },
+        {
+          "id": "not-now",
+          "label": "Not a present focus in this phase.",
+          "weight": 0.0
+        }
+      ]
+    },
+    {
+      "id": "q06-greece",
+      "tag": "Greece",
+      "prompt": "Which option best matches your current relationship to the \"Greece\" subject cluster?",
+      "support_ids": [
+        "HNSRC-0001",
+        "HNSRC-0002",
+        "HNSRC-0003",
+        "HNSRC-0004",
+        "HNSRC-0005",
+        "HNSRC-0010",
+        "HNSRC-0041",
+        "HNSRC-0042"
+      ],
+      "support_authors_count": 9,
+      "options": [
+        {
+          "id": "enduring-core",
+          "label": "This is a durable core lens I actively carry.",
+          "weight": 1.0
+        },
+        {
+          "id": "active-focus",
+          "label": "This is active right now and shaping current thinking.",
+          "weight": 0.75
+        },
+        {
+          "id": "light-interest",
+          "label": "Useful context, but not a current self-defining focus.",
+          "weight": 0.4
+        },
+        {
+          "id": "not-now",
+          "label": "Not a present focus in this phase.",
+          "weight": 0.0
+        }
+      ]
+    },
+    {
+      "id": "q07-founding",
+      "tag": "founding",
+      "prompt": "Which option best matches your current relationship to the \"founding\" subject cluster?",
+      "support_ids": [
+        "HNSRC-0087",
+        "HNSRC-0088",
+        "HNSRC-0089",
+        "HNSRC-0090",
+        "HNSRC-0091",
+        "HNSRC-0106",
+        "HNSRC-0107",
+        "HNSRC-0108"
+      ],
+      "support_authors_count": 10,
+      "options": [
+        {
+          "id": "enduring-core",
+          "label": "This is a durable core lens I actively carry.",
+          "weight": 1.0
+        },
+        {
+          "id": "active-focus",
+          "label": "This is active right now and shaping current thinking.",
+          "weight": 0.75
+        },
+        {
+          "id": "light-interest",
+          "label": "Useful context, but not a current self-defining focus.",
+          "weight": 0.4
+        },
+        {
+          "id": "not-now",
+          "label": "Not a present focus in this phase.",
+          "weight": 0.0
+        }
+      ]
+    }
+  ],
+  "continue_prompt": "Continue to another round or stop and emit session summary?"
+}

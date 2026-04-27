@@ -1,4 +1,5 @@
 # Expert thread — `sachs`
+<!-- word_count: 4419 -->
 
 WORK only; not Record.
 

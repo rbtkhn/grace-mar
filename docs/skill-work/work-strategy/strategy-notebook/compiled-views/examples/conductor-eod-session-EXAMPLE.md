@@ -1,4 +1,5 @@
 # Example: Conductor EOD rehearsal checklist (hypothetical)
+<!-- word_count: 450 -->
 
 **Status:** EXAMPLE ONLY — fake `expert_id`s. **Not** a live session log.
 

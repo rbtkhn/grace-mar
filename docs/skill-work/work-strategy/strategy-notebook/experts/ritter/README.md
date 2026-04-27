@@ -1,4 +1,5 @@
 # Expert `ritter` — thread layout (WORK)
+<!-- word_count: 207 -->
 
 **Reading order (2026, chronological):** [`ritter-thread-2026-01.md`](ritter-thread-2026-01.md) → [`ritter-thread-2026-02.md`](ritter-thread-2026-02.md) → [`ritter-thread-2026-03.md`](ritter-thread-2026-03.md) → [`ritter-thread-2026-04.md`](ritter-thread-2026-04.md). Then [`thread.md`](thread.md) for **ongoing 2026-04** journal (if not yet fully moved to the April monthly), **backfill**, and the legacy machine block (when still present there).
 

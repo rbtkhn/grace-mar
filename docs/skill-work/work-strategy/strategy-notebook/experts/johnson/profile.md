@@ -1,4 +1,5 @@
 # Strategy expert — `johnson`
+<!-- word_count: 381 -->
 
 **Canonical index:** [strategy-commentator-threads.md](strategy-commentator-threads.md) — **`johnson`** lane.
 

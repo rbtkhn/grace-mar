@@ -1,4 +1,5 @@
 # Ritter strategy page — 2026-01-13 (*Losing the Republic*)
+<!-- word_count: 1072 -->
 
 WORK only; not Record.
 

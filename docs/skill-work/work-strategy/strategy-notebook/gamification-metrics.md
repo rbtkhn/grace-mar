@@ -1,4 +1,5 @@
 # Strategy notebook — seam / “gamification” trial (WORK only)
+<!-- word_count: 200 -->
 
 **Purpose:** Optional **observability** for weave quality and verify-first discipline — **not** a leaderboard. If a metric becomes the target, it stops measuring seam health (Goodhart risk). Prefer **falsifiable watches** in [`forecast-watch-log.md`](forecast-watch-log.md) over raw counts.
 

@@ -1,4 +1,5 @@
 # Compilation Recipe: Expert Polyphony Synthesis
+<!-- word_count: 843 -->
 
 **Recipe ID:** RECIPE-STRATEGY-POLYPHONY-2026-04-22-001  
 **Version:** 0.1 (Starter)  

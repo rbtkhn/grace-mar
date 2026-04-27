@@ -1,5 +1,5 @@
 # Cluster — Hormuz commercial passage (multi-day)
-<!-- word_count: 251 -->
+<!-- word_count: 326 -->
 
 **Role:** Cross-channel object for strait passage, PMO route, and “commercial open” language versus **material** shipping / AIS — tension between [diplomacy](../channels/diplomacy/profile.md) announcements and [material-check](../channels/material-check/profile.md).
 
@@ -11,6 +11,7 @@
 
 **Fill with:**
 
+- **Toscanini (one split, pinned):** **Announced** — IRI **FM** **English** **2026-04-17** declares **Hormuz** **passage** **open** for **commercial** **vessels** on the **PMO**-**coordinated** **route**, **in line with** the **Lebanon** **ceasefire** **remainder** (institutional **signaling**, not **AIS**). **Material** — **strait** **traffic** / **lineups** / **enforcement** **facts** and **tolls** / **ROE** (if any) are **out-of-band** to that **row**; they belong in [material-check](../channels/material-check/profile.md) + **wire** readouts, **not** in the **X** **receipt** alone. **Pin:** table row and anchor for **04-17** in [`raw-input/2026-04-20/x-araghchi-april-2026-posts-bundle.md`](../../raw-input/2026-04-20/x-araghchi-april-2026-posts-bundle.md#slice-araghchi-2026-04-17).
 - FM / Presidency English hooks and `raw-input` bundle dates.
 - Material hooks: wire, field, multilateral readouts routed to material-check.
 - [daily/](../chapters/2026-04/daily/) rows where Hormuz or passage is central.

@@ -3,12 +3,12 @@ ingest_date: 2026-04-25
 pub_date: 2026-04-25
 kind: strategy-draft
 title: Hormuz Strait Transit Agreement (v0 strawman)
-word_count: 257
+word_count: 393
 thread: mercouris
 related_transcript: raw-input/2026-04-25/transcript-duran-mercouris-cristoforu-sea-blockade-iran-2026-04-25.md
-conformance_note: Shaped against Mercouris–Christoforou sea-blockade / stalemate diagnosis (WORK; not Record).
-word_budget_words: 300
-word_budget_scope: Entire file ≤300 words. Longer HRTF scaffolds → separate paths.
+conformance_note: Shaped against Mercouris–Christoforou sea-blockade / stalemate diagnosis (WORK; not Record). §3.1 added as Furtwängler “hold the tension” beat — no policy prescription.
+word_budget_words: 420
+word_budget_scope: Entire file ≤420 words. Longer HRTF scaffolds → separate paths.
 related_long_form: hormuz-reciprocal-transit-deescalation-framework-v2-1.md
 ---
 # Hormuz Strait Transit Agreement (v0 strawman)
@@ -26,6 +26,10 @@ related_long_form: hormuz-reciprocal-transit-deescalation-framework-v2-1.md
 ## 3. Reciprocal implementation
 
 **Maritime** **coercion** and **strait** **practices** shall **not** be required to end in one **unilateral** **step** where that reads as **forfeiting** **leverage**; **synchronized** **reciprocal** **moves** tied to **observable** **hooks** in the **same** **political** **package** are the default **intent**.
+
+### 3.1 Commercial passage vs. material enforcement (tension held)
+
+*Commercial* and *open strait* messaging can **outpace** the same week’s **interdiction**, **inspection**, and **national authority** facts on the water — so “predictable transit” in rhetoric and **contested** enforcement in practice may **coexist** without one line abolishing the other. This v0 names that **mismatch** as a live object, not a drafting slip to “solve” here: it stays **for negotiators and facts**, not a prescriptive strait **fix** in the strawman.
 
 ## 4. Parallel tracks
 

@@ -1,4 +1,5 @@
 # Expert thread — `mercouris`
+<!-- word_count: 17441 -->
 
 WORK only; not Record.
 

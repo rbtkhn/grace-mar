@@ -1,4 +1,5 @@
 # Mearsheimer strategy page — 2026-03-10 (*U.S. Already Lost Iran War — No Off-Ramp in Sight*)
+<!-- word_count: 2534 -->
 
 WORK only; not Record.
 

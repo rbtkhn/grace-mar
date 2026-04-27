@@ -1,4 +1,5 @@
 # Expert mind — Robert Barnes (`barnes`)
+<!-- word_count: 4412 -->
 
 WORK only; not Record.
 

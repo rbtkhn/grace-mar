@@ -1,4 +1,5 @@
 # strategy-state-iran — institutional thread (tri-voice, **official** — not commentator `experts`)
+<!-- word_count: 1490 -->
 
 ### Migration / redirect (read first)
 
@@ -52,6 +53,8 @@ Treat as **IRI FM register** for **§1e / Islamabad / Hormuz–Lebanon linkage**
 ### Foresight
 
 **Gap:** Scrape reports **no** Araghchi posts **04-01**, **04-18–04-20** — refresh if the account adds posts. **Image-only** rows (**SNSC**, photos) need **visual primary** or **fa/EN readout** for full cite. Engagement numbers are **snapshot** from fetch, not live.
+
+**Why this matters now:** A headline-only reader can still walk away with a *portable* FM story — **Hormuz** passage **named** to **Lebanon ceasefire remainder** and a **PMO-coordinated commercial route**, layered on **civilian / Bushehr** under attack — third-party retelling without the Islamabad detail stack.
 
 ---
 

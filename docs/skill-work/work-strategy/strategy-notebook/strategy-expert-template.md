@@ -1,4 +1,5 @@
 # Strategy expert — templates (WORK only)
+<!-- word_count: 2557 -->
 
 **Single source** for the **four** on-disk files each commentator uses (profile, thread, transcript, **mind**). When adding someone new, either copy **each** section below into its own file (name on the section heading) or run `python3 scripts/expand_strategy_expert_template.py --expert-id <slug> [--full-name "..."]` from the repo root (`--dry-run` to preview). `validate_expert_profiles.py` validates real `strategy-expert-<id>.md` profiles only (this bundle file is skipped; `-mind.md` companions are skipped too). `validate_strategy_expert_threads.py` checks on-disk **`experts/<id>/thread.md`**, **`experts/<id>/<id>-thread-YYYY-MM.md`** (and flat `strategy-expert-<id>-thread.md` / `…-thread-YYYY-MM.md`) **journal-layer** month blocks (prose vs list-only hints, and **≥500 words** of **prose + blockquotes** per `## YYYY-MM` unless opted out — **verbatim-forward** policy). During a **phased** monthly split, **both** a monthly file and **`thread.md`** may exist; `discover_all_pages` uses **union** + **dedupe** (see [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *Thread*). Use `--month MM` (`01`–`12`) to scope checks to one calendar month across all expert-thread files; omit for a full audit.
 
@@ -121,13 +122,13 @@ _Omit or leave “roster-only (Tier C)” until **`thread:`** density supports a
 
 ---
 
-**Companion files:** [`strategy-expert-<expert_id>-transcript.md`](strategy-expert-template.md#transcript-template) (7-day rolling verbatim), thread file(s) — legacy [`strategy-expert-<expert_id>-thread.md`](strategy-expert-template.md#thread-template) / **`experts/<expert_id>/thread.md`**, or monthly **`experts/<expert_id>/<expert_id>-thread-YYYY-MM.md`** (see [Thread](#thread-template)), and [`strategy-expert-<expert_id>-mind.md`](strategy-expert-template.md#mind-template) (optional long-form voice / linguistic fingerprint).
+**Companion files:** [`strategy-expert-<expert_id>-transcript.md`](strategy-expert-template.md#transcript-template) (7-day rolling verbatim), thread file(s) — **canonical:** **`experts/<expert_id>/<expert_id>-thread-YYYY-MM.md`** (one per month; see [Thread](#thread-template)), **legacy:** [`strategy-expert-<expert_id>-thread.md`](strategy-expert-template.md#thread-template) / **`experts/<expert_id>/thread.md`**, and [`strategy-expert-<expert_id>-mind.md`](strategy-expert-template.md#mind-template) (optional long-form voice / linguistic fingerprint).
 
 ---
 
 <a id="thread-template"></a>
 
-## Thread → `strategy-expert-<expert_id>-thread.md` (or `experts/<expert_id>/<expert_id>-thread-YYYY-MM.md`)
+## Thread → `experts/<expert_id>/<expert_id>-thread-YYYY-MM.md` (one file per month; legacy `thread.md` optional)
 
 # Expert thread — `<expert_id>`
 
@@ -158,7 +159,7 @@ WORK only; not Record.
 - `python3 scripts/list_strategy_pages_by_month.py --year-month YYYY-MM --chronicle-snippets` — same TSV, then **advisory** first-paragraph + `>` line candidates per page (dumb `### Chronicle` parse; **never** auto-inserts; rubric still governs operator picks).
 - `python3 scripts/list_strategy_pages_by_month.py --year-month YYYY-MM --json` — JSON array; add `--chronicle-snippets` to include a `snippets` object per row.
 
-**Layout:** **Legacy:** one **`experts/<expert_id>/thread.md`** (or flat `strategy-expert-<expert_id>-thread.md`) with multiple **`## YYYY-MM`** segments. **Monthly chapters (preferred for large journals):** one file per month — **`experts/<expert_id>/<expert_id>-thread-YYYY-MM.md`** (optional flat **`strategy-expert-<expert_id>-thread-YYYY-MM.md`**). In each monthly file the journal covers **that month only**; an optional **`## YYYY-MM`** heading matching the filename keeps grep / validator continuity. For **2026** in a **single** legacy file: **Segment 1** = January (`## 2026-01`), **Segment 2** = February, **Segment 3** = March, **Segment 4** = April (ongoing). The **machine layer** (script-maintained) is **only** the fenced block between the **strategy-expert-thread** HTML start and end comments — do not call that “Segment 2” in the month sense.
+**Layout:** **Canonical:** **one thread file per calendar month** — **`experts/<expert_id>/<expert_id>-thread-YYYY-MM.md`** (optional flat **`strategy-expert-<expert_id>-thread-YYYY-MM.md`**). Each file is **temporally bounded** to that month: journal + **`strategy-page`** fences + machine layer for **`YYYY-MM`** only; an optional **`## YYYY-MM`** heading matching the filename keeps grep / validator continuity. **Legacy:** one **`experts/<expert_id>/thread.md`** (or flat `strategy-expert-<expert_id>-thread.md`) with **multiple** **`## YYYY-MM`** segments until you run **`migrate_thread_md_to_monthly.py`**. For **2026** in a **single** legacy file: **Segment 1** = January (`## 2026-01`), **Segment 2** = February, **Segment 3** = March, **Segment 4** = April (ongoing). The **machine layer** (script-maintained) is **only** the fenced block between the **strategy-expert-thread** HTML start and end comments — do not call that “Segment 2” in the month sense.
 
 **Continuity (month open) —** optional at the start of a **new** month file: one short paragraph (what **carried** from the prior month, what is still **open**, which **pages** or **verify** pins matter) so a monthly file reads as a **chapter**, not a reset. Use especially when the expert’s lane spans several months of capture.
 
@@ -201,21 +202,21 @@ Woven pages use the scaffold in [strategy-page-template.md](strategy-page-templa
 
 ## Machine layer — Extraction (script-maintained)
 
-_Auto-generated from `transcript.md` + (optional) **inbox `raw-input/` pointers** + `strategy-page` blocks (+ optional empty legacy on-disk index). **Journal layer** (narrative) lives **above** the **strategy-expert-thread** start HTML comment. The machine-layer HTML block is replaced on each `thread` run._
+_Auto-generated from `transcript.md` + **on-disk and inbox** `raw-input/…` (de-duped **Recent raw-input (lane)**) + `strategy-page` blocks (+ optional empty legacy on-disk index). **Journal layer** (narrative) lives **above** the **strategy-expert-thread** start HTML comment. The machine-layer HTML block is replaced on each `thread` run._
 
 ### Recent transcript material
 
 _(Populated by `strategy_expert_corpus.py` / `strategy_thread.py` when `transcript.md` body lines exist.)_
 
-### Raw-input pointers (inbox)
+### Recent raw-input (lane)
 
-_(When **`daily-strategy-inbox.md`** lines with this expert’s `thread:` tag reference paths under `raw-input/…`, a short pointer list is listed here so the machine layer can stay useful even if `transcript.md` is **thin** or **pointer-only**.)_
+_(**Union** of on-disk `raw-input/**.md` with this expert’s `thread:` and inbox lines that point at `raw-input/…`—paths de-duped, disk first.)_
 
 ### Page references
 
 _(Populated from `strategy-page` blocks; optional legacy index rows if present on disk.)_
 
-_(No transcript or page material for extraction.)_
+_(No transcript, raw-input lane, or page material for extraction.)_
 
 <!-- strategy-expert-thread:end -->
 
@@ -233,7 +234,7 @@ legacy_index_paths: []
 
 <a id="transcript-template"></a>
 
-## Transcript → `strategy-expert-<expert_id>-transcript.md`
+## Transcript → `experts/<expert_id>/transcript.md`
 
 # Expert transcript — `<expert_id>`
 
@@ -247,7 +248,7 @@ WORK only; not Record.
 **Editing:** Operator may lightly edit for clarity after triage. Edits are preserved across triage runs (append-only, not overwrite).
 **Companion files:** [`strategy-expert-<expert_id>.md`](strategy-expert-template.md#profile-template) (profile), [`strategy-expert-<expert_id>-thread.md`](strategy-expert-template.md#thread-template) (distilled thread), and [`strategy-expert-<expert_id>-mind.md`](strategy-expert-template.md#mind-template) (optional long-form mind).
 
-**Optional refined day page (same folder):** `experts/<expert_id>/<expert_id>-page-YYYY-MM-DD.md` (e.g. Mercouris: `mercouris-page-2026-04-21.md`; Pape: `pape-page-2026-04-20.md`) — Chronicle / Reflection / Foresight artifact; **not** a substitute for full **verbatim** in [`raw-input/`](raw-input/README.md). Distinct from **`strategy-page`** fences in the expert **thread file(s)** unless you mirror judgment during EOD compose. When this pattern is in use for an expert, maintain a colocated **`experts/<expert_id>/<expert_id>-page-template.md`** (scaffold + compliance checklist); references: [`experts/mercouris/mercouris-page-template.md`](experts/mercouris/mercouris-page-template.md), [`experts/pape/pape-page-template.md`](experts/pape/pape-page-template.md). Introducing that template implies **bringing existing `*-page-*.md` files into compliance** for that expert. Do **not** add empty `*-page-template.md` files until the expert has at least one day page or a settled capture contract.
+**Optional refined day page (same folder):** `experts/<expert_id>/<expert_id>-page-YYYY-MM-DD.md` (e.g. Mercouris: `mercouris-page-2026-04-21.md`; Pape: `pape-page-2026-04-20.md`). **Multiple refined pages for the same publication date are allowed:** `experts/<expert_id>/<expert_id>-page-YYYY-MM-DD-<slug>.md` (slug from the primary `raw-input` stem), **or** one consolidated file with **A / B / C** Chronicle blocks per that expert’s **`*-page-template.md`**. Chronicle / Reflection / Foresight artifact; **not** a substitute for full **verbatim** in [`raw-input/`](raw-input/README.md). Distinct from **`strategy-page`** fences in the expert **thread file(s)** unless you mirror judgment during EOD compose. When this pattern is in use for an expert, maintain a colocated **`experts/<expert_id>/<expert_id>-page-template.md`** (scaffold + compliance checklist); references: [`experts/mercouris/mercouris-page-template.md`](experts/mercouris/mercouris-page-template.md), [`experts/pape/pape-page-template.md`](experts/pape/pape-page-template.md). Introducing that template implies **bringing existing `*-page-*.md` files into compliance** for that expert. Do **not** add empty `*-page-template.md` files until the expert has at least one day page or a settled capture contract.
 
 <a id="thesis-scaffold-pattern"></a>
 

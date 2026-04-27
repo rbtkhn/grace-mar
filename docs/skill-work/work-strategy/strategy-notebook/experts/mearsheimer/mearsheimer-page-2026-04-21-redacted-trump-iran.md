@@ -1,4 +1,5 @@
 # Mearsheimer strategy page — 2026-04-21 (*Trump's ONLY option is surrender*)
+<!-- word_count: 6298 -->
 
 WORK only; not Record.
 

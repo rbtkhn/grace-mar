@@ -1,4 +1,5 @@
 # Expert mind — Alexander Mercouris (`mercouris`)
+<!-- word_count: 3097 -->
 
 WORK only; not Record.
 

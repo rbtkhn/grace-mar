@@ -1,4 +1,5 @@
 # Channel — material check (strait / AIS / field-adjacent)
+<!-- word_count: 209 -->
 
 **Formal role:** **Material** readouts for **Hormuz**, **shipping**, **AIS-**adjacent, **ORBAT-**touched, **multilateral** **body** **reports** when the **judgment** **object** is **“what** **is** **happening** **on** **the** **water** / **in** **the** **field**” — **not** the **MFA** **X** line alone.
 

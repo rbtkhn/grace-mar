@@ -1,4 +1,5 @@
 # Trump — Christianity, the papacy, and religion — narrative arc (2016→)
+<!-- word_count: 595 -->
 
 **Purpose:** Retroactively **place** current **`narrative-escalation`** captures (e.g. **Trump–Leo XIV** public row, Bible-oath memes, **Satan**-frame posts) on a **long arc** about **Donald Trump’s relationship to Christianity (especially U.S. evangelical / Catholic publics), to the Roman pontiff, and to “religion” as a policy-and-identity register** — **not** a general election-legitimacy timeline.
 

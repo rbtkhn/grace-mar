@@ -1,4 +1,5 @@
 # Institutional ledger — 2026-04
+<!-- word_count: 277 -->
 
 **Role:** **Month ledger** for Iran institutional **signals**, organized by [signal class](../templates/INSTITUTIONAL-LEDGER-SIGNAL-CLASSES.md). **Not** a replacement for [`chapters/2026-04/daily/`](../chapters/2026-04/daily/) (chronology) or the **legacy** embedded pages in [`voices/iri-institutional/thread.md`](../voices/iri-institutional/thread.md) (history + inbound links).
 

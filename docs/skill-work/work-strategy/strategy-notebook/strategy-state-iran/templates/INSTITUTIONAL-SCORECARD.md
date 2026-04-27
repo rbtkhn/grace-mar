@@ -1,4 +1,5 @@
 # Institutional scorecard (state lane)
+<!-- word_count: 149 -->
 
 **Use in:** [strategy-state-iran](..) only — **not** the main `experts/` thread grammar. Copy into weave, cluster pages, or `channels/…/YYYY-MM.md` when you need a one-glance pass.
 

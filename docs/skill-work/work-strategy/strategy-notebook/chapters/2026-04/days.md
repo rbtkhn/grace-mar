@@ -1,4 +1,5 @@
 # April 2026 — daily entries
+<!-- word_count: 18765 -->
 
 Append-only. Newest dated block at the **bottom**.
 

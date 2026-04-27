@@ -87,11 +87,24 @@ def test_render_thread_extraction_includes_raw_input_pointers() -> None:
         transcript_lines=[],
         knot_refs=[],
         page_blocks=[],
-        raw_input_pointer_lines=["- [a.md](raw-input/2026-04-24/a.md)"],
+        raw_input_lane_lines=["- [a.md](raw-input/2026-04-24/a.md)"],
     )
-    assert "Raw-input pointers" in text
+    assert "Recent raw-input" in text
     assert "raw-input/2026-04-24/a.md" in text
-    assert "_(No transcript, raw-input pointers, or page material" not in text
+    assert "_(No transcript, raw-input lane, or page material" not in text
+
+
+def test_render_thread_extraction_raw_input_lane_suffices_without_transcript() -> None:
+    """Empty rolling transcript is OK when the lane lists on-disk / inbox raw-input (phase-4 gate)."""
+    text = render_thread_extraction(
+        "davis",
+        transcript_lines=[],
+        knot_refs=[],
+        page_blocks=[],
+        raw_input_lane_lines=["- [b.md](raw-input/2026-04-24/b.md) _on-disk_"],
+    )
+    assert "Union of" in text or "de-duped" in text
+    assert "_(No transcript, raw-input lane, or page material" not in text
 
 
 def test_collect_inbox_raw_input_pointers_respects_thread_tag_and_month(

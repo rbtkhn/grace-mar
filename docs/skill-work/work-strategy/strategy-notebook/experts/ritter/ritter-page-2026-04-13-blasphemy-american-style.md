@@ -1,4 +1,5 @@
 # Ritter strategy page — 2026-04-13 (*Blasphemy, American Style*)
+<!-- word_count: 1765 -->
 
 WORK only; not Record.
 

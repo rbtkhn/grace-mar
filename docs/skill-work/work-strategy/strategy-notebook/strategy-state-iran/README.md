@@ -1,4 +1,5 @@
 # strategy-state-iran (institutional signaling notebook)
+<!-- word_count: 545 -->
 
 **Purpose:** A **parallel WORK lane** for **Iranian institutional and elite-authored** signaling — MFA, presidency, Majlis, state-adjacent amplification chains, and **material** readouts (AIS, shipping) — that **complements** the main notebook’s **commentator** [`experts/`](../experts/) **without** imitating the same routing story.
 

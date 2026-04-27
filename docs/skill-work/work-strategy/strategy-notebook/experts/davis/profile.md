@@ -1,4 +1,5 @@
 # Strategy expert — Daniel L. Davis (`davis`)
+<!-- word_count: 906 -->
 
 WORK only; not Record.
 

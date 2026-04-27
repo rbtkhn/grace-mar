@@ -1,4 +1,5 @@
 # Ritter strategy page — 2026-01-05 (*The Sanctions Shield*)
+<!-- word_count: 2663 -->
 
 WORK only; not Record.
 

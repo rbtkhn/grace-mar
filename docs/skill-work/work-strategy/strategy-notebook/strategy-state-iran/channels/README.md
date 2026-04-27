@@ -1,4 +1,5 @@
 # Channels (institutional routing)
+<!-- word_count: 227 -->
 
 **Role:** **Primary** organizational axis for the Iran **state** lane — **not** the same as [`experts/`](../experts/) (commentator IDs). A **channel** = an **institutional** lane for **evidence and register**; **offices and persons** are **emitters** inside a channel, not the top-level file tree.
 

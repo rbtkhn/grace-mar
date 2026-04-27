@@ -1,4 +1,5 @@
 # Example: Symphony Snapshot (hypothetical)
+<!-- word_count: 363 -->
 
 **Status:** EXAMPLE ONLY — fake experts and content. **Not** Record truth. **Do not** cite as analysis of real threads.
 

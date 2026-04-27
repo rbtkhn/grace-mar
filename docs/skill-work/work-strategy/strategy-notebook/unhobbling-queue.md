@@ -1,4 +1,5 @@
 # Unhobbling queue
+<!-- word_count: 111 -->
 
 WORK only; not Record. Curated **frontier / tool** rows for the [five-conductors](compiled-views/recipes/expert-polyphony-synthesis-five-conductors.md) recipe **Unhobbling** block. **Strict:** every substantive line in the Unhobbling pass must trace to a row here; **evidence** is required (URL and/or path under this repo, e.g. `raw-input/...`).
 

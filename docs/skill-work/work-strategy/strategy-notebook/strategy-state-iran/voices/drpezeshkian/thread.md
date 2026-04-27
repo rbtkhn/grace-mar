@@ -1,4 +1,5 @@
 # strategy-state-iran — official voice `drpezeshkian` (redirect)
+<!-- word_count: 43 -->
 
 **Primary routing (new work):** [channels/presidency](../../channels/presidency/profile.md) and month [weave/2026-04-institutional-ledger.md](../../weave/2026-04-institutional-ledger.md).
 

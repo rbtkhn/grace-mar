@@ -1,4 +1,5 @@
 # Ritter strategy page — 2026-01-12 (*Iranian Resilience*)
+<!-- word_count: 763 -->
 
 WORK only; not Record.
 

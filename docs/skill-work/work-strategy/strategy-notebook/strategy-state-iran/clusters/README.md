@@ -1,4 +1,5 @@
 # Clusters (multi-day state-signal objects)
+<!-- word_count: 98 -->
 
 **Layering in this lane:**
 

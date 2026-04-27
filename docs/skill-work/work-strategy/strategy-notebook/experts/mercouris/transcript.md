@@ -1,4 +1,5 @@
 # Expert transcript — `mercouris`
+<!-- word_count: 6074 -->
 
 WORK only; not Record.
 

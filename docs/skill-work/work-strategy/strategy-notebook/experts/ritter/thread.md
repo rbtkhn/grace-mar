@@ -1,4 +1,5 @@
 # Expert thread — `ritter`
+<!-- word_count: 12241 -->
 
 WORK only; not Record.
 

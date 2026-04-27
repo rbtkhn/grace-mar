@@ -1,4 +1,5 @@
 # Verbatim — Lt Col Daniel Davis (ret.) *Deep Dive* (WORK)
+<!-- word_count: 6592 -->
 
 **Title:** *Iran Closes Strait of Hormuz, Now What?*  
 **Speaker:** Lt Col **Daniel L. Davis** (ret.) — Defense Priorities / *Daniel Davis Deep Dive*  

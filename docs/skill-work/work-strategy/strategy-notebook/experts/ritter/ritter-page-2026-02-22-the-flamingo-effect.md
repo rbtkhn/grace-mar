@@ -1,4 +1,5 @@
 # Ritter strategy page — 2026-02-22 (*The Flamingo Effect*)
+<!-- word_count: 3100 -->
 
 WORK only; not Record.
 

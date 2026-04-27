@@ -1,4 +1,5 @@
 # skill-strategy exercise prompts (copy-paste)
+<!-- word_count: 230 -->
 
 **Skill:** [`.cursor/skills/skill-strategy/SKILL.md`](../../../../.cursor/skills/skill-strategy/SKILL.md)  
 **Notebook:** [`../chapters/YYYY-MM/days.md`](../chapters/2026-04/days.md) — append `### EXERCISE — <slug> (YYYY-MM-DD)` **or** clean-room under this folder + one pointer line in `days.md`.  

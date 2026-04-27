@@ -1,4 +1,5 @@
 # Ritter strategy page — 2026-03-25 (*How the Chechen miracle kick-started the Russian 'Path of Redemption'*)
+<!-- word_count: 2035 -->
 
 WORK only; not Record.
 

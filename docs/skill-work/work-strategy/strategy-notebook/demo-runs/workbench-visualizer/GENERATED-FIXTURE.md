@@ -1,4 +1,5 @@
 # Generated fixture (strategy notebook visualizer)
+<!-- word_count: 209 -->
 
 `strategy-notebook-visualizer.fixture.json` is a **derived** artifact. It is **not** SELF, EVIDENCE, or a gate merge. The HTML map **does not** assert strategic truth; it only reflects **tree structure and paths** the generator found.
 

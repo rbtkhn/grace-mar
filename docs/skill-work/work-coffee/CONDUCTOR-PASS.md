@@ -64,7 +64,13 @@ Each printed option includes a **continuity** tail: last `coffee_pick` slug, opt
 
 **How the operator picks:** A **Conductor MCQ** letter **A.–E.**; or **`D`** (hub) then **A.–E.** / fragment on the next line; or **`D` +** name fragment in one line; or **bare `D`** to continue the **same conductor as last time** (`last_logged_conductor` / `resolve_d_conductor("", …)`). If two prefix fragments match, ask for a longer fragment or a Conductor **A.–E.** letter. Single-character **A.–E** in a conductor turn maps to the **Conductor** row (`conductor_submenu_letter_to_slug`), not the hub.
 
-**On pick,** give the usual **short** Conductor orientation ([COFFEE-CADENCE-CONDUCTOR-PROTOCOL.md](../work-strategy/strategy-notebook/COFFEE-CADENCE-CONDUCTOR-PROTOCOL.md)) plus **concrete** next actions for the **chosen** movement.
+**On pick,** give the usual **short** Conductor orientation ([COFFEE-CADENCE-CONDUCTOR-PROTOCOL.md](../work-strategy/strategy-notebook/COFFEE-CADENCE-CONDUCTOR-PROTOCOL.md)).
+
+<a id="conductor-action-mcq"></a>
+
+#### Conductor action MCQ (second **A.–E.** — **required**)
+
+**Not** another **A.–E.** that names **Toscanini…Bernstein** — it is a **new** **five-line** list **after** the master is resolved, with **this** pass’s **repo** next moves. Label it **`Conductor action MCQ`** and instruct **Reply A–E** for **this** pass. Each line is a **concrete, repo-grounded** next move (path or explicit refusal for this round), with **verbs and constraints** that match the **active** `conductor` slug (see [`.cursor/skills/conductor/SKILL.md`](../../../.cursor/skills/conductor/SKILL.md) **Conductor action MCQ**). **Omit** only if the operator says **"orientation only"** or **"no action menu"** in the same turn. **Kleiber** is not the only mode that gets a menu; **Bernstein, Toscanini,** etc. all get **their own** five options — same **A.–E.** letters, **third** use of the letter set in one session (after hub and master row).
 
 **Outside `coffee`:** the operator may issue the **same** conductor pick (**`D`**, **`D` +** fragment, or clear natural-language equivalent) **without** running `coffee` Step 0–1. Resolution, orientation, and **`coffee_pick`** logging match **`coffee` Step 2 D**; do **not** require Recent rhythm or `operator_coffee.py` for that turn. See [.cursor/skills/coffee/SKILL.md](../../../.cursor/skills/coffee/SKILL.md) § *Conductor only (no `coffee` session)*.
 

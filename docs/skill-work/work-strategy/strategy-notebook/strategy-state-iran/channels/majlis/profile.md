@@ -1,4 +1,5 @@
 # Channel — majlis (legislative / elite mobilization)
+<!-- word_count: 167 -->
 
 **Formal role:** **Majlis** speaker and **legislative** elite **X** (or filed **fa→EN** copy), including **siege** / **ceasefire-violation** / **“battlefield cards”** **rhetoric**, often **repost-boosted**.
 

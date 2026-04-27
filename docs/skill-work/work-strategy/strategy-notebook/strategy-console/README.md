@@ -1,4 +1,5 @@
 # Strategy Console
+<!-- word_count: 413 -->
 
 **WORK only;** not **Record**. **Derived, refresh-only, non-canonical.**
 

@@ -1,4 +1,5 @@
 # US–Iran kinetic likelihood — cross-expert tracker
+<!-- word_count: 321 -->
 
 **Kind:** WORK-only strategy-notebook scaffold; **not** Record.  
 **Governed by:** [NOTEBOOK-PREFERENCES.md](NOTEBOOK-PREFERENCES.md) § *US–Iran kinetic likelihood (cross-expert track)* (`#us-iran-kinetic-track`).  

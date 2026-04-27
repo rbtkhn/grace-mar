@@ -315,3 +315,10 @@ _(Append below this line.)_
 - **2026-04-26 13:11 UTC** — coffee (grace-mar) ok=true mode=work-start cursor_model=unknown model_tier=unknown
 - **2026-04-26 13:21 UTC** — coffee_pick (grace-mar) ok=true cursor_model=unknown model_tier=unknown picked=D conductor=toscanini
 - **2026-04-26 13:28 UTC** — coffee_pick (grace-mar) ok=true cursor_model=unknown model_tier=unknown picked=D conductor=kleiber
+- **2026-04-26 13:52 UTC** — coffee (grace-mar) ok=true mode=work-start cursor_model=unknown model_tier=unknown
+- **2026-04-26 13:54 UTC** — coffee_pick (grace-mar) ok=true cursor_model=unknown model_tier=unknown picked=D conductor=kleiber
+- **2026-04-26 14:22 UTC** — coffee (grace-mar) ok=true mode=work-start cursor_model=unknown model_tier=unknown
+- **2026-04-26 14:24 UTC** — coffee_pick (grace-mar) ok=true cursor_model=unknown model_tier=unknown picked=D conductor=karajan
+- **2026-04-26 14:27 UTC** — coffee_pick (grace-mar) ok=true cursor_model=unknown model_tier=unknown picked=D conductor=karajan
+- **2026-04-26 14:32 UTC** — coffee_conductor_outcome (grace-mar) ok=true cursor_model=unknown model_tier=unknown verdict=watch conductor=karajan notebook_ref=strategy-notebook/hormuz-strait-transit-agreement-v0.md note=dedupe_map_plus_cluster_backpointer
+- **2026-04-26 15:35 UTC** — coffee_pick (grace-mar) ok=true cursor_model=unknown model_tier=unknown picked=D conductor=bernstein

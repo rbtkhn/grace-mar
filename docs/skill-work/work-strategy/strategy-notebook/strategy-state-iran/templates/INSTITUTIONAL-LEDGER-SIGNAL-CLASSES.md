@@ -1,4 +1,5 @@
 # Institutional ledger — signal-class headings (template)
+<!-- word_count: 204 -->
 
 **Role:** In [`weave/`*`-institutional-ledger.md`](../weave/) and new channel month notes, **default** the top organization to **signal class**, not to **`### Voice — …`** (person-primary).
 

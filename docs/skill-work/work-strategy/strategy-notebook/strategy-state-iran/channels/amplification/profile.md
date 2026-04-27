@@ -1,4 +1,5 @@
 # Channel — amplification (republication / repost / echo)
+<!-- word_count: 209 -->
 
 **Formal role:** **Non-primary** **paths** the signal takes — **Tasnim**-class **republication**, **X** **repost** chains, **influential** **quote-boosts** of a **Majlis** or **press** line — **the chain is part of the judgment object** (provenance, not “noise” to strip).
 

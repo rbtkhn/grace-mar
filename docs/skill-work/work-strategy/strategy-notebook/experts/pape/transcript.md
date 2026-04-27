@@ -1,4 +1,5 @@
 # Expert transcript — `pape`
+<!-- word_count: 7822 -->
 
 WORK only; not Record.
 

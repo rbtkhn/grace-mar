@@ -1,4 +1,5 @@
 # Strategy notebook — synthesis operating model
+<!-- word_count: 3753 -->
 
 **Purpose:** A **single ergonomic entry point** for turning inputs into strategy-notebook **`strategy-page`** blocks and `days.md` continuity. Deep algorithms (condense tiers, summarize-and-condense steps, word targets) stay in [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md); **minds recipes** stay in [MINDS-SKILL-STRATEGY-PATTERNS.md](../minds/MINDS-SKILL-STRATEGY-PATTERNS.md). This file answers: *what do I run, in what order, and where does each kind of content go?*
 

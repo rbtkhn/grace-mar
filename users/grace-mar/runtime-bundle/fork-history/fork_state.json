@@ -1,1 +1,10 @@
-{"phase": "seed", "reseeded_at": "2026-04-14", "previous_companion": "Abby"}
+{
+  "phase": "seed",
+  "reseeded_at": "2026-04-14",
+  "previous_companion": "Abby",
+  "counters": {
+    "merge_count": 7
+  },
+  "fork_id": "grace-mar",
+  "updated_at": "2026-04-26T13:52:22Z"
+}

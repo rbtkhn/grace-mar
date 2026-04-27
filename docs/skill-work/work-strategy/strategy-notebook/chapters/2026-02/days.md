@@ -1,4 +1,5 @@
 # Chapter 2026-02 — days
+<!-- word_count: 151 -->
 
 **Chronology note:** February 2026 did not use daily **`## YYYY-MM-DD`** blocks at capture time. **Episodic synthesis** only; full arc in [meta.md](meta.md).
 

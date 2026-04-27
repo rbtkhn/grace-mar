@@ -1,8 +1,12 @@
 # Baud refined day page — template
+<!-- word_count: 806 -->
 
 WORK only; not Record.
 
 **Purpose:** Standalone refined day page for the `baud` expert. **`### Chronicle`** carries the **full verbatim** from linked [`raw-input/`](../../raw-input/README.md)—**lightly cleaned and formatted**; **`### Reflection`** and **`### Foresight`** are **operator analysis** (**may be stubbed** on ingest, completed in a later pass). Distinct from a `strategy-page` HTML fence in [`thread.md`](thread.md) unless you duplicate judgment there during EOD compose.
+
+
+**Filename:** Default **`baud-page-YYYY-MM-DD.md`** (voice / publication date). **Multiple refined pages for the same publication date are allowed:** use **`baud-page-YYYY-MM-DD-<slug>.md`** with **`<slug>`** from the primary `raw-input` stem so filenames stay unique. **Alternatively,** consolidate same-day captures into **one** refined file with **A / B / C** Chronicle blocks when this template provides a same-day section. If the `raw-input/` folder date differs (ingest batching), note it in **`### Appendix`**. Under [`transcript.md`](transcript.md) when used, add one **`Refined day page:`** line per refined file for that date.
 
 **Thread-embedded pages:** For `<!-- strategy-page:start … -->` blocks in monthly or legacy thread files, use [`strategy-page-template.md`](../../strategy-page-template.md) instead of this file.
 
@@ -68,7 +72,7 @@ Verbatim lives under `raw-input/<date>/`. Refined pages live only under `experts
 Under the matching `## YYYY-MM-DD` in [`transcript.md`](transcript.md), add (when not already present):
 
 - `Verbatim:` → relative link to the `raw-input` capture.
-- `Refined day page:` → `baud-page-YYYY-MM-DD.md`.
+- `Refined day page:` → `baud-page-YYYY-MM-DD.md` or `baud-page-YYYY-MM-DD-<slug>.md` (one line per refined file).
 - `Template:` → [`baud-page-template.md`](baud-page-template.md) (optional header pointer).
 
 ---
@@ -112,7 +116,7 @@ WORK only; not Record.
 
 ## Compliance checklist (retrofit / review)
 
-1. Title: `# Baud day page — YYYY-MM-DD`.
+1. Title: `# Baud day page — YYYY-MM-DD`. Optional short title in parentheses when multiple pages share the date; filename uses `-<slug>` when split.
 2. `WORK only; not Record.` on its own line after the title.
 3. Preamble matches Mode A or Mode B; **Artifact:** uses “refined day page (standalone file under `experts/baud/`)” verbatim.
 4. `---` before `### Chronicle`.

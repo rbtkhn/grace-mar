@@ -1,4 +1,5 @@
 # Verbatim — Amb. Charles Freeman × Glenn Diesen (WORK)
+<!-- word_count: 6561 -->
 
 **Title (session):** *Charles Freeman: Diplomacy Fails - Strait of Hormuz Shut Down Again*  
 **Host:** Glenn Diesen · **Guest:** Amb. Charles Freeman (former U.S. Assistant Secretary of Defense)  

@@ -1,4 +1,5 @@
 # Expert transcript — `davis`
+<!-- word_count: 1765 -->
 
 WORK only; not Record.
 

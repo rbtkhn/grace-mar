@@ -1,4 +1,5 @@
 # Chapter 2026-01 — days
+<!-- word_count: 191 -->
 
 **Chronology note:** January 2026 did not use daily **`## YYYY-MM-DD`** blocks at capture time. This file holds a single **episodic synthesis**; the full retro narrative is in [meta.md](meta.md).
 

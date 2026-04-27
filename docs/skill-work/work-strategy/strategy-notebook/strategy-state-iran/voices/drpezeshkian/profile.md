@@ -1,4 +1,5 @@
 # strategy-state-iran — voice — `drpezeshkian`
+<!-- word_count: 509 -->
 
 **Lane:** [strategy-state-iran](../../README.md) — Iranian institutional / elite voices (emitter metadata).
 

@@ -1,4 +1,5 @@
 # Deprecated folder — `expert-ingest-corpus/`
+<!-- word_count: 124 -->
 
 Per-expert rolling ingests now live in the parent directory as **`strategy-expert-<expert_id>.md`** (same level as [strategy-commentator-threads.md](../strategy-commentator-threads.md)).
 

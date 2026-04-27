@@ -1,4 +1,5 @@
 # Exercise 1 — headline collapse (clean-room example)
+<!-- word_count: 344 -->
 
 **Series:** skill-strategy exercise · **Date:** 2026-04-12  
 **Purpose:** Validate tagged rewrite vs synthetic wire mashup (no real attributions in the **input** paragraph).

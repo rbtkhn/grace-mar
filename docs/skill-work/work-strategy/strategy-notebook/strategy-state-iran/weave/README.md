@@ -1,4 +1,5 @@
 # Weave (institutional ledger + interpretation)
+<!-- word_count: 125 -->
 
 **Role:** **Month-scoped** reasoning for the Iran **institutional** lane. **Grep** `institutional-ledger` and `institutional-weave` under this folder.
 

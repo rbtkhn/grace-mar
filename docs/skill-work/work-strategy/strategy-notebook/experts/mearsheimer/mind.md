@@ -1,4 +1,5 @@
 # Expert mind — John Mearsheimer (`mearsheimer`)
+<!-- word_count: 2027 -->
 
 WORK only; not Record.
 

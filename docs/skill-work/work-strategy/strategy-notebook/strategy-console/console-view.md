@@ -1,4 +1,5 @@
 # Strategy Console
+<!-- word_count: 800 -->
 
 > Derived refresh-only operator-orientation surface.
 > The Strategy Console does not automate judgment. It automates orientation.

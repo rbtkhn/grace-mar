@@ -1,4 +1,5 @@
 # Forecast Watch Log
+<!-- word_count: 123 -->
 
 Purpose: lightweight log of forecast-informed watches inside work-strategy.
 

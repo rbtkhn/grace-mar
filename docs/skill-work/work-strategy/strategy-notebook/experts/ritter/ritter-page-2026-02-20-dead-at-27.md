@@ -1,4 +1,5 @@
 # Ritter strategy page — 2026-02-20 (*Dead at 27*)
+<!-- word_count: 2077 -->
 
 WORK only; not Record.
 

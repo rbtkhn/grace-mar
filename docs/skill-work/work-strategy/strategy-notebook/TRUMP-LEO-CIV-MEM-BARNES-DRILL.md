@@ -1,4 +1,5 @@
 # Trump–Leo × civ-mem — Barnes drill (session sheet)
+<!-- word_count: 504 -->
 
 **Purpose:** Repeatable **WORK** protocol for a **`strategy`** pass that layers **civilization_memory** MEM reads under **Recipe A** (Barnes-only) and **[CIV-MIND-BARNES.md](minds/CIV-MIND-BARNES.md) § VII** (Trump–Leo × Iran stack). **Not** Record; tier-A claims still need wires / [ROME-PASS.md](../../work-strategy-rome/ROME-PASS.md) order for current papal text.
 

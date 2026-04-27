@@ -1,4 +1,5 @@
 # Compilation Recipe: Expert Polyphony Synthesis (Five Conductor Movements)
+<!-- word_count: 1684 -->
 
 **Recipe ID:** RECIPE-STRATEGY-POLYPHONY-FIVE-CONDUCTORS-2026-04-23-003  
 **Version:** 1.2  

@@ -1,4 +1,5 @@
 # Ritter strategy page — 2026-01-16 (*Back to the Future*)
+<!-- word_count: 3428 -->
 
 WORK only; not Record.
 

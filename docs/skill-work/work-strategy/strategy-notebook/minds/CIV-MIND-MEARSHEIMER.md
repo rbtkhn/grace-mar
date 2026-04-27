@@ -1,4 +1,5 @@
 # CIV-MIND-MEARSHEIMER — redirect (stable path)
+<!-- word_count: 56 -->
 
 **Canonical long-form mind (SSOT):** [`../strategy-expert-mearsheimer-mind.md`](../strategy-expert-mearsheimer-mind.md)
 

@@ -1,8 +1,12 @@
 # Big Serge refined day page — template
+<!-- word_count: 794 -->
 
 WORK only; not Record.
 
 **Purpose:** Standalone refined day page for the `bigserge` expert. **`### Chronicle`** carries the **full verbatim** from linked [`raw-input/`](../../raw-input/README.md)—**lightly cleaned and formatted**; **`### Reflection`** and **`### Foresight`** are **operator analysis** (**may be stubbed** on ingest, completed in a later pass). Distinct from a `strategy-page` HTML fence in [`thread.md`](thread.md) unless you duplicate judgment there during EOD compose.
+
+
+**Filename:** Default **`bigserge-page-YYYY-MM-DD.md`** (voice / publication date). **Multiple refined pages for the same publication date are allowed:** use **`bigserge-page-YYYY-MM-DD-<slug>.md`** with **`<slug>`** from the primary `raw-input` stem so filenames stay unique. **Alternatively,** consolidate same-day captures into **one** refined file with **A / B / C** Chronicle blocks when this template provides a same-day section. If the `raw-input/` folder date differs (ingest batching), note it in **`### Appendix`**. Under [`transcript.md`](transcript.md) when used, add one **`Refined day page:`** line per refined file for that date.
 
 **Thread-embedded pages:** For `<!-- strategy-page:start … -->` blocks in monthly or legacy thread files, use [`strategy-page-template.md`](../../strategy-page-template.md) instead of this file.
 
@@ -68,7 +72,7 @@ Verbatim lives under `raw-input/<date>/`. Refined pages live only under `experts
 Under the matching `## YYYY-MM-DD` in [`transcript.md`](transcript.md), add (when not already present):
 
 - `Verbatim:` → relative link to the `raw-input` capture.
-- `Refined day page:` → `bigserge-page-YYYY-MM-DD.md`.
+- `Refined day page:` → `bigserge-page-YYYY-MM-DD.md` or `bigserge-page-YYYY-MM-DD-<slug>.md` (one line per refined file).
 - `Template:` → [`bigserge-page-template.md`](bigserge-page-template.md) (optional header pointer).
 
 ---

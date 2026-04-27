@@ -1,4 +1,5 @@
 # Mearsheimer strategy page — 2026-01-20 (*The Tag Team Fails in Iran*)
+<!-- word_count: 1645 -->
 
 WORK only; not Record.
 

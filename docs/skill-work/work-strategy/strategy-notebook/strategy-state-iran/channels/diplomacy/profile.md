@@ -1,4 +1,5 @@
 # Channel — diplomacy (FM / foreign ministry register)
+<!-- word_count: 199 -->
 
 **Formal role:** IRI **foreign ministry** and **head-of-mission** English (and other) **official** lines — X accounts, readouts, press-adjacent material labeled MFA.
 

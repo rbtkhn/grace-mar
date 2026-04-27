@@ -1,4 +1,5 @@
 # Strategy expert — `simplicius`
+<!-- word_count: 665 -->
 
 WORK only; not Record.
 

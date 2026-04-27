@@ -1,4 +1,5 @@
 # strategy-state-iran — `chapters/2026-04/days.md`
+<!-- word_count: 359 -->
 
 WORK only; not Record.
 

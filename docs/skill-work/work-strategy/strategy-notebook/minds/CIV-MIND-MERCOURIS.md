@@ -1,4 +1,5 @@
 # CIV-MIND-MERCOURIS — redirect (stable path)
+<!-- word_count: 56 -->
 
 **Canonical long-form mind (SSOT):** [`../strategy-expert-mercouris-mind.md`](../strategy-expert-mercouris-mind.md)
 

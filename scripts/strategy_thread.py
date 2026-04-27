@@ -14,10 +14,14 @@ or::
 This runs **two automatic steps**:
 
 1. **Triage** (``strategy_expert_transcript.py``) — routes ``thread:`` lines
-   from the inbox to per-expert transcript files (append-only, 7-day prune),
-   and appends lines derived from ``raw-input/**`` markdown with
-   ``kind: rss-item`` + ``thread:`` in YAML (see ``fetch-sources.json`` /
-   ``fetch_strategy_raw_input.py``).
+   from the inbox to per-expert ``transcript`` files (append-only, 7-day prune),
+   and merges one-line stubs from ``raw-input/**`` markdown with valid YAML
+   ``thread: <expert_id>`` and an included ``kind:`` (see ``raw-input/README.md``
+   — ``rss-item``, ``transcript``, ``paste-bundle``, etc.; a small **index-only**
+   exclude list skips screenshot indexes). Bodies on disk are **not** re-pasted
+   into the transcript; pointers only when the line already names ``raw-input/...``.
+   RSS fetches: ``fetch-sources.json`` / ``fetch_strategy_raw_input.py`` (also
+   appends an inbox **stub** on ``--apply`` for threaded feeds).
 2. **Extraction** (``strategy_expert_corpus.py``) — reads each expert's
    transcript + existing ``strategy-page`` blocks (+ optional legacy index rows),
    writes raw material to thread files between script markers.

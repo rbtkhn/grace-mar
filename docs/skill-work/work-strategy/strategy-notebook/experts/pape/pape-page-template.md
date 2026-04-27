@@ -1,4 +1,5 @@
 # Pape refined day page — template
+<!-- word_count: 1139 -->
 
 WORK only; not Record.
 
@@ -6,7 +7,7 @@ WORK only; not Record.
 
 **Thread-embedded pages:** Use [`strategy-page-template.md`](../../strategy-page-template.md) for `<!-- strategy-page:start … -->` blocks in thread files.
 
-**Filename date:** Always use frontmatter **`pub_date`** (Substack byline / operator publication stamp) for `pape-page-YYYY-MM-DD.md`. If `ingest_date` or the `raw-input/` folder date differs, note it only in the preamble (**Ingest** logged …) or appendix; capture paths still reflect on-disk location.
+**Filename:** Default **`pape-page-YYYY-MM-DD.md`**, with frontmatter / preamble **`pub_date`** (Substack byline / operator publication stamp) matching that calendar date. **Multiple refined pages for the same publication date are allowed:** use **`pape-page-YYYY-MM-DD-<slug>.md`** with **`<slug>`** from the primary `raw-input` stem so filenames stay unique. **Alternatively,** consolidate same-day captures into **one** `pape-page-YYYY-MM-DD.md` with **A / B / C** Chronicle blocks ([Same-day multiple captures](#same-day-multiple-captures-one-publish-date)). If `ingest_date` or the `raw-input/` folder date differs, note it in the preamble (**Ingest** logged …) or **`### Appendix`**; capture paths still reflect on-disk location. Under [`transcript.md`](transcript.md) when used, add one **`Refined day page:`** line per refined file for that date.
 
 **Length:** No enforced word limit. **Chronicle** carries **full verbatim** (lightly cleaned); it is often long. **Reflection** / **Foresight** are operator analysis—**may be stubbed** at first; **Mode C** may still be shorter overall. Keep **`verify:`** tails, path dumps, and inbox machinery out of body sections—**`### Appendix`** only.
 
@@ -56,24 +57,28 @@ Essay or ledger post; pin **`source_url`** and **`pub_date`** in raw-input front
 
 ---
 
-## Same-day multiple posts (one publish date)
+## Same-day multiple captures (one publish date)
 
-When **more than one** primary Substack (or mixed) capture shares **`pub_date`** (e.g. [pape-page-2026-03-05.md](pape-page-2026-03-05.md), [pape-page-2026-03-24.md](pape-page-2026-03-24.md)):
+When **more than one** primary Substack (or mixed) capture shares **`pub_date`**, choose **one** pattern (examples on disk: [pape-page-2026-03-05.md](pape-page-2026-03-05.md), [pape-page-2026-03-24.md](pape-page-2026-03-24.md)):
 
-1. **Single** refined file: `pape-page-YYYY-MM-DD.md`.
-2. **`### Chronicle`:** ordered blocks **`A —`** *Title* **(**[Substack](https://…)**):** … **`B —`** … **`C —`** … as needed. Each letter matches one verbatim file.
-3. **`### Reflection` / `### Foresight`:** tag bullets with **(A)** / **(B)** / **(C)** when judgments differ by post.
-4. **`### Appendix`:** **`Full verbatim (A):`** … **`Full verbatim (B):`** … ; mark **(**paid** **tier** **)** on the bullet where relevant. **`Canonical Substack URLs:`** — list all, with paid labels.
-5. **[`transcript.md`](transcript.md):** one **`Verbatim:`** line per capture under the same **`## YYYY-MM-DD`**; note **(**paid** **tier** **)** on the paste line when useful. **One** **`Refined day page:`** line.
-6. **[`daily-strategy-inbox.md`](../../daily-strategy-inbox.md):** one **SS | cold** row per post (same publish date), each pointing at the shared day page + its raw path.
-7. **Raw-input:** cross-link via **`related_same_series`** between same-day captures.
+**Option A — Consolidated (one refined file):** `pape-page-YYYY-MM-DD.md` only.
+
+1. **`### Chronicle`:** ordered blocks **`A —`** *Title* **(**[Substack](https://…)**):** … **`B —`** … **`C —`** … as needed. Each letter matches one verbatim file.
+2. **`### Reflection` / `### Foresight`:** tag bullets with **(A)** / **(B)** / **(C)** when judgments differ by post.
+3. **`### Appendix`:** **`Full verbatim (A):`** … **`Full verbatim (B):`** … ; mark **(**paid** **tier** **)** on the bullet where relevant. **`Canonical Substack URLs:`** — list all, with paid labels.
+4. **[`daily-strategy-inbox.md`](../../daily-strategy-inbox.md):** one **SS | cold** row per post (same publish date); each row may point at the **same** refined page + its raw path.
+5. **Raw-input:** cross-link via **`related_same_series`** between same-day captures when useful.
+
+**Option B — Split (one refined file per primary capture):** `pape-page-YYYY-MM-DD-<slug>.md` per ingest (slug from `raw-input` stem). Each file has **one** Chronicle (one verbatim), **one** primary Appendix verbatim link, and **one** canonical URL line as usual. **[`daily-strategy-inbox.md`](../../daily-strategy-inbox.md):** one row per post pointing at **that** refined page + raw path.
+
+**[`transcript.md`](transcript.md)** when used: one **`Verbatim:`** line per capture under the same **`## YYYY-MM-DD`**; one **`Refined day page:`** line **per** refined file (consolidated or split).
 
 ---
 
 ## Body scaffold
 
 1. Horizontal rule `---` after the preamble.
-2. `### Chronicle` — **Full verbatim** from the linked `raw-input` capture(s) (after frontmatter): same cleanup rule as other experts—**lightly cleaned and formatted** only. Multi-post days: ordered **A —** / **B —** blocks per [Same-day multiple posts](#same-day-multiple-posts-one-publish-date). **Pape beat-bold** in Chronicle is optional formatting on top of full text, not a substitute for pasting the capture (see Prose emphasis).
+2. `### Chronicle` — **Full verbatim** from the linked `raw-input` capture(s) (after frontmatter): same cleanup rule as other experts—**lightly cleaned and formatted** only. Same-day consolidated pages: ordered **A —** / **B —** blocks per [Same-day multiple captures](#same-day-multiple-captures-one-publish-date). **Pape beat-bold** in Chronicle is optional formatting on top of full text, not a substitute for pasting the capture (see Prose emphasis).
 3. `### Reflection` — **Operator analysis:** Pape-lane arc (escalation trap, Hormuz / blockade stages, Stage I–III, domestic pocketbook, etc.); **homophone** and **tier** discipline (e.g. negotiation fork vs press shorthand—do not merge distinct phrases in Reflection). **May be stubbed** until a later operator pass.
 4. `### Foresight` — **Operator analysis:** falsifiers, resume lines, tier tags (bullets allowed); **Cross-weave** bullets welcome. **May be stubbed** until a later operator pass.
 5. Horizontal rule `---` before appendix.
@@ -94,7 +99,7 @@ When **more than one** primary Substack (or mixed) capture shares **`pub_date`**
 Under **`## YYYY-MM-DD`** in [`transcript.md`](transcript.md) (publish date), add when missing:
 
 - **`Verbatim:`** → link to each primary `raw-input` file (same label for all modes; multiple lines when same-day multi-post).
-- **`Refined day page:`** → `pape-page-YYYY-MM-DD.md` (once per date).
+- **`Refined day page:`** → `pape-page-YYYY-MM-DD.md` or `pape-page-YYYY-MM-DD-<slug>.md` (one line per refined file).
 - **`Template:`** → [`pape-page-template.md`](pape-page-template.md) (optional).
 
 ---
@@ -147,7 +152,7 @@ Same scaffold as Mode D but shorter body; fourth appendix bullet may be **X** pe
 
 ## Compliance checklist
 
-1. Title `# Pape day page — YYYY-MM-DD` matches **`pub_date`** (one file per publish date, including multi-post days).
+1. Title `# Pape day page — YYYY-MM-DD` matches **`pub_date`** for that file; optional short title in parentheses when splitting. **Multiple refined pages per `pub_date` are allowed** (filename `-<slug>`) or use one consolidated file (Option A in [Same-day multiple captures](#same-day-multiple-captures-one-publish-date)).
 2. `WORK only; not Record.`
 3. Preamble identifies capture mode (**Substack** / Mode A–C) and **Artifact:** **standalone file under `experts/pape/`**.
 4. `---` before `### Chronicle`; **Chronicle** = full verbatim (no `verify:` / path dumps); **Reflection** / **Foresight** = operator analysis (stubs OK).

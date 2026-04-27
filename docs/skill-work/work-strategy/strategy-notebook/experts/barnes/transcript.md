@@ -1,4 +1,5 @@
 # Expert transcript — `barnes`
+<!-- word_count: 514 -->
 
 WORK only; not Record.
 

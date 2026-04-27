@@ -1,4 +1,5 @@
 # Strategy expert — `pape`
+<!-- word_count: 366 -->
 
 **Canonical index:** [strategy-commentator-threads.md](strategy-commentator-threads.md) — **`pape`** lane.
 

@@ -1,4 +1,5 @@
 # Ritter strategy page — 2026-01-06 (*The Battle of New York*)
+<!-- word_count: 3236 -->
 
 WORK only; not Record.
 

@@ -1,4 +1,5 @@
 # strategy-state-iran — voice — `araghchi`
+<!-- word_count: 555 -->
 
 **Lane:** [strategy-state-iran](../../README.md) — Iranian institutional / elite voices (emitter metadata).
 

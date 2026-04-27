@@ -22,10 +22,12 @@ from pathlib import Path
 
 from strategy_expert_corpus import (
     MAX_VERBATIM_WORDS_PER_INGEST,
+    RE_RAW_INPUT_MD_PATH,
     SOFT_MAX_TRANSCRIPT_FILE_WORDS,
     _word_count,
     expert_paths,
     extract_thread_ingests,
+    raw_input_paths_in_text,
     verbatim_to_transcript_lines,
 )
 
@@ -161,18 +163,49 @@ def _rss_row_pub_date(fm: dict[str, str], path: Path) -> date | None:
         return None
 
 
-def collect_rss_thread_ingests(
+# YAML ``kind:`` — include any ``thread:``-tagged doc by default; exclude pure index kinds.
+_EXCLUDED_RAW_KINDS = frozenset(
+    {
+        "screenshot-list",
+        "x-screenshots-index",
+    }
+)
+
+
+def _raw_input_kind_included(fm: dict) -> bool:
+    k = (fm.get("kind") or "").strip().lower()
+    if not k:
+        return True
+    if k in _EXCLUDED_RAW_KINDS:
+        return False
+    return True
+
+
+def collect_thread_tagged_raw_ingests(
     raw_root: Path,
+    notebook_dir: Path,
     *,
     cutoff: date,
     expert_ids_set: frozenset[str],
 ) -> dict[str, dict[date, list[str]]]:
-    """Build ``expert_id -> date -> verbatim`` from ``raw-input`` RSS markdown with ``thread:``."""
+    """Build ``expert_id -> date -> one-line stubs`` from ``raw-input`` markdown with ``thread:``.
+
+    Stubs reference ``raw-input/...`` on disk (not full body) for all included ``kind`` values
+    (not only ``rss-item``), excluding a small index-only exclude list.
+    """
     nested: dict[str, dict[date, list[str]]] = defaultdict(lambda: defaultdict(list))
     for path in _iter_raw_input_md_paths(raw_root, cutoff):
-        text = path.read_text(encoding="utf-8")
+        try:
+            rel_nb = path.resolve().relative_to(notebook_dir.resolve())
+        except ValueError:
+            rel_nb = path
+        rel_s = str(rel_nb).replace("\\", "/")
+        try:
+            text = path.read_text(encoding="utf-8")
+        except OSError:
+            continue
         for fm, body in iter_raw_input_yaml_documents(text):
-            if fm.get("kind") != "rss-item":
+            if not _raw_input_kind_included(fm):
                 continue
             tid = (fm.get("thread") or "").strip()
             if not tid or tid not in expert_ids_set:
@@ -182,12 +215,42 @@ def collect_rss_thread_ingests(
                 continue
             title = _extract_markdown_h1_title(body)
             url = (fm.get("source_url") or "").strip()
+            k = (fm.get("kind") or "capture").strip() or "capture"
             verbatim = (
-                f"- RSS | cold: **{title}** // raw-input `{path.name}`"
-                f" | {url} | verify:rss-fetch | thread:{tid}"
+                f"- raw-input | kind:{k} | cold: **{title}** // "
+                f"[`{path.name}`]({rel_s})"
+                f" | {url} | verify:raw-input+thread-triage | thread:{tid}"
             )
             nested[tid][d].append(verbatim)
     return {e: dict(dm) for e, dm in nested.items()}
+
+
+def collect_rss_thread_ingests(
+    raw_root: Path,
+    *,
+    cutoff: date,
+    expert_ids_set: frozenset[str],
+    notebook_dir: Path | None = None,
+) -> dict[str, dict[date, list[str]]]:
+    """Backward-compatible name; requires ``notebook_dir`` (``strategy-notebook`` root)."""
+    nb = notebook_dir or (REPO_ROOT / "docs/skill-work/work-strategy/strategy-notebook")
+    return collect_thread_tagged_raw_ingests(
+        raw_root, nb, cutoff=cutoff, expert_ids_set=expert_ids_set
+    )
+
+
+def fold_verbatim_if_raw_input_linked(verbatim: str, expert_id: str) -> str | None:
+    """If the ingest already references a ``raw-input/...`` path, fold to a one-line pointer."""
+    for _line in verbatim.splitlines():
+        m = RE_RAW_INPUT_MD_PATH.search(_line)
+        if m:
+            rel = f"raw-input/{m.group(1)}/{m.group(2)}"
+            fn = m.group(2)
+            return (
+                f"- Inbox | cold: full text in [`{fn}`]({rel}) (pointer; SSOT raw-input) "
+                f"| thread:{expert_id}"
+            )
+    return None
 
 
 def _merge_date_ingest_maps(
@@ -277,7 +340,9 @@ def triage_to_transcripts(
 
     raw_root = raw_input_root if raw_input_root is not None else (out_dir / "raw-input")
     rss_by_expert = (
-        collect_rss_thread_ingests(raw_root, cutoff=cutoff, expert_ids_set=expert_ids_set)
+        collect_thread_tagged_raw_ingests(
+            raw_root, out_dir, cutoff=cutoff, expert_ids_set=expert_ids_set
+        )
         if raw_root.is_dir()
         else {}
     )
@@ -304,21 +369,35 @@ def triage_to_transcripts(
             if date_str in existing_sections:
                 existing_lines_text = "\n".join(existing_sections[date_str])
                 for verbatim in lines:
-                    rendered = "\n".join(verbatim_to_transcript_lines(verbatim))
+                    folded = fold_verbatim_if_raw_input_linked(verbatim, expert_id)
+                    use_v = folded if folded is not None else verbatim
+                    new_paths = raw_input_paths_in_text(use_v) | raw_input_paths_in_text(
+                        "\n".join(verbatim_to_transcript_lines(use_v))
+                    )
+                    if new_paths & raw_input_paths_in_text(existing_lines_text):
+                        continue
+                    rendered = "\n".join(verbatim_to_transcript_lines(use_v))
                     if rendered.rstrip() not in existing_lines_text:
-                        msg = _warn_verbatim_size(verbatim, expert_id, date_str)
+                        msg = _warn_verbatim_size(use_v, expert_id, date_str)
                         if msg:
                             warn_ingest.append(msg)
-                        new_lines = verbatim_to_transcript_lines(verbatim)
+                        new_lines = verbatim_to_transcript_lines(use_v)
                         existing_sections[date_str].extend(new_lines)
                         existing_lines_text = "\n".join(existing_sections[date_str])
             else:
                 section_lines = [f"## {date_str}"]
+                existing_lines_text = ""
                 for verbatim in lines:
-                    msg = _warn_verbatim_size(verbatim, expert_id, date_str)
+                    folded = fold_verbatim_if_raw_input_linked(verbatim, expert_id)
+                    use_v = folded if folded is not None else verbatim
+                    if raw_input_paths_in_text(use_v) & raw_input_paths_in_text(
+                        "\n".join(section_lines)
+                    ):
+                        continue
+                    msg = _warn_verbatim_size(use_v, expert_id, date_str)
                     if msg:
                         warn_ingest.append(msg)
-                    section_lines.extend(verbatim_to_transcript_lines(verbatim))
+                    section_lines.extend(verbatim_to_transcript_lines(use_v))
                 existing_sections[date_str] = section_lines
 
         pruned: dict[str, list[str]] = {}

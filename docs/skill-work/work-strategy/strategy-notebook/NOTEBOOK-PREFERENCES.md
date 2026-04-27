@@ -1,4 +1,5 @@
 # Strategy notebook — operator preferences
+<!-- word_count: 4325 -->
 
 **Status:** ACTIVE  
 **Set:** 2026-04 (from multiple-choice questionnaire)  

@@ -7,7 +7,7 @@ Reads ``docs/skill-work/work-strategy/strategy-notebook/strategy-expert-template
 
 - ``strategy-expert-<expert_id>.md``
 - ``strategy-expert-<expert_id>-thread.md``
-- ``strategy-expert-<expert_id>-transcript.md``
+- ``experts/<expert_id>/transcript.md`` (7-day triage; bulk verbatim in ``raw-input/``)
 - ``strategy-expert-<expert_id>-mind.md``
 
 Companion links in the template (pointing at ``strategy-expert-template.md#...``) are

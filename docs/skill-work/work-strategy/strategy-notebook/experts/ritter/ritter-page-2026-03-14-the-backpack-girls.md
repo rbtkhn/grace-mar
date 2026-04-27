@@ -1,4 +1,5 @@
 # Ritter strategy page — 2026-03-14 (*The Backpack Girls*)
+<!-- word_count: 5189 -->
 
 WORK only; not Record.
 

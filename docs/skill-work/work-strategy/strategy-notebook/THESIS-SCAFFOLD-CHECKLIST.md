@@ -1,4 +1,5 @@
 # Thesis scaffold — strong sentence checklist (printable)
+<!-- word_count: 302 -->
 
 WORK only; not Record.
 

@@ -1,4 +1,5 @@
 # Strategy expert — `baud`
+<!-- word_count: 419 -->
 
 WORK only; not Record.
 

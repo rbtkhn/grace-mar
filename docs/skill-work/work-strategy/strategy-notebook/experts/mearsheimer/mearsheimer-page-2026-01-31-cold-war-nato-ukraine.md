@@ -1,4 +1,5 @@
 # Mearsheimer strategy page — 2026-01-31 (*Cold War 2.0 & NATO's Defeat in Ukraine*)
+<!-- word_count: 5788 -->
 
 WORK only; not Record.
 

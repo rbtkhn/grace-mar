@@ -1,4 +1,5 @@
 # Ritter strategy page — 2026-04-20 (*Trump and Hegseth Haven't a Clue*)
+<!-- word_count: 3879 -->
 
 WORK only; not Record.
 

@@ -1,4 +1,5 @@
 # Ritter strategy page — 2026-01-20 (*Getting it Wrong on Russia*)
+<!-- word_count: 4364 -->
 
 WORK only; not Record.
 

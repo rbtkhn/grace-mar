@@ -1,4 +1,5 @@
 # Mearsheimer strategy page — 2026-04-20 (*Iran, Islamabad & Hormuz*)
+<!-- word_count: 6603 -->
 
 WORK only; not Record.
 

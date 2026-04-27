@@ -1,4 +1,5 @@
 # Ritter strategy page — 2026-02-05 (*Alas, Babylon*)
+<!-- word_count: 3489 -->
 
 WORK only; not Record.
 

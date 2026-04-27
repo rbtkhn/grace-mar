@@ -1,4 +1,5 @@
 # Strategy expert predictions (ledger)
+<!-- word_count: 2269 -->
 
 **Purpose:** Single **WORK** place to register **falsifiable** claims attributed to indexed **`thread:<expert_id>`** commentators, with **resolution** and **receipts**—notebook calibration, not a public ranking.
 

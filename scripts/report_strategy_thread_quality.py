@@ -178,7 +178,7 @@ def _check_machine_layer(diag: ExpertDiagnostic, notebook_dir: Path) -> None:
 
     total_lines = 0
     any_markers = False
-    no_material_marker = "_(No transcript or page material for extraction.)_"
+    no_material_marker = "_(No transcript, raw-input lane, or page material for extraction.)_"
     for thread_path in expert_thread_paths_for_discovery(notebook_dir, diag.expert_id):
         if not thread_path.is_file():
             continue
@@ -459,8 +459,10 @@ def log_misses_from_report(report: QualityReport) -> int:
                 "--query", f"strategy-expert-{e.expert_id} machine layer extraction",
                 "--failure-class", "aggregation_failure",
                 "--notes", f"Transcript has {e.transcript_line_count} lines but machine layer is empty",
-                "--related-path", f"docs/skill-work/work-strategy/strategy-notebook/strategy-expert-{e.expert_id}-thread.md",
-                "--related-path", f"docs/skill-work/work-strategy/strategy-notebook/strategy-expert-{e.expert_id}-transcript.md",
+                "--related-path",
+                f"docs/skill-work/work-strategy/strategy-notebook/experts/{e.expert_id}/thread.md",
+                "--related-path",
+                f"docs/skill-work/work-strategy/strategy-notebook/experts/{e.expert_id}/transcript.md",
                 "--lane", "work-strategy",
                 "--recorded-by", "report_strategy_thread_quality",
             ]
@@ -478,7 +480,8 @@ def log_misses_from_report(report: QualityReport) -> int:
                 "--query", f"strategy-expert-{e.expert_id} recent transcript content",
                 "--failure-class", "stale_ranking",
                 "--notes", f"No transcript content within lookback window; newest date: {e.newest_transcript_date or 'none'}",
-                "--related-path", f"docs/skill-work/work-strategy/strategy-notebook/strategy-expert-{e.expert_id}-transcript.md",
+                "--related-path",
+                f"docs/skill-work/work-strategy/strategy-notebook/experts/{e.expert_id}/transcript.md",
                 "--lane", "work-strategy",
                 "--recorded-by", "report_strategy_thread_quality",
             ]

@@ -1,4 +1,5 @@
 # Daily strategy inbox (accumulator)
+<!-- word_count: 27955 -->
 
 **Purpose:** **Append-only** scratch surface for the **current local calendar day** while you run **`strategy`**, read briefs, or capture links. Polished prose is **not** required — bullets, paste, URLs, half-sentences.
 
@@ -16,9 +17,9 @@
 
 **Thread rhythm (expert corpus):** After **`thread:<expert_id>`** lines are in this file, operator **`thread`** rebuilds **`strategy-expert-<expert_id>.md`** rolling blocks only — **`python3 scripts/strategy_thread.py`** (same flags as `scripts/strategy_expert_corpus.py`). **Not** **EOD compose**: does **not** touch **`days.md`**, **`strategy-page`** blocks, or **`Accumulator for`**. Spec: [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *Thread (terminology)*.
 
-**Third-party scan / X-only hygiene:** Do **not** paste assistant or digest **paraphrases** (e.g. daily scan summaries without URLs) into **`strategy-expert-*-transcript.md`**. For claims that need a named expert lane, add **paste-ready lines here first** with a **URL** and **`thread:<expert_id>`** when cold attributes speech to that expert; if no primary yet, use a one-line **stub** with **`verify:pending-primary`** — verbatim transcripts stay for **actual ingested speech**, not second-hand scan text.
+**Third-party scan / X-only hygiene:** Do **not** paste assistant or digest **paraphrases** (e.g. daily scan summaries without URLs) into **`experts/<expert_id>/transcript.md`**. For claims that need a named expert lane, add **paste-ready lines here first** with a **URL** and **`thread:<expert_id>`** when cold attributes speech to that expert; if no primary yet, use a one-line **stub** with **`verify:pending-primary`** — verbatim transcripts stay for **actual ingested speech**, not second-hand scan text.
 
-**Split ingest (planned direction):** Long verbatim may live primarily in **`strategy-expert-<expert_id>-transcript.md`** while this file stays the **stub + grep registry** (short line, **`thread:`**, optional **`aired:YYYY-MM-DD`**, URL, **`verify:`**). One future **`strategy_ingest`**-style command would write both layers in one step; until then, manual inbox + **`thread`** triage remains the path. Full policy + CLI sketch: [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *Split ingest model* and § *Planned unified ingest command*.
+**Inbox → raw-input (order of operations):** The **inbox** is the **registry** (stubs, **`thread:`**, links, **`verify:`**). **Durable** full text belongs under **`[raw-input/YYYY-MM-DD/](raw-input/README.md)`** as soon as the capture is **indexed** here (one-line stub + path, or the same run as an ingest script that writes the file e.g. **`python3 scripts/fetch_strategy_raw_input.py --apply`**, which also appends a matching stub). Do **not** treat **`raw-input/`** as a second capture “lane” you use **instead of** the inbox. Full policy: [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *Split ingest model*.
 
 **X post ingest cadence:** Aim for **at least five** strategy ingests from X per local day (claim → why it matters → URL, plus verify tags as needed). **Five is a floor, not a cap** — capturing **more than five** on busy days is **normal**, not exceptional. Same one-line shape scales to 6+ rows without a separate workflow.
 

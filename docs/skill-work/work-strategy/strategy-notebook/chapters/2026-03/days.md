@@ -1,4 +1,5 @@
 # Chapter 2026-03 — days
+<!-- word_count: 158 -->
 
 **Chronology note:** March 2026 did not use a complete daily **`## YYYY-MM-DD`** spine at capture time. **Episodic synthesis**; full narrative in [meta.md](meta.md).
 

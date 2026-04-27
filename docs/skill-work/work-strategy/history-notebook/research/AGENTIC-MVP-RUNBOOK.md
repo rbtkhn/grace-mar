@@ -8,6 +8,11 @@ This runbook wires self-library-bookshelf (`HNSRC-*`) into chapter operations wi
 - [PROVENANCE-PACKETS.md](PROVENANCE-PACKETS.md) — claim packets with confidence and verification tasks
 - [REDTEAM-FINDINGS.md](REDTEAM-FINDINGS.md) — counterfactual challenge matrix
 
+Coffee E membrane outputs:
+
+- [BOOKSHELF-MEMBRANE-REPORT.md](BOOKSHELF-MEMBRANE-REPORT.md) — scored round/session rationale
+- [BOOKSHELF-MEMBRANE-CANDIDATE-DRAFTS.md](BOOKSHELF-MEMBRANE-CANDIDATE-DRAFTS.md) — pending candidate drafts (work layer only)
+
 Config: [AGENTIC-MVP-CONFIG.yaml](AGENTIC-MVP-CONFIG.yaml).
 Latest web metadata candidate pass (attach-then-merge workflow): [bookshelf-web-enrichment-2026-04-25.yaml](bookshelf-web-enrichment-2026-04-25.yaml).
 Second candidate pass: [bookshelf-web-enrichment-2026-04-25-batch2.yaml](bookshelf-web-enrichment-2026-04-25-batch2.yaml).
@@ -30,6 +35,8 @@ Run from repo root:
 python3 scripts/build_hn_autopriority_queue.py
 python3 scripts/build_hn_provenance_packets.py
 python3 scripts/build_hn_redteam_findings.py
+python3 scripts/build_bookshelf_membrane_candidates.py --emit-round --round-index 1 --round-size 7
+python3 scripts/build_bookshelf_membrane_candidates.py --responses-file docs/skill-work/work-strategy/history-notebook/research/bookshelf-membrane-responses.json
 ```
 
 ## Freshness checks (local + CI)
@@ -38,6 +45,8 @@ python3 scripts/build_hn_redteam_findings.py
 python3 scripts/build_hn_autopriority_queue.py --check
 python3 scripts/build_hn_provenance_packets.py --check
 python3 scripts/build_hn_redteam_findings.py --check
+python3 scripts/build_bookshelf_membrane_candidates.py --emit-round --round-index 1 --round-size 7 --check
+python3 scripts/build_bookshelf_membrane_candidates.py --responses-file docs/skill-work/work-strategy/history-notebook/research/bookshelf-membrane-responses.json --check
 ```
 
 CI runs these in [`.github/workflows/test.yml`](../../../../.github/workflows/test.yml).
@@ -52,6 +61,15 @@ CI runs these in [`.github/workflows/test.yml`](../../../../.github/workflows/te
    - `python3 scripts/build_hn_bookshelf_bibliography.py`
    - `python3 scripts/hn_shelf_anchors.py`
 3. Regenerate the agentic outputs (three commands above).
+4. Coffee E self-knowledge quiz membrane:
+   - Generate round prompt payload:
+     - `python3 scripts/build_bookshelf_membrane_candidates.py --emit-round --round-index <N> --round-size 7`
+   - Ask 5-10 MCQs in chat (`AskQuestion`) and append selected options to:
+     - [bookshelf-membrane-responses.json](bookshelf-membrane-responses.json)
+   - Build report + drafts:
+     - `python3 scripts/build_bookshelf_membrane_candidates.py --responses-file docs/skill-work/work-strategy/history-notebook/research/bookshelf-membrane-responses.json`
+   - Optional determinism gate:
+     - `python3 scripts/build_bookshelf_membrane_candidates.py --responses-file docs/skill-work/work-strategy/history-notebook/research/bookshelf-membrane-responses.json --check`
 
 ## Interpretation quick-guide
 

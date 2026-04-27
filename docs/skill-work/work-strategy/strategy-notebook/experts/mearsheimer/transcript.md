@@ -1,4 +1,5 @@
 # Expert transcript — `mearsheimer`
+<!-- word_count: 2481 -->
 
 WORK only; not Record.
 

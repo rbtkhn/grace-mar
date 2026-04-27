@@ -1,4 +1,5 @@
 # skill-strategy exercise series — extended rubric reference
+<!-- word_count: 490 -->
 
 **Use:** Score each run (demo, exercise, or combined session). Pair with [`skill-strategy-exercise-log.md`](skill-strategy-exercise-log.md) and [`EXERCISE-PROMPTS.md`](EXERCISE-PROMPTS.md).
 

@@ -1,4 +1,5 @@
 # Condense outline — `days.md` § 2026-04-10
+<!-- word_count: 557 -->
 
 **Measured:** ~**4500** words for the full `## 2026-04-10` section (shell `wc -w` on lines 82–349 of `chapters/2026-04/days.md`, **2026-04-10**).  
 **Target band:** ~**900–1100** words per [STRATEGY-NOTEBOOK-ARCHITECTURE.md](../STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *Daily length* / *Condense-to-target*.  

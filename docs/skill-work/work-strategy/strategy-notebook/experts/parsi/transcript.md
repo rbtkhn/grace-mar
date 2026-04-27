@@ -1,4 +1,5 @@
 # Expert transcript — `parsi`
+<!-- word_count: 1408 -->
 
 WORK only; not Record.
 

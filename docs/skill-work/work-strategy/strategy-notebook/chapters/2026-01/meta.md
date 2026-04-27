@@ -1,4 +1,5 @@
 # Chapter 2026-01 — meta
+<!-- word_count: 1008 -->
 
 **Kind:** month (retro synthesis — sparse contemporaneous `days.md` capture)  
 **Status:** `closed` (narrative backfilled)  

@@ -3,8 +3,8 @@
 
 Replaces ``strategy_weave_inbox_stub.py``. Accepts a mix of expert IDs,
 watch tags, and topic keywords. Gathers relevant material from thread files,
-transcripts, inbox, and existing pages, then produces an integrated analysis
-to stdout.
+transcripts, **on-disk** ``raw-input/`` (per-expert lane, 7 days), inbox, and
+existing pages, then produces an integrated analysis to stdout.
 
 Also refreshes the batch-analysis snapshot (moved from ``strategy_thread.py``).
 
@@ -23,7 +23,7 @@ from __future__ import annotations
 import argparse
 import json
 import sys
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
@@ -127,6 +127,33 @@ def _gather_transcript_lines(experts: list[str], notebook_dir: Path) -> dict[str
     return result
 
 
+def _gather_raw_input_lane_bullets(
+    experts: list[str],
+    notebook_dir: Path,
+    *,
+    lookback_days: int = 7,
+) -> dict[str, list[str]]:
+    """On-disk `raw-input/` path bullets per expert (same 7d window as `thread` machine layer)."""
+    from strategy_raw_input_index import (  # noqa: PLC0415
+        discover_raw_input_bullets_for_expert,
+    )
+
+    today = datetime.now(timezone.utc).date()
+    cut = today - timedelta(days=lookback_days)
+    out: dict[str, list[str]] = {}
+    for eid in experts:
+        b = discover_raw_input_bullets_for_expert(
+            notebook_dir,
+            eid,
+            after_cutoff=cut,
+            month_filter_ym=None,
+            max_bullets=20,
+        )
+        if b:
+            out[eid] = b
+    return out
+
+
 def _gather_inbox_lines(
     experts: list[str],
     keywords: list[str],
@@ -202,9 +229,11 @@ def _build_analysis(
     transcripts: dict[str, list[str]],
     inbox_lines: list[str],
     machine_layers: dict[str, str],
+    raw_input_lane: dict[str, list[str]] | None = None,
 ) -> dict:
     """Structure the gathered material into an analysis dict."""
     expert_positions: dict[str, list[str]] = {}
+    raw_input_lane = raw_input_lane or {}
     for p in pages:
         bucket = expert_positions.setdefault(p.expert_id, [])
         summary = f"[{p.date}] {p.id}"
@@ -216,6 +245,13 @@ def _build_analysis(
         bucket = expert_positions.setdefault(eid, [])
         first_line = ml.splitlines()[0] if ml else "(machine layer)"
         bucket.append(f"[machine] {first_line[:120]}")
+
+    for eid, bullets in raw_input_lane.items():
+        bucket = expert_positions.setdefault(eid, [])
+        for b in bullets[:5]:
+            bucket.append(f"[raw-input] {b[:140]}")
+        if len(bullets) > 5:
+            bucket.append(f"[raw-input] … +{len(bullets) - 5} more on disk")
 
     shared_watches: list[str] = []
     page_watches = {p.watch for p in pages if p.watch}
@@ -248,6 +284,7 @@ def _build_analysis(
             "transcript_experts": list(transcripts.keys()),
             "inbox_lines": len(inbox_lines),
             "machine_layer_experts": list(machine_layers.keys()),
+            "raw_input_experts": list(raw_input_lane.keys()),
         },
         "shared_ground": shared_ground,
         "expert_positions": expert_positions,
@@ -275,8 +312,9 @@ def _format_markdown(analysis: dict) -> str:
     parts.append(
         f"**Material:** {mat['pages_found']} pages, "
         f"{len(mat['transcript_experts'])} transcripts, "
-        f"{mat['inbox_lines']} inbox lines, "
-        f"{len(mat['machine_layer_experts'])} machine layers"
+        f"{len(mat['inbox_lines'])} inbox lines, "
+        f"{len(mat['machine_layer_experts'])} machine layers, "
+        f"{len(mat.get('raw_input_experts', []))} raw-input (lane) expert rows"
     )
     parts.append("")
 
@@ -350,12 +388,14 @@ def main() -> int:
 
     pages = _gather_pages(experts, watches, args.notebook)
     transcripts = _gather_transcript_lines(experts, args.notebook)
+    raw_lane = _gather_raw_input_lane_bullets(experts, args.notebook, lookback_days=7)
     inbox_lines = _gather_inbox_lines(experts, keywords, args.inbox)
     machine_layers = _extract_machine_layer(experts, args.notebook)
 
     analysis = _build_analysis(
         experts, watches, keywords,
         pages, transcripts, inbox_lines, machine_layers,
+        raw_input_lane=raw_lane,
     )
 
     if args.json:

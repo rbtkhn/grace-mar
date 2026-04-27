@@ -1,4 +1,5 @@
 # Strategy expert — Alexander Mercouris (`mercouris`)
+<!-- word_count: 909 -->
 
 WORK only; not Record.
 

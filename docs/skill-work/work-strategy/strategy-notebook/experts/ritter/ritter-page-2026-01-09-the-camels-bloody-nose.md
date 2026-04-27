@@ -1,4 +1,5 @@
 # Ritter strategy page — 2026-01-09 (*The Camel’s Bloody Nose*)
+<!-- word_count: 659 -->
 
 WORK only; not Record.
 

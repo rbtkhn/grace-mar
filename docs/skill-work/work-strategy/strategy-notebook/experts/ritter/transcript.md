@@ -1,4 +1,5 @@
 # Expert transcript — `ritter`
+<!-- word_count: 5046 -->
 
 WORK only; not Record.
 

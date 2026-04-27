@@ -1,4 +1,5 @@
 # Expert transcript — `marandi`
+<!-- word_count: 705 -->
 
 WORK only; not Record.
 

@@ -1,4 +1,5 @@
 # Ritter strategy page — 2026-01-10 (*The End of a Dream?*)
+<!-- word_count: 4569 -->
 
 WORK only; not Record.
 

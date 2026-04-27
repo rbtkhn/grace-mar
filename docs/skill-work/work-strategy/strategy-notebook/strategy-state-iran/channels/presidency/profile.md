@@ -1,4 +1,5 @@
 # Channel — presidency (head-of-executive signaling)
+<!-- word_count: 186 -->
 
 **Formal role:** **Presidential** account and **head-of-executive** public lines (multi-language, quote chains, ROME/UNGA-style **legitimacy** moments).
 

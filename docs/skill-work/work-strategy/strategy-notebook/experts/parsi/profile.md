@@ -1,4 +1,5 @@
 # Strategy expert — Trita Parsi (`parsi`)
+<!-- word_count: 834 -->
 
 WORK only; not Record.
 

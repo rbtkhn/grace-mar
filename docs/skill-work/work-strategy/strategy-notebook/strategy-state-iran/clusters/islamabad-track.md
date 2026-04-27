@@ -1,4 +1,5 @@
 # Cluster — Islamabad track (multi-day)
+<!-- word_count: 96 -->
 
 **Role:** Multi-day **state-signal** object for the Islamabad / mediation arc as IRI offices and main-notebook commentators both thread it — not a wire summary.
 

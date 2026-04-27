@@ -1,4 +1,5 @@
 # Cluster — Lebanon ceasefire linkage (multi-day)
+<!-- word_count: 84 -->
 
 **Role:** IRI **signaling** that ties **Lebanon ceasefire** or **violation** rhetoric to other objects (Hormuz, Islamabad, U.S. talks) across **days** and **channels**.
 

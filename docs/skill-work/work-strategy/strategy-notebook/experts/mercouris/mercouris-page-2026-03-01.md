@@ -1,4 +1,5 @@
 # Mercouris day page — 2026-03-01
+<!-- word_count: 559 -->
 
 WORK only; not Record.
 

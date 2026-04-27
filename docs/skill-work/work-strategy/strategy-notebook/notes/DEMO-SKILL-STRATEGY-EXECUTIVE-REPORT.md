@@ -1,4 +1,5 @@
 # Executive report — `skill-strategy` transcript demo (implementation)
+<!-- word_count: 808 -->
 
 **Audience:** Operator / work-strategy stakeholders  
 **Date:** 2026-04-10  

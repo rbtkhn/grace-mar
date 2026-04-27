@@ -1,4 +1,5 @@
 # Strategy Console Contract
+<!-- word_count: 282 -->
 
 **Status:** Derived / refresh-only / non-canonical.
 

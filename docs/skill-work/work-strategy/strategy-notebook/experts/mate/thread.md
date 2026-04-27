@@ -1,4 +1,5 @@
 # Expert thread — `mate`
+<!-- word_count: 3096 -->
 
 WORK only; not Record.
 

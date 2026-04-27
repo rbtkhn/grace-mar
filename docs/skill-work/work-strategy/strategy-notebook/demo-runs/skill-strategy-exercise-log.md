@@ -1,4 +1,5 @@
 # skill-strategy exercise series — running log
+<!-- word_count: 336 -->
 
 **Purpose:** Comparable rows across runs — notebook path, rubric snapshot, failure mode, recursive **SKILL.md** candidate. See [`EXERCISE-PROMPTS.md`](EXERCISE-PROMPTS.md) for copy-paste prompts and exercise definitions.
 

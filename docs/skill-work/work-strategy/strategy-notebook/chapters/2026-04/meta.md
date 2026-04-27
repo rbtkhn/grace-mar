@@ -1,4 +1,5 @@
 # Chapter 2026-04 — meta
+<!-- word_count: 3415 -->
 
 **Kind:** month (first strategy-notebook chapter with dense `days.md` continuity)  
 **Prior chapters (retro meta syntheses):** [2026-01](../2026-01/meta.md) · [2026-02](../2026-02/meta.md) · [2026-03](../2026-03/meta.md)  

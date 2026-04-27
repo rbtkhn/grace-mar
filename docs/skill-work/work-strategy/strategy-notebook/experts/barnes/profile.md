@@ -1,4 +1,5 @@
 # Strategy expert — Robert Barnes (`barnes`)
+<!-- word_count: 1049 -->
 
 WORK only; not Record.
 

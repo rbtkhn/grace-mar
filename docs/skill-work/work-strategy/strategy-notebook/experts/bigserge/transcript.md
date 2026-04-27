@@ -1,4 +1,5 @@
 # Expert transcript — `bigserge`
+<!-- word_count: 87 -->
 
 WORK only; not Record.
 

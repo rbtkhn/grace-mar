@@ -1,4 +1,5 @@
 # strategy-state-iran — April 2026 — slice registry
+<!-- word_count: 528 -->
 
 WORK only; not Record.
 

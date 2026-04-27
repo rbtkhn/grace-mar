@@ -1,4 +1,5 @@
 # Strategy expert — `bigserge`
+<!-- word_count: 685 -->
 
 WORK only; not Record.
 

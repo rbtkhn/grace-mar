@@ -1,4 +1,5 @@
 # Demo script — `skill-strategy` using three ingested transcripts
+<!-- word_count: 1331 -->
 
 **Purpose:** Runnable calibration for [skill-strategy](../../../../.cursor/skills/skill-strategy/SKILL.md): notebook-first output, verify discipline, and **explicit tri-frame** (all **three minds**). **WORK only** — not Record, not Voice.
 

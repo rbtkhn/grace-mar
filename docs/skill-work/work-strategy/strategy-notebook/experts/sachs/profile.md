@@ -1,4 +1,5 @@
 # Strategy expert — Jeffrey D. Sachs (`sachs`)
+<!-- word_count: 767 -->
 
 WORK only; not Record.
 

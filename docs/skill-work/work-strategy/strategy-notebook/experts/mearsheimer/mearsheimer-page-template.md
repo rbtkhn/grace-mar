@@ -1,4 +1,5 @@
 # Mearsheimer refined day page — template
+<!-- word_count: 838 -->
 
 WORK only; not Record.
 
@@ -6,7 +7,7 @@ WORK only; not Record.
 
 **Thread-embedded pages:** For `<!-- strategy-page:start … -->` blocks in monthly or legacy thread files, use [`strategy-page-template.md`](../../strategy-page-template.md) instead of this file.
 
-**Filename:** Default **`mearsheimer-page-YYYY-MM-DD.md`** (voice / publication date). When more than one primary shares that date, use **`mearsheimer-page-YYYY-MM-DD-<slug>.md`** with **`<slug>`** from the raw-input stem so filenames stay unique. If the `raw-input/` folder date differs (ingest batching), note it in **`### Appendix`**. Under [`transcript.md`](transcript.md), add one **`Refined day page:`** line per file for that date.
+**Filename:** Default **`mearsheimer-page-YYYY-MM-DD.md`** (voice / publication date). **Multiple refined pages for the same publication date are allowed:** use **`mearsheimer-page-YYYY-MM-DD-<slug>.md`** with **`<slug>`** from the raw-input stem so filenames stay unique. **Alternatively,** consolidate same-day captures into **one** refined file with **A / B / C** Chronicle blocks when this template provides a same-day section. If the `raw-input/` folder date differs (ingest batching), note it in **`### Appendix`**. Under [`transcript.md`](transcript.md) when used, add one **`Refined day page:`** line per refined file for that date.
 
 **Length:** No enforced word limit. **Chronicle** is typically long (full verbatim) for Mode A–C; **Reflection** / **Foresight** may be stubbed until operator analysis. Mode D may be short. No path dumps or `verify:` in body sections—**`### Appendix`** only.
 

@@ -1,0 +1,55 @@
+{
+  "type": "counterfactual-simulation-report-v1",
+  "proposal_id": "example-dangerous-merge-authority",
+  "generated_at": "2026-04-26T01:04:25Z",
+  "authority": {
+    "recordAuthority": "none",
+    "gateEffect": "none",
+    "mergeAuthority": "none",
+    "simulationOnly": true
+  },
+  "input_summary": {
+    "proposal_kind": "portable_emulation",
+    "target_paths": [
+      "docs/portability/emulation/behavior-spec/v1-core-constitution.md"
+    ],
+    "target_surfaces": [
+      "WORK"
+    ],
+    "proposed_change_summary": "Allow foreign runtimes to approve and merge low-risk Record updates automatically after local validation.",
+    "evidence_refs": [
+      "docs/portability/emulation/README.md",
+      "docs/authority-values.md"
+    ],
+    "operator_question": "Should portable emulation be allowed to approve low-risk changes without source-repo review?",
+    "has_patch_text": true
+  },
+  "affected_paths": [
+    "docs/portability/emulation/behavior-spec/v1-core-constitution.md"
+  ],
+  "affected_surfaces": [
+    "WORK"
+  ],
+  "possible_contradictions": [
+    "Proposal references Record surfaces directly; verify the target surface and merge path are explicit."
+  ],
+  "doctrine_drift_risks": [
+    "Proposed text appears to set mergeAuthority to a non-'none' value, which would drift from current doctrine boundaries.",
+    "Proposal appears to write canonical Record or gate surfaces without human review."
+  ],
+  "follow_up_required": [
+    "Review nearby documentation cross-links and terminology alignment around docs/portability/emulation/behavior-spec/v1-core-constitution.md.",
+    "Re-check portable emulation authority wording and validation around docs/portability/emulation/behavior-spec/v1-core-constitution.md."
+  ],
+  "tests_or_audits_to_run": [
+    "pytest tests/test_emulation_contract_schema.py tests/test_emulation_bundle_schema.py",
+    "python3 scripts/audit_doctrine_drift.py"
+  ],
+  "recommendation": {
+    "decision": "reject",
+    "rationale": "The proposal appears to claim merge or canonical Record write authority that Grace-Mar doctrine forbids."
+  },
+  "warnings": [
+    "Advisory only: this simulation report is not evidence, not Record, not approval, and not a merge receipt."
+  ]
+}

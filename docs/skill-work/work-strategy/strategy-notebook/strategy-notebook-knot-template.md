@@ -1,4 +1,5 @@
 # Superseded placeholder (legacy on-disk name)
+<!-- word_count: 43 -->
 
 **Use instead:** [strategy-page-template.md](strategy-page-template.md) — `strategy-page` marker blocks in **`experts/<expert_id>/thread.md`** are the primary unit.
 

@@ -1,4 +1,5 @@
 # Expert thread — `simplicius`
+<!-- word_count: 342 -->
 
 WORK only; not Record.
 

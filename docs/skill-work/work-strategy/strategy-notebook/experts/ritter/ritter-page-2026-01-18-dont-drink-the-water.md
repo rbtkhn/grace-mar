@@ -1,4 +1,5 @@
 # Ritter strategy page — 2026-01-18 (*Don't Drink the Water*)
+<!-- word_count: 2843 -->
 
 WORK only; not Record.
 

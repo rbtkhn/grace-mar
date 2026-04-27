@@ -1,4 +1,5 @@
 # Verbatim — Robert Barnes on Larry Johnson *Countercurrent* (WORK)
+<!-- word_count: 1143 -->
 
 **Title (YouTube):** Robert Barnes | What the HELL is going on in the White House?  
 **Host:** Larry Johnson · **Guest:** Robert Barnes  

@@ -1,4 +1,5 @@
 # Expert transcript — `macgregor`
+<!-- word_count: 486 -->
 
 WORK only; not Record.
 

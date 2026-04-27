@@ -17,6 +17,10 @@ per-item slug filenames under the date folder.
 
 Override path with ``FETCH_STRATEGY_SOURCES`` env or ``--config``.
 
+With ``--apply``, for feeds that set ``thread:``, the script also appends a **one-line
+stub** to ``daily-strategy-inbox.md`` (same ``raw-input/`` path) when missing —
+**inbox → raw-input** registry discipline.
+
 WORK only; not Record. Network use is explicit (--apply).
 
 Usage::
@@ -51,8 +55,10 @@ if str(_SCRIPTS) not in sys.path:
 from strategy_expert_corpus import _EXPERT_IDS_SET  # noqa: E402
 from strategy_expert_transcript import iter_raw_input_yaml_documents  # noqa: E402
 DEFAULT_NOTEBOOK = REPO_ROOT / "docs/skill-work/work-strategy/strategy-notebook"
+DEFAULT_INBOX = DEFAULT_NOTEBOOK / "daily-strategy-inbox.md"
 DEFAULT_RAW_ROOT = DEFAULT_NOTEBOOK / "raw-input"
 DEFAULT_CONFIG = DEFAULT_RAW_ROOT / "fetch-sources.json"
+INBOX_APPEND_LINE = "_(Append below this line during the day.)_"
 USER_AGENT = (
     "grace-mar-fetch-strategy-raw-input/1.0 "
     "(+https://github.com/grace-mar; local strategy notebook ingest)"
@@ -292,10 +298,67 @@ def load_config(path: Path) -> dict[str, Any]:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
+def append_inbox_stubs_for_fetch(
+    notebook_dir: Path,
+    items: list[tuple[str, Path]],
+    *,
+    dry_run: bool,
+) -> int:
+    """Append one-line ``daily-strategy-inbox.md`` rows for each ``(expert_id, raw-input path)``.
+
+    Skips a row if the normalized ``raw-input/...`` path already appears anywhere in
+    the inbox (idempotent re-runs).
+    """
+    if not items:
+        return 0
+    inbox = notebook_dir / "daily-strategy-inbox.md"
+    if not inbox.is_file():
+        print(f"fetch: skip inbox append (missing): {inbox}", file=sys.stderr)
+        return 0
+    text = inbox.read_text(encoding="utf-8")
+    nbase = notebook_dir.resolve()
+    new_lines: list[str] = []
+    for expert_id, abs_path in items:
+        ap = abs_path.resolve()
+        try:
+            rel = ap.relative_to(nbase)
+        except ValueError:
+            try:
+                rel = ap.relative_to(REPO_ROOT)
+            except ValueError:
+                rel = ap
+        rel_s = str(rel).replace("\\", "/")
+        if rel_s in text:
+            continue
+        title = re.sub(r"[-_]+", " ", ap.stem).strip()[:100] or ap.name
+        new_lines.append(
+            f"- rss-fetch | cold: **{title}** // hook: `thread:{expert_id}` + raw-input | "
+            f"[{ap.name}]({rel_s}) | verify:rss-fetch+fetch_strategy_raw_input | thread:{expert_id}\n"
+        )
+    if not new_lines:
+        return 0
+    if dry_run:
+        for ln in new_lines:
+            print(f"would append inbox: {ln.strip()}", flush=True)
+        return len(new_lines)
+    if INBOX_APPEND_LINE in text:
+        i = text.index(INBOX_APPEND_LINE) + len(INBOX_APPEND_LINE)
+        new_text = text[:i] + "\n\n" + "".join(new_lines) + text[i:]
+    else:
+        new_text = text.rstrip() + "\n\n" + "".join(new_lines) + "\n"
+    inbox.write_text(new_text, encoding="utf-8")
+    print(
+        f"fetch: appended {len(new_lines)} inbox stub(s) → {inbox.relative_to(REPO_ROOT)}",
+        flush=True,
+    )
+    return len(new_lines)
+
+
 def run(
     *,
     config_path: Path,
     raw_root: Path,
+    notebook_dir: Path | None = None,
     ingest_date: date,
     apply: bool,
     global_max: int | None,
@@ -303,6 +366,7 @@ def run(
     cfg = load_config(config_path)
     feeds = cfg.get("rss_feeds") or []
     planned: dict[Path, list[tuple[str, str]]] = defaultdict(list)
+    dest_thread: dict[Path, str] = {}
 
     for feed in feeds:
         if not feed.get("enabled", True):
@@ -365,8 +429,11 @@ def run(
                 )
                 dest = raw_root / air.isoformat() / fname
             planned[dest].append((guid_key, content))
+            if thread_str:
+                dest_thread[dest] = thread_str
 
     total_writes = 0
+    inbox_stubs: list[tuple[str, Path]] = []
     for dest in sorted(planned.keys(), key=lambda x: str(x)):
         blocks_with_guids = planned[dest]
         existing_guids = _existing_guids_in_raw_file(dest) if dest.is_file() else set()
@@ -397,20 +464,40 @@ def run(
         if same:
             print(f"skip (unchanged): {rel}")
             continue
+        expert_id = dest_thread.get(dest)
         if not apply:
             action = "would append to" if exists else "would write"
             print(f"{action}: {rel}  (+{len(new_blocks)} ingest(s))")
             total_writes += 1
+            if expert_id and new_blocks:
+                inbox_stubs.append((expert_id, dest.resolve()))
             continue
         dest.parent.mkdir(parents=True, exist_ok=True)
         dest.write_text(content, encoding="utf-8")
         print(f"{'updated' if exists else 'wrote'}: {rel}  (+{len(new_blocks)} ingest(s))")
         total_writes += 1
+        if expert_id and new_blocks:
+            inbox_stubs.append((expert_id, dest.resolve()))
 
     if not planned:
         print("No items planned (empty feeds or fetch errors).")
     elif not apply:
         print(f"\nDry-run: {len(planned)} path(s), {total_writes} would change. Pass --apply to write.")
+
+    if notebook_dir is not None and inbox_stubs:
+        seen: set[str] = set()
+        deduped: list[tuple[str, Path]] = []
+        for eid, p in inbox_stubs:
+            key = str(p.resolve())
+            if key in seen:
+                continue
+            seen.add(key)
+            deduped.append((eid, p))
+        append_inbox_stubs_for_fetch(
+            notebook_dir.resolve(),
+            deduped,
+            dry_run=not apply,
+        )
 
     return 0
 
@@ -426,6 +513,12 @@ def _parse_args() -> argparse.Namespace:
     )
     p.add_argument("--today", type=str, default=None, help="ingest date YYYY-MM-DD (default: local today)")
     p.add_argument("--max-items", type=int, default=None, help="cap items per feed (override)")
+    p.add_argument(
+        "--notebook",
+        type=Path,
+        default=DEFAULT_NOTEBOOK,
+        help="Strategy notebook root (for daily-strategy-inbox.md stubs when --apply)",
+    )
     p.add_argument("--apply", action="store_true", help="Write files (default: dry-run)")
     p.add_argument("--dry-run", action="store_true", help="Force dry-run")
     return p.parse_args()
@@ -451,6 +544,7 @@ def main() -> int:
     return run(
         config_path=config_path,
         raw_root=args.root.resolve(),
+        notebook_dir=args.notebook.resolve(),
         ingest_date=ingest_date,
         apply=apply,
         global_max=args.max_items,

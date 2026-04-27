@@ -1,4 +1,5 @@
 # Mearsheimer strategy page — 2026-02-25 (*The Case for a Nuclear Iran*)
+<!-- word_count: 4873 -->
 
 WORK only; not Record.
 

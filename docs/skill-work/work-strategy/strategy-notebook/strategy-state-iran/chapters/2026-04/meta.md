@@ -1,4 +1,5 @@
 # strategy-state-iran — chapter 2026-04 — meta
+<!-- word_count: 241 -->
 
 **Kind:** month (first **strategy-state-iran** chapter)  
 **Status:** `open`  

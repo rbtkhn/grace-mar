@@ -1,4 +1,5 @@
 # Expert transcript — `berletic`
+<!-- word_count: 86 -->
 
 WORK only; not Record.
 

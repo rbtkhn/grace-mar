@@ -1,4 +1,5 @@
 # Strategy page template (`strategy-page`)
+<!-- word_count: 838 -->
 
 WORK only; not Record.
 

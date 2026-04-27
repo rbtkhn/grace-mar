@@ -1,4 +1,5 @@
 # Strategy expert — `diesen`
+<!-- word_count: 379 -->
 
 **Canonical index:** [strategy-commentator-threads.md](strategy-commentator-threads.md) — **`diesen`** lane.
 

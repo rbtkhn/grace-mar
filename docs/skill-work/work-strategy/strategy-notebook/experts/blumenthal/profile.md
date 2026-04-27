@@ -1,4 +1,5 @@
 # Strategy expert — `blumenthal`
+<!-- word_count: 414 -->
 
 **Canonical index:** [strategy-commentator-threads.md](strategy-commentator-threads.md) — **`blumenthal`** lane.
 

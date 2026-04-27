@@ -1,4 +1,5 @@
 # Announced vs material (reusable block)
+<!-- word_count: 54 -->
 
 **Use when:** An official or amplified line states **posture** (open/closed, ceasefire, passage) and your judgment object includes **strait, AIS, or multilateral** **material** state. Copy the block into **weave**, **cluster**, or **channel** month notes; keep **seam** to main `days.md` explicit.
 

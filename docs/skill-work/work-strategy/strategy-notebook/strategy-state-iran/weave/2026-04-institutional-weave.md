@@ -1,4 +1,5 @@
 # Institutional weave — 2026-04 (interpretation)
+<!-- word_count: 180 -->
 
 **Role:** **Second layer** after the [ledger](2026-04-institutional-ledger.md) — what the month’s **constellation of signals** **means** for judgment, which **cross-channel tensions** matter, and which **seams** to press into the [main strategy notebook `days.md`](../chapters/2026-04/days.md) (and **not** a substitute for **`thread:`** primaries on the U.S. side).
 

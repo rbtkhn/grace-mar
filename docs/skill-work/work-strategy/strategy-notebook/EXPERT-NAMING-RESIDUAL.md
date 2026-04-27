@@ -1,4 +1,5 @@
 # Expert naming — residual audit and upstream sync
+<!-- word_count: 254 -->
 
 WORK-only reference. Not Record.
 

@@ -1,4 +1,5 @@
 # Translation and republication provenance
+<!-- word_count: 69 -->
 
 **Role:** The Iran **state** lane ingests **fa**-primary X, **English**-official, **repost** **chains**, and **screenshot** **captures**. **Provenance** is part of the **judgment** **object** — not optional metadata of last resort.
 

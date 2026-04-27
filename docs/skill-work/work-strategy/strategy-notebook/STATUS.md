@@ -1,4 +1,5 @@
 # Strategy notebook — status
+<!-- word_count: 380 -->
 
 > Operator-maintained. Run from repo root; not auto-generated.
 

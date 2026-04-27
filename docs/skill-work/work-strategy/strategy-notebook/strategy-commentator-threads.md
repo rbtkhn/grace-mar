@@ -1,4 +1,5 @@
 # Strategy commentator threads (index)
+<!-- word_count: 5754 -->
 
 **Purpose:** Stable **expert lanes** for recurring **expert / commentator** ingests so `batch-analysis` lines can name **divergence and correlation** without re-deriving the roster each session. The same **`thread:<expert_id>`** on **different dates** is the **join key** for **accuracy** checks and **opinion drift** (see **Expert threads: predictive accuracy and opinion drift**). **WORK only** — not Record.
 

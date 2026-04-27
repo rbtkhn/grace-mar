@@ -1,4 +1,5 @@
 # Ritter strategy page — 2026-04-03 (*Combat Search and Rescue, the Prequel*)
+<!-- word_count: 1902 -->
 
 WORK only; not Record.
 

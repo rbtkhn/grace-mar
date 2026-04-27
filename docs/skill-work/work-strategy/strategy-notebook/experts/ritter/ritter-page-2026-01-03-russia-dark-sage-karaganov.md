@@ -1,4 +1,5 @@
 # Ritter strategy page — 2026-01-03 (*Russia's Dark Sage*)
+<!-- word_count: 2618 -->
 
 WORK only; not Record.
 

@@ -1,4 +1,5 @@
 # Expert thread — `blumenthal`
+<!-- word_count: 4382 -->
 
 WORK only; not Record.
 
