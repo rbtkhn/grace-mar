@@ -1,0 +1,15 @@
+{
+  "surface_id": "library-index",
+  "path": "artifacts/library-index.md",
+  "class": "dashboard",
+  "owner_lane": "work-strategy",
+  "producer": "scripts/build_library_index.py",
+  "source_inputs": ["users/grace-mar/self-library.md"],
+  "authority_status": "derived_non_authoritative",
+  "canonical_surfaces_touched": false,
+  "rebuild_command": "python3 scripts/build_library_index.py -u grace-mar",
+  "staleness_check": "Regenerate when self-library entries change; library-index CI on main if out of date.",
+  "operator_use": "At-a-glance SELF-LIBRARY navigation; not SELF-LIBRARY truth.",
+  "related_surfaces": ["artifacts/lane-dashboards/README.md", "docs/operator-dashboards.md"],
+  "notes": "Example instance for schema-operator-surface.v1.json; not an extra registry file to maintain by default."
+}

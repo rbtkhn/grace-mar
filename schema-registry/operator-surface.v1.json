@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/rbtkhn/grace-mar/main/schema-registry/operator-surface.v1.json",
+  "title": "Operator Surface Registry Entry",
+  "description": "Registry entry for an operator-facing Grace-Mar surface. Markdown tables in docs/operator-surface-registry.md are the human SSOT; this schema validates machine instances if added.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "surface_id",
+    "path",
+    "class",
+    "owner_lane",
+    "authority_status",
+    "operator_use"
+  ],
+  "properties": {
+    "surface_id": {
+      "type": "string"
+    },
+    "path": {
+      "type": "string"
+    },
+    "class": {
+      "type": "string",
+      "enum": [
+        "dashboard",
+        "index",
+        "report",
+        "receipt",
+        "packet",
+        "sidecar",
+        "machine_feed",
+        "lane_local_surface"
+      ]
+    },
+    "owner_lane": {
+      "type": "string"
+    },
+    "producer": {
+      "type": "string"
+    },
+    "source_inputs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "authority_status": {
+      "type": "string",
+      "enum": [
+        "canonical",
+        "derived_non_authoritative",
+        "advisory",
+        "review_support",
+        "machine_feed",
+        "deprecated",
+        "unknown_needs_classification"
+      ]
+    },
+    "canonical_surfaces_touched": {
+      "type": "boolean"
+    },
+    "rebuild_command": {
+      "type": "string"
+    },
+    "staleness_check": {
+      "type": "string"
+    },
+    "operator_use": {
+      "type": "string"
+    },
+    "related_surfaces": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "supersedes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

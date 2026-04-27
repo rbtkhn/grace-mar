@@ -2,6 +2,10 @@
 
 Grace-Mar can emit **compact, regeneratable Markdown “dashboards”** for operator navigation. They borrow the *visibility* idea from Dataview-style vault tools without making the repo an Obsidian-style truth system.
 
+## Dashboard anti-sprawl rule
+
+Prefer **extending** an existing dashboard, **adding a registry entry**, or **adding a report, receipt, packet, or machine feed** before adding a **new** dashboard. Any new operator dashboard must be **registered** in [operator-surface-registry.md](operator-surface-registry.md) with **authority status**, **source inputs**, **operator use**, and **relationship** to existing surfaces (see §5–7 there). The full policy and preferred alternatives live in that file—not duplicated here.
+
 Dashboards are a **stable scripted subclass** of the [Interface Artifact Protocol](skill-work/work-dev/interface-artifacts/README.md): generated operator-facing views that remain **derived** and **non-canonical** even when they become reliable enough to script and regenerate routinely.
 
 ## What these are
