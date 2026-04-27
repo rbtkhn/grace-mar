@@ -247,6 +247,12 @@ def main() -> int:
     manifest = yaml.safe_load(MANIFEST_PATH.read_text(encoding="utf-8"))
     pages = manifest.get("pages") or []
     for entry in pages:
+        if entry.get("skip_assembly"):
+            print(
+                "skip_assembly:",
+                entry.get("page_filename", entry.get("raw_input_relative", "?")),
+            )
+            continue
         raw_rel = entry["raw_input_relative"]
         page_fn = entry["page_filename"]
         raw_path = NOTEBOOK / raw_rel

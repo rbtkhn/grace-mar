@@ -50,6 +50,7 @@ tags:
 - Run **`python3 scripts/strategy/audit_refined_pages.py`** on new refined pages; fix appendix order if flagged.
 - Grep for old filenames if replacing an undated **`*-page-YYYY-MM-DD.md`**.
 - **Mearsheimer** auto-assembler: `scripts/strategy/assemble_mearsheimer_pages_verbatim.py` can **overwrite** a guest `mearsheimer-page-*.md` with a full **embed** from `raw-input`. For an entry that uses **lane split** (compressed **guest** **Verbatim**), set **`skip_assembly: true`** on that **manifest** row in **`mearsheimer-pages-manifest.yaml`** so the script **skips** the file. (Do **not** run the assembler to “refresh” lane-split pages unless you intend to move back to full-embed mode.)
+- **Ritter** auto-assembler: `scripts/strategy/assemble_ritter_pages_verbatim.py` — same **`skip_assembly: true`** guard on **`ritter-pages-manifest.yaml`** for lane-split guest pages so a full-embed pass does not overwrite compressed **Verbatim**.
 
 ## Guardrails
 

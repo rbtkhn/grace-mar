@@ -1,5 +1,5 @@
 generated_by: scripts/strategy/build_ritter_refined_pages.py
-primary_capture_count: 23
+primary_capture_count: 24
 backlog:
 - note: Substack *The Consequences of Incompetence* (2026-04-19) — listed in inbox/transcript;
     no verbatim raw-input file yet.
@@ -259,6 +259,19 @@ pages:
   display_title: Blasphemy, American Style
   source_url: https://scottritter.substack.com/p/blasphemy-american-style
   href_verbatim: ../../raw-input/2026-04-13/substack-ritter-blasphemy-american-style-2026-04-13.md
+- raw_input_relative: raw-input/2026-04-17/transcript-diesen-ritter-russia-threatens-strike-finland-baltic-2026-04-17.md
+  voice_date: '2026-04-17'
+  page_filename: ritter-page-2026-04-17-diesen-ritter-russia-threatens-strike-finland-baltic-2026-04-17.md
+  skip_assembly: true
+  collision: false
+  slug: russia-threatens-strike-finland-baltic
+  mode: B
+  capture_mode: Mode B — interview (Glenn Diesen × Scott Ritter; lane-split guest Verbatim)
+  preamble_label: Aired
+  preamble_date: '2026-04-17'
+  display_title: Russia Threatens Strike on Finland & Baltic States
+  source_url: https://www.youtube.com/watch?v=TBD-diesen-ritter-finland-baltic-2026-04
+  href_verbatim: ../../raw-input/2026-04-17/transcript-diesen-ritter-russia-threatens-strike-finland-baltic-2026-04-17.md
 - raw_input_relative: raw-input/2026-04-20/judging-freedom-trump-hegseth-2026-04-20.md
   voice_date: '2026-04-20'
   page_filename: ritter-page-2026-04-20-judging-freedom-trump-hegseth.md
