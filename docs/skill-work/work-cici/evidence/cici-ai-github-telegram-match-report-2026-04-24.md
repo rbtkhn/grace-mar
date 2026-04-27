@@ -39,8 +39,17 @@ Post one roster-check prompt in `cici-ai` and collect self-claims in one line:
 
 Promote confidence tiers only after explicit self-claim in chat or a direct handle-level mapping.
 
+## Post–2026-04-27 snapshot (operator)
+
+Not in the [2026-04-27 member list](cici-telegram-cici-ai-members-snapshot-2026-04-27.md) (that capture had 14 rows). New join reported in-group:
+
+| Telegram display name | GitHub | Confidence | Notes |
+| --- | --- | --- | --- |
+| Jonathan | [JK3303](https://github.com/JK3303) | B (operator) | Name↔handle as reported by operator; in-chat self-claim or roster message can raise to **High** on the table above. |
+
 ## Revision
 
 | Date | Note |
 |---|---|
 | 2026-04-24 | First aggregate tiered match report (10 GitHub accounts vs Telegram snapshot). |
+| 2026-04-28 | Add post-snapshot row: `Jonathan` ↔ [JK3303](https://github.com/JK3303) (operator, confidence B). |
