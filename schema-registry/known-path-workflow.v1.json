@@ -1,0 +1,94 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schema-registry/known-path-workflow.v1.json",
+  "title": "Known-path workflow registry entry (v1)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "workflow_id",
+    "title",
+    "status",
+    "version",
+    "owner",
+    "reviewer",
+    "cadence",
+    "trigger",
+    "authority_class",
+    "maximum_action",
+    "input_surfaces",
+    "output_surfaces"
+  ],
+  "properties": {
+    "workflow_id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Stable slug (snake_case or kebab-case); unique per workflow doc."
+    },
+    "title": { "type": "string", "minLength": 1 },
+    "status": {
+      "type": "string",
+      "enum": ["proposed", "example", "active", "retired"]
+    },
+    "version": { "type": "string", "minLength": 1 },
+    "owner": { "type": "string", "minLength": 1 },
+    "reviewer": { "type": "string", "minLength": 1 },
+    "cadence": {
+      "type": "string",
+      "enum": [
+        "daily",
+        "weekly",
+        "monthly",
+        "event_driven",
+        "operator_invoked"
+      ]
+    },
+    "trigger": { "type": "string", "minLength": 1 },
+    "authority_class": {
+      "type": "string",
+      "enum": [
+        "read_only",
+        "draftable",
+        "review_required",
+        "human_only",
+        "ephemeral_only"
+      ],
+      "description": "Normative classes per docs/authority-map.md (snake_case)."
+    },
+    "maximum_action": { "type": "string", "minLength": 1 },
+    "input_surfaces": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "output_surfaces": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "related_existing_surfaces": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "runtime_vs_record",
+          "authority_map",
+          "recursion_gate",
+          "action_receipts",
+          "operator_dashboards",
+          "strategy_notebook"
+        ]
+      }
+    },
+    "load_lift_metrics": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "manual_time_minutes": { "type": "number", "minimum": 0 },
+        "review_time_minutes": { "type": "number", "minimum": 0 },
+        "missed_signal_check": { "type": "boolean" },
+        "false_promotion_check": { "type": "boolean" }
+      }
+    },
+    "promotion_path": { "type": "string", "minLength": 1 }
+  }
+}

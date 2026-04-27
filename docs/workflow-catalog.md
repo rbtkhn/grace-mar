@@ -50,6 +50,10 @@
 - [observability.md](observability.md), [session-observability.md](session-observability.md), `runtime/observability/`
 - Web / family hub: [simple-user-interface.md](simple-user-interface.md), [web-app-plan.md](web-app-plan.md)
 
+## Known-path workflow registry
+
+- [Known-path workflows](workflows/known-path-workflows/README.md) — eligibility, fitness test, and templates for **repeatable** processes with explicit reviewer and **authority_class** (draft / review only; **no** merge shortcut). **Different axis** from [runtime workflow depth](runtime/workflow-depth-contract.md) (tier / observability for execution depth).
+
 ---
 
 ## See also
