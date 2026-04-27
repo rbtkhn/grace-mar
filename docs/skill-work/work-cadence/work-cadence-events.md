@@ -337,3 +337,6 @@ _(Append below this line.)_
 - **2026-04-27 16:59 UTC** — coffee_conductor_outcome (grace-mar) ok=true cursor_model=unknown model_tier=unknown falsify=lead-themes-section-3
 - **2026-04-27 17:01 UTC** — coffee_pick (grace-mar) ok=true cursor_model=unknown model_tier=unknown picked=conductor conductor=kleiber
 - **2026-04-27 17:02 UTC** — coffee_conductor_outcome (grace-mar) ok=true cursor_model=unknown model_tier=unknown falsify=mem-boundary-crosslink
+- **2026-04-27 17:19 UTC** — coffee_pick (grace-mar) ok=true cursor_model=unknown model_tier=unknown picked=conductor conductor=kleiber
+- **2026-04-27 17:22 UTC** — coffee_conductor_outcome (grace-mar) ok=true cursor_model=unknown model_tier=unknown verdict=no_action conductor=kleiber action=integrity_c falsify=validate-integrity-ok
+- **2026-04-27 17:24 UTC** — coffee_conductor_outcome (grace-mar) ok=true cursor_model=unknown model_tier=unknown verdict=watch conductor=kleiber action=derived_A notebook_ref=docs/skill-work/work-dev/derived-regeneration.md

@@ -165,6 +165,7 @@ Next wedges:
 - expand target coverage only where source -> artifact mapping is clear
 - deepen the generated dependency manifest
 - strengthen topological incremental ordering and downstream expansion
+- **Sequence each expansion:** (1) register the new target in the generated manifest (run `build_derived_regeneration_manifest.py` so the artifact is declared); (2) confirm `canonical_change_detector.py` lists the canonical sources for that target; (3) run `regenerate_all_derived.py --changed --incremental --dry-run` and only then treat the target as live for non-dry runs.
 - keep optional git hooks as wrappers later, not the primary contract
 
 ### 2. Reliability completion immediately after the foundation
