@@ -34,6 +34,7 @@ Define how [Cursor Automations](https://cursor.com/docs/cloud-agent/automations)
 **CI failure triage comment** — on **GitHub: workflow / CI completed** with **failure** (or equivalent trigger).
 
 - **Why first:** Tight event, one comment, no file writes, clear value (first failing job + repro hint), low governance surface if the prompt includes the [safe contract](cursor-safe-automation-contract.md).
+- **How:** [README — First live automation: CI failure triage](README.md#first-live-automation-ci-failure-triage) · operator guide [cursor-ci-failure-triage.md](cursor-ci-failure-triage.md) · paste prompt [prompts/cursor-ci-failure-triage.md](prompts/cursor-ci-failure-triage.md).
 
 ## Trigger map
 

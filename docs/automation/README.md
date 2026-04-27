@@ -26,6 +26,7 @@ That keeps Automations from becoming a second CI system. Deterministic checks st
 | File | Role |
 |------|------|
 | [cursor-automations.md](cursor-automations.md) | Design note: fit, trigger map, non-goals. |
+| [cursor-ci-failure-triage.md](cursor-ci-failure-triage.md) | **Operator guide** for the first live automation: triggers, allow/deny, failure taxonomy, **canonical comment template**. |
 | [cursor-safe-automation-contract.md](cursor-safe-automation-contract.md) | **Paste** at the top of any Automation prompt. |
 | [prompts/](prompts/) | **Paste-ready** prompts per use case. |
 
@@ -33,7 +34,7 @@ That keeps Automations from becoming a second CI system. Deterministic checks st
 
 | Class | Prompt | Typical trigger (when you enable it) |
 |-------|--------|--------------------------------------|
-| 1. CI failure triage | [prompts/cursor-ci-failure-triage.md](prompts/cursor-ci-failure-triage.md) | Workflow completed with failure |
+| 1. CI failure triage | [cursor-ci-failure-triage.md](cursor-ci-failure-triage.md) (guide) + [prompts/cursor-ci-failure-triage.md](prompts/cursor-ci-failure-triage.md) (paste) | Workflow completed with failure |
 | 2. PR onboarding | [prompts/cursor-pr-onboarding.md](prompts/cursor-pr-onboarding.md) | PR opened or synchronized |
 | 3. Integrity summary | [prompts/cursor-integrity-summary.md](prompts/cursor-integrity-summary.md) | Weekly schedule (or manual) |
 | 4. Gate queue nudge | [prompts/cursor-gate-queue-nudge.md](prompts/cursor-gate-queue-nudge.md) | Weekly schedule — **medium priority**; not recommended as first live automation |
@@ -44,6 +45,14 @@ That keeps Automations from becoming a second CI system. Deterministic checks st
 
 A broader opportunity probe (friction list, CI inventory) lives in [docs/skill-work/work-dev/cursor-automations-candidates.md](../skill-work/work-dev/cursor-automations-candidates.md). **Prompts SSOT** for paste-ready text is this `docs/automation/` tree.
 
-## First live automation to try
+<a id="first-live-automation-ci-failure-triage"></a>
 
-When you are ready to turn something on in Cursor, start with **CI failure triage** (comment-only, repro-oriented, no repo writes). See [cursor-automations.md § Recommended first live automation](cursor-automations.md#recommended-first-live-automation) and [prompts/cursor-ci-failure-triage.md](prompts/cursor-ci-failure-triage.md).
+## First live automation: CI failure triage
+
+**Recommended first** because it is **event-bounded** (runs only after a failure), **read-only** (comments / report text, not commits), and **complements** existing GitHub Actions without duplicating pass/fail logic.
+
+1. **Operator guide** (setup, taxonomy, **canonical** PR comment template): [cursor-ci-failure-triage.md](cursor-ci-failure-triage.md)
+2. **Paste prompt** (bounded identity + procedure; references the guide’s template): [prompts/cursor-ci-failure-triage.md](prompts/cursor-ci-failure-triage.md)
+3. **Design context:** [cursor-automations.md § Recommended first live automation](cursor-automations.md#recommended-first-live-automation)
+
+**This does not** enable an automation in GitHub or in the repo; it documents how to configure one in the Cursor product.
