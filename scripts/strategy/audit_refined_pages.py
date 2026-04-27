@@ -4,7 +4,7 @@
 Checks mirror the template compliance checklist (structural / grep-level only).
 Excludes *-page-template.md compat stubs.
 
-Usage (repo root): python3 scripts/strategy/audit_refined_day_pages.py
+Usage (repo root): python3 scripts/strategy/audit_refined_pages.py
 Optional: --json for machine-readable summary.
 """
 from __future__ import annotations
