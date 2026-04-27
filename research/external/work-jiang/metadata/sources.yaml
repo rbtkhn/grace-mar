@@ -2789,3 +2789,18 @@ sources:
     curated_lecture: complete
     analysis: complete
     chapter_mapping: not_started
+- source_id: es-35
+  video_id: ''
+  title: The Trump New Deal
+  canonical_url: https://predictivehistory.substack.com/p/the-trump-new-deal
+  publication_date: '2026-04-25'
+  lecture_path: substack/essays/the-trump-new-deal.md
+  analysis_path: analysis/essay-the-trump-new-deal-analysis.md
+  series: essays
+  episode: 35
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: not_started
+    chapter_mapping: not_started
