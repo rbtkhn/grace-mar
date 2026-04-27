@@ -328,3 +328,4 @@ _(Append below this line.)_
 - **2026-04-27 14:30 UTC** — bridge (grace-mar) ok=true cursor_model=unknown model_tier=unknown refs=cfe07ae8,983bfba
 - **2026-04-27 16:05 UTC** — coffee (grace-mar) ok=true mode=work-start cursor_model=unknown model_tier=unknown
 - **2026-04-27 16:11 UTC** — coffee_pick (grace-mar) ok=true cursor_model=unknown model_tier=unknown picked=conductor conductor=toscanini
+- **2026-04-27 16:20 UTC** — coffee_conductor_outcome (grace-mar) ok=true cursor_model=unknown model_tier=unknown falsify=oembed-title-author-match
