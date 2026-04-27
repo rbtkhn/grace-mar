@@ -47,6 +47,14 @@ A workflow is worth registering only if it **saves more operator time than it cr
 
 If review burden cannot be estimated, treat the process as **not yet known-path** (manual checklist only).
 
+## Load-Lift Receipts
+
+Known-path workflows should be **evaluated** by whether they **lift operator load**: time saved vs review time, plus governance checks (missed signals, false confidence, authority drift). **Load-Lift Receipts** record those numbers and a **`continue` / `revise` / `narrow` / `retire` / `manual_only`** decision after a run. They **do not** approve durable Record changes or bypass the gate.
+
+- Spec: [load-lift-receipts.md](load-lift-receipts.md)
+- Schema: [`schema-registry/load-lift-receipt.v1.json`](../../../schema-registry/load-lift-receipt.v1.json)
+- Example: [examples/load-lift-receipt-daily-strategy-thread-synthesis.json](examples/load-lift-receipt-daily-strategy-thread-synthesis.json)
+
 ---
 
 ## Relationship to existing Grace-Mar concepts
@@ -56,7 +64,7 @@ If review burden cannot be estimated, treat the process as **not yet known-path*
 | [Runtime vs Record](../../runtime-vs-record.md) | Drafts and receipts stay **runtime / WORK** unless promoted through the gate. |
 | [Authority map](../../authority-map.md) | **`authority_class`** on a workflow aligns with these classes; it does **not** add new config keys. |
 | [Recursion-gate](../../../users/grace-mar/recursion-gate.md) | Staging and companion approval remain **unchanged**. |
-| [Action receipts](../../action-receipts.md) | Optional **audit / run** receipts may accompany a workflow; they do not substitute for gate approval. |
+| [Action receipts](../../action-receipts.md) | General doctrine for meaningful-action audit stubs; **Load-Lift Receipts** are a **specialized** evaluation type for known-path runs ([load-lift-receipts.md](load-lift-receipts.md)). Neither substitutes for gate approval. |
 | [Operator dashboards](../../operator-dashboards.md) | Future dashboards might list **active** workflows; this registry is the doc SSOT until then. |
 | [Strategy notebook](../../skill-work/work-strategy/strategy-notebook/README.md) | Example workflows may **read** notebook paths and **write** reviewable drafts only where authority allows. |
 
@@ -71,7 +79,7 @@ If review burden cannot be estimated, treat the process as **not yet known-path*
 3. **Register** — Commit the workflow doc under this tree (or link from runbooks); set `status` to `example` or `active` only when policy matches reality.
 4. **Run manually or semi-automatically** — Operator or scripts follow the documented path; no merge authority implied.
 5. **Produce draft / reviewable output** — Within declared `authority_class` and `maximum_action`.
-6. **Emit optional receipt** — If the workflow defines a receipt shape, keep it **non-authoritative** per runtime-vs-Record.
+6. **Emit optional receipt** — E.g. [Load-Lift Receipt](load-lift-receipts.md) after a pilot or recurring run; or other audit stubs; keep it **non-authoritative** per [runtime vs Record](../../runtime-vs-record.md).
 7. **Human approves, rejects, revises, or promotes** — Through existing gates ([AGENTS.md](../../../AGENTS.md)); `process_approved_candidates.py` (or companion receipt flow) remains the merge path for Record changes.
 
 ---
@@ -81,6 +89,7 @@ If review burden cannot be estimated, treat the process as **not yet known-path*
 Machine shape for registry entries (optional for doc-only workflows; required if you emit JSON instances):
 
 - [`schema-registry/known-path-workflow.v1.json`](../../../schema-registry/known-path-workflow.v1.json)
+- **Load-lift (per run):** [`schema-registry/load-lift-receipt.v1.json`](../../../schema-registry/load-lift-receipt.v1.json) — see [load-lift-receipts.md](load-lift-receipts.md)
 
 Developers may validate a YAML/JSON instance with `jsonschema` Draft 2020-12 locally; this repo does not require a dedicated validator script for the registry in the initial drop.
 
@@ -100,5 +109,6 @@ Examples use `status: example`. They are **not** activated automation.
 ## See also
 
 - [Workflow catalog](../../workflow-catalog.md) — broader recipe index
+- [Load-lift receipts](load-lift-receipts.md)
 - [Workflow fitness test](workflow-fitness-test.md)
 - [Workflow registration template](workflow-agent-template.md)

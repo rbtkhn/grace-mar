@@ -24,6 +24,10 @@ Action receipts are **not** the Record. They are **not** a second merge path. Th
 - Emitted a bridge or harvest packet (ephemeral; still legible)
 - Applied an **accepted** change (often **also** recorded elsewhere; receipt is redundant only if those surfaces are complete)
 
+### Specialized evaluation receipts
+
+**Load-Lift Receipts** are a **specialized** evaluation artifact for [known-path workflow](workflows/known-path-workflows/README.md) **runs** — they record whether a workflow **reduced operator burden** (baseline vs run vs review time) while flagging **missed signals**, **false promotion risk**, and **authority** concerns. They **do not** replace general action-receipt use cases, **do not** merge or approve the Record, and **do not** subsume a future `schema-registry/action-receipt.v1.json` (see *Shape* below). Schema: [schema-registry/load-lift-receipt.v1.json](../schema-registry/load-lift-receipt.v1.json); spec: [load-lift-receipts.md](workflows/known-path-workflows/load-lift-receipts.md).
+
 ---
 
 ## Shape (future)

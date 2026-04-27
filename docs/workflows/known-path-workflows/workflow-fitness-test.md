@@ -84,6 +84,7 @@ If **any** of these apply, the workflow is **not** eligible as a known-path work
 - **Review time** expected: documented.
 - **Acceptable if:** inequality “saved ≥ review + coordination overhead” or explicit operator exception (documented).
 - **Retire if:** false positives, review fatigue, or drift in inputs/outputs.
+- After a pilot or when comparing runs, optionally record a [Load-Lift Receipt](load-lift-receipts.md) (time fields + `decision`); not required for a **paper** fitness test, **recommended** before `status: active`.
 
 ---
 

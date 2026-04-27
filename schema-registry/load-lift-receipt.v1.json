@@ -1,0 +1,124 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schema-registry/load-lift-receipt.v1.json",
+  "title": "Load-Lift Receipt (v1)",
+  "description": "Evaluation receipt for a known-path workflow run. Not a merge receipt; not gate approval. See docs/workflows/known-path-workflows/load-lift-receipts.md",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "receipt_id",
+    "workflow_id",
+    "workflow_title",
+    "run_date",
+    "run_trigger",
+    "authority_class",
+    "reviewer",
+    "manual_baseline_minutes",
+    "workflow_run_minutes",
+    "review_minutes",
+    "net_time_saved_minutes",
+    "output_accepted",
+    "output_required_revision",
+    "missed_major_signal",
+    "false_promotion_risk",
+    "authority_boundary_issue",
+    "operator_would_miss_if_disabled",
+    "decision"
+  ],
+  "properties": {
+    "receipt_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "workflow_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "workflow_title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "run_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "run_trigger": {
+      "type": "string",
+      "minLength": 1
+    },
+    "authority_class": {
+      "type": "string",
+      "description": "Same vocabulary as known-path-workflow.v1 and docs/authority-map.md",
+      "enum": [
+        "read_only",
+        "draftable",
+        "review_required",
+        "human_only",
+        "ephemeral_only"
+      ]
+    },
+    "reviewer": {
+      "type": "string",
+      "minLength": 1
+    },
+    "manual_baseline_minutes": {
+      "type": "number",
+      "minimum": 0
+    },
+    "workflow_run_minutes": {
+      "type": "number",
+      "minimum": 0
+    },
+    "review_minutes": {
+      "type": "number",
+      "minimum": 0
+    },
+    "net_time_saved_minutes": {
+      "type": "number"
+    },
+    "output_accepted": {
+      "type": "boolean"
+    },
+    "output_required_revision": {
+      "type": "boolean"
+    },
+    "missed_major_signal": {
+      "type": "boolean"
+    },
+    "false_promotion_risk": {
+      "type": "string",
+      "enum": [
+        "none",
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    "authority_boundary_issue": {
+      "type": "boolean"
+    },
+    "operator_would_miss_if_disabled": {
+      "type": "boolean"
+    },
+    "decision": {
+      "type": "string",
+      "enum": [
+        "continue",
+        "revise",
+        "narrow",
+        "retire",
+        "manual_only"
+      ]
+    },
+    "reviewer_notes": {
+      "type": "string"
+    },
+    "related_artifacts": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  }
+}

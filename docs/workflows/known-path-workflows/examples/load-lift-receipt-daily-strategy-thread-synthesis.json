@@ -1,0 +1,24 @@
+{
+  "receipt_id": "load-lift-daily-strategy-thread-synthesis-2026-04-27",
+  "workflow_id": "daily-strategy-thread-synthesis",
+  "workflow_title": "Daily Strategy Thread Synthesis",
+  "run_date": "2026-04-27",
+  "run_trigger": "operator_invoked",
+  "authority_class": "draftable",
+  "reviewer": "human operator",
+  "manual_baseline_minutes": 45,
+  "workflow_run_minutes": 3,
+  "review_minutes": 9,
+  "net_time_saved_minutes": 33,
+  "output_accepted": true,
+  "output_required_revision": true,
+  "missed_major_signal": false,
+  "false_promotion_risk": "low",
+  "authority_boundary_issue": false,
+  "operator_would_miss_if_disabled": true,
+  "decision": "continue",
+  "reviewer_notes": "Draft synthesis required minor revisions but reduced manual scanning burden and preserved review control.",
+  "related_artifacts": [
+    "docs/workflows/known-path-workflows/examples/daily-strategy-thread-synthesis.md"
+  ]
+}

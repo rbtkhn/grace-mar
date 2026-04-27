@@ -78,6 +78,22 @@ _What can go wrong; how the operator detects it; what to do (stop, revert draft,
 
 _Optional receipt types, paths under `artifacts/` or logs, pointers to [action receipts](../../action-receipts.md)._
 
+### Load-Lift Receipt (optional)
+
+After **trial runs** or when moving toward `status: active`, consider emitting a [Load-Lift Receipt](load-lift-receipts.md) (schema: [`schema-registry/load-lift-receipt.v1.json`](../../../schema-registry/load-lift-receipt.v1.json)). Fields to fill (see spec for full semantics):
+
+- `manual_baseline_minutes`
+- `workflow_run_minutes`
+- `review_minutes`
+- `net_time_saved_minutes` (or compute per formula in the doc)
+- `missed_major_signal`
+- `false_promotion_risk`
+- `authority_boundary_issue`
+- `operator_would_miss_if_disabled`
+- `decision` (`continue` | `revise` | `narrow` | `retire` | `manual_only`)
+
+**Proposed** workflows can omit; **piloted** or **active** workflows should use receipts on a cadence the operator sets.
+
 ## 11. Promotion path
 
 _Exact handoff: e.g. “stage `CANDIDATE-XXXX` in recursion-gate” or “open PR”; link to [AGENTS.md](../../../AGENTS.md) merge rules._
