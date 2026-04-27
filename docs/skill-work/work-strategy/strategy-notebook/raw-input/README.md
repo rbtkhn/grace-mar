@@ -5,6 +5,12 @@
 
 **Expert-agnostic:** This tree is **raw material for analysis**, not only dumps tied to a [strategy-commentator-threads.md](../strategy-commentator-threads.md) **`expert_id`**. Substack essays, wire bundles, institutional statements, screenshot indexes, and mixed paste-bundles belong here even when there is **no** `thread:` lane yet (or ever). The inbox stub may use **`membrane:single`** and omit **`thread:`**; frontmatter **`thread:`** is optional (see § File template).
 
+## Publication vocabulary (formal pin)
+
+- **Machine (grep / YAML / cold lines, `verify:` tails):** use **`pub_date`** and the tag **`pub_date:YYYY-MM-DD`**. **Do not** introduce new **`aired:`** tags; **`ingest_date`** remains “when the file entered this tree,” distinct from **publication**.
+- **Human (preambles, spec prose):** use **Published** / “publication day” — not an “aired” block as the norm. Same calendar anchor as **`pub_date`**; see [STRATEGY-NOTEBOOK-ARCHITECTURE.md](../STRATEGY-NOTEBOOK-ARCHITECTURE.md) publication vocabulary and [refined-day-page-template.md](../refined-day-page-template.md).
+- **Legacy (until bulk migration):** folder **`_aired-pending/`** and existing **`aired:`** / “aired” in older **daily-strategy-inbox.md** and captures stay on disk; new material and new edits follow this pin.
+
 ## Automated fetch (RSS → raw-input)
 
 **Script:** [`scripts/fetch_strategy_raw_input.py`](../../../../scripts/fetch_strategy_raw_input.py) — pulls **RSS/Atom** items (e.g. Substack `/feed`) into **`raw-input/<pub_date>/`** as markdown with YAML frontmatter (`kind: rss-item`). When a feed sets **`"thread": "<expert_id>"`**, new items **append** into **`raw-input/<pub_date>/<pub_date>-<expert_id>.md`** (multiple ingests = multiple `---` … `---` blocks; duplicates skipped by `guid:`). **Refined day pages** (operator judgment artifacts) live under **`experts/<expert_id>/`** — e.g. **`mercouris-page-YYYY-MM-DD.md`** — not in this tree. Feeds **without** `thread` still write **one markdown file per RSS item** (slug + hash basename). Optional **`thread:`** in YAML drives **`python3 scripts/strategy_thread.py`** triage: one-line RSS stubs merge into that expert’s **`experts/<id>/transcript.md`** (after inbox lines for the same date).
@@ -53,7 +59,7 @@ WORK only; not Record.
 
 ## Layout
 
-Use **one subdirectory per publication / air day** — the folder name **`YYYY-MM-DD`** matches **`pub_date`** in the file’s frontmatter (when the source went public: air date, YouTube publish, Substack `pubDate`, RSS item date, etc.). This matches [`scripts/fetch_strategy_raw_input.py`](../../../../scripts/fetch_strategy_raw_input.py) (writes under **`raw-input/<pub_date>/`**) and [`scripts/populate_strategy_raw_input.py`](../../../../scripts/populate_strategy_raw_input.py) (uses section / filename air dates).
+Use **one subdirectory per publication day** — the folder name **`YYYY-MM-DD`** matches **`pub_date`** in the file’s frontmatter (when the source went public: livestream go-live, YouTube publish, Substack `pubDate`, RSS item date, etc.). This matches [`scripts/fetch_strategy_raw_input.py`](../../../../scripts/fetch_strategy_raw_input.py) (writes under **`raw-input/<pub_date>/`**) and [`scripts/populate_strategy_raw_input.py`](../../../../scripts/populate_strategy_raw_input.py) (uses section / filename **publication** dates).
 
 **Not** the folder for “the day I saved the file” — that belongs in **`ingest_date`** in YAML only. If **`pub_date`** is still unknown (e.g. transcript paste before the canonical `watch?v=` is pinned), use **`_aired-pending/`** for the markdown file; move it into **`raw-input/<pub_date>/`** once the air day is fixed.
 
@@ -66,9 +72,9 @@ raw-input/
     <slug>.md        ← other captures: verbatim sidecars, RSS without thread:, bundles, indexes
 ```
 
-**Refined day page (not here):** **`experts/<expert_id>/<expert_id>-page-YYYY-MM-DD.md`** — Chronicle / Reflection / Foresight; links back to **verbatim** in this tree. **Multiple refined pages for the same publication date are allowed:** **`…-page-YYYY-MM-DD-<slug>.md`** (slug from `raw-input` stem) **or** one consolidated file with **A / B / C** Chronicle blocks per that expert’s **`*-page-template.md`**. Distinct from **`strategy-page`** in `thread.md` unless mirrored during EOD compose.
+**Refined day page (not here):** **`experts/<expert_id>/<expert_id>-page-YYYY-MM-DD.md`** — Chronicle / Reflection / Foresight; links back to **verbatim** in this tree. **Multiple refined pages for the same publication date are allowed:** **`…-page-YYYY-MM-DD-<slug>.md`** (slug from `raw-input` stem) **or** one consolidated file with **A / B / C** Chronicle blocks per [refined-day-page-template.md](../refined-day-page-template.md) (each expert’s **`*-page-template.md`** is a **compat stub** linking that canonical). Distinct from **`strategy-page`** in `thread.md` unless mirrored during EOD compose.
 
-**Raw capture:** e.g. **`2026-04-21-mercouris-verbatim.md`** under **`2026-04-21/`** because the episode **aired / published** on that calendar day; RSS **`thread: mercouris`** appends to **`2026-04-21-mercouris.md`** in that same folder.
+**Raw capture:** e.g. **`2026-04-21-mercouris-verbatim.md`** under **`2026-04-21/`** because the episode **published** ( **`pub_date`** ) on that calendar day; RSS **`thread: mercouris`** appends to **`2026-04-21-mercouris.md`** in that same folder.
 
 **Other slugs:** `kebab-case`, unique within that day — e.g. `ritter-judging-freedom-2026-04-20.md`, `substack-simplicius-….md`, `davis-johnson-hormuz-full.md`.
 
@@ -92,7 +98,7 @@ kind: transcript | paste-bundle | screenshot-list | x-screenshots-index | x-post
 …full body…
 ```
 
-`thread:` may be omitted for non-expert material (e.g. raw wire paste with no `thread:` lane yet). **`pub_date`** is the calendar day the source went public (air, YouTube/Substack publish, RSS `pubDate`, etc.), distinct from **`ingest_date`** (when you saved or ingested the file into this tree). **On disk,** the parent folder `raw-input/YYYY-MM-DD/` **should match `pub_date`** once known (or **`_aired-pending/`** until then). The legacy key **`published_date`** is **removed** from this tree—use **`pub_date`** only. RSS triage reads **`pub_date`**, then **`ingest_date`**, then the folder name. Prefer **`kind: x-post-text`** when you paste X copy directly; legacy screenshot captures are indexed as **`x-screenshots-index`** (links to `assets/**/*.png`, no OCR).
+`thread:` may be omitted for non-expert material (e.g. raw wire paste with no `thread:` lane yet). **`pub_date`** is the calendar day the source went public (live, YouTube/Substack publish, RSS `pubDate`, etc.), distinct from **`ingest_date`** (when you saved or ingested the file into this tree). **On disk,** the parent folder `raw-input/YYYY-MM-DD/` **should match `pub_date`** once known (or **`_aired-pending/`** until then). The legacy key **`published_date`** is **removed** from this tree—use **`pub_date`** only. RSS triage reads **`pub_date`**, then **`ingest_date`**, then the folder name. Prefer **`kind: x-post-text`** when you paste X copy directly; legacy screenshot captures are indexed as **`x-screenshots-index`** (links to `assets/**/*.png`, no OCR).
 
 ## Harvest / backfill
 

@@ -109,16 +109,20 @@ Apply **prospectively**; no obligation to backfill older months unless you expli
 
 **Problem:** **Durable** long verbatim for **reading and Chronicle** belongs in **[`raw-input/`](raw-input/README.md)**, but **unified discovery** still needs a **grep-friendly registry** and a **single habitual action** (see operator preference: stub + corpus + one command). The **7-day** **`transcript.md`** is the **triage** target for `thread:` lines, **not** the operator’s only bulk store.
 
+### Publication vocabulary (formal pin)
+
+Normative: **[`raw-input/README.md` § Publication vocabulary](raw-input/README.md#publication-vocabulary-formal-pin)** — **machine** tag **`pub_date:YYYY-MM-DD`**, YAML **`pub_date`**, human **Published** / “publication day” — not **`aired:`** as a norm for new work. **Legacy** inbox lines and the **`_aired-pending/`** folder name may persist until a bulk migration. **[`refined-day-page-template.md`](refined-day-page-template.md)** preambles follow the same pin.
+
 **Policy (target):**
 
 | Layer | Role |
 |-------|------|
-| **[`daily-strategy-inbox.md`](daily-strategy-inbox.md)** | **Index / stub** — at minimum one paste-ready line per capture: **`thread:<expert_id>`**, **`aired:YYYY-MM-DD`** (or equivalent) when the event has a clear **air/publication date**, short **cold** / **hook**, **URL**, **`verify:`**. Same tags as today so **`rg`** across the inbox stays the primary “what did we file?” sweep. |
-| **`experts/<expert_id>/transcript.md`** | **Rolling triage / machine echo (7 days)** — optional short or pointer-only blocks under **`## YYYY-MM-DD`** where that date is the **air/publication day**; continuation paragraphs follow the [long-form verbatim](daily-strategy-inbox.md#long-form-verbatim-thread) rules. **Full** unabridged text stays in **[`raw-input/`](raw-input/README.md)**; this file is **not** a second SSOT the operator must consult for bulk verbatim. Triage targets **≤ ~2000 words** per ingest block (soft caps). |
-| **[`raw-input/`](raw-input/README.md)** | **Unabridged SSOT** — full transcripts, RSS merge files **`YYYY-MM-DD-<expert_id>.md`**, sidecars, bundles. **On disk:** **`raw-input/<pub_date>/`** (air / publication day; **`ingest_date`** in YAML only). **`_aired-pending/`** when **`pub_date`** is not fixed yet ([§ Layout](raw-input/README.md)). **Refined day pages** live under **`experts/<expert_id>/`** only (including **`-<slug>`** suffixes when multiple pages share a date — see split-ingest **Refined day pages** note below); **not** in this tree — inbox stays **stubs** + **`verify:`** pointers. **Prune** only when **you** run **`prune_strategy_raw_input.py`** (default window aligns with expert transcript tooling); **`--apply`** is **blocked** while **[`.pruning-suspended`](raw-input/.pruning-suspended)** exists unless **`--override`** ([§ Pruning](raw-input/README.md)). |
+| **[`daily-strategy-inbox.md`](daily-strategy-inbox.md)** | **Index / stub** — at minimum one paste-ready line per capture: **`thread:<expert_id>`**, **`pub_date:YYYY-MM-DD`** (canonical tag) when the event has a clear **publication** anchor, short **cold** / **hook**, **URL**, **`verify:`**. Same tags as today (plus migration from legacy **`aired:`** where still present) so **`rg`** across the inbox stays the primary “what did we file?” sweep. |
+| **`experts/<expert_id>/transcript.md`** | **Rolling triage / machine echo (7 days)** — optional short or pointer-only blocks under **`## YYYY-MM-DD`** where that date is the **publication** day; continuation paragraphs follow the [long-form verbatim](daily-strategy-inbox.md#long-form-verbatim-thread) rules. **Full** unabridged text stays in **[`raw-input/`](raw-input/README.md)**; this file is **not** a second SSOT the operator must consult for bulk verbatim. Triage targets **≤ ~2000 words** per ingest block (soft caps). |
+| **[`raw-input/`](raw-input/README.md)** | **Unabridged SSOT** — full transcripts, RSS merge files **`YYYY-MM-DD-<expert_id>.md`**, sidecars, bundles. **On disk:** **`raw-input/<pub_date>/`** (publication / calendar day; **`ingest_date`** in YAML only). **`_aired-pending/`** (legacy folder name) when **`pub_date`** is not fixed yet ([§ Layout](raw-input/README.md)). **Refined day pages** live under **`experts/<expert_id>/`** only (including **`-<slug>`** suffixes when multiple pages share a date — see split-ingest **Refined day pages** note below); **not** in this tree — inbox stays **stubs** + **`verify:`** pointers. **Prune** only when **you** run **`prune_strategy_raw_input.py`** (default window aligns with expert transcript tooling); **`--apply`** is **blocked** while **[`.pruning-suspended`](raw-input/.pruning-suspended)** exists unless **`--override`** ([§ Pruning](raw-input/README.md)). |
 | **`python3 scripts/strategy_thread.py`** (today) | Triage + extraction: inbox → transcript (optional body) + **inbox `raw-input/` path lines** + **`strategy-page` refs** → machine block; **until** a dedicated command ships, triage still assumes inbox-sourced `thread:` blocks. |
 
-**Refined day pages (standalone files under `experts/<expert_id>/`):** **Multiple** refined pages may share the same **publication / air date**. Default basename **`<expert_id>-page-YYYY-MM-DD.md`**; when more than one primary capture warrants a separate judgment artifact for that date, use **`<expert_id>-page-YYYY-MM-DD-<slug>.md`** with **`<slug>`** from the primary **`raw-input`** stem (kebab-case). **Alternatively,** the operator may consolidate same-day captures into **one** file with **A / B / C** Chronicle blocks where the expert template defines that pattern. **Per-expert scaffolds:** **`<expert_id>-page-template.md`**.
+**Refined day pages (standalone files under `experts/<expert_id>/`):** **Multiple** refined pages may share the same **publication date** (same calendar anchor as YAML **`pub_date`**). Default basename **`<expert_id>-page-YYYY-MM-DD.md`**; when more than one primary capture warrants a separate judgment artifact for that date, use **`<expert_id>-page-YYYY-MM-DD-<slug>.md`** with **`<slug>`** from the primary **`raw-input`** stem (kebab-case). **Alternatively,** the operator may consolidate same-day captures into **one** file with **A / B / C** Chronicle blocks where [refined-day-page-template.md](refined-day-page-template.md) defines that pattern. **Canonical scaffold:** [refined-day-page-template.md](refined-day-page-template.md). **Per-expert compat stub:** **`<expert_id>-page-template.md`** (links the canonical file; stable **`Template:`** pointer in **`transcript.md`**).
 
 **Unified search:** Treat **inbox + `experts/*/transcript.md` + `raw-input/`** as one habit: grep inbox for stubs; grep **`raw-input`** for full text when the operator stored it there; grep transcripts for triage-sized verbatim — **or** (future) a generated rollup listing pointers only. **Not** Record.
 
@@ -133,15 +137,15 @@ Single entry point (working name **`strategy_ingest`** or fold into **`strategy_
 | Flag / arg | Purpose |
 |------------|---------|
 | **`--expert <expert_id>`** | Required for expert-tagged ingest; must match [strategy-commentator-threads.md](strategy-commentator-threads.md) slug. |
-| **`--aired YYYY-MM-DD`** | **Air / publication date** for the segment (drives **`##`** section in **`-transcript.md`**). Optional only if stub-only. |
+| **`--pub-date YYYY-MM-DD`** | **Publication** calendar anchor for the segment (drives **`## YYYY-MM-DD`** in **`-transcript.md`**). Optional only if stub-only. (Legacy sketch name: **`--aired`**, deprecated.) |
 | **`--stub-only`** | Append/update **inbox** line only (short line + URL + tags); no long body. |
-| **`--from-file <path>`** | Body text from file (avoids shell quoting); written to transcript block under **`--aired`**. |
+| **`--from-file <path>`** | Body text from file (avoids shell quoting); written to transcript block for the same **`--pub-date`**. |
 | **`--stdin` / `-`** | Read long body from stdin (optional alternative to **`--from-file`**). |
 | **`--inbox-path`** | Override default [`daily-strategy-inbox.md`](daily-strategy-inbox.md) (advanced). |
 | **`--dry-run`** | Print planned writes; no file changes. |
 | **`--skip-thread`** | Write stub/body only; do **not** run extraction (optional escape hatch). |
 
-**Default behavior (sketch):** With **`--expert`**, **`--aired`**, and body (**`--from-file`** or stdin), write **(1)** stub line to inbox with **`aired:`** + **`thread:`**, **(2)** append verbatim under **`## aired`** in **`-transcript.md`**, **(3)** invoke existing **`thread`** pipeline to refresh machine segments. **`--stub-only`** skips (2)–(3) or runs a minimal path.
+**Default behavior (sketch):** With **`--expert`**, **`--pub-date`**, and body (**`--from-file`** or stdin), write **(1)** stub line to inbox with **`pub_date:`** + **`thread:`**, **(2)** append verbatim under the matching **`## YYYY-MM-DD`** in **`-transcript.md`**, **(3)** invoke existing **`thread`** pipeline to refresh machine segments. **`--stub-only`** skips (2)–(3) or runs a minimal path.
 
 **Implementation** is **future `EXECUTE`** — this section is the contract placeholder only.
 
@@ -242,7 +246,7 @@ The word **“page”** is overloaded in this lane. Use the table below as the d
 |-------|----------|---------------------------|
 | **Operator boundary** | “I have not uploaded anything after **2026-04-16**” | Sets the **latest day block** that should claim **operator-sourced** material unless the operator adds more. **Do not** open **`## 2026-04-17`** solely to park assistant work. |
 | **Session / inbox mechanics** | **`Accumulator for: YYYY-MM-DD`** (host clock), assistant session date, **`### Expert X / YT ingest — YYYY-MM-DD`** inside the inbox | **Organizational keys** for scratch and grep — **not** automatic instructions to create a **new** `## YYYY-MM-DD` in `days.md`. |
-| **Third-party publication** | Wire dates (WSJ **Apr 15**), **`aired:YYYY-MM-DD`**, air/publication day on **`-transcript.md`** | Belongs in **Signal / Links** and **cite lines** — **not** proof that the **notebook day heading** must match that calendar date. |
+| **Third-party publication** | Wire dates (WSJ **Apr 15**), **`pub_date:YYYY-MM-DD`**, publication day on **`-transcript.md`** | Belongs in **Signal / Links** and **cite lines** — **not** proof that the **notebook day heading** must match that calendar date. |
 
 **Anti-split defaults (EOD session / `strategy` with notebook write):**
 
