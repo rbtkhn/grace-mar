@@ -4,7 +4,7 @@
 WORK only; not Record.
 
 **Source:** Verbatim blocks from [`daily-strategy-inbox.md`](daily-strategy-inbox.md) that include `thread:mercouris` (first line + optional continuation paragraphs), routed on ingest.
-**Day page (refined):** **`experts/mercouris/mercouris-page-YYYY-MM-DD.md`** — Chronicle / Reflection / Foresight artifact; points to **verbatim** in [`raw-input/`](../../raw-input/README.md). **Verbatim capture** stays under **`raw-input/<date>/`** (e.g. `*-mercouris-verbatim.md` or RSS-merge **`YYYY-MM-DD-mercouris.md`**). Distinct from a **`strategy-page`** fence in [`thread.md`](strategy-expert-mercouris-thread.md) unless you duplicate judgment there during EOD compose. **Template:** [`mercouris-page-template.md`](mercouris-page-template.md).
+**Refined page:** **`experts/mercouris/mercouris-page-YYYY-MM-DD.md`** — Verbatim / Reflection / Foresight artifact; points to **verbatim** in [`raw-input/`](../../raw-input/README.md). **Verbatim capture** stays under **`raw-input/<date>/`** (e.g. `*-mercouris-verbatim.md` or RSS-merge **`YYYY-MM-DD-mercouris.md`**). Distinct from a **`strategy-page`** fence in [`thread.md`](strategy-expert-mercouris-thread.md) unless you duplicate judgment there during EOD compose. **Template:** [`mercouris-page-template.md`](mercouris-page-template.md).
 **Length:** Target **≤ 2000 words** per ingest block; whole file soft **≤ 20000 words** after prune (7-day window makes overrun unlikely).
 **Retention:** 7-day rolling window; date sections older than 7 days are pruned automatically.
 **Editing:** Operator may lightly edit for clarity after triage. Edits are preserved across triage runs (append-only, not overwrite).
@@ -14,6 +14,10 @@ WORK only; not Record.
 ---
 
 <!-- Triage appends new date sections below. Do not add content above this line. -->
+
+## 2026-04-27
+- Inbox | cold: full text in [`2026-04-27-mercouris-verbatim.md`](raw-input/2026-04-27/2026-04-27-mercouris-verbatim.md) (pointer; SSOT raw-input) | thread:mercouris
+- YT | cold: **Alexander Mercouris** (*The Duran* — *Iran Toughens Terms as Araghchi Meets Putin; Refuses Talks on Enrichment; Russia Prepares War With EU* — **operator** **cleaned** **transcript** **2026-04-27**) — **Hormuz** **/** **blockade** **“fiction”;** **Lebanon** **ceasefire** **strain;** **Johnson** **/** **CENTCOM** **air** **limits** **/** **ground** **fork;** **Araghchi** **Oman** **/** **Pakistan** **document** **/** **St** **Petersburg** **×** **Putin;** **enrichment** **off** **table,** **Hormuz** **governance** **(Iran–Oman)** **vs** **“reopen”** **spin;** **Münchau** **UAE–Fed** **swap** **/** **Gopinath;** **Karaganov** **nuclear** **Europe** **rhetoric;** **Bondar** **NYT** **drones;** **Sumy** **/** **Konstantinovka** **/** **Kramatorsk;** **Typhoon** **rumor** **×** **UK** **clarification** // hook: **`thread:mercouris`** **×** **§1e** **Hormuz** **+** **§1f** **markets** **+** **RU–EU** **rhetoric** **—** **verbatim** [raw-input/2026-04-27/2026-04-27-mercouris-verbatim.md](raw-input/2026-04-27/2026-04-27-mercouris-verbatim.md) · **refined** [experts/mercouris/mercouris-page-2026-04-27.md](experts/mercouris/mercouris-page-2026-04-27.md) | TBD The Duran (pin `watch?v=`) | verify:operator-cleaned-transcript+full-text+pub_date:2026-04-27+second-hand-media+opinion-narrative-tier+not-Record | thread:mercouris | IRAN | RU | EU | UKR | grep:Mercouris+Araghchi+Putin+Hormuz+2026-04-27
 
 ## 2026-04-26
 - Inbox | cold: full text in [`transcript-mercouris-us-eu-ukraine-russia-iran-sunday-2026-04-26.md`](raw-input/2026-04-26/transcript-mercouris-us-eu-ukraine-russia-iran-sunday-2026-04-26.md) (pointer; SSOT raw-input) | thread:mercouris
