@@ -71,11 +71,36 @@ When recording a surface in the table below (or in a future JSON instance valida
 | `authority_status` | One of §3. |
 | `canonical_surfaces_touched` | `false` for almost all operator surfaces: does not modify Record by itself. |
 | `rebuild_command` | **Prefer:** sidecar or [artifacts README](../artifacts/README.md); or `regenerate_all_derived.py` where applicable. |
-| `staleness_check` | How to know it is stale (e.g. CI fail, manual regen, receipt timestamp). |
+| `staleness_check` | How to know it is stale; see [operator-surface-staleness.md](operator-surface-staleness.md) (§3–§4). |
 | `operator_use` | What decision or inspection this supports. |
 | `related_surfaces` | Sibling paths, feed + dashboard pairs, or docs. |
 | `supersedes` | If this surface replaced another id. |
 | `notes` | Drift, CI, or lane caveats. |
+| `staleness_level` (optional) | One of: `current_declared`, `current_unknown`, `stale_possible`, `stale_likely`, `historical_only` — see [operator-surface-staleness.md](operator-surface-staleness.md) §4. For JSON instances, see [operator-surface.v1.json](../schema-registry/operator-surface.v1.json). |
+| `last_generated` (optional) | ISO-8601-ish string when the surface or an operator last knew generation time (machine or human). |
+| `freshness_notes` (optional) | Free text: cadence, CI, or “verify after X”. |
+
+### Staleness expectations
+
+Every registered surface should **eventually** declare **freshness expectations** (or point here). **Optional** metadata `staleness_level`, `last_generated`, and `freshness_notes` may be added to JSON registry entries (schema) or to this doc over time; **this PR does not require** every row in the §5 table to list them.
+
+**Convention:** [operator-surface-staleness.md](operator-surface-staleness.md) defines levels, a standard **staleness note** blockquote, and the rule that **staleness does not change authority**.
+
+**Typical default by class (heuristic, not a rule):**
+
+| Class | Typical default | When it goes stale |
+|-------|-----------------|---------------------|
+| dashboard, index | `stale_possible` | After listed **source inputs** change without regen |
+| report | `stale_possible` or `historical_only` | After new runs or new source data; old run = historical |
+| receipt | `historical_only` | Receipts are run records; not “refreshed” in place |
+| packet | `stale_possible` | If bound item or evidence changed |
+| sidecar | follows paired artifact | Regenerate when parent artifact regen required |
+| machine feed | `stale_possible` | When upstream JSON/inputs change |
+| lane_local_surface | `stale_possible` | Lane inputs or regen script path change |
+
+**Honesty:** If rebuild command or last run time is **unknown**, use `current_unknown` or leave freshness fields empty until known—**do not** guess timestamps.
+
+**Path note:** `artifacts/strategy-run-report.md` is **registered** when the script is used to generate it; the file may be **absent** until a run—do not add an empty file just to “have” a surface.
 
 ## 5. Registered surfaces (major)
 
@@ -150,6 +175,7 @@ Add a **dedicated Known-path workflow dashboard** only if **this registry** plus
 
 ## 9. Related docs
 
+- [Operator surface staleness](operator-surface-staleness.md) — levels, note format, anti-authority rule.
 - [Operator dashboards (derived Markdown)](operator-dashboards.md) — regeneration order, CI, design notes.
 - [Artifacts (derived) README](../artifacts/README.md) — Path → producer → policy table.
 - [Runtime vs Record](runtime-vs-record.md) — non-canonical boundary.

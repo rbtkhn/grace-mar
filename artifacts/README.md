@@ -4,6 +4,8 @@ This tree holds **rebuildable, non-canonical** outputs from operator scripts. No
 
 **Operator surface taxonomy:** Generated and operator-facing paths are classified in [docs/operator-surface-registry.md](../docs/operator-surface-registry.md). New dashboard-like artifacts should be registered there (and satisfy the **dashboard anti-sprawl policy** there) before being treated as part of the stable operator interface.
 
+**Staleness:** Artifacts are often **generated snapshots**. If a file has **no** generation time or **unclear** source declaration, treat freshness as **unknown** or **possibly stale** and **verify** against the governing source files (e.g. `users/<id>/`, gate file) before relying on it for load-bearing operator decisions. Convention and levels: [docs/operator-surface-staleness.md](../docs/operator-surface-staleness.md).
+
 Primary doctrine stays **derived / rebuildable / non-canonical**. If you use `shadow layer` as an informal metaphor for these outputs, treat it as a glossary aid only, not a replacement term. It is **not** the same thing as `shadow-merges`, `shadow autonomy`, or any implied “shadow Record”.
 
 **Important distinction:** the portable-record schema [`schema-registry/artifact-rationale.v1.json`](../schema-registry/artifact-rationale.v1.json) is about **demonstrated capability rationale** alongside EVIDENCE. It is **not** the schema for everything under `/artifacts/`.

@@ -66,6 +66,24 @@
     "staleness_check": {
       "type": "string"
     },
+    "staleness_level": {
+      "type": "string",
+      "enum": [
+        "current_declared",
+        "current_unknown",
+        "stale_possible",
+        "stale_likely",
+        "historical_only"
+      ]
+    },
+    "last_generated": {
+      "type": "string",
+      "description": "ISO-8601-style timestamp when known (human or machine)."
+    },
+    "freshness_notes": {
+      "type": "string",
+      "description": "Cadence, CI, or operator guidance for when to regen or re-check."
+    },
     "operator_use": {
       "type": "string"
     },

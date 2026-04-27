@@ -8,6 +8,10 @@ Prefer **extending** an existing dashboard, **adding a registry entry**, or **ad
 
 Dashboards are a **stable scripted subclass** of the [Interface Artifact Protocol](skill-work/work-dev/interface-artifacts/README.md): generated operator-facing views that remain **derived** and **non-canonical** even when they become reliable enough to script and regenerate routinely.
 
+## Dashboard staleness
+
+Dashboards are **derived views** and can become **stale** when **source inputs** (e.g. `self-library.md`, `recursion-gate.md`, runtime indexes) change without a **regen**. For time-sensitive decisions, **confirm** against the **authoritative source** when freshness matters. Levels, a standard note format, and the rule that staleness does **not** change authority: [operator-surface-staleness.md](operator-surface-staleness.md).
+
 ## What these are
 
 - **Derived artifacts** under [`artifacts/`](../artifacts/README.md), produced by scripts:

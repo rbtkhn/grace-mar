@@ -9,6 +9,9 @@
   "canonical_surfaces_touched": false,
   "rebuild_command": "python3 scripts/build_library_index.py -u grace-mar",
   "staleness_check": "Regenerate when self-library entries change; library-index CI on main if out of date.",
+  "staleness_level": "stale_possible",
+  "last_generated": "2026-04-24T14:04:30Z",
+  "freshness_notes": "Typical: stale_possible after self-library edit until regen; see docs/operator-surface-staleness.md.",
   "operator_use": "At-a-glance SELF-LIBRARY navigation; not SELF-LIBRARY truth.",
   "related_surfaces": ["artifacts/lane-dashboards/README.md", "docs/operator-dashboards.md"],
   "notes": "Example instance for schema-operator-surface.v1.json; not an extra registry file to maintain by default."
