@@ -16,6 +16,8 @@ from route_civ_mem_topic import (  # noqa: E402
     _pick_profile,
     _score_profile,
     extract_mem_connection_ids,
+    resolve_mem_id_to_path,
+    run_mem_bfs,
 )
 
 
@@ -144,6 +146,34 @@ MEM CONNECTIONS
     assert "MEM–RUSSIA–THIRD–ROME" in ids
 
 
+@pytest.mark.skipif(
+    not (REPO_ROOT / "research" / "repos" / "civilization_memory" / "content").is_dir(),
+    reason="civilization_memory checkout not present",
+)
+def test_resolve_mem_id_to_path_papacy() -> None:
+    p = resolve_mem_id_to_path("MEM–ROME–PAPACY")
+    assert p is not None
+    assert p.is_file()
+    assert p.name == "MEM–ROME–PAPACY.md"
+
+
+@pytest.mark.skipif(
+    not (REPO_ROOT / "research" / "repos" / "civilization_memory" / "content").is_dir(),
+    reason="civilization_memory checkout not present",
+)
+def test_run_mem_bfs_finds_neighbors() -> None:
+    vis, edges, hit, _stall = run_mem_bfs(
+        ["ROME/MEM–ROME–PAPACY.md"],
+        target=3,
+        max_depth=3,
+        neighbors_per_hop=40,
+        prefer_rome_prefix=True,
+    )
+    assert len(vis) >= 3
+    assert hit
+    assert len(edges) >= 2
+
+
 def test_score_profile_required_tokens_disqualifies() -> None:
     cfg = {
         "priority": 10,
@@ -165,3 +195,6 @@ def test_yaml_loads() -> None:
     data = yaml.safe_load(p.read_text(encoding="utf-8"))
     assert "profiles" in data
     assert "latin_catholic_sphere" in data["profiles"]
+    assert "theology_ra_trace" in data["profiles"]
+    assert "theology_seed_mems" in data
+    assert int(data.get("routing_rules_version", 0)) >= 1

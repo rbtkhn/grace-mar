@@ -5,6 +5,10 @@ Reads config/civ_mem_topic_routes.yaml, scores the query against profiles, then
 emits suggested civilization order, MEM–RELEVANCE suggestions where present, ROME
 seeds otherwise, and optional MEM CONNECTIONS neighbors.
 
+Optional **MEM-only BFS** (theology / lineage traces): `--bfs-mem-target N` walks
+MEM CONNECTIONS from `theology_seed_mems` (and optional `--bfs-seed-file`) until
+N distinct `MEM–*.md` files are visited or the queue/depth cap is hit.
+
 WORK only; not Record. Requires research/repos/civilization_memory checkout for
 full output.
 
@@ -14,6 +18,7 @@ Usage:
   python3 scripts/route_civ_mem_topic.py "Algiers mosque dialogue" --expand-connections --log-decision
   python3 scripts/route_civ_mem_topic.py "hormuz shipping" --focus-config config/civ_mem_routing_focus.yaml
   python3 scripts/route_civ_mem_topic.py "test" --no-focus
+  python3 scripts/route_civ_mem_topic.py --profile theology_ra_trace "Law of One" --bfs-mem-target 50 --no-focus
 """
 
 from __future__ import annotations
@@ -23,6 +28,7 @@ import json
 import re
 import subprocess
 import sys
+from collections import deque
 from datetime import date, datetime, timezone
 from pathlib import Path
 
@@ -39,6 +45,8 @@ DEFAULT_LOG = REPO_ROOT / "artifacts" / "skill-work" / "work-civ-mem" / "routing
 
 # Permissive: MEM–ROME–CONSTANTINOPLE — style ids
 MEM_ID_PATTERN = re.compile(r"MEM[–\-][A-Za-z0-9–\-]+")
+# Large cap = "all connections" for BFS neighbor harvesting
+_BFS_EXTRACT_MAX = 50_000
 
 
 def _keyword_overlap(profile: dict, query_lower: str) -> int:
@@ -284,6 +292,7 @@ def extract_mem_connection_ids(
     prefer_rome_prefix: bool,
 ) -> list[str]:
     """Parse MEM–* ids from text after first 'MEM CONNECTIONS' header (tests use inline fixtures)."""
+    cap = max_edges if max_edges > 0 else _BFS_EXTRACT_MAX
     parts = re.split(r"(?is)MEM CONNECTIONS", text, maxsplit=1)
     chunk = parts[1] if len(parts) > 1 else text
     raw = MEM_ID_PATTERN.findall(chunk)
@@ -295,7 +304,147 @@ def extract_mem_connection_ids(
     rome_first = [x for x in seen if x.startswith("MEM–ROME–")]
     rest = [x for x in seen if not x.startswith("MEM–ROME–")]
     ordered = (rome_first + rest) if prefer_rome_prefix else seen
-    return ordered[:max_edges]
+    return ordered[:cap]
+
+
+def resolve_mem_id_to_path(mem_id: str) -> Path | None:
+    """Map MEM–CIV–… id to `content/civilizations/<CIV>/MEM–….md` if the file exists."""
+    norm = mem_id.replace("-", "–").strip()
+    if not norm.startswith("MEM–") or "–" not in norm[4:]:
+        return None
+    rest = norm[4:]
+    end_civ = rest.find("–")
+    if end_civ < 0:
+        return None
+    civ = rest[:end_civ]
+    if not civ:
+        return None
+    p = CIV_BASE / civ / f"{norm}.md"
+    return p if p.is_file() else None
+
+
+def run_mem_bfs(
+    seed_rel_paths: list[str],
+    *,
+    target: int,
+    max_depth: int,
+    neighbors_per_hop: int,
+    prefer_rome_prefix: bool,
+) -> tuple[list[Path], list[dict[str, str | int]], bool, str | None]:
+    """
+    Breadth-first expansion along MEM CONNECTIONS. MEM `.md` files only.
+
+    Returns:
+      (ordered_visited, edges, hit_target, stall_reason)
+    """
+    if not CIV_BASE.is_dir():
+        return [], [], False, "civ_base_missing"
+
+    queue: deque[tuple[Path, int, str | None]] = deque()
+    visited: set[Path] = set()
+    queued: set[Path] = set()
+    ordered: list[Path] = []
+    edges: list[dict[str, str | int]] = []
+
+    for rel in seed_rel_paths:
+        rel = rel.strip()
+        if not rel or rel.startswith("#"):
+            continue
+        p = CIV_BASE / rel
+        if p.is_file() and p.name.startswith("MEM–") and p.suffix == ".md":
+            if p not in queued:
+                queue.append((p, 0, None))
+                queued.add(p)
+
+    if not queue:
+        return [], [], False, "no_valid_seeds"
+
+    while queue:
+        path, depth, from_stem = queue.popleft()
+        queued.discard(path)
+        if path in visited:
+            continue
+        if depth > max_depth:
+            continue
+        visited.add(path)
+        ordered.append(path)
+        stem = path.stem
+        if from_stem is not None:
+            edges.append({"from": from_stem, "to": stem, "hop": depth})
+        if len(ordered) >= target:
+            return ordered, edges, True, None
+
+        try:
+            text = path.read_text(encoding="utf-8")
+        except OSError:
+            continue
+        nbr_ids = extract_mem_connection_ids(
+            text,
+            max_edges=_BFS_EXTRACT_MAX,
+            prefer_rome_prefix=prefer_rome_prefix,
+        )[:neighbors_per_hop]
+        for nid in nbr_ids:
+            npath = resolve_mem_id_to_path(nid)
+            if npath is None or npath in visited or npath in queued:
+                continue
+            queue.append((npath, depth + 1, stem))
+            queued.add(npath)
+
+    hit = len(ordered) >= target
+    return ordered, edges, hit, (None if hit else "queue_exhausted_or_depth")
+
+
+def _load_seed_lines_file(path: Path) -> list[str]:
+    if not path.is_file():
+        return []
+    return [ln.strip() for ln in path.read_text(encoding="utf-8").splitlines()]
+
+
+def _civ_mem_upstream_rev() -> str:
+    cmc = REPO_ROOT / "research" / "repos" / "civilization_memory"
+    if not (cmc / ".git").is_dir():
+        return "unknown"
+    try:
+        p = subprocess.run(
+            ["git", "rev-parse", "HEAD"],
+            cwd=str(cmc),
+            capture_output=True,
+            text=True,
+            timeout=5,
+        )
+        if p.returncode == 0:
+            return p.stdout.strip()[:12]
+    except OSError:
+        pass
+    return "unknown"
+
+
+def _collect_bfs_seeds(
+    cfg: dict,
+    profile_id: str,
+    rome_seeds: list,
+    extra_file: Path | None,
+) -> list[str]:
+    """Merge theology_seed_mems, profile-specific bfs_seeds, ROME rome_seed_files, and --bfs-seed-file."""
+    out: list[str] = []
+    for rel in cfg.get("theology_seed_mems") or []:
+        s = str(rel).strip()
+        if s and s not in out:
+            out.append(s)
+    prof = (cfg.get("profiles") or {}).get(profile_id) or {}
+    for rel in prof.get("bfs_seed_mems") or []:
+        s = str(rel).strip()
+        if s and s not in out:
+            out.append(s)
+    if profile_id == "theology_ra_trace" or (cfg.get("profiles") or {}).get(profile_id, {}).get("merge_rome_bfs_seeds"):
+        for s in rome_seeds or []:
+            rel = f"ROME/{s}" if not str(s).startswith("ROME/") else str(s)
+            if rel not in out:
+                out.append(rel)
+    for ln in _load_seed_lines_file(extra_file) if extra_file else []:
+        if ln and not ln.startswith("#") and ln not in out:
+            out.append(ln)
+    return out
 
 
 def _expand_connections(
@@ -350,6 +499,41 @@ def main() -> int:
         "--no-focus",
         action="store_true",
         help="Do not load or apply routing focus bonuses",
+    )
+    ap.add_argument(
+        "--bfs-mem-target",
+        type=int,
+        default=0,
+        help="If >0, BFS over MEM CONNECTIONS (MEM .md only) from theology_seed_mems + ROME seeds + --bfs-seed-file",
+    )
+    ap.add_argument(
+        "--bfs-max-depth",
+        type=int,
+        default=8,
+        help="Max depth for BFS (default: 8)",
+    )
+    ap.add_argument(
+        "--bfs-neighbors-per-hop",
+        type=int,
+        default=24,
+        help="Max neighbor MEM ids to follow from each file (default: 24)",
+    )
+    ap.add_argument(
+        "--bfs-seed-file",
+        type=Path,
+        default=None,
+        help="Extra seed paths (one CIV/MEM–….md per line) merged into BFS",
+    )
+    ap.add_argument(
+        "--bfs-no-rome-priority",
+        action="store_true",
+        help="List MEM connection ids in document order, not ROME-first",
+    )
+    ap.add_argument(
+        "--bfs-output",
+        type=Path,
+        default=None,
+        help="Write BFS JSON (visited paths, edges, sha, hit_target) to this path",
     )
     args = ap.parse_args()
 
@@ -450,6 +634,53 @@ def main() -> int:
         lines.append("")
         lines.append(f"`{CIV_BASE.relative_to(REPO_ROOT)}` missing — clone civilization_memory (see docs/ci/README.md).")
         lines.append("")
+
+    if args.bfs_mem_target and args.bfs_mem_target > 0:
+        bfs_seeds = _collect_bfs_seeds(
+            cfg, profile_id, rome_seeds, args.bfs_seed_file
+        )
+        vis, bfs_edges, hit, stall = run_mem_bfs(
+            bfs_seeds,
+            target=args.bfs_mem_target,
+            max_depth=args.bfs_max_depth,
+            neighbors_per_hop=args.bfs_neighbors_per_hop,
+            prefer_rome_prefix=not args.bfs_no_rome_priority,
+        )
+        cmc_sha = _civ_mem_upstream_rev()
+        lines.append("## MEM-only BFS (CONNECTIONS expansion)")
+        lines.append("")
+        lines.append(f"- **civ-mem `HEAD` (short):** `{cmc_sha}`")
+        lines.append(f"- **bfs_mem_target:** {args.bfs_mem_target}")
+        lines.append(f"- **visited count:** {len(vis)} (distinct `MEM–*.md`)")
+        lines.append(f"- **hit_target:** {'yes' if hit else 'no'}" + (f" — _stall: {stall}_" if stall else ""))
+        lines.append(f"- **seed count (config + optional file + ROME merge):** {len(bfs_seeds)}")
+        lines.append("")
+        lines.append("### Visited MEM paths (BFS order)")
+        lines.append("")
+        for p in vis:
+            lines.append(f"- `{p.relative_to(REPO_ROOT)}`")
+        lines.append("")
+        if args.bfs_output:
+            out_p = (args.bfs_output if args.bfs_output.is_absolute() else (REPO_ROOT / args.bfs_output)).resolve()
+            out_p.parent.mkdir(parents=True, exist_ok=True)
+            payload = {
+                "civ_mem_HEAD": cmc_sha,
+                "target": args.bfs_mem_target,
+                "hit_target": hit,
+                "stall": stall,
+                "seeds": bfs_seeds,
+                "visited": [str(p.relative_to(REPO_ROOT)) for p in vis],
+                "edges": bfs_edges,
+            }
+            out_p.write_text(
+                json.dumps(payload, ensure_ascii=False, indent=2) + "\n",
+                encoding="utf-8",
+            )
+            try:
+                rel = out_p.relative_to(REPO_ROOT)
+            except ValueError:
+                rel = out_p
+            print(f"\n(BFS JSON written to {rel})", file=sys.stderr)
 
     sys.stdout.write("\n".join(lines).rstrip() + "\n")
 

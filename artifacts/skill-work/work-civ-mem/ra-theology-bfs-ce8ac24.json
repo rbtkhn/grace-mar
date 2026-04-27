@@ -1,0 +1,244 @@
+{
+  "civ_mem_HEAD": "ce8ac249cdf5",
+  "target": 50,
+  "hit_target": true,
+  "stall": null,
+  "seeds": [
+    "ROME/MEM–ROME–PAPACY.md",
+    "ROME/MEM–ROME–VATICAN.md",
+    "ROME/MEM–ROME–LAW–CITIZENSHIP.md",
+    "ROME/MEM–ROME–LAW–SLAVERY.md",
+    "ROME/MEM–ROME–ITALY–LIT–PETRARCH.md",
+    "AMERICA/MEM–AMERICA–COLONIAL–PLYMOUTH.md",
+    "AMERICA/MEM–AMERICA–LAW–CONSTITUTION.md",
+    "GERMANY/MEM–GERMANY–LAW–GROTIUS.md",
+    "RUSSIA/MEM–RUSSIA–ORTHODOX–CHRISTIANITY.md",
+    "ANGLIA/MEM–ANGLIA–PAPACY.md",
+    "ANGLIA/MEM–ANGLIA–COMMON–LAW.md",
+    "FRANCE/MEM–FRANCE–PAPACY.md",
+    "ISLAM/MEM–ISLAM–GEO–ARABIA.md",
+    "ISLAM/MEM–ISLAM–DYNASTY–AYYUBID.md",
+    "INDIA/MEM–INDIA–AFGHANISTAN.md",
+    "PERSIA/MEM–PERSIA–GEO–PERSIAN–GULF.md",
+    "ROME/MEM–ROME–GEO–MEDITERRANEAN–SEA.md"
+  ],
+  "visited": [
+    "research/repos/civilization_memory/content/civilizations/ROME/MEM–ROME–PAPACY.md",
+    "research/repos/civilization_memory/content/civilizations/ROME/MEM–ROME–VATICAN.md",
+    "research/repos/civilization_memory/content/civilizations/ROME/MEM–ROME–LAW–CITIZENSHIP.md",
+    "research/repos/civilization_memory/content/civilizations/ROME/MEM–ROME–LAW–SLAVERY.md",
+    "research/repos/civilization_memory/content/civilizations/ROME/MEM–ROME–ITALY–LIT–PETRARCH.md",
+    "research/repos/civilization_memory/content/civilizations/AMERICA/MEM–AMERICA–COLONIAL–PLYMOUTH.md",
+    "research/repos/civilization_memory/content/civilizations/AMERICA/MEM–AMERICA–LAW–CONSTITUTION.md",
+    "research/repos/civilization_memory/content/civilizations/GERMANY/MEM–GERMANY–LAW–GROTIUS.md",
+    "research/repos/civilization_memory/content/civilizations/RUSSIA/MEM–RUSSIA–ORTHODOX–CHRISTIANITY.md",
+    "research/repos/civilization_memory/content/civilizations/ANGLIA/MEM–ANGLIA–PAPACY.md",
+    "research/repos/civilization_memory/content/civilizations/ANGLIA/MEM–ANGLIA–COMMON–LAW.md",
+    "research/repos/civilization_memory/content/civilizations/FRANCE/MEM–FRANCE–PAPACY.md",
+    "research/repos/civilization_memory/content/civilizations/ISLAM/MEM–ISLAM–GEO–ARABIA.md",
+    "research/repos/civilization_memory/content/civilizations/ISLAM/MEM–ISLAM–DYNASTY–AYYUBID.md",
+    "research/repos/civilization_memory/content/civilizations/INDIA/MEM–INDIA–AFGHANISTAN.md",
+    "research/repos/civilization_memory/content/civilizations/PERSIA/MEM–PERSIA–GEO–PERSIAN–GULF.md",
+    "research/repos/civilization_memory/content/civilizations/ROME/MEM–ROME–GEO–MEDITERRANEAN–SEA.md",
+    "research/repos/civilization_memory/content/civilizations/ROME/MEM–ROME–CONSTANTINOPLE.md",
+    "research/repos/civilization_memory/content/civilizations/ROME/MEM–ROME–CITY.md",
+    "research/repos/civilization_memory/content/civilizations/ROME/MEM–ROME–CHRISTIANITY.md",
+    "research/repos/civilization_memory/content/civilizations/ROME/MEM–ROME–CHARLEMAGNE.md",
+    "research/repos/civilization_memory/content/civilizations/ROME/MEM–ROME–CRUSADES.md",
+    "research/repos/civilization_memory/content/civilizations/ROME/MEM–ROME–PAPACY–GREAT–SCHISM.md",
+    "research/repos/civilization_memory/content/civilizations/ROME/MEM–ROME–PAPACY–PROTESTANT–REFORMATION.md",
+    "research/repos/civilization_memory/content/civilizations/ROME/MEM–ROME–LATIN.md",
+    "research/repos/civilization_memory/content/civilizations/ROME/MEM–ROME–EMPIRE–CONSTANTINE.md",
+    "research/repos/civilization_memory/content/civilizations/RUSSIA/MEM–RUSSIA–THIRD–ROME.md",
+    "research/repos/civilization_memory/content/civilizations/GERMANY/MEM–GERMANY–HOLY–ROMAN–EMPIRE.md",
+    "research/repos/civilization_memory/content/civilizations/ROME/MEM–ROME–REPUBLIC.md",
+    "research/repos/civilization_memory/content/civilizations/ROME/MEM–ROME–AUGUSTUS.md",
+    "research/repos/civilization_memory/content/civilizations/ROME/MEM–ROME–GREEK–PHILIP–II.md",
+    "research/repos/civilization_memory/content/civilizations/RUSSIA/MEM–RUSSIA–LAW–AUTOCRACY.md",
+    "research/repos/civilization_memory/content/civilizations/ROME/MEM–ROME–SPARTACUS.md",
+    "research/repos/civilization_memory/content/civilizations/ROME/MEM–ROME–SICILY.md",
+    "research/repos/civilization_memory/content/civilizations/ROME/MEM–ROME–CAESAR.md",
+    "research/repos/civilization_memory/content/civilizations/ROME/MEM–ROME–EMPIRE–TRAJAN.md",
+    "research/repos/civilization_memory/content/civilizations/ROME/MEM–ROME–GEO–IBERIA.md",
+    "research/repos/civilization_memory/content/civilizations/ROME/MEM–ROME–ITALY.md",
+    "research/repos/civilization_memory/content/civilizations/ROME/MEM–ROME–ITALY–LIT–DANTE.md",
+    "research/repos/civilization_memory/content/civilizations/ROME/MEM–ROME–ITALY–LIT–BOCCACCIO.md",
+    "research/repos/civilization_memory/content/civilizations/ROME/MEM–ROME–ITALY–LIT–MACHIAVELLI.md",
+    "research/repos/civilization_memory/content/civilizations/ROME/MEM–ROME–CICERO.md",
+    "research/repos/civilization_memory/content/civilizations/ROME/MEM–ROME–SCIPIO–AFRICANUS.md",
+    "research/repos/civilization_memory/content/civilizations/AMERICA/MEM–AMERICA–WAR–AMERICAN–INDEPENDENCE.md",
+    "research/repos/civilization_memory/content/civilizations/AMERICA/MEM–AMERICA–COLONIAL–JAMESTOWN.md",
+    "research/repos/civilization_memory/content/civilizations/AMERICA/MEM–AMERICA–COLONIAL–BOSTON.md",
+    "research/repos/civilization_memory/content/civilizations/AMERICA/MEM–AMERICA–PRESIDENT–ADAMS.md",
+    "research/repos/civilization_memory/content/civilizations/AMERICA/MEM–AMERICA–WAR–AMERICAN–CIVIL–CONFEDERACY.md",
+    "research/repos/civilization_memory/content/civilizations/ANGLIA/MEM–ANGLIA–DECLARATION–INDEPENDENCE.md",
+    "research/repos/civilization_memory/content/civilizations/AMERICA/MEM–AMERICA–COLONIAL–PHILADELPHIA.md"
+  ],
+  "edges": [
+    {
+      "from": "MEM–ROME–PAPACY",
+      "to": "MEM–ROME–CONSTANTINOPLE",
+      "hop": 1
+    },
+    {
+      "from": "MEM–ROME–PAPACY",
+      "to": "MEM–ROME–CITY",
+      "hop": 1
+    },
+    {
+      "from": "MEM–ROME–PAPACY",
+      "to": "MEM–ROME–CHRISTIANITY",
+      "hop": 1
+    },
+    {
+      "from": "MEM–ROME–PAPACY",
+      "to": "MEM–ROME–CHARLEMAGNE",
+      "hop": 1
+    },
+    {
+      "from": "MEM–ROME–PAPACY",
+      "to": "MEM–ROME–CRUSADES",
+      "hop": 1
+    },
+    {
+      "from": "MEM–ROME–PAPACY",
+      "to": "MEM–ROME–PAPACY–GREAT–SCHISM",
+      "hop": 1
+    },
+    {
+      "from": "MEM–ROME–PAPACY",
+      "to": "MEM–ROME–PAPACY–PROTESTANT–REFORMATION",
+      "hop": 1
+    },
+    {
+      "from": "MEM–ROME–PAPACY",
+      "to": "MEM–ROME–LATIN",
+      "hop": 1
+    },
+    {
+      "from": "MEM–ROME–PAPACY",
+      "to": "MEM–ROME–EMPIRE–CONSTANTINE",
+      "hop": 1
+    },
+    {
+      "from": "MEM–ROME–PAPACY",
+      "to": "MEM–RUSSIA–THIRD–ROME",
+      "hop": 1
+    },
+    {
+      "from": "MEM–ROME–PAPACY",
+      "to": "MEM–GERMANY–HOLY–ROMAN–EMPIRE",
+      "hop": 1
+    },
+    {
+      "from": "MEM–ROME–LAW–CITIZENSHIP",
+      "to": "MEM–ROME–REPUBLIC",
+      "hop": 1
+    },
+    {
+      "from": "MEM–ROME–LAW–CITIZENSHIP",
+      "to": "MEM–ROME–AUGUSTUS",
+      "hop": 1
+    },
+    {
+      "from": "MEM–ROME–LAW–CITIZENSHIP",
+      "to": "MEM–ROME–GREEK–PHILIP–II",
+      "hop": 1
+    },
+    {
+      "from": "MEM–ROME–LAW–CITIZENSHIP",
+      "to": "MEM–RUSSIA–LAW–AUTOCRACY",
+      "hop": 1
+    },
+    {
+      "from": "MEM–ROME–LAW–SLAVERY",
+      "to": "MEM–ROME–SPARTACUS",
+      "hop": 1
+    },
+    {
+      "from": "MEM–ROME–LAW–SLAVERY",
+      "to": "MEM–ROME–SICILY",
+      "hop": 1
+    },
+    {
+      "from": "MEM–ROME–LAW–SLAVERY",
+      "to": "MEM–ROME–CAESAR",
+      "hop": 1
+    },
+    {
+      "from": "MEM–ROME–LAW–SLAVERY",
+      "to": "MEM–ROME–EMPIRE–TRAJAN",
+      "hop": 1
+    },
+    {
+      "from": "MEM–ROME–LAW–SLAVERY",
+      "to": "MEM–ROME–GEO–IBERIA",
+      "hop": 1
+    },
+    {
+      "from": "MEM–ROME–ITALY–LIT–PETRARCH",
+      "to": "MEM–ROME–ITALY",
+      "hop": 1
+    },
+    {
+      "from": "MEM–ROME–ITALY–LIT–PETRARCH",
+      "to": "MEM–ROME–ITALY–LIT–DANTE",
+      "hop": 1
+    },
+    {
+      "from": "MEM–ROME–ITALY–LIT–PETRARCH",
+      "to": "MEM–ROME–ITALY–LIT–BOCCACCIO",
+      "hop": 1
+    },
+    {
+      "from": "MEM–ROME–ITALY–LIT–PETRARCH",
+      "to": "MEM–ROME–ITALY–LIT–MACHIAVELLI",
+      "hop": 1
+    },
+    {
+      "from": "MEM–ROME–ITALY–LIT–PETRARCH",
+      "to": "MEM–ROME–CICERO",
+      "hop": 1
+    },
+    {
+      "from": "MEM–ROME–ITALY–LIT–PETRARCH",
+      "to": "MEM–ROME–SCIPIO–AFRICANUS",
+      "hop": 1
+    },
+    {
+      "from": "MEM–AMERICA–COLONIAL–PLYMOUTH",
+      "to": "MEM–AMERICA–WAR–AMERICAN–INDEPENDENCE",
+      "hop": 1
+    },
+    {
+      "from": "MEM–AMERICA–COLONIAL–PLYMOUTH",
+      "to": "MEM–AMERICA–COLONIAL–JAMESTOWN",
+      "hop": 1
+    },
+    {
+      "from": "MEM–AMERICA–COLONIAL–PLYMOUTH",
+      "to": "MEM–AMERICA–COLONIAL–BOSTON",
+      "hop": 1
+    },
+    {
+      "from": "MEM–AMERICA–COLONIAL–PLYMOUTH",
+      "to": "MEM–AMERICA–PRESIDENT–ADAMS",
+      "hop": 1
+    },
+    {
+      "from": "MEM–AMERICA–COLONIAL–PLYMOUTH",
+      "to": "MEM–AMERICA–WAR–AMERICAN–CIVIL–CONFEDERACY",
+      "hop": 1
+    },
+    {
+      "from": "MEM–AMERICA–COLONIAL–PLYMOUTH",
+      "to": "MEM–ANGLIA–DECLARATION–INDEPENDENCE",
+      "hop": 1
+    },
+    {
+      "from": "MEM–AMERICA–LAW–CONSTITUTION",
+      "to": "MEM–AMERICA–COLONIAL–PHILADELPHIA",
+      "hop": 1
+    }
+  ]
+}

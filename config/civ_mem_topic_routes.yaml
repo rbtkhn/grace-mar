@@ -1,6 +1,6 @@
 # Civ-mem topic routing — WORK only; not Record.
 # See docs/skill-work/work-civ-mem/TOPIC-ROUTING.md
-routing_rules_version: 1
+routing_rules_version: 2
 
 # Re-check when bumping research/repos/civilization_memory (MEM–RELEVANCE–* inventory).
 tier_a_relevance_entities:
@@ -21,6 +21,26 @@ rome_seed_files:
   - MEM–ROME–LAW–CITIZENSHIP.md
   - MEM–ROME–LAW–SLAVERY.md
   - MEM–ROME–GEO–MEDITERRANEAN–SEA.md
+
+# Multi-civ `MEM–*.md` rel paths under `content/civilizations/` for `--bfs-mem-target`
+# (Ra / theology lineage trace, WORK only). Used by `theology_ra_trace` + BFS; deduped with ROME seeds.
+theology_seed_mems:
+  - ROME/MEM–ROME–PAPACY.md
+  - ROME/MEM–ROME–VATICAN.md
+  - ROME/MEM–ROME–LAW–CITIZENSHIP.md
+  - ROME/MEM–ROME–LAW–SLAVERY.md
+  - ROME/MEM–ROME–ITALY–LIT–PETRARCH.md
+  - AMERICA/MEM–AMERICA–COLONIAL–PLYMOUTH.md
+  - AMERICA/MEM–AMERICA–LAW–CONSTITUTION.md
+  - GERMANY/MEM–GERMANY–LAW–GROTIUS.md
+  - RUSSIA/MEM–RUSSIA–ORTHODOX–CHRISTIANITY.md
+  - ANGLIA/MEM–ANGLIA–PAPACY.md
+  - ANGLIA/MEM–ANGLIA–COMMON–LAW.md
+  - FRANCE/MEM–FRANCE–PAPACY.md
+  - ISLAM/MEM–ISLAM–GEO–ARABIA.md
+  - ISLAM/MEM–ISLAM–DYNASTY–AYYUBID.md
+  - INDIA/MEM–INDIA–AFGHANISTAN.md
+  - PERSIA/MEM–PERSIA–GEO–PERSIAN–GULF.md
 
 profiles:
   latin_catholic_sphere:
@@ -100,3 +120,53 @@ profiles:
       america: 10
     max_mem_budget_default: 12
     max_cross_civ_edges: 4
+
+  theology_ra_trace:
+    description: "Ra / Law of One lineage trace — institutional + thought-adjacent MEMs; BFS over CONNECTIONS."
+    priority: 30
+    required_tokens: []
+    keywords:
+      - "law of one"
+      - law-of-one
+      - ra-material
+      - "intelligent infinity"
+      - infinite
+      - potentiation
+      - potentiate
+      - "free will"
+      - logos
+      - neoplaton
+      - plotinus
+      - emanation
+      - gnostic
+      - covenant
+      - papacy
+      - theology
+      - metaphysics
+      - schiller
+      - grotius
+      - orthodox
+      - quranic
+    primary_civ: ROME
+    secondary_civs:
+      - ISLAM
+      - AMERICA
+      - RUSSIA
+      - ANGLIA
+      - FRANCE
+      - GERMANY
+      - INDIA
+      - PERSIA
+    attention_pct:
+      rome: 25
+      islam: 15
+      america: 15
+      russia: 10
+      anglia: 10
+      france: 10
+      germany: 10
+      india: 2
+      persia: 2
+    max_mem_budget_default: 12
+    max_cross_civ_edges: 8
+    merge_rome_bfs_seeds: true

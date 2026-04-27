@@ -12,9 +12,12 @@ python3 scripts/route_civ_mem_topic.py "mosque Algiers dialogue" --expand-connec
 python3 scripts/route_civ_mem_topic.py --profile latin_catholic_sphere "custom"
 python3 scripts/route_civ_mem_topic.py "hormuz" --focus-config config/civ_mem_routing_focus.yaml
 python3 scripts/route_civ_mem_topic.py "test" --no-focus
+# MEM-only BFS (theology / lineage traces): connection-first walk to N distinct MEM files
+python3 scripts/route_civ_mem_topic.py --profile theology_ra_trace "Law of One" --bfs-mem-target 50 --no-focus
+python3 scripts/route_civ_mem_topic.py --profile theology_ra_trace "…" --bfs-mem-target 50 --bfs-max-depth 12 --bfs-neighbors-per-hop 32 --bfs-output artifacts/skill-work/work-civ-mem/bfs-log.json --no-focus
 ```
 
-**Config:** [`config/civ_mem_topic_routes.yaml`](../../../config/civ_mem_topic_routes.yaml) — profiles, keywords, `rome_seed_files`, `routing_rules_version`.
+**Config:** [`config/civ_mem_topic_routes.yaml`](../../../config/civ_mem_topic_routes.yaml) — profiles, keywords, `rome_seed_files`, **`theology_seed_mems`** (multi-civ MEM rel paths for BFS), `routing_rules_version`.
 
 **Optional routing focus:** [`config/civ_mem_routing_focus.yaml`](../../../config/civ_mem_routing_focus.yaml) — time-bounded `profile_overlap_bonus` and `sticky_keywords` (see **Routing focus** below).
 
@@ -26,6 +29,7 @@ python3 scripts/route_civ_mem_topic.py "test" --no-focus
    - If `MEM–RELEVANCE–<CIV>.md` exists under `research/repos/civilization_memory/content/civilizations/<CIV>/`, run `suggest_civ_mem_from_relevance.py <CIV>` (unless `--dry-run`).
    - If absent for **ROME**, list **ROME seeds** from config (Tier B until upstream adds `MEM–RELEVANCE–ROME.md`).
 4. **`--expand-connections`** — Parse `MEM CONNECTIONS` in the **first** ROME seed file; list MEM ids (ROME-internal first, then others), capped by `max_cross_civ_edges`.
+5. **`--bfs-mem-target N` (optional)** — If `N > 0`, run a **breadth-first** walk along **MEM CONNECTIONS** only. Visits distinct `MEM–*.md` files until `N` are collected or the queue / `--bfs-max-depth` is exhausted. Seeds = `theology_seed_mems` + profile merge of `rome_seed_files` when `merge_rome_bfs_seeds` is true (see `theology_ra_trace`) + optional `--bfs-seed-file` (one `CIV/MEM–….md` path per line). Neighbor fan-out per file: `--bfs-neighbors-per-hop` (default 24). **`--bfs-output PATH`** writes JSON (`visited`, `edges`, `civ_mem_HEAD`). Use `--bfs-no-rome-priority` to follow connection ids in document order instead of ROME-first.
 
 Re-check **`tier_a_relevance_entities`** and filesystem inventory when bumping the `civilization_memory` submodule.
 
@@ -36,6 +40,7 @@ Re-check **`tier_a_relevance_entities`** and filesystem inventory when bumping t
 | `route_civ_mem_topic.py` | Mixed geography / papacy / Islam–Christian encounter; need **ordered** civs and ROME-first discipline |
 | `suggest_civ_mem_from_relevance.py <X>` | You already fixed **X** and a relevance spine exists |
 | `build_civmem_upstream_index.py query` | Exploratory search without a routing prior |
+| `route_civ_mem_topic.py` + `--bfs-mem-target` | Need **50+ MEM** file list along **graph edges** (theology / comparative lineage WORK) |
 
 ## Routing focus (forward-looking)
 
