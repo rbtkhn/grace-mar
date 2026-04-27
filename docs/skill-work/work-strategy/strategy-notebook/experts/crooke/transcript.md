@@ -12,3 +12,8 @@ WORK only; not Record.
 ---
 
 <!-- Triage appends new date sections below. Do not add content above this line. -->
+
+## 2026-04-27
+- Inbox | cold: full text in [`transcript-diesen-crooke-iran-global-war-world-order-2026-04-27.md`](../raw-input/2026-04-27/transcript-diesen-crooke-iran-global-war-world-order-2026-04-27.md) (pointer; SSOT raw-input) | thread:crooke | crosses:diesen
+- Inbox | cold: refined [crooke-page-2026-04-27.md](crooke-page-2026-04-27.md) (guest primary voice) | thread:crooke
+- YT | cold: **Glenn Diesen** (host) **×** **Alastair Crooke** — *Iran War Is Now a Global War for World Order* — **aired** **2026-04-27** — **Conflicts** **Forum** / **Eurasia** | `https://www.youtube.com/watch?v=TBD-diesen-crooke-2026-04-27` | verify:operator-paste+pin-URL+two-speaker | thread:crooke | grep:Crooke+Diesen+Iran+world+order+2026-04-27

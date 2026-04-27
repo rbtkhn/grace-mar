@@ -13,6 +13,10 @@ WORK only; not Record.
 
 <!-- Triage appends new date sections below. Do not add content above this line. -->
 
+## 2026-04-27
+- Inbox | cold: full text in [`transcript-diesen-crooke-iran-global-war-world-order-2026-04-27.md`](raw-input/2026-04-27/transcript-diesen-crooke-iran-global-war-world-order-2026-04-27.md) (pointer; SSOT raw-input) | thread:diesen | crosses:crooke
+- YT | cold: **Glenn Diesen** (host) **×** **Alastair Crooke** (guest) — *Iran War Is Now a Global War for World Order* — **aired** **2026-04-27** — **Hormuz** / JCPOA “**prison**,” IRI reorders (war & sanctions before nuclear), Trump/Obama, Israel messianic, EU/vdl, $ **architecture** // hook: **`thread:diesen`** **+** **`thread:crooke`** | `https://www.youtube.com/watch?v=TBD-diesen-crooke-2026-04-27` | verify:operator-paste+speaker-labeled+pin-canonical-URL | grep:Diesen+Crooke+Greater+Eurasia+2026-04-27
+
 ## 2026-04-26
 - Inbox | cold: full text in [`transcript-diesen-escobar-connectivity-wars-multipolarity-2026-04-23.md`](raw-input/2026-04-23/transcript-diesen-escobar-connectivity-wars-multipolarity-2026-04-23.md) (pointer; SSOT raw-input) | thread:diesen
 - Inbox | cold: full text in [`transcript-macgregor-diesen-total-war-iran-2026-04-21.md`](raw-input/2026-04-21/transcript-macgregor-diesen-total-war-iran-2026-04-21.md) (pointer; SSOT raw-input) | thread:diesen
