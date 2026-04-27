@@ -29,6 +29,7 @@ WORK only; not Record.
 - notebook | cold: **IRI FM** **@araghchi** **2026-04-17 06:45** — Hormuz passage for commercial vessels for **ceasefire** remainder on **PMO** coordinated route; opens **in line with** **Lebanon ceasefire** // hook: **expert-thread continuity** — **no** `thread:` (state primary); **cross** `parsi` Lebanon scope, `marandi` register, `mercouris` Lebanon institutional surface, `thread:davis` QT packaging | verify:IRI-primary+cross-thread-continuity | IRI+TEHRAN+Lebanon
 - batch-analysis | 2026-04-17 | **Barnes × Johnson (YT) — US politics room × Iran week** | **Tension-first:** **`thread:barnes`** **long-form** **domestic-liability** **+** **White** **House** **process** **(C-plane** **hypothesis)** **—** **not** **§1e** **text** **and** **not** **Pentagon** **primary.** **Same** **calendar** **day** **as** **Hormuz** **/** **Islamabad** **expert** **stack** **—** **cross** **`thread:davis`**, **`thread:johnson`** **(Davis** **×** **Johnson** **earlier** **YT),** **`thread:ritter`** **with** **explicit** **plane** **tags** **(room** **vs** **ORBAT** **vs** **FM).** **Falsifiers:** **named** **official** **statements,** **vote** **counts,** **Navy** **press,** **TS** **screenshots.** | crosses:barnes+johnson
 
+
 ## 2026-04-25
 - YT | cold: **Daniel** **Davis (Lt** **Col.)** **×** **Robert** **Barnes** — *US Shifting ‘Clear’ Objectives in IRAN WAR* — **aired** **2026-04-24** — **cleaned** **transcript** **(VivaBarnesLaw** **/** **Davis** **show):** **U.S.–Iran** **settlement,** **“fractured”** **/ disjoint** **(U.S. vs** **alleged** **Iran** **splits),** **breaking** **news** **(sequence** **in** **transcript** **—** **verify** **tapes** **if** **citing** **timing);** **Viva** **/ Barnes** **Law** **plug** // hook: **`thread:davis`** **×** **`thread:barnes`** **—** **§1d** **/ §1e** **domestic** **+** **negotiation** **frame** **—** **full** [raw-input/2026-04-24/transcript-davis-barnes-us-shifting-objectives-iran-war-2026-04-24.md](raw-input/2026-04-24/transcript-davis-barnes-us-shifting-objectives-iran-war-2026-04-24.md) | TBD (pin `watch?v=`) | verify:operator-file+cleaned-transcript+opinion-narrative-tier+not-Record | thread:davis | crosses:barnes | IRAN | US-POL | grep:Davis+Barnes+US+objectives+Iran+2026-04-24
 - YT | cold: **Daniel** **Davis** **(Lt** **Col.)** — *Trump Says He's Got 'All the Time in the World'* — **aired** **2026-04-23** — **cleaned** **caption** **transcript:** **Truth** **Social** **/ Trump** **“all** **the** **time** **in** **the** **world”** **vs** **Iran,** **credibility** **/ media** **montage,** **“we’ve** **won”** **/** **11** **Mar** **clip** **vs** **current** **war;** **Pakistan** **deal** **/ power** **plant** **threats** **(narrated);** **ORBAT** **+** **blockade** **claims** **(commentary** **—** **not** **wire** **per** **line)** // hook: **`thread:davis`** **×** **§1d** **Trump** **/ TS** **+** **§1e** **Iran** **(credibility,** **clock)** **—** **full** [raw-input/2026-04-23/transcript-davis-trump-all-time-in-the-world-2026-04-23.md](raw-input/2026-04-23/transcript-davis-trump-all-time-in-the-world-2026-04-23.md) | TBD (pin `watch?v=`) | verify:operator-file+cleaned-caption+full-text+aired:2026-04-23+TS-quote-tier+opinion-narrative-tier+not-Record | thread:davis | IRAN | grep:Davis+Trump+all+time+world+2026-04-23
@@ -48,8 +49,10 @@ WORK only; not Record.
 
 
 
+
 ## 2026-04-23
 - Inbox | cold: full text in [`transcript-davis-trump-all-time-in-the-world-2026-04-23.md`](raw-input/2026-04-23/transcript-davis-trump-all-time-in-the-world-2026-04-23.md) (pointer; SSOT raw-input) | thread:davis
+
 
 
 ## 2026-04-20

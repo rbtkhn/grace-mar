@@ -50,6 +50,7 @@ WORK only; not Record.
 - X | cold: @ProfessorPape (**2026-04-17** ~08:07) — Israel–Lebanon truce as **signal of shifting global power** (more than ceasefire); claims **Iran** demanded end to **Israeli attacks in Lebanon** and **U.S. delivered**; amplifies **NYT Opinion** card on Iran as **major world power** (“4th” framing in card) // hook: **seam** vs **04-14** sectarian worst-case fork + vs Janssen **04-16** **“fourth center”** (different object); **op-ed tier** — not Pape independent ORBAT/power rank | https://x.com/ProfessorPape | verify:pin-exact-status-URL+nytimes-opinion-card+screenshot | thread:pape | grep:Lebanon+Pape+NYT+2026-04-17
 - batch-analysis | 2026-04-17 | **Pape X — 04-14 Lebanon fork × 04-17 truce / NYT power thesis** | **Tension-first:** **04-14** indexed ingest = **downside** / **civil-war** fork + **AP** Washington talks **seam**; **04-17** = **settlement / power-shift** read + **NYT** secondary thesis Pape spotlights — use **dated evolution**, not silent merge. **Homophone risk:** Janssen **04-16** **“fourth center”** (negotiation fork) ≠ NYT headline **“major world power”** / **“4th”** — **do not** equate in Judgment. **Membership:** `thread:pape` only.
 
+
 ## 2026-04-25
 - X | cold: **Robert A. Pape** (@ProfessorPape) — **aired** **2026-04-21** (**~6:27** **AM** **+** **thread** **~14h**) — **ceasefire** **=** **zero-sum** **“next** **phase”** **not** **random** **breakdown;** **Hormuz** **/** **nuclear** **×** **U.S.** **power** **trilemma;** **ladder** **R1** **demonstration** **(tankers,** **disruptions,** **force** **moves)** **→** **R2** **damaging** **economic** **war** **/ infra** **/ ~20%** **Hormuz** **oil;** **R3** **expansion,** **Red** **Sea** **+** **Gulf,** **proxies,** **ground** **risk;** **Escalation** **Trap,** **month-by-month** **grind** // hook: **`thread:pape`** **×** **ceasefire** **/ §1e** **Hormuz** **—** **full** [raw-input/2026-04-21/x-pape-zero-sum-escalation-ladder-2026-04-21.md](raw-input/2026-04-21/x-pape-zero-sum-escalation-ladder-2026-04-21.md) | https://x.com/ProfessorPape | verify:full-text+raw-input/2026-04-21/x-pape-zero-sum-escalation-ladder-2026-04-21.md+X-thread+2026-04-21+optional-status-permalinks+two-segments-truncated-in-paste | thread:pape | IRAN | grep:Pape+zero-sum+escalation+2026-04-21
 - SS | cold: **Robert Pape** — *Within 10 Days, Shortages Are Already Here* (*Escalation Trap* — **published** **2026-04-22**) — **blockade** **stage** **2** **(physical** **shortage** **+** **production** **stress)** **now;** **price** **→** **access** **inflection;** **EU** **jet** **fuel** **/** **KR** **plastics** **inputs** **/** **Asia** **workweek** **+** **fuel** **anecdotes** **/** **India** **reserves;** **Iraq** **1990s** **/** **Iran** **sanctions** **→** **consolidation** **not** **capitulation** **thesis;** **AP** **~33%** **approval** **cited;** **45–60d** **shortages** **→** **60–90d** **contraction** **→** **1973** **parallel** **/** **coupled-system** **severity** **warning** // hook: **`thread:pape`** **macro** **stages** **×** **`thread:davis`** **/** **`thread:ritter`** **material** **primaries** **—** **full** [raw-input/2026-04-22/substack-pape-within-10-days-shortages-already-2026-04-22.md](raw-input/2026-04-22/substack-pape-within-10-days-shortages-already-2026-04-22.md) · **day** **page** [experts/pape/pape-page-2026-04-22.md](experts/pape/pape-page-2026-04-22.md) | https://escalationtrap.substack.com/p/within-10-days-shortages-are-already | verify:operator-paste+paywall-public+raw-input+per-claim-primaries-tier | thread:pape | IRAN | MACRO | grep:Pape+shortages+blockade+Escalation+Trap+2026-04-22
@@ -86,8 +87,10 @@ WORK only; not Record.
 - batch-analysis | 2026-04-17 | **Pape X — 04-14 Lebanon fork × 04-17 truce / NYT power thesis** | **Tension-first:** **04-14** indexed ingest = **downside** / **civil-war** fork + **AP** Washington talks **seam**; **04-17** = **settlement / power-shift** read + **NYT** secondary thesis Pape spotlights — use **dated evolution**, not silent merge. **Homophone risk:** Janssen **04-16** **“fourth center”** (negotiation fork) ≠ NYT headline **“major world power”** / **“4th”** — **do not** equate in Judgment. **Membership:** `thread:pape` only.
 
 
+
 ## 2026-04-24
 - Inbox | cold: full text in [`substack-pape-2-blockades-2-clocks-2026-04-24.md`](raw-input/2026-04-24/substack-pape-2-blockades-2-clocks-2026-04-24.md) (pointer; SSOT raw-input) | thread:pape
+
 
 
 ## 2026-04-22
@@ -102,11 +105,13 @@ Refined day page: [`pape-page-2026-04-22.md`](pape-page-2026-04-22.md).
 
 
 
+
 ## 2026-04-21
 
 Verbatim: [`raw-input/2026-04-21/x-pape-zero-sum-escalation-ladder-2026-04-21.md`](../../raw-input/2026-04-21/x-pape-zero-sum-escalation-ladder-2026-04-21.md).
 
 Refined day page: [`pape-page-2026-04-21.md`](pape-page-2026-04-21.md).
+
 
 
 

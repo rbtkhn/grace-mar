@@ -16,8 +16,10 @@ WORK only; not Record.
 ## 2026-04-26
 - Inbox | cold: full text in [`davis-deep-dive-baud-iran-pakistan-diplomacy.md`](raw-input/2026-04-20/davis-deep-dive-baud-iran-pakistan-diplomacy.md) (pointer; SSOT raw-input) | thread:baud
 
+
 ## 2026-04-25
 - YT | cold: **Daniel Davis** × **Col. Jacques Baud** (*Daniel Davis Deep Dive*) — **Trump** **Fox** **Pakistan-signing** **frame** **vs** **IRI** **no-show** **Islamabad** **(CBS** **wire** **in** **voice);** **carrot–stick** **/** **blackmail** **read;** **ceasefire** **as** **rear** **arm** **(Ukraine** **parallel);** **Strait** **/** **Hormuz** **deterrent;** **UNGA** **3314** **co-belligerent** **(GCC** **territory** **/** **airspace);** **UAE** **FM** **“gulf** **of** **trust”** **vs** **aggression** **facts;** **perfidy** **/** **Geneva** **timing;** **Keane** **blockade** **claims** **vs** **energy** **/** **Bab** **el-Mandeb** **escalation** **geometry;** **Europe** **vassal** **thesis** **(E3** **Mar** **1)** // hook: **`thread:baud`** **law-of-war** **+** **alliance** **mandate** **—** **host** **`thread:davis`**; **full** **verbatim** [raw-input/2026-04-20/davis-deep-dive-baud-iran-pakistan-diplomacy.md](raw-input/2026-04-20/davis-deep-dive-baud-iran-pakistan-diplomacy.md) | https://www.youtube.com/watch?v=TBD-davis-baud-deep-dive | verify:full-text+raw-input+pin-canonical-URL+aired:TBD | thread:baud | grep:Baud+Davis+Pakistan+Hormuz+3314+trust
+
 
 
 
