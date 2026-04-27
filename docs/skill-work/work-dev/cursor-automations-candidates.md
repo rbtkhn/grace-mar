@@ -1,5 +1,7 @@
 # Cursor Automations — grace-mar probe (WORK)
 
+**Prompts SSOT (paste-ready):** [docs/automation/](../../automation/) — policy + per-use-case prompts. This file is an earlier **friction/CI** survey; new work should not duplicate the contract text.
+
 **Status:** Evidence pass from repo + skills; **not** Record. **Purpose:** Map this instance’s cadence, scripts, and CI to [Cursor Automations](https://cursor.com/docs/cloud-agent/automations) triggers and tools, with red lines from [AGENTS.md](../../../AGENTS.md) and [instance-doctrine.md](../../../users/grace-mar/instance-doctrine.md).
 
 **Operator validation:** The **top 5 frictions** below are **proposed** from structure; adjust after a 15–20 min pass.
