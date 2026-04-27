@@ -3,21 +3,23 @@ ingest_date: 2026-04-25
 pub_date: 2026-04-25
 kind: strategy-draft
 title: Hormuz Strait Transit Agreement (v0 strawman)
-word_count: 393
+word_count: 452
 thread: mercouris
 related_transcript: raw-input/2026-04-25/transcript-duran-mercouris-cristoforu-sea-blockade-iran-2026-04-25.md
-conformance_note: Shaped against Mercouris–Christoforou sea-blockade / stalemate diagnosis (WORK; not Record). §3.1 added as Furtwängler “hold the tension” beat — no policy prescription.
-word_budget_words: 420
-word_budget_scope: Entire file ≤420 words. Longer HRTF scaffolds → separate paths.
+conformance_note: Shaped against Mercouris–Christoforou sea-blockade / stalemate diagnosis (WORK; not Record). §3.1 Furtwängler tension; §1 Karajan long-horizon bet on Gulf predictability — no policy prescription.
+word_budget_words: 500
+word_budget_scope: Entire file ≤500 words. Longer HRTF scaffolds → separate paths.
 related_long_form: hormuz-reciprocal-transit-deescalation-framework-v2-1.md
 ---
 # Hormuz Strait Transit Agreement (v0 strawman)
 
-**HSTA** names both this **Hormuz Strait Transit Agreement** and the **Hormuz Strait Transit Authority**; context disambiguates. **WORK** only; not Record. **This path: 300-word cap.** **Phased negotiation scaffold (HRTF v2.1):** [hormuz-reciprocal-transit-deescalation-framework-v2-1.md](hormuz-reciprocal-transit-deescalation-framework-v2-1.md). **Institutional** **passage** **signaling** (announced vs material; Kleiber falsify) → [Cluster — Hormuz commercial passage](strategy-state-iran/clusters/hormuz-commercial-passage.md).
+**HSTA** names both this **Hormuz Strait Transit Agreement** and the **Hormuz Strait Transit Authority**; context disambiguates. **WORK** only; not Record. **This path: 500-word cap.** **Phased negotiation scaffold (HRTF v2.1):** [hormuz-reciprocal-transit-deescalation-framework-v2-1.md](hormuz-reciprocal-transit-deescalation-framework-v2-1.md). **Institutional** **passage** **signaling** (announced vs material; Kleiber falsify) → [Cluster — Hormuz commercial passage](strategy-state-iran/clusters/hormuz-commercial-passage.md).
 
 ## 1. Purpose
 
 **States** (TBD) seek **predictable** **transit** near the **Strait of Hormuz**, **reducing** ad hoc **interdiction** and open-ended **confrontation**, and improving **Gulf** energy **predictability**. Scaffold for negotiation only.
+
+**Long-horizon bet (month-arc):** The judgment this v0 is trying on is that **Gulf** **predictability** worth the notebook’s attention is a **quarterly** object — **strait** **rules** and **review** **cadence** that can **outlive** any single week’s **interdiction** or **headline** — not a claim that a strawman *delivers* calm, but that *treaty-shaped* **hooks** are the right **lens** for long-arc balance.
 
 ## 2. Hormuz Strait Transit Authority (HSTA)
 
