@@ -41,7 +41,7 @@ Define how [Cursor Automations](https://cursor.com/docs/cloud-agent/automations)
 | Event (product / operator choice) | Intended prompt | Output channel |
 |-----------------------------------|-----------------|----------------|
 | **CI / workflow completed + failure** | [prompts/cursor-ci-failure-triage.md](prompts/cursor-ci-failure-triage.md) | PR or workflow comment (as configured) |
-| **PR opened** or **synchronized** | [prompts/cursor-pr-onboarding.md](prompts/cursor-pr-onboarding.md) | Single PR comment (update in place if the tool allows) |
+| **PR opened** / **synchronized** / **reopened** | [cursor-pr-onboarding.md](cursor-pr-onboarding.md) + [prompts/cursor-pr-onboarding.md](prompts/cursor-pr-onboarding.md) | Single PR comment (update in place if the tool allows) |
 | **Weekly schedule** (or manual) | [prompts/cursor-integrity-summary.md](prompts/cursor-integrity-summary.md) | Report / Slack / issue **text only** — no commit of regen |
 | **Weekly schedule** | [prompts/cursor-gate-queue-nudge.md](prompts/cursor-gate-queue-nudge.md) | Nudge only — **medium priority**; read-only `recursion-gate.md` |
 
@@ -59,3 +59,4 @@ Define how [Cursor Automations](https://cursor.com/docs/cloud-agent/automations)
 - [README.md](README.md) — index and principle.
 - [cursor-safe-automation-contract.md](cursor-safe-automation-contract.md) — paste into every prompt.
 - [docs/skill-work/work-dev/cursor-automations-candidates.md](../skill-work/work-dev/cursor-automations-candidates.md) — prior friction/CI survey.
+- [cursor-pr-onboarding.md](cursor-pr-onboarding.md) — second live automation: PR shape / lane / sensitive paths (operator guide).
