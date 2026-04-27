@@ -332,3 +332,8 @@ _(Append below this line.)_
 - **2026-04-27 16:26 UTC** — bridge (grace-mar) ok=true cursor_model=unknown model_tier=unknown refs=dbceacd5
 - **2026-04-27 16:34 UTC** — coffee_pick (grace-mar) ok=true cursor_model=unknown model_tier=unknown picked=conductor conductor=furtwangler
 - **2026-04-27 16:36 UTC** — coffee_conductor_outcome (grace-mar) ok=true cursor_model=unknown model_tier=unknown falsify=two-column-judgment-no-winner
+- **2026-04-27 16:51 UTC** — coffee (grace-mar) ok=true mode=work-start cursor_model=unknown model_tier=unknown
+- **2026-04-27 16:57 UTC** — coffee_pick (grace-mar) ok=true cursor_model=unknown model_tier=unknown picked=conductor conductor=bernstein
+- **2026-04-27 16:59 UTC** — coffee_conductor_outcome (grace-mar) ok=true cursor_model=unknown model_tier=unknown falsify=lead-themes-section-3
+- **2026-04-27 17:01 UTC** — coffee_pick (grace-mar) ok=true cursor_model=unknown model_tier=unknown picked=conductor conductor=kleiber
+- **2026-04-27 17:02 UTC** — coffee_conductor_outcome (grace-mar) ok=true cursor_model=unknown model_tier=unknown falsify=mem-boundary-crosslink

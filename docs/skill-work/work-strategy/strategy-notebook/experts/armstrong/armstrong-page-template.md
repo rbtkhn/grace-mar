@@ -1,5 +1,5 @@
 # Armstrong refined day page — template
-<!-- word_count: 806 -->
+<!-- word_count: ~880 -->
 
 WORK only; not Record.
 
@@ -66,6 +66,10 @@ Use when [`transcript.md`](transcript.md) holds only a `notebook |` row or thin 
 Verbatim lives under `raw-input/<date>/`. Refined pages live only under `experts/armstrong/`.
 
 ---
+
+## MEM / topic-trace boundary (optional)
+
+When **`### Reflection`** or **`### Foresight`** draws on **CIV-MEM** routing, **MEM CONNECTIONS**, or **structural analogy** from the read-only upstream corpus, keep that work in the **WORK · DERIVED** lane: do not treat graph patterns as **Record** truth or as **civilization_memory** canon edits. Governing contract: [topic-trace-contract.md](../../../../work-civ-mem/topic-trace-contract.md). For a **standalone** bounded trace file (separate from this day page), use the scaffold in [topic-trace-template.md](../../../../work-civ-mem/topic-trace-template.md). **`### Chronicle`** remains **verbatim expert capture** only—do not merge MEM synthesis into Chronicle as if it were the expert’s words.
 
 ## Transcript wiring
 

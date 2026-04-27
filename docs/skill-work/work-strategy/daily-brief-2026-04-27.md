@@ -134,28 +134,19 @@ _Token overlap against `docs/civilization-memory/` (build: `python3 scripts/buil
 - _No in-repo civ-mem matches (build index: `python3 scripts/build_civmem_inrepo_index.py build`)._
 - _Treat as optional depth for triangulation — not a substitute for dated news citations._
 
-## 3. Lead themes (auto-stub — replace after reading)
+## 3. Lead themes
 
 ### Work-politics / campaign angle
-- EN DIRECT, guerre en Ukraine : la Norvège va livrer « plusieurs milliers de drones » à Kiev « d’ici à l’été »
-- Cómo pudo el atacante llegar tan cerca de Trump y otras dudas que plantea el tiroteo en la cena corresponsales en Washington
-- Ukraine's drone commander has Russian oil, troops and morale in his sights
 
-**Replace:** 2–3 sentences for principal, district, opposition narrative.
+The **May 19** primary clock in §1 still frames district work, but the open press is split between a **domestic security shock** (Correspondents’ Dinner evacuation and follow-on court calendar) and **two-theater** international load (Ukraine kinetic lines beside Iran–Russia shuttle and Hormuz diplomacy in §2). For KY-4 messaging, keep **GOTV and ballot dates** in one lane and **national security tone** in another unless a single piece deliberately bridges them. Opposition narrative stays strongest where **institutional receipts** exist—do not collapse Spain, Ukraine, and DC headline clusters into one Judgment without plane tags.
 
 ### Work-strategy angle (product / governance / tech)
 
-- Listen live: Supreme Court hears case that could limit pesticide liability
-- Virginia Supreme Court weighs legality of redistricting plan after voters approved it
-- Alleged Correspondents' Dinner shooter to appear in court. And, Charles III visits U.S.
-
-**Replace:** 2–3 sentences for Record/Voice positioning, OpenClaw, schools, or policy hooks.
+Gate snapshot in §1 stays quiet (zero pending work-politics candidates); the heat in the wires is how **US institutions** read in public—high court dockets, state supreme courts on maps, federal criminal calendar after a major security incident—alongside allied symbolism (state-visit headlines). For Record and Voice positioning, the lesson is **separation of concerns**: companion sovereignty and gated merge discipline do not require chasing every RSS pulse; product, OpenClaw, and schools hooks land only where §1b focus already tags a durable operator thread, not from raw headline stubs.
 
 ### Slow structural layer (work-jiang)
 
-_Not dated news — patterns from lecture extractions, `jiang-compress` JSON, comparative sweeps. Connect to **§1c** hooks when drafting campaign or opposition copy; cite sources if anything ships publicly._
-
-**Replace:** 2–3 sentences — which slow pattern applies to today’s **W** angle, or why none does.
+Today’s fast **W** weight (Norway pledging drone scale to Kyiv, Ukraine deep-strike storylines) rhymes with Predictive History Volume I patterns of **alliance cargo as credibility** (who ships what, on what timeline) and escalation geometry—use [SELF-LIBRARY — Predictive History](../../../users/grace-mar/self-library.md#operator-analytical-books) when a chapter anchor is needed for copy that ships. If operator work stays Iran and Hormuz first, treat Ukraine RSS as **parallel pressure** on European capacity and US attention budget, not as the slow-layer primary unless you open a Geo-Strategy thread explicitly.
 
 ## 4. Triangulation (when lead is political)
 
