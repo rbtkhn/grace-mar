@@ -25,6 +25,8 @@ REPO_ROOT = Path(__file__).resolve().parents[2]
 NOTEBOOK = REPO_ROOT / "docs/skill-work/work-strategy/strategy-notebook"
 MEARSHEIMER = NOTEBOOK / "experts" / "mearsheimer"
 MANIFEST_PATH = MEARSHEIMER / "mearsheimer-pages-manifest.yaml"
+# Pruning hint threshold for generated Mearsheimer pages (finalize_page / soft-cap notes).
+SOFT_CAP_WORDS = 8000
 
 
 def _word_count(s: str) -> int:
@@ -278,6 +280,11 @@ def main() -> int:
     manifest = yaml.safe_load(MANIFEST_PATH.read_text(encoding="utf-8"))
     pages = manifest.get("pages") or []
     for entry in pages:
+        if entry.get("skip_assembly"):
+            print(
+                f"skip_assembly: {entry.get('page_filename', entry.get('raw_input_relative', '?'))}"
+            )
+            continue
         raw_rel = entry["raw_input_relative"]
         page_fn = entry["page_filename"]
         raw_path = NOTEBOOK / raw_rel

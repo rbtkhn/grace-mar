@@ -13,6 +13,12 @@ WORK only; not Record.
 
 <!-- Triage appends new date sections below. Do not add content above this line. -->
 
+## 2026-04-10
+- Inbox | cold: full text in [`transcript-diesen-mearsheimer-world-changed-forever-2026-04-10.md`](raw-input/2026-04-10/transcript-diesen-mearsheimer-world-changed-forever-2026-04-10.md) (SSOT) | thread:diesen | crosses:mearsheimer
+- Refined | cold: [diesen-page-2026-04-10-diesen-mearsheimer-world-changed-forever-2026-04-10.md](diesen-page-2026-04-10-diesen-mearsheimer-world-changed-forever-2026-04-10.md) (host lane) | thread:diesen
+- Sibling (guest): [../mearsheimer/mearsheimer-page-2026-04-10-diesen-mearsheimer-world-changed-forever-2026-04-10.md](../mearsheimer/mearsheimer-page-2026-04-10-diesen-mearsheimer-world-changed-forever-2026-04-10.md) | thread:mearsheimer
+- YT | cold: **Glenn Diesen** × **John Mearsheimer** — *World Changed Forever as Iran Defeated the U.S.* — **aired** **2026-04-10** — lane split (host + guest refined; SSOT raw) | https://www.youtube.com/watch?v=H2K3qDshr70 | verify:lane-split+threads in raw | thread:diesen
+
 ## 2026-04-27
 - Inbox | cold: full text in [`transcript-diesen-crooke-iran-global-war-world-order-2026-04-27.md`](raw-input/2026-04-27/transcript-diesen-crooke-iran-global-war-world-order-2026-04-27.md) (pointer; SSOT raw-input) | thread:diesen | crosses:crooke
 - Refined | cold: [diesen-page-2026-04-27-diesen-crooke-iran-global-war-world-order.md](diesen-page-2026-04-27-diesen-crooke-iran-global-war-world-order.md) (host lane; same raw) | thread:diesen
