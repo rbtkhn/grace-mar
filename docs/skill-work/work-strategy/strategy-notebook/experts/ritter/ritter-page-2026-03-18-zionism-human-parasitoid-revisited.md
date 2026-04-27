@@ -9,7 +9,7 @@ WORK only; not Record.
 
 ---
 
-### Chronicle
+### Verbatim
 
 Expert capture (verbatim body from linked `raw-input`; operator-ingested).
 
@@ -131,7 +131,7 @@ Before it is too late.
 
 **Operator note:** Revisited repost (2026-03-18); original Substack piece dated 2025-04-17 per closing graf. Light cleanup of operator/OCR errors only.
 
-**WORK read.** Chronicle is expert verbatim from capture; this block is notebook analysis only—tier discipline and seams, not a substitute for wire.
+**WORK read.** Verbatim is expert verbatim from capture; this block is notebook analysis only—tier discipline and seams, not a substitute for wire.
 
 **Capture:** Zionism, the Human Parasitoid (Revisited) (Substack) · Format: Substack-style essay. Historical and legal passages reflect Ritter’s read; verify dates, quotes, and casualty figures against primary or scholarly sources if promoted.
 
@@ -150,7 +150,7 @@ Before it is too late.
 
 - **Falsifiers:** Wire/primary items that would change the thesis.
 - **Resume:** Next capture, `days.md` seam, chapter meta.
-- **Tier:** Chronicle = expert (A); Reflection/Foresight = WORK.
+- **Tier:** Verbatim = expert (A); Reflection/Foresight = WORK.
 
 
 ---

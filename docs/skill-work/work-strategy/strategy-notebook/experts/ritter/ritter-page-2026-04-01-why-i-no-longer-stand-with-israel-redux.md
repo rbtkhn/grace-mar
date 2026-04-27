@@ -9,7 +9,7 @@ WORK only; not Record.
 
 ---
 
-### Chronicle
+### Verbatim
 
 Expert capture (verbatim body from linked `raw-input`; operator-ingested).
 
@@ -336,7 +336,7 @@ I stand with Palestine, because I stand for the children of Israel and Palestine
 
 **Operator note:** Redux repost (2026-04-01); original essay Oct 2023. Body preserves Substack voice including known typos (Dyan, canon, Irael, etc.).
 
-**WORK read.** Chronicle is expert verbatim from capture; this block is notebook analysis only—tier discipline and seams, not a substitute for wire.
+**WORK read.** Verbatim is expert verbatim from capture; this block is notebook analysis only—tier discipline and seams, not a substitute for wire.
 
 **Capture:** Why I no longer stand with Israel (Redux) (Substack) · Format: Substack-style essay. Historical and legal passages reflect Ritter’s read; verify dates, quotes, and casualty figures against primary or scholarly sources if promoted.
 
@@ -363,7 +363,7 @@ IHL content: useful for notebook legal seams; adjudication belongs to courts or 
 
 - **Falsifiers:** Wire/primary items that would change the thesis.
 - **Resume:** Next capture, `days.md` seam, chapter meta.
-- **Tier:** Chronicle = expert (A); Reflection/Foresight = WORK.
+- **Tier:** Verbatim = expert (A); Reflection/Foresight = WORK.
 
 
 ---

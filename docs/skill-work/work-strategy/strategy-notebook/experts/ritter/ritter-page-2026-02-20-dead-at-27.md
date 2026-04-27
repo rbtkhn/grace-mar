@@ -9,7 +9,7 @@ WORK only; not Record.
 
 ---
 
-### Chronicle
+### Verbatim
 
 Expert capture (verbatim body from linked `raw-input`; operator-ingested).
 
@@ -136,7 +136,7 @@ Along with tens of thousands of others whose lives will tragically be cut short 
 
 **Operator note:** Advocacy essay mixing memoir (1990–1991 Gulf War targeting, 1985 Iran plan update, 2003 Iraq judgment) with near-term US–Iran war framing and Polymarket odds. Light cleanup of operator/OCR errors only.
 
-**WORK read.** Chronicle is expert verbatim from capture; this block is notebook analysis only—tier discipline and seams, not a substitute for wire.
+**WORK read.** Verbatim is expert verbatim from capture; this block is notebook analysis only—tier discipline and seams, not a substitute for wire.
 
 **Capture:** Dead at 27 (Substack) · Format: Substack-style essay. Historical and legal passages reflect Ritter’s read; verify dates, quotes, and casualty figures against primary or scholarly sources if promoted.
 
@@ -154,7 +154,7 @@ Along with tens of thousands of others whose lives will tragically be cut short 
 
 - **Falsifiers:** Wire/primary items that would change the thesis.
 - **Resume:** Next capture, `days.md` seam, chapter meta.
-- **Tier:** Chronicle = expert (A); Reflection/Foresight = WORK.
+- **Tier:** Verbatim = expert (A); Reflection/Foresight = WORK.
 
 
 ---

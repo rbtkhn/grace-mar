@@ -9,7 +9,7 @@ WORK only; not Record.
 
 ---
 
-### Chronicle
+### Verbatim
 
 Expert capture (verbatim body from linked `raw-input`; operator-ingested).
 
@@ -238,7 +238,7 @@ I just want to bring this to the attention of my good friend, and hope that he a
 
 **Operator note:** Critique of Seymour Hersh "Putin's Long War" via Ilnitsky "Mental War" frame, Biden 2011 MSU speech, Gerasimov-quote debunk, Prokopenko/Kolyandr, Alaska/Witkoff/Dmitriev thesis. Substack UI may read Jan 21, 2026. Essay ≠ wire; light cleanup only.
 
-**WORK read.** Chronicle is expert verbatim from capture; this block is notebook analysis only—tier discipline and seams, not a substitute for wire.
+**WORK read.** Verbatim is expert verbatim from capture; this block is notebook analysis only—tier discipline and seams, not a substitute for wire.
 
 **Capture:** Getting it Wrong on Russia (Substack) · Format: Substack-style essay. Historical and legal passages reflect Ritter’s read; verify dates, quotes, and casualty figures against primary or scholarly sources if promoted.
 
@@ -256,7 +256,7 @@ I just want to bring this to the attention of my good friend, and hope that he a
 
 - **Falsifiers:** Wire/primary items that would change the thesis.
 - **Resume:** Next capture, `days.md` seam, chapter meta.
-- **Tier:** Chronicle = expert (A); Reflection/Foresight = WORK.
+- **Tier:** Verbatim = expert (A); Reflection/Foresight = WORK.
 
 
 ---

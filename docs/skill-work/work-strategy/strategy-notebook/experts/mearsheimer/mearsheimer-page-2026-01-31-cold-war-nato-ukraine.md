@@ -9,7 +9,7 @@ WORK only; not Record.
 
 ---
 
-### Chronicle
+### Verbatim
 
 Expert capture (verbatim body from linked `raw-input`; operator-ingested).
 
@@ -176,7 +176,7 @@ You also had reports which have been confirmed in Western media that a lot of th
 
 **Operator note:** Operator paste; tail after conventional-war segment duplicated another Diesen×Mearsheimer episode (Europe/Merz/Iran/Hormuz block — same text as raw-input/2026-02-25/transcript-diesen-mearsheimer-case-for-nuclear-iran-2026-02-25.md); omitted here; closing thanks retained. In-voice forecasts (2026 collapse, Karaganov/NW, Kupyansk/Sumy, 600–800k vs 85k army) — analyst tier; verify if promoted.
 
-**WORK read.** Chronicle is expert verbatim from capture; this block is notebook analysis only—tier discipline and seams, not a substitute for wire.
+**WORK read.** Verbatim is expert verbatim from capture; this block is notebook analysis only—tier discipline and seams, not a substitute for wire.
 
 **Capture:** John Mearsheimer: Cold War 2.0 & NATO's Defeat in Ukraine · Format: interview transcript. Attribute lines to speakers; treat Mearsheimer’s spoken segments as structural-realist argument, not independent confirmation of operational facts. Pin canonical `watch?v=` in appendix when published.
 
@@ -203,7 +203,7 @@ Order / institutions language: label as Mearsheimer framework; not standalone pr
 
 - **Falsifiers:** Wire/primary items that would change the thesis.
 - **Resume:** Next capture, `days.md` seam, chapter meta.
-- **Tier:** Chronicle = expert (B); Reflection/Foresight = WORK.
+- **Tier:** Verbatim = expert (B); Reflection/Foresight = WORK.
 
 
 ---

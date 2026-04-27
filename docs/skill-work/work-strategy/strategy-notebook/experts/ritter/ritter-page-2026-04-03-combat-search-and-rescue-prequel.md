@@ -9,7 +9,7 @@ WORK only; not Record.
 
 ---
 
-### Chronicle
+### Verbatim
 
 Expert capture (verbatim body from linked `raw-input`; operator-ingested).
 
@@ -75,7 +75,7 @@ It was clear to everyone that the crew of "Corvette 3" had been taken prisoner b
 
 **Operator note:** Operator-ingested Substack essay; includes closing note on serialized *The SCUD Hunters*.
 
-**WORK read.** Chronicle is expert verbatim from capture; this block is notebook analysis only—tier discipline and seams, not a substitute for wire.
+**WORK read.** Verbatim is expert verbatim from capture; this block is notebook analysis only—tier discipline and seams, not a substitute for wire.
 
 **Capture:** Combat Search and Rescue, the Prequel (Substack) · Format: Substack-style essay. Historical and legal passages reflect Ritter’s read; verify dates, quotes, and casualty figures against primary or scholarly sources if promoted.
 
@@ -93,7 +93,7 @@ It was clear to everyone that the crew of "Corvette 3" had been taken prisoner b
 
 - **Falsifiers:** Wire/primary items that would change the thesis.
 - **Resume:** Next capture, `days.md` seam, chapter meta.
-- **Tier:** Chronicle = expert (A); Reflection/Foresight = WORK.
+- **Tier:** Verbatim = expert (A); Reflection/Foresight = WORK.
 
 
 ---

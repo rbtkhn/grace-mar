@@ -9,7 +9,7 @@ WORK only; not Record.
 
 ---
 
-### Chronicle
+### Verbatim
 
 Expert capture (verbatim body from linked `raw-input`; operator-ingested).
 
@@ -54,9 +54,9 @@ This has been my rant. Next time a thought crosses my mind, I'll be sure to let 
 
 ### Reflection
 
-**WORK read.** Chronicle is expert verbatim from capture; this block is notebook analysis only—tier discipline and seams, not a substitute for wire.
+**WORK read.** Verbatim is expert verbatim from capture; this block is notebook analysis only—tier discipline and seams, not a substitute for wire.
 
-**Capture:** Ritter's Rant · Format: monologue / solo video. Same tier rules as Substack: expert argument and rhetoric preserved in Chronicle; corroborate operational claims before wire-style use.
+**Capture:** Ritter's Rant · Format: monologue / solo video. Same tier rules as Substack: expert argument and rhetoric preserved in Verbatim; corroborate operational claims before wire-style use.
 
 **Lanes:**
 - Iran / Gulf / Hormuz seam
@@ -77,7 +77,7 @@ IHL content: useful for notebook legal seams; adjudication belongs to courts or 
 
 - **Falsifiers:** Wire/primary items that would change the thesis.
 - **Resume:** Next capture, `days.md` seam, chapter meta.
-- **Tier:** Chronicle = expert (C); Reflection/Foresight = WORK.
+- **Tier:** Verbatim = expert (C); Reflection/Foresight = WORK.
 
 
 ---

@@ -9,7 +9,7 @@ WORK only; not Record.
 
 ---
 
-### Chronicle
+### Verbatim
 
 Expert capture (verbatim body from linked `raw-input`; operator-ingested).
 
@@ -256,7 +256,7 @@ And the living manifestation of everything that has gone wrong with the United S
 
 **Operator note:** Operator byline Mar 14, 2026; Substack UI shows Mar 15, 2026 (timezone). Speculative scenario (Feb 28, 2026 strike, Anthropic/Claude targeting). Light cleanup of operator/OCR errors only; CHMR acronym normalized where source had CHRM.
 
-**WORK read.** Chronicle is expert verbatim from capture; this block is notebook analysis only—tier discipline and seams, not a substitute for wire.
+**WORK read.** Verbatim is expert verbatim from capture; this block is notebook analysis only—tier discipline and seams, not a substitute for wire.
 
 **Capture:** The Backpack Girls (Substack) · Format: Substack-style essay. Historical and legal passages reflect Ritter’s read; verify dates, quotes, and casualty figures against primary or scholarly sources if promoted.
 
@@ -280,7 +280,7 @@ IHL content: useful for notebook legal seams; adjudication belongs to courts or 
 
 - **Falsifiers:** Wire/primary items that would change the thesis.
 - **Resume:** Next capture, `days.md` seam, chapter meta.
-- **Tier:** Chronicle = expert (A); Reflection/Foresight = WORK.
+- **Tier:** Verbatim = expert (A); Reflection/Foresight = WORK.
 
 
 ---

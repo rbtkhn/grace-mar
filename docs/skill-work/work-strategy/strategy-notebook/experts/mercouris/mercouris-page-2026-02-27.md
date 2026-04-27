@@ -7,7 +7,7 @@ WORK only; not Record.
 
 ---
 
-### Chronicle
+### Verbatim
 
 The episode opens on Geneva: Witkoff and Kushner meet Araghchi with an Omani mediator; Tehran’s package is summarized as NPT-grounded enrichment, multi-year suspension with dilution to civilian levels, resumed IAEA access, and a post-suspension regional (plus possibly Russian) enrichment consortium. Mercouris treats dilution language as implicit confirmation that a highly enriched stockpile survived the June 2025 strikes better than Trump’s “obliterated” narrative. The Wall Street Journal–sourced U.S. counterproposal is described as maximalist: end enrichment, destroy Fordow/Natanz/Isfahan infrastructure, plus missiles and regional alliance demands, with no security guarantee, no sanctions relief timetable, and discretionary U.S. supervision—read as unacceptable and regime-change foreshadowing after the State of the Union. Oman and Iran still float “technical talks” in Vienna; Mercouris is skeptical of the label without substance. He then chains Larry Johnson (Sonar21) on embassy evacuations and citizen departures as attack precursors to same-day reports: UK drawdown in Tehran and advice to nationals, U.S. warnings on Israel and partial embassy evacuation there. Vance’s exclusion of a “long war” is read as telegraphing a short offensive decision, set beside Iranian long-war rhetoric and U.S. sustainability doubts, plus reporting that Caine and Ratcliffe could not guarantee regime-change success. A weekend timing guess and full-moon aside follow.
 

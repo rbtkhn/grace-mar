@@ -7,7 +7,7 @@ WORK only; not Record.
 
 ---
 
-### Chronicle
+### Verbatim
 
 Easter Sunday framing (Western Easter; Orthodox in a week) brackets two wars. The lead is the F-15 navigator rescue: Trump’s relief narrative vs contested extraction—Chaharmahal and Bakhtiari / Shahr-e Kord area, IRGC–Basij skirmishes, Iranian claims of two C-130s and two Black Hawks lost, A-10 tie-in, possible second F-15 damaged. Jack Murphy’s “FARP / Delta / blow in place” post is treated as partial corroboration of multiple C-130 losses and a “dicey” op. Mercouris links material losses to doubts about collapsed Iranian air defenses and ground resistance, special-mission C-130 kit and counterintelligence value to Tehran plus Russia and China, and drone shoot-downs. He revives the Financial Times thread on Kharg / Hormuz islands and deep insertion: rescue scale implies liability-heavy force protection if the U.S. holds terrain in Iran. Second lesson: casualty-aversion signaling. Detailed airstrip-seizure reconstruction (unprepared-ground limits) argues rapid Iranian counterattack and high risk for sustained U.S. ground ops.
 

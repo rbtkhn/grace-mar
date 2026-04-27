@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Rewrite mearsheimer-page-*.md: ~80% expert verbatim (Chronicle) + ~20% WORK (Reflection/Foresight).
+"""Rewrite mearsheimer-page-*.md: ~80% expert verbatim (Verbatim section) + ~20% WORK (Reflection/Foresight).
 
 Reads mearsheimer-pages-manifest.yaml; pulls capture body from each raw-input file (YAML frontmatter
-stripped); embeds full body under ### Chronicle.
+stripped); embeds full body under ### Verbatim.
 
 Inserts a preamble **`**Words:**`** line (full-file count). There is **no** notebook word ceiling.
 
@@ -73,7 +73,7 @@ def _mode_para(mode: str) -> str:
         )
     if mode == "C":
         return (
-            "Format: monologue / solo video. Preserve expert argument in Chronicle; corroborate "
+            "Format: monologue / solo video. Preserve expert argument in Verbatim; corroborate "
             "load-bearing factual claims before wire-style use."
         )
     return (
@@ -134,7 +134,7 @@ def _build_judgment(fm: dict, body: str, mode: str, verbatim_w: int) -> str:
     if note:
         parts.append(f"**Operator note:** {note}")
     parts.append(
-        "**WORK read.** Chronicle is expert verbatim from capture; this block is notebook analysis only—"
+        "**WORK read.** Verbatim is expert verbatim from capture; this block is notebook analysis only—"
         "tier discipline and seams, not a substitute for wire."
     )
     parts.append(f"**Capture:** {series or '(see title)'} · {_mode_para(mode)}")
@@ -166,7 +166,7 @@ def _build_open(mode: str) -> str:
         [
             "- **Falsifiers:** Wire/primary items that would change the thesis.",
             "- **Resume:** Next capture, `days.md` seam, chapter meta.",
-            f"- **Tier:** Chronicle = expert ({mode}); Reflection/Foresight = WORK.",
+            f"- **Tier:** Verbatim = expert ({mode}); Reflection/Foresight = WORK.",
         ]
     )
 
@@ -198,7 +198,7 @@ def render_page(entry: dict, fm: dict, body: str) -> str:
         "",
         "---",
         "",
-        "### Chronicle",
+        "### Verbatim",
         "",
         "Expert capture (verbatim body from linked `raw-input`; operator-ingested).",
         "",
@@ -251,7 +251,7 @@ def _inject_soft_cap_judgment(page: str, total_w: int) -> str:
 
 
 def _inject_header_word_count(page: str, total_w: int) -> str:
-    marker = "\n\n---\n\n### Chronicle\n"
+    marker = "\n\n---\n\n### Verbatim\n"
     if marker not in page:
         return page
     extra = ""
@@ -259,7 +259,7 @@ def _inject_header_word_count(page: str, total_w: int) -> str:
         extra = "; **over cap** — see **Soft cap — pruning** in Reflection"
     replacement = (
         f"\n\n**Words:** {total_w} (soft cap {SOFT_CAP_WORDS}{extra})\n\n"
-        "---\n\n### Chronicle\n"
+        "---\n\n### Verbatim\n"
     )
     return page.replace(marker, replacement, 1)
 

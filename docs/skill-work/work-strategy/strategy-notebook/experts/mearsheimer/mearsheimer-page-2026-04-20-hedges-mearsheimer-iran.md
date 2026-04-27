@@ -9,7 +9,7 @@ WORK only; not Record.
 
 ---
 
-### Chronicle
+### Verbatim
 
 Expert capture (verbatim body from linked `raw-input`; operator-ingested).
 
@@ -202,7 +202,7 @@ We’re not, in my opinion, going to get weaker with the passage of time. The Un
 
 **Operator note:** Operator paste; canonical watch URL not pinned — add when available.
 
-**WORK read.** Chronicle is expert verbatim from capture; this block is notebook analysis only—tier discipline and seams, not a substitute for wire.
+**WORK read.** Verbatim is expert verbatim from capture; this block is notebook analysis only—tier discipline and seams, not a substitute for wire.
 
 **Capture:** (see title) · Format: interview transcript. Attribute lines to speakers; treat Mearsheimer’s spoken segments as structural-realist argument, not independent confirmation of operational facts. Pin canonical `watch?v=` in appendix when published.
 
@@ -223,7 +223,7 @@ We’re not, in my opinion, going to get weaker with the passage of time. The Un
 
 - **Falsifiers:** Wire/primary items that would change the thesis.
 - **Resume:** Next capture, `days.md` seam, chapter meta.
-- **Tier:** Chronicle = expert (B); Reflection/Foresight = WORK.
+- **Tier:** Verbatim = expert (B); Reflection/Foresight = WORK.
 
 
 ---

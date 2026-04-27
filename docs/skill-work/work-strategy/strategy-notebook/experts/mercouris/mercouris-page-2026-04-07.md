@@ -7,7 +7,7 @@ WORK only; not Record.
 
 ---
 
-### Chronicle
+### Verbatim
 
 Trump’s Hormuz ultimatum is framed as expiring on **7 April 2026** (already extended twice). Mercouris argues industrial/strategic bombing cannot collapse Iran’s economy on a timetable that fixes the emerging **global energy** crunch; Tehran keeps **de facto** Hormuz control, **~10%** of normal traffic, **$2M** transit fees in **RMB** (read as **PRC green light**), tankers still moving heavily toward **China** (India/Pakistan also). Iran’s counter-proposal (via **Pakistan**, **NYT**): **non-aggression** guarantees, **full sanctions** lift, ceasefire covering **proxies** (Hezbollah, Houthis, Iraq militias), **reparations** for destroyed infra; Hormuz would reopen but **toll remains**—Trump calls it significant but insufficient; Mercouris treats U.S. acceptance as implausible, especially for Israel/Saudi red lines. **Graham** frames RMB toll as attack on **dollar reserve** status—Mercouris calls that far-fetched but notes **policy nervousness** under the surface.
 

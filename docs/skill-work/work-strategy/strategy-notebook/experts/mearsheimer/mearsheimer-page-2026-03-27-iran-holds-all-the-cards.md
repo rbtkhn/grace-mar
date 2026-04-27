@@ -9,7 +9,7 @@ WORK only; not Record.
 
 ---
 
-### Chronicle
+### Verbatim
 
 Expert capture (verbatim body from linked `raw-input`; operator-ingested).
 
@@ -184,7 +184,7 @@ The Iranians have no incentive to cut a deal quickly. They have no interest in c
 
 **Operator note:** Operator paste; cleaned for readability. In-voice anchors include March 23 Trump pause (5d then 10d countdown), Judging Freedom optimism arc, 15-point / unconditional-surrender frame, escalation ladder vs Hormuz oil flow (~5% of pre-war strait volume in voice), Kharg Island, Desert Storm ground-prep timeline — Mearsheimer-voice analyst tier; verify wire/market primaries if promoted.
 
-**WORK read.** Chronicle is expert verbatim from capture; this block is notebook analysis only—tier discipline and seams, not a substitute for wire.
+**WORK read.** Verbatim is expert verbatim from capture; this block is notebook analysis only—tier discipline and seams, not a substitute for wire.
 
 **Capture:** John Mearsheimer: Iran Holds All the Cards — The Strategic Defeat of the U.S. · Format: interview transcript. Attribute lines to speakers; treat Mearsheimer’s spoken segments as structural-realist argument, not independent confirmation of operational facts. Pin canonical `watch?v=` in appendix when published.
 
@@ -205,7 +205,7 @@ The Iranians have no incentive to cut a deal quickly. They have no interest in c
 
 - **Falsifiers:** Wire/primary items that would change the thesis.
 - **Resume:** Next capture, `days.md` seam, chapter meta.
-- **Tier:** Chronicle = expert (B); Reflection/Foresight = WORK.
+- **Tier:** Verbatim = expert (B); Reflection/Foresight = WORK.
 
 
 ---

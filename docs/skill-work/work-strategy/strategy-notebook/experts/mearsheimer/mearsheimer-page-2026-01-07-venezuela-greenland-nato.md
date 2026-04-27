@@ -9,7 +9,7 @@ WORK only; not Record.
 
 ---
 
-### Chronicle
+### Verbatim
 
 Expert capture (verbatim body from linked `raw-input`; operator-ingested).
 
@@ -216,7 +216,7 @@ I know you have places to run now. I just want to thank you again for letting me
 
 **Operator note:** Operator paste; Greenland follow-up was mis-attributed in paste — merged into Diesen’s question; stray “Now…” dropped. Venezuelan acting leader normalized to Delcy Rodríguez (operator “Deli Rodriguez”). In-voice scenario claims (seven countries ~one year, June 22 2025 Iran pinprick, Nigeria missiles, China/Houthis anecdotes, Kujat 2023 article, Denmark PM NATO quote) — analyst tier; verify if promoted.
 
-**WORK read.** Chronicle is expert verbatim from capture; this block is notebook analysis only—tier discipline and seams, not a substitute for wire.
+**WORK read.** Verbatim is expert verbatim from capture; this block is notebook analysis only—tier discipline and seams, not a substitute for wire.
 
 **Capture:** John Mearsheimer: Venezuela, Greenland & the End of NATO · Format: interview transcript. Attribute lines to speakers; treat Mearsheimer’s spoken segments as structural-realist argument, not independent confirmation of operational facts. Pin canonical `watch?v=` in appendix when published.
 
@@ -243,7 +243,7 @@ Order / institutions language: label as Mearsheimer framework; not standalone pr
 
 - **Falsifiers:** Wire/primary items that would change the thesis.
 - **Resume:** Next capture, `days.md` seam, chapter meta.
-- **Tier:** Chronicle = expert (B); Reflection/Foresight = WORK.
+- **Tier:** Verbatim = expert (B); Reflection/Foresight = WORK.
 
 
 ---

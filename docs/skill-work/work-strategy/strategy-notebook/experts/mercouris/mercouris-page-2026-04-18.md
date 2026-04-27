@@ -7,7 +7,7 @@ WORK only; not Record.
 
 ---
 
-### Chronicle
+### Verbatim
 
 The captured material is a single notebook line: US maritime-denial grammar used in the Hormuz crisis is framed as portable precedent for how Beijing might read blockade and interdiction logic against PRC interests elsewhere. Escalation is modeled as thickening friction—insurance, routing, posture, rhetoric—before any fleet-on-fleet clash, so the analytic object is systemic risk and second-order costs, not a specific ORBAT claim.
 

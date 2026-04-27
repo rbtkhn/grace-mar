@@ -7,7 +7,7 @@ WORK only; not Record.
 
 ---
 
-### Chronicle
+### Verbatim
 
 The program opens with a long-form British frame (Skidelsky, Mandelson–Starmer contrast), then pivots to Iran: Iranian media report no IRI delegation in Islamabad while a U.S. team is present; Tehran cites the recent tanker strike, unchanged U.S. demands (enriched stockpile to the U.S., missile program), and unstable U.S. negotiator casting (Vance vs Kushner shuffle) as reasons talks are pointless. Mercouris reads the ceasefire as likely expiring and fighting resuming (missiles, possible ground options, Hormuz mining in earnest). He layers carrier deployment (Ford returning; three CSGs vs 1991 five-carrier comparison), Pakistan and China stress, Barnes on POTUS being misled, and Macron criticizing the blockade. The back half shifts to Ukraine: Ulyanov warning on the Baltics, Gerasimov briefing on Donbass closure, Kostiantynivka, Kupyansk / Oskil, Lyman, Zaporizhzhia claims, and Zelensky / Merz political reads, closing with Nabiullina and Putin on the Russian economy.
 

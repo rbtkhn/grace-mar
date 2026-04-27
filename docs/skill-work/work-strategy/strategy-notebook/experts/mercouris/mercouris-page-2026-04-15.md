@@ -7,7 +7,7 @@ WORK only; not Record.
 
 ---
 
-### Chronicle
+### Verbatim
 
 **Hormuz / blockade facts contested:** Iran says tankers exit toward **China**; U.S. says reversals and **blockade intact**—Mercouris withholds verdict, doubts press certainty. **Ceasefire** framed as expiring **22 April**; possible return to **missile exchange**; **Vance** settlement talk vs rumors Trump calls the war a **loser** (discounted). **IRI** won’t concede on **missiles/enrichment**; **Barnea** / **Mossad** = **regime change** must-stay. **Economic attrition** thesis: mobilized **Iran** repair + **BRICS**/Central Asia backing vs **U.S.** economy, politics, allies; **Evans-Pritchard** cited as “Iran may be right” press strand; risk of **desperate** U.S. **military** lash-out.
 

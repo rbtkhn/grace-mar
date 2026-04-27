@@ -9,7 +9,7 @@ WORK only; not Record.
 
 ---
 
-### Chronicle
+### Verbatim
 
 Expert capture (verbatim body from linked `raw-input`; operator-ingested).
 
@@ -146,7 +146,7 @@ I think that is what the future looks like. I think in one tweet he was able to 
 
 **Operator note:** Operator paste; host date Friday 10 April 2026 in voice. Trump tweets, ceasefire/Hormuz/Lebanon sequencing, four war demands, NATO/Ukraine spillover — Mearsheimer-voice analyst tier; verify wire/social primaries if promoted to §1.
 
-**WORK read.** Chronicle is expert verbatim from capture; this block is notebook analysis only—tier discipline and seams, not a substitute for wire.
+**WORK read.** Verbatim is expert verbatim from capture; this block is notebook analysis only—tier discipline and seams, not a substitute for wire.
 
 **Capture:** John Mearsheimer: World Changed Forever as Iran Defeated the U.S. · Format: interview transcript. Attribute lines to speakers; treat Mearsheimer’s spoken segments as structural-realist argument, not independent confirmation of operational facts. Pin canonical `watch?v=` in appendix when published.
 
@@ -167,7 +167,7 @@ I think that is what the future looks like. I think in one tweet he was able to 
 
 - **Falsifiers:** Wire/primary items that would change the thesis.
 - **Resume:** Next capture, `days.md` seam, chapter meta.
-- **Tier:** Chronicle = expert (B); Reflection/Foresight = WORK.
+- **Tier:** Verbatim = expert (B); Reflection/Foresight = WORK.
 
 
 ---

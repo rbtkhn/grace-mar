@@ -7,7 +7,7 @@ WORK only; not Record.
 
 ---
 
-### Chronicle
+### Verbatim
 
 The episode opens with a British domestic frame (Starmer, Mandelson, Epstein, failed vetting, Commons “make-or-break”) as evidence of centre-political collapse, then pivots to two wars with Trump as the hinge. WSJ is cited for Pentagon officials excluding Trump from the F-15 navigator rescue ops room — framed as loss of military confidence in the Commander-in-Chief during a high-loss day. Gulf: Iran–US blockade vs Hormuz control; Spruance boarding and engine-room fire after a transit defiance; Iranian drone-threat reporting; Chinese signalling on protecting trade with Iran; Islamabad follow-on delegation with Vance / Kushner casting uncertainty; Munir publicly blaming the U.S. sea blockade; TASS reporting ~40 ships transiting Hormuz over the weekend with blockade “mostly” not enforced beyond the one interdiction; Diego Garcia distance, crew strain, and Pakistani ports for Chinese rest. Mercouris reads blockade lift rumours and Vance returning as a possible row-back and labels the President’s position zugzwang — next ~48 hours and post-Tuesday escalation fork. Ukraine: European manpower coercion and a quoted Belgian line about years of bleed; Russian advances (Kupyansk, Zaporizhzhia, Kostiantynivka, Sumy encirclement narrative, Chernihiv power station); drone strikes into northwest Russia and NATO overflight warnings tied to Shoigu / Lavrov red-line rhetoric and Baltic law.
 

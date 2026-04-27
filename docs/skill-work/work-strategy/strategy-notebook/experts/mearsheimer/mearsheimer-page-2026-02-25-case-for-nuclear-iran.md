@@ -9,7 +9,7 @@ WORK only; not Record.
 
 ---
 
-### Chronicle
+### Verbatim
 
 Expert capture (verbatim body from linked `raw-input`; operator-ingested).
 
@@ -164,7 +164,7 @@ So Europe is in real trouble. It started with the Ukraine war and this war just 
 
 **Operator note:** Operator paste; speaker boundary after JCPOA optimism graf restored (Mearsheimer continues “It appears, Glenn…”). In-voice anchors include State of the Union, Iranian FM “crystal clear” no nuclear weapon quote, Jan 14 Caine/military advice, Witkoff “week or two” claim, Netanyahu White House visits, Iraq 2003 / Israel Lobby chapter, April/Oct 2024 Israel-Iran strikes as retaliation frame, anti-Semitism / lobby caveat block, Merz/Macron/Europe boot-licking frame — analyst tier; verify SOTU text, FM quotes, and wire primaries if promoted.
 
-**WORK read.** Chronicle is expert verbatim from capture; this block is notebook analysis only—tier discipline and seams, not a substitute for wire.
+**WORK read.** Verbatim is expert verbatim from capture; this block is notebook analysis only—tier discipline and seams, not a substitute for wire.
 
 **Capture:** John Mearsheimer: The Case for a Nuclear Iran · Format: interview transcript. Attribute lines to speakers; treat Mearsheimer’s spoken segments as structural-realist argument, not independent confirmation of operational facts. Pin canonical `watch?v=` in appendix when published.
 
@@ -184,7 +184,7 @@ So Europe is in real trouble. It started with the Ukraine war and this war just 
 
 - **Falsifiers:** Wire/primary items that would change the thesis.
 - **Resume:** Next capture, `days.md` seam, chapter meta.
-- **Tier:** Chronicle = expert (B); Reflection/Foresight = WORK.
+- **Tier:** Verbatim = expert (B); Reflection/Foresight = WORK.
 
 
 ---

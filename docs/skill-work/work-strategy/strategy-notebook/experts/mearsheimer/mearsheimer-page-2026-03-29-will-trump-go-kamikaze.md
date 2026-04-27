@@ -9,7 +9,7 @@ WORK only; not Record.
 
 ---
 
-### Chronicle
+### Verbatim
 
 Expert capture (verbatim body from linked `raw-input`; operator-ingested).
 
@@ -52,7 +52,7 @@ Maybe with some luck we could take a small island in the Persian Gulf, but I don
 
 **Operator note:** Operator paste; public Substack essay. Published date per operator (2026-03-29); Substack byline may read Mar 30, 2026 by timezone. ORBAT counts (~40k regional vs organized combat troops, 82nd ~2k, 31st MEU ~2.5k, 11th MEU mid-April, hypothetical +10k → ~17k), “13 major US installations” damage, million-man Iranian mobilization, USS Iwo Jima / Boxer — in-voice; verify DOD/wire/press if promoted to §1. Paste had “President Troop”; normalized to Trump below.
 
-**WORK read.** Chronicle is expert verbatim from capture; this block is notebook analysis only—tier discipline and seams, not a substitute for wire.
+**WORK read.** Verbatim is expert verbatim from capture; this block is notebook analysis only—tier discipline and seams, not a substitute for wire.
 
 **Capture:** (see title) · Format: Substack-style essay. Historical and theoretical passages reflect Mearsheimer’s read; verify dates, quotes, and figures against primary or scholarly sources if promoted.
 
@@ -70,7 +70,7 @@ Maybe with some luck we could take a small island in the Persian Gulf, but I don
 
 - **Falsifiers:** Wire/primary items that would change the thesis.
 - **Resume:** Next capture, `days.md` seam, chapter meta.
-- **Tier:** Chronicle = expert (A); Reflection/Foresight = WORK.
+- **Tier:** Verbatim = expert (A); Reflection/Foresight = WORK.
 
 
 ---

@@ -9,7 +9,7 @@ WORK only; not Record.
 
 ---
 
-### Chronicle
+### Verbatim
 
 Expert capture (verbatim body from linked `raw-input`; operator-ingested).
 
@@ -238,7 +238,7 @@ Because the current state of US-Russian relations has us on a one-way trip on a 
 
 **Operator note:** Long US–Russia relations essay (Trump quotes, Alaska/Gurganus thesis, New START, Cold War history, "New Cold War" advocacy). Named-official and CIA claims—essay ≠ wire. Light cleanup of spelling/grammar/OCR errors only.
 
-**WORK read.** Chronicle is expert verbatim from capture; this block is notebook analysis only—tier discipline and seams, not a substitute for wire.
+**WORK read.** Verbatim is expert verbatim from capture; this block is notebook analysis only—tier discipline and seams, not a substitute for wire.
 
 **Capture:** Back to the Future (Substack) · Format: Substack-style essay. Historical and legal passages reflect Ritter’s read; verify dates, quotes, and casualty figures against primary or scholarly sources if promoted.
 
@@ -261,7 +261,7 @@ Sanctions thread: track whether the piece is arguing mechanism (elite leverage, 
 
 - **Falsifiers:** Wire/primary items that would change the thesis.
 - **Resume:** Next capture, `days.md` seam, chapter meta.
-- **Tier:** Chronicle = expert (A); Reflection/Foresight = WORK.
+- **Tier:** Verbatim = expert (A); Reflection/Foresight = WORK.
 
 
 ---

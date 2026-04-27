@@ -9,7 +9,7 @@ WORK only; not Record.
 
 ---
 
-### Chronicle
+### Verbatim
 
 Expert capture (verbatim body from linked `raw-input`; operator-ingested).
 
@@ -54,7 +54,7 @@ The **bottom line** is two-fold: 1) the tag team failed to overthrow the regime 
 
 **Operator note:** Operator paste; public Substack essay. Four-part “tag team” thesis (sanctions → foment violence/Starlink/media → primed US/IL strike); Mossad/CIA on-ground, Pompeo/Trump quotes, Mossad Farsi message — attribution-heavy; verify primary/wire if promoted to §1. 12-Day war (June 2025), DIA vs Trump on 22 Jun 2025 nuclear strike, Netanyahu–Trump 14 Jan 2026 bombing report — in-voice analyst tier. Paste “If fact” → In fact; “the12-Day” → spaced.
 
-**WORK read.** Chronicle is expert verbatim from capture; this block is notebook analysis only—tier discipline and seams, not a substitute for wire.
+**WORK read.** Verbatim is expert verbatim from capture; this block is notebook analysis only—tier discipline and seams, not a substitute for wire.
 
 **Capture:** (see title) · Format: Substack-style essay. Historical and theoretical passages reflect Mearsheimer’s read; verify dates, quotes, and figures against primary or scholarly sources if promoted.
 
@@ -72,7 +72,7 @@ The **bottom line** is two-fold: 1) the tag team failed to overthrow the regime 
 
 - **Falsifiers:** Wire/primary items that would change the thesis.
 - **Resume:** Next capture, `days.md` seam, chapter meta.
-- **Tier:** Chronicle = expert (A); Reflection/Foresight = WORK.
+- **Tier:** Verbatim = expert (A); Reflection/Foresight = WORK.
 
 
 ---

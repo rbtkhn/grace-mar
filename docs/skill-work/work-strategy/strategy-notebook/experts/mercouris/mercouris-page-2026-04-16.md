@@ -7,7 +7,7 @@ WORK only; not Record.
 
 ---
 
-### Chronicle
+### Verbatim
 
 The episode centers the Munir visit to Tehran as the first open, government-level arrival since hostilities began in late February, with Iranian fighter escorts (MiG-29 and F-4) on approach—used to rebut repeated Trump claims that Iran’s air force was fully destroyed, while conceding Iran cannot contest US/Israeli air superiority head-on and that IADS and SAMs remain the main aerial defense. Ceasefires (US–Iran, Israel–Iran, and an Israel–Hezbollah/Lebanon line) still hold, but Pakistan is pressing to extend the two-week pause; a British-media extension rumor is denied by both Washington and Tehran, and Mercouris reads Trump as cool on extension and Washington as drifting back toward confrontation, with Tuesday as the hard stop and Russian warnings of a more intense next round.
 

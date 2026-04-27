@@ -44,14 +44,14 @@ def _expert_paths(expert: str) -> tuple[Path, Path, str]:
 WORDS_DECL_RE = re.compile(r"^\*\*Words:\*\*\s*(\d+)", re.MULTILINE)
 WORDS_LINE_RE = re.compile(r"(?m)^\*\*Words:\*\*\s*\d+.*\n?", re.MULTILINE)
 REQUIRED_H3 = (
-    "### Chronicle",
+    "### Verbatim",
     "### Reflection",
     "### Foresight",
     "### Appendix",
 )
 # Legacy headings (still accepted until pages are regenerated)
 LEGACY_H3_MAP = {
-    "### Chronicle": ("### Signal",),
+    "### Verbatim": ("### Chronicle", "### Signal"),
     "### Reflection": ("### Judgment",),
     "### Foresight": ("### Open",),
     "### Appendix": ("### Technical appendix",),
@@ -111,8 +111,9 @@ def _foresight_block(text: str) -> str | None:
     return None
 
 
-def _chronicle_body(text: str) -> str | None:
+def _verbatim_body(text: str) -> str | None:
     for start, end in (
+        ("### Verbatim", "### Reflection"),
         ("### Chronicle", "### Reflection"),
         ("### Signal", "### Judgment"),
     ):
@@ -143,13 +144,13 @@ def verify_page_content(page_fn: str, raw: str) -> tuple[list[str], list[str]]:
                 f"(±5 tolerance; strip **Words:** line for count)"
             )
 
-    # Advisory: Reflection+Foresight share vs Chronicle (only when **Words:** present—long Chronicle is expected)
+    # Advisory: Reflection+Foresight share vs Verbatim (only when **Words:** present—long Verbatim is expected)
     if m is not None:
-        chronicle = _chronicle_body(raw)
+        verbatim = _verbatim_body(raw)
         refl_b = _reflection_block(raw)
         fore_b = _foresight_block(raw)
-        if chronicle is not None and refl_b is not None and fore_b is not None:
-            c_w = _word_count(chronicle)
+        if verbatim is not None and refl_b is not None and fore_b is not None:
+            c_w = _word_count(verbatim)
             r_w = _word_count(refl_b)
             f_w = _word_count(fore_b)
             denom = c_w + r_w + f_w
@@ -158,7 +159,7 @@ def verify_page_content(page_fn: str, raw: str) -> tuple[list[str], list[str]]:
                 if share > 0.35:
                     warnings.append(
                         f"{page_fn}: Reflection+Foresight ~{share:.0%} of "
-                        f"(Chronicle+Reflection+Foresight) words — check ~80/20 target (advisory)"
+                        f"(Verbatim+Reflection+Foresight) words — check ~80/20 target (advisory)"
                     )
 
     return errors, warnings

@@ -6,15 +6,15 @@ WORK only; not Record.
 
 **Publication vocabulary (formal pin):** **Machine** — use YAML / cold-line tag **`pub_date:YYYY-MM-DD`** (and [`raw-input/`](../raw-input/README.md) folder rules). **Human** — preamble line **`Published:`** (date). **Do not** use an “aired” block or **`aired:`** as the norm; full spec: [raw-input README — Publication vocabulary](../raw-input/README.md#publication-vocabulary-formal-pin), [STRATEGY-NOTEBOOK-ARCHITECTURE.md — publication vocabulary](../STRATEGY-NOTEBOOK-ARCHITECTURE.md#publication-vocabulary-formal-pin).
 
-**Purpose:** Standalone **refined page** for expert **`{expert_id}`** (replace token everywhere below when pasting scaffolds). **`### Chronicle`** carries the **full verbatim** from linked [`raw-input/`](../raw-input/README.md)—**lightly cleaned and formatted**; **`### Reflection`** and **`### Foresight`** are **operator analysis** (**may be stubbed** on ingest, completed in a later pass). Distinct from a **`strategy-page`** HTML fence in the expert **`thread.md`** (or **`*-thread-YYYY-MM.md`**) unless you duplicate judgment there during EOD compose.
+**Purpose:** Standalone **refined page** for expert **`{expert_id}`** (replace token everywhere below when pasting scaffolds). **`### Verbatim`** carries the **full verbatim** from linked [`raw-input/`](../raw-input/README.md)—**lightly cleaned and formatted**; **`### Reflection`** and **`### Foresight`** are **operator analysis** (**may be stubbed** on ingest, completed in a later pass). **Naming:** **`### Chronicle`** remains the verbatim-first heading inside **thread-embedded** **`strategy-page`** fences ([strategy-page-template.md](strategy-page-template.md)); **`### Verbatim`** is the refined-page heading so **Chronicle** names the **thread / `days.md` day-block** weave, not this standalone file. Distinct from a **`strategy-page`** HTML fence in **`thread.md`** (or **`*-thread-YYYY-MM.md`**) unless you duplicate judgment there during EOD compose.
 
 **Thread-embedded pages:** For `<!-- strategy-page:start … -->` blocks in monthly or legacy thread files, use [`strategy-page-template.md`](strategy-page-template.md) instead of this file.
 
-**Filename:** Default **`{expert_id}-page-YYYY-MM-DD.md`** (publication / **`pub_date`** anchor). **Multiple refined pages for the same publication date are allowed:** **`{expert_id}-page-YYYY-MM-DD-<slug>.md`** with **`<slug>`** from the primary `raw-input` stem so filenames stay unique. **Alternatively,** consolidate same-day captures into **one** refined file with **A / B / C** Chronicle blocks when this template’s same-day pattern applies. If the `raw-input/` folder date differs (ingest batching), note it in **`### Appendix`**. Under **`experts/{expert_id}/transcript.md`** when used, add one **`Refined page:`** line per refined file for that date.
+**Filename:** Default **`{expert_id}-page-YYYY-MM-DD.md`** (publication / **`pub_date`** anchor). **Multiple refined pages for the same publication date are allowed:** **`{expert_id}-page-YYYY-MM-DD-<slug>.md`** with **`<slug>`** from the primary `raw-input` stem so filenames stay unique. **Alternatively,** consolidate same-day captures into **one** refined file with **A / B / C** Verbatim blocks when this template’s same-day pattern applies. If the `raw-input/` folder date differs (ingest batching), note it in **`### Appendix`**. Under **`experts/{expert_id}/transcript.md`** when used, add one **`Refined page:`** line per refined file for that date.
 
-**Length:** No enforced word limit. **Chronicle** is often long (full verbatim) when a capture exists; **Reflection** / **Foresight** may be stubbed until operator analysis. No path dumps or `verify:` in body sections—**`### Appendix`** only (unless grammatical prose in Reflection explicitly cites a tier).
+**Length:** No enforced word limit. **Verbatim** is often long (full capture text) when a body exists; **Reflection** / **Foresight** may be stubbed until operator analysis. No path dumps or `verify:` in body sections—**`### Appendix`** only (unless grammatical prose in Reflection explicitly cites a tier).
 
-### Prose emphasis (Chronicle / Reflection / Foresight)
+### Prose emphasis (Verbatim / Reflection / Foresight)
 
 Do not scatter `**inline bold**` through running paragraphs for rhetorical stress, “beat” words, or decoration. Use normal weight for body copy. Bold is allowed for:
 
@@ -27,11 +27,11 @@ Section titles use `###` headings, not bold.
 
 ## Preamble modes — core (default)
 
-Pick **one** unless your ingest pipeline documents a second same-day block (A/B/C Chronicle in one file).
+Pick **one** unless your ingest pipeline documents a second same-day block (A/B/C Verbatim in one file).
 
 ### Mode A — Primary dated capture
 
-Use when **Chronicle** carries the full verbatim for this expert’s main artifact for that calendar day (broadcast, interview, essay, or long transcript) with a canonical **publication** date (same anchor as **`pub_date`**).
+Use when **Verbatim** carries the full capture text for this expert’s main artifact for that calendar day (broadcast, interview, essay, or long transcript) with a canonical **publication** date (same anchor as **`pub_date`**).
 
 ```markdown
 **Expert:** `{expert_id}` · **Published:** YYYY-MM-DD · **Artifact:** refined page (standalone file under `experts/{expert_id}/`). Not a `strategy-page` HTML fence in `thread.md` unless you duplicate the same judgment there during EOD compose.
@@ -88,7 +88,7 @@ Monologue or guest spot with canonical `watch?v=` when pinned.
 ## Body scaffold
 
 1. Horizontal rule `---` after the preamble.
-2. `### Chronicle` — **Full verbatim** from the linked `raw-input` capture (after YAML frontmatter when present): **lightly cleaned and formatted** only—paragraphing, spacing, obvious ingest artifacts, optional speaker labels; **do not** replace the expert’s words with summary or paraphrase. The file under `raw-input/` remains the archived capture; **Chronicle** is the readable full text on this page. **Notebook stub modes** (core Mode B, or extended Mode F for `ritter`): brief stub or pointer only.
+2. `### Verbatim` — **Full verbatim** from the linked `raw-input` capture (after YAML frontmatter when present): **lightly cleaned and formatted** only—paragraphing, spacing, obvious ingest artifacts, optional speaker labels; **do not** replace the expert’s words with summary or paraphrase. The file under `raw-input/` remains the archived capture; **Verbatim** is the readable full text on this page. **Notebook stub modes** (core Mode B, or extended Mode F for `ritter`): brief stub or pointer only.
 3. `### Reflection` — **Operator analysis:** `{expert_id}`-lane arc; keep verification discipline explicit where load-bearing claims sit in commentator tier. _(When `{expert_id}` is `ritter`, add IHL / coercion / Hormuz or Russia–U.S. seams in prose when material.)_ **May be stubbed** until a later operator pass.
 4. `### Foresight` — **Operator analysis:** falsifiers, resume lines, tier tags (bullets allowed). **May be stubbed** until a later operator pass.
 5. Horizontal rule `---` before appendix.
@@ -111,7 +111,7 @@ Verbatim lives under `raw-input/<date>/`. Refined pages live only under **`exper
 
 ## MEM / topic-trace boundary (optional)
 
-When **`### Reflection`** or **`### Foresight`** draws on **CIV-MEM** routing, **MEM CONNECTIONS**, or **structural analogy** from the read-only upstream corpus, keep that work in the **WORK · DERIVED** lane: do not treat graph patterns as **Record** truth or as **civilization_memory** canon edits. Governing contract: [topic-trace-contract.md](../../work-civ-mem/topic-trace-contract.md). For a **standalone** bounded trace file (separate from this **refined page**), use [topic-trace-template.md](../../work-civ-mem/topic-trace-template.md). **`### Chronicle`** remains **verbatim expert capture** only—do not merge MEM synthesis into Chronicle as if it were the expert’s words.
+When **`### Reflection`** or **`### Foresight`** draws on **CIV-MEM** routing, **MEM CONNECTIONS**, or **structural analogy** from the read-only upstream corpus, keep that work in the **WORK · DERIVED** lane: do not treat graph patterns as **Record** truth or as **civilization_memory** canon edits. Governing contract: [topic-trace-contract.md](../../work-civ-mem/topic-trace-contract.md). For a **standalone** bounded trace file (separate from this **refined page**), use [topic-trace-template.md](../../work-civ-mem/topic-trace-template.md). **`### Verbatim`** remains **verbatim expert capture** only—do not merge MEM synthesis into Verbatim as if it were the expert’s words.
 
 ---
 
@@ -124,7 +124,7 @@ Applies when **`{expert_id}`** is **`ritter`** (paths relative to **`experts/rit
 
 ### Machine checks (`verify_ritter_refined_pages.py`)
 
-[`scripts/strategy/verify_ritter_refined_pages.py`](../../../scripts/strategy/verify_ritter_refined_pages.py) (repo root): manifest rows, `raw-input` on disk, `transcript.md` backlinks, and page spine **`### Chronicle`**, **`### Reflection`**, **`### Foresight`**, **`### Appendix`** (legacy `### Signal` / `### Judgment` / `### Open` / `### Technical appendix` still accepted until regenerated). **`**Words:** N`** is **optional**: when present it must match full-file word count with that line stripped (±5 tokens); when omitted, **`**Words:**`** bookkeeping is skipped. An optional Reflection+Foresight **share** advisory runs only when **`**Words:**`** is present. **No** word-count ceiling. Use `--no-page-shape` for manifest/transcript-only checks. Other experts may gain parallel scripts later; until then, apply this section only to **`ritter`**.
+[`scripts/strategy/verify_ritter_refined_pages.py`](../../../scripts/strategy/verify_ritter_refined_pages.py) (repo root): manifest rows, `raw-input` on disk, `transcript.md` backlinks, and page spine **`### Verbatim`**, **`### Reflection`**, **`### Foresight`**, **`### Appendix`** (legacy **`### Chronicle`** on older refined files; legacy `### Signal` / `### Judgment` / `### Open` / `### Technical appendix` still accepted until regenerated). **`**Words:** N`** is **optional**: when present it must match full-file word count with that line stripped (±5 tokens); when omitted, **`**Words:**`** bookkeeping is skipped. An optional Reflection+Foresight **share** advisory runs only when **`**Words:**`** is present. **No** word-count ceiling. Use `--no-page-shape` for manifest/transcript-only checks. Other experts may gain parallel scripts later; until then, apply this section only to **`ritter`**.
 
 ---
 
@@ -151,7 +151,7 @@ WORK only; not Record.
 
 ---
 
-### Chronicle
+### Verbatim
 
 
 
@@ -182,8 +182,8 @@ Use **`# {ExpertTitle}`** as a human-facing title case of the expert display nam
 1. Title: `# … refined page — YYYY-MM-DD` (optional short parenthetical when multiple files share the publication date); filename uses `-<slug>` when split.
 2. `WORK only; not Record.` on its own line after the title.
 3. Preamble matches one chosen mode; **Artifact:** line uses “refined page (standalone file under `experts/{expert_id}/`)” verbatim.
-4. `---` before `### Chronicle`.
-5. `### Chronicle`, `### Reflection`, `### Foresight` present; **Chronicle** = full verbatim (lightly cleaned)—no `verify:` / path machinery there; **Reflection** / **Foresight** = operator analysis (stubs OK). No decorative bold except lane rules (see Prose emphasis).
+4. `---` before `### Verbatim`.
+5. `### Verbatim`, `### Reflection`, `### Foresight` present; **Verbatim** = full expert capture (lightly cleaned)—no `verify:` / path machinery there; **Reflection** / **Foresight** = operator analysis (stubs OK). No decorative bold except lane rules (see Prose emphasis).
 6. `---` before `### Appendix`.
 7. Appendix bullets in order: Full verbatim (capture) → Inbox / triage → `thread:{expert_id}` · verify → Canonical primary.
 8. Relative links resolve from **`experts/{expert_id}/`** (typically `../../raw-input/…`, `../../daily-strategy-inbox.md`, `../../chapters/…` when citing `days.md`).

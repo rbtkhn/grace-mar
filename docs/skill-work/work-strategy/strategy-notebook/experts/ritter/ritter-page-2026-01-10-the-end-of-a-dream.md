@@ -9,7 +9,7 @@ WORK only; not Record.
 
 ---
 
-### Chronicle
+### Verbatim
 
 Expert capture (verbatim body from linked `raw-input`; operator-ingested).
 
@@ -296,7 +296,7 @@ Together we can help make it come true.
 
 **Operator note:** Long US–Russia arms-control / disarmament advocacy essay (Alaska process, GORKI mock negotiation plan, Oreshnik, Golden Dome, fundraising CTA). Attributed claims re CIA, drone strike, budgets—essay ≠ wire. Light cleanup of operator/Substack OCR-style errors only (e.g. breath/breathe, gown/grown).
 
-**WORK read.** Chronicle is expert verbatim from capture; this block is notebook analysis only—tier discipline and seams, not a substitute for wire.
+**WORK read.** Verbatim is expert verbatim from capture; this block is notebook analysis only—tier discipline and seams, not a substitute for wire.
 
 **Capture:** The End of a Dream? (Substack) · Format: Substack-style essay. Historical and legal passages reflect Ritter’s read; verify dates, quotes, and casualty figures against primary or scholarly sources if promoted.
 
@@ -320,7 +320,7 @@ Oreshnik / long-range fires: keep launch geography, basing, and escalation reads
 
 - **Falsifiers:** Wire/primary items that would change the thesis.
 - **Resume:** Next capture, `days.md` seam, chapter meta.
-- **Tier:** Chronicle = expert (A); Reflection/Foresight = WORK.
+- **Tier:** Verbatim = expert (A); Reflection/Foresight = WORK.
 
 
 ---

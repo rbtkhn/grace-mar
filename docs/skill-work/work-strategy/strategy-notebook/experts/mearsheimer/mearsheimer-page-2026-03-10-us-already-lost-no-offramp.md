@@ -9,7 +9,7 @@ WORK only; not Record.
 
 ---
 
-### Chronicle
+### Verbatim
 
 Expert capture (verbatim body from linked `raw-input`; operator-ingested).
 
@@ -96,7 +96,7 @@ In a very important way the Iranians are in the driver’s seat.
 
 **Operator note:** Operator paste. In-voice anchors include “11 days of the war,” Hegseth “heaviest bombardment” on a Tuesday, WSJ/advisers quick-exit frame, Israel concern in U.S. media, desalination percentages (Riyadh 90%, KSA 70%, Kuwait 90%, Oman 76% in voice), Navy escort “not possible” anecdote, Trump Hormuz / 20× tweet, Macron defensive Hormuz — Mearsheimer-voice analyst tier; verify wire/official primaries if promoted.
 
-**WORK read.** Chronicle is expert verbatim from capture; this block is notebook analysis only—tier discipline and seams, not a substitute for wire.
+**WORK read.** Verbatim is expert verbatim from capture; this block is notebook analysis only—tier discipline and seams, not a substitute for wire.
 
 **Capture:** John Mearsheimer: U.S. Already Lost Iran War — No Off-Ramp in Sight · Format: interview transcript. Attribute lines to speakers; treat Mearsheimer’s spoken segments as structural-realist argument, not independent confirmation of operational facts. Pin canonical `watch?v=` in appendix when published.
 
@@ -114,7 +114,7 @@ In a very important way the Iranians are in the driver’s seat.
 
 - **Falsifiers:** Wire/primary items that would change the thesis.
 - **Resume:** Next capture, `days.md` seam, chapter meta.
-- **Tier:** Chronicle = expert (B); Reflection/Foresight = WORK.
+- **Tier:** Verbatim = expert (B); Reflection/Foresight = WORK.
 
 
 ---

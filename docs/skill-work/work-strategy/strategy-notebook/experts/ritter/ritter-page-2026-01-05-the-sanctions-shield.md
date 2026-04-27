@@ -9,7 +9,7 @@ WORK only; not Record.
 
 ---
 
-### Chronicle
+### Verbatim
 
 Expert capture (verbatim body from linked `raw-input`; operator-ingested).
 
@@ -128,7 +128,7 @@ Therefore, if Russia desires to avoid being caught up in the regime change polic
 
 **Operator note:** Advocacy essay on sanctions as regime-change lever and “sanctions shield” thesis; cites Syria 2024, Venezuela, Iran, Dugin, Karaganov. Scenario-heavy claims—essay ≠ wire. Light cleanup of operator/OCR errors only.
 
-**WORK read.** Chronicle is expert verbatim from capture; this block is notebook analysis only—tier discipline and seams, not a substitute for wire.
+**WORK read.** Verbatim is expert verbatim from capture; this block is notebook analysis only—tier discipline and seams, not a substitute for wire.
 
 **Capture:** The Sanctions Shield (Substack) · Format: Substack-style essay. Historical and legal passages reflect Ritter’s read; verify dates, quotes, and casualty figures against primary or scholarly sources if promoted.
 
@@ -151,7 +151,7 @@ Sanctions thread: track whether the piece is arguing mechanism (elite leverage, 
 
 - **Falsifiers:** Wire/primary items that would change the thesis.
 - **Resume:** Next capture, `days.md` seam, chapter meta.
-- **Tier:** Chronicle = expert (A); Reflection/Foresight = WORK.
+- **Tier:** Verbatim = expert (A); Reflection/Foresight = WORK.
 
 
 ---

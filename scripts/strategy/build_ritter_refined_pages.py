@@ -4,8 +4,8 @@
 Run from repo root after adding new Substack / JF / Ritter's Rant verbatim files:
   python3 scripts/strategy/build_ritter_refined_pages.py
 
-Scaffolds are structural only (empty Chronicle / Reflection / Foresight). After ingest, run
-`scripts/strategy/assemble_ritter_pages_verbatim.py` to embed ~80% expert verbatim in Chronicle
+Scaffolds are structural only (empty Verbatim / Reflection / Foresight). After ingest, run
+`scripts/strategy/assemble_ritter_pages_verbatim.py` to embed ~80% expert verbatim in Verbatim
 and generated WORK analysis in Reflection/Foresight per
 `docs/skill-work/work-strategy/strategy-notebook/refined-page-template.md` (Ritter extended modes; compat stub: `experts/ritter/ritter-page-template.md`).
 
@@ -193,7 +193,7 @@ def render_scaffold(e: dict) -> str:
         "",
         "---",
         "",
-        "### Chronicle",
+        "### Verbatim",
         "",
         "",
         "",

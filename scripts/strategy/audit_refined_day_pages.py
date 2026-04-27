@@ -90,17 +90,26 @@ def issues_for(text: str) -> list[str]:
         else:
             iss.append("artifact_missing_refined_page_line")
 
-    for sec in ("### Chronicle", "### Reflection", "### Foresight", "### Appendix"):
+    has_verbatim = bool(
+        re.search(r"^### Verbatim\s*$", text, re.M)
+        or re.search(r"^### Chronicle\s*$", text, re.M)
+    )
+    if not has_verbatim:
+        iss.append("missing_###_Verbatim_or_legacy_Chronicle")
+
+    for sec in ("### Reflection", "### Foresight", "### Appendix"):
         if sec not in text:
             iss.append(f"missing_{sec.replace(' ', '_').replace('#', '')}")
 
-    ch_m = re.search(r"^### Chronicle\s*$", text, re.M)
-    if ch_m:
-        pre = text[: ch_m.start()]
+    vb_m = re.search(r"^### Verbatim\s*$", text, re.M) or re.search(
+        r"^### Chronicle\s*$", text, re.M
+    )
+    if vb_m:
+        pre = text[: vb_m.start()]
         tail_nonempty = [ln.strip() for ln in pre.splitlines() if ln.strip()]
         last8 = tail_nonempty[-8:] if tail_nonempty else []
         if "---" not in last8:
-            iss.append("no_hr_immediately_before_Chronicle")
+            iss.append("no_hr_immediately_before_Verbatim")
 
     ap_m = re.search(r"^### Appendix\s*$", text, re.M)
     fo_m = list(re.finditer(r"^### Foresight\s*$", text, re.M))
@@ -114,12 +123,14 @@ def issues_for(text: str) -> list[str]:
         rest = text[ap_m.end() :]
         iss.extend(appendix_issues(appendix_bullets(rest)))
 
-    ch = re.search(r"^### Chronicle\s*$", text, re.M)
+    vb = re.search(r"^### Verbatim\s*$", text, re.M) or re.search(
+        r"^### Chronicle\s*$", text, re.M
+    )
     rf = re.search(r"^### Reflection\s*$", text, re.M)
-    if ch and rf:
-        chron = text[ch.end() : rf.start()]
-        if re.search(r"\bverify:\b", chron, re.I):
-            iss.append("verify_token_in_Chronicle_body")
+    if vb and rf:
+        verb = text[vb.end() : rf.start()]
+        if re.search(r"\bverify:\b", verb, re.I):
+            iss.append("verify_token_in_Verbatim_body")
 
     return iss
 

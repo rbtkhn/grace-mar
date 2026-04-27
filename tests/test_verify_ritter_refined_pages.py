@@ -51,28 +51,28 @@ def test_verify_page_content_minimal_passes() -> None:
     tail = (
         "### Reflection\n\na b\n\n### Foresight\n\nc d\n\n---\n\n### Appendix\n\n- e\n"
     )
-    core = f"# T\n\n---\n\n### Chronicle\n\n{ch}\n\n{tail}"
+    core = f"# T\n\n---\n\n### Verbatim\n\n{ch}\n\n{tail}"
     n = len(re.findall(r"\S+", core))
-    md = f"# T\n\n**Words:** {n}\n\n---\n\n### Chronicle\n\n{ch}\n\n{tail}"
+    md = f"# T\n\n**Words:** {n}\n\n---\n\n### Verbatim\n\n{ch}\n\n{tail}"
     errs, warns = mod.verify_page_content("fixture.md", md)
     assert not errs
     assert not warns
 
 
-def test_verify_page_content_missing_chronicle_fails() -> None:
+def test_verify_page_content_missing_verbatim_fails() -> None:
     mod = _load_verifier()
     md = (
         "**Words:** 4\n\n---\n\n### Reflection\n\na\n\n### Foresight\n\nb\n\n---\n\n"
         "### Appendix\n\nc\n"
     )
     errs, _ = mod.verify_page_content("bad.md", md)
-    assert any("Chronicle" in e for e in errs)
+    assert any("Verbatim" in e for e in errs)
 
 
 def test_verify_page_content_digest_without_words_passes() -> None:
     mod = _load_verifier()
     md = (
-        "# T\n\n---\n\n### Chronicle\n\n"
+        "# T\n\n---\n\n### Verbatim\n\n"
         "one two three four five.\n\n"
         "### Reflection\n\nsix seven.\n\n### Foresight\n\n- eight\n\n---\n\n"
         "### Appendix\n\n- nine\n"
@@ -88,9 +88,9 @@ def test_verify_page_long_file_no_soft_cap_warning() -> None:
     tail = (
         "### Reflection\n\nkeep short.\n\n### Foresight\n\n- x\n\n---\n\n### Appendix\n\n- y\n"
     )
-    core = f"# T\n\n---\n\n### Chronicle\n\n{long_ch}\n\n{tail}"
+    core = f"# T\n\n---\n\n### Verbatim\n\n{long_ch}\n\n{tail}"
     n = len(re.findall(r"\S+", core))
-    md = f"# T\n\n**Words:** {n}\n\n---\n\n### Chronicle\n\n{long_ch}\n\n{tail}"
+    md = f"# T\n\n**Words:** {n}\n\n---\n\n### Verbatim\n\n{long_ch}\n\n{tail}"
     errs, warns = mod.verify_page_content("long.md", md)
     assert not errs
     assert not any("soft cap" in w.lower() for w in warns)

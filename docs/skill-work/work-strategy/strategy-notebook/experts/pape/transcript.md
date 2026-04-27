@@ -4,7 +4,7 @@
 WORK only; not Record.
 
 **Source:** Verbatim blocks from [`daily-strategy-inbox.md`](daily-strategy-inbox.md) that include `thread:pape` (first line + optional continuation paragraphs), routed on ingest.
-**Day page (refined):** **`experts/pape/pape-page-YYYY-MM-DD.md`** — Chronicle / Reflection / Foresight artifact; points to **verbatim** in [`raw-input/`](../../raw-input/README.md). Distinct from a **`strategy-page`** fence in [`thread.md`](thread.md) unless you duplicate judgment there during EOD compose. **Template:** [`pape-page-template.md`](pape-page-template.md).
+**Refined page:** **`experts/pape/pape-page-YYYY-MM-DD.md`** — Verbatim / Reflection / Foresight artifact; points to **verbatim** in [`raw-input/`](../../raw-input/README.md). Distinct from a **`strategy-page`** fence in [`thread.md`](thread.md) unless you duplicate judgment there during EOD compose. **Template:** [`pape-page-template.md`](pape-page-template.md).
 **Length:** Target **≤ 2000 words** per ingest block; whole file soft **≤ 20000 words** after prune (7-day window makes overrun unlikely).
 **Retention:** 7-day rolling window; date sections older than 7 days are pruned automatically.
 **Editing:** Operator may lightly edit for clarity after triage. Edits are preserved across triage runs (append-only, not overwrite).

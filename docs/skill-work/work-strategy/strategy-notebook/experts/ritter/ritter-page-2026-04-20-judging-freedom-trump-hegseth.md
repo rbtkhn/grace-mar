@@ -9,7 +9,7 @@ WORK only; not Record.
 
 ---
 
-### Chronicle
+### Verbatim
 
 Expert capture (verbatim body from linked `raw-input`; operator-ingested).
 
@@ -94,7 +94,7 @@ Scott Ritter: Okay. Thank you very much.
 
 ### Reflection
 
-**WORK read.** Chronicle is expert verbatim from capture; this block is notebook analysis only—tier discipline and seams, not a substitute for wire.
+**WORK read.** Verbatim is expert verbatim from capture; this block is notebook analysis only—tier discipline and seams, not a substitute for wire.
 
 **Capture:** Judging Freedom · Format: interview transcript. Attribute lines to speakers; treat Ritter’s spoken segments as author voice, not independent confirmation of battlefield or legal facts. Pin canonical watch URL in appendix when published.
 
@@ -119,7 +119,7 @@ IHL content: useful for notebook legal seams; adjudication belongs to courts or 
 
 - **Falsifiers:** Wire/primary items that would change the thesis.
 - **Resume:** Next capture, `days.md` seam, chapter meta.
-- **Tier:** Chronicle = expert (B); Reflection/Foresight = WORK.
+- **Tier:** Verbatim = expert (B); Reflection/Foresight = WORK.
 
 
 ---
