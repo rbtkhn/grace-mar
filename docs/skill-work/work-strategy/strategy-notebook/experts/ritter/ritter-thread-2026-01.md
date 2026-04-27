@@ -37,7 +37,23 @@ When historical expert context artifacts exist for `ritter` (per-month files or 
 <!-- strategy-expert-thread:start -->
 ## Machine layer — Extraction (script-maintained)
 
-_Auto-generated from `-transcript.md` + `strategy-page` blocks in this thread + optional empty legacy on-disk index rows. **Journal layer** (narrative) lives **above** the **strategy-expert-thread** start HTML comment. The machine-layer HTML block is replaced on each `thread` run._
+_Auto-generated from `transcript.md` + **on-disk** and **inbox** `raw-input/` (de-duped union) + `strategy-page` blocks + optional legacy on-disk index rows. **Journal layer** (narrative) lives **above** the **strategy-expert-thread** start HTML comment. The machine-layer HTML block is replaced on each `thread` run._
 
-_(No transcript or page material for extraction.)_
+### Recent raw-input (lane)
+
+_Union of **on-disk** `raw-input/…` files tagged with this expert’s `thread:` and **inbox** lines (same paths de-duped; disk line kept first)._
+
+- [substack-ritter-getting-it-wrong-on-russia-2026-01-20.md](raw-input/2026-01-20/substack-ritter-getting-it-wrong-on-russia-2026-01-20.md)
+- [substack-mearsheimer-the-tag-team-fails-in-iran-2026-01-20.md](raw-input/2026-01-20/substack-mearsheimer-the-tag-team-fails-in-iran-2026-01-20.md)
+- [substack-ritter-dont-drink-the-water-2026-01-18.md](raw-input/2026-01-18/substack-ritter-dont-drink-the-water-2026-01-18.md)
+- [substack-ritter-back-to-the-future-2026-01-16.md](raw-input/2026-01-16/substack-ritter-back-to-the-future-2026-01-16.md)
+- [substack-ritter-reflections-on-a-war-2026-01-16.md](raw-input/2026-01-16/substack-ritter-reflections-on-a-war-2026-01-16.md)
+- [substack-ritter-losing-the-republic-2026-01-13.md](raw-input/2026-01-13/substack-ritter-losing-the-republic-2026-01-13.md)
+- [substack-ritter-iranian-resilience-2026-01-12.md](raw-input/2026-01-12/substack-ritter-iranian-resilience-2026-01-12.md)
+- [substack-ritter-the-end-of-a-dream-2026-01-10.md](raw-input/2026-01-10/substack-ritter-the-end-of-a-dream-2026-01-10.md)
+- [substack-ritter-the-camels-bloody-nose-2026-01-09.md](raw-input/2026-01-09/substack-ritter-the-camels-bloody-nose-2026-01-09.md)
+- [transcript-diesen-mearsheimer-venezuela-greenland-nato-2026-01-07.md](raw-input/2026-01-07/transcript-diesen-mearsheimer-venezuela-greenland-nato-2026-01-07.md)
+- [substack-ritter-the-battle-of-new-york-2026-01-06.md](raw-input/2026-01-06/substack-ritter-the-battle-of-new-york-2026-01-06.md)
+- [substack-ritter-the-sanctions-shield-2026-01-05.md](raw-input/2026-01-05/substack-ritter-the-sanctions-shield-2026-01-05.md)
+- [substack-ritter-russia-dark-sage-karaganov-2026-01-03.md](raw-input/2026-01-03/substack-ritter-russia-dark-sage-karaganov-2026-01-03.md)
 <!-- strategy-expert-thread:end -->

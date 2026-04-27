@@ -19,11 +19,13 @@ WORK only; not Record.
 - YT | cold: **Chris Hedges** × **John Mearsheimer** (*The Chris Hedges Report* — **operator transcript** **2026-04-20**) — **Islamabad** **round** **<48h** **before** **ceasefire** **break;** **Iran** **10-point** **basis;** **Hormuz** **blockade** **/** **container-ship** **seizure** **as** **ceasefire** **breach;** **Mearsheimer:** **escalation** **ladder** **favors** **Iran** **—** **deal** **or** **extend** **ceasefire;** **Israel** **lobby** **×** **economy** **cliff;** **Lebanon** **lever;** **ship** **boarding** **after** **strait** **re-open** **—** **full** **verbatim** [raw-input/2026-04-20/transcript-hedges-mearsheimer-iran-2026-04-20.md](raw-input/2026-04-20/transcript-hedges-mearsheimer-iran-2026-04-20.md) · **day** **page** [experts/mearsheimer/mearsheimer-page-2026-04-20-hedges-mearsheimer-iran.md](experts/mearsheimer/mearsheimer-page-2026-04-20-hedges-mearsheimer-iran.md) // hook: **`thread:mearsheimer`** **×** **§1e** **Islamabad** **/** **Hormuz** **week** | `TBD` canonical watch URL | verify:full-text+raw-input/2026-04-20/transcript-hedges-mearsheimer-iran-2026-04-20.md+operator-transcript | thread:mearsheimer | IRAN | grep:Hedges+Mearsheimer+2026-04-20
 
 
+
 ## 2026-04-21
 
 Verbatim: [`raw-input/2026-04-21/transcript-mearsheimer-redacted-trump-iran-2026-04-21.md`](../../raw-input/2026-04-21/transcript-mearsheimer-redacted-trump-iran-2026-04-21.md).
 
 Refined day page: [`mearsheimer-page-2026-04-21-redacted-trump-iran.md`](mearsheimer-page-2026-04-21-redacted-trump-iran.md).
+
 
 
 

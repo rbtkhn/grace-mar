@@ -695,7 +695,7 @@ When macro or petroleum lines in Davis’s post read as **multi-year** stress te
 <!-- strategy-expert-thread:start -->
 ## Machine layer — Extraction (script-maintained)
 
-_Auto-generated from `-transcript.md` + `strategy-page` blocks in this thread + optional empty legacy on-disk index rows. **Journal layer** (narrative) lives **above** the **strategy-expert-thread** start HTML comment. The machine-layer HTML block is replaced on each `thread` run._
+_Auto-generated from `transcript.md` + **on-disk** and **inbox** `raw-input/` (de-duped union) + `strategy-page` blocks + optional legacy on-disk index rows. **Journal layer** (narrative) lives **above** the **strategy-expert-thread** start HTML comment. The machine-layer HTML block is replaced on each `thread` run._
 
 ### Recent transcript material
 
@@ -714,6 +714,8 @@ _Auto-generated from `-transcript.md` + `strategy-page` blocks in this thread + 
 - X | cold: @DanielLDavis1 same calendar day — embeds **Trump** Truth Social **~09:57** (~**30 min** after Hormuz “open” framing per Davis); Davis reads **maximalist** terms (**nuclear** reprocessing / **no** money / **Lebanon–Hezbollah** separate / **Israel** **prohibited** from bombing **Lebanon** by **USA**) as **slamming door** on diplomatic space // hook: **§1e** executive primary + **falsifier** for §1f single-arc de-escalation; pin **Truth Social** full text | verify:truth-social-primary+embed-chain | thread:davis
 - notebook | cold: **IRI FM** **@araghchi** **2026-04-17 06:45** — Hormuz passage for commercial vessels for **ceasefire** remainder on **PMO** coordinated route; opens **in line with** **Lebanon ceasefire** // hook: **expert-thread continuity** — **no** `thread:` (state primary); **cross** `parsi` Lebanon scope, `marandi` register, `mercouris` Lebanon institutional surface, `thread:davis` QT packaging | verify:IRI-primary+cross-thread-continuity | IRI+TEHRAN+Lebanon
 - batch-analysis | 2026-04-17 | **Barnes × Johnson (YT) — US politics room × Iran week** | **Tension-first:** **`thread:barnes`** **long-form** **domestic-liability** **+** **White** **House** **process** **(C-plane** **hypothesis)** **—** **not** **§1e** **text** **and** **not** **Pentagon** **primary.** **Same** **calendar** **day** **as** **Hormuz** **/** **Islamabad** **expert** **stack** **—** **cross** **`thread:davis`**, **`thread:johnson`** **(Davis** **×** **Johnson** **earlier** **YT),** **`thread:ritter`** **with** **explicit** **plane** **tags** **(room** **vs** **ORBAT** **vs** **FM).** **Falsifiers:** **named** **official** **statements,** **vote** **counts,** **Navy** **press,** **TS** **screenshots.** | crosses:barnes+johnson
+## 2026-04-23
+- Inbox | cold: full text in [`transcript-davis-trump-all-time-in-the-world-2026-04-23.md`](raw-input/2026-04-23/transcript-davis-trump-all-time-in-the-world-2026-04-23.md) (pointer; SSOT raw-input) | thread:davis
 ## 2026-04-20
 - X | cold: @DanielLDavis1 **2026-04-17 ~06:30** — QT **@araghchi**: Hormuz passage **open** for **all commercial vessels** for **remaining ceasefire period** on **coordinated route** (Ports & Maritime Organisation); Davis — back-channel diplomacy, **zero-give** warning re U.S. posture // hook: [daily-brief-2026-04-17.md](../daily-brief-2026-04-17.md) **§1h** + expert mesh; **pin** @araghchi + Davis status URLs | verify:pin-x-urls+IRI-primary-chain | thread:davis | IRI+TEHRAN
 - X | cold: @DanielLDavis1 same calendar day — embeds **Trump** Truth Social **~09:57** (~**30 min** after Hormuz “open” framing per Davis); Davis reads **maximalist** terms (**nuclear** reprocessing / **no** money / **Lebanon–Hezbollah** separate / **Israel** **prohibited** from bombing **Lebanon** by **USA**) as **slamming door** on diplomatic space // hook: **§1e** executive primary + **falsifier** for §1f single-arc de-escalation; pin **Truth Social** full text | verify:truth-social-primary+embed-chain | thread:davis
@@ -723,6 +725,23 @@ _Auto-generated from `-transcript.md` + `strategy-page` blocks in this thread + 
 - X | cold: **Daniel** **Davis** (@DanielLDavis1) — **Trump** **again** **threatens** **Iranian** **energy** **/** **Strait** **frame** **;** **Islamabad** **team** **performative** **vs** **war** **resume** **;** **Iran** **Strait** **/** **missile** **/** **drone** **;** **retaliation** **vs** **U.S.** **/** **Israel** **/** **Gulf** **allies** **;** **petroleum** **constraint** **years** **/** **recession–depression** **risk** **—** **hope** **bluster** // hook: **`thread:davis`** **material** **/** **macro** **forecast** **—** **not** **§1e** **without** **primaries** | https://x.com/DanielLDavis1 | verify:primary-X+pin-status-URL | thread:davis | grep:Davis+Trump+Iran+Strait+energy
     `batch-analysis | 2026-04-19 | **Pape** **×** **Davis** **×** **Trump** **Truth** **Social** **(Iran** **threats)** | **Tension-first:** **`thread:pape`** **escalation-trap** **/** **repeat** **threat** **vs** **`thread:davis`** **Strait** **/** **energy** **/** **retaliation** **geometry** **/** **macro** **risk** **—** **not** **§1e** **/** **wire.** **Legal** **register** **(WORK):** **genocide** **/** **incitement** **/** **threat** **of** **force** **/** **IHL** **are** **different** **tests** **—** **do** **not** **snap-label** **from** **screenshots.** **Falsifiers:** **Truth** **Social** **primary,** **DOD** **/** **White** **House** **readout** **if** **action** **attributed.** | crosses:pape+davis`
     `batch-analysis | 2026-04-19 | **fold:** **`daily-brief`** **§1f** **(Grok)** **×** **tri-mind** **`ab+c`** | **Tension-first:** **LLM** **digest** **clusters** **(Lebanon** **/** **Oman** **/** **EU–Hungary** **/** **Kerch** **/** **SPR** **/** **sorties)** **—** **Q-tier** **until** **`#strategy-verify-2026-04-19`** **rows** **clear** **;** **tri-mind** **hypothesis** **=** **parallel** **scarcity** **/** **non-single** **story** **;** **Barnes** **close** **=** **jurisdiction** **/** **enforceable** **text** **vs** **performance** **.** **Cross:** **[`days.md`](chapters/2026-04/days.md)** **`## 2026-04-19`** **—** **do** **not** **merge** **with** **Ritter** **/** **Sánchez** **/** **Pape** **/** **Davis** **without** **labeled** **seams** **.** | seam:brief-grok+tri-mind`
+## 2026-04-18
+- Inbox | cold: full text in [`transcript-davis.md`](raw-input/2026-04-18/transcript-davis.md) (pointer; SSOT raw-input) | thread:davis
+
+### Recent raw-input (lane)
+
+_Union of **on-disk** `raw-input/…` files tagged with this expert’s `thread:` and **inbox** lines (same paths de-duped; disk line kept first)._
+
+- [transcript-davis-trump-all-time-in-the-world-2026-04-23.md](raw-input/2026-04-23/transcript-davis-trump-all-time-in-the-world-2026-04-23.md) _on-disk_
+- [transcript-davis-barnes-us-shifting-objectives-iran-war-2026-04-24.md](raw-input/2026-04-24/transcript-davis-barnes-us-shifting-objectives-iran-war-2026-04-24.md)
+- [transcript-davis-crooke-iranians-only-getting-tougher-2026-04-23.md](raw-input/2026-04-23/transcript-davis-crooke-iranians-only-getting-tougher-2026-04-23.md)
+- [transcript-davis-diesen-iran-miscalculation-2026-03-01.md](raw-input/2026-03-01/transcript-davis-diesen-iran-miscalculation-2026-03-01.md)
+- [transcript-davis-diesen-trump-war-speech-2026-04-02.md](raw-input/2026-04-02/transcript-davis-diesen-trump-war-speech-2026-04-02.md)
+- [transcript-davis-diesen-military-options-kent-2026-03-18.md](raw-input/2026-03-18/transcript-davis-diesen-military-options-kent-2026-03-18.md)
+- [transcript-davis-diesen-iran-knife-edge-2026-02-07.md](raw-input/2026-02-07/transcript-davis-diesen-iran-knife-edge-2026-02-07.md)
+- [substack-pape-within-10-days-shortages-already-2026-04-22.md](raw-input/2026-04-22/substack-pape-within-10-days-shortages-already-2026-04-22.md)
+- [x-araghchi-april-2026-posts-bundle.md](raw-input/2026-04-20/x-araghchi-april-2026-posts-bundle.md)
+- [davis-deep-dive-baud-iran-pakistan-diplomacy.md](raw-input/2026-04-20/davis-deep-dive-baud-iran-pakistan-diplomacy.md)
 
 ### Page references
 

@@ -90,6 +90,7 @@ WORK only; not Record.
 - batch-analysis | 2026-04-17 | **Barnes × Johnson (YT) — US politics room × Iran week** | **Tension-first:** **`thread:barnes`** **long-form** **domestic-liability** **+** **White** **House** **process** **(C-plane** **hypothesis)** **—** **not** **§1e** **text** **and** **not** **Pentagon** **primary.** **Same** **calendar** **day** **as** **Hormuz** **/** **Islamabad** **expert** **stack** **—** **cross** **`thread:davis`**, **`thread:johnson`** **(Davis** **×** **Johnson** **earlier** **YT),** **`thread:ritter`** **with** **explicit** **plane** **tags** **(room** **vs** **ORBAT** **vs** **FM).** **Falsifiers:** **named** **official** **statements,** **vote** **counts,** **Navy** **press,** **TS** **screenshots.** | crosses:barnes+johnson
 
 
+
 ## 2026-04-20
 - YT | cold: **Daniel Davis** × **Larry Johnson** — *HORMUZ OPENING, CEASEFIRE ENDING: Conflicting Messages* — dual-register Trump TS vs IRI Lebanon/Hormuz conditions; Bessent sanctions; military “WTF”; three-option endgame; Johnson strong C-plane on Trump // hook: stack 04-17 §1h + Ritter Diesen Iran segment — seams not one Judgment | https://www.youtube.com/watch?v=TBD-davis-johnson-hormuz-2026-04-17 | verify:operator-transcript+pin-canonical-URL+aired:2026-04-17+Truth-Social-primary | thread:johnson | grep:Hormuz+Johnson+Davis+blockade+Bessent
     
@@ -253,3 +254,6 @@ Judge Andrew Napolitano: Wow. Thank you, Larry. All the best, my dear friend.
 
 
 
+
+## 2026-04-18
+- Inbox | cold: full text in [`transcript-johnson.md`](raw-input/2026-04-18/transcript-johnson.md) (pointer; SSOT raw-input) | thread:johnson

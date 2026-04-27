@@ -316,12 +316,18 @@ Pins keep **`ritter`** **mechanics** **distinct** from **speech**/**institution*
 <!-- strategy-expert-thread:start -->
 ## Machine layer — Extraction (script-maintained)
 
-_Auto-generated from `-transcript.md` + `strategy-page` blocks in this thread + optional empty legacy on-disk index rows. **Journal layer** (narrative) lives **above** the **strategy-expert-thread** start HTML comment. The machine-layer HTML block is replaced on each `thread` run._
+_Auto-generated from `transcript.md` + **on-disk** and **inbox** `raw-input/` (de-duped union) + `strategy-page` blocks + optional legacy on-disk index rows. **Journal layer** (narrative) lives **above** the **strategy-expert-thread** start HTML comment. The machine-layer HTML block is replaced on each `thread` run._
 
 ### Recent transcript material
 
 ## 2026-04-25
 - YT | cold: **Tucker** **Carlson** **×** **Jeffrey** **D.** **Sachs** — *The Real Origins of the Iran War and the Coming Economic Devastation* — **aired** **2026-04-24** — **Hormuz** **closure** **&** **global** **econ** **crisis,** **fork** **(off-ramp** **vs** **renewed** **bombing** **/** **all-out** **war);** **1953** **Mossadegh** **/** **empire** **frame,** **Shah** **/ 1979,** **hostage,** **post-1980** **U.S.–Iran** **arc;** **Gulf** **/ desal** **/ missile** **vulnerability;** **Trump** **/** **Netanyahu** **/ political** **vs** **“grown-up”** **off-ramp** // hook: **`thread:sachs`** **×** **§1e** **Hormuz** **+** **§1d** **exec** **—** **full** [raw-input/2026-04-24/transcript-sachs-carlson-iran-war-origins-2026-04-24.md](raw-input/2026-04-24/transcript-sachs-carlson-iran-war-origins-2026-04-24.md) | TBD (pin `watch?v=`) | verify:operator-file+YouTube+full-text+aired:2026-04-24+opinion-historical-narrative-tier+not-Record | thread:sachs | IRAN | HORMUZ | US-POL | grep:Sachs+Carlson+Iran+origins+2026-04-24
+
+### Recent raw-input (lane)
+
+_Union of **on-disk** `raw-input/…` files tagged with this expert’s `thread:` and **inbox** lines (same paths de-duped; disk line kept first)._
+
+- [transcript-sachs-carlson-iran-war-origins-2026-04-24.md](raw-input/2026-04-24/transcript-sachs-carlson-iran-war-origins-2026-04-24.md)
 
 ### Page references
 

@@ -142,7 +142,7 @@ Canonical page paths and raw ingest lines live in **Segment 2** below (regenerat
 <!-- strategy-expert-thread:start -->
 ## Machine layer — Extraction (script-maintained)
 
-_Auto-generated from `-transcript.md` + `strategy-page` blocks in this thread + optional empty legacy on-disk index rows. **Journal layer** (narrative) lives **above** the **strategy-expert-thread** start HTML comment. The machine-layer HTML block is replaced on each `thread` run._
+_Auto-generated from `transcript.md` + **on-disk** and **inbox** `raw-input/` (de-duped union) + `strategy-page` blocks + optional legacy on-disk index rows. **Journal layer** (narrative) lives **above** the **strategy-expert-thread** start HTML comment. The machine-layer HTML block is replaced on each `thread` run._
 
 ### Recent transcript material
 
@@ -232,4 +232,10 @@ Thank you so much.
 Col. Jacques Baud: Thank you for inviting me.
 Daniel Davis: And we appreciate you guys too. We'll be back in about an hour. We're going to look at how the Iran war—bombs more likely than talks—as some things have been developing even since we've been on the air here. That makes restarting the war more likely than bringing it to an end. We'll talk about some of that this afternoon.
 See you then on the Daniel Davis Deep Dive.
+
+### Recent raw-input (lane)
+
+_Union of **on-disk** `raw-input/…` files tagged with this expert’s `thread:` and **inbox** lines (same paths de-duped; disk line kept first)._
+
+- [davis-deep-dive-baud-iran-pakistan-diplomacy.md](raw-input/2026-04-20/davis-deep-dive-baud-iran-pakistan-diplomacy.md)
 <!-- strategy-expert-thread:end -->

@@ -151,7 +151,11 @@ Canonical page paths and raw ingest lines live in **Segment 2** below (regenerat
 <!-- strategy-expert-thread:start -->
 ## Machine layer — Extraction (script-maintained)
 
-_Auto-generated from `-transcript.md` + `strategy-page` blocks in this thread + optional empty legacy on-disk index rows. **Journal layer** (narrative) lives **above** the **strategy-expert-thread** start HTML comment. The machine-layer HTML block is replaced on each `thread` run._
+_Auto-generated from `transcript.md` + **on-disk** and **inbox** `raw-input/` (de-duped union) + `strategy-page` blocks + optional legacy on-disk index rows. **Journal layer** (narrative) lives **above** the **strategy-expert-thread** start HTML comment. The machine-layer HTML block is replaced on each `thread` run._
 
-_(No transcript or page material for extraction.)_
+### Recent raw-input (lane)
+
+_Union of **on-disk** `raw-input/…` files tagged with this expert’s `thread:` and **inbox** lines (same paths de-duped; disk line kept first)._
+
+- [transcript-davis-crooke-iranians-only-getting-tougher-2026-04-23.md](raw-input/2026-04-23/transcript-davis-crooke-iranians-only-getting-tougher-2026-04-23.md)
 <!-- strategy-expert-thread:end -->

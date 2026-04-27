@@ -50,7 +50,13 @@ Typical pairings on file for `ritter` emphasize contrast surfaces: × marandi, �
 <!-- strategy-expert-thread:start -->
 ## Machine layer — Extraction (script-maintained)
 
-_Auto-generated from `-transcript.md` + `strategy-page` blocks in this thread + optional empty legacy on-disk index rows. **Journal layer** (narrative) lives **above** the **strategy-expert-thread** start HTML comment. The machine-layer HTML block is replaced on each `thread` run._
+_Auto-generated from `transcript.md` + **on-disk** and **inbox** `raw-input/` (de-duped union) + `strategy-page` blocks + optional legacy on-disk index rows. **Journal layer** (narrative) lives **above** the **strategy-expert-thread** start HTML comment. The machine-layer HTML block is replaced on each `thread` run._
 
-_(No transcript or page material for extraction.)_
+### Recent raw-input (lane)
+
+_Union of **on-disk** `raw-input/…` files tagged with this expert’s `thread:` and **inbox** lines (same paths de-duped; disk line kept first)._
+
+- [substack-ritter-the-flamingo-effect-2026-02-22.md](raw-input/2026-02-22/substack-ritter-the-flamingo-effect-2026-02-22.md)
+- [substack-ritter-dead-at-27-2026-02-20.md](raw-input/2026-02-20/substack-ritter-dead-at-27-2026-02-20.md)
+- [substack-ritter-alas-babylon-2026-02-05.md](raw-input/2026-02-05/substack-ritter-alas-babylon-2026-02-05.md)
 <!-- strategy-expert-thread:end -->

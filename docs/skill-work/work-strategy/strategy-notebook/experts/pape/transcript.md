@@ -49,6 +49,8 @@ WORK only; not Record.
 - X | cold: @ProfessorPape (**2026-04-17** ~08:07) — Israel–Lebanon truce as **signal of shifting global power** (more than ceasefire); claims **Iran** demanded end to **Israeli attacks in Lebanon** and **U.S. delivered**; amplifies **NYT Opinion** card on Iran as **major world power** (“4th” framing in card) // hook: **seam** vs **04-14** sectarian worst-case fork + vs Janssen **04-16** **“fourth center”** (different object); **op-ed tier** — not Pape independent ORBAT/power rank | https://x.com/ProfessorPape | verify:pin-exact-status-URL+nytimes-opinion-card+screenshot | thread:pape | grep:Lebanon+Pape+NYT+2026-04-17
 - batch-analysis | 2026-04-17 | **Pape X — 04-14 Lebanon fork × 04-17 truce / NYT power thesis** | **Tension-first:** **04-14** indexed ingest = **downside** / **civil-war** fork + **AP** Washington talks **seam**; **04-17** = **settlement / power-shift** read + **NYT** secondary thesis Pape spotlights — use **dated evolution**, not silent merge. **Homophone risk:** Janssen **04-16** **“fourth center”** (negotiation fork) ≠ NYT headline **“major world power”** / **“4th”** — **do not** equate in Judgment. **Membership:** `thread:pape` only.
 
+## 2026-04-24
+- Inbox | cold: full text in [`substack-pape-2-blockades-2-clocks-2026-04-24.md`](raw-input/2026-04-24/substack-pape-2-blockades-2-clocks-2026-04-24.md) (pointer; SSOT raw-input) | thread:pape
 
 ## 2026-04-22
 
@@ -60,11 +62,13 @@ Refined day page: [`pape-page-2026-04-22.md`](pape-page-2026-04-22.md).
 
 
 
+
 ## 2026-04-21
 
 Verbatim: [`raw-input/2026-04-21/x-pape-zero-sum-escalation-ladder-2026-04-21.md`](../../raw-input/2026-04-21/x-pape-zero-sum-escalation-ladder-2026-04-21.md).
 
 Refined day page: [`pape-page-2026-04-21.md`](pape-page-2026-04-21.md).
+
 
 
 
@@ -166,6 +170,7 @@ Professor Robert Pape: Me too. Thanks for everything you're doing.
 
 
 
+
 ## 2026-04-19
 - X | cold: **Robert** **A.** **Pape** (@ProfessorPape) — **Truth** **Social** **screenshot** **:** **Trump** **threat** **to** **knock** **out** **power** **plants** **/** **bridges** **in** **Iran** **if** **no** **deal** **;** **“Iran** **killing** **machine”** **close** **;** **Pape** **:** **3rd** **time** **threat** **—** **escalation** **trap** **/** **IRGC** **back** **stiffens** // hook: **`thread:pape`** **×** **Trump** **coercive** **rhetoric** **—** **theory** **plane** **;** **not** **genocide** **label** **without** **elements** | https://x.com/ProfessorPape | verify:primary-X+pin-status-URL+Truth-Social-primary | thread:pape | grep:Pape+Trump+escalation+trap+Iran
 
@@ -174,3 +179,6 @@ Professor Robert Pape: Me too. Thanks for everything you're doing.
 
 
 
+
+## 2026-04-18
+- Inbox | cold: full text in [`transcript-pape.md`](raw-input/2026-04-18/transcript-pape.md) (pointer; SSOT raw-input) | thread:pape

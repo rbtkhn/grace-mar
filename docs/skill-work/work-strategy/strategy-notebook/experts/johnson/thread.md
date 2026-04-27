@@ -321,7 +321,7 @@ Pins keep **`ritter`** **mechanics** **distinct** from **speech**/**institution*
 <!-- strategy-expert-thread:start -->
 ## Machine layer — Extraction (script-maintained)
 
-_Auto-generated from `-transcript.md` + `strategy-page` blocks in this thread + optional empty legacy on-disk index rows. **Journal layer** (narrative) lives **above** the **strategy-expert-thread** start HTML comment. The machine-layer HTML block is replaced on each `thread` run._
+_Auto-generated from `transcript.md` + **on-disk** and **inbox** `raw-input/` (de-duped union) + `strategy-page` blocks + optional legacy on-disk index rows. **Journal layer** (narrative) lives **above** the **strategy-expert-thread** start HTML comment. The machine-layer HTML block is replaced on each `thread` run._
 
 ### Recent transcript material
 
@@ -501,6 +501,8 @@ Larry Johnson: Possibly. Yeah. I wouldn't rule anything out. But I don't think I
 Judge Andrew Napolitano: Wow. Thank you, Larry. All the best, my dear friend.
     **Overlap — same-day JF (`thread:ritter` *Trump and Hegseth Haven't a Clue*):** shared Hormuz boarding / Islamabad / Caine–codes stack — analyst **C-plane** vs institutional **FM** **/** **USN** tiers; **do** **not** **merge** **without** **labeled** **seam.** Verbatim sibling: [`judging-freedom-trump-hegseth-2026-04-20.md`](../../raw-input/2026-04-20/judging-freedom-trump-hegseth-2026-04-20.md).
 - batch-analysis | 2026-04-17 | **Barnes × Johnson (YT) — US politics room × Iran week** | **Tension-first:** **`thread:barnes`** **long-form** **domestic-liability** **+** **White** **House** **process** **(C-plane** **hypothesis)** **—** **not** **§1e** **text** **and** **not** **Pentagon** **primary.** **Same** **calendar** **day** **as** **Hormuz** **/** **Islamabad** **expert** **stack** **—** **cross** **`thread:davis`**, **`thread:johnson`** **(Davis** **×** **Johnson** **earlier** **YT),** **`thread:ritter`** **with** **explicit** **plane** **tags** **(room** **vs** **ORBAT** **vs** **FM).** **Falsifiers:** **named** **official** **statements,** **vote** **counts,** **Navy** **press,** **TS** **screenshots.** | crosses:barnes+johnson
+## 2026-04-18
+- Inbox | cold: full text in [`transcript-johnson.md`](raw-input/2026-04-18/transcript-johnson.md) (pointer; SSOT raw-input) | thread:johnson
 
 ### Page references
 

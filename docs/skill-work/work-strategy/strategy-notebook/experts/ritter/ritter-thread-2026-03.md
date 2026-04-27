@@ -55,7 +55,14 @@ When historical expert context artifacts exist for `ritter` (per-month files or 
 <!-- strategy-expert-thread:start -->
 ## Machine layer — Extraction (script-maintained)
 
-_Auto-generated from `-transcript.md` + `strategy-page` blocks in this thread + optional empty legacy on-disk index rows. **Journal layer** (narrative) lives **above** the **strategy-expert-thread** start HTML comment. The machine-layer HTML block is replaced on each `thread` run._
+_Auto-generated from `transcript.md` + **on-disk** and **inbox** `raw-input/` (de-duped union) + `strategy-page` blocks + optional legacy on-disk index rows. **Journal layer** (narrative) lives **above** the **strategy-expert-thread** start HTML comment. The machine-layer HTML block is replaced on each `thread` run._
 
-_(No transcript or page material for extraction.)_
+### Recent raw-input (lane)
+
+_Union of **on-disk** `raw-input/…` files tagged with this expert’s `thread:` and **inbox** lines (same paths de-duped; disk line kept first)._
+
+- [substack-ritter-chechen-miracle-path-redemption-2026-03-25.md](raw-input/2026-03-25/substack-ritter-chechen-miracle-path-redemption-2026-03-25.md)
+- [substack-ritter-zionism-human-parasitoid-revisited-2026-03-18.md](raw-input/2026-03-18/substack-ritter-zionism-human-parasitoid-revisited-2026-03-18.md)
+- [substack-ritter-the-backpack-girls-2026-03-14.md](raw-input/2026-03-14/substack-ritter-the-backpack-girls-2026-03-14.md)
+- [substack-ritter-regime-change-double-edged-sword-2026-03-01.md](raw-input/2026-03-01/substack-ritter-regime-change-double-edged-sword-2026-03-01.md)
 <!-- strategy-expert-thread:end -->

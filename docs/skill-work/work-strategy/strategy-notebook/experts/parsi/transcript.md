@@ -27,6 +27,7 @@ WORK only; not Record.
 - X | cold: @tparsi **repost** — **Joe Kent** embeds **Trump** **Truth Social**: **B-2** nuclear-material terms; **no** money exchange; **Lebanon** / **Hezbollah** seam separate; **Israel** **prohibited** from bombing **Lebanon** by **U.S.**; Kent adds deal may hold if **Trump** enforces **Israel** restrictions and limits **U.S.** military aid // hook: **Parsi** signal-boost — **cross** `thread:davis` same-day Trump TS embed; keep **dual-register** with §1f pool triage | https://x.com/joekent16jan19 | verify:Truth-Social-primary+Kent-status-URL | thread:parsi
 
 
+
 ## 2026-04-20
 - X | cold: @tparsi (2026-04-20) — **Masih Alinejad** **critique:** **prior** **pro-bombing** **/** **anti-dissenter** **rhetoric;** **post-disaster** **backtrack** **as** **victim** **—** **“betrayal”** **of** **Iranian** **/** **American** **(military** **as** **“private** **mercenary** **army”)** **frame** // hook: **diaspora** **commentariat** **accountability** **—** **not** **wire** **tier** | https://x.com/tparsi | verify:pin-exact-status-URL-2026-04-20+screenshot | thread:parsi | grep:Parsi+Alinejad+mercenary
 - X | cold: @tparsi (2026-04-20) — **NewsNation:** **Trump** **social** **mockery** **of** **counterparts** **=** **dominance** **optics;** **negotiation** **trash-talk** **≠** **fit** **for** **hot** **war** **when** **diplomacy** **needed** **to** **end** **it** // hook: **`thread:parsi`** **process** **×** **Trump** **conduct** **seam** | https://x.com/tparsi | verify:NewsNation-primary+pin-status-URL | thread:parsi | grep:Parsi+NewsNation+dominance+diplomacy
@@ -45,3 +46,6 @@ WORK only; not Record.
 
 
 
+
+## 2026-04-18
+- Inbox | cold: full text in [`transcript-parsi.md`](raw-input/2026-04-18/transcript-parsi.md) (pointer; SSOT raw-input) | thread:parsi

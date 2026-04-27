@@ -534,7 +534,7 @@ WORK only; not Record.
 <!-- strategy-expert-thread:start -->
 ## Machine layer — Extraction (script-maintained)
 
-_Auto-generated from `-transcript.md` + `strategy-page` blocks in this thread + optional empty legacy on-disk index rows. **Journal layer** (narrative) lives **above** the **strategy-expert-thread** start HTML comment. The machine-layer HTML block is replaced on each `thread` run._
+_Auto-generated from `transcript.md` + **on-disk** and **inbox** `raw-input/` (de-duped union) + `strategy-page` blocks + optional legacy on-disk index rows. **Journal layer** (narrative) lives **above** the **strategy-expert-thread** start HTML comment. The machine-layer HTML block is replaced on each `thread` run._
 
 ### Recent transcript material
 
@@ -582,6 +582,21 @@ So this is one of the reasons I find it hard to imagine that you’re ever going
 ~~~
 _(Continues in raw-input file: ship-seizure / blockade spiral, lobby discourse vs policy, WSJ White House tantrum episode, global economy / fertilizer / jet fuel, Suez analogy rejection, etc.)_
 Refined day page: [`mearsheimer-page-2026-04-20-hedges-mearsheimer-iran.md`](mearsheimer-page-2026-04-20-hedges-mearsheimer-iran.md).
+
+### Recent raw-input (lane)
+
+_Union of **on-disk** `raw-input/…` files tagged with this expert’s `thread:` and **inbox** lines (same paths de-duped; disk line kept first)._
+
+- [transcript-mearsheimer-redacted-trump-iran-2026-04-21.md](raw-input/2026-04-21/transcript-mearsheimer-redacted-trump-iran-2026-04-21.md)
+- [substack-mearsheimer-will-trump-go-kamikaze-2026-03-29.md](raw-input/2026-03-29/substack-mearsheimer-will-trump-go-kamikaze-2026-03-29.md)
+- [transcript-hedges-mearsheimer-iran-2026-04-20.md](raw-input/2026-04-20/transcript-hedges-mearsheimer-iran-2026-04-20.md)
+- [transcript-diesen-mearsheimer-world-changed-forever-2026-04-10.md](raw-input/2026-04-10/transcript-diesen-mearsheimer-world-changed-forever-2026-04-10.md)
+- [transcript-diesen-mearsheimer-iran-holds-all-the-cards-2026-03-27.md](raw-input/2026-03-27/transcript-diesen-mearsheimer-iran-holds-all-the-cards-2026-03-27.md)
+- [transcript-diesen-mearsheimer-us-already-lost-no-offramp-2026-03-10.md](raw-input/2026-03-10/transcript-diesen-mearsheimer-us-already-lost-no-offramp-2026-03-10.md)
+- [transcript-diesen-mearsheimer-case-for-nuclear-iran-2026-02-25.md](raw-input/2026-02-25/transcript-diesen-mearsheimer-case-for-nuclear-iran-2026-02-25.md)
+- [transcript-diesen-mearsheimer-cold-war-nato-ukraine-2026-01-31.md](raw-input/2026-01-31/transcript-diesen-mearsheimer-cold-war-nato-ukraine-2026-01-31.md)
+- [substack-mearsheimer-the-tag-team-fails-in-iran-2026-01-20.md](raw-input/2026-01-20/substack-mearsheimer-the-tag-team-fails-in-iran-2026-01-20.md)
+- [transcript-diesen-mearsheimer-venezuela-greenland-nato-2026-01-07.md](raw-input/2026-01-07/transcript-diesen-mearsheimer-venezuela-greenland-nato-2026-01-07.md)
 
 ### Page references
 

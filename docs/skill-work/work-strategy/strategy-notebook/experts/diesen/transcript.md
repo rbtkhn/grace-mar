@@ -19,6 +19,10 @@ WORK only; not Record.
 - YT | cold: **Glenn Diesen** — **host** / interviewer; **same** **episode** **as** **verbatim** **above** (Baltic/Finland, Article 5, Trump, Iran↔Ukraine spillover) // hook: **paired** **`expert_id`** **per** **commentator-threads** **two-speaker** **rule** | https://www.youtube.com/watch?v=TBD-diesen-ritter-finland-baltic-2026-04 | verify:paired-host+pin-canonical-URL | thread:diesen | grep:Diesen+Greater-Eurasia+Ritter
 
 
+
+## 2026-04-23
+- Inbox | cold: full text in [`transcript-diesen-escobar-connectivity-wars-multipolarity-2026-04-23.md`](raw-input/2026-04-23/transcript-diesen-escobar-connectivity-wars-multipolarity-2026-04-23.md) (pointer; SSOT raw-input) | thread:diesen
+
 ## 2026-04-20
 - YT | cold: **Glenn Diesen** — **host** / interviewer; **same** **episode** **as** **verbatim** **above** (Baltic/Finland, Article 5, Trump, Iran↔Ukraine spillover) // hook: **paired** **`expert_id`** **per** **commentator-threads** **two-speaker** **rule** | https://www.youtube.com/watch?v=TBD-diesen-ritter-finland-baltic-2026-04 | verify:paired-host+pin-canonical-URL | thread:diesen | grep:Diesen+Greater-Eurasia+Ritter
 
@@ -27,3 +31,6 @@ WORK only; not Record.
 
 
 
+
+## 2026-04-18
+- Inbox | cold: full text in [`transcript-diesen.md`](raw-input/2026-04-18/transcript-diesen.md) (pointer; SSOT raw-input) | thread:diesen

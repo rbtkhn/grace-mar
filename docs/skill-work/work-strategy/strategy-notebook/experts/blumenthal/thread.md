@@ -310,12 +310,18 @@ WORK only; not Record.
 <!-- strategy-expert-thread:start -->
 ## Machine layer — Extraction (script-maintained)
 
-_Auto-generated from `-transcript.md` + `strategy-page` blocks in this thread + optional empty legacy on-disk index rows. **Journal layer** (narrative) lives **above** the **strategy-expert-thread** start HTML comment. The machine-layer HTML block is replaced on each `thread` run._
+_Auto-generated from `transcript.md` + **on-disk** and **inbox** `raw-input/` (de-duped union) + `strategy-page` blocks + optional legacy on-disk index rows. **Journal layer** (narrative) lives **above** the **strategy-expert-thread** start HTML comment. The machine-layer HTML block is replaced on each `thread` run._
 
 ### Recent transcript material
 
 ## 2026-04-25
 - YT | cold: **Nemo** × **Max Blumenthal** (*Israel’s Defeat Begins: Zionist Power Structure FALLING APART in the US* — **operator** **ASR** **transcript** **2026-04-21**) — **blockade** **×** **Islamabad;** **Witkoff** **/** **Kushner** **“Trojan** **horse”** **frame;** **UAE** **/** **KSA** **SWF** **→** **Kushner;** **Trump** **×** **Wright** **gas;** **Bessent** **UAE** **loan;** **April** **7** **insider** **trades;** **Vance** **×** **Singer** **/** **Adelson** **+** **Netanyahu** **Islamabad** **call;** **Tucker** **/** **Buckley;** **JASSM,** **carriers,** **Anduril** **/** **Palmer** **Luckey,** **tanker** **→** **China,** **Bible** **Museum** **/** **Chronicles** **/** **Third** **Temple** **echo;** **Netanyahu** **sit** **room** **/** **Barnea** **Greyzone** **echo;** **Pew** **U50** **men** **/** **Israel;** **GCC** **/** **Kuwait** **journalist;** **Syria-ization** **/** **Barnea** **“phase** **three;”** **Lebanon** **“yellow** **line”** // hook: **`thread:blumenthal`** **alt-media** **+** **§1d** **/** **§1e** **—** **full** **verbatim** [raw-input/2026-04-21/transcript-blumenthal-israel-defeat-zionist-power-2026-04-21.md](raw-input/2026-04-21/transcript-blumenthal-israel-defeat-zionist-power-2026-04-21.md) | `TBD` canonical watch URL | verify:ASR+raw-input/2026-04-21/transcript-blumenthal+operator-transcript+spellings-tier | thread:blumenthal | IRAN | LEBANON | grep:Blumenthal+Nemo+Zionist+defeat+2026-04-21
+
+### Recent raw-input (lane)
+
+_Union of **on-disk** `raw-input/…` files tagged with this expert’s `thread:` and **inbox** lines (same paths de-duped; disk line kept first)._
+
+- [transcript-blumenthal-israel-defeat-zionist-power-2026-04-21.md](raw-input/2026-04-21/transcript-blumenthal-israel-defeat-zionist-power-2026-04-21.md)
 
 ### Page references
 

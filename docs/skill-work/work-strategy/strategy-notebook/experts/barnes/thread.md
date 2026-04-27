@@ -419,7 +419,7 @@ Pins keep **`ritter`** **mechanics** **distinct** from **speech**/**institution*
 <!-- strategy-expert-thread:start -->
 ## Machine layer — Extraction (script-maintained)
 
-_Auto-generated from `-transcript.md` + `strategy-page` blocks in this thread + optional empty legacy on-disk index rows. **Journal layer** (narrative) lives **above** the **strategy-expert-thread** start HTML comment. The machine-layer HTML block is replaced on each `thread` run._
+_Auto-generated from `transcript.md` + **on-disk** and **inbox** `raw-input/` (de-duped union) + `strategy-page` blocks + optional legacy on-disk index rows. **Journal layer** (narrative) lives **above** the **strategy-expert-thread** start HTML comment. The machine-layer HTML block is replaced on each `thread` run._
 
 ### Recent transcript material
 
@@ -430,6 +430,16 @@ _Auto-generated from `-transcript.md` + `strategy-page` blocks in this thread + 
 ## 2026-04-20
 - YT | cold: **Larry Johnson** (*Countercurrent*) × **Robert Barnes** — *What the HELL is going on in the White House?* — **US politics** **focus:** executive **cognition** / **staff** **dynamics** (**Wiles**, **NYT** leak path); **Vance** **ceasefire** **/** **10** **points** **vs** **Trump** **rug** **pull**; **Witkoff–Kushner** **vs** **Driscoll** **lane**; **Iran** **“VP** **no** **authority”**; **Navy** **Hormuz** **“mall** **cop”** + **incentive** to **feed** **success**; **electoral** **tsunami** **/** **House** **funding** **brake**; **Hegseth**/**Bessent**; **farmer** **supply** **shock** // hook: **work-politics** **domestic** **fork** **+** **Iran** **week** **overlap** — **seam** **§1e** **/** **§1h**; verbatim **excerpt** **[barnes-countercurrent-2026-04-17-verbatim.md](barnes-countercurrent-2026-04-17-verbatim.md)** | https://www.youtube.com/watch?v=TBD-johnson-barnes-white-house-2026-04 | verify:operator-transcript+pin-canonical-URL+aired:2026-04-17 | thread:barnes | grep:Barnes+White+House+Vance+Iran+blockade
 - batch-analysis | 2026-04-17 | **Barnes × Johnson (YT) — US politics room × Iran week** | **Tension-first:** **`thread:barnes`** **long-form** **domestic-liability** **+** **White** **House** **process** **(C-plane** **hypothesis)** **—** **not** **§1e** **text** **and** **not** **Pentagon** **primary.** **Same** **calendar** **day** **as** **Hormuz** **/** **Islamabad** **expert** **stack** **—** **cross** **`thread:davis`**, **`thread:johnson`** **(Davis** **×** **Johnson** **earlier** **YT),** **`thread:ritter`** **with** **explicit** **plane** **tags** **(room** **vs** **ORBAT** **vs** **FM).** **Falsifiers:** **named** **official** **statements,** **vote** **counts,** **Navy** **press,** **TS** **screenshots.** | crosses:barnes+johnson
+## 2026-04-18
+- Inbox | cold: full text in [`transcript-barnes.md`](raw-input/2026-04-18/transcript-barnes.md) (pointer; SSOT raw-input) | thread:barnes
+
+### Recent raw-input (lane)
+
+_Union of **on-disk** `raw-input/…` files tagged with this expert’s `thread:` and **inbox** lines (same paths de-duped; disk line kept first)._
+
+- [transcript-davis-barnes-us-shifting-objectives-iran-war-2026-04-24.md](raw-input/2026-04-24/transcript-davis-barnes-us-shifting-objectives-iran-war-2026-04-24.md)
+- [transcript-duran-mercouris-barnes-fractured-iran-trump-2026-04-23.md](raw-input/2026-04-23/transcript-duran-mercouris-barnes-fractured-iran-trump-2026-04-23.md)
+- [x-barnes-kent-exit-ramp-qt-2026-04-21.md](raw-input/2026-04-21/x-barnes-kent-exit-ramp-qt-2026-04-21.md)
 
 ### Page references
 
