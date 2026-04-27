@@ -1,9 +1,9 @@
-# Mercouris day page — 2026-04-20
+# Mercouris refined page — 2026-04-20
 <!-- word_count: 510 -->
 
 WORK only; not Record.
 
-**Expert:** `mercouris` · **Aired:** 2026-04-20 · **Artifact:** refined day page (standalone file under `experts/mercouris/`). Not a `strategy-page` HTML fence in `thread.md` unless you duplicate the same judgment there during EOD compose.
+**Expert:** `mercouris` · **Aired:** 2026-04-20 · **Artifact:** refined page (standalone file under `experts/mercouris/`). Not a `strategy-page` HTML fence in `thread.md` unless you duplicate the same judgment there during EOD compose.
 
 ---
 

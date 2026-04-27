@@ -43,7 +43,7 @@ WORK only; not Record.
 
 Verbatim: [`raw-input/2026-04-20/judging-freedom-trump-hegseth-2026-04-20.md`](../../raw-input/2026-04-20/judging-freedom-trump-hegseth-2026-04-20.md).
 
-Refined day page: [`ritter-page-2026-04-20-judging-freedom-trump-hegseth.md`](ritter-page-2026-04-20-judging-freedom-trump-hegseth.md).
+Refined page: [`ritter-page-2026-04-20-judging-freedom-trump-hegseth.md`](ritter-page-2026-04-20-judging-freedom-trump-hegseth.md).
 
 Template: [`ritter-page-template.md`](ritter-page-template.md).
 
@@ -136,7 +136,7 @@ Scott Ritter: Okay. Thank you very much.
 
 Verbatim: [`raw-input/2026-04-20/ritter-rant-shorting-america-7pXI52jKcOU.md`](../../raw-input/2026-04-20/ritter-rant-shorting-america-7pXI52jKcOU.md).
 
-Refined day page: [`ritter-page-2026-04-20-ritter-rant-shorting-america-7pXI52jKcOU.md`](ritter-page-2026-04-20-ritter-rant-shorting-america-7pXI52jKcOU.md).
+Refined page: [`ritter-page-2026-04-20-ritter-rant-shorting-america-7pXI52jKcOU.md`](ritter-page-2026-04-20-ritter-rant-shorting-america-7pXI52jKcOU.md).
 
 Template: [`ritter-page-template.md`](ritter-page-template.md).
 

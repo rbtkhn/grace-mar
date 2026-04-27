@@ -6,14 +6,15 @@ Run from repo root after adding new Substack / JF / Ritter's Rant verbatim files
 
 Scaffolds are structural only (empty Chronicle / Reflection / Foresight). After ingest, run
 `scripts/strategy/assemble_ritter_pages_verbatim.py` to embed ~80% expert verbatim in Chronicle
-and generated WORK analysis in Reflection/Foresight per `ritter-page-template.md`.
+and generated WORK analysis in Reflection/Foresight per
+`docs/skill-work/work-strategy/strategy-notebook/refined-page-template.md` (Ritter extended modes; compat stub: `experts/ritter/ritter-page-template.md`).
 
 Idempotent: overwrites manifest; overwrites ritter-page scaffolds that still contain
 the marker SCOUT_REFINED_PAGE_SCAFFOLD (or use --force to overwrite all).
 
 Transcript backlinks: lines may be ``Verbatim (~triage note):`` as well as ``Verbatim:``;
 any line starting with ``Verbatim`` should be treated as the verbatim header when inserting
-``Refined day page:`` after raw-input captures.
+``Refined page:`` after raw-input captures.
 """
 
 from __future__ import annotations

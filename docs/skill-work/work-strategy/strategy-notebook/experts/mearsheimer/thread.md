@@ -548,7 +548,7 @@ _Auto-generated from `transcript.md` + **on-disk** and **inbox** `raw-input/` (d
 - YT | cold: **Chris Hedges** × **John Mearsheimer** (*The Chris Hedges Report* — **operator transcript** **2026-04-20**) — **Islamabad** **round** **<48h** **before** **ceasefire** **break;** **Iran** **10-point** **basis;** **Hormuz** **blockade** **/** **container-ship** **seizure** **as** **ceasefire** **breach;** **Mearsheimer:** **escalation** **ladder** **favors** **Iran** **—** **deal** **or** **extend** **ceasefire;** **Israel** **lobby** **×** **economy** **cliff;** **Lebanon** **lever;** **ship** **boarding** **after** **strait** **re-open** **—** **full** **verbatim** [raw-input/2026-04-20/transcript-hedges-mearsheimer-iran-2026-04-20.md](raw-input/2026-04-20/transcript-hedges-mearsheimer-iran-2026-04-20.md) · **day** **page** [experts/mearsheimer/mearsheimer-page-2026-04-20-hedges-mearsheimer-iran.md](experts/mearsheimer/mearsheimer-page-2026-04-20-hedges-mearsheimer-iran.md) // hook: **`thread:mearsheimer`** **×** **§1e** **Islamabad** **/** **Hormuz** **week** | `TBD` canonical watch URL | verify:full-text+raw-input/2026-04-20/transcript-hedges-mearsheimer-iran-2026-04-20.md+operator-transcript | thread:mearsheimer | IRAN | grep:Hedges+Mearsheimer+2026-04-20
 ## 2026-04-21
 Verbatim: [`raw-input/2026-04-21/transcript-mearsheimer-redacted-trump-iran-2026-04-21.md`](../../raw-input/2026-04-21/transcript-mearsheimer-redacted-trump-iran-2026-04-21.md).
-Refined day page: [`mearsheimer-page-2026-04-21-redacted-trump-iran.md`](mearsheimer-page-2026-04-21-redacted-trump-iran.md).
+Refined page: [`mearsheimer-page-2026-04-21-redacted-trump-iran.md`](mearsheimer-page-2026-04-21-redacted-trump-iran.md).
 ## 2026-04-20
 **The Chris Hedges Report** · **John Mearsheimer** · operator transcript **2026-04-20**. Full verbatim (all exchanges): [`raw-input/2026-04-20/transcript-hedges-mearsheimer-iran-2026-04-20.md`](../../raw-input/2026-04-20/transcript-hedges-mearsheimer-iran-2026-04-20.md). [strategy-expert-template.md § Thesis-first verbatim scaffold](../../strategy-expert-template.md#thesis-scaffold-pattern)
 **Thesis A — Escalation geometry.** U.S. escalation up the ladder does not beat Iran; longer war and less Gulf (and possibly Red Sea) oil flow helps Iran. Default expectation: Washington seeks a deal before the ceasefire break or extends the ceasefire—not a climb.
@@ -585,7 +585,7 @@ And the Israelis will continue to attack Lebanon and Hezbollah in good part not 
 So this is one of the reasons I find it hard to imagine that you’re ever going to settle this conflict in any meaningful way.
 ~~~
 _(Continues in raw-input file: ship-seizure / blockade spiral, lobby discourse vs policy, WSJ White House tantrum episode, global economy / fertilizer / jet fuel, Suez analogy rejection, etc.)_
-Refined day page: [`mearsheimer-page-2026-04-20-hedges-mearsheimer-iran.md`](mearsheimer-page-2026-04-20-hedges-mearsheimer-iran.md).
+Refined page: [`mearsheimer-page-2026-04-20-hedges-mearsheimer-iran.md`](mearsheimer-page-2026-04-20-hedges-mearsheimer-iran.md).
 
 ### Recent raw-input (lane)
 

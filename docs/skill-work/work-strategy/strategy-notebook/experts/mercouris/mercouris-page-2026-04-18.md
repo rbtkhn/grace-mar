@@ -1,9 +1,9 @@
-# Mercouris day page — 2026-04-18
+# Mercouris refined page — 2026-04-18
 <!-- word_count: 280 -->
 
 WORK only; not Record.
 
-**Expert:** `mercouris` · **Ingest:** 2026-04-18 · **Artifact:** refined day page (standalone file under `experts/mercouris/`). **Note:** This date is a `notebook |` lens row only—not a The Duran episode verbatim. Use for tri-mind / Hormuz–PRC precedent folds alongside [`days.md` § 2026-04-16](../../chapters/2026-04/days.md#2026-04-16).
+**Expert:** `mercouris` · **Ingest:** 2026-04-18 · **Artifact:** refined page (standalone file under `experts/mercouris/`). **Note:** This date is a `notebook |` lens row only—not a The Duran episode verbatim. Use for tri-mind / Hormuz–PRC precedent folds alongside [`days.md` § 2026-04-16](../../chapters/2026-04/days.md#2026-04-16).
 
 ---
 
@@ -13,7 +13,7 @@ The captured material is a single notebook line: US maritime-denial grammar used
 
 ### Reflection
 
-Treating this as a Mercouris lane hook means holding the inference lightly: the analogy (Iran case → PRC reaction) is plausible strategic commentary but not wire-tier without PRC official statements and shipping data on the same window. It pairs naturally with the full 2026-04-16 Mercouris day page and chapter weave on Hormuz, blockade precedent, and Chinese naval options—this file is the stub anchor so the 04-18 ingest date is not orphaned.
+Treating this as a Mercouris lane hook means holding the inference lightly: the analogy (Iran case → PRC reaction) is plausible strategic commentary but not wire-tier without PRC official statements and shipping data on the same window. It pairs naturally with the full 2026-04-16 Mercouris refined page and chapter weave on Hormuz, blockade precedent, and Chinese naval options—this file is the stub anchor so the 04-18 ingest date is not orphaned.
 
 ### Foresight
 

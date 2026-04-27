@@ -34,7 +34,7 @@ WORK only; not Record.
 
 Verbatim: [`raw-input/2026-04-21/transcript-mearsheimer-redacted-trump-iran-2026-04-21.md`](../../raw-input/2026-04-21/transcript-mearsheimer-redacted-trump-iran-2026-04-21.md).
 
-Refined day page: [`mearsheimer-page-2026-04-21-redacted-trump-iran.md`](mearsheimer-page-2026-04-21-redacted-trump-iran.md).
+Refined page: [`mearsheimer-page-2026-04-21-redacted-trump-iran.md`](mearsheimer-page-2026-04-21-redacted-trump-iran.md).
 
 
 
@@ -112,5 +112,5 @@ So this is one of the reasons I find it hard to imagine that you’re ever going
 
 _(Continues in raw-input file: ship-seizure / blockade spiral, lobby discourse vs policy, WSJ White House tantrum episode, global economy / fertilizer / jet fuel, Suez analogy rejection, etc.)_
 
-Refined day page: [`mearsheimer-page-2026-04-20-hedges-mearsheimer-iran.md`](mearsheimer-page-2026-04-20-hedges-mearsheimer-iran.md).
+Refined page: [`mearsheimer-page-2026-04-20-hedges-mearsheimer-iran.md`](mearsheimer-page-2026-04-20-hedges-mearsheimer-iran.md).
 

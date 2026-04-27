@@ -36,7 +36,7 @@ Optional index: [`research/external/work-strategy/analyst-corpus/INDEX.md`](../.
 - **A — Production notebook:** Append under `## YYYY-MM-DD` in `days.md` using subsections `### DEMO — Phase N`.
 - **B — Clean room:** `strategy-notebook/demo-runs/skill-strategy-demo-scratch-YYYY-MM-DD.md` (create `demo-runs/` if needed). Same section headings as below.
 
-**Ceiling:** Keep each phase concise; total demo block should stay within the notebook [daily length guidance](STRATEGY-NOTEBOOK-ARCHITECTURE.md) (~1000 words/day page target — compress if needed).
+**Ceiling:** Keep each phase concise; total demo block should stay within the notebook [daily length guidance](STRATEGY-NOTEBOOK-ARCHITECTURE.md) (~1000 words per `days.md` day-block target — compress if needed).
 
 ---
 

@@ -16,6 +16,7 @@ WORK only; not Record.
 | Topic | Document / tool |
 |-------|-----------------|
 | Fence syntax, page template | [strategy-page-template.md](strategy-page-template.md) |
+| Refined page scaffold (all experts) | [refined-page-template.md](refined-page-template.md) + per-expert `*-page-template.md` stub |
 | Thread layers (journal vs machine), parse contract | [STRATEGY-NOTEBOOK-ARCHITECTURE.md § Thread](STRATEGY-NOTEBOOK-ARCHITECTURE.md#thread-terminology) |
 | `watch=` and multi-expert duplicate pages | [watches/README.md](watches/README.md) (page format) |
 | Validation | From repo root: `python3 scripts/validate_strategy_pages.py` — [validate_strategy_pages.py](../../../../scripts/validate_strategy_pages.py) |
@@ -29,6 +30,6 @@ WORK only; not Record.
 
 When several experts address the same page, the **same `id=`** appears in each expert’s **thread file for that month** (see [watches/README.md](watches/README.md)). This is **intentional** duplication for per-lane reading; **not** multiple competing sources of truth.
 
-## Refined day pages (standalone `*-page-*.md`)
+## Refined pages (standalone `*-page-*.md`)
 
-**Distinct from** thread-embedded **`strategy-page`** fences: standalone files under **`experts/<expert_id>/`** (Chronicle / Reflection / Foresight; link to **`raw-input/`** in **`### Appendix`**). **Multiple refined pages for the same publication date are allowed** for every expert: default **`<expert_id>-page-YYYY-MM-DD.md`**, or **`<expert_id>-page-YYYY-MM-DD-<slug>.md`** when splitting by primary capture (`<slug>` from the **`raw-input`** stem). **Alternatively,** one file may consolidate same-day captures with **A / B / C** Chronicle blocks where the expert template defines that pattern. Normative detail: [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md) (split ingest / refined day pages) and each expert’s **`*-page-template.md`**.
+**Distinct from** thread-embedded **`strategy-page`** fences: standalone files under **`experts/<expert_id>/`** (Chronicle / Reflection / Foresight; link to **`raw-input/`** in **`### Appendix`**). **Multiple refined pages for the same publication date are allowed** for every expert: default **`<expert_id>-page-YYYY-MM-DD.md`**, or **`<expert_id>-page-YYYY-MM-DD-<slug>.md`** when splitting by primary capture (`<slug>` from the **`raw-input`** stem). **Alternatively,** one file may consolidate same-day captures with **A / B / C** Chronicle blocks as defined in [refined-page-template.md](refined-page-template.md). Normative detail: [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md) (split ingest / refined pages), the same **refined-page-template.md**, and each expert’s thin **`*-page-template.md`** compat stub.

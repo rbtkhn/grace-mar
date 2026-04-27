@@ -11,7 +11,7 @@ Config: JSON next to raw-input (see ``fetch-sources.example.json``).
 Each feed may set optional ``"thread": "<expert_id>"`` (must match
 ``CANONICAL_EXPERT_IDS``); items append into
 ``raw-input/<pub_date>/<pub_date>-<expert_id>.md`` (one file per expert per
-calendar day, multiple ``---`` YAML blocks). **Refined day pages** live under
+calendar day, multiple ``---`` YAML blocks). **Refined pages** live under
 ``experts/<expert_id>/``, not in ``raw-input``. Feeds **without** ``thread`` keep
 per-item slug filenames under the date folder.
 

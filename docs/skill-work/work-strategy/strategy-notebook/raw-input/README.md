@@ -8,12 +8,12 @@
 ## Publication vocabulary (formal pin)
 
 - **Machine (grep / YAML / cold lines, `verify:` tails):** use **`pub_date`** and the tag **`pub_date:YYYY-MM-DD`**. **Do not** introduce new **`aired:`** tags; **`ingest_date`** remains “when the file entered this tree,” distinct from **publication**.
-- **Human (preambles, spec prose):** use **Published** / “publication day” — not an “aired” block as the norm. Same calendar anchor as **`pub_date`**; see [STRATEGY-NOTEBOOK-ARCHITECTURE.md](../STRATEGY-NOTEBOOK-ARCHITECTURE.md) publication vocabulary and [refined-day-page-template.md](../refined-day-page-template.md).
+- **Human (preambles, spec prose):** use **Published** / “publication day” — not an “aired” block as the norm. Same calendar anchor as **`pub_date`**; see [STRATEGY-NOTEBOOK-ARCHITECTURE.md](../STRATEGY-NOTEBOOK-ARCHITECTURE.md) publication vocabulary and [refined-page-template.md](../refined-page-template.md).
 - **Legacy (until bulk migration):** folder **`_aired-pending/`** and existing **`aired:`** / “aired” in older **daily-strategy-inbox.md** and captures stay on disk; new material and new edits follow this pin.
 
 ## Automated fetch (RSS → raw-input)
 
-**Script:** [`scripts/fetch_strategy_raw_input.py`](../../../../scripts/fetch_strategy_raw_input.py) — pulls **RSS/Atom** items (e.g. Substack `/feed`) into **`raw-input/<pub_date>/`** as markdown with YAML frontmatter (`kind: rss-item`). When a feed sets **`"thread": "<expert_id>"`**, new items **append** into **`raw-input/<pub_date>/<pub_date>-<expert_id>.md`** (multiple ingests = multiple `---` … `---` blocks; duplicates skipped by `guid:`). **Refined day pages** (operator judgment artifacts) live under **`experts/<expert_id>/`** — e.g. **`mercouris-page-YYYY-MM-DD.md`** — not in this tree. Feeds **without** `thread` still write **one markdown file per RSS item** (slug + hash basename). Optional **`thread:`** in YAML drives **`python3 scripts/strategy_thread.py`** triage: one-line RSS stubs merge into that expert’s **`experts/<id>/transcript.md`** (after inbox lines for the same date).
+**Script:** [`scripts/fetch_strategy_raw_input.py`](../../../../scripts/fetch_strategy_raw_input.py) — pulls **RSS/Atom** items (e.g. Substack `/feed`) into **`raw-input/<pub_date>/`** as markdown with YAML frontmatter (`kind: rss-item`). When a feed sets **`"thread": "<expert_id>"`**, new items **append** into **`raw-input/<pub_date>/<pub_date>-<expert_id>.md`** (multiple ingests = multiple `---` … `---` blocks; duplicates skipped by `guid:`). **Refined pages** (operator judgment artifacts) live under **`experts/<expert_id>/`** — e.g. **`mercouris-page-YYYY-MM-DD.md`** — not in this tree. Feeds **without** `thread` still write **one markdown file per RSS item** (slug + hash basename). Optional **`thread:`** in YAML drives **`python3 scripts/strategy_thread.py`** triage: one-line RSS stubs merge into that expert’s **`experts/<id>/transcript.md`** (after inbox lines for the same date).
 
 **Setup:**
 
@@ -72,7 +72,7 @@ raw-input/
     <slug>.md        ← other captures: verbatim sidecars, RSS without thread:, bundles, indexes
 ```
 
-**Refined day page (not here):** **`experts/<expert_id>/<expert_id>-page-YYYY-MM-DD.md`** — Chronicle / Reflection / Foresight; links back to **verbatim** in this tree. **Multiple refined pages for the same publication date are allowed:** **`…-page-YYYY-MM-DD-<slug>.md`** (slug from `raw-input` stem) **or** one consolidated file with **A / B / C** Chronicle blocks per [refined-day-page-template.md](../refined-day-page-template.md) (each expert’s **`*-page-template.md`** is a **compat stub** linking that canonical). Distinct from **`strategy-page`** in `thread.md` unless mirrored during EOD compose.
+**Refined page (not here):** **`experts/<expert_id>/<expert_id>-page-YYYY-MM-DD.md`** — Chronicle / Reflection / Foresight; links back to **verbatim** in this tree. **Multiple refined pages for the same publication date are allowed:** **`…-page-YYYY-MM-DD-<slug>.md`** (slug from `raw-input` stem) **or** one consolidated file with **A / B / C** Chronicle blocks per [refined-page-template.md](../refined-page-template.md) (each expert’s **`*-page-template.md`** is a **compat stub** linking that canonical). Distinct from **`strategy-page`** in `thread.md` unless mirrored during EOD compose.
 
 **Raw capture:** e.g. **`2026-04-21-mercouris-verbatim.md`** under **`2026-04-21/`** because the episode **published** ( **`pub_date`** ) on that calendar day; RSS **`thread: mercouris`** appends to **`2026-04-21-mercouris.md`** in that same folder.
 
@@ -135,6 +135,6 @@ Default root: `docs/skill-work/work-strategy/strategy-notebook/raw-input`. Overr
 
 ## Assistant default
 
-When the operator asks for **full transcript on disk**, write **verbatim** under **`raw-input/YYYY-MM-DD/<descriptive-slug>.md`** (or **`YYYY-MM-DD-<expert_id>.md`** when matching RSS merge). Place **refined day pages** under **`experts/<expert_id>/<expert_id>-page-YYYY-MM-DD.md`** (and **`…-page-YYYY-MM-DD-<slug>.md`** when splitting multiple primaries on the same date — see [PAGE-CONTRACT.md](../PAGE-CONTRACT.md) § Refined day pages). Keep [daily-strategy-inbox.md](../daily-strategy-inbox.md) to **stub lines** pointing at **verbatim** for `verify:` and optionally at the **expert page** for composed judgment, e.g. `verify:full-text+raw-input/2026-04-21/2026-04-21-mercouris-verbatim.md`.
+When the operator asks for **full transcript on disk**, write **verbatim** under **`raw-input/YYYY-MM-DD/<descriptive-slug>.md`** (or **`YYYY-MM-DD-<expert_id>.md`** when matching RSS merge). Place **refined pages** under **`experts/<expert_id>/<expert_id>-page-YYYY-MM-DD.md`** (and **`…-page-YYYY-MM-DD-<slug>.md`** when splitting multiple primaries on the same date — see [PAGE-CONTRACT.md](../PAGE-CONTRACT.md) § Refined pages). Keep [daily-strategy-inbox.md](../daily-strategy-inbox.md) to **stub lines** pointing at **verbatim** for `verify:` and optionally at the **expert page** for composed judgment, e.g. `verify:full-text+raw-input/2026-04-21/2026-04-21-mercouris-verbatim.md`.
 
 Full contract: [STRATEGY-NOTEBOOK-ARCHITECTURE.md § Split ingest model](../STRATEGY-NOTEBOOK-ARCHITECTURE.md#split-ingest-model).

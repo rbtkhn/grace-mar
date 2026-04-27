@@ -102,7 +102,7 @@ Verbatim: [`raw-input/2026-04-22/substack-pape-within-10-days-shortages-already-
 
 Verbatim: [`raw-input/2026-04-22/substack-pape-the-first-move-has-begun-2026-04-22.md`](../../raw-input/2026-04-22/substack-pape-the-first-move-has-begun-2026-04-22.md).
 
-Refined day page: [`pape-page-2026-04-22.md`](pape-page-2026-04-22.md).
+Refined page: [`pape-page-2026-04-22.md`](pape-page-2026-04-22.md).
 
 
 
@@ -114,7 +114,7 @@ Refined day page: [`pape-page-2026-04-22.md`](pape-page-2026-04-22.md).
 
 Verbatim: [`raw-input/2026-04-21/x-pape-zero-sum-escalation-ladder-2026-04-21.md`](../../raw-input/2026-04-21/x-pape-zero-sum-escalation-ladder-2026-04-21.md).
 
-Refined day page: [`pape-page-2026-04-21.md`](pape-page-2026-04-21.md).
+Refined page: [`pape-page-2026-04-21.md`](pape-page-2026-04-21.md).
 
 
 
@@ -131,7 +131,7 @@ Refined day page: [`pape-page-2026-04-21.md`](pape-page-2026-04-21.md).
 
 Verbatim: [`raw-input/2026-04-20/redacted-pape-collapse-ahead-of-schedule-2026-04-20.md`](../../raw-input/2026-04-20/redacted-pape-collapse-ahead-of-schedule-2026-04-20.md).
 
-Refined day page: [`pape-page-2026-04-20.md`](pape-page-2026-04-20.md).
+Refined page: [`pape-page-2026-04-20.md`](pape-page-2026-04-20.md).
 
 Host: Professor Robert Pape is the director of the Chicago Project on Security and Threats at the University of Chicago and the author of Escalation Trap on Substack.
 Professor, great to have you here on the show. Welcome.

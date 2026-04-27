@@ -81,7 +81,7 @@ WORK only; not Record.
 
 Verbatim: [`raw-input/2026-04-20/duran-mercouris-russia-blockade-40-ships-hormuz-2026-04-20.md`](../../raw-input/2026-04-20/duran-mercouris-russia-blockade-40-ships-hormuz-2026-04-20.md).
 
-Refined day page: [`mercouris-page-2026-04-20.md`](mercouris-page-2026-04-20.md).
+Refined page: [`mercouris-page-2026-04-20.md`](mercouris-page-2026-04-20.md).
 
 Good day. Today is Monday, 20th April 2026.
 First, I want to thank everyone again for your kind words about my recent bout of ill health. Today I feel much better — not perhaps fully myself again, as I still get occasional moments of dizziness — but a great deal better. Today is the first day I generally feel essentially myself again, so from today moving forward it will be business as usual as far as videos are concerned.

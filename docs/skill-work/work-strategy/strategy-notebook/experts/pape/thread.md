@@ -603,15 +603,15 @@ _Auto-generated from `transcript.md` + **on-disk** and **inbox** `raw-input/` (d
 ## 2026-04-22
 Verbatim: [`raw-input/2026-04-22/substack-pape-within-10-days-shortages-already-2026-04-22.md`](../../raw-input/2026-04-22/substack-pape-within-10-days-shortages-already-2026-04-22.md).
 Verbatim: [`raw-input/2026-04-22/substack-pape-the-first-move-has-begun-2026-04-22.md`](../../raw-input/2026-04-22/substack-pape-the-first-move-has-begun-2026-04-22.md).
-Refined day page: [`pape-page-2026-04-22.md`](pape-page-2026-04-22.md).
+Refined page: [`pape-page-2026-04-22.md`](pape-page-2026-04-22.md).
 ## 2026-04-21
 Verbatim: [`raw-input/2026-04-21/x-pape-zero-sum-escalation-ladder-2026-04-21.md`](../../raw-input/2026-04-21/x-pape-zero-sum-escalation-ladder-2026-04-21.md).
-Refined day page: [`pape-page-2026-04-21.md`](pape-page-2026-04-21.md).
+Refined page: [`pape-page-2026-04-21.md`](pape-page-2026-04-21.md).
 ## 2026-04-20
 - YT | cold: **Robert A. Pape** × **Clayton Morris & Natali Morris** (*Redacted* — *The Collapse is Now "Ahead of Schedule"*) — **aired 2026-04-20** — **04-12** **10-day** **shortage** **prediction** **→** **“ahead** **of** **schedule”** **(~4–5** **days** **post);** **Escalation** **Trap** **Substack** **/** **sanctions** **stages** **(≈45d** **prices,** **45–60d** **shortages,** **60–90d** **contraction** **→** **May** **31);** **jet** **fuel** **Europe** **/** **Air** **Canada** **LaGuardia;** **Australia** **/** **India** **stress;** **Hormuz** **~20%** **oil** **+** **dual** **closure** **(Iran** **+** **US)** **frame;** **China** **visit** **—** **stockpile** **/** **~80%** **non-oil** **energy** **/** **quagmire** **helps** **China** **thesis;** **US** **energy** **independence** **vs** **policies** **hastening** **China** **#1;** **SPR** **/** **171** **tankers** **/** **~200M** **bbl** **hypothesis;** **Islamabad** **48h** **paper** **deal** **possible** **but** **low** **stickiness** **/** **Lebanon** **48h** **unwind** **parallel;** **zero-sum** **Hormuz** **+** **nuclear** **/** **Bombing** **to** **Win** **/** **~$40T** **debt** **risk;** **working** **class** **/** **truckers** **/** **gas** **relief** **pitch** **/** **Bessent** **/** **poll** **/** **Erie** **frame;** **consequences** **over** **conspiracy** // hook: **`thread:pape`** **supply** **/** **sanctions** **theory** **×** **`thread:davis`** **`thread:ritter`** **`thread:johnson`** **Hormuz** **week** **—** **not** **§1e** **without** **primaries** | https://www.youtube.com/watch?v=WemB-vfoMaw | verify:full-text+raw-input+aired:2026-04-20+canonical-URL | thread:pape | grep:Pape+Redacted+Hormuz+Escalation+Trap+collapse+Bessent
 # Redacted — *The Collapse is Now "Ahead of Schedule"* (April 20, 2026)
 Verbatim: [`raw-input/2026-04-20/redacted-pape-collapse-ahead-of-schedule-2026-04-20.md`](../../raw-input/2026-04-20/redacted-pape-collapse-ahead-of-schedule-2026-04-20.md).
-Refined day page: [`pape-page-2026-04-20.md`](pape-page-2026-04-20.md).
+Refined page: [`pape-page-2026-04-20.md`](pape-page-2026-04-20.md).
 Host: Professor Robert Pape is the director of the Chicago Project on Security and Threats at the University of Chicago and the author of Escalation Trap on Substack.
 Professor, great to have you here on the show. Welcome.
 Professor Robert Pape: Thank you very much. It's really quite a pleasure to be with you.
