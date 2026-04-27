@@ -1,29 +1,30 @@
 ---
 name: thanks
 preferred_activation: thanks
-description: "Grace-Mar micro-pause cadence beat. Primary trigger: thanks (optionally followed by a short park line). Reads the most recent cadence event from work-cadence-events.md (with empty-log and file fallbacks), synthesizes **Recent rhythm** in plain language (no internal ops jargon or timestamps in chat), replies in **two blocks** (recent rhythm + leaving on the desk with resume hint), then logs one thanks line via log_cadence_event.py. No dream stack, no integrity/digest, no Record merge. Lighter than signing-off coffee or bridge; heavier than silence."
+description: "DEPRECATED for grace-mar operator workflow (2026-04). Prefer Conductor sessions or coffee light/minimal for mid-day beats. Legacy: micro-pause — thanks + optional park, two-block reply, log_cadence_event --kind thanks. See conductor SKILL + coffee SKILL."
 ---
 
-# Thanks (micro-pause)
+# Thanks (micro-pause) — **deprecated operator workflow**
 
-**Preferred activation (operator):** say **`thanks`** — optionally **same message**, after a space or punctuation, a **short park line** (what you are leaving on the desk).
+**Status (grace-mar):** The operator **no longer uses** **`thanks`** as a primary cadence command. **Prefer instead:** a **Conductor** pass ([`.cursor/skills/conductor/SKILL.md`](../conductor/SKILL.md) — master name, **`conductor`**, orientation + action MCQ), or **`coffee` light** / **`coffee` minimal** for thin reorientation without the full hub. This file stays **authoritative for legacy behavior** if an old thread or script still says **`thanks`**, and historical **`thanks`** lines remain valid in `work-cadence-events.md`.
 
-`thanks` is a **bookmark**, not gratitude training for the model. It exists so **pauses** show up in **cadence telemetry** and the next thread can see a **one-line anchor** without running **`dream`**. Each beat **echoes the most recent cadence line** from this log (as **Recent rhythm** in chat), so the pause lands in context, not isolation.
+**Preferred activation (legacy):** say **`thanks`** — optionally **same message**, after a space or punctuation, a **short park line** (what you are leaving on the desk).
+
+`thanks` was a **bookmark**, not gratitude training for the model. It put **pauses** in **cadence telemetry** with a **one-line anchor** without running **`dream`**. **Conductors** now cover the more interesting mid-day “shape the next move” slot; **`thanks`** is redundant for that purpose.
 
 ---
 
-## When to run
+## When to run (legacy only)
 
-- Stepping away for a meeting, meal, or context switch **mid-day**.
-- Closing a **work block** that does **not** merit **`dream`** (no day-close maintenance).
-- You want **`work-cadence-events.md`** to show a **pause** without **`coffee`** menu or **`bridge`** transfer packet.
-
-**Not for:** end-of-day consolidation (use **`dream`**), Cursor session seal (use **`bridge`**), full reorientation (use **`coffee`**).
+- **Do not** steer new operator habit toward **`thanks`.** Use **Conductor** or **`coffee` light/minimal** first.
+- If the operator **explicitly** says **`thanks`** as a cadence beat (or you are finishing a documented legacy flow), run the steps below.
+- **Not for:** end-of-day consolidation (use **`dream`**), Cursor session seal (use **`bridge`**), full **`coffee`** (use normal **`coffee`**).
 
 ---
 
 ## Disambiguation (agent)
 
+- **Deprecation-first:** If the operator seems to want a **mid-day beat** but did not insist on **`thanks`**, you may **one line** suggest **Conductor** or **`coffee` minimal** — then honor a clear **`thanks`** if they repeat it.
 - **Default — run the ritual without asking:** Message is **`thanks`** alone, **`Thanks.`**, **`thanks — …`**, **`thanks:`** + park line, or **`thank you`** in the same **minimal** shape **and** there is **no substantive new task** in the same turn. Do **not** ask “log or conversational?” for these.
 - **Work first:** If the operator **also** assigns substantive work in the same message (“thanks, and fix the script…”), **answer the work**; **skip** cadence logging in that turn unless they send **`thanks`** again as its **own** beat afterward.
 - **Do not** treat as this ritual when **`thanks`** is **inside** technical or narrative prose (e.g. “the function thanks the caller for …”).
@@ -51,7 +52,7 @@ description: "Grace-Mar micro-pause cadence beat. Primary trigger: thanks (optio
 
 4. **Reply** with a **two-block** **Pause beat** only (friendly to a **new companion-self user** — no internal ops jargon in labels):
    - **Recent rhythm:** the line from step 2 (synthesis, empty-log fixed sentence, or thread fallback).
-   - **Leaving on the desk:** the park text or agent-inferred slug **—** resume here or run **`coffee`** when you return.
+   - **Leaving on the desk:** the park text or agent-inferred slug **—** resume here, run **`coffee`** when you return, or open a **Conductor** pass when you want a scored next-move menu.
 
 5. **Log** (operator repo, default user **`grace-mar`** unless context names another id):
 
@@ -65,7 +66,7 @@ Pass **`--cursor-model "…"`** when the Cursor UI model name is known (parity w
 
 6. **Do not** run **`auto_dream.py`**, **`operator_handoff_check.py`**, full **`coffee`** Step 1, **`bridge`**, or **RECURSION-GATE** merges as part of this skill unless the operator explicitly asks in the **same** or **next** message.
 
-7. **No** full **A–E** **coffee** menu unless the operator pivots to **`coffee`**.
+7. **No** full **`coffee` A–D** hub unless the operator pivots to **`coffee`**.
 
 ---
 
@@ -83,7 +84,7 @@ Pass **`--cursor-model "…"`** when the Cursor UI model name is known (parity w
 | Ritual | Role |
 |--------|------|
 | **coffee** | Framing + menu (many per day) |
-| **thanks** | Micro-pause + **synthesis of the prior cadence line** (or fallbacks) + optional park + **two-block** reply + one telemetry line |
+| **thanks** | **Deprecated** for new workflow — use **conductor** / **coffee** instead. Legacy: micro-pause + prior-line synthesis + park + two-block reply + one telemetry line |
 | **dream** | Day-close maintenance |
 | **bridge** | Session seal + transfer prompt |
 

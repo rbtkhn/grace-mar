@@ -1,6 +1,6 @@
 # Cadence events
 
-> Append-only audit of **coffee**, **coffee_pick**, **coffee_conductor_outcome**, **dream**, **bridge**, **thanks**, and optional **harvest** runs.
+> Append-only audit of **coffee**, **coffee_pick**, **coffee_conductor_outcome**, **dream**, **bridge**, legacy **`thanks`**, and optional **harvest** runs. (**`thanks`** is a deprecated grace-mar operator beat; new work prefers **conductor** + **`coffee`**.)
 > **Not** Record truth. **Not** self-memory. **Not** a replacement for
 > handoff artifacts or `session-transcript.md`.
 >

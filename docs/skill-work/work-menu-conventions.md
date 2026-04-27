@@ -115,7 +115,7 @@ Dated WORK outputs (daily brief, weekly scaffold, newsletter digest, optional `m
 ## See also
 
 - **`strategy + verify`** (named fork) — §4 **Combo and hybrid options** above; full spec under **work-strategy** in [skill-strategy SKILL](../../.cursor/skills/skill-strategy/SKILL.md).
-- **Fixed session menu (`coffee` — same A–G for work-start and signing-off; legacy hey still works):** not the 3–5 WORK pattern — use the canonical **`coffee`** fixed menu, listed **A, B, C, D, E, F, G** (seven modes; **no** close letter). **A — Daily Brief**, **B — Build**, **C — Compass** (includes work-strategy-rome), **D — Book**, **E — Steward**, **F — Cici next**, **G — Dev next** (`workspace.md` § Next actions). **C** and **D** exit the coffee hub by default unless **`stay in coffee`**; **skills** / **meta:** say with **B**. Roles: [.cursor/skills/coffee/SKILL.md](../../../.cursor/skills/coffee/SKILL.md).
+- **Fixed session menu (`coffee` — same **A–D** hub for work-start and signing-off; legacy **hey** still works):** not the 3–5 WORK pattern — canonical hub: **A** Build, **B** Steward, **C** Strategy (daily brief), **D** (system choice). **Symphony conductors** are **not** hub letters — [conductor skill](../../../.cursor/skills/conductor/SKILL.md). **C** exits the coffee hub by default unless **`stay in coffee`**; **skills** / **meta:** say with **A — Build**. Legacy **A–G** workload table for mapping: [menu-reference.md](../work-coffee/menu-reference.md). Roles: [.cursor/skills/coffee/SKILL.md](../../../.cursor/skills/coffee/SKILL.md).
 - [Operator–agent lanes](../../operator-agent-lanes.md)
 - [Coffee skill](../../../.cursor/skills/coffee/SKILL.md)
 - [Work territory history logs](work-modules-history-principle.md) (`docs/skill-work/work-*/*-history.md`)

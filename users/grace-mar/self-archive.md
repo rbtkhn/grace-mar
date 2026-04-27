@@ -182,6 +182,11 @@ entries: []
 > IX-A: American narrative-historical LOA set as reference canon (not a method claim)
 > warrant: Revisit if the LOA-anchored shelf is materially re-sorted or deprioritized as my American narrative spine.
 > operator: | Knowledge claim: the LOA-anchored shelf set supports an internal map of the American story through primary narrative-historical texts, not a statement about curation as a "method" — it is the substantive canon the companion is reading. Evidence: HNSRC-0101, HNSRC-0102, HNSRC-0103, HNSRC-0104, HNSRC-0105, HNSRC-0106, HNSRC-0107, HNSRC-0108
+
+**[2026-04-26 20:56:46]** `APPROVED` (Operator)
+> CANDIDATE-0031 → RUNTIME-OBSERVATION
+> IX-C: delete PERS-004 — work rhythm / cadence belongs in skill-work + work-dev, not Record
+> operator: | Cadence events and operator ritual habits are WORK (skill-work doctrine + work-dev tooling), not IX-C personality. Operator: keep cadence only in work; remove PERS-004 from Record on approve.
 END OF FILE — EVIDENCE grace-mar v0.2 (reseeded)
 
   - id: ACT-0001

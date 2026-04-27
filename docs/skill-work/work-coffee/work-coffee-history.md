@@ -61,10 +61,23 @@ This log is WORK-only. It is not the Record, not MEMORY, and not a substitute fo
 
 - Two Conductor lines on the main menu; **superseded 2026-04-25** by a single **D** line (entry below). A later pass expanded to **D1–D5** (five lines) before consolidation.
 
+## 2026-04-24 — **`thanks`** cadence beat **deprecated** (grace-mar operator workflow)
+
+- **Prefer:** **Conductor** sessions ([conductor SKILL](../../../.cursor/skills/conductor/SKILL.md)) or **`coffee` light/minimal** for mid-day pauses and depth. **`thanks`** skill retained for legacy invocations and historical `work-cadence-events.md` lines — see [.cursor/skills/thanks/SKILL.md](../../../.cursor/skills/thanks/SKILL.md).
+- Cross-refs: `work-cadence/README.md`, `dream` / `coffee` skills, `operator-skills.md`, AGENTS Layer 4, COFFEE-CADENCE-CONDUCTOR-PROTOCOL, `cursor-automations-candidates.md`, `operator-thresholds.md`, `work-cadence-events.md` header.
+
+## 2026-04-24 — **Conductors** off the **`coffee` hub** (**A–D** only)
+
+- **Step 2 hub:** **A** Build, **B** Steward, **C** Strategy (daily brief), **D** (system choice). **No** Symphony master line on the hub — invoke **Toscanini … Bernstein** by **name**, **`conductor`**, or [conductor skill](../../../.cursor/skills/conductor/SKILL.md).
+- **`coffee_pick`:** prefer **`picked=conductor`** + **`conductor=<slug>`**; legacy **`picked=D`** + `conductor=` and **`D1`..`D5`** still parse.
+- Cross-refs updated: coffee / conductor skills, AGENTS, operator-style, harness-warmup, handoff-check, CONDUCTOR-PASS, COFFEE-CADENCE-CONDUCTOR-PROTOCOL, menu-reference, operator-skills, work-coffee README, cursor-automations, git-branch-hygiene, thanks, development-handoff, CONDUCTOR-PASS see-also.
+- **Note:** Supersedes *hub placement* in the 2026-04-25 entry below; movement vocabulary and protocol SSOTs unchanged.
+
 ## 2026-04-25 — **one** **D — Conductor** (five names, prefix match, bare **D** = continue last)
 
-- **Menu D** is one line: **Toscanini / Furtwängler / Karajan / Kleiber / Bernstein**; operator types **D** + a name prefix, or bare **D** to continue the last `coffee_pick` conductor. **`coffee_pick`** uses **`picked=D` `conductor=<slug>`**; legacy **`D1`..`D5`** still parse from old logs.
-- **`assess_session_load.py`:** one **D** key in `option_weights` and `format_annotated_menu` (session-load recommendation remains **A–C** only).
+- **Superseded for hub placement 2026-04-24:** Conductors are **no longer** a **`coffee`** Step 2 letter; this entry remains as history for the intermediate design.
+- **Menu D** was one line: **Toscanini / Furtwängler / Karajan / Kleiber / Bernstein**; operator typed **D** + a name prefix, or bare **D** to continue the last `coffee_pick` conductor. **`coffee_pick`** used **`picked=D` `conductor=<slug>`**; legacy **`D1`..`D5`** still parse from old logs.
+- **`assess_session_load.py`:** one **D** key in `option_weights` and `format_annotated_menu` (session-load recommendation remains **A–C** only); **D** now means **system choice** on the hub, not Conductor.
 
 ## 2026-04-11 — coffee **A–E** (five options); no micro-hints line
 

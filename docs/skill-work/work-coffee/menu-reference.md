@@ -1,17 +1,17 @@
 # Coffee — menu and protocol reference
 
-**Canonical Step 2 menu (grace-mar):** **(1)** **five** hub lines — **A** Build, **B** Steward, **C** Strategy (daily brief), **D** Conductor, **E** (system choice); then **(2)** the **Conductor MCQ** — a **second** set of **A.–E.** options naming **Toscanini … Bernstein** with attribute + **continuity** (last `coffee_pick`, `focus`/`arc`, dream/load advisory) via `build_conductor_mcq_for_user` in `scripts/cadence_conductor_resolution.py`. Hub **D** + Conductor **A**–**E** re-use the same letters in different rows — not micro-hints. **No** other row under the hub list. Executable contract: [.cursor/skills/coffee/SKILL.md](../../../.cursor/skills/coffee/SKILL.md).
+**Canonical Step 2 menu (grace-mar):** **four** hub lines only — **A** Build, **B** Steward, **C** Strategy (daily brief), **D** (system choice). **No** Conductor MCQ under `coffee`; the five Symphony masters (**Toscanini … Bernstein**) are invoked **separately** (master name, **`conductor`**, or [conductor skill](../../../.cursor/skills/conductor/SKILL.md)) — see [CONDUCTOR-PASS.md](CONDUCTOR-PASS.md). **No** micro-hints row under the hub list. Executable contract: [.cursor/skills/coffee/SKILL.md](../../../.cursor/skills/coffee/SKILL.md).
 
-**Fixed E option:** `E` always includes **Self-knowledge quiz (bookshelf membrane)** as an eligible branch. Quiz sessions run as **multi-round** (5–10 MCQs each), ask continue/stop after each round, and emit report + gate-draft artifacts only (no auto-merge).
+**Fixed D option:** The **D** angle-bracket line always may include **Self-knowledge quiz (bookshelf membrane)** as an eligible branch. Quiz sessions run as **multi-round** (5–10 MCQs each), ask continue/stop after each round, and emit report + gate-draft artifacts only (no auto-merge).
 
-**D — Conductor** names **only** the **strategy-notebook** cadence in the menu (not legacy Jiang “Book”): operator-as-conductor for the “Symphony of Civilization” per [COFFEE-CADENCE-CONDUCTOR-PROTOCOL.md](../work-strategy/strategy-notebook/COFFEE-CADENCE-CONDUCTOR-PROTOCOL.md). The **shared five-movement model** (usable **by analogy** in work-dev, work-politics, work-cici, etc.) lives in [CONDUCTOR-PASS.md](CONDUCTOR-PASS.md) — it does **not** rename other lanes as **D**. **No submenu** after **D:** one menu line lists all five masters. **Standalone:** the same **D** picks may be used **without** a prior **`coffee`** (no Step 0–1); see [.cursor/skills/coffee/SKILL.md](../../../.cursor/skills/coffee/SKILL.md) § *Conductor only (no `coffee` session)*. Full spec: [CONDUCTOR-PASS.md — D](CONDUCTOR-PASS.md#conductor-d-menu). **self-skill-write** / PRP / Lexile / prompt proposals → **E** (system choice) or explicit **`write`** / **`skill-write`** without opening **`coffee`**.
+**Symphony / Conductor:** [COFFEE-CADENCE-CONDUCTOR-PROTOCOL.md](../work-strategy/strategy-notebook/COFFEE-CADENCE-CONDUCTOR-PROTOCOL.md) + [CONDUCTOR-PASS.md](CONDUCTOR-PASS.md) — **not** a letter on the `coffee` hub. **self-skill-write** / PRP / Lexile / prompt proposals → hub **D** (system choice) or explicit **`write`** / **`skill-write`** without opening **`coffee`**.
 
 <a id="conductor-fork-d-menu"></a>
 <a id="conductor-fork-d1-d5"></a>
 
-The sections below retain **legacy A–G workload detail** (seven letters) for **scope** descriptions; map to the coffee SKILL’s current menu as in the spec (**Daily Brief → C**, **Build → A**, **Steward → B**, **Conductor → D**, **Compass/Book/F/G** → usually **E** or folded into **C**; **old** legacy **D Book** (Jiang) → **E** or **`work-jiang`**, not current **D — Conductor**). **Signing-off** add-ons, cadence tables, explicit phrase modifiers, and companion survey track follow.
+The sections below retain **legacy A–G workload detail** (seven letters) for **scope** descriptions; map to the coffee SKILL’s current **A–D** hub (**Daily Brief → C**, **Build → A**, **Steward → B**, **Symphony Conductor → out of band** — master name / **`conductor`** / [conductor skill](../../../.cursor/skills/conductor/SKILL.md), **not** a hub letter; **Compass/Book/F/G** → usually **current D** (system choice) or folded into **C**; **old** legacy **D Book** (Jiang) → **`work-jiang`** or hub **D**, not Symphony). **Signing-off** add-ons, cadence tables, explicit phrase modifiers, and companion survey track follow.
 
-**Exit:** There is **no** “close hub” letter. The operator leaves coffee by **C** or **D** (normal workflow unless **`stay in coffee`**), by **Later** on the [steward follow-up fork](#steward-follow-up-fork-implement-now-vs-later) (which returns to the full menu), or by starting a non-coffee task. The coffee ritual does **not** use a **no menu** opt-out.
+**Exit:** There is **no** “close hub” letter. The operator leaves coffee by **C** (normal workflow unless **`stay in coffee`**), by **Later** on the [steward follow-up fork](#steward-follow-up-fork-implement-now-vs-later) (which returns to the full menu), or by starting a non-coffee task. **A**, **B**, and **D** re-offer the full **A–D** menu by default after the turn. The coffee ritual does **not** use a **no menu** opt-out.
 
 ### Bare **`compass`** vs **`coffee`** then **`C`**
 
@@ -47,14 +47,14 @@ If the operator says **`coffee`** on a **Sunday** (or legacy **`hey`**), default
 - Run **`operator_daily_warmup.py`** and, when instance state matters, **`harness_warmup.py`**.
 - **Internet intel** (Polymarket, polls, Massie X) is **never** Step 1 — same as full coffee; choose **C — Strategy (daily brief)** when you want it (or ask explicitly). **Light** keeps **branch snapshot** compact (one line unless multiple branches).
 - **Daily brief:** **do not** generate in Step 1 — one-line pointer to **menu C** and path pattern `docs/skill-work/work-strategy/daily-brief-YYYY-MM-DD.md` (e.g. `daily-brief-2026-03-29.md`).
-- Deliver a **compact brief** from script outputs + thread context; then the **full Step 2 menu**. On later turns, **A**, **B**, or **E** re-offer the full menu; **B** uses the [steward follow-up fork](#steward-follow-up-fork-implement-now-vs-later) when reading canonical **B — Steward**; **C** and **D** exit to normal workflow by default after the reply. **Build (A):** **compact** work-dev/skills focus — **one** next implementation or skills step (branch/`git status` lives under **B — Steward**, **git/ship** track when chosen). **Not** a full sweep unless the operator asks.
+- Deliver a **compact brief** from script outputs + thread context; then the **full Step 2 menu**. On later turns, **A**, **B**, or **D** re-offer the full menu; **B** uses the [steward follow-up fork](#steward-follow-up-fork-implement-now-vs-later) when reading canonical **B — Steward**; **C** exits to normal workflow by default after the reply. **Build (A):** **compact** work-dev/skills focus — **one** next implementation or skills step (branch/`git status` lives under **B — Steward**, **git/ship** track when chosen). **Not** a full sweep unless the operator asks.
 
 **`coffee minimal`** (or clear equivalent; legacy **`hey minimal`** still works):
 
 - Run **`harness_warmup.py`** only when instance state matters; **do not** run `operator_daily_warmup.py` unless the operator asks.
 - Step 1 has **no** Polymarket / Massie X / poll web search unless the operator **explicitly** asks in the same message. **Daily brief** still **only** via **menu C** (never Step 1).
 - Optional **one-line** gate pointer (e.g. pending count from warmup output if already pasted, or "see `users/grace-mar/recursion-gate.md`").
-- Still output the **full Step 2** menu. On later turns, **A**, **B**, or **E** re-offer the full menu; **B** uses the [steward follow-up fork](#steward-follow-up-fork-implement-now-vs-later); **C** and **D** (conductor) exit to normal workflow by default after the reply. **Build (A):** **minimal** — **one** work-dev or skills next step; **git/ship** → **`B git`** if needed; no unrelated sweeps.
+- Still output the **full Step 2** menu. On later turns, **A**, **B**, or **D** re-offer the full menu; **B** uses the [steward follow-up fork](#steward-follow-up-fork-implement-now-vs-later); **C** exits to normal workflow by default after the reply. **Build (A):** **minimal** — **one** work-dev or skills next step; **git/ship** → **`B git`** if needed; no unrelated sweeps.
 
 **`coffee survey`** (or **`coffee + survey`** / clear equivalent; legacy **`hey survey`** still works):
 
@@ -69,9 +69,9 @@ If the operator says **`coffee`** on a **Sunday** (or legacy **`hey`**), default
 
 ## Legacy A–G workload table (detail; canonical menu is the current coffee menu)
 
-**Canonical Step 2** today: [.cursor/skills/coffee/SKILL.md](../../../.cursor/skills/coffee/SKILL.md) — **A, B, C, D, E**. The **rows below** keep **historical seven-letter labels** for workload scope. **Map:** old **Daily Brief → current C**; old **Build → current A**; old **Steward → current B**; old **Compass / F / G → current E** (system choice) or fold into **C**; old **Book (legacy D) →** **`work-jiang` / E**, **not** current **D — Conductor** (see above).
+**Canonical Step 2** today: [.cursor/skills/coffee/SKILL.md](../../../.cursor/skills/coffee/SKILL.md) — **A, B, C, D** (hub only). **Symphony conductors** are **out of band** — [CONDUCTOR-PASS.md](CONDUCTOR-PASS.md). The **rows below** keep **historical seven-letter labels** for workload scope. **Map:** old **Daily Brief → current C**; old **Build → current A**; old **Steward → current B**; old **Compass / F / G → current D** (system choice) or fold into **C**; old **Book (legacy Jiang D) →** **`work-jiang` / hub D**, not a conductor.
 
-The **first** coffee reply ends **Step 2** with the fixed menu. **Follow-up behavior (canonical letters):** **A**, **B**, and **E** re-offer the full menu by default; **B** uses the [steward follow-up fork](#steward-follow-up-fork-implement-now-vs-later) (full menu only after **Later** or when nothing actionable surfaced); **C** and **D** exit to normal workflow by default after the reply. Wording may vary; **roles must not**.
+The **first** coffee reply ends **Step 2** with the fixed menu. **Follow-up behavior (canonical letters):** **A**, **B**, and **D** re-offer the full menu by default; **B** uses the [steward follow-up fork](#steward-follow-up-fork-implement-now-vs-later) (full menu only after **Later** or when nothing actionable surfaced); **C** exits to normal workflow by default after the reply. Wording may vary; **roles must not**.
 
 | Letter | Mode | What it means when chosen |
 |--------|------|---------------------------|
@@ -154,7 +154,7 @@ After **`B — Steward`** (legacy tables below may still say **`E — Steward`**
 
 **Step 1:** Handoff-weighted — `python3 scripts/operator_coffee.py -u <id> --mode closeout` or `operator_handoff_check.py` (see [coffee SKILL.md](../../../.cursor/skills/coffee/SKILL.md)). Same paste + short paragraph as before.
 
-**Step 2:** The **same** menu as work-start (**order A, B, C, D, E**). There is **no** separate closeout menu and **no** closeout-only letter.
+**Step 2:** The **same** menu as work-start (**order A, B, C, D**). There is **no** separate closeout menu and **no** closeout-only letter.
 
 **Per-letter add-ons when Step 1 was signing-off** (optional emphasis — do not duplicate the whole handoff block):
 
@@ -163,8 +163,7 @@ After **`B — Steward`** (legacy tables below may still say **`E — Steward`**
 | **A** | **Build** carryover from Step 1 when relevant; one concrete work-dev / skills step. |
 | **B** | Same **single-track default** as work-start (**gate** if pending candidates, else **template/boundary**); **`B integrity`**, **`B git`**, **`B all`** when explicit. If handoff flagged **dirty tree / branch noise** → prefer **`B git`**; **manifest / derived churn** → **`B integrity`**. Follow-up: [Implement now vs Later](#steward-follow-up-fork-implement-now-vs-later). |
 | **C** | Brief + strategy carryover only if **C** chosen; optional pointer to the next brief / strategy day. |
-| **D** | Optional conductor carryover line grounded in notebook residue from Step 1; keep the add-on aligned with the chosen conductor's emphasis rather than switching lanes. |
-| **E** | Cici next, Dev next, Rome, Jiang/PH, or another single system-chosen slice as filled on the menu line. |
+| **D** | Cici next, Dev next, Rome, Jiang/PH, skill-write slice, or another single system-chosen line as filled on the hub — **not** Symphony masters (those stay out-of-band). |
 
 ---
 

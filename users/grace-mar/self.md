@@ -174,11 +174,6 @@ entries:
     detail: "Good enough = Signal has attributed wire captures with dates and sources; Judgment names tensions and does not collapse distinct positions; Links has at least one primary URL per claim."
     source: "elicitation: operator-thresholds.md"
     merged: 2026-04-17
-  - id: PERS-004
-    label: "Work rhythm — punctuated resets"
-    detail: "~6 coffee reorientation sessions per day; ~18-hour active spans; thanks pauses between work blocks; dream consolidation once near day-end. Not a single morning start — work is punctuated by frequent resets."
-    source: "elicitation: operator-rhythm.md"
-    merged: 2026-04-17
   - id: PERS-005
     label: "Decision failure sensitivity"
     detail: "Detects and names when the agent implements before confirmation or misreads short answers as approval. Requires explicit echo of intent before acting."

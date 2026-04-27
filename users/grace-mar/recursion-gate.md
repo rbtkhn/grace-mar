@@ -125,6 +125,40 @@ reflection_ack: heavy
 
 ## Processed
 
+### CANDIDATE-0031 (IX-C — remove PERS-004; cadence stays WORK-only)
+
+```yaml
+proposal_class: RUNTIME_OBSERVATION_PROPOSAL
+status: approved
+timestamp: 2026-04-24 18:45:00
+channel_key: operator:cursor:cadence-boundary-ix-c
+source: operator — cursor session (Record boundary)
+mind_category: personality
+signal_type: operator_directive
+profile_target: IX-C. PERSONALITY
+priority_score: 4
+summary: "IX-C: delete PERS-004 — work rhythm / cadence belongs in skill-work + work-dev, not Record"
+target_surface: SELF_IX_C
+target_path: users/grace-mar/self.md
+proposed_change: |
+  In users/grace-mar/self.md IX-C `entries`, remove the entire list item with id PERS-004
+  ("Work rhythm — punctuated resets" / coffee / thanks / dream wording).
+  Do not replace it with another IX-C row for cadence — ritual choices, frequencies, and
+  work-cadence-events.md telemetry stay under docs/skill-work/work-cadence/, work-coffee/,
+  .cursor/skills (coffee, dream, bridge, conductor, thanks), and work-dev scripts (see
+  docs/skill-work/work-dev/ for runners and logging).
+  Renumbering other PERS-* ids is not required; only remove the PERS-004 block.
+suggested_entry: "Manual apply: delete PERS-004 from self.md IX-C per proposed_change."
+prompt_section: YOUR PERSONALITY
+prompt_addition: none
+impact_tier: low
+envelope_class: none
+source_exchange:
+  operator: |
+    Cadence events and operator ritual habits are WORK (skill-work doctrine + work-dev tooling), not IX-C personality.
+    Operator: keep cadence only in work; remove PERS-004 from Record on approve.
+```
+
 ### CANDIDATE-0025 (IX-A fact — U.S. constitutional order from founding canon)
 
 ```yaml

@@ -59,7 +59,7 @@ It is not legal policy and not Record truth.
 
 ### Cadence event
 
-- Name: coffee / thanks / dream / bridge log line
+- Name: coffee / coffee_pick / coffee_conductor_outcome / dream / bridge log line (legacy: **thanks**)
 - Good enough means: kind, user, ok status, and relevant key-value pairs logged; park text is a meaningful slug (not `none`)
 - Not good enough when: event is silently skipped; park text is generic filler
 - Typical acceptable imperfection: `cursor_model=unknown` (env var not set)
@@ -109,7 +109,7 @@ It is not legal policy and not Record truth.
 
 ## Stop / continue
 
-- Stop when: the operator says `thanks` (micro-pause), `dream` (day-close), or `bridge` (session seal); or when four attempts at the same action fail without new evidence
+- Stop when: the operator says `dream` (day-close), `bridge` (session seal), or a **deprecated** `thanks` micro-pause if they still use it; or when four attempts at the same action fail without new evidence
 - Continue when: the operator picks from a menu (letter selection); says "implement the plan"; or combines options ("a,b,c, unless unwise")
 - Ask when: the operator's intent is ambiguous; the combined scope of a combo-pick might be too large for one pass; a proposed edit touches a surface the operator hasn't explicitly named
 

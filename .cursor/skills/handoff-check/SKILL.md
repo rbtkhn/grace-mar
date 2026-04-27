@@ -1,7 +1,7 @@
 ---
 name: handoff-check
 preferred_activation: handoff check
-description: Run operator_handoff_check.py for RECURSION-GATE pending, Predictive History night closeout, commits, worktree noise, re-entry prompt — read-only. On **coffee** with **signing-off** intent, this script (or `operator_coffee.py --mode closeout`) is **coffee Step 1**; **Step 2** is the **same** fixed **A–E** menu as work-start — **B — Steward** without gate/template split → **system pick**. See [coffee/SKILL.md](../coffee/SKILL.md) and [menu-reference — signing-off intent](../../../docs/skill-work/work-coffee/menu-reference.md#signing-off-intent). Also use when resuming work or checking safe-to-ignore before commit/push.
+description: Run operator_handoff_check.py for RECURSION-GATE pending, Predictive History night closeout, commits, worktree noise, re-entry prompt — read-only. On **coffee** with **signing-off** intent, this script (or `operator_coffee.py --mode closeout`) is **coffee Step 1**; **Step 2** is the **same** fixed **A–D** hub as work-start — **B — Steward** without gate/template split → **system pick**. See [coffee/SKILL.md](../coffee/SKILL.md) and [menu-reference — signing-off intent](../../../docs/skill-work/work-coffee/menu-reference.md#signing-off-intent). Also use when resuming work or checking safe-to-ignore before commit/push.
 ---
 
 # Handoff Check
@@ -10,9 +10,9 @@ description: Run operator_handoff_check.py for RECURSION-GATE pending, Predictiv
 
 Use this skill when the operator wants to pause or resume work without losing the active thread.
 
-**Preset — signing-off `coffee`:** When the operator says **`coffee`** with **signing-off** intent (session end, wrapping the day; legacy **`hey`** still works), the agent runs **signing-off Step 1** (this command + short summary paragraph) then the **same** **A–E** menu as work-start. **B — Steward** with **no** gate vs template split named → **system pick** (see [menu-reference — signing-off intent](../../../docs/skill-work/work-coffee/menu-reference.md#signing-off-intent)). On follow-up turns, **A**, **B**, **E**, or steward fork outcomes re-offer per [coffee SKILL](../coffee/SKILL.md); **C** and **D** exit to normal workflow unless **`stay in coffee`**. **No close letter** — exit the hub by normal workflow or **no menu**.
+**Preset — signing-off `coffee`:** When the operator says **`coffee`** with **signing-off** intent (session end, wrapping the day; legacy **`hey`** still works), the agent runs **signing-off Step 1** (this command + short summary paragraph) then the **same** **A–D** hub as work-start. **B — Steward** with **no** gate vs template split named → **system pick** (see [menu-reference — signing-off intent](../../../docs/skill-work/work-coffee/menu-reference.md#signing-off-intent)). On follow-up turns, **A**, **B**, **D**, or steward fork outcomes re-offer per [coffee SKILL](../coffee/SKILL.md); **C** exits to normal workflow unless **`stay in coffee`**. **No close letter** — exit the hub by normal workflow or **no menu**.
 
-**Work-start `coffee`:** Re-offer and exit behavior for **A–E** match [coffee/SKILL.md](../coffee/SKILL.md) ( **A**, **B**, **E** → full menu by default; **C** / **D** → exit unless **`stay in coffee`**; **B — Steward** → steward fork when actionable).
+**Work-start `coffee`:** Re-offer and exit behavior for **A–D** match [coffee/SKILL.md](../coffee/SKILL.md) (**A**, **B**, **D** → full hub by default; **C** → exit unless **`stay in coffee`**; **B — Steward** → steward fork when actionable).
 
 ## Default command
 
