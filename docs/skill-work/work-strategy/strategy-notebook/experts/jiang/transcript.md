@@ -12,3 +12,9 @@ WORK only; not Record.
 ---
 
 <!-- Triage appends new date sections below. Do not add content above this line. -->
+
+## 2026-04-26
+- Inbox | cold: full text in [`substack-jiang-trump-new-deal-2026-04-25.md`](raw-input/2026-04-25/substack-jiang-trump-new-deal-2026-04-25.md) (pointer; SSOT raw-input) | thread:jiang
+
+## 2026-04-25
+- Inbox | cold: full text in [`substack-jiang-trump-new-deal-2026-04-25.md`](raw-input/2026-04-25/substack-jiang-trump-new-deal-2026-04-25.md) (pointer; SSOT raw-input) | thread:jiang

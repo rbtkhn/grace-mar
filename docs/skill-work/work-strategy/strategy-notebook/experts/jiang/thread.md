@@ -143,5 +143,16 @@ Canonical page paths and raw ingest lines live in **Segment 2** below (regenerat
 
 _Auto-generated from `transcript.md` + **on-disk** and **inbox** `raw-input/` (de-duped union) + `strategy-page` blocks + optional legacy on-disk index rows. **Journal layer** (narrative) lives **above** the **strategy-expert-thread** start HTML comment. The machine-layer HTML block is replaced on each `thread` run._
 
-_(No transcript, raw-input lane, or page material for extraction.)_
+### Recent transcript material
+
+## 2026-04-26
+- Inbox | cold: full text in [`substack-jiang-trump-new-deal-2026-04-25.md`](raw-input/2026-04-25/substack-jiang-trump-new-deal-2026-04-25.md) (pointer; SSOT raw-input) | thread:jiang
+## 2026-04-25
+- Inbox | cold: full text in [`substack-jiang-trump-new-deal-2026-04-25.md`](raw-input/2026-04-25/substack-jiang-trump-new-deal-2026-04-25.md) (pointer; SSOT raw-input) | thread:jiang
+
+### Recent raw-input (lane)
+
+_Union of **on-disk** `raw-input/…` files tagged with this expert’s `thread:` and **inbox** lines (same paths de-duped; disk line kept first)._
+
+- [substack-jiang-trump-new-deal-2026-04-25.md](raw-input/2026-04-25/substack-jiang-trump-new-deal-2026-04-25.md) _on-disk_
 <!-- strategy-expert-thread:end -->

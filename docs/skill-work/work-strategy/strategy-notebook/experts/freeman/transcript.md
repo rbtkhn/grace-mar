@@ -20,6 +20,7 @@ WORK only; not Record.
 - batch-analysis | 2026-04-18 | **Freeman × Diesen (YT) × Hormuz week stack** | **Tension-first:** **`thread:freeman`** **career-diplomat** **staging** (**door/padlock**, **Islamabad** **performative**, **China** **/ Pakistan** **/ Lebanon** **long** **segments**) — **not** **wire** **ORBAT**. **Cross** **`marandi`** **(Tehran** **register),** **`barnes`** **(White** **House** **/ Vance** **/ Witkoff–Kushner),** **`davis`/`mearsheimer`** **(channel** **geometry),** **`mercouris`** **(institutional** **tickers),** **`parsi`** **(Beltway** **process)** — **explicit** **seams**; **quant** **(**barrels,** **crew** **reports,** **pipeline** **repair)** **verify-first**. | crosses:freeman+diesen(host-not-thread)
 
 
+
 ## 2026-04-25
 - YT | cold: **Chas** **W.** **Freeman** **/** **Dialogue** **Works** **(host** **Nima) —** *Israel’s* *Agenda* *Is* *Collapsing* *Faster* *Than* *Anyone* *Expected* **—** **aired** **2026-04-24** **—** **Hormuz** **blockade** **/** **ceasefire** **frame,** **USN** **carriers,** **NATO** **/** **Orbán,** **Trump** **(deleted)** **Armenia** **/ Pashinyan** **airfield** **read,** **J.D.** **Vance** **(June** **2025** **clip)** **vs** **“collective** **self-defense** **of** **Israel;”** **NPT,** **Greater** **Israel** // hook: **`thread:freeman`** **×** **§1e** **/** **§1g** **—** **full** [raw-input/2026-04-24/transcript-nima-freeman-israel-agenda-collapsing-2026-04-24.md](raw-input/2026-04-24/transcript-nima-freeman-israel-agenda-collapsing-2026-04-24.md) | TBD (pin Dialogue Works `watch?v=`) | verify:operator-paste+full-text+aired:2026-04-24+opinion-narrative-tier | thread:freeman | IRAN | ISRAEL | NATO | grep:Freeman+Nima+Dialogue+Works+Israel+agenda+2026-04-24
 - YT | cold: **Amb. Charles Freeman** (Dialogue Works (Nima), **2026-04-17** — *Israel’s Strategy Just COLLAPSED – Trump Steps In*) — **Phony ceasefire** / **Trump** **rhetoric** vs **reality**; **Israel** **aims unmet** + **Netanyahu** **bind**; **Hormuz** **perception** vs **export** **story** + **GCC hedge**; **US** **decay** / **Rubio**; **Iran** **attrition** // hook: **five theses** + **tri-mind** **`ab+c`** **resolve** — [strategy-expert-freeman-thread.md](strategy-expert-freeman-thread.md) § **Dialogue Works (Nima)** + **Tri-mind resolution**; crosses **Davis×Freeman×Mearsheimer** [scaffold](experts/marandi/thread.md) (**`strategy-page`** **id** `marandi-ritter-mercouris-hormuz-scaffold`) | https://www.youtube.com/watch?v=TBD-dialogue-works-freeman-2026-04-17 | verify:operator-transcript+pin-canonical-URL | thread:freeman | grep:Freeman+Dialogue+Works+2026-04-17
@@ -30,8 +31,10 @@ WORK only; not Record.
 
 
 
+
 ## 2026-04-24
 - Inbox | cold: full text in [`transcript-nima-freeman-israel-agenda-collapsing-2026-04-24.md`](raw-input/2026-04-24/transcript-nima-freeman-israel-agenda-collapsing-2026-04-24.md) (pointer; SSOT raw-input) | thread:freeman
+
 
 
 
