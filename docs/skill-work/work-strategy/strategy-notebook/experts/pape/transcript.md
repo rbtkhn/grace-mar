@@ -14,6 +14,42 @@ WORK only; not Record.
 
 <!-- Triage appends new date sections below. Do not add content above this line. -->
 
+## 2026-04-26
+- Inbox | cold: full text in [`substack-pape-2-blockades-2-clocks-2026-04-24.md`](raw-input/2026-04-24/substack-pape-2-blockades-2-clocks-2026-04-24.md) (pointer; SSOT raw-input) | thread:pape
+- Inbox | cold: full text in [`x-pape-zero-sum-escalation-ladder-2026-04-21.md`](raw-input/2026-04-21/x-pape-zero-sum-escalation-ladder-2026-04-21.md) (pointer; SSOT raw-input) | thread:pape
+- Inbox | cold: full text in [`substack-pape-within-10-days-shortages-already-2026-04-22.md`](raw-input/2026-04-22/substack-pape-within-10-days-shortages-already-2026-04-22.md) (pointer; SSOT raw-input) | thread:pape
+- Inbox | cold: full text in [`substack-pape-the-first-move-has-begun-2026-04-22.md`](raw-input/2026-04-22/substack-pape-the-first-move-has-begun-2026-04-22.md) (pointer; SSOT raw-input) | thread:pape
+- Inbox | cold: full text in [`substack-pape-the-smart-bomb-trap-2026-02-25.md`](raw-input/2026-02-25/substack-pape-the-smart-bomb-trap-2026-02-25.md) (pointer; SSOT raw-input) | thread:pape
+- Inbox | cold: full text in [`substack-pape-from-kosovo-to-iran-the-smart-bomb-2026-02-27.md`](raw-input/2026-02-27/substack-pape-from-kosovo-to-iran-the-smart-bomb-2026-02-27.md) (pointer; SSOT raw-input) | thread:pape
+- Inbox | cold: full text in [`substack-pape-the-illusion-of-control-2026-02-28.md`](raw-input/2026-02-28/substack-pape-the-illusion-of-control-2026-02-28.md) (pointer; SSOT raw-input) | thread:pape
+- Inbox | cold: full text in [`substack-pape-the-day-1-mirage-2026-02-28.md`](raw-input/2026-02-28/substack-pape-the-day-1-mirage-2026-02-28.md) (pointer; SSOT raw-input) | thread:pape
+- Inbox | cold: full text in [`substack-pape-smart-bomb-trap-confirmed-decapitation-2026-03-01.md`](raw-input/2026-03-01/substack-pape-smart-bomb-trap-confirmed-decapitation-2026-03-01.md) (pointer; SSOT raw-input) | thread:pape
+- Inbox | cold: full text in [`substack-pape-what-vox-couldnt-publish-2026-03-01.md`](raw-input/2026-03-01/substack-pape-what-vox-couldnt-publish-2026-03-01.md) (pointer; SSOT raw-input) | thread:pape
+- Inbox | cold: full text in [`substack-pape-the-escalation-ledger-iran-day-3-2026-03-02.md`](raw-input/2026-03-02/substack-pape-the-escalation-ledger-iran-day-3-2026-03-02.md) (pointer; SSOT raw-input) | thread:pape
+- Inbox | cold: full text in [`substack-pape-the-air-power-illusion-2026-03-03.md`](raw-input/2026-03-03/substack-pape-the-air-power-illusion-2026-03-03.md) (pointer; SSOT raw-input) | thread:pape
+- Inbox | cold: full text in [`substack-pape-the-smart-bomb-trap-is-becoming-a-dumb-bomb-2026-03-04.md`](raw-input/2026-03-04/substack-pape-the-smart-bomb-trap-is-becoming-a-dumb-bomb-2026-03-04.md) (pointer; SSOT raw-input) | thread:pape
+- Inbox | cold: full text in [`substack-pape-the-nation-building-trap-2026-03-05.md`](raw-input/2026-03-05/substack-pape-the-nation-building-trap-2026-03-05.md) (pointer; SSOT raw-input) | thread:pape
+- Inbox | cold: full text in [`substack-pape-day-5-the-war-is-widening-from-gulf-2026-03-05.md`](raw-input/2026-03-05/substack-pape-day-5-the-war-is-widening-from-gulf-2026-03-05.md) (pointer; SSOT raw-input) | thread:pape
+- Inbox | cold: full text in [`substack-pape-parallel-strategic-attack-stage-ii-2026-03-05.md`](raw-input/2026-03-05/substack-pape-parallel-strategic-attack-stage-ii-2026-03-05.md) (pointer; SSOT raw-input) | thread:pape
+- Inbox | cold: full text in [`substack-pape-victory-narrative-vs-escalation-reality-2026-03-06.md`](raw-input/2026-03-06/substack-pape-victory-narrative-vs-escalation-reality-2026-03-06.md) (pointer; SSOT raw-input) | thread:pape
+- Inbox | cold: full text in [`substack-pape-victory-narratives-are-not-noise-2026-03-06.md`](raw-input/2026-03-06/substack-pape-victory-narratives-are-not-noise-2026-03-06.md) (pointer; SSOT raw-input) | thread:pape
+- Inbox | cold: full text in [`substack-pape-the-escalation-trap-widens-russias-2026-03-07.md`](raw-input/2026-03-07/substack-pape-the-escalation-trap-widens-russias-2026-03-07.md) (pointer; SSOT raw-input) | thread:pape
+- Inbox | cold: full text in [`substack-pape-three-signals-to-watch-after-irans-2026-03-08.md`](raw-input/2026-03-08/substack-pape-three-signals-to-watch-after-irans-2026-03-08.md) (pointer; SSOT raw-input) | thread:pape
+- Inbox | cold: full text in [`substack-pape-answers-to-questions-our-community-2026-03-09.md`](raw-input/2026-03-09/substack-pape-answers-to-questions-our-community-2026-03-09.md) (pointer; SSOT raw-input) | thread:pape
+- Inbox | cold: full text in [`substack-pape-four-strategic-patterns-now-visible-2026-03-12.md`](raw-input/2026-03-12/substack-pape-four-strategic-patterns-now-visible-2026-03-12.md) (pointer; SSOT raw-input) | thread:pape
+- Inbox | cold: full text in [`substack-pape-strategic-briefings-iran-war-and-2026-03-13.md`](raw-input/2026-03-13/substack-pape-strategic-briefings-iran-war-and-2026-03-13.md) (pointer; SSOT raw-input) | thread:pape
+- Inbox | cold: full text in [`substack-pape-irans-new-battlefield-the-global-2026-03-16.md`](raw-input/2026-03-16/substack-pape-irans-new-battlefield-the-global-2026-03-16.md) (pointer; SSOT raw-input) | thread:pape
+- Inbox | cold: full text in [`substack-pape-the-questions-that-matter-now-2026-03-23.md`](raw-input/2026-03-23/substack-pape-the-questions-that-matter-now-2026-03-23.md) (pointer; SSOT raw-input) | thread:pape
+- Inbox | cold: full text in [`substack-pape-trumps-words-dont-predict-war-his-2026-03-24.md`](raw-input/2026-03-24/substack-pape-trumps-words-dont-predict-war-his-2026-03-24.md) (pointer; SSOT raw-input) | thread:pape
+- Inbox | cold: full text in [`substack-pape-the-gamblers-conceit-in-war-2026-03-24.md`](raw-input/2026-03-24/substack-pape-the-gamblers-conceit-in-war-2026-03-24.md) (pointer; SSOT raw-input) | thread:pape
+- Inbox | cold: full text in [`substack-pape-why-iran-prefers-vance-2026-03-25.md`](raw-input/2026-03-25/substack-pape-why-iran-prefers-vance-2026-03-25.md) (pointer; SSOT raw-input) | thread:pape
+- Inbox | cold: full text in [`substack-pape-the-marine-threshold-5000-marines-2026-03-27.md`](raw-input/2026-03-27/substack-pape-the-marine-threshold-5000-marines-2026-03-27.md) (pointer; SSOT raw-input) | thread:pape
+- Inbox | cold: full text in [`substack-pape-vietnam-shows-exactly-when-air-wars-2026-03-29.md`](raw-input/2026-03-29/substack-pape-vietnam-shows-exactly-when-air-wars-2026-03-29.md) (pointer; SSOT raw-input) | thread:pape
+- Inbox | cold: full text in [`substack-pape-trump-accelerated-the-crisis-2026-04-02.md`](raw-input/2026-04-02/substack-pape-trump-accelerated-the-crisis-2026-04-02.md) (pointer; SSOT raw-input) | thread:pape
+- YT | cold: **Robert A. Pape** × **Clayton Morris & Natali Morris** (*Redacted* — *The Collapse is Now "Ahead of Schedule"*) — **aired 2026-04-20** — **04-12** **10-day** **shortage** **prediction** **→** **“ahead** **of** **schedule”** **(~4–5** **days** **post);** **Escalation** **Trap** **Substack** **/** **sanctions** **stages** **(≈45d** **prices,** **45–60d** **shortages,** **60–90d** **contraction** **→** **May** **31);** **jet** **fuel** **Europe** **/** **Air** **Canada** **LaGuardia;** **Australia** **/** **India** **stress;** **Hormuz** **~20%** **oil** **+** **dual** **closure** **(Iran** **+** **US)** **frame;** **China** **visit** **—** **stockpile** **/** **~80%** **non-oil** **energy** **/** **quagmire** **helps** **China** **thesis;** **US** **energy** **independence** **vs** **policies** **hastening** **China** **#1;** **SPR** **/** **171** **tankers** **/** **~200M** **bbl** **hypothesis;** **Islamabad** **48h** **paper** **deal** **possible** **but** **low** **stickiness** **/** **Lebanon** **48h** **unwind** **parallel;** **zero-sum** **Hormuz** **+** **nuclear** **/** **Bombing** **to** **Win** **/** **~$40T** **debt** **risk;** **working** **class** **/** **truckers** **/** **gas** **relief** **pitch** **/** **Bessent** **/** **poll** **/** **Erie** **frame;** **consequences** **over** **conspiracy** // hook: **`thread:pape`** **supply** **/** **sanctions** **theory** **×** **`thread:davis`** **`thread:ritter`** **`thread:johnson`** **Hormuz** **week** **—** **not** **§1e** **without** **primaries** | https://www.youtube.com/watch?v=WemB-vfoMaw | verify:full-text+raw-input+aired:2026-04-20+canonical-URL | thread:pape | grep:Pape+Redacted+Hormuz+Escalation+Trap+collapse+Bessent
+- X | cold: @ProfessorPape (**2026-04-17** ~08:07) — Israel–Lebanon truce as **signal of shifting global power** (more than ceasefire); claims **Iran** demanded end to **Israeli attacks in Lebanon** and **U.S. delivered**; amplifies **NYT Opinion** card on Iran as **major world power** (“4th” framing in card) // hook: **seam** vs **04-14** sectarian worst-case fork + vs Janssen **04-16** **“fourth center”** (different object); **op-ed tier** — not Pape independent ORBAT/power rank | https://x.com/ProfessorPape | verify:pin-exact-status-URL+nytimes-opinion-card+screenshot | thread:pape | grep:Lebanon+Pape+NYT+2026-04-17
+- batch-analysis | 2026-04-17 | **Pape X — 04-14 Lebanon fork × 04-17 truce / NYT power thesis** | **Tension-first:** **04-14** indexed ingest = **downside** / **civil-war** fork + **AP** Washington talks **seam**; **04-17** = **settlement / power-shift** read + **NYT** secondary thesis Pape spotlights — use **dated evolution**, not silent merge. **Homophone risk:** Janssen **04-16** **“fourth center”** (negotiation fork) ≠ NYT headline **“major world power”** / **“4th”** — **do not** equate in Judgment. **Membership:** `thread:pape` only.
+
 ## 2026-04-25
 - X | cold: **Robert A. Pape** (@ProfessorPape) — **aired** **2026-04-21** (**~6:27** **AM** **+** **thread** **~14h**) — **ceasefire** **=** **zero-sum** **“next** **phase”** **not** **random** **breakdown;** **Hormuz** **/** **nuclear** **×** **U.S.** **power** **trilemma;** **ladder** **R1** **demonstration** **(tankers,** **disruptions,** **force** **moves)** **→** **R2** **damaging** **economic** **war** **/ infra** **/ ~20%** **Hormuz** **oil;** **R3** **expansion,** **Red** **Sea** **+** **Gulf,** **proxies,** **ground** **risk;** **Escalation** **Trap,** **month-by-month** **grind** // hook: **`thread:pape`** **×** **ceasefire** **/ §1e** **Hormuz** **—** **full** [raw-input/2026-04-21/x-pape-zero-sum-escalation-ladder-2026-04-21.md](raw-input/2026-04-21/x-pape-zero-sum-escalation-ladder-2026-04-21.md) | https://x.com/ProfessorPape | verify:full-text+raw-input/2026-04-21/x-pape-zero-sum-escalation-ladder-2026-04-21.md+X-thread+2026-04-21+optional-status-permalinks+two-segments-truncated-in-paste | thread:pape | IRAN | grep:Pape+zero-sum+escalation+2026-04-21
 - SS | cold: **Robert Pape** — *Within 10 Days, Shortages Are Already Here* (*Escalation Trap* — **published** **2026-04-22**) — **blockade** **stage** **2** **(physical** **shortage** **+** **production** **stress)** **now;** **price** **→** **access** **inflection;** **EU** **jet** **fuel** **/** **KR** **plastics** **inputs** **/** **Asia** **workweek** **+** **fuel** **anecdotes** **/** **India** **reserves;** **Iraq** **1990s** **/** **Iran** **sanctions** **→** **consolidation** **not** **capitulation** **thesis;** **AP** **~33%** **approval** **cited;** **45–60d** **shortages** **→** **60–90d** **contraction** **→** **1973** **parallel** **/** **coupled-system** **severity** **warning** // hook: **`thread:pape`** **macro** **stages** **×** **`thread:davis`** **/** **`thread:ritter`** **material** **primaries** **—** **full** [raw-input/2026-04-22/substack-pape-within-10-days-shortages-already-2026-04-22.md](raw-input/2026-04-22/substack-pape-within-10-days-shortages-already-2026-04-22.md) · **day** **page** [experts/pape/pape-page-2026-04-22.md](experts/pape/pape-page-2026-04-22.md) | https://escalationtrap.substack.com/p/within-10-days-shortages-are-already | verify:operator-paste+paywall-public+raw-input+per-claim-primaries-tier | thread:pape | IRAN | MACRO | grep:Pape+shortages+blockade+Escalation+Trap+2026-04-22
@@ -49,8 +85,10 @@ WORK only; not Record.
 - X | cold: @ProfessorPape (**2026-04-17** ~08:07) — Israel–Lebanon truce as **signal of shifting global power** (more than ceasefire); claims **Iran** demanded end to **Israeli attacks in Lebanon** and **U.S. delivered**; amplifies **NYT Opinion** card on Iran as **major world power** (“4th” framing in card) // hook: **seam** vs **04-14** sectarian worst-case fork + vs Janssen **04-16** **“fourth center”** (different object); **op-ed tier** — not Pape independent ORBAT/power rank | https://x.com/ProfessorPape | verify:pin-exact-status-URL+nytimes-opinion-card+screenshot | thread:pape | grep:Lebanon+Pape+NYT+2026-04-17
 - batch-analysis | 2026-04-17 | **Pape X — 04-14 Lebanon fork × 04-17 truce / NYT power thesis** | **Tension-first:** **04-14** indexed ingest = **downside** / **civil-war** fork + **AP** Washington talks **seam**; **04-17** = **settlement / power-shift** read + **NYT** secondary thesis Pape spotlights — use **dated evolution**, not silent merge. **Homophone risk:** Janssen **04-16** **“fourth center”** (negotiation fork) ≠ NYT headline **“major world power”** / **“4th”** — **do not** equate in Judgment. **Membership:** `thread:pape` only.
 
+
 ## 2026-04-24
 - Inbox | cold: full text in [`substack-pape-2-blockades-2-clocks-2026-04-24.md`](raw-input/2026-04-24/substack-pape-2-blockades-2-clocks-2026-04-24.md) (pointer; SSOT raw-input) | thread:pape
+
 
 ## 2026-04-22
 
@@ -63,11 +101,13 @@ Refined day page: [`pape-page-2026-04-22.md`](pape-page-2026-04-22.md).
 
 
 
+
 ## 2026-04-21
 
 Verbatim: [`raw-input/2026-04-21/x-pape-zero-sum-escalation-ladder-2026-04-21.md`](../../raw-input/2026-04-21/x-pape-zero-sum-escalation-ladder-2026-04-21.md).
 
 Refined day page: [`pape-page-2026-04-21.md`](pape-page-2026-04-21.md).
+
 
 
 
@@ -171,14 +211,3 @@ Professor Robert Pape: Me too. Thanks for everything you're doing.
 
 
 
-## 2026-04-19
-- X | cold: **Robert** **A.** **Pape** (@ProfessorPape) — **Truth** **Social** **screenshot** **:** **Trump** **threat** **to** **knock** **out** **power** **plants** **/** **bridges** **in** **Iran** **if** **no** **deal** **;** **“Iran** **killing** **machine”** **close** **;** **Pape** **:** **3rd** **time** **threat** **—** **escalation** **trap** **/** **IRGC** **back** **stiffens** // hook: **`thread:pape`** **×** **Trump** **coercive** **rhetoric** **—** **theory** **plane** **;** **not** **genocide** **label** **without** **elements** | https://x.com/ProfessorPape | verify:primary-X+pin-status-URL+Truth-Social-primary | thread:pape | grep:Pape+Trump+escalation+trap+Iran
-
-
-
-
-
-
-
-## 2026-04-18
-- Inbox | cold: full text in [`transcript-pape.md`](raw-input/2026-04-18/transcript-pape.md) (pointer; SSOT raw-input) | thread:pape

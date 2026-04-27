@@ -32,14 +32,14 @@ _Auto-generated from `transcript.md` + **on-disk** and **inbox** `raw-input/` (d
 
 ### Recent transcript material
 
+## 2026-04-26
+- Inbox | cold: full text in [`substack-simplicius-gimmicks-trump-iran-bluff-2026-04-21.md`](raw-input/2026-04-21/substack-simplicius-gimmicks-trump-iran-bluff-2026-04-21.md) (pointer; SSOT raw-input) | thread:simplicius
 ## 2026-04-25
 - Substack | cold: **Simplicius** (*Garden of Knowledge*, `@simpatico771`) — **aired** **2026-04-21** — **Trump** **power-plant** **/** **bridge** **threat** **quote;** **Islamabad** **“fiasco”** **(Iran** **denies** **talks,** **Rubio** **stayed** **home,** **blockade** **lift** **as** **demand);** **indefinite** **ceasefire** **×** **IRI** **“did** **not** **request”** **frame;** **Strait** **/** **blockade** **order-of-events** **thesis;** **ISW** **Tifani** **Bay** **of** **Bengal;** **CNN** **“radio** **silence”** **/** **deal** **points** **no** **reply;** **FT** **/** **Vortexa** **34** **tankers** **bypass;** **CNN** **+** **CSIS** **munitions** **depletion;** **JASSM** **May** **2025** **mfr** **(Taghvaee);** **IRGC** **tunnel** **video** **/** **Iran** **War** **Message** **Centre** **quote** // hook: **`thread:simplicius`** **×** **§1e** **bluff** **/** **blockade** **/** **extension-game** **—** **full** **API** **backfill** **also** **on** **disk** **`raw-input/**/substack-simplicius-*-2026-04-*.md`** | https://simplicius76.substack.com/p/left-with-nothing-but-gimmicks-trump | verify:full-text+raw-input/2026-04-21/substack-simplicius-gimmicks-trump-iran-bluff-2026-04-21.md+operator-ingest+secondary-links-in-body | thread:simplicius | IRAN | grep:Simplicius+gimmicks+Trump+Iran+bluff+2026-04-21
 ## 2026-04-22
 - Inbox | cold: full text in [`substack-simplicius-left-with-nothing-but-gimmicks-trump-2026-04-22.md`](raw-input/2026-04-22/substack-simplicius-left-with-nothing-but-gimmicks-trump-2026-04-22.md) (pointer; SSOT raw-input) | thread:simplicius
 ## 2026-04-21
 - Inbox | cold: full text in [`substack-simplicius-power-again-rebalanced-in-europe-2026-04-21.md`](raw-input/2026-04-21/substack-simplicius-power-again-rebalanced-in-europe-2026-04-21.md) (pointer; SSOT raw-input) | thread:simplicius
-## 2026-04-19
-- Inbox | cold: full text in [`substack-simplicius-hormuz-deal-collapses-amidst-us-lies-2026-04-19.md`](raw-input/2026-04-19/substack-simplicius-hormuz-deal-collapses-amidst-us-lies-2026-04-19.md) (pointer; SSOT raw-input) | thread:simplicius
 
 ### Recent raw-input (lane)
 
