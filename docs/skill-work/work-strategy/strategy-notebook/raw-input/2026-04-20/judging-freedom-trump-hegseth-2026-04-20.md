@@ -2,13 +2,13 @@
 ingest_date: 2026-04-20
 pub_date: 2026-04-20
 thread: ritter
-source_url: https://www.youtube.com/watch?v=TBD-judging-freedom-ritter-2026-04-20
+source_url: https://www.youtube.com/watch?v=QRkC8xniXkQ
 kind: transcript
 series: Judging Freedom
 episode_title: Trump and Hegseth Haven't a Clue
 hosts: Judge Andrew Napolitano; Scott Ritter
 air_day: Monday, April 20, 2026
-note: Pin canonical YouTube/Rumble watch?v= when available.
+note: Canonical YouTube ID pinned 2026-04-27 (oEmbed title/author match Judging Freedom).
 ---
 
 # Judging Freedom — *Trump and Hegseth Haven't a Clue* (Monday, April 20, 2026)
