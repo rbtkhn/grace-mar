@@ -15,6 +15,10 @@
 
 ## Default operating path (SSOT)
 
+**Two-layer SSOT (capture vs notebook work):** **[`raw-input/`](raw-input/README.md)** holds the **literal** expert/host/guest text (archived capture). **Refined pages** under **`experts/<expert_id>/`** per [`refined-page-template.md`](refined-page-template.md) are the **default handle** for **strategy-page**, **`thread`**, and **`days.md`** — lane, sibling links, and **`### Verbatim`** on the page. **Disputes on wording** → correct **`raw-input/`** and the page’s **`### Verbatim`** together. **Disputes on judgment** → **`### Reflection` / `### Foresight`** and downstream compose, not a second paraphrase of the raw in **`thread`**.
+
+### Flow
+
 **Canonical long-form sequence** for work-strategy judgment (inbox-first; complements the three-move minimum in [DEFAULT-PATH.md](../DEFAULT-PATH.md)):
 
 1. **Accumulate** through the day in [`daily-strategy-inbox.md`](daily-strategy-inbox.md) (paste-ready stubs) and **[`raw-input/`](raw-input/README.md)** (full verbatim when needed) — see [Split ingest model](#split-ingest-model) and [raw-input/README.md](raw-input/README.md).

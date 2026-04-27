@@ -19,7 +19,7 @@ tags:
 - A **`raw-input/YYYY-MM-DD/… .md`** file carries **more than one** [strategy `expert_id`](../../../docs/skill-work/work-strategy/strategy-notebook/strategy-commentator-threads.md) in YAML **`threads: […]`** (e.g. host and guest on one YouTube).
 - You need **separate** refined judgments by **role**: host lane (interview/coda/Eurasia framing) vs guest lane (substantive claim stack), or any **A** vs **B** lane the operator names.
 
-**Do not** use this to duplicate the same `### Verbatim` block in two files; each lane’s summary must differ by interpretive job.
+**Do not** paste the **same** `### Verbatim` in two files — each file gets **only that lane’s speaker-tagged lines** from the **same** `raw-input` file (concatenate all `**Host Name:**` / `**Guest Name:**` turns for that voice). **Paraphrase or “host-arc” narrative belongs in `### Reflection`**, not in `### Verbatim` ([refined-page-template.md](../../../docs/skill-work/work-strategy/strategy-notebook/refined-page-template.md) **SSOT hierarchy** + **Verbatim** rule). Optional helper: `python3 scripts/strategy/extract_transcript_speaker_lanes.py <raw.md> --list` / `--print glenn` (keys depend on labels in the raw).
 
 ## SSOT and naming
 
@@ -29,10 +29,10 @@ tags:
 
 ## Lane content (contract)
 
-| Lane | `### Verbatim` focus |
-|------|----------------------|
-| **Host / A** | Question order, show title/coda, metaphors the **host** owns, bridges to other regions/actors (e.g. EU) as **comparative** moves—not the guest’s main thesis. |
-| **Guest / B** | The named expert’s **analytical** moves, claims, priors, and **falsifiers** as that voice. |
+| Lane | `### Verbatim` (required shape) |
+|------|----------------------------------|
+| **Host / A** | **All** dialogue lines spoken by the **host** in the shared `raw-input` transcript (same words as raw; optional light clean per template). *Analytical* description of the host’s “arc” → **`### Reflection`**, not `### Verbatim`. |
+| **Guest / B** | **All** dialogue lines spoken by the **guest** in the same raw file. |
 
 - **`### Reflection`**: state the **lane contract**; point to the **sibling** file for the other role (relative path: `../other-expert/...`).
 - **`### Foresight`**: lane-specific; when both touch the same event (e.g. vdl), note **seams** (host: multipolar literacy; guest: governance/alignment) so EOD `days.md` does not merge two planes unlabeled.

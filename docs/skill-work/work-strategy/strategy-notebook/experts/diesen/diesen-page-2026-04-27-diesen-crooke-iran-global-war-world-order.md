@@ -1,5 +1,5 @@
 # Diesen refined page — 2026-04-27 (host lane)
-<!-- word_count: ~360 -->
+<!-- word_count: host lines from raw; see Reflection for analysis -->
 
 WORK only; not Record.
 
@@ -9,15 +9,47 @@ WORK only; not Record.
 
 ### Verbatim
 
-Host-arc, Monday 27 Apr 2026. Diesen opens with Iran and Russia as co-headline escalation, then narrows to Iran and loads “what do we know?” in one pass: are talks on, is the ceasefire real, and is Washington actually seeking a way out—i.e. he does not let the hour float on mood alone. After Crooke’s first long answer, he drives the settlement question: what prospect for a negotiated exit, and he supplies a host-side metaphor: JCPOA as jail return versus using Hormuz as a prison break and a toll to discipline the sanctioning capitals—then stacks Israel’s territorial drive and a “Lebanon as the next crack” complicator before asking for “halfway” geometry. Structure of the hour: exit terms, then institutional and regional spoilers.
+**Glenn Diesen:** Welcome back. Today is April 27th, 2026, and I have the great pleasure of being joined by Alastair Crooke, who is a renowned British diplomat and negotiator who worked for decades on addressing conflicts in the Middle East. He is also the founder and director of Conflicts Forum, and the link to his great Substack can be found in the description.
 
-Separately, Diesen (not the United States thread) names von der Leyen and the “values + regime must change” posture, calls it at risk of delusion, and extends the pattern to how Brussels talks about China and Russia—inability to see a multipolar distribution versus a moralized “how the world ought to be.” This is the Eurasia host lane: world-order literacy, not IR detail primacy.
+So thank you very much for coming back on the program.
 
-He closes in host voice: attrition, pain absorption, and whether time is on Iran’s side—then a final coda: not a short Venezuela-style U.S. operation, but a stressor on the American “world order,” echoing the episode title in interviewer synthesis rather than only in Crooke’s exposition.
+**Glenn Diesen:** So it seems that we are at risk of a greater war with both Iran and Russia. But I thought we could start with Iran.
+
+First of all, there’s a lot of confusion here. That is, are the peace negotiations still going on? Is the ceasefire actually still here?
+
+But overall, I also see the problem of how we can end this war. That is, is the United States seeking an end to the Iran war? And if so, what do you think is the possible off-ramp or exit strategy of the United States?
+
+**Glenn Diesen:** Actually, yeah, that’s my next question. I was going to ask what prospects there are for a negotiated settlement.
+
+First, you described returning to the JCPOA as almost a prison, and it does feel like this is the war objective of Iran: a prison break, in which control of Hormuz is essentially the main instrument towards this end.
+
+Because if they have the Strait of Hormuz, where they can set up a toll and set conditions for transit, essentially the countries who put sanctions on Iran, who threaten it with war by hosting bases or actually attacking — all of them can be, well, to some extent disciplined if they want to have proper access.
+
+So it seems very critical for Iran, if they don’t want to go back to the past decades of crippling sanctions and the threat of war all the time, that the Strait of Hormuz is non-negotiable.
+
+But I want to ask how you see the possibility, therefore, of an actual negotiated settlement. And to make matters more complicated, you can throw in Israel’s territorial ambitions and, of course, the desire to crack Lebanon like it did Syria.
+
+So how do you see the possibility of actually meeting halfway somewhere in a negotiation?
+
+**Glenn Diesen:** Yeah. Well, this is not the United States, but I saw von der Leyen from the European Union making the point that sanctions will not come off Iran because of values. The regime has to change this and that.
+
+It’s intended to sound very principled, but it also comes off as delusional at times.
+
+But they do the same with China and Russia. That is, if they fail to achieve anything, I think part of it is because there’s difficulty in transitioning to a multipolar world. Because they know what they want to get, but it prevents them from seeing what they actually can get, or how they want the world to be. They fail to see how the world actually is, and they often frame it in morality.
+
+**Glenn Diesen:** Exactly.
+
+Just a final question, then. It seems like this is then a war of attrition, both in the military sense but also economic. That is, who can absorb the most pain and, of course, inflict pain on the other side.
+
+Do you think it’s clear, though, that time is on the side of the Iranians? Or how do you see it? Because it seems all sides are under great pressure now.
+
+**Glenn Diesen:** No, that’s interesting. Well, I don’t think Trump expected that this war, which was supposed to be a quick Venezuela-like operation, would turn out into a war which could bring down the American world order. It’s quite a dramatic development.
+
+Anyways, thank you very much, as always, for taking the time.
 
 ### Reflection
 
-This lane is host labor: question order, Diesen-owned frames (prison break, attrition, vdl as multipolar-transition failure, Venezuela-to-order closer). It does not replace the guest file’s material judgment on IRI, Israel, or market mechanics. Inbox `thread:diesen` and `crosses:crooke` still register the capture; in EOD weave, pair the crooke-page seam so two planes are not merged into one Judgment without tags.
+This lane is host labor: question order and Diesen-owned frames (prison break, attrition, vdl as multipolar-transition failure, Venezuela-to-order closer) are explicit in **`### Verbatim`**. `### Verbatim` does not replace the guest file’s material judgment on IRI, Israel, or market mechanics. Inbox `thread:diesen` and `crosses:crooke` still register the capture; in EOD weave, pair the crooke-page seam so two planes are not merged into one Judgment without tags.
 
 ### Foresight
 

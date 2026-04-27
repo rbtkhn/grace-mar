@@ -32,4 +32,6 @@ When several experts address the same page, the **same `id=`** appears in each e
 
 ## Refined pages (standalone `*-page-*.md`)
 
+**SSOT stack:** **[`raw-input/`](raw-input/README.md)** = literal capture; **refined page** = default handle for **`thread` / `days.md` / analysis** (see [refined-page-template.md](refined-page-template.md) **SSOT hierarchy**).
+
 **Distinct from** thread-embedded **`strategy-page`** fences: standalone files under **`experts/<expert_id>/`** (**Verbatim** / Reflection / Foresight; link to **`raw-input/`** in **`### Appendix`**). **Multiple refined pages for the same publication date are allowed** for every expert: default **`<expert_id>-page-YYYY-MM-DD.md`**, or **`<expert_id>-page-YYYY-MM-DD-<slug>.md`** when splitting by primary capture (`<slug>` from the **`raw-input`** stem). **Alternatively,** one file may consolidate same-day captures with **A / B / C** Verbatim blocks as defined in [refined-page-template.md](refined-page-template.md). Normative detail: [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md) (split ingest / refined pages), the same **refined-page-template.md**, and each expert’s thin **`*-page-template.md`** compat stub.

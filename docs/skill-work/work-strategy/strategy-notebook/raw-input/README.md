@@ -3,6 +3,8 @@
 
 **Purpose:** Store **complete** transcripts and **all** strategy-ingest source material you want kept verbatim — without bloating [daily-strategy-inbox.md](../daily-strategy-inbox.md) or hitting the **~2000 word** per-block budget on [experts/*/transcript.md](../experts/ritter/transcript.md) that **`thread`** triage targets.
 
+**SSOT role:** This tree is the **SSOT for literal text** of each capture. **[`refined-page-template.md`](../refined-page-template.md)** defines the **next layer:** standalone **`experts/…/ *-page-*.md`** files carry **`### Verbatim`** (and analysis) and are the **SSOT for thread / `days.md` / strategy work** — cite those pages for judgment; use **`raw-input/`** when you must verify or edit the **exact words**.
+
 **Expert-agnostic:** This tree is **raw material for analysis**, not only dumps tied to a [strategy-commentator-threads.md](../strategy-commentator-threads.md) **`expert_id`**. Substack essays, wire bundles, institutional statements, screenshot indexes, and mixed paste-bundles belong here even when there is **no** `thread:` lane yet (or ever). The inbox stub may use **`membrane:single`** and omit **`thread:`**; frontmatter **`thread:`** is optional (see § File template).
 
 ## Publication vocabulary (formal pin)

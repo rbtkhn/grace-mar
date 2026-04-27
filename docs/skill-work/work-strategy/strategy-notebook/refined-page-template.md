@@ -6,6 +6,11 @@ WORK only; not Record.
 
 **Publication vocabulary (formal pin):** **Machine** — use YAML / cold-line tag **`pub_date:YYYY-MM-DD`** (and [`raw-input/`](../raw-input/README.md) folder rules). **Human** — preamble line **`Published:`** (date). **Do not** use an “aired” block or **`aired:`** as the norm; full spec: [raw-input README — Publication vocabulary](../raw-input/README.md#publication-vocabulary-formal-pin), [STRATEGY-NOTEBOOK-ARCHITECTURE.md — publication vocabulary](../STRATEGY-NOTEBOOK-ARCHITECTURE.md#publication-vocabulary-formal-pin).
 
+**SSOT hierarchy (two layers):**
+
+1. **[`raw-input/`](../raw-input/README.md)** is the **SSOT for literal capture** — the archived words (and capture metadata) of the source. If **`### Verbatim`** on a refined page ever disagrees with the linked raw file on **what was said**, **fix the page** (or the raw) so they match; do not treat the refined page as overriding the transcript for literal content.
+2. **This file shape** (`experts/…/ *-page-*.md`) is the **SSOT for notebook work** — the object you cite when composing **`strategy-page`** blocks, expert **`thread.md`**, and **`chapters/…/days.md`**: **lane**, **sibling links**, **Reflection** / **Foresight** judgment, and the readable **`### Verbatim`** copy. Downstream analysis should **default to refined pages** as the handle for “this capture / this expert-lane,” not re-derive structure by re-ingesting raw unless you are **auditing the literal** or **editing capture**.
+
 **Purpose:** Standalone **refined page** for expert **`{expert_id}`** (replace token everywhere below when pasting scaffolds). **`### Verbatim`** carries the **full verbatim** from linked [`raw-input/`](../raw-input/README.md)—**lightly cleaned and formatted**; **`### Reflection`** and **`### Foresight`** are **operator analysis** (**may be stubbed** on ingest, completed in a later pass). **Naming:** **`### Chronicle`** remains the verbatim-first heading inside **thread-embedded** **`strategy-page`** fences ([strategy-page-template.md](strategy-page-template.md)); **`### Verbatim`** is the refined-page heading so **Chronicle** names the **thread / `days.md` day-block** weave, not this standalone file. Distinct from a **`strategy-page`** HTML fence in **`thread.md`** (or **`*-thread-YYYY-MM.md`**) unless you duplicate judgment there during EOD compose.
 
 **Thread-embedded pages:** For `<!-- strategy-page:start … -->` blocks in monthly or legacy thread files, use [`strategy-page-template.md`](strategy-page-template.md) instead of this file.
@@ -106,6 +111,8 @@ Monologue or guest spot with canonical `watch?v=` when pinned.
 ## Raw-input naming
 
 Verbatim lives under `raw-input/<date>/`. Refined pages live only under **`experts/{expert_id}/`**.
+
+**Multi-expert lane split:** `### Verbatim` on each refined page = **that speaker’s lines** from the shared raw file (concatenate turns), not a paraphrase. Helper: [`scripts/strategy/extract_transcript_speaker_lanes.py`](../../../scripts/strategy/extract_transcript_speaker_lanes.py) (`--list`, `--print glenn`, etc.). See [`.cursor/skills/strategy-notebook-lane-split/SKILL.md`](../../../.cursor/skills/strategy-notebook-lane-split/SKILL.md).
 
 ---
 
