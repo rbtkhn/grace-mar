@@ -4,8 +4,8 @@
 
 | Surface | Notes |
 |---------|--------|
-| **Locals — VivaBarnesLaw** | Forum posts (e.g. [vivabarneslaw.beta.locals.com](https://vivabarneslaw.beta.locals.com/)); operator voice, liability-adjacent framing when useful. |
-| **Locals — Duran** | **Recorded:** **Same defaults as VivaBarnes** unless you override. **Intent:** over time, develop **one distinct operator style** tuned for **both** communities (not two permanently separate personas). |
+| **Locals — VivaBarnesLaw** | Forum posts (e.g. [vivabarneslaw.beta.locals.com](https://vivabarneslaw.beta.locals.com/)); **Grace‑Mar** house style for this surface (see [grace-mar-locals-voice.md](grace-mar-locals-voice.md)), liability-adjacent framing when useful. |
+| **Locals — Duran** | **Recorded:** **Same defaults as VivaBarnes** (same **Grace‑Mar** Locals voice) unless you override. **Intent:** over time, develop **one distinct style** tuned for **both** communities (not two permanently separate personas). |
 | **X** | Short posts / threads; topic-first and density per [.cursor/rules/drafting-topic-lede.mdc](../../.cursor/rules/drafting-topic-lede.mdc). |
 | **YouTube — Predictive History** | **Comments** (usually **top-level**); **short paragraph** is fine when needed—not only one-liners. Channel context: [youtube-channels/predictive-history](../../research/external/youtube-channels/predictive-history/README.md) (transcript library **LIB-0151** — not the **LIB-0149** operator book; see [self-library-operator-books](../../.cursor/rules/self-library-operator-books.mdc) if ambiguous). |
 
@@ -70,6 +70,7 @@ Edit and extend this section as your taste evolves.
 ### Voice and register
 
 - **No default persona** in the hub — you choose per piece. **When** tone or register is **ambiguous**, the agent should offer **multiple-choice** forks (short, scannable options) instead of assuming a single voice.
+- **Grace‑Mar on Locals (VivaBarnes / Duran)** — **House style** for that forum copy is **not** “the operator’s personal voice to imitate” and **not** default **CIV-MIND-BARNES** / **tri-mind**; see [grace-mar-locals-voice.md](grace-mar-locals-voice.md) (Cursor: [`.cursor/rules/drafting-grace-mar-locals-voice.mdc`](../../.cursor/rules/drafting-grace-mar-locals-voice.mdc)).
 
 ### Companion Lexile / Voice vs operator copy
 
@@ -140,6 +141,7 @@ Skill-write handoff commonly starts from:
 
 ## See also
 
+- [grace-mar-locals-voice.md](grace-mar-locals-voice.md) — **Grace‑Mar** Locals (VivaBarnes / Duran) do / do not; gears and prudence
 - [README.md](README.md) — skill-write doctrine hub
 - [skills-modularity.md](../skills-modularity.md) §4 — Voice and profile as f(skill-write)
 - [`tri-mind` SKILL](../../.cursor/skills/tri-mind/SKILL.md) — tri-frame pass (source analysis; then hand off to preferences above for public copy)

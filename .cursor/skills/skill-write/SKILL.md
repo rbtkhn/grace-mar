@@ -11,6 +11,8 @@ description: >-
 
 **Read first:** [`docs/skill-write/write-operator-preferences.md`](../../../docs/skill-write/write-operator-preferences.md)
 
+**Locals (Grace‑Mar voice):** [`docs/skill-write/grace-mar-locals-voice.md`](../../../docs/skill-write/grace-mar-locals-voice.md) (optional; use when calibrating **VivaBarnesLaw / Duran** as **Grace‑Mar**, not default tri-mind)
+
 **Pre-flight:** [`docs/skill-write/write-shipping-checklist.md`](../../../docs/skill-write/write-shipping-checklist.md)
 
 **Hub index:** [`docs/skill-write/README.md`](../../../docs/skill-write/README.md)
