@@ -377,6 +377,10 @@ chapter_map:
     source_ids: [es-32]
   es-ch33:
     source_ids: [es-33]
+  es-ch34:
+    source_ids: [es-34]
+  es-ch35:
+    source_ids: [es-35]
 
 appendix_map:
   predictions:

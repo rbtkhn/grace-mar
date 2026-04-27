@@ -2788,7 +2788,7 @@ sources:
     transcript: complete
     curated_lecture: complete
     analysis: complete
-    chapter_mapping: not_started
+    chapter_mapping: complete
 - source_id: es-35
   video_id: ''
   title: The Trump New Deal
@@ -2803,4 +2803,4 @@ sources:
     transcript: complete
     curated_lecture: complete
     analysis: not_started
-    chapter_mapping: not_started
+    chapter_mapping: complete
