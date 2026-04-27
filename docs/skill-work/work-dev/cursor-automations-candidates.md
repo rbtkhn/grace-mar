@@ -1,6 +1,6 @@
 # Cursor Automations — grace-mar probe (WORK)
 
-**Prompts SSOT (paste-ready):** [docs/automation/](../../automation/) — policy + per-use-case prompts. This file is an earlier **friction/CI** survey; new work should not duplicate the contract text.
+**Prompts SSOT (paste-ready):** [docs/automation/](../../automation/) — policy + per-use-case prompts. **Automation governance (R0–R5, max authority by surface):** [automation-readiness-policy.md](../../automation/automation-readiness-policy.md) and the repo-native table in [automation-readiness-ledger.md](../../automation/automation-readiness-ledger.md) — use them before enabling new automations; see [automation-classification-template.md](../../automation/automation-classification-template.md) for proposals. This file is an earlier **friction/CI** survey; new work should not duplicate the contract text.
 
 **Status:** Evidence pass from repo + skills; **not** Record. **Purpose:** Map this instance’s cadence, scripts, and CI to [Cursor Automations](https://cursor.com/docs/cloud-agent/automations) triggers and tools, with red lines from [AGENTS.md](../../../AGENTS.md) and [instance-doctrine.md](../../../users/grace-mar/instance-doctrine.md).
 

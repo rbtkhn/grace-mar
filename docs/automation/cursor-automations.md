@@ -42,7 +42,7 @@ Define how [Cursor Automations](https://cursor.com/docs/cloud-agent/automations)
 |-----------------------------------|-----------------|----------------|
 | **CI / workflow completed + failure** | [prompts/cursor-ci-failure-triage.md](prompts/cursor-ci-failure-triage.md) | PR or workflow comment (as configured) |
 | **PR opened** / **synchronized** / **reopened** | [cursor-pr-onboarding.md](cursor-pr-onboarding.md) + [prompts/cursor-pr-onboarding.md](prompts/cursor-pr-onboarding.md) | Single PR comment (update in place if the tool allows) |
-| **Weekly schedule** (or manual) | [prompts/cursor-integrity-summary.md](prompts/cursor-integrity-summary.md) | Report / Slack / issue **text only** — no commit of regen |
+| **Weekly schedule** (or manual) | [cursor-integrity-summary.md](cursor-integrity-summary.md) + [prompts/cursor-integrity-summary.md](prompts/cursor-integrity-summary.md) | Report / Slack / issue **text only** — no commit of regen |
 | **Weekly schedule** | [prompts/cursor-gate-queue-nudge.md](prompts/cursor-gate-queue-nudge.md) | Nudge only — **medium priority**; read-only `recursion-gate.md` |
 
 **Human rituals:** **coffee** (cadence), **dream** (maintenance consolidation), **bridge** (session handoff), and **Steward / gate** (approval, `process_approved_candidates` when the **operator** runs it) are **not** replaced by this schedule table.
