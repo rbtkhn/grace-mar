@@ -33,6 +33,8 @@ So `work-civ-mem` is about **repository management**, not about importing CMC op
 
 For **multi-region** questions (papacy, Latin Europe, Americas Catholic history, Islam–Christian encounter), see **[TOPIC-ROUTING.md](TOPIC-ROUTING.md)** and `scripts/route_civ_mem_topic.py` — profiles in `config/civ_mem_topic_routes.yaml` prioritize **ROME** and MEM **CONNECTIONS** expansion before ad hoc search. Optional **routing focus** (`config/civ_mem_routing_focus.yaml`, `scripts/suggest_routing_focus.py`) adds time-bounded overlap bonuses from recent routing logs.
 
+Trace governance for this lane is defined in **[topic-trace-contract.md](topic-trace-contract.md)**: CIV-MEM topic tracing is **WORK · DERIVED · NOT RECORD**, upstream is read-only, and structural analogy is not truth validation.
+
 ---
 
 ## How CMC Is Useful Inside Grace-Mar
@@ -75,6 +77,8 @@ Compressed rule: `civilization_memory` is a reference corpus and work aid, not p
 | **[roadmap.md](roadmap.md)** | Phased path from manual repo stewardship to bounded autonomous maintenance. |
 | **[workspace.md](workspace.md)** | Lightweight runbook: start points, core repo surfaces, validation commands, and default stewardship loop. |
 | **[audit-report.md](audit-report.md)** | Initial baseline audit snapshot for repo strengths, likely risks, and next stewardship steps. |
+| **[topic-trace-contract.md](topic-trace-contract.md)** | Governing contract for CIV-MEM topic traces: WORK-only derived outputs, read-only upstream boundary, and gate-only promotion path. |
+| **[SCHEMA-PR0-BLUEPRINT.md](SCHEMA-PR0-BLUEPRINT.md)** | Design-only upstream-targeted schema hardening blueprint (metadata contract, typed connections, relevance coverage, validator rollout). |
 
 ---
 

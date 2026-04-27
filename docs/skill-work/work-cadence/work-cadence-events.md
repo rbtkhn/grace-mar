@@ -322,3 +322,6 @@ _(Append below this line.)_
 - **2026-04-26 14:27 UTC** — coffee_pick (grace-mar) ok=true cursor_model=unknown model_tier=unknown picked=D conductor=karajan
 - **2026-04-26 14:32 UTC** — coffee_conductor_outcome (grace-mar) ok=true cursor_model=unknown model_tier=unknown verdict=watch conductor=karajan notebook_ref=strategy-notebook/hormuz-strait-transit-agreement-v0.md note=dedupe_map_plus_cluster_backpointer
 - **2026-04-26 15:35 UTC** — coffee_pick (grace-mar) ok=true cursor_model=unknown model_tier=unknown picked=D conductor=bernstein
+- **2026-04-27 05:57 UTC** — dream (grace-mar) ok=false mode=default cursor_model=unknown model_tier=unknown phase=both integrity=fail governance=pass mem_changed=true reviewable=0 contradictions=0 civmem_echo_count=0 civmem_suppressed=true handoff_written=true
+- **2026-04-27 12:24 UTC** — coffee (grace-mar) ok=true mode=work-start cursor_model=unknown model_tier=unknown
+- **2026-04-27 13:28 UTC** — coffee_conductor_outcome (grace-mar) ok=true cursor_model=unknown model_tier=unknown verdict=hold conductor=bernstein notebook_ref=theology-notebook/research/2026-04-26-ra-potentiation-civ-mem-lineage.md

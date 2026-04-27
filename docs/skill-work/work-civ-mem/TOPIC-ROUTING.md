@@ -21,6 +21,8 @@ python3 scripts/route_civ_mem_topic.py --profile theology_ra_trace "…" --bfs-m
 
 **Optional routing focus:** [`config/civ_mem_routing_focus.yaml`](../../../config/civ_mem_routing_focus.yaml) — time-bounded `profile_overlap_bonus` and `sticky_keywords` (see **Routing focus** below).
 
+**Trace contract:** [`topic-trace-contract.md`](topic-trace-contract.md) — topic traces are **WORK · DERIVED · NOT RECORD**, upstream is read-only, and structural analogy is not truth validation.
+
 ## Behavior
 
 1. **Profile match** — Keyword substring overlap against each profile’s `keywords` list; tie-break by `priority`. If overlap is zero, use `default_profile`. If a **routing focus** file is loaded, in date range, and not disabled with `--no-focus`, add **integer bonuses**: per-profile `profile_overlap_bonus` plus per-entry `sticky_keywords` (substring match → bonus to named profile). Effective score = base overlap + those bonuses (disqualified profiles stay excluded).

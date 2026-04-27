@@ -27,6 +27,7 @@ A governed retrieval substrate for reference-facing knowledge. Active entries sh
 | **LIB-0154** | Cici notebook | [`docs/skill-work/work-cici/cici-notebook/README.md`](../../docs/skill-work/work-cici/cici-notebook/README.md) |
 | **LIB-0155** | Dev journal | [`docs/skill-work/work-dev/dev-notebook/work-dev/journal/README.md`](../../docs/skill-work/work-dev/dev-notebook/work-dev/journal/README.md) |
 | **LIB-0156** | History notebook — **operator-authored** `hn-*` chapters (deliverable) | [`docs/skill-work/work-strategy/history-notebook/README.md`](../../docs/skill-work/work-strategy/history-notebook/README.md) |
+| **LIB-0159** | Theology notebook — define own beliefs through creating the book | [`docs/skill-work/work-strategy/theology-notebook/README.md`](../../docs/skill-work/work-strategy/theology-notebook/README.md) |
 | **LIB-0157** | Civilization Memory (upstream repository) | Local: [`research/repos/civilization_memory/`](../../research/repos/civilization_memory/README.md) · symlink: [`SELF-LIBRARY/civilization_memory`](SELF-LIBRARY/civilization_memory) |
 
 **Related (not on this shelf):** [LIB-0151](#entries) (YouTube transcript library) and [LIB-0152](#entries) (TCN curated transcript book) are **bundled channel books** — operator analytical, but listed under the YouTube subsection in **Entries**.
@@ -140,6 +141,23 @@ entries:
     reviewed_at: 2026-04-18
     added_at: 2026-04-18
     notes: "Operator analytical book: compressed civilizational chapters (hn-*), book-architecture.yaml SSOT. SELF-LIBRARY shelf is the curated fact base for HN (lookup and drafting discipline) alongside CIV-MEM as MEM reservoir. Distinct from LIB-0158 (Bookshelf / third-party owned books in bookshelf-catalog.yaml). WORK; not Record until gated."
+
+  - id: LIB-0159
+    title: "Theology notebook"
+    author: "grace-mar"
+    lane: "reference"
+    type: "book"
+    status: "active"
+    shelf_intent: "operator_book"
+    operator_subtype: "operator_notebook"
+    engagement_status: "in_progress"
+    lookup_priority: "high"
+    scope: ["work_strategy", "theology", "theology_notebook", "operator_analytical"]
+    source: "url"
+    url: "https://github.com/rbtkhn/grace-mar/blob/main/docs/skill-work/work-strategy/theology-notebook/README.md"
+    reviewed_at: 2026-04-26
+    added_at: 2026-04-26
+    notes: "Operator analytical book: define own theological beliefs through the activity of writing the book; research/ + ideas/ + optional chapters/. Complements governed Theology entries in this file (LIB-0140+); not CIV-MEM corpus. WORK; not Record until gated."
 
   - id: LIB-0158
     title: "Bookshelf (self-library-bookshelf — owned print catalog)"
