@@ -1,22 +1,20 @@
 {
-  "generated_at": "2026-04-26T05:21:01.572932+00:00",
+  "generated_at": "2026-04-27T05:57:40.189435+00:00",
   "user_id": "grace-mar",
   "agent_surface": {
     "cursor_model": "unknown"
   },
   "strict_mode": false,
   "phase": "both",
-  "ok": false,
-  "integrity_ok": false,
+  "ok": true,
+  "integrity_ok": true,
   "governance_ok": true,
   "self_memory_changed": false,
-  "reviewable_count": 1,
+  "reviewable_count": 0,
   "contradiction_count": 0,
   "artifact_draft_count": 0,
   "promotable_draft_count": 0,
-  "followups": [
-    "1 reviewable item(s) in digest"
-  ],
+  "followups": [],
   "phases": {
     "recent": {
       "self_memory_changed": false,
@@ -24,29 +22,26 @@
       "relation_counts": {}
     },
     "structural": {
-      "integrity": "fail",
+      "integrity": "pass",
       "governance": "pass",
-      "entry_count": 2,
-      "relation_counts": {
-        "reinforcement": 1,
-        "refinement": 1
-      }
+      "entry_count": 0,
+      "relation_counts": {}
     }
   },
   "coffee_rollup_24h": {
-    "window_start_utc": "2026-04-25T05:20:57.638909+00:00",
-    "window_end_utc": "2026-04-26T05:20:57.638909+00:00",
+    "window_start_utc": "2026-04-26T05:57:36.630882+00:00",
+    "window_end_utc": "2026-04-27T05:57:36.630882+00:00",
     "window_hours": 24.0,
-    "count": 7,
-    "first_ts": "2026-04-25T13:18:00+00:00",
-    "last_ts": "2026-04-26T05:17:00+00:00",
-    "span_hours": 15.98,
+    "count": 3,
+    "first_ts": "2026-04-26T13:11:00+00:00",
+    "last_ts": "2026-04-26T14:22:00+00:00",
+    "span_hours": 1.18,
     "by_mode": {
-      "work-start": 7
+      "work-start": 3
     },
     "runs": [
       {
-        "ts_iso": "2026-04-25T13:18:00+00:00",
+        "ts_iso": "2026-04-26T13:11:00+00:00",
         "ok": true,
         "mode": "work-start",
         "kv": {
@@ -55,7 +50,7 @@
         }
       },
       {
-        "ts_iso": "2026-04-25T16:37:00+00:00",
+        "ts_iso": "2026-04-26T13:52:00+00:00",
         "ok": true,
         "mode": "work-start",
         "kv": {
@@ -64,43 +59,7 @@
         }
       },
       {
-        "ts_iso": "2026-04-25T17:20:00+00:00",
-        "ok": true,
-        "mode": "work-start",
-        "kv": {
-          "cursor_model": "unknown",
-          "model_tier": "unknown"
-        }
-      },
-      {
-        "ts_iso": "2026-04-25T18:04:00+00:00",
-        "ok": true,
-        "mode": "work-start",
-        "kv": {
-          "cursor_model": "unknown",
-          "model_tier": "unknown"
-        }
-      },
-      {
-        "ts_iso": "2026-04-26T00:28:00+00:00",
-        "ok": true,
-        "mode": "work-start",
-        "kv": {
-          "cursor_model": "unknown",
-          "model_tier": "unknown"
-        }
-      },
-      {
-        "ts_iso": "2026-04-26T01:39:00+00:00",
-        "ok": true,
-        "mode": "work-start",
-        "kv": {
-          "cursor_model": "unknown",
-          "model_tier": "unknown"
-        }
-      },
-      {
-        "ts_iso": "2026-04-26T05:17:00+00:00",
+        "ts_iso": "2026-04-26T14:22:00+00:00",
         "ok": true,
         "mode": "work-start",
         "kv": {
@@ -111,32 +70,44 @@
     ],
     "picks": [
       {
-        "ts_iso": "2026-04-25T13:21:00+00:00",
+        "ts_iso": "2026-04-26T13:21:00+00:00",
         "picked": "D",
-        "menu_label": "D1",
-        "conductor": "kleiber"
-      },
-      {
-        "ts_iso": "2026-04-25T16:49:00+00:00",
-        "picked": "D",
-        "menu_label": "D1",
-        "conductor": "kleiber"
-      },
-      {
-        "ts_iso": "2026-04-25T18:06:00+00:00",
-        "picked": "D",
-        "menu_label": "D2",
+        "menu_label": "D",
         "conductor": "toscanini"
       },
       {
-        "ts_iso": "2026-04-26T01:44:00+00:00",
+        "ts_iso": "2026-04-26T13:28:00+00:00",
         "picked": "D",
-        "menu_label": "D3",
+        "menu_label": "D",
+        "conductor": "kleiber"
+      },
+      {
+        "ts_iso": "2026-04-26T13:54:00+00:00",
+        "picked": "D",
+        "menu_label": "D",
+        "conductor": "kleiber"
+      },
+      {
+        "ts_iso": "2026-04-26T14:24:00+00:00",
+        "picked": "D",
+        "menu_label": "D",
+        "conductor": "karajan"
+      },
+      {
+        "ts_iso": "2026-04-26T14:27:00+00:00",
+        "picked": "D",
+        "menu_label": "D",
+        "conductor": "karajan"
+      },
+      {
+        "ts_iso": "2026-04-26T15:35:00+00:00",
+        "picked": "D",
+        "menu_label": "D",
         "conductor": "bernstein"
       }
     ],
     "by_picked": {
-      "D": 4
+      "D": 6
     }
   },
   "execution_paths": [
@@ -145,45 +116,47 @@
       "title": "Daily Brief (generator + watch slices; optional KY-4 intel when chosen)",
       "first_move": "python3 scripts/operator_coffee.py -u grace-mar \u2014 then coffee menu C \u2014 Strategy (daily brief)",
       "stop_rule": "One slice: daily brief path opened or optional intel pass started \u2014 enough for first block.",
-      "signals_used": [
-        "reentry_heavy"
-      ]
+      "signals_used": []
     },
     {
       "id": "build",
       "title": "Build / integrate (repo + work-dev)",
       "first_move": "python3 scripts/validate-integrity.py --user grace-mar --json",
-      "stop_rule": "Fix reported integrity errors before shipping.",
-      "signals_used": [
-        "integrity_fail"
-      ]
+      "stop_rule": "Integrity passes; then optional: python3 scripts/refresh_derived_exports.py -u grace-mar",
+      "signals_used": []
     },
     {
       "id": "steward",
       "title": "Steward / membrane (gate + template parity)",
-      "first_move": "python3 scripts/operator_gate_review_pass.py -u grace-mar (digest: reviewable=1, contradiction=0)",
+      "first_move": "Read users/grace-mar/recursion-gate.md; optional: python3 scripts/operator_gate_review_pass.py -u grace-mar",
       "stop_rule": "Top 1\u20133 candidates reviewed or explicitly deferred.",
-      "signals_used": [
-        "digest_hot"
-      ]
+      "signals_used": []
     }
   ],
-  "suggested_execution_path_index": 2,
-  "execution_path_suggestion_reason": "integrity_or_governance_fail",
-  "tomorrow_inherits": "Tomorrow inherits (hint): **Steward / membrane (gate + template parity)** \u2014 integrity or governance did not fully pass this dream; not policy or Record.",
-  "civmem_echoes": [],
+  "suggested_execution_path_index": 0,
+  "execution_path_suggestion_reason": "calendar_mod3",
+  "tomorrow_inherits": "Tomorrow inherits (hint): **Daily Brief (generator + watch slices; optional KY-4 intel when chosen)** \u2014 calendar rotation; not policy or Record.",
+  "civmem_echoes": [
+    {
+      "path": "book/APPLIED-THEOLOGY-INSIGHTS-MERCOURIS-LENS.md",
+      "overlap": 4,
+      "snippet_preview": "**Purpose:** Identify structural and procedural insights from CIV\u2013MIND\u2013MERCOURIS (legitimacy, delegation/format, faction persistence, time horizon, asymmetric information) that the book does not yet s",
+      "analogy_label": "Analogy candidate only \u2014 not evidence, not recommendation, not Record.",
+      "specificity_pass": true,
+      "score": 6.0
+    }
+  ],
   "civmem_disclaimer": "Analogical / historical depth from in-repo civ-mem (token overlap); not current truth, not Voice knowledge, not part of the Record.",
   "civmem_index_missing": false,
-  "civmem_suppressed_reason": "suppressed_integrity_fail",
   "capture_gap": {
-    "last_evidence_date": "2026-04-25",
-    "last_evidence_id": "ACT-0001",
+    "last_evidence_date": "2026-04-26",
+    "last_evidence_id": "ACT-0007",
     "days_since_evidence": 0,
-    "last_merge_date": "2026-04-25",
+    "last_merge_date": "2026-04-26",
     "days_since_merge": 0,
-    "pending_count": 5,
+    "pending_count": 3,
     "level": "ok",
-    "message": "Record healthy \u2014 last entry 0d ago (ACT-0001, 2026-04-25)"
+    "message": "Record healthy \u2014 last entry 0d ago (ACT-0007, 2026-04-26)"
   },
   "capability_shift": {
     "category": "model",
@@ -198,25 +171,25 @@
   "dream_catchup": {
     "semantics": "since_previous_dream",
     "timezone": "UTC",
-    "previous_dream_generated_at": "2026-04-26T05:17:16.037724+00:00",
+    "previous_dream_generated_at": "2026-04-27T05:57:06.550622+00:00",
     "local_calendar_dates": [],
     "strategy_notebook_missing_day_headers": []
   },
   "last_coffee_echo": {
-    "timestamp": "2026-04-26T05:17:00+00:00",
+    "timestamp": "2026-04-26T14:22:00+00:00",
     "conductor": "bernstein",
     "mode": "work-start",
-    "menu_letter": "D3",
-    "highlight": "Yesterday\u2019s work-start coffee is still the thread. Menu pick: D3. Conductor line: bernstein.",
+    "menu_letter": "D",
+    "highlight": "Yesterday\u2019s work-start coffee is still the thread. Menu pick: D. Conductor line: bernstein.",
     "source": "coffee_rollup_24h"
   },
   "handoffSchemaVersion": 3,
-  "topActionReason": "integrity_or_governance_fail",
-  "quietRun": false,
+  "topActionReason": "calendar_mod3",
+  "quietRun": true,
   "residueLedger": {
-    "must_resume": "1 reviewable item(s) in digest",
+    "must_resume": "",
     "safe_to_drop": "",
-    "blocked": "Dream reported not ok \u2014 review integrity/governance before new work.",
+    "blocked": "",
     "watch_later": ""
   },
   "worktreeState": "risky residue",
