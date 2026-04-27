@@ -82,5 +82,5 @@ def test_assess_session_load_includes_menu_weights() -> None:
 
     r = assess_load("grace-mar")
     ow = r.get("option_weights") or {}
-    assert set(ow.keys()) == {"A", "B", "C", "D", "E"}
+    assert set(ow.keys()) == {"A", "B", "C", "D"}
     assert r.get("recommended") in ("A", "B", "C")

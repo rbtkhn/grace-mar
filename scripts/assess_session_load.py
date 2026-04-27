@@ -223,12 +223,8 @@ def _compute_option_weights(
         "C": {"cost": "light", "note": "Strategy — daily brief + tri-frame"},
         "D": {
             "cost": "moderate",
-            "note": (
-                "Conductor — Toscanini / Furtwängler / Karajan / Kleiber / Bernstein "
-                "(D or name prefix; bare D continues last pick)"
-            ),
+            "note": "System choice — cici / dev / jiang / rome / skill-write slice (conductors: invoke by master name separately)",
         },
-        "E": {"cost": "moderate", "note": "System choice — cici / dev / jiang / rome slice"},
     }
 
     if branch_count >= 3:
@@ -315,12 +311,11 @@ def format_annotated_menu(result: dict) -> str:
         "A": "Build",
         "B": "Steward",
         "C": "Strategy (daily brief)",
-        "D": "Conductor (Toscanini / Furtwängler / Karajan / Kleiber / Bernstein)",
-        "E": "System choice",
+        "D": "System choice",
     }
 
     lines = []
-    for letter in ("A", "B", "C", "D", "E"):
+    for letter in ("A", "B", "C", "D"):
         w = weights.get(letter, {"cost": "?", "note": ""})
         label = labels[letter]
         tag = f"({w['cost']})"
