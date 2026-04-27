@@ -6,6 +6,7 @@ show: Glenn Diesen (Greater Eurasia)
 episode_title: "John Mearsheimer: Iran Holds All the Cards — The Strategic Defeat of the U.S."
 host: Glenn Diesen
 guest: John Mearsheimer
+threads: [diesen, mearsheimer]
 thread_expert: mearsheimer
 cross_host_thread: diesen
 source_url: https://www.youtube.com/watch?v=DBOVT0UdHXg

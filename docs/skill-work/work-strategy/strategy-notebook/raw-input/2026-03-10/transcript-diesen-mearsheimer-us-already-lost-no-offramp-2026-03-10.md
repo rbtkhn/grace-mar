@@ -6,6 +6,7 @@ show: Glenn Diesen (Greater Eurasia)
 episode_title: "John Mearsheimer: U.S. Already Lost Iran War — No Off-Ramp in Sight"
 host: Glenn Diesen
 guest: John Mearsheimer
+threads: [diesen, mearsheimer]
 thread_expert: mearsheimer
 cross_host_thread: diesen
 source_url: https://www.youtube.com/watch?v=1e9NhLfPNKU

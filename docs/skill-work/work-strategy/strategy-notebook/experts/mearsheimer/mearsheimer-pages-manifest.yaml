@@ -3,7 +3,9 @@ primary_capture_count: 10
 pages:
 - raw_input_relative: raw-input/2026-01-07/transcript-diesen-mearsheimer-venezuela-greenland-nato-2026-01-07.md
   voice_date: '2026-01-07'
-  page_filename: mearsheimer-page-2026-01-07-venezuela-greenland-nato.md
+  page_filename: mearsheimer-page-2026-01-07-diesen-mearsheimer-venezuela-greenland-nato-2026-01-07.md
+  # Legacy: mearsheimer-page-2026-01-07-venezuela-greenland-nato.md (stub; see file body)
+  skip_assembly: true
   collision: false
   slug: venezuela-greenland-nato
   mode: B
@@ -27,7 +29,9 @@ pages:
   href_verbatim: ../../raw-input/2026-01-20/substack-mearsheimer-the-tag-team-fails-in-iran-2026-01-20.md
 - raw_input_relative: raw-input/2026-01-31/transcript-diesen-mearsheimer-cold-war-nato-ukraine-2026-01-31.md
   voice_date: '2026-01-31'
-  page_filename: mearsheimer-page-2026-01-31-cold-war-nato-ukraine.md
+  page_filename: mearsheimer-page-2026-01-31-diesen-mearsheimer-cold-war-nato-ukraine-2026-01-31.md
+  # Legacy: mearsheimer-page-2026-01-31-cold-war-nato-ukraine.md (stub; see file body)
+  skip_assembly: true
   collision: false
   slug: cold-war-nato-ukraine
   mode: B
@@ -39,7 +43,9 @@ pages:
   href_verbatim: ../../raw-input/2026-01-31/transcript-diesen-mearsheimer-cold-war-nato-ukraine-2026-01-31.md
 - raw_input_relative: raw-input/2026-02-25/transcript-diesen-mearsheimer-case-for-nuclear-iran-2026-02-25.md
   voice_date: '2026-02-25'
-  page_filename: mearsheimer-page-2026-02-25-case-for-nuclear-iran.md
+  page_filename: mearsheimer-page-2026-02-25-diesen-mearsheimer-case-for-nuclear-iran-2026-02-25.md
+  # Legacy: mearsheimer-page-2026-02-25-case-for-nuclear-iran.md (stub; see file body)
+  skip_assembly: true
   collision: false
   slug: case-for-nuclear-iran
   mode: B
@@ -51,7 +57,9 @@ pages:
   href_verbatim: ../../raw-input/2026-02-25/transcript-diesen-mearsheimer-case-for-nuclear-iran-2026-02-25.md
 - raw_input_relative: raw-input/2026-03-10/transcript-diesen-mearsheimer-us-already-lost-no-offramp-2026-03-10.md
   voice_date: '2026-03-10'
-  page_filename: mearsheimer-page-2026-03-10-us-already-lost-no-offramp.md
+  page_filename: mearsheimer-page-2026-03-10-diesen-mearsheimer-us-already-lost-no-offramp-2026-03-10.md
+  # Legacy: mearsheimer-page-2026-03-10-us-already-lost-no-offramp.md (stub; see file body)
+  skip_assembly: true
   collision: false
   slug: us-already-lost-no-offramp
   mode: B
@@ -63,7 +71,9 @@ pages:
   href_verbatim: ../../raw-input/2026-03-10/transcript-diesen-mearsheimer-us-already-lost-no-offramp-2026-03-10.md
 - raw_input_relative: raw-input/2026-03-27/transcript-diesen-mearsheimer-iran-holds-all-the-cards-2026-03-27.md
   voice_date: '2026-03-27'
-  page_filename: mearsheimer-page-2026-03-27-iran-holds-all-the-cards.md
+  page_filename: mearsheimer-page-2026-03-27-diesen-mearsheimer-iran-holds-all-the-cards-2026-03-27.md
+  # Legacy: mearsheimer-page-2026-03-27-iran-holds-all-the-cards.md (stub; see file body)
+  skip_assembly: true
   collision: false
   slug: iran-holds-all-the-cards
   mode: B

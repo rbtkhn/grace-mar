@@ -20,6 +20,41 @@ WORK only; not Record.
 - Legacy stub: [mearsheimer-page-2026-04-10-world-changed-forever.md](mearsheimer-page-2026-04-10-world-changed-forever.md) (pointer; full transcript no longer in-page)
 - YT | cold: **Diesen** **×** **Mearsheimer** *World Changed Forever* **2026-04-10** | https://www.youtube.com/watch?v=H2K3qDshr70 | `skip_assembly` in manifest (lane split) | thread:mearsheimer
 
+## 2026-03-27
+- Inbox | cold: full text in [`transcript-diesen-mearsheimer-iran-holds-all-the-cards-2026-03-27.md`](../raw-input/2026-03-27/transcript-diesen-mearsheimer-iran-holds-all-the-cards-2026-03-27.md) (SSOT) | thread:mearsheimer | crosses:diesen
+- Refined | cold: [mearsheimer-page-2026-03-27-diesen-mearsheimer-iran-holds-all-the-cards-2026-03-27.md](mearsheimer-page-2026-03-27-diesen-mearsheimer-iran-holds-all-the-cards-2026-03-27.md) (guest lane) | thread:mearsheimer
+- Sibling (host): [../diesen/diesen-page-2026-03-27-diesen-mearsheimer-iran-holds-all-the-cards-2026-03-27.md](../diesen/diesen-page-2026-03-27-diesen-mearsheimer-iran-holds-all-the-cards-2026-03-27.md) | thread:diesen
+- Legacy stub: [mearsheimer-page-2026-03-27-iran-holds-all-the-cards.md](mearsheimer-page-2026-03-27-iran-holds-all-the-cards.md) (pointer; full transcript no longer in-page)
+- YT | cold: **Diesen** **×** **Mearsheimer** *Iran Holds All the Cards* **2026-03-27** | https://www.youtube.com/watch?v=DBOVT0UdHXg | `skip_assembly` in manifest (lane split) | thread:mearsheimer
+
+## 2026-03-10
+- Inbox | cold: full text in [`transcript-diesen-mearsheimer-us-already-lost-no-offramp-2026-03-10.md`](../raw-input/2026-03-10/transcript-diesen-mearsheimer-us-already-lost-no-offramp-2026-03-10.md) (SSOT) | thread:mearsheimer | crosses:diesen
+- Refined | cold: [mearsheimer-page-2026-03-10-diesen-mearsheimer-us-already-lost-no-offramp-2026-03-10.md](mearsheimer-page-2026-03-10-diesen-mearsheimer-us-already-lost-no-offramp-2026-03-10.md) (guest lane) | thread:mearsheimer
+- Sibling (host): [../diesen/diesen-page-2026-03-10-diesen-mearsheimer-us-already-lost-no-offramp-2026-03-10.md](../diesen/diesen-page-2026-03-10-diesen-mearsheimer-us-already-lost-no-offramp-2026-03-10.md) | thread:diesen
+- Legacy stub: [mearsheimer-page-2026-03-10-us-already-lost-no-offramp.md](mearsheimer-page-2026-03-10-us-already-lost-no-offramp.md) (pointer; full transcript no longer in-page)
+- YT | cold: **Diesen** **×** **Mearsheimer** *U.S. Already Lost* **2026-03-10** | https://www.youtube.com/watch?v=1e9NhLfPNKU | `skip_assembly` in manifest (lane split) | thread:mearsheimer
+
+## 2026-02-25
+- Inbox | cold: full text in [`transcript-diesen-mearsheimer-case-for-nuclear-iran-2026-02-25.md`](../raw-input/2026-02-25/transcript-diesen-mearsheimer-case-for-nuclear-iran-2026-02-25.md) (SSOT) | thread:mearsheimer | crosses:diesen
+- Refined | cold: [mearsheimer-page-2026-02-25-diesen-mearsheimer-case-for-nuclear-iran-2026-02-25.md](mearsheimer-page-2026-02-25-diesen-mearsheimer-case-for-nuclear-iran-2026-02-25.md) (guest lane) | thread:mearsheimer
+- Sibling (host): [../diesen/diesen-page-2026-02-25-diesen-mearsheimer-case-for-nuclear-iran-2026-02-25.md](../diesen/diesen-page-2026-02-25-diesen-mearsheimer-case-for-nuclear-iran-2026-02-25.md) | thread:diesen
+- Legacy stub: [mearsheimer-page-2026-02-25-case-for-nuclear-iran.md](mearsheimer-page-2026-02-25-case-for-nuclear-iran.md) (pointer; full transcript no longer in-page)
+- YT | cold: **Diesen** **×** **Mearsheimer** *The Case for a Nuclear Iran* **2026-02-25** | https://www.youtube.com/watch?v=vx1KnspP1gM | `skip_assembly` in manifest (lane split) | thread:mearsheimer
+
+## 2026-01-31
+- Inbox | cold: full text in [`transcript-diesen-mearsheimer-cold-war-nato-ukraine-2026-01-31.md`](../raw-input/2026-01-31/transcript-diesen-mearsheimer-cold-war-nato-ukraine-2026-01-31.md) (SSOT) | thread:mearsheimer | crosses:diesen
+- Refined | cold: [mearsheimer-page-2026-01-31-diesen-mearsheimer-cold-war-nato-ukraine-2026-01-31.md](mearsheimer-page-2026-01-31-diesen-mearsheimer-cold-war-nato-ukraine-2026-01-31.md) (guest lane) | thread:mearsheimer
+- Sibling (host): [../diesen/diesen-page-2026-01-31-diesen-mearsheimer-cold-war-nato-ukraine-2026-01-31.md](../diesen/diesen-page-2026-01-31-diesen-mearsheimer-cold-war-nato-ukraine-2026-01-31.md) | thread:diesen
+- Legacy stub: [mearsheimer-page-2026-01-31-cold-war-nato-ukraine.md](mearsheimer-page-2026-01-31-cold-war-nato-ukraine.md) (pointer; full transcript no longer in-page)
+- YT | cold: **Diesen** **×** **Mearsheimer** *Cold War 2.0* **2026-01-31** | https://www.youtube.com/watch?v=OV75YsYnE8U | `skip_assembly` in manifest (lane split) | thread:mearsheimer
+
+## 2026-01-07
+- Inbox | cold: full text in [`transcript-diesen-mearsheimer-venezuela-greenland-nato-2026-01-07.md`](../raw-input/2026-01-07/transcript-diesen-mearsheimer-venezuela-greenland-nato-2026-01-07.md) (SSOT) | thread:mearsheimer | crosses:diesen
+- Refined | cold: [mearsheimer-page-2026-01-07-diesen-mearsheimer-venezuela-greenland-nato-2026-01-07.md](mearsheimer-page-2026-01-07-diesen-mearsheimer-venezuela-greenland-nato-2026-01-07.md) (guest lane) | thread:mearsheimer
+- Sibling (host): [../diesen/diesen-page-2026-01-07-diesen-mearsheimer-venezuela-greenland-nato-2026-01-07.md](../diesen/diesen-page-2026-01-07-diesen-mearsheimer-venezuela-greenland-nato-2026-01-07.md) | thread:diesen
+- Legacy stub: [mearsheimer-page-2026-01-07-venezuela-greenland-nato.md](mearsheimer-page-2026-01-07-venezuela-greenland-nato.md) (pointer; full transcript no longer in-page)
+- YT | cold: **Diesen** **×** **Mearsheimer** *Venezuela, Greenland & NATO* **2026-01-07** | https://www.youtube.com/watch?v=-NQ3lnuYcXs | `skip_assembly` in manifest (lane split) | thread:mearsheimer
+
 ## 2026-04-26
 - Inbox | cold: full text in [`transcript-mearsheimer-redacted-trump-iran-2026-04-21.md`](raw-input/2026-04-21/transcript-mearsheimer-redacted-trump-iran-2026-04-21.md) (pointer; SSOT raw-input) | thread:mearsheimer
 - Inbox | cold: full text in [`substack-mearsheimer-will-trump-go-kamikaze-2026-03-29.md`](raw-input/2026-03-29/substack-mearsheimer-will-trump-go-kamikaze-2026-03-29.md) (pointer; SSOT raw-input) | thread:mearsheimer

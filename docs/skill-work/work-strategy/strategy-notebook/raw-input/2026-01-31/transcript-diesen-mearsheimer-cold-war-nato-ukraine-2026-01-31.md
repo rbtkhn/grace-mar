@@ -6,6 +6,7 @@ show: Glenn Diesen (Greater Eurasia)
 episode_title: "John Mearsheimer: Cold War 2.0 & NATO's Defeat in Ukraine"
 host: Glenn Diesen
 guest: John Mearsheimer
+threads: [diesen, mearsheimer]
 thread_expert: mearsheimer
 cross_host_thread: diesen
 source_url: https://www.youtube.com/watch?v=OV75YsYnE8U

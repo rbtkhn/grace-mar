@@ -19,6 +19,36 @@ WORK only; not Record.
 - Sibling (guest): [../mearsheimer/mearsheimer-page-2026-04-10-diesen-mearsheimer-world-changed-forever-2026-04-10.md](../mearsheimer/mearsheimer-page-2026-04-10-diesen-mearsheimer-world-changed-forever-2026-04-10.md) | thread:mearsheimer
 - YT | cold: **Glenn Diesen** × **John Mearsheimer** — *World Changed Forever as Iran Defeated the U.S.* — **aired** **2026-04-10** — lane split (host + guest refined; SSOT raw) | https://www.youtube.com/watch?v=H2K3qDshr70 | verify:lane-split+threads in raw | thread:diesen
 
+## 2026-03-27
+- Inbox | cold: full text in [`transcript-diesen-mearsheimer-iran-holds-all-the-cards-2026-03-27.md`](raw-input/2026-03-27/transcript-diesen-mearsheimer-iran-holds-all-the-cards-2026-03-27.md) (SSOT) | thread:diesen | crosses:mearsheimer
+- Refined | cold: [diesen-page-2026-03-27-diesen-mearsheimer-iran-holds-all-the-cards-2026-03-27.md](diesen-page-2026-03-27-diesen-mearsheimer-iran-holds-all-the-cards-2026-03-27.md) (host lane) | thread:diesen
+- Sibling (guest): [../mearsheimer/mearsheimer-page-2026-03-27-diesen-mearsheimer-iran-holds-all-the-cards-2026-03-27.md](../mearsheimer/mearsheimer-page-2026-03-27-diesen-mearsheimer-iran-holds-all-the-cards-2026-03-27.md) | thread:mearsheimer
+- YT | cold: **Glenn Diesen** × **John Mearsheimer** — *Iran Holds All the Cards* — **2026-03-27** — `skip_assembly` in manifest | https://www.youtube.com/watch?v=DBOVT0UdHXg | thread:diesen
+
+## 2026-03-10
+- Inbox | cold: full text in [`transcript-diesen-mearsheimer-us-already-lost-no-offramp-2026-03-10.md`](raw-input/2026-03-10/transcript-diesen-mearsheimer-us-already-lost-no-offramp-2026-03-10.md) (SSOT) | thread:diesen | crosses:mearsheimer
+- Refined | cold: [diesen-page-2026-03-10-diesen-mearsheimer-us-already-lost-no-offramp-2026-03-10.md](diesen-page-2026-03-10-diesen-mearsheimer-us-already-lost-no-offramp-2026-03-10.md) (host lane) | thread:diesen
+- Sibling (guest): [../mearsheimer/mearsheimer-page-2026-03-10-diesen-mearsheimer-us-already-lost-no-offramp-2026-03-10.md](../mearsheimer/mearsheimer-page-2026-03-10-diesen-mearsheimer-us-already-lost-no-offramp-2026-03-10.md) | thread:mearsheimer
+- YT | cold: **Glenn Diesen** × **John Mearsheimer** — *U.S. Already Lost* — **2026-03-10** | https://www.youtube.com/watch?v=1e9NhLfPNKU | thread:diesen
+
+## 2026-02-25
+- Inbox | cold: full text in [`transcript-diesen-mearsheimer-case-for-nuclear-iran-2026-02-25.md`](raw-input/2026-02-25/transcript-diesen-mearsheimer-case-for-nuclear-iran-2026-02-25.md) (SSOT) | thread:diesen | crosses:mearsheimer
+- Refined | cold: [diesen-page-2026-02-25-diesen-mearsheimer-case-for-nuclear-iran-2026-02-25.md](diesen-page-2026-02-25-diesen-mearsheimer-case-for-nuclear-iran-2026-02-25.md) (host lane) | thread:diesen
+- Sibling (guest): [../mearsheimer/mearsheimer-page-2026-02-25-diesen-mearsheimer-case-for-nuclear-iran-2026-02-25.md](../mearsheimer/mearsheimer-page-2026-02-25-diesen-mearsheimer-case-for-nuclear-iran-2026-02-25.md) | thread:mearsheimer
+- YT | cold: **Glenn Diesen** × **John Mearsheimer** — *The Case for a Nuclear Iran* — **2026-02-25** | https://www.youtube.com/watch?v=vx1KnspP1gM | thread:diesen
+
+## 2026-01-31
+- Inbox | cold: full text in [`transcript-diesen-mearsheimer-cold-war-nato-ukraine-2026-01-31.md`](raw-input/2026-01-31/transcript-diesen-mearsheimer-cold-war-nato-ukraine-2026-01-31.md) (SSOT) | thread:diesen | crosses:mearsheimer
+- Refined | cold: [diesen-page-2026-01-31-diesen-mearsheimer-cold-war-nato-ukraine-2026-01-31.md](diesen-page-2026-01-31-diesen-mearsheimer-cold-war-nato-ukraine-2026-01-31.md) (host lane) | thread:diesen
+- Sibling (guest): [../mearsheimer/mearsheimer-page-2026-01-31-diesen-mearsheimer-cold-war-nato-ukraine-2026-01-31.md](../mearsheimer/mearsheimer-page-2026-01-31-diesen-mearsheimer-cold-war-nato-ukraine-2026-01-31.md) | thread:mearsheimer
+- YT | cold: **Glenn Diesen** × **John Mearsheimer** — *Cold War 2.0 & NATO* — **2026-01-31** | https://www.youtube.com/watch?v=OV75YsYnE8U | thread:diesen
+
+## 2026-01-07
+- Inbox | cold: full text in [`transcript-diesen-mearsheimer-venezuela-greenland-nato-2026-01-07.md`](raw-input/2026-01-07/transcript-diesen-mearsheimer-venezuela-greenland-nato-2026-01-07.md) (SSOT) | thread:diesen | crosses:mearsheimer
+- Refined | cold: [diesen-page-2026-01-07-diesen-mearsheimer-venezuela-greenland-nato-2026-01-07.md](diesen-page-2026-01-07-diesen-mearsheimer-venezuela-greenland-nato-2026-01-07.md) (host lane) | thread:diesen
+- Sibling (guest): [../mearsheimer/mearsheimer-page-2026-01-07-diesen-mearsheimer-venezuela-greenland-nato-2026-01-07.md](../mearsheimer/mearsheimer-page-2026-01-07-diesen-mearsheimer-venezuela-greenland-nato-2026-01-07.md) | thread:mearsheimer
+- YT | cold: **Glenn Diesen** × **John Mearsheimer** — *Venezuela, Greenland & NATO* — **2026-01-07** | https://www.youtube.com/watch?v=-NQ3lnuYcXs | thread:diesen
+
 ## 2026-04-27
 - Inbox | cold: full text in [`transcript-diesen-crooke-iran-global-war-world-order-2026-04-27.md`](raw-input/2026-04-27/transcript-diesen-crooke-iran-global-war-world-order-2026-04-27.md) (pointer; SSOT raw-input) | thread:diesen | crosses:crooke
 - Refined | cold: [diesen-page-2026-04-27-diesen-crooke-iran-global-war-world-order.md](diesen-page-2026-04-27-diesen-crooke-iran-global-war-world-order.md) (host lane; same raw) | thread:diesen

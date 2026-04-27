@@ -6,6 +6,7 @@ show: Glenn Diesen (Greater Eurasia)
 episode_title: "John Mearsheimer: The Case for a Nuclear Iran"
 host: Glenn Diesen
 guest: John Mearsheimer
+threads: [diesen, mearsheimer]
 thread_expert: mearsheimer
 cross_host_thread: diesen
 source_url: https://www.youtube.com/watch?v=vx1KnspP1gM

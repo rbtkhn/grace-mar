@@ -6,6 +6,7 @@ show: Glenn Diesen (Greater Eurasia)
 episode_title: "John Mearsheimer: Venezuela, Greenland & the End of NATO"
 host: Glenn Diesen
 guest: John Mearsheimer
+threads: [diesen, mearsheimer]
 thread_expert: mearsheimer
 cross_host_thread: diesen
 source_url: https://www.youtube.com/watch?v=-NQ3lnuYcXs
