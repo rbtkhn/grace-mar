@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "receipt_id": "bc97e99e-8325-489b-8f98-33f33c060508",
+  "created_at_utc": "2026-04-28T15:11:11Z",
+  "actor": {
+    "kind": "assistant",
+    "name": "cursor"
+  },
+  "capability": {
+    "id": "github_readonly",
+    "category": "scm",
+    "output_lane": "runtime_only"
+  },
+  "authority": {
+    "authority_surface": "bridge_packets",
+    "authority_class": "ephemeral_only",
+    "gate_required_for_record_change": false
+  },
+  "declared_intent": "Inspect MCP policy",
+  "inputs": {
+    "operator_supplied_refs": []
+  },
+  "access": {
+    "network_access": "read",
+    "credential_use": "optional",
+    "resources_read": [
+      "config/mcp-capabilities.yaml",
+      "config/mcp-authority-bindings.yaml"
+    ],
+    "resources_written": []
+  },
+  "result": {
+    "status": "success",
+    "summary": "Smoke test receipt.",
+    "artifacts": []
+  },
+  "governance": {
+    "durable_state_write_attempted": false,
+    "canonical_record_touched": false,
+    "requires_human_review": false,
+    "requires_gate_review": false,
+    "prohibited_action_attempted": false,
+    "prohibited_action_notes": []
+  },
+  "integrity": {
+    "repo_git_ref": "ebbaa346"
+  }
+}

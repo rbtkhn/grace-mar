@@ -2,7 +2,7 @@
 
 **Status:** Planning and policy surface only. This document does **not** connect MCP servers or execute external tools.
 
-**Related:** Read-only export adapter — [`integrations/mcp-adapter.md`](../integrations/mcp-adapter.md). Internal worker trust (different domain) — [`schemas/worker-trust-registry.v1.schema.json`](../../schemas/worker-trust-registry.v1.schema.json). Capability registry — [`config/mcp-capabilities.yaml`](../../config/mcp-capabilities.yaml), schema [`schemas/mcp-capability.v1.json`](../../schemas/mcp-capability.v1.json). Lane ↔ authority bindings — [`config/mcp-authority-bindings.yaml`](../../config/mcp-authority-bindings.yaml), [`mcp-authority-bindings.md`](mcp-authority-bindings.md).
+**Related:** Read-only export adapter — [`integrations/mcp-adapter.md`](../integrations/mcp-adapter.md). Internal worker trust (different domain) — [`schemas/worker-trust-registry.v1.schema.json`](../../schemas/worker-trust-registry.v1.schema.json). Capability registry — [`config/mcp-capabilities.yaml`](../../config/mcp-capabilities.yaml), schema [`schemas/mcp-capability.v1.json`](../../schemas/mcp-capability.v1.json). Lane ↔ authority bindings — [`config/mcp-authority-bindings.yaml`](../../config/mcp-authority-bindings.yaml), [`mcp-authority-bindings.md`](mcp-authority-bindings.md). Execution receipts — [`schemas/mcp-execution-receipt.v1.json`](../../schemas/mcp-execution-receipt.v1.json), [`mcp-execution-receipts.md`](mcp-execution-receipts.md).
 
 ---
 
@@ -80,6 +80,14 @@ python3 scripts/mcp_authority_check.py
 ```
 
 Use **`--strict`** to fail when informational warnings fire (e.g. unused binding lanes). Full rationale and mapping table: **[`mcp-authority-bindings.md`](mcp-authority-bindings.md)**.
+
+---
+
+## Execution receipts
+
+Every capability class that may emit tool-shaped work should produce **execution receipts** ([`schemas/mcp-execution-receipt.v1.json`](../../schemas/mcp-execution-receipt.v1.json)): structured audit metadata linking **`capability.id`**, **`output_lane`**, and **authority** resolved from bindings. Receipts live under **[`artifacts/mcp-receipts/`](../../artifacts/mcp-receipts/)** — **WORK/runtime artifacts**, not canonical Record. **Receipts do not grant approval**; durable Record change still requires recursion-gate review and companion-approved merge.
+
+Before enabling **live MCP integration**, receipt generation and validation (`scripts/mcp_receipt.py`, `scripts/mcp_receipt_audit.py`) should be part of the operator workflow so posture cannot drift unseen. Full semantics: **[`mcp-execution-receipts.md`](mcp-execution-receipts.md)**.
 
 ---
 

@@ -16,6 +16,7 @@
 | **Trust layers (tools)** | [TRUST-LAYERS](trust-layers.md) | Reliability vs adversarial surfaces; complements knowledge boundary. |
 | **MCP capability registry (planned integrations)** | [mcp/governed-mcp-layer.md](mcp/governed-mcp-layer.md) | Policy classes + audit report for hypothetical MCP tools; not live wiring; Record merge stays gated. |
 | **MCP authority bindings** | [mcp/mcp-authority-bindings.md](mcp/mcp-authority-bindings.md) | Join table: `output_lane` → `authority-map.json` surfaces + `mcp_authority_check.py` report. |
+| **MCP execution receipts** | [mcp/mcp-execution-receipts.md](mcp/mcp-execution-receipts.md) | Governance receipt schema + generator (`mcp_receipt.py`) / audit (`mcp_receipt_audit.py`); WORK/runtime artifacts; distinct from runtime-worker receipts in `schema-registry/execution-receipt.v1.json`. |
 | **Public copy / examples** | [CONTRIBUTING-PUBLIC-COPY](contributing-public-copy.md) | Tone for comparisons; fake tokens in docs. |
 | **Naming convention** | [NAMING-CONVENTION](naming-convention.md) | Lowercase/hyphen preference; reserved `AGENTS.md`; Python `snake_case`; OpenClaw export path. |
 | **Web app** | [WEB-APP-PLAN](web-app-plan.md) | Grace-mar.com development plan; phases, tech, dependencies. See [DESIGN-ROADMAP](design-roadmap.md) for related features. |

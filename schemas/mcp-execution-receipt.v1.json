@@ -1,0 +1,209 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://grace-mar.local/schemas/mcp-execution-receipt.v1.json",
+  "title": "McpExecutionReceipt",
+  "$comment": "MCP governance receipts — distinct from schema-registry/execution-receipt.v1.json (runtime worker). See docs/mcp/mcp-execution-receipts.md.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "receipt_id",
+    "created_at_utc",
+    "actor",
+    "capability",
+    "authority",
+    "declared_intent",
+    "inputs",
+    "access",
+    "result",
+    "governance",
+    "integrity"
+  ],
+  "properties": {
+    "schema_version": { "type": "integer", "const": 1 },
+    "receipt_id": { "type": "string", "minLength": 1, "pattern": "^[A-Za-z0-9_.-]+$" },
+    "created_at_utc": { "type": "string", "format": "date-time" },
+    "actor": { "$ref": "#/$defs/actor" },
+    "capability": { "$ref": "#/$defs/capability" },
+    "authority": { "$ref": "#/$defs/authority" },
+    "declared_intent": { "type": "string", "minLength": 1 },
+    "inputs": { "$ref": "#/$defs/inputs" },
+    "access": { "$ref": "#/$defs/access" },
+    "result": { "$ref": "#/$defs/result" },
+    "governance": { "$ref": "#/$defs/governance" },
+    "integrity": { "$ref": "#/$defs/integrity" }
+  },
+  "$defs": {
+    "actor": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "name"],
+      "properties": {
+        "kind": {
+          "type": "string",
+          "enum": ["operator", "assistant", "coding_agent", "script"]
+        },
+        "name": { "type": "string", "minLength": 1 },
+        "session_id": { "type": "string", "minLength": 1 }
+      }
+    },
+    "capability": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "category", "output_lane"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1, "pattern": "^[a-z0-9_]+$" },
+        "category": {
+          "type": "string",
+          "enum": [
+            "filesystem",
+            "scm",
+            "network",
+            "database",
+            "shell",
+            "memory",
+            "coding_agent",
+            "policy",
+            "web"
+          ]
+        },
+        "output_lane": {
+          "type": "string",
+          "enum": [
+            "runtime_only",
+            "work_artifact",
+            "evidence_stub",
+            "candidate_proposal",
+            "prohibited"
+          ]
+        }
+      }
+    },
+    "authority": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "authority_surface",
+        "authority_class",
+        "gate_required_for_record_change"
+      ],
+      "properties": {
+        "authority_surface": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[a-z0-9_]+$"
+        },
+        "authority_class": {
+          "type": "string",
+          "enum": [
+            "read_only",
+            "draftable",
+            "review_required",
+            "human_only",
+            "ephemeral_only"
+          ]
+        },
+        "gate_required_for_record_change": { "type": "boolean" }
+      }
+    },
+    "inputs": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["operator_supplied_refs"],
+      "properties": {
+        "prompt_summary": { "type": "string" },
+        "operator_supplied_refs": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "access": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "network_access",
+        "credential_use",
+        "resources_read",
+        "resources_written"
+      ],
+      "properties": {
+        "network_access": {
+          "type": "string",
+          "enum": ["none", "read", "full"]
+        },
+        "credential_use": {
+          "type": "string",
+          "enum": ["none", "optional", "required"]
+        },
+        "resources_read": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "resources_written": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "result": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "summary", "artifacts"],
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": ["success", "partial", "blocked", "failed"]
+        },
+        "summary": { "type": "string", "minLength": 1 },
+        "artifacts": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/artifact_item" }
+        }
+      }
+    },
+    "artifact_item": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "kind"],
+      "properties": {
+        "path": { "type": "string", "minLength": 1 },
+        "kind": { "type": "string", "minLength": 1 },
+        "description": { "type": "string" }
+      }
+    },
+    "governance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "durable_state_write_attempted",
+        "canonical_record_touched",
+        "requires_human_review",
+        "requires_gate_review",
+        "prohibited_action_attempted",
+        "prohibited_action_notes"
+      ],
+      "properties": {
+        "durable_state_write_attempted": { "type": "boolean" },
+        "canonical_record_touched": { "type": "boolean" },
+        "requires_human_review": { "type": "boolean" },
+        "requires_gate_review": { "type": "boolean" },
+        "prohibited_action_attempted": { "type": "boolean" },
+        "prohibited_action_notes": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "integrity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["repo_git_ref"],
+      "properties": {
+        "repo_git_ref": { "type": "string", "minLength": 1 },
+        "receipt_hash": { "type": "string", "minLength": 1 },
+        "parent_receipt_id": { "type": "string", "minLength": 1 }
+      }
+    }
+  }
+}
