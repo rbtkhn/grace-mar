@@ -1,0 +1,153 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://grace-mar.local/schemas/skill-eval-report.v1.schema.json",
+  "title": "Grace-Mar Skill Evaluation Report v1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "skill_path",
+    "overall_score",
+    "scores",
+    "findings",
+    "candidate_improvements",
+    "governance_note"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "skill-eval-report.v1"
+    },
+    "skill_path": {
+      "type": "string",
+      "minLength": 1
+    },
+    "overall_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "scores": {
+      "type": "object",
+      "required": [
+        "boundary_safety",
+        "evidence_posture",
+        "gate_awareness",
+        "operator_clarity",
+        "failure_mode_awareness"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "boundary_safety": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 20
+        },
+        "evidence_posture": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 20
+        },
+        "gate_awareness": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 20
+        },
+        "operator_clarity": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 20
+        },
+        "failure_mode_awareness": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 20
+        }
+      }
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/finding"
+      }
+    },
+    "candidate_improvements": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/candidate_improvement"
+      }
+    },
+    "governance_note": {
+      "type": "string",
+      "minLength": 20
+    }
+  },
+  "$defs": {
+    "finding": {
+      "type": "object",
+      "required": [
+        "level",
+        "dimension",
+        "message"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "level": {
+          "enum": [
+            "info",
+            "warn",
+            "risk"
+          ]
+        },
+        "dimension": {
+          "enum": [
+            "boundary_safety",
+            "evidence_posture",
+            "gate_awareness",
+            "operator_clarity",
+            "failure_mode_awareness"
+          ]
+        },
+        "message": {
+          "type": "string",
+          "minLength": 5
+        }
+      }
+    },
+    "candidate_improvement": {
+      "type": "object",
+      "required": [
+        "priority",
+        "target_dimension",
+        "recommendation",
+        "candidate_text"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "priority": {
+          "enum": [
+            "low",
+            "medium",
+            "high"
+          ]
+        },
+        "target_dimension": {
+          "enum": [
+            "boundary_safety",
+            "evidence_posture",
+            "gate_awareness",
+            "operator_clarity",
+            "failure_mode_awareness"
+          ]
+        },
+        "recommendation": {
+          "type": "string",
+          "minLength": 10
+        },
+        "candidate_text": {
+          "type": "string",
+          "minLength": 10
+        }
+      }
+    }
+  }
+}
