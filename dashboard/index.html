@@ -141,6 +141,38 @@ entries:
     evidence_id: ACT-0008
     warrant: "Revisit if the LOA-anchored shelf is materially re-sorted or deprioritized as my American narrative spine."
     provenance: human_approved
+  - id: LEARN-0003
+    date: 2026-04-27
+    topic: "Knows: the Second Continental Congress appointed George Washington Commander in Chief of the Continental Army in June 1775 after open war had begun in Massachusetts—standard Revolutionary narrative anchor on shelf (HNSRC-0109)."
+    source: pipeline merge
+    evidence_id: ACT-0009
+    warrant: "Revisit if I relocate commissioning facts away from June 1775 or drop the LOA Washington row as evidence for this claim."
+    provenance: human_approved
+
+  - id: LEARN-0004
+    date: 2026-04-27
+    topic: "Knows: Washington’s Christmas-night Delaware crossing is paired in survey accounts with the surprise attack on Trenton (Dec. 26, 1776)—turning-point framing for the New Jersey campaign on shelf (HNSRC-0109)."
+    source: pipeline merge
+    evidence_id: ACT-0010
+    warrant: "Revisit if I decouple the crossing from Trenton in my mental map or stop anchoring this arc to HNSRC-0109."
+    provenance: human_approved
+
+  - id: LEARN-0005
+    date: 2026-04-27
+    topic: "Knows: George Washington presided over the Philadelphia Constitutional Convention of 1787 as its president—chief ceremonial/unifying role emphasized in textbooks alongside substantive drafting debates on shelf (HNSRC-0109)."
+    source: pipeline merge
+    evidence_id: ACT-0011
+    warrant: "Revisit if I attribute primary drafting authorship to Washington or fold this into generic ‘founding’ without his chair role."
+    provenance: human_approved
+
+  - id: LEARN-0006
+    date: 2026-04-27
+    topic: "Knows: Washington’s Farewell Address (1796) prominently warns against factional excess and permanent foreign entanglements while stressing national unity—canonical textbook pairing on shelf (HNSRC-0109)."
+    source: pipeline merge
+    evidence_id: ACT-0012
+    warrant: "Revisit if I flatten the Address into generic patriotism without faction/alliance tension or stop citing HNSRC-0109 for this speech cluster."
+    provenance: human_approved
+
 ```
 
 ---
@@ -206,11 +238,6 @@ entries:
     label: "Quality standard — falsifiable thesis + attributed sources + named tensions"
     detail: "Good enough = Signal has attributed wire captures with dates and sources; Judgment names tensions and does not collapse distinct positions; Links has at least one primary URL per claim."
     source: "elicitation: operator-thresholds.md"
-    merged: 2026-04-17
-  - id: PERS-004
-    label: "Work rhythm — punctuated resets"
-    detail: "~6 coffee reorientation sessions per day; ~18-hour active spans; thanks pauses between work blocks; dream consolidation once near day-end. Not a single morning start — work is punctuated by frequent resets."
-    source: "elicitation: operator-rhythm.md"
     merged: 2026-04-17
   - id: PERS-005
     label: "Decision failure sensitivity"
@@ -399,6 +426,7 @@ A governed retrieval substrate for reference-facing knowledge. Active entries sh
 | **LIB-0154** | Cici notebook | [`docs/skill-work/work-cici/cici-notebook/README.md`](../../docs/skill-work/work-cici/cici-notebook/README.md) |
 | **LIB-0155** | Dev journal | [`docs/skill-work/work-dev/dev-notebook/work-dev/journal/README.md`](../../docs/skill-work/work-dev/dev-notebook/work-dev/journal/README.md) |
 | **LIB-0156** | History notebook — **operator-authored** `hn-*` chapters (deliverable) | [`docs/skill-work/work-strategy/history-notebook/README.md`](../../docs/skill-work/work-strategy/history-notebook/README.md) |
+| **LIB-0159** | Theology notebook — define own beliefs through creating the book | [`docs/skill-work/work-strategy/theology-notebook/README.md`](../../docs/skill-work/work-strategy/theology-notebook/README.md) |
 | **LIB-0157** | Civilization Memory (upstream repository) | Local: [`research/repos/civilization_memory/`](../../research/repos/civilization_memory/README.md) · symlink: [`SELF-LIBRARY/civilization_memory`](SELF-LIBRARY/civilization_memory) |
 
 **Related (not on this shelf):** [LIB-0151](#entries) (YouTube transcript library) and [LIB-0152](#entries) (TCN curated transcript book) are **bundled channel books** — operator analytical, but listed under the YouTube subsection in **Entries**.
@@ -512,6 +540,23 @@ entries:
     reviewed_at: 2026-04-18
     added_at: 2026-04-18
     notes: "Operator analytical book: compressed civilizational chapters (hn-*), book-architecture.yaml SSOT. SELF-LIBRARY shelf is the curated fact base for HN (lookup and drafting discipline) alongside CIV-MEM as MEM reservoir. Distinct from LIB-0158 (Bookshelf / third-party owned books in bookshelf-catalog.yaml). WORK; not Record until gated."
+
+  - id: LIB-0159
+    title: "Theology notebook"
+    author: "grace-mar"
+    lane: "reference"
+    type: "book"
+    status: "active"
+    shelf_intent: "operator_book"
+    operator_subtype: "operator_notebook"
+    engagement_status: "in_progress"
+    lookup_priority: "high"
+    scope: ["work_strategy", "theology", "theology_notebook", "operator_analytical"]
+    source: "url"
+    url: "https://github.com/rbtkhn/grace-mar/blob/main/docs/skill-work/work-strategy/theology-notebook/README.md"
+    reviewed_at: 2026-04-26
+    added_at: 2026-04-26
+    notes: "Operator analytical book: define own theological beliefs through the activity of writing the book; research/ + ideas/ + optional chapters/. Complements governed Theology entries in this file (LIB-0140+); not CIV-MEM corpus. WORK; not Record until gated."
 
   - id: LIB-0158
     title: "Bookshelf (self-library-bookshelf — owned print catalog)"
