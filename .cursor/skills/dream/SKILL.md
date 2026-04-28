@@ -48,7 +48,7 @@ But the default pattern is:
 Optional but high-leverage before leaving the dream thread after a **successful** `auto_dream.py` (writes `last-dream.json`):
 
 1. **Primary** — **one** sentence for tomorrow: mirror **`tomorrow_inherits`** from `last-dream.json` (or the same idea in plain language). That field is the main human-facing hint; do not stack it with unrelated “do next” lists.
-2. **Secondary** — the coffee menu letter (**A** / **B** / **C**) from `execution_paths[suggested_execution_path_index]` only if it **adds** something beyond the inherits line, or if you need to align with **`Dream → coffee menu:`** on the next **`coffee`** Step 1 (`operator_daily_warmup.py`). If the letter and `tomorrow_inherits` **conflict**, say so in **one** clarifying sentence—do not present three parallel “tomorrow” signals without priority.
+2. **Secondary** — the coffee menu letter (**A** Steward / **B** Engineer / **C** Historian) from `execution_paths[suggested_execution_path_index]` only if it **adds** something beyond the inherits line, or if you need to align with **`Dream → coffee menu:`** on the next **`coffee`** Step 1 (`operator_daily_warmup.py`). Dream paths do **not** emit **D** / **E** — those are operator picks on the full hub. If the letter and `tomorrow_inherits` **conflict**, say so in **one** clarifying sentence—do not present three parallel “tomorrow” signals without priority.
 
 If **`auto_dream.py --strict`** halted, **`last-dream.json` was not updated** — yesterday’s file may still be on disk; do not treat the handoff as fresh until the next successful dream; fix integrity/governance first (see **When `--strict` halts** below).
 
@@ -128,7 +128,7 @@ Use a **short default brief** every time. Add **Details** only when load-bearing
 
 ### Primary tomorrow hint
 
-- Prefer **one** line from **`tomorrow_inherits`** (script stdout / `last-dream.json`) when present. The coffee **execution path** letter (**A** / **B** / **C**) and **`Dream → coffee menu:`** are **derived** hints—see **Five-second closeout**. Do **not** stack **`tomorrow_inherits` + path letter + civ-mem + rollup** as separate “do tomorrow” orders without stating priority; **tomorrow_inherits wins** unless you note a direct conflict.
+- Prefer **one** line from **`tomorrow_inherits`** (script stdout / `last-dream.json`) when present. The coffee **execution path** letter (**A** Steward / **B** Engineer / **C** Historian) and **`Dream → coffee menu:`** are **derived** hints—see **Five-second closeout**. Do **not** stack **`tomorrow_inherits` + path letter + civ-mem + rollup** as separate “do tomorrow” orders without stating priority; **tomorrow_inherits wins** unless you note a direct conflict.
 
 ### Details — expand when load-bearing
 
@@ -294,13 +294,13 @@ Usually one `dream` session per day is normal.
 
 ## Cadence choreography
 
-`coffee`, `dream`, and `bridge` form Grace-Mar's cadence triad. **Mid-day depth** uses **Conductor** sessions ([conductor SKILL](../conductor/SKILL.md)) — not on the `coffee` hub — for orientation + action MCQ + optional close. **`thanks`** is **deprecated** as a primary operator beat ([thanks SKILL](../thanks/SKILL.md)); prefer **conductor** or **`coffee` light/minimal** for pauses and re-grounding.
+`coffee`, `dream`, and `bridge` form Grace-Mar's cadence triad. **Mid-day depth:** **`coffee` hub E — Conductor** after **`coffee`** Step 1, or **standalone** **Conductor** ([conductor SKILL](../conductor/SKILL.md)) via master name / **`conductor`** without opening **`coffee`** — orientation + action MCQ + optional close. **`thanks`** is **deprecated** as a primary operator beat ([thanks SKILL](../thanks/SKILL.md)); prefer **conductor** or **`coffee` light/minimal** for pauses and re-grounding.
 
 | Time | Ritual | What it does |
 |------|--------|-------------|
-| **Morning** | `coffee` (work-start) | Read dream handoff, grounding scripts, fixed coffee menu |
+| **Morning** | `coffee` (work-start) | Read dream handoff, grounding scripts, fixed coffee menu (**A–E**) |
 | **During day** | `coffee` (reorientation) | Re-sip as needed — many per day is normal |
-| **During day** | `conductor` (Symphony / execution emphasis) | Master pick → orientation → Conductor action MCQ; `coffee_pick` + optional `coffee_conductor_outcome` — see [CONDUCTOR-PASS.md](../../../docs/skill-work/work-coffee/CONDUCTOR-PASS.md) |
+| **During day** | `conductor` / hub **E** (Symphony / execution emphasis) | Master pick → orientation → Conductor action MCQ; `coffee_pick` + optional `coffee_conductor_outcome` — see [CONDUCTOR-PASS.md](../../../docs/skill-work/work-coffee/CONDUCTOR-PASS.md) |
 | **End of day** | `dream` | Memory normalization, integrity, governance, contradiction digest; optional strategy-notebook **FYI** + **Cici notebook** day file generation (see §§ Strategy notebook, Cici notebook) |
 | **Session close** | `bridge` | Seal repos (commit/push), synthesize transfer prompt for next session |
 

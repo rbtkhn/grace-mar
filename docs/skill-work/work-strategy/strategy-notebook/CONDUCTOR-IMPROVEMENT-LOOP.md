@@ -3,7 +3,7 @@
 
 **Status:** WORK (operator discipline). **Not** Record. **Not** a merge or gate substitute. **Not** a second strategy pipeline beside [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md).
 
-**Purpose:** Name the **closed loop** from a **Conductor** stance (`coffee` **D** / `coffee_pick` with `conductor=`) to **durable, testable** notebook output and optional promotion. Append-only [cadence lines](../../work-cadence/work-cadence-events.md) record *that* a pick happened; they do **not** by themselves store **what changed** in the work.
+**Purpose:** Name the **closed loop** from a **Conductor** stance (`coffee` hub **E** / `coffee_pick` with **`picked=E` `conductor=`** or **`picked=conductor`**) to **durable, testable** notebook output and optional promotion. Append-only [cadence lines](../../work-cadence/work-cadence-events.md) record *that* a pick happened; they do **not** by themselves store **what changed** in the work.
 
 **Related:** [CONDUCTOR-CLOSE-TEMPLATE.md](CONDUCTOR-CLOSE-TEMPLATE.md) (paste block) · [COFFEE-CADENCE-CONDUCTOR-PROTOCOL.md](COFFEE-CADENCE-CONDUCTOR-PROTOCOL.md) (ritual) · [CONDUCTOR-PASS.md](../../work-coffee/CONDUCTOR-PASS.md) (menu) · [promotion-ladder.md](../promotion-ladder.md) · [NOTEBOOK-PREFERENCES.md](NOTEBOOK-PREFERENCES.md#escalation-marker-preference) · [AGENTS.md](../../../../AGENTS.md) (governance boundary) · [`.cursor/skills/coffee/SKILL.md`](../../../../.cursor/skills/coffee/SKILL.md) (Cursor ritual).
 
@@ -30,7 +30,7 @@
 
 ```mermaid
 flowchart TD
-  pick["coffee_pick: picked=D conductor=slug"]
+  pick["coffee_pick: picked=E conductor=slug"]
   work["Write or revise: days.md, strategy-page, or thread journal"]
   test["One falsify or next-check line"]
   mark["Optional: watch / decision / promote"]

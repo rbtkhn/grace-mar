@@ -218,26 +218,30 @@ def _compute_option_weights(
     pending = gate.get("pending", 0) if gate else 0
 
     weights: dict[str, dict[str, str]] = {
-        "A": {"cost": "moderate", "note": "Build — work-dev + skills"},
-        "B": {"cost": "light", "note": "Steward — gate / template / integrity / git"},
-        "C": {"cost": "light", "note": "Strategy — daily brief + tri-frame"},
+        "A": {"cost": "light", "note": "Steward — gate / template / integrity / git"},
+        "B": {"cost": "moderate", "note": "Engineer — work-dev + skills"},
+        "C": {"cost": "light", "note": "Historian — daily brief + tri-frame"},
         "D": {
             "cost": "moderate",
-            "note": "System choice — cici / dev / jiang / rome / skill-write slice (conductors: invoke by master name separately)",
+            "note": "Capitalist — work-business / grace-gems / bookshelf / commercial cici",
+        },
+        "E": {
+            "cost": "moderate",
+            "note": "Conductor — hub continuation (resolve slug); standalone conductor outside hub",
         },
     }
 
     if branch_count >= 3:
-        weights["A"]["cost"] = "heavy"
-        weights["A"]["note"] = f"Build; {branch_count} branches to review"
+        weights["B"]["cost"] = "heavy"
+        weights["B"]["note"] = f"Engineer; {branch_count} branches to review"
     elif branch_count >= 1:
-        weights["A"]["note"] = f"Build; {branch_count} non-main branch(es)"
+        weights["B"]["note"] = f"Engineer; {branch_count} non-main branch(es)"
 
     if pending >= 5:
-        weights["B"]["note"] = f"Steward; {pending} pending — heavier gate pass"
-        weights["B"]["cost"] = "moderate"
+        weights["A"]["note"] = f"Steward; {pending} pending — heavier gate pass"
+        weights["A"]["cost"] = "moderate"
     elif pending >= 1:
-        weights["B"]["note"] = f"Steward; {pending} pending candidate(s)"
+        weights["A"]["note"] = f"Steward; {pending} pending candidate(s)"
 
     return weights
 
@@ -247,19 +251,19 @@ def _pick_recommendation(
     weights: dict[str, dict[str, str]],
     signals: list[str],
 ) -> tuple[str, str]:
-    """Select the recommended option and reason (A / B / C only; see menu skill)."""
+    """Select the recommended option and reason (A / B / C only; see coffee SKILL)."""
     w = {k: weights[k] for k in ("A", "B", "C") if k in weights}
     if load_level == "heavy":
-        return "C", "heavy load — strategy / daily brief pass is highest leverage"
+        return "C", "heavy load — historian / daily brief pass is highest leverage"
     if load_level == "moderate":
         light_options = [k for k, v in w.items() if v["cost"] == "light"]
-        if "B" in light_options:
-            return "B", "moderate load — bounded steward pass clears cognitive debt"
-        return "C", "moderate load — strategy pass matches current pace"
+        if "A" in light_options:
+            return "A", "moderate load — bounded steward pass clears cognitive debt"
+        return "C", "moderate load — historian pass matches current pace"
     moderate_options = [k for k, v in w.items() if v["cost"] in ("light", "moderate")]
     if "C" in moderate_options:
-        return "C", "light load — good conditions for strategy / daily brief"
-    return "A", "light load — good conditions for build work"
+        return "C", "light load — good conditions for historian / daily brief"
+    return "B", "light load — good conditions for engineer / build work"
 
 
 # ---------------------------------------------------------------------------
@@ -308,14 +312,15 @@ def format_annotated_menu(result: dict) -> str:
     rec = result.get("recommended", "")
 
     labels = {
-        "A": "Build",
-        "B": "Steward",
-        "C": "Strategy (daily brief)",
-        "D": "System choice",
+        "A": "Steward",
+        "B": "Engineer",
+        "C": "Historian",
+        "D": "Capitalist",
+        "E": "Conductor",
     }
 
     lines = []
-    for letter in ("A", "B", "C", "D"):
+    for letter in ("A", "B", "C", "D", "E"):
         w = weights.get(letter, {"cost": "?", "note": ""})
         label = labels[letter]
         tag = f"({w['cost']})"

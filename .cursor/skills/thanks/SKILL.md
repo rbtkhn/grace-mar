@@ -66,7 +66,7 @@ Pass **`--cursor-model "…"`** when the Cursor UI model name is known (parity w
 
 6. **Do not** run **`auto_dream.py`**, **`operator_handoff_check.py`**, full **`coffee`** Step 1, **`bridge`**, or **RECURSION-GATE** merges as part of this skill unless the operator explicitly asks in the **same** or **next** message.
 
-7. **No** full **`coffee` A–D** hub unless the operator pivots to **`coffee`**.
+7. **No** full **`coffee` A–E** hub unless the operator pivots to **`coffee`**.
 
 ---
 

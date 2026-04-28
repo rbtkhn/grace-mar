@@ -6,11 +6,11 @@ from __future__ import annotations
 from datetime import datetime, timedelta, timezone
 from typing import Any
 
-# Stable order from build_execution_paths — maps to coffee A–E menu (see coffee SKILL).
+# Stable order from build_execution_paths — maps first three hub letters A/B/C (see coffee SKILL).
 _COFFEE_LETTER_AND_LABEL: dict[str, tuple[str, str]] = {
-    "today_field": ("C", "Strategy (daily brief)"),
-    "build": ("A", "Build"),
-    "steward": ("B", "Steward"),
+    "today_field": ("C", "Historian"),
+    "build": ("B", "Engineer"),
+    "steward": ("A", "Steward"),
 }
 
 
@@ -19,7 +19,7 @@ def coffee_menu_hint_from_dream(dream: dict[str, Any]) -> str | None:
     One-line hint for the next coffee Step 2 menu from last-dream.json.
 
     Maps execution_paths[suggested_execution_path_index] to **A / B / C** only
-    (build, steward, today_field). Operational hint — not policy or Record.
+    (Historian, Engineer, Steward). Operational hint — not policy or Record.
     """
     paths = dream.get("execution_paths")
     if not isinstance(paths, list) or not paths:
@@ -33,8 +33,8 @@ def coffee_menu_hint_from_dream(dream: dict[str, Any]) -> str | None:
     letter, label = _COFFEE_LETTER_AND_LABEL.get(pid, ("?", "?"))
     if letter == "?":
         # Fallback: positional 0/1/2 matches build_execution_paths order.
-        fallbacks = (("C", "Strategy (daily brief)"), ("A", "Build"), ("B", "Steward"))
-        letter, label = fallbacks[idx] if idx < len(fallbacks) else ("B", "Steward")
+        fallbacks = (("C", "Historian"), ("B", "Engineer"), ("A", "Steward"))
+        letter, label = fallbacks[idx] if idx < len(fallbacks) else ("A", "Steward")
 
     reason = str(dream.get("execution_path_suggestion_reason") or "").strip()
     if reason == "integrity_or_governance_fail":
@@ -68,7 +68,7 @@ def build_execution_paths(
     suggested_index is 0..2. Paths are stable order: today_field, build, steward.
 
     Suggestion rule (deterministic): if integrity or governance failed this run,
-    suggest Steward (2). Else if gate pending exceeds max_pending_candidates (when
+    suggest Steward path index 2 (`steward`). Else if gate pending exceeds max_pending_candidates (when
     configured), suggest Steward (2). Else use calendar mod-3 on tomorrow's yearday.
     suggestion_reason is one of: integrity_or_governance_fail, gate_backlog, calendar_mod3.
     """
@@ -123,7 +123,7 @@ def build_execution_paths(
         {
             "id": "today_field",
             "title": "Daily Brief (generator + watch slices; optional KY-4 intel when chosen)",
-            "first_move": f"python3 scripts/operator_coffee.py -u {user_id} — then coffee menu C — Strategy (daily brief)",
+            "first_move": f"python3 scripts/operator_coffee.py -u {user_id} — then coffee menu C — Historian",
             "stop_rule": "One slice: daily brief path opened or optional intel pass started — enough for first block.",
             "signals_used": signals_field,
         },

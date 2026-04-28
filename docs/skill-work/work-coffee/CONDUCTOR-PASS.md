@@ -4,7 +4,7 @@
 
 **Purpose:** A **territory-agnostic** description of the **conductor** role in Grace‑Mar: the operator sets **emphasis, tempo, and depth**; tools and file trees do **not** replace judgment. The **five movement** map (Precision → … → Selectivity) is **portable**—it describes **modes of attention**, not one folder.
 
-**Relationship to the `coffee` menu:** **Conductors are not on the `coffee` hub.** Invoke a master **directly** (**`toscanini`**, **`karajan`**, **`bernstein`**, …), say **`conductor`** + optional fragment, or use [`.cursor/skills/conductor/SKILL.md`](../../../.cursor/skills/conductor/SKILL.md) — same resolution as [coffee SKILL — Conductor session (independent of `coffee`)](../../../.cursor/skills/coffee/SKILL.md#conductor-only-no-coffee). Strategy-notebook SSOT for the embodied ritual: [COFFEE-CADENCE-CONDUCTOR-PROTOCOL.md](../work-strategy/strategy-notebook/COFFEE-CADENCE-CONDUCTOR-PROTOCOL.md). This file remains the **shared spine** for cross-lane analogy.
+**Relationship to the `coffee` menu:** The **Symphony masters** are **not** listed as five separate hub lines. **`coffee` Step 2** includes **E — Conductor** as the **single** in-`coffee` slot for **Conductor continuation** (after Step 1). You may still open **Conductor** **without** `coffee`: invoke a master **directly** (**`toscanini`**, **`karajan`**, **`bernstein`**, …), say **`conductor`** + optional fragment, or use [`.cursor/skills/conductor/SKILL.md`](../../../.cursor/skills/conductor/SKILL.md) — same resolution as [coffee SKILL — Conductor session (outside `coffee` hub menu)](../../../.cursor/skills/coffee/SKILL.md#conductor-only-no-coffee). Strategy-notebook SSOT for the embodied ritual: [COFFEE-CADENCE-CONDUCTOR-PROTOCOL.md](../work-strategy/strategy-notebook/COFFEE-CADENCE-CONDUCTOR-PROTOCOL.md). This file remains the **shared spine** for cross-lane analogy.
 
 **Relationship to synthesis doctrine:** The same **figures → Grace‑Mar anchor** table lives in [SYNTHESIS-OPERATING-MODEL.md](../work-strategy/strategy-notebook/SYNTHESIS-OPERATING-MODEL.md#techniques-inspired-by-the-masters) (*Techniques inspired by the masters*). These three documents are **consistent**, not competitive: **SYNTHESIS-OM** = theory; this page = **cross-lane** pass shape; **COFFEE-CADENCE** = **notebook** timeboxed ritual and seeds.
 
@@ -33,7 +33,7 @@
 | **work-politics** | Daily brief, campaign queue, brief registry | [brief-source-registry.md](../work-politics/brief-source-registry.md), `daily-brief-YYYY-MM-DD.md` |
 | **work-cici** | Cici/OB1 rhythm, handoff, day journal | [INDEX.md](../work-cici/INDEX.md), [SYNC-DAILY.md](../work-cici/SYNC-DAILY.md) |
 | **work-jiang / PH** | Lecture pipeline, forward chains, STATUS | [research/external/work-jiang/README.md](../../../research/external/work-jiang/README.md) |
-| **Steward / membrane** | Gate, template parity, integrity, ship | [menu-reference — Steward](menu-reference.md#steward-follow-up-fork-implement-now-vs-later) ( **`coffee` B** ) — **governance** work is **not** a substitute for artistic “balance” in threads; it is the **frame** that keeps other lanes safe. |
+| **Steward / membrane** | Gate, template parity, integrity, ship | [menu-reference — Steward](menu-reference.md#steward-follow-up-fork-implement-now-vs-later) ( **`coffee` A** ) — **governance** work is **not** a substitute for artistic “balance” in threads; it is the **frame** that keeps other lanes safe. |
 
 When you are **not** in **`coffee`**, you do **not** need to call this a “Conductor pass” in chat—**use the lane’s normal names**. The value of this doc is a **common vocabulary** for “how we sequence attention” in retrospectives, handoffs, and skill text.
 
@@ -42,9 +42,11 @@ When you are **not** in **`coffee`**, you do **not** need to call this a “Cond
 <a id="conductor-d-menu"></a>
 <a id="conductor-d1-d5"></a>
 
-## Conductor session (strategy-notebook) — not a `coffee` hub letter
+## Conductor session (strategy-notebook) — hub **E** vs standalone
 
-**`coffee` Step 2** is **A–D** only and **excludes** Symphony masters. Open this lane by **master name**, **`conductor`**, or [`.cursor/skills/conductor/SKILL.md`](../../../.cursor/skills/conductor/SKILL.md) — see [coffee SKILL — Conductor session](../../../.cursor/skills/coffee/SKILL.md#conductor-only-no-coffee). The **Conductor MCQ** (masters **A.–E.**) appears when the pick needs disambiguation — `scripts/cadence_conductor_resolution.py` (`build_conductor_mcq_for_user`, `format_conductor_mcq_block`).
+**`coffee` Step 2** is **A–E**. **E — Conductor** is the hub slot for **Conductor continuation** after **`coffee`** Step 1. The **five masters** are **not** five hub lines; disambiguation uses the **Conductor MCQ** (masters **A.–E.**). Open **standalone** Conductor (no `coffee`) by **master name**, **`conductor`**, or [`.cursor/skills/conductor/SKILL.md`](../../../.cursor/skills/conductor/SKILL.md) — see [coffee SKILL — Conductor session (outside `coffee` hub menu)](../../../.cursor/skills/coffee/SKILL.md#conductor-only-no-coffee). The **Conductor MCQ** appears when the pick needs disambiguation — `scripts/cadence_conductor_resolution.py` (`build_conductor_mcq_for_user`, `format_conductor_mcq_block`).
+
+**Hub pick logging:** `picked=E conductor=<slug>` when the operator chose **E** from the **`coffee`** hub. **Legacy:** `picked=conductor`, `picked=D` + `conductor=`, etc.
 
 <a id="conductor-mcq"></a>
 
@@ -60,7 +62,7 @@ When you are **not** in **`coffee`**, you do **not** need to call this a “Cond
 
 Each printed option includes a **continuity** tail: last `coffee_pick` slug, optional `focus` / `arc`, and the dream / session-load **advisory** match when relevant.
 
-**How the operator picks:** A **Conductor MCQ** letter **A.–E.**; or **master name / prefix** in the message; or **`conductor`** + fragment; or **bare `conductor`** to continue the **same conductor as last time** when resolvable (`last_logged_conductor` / `resolve_d_conductor("", …)`). If two prefix fragments match, ask for a longer fragment or a Conductor **A.–E.** letter. Single-character **A.–E** in a **conductor** turn maps to the **Conductor** row (`conductor_submenu_letter_to_slug`), **not** the coffee hub (hub is only **A–D**).
+**How the operator picks:** A **Conductor MCQ** letter **A.–E.**; or **master name / prefix** in the message; or **`conductor`** + fragment; or **bare `conductor`** to continue the **same conductor as last time** when resolvable (`last_logged_conductor` / `resolve_d_conductor("", …)`). If two prefix fragments match, ask for a longer fragment or a Conductor **A.–E.** letter. Single-character **A.–E** in a **standalone conductor** turn maps to the **masters** row (`conductor_submenu_letter_to_slug`), **not** the **`coffee` hub** letters — the hub has its **own** **A–E** (including **E — Conductor**). When **both** a **coffee hub** menu and a **Conductor action MCQ** appear, **label** them ([coffee SKILL Step 2](../../../.cursor/skills/coffee/SKILL.md#coffee-step-2-hub)).
 
 **On pick,** give the usual **short** Conductor orientation ([COFFEE-CADENCE-CONDUCTOR-PROTOCOL.md](../work-strategy/strategy-notebook/COFFEE-CADENCE-CONDUCTOR-PROTOCOL.md)).
 
@@ -68,7 +70,7 @@ Each printed option includes a **continuity** tail: last `coffee_pick` slug, opt
 
 #### Conductor action MCQ (second **A.–E.** — **required**)
 
-**Not** another **A.–E.** that names **Toscanini…Bernstein** — it is a **new** **five-line** list **after** the master is resolved, with **this** pass’s **repo** next moves. Label it **`Conductor action MCQ`** and instruct **Reply A–E** for **this** pass. Each line is a **concrete, repo-grounded** next move (path or explicit refusal for this round), with **verbs and constraints** that match the **active** `conductor` slug (see [`.cursor/skills/conductor/SKILL.md`](../../../.cursor/skills/conductor/SKILL.md) **Conductor action MCQ**). **Omit** only if the operator says **"orientation only"** or **"no action menu"** in the same turn. **Kleiber** is not the only mode that gets a menu; **Bernstein, Toscanini,** etc. all get **their own** five options — same **A.–E.** letters, **third** use of the letter set in one session (after hub and master row).
+**Not** another **A.–E.** that names **Toscanini…Bernstein** — it is a **new** **five-line** list **after** the master is resolved, with **this** pass’s **repo** next moves. Label it **`Conductor action MCQ`** and instruct **Reply A–E** for **this** pass. Each line is a **concrete, repo-grounded** next move (path or explicit refusal for this round), with **verbs and constraints** that match the **active** `conductor` slug (see [`.cursor/skills/conductor/SKILL.md`](../../../.cursor/skills/conductor/SKILL.md) **Conductor action MCQ**). **Omit** only if the operator says **"orientation only"** or **"no action menu"** in the same turn. **Kleiber** is not the only mode that gets a menu; **Bernstein, Toscanini,** etc. all get **their own** five options — same **A.–E.** letters, **third** use of the letter set in one session (after **coffee** hub **A–E** and masters MCQ row when all apply).
 
 **Outside `coffee`:** the operator issues the conductor pick **without** running `coffee` Step 0–1. Resolution, orientation, and **`coffee_pick`** logging match [coffee § Conductor session](../../../.cursor/skills/coffee/SKILL.md#conductor-only-no-coffee); do **not** require Recent rhythm or `operator_coffee.py` for that turn.
 
@@ -89,14 +91,14 @@ Cadence lines alone are **insufficient** to store *what* improved in the work. *
 
 ## What this is not
 
-- **Not** a second **`coffee`** step for every lane; the **`coffee` Step 2** hub is **A, B, C, D** only in [.cursor/skills/coffee/SKILL.md](../../../.cursor/skills/coffee/SKILL.md).
-- **Not** an instruction to **merge** the Record, auto-promote, or replace **B — Steward** with “conduct the gate.”
-- **Not** a replacement for **C — Strategy (daily brief)** (field + Tri-Frame when chosen).
+- **Not** a second **`coffee`** step for every lane; the **`coffee` Step 2** hub is **A–E** in [.cursor/skills/coffee/SKILL.md](../../../.cursor/skills/coffee/SKILL.md).
+- **Not** an instruction to **merge** the Record, auto-promote, or replace **A — Steward** with “conduct the gate.”
+- **Not** a replacement for **C — Historian** (daily brief + Tri-Frame when chosen).
 
 ---
 
 ## See also
 
 - [CONDUCTOR-IMPROVEMENT-LOOP.md](../work-strategy/strategy-notebook/CONDUCTOR-IMPROVEMENT-LOOP.md) — operator **improvement loop** (conductor + notebook + promotion + gate when policy).
-- [menu-reference.md](menu-reference.md) — **`coffee` A–D** hub + **Conductor** out of band (`#conductor-fork-d-menu` anchors legacy disambiguation notes).
+- [menu-reference.md](menu-reference.md) — **`coffee` A–E** hub + **standalone Conductor** (`#conductor-fork-d-menu` anchors legacy disambiguation notes).
 - [work-coffee README](README.md) — territory role of `work-coffee`.

@@ -12,7 +12,7 @@
 
 | Beat / habit | On-disk artifacts | Primary commands / skills | Typical frequency | Human decision point |
 |--------------|---------------------|----------------------------|-------------------|----------------------|
-| **coffee** (work-start) | `work-cadence-events.md` (append **`coffee`**), `users/grace-mar/pipeline-events.jsonl` (optional) | `python3 scripts/operator_coffee.py -u grace-mar` (modes: `light`, `minimal`, `reentry`, `closeout`); [coffee/SKILL.md](../../../.cursor/skills/coffee/SKILL.md) Step 0–2 | Many per day | **Hub A–D**; **Conductor** is separate (manual / `conductor` skill) |
+| **coffee** (work-start) | `work-cadence-events.md` (append **`coffee`**), `users/grace-mar/pipeline-events.jsonl` (optional) | `python3 scripts/operator_coffee.py -u grace-mar` (modes: `light`, `minimal`, `reentry`, `closeout`); [coffee/SKILL.md](../../../.cursor/skills/coffee/SKILL.md) Step 0–2 | Many per day | **Hub A–E**; **hub E** vs standalone **`conductor`** |
 | **coffee** (signing-off) | same + handoff output | `operator_coffee.py --mode closeout` or `operator_handoff_check.py` | 0–1 per day | same menu; seal vs continue |
 | **Conductor** (with or without full coffee) | `coffee_pick` line (`picked=conductor` `conductor=<slug>`; legacy `picked=D`) | `cadence_conductor_resolution.build_conductor_mcq_for_user`, `log_cadence_event.py`; [conductor/SKILL.md](../../../.cursor/skills/conductor/SKILL.md) | As needed | Master + **Conductor action MCQ**; disk close |
 | **dream** | `last-dream.json`, `work-cadence-events.md` (**`dream`**), `self-memory.md` touches, integrity/governance block | `scripts/auto_dream.py` (per [dream/SKILL.md](../../../.cursor/skills/dream/SKILL.md)) | Usually once per day | What to fix vs defer; no merge from dream |

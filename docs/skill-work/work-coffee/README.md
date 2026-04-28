@@ -1,6 +1,6 @@
 # work-coffee
 
-**Purpose:** Operator cadence, activation, re-entry, signing-off (merged into **`coffee`** Step 1 + **A–D** hub), and workflow-state design for Grace-Mar's `coffee` ritual. **Symphony conductors** are invoked **separately** (master name, **`conductor`**, [conductor skill](../../../.cursor/skills/conductor/SKILL.md)). This territory is where the system explains and evolves the ritual architecture. The executable trigger surface lives in [.cursor/skills/coffee/SKILL.md](../../../.cursor/skills/coffee/SKILL.md).
+**Purpose:** Operator cadence, activation, re-entry, signing-off (merged into **`coffee`** Step 1 + **A–E** hub), and workflow-state design for Grace-Mar's `coffee` ritual. **Standalone Conductor** (master name, **`conductor`**, [conductor skill](../../../.cursor/skills/conductor/SKILL.md)) remains available without `coffee`; **hub E — Conductor** continues a pass after **`coffee`** Step 1. This territory is where the system explains and evolves the ritual architecture. The executable trigger surface lives in [.cursor/skills/coffee/SKILL.md](../../../.cursor/skills/coffee/SKILL.md).
 
 **Not** Record truth. **Not** MEMORY. **Not** a second merge path. **Not** generic repo hygiene, and **not** a broad health/caffeine territory. `work-coffee` is a WORK lane for ritual architecture and operator ergonomics.
 
@@ -10,7 +10,7 @@
 
 | Role | Description |
 |------|-------------|
-| **Cadence architecture** | Defines work-start vs signing-off **Step 1** weight, **one** fixed **`coffee` hub** (**A–D**: Build, Steward, Strategy/daily brief, system choice), **Conductor sessions** off-hub, re-entry behavior, and cadence modifiers. |
+| **Cadence architecture** | Defines work-start vs signing-off **Step 1** weight, **one** fixed **`coffee` hub** (**A–E**: Steward, Engineer, Historian, Capitalist, Conductor), **standalone Conductor** sessions, re-entry behavior, and cadence modifiers. |
 | **Operator activation** | Holds the rationale for why the `coffee` ritual exists: activation, rhythm, state shift, and workflow dopamine replacement. |
 | **Boundary surface** | Explains what belongs in WORK-only docs/history versus what must escalate to `RECURSION-GATE` or change review. |
 | **Session trail guidance** | Clarifies how `session-transcript`, `work-*-history.md`, and `self-memory` relate without collapsing into one another. |
@@ -27,9 +27,9 @@ This split is intentional:
 - the skill should stay optimized for invocation and agent behavior
 - the territory should hold the longer-form doctrine and lane-specific history
 
-**`coffee` C — Strategy (daily brief) (operator default for field intel):** Stage 1 = today’s brief file + Putin/Vance watches + optional KY-4 intel. Stage 2 = offer **three Tri-Frame mind lenses** (Barnes → Mearsheimer → Mercouris), then the operator **chooses which mind** and **A–D** prompts per [daily-brief-minds-menu.md](../work-strategy/daily-brief-minds-menu.md). Agents should **not** stop after markets/polls unless the operator opts out — see [menu-reference.md](menu-reference.md#tri-frame-daily-brief).
+**`coffee` C — Historian** (operator default for field intel): Stage 1 = today’s brief file + Putin/Vance watches + optional KY-4 intel. Stage 2 = offer **three Tri-Frame mind lenses** (Barnes → Mearsheimer → Mercouris), then the operator **chooses which mind** and **A–D** prompts per [daily-brief-minds-menu.md](../work-strategy/daily-brief-minds-menu.md). Agents should **not** stop after markets/polls unless the operator opts out — see [menu-reference.md](menu-reference.md#tri-frame-daily-brief).
 
-**Symphony / Conductor** is **not** a **`coffee` hub** letter — strategy-notebook cadence: [COFFEE-CADENCE-CONDUCTOR-PROTOCOL.md](../work-strategy/strategy-notebook/COFFEE-CADENCE-CONDUCTOR-PROTOCOL.md) + [CONDUCTOR-PASS.md](CONDUCTOR-PASS.md); invoke by **master name**, **`conductor`**, or [conductor skill](../../../.cursor/skills/conductor/SKILL.md).
+**Symphony / Conductor:** **Hub E** after **`coffee`** continues Conductor; **standalone** strategy-notebook cadence: [COFFEE-CADENCE-CONDUCTOR-PROTOCOL.md](../work-strategy/strategy-notebook/COFFEE-CADENCE-CONDUCTOR-PROTOCOL.md) + [CONDUCTOR-PASS.md](CONDUCTOR-PASS.md); invoke by **master name**, **`conductor`**, or [conductor skill](../../../.cursor/skills/conductor/SKILL.md) without opening **`coffee`** when preferred.
 
 ---
 
@@ -118,7 +118,7 @@ In scope:
 
 - operator cadence design
 - activation rituals
-- work-start / signing-off (merged into one fixed coffee flow; Rome / Jiang / Xavier / Dev / **skill-write** often land in **E**; **Conductor** is **D**; fold strategy-only into **C** per [coffee SKILL](../../../.cursor/skills/coffee/SKILL.md))
+- work-start / signing-off (merged into one fixed coffee flow; Rome / Jiang / skill-write / commercial slices land under **D — Capitalist** or **C — Historian** as appropriate; **E — Conductor** continues Conductor; fold strategy-only into **C** per [coffee SKILL](../../../.cursor/skills/coffee/SKILL.md))
 - reorientation and multi-`coffee` behavior
 - survey/cadence workflow design
 - relationship between hub flow and territory execution

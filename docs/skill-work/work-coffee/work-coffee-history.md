@@ -110,3 +110,8 @@ This log is WORK-only. It is not the Record, not MEMORY, and not a substitute fo
 
 - Renamed coffee Step 2 **A** from **Today** to **Daily Brief** in [menu-reference.md](menu-reference.md), [.cursor/skills/coffee/SKILL.md](../../../.cursor/skills/coffee/SKILL.md), `assess_session_load.py` (annotated menu label), `dream_execution_paths.py` (handoff titles + `first_move` text), operator docs, and daily-brief watch footers.
 - **Framing:** the **daily brief** path (generator, §1d/§1e watch slices, registry) is the primary meaning of **A**; KY-4 / Polymarket / Massie intel remains **deferred from Step 1** and runs as an **optional slice** when the operator chooses **A** (or asks explicitly), not as the fixed identity of the letter.
+
+## 2026-04-27 — hub **A–E** (Steward / Engineer / Historian / Capitalist / Conductor)
+
+- Replaced the fixed **four-line** hub (**Build / Steward / Strategy / system choice**) with **five** letters: **A** Steward, **B** Engineer, **C** Historian, **D** Capitalist, **E** Conductor (**hub E** = Conductor continuation after **`coffee`** Step 1; standalone **`conductor`** / master name unchanged).
+- Updated **CONDUCTOR-PASS**, **conductor** / **coffee** / **dream** / **bridge** skills, **menu-reference**, **assess_session_load** / **dream_execution_paths**, **recommended_conductor_from_menu_recommendation** mapping for session-load **A/B/C**, **AGENTS**, rules, and tests.

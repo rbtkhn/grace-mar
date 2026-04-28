@@ -1,5 +1,5 @@
 """
-Illustrations for coffee conductor helpers under the **single D — Conductor** menu.
+Illustrations for coffee conductor helpers (hub **E** / standalone **`conductor`**).
 
 Helper signals still matter: the log can show which conductor was picked most recently,
 and dream/load can still point elsewhere (e.g. **Bernstein** when ``recommended: C``).
@@ -129,8 +129,8 @@ def test_illustration_rotation_tracks_newest():
 
 
 def test_illustration_d2_abc_map():
-    assert d2_conductor_from_menu_recommendation("A") == "toscanini"
-    assert d2_conductor_from_menu_recommendation("B") == "kleiber"
+    assert d2_conductor_from_menu_recommendation("A") == "kleiber"
+    assert d2_conductor_from_menu_recommendation("B") == "toscanini"
     assert d2_conductor_from_menu_recommendation("C") == "bernstein"
     assert d2_conductor_from_menu_recommendation("Z") == "furtwangler"
 
@@ -159,7 +159,7 @@ def test_illustration_dream_worktree_seam_overrides_assess_b():
     dream = {"worktreeAdvice": "merge conflict risk on feature seam"}
     assess = {"recommended": "B"}
     assert d2_conductor_resolved(dream=dream, assess=assess) == "toscanini"
-    assert d2_conductor_from_assess_load(assess) == "kleiber"
+    assert d2_conductor_from_assess_load(assess) == "toscanini"
     assert system_recommended_menu_pick(dream=dream, assess=assess) == "D"
 
 

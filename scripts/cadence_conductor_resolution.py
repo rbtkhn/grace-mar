@@ -129,8 +129,8 @@ def format_conductor_mcq_block(
 ) -> str:
     """Return the 5-line **Conductor MCQ** (markdown) with attribute + continuity kickers."""
     lines: list[str] = [
-        "**Conductor MCQ** — letters **A**–**E** name the five masters (*not* the main Build/Steward/Strategy line). "
-        "Reply with one letter, a name prefix (`klei`, `tos`, …), or bare main-menu **D** to continue last.",
+        "**Conductor MCQ** — letters **A**–**E** name the five masters (*not* the same letters as the **`coffee` hub** menu **A–E** — hub uses Steward/Engineer/Historian/Capitalist/Conductor). "
+        "Reply with one letter, a name prefix (`klei`, `tos`, …), **`conductor`**, or **`coffee`** hub **E** after Step 1 to continue.",
     ]
     if focus_text and str(focus_text).strip():
         lines.append(
@@ -275,8 +275,11 @@ def focus_for_last_conductor(events: list[dict[str, Any]]) -> str | None:
 
 
 def recommended_conductor_from_menu_recommendation(letter: str) -> str:
-    """Map session-load letter to conductor slug; unknown letter → ``furtwangler``."""
-    m = {"A": "toscanini", "B": "kleiber", "C": "bernstein"}
+    """Map session-load ``recommended`` hub letter (A/B/C) to conductor slug; unknown → ``furtwangler``.
+
+    Aligns with coffee hub: **A** Steward → **kleiber**; **B** Engineer → **toscanini**; **C** Historian → **bernstein**.
+    """
+    m = {"A": "kleiber", "B": "toscanini", "C": "bernstein"}
     key = str(letter).strip().upper()[:1]
     return m.get(key, "furtwangler")
 
@@ -326,7 +329,7 @@ def system_recommended_conductor(
     Order: (1) risky worktree / ``worktreeAdvice`` → **toscanini**;
     (2) ``tomorrow_inherits`` or steward-style hint → **kleiber**;
     (3) long-arc / balance hints → **karajan**;
-    (4) ``assess["recommended"]`` → A/B/C map;
+    (4) ``assess["recommended"]`` → hub A/B/C map (Steward/Engineer/Historian);
     (5) **furtwangler**.
     """
     if dream:
