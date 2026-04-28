@@ -146,6 +146,9 @@ _Auto-generated from `transcript.md` + **on-disk** and **inbox** `raw-input/` (d
 
 ### Recent transcript material
 
+## 2026-04-28
+- Inbox | cold: full text in [`transcript-baud-dialogue-works-nima-2026-04-27.md`](raw-input/2026-04-27/transcript-baud-dialogue-works-nima-2026-04-27.md) (pointer; SSOT raw-input) | thread:baud
+- Inbox | cold: full text in [`davis-deep-dive-baud-iran-pakistan-diplomacy.md`](raw-input/2026-04-20/davis-deep-dive-baud-iran-pakistan-diplomacy.md) (pointer; SSOT raw-input) | thread:baud
 ## 2026-04-27
 - Inbox | cold: full text in [`transcript-baud-dialogue-works-nima-2026-04-27.md`](raw-input/2026-04-27/transcript-baud-dialogue-works-nima-2026-04-27.md) (pointer; SSOT raw-input) | thread:baud
 - Inbox | cold: full text in [`davis-deep-dive-baud-iran-pakistan-diplomacy.md`](raw-input/2026-04-20/davis-deep-dive-baud-iran-pakistan-diplomacy.md) (pointer; SSOT raw-input) | thread:baud

@@ -12,3 +12,8 @@ WORK only; not Record.
 ---
 
 <!-- Triage appends new date sections below. Do not add content above this line. -->
+
+## 2026-04-28
+- Inbox | cold: full text in [`transcript-baud-dialogue-works-nima-2026-04-27.md`](raw-input/2026-04-27/transcript-baud-dialogue-works-nima-2026-04-27.md) (pointer; SSOT raw-input) | thread:alkorshid
+- Inbox | cold: full text in [`transcript-nima-freeman-israel-agenda-collapsing-2026-04-24.md`](raw-input/2026-04-24/transcript-nima-freeman-israel-agenda-collapsing-2026-04-24.md) (pointer; SSOT raw-input) | thread:alkorshid
+- Inbox | cold: full text in [`transcript-marandi-blockade-trump-nima-2026-04-21.md`](raw-input/2026-04-21/transcript-marandi-blockade-trump-nima-2026-04-21.md) (pointer; SSOT raw-input) | thread:alkorshid

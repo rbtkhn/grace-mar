@@ -340,6 +340,11 @@ _Auto-generated from `transcript.md` + **on-disk** and **inbox** `raw-input/` (d
 
 ### Recent transcript material
 
+## 2026-04-28
+- Inbox | cold: full text in [`transcript-diesen-crooke-iran-global-war-world-order-2026-04-27.md`](raw-input/2026-04-27/transcript-diesen-crooke-iran-global-war-world-order-2026-04-27.md) (pointer; SSOT raw-input) | thread:diesen
+- Inbox | cold: full text in [`transcript-diesen-escobar-connectivity-wars-multipolarity-2026-04-23.md`](raw-input/2026-04-23/transcript-diesen-escobar-connectivity-wars-multipolarity-2026-04-23.md) (pointer; SSOT raw-input) | thread:diesen
+- Inbox | cold: full text in [`transcript-macgregor-diesen-total-war-iran-2026-04-21.md`](raw-input/2026-04-21/transcript-macgregor-diesen-total-war-iran-2026-04-21.md) (pointer; SSOT raw-input) | thread:diesen
+- Inbox | cold: full text in [`transcript-diesen-ritter-russia-threatens-strike-finland-baltic-2026-04-17.md`](raw-input/2026-04-17/transcript-diesen-ritter-russia-threatens-strike-finland-baltic-2026-04-17.md) (pointer; SSOT raw-input) | thread:diesen
 ## 2026-04-27
 - Inbox | cold: full text in [`transcript-diesen-crooke-iran-global-war-world-order-2026-04-27.md`](raw-input/2026-04-27/transcript-diesen-crooke-iran-global-war-world-order-2026-04-27.md) (pointer; SSOT raw-input) | thread:diesen | crosses:crooke
 - Refined | cold: [diesen-page-2026-04-27-diesen-crooke-iran-global-war-world-order.md](diesen-page-2026-04-27-diesen-crooke-iran-global-war-world-order.md) (host lane; same raw) | thread:diesen

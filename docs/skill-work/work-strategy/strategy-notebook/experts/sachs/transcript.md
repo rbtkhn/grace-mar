@@ -13,11 +13,19 @@ WORK only; not Record.
 
 <!-- Triage appends new date sections below. Do not add content above this line. -->
 
+## 2026-04-28
+- Inbox | cold: full text in [`transcript-sachs-carlson-iran-war-origins-2026-04-24.md`](raw-input/2026-04-24/transcript-sachs-carlson-iran-war-origins-2026-04-24.md) (pointer; SSOT raw-input) | thread:sachs
+
+
 ## 2026-04-27
 - Inbox | cold: full text in [`transcript-sachs-carlson-iran-war-origins-2026-04-24.md`](raw-input/2026-04-24/transcript-sachs-carlson-iran-war-origins-2026-04-24.md) (pointer; SSOT raw-input) | thread:sachs
 
+
+
 ## 2026-04-26
 - Inbox | cold: full text in [`transcript-sachs-carlson-iran-war-origins-2026-04-24.md`](raw-input/2026-04-24/transcript-sachs-carlson-iran-war-origins-2026-04-24.md) (pointer; SSOT raw-input) | thread:sachs
+
+
 
 
 
