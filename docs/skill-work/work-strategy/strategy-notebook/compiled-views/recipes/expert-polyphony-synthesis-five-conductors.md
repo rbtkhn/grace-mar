@@ -21,6 +21,8 @@
 
 **Optional input:** Recent notes from the [Coffee Cadence](../../COFFEE-CADENCE-CONDUCTOR-PROTOCOL.md) (verification flags, `[[watch]]` seeds, balance notes) may inform **Movement 1** and **Movement 5** but must not introduce facts absent from the SSOT list above. **Unhobbling** does not use Coffee outputs as a substitute for `unhobbling-queue.md` rows.
 
+**Derived recipe / mechanism:** This recipe is a **Symphony Snapshot output shape** using the five conductor **movements**; it is **downstream** of the conductor mechanism (not the SSOT for conductor doctrine). See [CONDUCTOR-LAYER-MAP.md](../../../../work-coffee/CONDUCTOR-LAYER-MAP.md).
+
 ---
 
 ## Recipe instructions for the compilation agent

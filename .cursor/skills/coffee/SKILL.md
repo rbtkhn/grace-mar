@@ -17,6 +17,8 @@ Its purpose is to help the operator become more awake to the actual situation, m
 
 Multiple `coffee` sessions per day are normal. That is not redundancy; it is the point. Each `coffee` is another sip.
 
+**Coffee Hub Menu (terminology):** **`coffee` Step 2** fixed **A–E** hub (**Steward / Engineer / Historian / Capitalist / Conductor**) is the **Coffee Hub Menu**. When routing continues into **Conductor**, resolution uses the **Master Selection Menu** (masters **A.–E.** — Toscanini … Bernstein) and then typically the **Conductor Action Menu** (five repo-grounded next moves — [CONDUCTOR-PASS — Conductor action MCQ](../../../docs/skill-work/work-coffee/CONDUCTOR-PASS.md#conductor-action-mcq)). Layer map: [CONDUCTOR-LAYER-MAP.md](../../../docs/skill-work/work-coffee/CONDUCTOR-LAYER-MAP.md).
+
 ## Guardrails
 
 - Do not turn `coffee` into a heavy maintenance ritual by default.

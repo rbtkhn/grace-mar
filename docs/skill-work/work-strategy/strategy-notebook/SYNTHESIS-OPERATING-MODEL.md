@@ -5,6 +5,8 @@
 
 **Territory:** WORK / operator strategy — not Record unless promoted through the gate.
 
+**Conductor layer map:** This file provides **synthesis theory** (operator-as-conductor, polyphonic synthesis). Operational routing, rituals, compiled-view recipes, and coding-agent proposal lenses are separated in [CONDUCTOR-LAYER-MAP.md](../../work-coffee/CONDUCTOR-LAYER-MAP.md); do **not** duplicate the full conductor mechanism tables here unless this page already needs them for a specific workflow.
+
 ---
 
 ## 1. Synthesis stack (five levels)

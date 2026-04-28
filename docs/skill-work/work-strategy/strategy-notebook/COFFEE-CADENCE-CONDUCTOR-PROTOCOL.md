@@ -8,6 +8,8 @@
 
 **Related:** [SYNTHESIS-OPERATING-MODEL.md](SYNTHESIS-OPERATING-MODEL.md) (session types A–D, L0–L4) · [NOTEBOOK-PREFERENCES.md](NOTEBOOK-PREFERENCES.md) (operator-as-conductor, polyphony) · [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md) (`days.md`, expert threads) · **Generic spine (all territories):** [CONDUCTOR-PASS.md](../../work-coffee/CONDUCTOR-PASS.md)
 
+**Layer map:** This file is the **strategy-notebook ritual** layer for the five conductors. They are **modes of attention** (WORK-only posture), not autonomous agents or Record authority. Full layer table: [CONDUCTOR-LAYER-MAP.md](../../work-coffee/CONDUCTOR-LAYER-MAP.md). When chat surfaces **A–E** choices near each other, **label** them explicitly — **Coffee Hub Menu**, **Master Selection Menu**, **Conductor Action Menu** — per that map.
+
 ---
 
 ## Coffee Cadence Protocol
