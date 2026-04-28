@@ -33,11 +33,22 @@
     },
     "time_unit": {
       "type": "string",
-      "enum": ["day", "week", "month", "quarter", "year", "custom"]
+      "enum": [
+        "day",
+        "week",
+        "month",
+        "quarter",
+        "year",
+        "custom"
+      ]
     },
     "history_window": {
       "type": "object",
-      "required": ["start", "end", "n_observations"],
+      "required": [
+        "start",
+        "end",
+        "n_observations"
+      ],
       "properties": {
         "start": {
           "type": "string"
@@ -61,7 +72,9 @@
     },
     "method": {
       "type": "object",
-      "required": ["name"],
+      "required": [
+        "name"
+      ],
       "properties": {
         "name": {
           "type": "string"
@@ -95,7 +108,10 @@
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["name", "role"],
+        "required": [
+          "name",
+          "role"
+        ],
         "properties": {
           "name": {
             "type": "string"
@@ -114,19 +130,30 @@
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["baseline_name"],
+        "required": [
+          "baseline_name"
+        ],
         "properties": {
           "baseline_name": {
             "type": "string"
           },
           "mae": {
-            "type": ["number", "null"]
+            "type": [
+              "number",
+              "null"
+            ]
           },
           "rmse": {
-            "type": ["number", "null"]
+            "type": [
+              "number",
+              "null"
+            ]
           },
           "mape": {
-            "type": ["number", "null"]
+            "type": [
+              "number",
+              "null"
+            ]
           },
           "notes": {
             "type": "string"

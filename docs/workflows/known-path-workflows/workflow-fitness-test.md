@@ -2,7 +2,7 @@
 
 **Purpose:** Checklist for deciding whether a recurring Grace-Mar process is eligible for **known-path** treatment (documented assistance within explicit authority), versus staying **manual**, **narrower**, or **open-ended**.
 
-**Not a merge gate:** Passing this test does **not** approve Record changes or add surfaces to [`config/authority-map.json`](../../config/authority-map.json).
+**Not a merge gate:** Passing this test does **not** approve Record changes or add surfaces to [`config/authority-map.json`](../../../config/authority-map.json).
 
 ---
 

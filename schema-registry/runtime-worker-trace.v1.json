@@ -17,31 +17,61 @@
     "provenance"
   ],
   "properties": {
-    "run_id": { "type": "string", "minLength": 1 },
-    "timestamp": { "type": "string", "minLength": 1 },
-    "task_mode": { "type": "string", "minLength": 1 },
-    "scope": { "type": "string", "minLength": 1 },
+    "run_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "timestamp": {
+      "type": "string",
+      "minLength": 1
+    },
+    "task_mode": {
+      "type": "string",
+      "minLength": 1
+    },
+    "scope": {
+      "type": "string",
+      "minLength": 1
+    },
     "tools_used": {
       "type": "array",
-      "items": { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     },
     "approvals_requested": {
       "type": "array",
-      "items": { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     },
     "outputs": {
       "type": "array",
-      "items": { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     },
     "boundary_checks": {
       "type": "object",
       "additionalProperties": true
     },
-    "status": { "type": "string", "enum": ["ok", "error", "partial"] },
+    "status": {
+      "type": "string",
+      "enum": [
+        "ok",
+        "error",
+        "partial"
+      ]
+    },
     "provenance": {
       "type": "object",
       "additionalProperties": true
     },
-    "error": { "type": ["string", "null"] }
+    "error": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
   }
 }

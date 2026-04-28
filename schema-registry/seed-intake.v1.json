@@ -4,16 +4,34 @@
   "title": "seed_intake",
   "type": "object",
   "additionalProperties": false,
-  "required": ["user_slug", "age_band", "primary_use_cases", "constraints", "education_focus", "completion"],
+  "required": [
+    "user_slug",
+    "age_band",
+    "primary_use_cases",
+    "constraints",
+    "education_focus",
+    "completion"
+  ],
   "properties": {
-    "user_slug": { "type": "string", "minLength": 1 },
+    "user_slug": {
+      "type": "string",
+      "minLength": 1
+    },
     "age_band": {
       "type": "string",
-      "enum": ["child", "teen", "adult", "mixed", "unspecified"]
+      "enum": [
+        "child",
+        "teen",
+        "adult",
+        "mixed",
+        "unspecified"
+      ]
     },
     "primary_use_cases": {
       "type": "array",
-      "items": { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     },
     "constraints": {
       "type": "object",
@@ -25,20 +43,57 @@
         "safety_notes"
       ],
       "properties": {
-        "allowed_domains": { "type": "array", "items": { "type": "string" } },
-        "disallowed_domains": { "type": "array", "items": { "type": "string" } },
-        "tone_preferences": { "type": "array", "items": { "type": "string" } },
-        "safety_notes": { "type": "array", "items": { "type": "string" } }
+        "allowed_domains": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "disallowed_domains": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "tone_preferences": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "safety_notes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
       }
     },
-    "education_focus": { "type": "array", "items": { "type": "string" } },
+    "education_focus": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
     "completion": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["coverage_score", "contradictions"],
+      "required": [
+        "coverage_score",
+        "contradictions"
+      ],
       "properties": {
-        "coverage_score": { "type": "number", "minimum": 0, "maximum": 1 },
-        "contradictions": { "type": "array", "items": { "type": "string" } }
+        "coverage_score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "contradictions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
       }
     },
     "cursor_operator_profile": {
@@ -48,7 +103,13 @@
       "properties": {
         "ide_primary": {
           "type": "string",
-          "enum": ["cursor", "vscode", "jetbrains", "other", "unspecified"]
+          "enum": [
+            "cursor",
+            "vscode",
+            "jetbrains",
+            "other",
+            "unspecified"
+          ]
         },
         "rules_pack_preset": {
           "type": "string",
@@ -62,7 +123,9 @@
         },
         "work_surface_hints": {
           "type": "array",
-          "items": { "type": "string" },
+          "items": {
+            "type": "string"
+          },
           "description": "Optional WORK territory hints (e.g. work-politics, work-dev) to include in operator-focused presets."
         },
         "generate_cursor_pack_on_activation": {

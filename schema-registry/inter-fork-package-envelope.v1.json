@@ -57,7 +57,10 @@
     },
     "routingHint": {
       "type": "string",
-      "enum": ["candidate_import", "change_proposal_review"]
+      "enum": [
+        "candidate_import",
+        "change_proposal_review"
+      ]
     },
     "summary": {
       "type": "string",
@@ -98,7 +101,14 @@
             },
             "suggestedTargetSurface": {
               "type": "string",
-              "enum": ["self", "self_library", "civ_mem", "skills", "evidence", "work_layer"]
+              "enum": [
+                "self",
+                "self_library",
+                "civ_mem",
+                "skills",
+                "evidence",
+                "work_layer"
+              ]
             },
             "claim": {
               "type": "string"
@@ -171,19 +181,41 @@
             },
             "targetSurface": {
               "type": "string",
-              "enum": ["self", "self_library", "civ_mem", "skills", "evidence", "work_layer"]
+              "enum": [
+                "self",
+                "self_library",
+                "civ_mem",
+                "skills",
+                "evidence",
+                "work_layer"
+              ]
             },
             "materiality": {
               "type": "string",
-              "enum": ["low", "medium", "high", "critical"]
+              "enum": [
+                "low",
+                "medium",
+                "high",
+                "critical"
+              ]
             },
             "reviewType": {
               "type": "string",
-              "enum": ["routine", "extended", "boundary", "policy", "collision"]
+              "enum": [
+                "routine",
+                "extended",
+                "boundary",
+                "policy",
+                "collision"
+              ]
             },
             "riskLevel": {
               "type": "string",
-              "enum": ["low", "medium", "high"]
+              "enum": [
+                "low",
+                "medium",
+                "high"
+              ]
             },
             "priorStateRef": {
               "type": "string",
@@ -195,7 +227,14 @@
             },
             "proposalClass": {
               "type": "string",
-              "enum": ["identity", "library", "skills", "evidence", "policy", "work_politics"]
+              "enum": [
+                "identity",
+                "library",
+                "skills",
+                "evidence",
+                "policy",
+                "work_politics"
+              ]
             },
             "notes": {
               "type": "string"

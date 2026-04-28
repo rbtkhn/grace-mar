@@ -37,7 +37,11 @@
     },
     "runtimeMode": {
       "type": "string",
-      "enum": ["adjunct_runtime", "primary_runtime", "portable_bundle_only"]
+      "enum": [
+        "adjunct_runtime",
+        "primary_runtime",
+        "portable_bundle_only"
+      ]
     },
     "runtimeBundlePath": {
       "type": "string",

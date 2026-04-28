@@ -27,25 +27,54 @@
         "moonshot_insight_candidate"
       ]
     },
-    "title": { "type": "string", "minLength": 1 },
-    "distilled_claim": { "type": "string", "minLength": 1 },
-    "rationale": { "type": "string", "minLength": 1 },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "distilled_claim": {
+      "type": "string",
+      "minLength": 1
+    },
+    "rationale": {
+      "type": "string",
+      "minLength": 1
+    },
     "supporting_excerpts": {
       "type": "array",
-      "items": { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     },
-    "proposed_destination_surface": { "type": "string", "minLength": 1 },
+    "proposed_destination_surface": {
+      "type": "string",
+      "minLength": 1
+    },
     "confidence": {
       "type": "string",
-      "enum": ["low", "medium", "high"]
+      "enum": [
+        "low",
+        "medium",
+        "high"
+      ]
     },
     "review_questions": {
       "type": "array",
-      "items": { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "minItems": 1
     },
-    "provenance_tacit_id": { "type": "string", "minLength": 1 },
-    "provenance_normalized_path": { "type": "string", "minLength": 1 },
-    "generator_version": { "type": "string", "const": "1.0" }
+    "provenance_tacit_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "provenance_normalized_path": {
+      "type": "string",
+      "minLength": 1
+    },
+    "generator_version": {
+      "type": "string",
+      "const": "1.0"
+    }
   }
 }

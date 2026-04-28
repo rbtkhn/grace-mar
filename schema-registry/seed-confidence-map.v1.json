@@ -4,9 +4,16 @@
   "title": "seed_confidence_map",
   "type": "object",
   "additionalProperties": false,
-  "required": ["user_slug", "confidence_map", "bands"],
+  "required": [
+    "user_slug",
+    "confidence_map",
+    "bands"
+  ],
   "properties": {
-    "user_slug": { "type": "string", "minLength": 1 },
+    "user_slug": {
+      "type": "string",
+      "minLength": 1
+    },
     "confidence_map": {
       "type": "object",
       "additionalProperties": false,
@@ -20,23 +27,64 @@
         "overall"
       ],
       "properties": {
-        "identity": { "type": "number", "minimum": 0, "maximum": 1 },
-        "curiosity": { "type": "number", "minimum": 0, "maximum": 1 },
-        "pedagogy": { "type": "number", "minimum": 0, "maximum": 1 },
-        "expression": { "type": "number", "minimum": 0, "maximum": 1 },
-        "memory_governance": { "type": "number", "minimum": 0, "maximum": 1 },
-        "interaction_stability": { "type": "number", "minimum": 0, "maximum": 1 },
-        "overall": { "type": "number", "minimum": 0, "maximum": 1 }
+        "identity": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "curiosity": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "pedagogy": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "expression": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "memory_governance": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "interaction_stability": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "overall": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
       }
     },
     "bands": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["low_max", "medium_max", "high_max"],
+      "required": [
+        "low_max",
+        "medium_max",
+        "high_max"
+      ],
       "properties": {
-        "low_max": { "type": "number", "maximum": 0.5 },
-        "medium_max": { "type": "number", "maximum": 0.85 },
-        "high_max": { "type": "number", "maximum": 1.0 }
+        "low_max": {
+          "type": "number",
+          "maximum": 0.5
+        },
+        "medium_max": {
+          "type": "number",
+          "maximum": 0.85
+        },
+        "high_max": {
+          "type": "number",
+          "maximum": 1.0
+        }
       }
     }
   }

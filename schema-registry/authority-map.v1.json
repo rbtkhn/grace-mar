@@ -5,7 +5,10 @@
   "description": "Machine-readable default authority class per named surface key.",
   "type": "object",
   "additionalProperties": false,
-  "required": ["schemaVersion", "surfaces"],
+  "required": [
+    "schemaVersion",
+    "surfaces"
+  ],
   "properties": {
     "schemaVersion": {
       "const": "1.0.0"

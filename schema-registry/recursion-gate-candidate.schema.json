@@ -40,10 +40,19 @@
     },
     "target_surface": {
       "type": "string",
-      "enum": ["SELF", "SELF-LIBRARY", "SKILLS", "EVIDENCE", "OTHER"]
+      "enum": [
+        "SELF",
+        "SELF-LIBRARY",
+        "SKILLS",
+        "EVIDENCE",
+        "OTHER"
+      ]
     },
     "target_path": {
-      "type": ["string", "null"]
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "proposal_summary": {
       "type": "string",
@@ -58,10 +67,16 @@
     "source_observation_ids": {
       "type": "array",
       "minItems": 1,
-      "items": { "type": "string", "minLength": 1 }
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
     },
     "timeline_anchor": {
-      "type": ["string", "null"]
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "lane_origin": {
       "type": "string",
@@ -69,25 +84,38 @@
     },
     "supporting_evidence_refs": {
       "type": "array",
-      "items": { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "default": []
     },
     "contradiction_refs": {
       "type": "array",
-      "items": { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "default": []
     },
     "confidence": {
-      "type": ["number", "null"],
+      "type": [
+        "number",
+        "null"
+      ],
       "minimum": 0,
       "maximum": 1
     },
     "why_now": {
-      "type": ["string", "null"],
+      "type": [
+        "string",
+        "null"
+      ],
       "maxLength": 1200
     },
     "review_notes": {
-      "type": ["string", "null"],
+      "type": [
+        "string",
+        "null"
+      ],
       "maxLength": 2000
     },
     "status": {

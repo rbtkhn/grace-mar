@@ -62,13 +62,22 @@
     },
     "subsurfaceSuggested": {
       "anyOf": [
-        { "type": "string", "const": "civ_mem" },
-        { "type": "null" }
+        {
+          "type": "string",
+          "const": "civ_mem"
+        },
+        {
+          "type": "null"
+        }
       ]
     },
     "boundaryStatus": {
       "type": "string",
-      "enum": ["clear", "ambiguous", "misaligned"]
+      "enum": [
+        "clear",
+        "ambiguous",
+        "misaligned"
+      ]
     },
     "misfiled": {
       "type": "boolean"
@@ -83,7 +92,11 @@
     },
     "confidenceBand": {
       "type": "string",
-      "enum": ["high", "medium", "low"]
+      "enum": [
+        "high",
+        "medium",
+        "low"
+      ]
     },
     "confidenceScore": {
       "type": "number",

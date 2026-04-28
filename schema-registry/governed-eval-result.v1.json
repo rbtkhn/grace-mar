@@ -26,18 +26,43 @@
       "minLength": 1,
       "description": "Execution receipt run_id (same as the receipt file evaluated)."
     },
-    "fixture_id": { "type": "string", "minLength": 1 },
+    "fixture_id": {
+      "type": "string",
+      "minLength": 1
+    },
     "setup": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["task_type", "task_subtype", "model_tier"],
+      "required": [
+        "task_type",
+        "task_subtype",
+        "model_tier"
+      ],
       "properties": {
-        "task_type": { "type": ["string", "null"] },
-        "task_subtype": { "type": ["string", "null"] },
-        "model_tier": { "type": ["string", "null"] }
+        "task_type": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "task_subtype": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "model_tier": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
       }
     },
-    "receipt_path": { "type": "string", "minLength": 1 },
+    "receipt_path": {
+      "type": "string",
+      "minLength": 1
+    },
     "scores": {
       "type": "object",
       "additionalProperties": false,
@@ -49,18 +74,53 @@
         "cost_adjusted_usefulness"
       ],
       "properties": {
-        "boundary_obedience": { "type": ["number", "null"] },
-        "epistemic_discipline": { "type": ["number", "null"] },
-        "abstention_correctness": { "type": ["number", "null"] },
-        "candidate_reviewability": { "type": ["number", "null"] },
-        "cost_adjusted_usefulness": { "type": ["number", "null"] }
+        "boundary_obedience": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "epistemic_discipline": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "abstention_correctness": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "candidate_reviewability": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "cost_adjusted_usefulness": {
+          "type": [
+            "number",
+            "null"
+          ]
+        }
       }
     },
-    "total": { "type": ["number", "null"] },
+    "total": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
     "notes": {
       "type": "array",
-      "items": { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     },
-    "non_canonical": { "type": "boolean", "const": true }
+    "non_canonical": {
+      "type": "boolean",
+      "const": true
+    }
   }
 }

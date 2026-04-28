@@ -41,30 +41,63 @@
         "superseded"
       ],
       "properties": {
-        "proposed": { "type": "integer", "minimum": 0 },
-        "underReview": { "type": "integer", "minimum": 0 },
-        "approved": { "type": "integer", "minimum": 0 },
-        "deferred": { "type": "integer", "minimum": 0 },
-        "rejected": { "type": "integer", "minimum": 0 },
-        "superseded": { "type": "integer", "minimum": 0 },
-        "unknownStatus": { "type": "integer", "minimum": 0 }
+        "proposed": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "underReview": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "approved": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "deferred": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "rejected": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "superseded": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "unknownStatus": {
+          "type": "integer",
+          "minimum": 0
+        }
       }
     },
     "changeTypeCounts": {
       "type": "object",
-      "additionalProperties": { "type": "integer", "minimum": 0 }
+      "additionalProperties": {
+        "type": "integer",
+        "minimum": 0
+      }
     },
     "targetSurfaceCounts": {
       "type": "object",
-      "additionalProperties": { "type": "integer", "minimum": 0 }
+      "additionalProperties": {
+        "type": "integer",
+        "minimum": 0
+      }
     },
     "scopeCounts": {
       "type": "object",
-      "additionalProperties": { "type": "integer", "minimum": 0 }
+      "additionalProperties": {
+        "type": "integer",
+        "minimum": 0
+      }
     },
     "evidenceTypeCounts": {
       "type": "object",
-      "additionalProperties": { "type": "integer", "minimum": 0 }
+      "additionalProperties": {
+        "type": "integer",
+        "minimum": 0
+      }
     },
     "staleReviewCount": {
       "type": "integer",
@@ -73,28 +106,57 @@
     "validationSummary": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["changeReview", "seedPhaseDemo"],
+      "required": [
+        "changeReview",
+        "seedPhaseDemo"
+      ],
       "properties": {
         "changeReview": {
           "type": "object",
           "additionalProperties": false,
-          "required": ["ran", "exitCode", "passed"],
+          "required": [
+            "ran",
+            "exitCode",
+            "passed"
+          ],
           "properties": {
-            "ran": { "type": "boolean" },
-            "exitCode": { "type": "integer" },
-            "passed": { "type": "boolean" },
-            "detail": { "type": "string" }
+            "ran": {
+              "type": "boolean"
+            },
+            "exitCode": {
+              "type": "integer"
+            },
+            "passed": {
+              "type": "boolean"
+            },
+            "detail": {
+              "type": "string"
+            }
           }
         },
         "seedPhaseDemo": {
           "type": "object",
           "additionalProperties": false,
-          "required": ["ran", "passed"],
+          "required": [
+            "ran",
+            "passed"
+          ],
           "properties": {
-            "ran": { "type": "boolean" },
-            "exitCode": { "type": ["integer", "null"] },
-            "passed": { "type": "boolean" },
-            "detail": { "type": "string" }
+            "ran": {
+              "type": "boolean"
+            },
+            "exitCode": {
+              "type": [
+                "integer",
+                "null"
+              ]
+            },
+            "passed": {
+              "type": "boolean"
+            },
+            "detail": {
+              "type": "string"
+            }
           }
         }
       }

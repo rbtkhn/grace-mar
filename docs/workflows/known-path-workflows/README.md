@@ -2,7 +2,7 @@
 
 **Purpose:** A first-class, **documentation-first** place to describe **known-path workflows**: repeatable Grace-Mar processes where inputs, output shape, reviewer, **authority class**, and pass/fail signals are explicit enough that **operators or tools may draft or coordinate** work **without** acquiring durable Record merge authority.
 
-**Not in scope for this registry:** autonomous agents, new merge paths, or changes to [`config/authority-map.json`](../../config/authority-map.json). Registering a workflow here does **not** widen write policy.
+**Not in scope for this registry:** autonomous agents, new merge paths, or changes to [`config/authority-map.json`](../../../config/authority-map.json). Registering a workflow here does **not** widen write policy.
 
 ---
 

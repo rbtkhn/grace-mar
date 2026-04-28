@@ -21,39 +21,112 @@
     "sourcesUsed"
   ],
   "properties": {
-    "schemaVersion": { "const": "1.0.0-workflow-report" },
-    "generatedAt": { "type": "string", "minLength": 1 },
-    "batchId": { "type": "string", "minLength": 1 },
-    "partialMetrics": { "type": "boolean" },
-    "eventCount": { "type": "integer", "minimum": 0 },
+    "schemaVersion": {
+      "const": "1.0.0-workflow-report"
+    },
+    "generatedAt": {
+      "type": "string",
+      "minLength": 1
+    },
+    "batchId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "partialMetrics": {
+      "type": "boolean"
+    },
+    "eventCount": {
+      "type": "integer",
+      "minimum": 0
+    },
     "totalsByWorkflowType": {
       "type": "object",
-      "additionalProperties": { "type": "integer", "minimum": 0 }
+      "additionalProperties": {
+        "type": "integer",
+        "minimum": 0
+      }
     },
     "totalsByLane": {
       "type": "object",
-      "additionalProperties": { "type": "integer", "minimum": 0 }
+      "additionalProperties": {
+        "type": "integer",
+        "minimum": 0
+      }
     },
-    "acceptanceCount": { "type": "integer", "minimum": 0 },
-    "revisionCount": { "type": "integer", "minimum": 0 },
-    "staleCount": { "type": "integer", "minimum": 0 },
-    "medianTimeToFirstReviewSeconds": { "type": ["number", "null"] },
-    "medianTimeToMergeSeconds": { "type": ["number", "null"] },
-    "medianContextTokensLoaded": { "type": ["number", "null"] },
-    "compressionRate": { "type": ["number", "null"], "minimum": 0, "maximum": 1 },
-    "retrievalMissRate": { "type": ["number", "null"], "minimum": 0, "maximum": 1 },
-    "medianReviewCycles": { "type": ["number", "null"] },
+    "acceptanceCount": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "revisionCount": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "staleCount": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "medianTimeToFirstReviewSeconds": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "medianTimeToMergeSeconds": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "medianContextTokensLoaded": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "compressionRate": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 1
+    },
+    "retrievalMissRate": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 1
+    },
+    "medianReviewCycles": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
     "reviewFrictionHotspots": {
       "type": "array",
       "items": {
         "type": "object",
         "additionalProperties": true,
-        "required": ["label", "score"],
+        "required": [
+          "label",
+          "score"
+        ],
         "properties": {
-          "label": { "type": "string" },
-          "lane": { "type": "string" },
-          "workflowType": { "type": "string" },
-          "score": { "type": "number" }
+          "label": {
+            "type": "string"
+          },
+          "lane": {
+            "type": "string"
+          },
+          "workflowType": {
+            "type": "string"
+          },
+          "score": {
+            "type": "number"
+          }
         }
       }
     },
@@ -62,22 +135,37 @@
       "items": {
         "type": "object",
         "additionalProperties": true,
-        "required": ["label", "score"],
+        "required": [
+          "label",
+          "score"
+        ],
         "properties": {
-          "label": { "type": "string" },
-          "lane": { "type": "string" },
-          "workflowType": { "type": "string" },
-          "score": { "type": "number" }
+          "label": {
+            "type": "string"
+          },
+          "lane": {
+            "type": "string"
+          },
+          "workflowType": {
+            "type": "string"
+          },
+          "score": {
+            "type": "number"
+          }
         }
       }
     },
     "sourcesUsed": {
       "type": "array",
-      "items": { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     },
     "notes": {
       "type": "array",
-      "items": { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     }
   }
 }

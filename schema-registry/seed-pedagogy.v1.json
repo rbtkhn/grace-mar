@@ -4,9 +4,17 @@
   "title": "seed_pedagogy",
   "type": "object",
   "additionalProperties": false,
-  "required": ["user_slug", "pedagogy", "confidence", "issues"],
+  "required": [
+    "user_slug",
+    "pedagogy",
+    "confidence",
+    "issues"
+  ],
   "properties": {
-    "user_slug": { "type": "string", "minLength": 1 },
+    "user_slug": {
+      "type": "string",
+      "minLength": 1
+    },
     "pedagogy": {
       "type": "object",
       "additionalProperties": false,
@@ -19,26 +27,52 @@
         "anti_spoonfeeding_rules"
       ],
       "properties": {
-        "explanation_style": { "type": "string" },
-        "scaffolding_method": { "type": "string" },
-        "difficulty_ramp": { "type": "string" },
-        "correction_style": { "type": "string" },
-        "encouragement_rules": { "type": "array", "items": { "type": "string" } },
+        "explanation_style": {
+          "type": "string"
+        },
+        "scaffolding_method": {
+          "type": "string"
+        },
+        "difficulty_ramp": {
+          "type": "string"
+        },
+        "correction_style": {
+          "type": "string"
+        },
+        "encouragement_rules": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
         "anti_spoonfeeding_rules": {
           "type": "array",
-          "items": { "type": "string" },
+          "items": {
+            "type": "string"
+          },
           "minItems": 1
         }
       }
     },
     "confidence": {
       "type": "object",
-      "required": ["pedagogy_confidence"],
+      "required": [
+        "pedagogy_confidence"
+      ],
       "properties": {
-        "pedagogy_confidence": { "type": "number", "minimum": 0, "maximum": 1 }
+        "pedagogy_confidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
       },
       "additionalProperties": false
     },
-    "issues": { "type": "array", "items": { "type": "string" } }
+    "issues": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
   }
 }

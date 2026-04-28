@@ -19,7 +19,7 @@ A **Load-Lift Receipt** is a **review artifact** that records whether a known-pa
 - **Load-Lift Receipts evaluate workflow usefulness** after (or in trial of) a run — time, quality flags, and a disposition decision.
 - They do **not** approve durable SELF, EVIDENCE, SKILLS, or prompt changes.
 - They do **not** promote [recursion-gate](../../../users/grace-mar/recursion-gate.md) candidates.
-- They do **not** change workflow **`authority_class`** or [`config/authority-map.json`](../../config/authority-map.json).
+- They do **not** change workflow **`authority_class`** or [`config/authority-map.json`](../../../config/authority-map.json).
 - They **may** support later human decisions to **continue**, **revise**, **narrow**, or **retire** a workflow, or to keep it **manual_only**.
 
 ---

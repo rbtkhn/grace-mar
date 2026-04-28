@@ -42,20 +42,31 @@
     },
     "tags": {
       "type": "array",
-      "items": { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     },
     "candidate_destinations": {
       "type": "array",
-      "items": { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "description": "Derived from intended_destination (pipe-separated in source)"
     },
     "confidence": {
       "type": "string",
-      "enum": ["low", "medium", "high"]
+      "enum": [
+        "low",
+        "medium",
+        "high"
+      ]
     },
     "privacy": {
       "type": "string",
-      "enum": ["private", "shareable"]
+      "enum": [
+        "private",
+        "shareable"
+      ]
     },
     "provenance_path": {
       "type": "string",

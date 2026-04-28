@@ -34,7 +34,12 @@
     },
     "type": {
       "type": "string",
-      "enum": ["income", "expense", "refund", "transfer"]
+      "enum": [
+        "income",
+        "expense",
+        "refund",
+        "transfer"
+      ]
     },
     "category": {
       "type": "string",

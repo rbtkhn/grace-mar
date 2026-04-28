@@ -16,26 +16,51 @@
     "approval_required"
   ],
   "properties": {
-    "run_id": { "type": "string", "minLength": 1 },
-    "page_id": { "type": "string", "minLength": 1 },
+    "run_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "page_id": {
+      "type": "string",
+      "minLength": 1
+    },
     "operation": {
       "type": "string",
-      "enum": ["new", "append", "refine"]
+      "enum": [
+        "new",
+        "append",
+        "refine"
+      ]
     },
-    "target_thread": { "type": "string", "minLength": 1 },
+    "target_thread": {
+      "type": "string",
+      "minLength": 1
+    },
     "watch_ids": {
       "type": "array",
-      "items": { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     },
     "experts": {
       "type": "array",
-      "items": { "type": "string", "minLength": 1 }
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
     },
-    "thesis": { "type": "string", "minLength": 1 },
+    "thesis": {
+      "type": "string",
+      "minLength": 1
+    },
     "references": {
       "type": "array",
-      "items": { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     },
-    "approval_required": { "type": "boolean" }
+    "approval_required": {
+      "type": "boolean"
+    }
   }
 }

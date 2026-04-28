@@ -42,7 +42,13 @@
     },
     "export_class": {
       "type": "string",
-      "enum": ["full_governed", "task_limited", "tool_bootstrap", "capability", "internal_only"],
+      "enum": [
+        "full_governed",
+        "task_limited",
+        "tool_bootstrap",
+        "capability",
+        "internal_only"
+      ],
       "description": "Which export class this rationale is eligible for. See docs/portable-record/export-contract.md."
     },
     "notes": {

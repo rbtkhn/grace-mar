@@ -46,27 +46,49 @@
     },
     "confidence": {
       "type": "string",
-      "enum": ["high", "medium", "low"],
+      "enum": [
+        "high",
+        "medium",
+        "low"
+      ],
       "description": "Source confidence in this claim."
     },
     "durability_class": {
       "type": "string",
-      "enum": ["ephemeral", "recurring", "stable"],
+      "enum": [
+        "ephemeral",
+        "recurring",
+        "stable"
+      ],
       "description": "Expected persistence of this pattern."
     },
     "sensitivity_class": {
       "type": "string",
-      "enum": ["safe", "review_required", "non_portable"],
+      "enum": [
+        "safe",
+        "review_required",
+        "non_portable"
+      ],
       "description": "Whether this candidate may contain sensitive or employer-bound content."
     },
     "portability_class": {
       "type": "string",
-      "enum": ["cross_tool", "role_specific", "employer_bound", "non_exportable"],
+      "enum": [
+        "cross_tool",
+        "role_specific",
+        "employer_bound",
+        "non_exportable"
+      ],
       "description": "How portable this candidate is across tools and contexts."
     },
     "proposed_target_surface": {
       "type": "string",
-      "enum": ["SELF", "SELF-LIBRARY", "SKILLS", "EVIDENCE"],
+      "enum": [
+        "SELF",
+        "SELF-LIBRARY",
+        "SKILLS",
+        "EVIDENCE"
+      ],
       "description": "Which canonical Record surface this candidate should be reviewed against."
     },
     "source_tool": {
@@ -79,12 +101,19 @@
     },
     "supporting_examples": {
       "type": "array",
-      "items": { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "description": "Concrete examples or evidence supporting this claim."
     },
     "review_status": {
       "type": "string",
-      "enum": ["pending", "approved", "rejected", "modified"],
+      "enum": [
+        "pending",
+        "approved",
+        "rejected",
+        "modified"
+      ],
       "default": "pending",
       "description": "Current review state of this candidate."
     },

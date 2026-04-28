@@ -119,7 +119,11 @@
     },
     "sensitivity": {
       "type": "string",
-      "enum": ["standard", "elevated", "high"],
+      "enum": [
+        "standard",
+        "elevated",
+        "high"
+      ],
       "description": "Determines which promotion threshold tier applies"
     },
     "notes": {

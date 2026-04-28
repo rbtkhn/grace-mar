@@ -2,15 +2,43 @@
   "version": "authority-values-v1",
   "note": "Vocabulary/reference artifact for repeated Grace-Mar authority values. Local schemas and scripts remain authoritative for enforcement.",
   "fields": {
-    "recordAuthority": ["none"],
-    "gateEffect": ["none", "stage-only", "advisory-only"],
-    "mergeAuthority": ["none"],
-    "canonicalRecordAccess": ["none", "read-only", "write-forbidden"],
-    "proposalAuthority": ["none", "stage-only", "proposal-only"],
-    "contradictionAuthority": ["none", "surface-only", "proposal-only"],
-    "workLaneAuthority": ["none", "local-runtime-only", "work-only"],
-    "simulationOnly": [true],
-    "requires_human_review": [true]
+    "recordAuthority": [
+      "none"
+    ],
+    "gateEffect": [
+      "none",
+      "stage-only",
+      "advisory-only"
+    ],
+    "mergeAuthority": [
+      "none"
+    ],
+    "canonicalRecordAccess": [
+      "none",
+      "read-only",
+      "write-forbidden"
+    ],
+    "proposalAuthority": [
+      "none",
+      "stage-only",
+      "proposal-only"
+    ],
+    "contradictionAuthority": [
+      "none",
+      "surface-only",
+      "proposal-only"
+    ],
+    "workLaneAuthority": [
+      "none",
+      "local-runtime-only",
+      "work-only"
+    ],
+    "simulationOnly": [
+      true
+    ],
+    "requires_human_review": [
+      true
+    ]
   },
   "safe_combinations": {
     "interface_artifact": {
@@ -38,15 +66,38 @@
       "simulationOnly": true
     },
     "agent_surface_registry": {
-      "canonical_record_access": ["none", "read-only", "write-forbidden"],
+      "canonical_record_access": [
+        "none",
+        "read-only",
+        "write-forbidden"
+      ],
       "merge_authority": "none",
-      "gate_effect": ["none", "stage-only", "advisory-only"]
+      "gate_effect": [
+        "none",
+        "stage-only",
+        "advisory-only"
+      ]
     }
   },
   "unsafe_values": {
-    "recordAuthority": ["write", "merge", "approve", "canonical-write"],
-    "gateEffect": ["merge", "approve", "auto-approve"],
-    "mergeAuthority": ["approve", "merge", "write"],
-    "requires_human_review": [false]
+    "recordAuthority": [
+      "write",
+      "merge",
+      "approve",
+      "canonical-write"
+    ],
+    "gateEffect": [
+      "merge",
+      "approve",
+      "auto-approve"
+    ],
+    "mergeAuthority": [
+      "approve",
+      "merge",
+      "write"
+    ],
+    "requires_human_review": [
+      false
+    ]
   }
 }

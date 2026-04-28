@@ -17,22 +17,53 @@
       "type": "string",
       "description": "Lane budget class used for packing: compact | medium | deep"
     },
-    "escalated": { "type": "boolean" },
-    "escalationReason": { "type": "string" },
-    "haltReason": { "type": "string" },
-    "rationale": { "type": "string" },
-    "lane": { "type": "string" },
-    "taskAnchor": { "type": "string" },
-    "constraint": { "type": ["string", "null"] },
-    "operatorOverride": { "type": "boolean" },
+    "escalated": {
+      "type": "boolean"
+    },
+    "escalationReason": {
+      "type": "string"
+    },
+    "haltReason": {
+      "type": "string"
+    },
+    "rationale": {
+      "type": "string"
+    },
+    "lane": {
+      "type": "string"
+    },
+    "taskAnchor": {
+      "type": "string"
+    },
+    "constraint": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "operatorOverride": {
+      "type": "boolean"
+    },
     "estimatedLoad": {
       "description": "Opaque hint (chars, token estimate, or label) — inspection only",
-      "oneOf": [{ "type": "string" }, { "type": "number" }]
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "number"
+        }
+      ]
     },
     "sourceWorkflow": {
       "type": "string",
       "description": "Emitter id e.g. prepared_context, memory_brief"
     },
-    "retrievalMissCount": { "type": ["integer", "null"] }
+    "retrievalMissCount": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    }
   }
 }

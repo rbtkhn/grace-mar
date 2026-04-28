@@ -14,11 +14,19 @@
   "properties": {
     "status": {
       "type": "string",
-      "enum": ["uninitialized", "initialized"]
+      "enum": [
+        "uninitialized",
+        "initialized"
+      ]
     },
     "development_involvement": {
       "type": "string",
-      "enum": ["none", "light", "regular", "core"]
+      "enum": [
+        "none",
+        "light",
+        "regular",
+        "core"
+      ]
     },
     "development_role_modes": {
       "type": "array",
@@ -38,22 +46,30 @@
     },
     "primary_repos": {
       "type": "array",
-      "items": { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "default": []
     },
     "systems_or_products": {
       "type": "array",
-      "items": { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "default": []
     },
     "preferred_languages": {
       "type": "array",
-      "items": { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "default": []
     },
     "preferred_tools": {
       "type": "array",
-      "items": { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "default": []
     },
     "work_modes": {
@@ -78,17 +94,23 @@
     },
     "technical_research_areas": {
       "type": "array",
-      "items": { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "default": []
     },
     "active_focuses": {
       "type": "array",
-      "items": { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "default": []
     },
     "important_constraints": {
       "type": "array",
-      "items": { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "default": []
     },
     "companion_help_priorities": {
@@ -117,7 +139,12 @@
     },
     "evidence_basis": {
       "type": "string",
-      "enum": ["none", "seed_survey", "explicit_user_input", "mixed"]
+      "enum": [
+        "none",
+        "seed_survey",
+        "explicit_user_input",
+        "mixed"
+      ]
     }
   }
 }

@@ -23,7 +23,14 @@
     },
     "policy_mode": {
       "type": "string",
-      "enum": ["Surface", "Deep", "Ephemeral", "Forecast", "Strategy", "Rebuild"],
+      "enum": [
+        "Surface",
+        "Deep",
+        "Ephemeral",
+        "Forecast",
+        "Strategy",
+        "Rebuild"
+      ],
       "description": "Policy mode describing how this derived artifact should be interpreted."
     },
     "generated_at": {

@@ -15,27 +15,60 @@
     "error"
   ],
   "properties": {
-    "timestamp": { "type": "string", "minLength": 1 },
-    "command": { "type": "string", "minLength": 1 },
-    "run_id": { "type": "string", "minLength": 1 },
+    "timestamp": {
+      "type": "string",
+      "minLength": 1
+    },
+    "command": {
+      "type": "string",
+      "minLength": 1
+    },
+    "run_id": {
+      "type": "string",
+      "minLength": 1
+    },
     "files_read": {
       "type": "array",
-      "items": { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     },
     "files_touched": {
       "type": "array",
-      "items": { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     },
     "result_status": {
       "type": "string",
-      "enum": ["ok", "failed"]
+      "enum": [
+        "ok",
+        "failed"
+      ]
     },
     "warnings": {
       "type": "array",
-      "items": { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     },
-    "error": { "type": ["string", "null"] },
-    "model": { "type": ["string", "null"] },
-    "provider": { "type": ["string", "null"] }
+    "error": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "model": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "provider": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
   }
 }

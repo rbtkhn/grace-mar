@@ -14,11 +14,19 @@
   "properties": {
     "status": {
       "type": "string",
-      "enum": ["uninitialized", "initialized"]
+      "enum": [
+        "uninitialized",
+        "initialized"
+      ]
     },
     "business_involvement": {
       "type": "string",
-      "enum": ["none", "light", "regular", "core"]
+      "enum": [
+        "none",
+        "light",
+        "regular",
+        "core"
+      ]
     },
     "business_role_modes": {
       "type": "array",
@@ -40,12 +48,16 @@
     },
     "primary_ventures_or_brands": {
       "type": "array",
-      "items": { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "default": []
     },
     "markets_or_sectors": {
       "type": "array",
-      "items": { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "default": []
     },
     "commerce_surfaces": {
@@ -90,17 +102,23 @@
     },
     "research_or_interest_areas": {
       "type": "array",
-      "items": { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "default": []
     },
     "active_focuses": {
       "type": "array",
-      "items": { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "default": []
     },
     "important_constraints": {
       "type": "array",
-      "items": { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "default": []
     },
     "companion_help_priorities": {
@@ -130,7 +148,12 @@
     },
     "evidence_basis": {
       "type": "string",
-      "enum": ["none", "seed_survey", "explicit_user_input", "mixed"]
+      "enum": [
+        "none",
+        "seed_survey",
+        "explicit_user_input",
+        "mixed"
+      ]
     }
   }
 }

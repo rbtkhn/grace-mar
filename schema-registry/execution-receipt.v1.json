@@ -16,111 +16,245 @@
     "non_canonical"
   ],
   "properties": {
-    "run_id": { "type": "string", "minLength": 1 },
-    "timestamp": { "type": "string", "minLength": 1 },
-
-    "task_mode": { "type": "string", "minLength": 1 },
-    "task_subtype": { "type": ["string", "null"] },
-
+    "run_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "timestamp": {
+      "type": "string",
+      "minLength": 1
+    },
+    "task_mode": {
+      "type": "string",
+      "minLength": 1
+    },
+    "task_subtype": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
     "scope": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["root", "max_files", "max_chars"],
+      "required": [
+        "root",
+        "max_files",
+        "max_chars"
+      ],
       "properties": {
-        "root": { "type": "string", "minLength": 1 },
-        "max_files": { "type": "integer", "minimum": 1 },
-        "max_chars": { "type": "integer", "minimum": 1 }
-      }
-    },
-
-    "worker_route": {
-      "type": "object",
-      "additionalProperties": false,
-      "required": ["resolved", "shared_workers", "routed_worker"],
-      "properties": {
-        "resolved": { "type": "boolean" },
-        "task_type": { "type": ["string", "null"] },
-        "shared_workers": {
-          "type": "array",
-          "items": { "type": "string" }
+        "root": {
+          "type": "string",
+          "minLength": 1
         },
-        "routed_worker": { "type": ["string", "null"] },
-        "entrypoints": {
-          "type": "object",
-          "additionalProperties": { "type": "string" }
+        "max_files": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "max_chars": {
+          "type": "integer",
+          "minimum": 1
         }
       }
     },
-
+    "worker_route": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "resolved",
+        "shared_workers",
+        "routed_worker"
+      ],
+      "properties": {
+        "resolved": {
+          "type": "boolean"
+        },
+        "task_type": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "shared_workers": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "routed_worker": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "entrypoints": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        }
+      }
+    },
     "epistemic": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["decision", "abstained"],
+      "required": [
+        "decision",
+        "abstained"
+      ],
       "properties": {
         "decision": {
           "type": "string",
-          "enum": ["allow", "allow_with_review", "hold", "block", "abstain"]
+          "enum": [
+            "allow",
+            "allow_with_review",
+            "hold",
+            "block",
+            "abstain"
+          ]
         },
-        "abstained": { "type": "boolean" },
-        "evidence_state": { "type": ["string", "null"] },
-        "notes": { "type": ["string", "null"] }
+        "abstained": {
+          "type": "boolean"
+        },
+        "evidence_state": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "notes": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
       }
     },
-
     "artifacts": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["trace_path", "proposal_path"],
+      "required": [
+        "trace_path",
+        "proposal_path"
+      ],
       "properties": {
-        "trace_path": { "type": ["string", "null"] },
-        "proposal_path": { "type": ["string", "null"] }
+        "trace_path": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "proposal_path": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
       }
     },
-
     "outcome": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["status"],
+      "required": [
+        "status"
+      ],
       "properties": {
         "status": {
           "type": "string",
-          "enum": ["ok", "error", "partial"]
+          "enum": [
+            "ok",
+            "error",
+            "partial"
+          ]
         },
-        "error": { "type": ["string", "null"] }
+        "error": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
       }
     },
-
     "model_policy": {
-      "type": ["object", "null"],
+      "type": [
+        "object",
+        "null"
+      ],
       "additionalProperties": false,
       "properties": {
-        "allowed_tier": { "type": ["string", "null"] },
-        "resolved_provider": { "type": ["string", "null"] },
-        "resolved_model": { "type": ["string", "null"] },
+        "allowed_tier": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "resolved_provider": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "resolved_model": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
         "fallback_chain": {
           "type": "array",
-          "items": { "type": "string" }
+          "items": {
+            "type": "string"
+          }
         },
-        "requires_human_review": { "type": ["boolean", "null"] }
+        "requires_human_review": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        }
       }
     },
-
     "scope_verification": {
-      "type": ["object", "null"],
+      "type": [
+        "object",
+        "null"
+      ],
       "additionalProperties": false,
-      "required": ["traversal", "stated_coverage", "coverage_ratio", "status", "warnings"],
+      "required": [
+        "traversal",
+        "stated_coverage",
+        "coverage_ratio",
+        "status",
+        "warnings"
+      ],
       "properties": {
         "traversal": {
           "type": "object",
           "additionalProperties": false,
-          "required": ["files_seen", "files_opened", "chunks_read", "paths_sample"],
+          "required": [
+            "files_seen",
+            "files_opened",
+            "chunks_read",
+            "paths_sample"
+          ],
           "properties": {
-            "files_seen": { "type": "integer", "minimum": 0 },
-            "files_opened": { "type": "integer", "minimum": 0 },
-            "chunks_read": { "type": "integer", "minimum": 0 },
+            "files_seen": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "files_opened": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "chunks_read": {
+              "type": "integer",
+              "minimum": 0
+            },
             "paths_sample": {
               "type": "array",
-              "items": { "type": "string" },
+              "items": {
+                "type": "string"
+              },
               "maxItems": 20
             }
           }
@@ -128,21 +262,40 @@
         "stated_coverage": {
           "type": "object",
           "additionalProperties": false,
-          "required": ["files_claimed", "source"],
+          "required": [
+            "files_claimed",
+            "source"
+          ],
           "properties": {
             "files_claimed": {
               "anyOf": [
-                { "type": "integer", "minimum": 0 },
-                { "type": "null" }
+                {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                {
+                  "type": "null"
+                }
               ]
             },
             "source": {
               "type": "string",
-              "enum": ["proposal_regex", "absent", "parse_failed"]
+              "enum": [
+                "proposal_regex",
+                "absent",
+                "parse_failed"
+              ]
             }
           }
         },
-        "coverage_ratio": { "type": ["number", "null"], "minimum": 0, "maximum": 1 },
+        "coverage_ratio": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 1
+        },
         "status": {
           "type": "string",
           "enum": [
@@ -155,11 +308,15 @@
         },
         "warnings": {
           "type": "array",
-          "items": { "type": "string" }
+          "items": {
+            "type": "string"
+          }
         }
       }
     },
-
-    "non_canonical": { "type": "boolean", "const": true }
+    "non_canonical": {
+      "type": "boolean",
+      "const": true
+    }
   }
 }

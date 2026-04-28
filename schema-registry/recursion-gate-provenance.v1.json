@@ -8,18 +8,34 @@
   "properties": {
     "source_observation_ids": {
       "type": "array",
-      "items": { "type": "string", "minLength": 1 }
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
     },
-    "timeline_anchor": { "type": "string" },
-    "compression_artifact_id": { "type": ["string", "null"] },
-    "lane_origin": { "type": "string" },
+    "timeline_anchor": {
+      "type": "string"
+    },
+    "compression_artifact_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "lane_origin": {
+      "type": "string"
+    },
     "supporting_evidence_refs": {
       "type": "array",
-      "items": { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     },
     "contradiction_refs": {
       "type": "array",
-      "items": { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     }
   }
 }

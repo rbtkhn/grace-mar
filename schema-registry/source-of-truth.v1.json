@@ -5,7 +5,10 @@
   "description": "Optional machine-readable default precedence across Companion-Self state layers.",
   "type": "object",
   "additionalProperties": false,
-  "required": ["schemaVersion", "precedence"],
+  "required": [
+    "schemaVersion",
+    "precedence"
+  ],
   "properties": {
     "schemaVersion": {
       "const": "1.0.0"

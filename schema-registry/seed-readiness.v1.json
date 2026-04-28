@@ -4,9 +4,16 @@
   "title": "seed_readiness",
   "type": "object",
   "additionalProperties": false,
-  "required": ["user_slug", "readiness", "stage_completion"],
+  "required": [
+    "user_slug",
+    "readiness",
+    "stage_completion"
+  ],
   "properties": {
-    "user_slug": { "type": "string", "minLength": 1 },
+    "user_slug": {
+      "type": "string",
+      "minLength": 1
+    },
     "readiness": {
       "type": "object",
       "additionalProperties": false,
@@ -20,12 +27,35 @@
       "properties": {
         "decision": {
           "type": "string",
-          "enum": ["pass", "conditional_pass", "fail"]
+          "enum": [
+            "pass",
+            "conditional_pass",
+            "fail"
+          ]
         },
-        "readiness_score": { "type": "number", "minimum": 0, "maximum": 1 },
-        "blocking_issues": { "type": "array", "items": { "type": "string" } },
-        "non_blocking_issues": { "type": "array", "items": { "type": "string" } },
-        "recommended_next_actions": { "type": "array", "items": { "type": "string" } }
+        "readiness_score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "blocking_issues": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "non_blocking_issues": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "recommended_next_actions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
       }
     },
     "stage_completion": {
@@ -41,13 +71,55 @@
         "trials"
       ],
       "properties": {
-        "intake": { "type": "string", "enum": ["complete", "incomplete"] },
-        "identity": { "type": "string", "enum": ["complete", "incomplete"] },
-        "curiosity": { "type": "string", "enum": ["complete", "incomplete"] },
-        "pedagogy": { "type": "string", "enum": ["complete", "incomplete"] },
-        "expression": { "type": "string", "enum": ["complete", "incomplete"] },
-        "memory_contract": { "type": "string", "enum": ["complete", "incomplete"] },
-        "trials": { "type": "string", "enum": ["complete", "incomplete"] }
+        "intake": {
+          "type": "string",
+          "enum": [
+            "complete",
+            "incomplete"
+          ]
+        },
+        "identity": {
+          "type": "string",
+          "enum": [
+            "complete",
+            "incomplete"
+          ]
+        },
+        "curiosity": {
+          "type": "string",
+          "enum": [
+            "complete",
+            "incomplete"
+          ]
+        },
+        "pedagogy": {
+          "type": "string",
+          "enum": [
+            "complete",
+            "incomplete"
+          ]
+        },
+        "expression": {
+          "type": "string",
+          "enum": [
+            "complete",
+            "incomplete"
+          ]
+        },
+        "memory_contract": {
+          "type": "string",
+          "enum": [
+            "complete",
+            "incomplete"
+          ]
+        },
+        "trials": {
+          "type": "string",
+          "enum": [
+            "complete",
+            "incomplete"
+          ]
+        }
       }
     }
   }

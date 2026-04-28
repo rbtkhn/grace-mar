@@ -4,9 +4,17 @@
   "title": "seed_expression",
   "type": "object",
   "additionalProperties": false,
-  "required": ["user_slug", "expression", "confidence", "issues"],
+  "required": [
+    "user_slug",
+    "expression",
+    "confidence",
+    "issues"
+  ],
   "properties": {
-    "user_slug": { "type": "string", "minLength": 1 },
+    "user_slug": {
+      "type": "string",
+      "minLength": 1
+    },
     "expression": {
       "type": "object",
       "additionalProperties": false,
@@ -18,21 +26,52 @@
         "tone_envelope"
       ],
       "properties": {
-        "writing_cadence": { "type": "string" },
-        "length_norms": { "type": "string" },
-        "format_preferences": { "type": "array", "items": { "type": "string" } },
-        "example_preferences": { "type": "array", "items": { "type": "string" } },
-        "tone_envelope": { "type": "array", "items": { "type": "string" }, "minItems": 1 }
+        "writing_cadence": {
+          "type": "string"
+        },
+        "length_norms": {
+          "type": "string"
+        },
+        "format_preferences": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "example_preferences": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "tone_envelope": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1
+        }
       }
     },
     "confidence": {
       "type": "object",
-      "required": ["expression_confidence"],
+      "required": [
+        "expression_confidence"
+      ],
       "properties": {
-        "expression_confidence": { "type": "number", "minimum": 0, "maximum": 1 }
+        "expression_confidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
       },
       "additionalProperties": false
     },
-    "issues": { "type": "array", "items": { "type": "string" } }
+    "issues": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
   }
 }

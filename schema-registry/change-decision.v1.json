@@ -54,15 +54,34 @@
     },
     "previousSurface": {
       "type": "string",
-      "enum": ["self", "self_library", "civ_mem", "skills", "evidence", "work_layer"]
+      "enum": [
+        "self",
+        "self_library",
+        "civ_mem",
+        "skills",
+        "evidence",
+        "work_layer"
+      ]
     },
     "newSurface": {
       "type": "string",
-      "enum": ["self", "self_library", "civ_mem", "skills", "evidence", "work_layer"]
+      "enum": [
+        "self",
+        "self_library",
+        "civ_mem",
+        "skills",
+        "evidence",
+        "work_layer"
+      ]
     },
     "materialityAtDecision": {
       "type": "string",
-      "enum": ["low", "medium", "high", "critical"]
+      "enum": [
+        "low",
+        "medium",
+        "high",
+        "critical"
+      ]
     },
     "reviewNotes": {
       "type": "string"

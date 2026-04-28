@@ -16,18 +16,34 @@
     "generated_at"
   ],
   "properties": {
-    "schema_version": { "type": "string", "pattern": "^1\\.0\\.0$" },
-    "seed_phase_version": { "type": "string" },
-    "user_slug": { "type": "string", "minLength": 1 },
+    "schema_version": {
+      "type": "string",
+      "pattern": "^1\\.0\\.0$"
+    },
+    "seed_phase_version": {
+      "type": "string"
+    },
+    "user_slug": {
+      "type": "string",
+      "minLength": 1
+    },
     "status": {
       "type": "string",
-      "enum": ["in_progress", "ready", "blocked", "activated"]
+      "enum": [
+        "in_progress",
+        "ready",
+        "blocked",
+        "activated"
+      ]
     },
     "stages": {
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["id", "status"],
+        "required": [
+          "id",
+          "status"
+        ],
         "properties": {
           "id": {
             "type": "string",
@@ -44,22 +60,38 @@
           },
           "status": {
             "type": "string",
-            "enum": ["pending", "in_progress", "complete", "blocked"]
+            "enum": [
+              "pending",
+              "in_progress",
+              "complete",
+              "blocked"
+            ]
           },
-          "notes": { "type": "string" }
+          "notes": {
+            "type": "string"
+          }
         },
         "additionalProperties": true
       }
     },
     "artifacts": {
       "type": "object",
-      "additionalProperties": { "type": "string" }
+      "additionalProperties": {
+        "type": "string"
+      }
     },
     "confidence_summary": {
       "type": "object",
-      "additionalProperties": { "type": "number", "minimum": 0, "maximum": 1 }
+      "additionalProperties": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 1
+      }
     },
-    "generated_at": { "type": "string", "format": "date-time" },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
     "doctrine_version": {
       "type": "string",
       "description": "Which seed-phase-doctrine version this fork was formed under (e.g. '1.0'). Provides forward-compatible formation provenance."

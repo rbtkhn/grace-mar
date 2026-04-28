@@ -49,7 +49,10 @@
     },
     "status": {
       "type": "string",
-      "enum": ["completed", "failed"]
+      "enum": [
+        "completed",
+        "failed"
+      ]
     },
     "notes": {
       "type": "string"

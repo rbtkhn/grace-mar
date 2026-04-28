@@ -4,17 +4,33 @@
   "title": "seed_trial_report",
   "type": "object",
   "additionalProperties": false,
-  "required": ["user_slug", "trials", "stability_score", "safety_fit_score", "issues"],
+  "required": [
+    "user_slug",
+    "trials",
+    "stability_score",
+    "safety_fit_score",
+    "issues"
+  ],
   "properties": {
-    "user_slug": { "type": "string", "minLength": 1 },
+    "user_slug": {
+      "type": "string",
+      "minLength": 1
+    },
     "trials": {
       "type": "array",
       "items": {
         "type": "object",
         "additionalProperties": false,
-        "required": ["trial_id", "scenario_type", "result", "notes"],
+        "required": [
+          "trial_id",
+          "scenario_type",
+          "result",
+          "notes"
+        ],
         "properties": {
-          "trial_id": { "type": "string" },
+          "trial_id": {
+            "type": "string"
+          },
           "scenario_type": {
             "type": "string",
             "enum": [
@@ -28,15 +44,34 @@
           },
           "result": {
             "type": "string",
-            "enum": ["pass", "conditional", "fail"]
+            "enum": [
+              "pass",
+              "conditional",
+              "fail"
+            ]
           },
-          "notes": { "type": "string" }
+          "notes": {
+            "type": "string"
+          }
         }
       },
       "minItems": 1
     },
-    "stability_score": { "type": "number", "minimum": 0, "maximum": 1 },
-    "safety_fit_score": { "type": "number", "minimum": 0, "maximum": 1 },
-    "issues": { "type": "array", "items": { "type": "string" } }
+    "stability_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "safety_fit_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "issues": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
   }
 }

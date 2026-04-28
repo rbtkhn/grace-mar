@@ -95,7 +95,11 @@
       "items": {
         "type": "object",
         "additionalProperties": false,
-        "required": ["type", "ref", "summary"],
+        "required": [
+          "type",
+          "ref",
+          "summary"
+        ],
         "properties": {
           "type": {
             "type": "string",
@@ -121,12 +125,19 @@
     },
     "riskLevel": {
       "type": "string",
-      "enum": ["low", "medium", "high"]
+      "enum": [
+        "low",
+        "medium",
+        "high"
+      ]
     },
     "confidenceDelta": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["before", "after"],
+      "required": [
+        "before",
+        "after"
+      ],
       "properties": {
         "before": {
           "type": "number",
@@ -156,11 +167,25 @@
     },
     "targetSurface": {
       "type": "string",
-      "enum": ["self", "self_library", "civ_mem", "skills", "evidence", "work_layer"]
+      "enum": [
+        "self",
+        "self_library",
+        "civ_mem",
+        "skills",
+        "evidence",
+        "work_layer"
+      ]
     },
     "suggestedSurface": {
       "type": "string",
-      "enum": ["self", "self_library", "civ_mem", "skills", "evidence", "work_layer"]
+      "enum": [
+        "self",
+        "self_library",
+        "civ_mem",
+        "skills",
+        "evidence",
+        "work_layer"
+      ]
     },
     "canonicalPath": {
       "type": "string",
@@ -168,15 +193,30 @@
     },
     "materiality": {
       "type": "string",
-      "enum": ["low", "medium", "high", "critical"]
+      "enum": [
+        "low",
+        "medium",
+        "high",
+        "critical"
+      ]
     },
     "reviewType": {
       "type": "string",
-      "enum": ["routine", "extended", "boundary", "policy", "collision"]
+      "enum": [
+        "routine",
+        "extended",
+        "boundary",
+        "policy",
+        "collision"
+      ]
     },
     "boundaryStatus": {
       "type": "string",
-      "enum": ["clear", "ambiguous", "misfiled_suspected"]
+      "enum": [
+        "clear",
+        "ambiguous",
+        "misfiled_suspected"
+      ]
     },
     "requiresReclassification": {
       "type": "boolean",
@@ -188,7 +228,14 @@
     },
     "proposalClass": {
       "type": "string",
-      "enum": ["identity", "library", "skills", "evidence", "policy", "work_politics"]
+      "enum": [
+        "identity",
+        "library",
+        "skills",
+        "evidence",
+        "policy",
+        "work_politics"
+      ]
     }
   }
 }

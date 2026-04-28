@@ -15,39 +15,120 @@
     "derivedFromReceipt"
   ],
   "properties": {
-    "schemaVersion": { "const": "1.0.0-workflow-event" },
-    "eventId": { "type": "string", "minLength": 1 },
-    "batchId": { "type": "string" },
-    "workflowId": { "type": "string", "minLength": 1 },
-    "workflowType": { "type": "string", "minLength": 1 },
-    "lane": { "type": "string", "minLength": 1 },
-    "phase": { "type": "string" },
-    "startedAt": { "type": ["string", "null"], "format": "date-time" },
-    "completedAt": { "type": ["string", "null"], "format": "date-time" },
-    "status": { "type": "string", "minLength": 1 },
-    "artifactType": { "type": "string" },
-    "targetSurface": { "type": "string" },
-    "reviewStatus": { "type": "string" },
-    "reviewCycles": { "type": "integer", "minimum": 0 },
-    "contextTokensLoaded": { "type": ["integer", "null"], "minimum": 0 },
-    "compressionInvoked": { "type": ["boolean", "null"] },
-    "retrievalHits": { "type": ["integer", "null"], "minimum": 0 },
-    "retrievalMisses": { "type": ["integer", "null"], "minimum": 0 },
-    "operatorActions": { "type": "integer", "minimum": 0 },
+    "schemaVersion": {
+      "const": "1.0.0-workflow-event"
+    },
+    "eventId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "batchId": {
+      "type": "string"
+    },
+    "workflowId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "workflowType": {
+      "type": "string",
+      "minLength": 1
+    },
+    "lane": {
+      "type": "string",
+      "minLength": 1
+    },
+    "phase": {
+      "type": "string"
+    },
+    "startedAt": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "completedAt": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "status": {
+      "type": "string",
+      "minLength": 1
+    },
+    "artifactType": {
+      "type": "string"
+    },
+    "targetSurface": {
+      "type": "string"
+    },
+    "reviewStatus": {
+      "type": "string"
+    },
+    "reviewCycles": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "contextTokensLoaded": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "compressionInvoked": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "retrievalHits": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "retrievalMisses": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "operatorActions": {
+      "type": "integer",
+      "minimum": 0
+    },
     "touchedSurfaces": {
       "type": "array",
-      "items": { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     },
-    "derivedFromReceipt": { "type": "boolean" },
+    "derivedFromReceipt": {
+      "type": "boolean"
+    },
     "sourceKind": {
       "type": "string",
       "description": "e.g. runtime_trace, change_proposal, lane_observability, workflow_depth, retrieval_miss, observability_report_aggregate"
     },
-    "sourcePath": { "type": "string" },
+    "sourcePath": {
+      "type": "string"
+    },
     "partialConfidence": {
       "type": "string",
-      "enum": ["full", "partial", "inferred", "aggregate_only"]
+      "enum": [
+        "full",
+        "partial",
+        "inferred",
+        "aggregate_only"
+      ]
     },
-    "notes": { "type": "string" }
+    "notes": {
+      "type": "string"
+    }
   }
 }
