@@ -1,7 +1,7 @@
 # MCP capability audit report
 
-- **Generated (UTC):** 2026-04-28T16:11:43Z
-- **Git:** `60d09bbf`
+- **Generated (UTC):** 2026-04-28T17:42:35Z
+- **Git:** `e85922da`
 - **Config:** `config\mcp-capabilities.yaml`
 - **Schema:** `schemas\mcp-capability.v1.json`
 - **Capabilities:** 11

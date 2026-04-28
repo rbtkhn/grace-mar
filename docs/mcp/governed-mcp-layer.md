@@ -115,6 +115,12 @@ Fixture JSON ([`schemas/mcp-mock-run.v1.json`](../../schemas/mcp-mock-run.v1.jso
 
 ---
 
+## Local read-only adapter
+
+Bounded UTF-8 file reads against **[`config/mcp-local-read-allowlist.yaml`](../../config/mcp-local-read-allowlist.yaml)** via **`scripts/mcp_local_readonly.py`** produce Markdown under **`artifacts/mcp-local-read/`** plus MCP receipts with **`filesystem_readonly`**. **Local repo-scoped read-only runs are allowed only through this allowlisted adapter**, **every run gets a receipt**, **no general MCP integration is enabled**, and **Record promotion remains gated** — **[`mcp-local-readonly-adapter.md`](mcp-local-readonly-adapter.md)**.
+
+---
+
 ## Risk / permission scanning
 
 New capability classes should be **risk-scanned** before admission using **`scripts/mcp_risk_scan.py`** against [`config/mcp-risk-policy.yaml`](../../config/mcp-risk-policy.yaml) — see **[`mcp-risk-permission-scanner.md`](mcp-risk-permission-scanner.md)**. The scanner **does not execute MCP servers**; it classifies **permission risk**, not factual truth. **Passing the scan does not approve live integration** — it only clears structured blocker rules on registry policy text.

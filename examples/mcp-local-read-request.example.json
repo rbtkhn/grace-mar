@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "request": {
+    "id": "local-read-governed-layer-001",
+    "declared_intent": "Verify governed MCP layer doc via bounded local read-only adapter (planning audit).",
+    "path": "docs/mcp/governed-mcp-layer.md",
+    "include_excerpt": true,
+    "max_excerpt_chars": 1200
+  }
+}

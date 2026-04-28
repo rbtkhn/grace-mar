@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://grace-mar.local/schemas/mcp-local-read-request.v1.json",
+  "title": "McpLocalReadRequest",
+  "$comment": "Local repo-scoped read-only adapter — scripts/mcp_local_readonly.py",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "request"],
+  "properties": {
+    "schema_version": { "type": "integer", "const": 1 },
+    "request": { "$ref": "#/$defs/request" }
+  },
+  "$defs": {
+    "request": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "declared_intent", "path", "include_excerpt", "max_excerpt_chars"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "declared_intent": { "type": "string", "minLength": 1 },
+        "path": { "type": "string", "minLength": 1 },
+        "include_excerpt": { "type": "boolean" },
+        "max_excerpt_chars": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 2000,
+          "default": 2000
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+# Grace-Mar — local read-only MCP-shaped adapter allowlist (planning-only).
+# Consumed by scripts/mcp_local_readonly.py. Paths are repo-relative POSIX with trailing slashes for roots.
+
+version: 1
+
+allowed_roots:
+  - docs/
+  - config/
+  - schemas/
+  - scripts/
+  - examples/
+  - artifacts/mcp-admission/
+  - artifacts/mcp-mock-runs/
+  - artifacts/evidence-stubs/
+  - artifacts/patch-intake/
+
+blocked_roots:
+  - users/grace-mar/
+  - .git/
+  - secrets/
+  - private/
+  - node_modules/
+  - venv/
+  - .venv/
+
+blocked_files:
+  - .env
+  - .env.local
+  - id_rsa
+  - id_ed25519
+
+blocked_name_patterns:
+  - "*token*"
+  - "*secret*"
+  - "*credential*"
+  - "*.pem"
+  - "*.key"
+
+max_file_bytes: 250000

@@ -98,6 +98,9 @@ artifacts/mcp-admission/*
 artifacts/mcp-mock-runs/*
 !artifacts/mcp-mock-runs/.gitkeep
 !artifacts/mcp-mock-runs/README.md
+artifacts/mcp-local-read/*
+!artifacts/mcp-local-read/.gitkeep
+!artifacts/mcp-local-read/README.md
 artifacts/candidate-drafts/*
 !artifacts/candidate-drafts/.gitkeep
 artifacts/shadow-merges/*

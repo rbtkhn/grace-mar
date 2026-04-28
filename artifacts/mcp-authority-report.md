@@ -1,7 +1,7 @@
 # MCP authority binding report
 
-- **Generated (UTC):** 2026-04-28T16:11:43Z
-- **Git:** `60d09bbf`
+- **Generated (UTC):** 2026-04-28T17:42:36Z
+- **Git:** `e85922da`
 - **Status:** **PASS**
 
 ## Summary
