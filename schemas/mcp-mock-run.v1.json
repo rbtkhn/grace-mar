@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://grace-mar.local/schemas/mcp-mock-run.v1.json",
+  "title": "McpMockRun",
+  "$comment": "Fixture-driven mock MCP-shaped tool call — scripts/mcp_mock_harness.py; no live MCP.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "run", "mock_request", "mock_response", "governance_expectations"],
+  "properties": {
+    "schema_version": { "type": "integer", "const": 1 },
+    "run": { "$ref": "#/$defs/run" },
+    "mock_request": { "$ref": "#/$defs/mock_request" },
+    "mock_response": { "$ref": "#/$defs/mock_response" },
+    "governance_expectations": { "$ref": "#/$defs/governance_expectations" }
+  },
+  "$defs": {
+    "run": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "capability_id", "tool_name", "declared_intent"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "capability_id": { "type": "string", "minLength": 1 },
+        "tool_name": { "type": "string", "minLength": 1 },
+        "declared_intent": { "type": "string", "minLength": 1 }
+      }
+    },
+    "mock_request": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["resources_read", "resources_written", "network_access", "credential_use"],
+      "properties": {
+        "resources_read": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "resources_written": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "network_access": {
+          "type": "string",
+          "enum": ["none", "read", "full"]
+        },
+        "credential_use": {
+          "type": "string",
+          "enum": ["none", "optional", "required"]
+        }
+      }
+    },
+    "mock_response": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "summary", "data"],
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": ["success", "partial", "blocked", "failed"]
+        },
+        "summary": { "type": "string", "minLength": 1 },
+        "data": { "type": "object", "additionalProperties": true }
+      }
+    },
+    "governance_expectations": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "requires_human_review",
+        "requires_gate_review",
+        "durable_state_write_attempted",
+        "canonical_record_touched"
+      ],
+      "properties": {
+        "requires_human_review": { "type": "boolean" },
+        "requires_gate_review": { "type": "boolean" },
+        "durable_state_write_attempted": { "type": "boolean" },
+        "canonical_record_touched": { "type": "boolean" }
+      }
+    }
+  }
+}

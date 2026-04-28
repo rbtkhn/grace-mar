@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "run": {
+    "id": "mock-shell-blocked-001",
+    "capability_id": "shell_execution_prohibited",
+    "tool_name": "shell_execute",
+    "declared_intent": "Fixture run: blocked interactive shell attempt under prohibition stance."
+  },
+  "mock_request": {
+    "resources_read": ["mock://local/session/context-only"],
+    "resources_written": [],
+    "network_access": "none",
+    "credential_use": "none"
+  },
+  "mock_response": {
+    "status": "blocked",
+    "summary": "Mock: shell execution refused by policy stance.",
+    "data": {
+      "blocked_reason": "shell_execution_prohibited"
+    }
+  },
+  "governance_expectations": {
+    "requires_human_review": true,
+    "requires_gate_review": true,
+    "durable_state_write_attempted": false,
+    "canonical_record_touched": false
+  }
+}

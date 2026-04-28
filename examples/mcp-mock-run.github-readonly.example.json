@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "run": {
+    "id": "mock-github-readonly-list-files-001",
+    "capability_id": "github_readonly",
+    "tool_name": "list_repository_files",
+    "declared_intent": "Fixture run: simulate read-only GitHub tree listing for governance chain testing (mock URIs only)."
+  },
+  "mock_request": {
+    "resources_read": ["mock://github/example-org/example-repo/tree/main/docs"],
+    "resources_written": [],
+    "network_access": "read",
+    "credential_use": "optional"
+  },
+  "mock_response": {
+    "status": "success",
+    "summary": "Mock: returned three markdown paths under docs/.",
+    "data": {
+      "paths": ["docs/README.md", "docs/guide.md", "docs/index.md"]
+    }
+  },
+  "governance_expectations": {
+    "requires_human_review": true,
+    "requires_gate_review": true,
+    "durable_state_write_attempted": false,
+    "canonical_record_touched": false
+  }
+}

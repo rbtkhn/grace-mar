@@ -241,3 +241,27 @@ capabilities:
     requires_receipt: true
     gate_required_for_record_change: true
     notes: Emits admission Markdown under artifacts/mcp-admission/ without enabling MCP servers.
+
+  - id: mcp_mock_harness
+    name: MCP mock execution harness (WORK fixture runs)
+    category: policy
+    local_or_cloud: local
+    trust_tier: operator_only
+    allowed_actions:
+      - ingest_mock_run_json
+      - evaluate_registry_overlay_without_live_mcp
+    prohibited_actions:
+      - execute_mcp_server
+      - invoke_remote_shell_or_network_agents
+      - enable_live_integration
+    reads:
+      - operator_mock_run_fixture_paths
+    writes:
+      - artifacts/mcp-mock-runs_markdown_packets_only
+    network_access: none
+    credential_requirements: none
+    durable_state_write: false
+    output_lane: work_artifact
+    requires_receipt: true
+    gate_required_for_record_change: true
+    notes: Simulates MCP-shaped calls from local JSON only; receipts bind work_artifact lane without launching MCP.

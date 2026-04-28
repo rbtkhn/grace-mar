@@ -109,6 +109,12 @@ Declared MCP server manifests ([`schemas/mcp-server-manifest.v1.json`](../../sch
 
 ---
 
+## Mock execution harness
+
+Fixture JSON ([`schemas/mcp-mock-run.v1.json`](../../schemas/mcp-mock-run.v1.json)) can exercise **MCP-shaped tool calls** against registry classes **without launching MCP servers** via **`scripts/mcp_mock_harness.py`**. Output lands under **`artifacts/mcp-mock-runs/`** with an **`mcp_mock_harness`** receipt in **`artifacts/mcp-receipts/`**. Every mock run produces a receipt; **live integration remains a separate future decision** — **[`mcp-mock-execution-harness.md`](mcp-mock-execution-harness.md)**.
+
+---
+
 ## Risk / permission scanning
 
 New capability classes should be **risk-scanned** before admission using **`scripts/mcp_risk_scan.py`** against [`config/mcp-risk-policy.yaml`](../../config/mcp-risk-policy.yaml) — see **[`mcp-risk-permission-scanner.md`](mcp-risk-permission-scanner.md)**. The scanner **does not execute MCP servers**; it classifies **permission risk**, not factual truth. **Passing the scan does not approve live integration** — it only clears structured blocker rules on registry policy text.

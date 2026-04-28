@@ -95,6 +95,9 @@ artifacts/patch-intake/*
 artifacts/mcp-admission/*
 !artifacts/mcp-admission/.gitkeep
 !artifacts/mcp-admission/README.md
+artifacts/mcp-mock-runs/*
+!artifacts/mcp-mock-runs/.gitkeep
+!artifacts/mcp-mock-runs/README.md
 artifacts/candidate-drafts/*
 !artifacts/candidate-drafts/.gitkeep
 artifacts/shadow-merges/*
