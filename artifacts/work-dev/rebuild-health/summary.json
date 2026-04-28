@@ -1,51 +1,16 @@
 {
   "schemaVersion": "1.0.0-rebuild-health",
-  "generatedAt": "2026-04-24T16:19:11Z",
+  "generatedAt": "2026-04-28T04:06:58Z",
   "recordAuthority": "none",
   "gateEffect": "none",
-  "receiptCount": 2,
-  "latestReceiptAt": "2026-04-24T16:19:05Z",
-  "latestSuccessfulFullRegenAt": "2026-04-24T16:19:05Z",
+  "receiptCount": 0,
+  "latestReceiptAt": null,
+  "latestSuccessfulFullRegenAt": null,
   "latestSuccessfulIncrementalAt": null,
   "manifestTargetCount": 8,
   "manifestRationaleSidecarCount": 10,
-  "resultStatusCounts": {
-    "ok": 2
-  },
-  "topTargets": [
-    {
-      "targetId": "derived-regeneration-manifest",
-      "runs": 2
-    },
-    {
-      "targetId": "gate-board",
-      "runs": 2
-    },
-    {
-      "targetId": "governance-posture",
-      "runs": 2
-    },
-    {
-      "targetId": "library-index",
-      "runs": 2
-    },
-    {
-      "targetId": "review-dashboard",
-      "runs": 2
-    },
-    {
-      "targetId": "strategy-notebook-graph",
-      "runs": 2
-    },
-    {
-      "targetId": "work-lanes-dashboard-json",
-      "runs": 2
-    },
-    {
-      "targetId": "lane-dashboards",
-      "runs": 2
-    }
-  ],
-  "avgTargetElapsedMs": 657,
-  "writtenRationaleSidecarCount": 20
+  "resultStatusCounts": {},
+  "topTargets": [],
+  "avgTargetElapsedMs": 0,
+  "writtenRationaleSidecarCount": 0
 }
