@@ -125,6 +125,107 @@ reflection_ack: heavy
 
 ## Processed
 
+### CANDIDATE-0038 (IX-A — Washington Commander in Chief June 1775; bookshelf MCQ Washington)
+
+```yaml
+status: approved
+timestamp: 2026-04-27 14:00:00
+channel_key: operator:cursor:bookshelf-mcq-washington
+source: operator — George Washington factual MCQ; validated Q1
+source_exchange:
+  operator: |
+    Anchor: Second Continental Congress, June 1775 — Commander in Chief appointment.
+    Companion matched standard account (Washington commissioned commander of Continental Army).
+    Evidence: HNSRC-0109 (Washington: Writings, Library of America).
+mind_category: knowledge
+signal_type: operator_quiz_validated
+priority_score: 5
+summary: "IX-A: Washington as Commander in Chief of the Continental Army (June 1775)"
+convergence: first
+profile_target: IX-A. KNOWLEDGE
+suggested_entry: "Knows: the Second Continental Congress appointed George Washington Commander in Chief of the Continental Army in June 1775 after open war had begun in Massachusetts—standard Revolutionary narrative anchor on shelf (HNSRC-0109)."
+warrant: "Revisit if I relocate commissioning facts away from June 1775 or drop the LOA Washington row as evidence for this claim."
+prompt_section: YOUR KNOWLEDGE
+prompt_addition: none
+impact_tier: low
+envelope_class: none
+```
+### CANDIDATE-0039 (IX-A — Delaware / Trenton Dec 1776; bookshelf MCQ Washington)
+
+```yaml
+status: approved
+timestamp: 2026-04-27 14:00:00
+channel_key: operator:cursor:bookshelf-mcq-washington
+source: operator — George Washington factual MCQ; validated Q2
+source_exchange:
+  operator: |
+    Anchor: Delaware crossing, December 1776 — Trenton assault.
+    Companion matched standard linkage (crossing → surprise attack on Trenton, Dec. 26, 1776).
+    Evidence: HNSRC-0109.
+mind_category: knowledge
+signal_type: operator_quiz_validated
+priority_score: 5
+summary: "IX-A: Delaware crossing tied to Trenton (Dec. 1776) in textbook Revolutionary narrative"
+convergence: first
+profile_target: IX-A. KNOWLEDGE
+suggested_entry: "Knows: Washington’s Christmas-night Delaware crossing is paired in survey accounts with the surprise attack on Trenton (Dec. 26, 1776)—turning-point framing for the New Jersey campaign on shelf (HNSRC-0109)."
+warrant: "Revisit if I decouple the crossing from Trenton in my mental map or stop anchoring this arc to HNSRC-0109."
+prompt_section: YOUR KNOWLEDGE
+prompt_addition: none
+impact_tier: low
+envelope_class: none
+```
+### CANDIDATE-0040 (IX-A — Constitutional Convention president 1787; bookshelf MCQ Washington)
+
+```yaml
+status: approved
+timestamp: 2026-04-27 14:00:00
+channel_key: operator:cursor:bookshelf-mcq-washington
+source: operator — George Washington factual MCQ; validated Q3
+source_exchange:
+  operator: |
+    Anchor: Philadelphia Constitutional Convention, 1787 — presiding officer.
+    Companion matched standard account (Washington president of the Convention).
+    Evidence: HNSRC-0109.
+mind_category: knowledge
+signal_type: operator_quiz_validated
+priority_score: 5
+summary: "IX-A: Washington as President of the Constitutional Convention (1787)"
+convergence: first
+profile_target: IX-A. KNOWLEDGE
+suggested_entry: "Knows: George Washington presided over the Philadelphia Constitutional Convention of 1787 as its president—chief ceremonial/unifying role emphasized in textbooks alongside substantive drafting debates on shelf (HNSRC-0109)."
+warrant: "Revisit if I attribute primary drafting authorship to Washington or fold this into generic ‘founding’ without his chair role."
+prompt_section: YOUR KNOWLEDGE
+prompt_addition: none
+impact_tier: low
+envelope_class: none
+```
+### CANDIDATE-0041 (IX-A — Farewell Address 1796; bookshelf MCQ Washington)
+
+```yaml
+status: approved
+timestamp: 2026-04-27 14:00:00
+channel_key: operator:cursor:bookshelf-mcq-washington
+source: operator — George Washington factual MCQ; validated Q5
+source_exchange:
+  operator: |
+    Anchor: Farewell Address, 1796 — faction and foreign-alliance warnings.
+    Companion matched standard pairing (faction spirit / permanent entanglements).
+    Evidence: HNSRC-0109.
+mind_category: knowledge
+signal_type: operator_quiz_validated
+priority_score: 5
+summary: "IX-A: Farewell Address warnings on faction and permanent foreign ties"
+convergence: first
+profile_target: IX-A. KNOWLEDGE
+suggested_entry: "Knows: Washington’s Farewell Address (1796) prominently warns against factional excess and permanent foreign entanglements while stressing national unity—canonical textbook pairing on shelf (HNSRC-0109)."
+warrant: "Revisit if I flatten the Address into generic patriotism without faction/alliance tension or stop citing HNSRC-0109 for this speech cluster."
+prompt_section: YOUR KNOWLEDGE
+prompt_addition: none
+impact_tier: low
+envelope_class: none
+```
+
 ### CANDIDATE-0031 (IX-C — remove PERS-004; cadence stays WORK-only)
 
 ```yaml

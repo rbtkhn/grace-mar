@@ -108,6 +108,38 @@ entries:
     evidence_id: ACT-0008
     warrant: "Revisit if the LOA-anchored shelf is materially re-sorted or deprioritized as my American narrative spine."
     provenance: human_approved
+  - id: LEARN-0003
+    date: 2026-04-27
+    topic: "Knows: the Second Continental Congress appointed George Washington Commander in Chief of the Continental Army in June 1775 after open war had begun in Massachusetts—standard Revolutionary narrative anchor on shelf (HNSRC-0109)."
+    source: pipeline merge
+    evidence_id: ACT-0009
+    warrant: "Revisit if I relocate commissioning facts away from June 1775 or drop the LOA Washington row as evidence for this claim."
+    provenance: human_approved
+
+  - id: LEARN-0004
+    date: 2026-04-27
+    topic: "Knows: Washington’s Christmas-night Delaware crossing is paired in survey accounts with the surprise attack on Trenton (Dec. 26, 1776)—turning-point framing for the New Jersey campaign on shelf (HNSRC-0109)."
+    source: pipeline merge
+    evidence_id: ACT-0010
+    warrant: "Revisit if I decouple the crossing from Trenton in my mental map or stop anchoring this arc to HNSRC-0109."
+    provenance: human_approved
+
+  - id: LEARN-0005
+    date: 2026-04-27
+    topic: "Knows: George Washington presided over the Philadelphia Constitutional Convention of 1787 as its president—chief ceremonial/unifying role emphasized in textbooks alongside substantive drafting debates on shelf (HNSRC-0109)."
+    source: pipeline merge
+    evidence_id: ACT-0011
+    warrant: "Revisit if I attribute primary drafting authorship to Washington or fold this into generic ‘founding’ without his chair role."
+    provenance: human_approved
+
+  - id: LEARN-0006
+    date: 2026-04-27
+    topic: "Knows: Washington’s Farewell Address (1796) prominently warns against factional excess and permanent foreign entanglements while stressing national unity—canonical textbook pairing on shelf (HNSRC-0109)."
+    source: pipeline merge
+    evidence_id: ACT-0012
+    warrant: "Revisit if I flatten the Address into generic patriotism without faction/alliance tension or stop citing HNSRC-0109 for this speech cluster."
+    provenance: human_approved
+
 ```
 
 ---

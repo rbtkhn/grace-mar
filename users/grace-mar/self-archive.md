@@ -187,6 +187,30 @@ entries: []
 > CANDIDATE-0031 → RUNTIME-OBSERVATION
 > IX-C: delete PERS-004 — work rhythm / cadence belongs in skill-work + work-dev, not Record
 > operator: | Cadence events and operator ritual habits are WORK (skill-work doctrine + work-dev tooling), not IX-C personality. Operator: keep cadence only in work; remove PERS-004 from Record on approve.
+
+**[2026-04-27 20:09:09]** `APPROVED` (Operator)
+> CANDIDATE-0038 → ACT-0009
+> IX-A: Washington as Commander in Chief of the Continental Army (June 1775)
+> warrant: Revisit if I relocate commissioning facts away from June 1775 or drop the LOA Washington row as evidence for this claim.
+> operator: | Anchor: Second Continental Congress, June 1775 — Commander in Chief appointment. Companion matched standard account (Washington commissioned commander of Continental Army). Evidence: HNSRC-0109 (Washington: Writings, Library of America).
+
+**[2026-04-27 20:09:09]** `APPROVED` (Operator)
+> CANDIDATE-0039 → ACT-0010
+> IX-A: Delaware crossing tied to Trenton (Dec. 1776) in textbook Revolutionary narrative
+> warrant: Revisit if I decouple the crossing from Trenton in my mental map or stop anchoring this arc to HNSRC-0109.
+> operator: | Anchor: Delaware crossing, December 1776 — Trenton assault. Companion matched standard linkage (crossing → surprise attack on Trenton, Dec. 26, 1776). Evidence: HNSRC-0109.
+
+**[2026-04-27 20:09:09]** `APPROVED` (Operator)
+> CANDIDATE-0040 → ACT-0011
+> IX-A: Washington as President of the Constitutional Convention (1787)
+> warrant: Revisit if I attribute primary drafting authorship to Washington or fold this into generic ‘founding’ without his chair role.
+> operator: | Anchor: Philadelphia Constitutional Convention, 1787 — presiding officer. Companion matched standard account (Washington president of the Convention). Evidence: HNSRC-0109.
+
+**[2026-04-27 20:09:09]** `APPROVED` (Operator)
+> CANDIDATE-0041 → ACT-0012
+> IX-A: Farewell Address warnings on faction and permanent foreign ties
+> warrant: Revisit if I flatten the Address into generic patriotism without faction/alliance tension or stop citing HNSRC-0109 for this speech cluster.
+> operator: | Anchor: Farewell Address, 1796 — faction and foreign-alliance warnings. Companion matched standard pairing (faction spirit / permanent entanglements). Evidence: HNSRC-0109.
 END OF FILE — EVIDENCE grace-mar v0.2 (reseeded)
 
   - id: ACT-0001
@@ -266,5 +290,45 @@ END OF FILE — EVIDENCE grace-mar v0.2 (reseeded)
     mind_category: knowledge
     source: pipeline merge
     summary: "IX-A: American narrative-historical LOA set as reference canon (not a method claim)"
+    curated_by: user
+    evidence_tier: 3
+
+  - id: ACT-0009
+    date: 2026-04-27
+    modality: text (pipeline merge)
+    activity_type: knowledge — curated observation
+    mind_category: knowledge
+    source: pipeline merge
+    summary: "IX-A: Washington as Commander in Chief of the Continental Army (June 1775)"
+    curated_by: user
+    evidence_tier: 3
+
+  - id: ACT-0010
+    date: 2026-04-27
+    modality: text (pipeline merge)
+    activity_type: knowledge — curated observation
+    mind_category: knowledge
+    source: pipeline merge
+    summary: "IX-A: Delaware crossing tied to Trenton (Dec. 1776) in textbook Revolutionary narrative"
+    curated_by: user
+    evidence_tier: 3
+
+  - id: ACT-0011
+    date: 2026-04-27
+    modality: text (pipeline merge)
+    activity_type: knowledge — curated observation
+    mind_category: knowledge
+    source: pipeline merge
+    summary: "IX-A: Washington as President of the Constitutional Convention (1787)"
+    curated_by: user
+    evidence_tier: 3
+
+  - id: ACT-0012
+    date: 2026-04-27
+    modality: text (pipeline merge)
+    activity_type: knowledge — curated observation
+    mind_category: knowledge
+    source: pipeline merge
+    summary: "IX-A: Farewell Address warnings on faction and permanent foreign ties"
     curated_by: user
     evidence_tier: 3
