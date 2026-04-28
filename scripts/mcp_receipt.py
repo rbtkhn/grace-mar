@@ -31,8 +31,8 @@ from mcp_receipt_lib import (  # noqa: E402
     BINDINGS_PATH,
     CAPABILITIES_PATH,
     RECEIPT_SCHEMA_PATH,
-    authority_from_binding,
     bindings_lane_map,
+    build_receipt,
     capability_by_id,
     load_yaml,
     receipt_sha256_hex,
@@ -56,70 +56,6 @@ def _parse_artifacts(items: list[str] | None) -> list[dict[str, str]]:
             raise ValueError(f"--artifact expects path=kind, got {raw!r}")
         out.append({"path": path, "kind": kind})
     return out
-
-
-def build_receipt(
-    *,
-    cap: dict[str, Any],
-    binding: dict[str, Any],
-    receipt_id: str,
-    created_at: str,
-    actor_kind: str,
-    actor_name: str,
-    session_id: str | None,
-    declared_intent: str,
-    prompt_summary: str | None,
-    operator_supplied_refs: list[str],
-    network_access: str,
-    credential_use: str,
-    resources_read: list[str],
-    resources_written: list[str],
-    status: str,
-    summary: str,
-    artifacts: list[dict[str, str]],
-    governance: dict[str, Any],
-    repo_git_ref: str,
-    receipt_hash: str | None,
-    parent_receipt_id: str | None,
-) -> dict[str, Any]:
-    authority = authority_from_binding(binding)
-    actor: dict[str, Any] = {"kind": actor_kind, "name": actor_name}
-    if session_id:
-        actor["session_id"] = session_id
-
-    inputs: dict[str, Any] = {"operator_supplied_refs": operator_supplied_refs}
-    if prompt_summary:
-        inputs["prompt_summary"] = prompt_summary
-
-    integrity: dict[str, Any] = {"repo_git_ref": repo_git_ref}
-    if receipt_hash:
-        integrity["receipt_hash"] = receipt_hash
-    if parent_receipt_id:
-        integrity["parent_receipt_id"] = parent_receipt_id
-
-    return {
-        "schema_version": 1,
-        "receipt_id": receipt_id,
-        "created_at_utc": created_at,
-        "actor": actor,
-        "capability": {
-            "id": cap["id"],
-            "category": cap["category"],
-            "output_lane": cap["output_lane"],
-        },
-        "authority": authority,
-        "declared_intent": declared_intent,
-        "inputs": inputs,
-        "access": {
-            "network_access": network_access,
-            "credential_use": credential_use,
-            "resources_read": resources_read,
-            "resources_written": resources_written,
-        },
-        "result": {"status": status, "summary": summary, "artifacts": artifacts},
-        "governance": governance,
-        "integrity": integrity,
-    }
 
 
 def main() -> int:

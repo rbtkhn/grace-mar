@@ -1,0 +1,133 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://grace-mar.local/schemas/research-evidence-input.v1.json",
+  "title": "ResearchEvidenceInput",
+  "$comment": "Structured input for research_to_evidence_stub.py — see docs/mcp/research-to-evidence-stubs.md.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "topic",
+    "research_kind",
+    "operator_intent",
+    "sources",
+    "candidate_claims",
+    "risks_or_uncertainties",
+    "suggested_gate_action"
+  ],
+  "properties": {
+    "schema_version": { "type": "integer", "const": 1 },
+    "topic": { "type": "string", "minLength": 1 },
+    "research_kind": {
+      "type": "string",
+      "enum": [
+        "policy_capture",
+        "comparative_notes",
+        "literature_review",
+        "operator_synthesis"
+      ]
+    },
+    "operator_intent": { "type": "string", "minLength": 1 },
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/source" }
+    },
+    "candidate_claims": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/candidate_claim" }
+    },
+    "risks_or_uncertainties": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "suggested_gate_action": {
+      "type": "string",
+      "enum": [
+        "no_action",
+        "keep_as_work",
+        "create_candidate_only",
+        "stage_for_review"
+      ]
+    }
+  },
+  "$defs": {
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_id",
+        "title",
+        "source_type",
+        "reliability",
+        "claims",
+        "short_excerpts"
+      ],
+      "properties": {
+        "source_id": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[a-z0-9_-]+$"
+        },
+        "title": { "type": "string", "minLength": 1 },
+        "url": { "type": "string", "minLength": 1 },
+        "local_path": { "type": "string", "minLength": 1 },
+        "accessed_at_utc": { "type": "string", "format": "date-time" },
+        "source_type": { "type": "string", "minLength": 1 },
+        "reliability": {
+          "type": "string",
+          "enum": ["primary", "secondary", "tertiary", "unknown"]
+        },
+        "claims": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "short_excerpts": {
+          "type": "array",
+          "items": { "type": "string", "maxLength": 300 }
+        },
+        "notes": { "type": "string" }
+      },
+      "allOf": [
+        {
+          "anyOf": [
+            { "required": ["url"] },
+            { "required": ["local_path"] }
+          ]
+        }
+      ]
+    },
+    "candidate_claim": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "claim",
+        "supporting_sources",
+        "confidence",
+        "record_action"
+      ],
+      "properties": {
+        "claim": { "type": "string", "minLength": 1 },
+        "supporting_sources": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "confidence": {
+          "type": "string",
+          "enum": ["low", "medium", "high"]
+        },
+        "record_action": {
+          "type": "string",
+          "enum": [
+            "no_action",
+            "keep_as_work",
+            "stage_for_review",
+            "create_candidate_only"
+          ]
+        }
+      }
+    }
+  }
+}

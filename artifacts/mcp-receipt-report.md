@@ -1,16 +1,18 @@
 # MCP execution receipt audit
 
-- **Generated (UTC):** 2026-04-28T15:12:57Z
-- **Git:** `b8de8878`
+- **Generated (UTC):** 2026-04-28T15:23:31Z
+- **Git:** `989dc122`
 - **Status:** **PASS**
 
 ## Summary
 
-- Files scanned: **1**
-- Passed: **1**
+- Files scanned: **2**
+- Passed: **2**
 - Failed: **0**
 
 ## Results
+
+### `artifacts\mcp-receipts\4a5a0c6e-52c0-442d-af82-06a4474b1fe8.json` — PASS
 
 ### `artifacts\mcp-receipts\smoke-github-readonly.json` — PASS
 

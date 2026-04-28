@@ -91,6 +91,12 @@ Before enabling **live MCP integration**, receipt generation and validation (`sc
 
 ---
 
+## Research-to-evidence stubs
+
+Structured research JSON ([`schemas/research-evidence-input.v1.json`](../../schemas/research-evidence-input.v1.json)) can be turned into **pre-canonical** Markdown under **[`artifacts/evidence-stubs/`](../../artifacts/evidence-stubs/)** via **`scripts/research_to_evidence_stub.py`**. Each run also emits an **MCP execution receipt** in **`artifacts/mcp-receipts/`**. Stubs are **not** canonical evidence; promotion follows the ordinary **`recursion-gate.md`** / review path — **[`research-to-evidence-stubs.md`](research-to-evidence-stubs.md)**.
+
+---
+
 ## Audit
 
 Regenerate the Markdown report after editing the registry:

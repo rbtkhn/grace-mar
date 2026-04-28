@@ -26,7 +26,7 @@ and describe **how to rebuild a derived file**, not why an EVIDENCE artifact was
 | Path | Produced by | Policy |
 |------|-------------|--------|
 | `artifacts/work-notes/` | `scripts/new_work_note.py` | **Scratch** work notes from `docs/templates/work-note-template.md`. **Default:** `*.md` **gitignored**; `.gitkeep` preserves the directory. Not Record. |
-| `artifacts/evidence-stubs/` | `scripts/new_evidence_stub.py` | **Pre-canonical** evidence stubs. **Default:** gitignored `*.md` like skill-cards. |
+| `artifacts/evidence-stubs/` | `scripts/new_evidence_stub.py`, **`scripts/research_to_evidence_stub.py`** | **Pre-canonical** evidence stubs ([README](evidence-stubs/README.md)); **`research_to_evidence_stub`** consumes [`schemas/research-evidence-input.v1.json`](../schemas/research-evidence-input.v1.json); **Default:** gitignored `*.md` like skill-cards. |
 | `artifacts/candidate-drafts/` | `scripts/new_candidate_draft.py` | **Pre-gate** human drafts; does not stage `recursion-gate.md`. **Default:** gitignored `*.md`. |
 | `artifacts/skill-cards/` | `scripts/build_skill_cards.py` | **Rebuild** after portable skill edits. **Default:** contents are **gitignored** (see repo `.gitignore`); only `.gitkeep` preserves the directory. Optional CI snapshots if you want diff review. |
 | `artifacts/context/` | `scripts/compress_active_lane.py` | **Ephemeral operator memos** with source paths. **Default:** gitignored except `.gitkeep`. Regenerate as needed; not a substitute for lane READMEs or `self-work.md`. |

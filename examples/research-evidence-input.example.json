@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "topic": "MCP governance layers in Grace-Mar (policy registry, authority bindings, receipts)",
+  "research_kind": "policy_capture",
+  "operator_intent": "Summarize how MCP capability classes connect to authority surfaces so future tooling stays auditable without implying Record merge.",
+  "sources": [
+    {
+      "source_id": "gov-mcp-layer",
+      "title": "Governed MCP layer overview",
+      "source_type": "repo_doc",
+      "reliability": "primary",
+      "local_path": "docs/mcp/governed-mcp-layer.md",
+      "claims": [
+        "MCP integration is planning/policy only by default.",
+        "Merge authority stays with the companion and governed pipeline."
+      ],
+      "short_excerpts": [
+        "Grace-Mar separates interface/runtime assistance from canonical durable state.",
+        "MCP outputs belong on the runtime / WORK side until promoted through the gate."
+      ]
+    },
+    {
+      "source_id": "mcp-bindings",
+      "title": "Authority bindings documentation",
+      "source_type": "repo_doc",
+      "reliability": "primary",
+      "local_path": "docs/mcp/mcp-authority-bindings.md",
+      "claims": [
+        "Each output_lane maps to one authority_surface from authority-map.json."
+      ],
+      "short_excerpts": [
+        "Bindings pin lanes to authority surfaces so capability posture cannot widen silently."
+      ],
+      "notes": "Cross-check when proposing new MCP-shaped tooling."
+    }
+  ],
+  "candidate_claims": [
+    {
+      "claim": "Structured receipts should precede any future live MCP wiring for auditability.",
+      "supporting_sources": ["gov-mcp-layer"],
+      "confidence": "medium",
+      "record_action": "keep_as_work"
+    },
+    {
+      "claim": "Lane-to-surface bindings reduce drift between assistant UX labels and authority classes.",
+      "supporting_sources": ["mcp-bindings"],
+      "confidence": "high",
+      "record_action": "stage_for_review"
+    }
+  ],
+  "risks_or_uncertainties": [
+    "Operator workflow adoption depends on discipline; stubs remain non-canonical until promoted.",
+    "Future capability IDs must stay aligned with bindings YAML when registry edits land."
+  ],
+  "suggested_gate_action": "keep_as_work"
+}
