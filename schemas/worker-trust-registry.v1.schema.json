@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://grace-mar.local/schemas/worker-trust-registry.v1.schema.json",
+  "title": "WorkerTrustRegistry",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["version", "registry_kind", "description", "non_canonical", "workers"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "version": { "type": "integer", "const": 1 },
+    "registry_kind": {
+      "type": "string",
+      "const": "worker_trust_registry"
+    },
+    "description": { "type": "string", "minLength": 1 },
+    "non_canonical": { "type": "boolean", "const": true },
+    "workers": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/worker" }
+    }
+  },
+  "$defs": {
+    "worker": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "layer",
+        "allowed_actions",
+        "forbidden_actions",
+        "evidence_requirements",
+        "receipt_expectations",
+        "gate_review_required"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9_]+$"
+        },
+        "layer": {
+          "type": "string",
+          "enum": ["shared", "routed", "orchestrator"]
+        },
+        "entrypoint": { "type": "string", "minLength": 1 },
+        "notes": { "type": "string" },
+        "allowed_actions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z0-9_]+$"
+          }
+        },
+        "forbidden_actions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z0-9_]+$"
+          },
+          "minItems": 1
+        },
+        "evidence_requirements": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "receipt_expectations": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "gate_review_required": { "type": "boolean" }
+      }
+    }
+  }
+}

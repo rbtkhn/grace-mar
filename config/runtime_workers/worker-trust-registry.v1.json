@@ -1,0 +1,205 @@
+{
+  "$schema": "../../schemas/worker-trust-registry.v1.schema.json",
+  "version": 1,
+  "registry_kind": "worker_trust_registry",
+  "description": "Governed documentation of runtime/shared/routed worker authority bounds. Does not grant merge or approval rights; companion gate remains sole merge path per AGENTS.md.",
+  "non_canonical": true,
+  "workers": [
+    {
+      "id": "provenance_checker",
+      "layer": "shared",
+      "entrypoint": "scripts/runtime/score_evidence_sufficiency.py",
+      "notes": "Scores evidence sufficiency for staged or retrieved material; advisory outputs only.",
+      "allowed_actions": ["read_repo", "score_evidence", "write_runtime_artifact"],
+      "forbidden_actions": [
+        "approve_candidate",
+        "merge_candidate",
+        "edit_record_surface",
+        "overwrite_record_surface",
+        "stage_candidate"
+      ],
+      "evidence_requirements": [
+        "cite_observation_or_source_ids_when_asserting_lineage"
+      ],
+      "receipt_expectations": [
+        "optional_script_stderr_stdout_only_no_canonical_receipt"
+      ],
+      "gate_review_required": false
+    },
+    {
+      "id": "boundary_checker",
+      "layer": "shared",
+      "entrypoint": "scripts/runtime/boundary_regression.py",
+      "notes": "Regression probes for knowledge-boundary and abstention posture; does not write Record.",
+      "allowed_actions": ["read_repo", "run_boundary_probes", "write_runtime_artifact"],
+      "forbidden_actions": [
+        "approve_candidate",
+        "merge_candidate",
+        "edit_record_surface",
+        "overwrite_record_surface",
+        "stage_candidate"
+      ],
+      "evidence_requirements": ["document_probe_ids_when_reporting_regression_results"],
+      "receipt_expectations": ["exit_code_and_summary_advisory_only"],
+      "gate_review_required": false
+    },
+    {
+      "id": "budget_enforcer",
+      "layer": "shared",
+      "entrypoint": "scripts/prepared_context/workflow_depth_control.py",
+      "notes": "Workflow depth and budget caps for prepared-context builds.",
+      "allowed_actions": ["read_repo", "evaluate_budgets", "emit_budget_warnings"],
+      "forbidden_actions": [
+        "approve_candidate",
+        "merge_candidate",
+        "edit_record_surface",
+        "overwrite_record_surface",
+        "stage_candidate"
+      ],
+      "evidence_requirements": ["surface_task_anchor_and_caps_in_logs_when_enforcing"],
+      "receipt_expectations": ["cli_or_embedded_budget_lines_in_downstream_receipts_optional"],
+      "gate_review_required": false
+    },
+    {
+      "id": "anchor_reinjector",
+      "layer": "shared",
+      "entrypoint": "scripts/runtime/review_orchestrator.py",
+      "notes": "Shared role for task-anchor fidelity via review orchestrator entrypoint listed for routing overlays.",
+      "allowed_actions": ["read_repo", "write_review_packet", "suggest_review_commands"],
+      "forbidden_actions": [
+        "approve_candidate",
+        "merge_candidate",
+        "edit_record_surface",
+        "overwrite_record_surface",
+        "stage_candidate"
+      ],
+      "evidence_requirements": ["task_anchor_required_when_packet_claims_scope"],
+      "receipt_expectations": ["markdown_review_packet_under_runtime_artifacts_non_canonical"],
+      "gate_review_required": false
+    },
+    {
+      "id": "strategy_worker",
+      "layer": "routed",
+      "entrypoint": "scripts/runtime/review_orchestrator.py",
+      "notes": "Routed for task_type strategy; proposals and review packets only.",
+      "allowed_actions": ["read_repo", "write_review_packet", "write_runtime_artifact", "suggest_review_commands"],
+      "forbidden_actions": [
+        "approve_candidate",
+        "merge_candidate",
+        "edit_record_surface",
+        "overwrite_record_surface",
+        "stage_candidate"
+      ],
+      "evidence_requirements": ["maintain_scope_caps_in_proposal_metadata"],
+      "receipt_expectations": ["execution_receipt_when_invoked_via_runtime_worker_non_canonical"],
+      "gate_review_required": false
+    },
+    {
+      "id": "tacit_worker",
+      "layer": "routed",
+      "entrypoint": "scripts/runtime/stage_candidate_from_observations.py",
+      "notes": "Stages RECURSION-GATE candidates from observations; human merge still required.",
+      "allowed_actions": [
+        "read_repo",
+        "stage_candidate",
+        "write_runtime_artifact",
+        "attach_observation_lineage"
+      ],
+      "forbidden_actions": [
+        "approve_candidate",
+        "merge_candidate",
+        "edit_record_surface",
+        "overwrite_record_surface"
+      ],
+      "evidence_requirements": [
+        "observation_ids_or_timeline_anchor_when_staging",
+        "candidate_body_must_remain_under_gate_review"
+      ],
+      "receipt_expectations": [
+        "staging_sidecar_or_gate_yaml_touch_expect_operator_review_before_merge"
+      ],
+      "gate_review_required": true
+    },
+    {
+      "id": "moonshot_worker",
+      "layer": "routed",
+      "entrypoint": "scripts/runtime/build_handoff_packet.py",
+      "notes": "Mission/handoff Markdown packets; non-canonical.",
+      "allowed_actions": ["read_repo", "write_handoff_packet", "write_runtime_artifact"],
+      "forbidden_actions": [
+        "approve_candidate",
+        "merge_candidate",
+        "edit_record_surface",
+        "overwrite_record_surface",
+        "stage_candidate"
+      ],
+      "evidence_requirements": ["anchor_handoff_to_lane_and_task_when_provided"],
+      "receipt_expectations": ["markdown_handoff_under_runtime_paths_optional_json_sidecar"],
+      "gate_review_required": false
+    },
+    {
+      "id": "contradiction_worker",
+      "layer": "routed",
+      "entrypoint": "scripts/runtime/flag_fabricated_history_risk.py",
+      "notes": "Fabricated-history / contradiction risk flags; advisory.",
+      "allowed_actions": ["read_repo", "emit_risk_assessment", "write_runtime_artifact"],
+      "forbidden_actions": [
+        "approve_candidate",
+        "merge_candidate",
+        "edit_record_surface",
+        "overwrite_record_surface",
+        "stage_candidate"
+      ],
+      "evidence_requirements": ["cite_inputs_when_asserting_risk_tier"],
+      "receipt_expectations": ["stderr_or_markdown_report_non_canonical"],
+      "gate_review_required": false
+    },
+    {
+      "id": "research_worker",
+      "layer": "routed",
+      "entrypoint": "scripts/runtime/hybrid_retrieve.py",
+      "notes": "Retrieval and ranking across configured surfaces; read-heavy.",
+      "allowed_actions": ["read_repo", "retrieve_rank", "emit_ranked_results"],
+      "forbidden_actions": [
+        "approve_candidate",
+        "merge_candidate",
+        "edit_record_surface",
+        "overwrite_record_surface",
+        "stage_candidate"
+      ],
+      "evidence_requirements": ["surface_query_and_lane_in_invocation_when_auditing"],
+      "receipt_expectations": ["stdout_json_or_text_rankings_non_canonical"],
+      "gate_review_required": false
+    },
+    {
+      "id": "grace_mar_runtime_worker",
+      "layer": "orchestrator",
+      "entrypoint": "scripts/runtime/grace_mar_runtime_worker.py",
+      "notes": "Orchestrates lens/task routing, traces, proposals; inherits routed worker bounds via resolved entrypoints.",
+      "allowed_actions": [
+        "read_repo",
+        "resolve_routing",
+        "write_trace",
+        "write_proposal_markdown",
+        "emit_execution_receipt_non_canonical",
+        "optional_llm_summarize"
+      ],
+      "forbidden_actions": [
+        "approve_candidate",
+        "merge_candidate",
+        "edit_record_surface",
+        "overwrite_record_surface",
+        "stage_candidate"
+      ],
+      "evidence_requirements": [
+        "worker_routing_payload_recorded_on_trace_non_canonical",
+        "scope_caps_declared_in_proposal_when_present"
+      ],
+      "receipt_expectations": [
+        "execution_receipt_json_matching_schema_registry_non_canonical",
+        "see_docs_runtime_execution_receipts_md"
+      ],
+      "gate_review_required": false
+    }
+  ]
+}
