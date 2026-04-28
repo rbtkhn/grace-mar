@@ -1,0 +1,130 @@
+{
+  "schema_version": 1,
+  "generated_at_utc": "2026-04-28T15:50:42Z",
+  "repo_git_ref": "230fd78e",
+  "capabilities_path": "config/mcp-capabilities.yaml",
+  "policy_path": "config/mcp-risk-policy.yaml",
+  "pass": true,
+  "capabilities_checked": 9,
+  "findings": [
+    {
+      "id": "filesystem_readonly",
+      "name": "Filesystem read-only",
+      "score": 0,
+      "risk_level": "low",
+      "recommendation": "allow_with_receipt",
+      "prohibited_by_policy": false,
+      "hard_blockers": [],
+      "warnings": [],
+      "score_breakdown": {}
+    },
+    {
+      "id": "github_readonly",
+      "name": "GitHub / SCM read-only",
+      "score": 1,
+      "risk_level": "low",
+      "recommendation": "allow_with_receipt",
+      "prohibited_by_policy": false,
+      "hard_blockers": [],
+      "warnings": [],
+      "score_breakdown": {
+        "hybrid": 1
+      }
+    },
+    {
+      "id": "github_patch_proposal",
+      "name": "GitHub patch proposal (non-merge)",
+      "score": 10,
+      "risk_level": "high",
+      "recommendation": "restrict_and_require_human_review",
+      "prohibited_by_policy": false,
+      "hard_blockers": [],
+      "warnings": [],
+      "score_breakdown": {
+        "credential_required": 3,
+        "network_full": 3,
+        "writes_nonempty": 3,
+        "hybrid": 1
+      }
+    },
+    {
+      "id": "evidence_stub_operator_template",
+      "name": "Evidence stub operator template (pre-canonical)",
+      "score": 3,
+      "risk_level": "low",
+      "recommendation": "allow_with_receipt",
+      "prohibited_by_policy": false,
+      "hard_blockers": [],
+      "warnings": [],
+      "score_breakdown": {
+        "writes_nonempty": 3
+      }
+    },
+    {
+      "id": "web_research",
+      "name": "Web research / fetch",
+      "score": 2,
+      "risk_level": "low",
+      "recommendation": "allow_with_receipt",
+      "prohibited_by_policy": false,
+      "hard_blockers": [],
+      "warnings": [],
+      "score_breakdown": {
+        "cloud": 2
+      }
+    },
+    {
+      "id": "database_readonly",
+      "name": "Database read-only",
+      "score": 1,
+      "risk_level": "low",
+      "recommendation": "allow_with_receipt",
+      "prohibited_by_policy": false,
+      "hard_blockers": [],
+      "warnings": [],
+      "score_breakdown": {
+        "hybrid": 1
+      }
+    },
+    {
+      "id": "shell_execution_prohibited",
+      "name": "Shell execution prohibited (policy class)",
+      "score": 0,
+      "risk_level": "low",
+      "recommendation": "allow_with_receipt",
+      "prohibited_by_policy": true,
+      "hard_blockers": [],
+      "warnings": [],
+      "score_breakdown": {}
+    },
+    {
+      "id": "memory_external_prohibited_by_default",
+      "name": "External memory store prohibited by default",
+      "score": 2,
+      "risk_level": "low",
+      "recommendation": "allow_with_receipt",
+      "prohibited_by_policy": true,
+      "hard_blockers": [],
+      "warnings": [],
+      "score_breakdown": {
+        "cloud": 2
+      }
+    },
+    {
+      "id": "coding_agent_patch_intake",
+      "name": "Coding agent patch intake (WORK lane)",
+      "score": 4,
+      "risk_level": "medium",
+      "recommendation": "allow_with_restrictions",
+      "prohibited_by_policy": false,
+      "hard_blockers": [],
+      "warnings": [],
+      "score_breakdown": {
+        "writes_nonempty": 3,
+        "hybrid": 1
+      }
+    }
+  ],
+  "blockers": [],
+  "warnings": []
+}

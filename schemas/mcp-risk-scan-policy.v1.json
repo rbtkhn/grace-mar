@@ -1,0 +1,100 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://grace-mar.local/schemas/mcp-risk-scan-policy.v1.json",
+  "title": "McpRiskScanPolicy",
+  "$comment": "Policy file for scripts/mcp_risk_scan.py — see docs/mcp/mcp-risk-permission-scanner.md.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "version",
+    "risk_thresholds",
+    "recommendations",
+    "risk_weights",
+    "hard_blockers"
+  ],
+  "properties": {
+    "version": { "type": "integer", "const": 1 },
+    "description": { "type": "string" },
+    "risk_thresholds": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["low", "medium", "high", "critical"],
+      "properties": {
+        "low": { "$ref": "#/$defs/threshold_band" },
+        "medium": { "$ref": "#/$defs/threshold_band" },
+        "high": { "$ref": "#/$defs/threshold_band" },
+        "critical": { "$ref": "#/$defs/threshold_band" }
+      }
+    },
+    "recommendations": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["low", "medium", "high", "critical"],
+      "properties": {
+        "low": { "$ref": "#/$defs/recommendation_value" },
+        "medium": { "$ref": "#/$defs/recommendation_value" },
+        "high": { "$ref": "#/$defs/recommendation_value" },
+        "critical": { "$ref": "#/$defs/recommendation_value" }
+      }
+    },
+    "risk_weights": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "credential_required",
+        "network_full",
+        "writes_nonempty",
+        "durable_state_write",
+        "cloud",
+        "hybrid",
+        "shell_execution",
+        "scm_merge_or_force",
+        "memory_or_database_write",
+        "canonical_record_write",
+        "receipt_missing",
+        "gate_missing",
+        "missing_github_prohibitions"
+      ],
+      "properties": {
+        "credential_required": { "type": "integer", "minimum": 0 },
+        "network_full": { "type": "integer", "minimum": 0 },
+        "writes_nonempty": { "type": "integer", "minimum": 0 },
+        "durable_state_write": { "type": "integer", "minimum": 0 },
+        "cloud": { "type": "integer", "minimum": 0 },
+        "hybrid": { "type": "integer", "minimum": 0 },
+        "shell_execution": { "type": "integer", "minimum": 0 },
+        "scm_merge_or_force": { "type": "integer", "minimum": 0 },
+        "memory_or_database_write": { "type": "integer", "minimum": 0 },
+        "canonical_record_write": { "type": "integer", "minimum": 0 },
+        "receipt_missing": { "type": "integer", "minimum": 0 },
+        "gate_missing": { "type": "integer", "minimum": 0 },
+        "missing_github_prohibitions": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "hard_blockers": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string", "minLength": 1 }
+    }
+  },
+  "$defs": {
+    "threshold_band": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["min", "max"],
+      "properties": {
+        "min": { "type": "integer", "minimum": 0 },
+        "max": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "recommendation_value": {
+      "type": "string",
+      "enum": [
+        "allow_with_receipt",
+        "allow_with_restrictions",
+        "restrict_and_require_human_review",
+        "prohibit_or_redesign"
+      ]
+    }
+  }
+}

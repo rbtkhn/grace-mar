@@ -103,6 +103,12 @@ Structured intake JSON ([`schemas/coding-agent-patch-intake.v1.json`](../../sche
 
 ---
 
+## Risk / permission scanning
+
+New capability classes should be **risk-scanned** before admission using **`scripts/mcp_risk_scan.py`** against [`config/mcp-risk-policy.yaml`](../../config/mcp-risk-policy.yaml) — see **[`mcp-risk-permission-scanner.md`](mcp-risk-permission-scanner.md)**. The scanner **does not execute MCP servers**; it classifies **permission risk**, not factual truth. **Passing the scan does not approve live integration** — it only clears structured blocker rules on registry policy text.
+
+---
+
 ## Audit
 
 Regenerate the Markdown report after editing the registry:

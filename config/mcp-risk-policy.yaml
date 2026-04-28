@@ -1,0 +1,59 @@
+# MCP risk / permission scan policy (PR6).
+# Consumed by scripts/mcp_risk_scan.py — planning-only; does not execute MCP servers.
+
+version: 1
+description: >-
+  Numeric weights and thresholds for scoring MCP capability registry rows before admission.
+  Hard blocker tokens drive exit failure when present on non-prohibition-stance capabilities.
+
+risk_thresholds:
+  low:
+    min: 0
+    max: 3
+  medium:
+    min: 4
+    max: 7
+  high:
+    min: 8
+    max: 12
+  critical:
+    min: 13
+    max: 999
+
+recommendations:
+  low: allow_with_receipt
+  medium: allow_with_restrictions
+  high: restrict_and_require_human_review
+  critical: prohibit_or_redesign
+
+risk_weights:
+  credential_required: 3
+  network_full: 3
+  writes_nonempty: 3
+  durable_state_write: 5
+  cloud: 2
+  hybrid: 1
+  shell_execution: 6
+  scm_merge_or_force: 5
+  memory_or_database_write: 4
+  canonical_record_write: 8
+  receipt_missing: 4
+  gate_missing: 4
+  missing_github_prohibitions: 3
+
+# Semantic tokens emitted in reports and JSON; scanner maps registry evidence to these.
+hard_blockers:
+  - shell_execute
+  - execute_command
+  - run_command
+  - credential_exfiltration
+  - merge_to_main
+  - force_push
+  - bypass_review
+  - direct_canonical_evidence_append
+  - write_users_grace_mar_self_md
+  - write_users_grace_mar_self_archive_md
+  - write_users_grace_mar_recursion_gate_md
+  - durable_state_write_without_gate
+  - write_without_receipt
+  - external_memory_write_without_review
