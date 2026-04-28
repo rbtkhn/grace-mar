@@ -871,15 +871,18 @@ Barnes says both sides face material clocks and the question is which clock runs
 ### Chronicle
 
 - **`thread:baud` — Dialogue Works (Nima Alkhorshid), pub_date 2026-04-27:** Col. **Jacques Baud** — [*Trump's Final Card Just Ended Israel — Full Breakdown*](https://www.youtube.com/watch?v=iZ5xSBYxxyQ) — **operator** **cleaned** **transcript** **(speaker** **labels)** on disk: [transcript-baud-dialogue-works-nima-2026-04-27.md](../../raw-input/2026-04-27/transcript-baud-dialogue-works-nima-2026-04-27.md). **Themes** **(WORK** **tier** **—** **analyst** **opinion,** **not** **wire):** **Araghchi** **neighbor** **tour** **/** **Pakistan–Oman–Russia** **sequence** **with** **Hormuz** **management** **as** **negotiation** **core** **vs** **nuclear-program** **headline;** **Western** **“peace** **through** **pressure”** **vs** **bilateral** **adjustment;** **carrier** **surge** **/** **escalation** **risk** **and** **Trump** **bluff** **thesis;** **decapitation** **vs** **preserving** **interlocutors** **(Sun** **Tzu** **/** **Cold** **War** **parallel);** **Israel–Lebanon** **Litani** **/** **yellow** **line** **/** **Hezbollah-as-defense** **frame;** **GCC** **vulnerability** **/** **bases** **/** **credibility** **aftermath.**
+- **No `thread:` (roster) — Tucker Carlson × John Kiriakou, pub_date 2026-04-27:** *Ex-CIA Officer John Kiriakou on the Truth About Iran, False Flags, and What's Really Happening in DC* — **verbatim** [transcript-kiriakou-carlson-iran-truth-dc-2026-04-27.md](../../raw-input/2026-04-27/transcript-kiriakou-carlson-iran-truth-dc-2026-04-27.md) (**operator** **OneDrive** **ingest** **—** **pin** **`watch?v=`** **when** **stable).** **Sketch** **(WORK** **—** **heavy** **opinion** **/** **anecdote** **/** **speculation** **—** **not** **wire):** **war** **decision** **process** **vs** **ally** **consultation;** **IC** **/** **NIE** **on** **Iran** **nuclear** **program;** **MEK** **/** **exile** **politics** **/** **cartels** **vs** **CT** **priority** **/** **GCC** **ambassador** **gap** **/** **Kent–Butler–Kirk** **narrative** **fork** **/** **CIA** **politicization** **closing.**
 
 ### References
 
-- [daily-strategy-inbox.md](../../daily-strategy-inbox.md) — **`thread:baud`** row **2026-04-27**
+- [daily-strategy-inbox.md](../../daily-strategy-inbox.md) — **`thread:baud`** row **2026-04-27** **+** **Kiriakou** **×** **Carlson** **row** **`membrane:single`**
 - [transcript-baud-dialogue-works-nima-2026-04-27.md](../../raw-input/2026-04-27/transcript-baud-dialogue-works-nima-2026-04-27.md) — **verbatim**
+- [transcript-kiriakou-carlson-iran-truth-dc-2026-04-27.md](../../raw-input/2026-04-27/transcript-kiriakou-carlson-iran-truth-dc-2026-04-27.md) — **verbatim**
 - [`experts/baud/thread.md`](../../experts/baud/thread.md) — **journal** **/** **`thread`** **machine** **layer** **(after** **`strategy_thread`)**
 
 ### Foresight
 
 - **Verify** **as** **needed:** **YouTube** **metadata** **match** **`watch?v=iZ5xSBYxxyQ`** **↔** **show** **title** **/** **pub** **day** **if** **titles** **drift.**
+- **Pin** **primary:** **canonical** **`watch?v=`** **for** **Carlson** **×** **Kiriakou** **2026-04-27** **episode** **—** **then** **add** **`source_url`** **to** **raw-input** **YAML** **and** **inbox** **URL** **tail.**
 
 - Prior day (notebook): [2026-04-20](#2026-04-20)
