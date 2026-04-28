@@ -89,6 +89,10 @@ Four prompts, each with a distinct role:
 
 The `SYSTEM_PROMPT` contains the self's knowledge, curiosity, and personality inline. It grows as content is merged into the fork. Apply summarization tiers to manage token count.
 
+**IX parity (operator):** `SYSTEM_PROMPT` and `ANALYST_PROMPT` both embed IX-shaped text; either can drift from `self.md` if not updated with merges. Full checklist, `rebuild_ix` behavior, and grace-mar **`## RECORD STATE`** vs rebuild headers: [**docs/prompt-ix-sync.md**](../../docs/prompt-ix-sync.md).
+
+**Summarization tiers (when IX lists grow):** Compress by category; preserve **warrants** and **IX-C tensions** where probes depend on them; keep **ANALYST** IX blocks accurate enough for **dedup** even if **SYSTEM_PROMPT** is tighter prose.
+
 ---
 
 ## Repository Structure

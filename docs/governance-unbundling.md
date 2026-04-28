@@ -20,6 +20,8 @@ Grace-Mar deliberately decomposes these functions at the individual level to pre
 
 Handled primarily by observation agents (Telegram/WeChat bots) and the LLM analyst. Raw signals are detected, structured into the three-dimension mind model (IX-A Knowledge, IX-B Curiosity, IX-C Personality), and staged as candidate proposals in `recursion-gate.md`. This layer is highly automatable. Operator-side runtime observations can also be staged with explicit lineage via `scripts/runtime/stage_candidate_from_observations.py` (see [docs/runtime/provenance-staging.md](runtime/provenance-staging.md)).
 
+**Staging ≠ Voice parity:** Approved merges update `self.md`; **`bot/prompt.py`** and analyst dedup lists require their own verification—see [prompt-ix-sync.md](prompt-ix-sync.md).
+
 ## Sensemaking
 
 Reserved for the human companion (or designated operator). During review in the **Approval Inbox** (pending candidates in `recursion-gate.md`), the human weighs each candidate against lived personal context, condition-derived ethics, long-term trajectory, and resistance signals. The LLM may propose interpretations, but final judgment remains strictly human.
