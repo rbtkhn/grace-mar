@@ -107,6 +107,7 @@ They **stack**: you can be in **Think** cognitively and still send **`PLAN`** so
 
 ## See also
 
+- [Conductor layer map](skill-work/work-coffee/CONDUCTOR-LAYER-MAP.md) — five conductors as WORK stance / attention routing (not agents); links [conductor proposal lenses](skill-work/work-dev/conductor-proposal-lenses.md) for PR-shape prompts; not Record authority.
 - [WORK menu conventions](skill-work/work-menu-conventions.md) — evidence links, heuristic tags, choice logging (`session-transcript`), optional multi-agent note.
 - [Operator style](../.cursor/rules/operator-style.mdc) (always-on; links here) — includes **WORK modules — multiple choice**: labeled next-step options on most turns when working in work-strategy / work-politics / work-jiang / work-dev unless the operator opts out or a fixed menu (e.g. `coffee`) already applies. **Rationale** (in-rule): lower operator cognitive load (selection vs path enumeration) and use assistant **parallel cognition** to prefetch plausible branches. **No faux “done”** in those menus — work **switches**, it does not end; options are pivots to other real work.
 - [Operator cognition — North star](lanes/operator-cognition.md)
