@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-27T05:57:40.189435+00:00",
+  "generated_at": "2026-04-28T05:03:46.121613+00:00",
   "user_id": "grace-mar",
   "agent_surface": {
     "cursor_model": "unknown"
@@ -9,15 +9,17 @@
   "ok": true,
   "integrity_ok": true,
   "governance_ok": true,
-  "self_memory_changed": false,
+  "self_memory_changed": true,
   "reviewable_count": 0,
   "contradiction_count": 0,
   "artifact_draft_count": 0,
   "promotable_draft_count": 0,
-  "followups": [],
+  "followups": [
+    "In-repo civ-mem index missing \u2014 optional: python3 scripts/build_civmem_inrepo_index.py build"
+  ],
   "phases": {
     "recent": {
-      "self_memory_changed": false,
+      "self_memory_changed": true,
       "entry_count": 0,
       "relation_counts": {}
     },
@@ -29,19 +31,19 @@
     }
   },
   "coffee_rollup_24h": {
-    "window_start_utc": "2026-04-26T05:57:36.630882+00:00",
-    "window_end_utc": "2026-04-27T05:57:36.630882+00:00",
+    "window_start_utc": "2026-04-27T05:03:41.676253+00:00",
+    "window_end_utc": "2026-04-28T05:03:41.676253+00:00",
     "window_hours": 24.0,
-    "count": 3,
-    "first_ts": "2026-04-26T13:11:00+00:00",
-    "last_ts": "2026-04-26T14:22:00+00:00",
-    "span_hours": 1.18,
+    "count": 4,
+    "first_ts": "2026-04-27T12:24:00+00:00",
+    "last_ts": "2026-04-28T04:00:00+00:00",
+    "span_hours": 15.6,
     "by_mode": {
-      "work-start": 3
+      "work-start": 4
     },
     "runs": [
       {
-        "ts_iso": "2026-04-26T13:11:00+00:00",
+        "ts_iso": "2026-04-27T12:24:00+00:00",
         "ok": true,
         "mode": "work-start",
         "kv": {
@@ -50,7 +52,7 @@
         }
       },
       {
-        "ts_iso": "2026-04-26T13:52:00+00:00",
+        "ts_iso": "2026-04-27T16:05:00+00:00",
         "ok": true,
         "mode": "work-start",
         "kv": {
@@ -59,7 +61,16 @@
         }
       },
       {
-        "ts_iso": "2026-04-26T14:22:00+00:00",
+        "ts_iso": "2026-04-27T16:51:00+00:00",
+        "ok": true,
+        "mode": "work-start",
+        "kv": {
+          "cursor_model": "unknown",
+          "model_tier": "unknown"
+        }
+      },
+      {
+        "ts_iso": "2026-04-28T04:00:00+00:00",
         "ok": true,
         "mode": "work-start",
         "kv": {
@@ -70,51 +81,45 @@
     ],
     "picks": [
       {
-        "ts_iso": "2026-04-26T13:21:00+00:00",
-        "picked": "D",
-        "menu_label": "D",
+        "ts_iso": "2026-04-27T16:11:00+00:00",
+        "picked": "C",
+        "menu_label": "conductor",
         "conductor": "toscanini"
       },
       {
-        "ts_iso": "2026-04-26T13:28:00+00:00",
-        "picked": "D",
-        "menu_label": "D",
-        "conductor": "kleiber"
+        "ts_iso": "2026-04-27T16:34:00+00:00",
+        "picked": "C",
+        "menu_label": "conductor",
+        "conductor": "furtwangler"
       },
       {
-        "ts_iso": "2026-04-26T13:54:00+00:00",
-        "picked": "D",
-        "menu_label": "D",
-        "conductor": "kleiber"
-      },
-      {
-        "ts_iso": "2026-04-26T14:24:00+00:00",
-        "picked": "D",
-        "menu_label": "D",
-        "conductor": "karajan"
-      },
-      {
-        "ts_iso": "2026-04-26T14:27:00+00:00",
-        "picked": "D",
-        "menu_label": "D",
-        "conductor": "karajan"
-      },
-      {
-        "ts_iso": "2026-04-26T15:35:00+00:00",
-        "picked": "D",
-        "menu_label": "D",
+        "ts_iso": "2026-04-27T16:57:00+00:00",
+        "picked": "C",
+        "menu_label": "conductor",
         "conductor": "bernstein"
+      },
+      {
+        "ts_iso": "2026-04-27T17:01:00+00:00",
+        "picked": "C",
+        "menu_label": "conductor",
+        "conductor": "kleiber"
+      },
+      {
+        "ts_iso": "2026-04-27T17:19:00+00:00",
+        "picked": "C",
+        "menu_label": "conductor",
+        "conductor": "kleiber"
       }
     ],
     "by_picked": {
-      "D": 6
+      "C": 5
     }
   },
   "execution_paths": [
     {
       "id": "today_field",
       "title": "Daily Brief (generator + watch slices; optional KY-4 intel when chosen)",
-      "first_move": "python3 scripts/operator_coffee.py -u grace-mar \u2014 then coffee menu C \u2014 Strategy (daily brief)",
+      "first_move": "python3 scripts/operator_coffee.py -u grace-mar \u2014 then coffee menu C \u2014 Historian",
       "stop_rule": "One slice: daily brief path opened or optional intel pass started \u2014 enough for first block.",
       "signals_used": []
     },
@@ -133,30 +138,21 @@
       "signals_used": []
     }
   ],
-  "suggested_execution_path_index": 0,
+  "suggested_execution_path_index": 1,
   "execution_path_suggestion_reason": "calendar_mod3",
-  "tomorrow_inherits": "Tomorrow inherits (hint): **Daily Brief (generator + watch slices; optional KY-4 intel when chosen)** \u2014 calendar rotation; not policy or Record.",
-  "civmem_echoes": [
-    {
-      "path": "book/APPLIED-THEOLOGY-INSIGHTS-MERCOURIS-LENS.md",
-      "overlap": 4,
-      "snippet_preview": "**Purpose:** Identify structural and procedural insights from CIV\u2013MIND\u2013MERCOURIS (legitimacy, delegation/format, faction persistence, time horizon, asymmetric information) that the book does not yet s",
-      "analogy_label": "Analogy candidate only \u2014 not evidence, not recommendation, not Record.",
-      "specificity_pass": true,
-      "score": 6.0
-    }
-  ],
+  "tomorrow_inherits": "Tomorrow inherits (hint): **Build / integrate (repo + work-dev)** \u2014 calendar rotation; not policy or Record.",
+  "civmem_echoes": [],
   "civmem_disclaimer": "Analogical / historical depth from in-repo civ-mem (token overlap); not current truth, not Voice knowledge, not part of the Record.",
-  "civmem_index_missing": false,
+  "civmem_index_missing": true,
   "capture_gap": {
-    "last_evidence_date": "2026-04-26",
-    "last_evidence_id": "ACT-0007",
+    "last_evidence_date": "2026-04-27",
+    "last_evidence_id": "ACT-0009",
     "days_since_evidence": 0,
-    "last_merge_date": "2026-04-26",
+    "last_merge_date": "2026-04-27",
     "days_since_merge": 0,
     "pending_count": 3,
     "level": "ok",
-    "message": "Record healthy \u2014 last entry 0d ago (ACT-0007, 2026-04-26)"
+    "message": "Record healthy \u2014 last entry 0d ago (ACT-0009, 2026-04-27)"
   },
   "capability_shift": {
     "category": "model",
@@ -171,27 +167,31 @@
   "dream_catchup": {
     "semantics": "since_previous_dream",
     "timezone": "UTC",
-    "previous_dream_generated_at": "2026-04-27T05:57:06.550622+00:00",
-    "local_calendar_dates": [],
-    "strategy_notebook_missing_day_headers": []
+    "previous_dream_generated_at": "2026-04-27T05:57:40.189435+00:00",
+    "local_calendar_dates": [
+      "2026-04-28"
+    ],
+    "strategy_notebook_missing_day_headers": [
+      "2026-04-28"
+    ]
   },
   "last_coffee_echo": {
-    "timestamp": "2026-04-26T14:22:00+00:00",
-    "conductor": "bernstein",
+    "timestamp": "2026-04-28T04:00:00+00:00",
+    "conductor": "kleiber",
     "mode": "work-start",
-    "menu_letter": "D",
-    "highlight": "Yesterday\u2019s work-start coffee is still the thread. Menu pick: D. Conductor line: bernstein.",
+    "menu_letter": "conductor",
+    "highlight": "Yesterday\u2019s work-start coffee is still the thread. Menu pick: conductor. Conductor line: kleiber.",
     "source": "coffee_rollup_24h"
   },
   "handoffSchemaVersion": 3,
   "topActionReason": "calendar_mod3",
-  "quietRun": true,
+  "quietRun": false,
   "residueLedger": {
-    "must_resume": "",
+    "must_resume": "In-repo civ-mem index missing \u2014 optional: python3 scripts/build_civmem_inrepo_index.py build",
     "safe_to_drop": "",
     "blocked": "",
     "watch_later": ""
   },
-  "worktreeState": "risky residue",
-  "worktreeAdvice": "Large or wide diff \u2014 inspect before continuing; use bridge when closing session."
+  "worktreeState": "light residue",
+  "worktreeAdvice": "leave or commit before sleep; bridge seals when you close the session."
 }
