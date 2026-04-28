@@ -1,0 +1,194 @@
+# MCP capability classes (PLANNING ONLY — not live server configs).
+# Describes allowed boundaries for hypothetical MCP integrations; durable Record change
+# remains gated per AGENTS.md / recursion-gate.
+#
+# Validate + audit report:
+#   python3 scripts/mcp_capability_audit.py
+
+version: 1
+description: Seed registry of illustrative MCP capability classes for Grace-Mar governance review.
+
+capabilities:
+  - id: filesystem_readonly
+    name: Filesystem read-only
+    category: filesystem
+    local_or_cloud: local
+    trust_tier: medium
+    allowed_actions:
+      - list_directory
+      - read_file
+    prohibited_actions:
+      - write_file
+      - delete_file
+      - chmod
+    reads:
+      - operator_workspace_paths
+      - portable_export_views
+    writes: []
+    network_access: none
+    credential_requirements: none
+    durable_state_write: false
+    output_lane: runtime_only
+    requires_receipt: true
+    gate_required_for_record_change: true
+    notes: Read paths must stay inside declared roots; no silent writes to Record surfaces.
+
+  - id: github_readonly
+    name: GitHub / SCM read-only
+    category: scm
+    local_or_cloud: hybrid
+    trust_tier: medium
+    allowed_actions:
+      - list_repos
+      - read_issue
+      - read_pr_diff
+    prohibited_actions:
+      - merge_pr
+      - push_commit
+      - delete_branch
+    reads:
+      - public_or_token_scoped_repo_metadata
+    writes: []
+    network_access: read
+    credential_requirements: optional
+    durable_state_write: false
+    output_lane: runtime_only
+    requires_receipt: true
+    gate_required_for_record_change: true
+    notes: Tokens are secrets; never merge identity or Record edits via tool calls.
+
+  - id: github_patch_proposal
+    name: GitHub patch proposal (non-merge)
+    category: scm
+    local_or_cloud: hybrid
+    trust_tier: high
+    allowed_actions:
+      - open_draft_pr
+      - comment_patch
+    prohibited_actions:
+      - merge_to_main
+      - force_push
+      - bypass_review
+    reads:
+      - repo_refs
+    writes:
+      - draft_branch_only
+    network_access: full
+    credential_requirements: required
+    durable_state_write: false
+    output_lane: candidate_proposal
+    requires_receipt: true
+    gate_required_for_record_change: true
+    notes: Companion-record changes still flow through recursion-gate; PR is a carrier only.
+
+  - id: web_research
+    name: Web research / fetch
+    category: web
+    local_or_cloud: cloud
+    trust_tier: low
+    allowed_actions:
+      - fetch_public_url
+      - summarize_excerpt
+    prohibited_actions:
+      - post_authenticated_forms
+      - execute_downloaded_binaries
+    reads:
+      - public_http_content
+    writes: []
+    network_access: read
+    credential_requirements: none
+    durable_state_write: false
+    output_lane: work_artifact
+    requires_receipt: true
+    gate_required_for_record_change: true
+    notes: Citations land as WORK artifacts or stubs; not authoritative Record facts without gate.
+
+  - id: database_readonly
+    name: Database read-only
+    category: database
+    local_or_cloud: hybrid
+    trust_tier: high
+    allowed_actions:
+      - select_queries
+      - explain_plan
+    prohibited_actions:
+      - insert
+      - update
+      - delete
+      - ddl
+    reads:
+      - operator_scoped_tables
+    writes: []
+    network_access: read
+    credential_requirements: optional
+    durable_state_write: false
+    output_lane: runtime_only
+    requires_receipt: true
+    gate_required_for_record_change: true
+    notes: No binding Record writes from query tools.
+
+  - id: shell_execution_prohibited
+    name: Shell execution prohibited (policy class)
+    category: policy
+    local_or_cloud: local
+    trust_tier: operator_only
+    allowed_actions: []
+    prohibited_actions:
+      - shell_execute
+      - subprocess_spawn
+      - interactive_terminal
+    reads: []
+    writes: []
+    network_access: none
+    credential_requirements: none
+    durable_state_write: false
+    output_lane: runtime_only
+    requires_receipt: true
+    gate_required_for_record_change: true
+    notes: Declarative stance for tooling reviews—interactive shells are out of scope for governed MCP.
+
+  - id: memory_external_prohibited_by_default
+    name: External memory store prohibited by default
+    category: memory
+    local_or_cloud: cloud
+    trust_tier: low
+    allowed_actions:
+      - describe_policy_only
+    prohibited_actions:
+      - write_thoughts_row
+      - upsert_embedding_store
+      - silent_profile_merge
+    reads: []
+    writes: []
+    network_access: none
+    credential_requirements: none
+    durable_state_write: false
+    output_lane: runtime_only
+    requires_receipt: true
+    gate_required_for_record_change: true
+    notes: Aligns with leakage checklist—vector/MCP retrieval is not gate approval.
+
+  - id: coding_agent_patch_intake
+    name: Coding agent patch intake (WORK lane)
+    category: coding_agent
+    local_or_cloud: hybrid
+    trust_tier: high
+    allowed_actions:
+      - propose_diff_in_worktree
+      - open_review_packet
+    prohibited_actions:
+      - apply_to_self_md
+      - apply_to_self_archive
+      - edit_recursion_gate_directly
+    reads:
+      - repo_source_for_assistant_context
+    writes:
+      - worktree_patch_files
+      - scratch_build_outputs
+    network_access: read
+    credential_requirements: optional
+    durable_state_write: false
+    output_lane: candidate_proposal
+    requires_receipt: true
+    gate_required_for_record_change: true
+    notes: Patches become proposals or gate candidates; merge scripts remain human-approved only.

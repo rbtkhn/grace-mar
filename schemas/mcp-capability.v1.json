@@ -1,0 +1,109 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://grace-mar.local/schemas/mcp-capability.v1.json",
+  "title": "McpCapabilityRegistry",
+  "$comment": "Governance registry for planned MCP integration classes. See docs/mcp/governed-mcp-layer.md.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["version", "capabilities"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "version": { "type": "integer", "const": 1 },
+    "description": { "type": "string" },
+    "capabilities": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/capability" }
+    }
+  },
+  "$defs": {
+    "capability": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "name",
+        "category",
+        "local_or_cloud",
+        "trust_tier",
+        "allowed_actions",
+        "prohibited_actions",
+        "reads",
+        "writes",
+        "network_access",
+        "credential_requirements",
+        "durable_state_write",
+        "output_lane",
+        "requires_receipt",
+        "gate_required_for_record_change",
+        "notes"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9_]+$"
+        },
+        "name": { "type": "string", "minLength": 1 },
+        "category": {
+          "type": "string",
+          "enum": [
+            "filesystem",
+            "scm",
+            "network",
+            "database",
+            "shell",
+            "memory",
+            "coding_agent",
+            "policy",
+            "web"
+          ]
+        },
+        "local_or_cloud": {
+          "type": "string",
+          "enum": ["local", "cloud", "hybrid"]
+        },
+        "trust_tier": {
+          "type": "string",
+          "enum": ["low", "medium", "high", "operator_only"]
+        },
+        "allowed_actions": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "prohibited_actions": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "reads": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "writes": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "network_access": {
+          "type": "string",
+          "enum": ["none", "read", "full"]
+        },
+        "credential_requirements": {
+          "type": "string",
+          "enum": ["none", "optional", "required"]
+        },
+        "durable_state_write": { "type": "boolean" },
+        "output_lane": {
+          "type": "string",
+          "enum": [
+            "runtime_only",
+            "work_artifact",
+            "evidence_stub",
+            "candidate_proposal"
+          ]
+        },
+        "requires_receipt": { "type": "boolean" },
+        "gate_required_for_record_change": { "type": "boolean" },
+        "notes": { "type": "string" }
+      }
+    }
+  }
+}

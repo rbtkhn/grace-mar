@@ -14,6 +14,7 @@
 | **Business** | [BUSINESS-PLAN](business-plan.md), [BUSINESS-PROSPECTUS](business-prospectus.md), [BUSINESS-ROADMAP](business-roadmap.md) | Operating plan, market, revenue, roadmap. |
 | **Implementation** | [AGENTS](../AGENTS.md), [ARCHITECTURE](architecture.md) | Guardrails for AI and developers; system design. |
 | **Trust layers (tools)** | [TRUST-LAYERS](trust-layers.md) | Reliability vs adversarial surfaces; complements knowledge boundary. |
+| **MCP capability registry (planned integrations)** | [mcp/governed-mcp-layer.md](mcp/governed-mcp-layer.md) | Policy classes + audit report for hypothetical MCP tools; not live wiring; Record merge stays gated. |
 | **Public copy / examples** | [CONTRIBUTING-PUBLIC-COPY](contributing-public-copy.md) | Tone for comparisons; fake tokens in docs. |
 | **Naming convention** | [NAMING-CONVENTION](naming-convention.md) | Lowercase/hyphen preference; reserved `AGENTS.md`; Python `snake_case`; OpenClaw export path. |
 | **Web app** | [WEB-APP-PLAN](web-app-plan.md) | Grace-mar.com development plan; phases, tech, dependencies. See [DESIGN-ROADMAP](design-roadmap.md) for related features. |

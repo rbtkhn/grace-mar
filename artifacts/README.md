@@ -41,6 +41,7 @@ and describe **how to rebuild a derived file**, not why an EVIDENCE artifact was
 | `artifacts/lane-dashboards/README.md` | `scripts/build_lane_dashboards.py` | **Derived** lane/runtime snapshot (+ optional `work-lanes-dashboard.json`). Not canonical. |
 | `artifacts/review-dashboard.md` | `scripts/build_review_dashboard.py` | **Derived** view of `recursion-gate.md` — does not replace the gate file. |
 | `artifacts/governance-posture.md` | `scripts/report_governance_posture.py` | **Derived** operator/partner one-pager (triad, gate, audit paths, verification commands) — not Record, not legal advice; [safety-story-ux.md](../docs/skill-work/work-dev/safety-story-ux.md). Regenerate after policy changes. |
+| `artifacts/mcp-capability-report.md` | `scripts/mcp_capability_audit.py` | **Derived** audit table + danger-flag heuristics over [`config/mcp-capabilities.yaml`](../config/mcp-capabilities.yaml); planning-only; [docs/mcp/governed-mcp-layer.md](../docs/mcp/governed-mcp-layer.md). Regenerate after registry edits. |
 | `artifacts/gate-board.md` | `scripts/build_gate_board.py` | **Kanban-style** candidate/review snapshot — not authoritative; [docs/gate-board.md](../docs/gate-board.md). |
 | `artifacts/work-lanes-dashboard.json` | `scripts/build_work_lanes_dashboard.py` | **WORK** telemetry aggregate; input to lane dashboard script. |
 | `artifacts/forecast/` | `scripts/run_forecast_baselines.py` | **Forecast artifact JSON** + optional `.summary.md` — WORK-layer; [policy](forecast/README.md), [lane](../docs/skill-work/work-forecast/README.md). |
