@@ -1,5 +1,5 @@
 # Strategy raw input (full retention, 7 days)
-<!-- word_count: 1309 -->
+<!-- word_count: 1395 -->
 
 **Purpose:** Store **complete** transcripts and **all** strategy-ingest source material you want kept verbatim — without bloating [daily-strategy-inbox.md](../daily-strategy-inbox.md) or hitting the **~2000 word** per-block budget on [experts/*/transcript.md](../experts/ritter/transcript.md) that **`thread`** triage targets.
 
@@ -114,6 +114,10 @@ python3 scripts/populate_strategy_raw_input.py --apply
 **Window:** dates **`d`** where **`d > today − 7`** local days (same as expert transcript triage and `prune_strategy_raw_input.py`). **`--days N`**, **`--today YYYY-MM-DD`** (tests), **`--force`** (overwrite changed files), and **`--notebook-root`** / **`--root`** are supported.
 
 Idempotent: unchanged files are skipped (content hash). See [`scripts/populate_strategy_raw_input.py`](../../../../scripts/populate_strategy_raw_input.py).
+
+## Outlet inventories (tracker docs)
+
+- **Dialogue Works** (Nima Alkhorshid): [dialogue-works-inventory.md](dialogue-works-inventory.md) — which **`raw-input/`** files are confirmed vs lane-stub references; maintenance grep at bottom.
 
 ## Pruning
 

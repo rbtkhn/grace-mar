@@ -105,6 +105,7 @@ Run operator **`thread`**: **`bin/thread`** or **`python3 scripts/strategy_threa
 - `marandi`
 - `parsi`
 - `simplicius`
+- `alkorshid`
 - `bigserge`
 
 ### `historicize`
@@ -151,6 +152,7 @@ Run operator **`thread`**: **`bin/thread`** or **`python3 scripts/strategy_threa
 | `berletic` | Brian Berletic (`@BrianJBerletic`, The New Atlas) | **Industrial capacity**, **sanctions**, **proxy-war** logistics, **force-generation** vs **headline** battlefield narratives; **long-run production** and **material** constraints as a distinct fingerprint | `Berletic`, `NewAtlas`, `sanctions`, or `IRAN` in cold | × `ritter`, × `jermy`, × `diesen`, × `davis`, × `mearsheimer` |
 | `bigserge` | Big Serge ([`@witte_sergei`](https://x.com/witte_sergei); *Big Serge Thought*) | **Substack** long-form **strategy / war studies** — **campaign** and **theater-level** synthesis, **OSINT- and media-thread** reads; **not** a wire or ORBAT primary — pair **`berletic`**, **`ritter`**, **`johnson`**, **`baud`**, **`mercouris`** with **tier seams** | `Big Serge`, `bigserge`, `witte_sergei`, or `Big Serge Thought` in cold | × `berletic`, × `ritter`, × `johnson`, × `baud`, × `mercouris` |
 | `simplicius` | Simplicius (pseudonym; *Garden of Knowledge* / [`@simpatico771`](https://x.com/simpatico771)) | **Substack** long-form **conflict analysis** — U.S.–Iran **ceasefire/blockade** narratives, **media/wire** synthesis, polemical register; **not** a wire primary — pair **`mercouris`**, **`parsi`**, **`davis`**, **`marandi`** with **tier seams** | `Simplicius`, `simplicius76`, or `simpatico771` in cold | × `mercouris`, × `parsi`, × `davis`, × `marandi`, × `blumenthal` |
+| `alkorshid` | Nima Alkorshid (*Dialogue Works*) | **Host / interviewer** lane — long-form **geopolitical dialogue**; symmetric **`thread:`** routing with **`thread:<guest>`** on **same-episode** ingests so **`raw-input`** mirroring lands **host** and **guest** rows (**host prompts / framing** on **`alkorshid`**, guest analysis on the guest **`expert_id`**) | `Alkorshid`, `Dialogue Works`, or `DialogueWorks` in cold | × `marandi`, × `diesen`, × `mercouris`, × `davis` |
 
 **Special routing rule — Predictive History:** PH-derived notebook-facing ingest must use `thread:jiang`. Do not route PH directly into other expert lanes or directly into ad-hoc page stubs. See [strategy-notebook/README.md](README.md) § **Predictive History routing rule**.
 
@@ -208,6 +210,7 @@ Run operator **`thread`**: **`bin/thread`** or **`python3 scripts/strategy_threa
 | `berletic` | 0.74 | 0.36 | 0.58 | Industrial and sanctions-throughput arguments are a clear signature; headline battle maps age faster than factory counts, so pair him when logistics and attrition matter. Bridges to energy-system and realist lanes without replacing hull-level ORBAT work. |
 | `bigserge` | 0.72 | 0.34 | 0.60 | Long-form war-studies register on Substack—campaign framing and narrative-of-operations that readers recognize week to week. Event-linked claims often need wire or imagery to close. Pairs naturally with industrial-capacity and ORBAT lanes as interpretive tension, not as duplicate primaries. |
 | `simplicius` | 0.70 | 0.32 | 0.62 | Pseudonymous Substack voice with a recognizable “bluff, blockade, media read” bundle on Middle East crises; falsification often waits on primaries behind the cited wires. Frequently read beside institutional or Beltway lanes as synthesis tension, not as a second wire. |
+| `alkorshid` | 0.72 | 0.34 | 0.68 | Host lane: coherence is “did routing stay symmetric with the guest **`thread:`** on shared episodes?” rather than closure on a single forecast. Often sits at the bridge between named guests on **Dialogue Works** long-forms. |
 
 ---
 
