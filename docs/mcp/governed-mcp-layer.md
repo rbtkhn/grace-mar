@@ -103,6 +103,12 @@ Structured intake JSON ([`schemas/coding-agent-patch-intake.v1.json`](../../sche
 
 ---
 
+## Manifest admission
+
+Declared MCP server manifests ([`schemas/mcp-server-manifest.v1.json`](../../schemas/mcp-server-manifest.v1.json)) can be validated and classified **without executing MCP** via **`scripts/mcp_manifest_admission.py`**. Output lands under **`artifacts/mcp-admission/`** with an **`mcp_manifest_admission`** receipt in **`artifacts/mcp-receipts/`** (`work_artifact` lane). This step is **admission review**, not live integration approval — **[`mcp-manifest-admission.md`](mcp-manifest-admission.md)**.
+
+---
+
 ## Risk / permission scanning
 
 New capability classes should be **risk-scanned** before admission using **`scripts/mcp_risk_scan.py`** against [`config/mcp-risk-policy.yaml`](../../config/mcp-risk-policy.yaml) — see **[`mcp-risk-permission-scanner.md`](mcp-risk-permission-scanner.md)**. The scanner **does not execute MCP servers**; it classifies **permission risk**, not factual truth. **Passing the scan does not approve live integration** — it only clears structured blocker rules on registry policy text.

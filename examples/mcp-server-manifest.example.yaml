@@ -1,0 +1,43 @@
+# Declared MCP server manifest — GitHub read-only candidate (planning-only).
+
+schema_version: 1
+
+server:
+  id: github-metadata-ro-sample
+  name: GitHub metadata reader (candidate)
+  description: >
+    Read repository metadata and file/issue surfaces via MCP-shaped tooling proposals only —
+    no merges or pushes declared here.
+  local_or_cloud: hybrid
+
+declared_capabilities:
+  tools:
+    - read_repo
+    - inspect_diff
+  resources:
+    - tracked_git_trees
+  prompts:
+    - summarize_issue_comment_threads
+
+permissions:
+  network_access: read
+  credential_requirements: required
+  reads:
+    - github_repository_metadata
+    - github_issue_comments_and_blob_reads
+  writes: []
+  allowed_actions:
+    - read_repo
+    - inspect_diff
+    - list_releases_read_only
+  prohibited_actions:
+    - merge_to_main
+    - force_push
+    - bypass_review
+    - write_file
+    - push_commit
+    - delete_branch
+
+operator:
+  intended_use: >
+    Offline admissions workflow — classify proposed GitHub read tooling versus Grace-Mar capability templates before any MCP wiring.

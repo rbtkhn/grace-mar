@@ -1,12 +1,12 @@
 # MCP authority binding report
 
-- **Generated (UTC):** 2026-04-28T14:45:00Z
-- **Git:** `a318f05c`
+- **Generated (UTC):** 2026-04-28T16:03:39Z
+- **Git:** `051fad36`
 - **Status:** **PASS**
 
 ## Summary
 
-- Capabilities checked: **9**
+- Capabilities checked: **10**
 - Bindings (lanes): **5**
 - Violations: **0**
 - Warnings: **0**
@@ -27,7 +27,7 @@
 - **`evidence_stub`:** `evidence_stub_operator_template`
 - **`prohibited`:** `memory_external_prohibited_by_default`, `shell_execution_prohibited`
 - **`runtime_only`:** `database_readonly`, `filesystem_readonly`, `github_readonly`
-- **`work_artifact`:** `web_research`
+- **`work_artifact`:** `mcp_manifest_admission`, `web_research`
 
 ## Violations
 

@@ -92,6 +92,9 @@ artifacts/evidence-stubs/*
 artifacts/patch-intake/*
 !artifacts/patch-intake/.gitkeep
 !artifacts/patch-intake/README.md
+artifacts/mcp-admission/*
+!artifacts/mcp-admission/.gitkeep
+!artifacts/mcp-admission/README.md
 artifacts/candidate-drafts/*
 !artifacts/candidate-drafts/.gitkeep
 artifacts/shadow-merges/*

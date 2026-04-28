@@ -1,0 +1,100 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://grace-mar.local/schemas/mcp-server-manifest.v1.json",
+  "title": "McpServerManifest",
+  "$comment": "Declared MCP server manifest for scripts/mcp_manifest_admission.py — planning-only.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "server", "declared_capabilities", "permissions", "operator"],
+  "properties": {
+    "schema_version": { "type": "integer", "const": 1 },
+    "server": { "$ref": "#/$defs/server" },
+    "declared_capabilities": { "$ref": "#/$defs/declared_capabilities" },
+    "permissions": { "$ref": "#/$defs/permissions" },
+    "operator": { "$ref": "#/$defs/operator" }
+  },
+  "$defs": {
+    "server": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "name", "description", "local_or_cloud"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "name": { "type": "string", "minLength": 1 },
+        "description": { "type": "string", "minLength": 1 },
+        "source_url": { "type": "string", "minLength": 1 },
+        "local_or_cloud": {
+          "type": "string",
+          "enum": ["local", "cloud", "hybrid", "unknown"]
+        }
+      }
+    },
+    "declared_capabilities": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["tools", "resources", "prompts"],
+      "properties": {
+        "tools": { "type": "array", "items": { "type": "string" } },
+        "resources": { "type": "array", "items": { "type": "string" } },
+        "prompts": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "permissions": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "network_access",
+        "credential_requirements",
+        "reads",
+        "writes",
+        "allowed_actions",
+        "prohibited_actions"
+      ],
+      "properties": {
+        "network_access": {
+          "type": "string",
+          "enum": ["none", "read", "full", "unknown"]
+        },
+        "credential_requirements": {
+          "type": "string",
+          "enum": ["none", "optional", "required", "unknown"]
+        },
+        "reads": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "writes": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "allowed_actions": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "prohibited_actions": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "durable_state_write": { "type": "boolean" }
+      }
+    },
+    "operator": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["intended_use"],
+      "properties": {
+        "intended_use": { "type": "string", "minLength": 1 },
+        "requested_output_lane": {
+          "type": "string",
+          "enum": [
+            "runtime_only",
+            "work_artifact",
+            "evidence_stub",
+            "candidate_proposal",
+            "prohibited"
+          ]
+        }
+      }
+    }
+  }
+}

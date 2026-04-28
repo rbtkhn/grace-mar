@@ -1,10 +1,10 @@
 # MCP capability audit report
 
-- **Generated (UTC):** 2026-04-28T14:44:02Z
-- **Git:** `a318f05c`
+- **Generated (UTC):** 2026-04-28T16:03:39Z
+- **Git:** `051fad36`
 - **Config:** `config\mcp-capabilities.yaml`
 - **Schema:** `schemas\mcp-capability.v1.json`
-- **Capabilities:** 9
+- **Capabilities:** 10
 
 ## Summary
 
@@ -20,6 +20,7 @@ Planning-only registry classes — not live MCP wiring. Durable Record changes r
 | `filesystem_readonly` | filesystem | local | medium | none | none | false | true | true | runtime_only |
 | `github_patch_proposal` | scm | hybrid | high | full | required | false | true | true | candidate_proposal |
 | `github_readonly` | scm | hybrid | medium | read | optional | false | true | true | runtime_only |
+| `mcp_manifest_admission` | policy | local | operator_only | none | none | false | true | true | work_artifact |
 | `memory_external_prohibited_by_default` | memory | cloud | low | none | none | false | true | true | prohibited |
 | `shell_execution_prohibited` | policy | local | operator_only | none | none | false | true | true | prohibited |
 | `web_research` | web | cloud | low | read | none | false | true | true | work_artifact |

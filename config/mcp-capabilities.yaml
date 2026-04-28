@@ -217,3 +217,27 @@ capabilities:
     requires_receipt: true
     gate_required_for_record_change: true
     notes: Patches become proposals or gate candidates; merge scripts remain human-approved only.
+
+  - id: mcp_manifest_admission
+    name: MCP manifest admission (WORK planning)
+    category: policy
+    local_or_cloud: local
+    trust_tier: operator_only
+    allowed_actions:
+      - ingest_manifest_yaml_or_json
+      - classify_against_registry
+    prohibited_actions:
+      - execute_mcp_server
+      - enable_live_integration
+      - emit_credentials_to_disk
+    reads:
+      - operator_manifest_paths
+    writes:
+      - artifacts/mcp-admission_packets_markdown_only
+    network_access: none
+    credential_requirements: none
+    durable_state_write: false
+    output_lane: work_artifact
+    requires_receipt: true
+    gate_required_for_record_change: true
+    notes: Emits admission Markdown under artifacts/mcp-admission/ without enabling MCP servers.
