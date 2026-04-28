@@ -102,6 +102,9 @@ jobs:
       - name: Governance check
         run: python scripts/governance_checker.py
 
+      - name: Validate structured governance files
+        run: python scripts/validate_structured_files.py
+
       - name: Run deterministic diagnostics
         run: python3 scripts/run_deterministic_diagnostics.py
 

@@ -16,16 +16,24 @@ python scripts/validate.py --user grace-mar full
 
 | Command | Purpose |
 |---------|---------|
-| `ci` | Parity with `.github/workflows/test.yml` validation steps (no pytest): canonical paths, integrity (`--require-proposal-class`), template sync contract, governance, work-dev control plane. |
-| `fast` | Cheap local checks: paths, identity/library boundary, IX evidence refs, governance. |
+| `ci` | Parity with `.github/workflows/test.yml` validation steps (no pytest): canonical paths, integrity (`--require-proposal-class`), template sync contract, governance, structured governance files (`validate_structured_files.py`), work-dev control plane. |
+| `fast` | Cheap local checks: paths, identity/library boundary, IX evidence refs, governance, structured governance files (`validate_structured_files.py`). |
 | `full` | Same as `ci` plus `measure_growth_and_density.py`. |
 | `expensive` | `measure_uniqueness.py` (OpenAI). **Skipped** if `OPENAI_API_KEY` is unset (exit code 0, status `skipped`). |
 | `experimental` | `validate_skills.py`, `validate-seed-phase.py` on `users/_template/seed-phase`. |
 
+## Structured governance files
+
+Standalone parse/link pass (also runs inside `ci` / `fast` via [`scripts/ci_validation_inventory.py`](../scripts/ci_validation_inventory.py)):
+
+```bash
+python scripts/validate_structured_files.py
+```
+
 ## `--user` semantics
 
 - **Required** for checks that target `users/<id>/` (paths, integrity, boundaries, evidence refs, growth). The effective user is passed through to those scripts.
-- **Ignored** for repo-wide tools (governance, template sync contract, work-dev control plane, seed-phase template path). The CLI still accepts `--user` for a consistent interface; metadata in `--json` output includes `user_scope` per step.
+- **Ignored** for repo-wide tools (governance, structured governance files, template sync contract, work-dev control plane, seed-phase template path). The CLI still accepts `--user` for a consistent interface; metadata in `--json` output includes `user_scope` per step.
 
 Default user: `GRACE_MAR_USER_ID`, else `grace-mar` if that directory exists, else `_template`.
 

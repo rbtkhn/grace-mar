@@ -6,6 +6,12 @@ This tree holds **rebuildable, non-canonical** outputs from operator scripts. No
 
 **Staleness:** Artifacts are often **generated snapshots**. If a file has **no** generation time or **unclear** source declaration, treat freshness as **unknown** or **possibly stale** and **verify** against the governing source files (e.g. `users/<id>/`, gate file) before relying on it for load-bearing operator decisions. Convention and levels: [docs/operator-surface-staleness.md](../docs/operator-surface-staleness.md).
 
+**Structured-file validation:** Parses committed JSON under `artifacts/` (skipping very large blobs), `schema-registry/`, and workflow examples; validates `pyproject.toml`, `.pre-commit-config.yaml` when PyYAML is available; checks critical relative links in operator/workflow READMEs. Does not change doctrine.
+
+```bash
+python scripts/validate_structured_files.py
+```
+
 Primary doctrine stays **derived / rebuildable / non-canonical**. If you use `shadow layer` as an informal metaphor for these outputs, treat it as a glossary aid only, not a replacement term. It is **not** the same thing as `shadow-merges`, `shadow autonomy`, or any implied “shadow Record”.
 
 **Important distinction:** the portable-record schema [`schema-registry/artifact-rationale.v1.json`](../schema-registry/artifact-rationale.v1.json) is about **demonstrated capability rationale** alongside EVIDENCE. It is **not** the schema for everything under `/artifacts/`.

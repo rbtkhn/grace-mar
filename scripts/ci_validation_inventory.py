@@ -116,6 +116,16 @@ ALL_CHECKS: tuple[CheckSpec, ...] = (
         ci_source=".github/workflows/test.yml (Governance check)",
     ),
     CheckSpec(
+        id="validate_structured_files",
+        label="Structured governance files (JSON/TOML/YAML/links)",
+        script_relpath="scripts/validate_structured_files.py",
+        argv_builder=_argv_governance,
+        user_scope="ignored",
+        groups=frozenset({"ci", "fast", "full"}),
+        timeout_sec=120.0,
+        ci_source=".github/workflows/test.yml (Validate structured files)",
+    ),
+    CheckSpec(
         id="validate_control_plane",
         label="Work-dev control plane",
         script_relpath="scripts/work_dev/validate_control_plane.py",
@@ -203,6 +213,7 @@ def checks_for_group(group: str) -> list[CheckSpec]:
             "validate_integrity",
             "validate_template_sync_contract",
             "governance_checker",
+            "validate_structured_files",
             "validate_control_plane",
         ]
         return [by_id[i] for i in order]
@@ -212,6 +223,7 @@ def checks_for_group(group: str) -> list[CheckSpec]:
             "validate_identity_library_boundary",
             "validate_ix_evidence_refs",
             "governance_checker",
+            "validate_structured_files",
         ]
         return [by_id[i] for i in order]
     if g == "full":
