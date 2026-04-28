@@ -1,0 +1,173 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://grace-mar.local/schemas/context-failure-report.v1.schema.json",
+  "title": "Grace-Mar Context Failure Report v1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "input_path",
+    "overall_risk",
+    "category_scores",
+    "findings",
+    "recommended_actions",
+    "governance_note"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "context-failure-report.v1"
+    },
+    "input_path": {
+      "type": "string",
+      "minLength": 1
+    },
+    "overall_risk": {
+      "enum": [
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    "category_scores": {
+      "type": "object",
+      "required": [
+        "surface_confusion",
+        "stale_context",
+        "missing_evidence",
+        "compression_loss",
+        "lane_misrouting",
+        "authority_drift",
+        "synthesis_overreach"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "surface_confusion": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 10
+        },
+        "stale_context": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 10
+        },
+        "missing_evidence": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 10
+        },
+        "compression_loss": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 10
+        },
+        "lane_misrouting": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 10
+        },
+        "authority_drift": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 10
+        },
+        "synthesis_overreach": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 10
+        }
+      }
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/finding"
+      }
+    },
+    "recommended_actions": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/recommended_action"
+      }
+    },
+    "governance_note": {
+      "type": "string",
+      "minLength": 20
+    }
+  },
+  "$defs": {
+    "finding": {
+      "type": "object",
+      "required": [
+        "level",
+        "category",
+        "message",
+        "matched_terms"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "level": {
+          "enum": [
+            "info",
+            "warn",
+            "risk"
+          ]
+        },
+        "category": {
+          "enum": [
+            "surface_confusion",
+            "stale_context",
+            "missing_evidence",
+            "compression_loss",
+            "lane_misrouting",
+            "authority_drift",
+            "synthesis_overreach"
+          ]
+        },
+        "message": {
+          "type": "string",
+          "minLength": 5
+        },
+        "matched_terms": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "recommended_action": {
+      "type": "object",
+      "required": [
+        "priority",
+        "category",
+        "action"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "priority": {
+          "enum": [
+            "low",
+            "medium",
+            "high"
+          ]
+        },
+        "category": {
+          "enum": [
+            "surface_confusion",
+            "stale_context",
+            "missing_evidence",
+            "compression_loss",
+            "lane_misrouting",
+            "authority_drift",
+            "synthesis_overreach"
+          ]
+        },
+        "action": {
+          "type": "string",
+          "minLength": 10
+        }
+      }
+    }
+  }
+}
