@@ -121,6 +121,12 @@ Bounded UTF-8 file reads against **[`config/mcp-local-read-allowlist.yaml`](../.
 
 ---
 
+## Local directory index adapter
+
+Repo-scoped **directory metadata** listings (paths, kinds, sizes; optional line counts and hashes — **no file bodies**) against **[`config/mcp-local-read-allowlist.yaml`](../../config/mcp-local-read-allowlist.yaml)** via **`scripts/mcp_local_index.py`** produce Markdown under **`artifacts/mcp-local-index/`** plus MCP receipts with **`filesystem_readonly`**. **Local indexing runs are allowed only through this adapter**, **every run gets a receipt**, **no file contents are emitted**, **no general MCP integration is enabled**, and **Record promotion remains gated** — **[`mcp-local-index-adapter.md`](mcp-local-index-adapter.md)**.
+
+---
+
 ## Risk / permission scanning
 
 New capability classes should be **risk-scanned** before admission using **`scripts/mcp_risk_scan.py`** against [`config/mcp-risk-policy.yaml`](../../config/mcp-risk-policy.yaml) — see **[`mcp-risk-permission-scanner.md`](mcp-risk-permission-scanner.md)**. The scanner **does not execute MCP servers**; it classifies **permission risk**, not factual truth. **Passing the scan does not approve live integration** — it only clears structured blocker rules on registry policy text.

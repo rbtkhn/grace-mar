@@ -22,6 +22,7 @@
 | **MCP manifest admission** | [mcp/mcp-manifest-admission.md](mcp/mcp-manifest-admission.md) | Declared MCP manifest YAML/JSON → admission Markdown + receipt (`mcp_manifest_admission.py`); planning-only; no live MCP or Record writes. |
 | **MCP mock execution harness** | [mcp/mcp-mock-execution-harness.md](mcp/mcp-mock-execution-harness.md) | Fixture mock-run JSON → harness Markdown + receipt (`mcp_mock_harness.py`); tests governance chain without launching MCP. |
 | **Local read-only adapter** | [mcp/mcp-local-readonly-adapter.md](mcp/mcp-local-readonly-adapter.md) | Bounded UTF-8 repo reads via allowlist (`mcp_local_readonly.py`); `filesystem_readonly` receipt; no network/credentials/shell. |
+| **Local directory index adapter** | [mcp/mcp-local-index-adapter.md](mcp/mcp-local-index-adapter.md) | Metadata-only directory listings via allowlist (`mcp_local_index.py`); same receipt posture; no file contents. |
 | **MCP risk / permission scanner** | [mcp/mcp-risk-permission-scanner.md](mcp/mcp-risk-permission-scanner.md) | Registry risk scoring + hard blockers (`mcp_risk_scan.py`); read-only; no MCP execution. |
 | **Naming convention** | [NAMING-CONVENTION](naming-convention.md) | Lowercase/hyphen preference; reserved `AGENTS.md`; Python `snake_case`; OpenClaw export path. |
 | **Web app** | [WEB-APP-PLAN](web-app-plan.md) | Grace-mar.com development plan; phases, tech, dependencies. See [DESIGN-ROADMAP](design-roadmap.md) for related features. |

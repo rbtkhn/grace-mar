@@ -101,6 +101,9 @@ artifacts/mcp-mock-runs/*
 artifacts/mcp-local-read/*
 !artifacts/mcp-local-read/.gitkeep
 !artifacts/mcp-local-read/README.md
+artifacts/mcp-local-index/*
+!artifacts/mcp-local-index/.gitkeep
+!artifacts/mcp-local-index/README.md
 artifacts/candidate-drafts/*
 !artifacts/candidate-drafts/.gitkeep
 artifacts/shadow-merges/*

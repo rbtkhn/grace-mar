@@ -14,7 +14,6 @@ from __future__ import annotations
 
 import argparse
 import copy
-import fnmatch
 import hashlib
 import json
 import sys
@@ -40,6 +39,11 @@ from mcp_receipt_lib import (  # noqa: E402
     validate_json_schema,
     validate_mcp_receipt,
 )
+from mcp_local_path_policy import (  # noqa: E402
+    posix_under_repo,
+    resolve_target_under_allowlist,
+    validate_allowlist_schema,
+)
 from mcp_risk_scan import evaluate_capability  # noqa: E402
 
 REQUEST_SCHEMA_PATH = REPO_ROOT / "schemas" / "mcp-local-read-request.v1.json"
@@ -53,13 +57,6 @@ BANNER = (
 )
 
 
-def _posix_under_repo(repo_root: Path, path: Path) -> str:
-    try:
-        return path.resolve().relative_to(repo_root.resolve()).as_posix()
-    except ValueError:
-        return path.as_posix()
-
-
 def load_request(path: Path) -> dict[str, Any]:
     doc = json.loads(path.read_text(encoding="utf-8"))
     if not isinstance(doc, dict):
@@ -71,84 +68,6 @@ def apply_defaults(doc: dict[str, Any]) -> None:
     r = doc["request"]
     if "max_excerpt_chars" not in r:
         r["max_excerpt_chars"] = 2000
-
-
-def validate_allowlist_schema(cfg: dict[str, Any]) -> None:
-    for key in ("allowed_roots", "blocked_roots", "blocked_files", "blocked_name_patterns"):
-        if key not in cfg:
-            raise ValueError(f"allowlist missing {key!r}")
-    if "max_file_bytes" not in cfg:
-        raise ValueError("allowlist missing max_file_bytes")
-
-
-def _norm_segments(rel_posix: str) -> list[str]:
-    parts = [p for p in rel_posix.replace("\\", "/").split("/") if p]
-    if ".." in parts:
-        raise ValueError("path must not contain .. segments")
-    return parts
-
-
-def validate_and_resolve_target(repo_root: Path, path_str: str, cfg: dict[str, Any]) -> Path:
-    raw = path_str.strip()
-    if not raw:
-        raise ValueError("path cannot be empty")
-
-    if len(raw) >= 2 and raw[1] == ":":
-        raise ValueError("absolute paths not allowed")
-    if raw.startswith("/"):
-        raise ValueError("absolute paths not allowed")
-
-    norm = raw.replace("\\", "/").strip("/")
-    parts = _norm_segments(norm)
-    rel_join = "/".join(parts) if parts else ""
-
-    low_rel = rel_join.lower()
-    if low_rel.startswith("users/grace-mar/") or low_rel == "users/grace-mar":
-        raise ValueError("path cannot reference users/grace-mar")
-
-    candidate = (repo_root / Path(*parts)) if parts else repo_root
-    try:
-        resolved = candidate.resolve()
-    except OSError as e:
-        raise ValueError(f"cannot resolve path: {e}") from e
-
-    repo_abs = repo_root.resolve()
-    try:
-        resolved.relative_to(repo_abs)
-    except ValueError as e:
-        raise ValueError(f"path escapes repository root: {resolved}") from e
-
-    rel_final = _posix_under_repo(repo_root, resolved)
-
-    blocked_roots = [str(x).replace("\\", "/").strip("/") for x in cfg["blocked_roots"]]
-    for br in blocked_roots:
-        br_prefix = br + "/" if br else ""
-        if rel_final == br or (br_prefix and rel_final.startswith(br_prefix)):
-            raise ValueError(f"path is under blocked root {br!r}")
-
-    allowed = [str(x).replace("\\", "/") for x in cfg["allowed_roots"]]
-    ok = False
-    for root in allowed:
-        prefix = root if root.endswith("/") else root + "/"
-        if rel_final == root.rstrip("/") or rel_final.startswith(prefix):
-            ok = True
-            break
-    if not ok:
-        raise ValueError(f"path not under any allowed_roots (got {rel_final!r})")
-
-    base = resolved.name
-    blocked_files = {str(x).lower() for x in cfg["blocked_files"]}
-    if base.lower() in blocked_files:
-        raise ValueError(f"basename blocked by allowlist: {base!r}")
-
-    for pat in cfg["blocked_name_patterns"]:
-        if fnmatch.fnmatch(base.lower(), pat.lower()):
-            raise ValueError(f"basename matches blocked_name_patterns: {pat!r}")
-
-    if not resolved.is_file():
-        raise ValueError(f"not a regular file: {resolved}")
-
-    return resolved
 
 
 def read_file_bounded(path: Path, max_bytes: int) -> tuple[bytes, int]:
@@ -328,7 +247,7 @@ def main() -> int:
     req = doc["request"]
 
     try:
-        target_abs = validate_and_resolve_target(root, req["path"], cfg)
+        target_abs = resolve_target_under_allowlist(root, req["path"], cfg, kind="file")
     except ValueError as e:
         print(f"mcp_local_readonly: path policy: {e}", file=sys.stderr)
         return 1
@@ -374,9 +293,9 @@ def main() -> int:
 
     receipt_id = str(uuid.uuid4())
     receipt_filename = f"{receipt_id}.json"
-    packet_rel = _posix_under_repo(root, dest)
-    target_rel = _posix_under_repo(root, target_abs)
-    inp_rel = _posix_under_repo(root, inp)
+    packet_rel = posix_under_repo(root, dest)
+    target_rel = posix_under_repo(root, target_abs)
+    inp_rel = posix_under_repo(root, inp)
 
     caps_doc_full = load_yaml(CAPABILITIES_PATH.resolve())
 
@@ -469,8 +388,8 @@ def main() -> int:
     receipt_path = (DEFAULT_RECEIPT_DIR / receipt_filename).resolve()
     receipt_path.write_text(json.dumps(receipt, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
-    print(_posix_under_repo(root, dest))
-    print(_posix_under_repo(root, receipt_path))
+    print(posix_under_repo(root, dest))
+    print(posix_under_repo(root, receipt_path))
     return 0
 
 
