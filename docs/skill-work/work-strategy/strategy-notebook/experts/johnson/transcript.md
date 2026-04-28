@@ -13,6 +13,83 @@ WORK only; not Record.
 
 <!-- Triage appends new date sections below. Do not add content above this line. -->
 
+## 2026-04-27
+- Inbox | cold: full text in [`transcript-johnson-lets-talk-geopolitics-whcd-iran-2026-04-26.md`](raw-input/2026-04-26/transcript-johnson-lets-talk-geopolitics-whcd-iran-2026-04-26.md) (pointer; SSOT raw-input) | thread:johnson
+- JF | cold: **Larry Johnson** × **Judge Andrew Napolitano** (*Judging Freedom* — *Who Controls Hormuz?*) — **host date 2026-04-20** — **no** **talks** **until** **blockade** **lift** **+** **IRI** **10** **points**; **Russia** **negotiation** **parallel**; **China→Iran** **cargo** **/** **retaliation** **track**; **Islamabad** **impasse**; **Friday** **concession** **then** **Trump** **blew** **up** **(direct-source** **hypothesis** **in** **voice)**; **37%** **poll** **/** **majority** **anti-war** **thesis**; **Saturday** **WH** **—** **nuclear** **codes** **/** **Caine** **no** **(Johnson** **two-source** **frame)**; **joint** **uranium** **excavation** **as** **delusion**; **Navy** **fired** **/** **engine-room** **disable** **(video** **/** **Telegram** **hypothesis)**; **pizza** **index** **/** **weather** **/** **bombing** **vs** **SOF** **pivot**; **GCC** **grid** **counter** **/** **heat** **viability**; **Waltz** **UN** **IRGC** **bridges** **(quoted)** **vs** **Iran–US** **history** **refutation**; **Netanyahu** **Lebanon** **/** **Christianity** **icon** **controversy**; **Mossad** **regime-change** **concedes** **surface** **vs** **goal** **unchanged**; **Reuters** **street** **hijab** **counter-narrative**; **10k** **troops** **not** **assault** **echelon** **/** **Qeshm** **rejected** **(Trump)** **/** **resupply** **/** **grid** **plan**; **Cooke** **/** **Morandi** **/** **Mojtaba** **generational** **frame**; **Hormuz** **Iran** **control** **on-off** **/** **marinetraffic** **metaphor** **/** **blockade** **re-close** // hook: **`thread:johnson`** **same-day** **JF** **`thread:ritter`** **[Hormuz** **/** **Caine** **/** **Islamabad]** **—** **seam** **not** **merge** | https://www.youtube.com/watch?v=TBD-judging-freedom-johnson-hormuz-2026-04-20 | verify:full-text+raw-input+aired:2026-04-20+pin-canonical-URL | thread:johnson | grep:Johnson+Napolitano+Judging+Freedom+Hormuz+Caine+Waltz
+- YT | cold: **Daniel Davis** × **Larry Johnson** — *HORMUZ OPENING, CEASEFIRE ENDING: Conflicting Messages* — dual-register Trump TS vs IRI Lebanon/Hormuz conditions; Bessent sanctions; military “WTF”; three-option endgame; Johnson strong C-plane on Trump // hook: stack 04-17 §1h + Ritter Diesen Iran segment — seams not one Judgment | https://www.youtube.com/watch?v=TBD-davis-johnson-hormuz-2026-04-17 | verify:operator-transcript+pin-canonical-URL+aired:2026-04-17+Truth-Social-primary | thread:johnson | grep:Hormuz+Johnson+Davis+blockade+Bessent
+    
+    Title: HORMUZ OPENING, CEASEFIRE ENDING: Conflicting Messages
+    Guests: Lt. Col. Daniel Davis & Larry Johnson
+    
+    Daniel Davis: President Trump has announced that the Strait of Hormuz is open. That's great news. Hopefully this means the war is coming to an end — hopefully by next Wednesday when the current ceasefire period ends.
+    The Iranian Foreign Minister, Abbas Araghchi, also said yes, the Strait is open, but it is contingent upon the ceasefire in Lebanon. So we're good to go.
+    Now there are real problems with that, because what does it actually mean for the Strait to be open? What does the Iranian side say it means versus what President Trump says it means? And even before the ink dries on these social media posts, we’ve already got contradictions.
+    Larry, let me properly introduce you: Larry Johnson, former CIA analyst, runs Son of the New American Revolution, and a great friend of the show.
+    What was the first thing you thought when you heard that both President Trump and the Iranian side announced — within minutes of each other — that the Strait of Hormuz was open?
+    
+    Larry Johnson: They’re not paying attention to what the U.S. government is actually saying. I’ve been talking to folks in the military and they’re going, “WTF, what is going on?”
+    You say the Strait of Hormuz is open, right? But then Trump says the naval blockade is still in full effect. So if the blockade is still in effect, then the Strait is not really open.
+    
+    Daniel Davis: Let me show you what President Trump posted this morning at 9:27:
+    “The Strait of Hormuz is completely open and ready for business and full passage. But the naval blockade — the American naval blockade — will remain in full force and effect as it pertains only to Iran.”
+    Then the Iranian Foreign Ministry spokesman posted something similar to what Araghchi said: this is contingent upon the implementation of certain terms and conditions for the ceasefire in Lebanon.
+    And here’s the rub: if the naval blockade continues, it will be considered a violation of the ceasefire and passage through the Strait of Hormuz will be closed again.
+    He also laid out three conditions:
+    
+    Ships must be commercial — passage of military ships is prohibited, and ships/cargo cannot be linked to belligerent states.
+    Ships must pass through routes designated by Iran (meaning Iran retains control).
+    Ship passage must be coordinated with Iranian forces responsible for it.
+    
+    So Trump says the Strait is fully open — except it’s only open for what we want to come out, while Iran stays blocked. Iran is saying it’s either all open or none of it is open.
+    What does that mean going forward?
+    
+    Larry Johnson: Iran is the only one in a position to keep it closed. The United States can’t open it. I was watching Gordon Chang and that other guy, Quinn, drawing parallels to the Malacca Strait. That’s nonsense. Iran has shore-based cruise missiles, ballistic missiles, underwater drones, surface drones, and aerial drones. They can close the Strait whenever they want without even putting ships out there. You don’t have that capability in the Malacca Strait.
+    I thought we might actually be on the verge of an exit ramp after the Hezbollah-Israel ceasefire. Then I saw what Scott Bessent (Treasury Secretary) did yesterday — they reimposed sanctions on Iran the very same day they announced a ceasefire.
+    Four weeks ago they lifted sanctions on Iranian oil and on Russia to restore market stability. Now they double down on sanctions. One of Iran’s 10-point demands is that all sanctions must be lifted — and it’s not negotiable.
+    Is there nobody in the Trump administration who understands how contradictory these messages are? Iran is not going to surrender on that point.
+    On top of that, the talks in Islamabad happened largely because of Chinese influence with Pakistan — and Bessent threatens China. The Chinese are pissed off. I think they’ve reached their limit. There’s not going to be a meeting between Xi Jinping and Donald Trump.
+    
+    Daniel Davis: Trump also posted: “Iran has agreed to never close the Strait of Hormuz again. It will no longer be used as a weapon against the world.” Then he thanked Pakistan, said the deal is not tied to Lebanon, claimed Iran with the help of the USA is removing all sea mines (there’s no evidence of that), and said NATO offered help but he told them to stay away because they’re a paper tiger.
+    Another post said the USA will get all the “nuclear dust” created by our B2 bombers, and no money will exchange hands in any way.
+    This morning there were reports of a possible deal to unfreeze $20 billion of Iranian assets in exchange for this “nuclear dust.” What do you make of all this? How is any of this supposed to work? Is there any truth to it?
+    
+    Larry Johnson: Donald Trump is detached from reality. He is living in a fantasy world and none of the people around him are willing to tell him the truth.
+    Just because he writes something on Truth Social doesn’t make it true. He is delusional. If your mother or elderly parent was acting like this, you wouldn’t let them drive. This guy is capable of starting a nuclear war.
+    The Strait of Hormuz is not “wide open.” It is under Iranian control. We have no control over it. Our blockade is miles offshore. You’ve seen the photos of Marines on the ships — they’re not even getting full rations. When 20–23-year-old Marines aren’t being fed properly, you’ve got serious problems.
+    This is a total failure of leadership. Officers are supposed to eat last. Instead, it looks like the officers eat first. That’s not how you treat troops you expect to put their lives on the line.
+    Trump has zero empathy. He’s divorced from reality. The American people need to stand up. He must be removed from office as soon as possible. This is dangerous.
+    
+    Daniel Davis: As I see it, there are three main options for how this war could end.
+    Option 1: Trump agrees to base a diplomatic agreement on Iran’s 10-point plan. At minimum that would mean lifting sanctions, providing security guarantees, some form of reparations, and limited uranium enrichment/reprocessing (Iran sees even limited enrichment as an act of sovereignty).
+    This would be the best outcome for the world and actually has a chance of working. What do you think?
+    
+    Larry Johnson: That would be the ideal outcome, but based on what we’ve seen in the last 24 hours — doubling down on sanctions and maintaining the blockade while claiming the Strait is open — that option is now off the table.
+    
+    Daniel Davis: Option 2: Trump doubles down. He listens to people like Jack Keane who say “give nothing, take everything.” He launches a massive air campaign to try to crush Iran once and for all — obliterating energy infrastructure, bridges, and the economy — hoping to force total submission.
+    
+    Larry Johnson: Unfortunately, I think that’s where this is headed. Within Trump’s delusional mindset, he believes the U.S. is winning militarily and just needs to finish the job. But the United States cannot actually destroy Iran. We have deluded ourselves about our military potency. We don’t have that capability anymore.
+    
+    Daniel Davis: Option 3: Trump recognizes the limits of power and plays the long game — ramping up sanctions (“Operation Economic Fury”) and trying to outlast Iran economically, betting the U.S. can suffer longer than Iran can.
+    
+    Larry Johnson: That’s pure magical thinking. Look at the case studies: Cuba (66 years of sanctions — didn’t work), North Korea, Russia — none of them surrendered. Iran has options: access to the Caspian Sea and Russia to the north, Turkmenistan, Pakistan, etc. We’re not sealing them off. This ignores reality.
+    
+    Daniel Davis: The wild card in all of this is Israel. What role will they play?
+    
+    Larry Johnson: Israel will try to destroy any prospect of an agreement if they can. Their words don’t match their capabilities. They’ve destroyed buildings in Gaza but after nearly three years still haven’t defeated Hamas. They’re bogged down in southern Lebanon fighting over towns like Bint Jbeil and taking significant casualties from Hezbollah.
+    The ceasefire in Lebanon was largely a cynical move to use the Lebanese army against Hezbollah. Israel will never accept Hezbollah as anything other than a terrorist group. They’re trying to build on a cracked foundation.
+    
+    Daniel Davis: Iran has made its position very clear. This isn’t a real-estate negotiation where you can haggle. They want sanctions lifted, U.S. military out of the Gulf, reparations, and an end to attacks on Hezbollah and Lebanon. It’s black or white.
+    
+    Larry Johnson: Exactly. Iran is the Islamic Republic of Iran. They have deep religious faith and a history of enduring pain. They will not surrender. They have alternative routes for oil and trade. They’ve also shown the world they can disrupt the Strait of Hormuz, making themselves a player that must be taken seriously. Countries like Italy and Spain are already distancing themselves from U.S. and Israeli policy.
+    
+    Daniel Davis: What about our allies in the Gulf States? They’re losing massive amounts of money every day this stays closed. At what point do they pressure Trump to go back to Option 1 and get the Strait fully open?
+    
+    Larry Johnson: I think that pressure is coming. Russia and China are actively courting the Gulf states, telling them they have alternatives and don’t have to keep taking the abuse. The Gulf Arabs are like an abused spouse being offered counseling. The UAE may be too far gone, but the Saudis are starting to reconsider. That may be one of the few things that could move the needle away from escalation.
+    
+    Daniel Davis: We’ll find out soon enough. Larry, really appreciate you making time on such a busy day. Thanks for coming on.
+    Larry Johnson: All right, my brother. We’ll see you later
+- batch-analysis | 2026-04-17 | **Barnes × Johnson (YT) — US politics room × Iran week** | **Tension-first:** **`thread:barnes`** **long-form** **domestic-liability** **+** **White** **House** **process** **(C-plane** **hypothesis)** **—** **not** **§1e** **text** **and** **not** **Pentagon** **primary.** **Same** **calendar** **day** **as** **Hormuz** **/** **Islamabad** **expert** **stack** **—** **cross** **`thread:davis`**, **`thread:johnson`** **(Davis** **×** **Johnson** **earlier** **YT),** **`thread:ritter`** **with** **explicit** **plane** **tags** **(room** **vs** **ORBAT** **vs** **FM).** **Falsifiers:** **named** **official** **statements,** **vote** **counts,** **Navy** **press,** **TS** **screenshots.** | crosses:barnes+johnson
+
 ## 2026-04-26
 - JF | cold: **Larry Johnson** × **Judge Andrew Napolitano** (*Judging Freedom* — *Who Controls Hormuz?*) — **host date 2026-04-20** — **no** **talks** **until** **blockade** **lift** **+** **IRI** **10** **points**; **Russia** **negotiation** **parallel**; **China→Iran** **cargo** **/** **retaliation** **track**; **Islamabad** **impasse**; **Friday** **concession** **then** **Trump** **blew** **up** **(direct-source** **hypothesis** **in** **voice)**; **37%** **poll** **/** **majority** **anti-war** **thesis**; **Saturday** **WH** **—** **nuclear** **codes** **/** **Caine** **no** **(Johnson** **two-source** **frame)**; **joint** **uranium** **excavation** **as** **delusion**; **Navy** **fired** **/** **engine-room** **disable** **(video** **/** **Telegram** **hypothesis)**; **pizza** **index** **/** **weather** **/** **bombing** **vs** **SOF** **pivot**; **GCC** **grid** **counter** **/** **heat** **viability**; **Waltz** **UN** **IRGC** **bridges** **(quoted)** **vs** **Iran–US** **history** **refutation**; **Netanyahu** **Lebanon** **/** **Christianity** **icon** **controversy**; **Mossad** **regime-change** **concedes** **surface** **vs** **goal** **unchanged**; **Reuters** **street** **hijab** **counter-narrative**; **10k** **troops** **not** **assault** **echelon** **/** **Qeshm** **rejected** **(Trump)** **/** **resupply** **/** **grid** **plan**; **Cooke** **/** **Morandi** **/** **Mojtaba** **generational** **frame**; **Hormuz** **Iran** **control** **on-off** **/** **marinetraffic** **metaphor** **/** **blockade** **re-close** // hook: **`thread:johnson`** **same-day** **JF** **`thread:ritter`** **[Hormuz** **/** **Caine** **/** **Islamabad]** **—** **seam** **not** **merge** | https://www.youtube.com/watch?v=TBD-judging-freedom-johnson-hormuz-2026-04-20 | verify:full-text+raw-input+aired:2026-04-20+pin-canonical-URL | thread:johnson | grep:Johnson+Napolitano+Judging+Freedom+Hormuz+Caine+Waltz
 - YT | cold: **Daniel Davis** × **Larry Johnson** — *HORMUZ OPENING, CEASEFIRE ENDING: Conflicting Messages* — dual-register Trump TS vs IRI Lebanon/Hormuz conditions; Bessent sanctions; military “WTF”; three-option endgame; Johnson strong C-plane on Trump // hook: stack 04-17 §1h + Ritter Diesen Iran segment — seams not one Judgment | https://www.youtube.com/watch?v=TBD-davis-johnson-hormuz-2026-04-17 | verify:operator-transcript+pin-canonical-URL+aired:2026-04-17+Truth-Social-primary | thread:johnson | grep:Hormuz+Johnson+Davis+blockade+Bessent
@@ -92,6 +169,7 @@ WORK only; not Record.
 - Inbox | cold: full text in [`transcript-johnson-lets-talk-geopolitics-whcd-iran-2026-04-26.md`](raw-input/2026-04-26/transcript-johnson-lets-talk-geopolitics-whcd-iran-2026-04-26.md) (pointer; SSOT raw-input) | thread:johnson
 
 
+
 ## 2026-04-25
 - JF | cold: **Larry Johnson** × **Judge Andrew Napolitano** (*Judging Freedom* — *Who Controls Hormuz?*) — **host date 2026-04-20** — **no** **talks** **until** **blockade** **lift** **+** **IRI** **10** **points**; **Russia** **negotiation** **parallel**; **China→Iran** **cargo** **/** **retaliation** **track**; **Islamabad** **impasse**; **Friday** **concession** **then** **Trump** **blew** **up** **(direct-source** **hypothesis** **in** **voice)**; **37%** **poll** **/** **majority** **anti-war** **thesis**; **Saturday** **WH** **—** **nuclear** **codes** **/** **Caine** **no** **(Johnson** **two-source** **frame)**; **joint** **uranium** **excavation** **as** **delusion**; **Navy** **fired** **/** **engine-room** **disable** **(video** **/** **Telegram** **hypothesis)**; **pizza** **index** **/** **weather** **/** **bombing** **vs** **SOF** **pivot**; **GCC** **grid** **counter** **/** **heat** **viability**; **Waltz** **UN** **IRGC** **bridges** **(quoted)** **vs** **Iran–US** **history** **refutation**; **Netanyahu** **Lebanon** **/** **Christianity** **icon** **controversy**; **Mossad** **regime-change** **concedes** **surface** **vs** **goal** **unchanged**; **Reuters** **street** **hijab** **counter-narrative**; **10k** **troops** **not** **assault** **echelon** **/** **Qeshm** **rejected** **(Trump)** **/** **resupply** **/** **grid** **plan**; **Cooke** **/** **Morandi** **/** **Mojtaba** **generational** **frame**; **Hormuz** **Iran** **control** **on-off** **/** **marinetraffic** **metaphor** **/** **blockade** **re-close** // hook: **`thread:johnson`** **same-day** **JF** **`thread:ritter`** **[Hormuz** **/** **Caine** **/** **Islamabad]** **—** **seam** **not** **merge** | https://www.youtube.com/watch?v=TBD-judging-freedom-johnson-hormuz-2026-04-20 | verify:full-text+raw-input+aired:2026-04-20+pin-canonical-URL | thread:johnson | grep:Johnson+Napolitano+Judging+Freedom+Hormuz+Caine+Waltz
 - YT | cold: **Daniel Davis** × **Larry Johnson** — *HORMUZ OPENING, CEASEFIRE ENDING: Conflicting Messages* — dual-register Trump TS vs IRI Lebanon/Hormuz conditions; Bessent sanctions; military “WTF”; three-option endgame; Johnson strong C-plane on Trump // hook: stack 04-17 §1h + Ritter Diesen Iran segment — seams not one Judgment | https://www.youtube.com/watch?v=TBD-davis-johnson-hormuz-2026-04-17 | verify:operator-transcript+pin-canonical-URL+aired:2026-04-17+Truth-Social-primary | thread:johnson | grep:Hormuz+Johnson+Davis+blockade+Bessent
@@ -167,170 +245,6 @@ WORK only; not Record.
     Daniel Davis: We’ll find out soon enough. Larry, really appreciate you making time on such a busy day. Thanks for coming on.
     Larry Johnson: All right, my brother. We’ll see you later
 - batch-analysis | 2026-04-17 | **Barnes × Johnson (YT) — US politics room × Iran week** | **Tension-first:** **`thread:barnes`** **long-form** **domestic-liability** **+** **White** **House** **process** **(C-plane** **hypothesis)** **—** **not** **§1e** **text** **and** **not** **Pentagon** **primary.** **Same** **calendar** **day** **as** **Hormuz** **/** **Islamabad** **expert** **stack** **—** **cross** **`thread:davis`**, **`thread:johnson`** **(Davis** **×** **Johnson** **earlier** **YT),** **`thread:ritter`** **with** **explicit** **plane** **tags** **(room** **vs** **ORBAT** **vs** **FM).** **Falsifiers:** **named** **official** **statements,** **vote** **counts,** **Navy** **press,** **TS** **screenshots.** | crosses:barnes+johnson
-
-
-
-
-
-
-## 2026-04-20
-- YT | cold: **Daniel Davis** × **Larry Johnson** — *HORMUZ OPENING, CEASEFIRE ENDING: Conflicting Messages* — dual-register Trump TS vs IRI Lebanon/Hormuz conditions; Bessent sanctions; military “WTF”; three-option endgame; Johnson strong C-plane on Trump // hook: stack 04-17 §1h + Ritter Diesen Iran segment — seams not one Judgment | https://www.youtube.com/watch?v=TBD-davis-johnson-hormuz-2026-04-17 | verify:operator-transcript+pin-canonical-URL+aired:2026-04-17+Truth-Social-primary | thread:johnson | grep:Hormuz+Johnson+Davis+blockade+Bessent
-    
-    Title: HORMUZ OPENING, CEASEFIRE ENDING: Conflicting Messages
-    Guests: Lt. Col. Daniel Davis & Larry Johnson
-    
-    Daniel Davis: President Trump has announced that the Strait of Hormuz is open. That's great news. Hopefully this means the war is coming to an end — hopefully by next Wednesday when the current ceasefire period ends.
-    The Iranian Foreign Minister, Abbas Araghchi, also said yes, the Strait is open, but it is contingent upon the ceasefire in Lebanon. So we're good to go.
-    Now there are real problems with that, because what does it actually mean for the Strait to be open? What does the Iranian side say it means versus what President Trump says it means? And even before the ink dries on these social media posts, we’ve already got contradictions.
-    Larry, let me properly introduce you: Larry Johnson, former CIA analyst, runs Son of the New American Revolution, and a great friend of the show.
-    What was the first thing you thought when you heard that both President Trump and the Iranian side announced — within minutes of each other — that the Strait of Hormuz was open?
-    
-    Larry Johnson: They’re not paying attention to what the U.S. government is actually saying. I’ve been talking to folks in the military and they’re going, “WTF, what is going on?”
-    You say the Strait of Hormuz is open, right? But then Trump says the naval blockade is still in full effect. So if the blockade is still in effect, then the Strait is not really open.
-    
-    Daniel Davis: Let me show you what President Trump posted this morning at 9:27:
-    “The Strait of Hormuz is completely open and ready for business and full passage. But the naval blockade — the American naval blockade — will remain in full force and effect as it pertains only to Iran.”
-    Then the Iranian Foreign Ministry spokesman posted something similar to what Araghchi said: this is contingent upon the implementation of certain terms and conditions for the ceasefire in Lebanon.
-    And here’s the rub: if the naval blockade continues, it will be considered a violation of the ceasefire and passage through the Strait of Hormuz will be closed again.
-    He also laid out three conditions:
-    
-    Ships must be commercial — passage of military ships is prohibited, and ships/cargo cannot be linked to belligerent states.
-    Ships must pass through routes designated by Iran (meaning Iran retains control).
-    Ship passage must be coordinated with Iranian forces responsible for it.
-    
-    So Trump says the Strait is fully open — except it’s only open for what we want to come out, while Iran stays blocked. Iran is saying it’s either all open or none of it is open.
-    What does that mean going forward?
-    
-    Larry Johnson: Iran is the only one in a position to keep it closed. The United States can’t open it. I was watching Gordon Chang and that other guy, Quinn, drawing parallels to the Malacca Strait. That’s nonsense. Iran has shore-based cruise missiles, ballistic missiles, underwater drones, surface drones, and aerial drones. They can close the Strait whenever they want without even putting ships out there. You don’t have that capability in the Malacca Strait.
-    I thought we might actually be on the verge of an exit ramp after the Hezbollah-Israel ceasefire. Then I saw what Scott Bessent (Treasury Secretary) did yesterday — they reimposed sanctions on Iran the very same day they announced a ceasefire.
-    Four weeks ago they lifted sanctions on Iranian oil and on Russia to restore market stability. Now they double down on sanctions. One of Iran’s 10-point demands is that all sanctions must be lifted — and it’s not negotiable.
-    Is there nobody in the Trump administration who understands how contradictory these messages are? Iran is not going to surrender on that point.
-    On top of that, the talks in Islamabad happened largely because of Chinese influence with Pakistan — and Bessent threatens China. The Chinese are pissed off. I think they’ve reached their limit. There’s not going to be a meeting between Xi Jinping and Donald Trump.
-    
-    Daniel Davis: Trump also posted: “Iran has agreed to never close the Strait of Hormuz again. It will no longer be used as a weapon against the world.” Then he thanked Pakistan, said the deal is not tied to Lebanon, claimed Iran with the help of the USA is removing all sea mines (there’s no evidence of that), and said NATO offered help but he told them to stay away because they’re a paper tiger.
-    Another post said the USA will get all the “nuclear dust” created by our B2 bombers, and no money will exchange hands in any way.
-    This morning there were reports of a possible deal to unfreeze $20 billion of Iranian assets in exchange for this “nuclear dust.” What do you make of all this? How is any of this supposed to work? Is there any truth to it?
-    
-    Larry Johnson: Donald Trump is detached from reality. He is living in a fantasy world and none of the people around him are willing to tell him the truth.
-    Just because he writes something on Truth Social doesn’t make it true. He is delusional. If your mother or elderly parent was acting like this, you wouldn’t let them drive. This guy is capable of starting a nuclear war.
-    The Strait of Hormuz is not “wide open.” It is under Iranian control. We have no control over it. Our blockade is miles offshore. You’ve seen the photos of Marines on the ships — they’re not even getting full rations. When 20–23-year-old Marines aren’t being fed properly, you’ve got serious problems.
-    This is a total failure of leadership. Officers are supposed to eat last. Instead, it looks like the officers eat first. That’s not how you treat troops you expect to put their lives on the line.
-    Trump has zero empathy. He’s divorced from reality. The American people need to stand up. He must be removed from office as soon as possible. This is dangerous.
-    
-    Daniel Davis: As I see it, there are three main options for how this war could end.
-    Option 1: Trump agrees to base a diplomatic agreement on Iran’s 10-point plan. At minimum that would mean lifting sanctions, providing security guarantees, some form of reparations, and limited uranium enrichment/reprocessing (Iran sees even limited enrichment as an act of sovereignty).
-    This would be the best outcome for the world and actually has a chance of working. What do you think?
-    
-    Larry Johnson: That would be the ideal outcome, but based on what we’ve seen in the last 24 hours — doubling down on sanctions and maintaining the blockade while claiming the Strait is open — that option is now off the table.
-    
-    Daniel Davis: Option 2: Trump doubles down. He listens to people like Jack Keane who say “give nothing, take everything.” He launches a massive air campaign to try to crush Iran once and for all — obliterating energy infrastructure, bridges, and the economy — hoping to force total submission.
-    
-    Larry Johnson: Unfortunately, I think that’s where this is headed. Within Trump’s delusional mindset, he believes the U.S. is winning militarily and just needs to finish the job. But the United States cannot actually destroy Iran. We have deluded ourselves about our military potency. We don’t have that capability anymore.
-    
-    Daniel Davis: Option 3: Trump recognizes the limits of power and plays the long game — ramping up sanctions (“Operation Economic Fury”) and trying to outlast Iran economically, betting the U.S. can suffer longer than Iran can.
-    
-    Larry Johnson: That’s pure magical thinking. Look at the case studies: Cuba (66 years of sanctions — didn’t work), North Korea, Russia — none of them surrendered. Iran has options: access to the Caspian Sea and Russia to the north, Turkmenistan, Pakistan, etc. We’re not sealing them off. This ignores reality.
-    
-    Daniel Davis: The wild card in all of this is Israel. What role will they play?
-    
-    Larry Johnson: Israel will try to destroy any prospect of an agreement if they can. Their words don’t match their capabilities. They’ve destroyed buildings in Gaza but after nearly three years still haven’t defeated Hamas. They’re bogged down in southern Lebanon fighting over towns like Bint Jbeil and taking significant casualties from Hezbollah.
-    The ceasefire in Lebanon was largely a cynical move to use the Lebanese army against Hezbollah. Israel will never accept Hezbollah as anything other than a terrorist group. They’re trying to build on a cracked foundation.
-    
-    Daniel Davis: Iran has made its position very clear. This isn’t a real-estate negotiation where you can haggle. They want sanctions lifted, U.S. military out of the Gulf, reparations, and an end to attacks on Hezbollah and Lebanon. It’s black or white.
-    
-    Larry Johnson: Exactly. Iran is the Islamic Republic of Iran. They have deep religious faith and a history of enduring pain. They will not surrender. They have alternative routes for oil and trade. They’ve also shown the world they can disrupt the Strait of Hormuz, making themselves a player that must be taken seriously. Countries like Italy and Spain are already distancing themselves from U.S. and Israeli policy.
-    
-    Daniel Davis: What about our allies in the Gulf States? They’re losing massive amounts of money every day this stays closed. At what point do they pressure Trump to go back to Option 1 and get the Strait fully open?
-    
-    Larry Johnson: I think that pressure is coming. Russia and China are actively courting the Gulf states, telling them they have alternatives and don’t have to keep taking the abuse. The Gulf Arabs are like an abused spouse being offered counseling. The UAE may be too far gone, but the Saudis are starting to reconsider. That may be one of the few things that could move the needle away from escalation.
-    
-    Daniel Davis: We’ll find out soon enough. Larry, really appreciate you making time on such a busy day. Thanks for coming on.
-    Larry Johnson: All right, my brother. We’ll see you later
-
-- JF | cold: **Larry Johnson** × **Judge Andrew Napolitano** (*Judging Freedom* — *Who Controls Hormuz?*) — **host date 2026-04-20** — **no** **talks** **until** **blockade** **lift** **+** **IRI** **10** **points**; **Russia** **negotiation** **parallel**; **China→Iran** **cargo** **/** **retaliation** **track**; **Islamabad** **impasse**; **Friday** **concession** **then** **Trump** **blew** **up** **(direct-source** **hypothesis** **in** **voice)**; **37%** **poll** **/** **majority** **anti-war** **thesis**; **Saturday** **WH** **—** **nuclear** **codes** **/** **Caine** **no** **(Johnson** **two-source** **frame)**; **joint** **uranium** **excavation** **as** **delusion**; **Navy** **fired** **/** **engine-room** **disable** **(video** **/** **Telegram** **hypothesis)**; **pizza** **index** **/** **weather** **/** **bombing** **vs** **SOF** **pivot**; **GCC** **grid** **counter** **/** **heat** **viability**; **Waltz** **UN** **IRGC** **bridges** **(quoted)** **vs** **Iran–US** **history** **refutation**; **Netanyahu** **Lebanon** **/** **Christianity** **icon** **controversy**; **Mossad** **regime-change** **concedes** **surface** **vs** **goal** **unchanged**; **Reuters** **street** **hijab** **counter-narrative**; **10k** **troops** **not** **assault** **echelon** **/** **Qeshm** **rejected** **(Trump)** **/** **resupply** **/** **grid** **plan**; **Cooke** **/** **Morandi** **/** **Mojtaba** **generational** **frame**; **Hormuz** **Iran** **control** **on-off** **/** **marinetraffic** **metaphor** **/** **blockade** **re-close** // hook: **`thread:johnson`** **same-day** **JF** **`thread:ritter`** **[Hormuz** **/** **Caine** **/** **Islamabad]** **—** **seam** **not** **merge** | https://www.youtube.com/watch?v=TBD-judging-freedom-johnson-hormuz-2026-04-20 | verify:full-text+raw-input+aired:2026-04-20+pin-canonical-URL | thread:johnson | grep:Johnson+Napolitano+Judging+Freedom+Hormuz+Caine+Waltz
-
-# Judging Freedom — *Who Controls Hormuz?* (Monday, April 20, 2026)
-
-
-
-Verbatim: [`raw-input/2026-04-20/judging-freedom-johnson-who-controls-hormuz-2026-04-20.md`](../../raw-input/2026-04-20/judging-freedom-johnson-who-controls-hormuz-2026-04-20.md).
-
-
-
-Judge Andrew Napolitano: Hi everyone, Judge Andrew Napolitano here for Judging Freedom. Today is Monday, April 20th, 2026. Larry Johnson joins us now. It seems like we just said goodbye to each other, Larry. We had such a busy week last week. Thank you for all your time and all your insight.
-Before we get into the question of the morning, which is who controls the Strait of Hormuz, why would the Iranians bother to negotiate with JD Vance and his two Zionist monitors after the US Navy engaged in an act of piracy against an Iranian cargo ship on the high seas?
-Larry Johnson: Well, they won't — until the United States lifts the so-called blockade and abides by the 10 points that Iran presented them with two weeks ago. They're very serious about this. This is reminiscent of the negotiations with Russia. The Russians made very clear what their non-negotiable items were, and the United States kept pretending, "Oh, they don't mean that. That's just a negotiation ploy." No, Iran is in the same position.
-They're going to retaliate for this attack on the ship that was coming from China to Iran. The escalation will be on. Look, the United States is planning to attack Iran. That's clear. There is no genuine desire to have a peace agreement.
-Judge Andrew Napolitano: Wow. Well, are Vance, Witkoff, and Kushner in Islamabad? Are they sitting there waiting for the Iranian delegation, or don't we know?
-Larry Johnson: I don't know. They were insistent yesterday that they were going, and the Iranians are saying they're not. So it's at an impasse.
-The Pakistanis are working hard to try to pull this off. What I was told by someone with direct information is that as of Friday, there actually had been an agreement — a decision on the part of the United States to make those concessions that Iran was demanding. This would have brought Iran to the table. Then Trump got into the middle of it and blew it up.
-Vance apparently is still working behind the scenes. I think they recognize that the administration is in real political trouble. If they continue down this road to war, it is going to destroy any hope of a Republican victory in November. It's going to leave Trump isolated. His polling now is at 37% favorability, and that continues to drop. More than 52–53% of the American people are very opposed to this war with Iran and to the support for Israel.
-They're not insane. They recognize they've got problems they have to deal with.
-There was also a report that they had an emergency meeting Saturday night. One report coming out of that White House meeting is that Trump wanted to use the nuclear codes, and General Dan Caine stood up and said no. He invoked his authority as the head of the military. It was apparently quite a blow-up. There are pictures of Caine coming out of that meeting with his head down.
-So there are some very bizarre things going on in DC.
-Judge Andrew Napolitano: Well, on Saturday night — excuse me, Larry — Trump said (this is hard to say with a straight face, but this is what he said): Trump said that the US and Iran would jointly excavate the enriched uranium and remove it. Has he lost his mind?
-Larry Johnson: Short answer: yes. There is something seriously wrong with Donald Trump — in terms of his tweeting on social media, Truth Social in particular, and these crazy public statements. Go back and look at what he said on Friday. In the space of about 30 minutes, he claimed that Iran had agreed, there was going to be peace, a deal was done. It was all manipulation of the stock market and commodities market, but none of it was true.
-You begin to come to the position that you can't trust anything coming out of Donald Trump's mouth.
-Judge Andrew Napolitano: Did the US Navy fire at this Iranian vessel — either to terrify the crew or to disable it?
-Larry Johnson: Yeah. They fired at it. There is video showing the ship firing. You don't see the impact, but reports on social media and Telegram stipulate that it hit the engine room and disabled the vessel.
-Again, it's important to emphasize: this was an Iranian-flagged vessel coming from China headed to Iran — a container ship carrying those 40-foot containers you see on the back of trucks roaring along the highways in the United States.
-Judge Andrew Napolitano: Wow. What do your sources tell you about what's going to happen next? You told us about General Caine storming out of a meeting at which the president said he wanted to familiarize himself with the nuclear codes, but yet they keep reintroducing troops to the area.
-What are Trump and Hegseth — with or without General Caine — planning according to your sources?
-Larry Johnson: Well, they're all over the board. Initially they were planning a massive bombing campaign. Trump has said outright that they're going to hit all the power plants, all the bridges.
-Then, middle of last week, I heard Trump decided to back off that. Instead, they were going to try to go for the highly enriched uranium, which would mean inserting a special operations unit somewhere. But I actually think they're now back to the massive bombing campaign. There is a lot of activity underway.
-You know, they call it the "pizza index." You look at the late-night orders of pizza delivered to the Pentagon — those were way up yesterday. So they're getting ready to do something.
-They're going to be hindered by the weather. Iran is covered with clouds right now, so that may affect any attempt to insert a special operations unit. It wouldn't necessarily affect an attack with Tomahawk missiles and other cruise missiles — going after the bridges and the power plants.
-But again, Iran has made it clear: if they do that, Iran is going to wipe out the power plants in the Gulf Arab states — Saudi Arabia, Qatar, United Arab Emirates. And look, that's becoming an issue because by midday over there, the weather is like a pizza oven. It is blistering hot early on. I experienced that 20 years ago when I was in Al Udeid in the middle of May headed into Iraq. If you don't have air conditioning, people would be abandoning those cities.
-Judge Andrew Napolitano: Wow. I mean, I guess it's crystal clear that all those military facilities in the Gulf are useless to protect the countries in which the facilities are located. Utterly useless.
-Larry Johnson: Correct. Yeah. Some now — like the Fifth Fleet headquarters in Bahrain — they're completely useless. That's not going to be re-inhabited. Al Udeid is still somewhat intact, and reportedly the Combined Air Operations Center is still up and functioning. But at least 13 of the bases have suffered significant damage, and Iran will continue to target them if or when the ceasefire breaks down.
-Judge Andrew Napolitano: Here's the two-bit political hack masquerading as the US ambassador to the UN — no diplomatic experience and no diplomacy of tone — saying, "Oh, bridges and power plants, they're not war crimes."
-US Ambassador (quoted): Number four, Chris, I hope we don't have to go back to a military option. But President Trump has made it very clear. And by the way, bridges and power plants that are run by the IRGC, which runs the entire military, are absolute legitimate military targets — not only now, but have been historically. That is a false, fake, and ridiculous notion that this is some type of war crime.
-Larry Johnson: Yeah. You know, Waltz is putting out the propaganda line to justify attacking Iran, and it's all predicated on a lie. We've heard Trump repeat this: "These presidents 46 years ago — Jimmy Carter, Ronald Reagan — they failed to take care of Iran."
-Apart from the hostage-taking at the US embassy in 1979 (which was students outraged that the United States was still harboring the Shah), it was not Iran that started attacking the United States. It was the United States that started attacking Iran — beginning with encouraging and supporting Saddam Hussein to start a war with Iran in September 1980. Then Ronald Reagan provided chemical weapons — the very weapons we claimed we were looking for in 2003. We were the ones who provided those to Saddam.
-So this screwed-up narrative, this lie, that Iran has been our enemy… No. Iran has been reacting and responding to our attacks all along.
-Judge Andrew Napolitano: The relationship between Trump and Netanyahu over Lebanon… Trump can't control Netanyahu. The Israelis want to seize that land and make it part of Greater Israel, and they'll never stop attacking civilians as a way to put pressure on Hezbollah. Agreed?
-Larry Johnson: Not just that — the attack on Christianity that these Israeli fanatics are carrying out. An image emerged over the weekend that the IDF confirmed: look at this Israeli soldier destroying an icon of the crucifixion of Jesus.
-Judge Andrew Napolitano: Right. You know, just talk about feeding into a narrative.
-Larry Johnson: Well, now it's not only this soldier. This is a video — we're not playing the video, we're taking stills from it — but one of his buddies filmed him doing this. And you know, this attack on Christianity by this Israeli Zionist government has been ongoing. Go back to Easter a couple of weeks ago — they closed the Church of the Holy Sepulchre a week before Easter, something that had not been done in the entire history since that church was built.
-Netanyahu recognizes they've got a bit of a PR problem on this. But it's important for Americans to understand: the Israelis hate Christians. They talk a good line, but they hate Christianity. They hate Muslims. Unlike in Iran, where the Jewish community is intact and not attacked.
-This kind of offense should outrage all Americans, regardless of their religion. The IDF did issue a statement saying they condemned it and were looking into it, but it is the product of a culture which comes from the extreme right government — that would lead a couple of soldiers to think that they could get away with this and film themselves doing it.
-Judge Andrew Napolitano: Well, where's the chain of command? I mean, this goes back to a point I've made repeatedly. The Israeli army is an incompetent, undisciplined force. They engage routinely in attacks on civilians, and doing something like this… the fact that this soldier felt he could do this with impunity, and he's not going to suffer any consequences. They can issue whatever statement they like saying "Oh, we're outraged," but this revives the meme of The Passion of the Christ — that it was the Jews who condemned Jesus and wanted him executed. Here they go again.
-Judge Andrew Napolitano: Have the Israelis and the US given up on regime change, neutering Iran's ballistic missiles, stifling Iran's proxies as conditions for ending the war? Or is it now all down to the Strait of Hormuz — which of course was open before Trump started this — and the disposition of the enriched uranium?
-Larry Johnson: Oh no. They'll say that. We're seeing reports that the Israeli intelligence services (Mossad) are conceding, "Yeah, we don't think we're going to get regime change now," but the goal has not changed. They want to get rid of the Islamic Republic. That is their objective.
-The entire propaganda effort is directed at portraying Iran as this fanatical Muslim culture, which it is not. There was a Reuters report out last week — there was a lot of pushback from the Israelis about it — because it showed 90% of the women in the video (just people walking along the street) did not have their hair covered. They were not wearing the hijab. It was just a normal society. And that doesn't fit with the control of the Western media, which wants to paint a picture of Iran as if it's Saudi Arabia.
-And that's the other thing that's crazy here. We overlook the excesses of Saudi Arabia, which is the home of the Wahhabis — this extremist sect of Muslims that view Iranians and Shia as heretics. Yet we tolerate that. We give them money. We give them support. And yet our focus is on attacking Iran.
-So they haven't backed off one bit from trying to have regime change.
-Judge Andrew Napolitano: Do you have any inside info from your friends in the military about what's being planned over there? Why are there 10,000 new infantry?
-Larry Johnson: Yeah, I wouldn't focus so much on the numbers — 10,000, 50,000. Those are not combat assault troops. There is no evidence right now that they've put them close to what I'd call an assembly area from which you could launch a ground operation.
-Any ground operation would be a suicide pact. Whether it's going onto Qeshm Island — and I will admit that Donald Trump reportedly is the one that rejected it: "Hey, we're not going to put them on Qeshm Island. They'd be sitting ducks." So he's not completely crazy. He at least acknowledged that would be just a symbolic move that would blow up on him.
-He's apparently terrified that he's going to wind up like Jimmy Carter, which — okay, good. I hope he keeps that fear in mind with some of the decisions.
-But they continue to move troops. If we were seeing those troops coming out, then I'd say, "Okay, good — we've finally made a decision that this can't be solved militarily." They continue to believe that if we put enough assets in the theater, then we will be able to ultimately defeat Iran.
-I'd note that a lot of this traffic we saw over the last week — the troops that were initially deployed in late February — they have about a 45- to 50-day supply that needs to be replenished. I think that's what we were seeing last week. They had basically exhausted the initial supplies and they were being resupplied.
-But there are clear plans for a massive bombing campaign to destroy the electrical grid in Iran and take out bridges.
-Judge Andrew Napolitano: And what will that accomplish militarily?
-Larry Johnson: Nothing. I mean, it'll make us feel good. It'll make us think that we've crippled the Iranian economy. Again, they still harbor this notion that if we just create enough pain inside Iran, the people of Iran are going to rise up.
-But I think, as Alistair Cooke made the point earlier with you, what this attack of the West on Iran has done is it has energized the people who are 30 years of age and younger to the fact that they are being attacked by this outside force without justification.
-The generation represented by our friend Professor Morandi, who's in his mid-50s, and by the new Ayatollah Mojtaba Khamenei — when Mojtaba Khamenei was 17 years old back in 1987, he enlisted in the Iranian Revolutionary Guard and fought against the US-backed attack from Iraq. So that experience was formative for both of them.
-But people in Iran who are under the age of 50 really don't remember it. They didn't have that experience of being attacked and trying to survive. Now they are experiencing that, and it's really renewed the revolution, I think, as Alistair said.
-Judge Andrew Napolitano: Who controls the Strait of Hormuz — Monday, April 20, 2026?
-Larry Johnson: Iran. Iran still controls it. They can turn it on, turn it off. They were willing to start allowing other countries to come in and out without interference. They accepted it — no US ships, no Israeli ships, nothing that would service either of those countries.
-But then on Friday, Trump said, "Oh, we're going to blockade them." So the blockade went into effect, and Iran is saying, "Okay, it's closed again."
-There were some Western media stories suggesting there was this big fight internally between the foreign minister and the IRGC — that the IRGC overruled him. But I don't think that was the case at all. He was announcing the policy as it was. Then, after his announcement (or as he was making it), it was decided by Trump that we're going to start this blockade. So the blockade became: "All right, we're going to close the Strait."
-You can go online to marinetraffic.com and see the Strait of Hormuz. You can see when ships are going through — and then boom — it's like turning a water faucet off.
-Judge Andrew Napolitano: Well, there's Bugs Bunny and Donald Duck — or Daffy Duck, as it were.
-Larry Johnson: Correct. Correct.
-Judge Andrew Napolitano: Larry, thank you very much, my dear friend. As always, great analysis, and we'll look forward to seeing you at the end of the week.
-Larry Johnson: Yeah. Let's hope we have a peaceful week, but I'm afraid we won't.
-Judge Andrew Napolitano: Well, you think that they'll start this heavy-duty bombing while the negotiators are in Islamabad?
-Larry Johnson: Possibly. Yeah. I wouldn't rule anything out. But I don't think Iran's going to go. Iran's been pretty clear. Pakistan is working desperately to try to keep this thing on track, but so far Iran is saying no.
-Judge Andrew Napolitano: Wow. Thank you, Larry. All the best, my dear friend.
-
-
-
-    **Overlap — same-day JF (`thread:ritter` *Trump and Hegseth Haven't a Clue*):** shared Hormuz boarding / Islamabad / Caine–codes stack — analyst **C-plane** vs institutional **FM** **/** **USN** tiers; **do** **not** **merge** **without** **labeled** **seam.** Verbatim sibling: [`judging-freedom-trump-hegseth-2026-04-20.md`](../../raw-input/2026-04-20/judging-freedom-trump-hegseth-2026-04-20.md).
-
-- batch-analysis | 2026-04-17 | **Barnes × Johnson (YT) — US politics room × Iran week** | **Tension-first:** **`thread:barnes`** **long-form** **domestic-liability** **+** **White** **House** **process** **(C-plane** **hypothesis)** **—** **not** **§1e** **text** **and** **not** **Pentagon** **primary.** **Same** **calendar** **day** **as** **Hormuz** **/** **Islamabad** **expert** **stack** **—** **cross** **`thread:davis`**, **`thread:johnson`** **(Davis** **×** **Johnson** **earlier** **YT),** **`thread:ritter`** **with** **explicit** **plane** **tags** **(room** **vs** **ORBAT** **vs** **FM).** **Falsifiers:** **named** **official** **statements,** **vote** **counts,** **Navy** **press,** **TS** **screenshots.** | crosses:barnes+johnson
-
 
 
 

@@ -153,9 +153,18 @@ Canonical page paths and raw ingest lines live in **Segment 2** below (regenerat
 
 _Auto-generated from `transcript.md` + **on-disk** and **inbox** `raw-input/` (de-duped union) + `strategy-page` blocks + optional legacy on-disk index rows. **Journal layer** (narrative) lives **above** the **strategy-expert-thread** start HTML comment. The machine-layer HTML block is replaced on each `thread` run._
 
+### Recent transcript material
+
+## 2026-04-27
+- Inbox | cold: full text in [`transcript-diesen-crooke-iran-global-war-world-order-2026-04-27.md`](../raw-input/2026-04-27/transcript-diesen-crooke-iran-global-war-world-order-2026-04-27.md) (pointer; SSOT raw-input) | thread:crooke | crosses:diesen
+- Refined | cold: [crooke-page-2026-04-27-diesen-crooke-iran-global-war-world-order.md](crooke-page-2026-04-27-diesen-crooke-iran-global-war-world-order.md) (guest lane; same raw) | thread:crooke
+- Sibling (host): [../diesen/diesen-page-2026-04-27-diesen-crooke-iran-global-war-world-order.md](../diesen/diesen-page-2026-04-27-diesen-crooke-iran-global-war-world-order.md) | thread:diesen
+- YT | cold: **Glenn Diesen** (host) **×** **Alastair Crooke** — *Iran War Is Now a Global War for World Order* — **aired** **2026-04-27** — **Conflicts** **Forum** / **Eurasia** | `https://www.youtube.com/watch?v=TBD-diesen-crooke-2026-04-27` | verify:operator-paste+pin-URL+two-speaker | thread:crooke | grep:Crooke+Diesen+Iran+world+order+2026-04-27
+
 ### Recent raw-input (lane)
 
 _Union of **on-disk** `raw-input/…` files tagged with this expert’s `thread:` and **inbox** lines (same paths de-duped; disk line kept first)._
 
+- [transcript-diesen-crooke-iran-global-war-world-order-2026-04-27.md](raw-input/2026-04-27/transcript-diesen-crooke-iran-global-war-world-order-2026-04-27.md)
 - [transcript-davis-crooke-iranians-only-getting-tougher-2026-04-23.md](raw-input/2026-04-23/transcript-davis-crooke-iranians-only-getting-tougher-2026-04-23.md)
 <!-- strategy-expert-thread:end -->

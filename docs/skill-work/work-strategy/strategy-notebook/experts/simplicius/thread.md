@@ -32,6 +32,8 @@ _Auto-generated from `transcript.md` + **on-disk** and **inbox** `raw-input/` (d
 
 ### Recent transcript material
 
+## 2026-04-27
+- Inbox | cold: full text in [`substack-simplicius-gimmicks-trump-iran-bluff-2026-04-21.md`](raw-input/2026-04-21/substack-simplicius-gimmicks-trump-iran-bluff-2026-04-21.md) (pointer; SSOT raw-input) | thread:simplicius
 ## 2026-04-26
 - Inbox | cold: full text in [`substack-simplicius-gimmicks-trump-iran-bluff-2026-04-21.md`](raw-input/2026-04-21/substack-simplicius-gimmicks-trump-iran-bluff-2026-04-21.md) (pointer; SSOT raw-input) | thread:simplicius
 ## 2026-04-25
@@ -45,7 +47,6 @@ _Auto-generated from `transcript.md` + **on-disk** and **inbox** `raw-input/` (d
 
 _Union of **on-disk** `raw-input/…` files tagged with this expert’s `thread:` and **inbox** lines (same paths de-duped; disk line kept first)._
 
-- [substack-simplicius-power-again-rebalanced-in-europe-2026-04-21.md](raw-input/2026-04-21/substack-simplicius-power-again-rebalanced-in-europe-2026-04-21.md) _on-disk_
 - [substack-simplicius-left-with-nothing-but-gimmicks-trump-2026-04-22.md](raw-input/2026-04-22/substack-simplicius-left-with-nothing-but-gimmicks-trump-2026-04-22.md) _on-disk_
 - [substack-simplicius-gimmicks-trump-iran-bluff-2026-04-21.md](raw-input/2026-04-21/substack-simplicius-gimmicks-trump-iran-bluff-2026-04-21.md)
 <!-- strategy-expert-thread:end -->

@@ -865,3 +865,21 @@ Barnes says both sides face material clocks and the question is which clock runs
 - **Caine / Saturday meeting:** **No** **on-record** **WH** **/** **Pentagon** **confirm** **in** **IBTimes** **wrap** **—** **keep** **hypothesis** **or** **disputed** **per** **Lead** **Stories** **+** **primary** **video** **only** **where** **speech** **is** **attributed**.
 - **Ritter** **04-20** **JF** **`watch=v=QRkC8xniXkQ`** **pinned** **(**Receipts** **row** **7** **/** **Chronicle** **above**)** **—** **re-verify** **if** **YouTube** **title** **ever** **drifts** **(**receipt** **discipline**)** **.**
 - Prior day: [2026-04-19](#2026-04-19)
+
+## 2026-04-27
+
+### Chronicle
+
+- **`thread:baud` — Dialogue Works (Nima Alkhorshid), pub_date 2026-04-27:** Col. **Jacques Baud** — [*Trump's Final Card Just Ended Israel — Full Breakdown*](https://www.youtube.com/watch?v=iZ5xSBYxxyQ) — **operator** **cleaned** **transcript** **(speaker** **labels)** on disk: [transcript-baud-dialogue-works-nima-2026-04-27.md](../../raw-input/2026-04-27/transcript-baud-dialogue-works-nima-2026-04-27.md). **Themes** **(WORK** **tier** **—** **analyst** **opinion,** **not** **wire):** **Araghchi** **neighbor** **tour** **/** **Pakistan–Oman–Russia** **sequence** **with** **Hormuz** **management** **as** **negotiation** **core** **vs** **nuclear-program** **headline;** **Western** **“peace** **through** **pressure”** **vs** **bilateral** **adjustment;** **carrier** **surge** **/** **escalation** **risk** **and** **Trump** **bluff** **thesis;** **decapitation** **vs** **preserving** **interlocutors** **(Sun** **Tzu** **/** **Cold** **War** **parallel);** **Israel–Lebanon** **Litani** **/** **yellow** **line** **/** **Hezbollah-as-defense** **frame;** **GCC** **vulnerability** **/** **bases** **/** **credibility** **aftermath.**
+
+### References
+
+- [daily-strategy-inbox.md](../../daily-strategy-inbox.md) — **`thread:baud`** row **2026-04-27**
+- [transcript-baud-dialogue-works-nima-2026-04-27.md](../../raw-input/2026-04-27/transcript-baud-dialogue-works-nima-2026-04-27.md) — **verbatim**
+- [`experts/baud/thread.md`](../../experts/baud/thread.md) — **journal** **/** **`thread`** **machine** **layer** **(after** **`strategy_thread`)**
+
+### Foresight
+
+- **Verify** **as** **needed:** **YouTube** **metadata** **match** **`watch?v=iZ5xSBYxxyQ`** **↔** **show** **title** **/** **pub** **day** **if** **titles** **drift.**
+
+- Prior day (notebook): [2026-04-20](#2026-04-20)
