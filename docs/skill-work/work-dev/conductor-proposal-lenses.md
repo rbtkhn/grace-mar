@@ -278,6 +278,234 @@ Refuse the new dashboard and add only one small registry row or receipt link pro
 
 ---
 
-## 9. Non-Authority Statement
+## 9. Appendix: Brahms Test for Conductor Utility
 
-Conductor Proposal Lenses and the Beethoven test shape **coding-agent proposals only**. They do **not** create new authority, bypass recursion-gate, approve durable changes, or alter Record surfaces.
+### Purpose
+
+If Beethoven differentiates the conductors by **crisis**, **propulsion**, and **public drama**, Brahms differentiates them by **density**, **inner weaving**, **tempo breathing**, **structural warmth**, and **continuity** across thick musical texture.
+
+The **Brahms test** should be used when a Grace-Mar task involves:
+
+- dense systems,
+- overlapping structures,
+- complex but not obviously broken docs,
+- architecture that feels fragmented rather than invalid,
+- operator-facing surfaces that are technically clear but emotionally dead,
+- or workflows that feel heavy and inert rather than wrong.
+
+### Core Brahms Distinctions
+
+| Conductor | Brahms Premise | Musical Signature | Coding-Agent Translation |
+|-----------|----------------|---------------------|--------------------------|
+| Toscanini | clarity inside density | transparent texture, coiled propulsion, strict line, decongested weave | clarify crowded structures, untangle dense docs, make inner lines legible without broad redesign |
+| Furtwängler | breathing structure from within | elastic continuity, inner pressure, transition life, unresolved relation | preserve overlap while showing continuity, map unresolved-but-related structures |
+| Bernstein | warmth made legible | emotional inhabitation, declaration, human warmth under structure | make complex systems humanly legible without flattening nuance |
+| Karajan | blended total architecture | homogeneity, radiance, continuity, fused long line | unify scattered surfaces into one coherent navigable whole |
+| Kleiber | selective rhythmic life | spring, exact gesture, anti-heaviness, reactivated motion | make one small intervention that restores life, tact, and movement |
+
+### Refined Brahms Formulae
+
+```text
+Toscanini clarifies the weave.
+Furtwängler breathes through the weave.
+Bernstein humanizes the weave.
+Karajan fuses the weave.
+Kleiber reanimates the weave.
+```
+
+### Brahms-Based Utility Upgrade
+
+#### Toscanini
+
+Before:
+
+- validate and enforce
+
+Brahms refinement:
+
+- validate by clarifying density
+- untangle crowded documentation and schema families
+- make inner structure audible without slowing the system down
+
+#### Furtwängler
+
+Before:
+
+- preserve unresolved tension
+
+Brahms refinement:
+
+- preserve unresolved continuity across the tension
+- show how overlapping surfaces still belong to one living structure
+- prefer overlap maps, bridge docs, and advisory relation notes
+
+#### Bernstein
+
+Before:
+
+- make the stakes speak
+
+Brahms refinement:
+
+- make complex structure speak warmly and humanly
+- preserve nuance while improving operator comprehension
+- turn technical surfaces into inhabitable guidance
+
+#### Karajan
+
+Before:
+
+- shape the whole architecture
+
+Brahms refinement:
+
+- blend scattered surfaces into one coherent long line
+- improve continuity and navigability across adjacent docs and registries
+- reduce fragmentation rather than merely polishing locally
+
+#### Kleiber
+
+Before:
+
+- narrow ruthlessly
+
+Brahms refinement:
+
+- find the one intervention that restores life, spring, and tact
+- remove heaviness without thinning substance
+- choose the cut that makes the system feel alive again
+
+### Applying the Brahms Test to Code Proposals
+
+Use the Brahms test when the system feels:
+
+- dense,
+- overgrown,
+- overlapping,
+- fragmented,
+- warm in intention but cold in presentation,
+- or heavy without being decisively broken.
+
+Ask these questions:
+
+#### Toscanini
+
+- Where is the structure too dense to hear?
+- What can be clarified without a redesign?
+- Which inner lines need to become explicit?
+
+#### Furtwängler
+
+- Which overlaps are alive and should not yet be collapsed?
+- How can continuity be shown across the overlap?
+- What transition or bridge is currently missing?
+
+#### Bernstein
+
+- Which technically correct surfaces still feel dead to a human operator?
+- How can the structure be made emotionally and practically legible?
+- What explanation would help a person inhabit the system rather than merely inspect it?
+
+#### Karajan
+
+- Which scattered surfaces should read as one blended architecture?
+- Where is the system fragmented even though each part is individually sound?
+- What relationship table, registry note, or layer map would restore continuity?
+
+#### Kleiber
+
+- What is the smallest intervention that would restore movement?
+- Which surface is heavy, inert, or overbuilt rather than invalid?
+- What should be removed, narrowed, or deferred to recover spring and tact?
+
+### Same Problem, Brahms-Tested Proposals
+
+**Problem:** “Grace-Mar’s operator-surface docs are correct but feel crowded, overlapping, and harder to navigate than they should.”
+
+#### Toscanini Response
+
+**PR:** Clarify dense operator-surface docs.
+
+- Reformat crowded sections.
+- Make headings and registry fields explicit.
+- Fix ambiguous links.
+- Preserve doctrine.
+- Do not redesign the whole operator-surface architecture.
+
+**Proposal signature:** decongest · clarify inner lines · exact links and headings · no broad redesign
+
+#### Furtwängler Response
+
+**PR:** Add overlap/continuity note across operator-surface docs.
+
+- Map where operator-surface registry, staleness doc, and dashboard doctrine overlap.
+- Preserve unresolved distinctions where they are still useful.
+- Add bridge language rather than forcing consolidation.
+
+**Proposal signature:** preserve continuity across overlap · no premature collapse · advisory bridge note · human review remains central
+
+#### Bernstein Response
+
+**PR:** Improve operator-facing explanations of the surface stack.
+
+- Add concise “when to use which surface” guidance.
+- Explain why multiple surfaces exist.
+- Improve practical usability without dumbing down the structure.
+
+**Proposal signature:** humanly legible · motivational and practical · adoption-oriented · not merely decorative prose
+
+#### Karajan Response
+
+**PR:** Harmonize operator-surface architecture.
+
+- Align the registry, staleness note, and dashboard doctrine under one cleaner relationship map.
+- Normalize naming.
+- Improve long-line coherence across the surface stack.
+
+**Proposal signature:** blend adjacent docs · system-level coherence · relationship table · reduce fragmentation
+
+#### Kleiber Response
+
+**PR:** Make one exact cut to restore movement.
+
+- Choose the single most crowded surface.
+- Remove or defer one redundant section.
+- Add explicit non-goals.
+- Avoid touching the whole stack.
+
+**Proposal signature:** one hotspot · anti-heaviness · narrow diff · explicit refusals
+
+### Two-Composer Rule
+
+#### Beethoven test
+
+Use when the task is about:
+
+- crisis,
+- propulsion,
+- formal drama,
+- enforcement under pressure,
+- public rhetorical force.
+
+#### Brahms test
+
+Use when the task is about:
+
+- density,
+- inner motion,
+- overlap,
+- continuity,
+- warmth,
+- architecture that feels fragmented or inert.
+
+The two tests are **complementary**. Beethoven sharpens macro-drama; Brahms sharpens texture, pacing, and structural warmth.
+
+### Non-Authority Note
+
+The Brahms test is a prompt-shaping and proposal-discipline tool only. It does not create authority, approve durable changes, bypass recursion-gate, or alter Record surfaces.
+
+---
+
+## 10. Non-Authority Statement
+
+Conductor Proposal Lenses and the **Beethoven** and **Brahms** tests shape **coding-agent proposals only**. They do **not** create new authority, bypass recursion-gate, approve durable changes, or alter Record surfaces.

@@ -14,7 +14,7 @@ description: "Conductor: work-dev–associated execution — pick → act on dis
 
 **Operational layer map:** This skill is the **operational router** (stance → disk actions → logging), not synthesis doctrine — see [CONDUCTOR-LAYER-MAP.md](../../../docs/skill-work/work-coffee/CONDUCTOR-LAYER-MAP.md). **Master Selection Menu** = conductor stance row (`build_conductor_mcq_for_user`, masters **A.–E.**); **Conductor Action Menu** = five next moves after `conductor=<slug>` resolves ([CONDUCTOR-PASS — Conductor action MCQ](../../../docs/skill-work/work-coffee/CONDUCTOR-PASS.md#conductor-action-mcq)). **Prefer conductor slugs** in logs/metadata (`toscanini`, `furtwangler`, …), not stable storage of hub/action letters.
 
-**Coding-agent prompts:** When using Conductor to shape a coding-agent proposal, load [conductor proposal lenses](../../../docs/skill-work/work-dev/conductor-proposal-lenses.md); if proposed actions still feel identical across conductors, use the **Beethoven test** appendix there.
+**Coding-agent prompts:** When using Conductor to shape a coding-agent proposal, load [conductor proposal lenses](../../../docs/skill-work/work-dev/conductor-proposal-lenses.md); if proposed actions still feel identical across conductors, use the **Beethoven test** appendix there for crisis-driven collapse, or the **Brahms test** appendix when the problem feels **dense, overlapping, or inert** rather than crisis-driven.
 
 ## When to read this
 
@@ -43,7 +43,7 @@ python3 scripts/log_cadence_event.py --kind coffee_conductor_outcome -u grace-ma
 ## Related
 
 - [CONDUCTOR-LAYER-MAP.md](../../../docs/skill-work/work-coffee/CONDUCTOR-LAYER-MAP.md) (theory vs ritual vs skills vs compiled views vs proposal lenses)
-- [conductor proposal lenses](../../../docs/skill-work/work-dev/conductor-proposal-lenses.md) (PR shapes + Beethoven test — prompt convention only)
+- [conductor proposal lenses](../../../docs/skill-work/work-dev/conductor-proposal-lenses.md) (PR shapes + Beethoven and Brahms tests — prompt convention only)
 - [dev-notebook — Conductor (work-dev)](../../../docs/skill-work/work-dev/dev-notebook/README.md#conductor-work-dev) (where **work-dev** Conductor **output** **lands**)
 - [work-dev — workspace (entrypoint)](../../../docs/skill-work/work-dev/workspace.md)
 - [CONDUCTOR-PASS.md](../../../docs/skill-work/work-coffee/CONDUCTOR-PASS.md) (generic + cross-territory table)

@@ -114,9 +114,13 @@ Letters may appear in user-facing menu text, but **not** as the canonical persis
 
 ---
 
-## 8. Beethoven Test Pointer
+## 8. Beethoven and Brahms Test Pointers
 
-The **Beethoven test** in [`../work-dev/conductor-proposal-lenses.md`](../work-dev/conductor-proposal-lenses.md) may be used when conductor proposal styles begin to flatten. It clarifies how the five conductors differ in structure, time, tension, communication, architecture, and selectivity.
+The **Beethoven test** in [`../work-dev/conductor-proposal-lenses.md`](../work-dev/conductor-proposal-lenses.md) clarifies how the five conductors differ under **crisis**, **propulsion**, and **formal drama** — use it when conductor proposal styles begin to flatten in those dimensions.
+
+The **Brahms test** (same file, distinct appendix) clarifies distinctions in **density**, **continuity**, **warmth**, **overlap**, and **anti-heaviness** — use it when the problem is crowded or inert texture rather than dramatic conflict.
+
+Use **both** when proposals still collapse into the same generic PR shape after stance selection.
 
 ---
 

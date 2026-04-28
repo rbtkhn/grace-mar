@@ -12,7 +12,7 @@
 
 **Menus vs slugs:** Use standard labels when two **A–E** menus could appear in one thread — **Coffee Hub Menu** (`coffee` Step 2 hub); **Master Selection Menu** (stance row — [§ Conductor MCQ](#conductor-mcq)); **Conductor Action Menu** ([§ Conductor action MCQ](#conductor-action-mcq)). **Letters are UI conveniences**; **durable logs** should record **conductor slugs** (`toscanini`, `furtwangler`, `bernstein`, `karajan`, `kleiber`), not hub/action letters.
 
-**Coding-agent proposals:** Conductor stance should change **scope, validation posture, non-goals, and acceptance criteria** — not merely wording — per [conductor proposal lenses](../work-dev/conductor-proposal-lenses.md). For coding-agent proposal work, use the **Beethoven test** appendix in that file when the five modes risk collapsing into the same PR shape.
+**Coding-agent proposals:** Conductor stance should change **scope, validation posture, non-goals, and acceptance criteria** — not merely wording — per [conductor proposal lenses](../work-dev/conductor-proposal-lenses.md). For coding-agent proposal work, use the **Beethoven test** appendix in that file when the five modes risk collapsing into the same PR shape under **crisis, propulsion, or formal drama**; use the **Brahms test** appendix there when the issue is **density, overlap, continuity, or anti-heaviness** rather than dramatic conflict.
 
 ---
 
