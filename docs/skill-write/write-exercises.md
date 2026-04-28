@@ -92,13 +92,13 @@ Rewrite at different densities.
 
 ### 5. `voice_preservation`
 
-Rewrite without losing the operator's recognizable style.
+Rewrite without losing the intended register — for **Locals (VivaBarnes / Duran)**, **Grace‑Mar** house style per [grace-mar-locals-voice.md](grace-mar-locals-voice.md); for **X / PH**, operator-chosen register per [write-operator-preferences.md](write-operator-preferences.md).
 
-**Goal:** Calibrate agent-assisted writing to operator taste.
+**Goal:** Calibrate agent-assisted writing to the documented surface (not a generic “personal voice” default).
 
 **Prompt:**
 
-> Rewrite this draft to improve clarity and force without changing the underlying voice.
+> Rewrite this draft to improve clarity and force without changing the underlying voice for this surface.
 
 **Return:**
 - revised draft
