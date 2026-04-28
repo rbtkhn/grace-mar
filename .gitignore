@@ -89,6 +89,9 @@ artifacts/work-notes/*
 !artifacts/work-notes/.gitkeep
 artifacts/evidence-stubs/*
 !artifacts/evidence-stubs/.gitkeep
+artifacts/patch-intake/*
+!artifacts/patch-intake/.gitkeep
+!artifacts/patch-intake/README.md
 artifacts/candidate-drafts/*
 !artifacts/candidate-drafts/.gitkeep
 artifacts/shadow-merges/*

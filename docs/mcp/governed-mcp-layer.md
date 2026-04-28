@@ -97,6 +97,12 @@ Structured research JSON ([`schemas/research-evidence-input.v1.json`](../../sche
 
 ---
 
+## Coding-agent patch intake
+
+Structured intake JSON ([`schemas/coding-agent-patch-intake.v1.json`](../../schemas/coding-agent-patch-intake.v1.json)) can be turned into a **patch-review Markdown packet** under **[`artifacts/patch-intake/`](../../artifacts/patch-intake/)** via **`scripts/coding_agent_patch_intake.py`**. Each run emits an **MCP execution receipt** under **`artifacts/mcp-receipts/`**. Packets are **candidate proposals**, not merges or approvals — merge authority stays outside the adapter — **[`coding-agent-patch-intake.md`](coding-agent-patch-intake.md)**.
+
+---
+
 ## Audit
 
 Regenerate the Markdown report after editing the registry:

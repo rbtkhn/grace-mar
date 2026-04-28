@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "agent": {
+    "name": "Cursor Agent",
+    "kind": "coding_agent",
+    "model": "example-model-tag"
+  },
+  "task": {
+    "title": "Document MCP patch-intake adapter boundaries",
+    "operator_intent": "Produce governed Markdown intake packets without implying Record merge.",
+    "claimed_summary": "Edited MCP governance doc prose and added helper wiring notes under scripts/mcp_receipt_lib.py callers section."
+  },
+  "repo": {
+    "name": "grace-mar",
+    "base_ref": "main",
+    "head_ref": "feature/pr-mcp-patch-intake-notes",
+    "commit": "abc1234deadbeef"
+  },
+  "files_touched": [
+    {
+      "path": "docs/mcp/governed-mcp-layer.md",
+      "change_type": "modified",
+      "surface_hint": "documentation"
+    },
+    {
+      "path": "scripts/mcp_receipt_lib.py",
+      "change_type": "modified",
+      "surface_hint": "library comments only"
+    }
+  ],
+  "tests": {
+    "claimed": [
+      "pytest tests/test_mcp_receipt.py (subset)",
+      "manual smoke: python scripts/mcp_receipt_audit.py"
+    ],
+    "reported_results": [
+      "Tests/test_mcp_receipt subset passed locally",
+      "mcp_receipt_audit: scanned receipts OK"
+    ]
+  },
+  "risks": [
+    "Agent summaries may omit edge-case edits — paths listed must match actual diff.",
+    "Documentation tone drift vs companion editorial stance."
+  ],
+  "review_request": {
+    "desired_action": "review_only",
+    "requires_human_review": true
+  }
+}

@@ -18,6 +18,7 @@
 | **MCP authority bindings** | [mcp/mcp-authority-bindings.md](mcp/mcp-authority-bindings.md) | Join table: `output_lane` → `authority-map.json` surfaces + `mcp_authority_check.py` report. |
 | **MCP execution receipts** | [mcp/mcp-execution-receipts.md](mcp/mcp-execution-receipts.md) | Governance receipt schema + generator (`mcp_receipt.py`) / audit (`mcp_receipt_audit.py`); WORK/runtime artifacts; distinct from runtime-worker receipts in `schema-registry/execution-receipt.v1.json`. |
 | **Research-to-evidence stubs** | [mcp/research-to-evidence-stubs.md](mcp/research-to-evidence-stubs.md) | Structured research JSON → pre-canonical stub + MCP receipt (`research_to_evidence_stub.py`); no Record writes. |
+| **Coding-agent patch intake** | [mcp/coding-agent-patch-intake.md](mcp/coding-agent-patch-intake.md) | Coding-agent intake JSON → governed patch-review packet + MCP receipt (`coding_agent_patch_intake.py`); no merges or Record edits. |
 | **Naming convention** | [NAMING-CONVENTION](naming-convention.md) | Lowercase/hyphen preference; reserved `AGENTS.md`; Python `snake_case`; OpenClaw export path. |
 | **Web app** | [WEB-APP-PLAN](web-app-plan.md) | Grace-mar.com development plan; phases, tech, dependencies. See [DESIGN-ROADMAP](design-roadmap.md) for related features. |
 | **Intent schema** | [INTENT-TEMPLATE](intent-template.md) | Machine-readable goal hierarchy, trade-offs, and escalation rules. |
