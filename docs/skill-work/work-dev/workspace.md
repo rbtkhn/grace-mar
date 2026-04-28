@@ -28,6 +28,8 @@ Use this file when you want one place to understand:
 | **Session continuity** | **Contract:** [session-continuity-contract.md](session-continuity-contract.md) — files + `continuity_read_log.py` + CI (`tests/test_continuity_read_log.py`); not “agent remembers.” Live JSONL append when script invoked; OpenClaw startup wiring still operator-side |
 | **Derived regeneration foundation** | **Partial:** repo-owned [derived-regeneration.md](derived-regeneration.md) now includes a phase-1 change detector, regeneration entrypoint, rebuild receipts, a generated target manifest, and rebuild-health telemetry for a small initial target set. Runtime-triggered rebuild requests remain explicitly deferred. |
 
+**Mirror (OpenClaw surfaces):** Full rows—including compute-ledger (**`partial`**), local topology (**`implemented`**), and VPS caveat (**`documented_only`**)—live in [`integration-status.md`](integration-status.md); this summary stays headline-only.
+
 ---
 
 ## Canonical files
