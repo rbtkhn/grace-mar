@@ -15,6 +15,7 @@
 | **Implementation** | [AGENTS](../AGENTS.md), [ARCHITECTURE](architecture.md) | Guardrails for AI and developers; system design. |
 | **Trust layers (tools)** | [TRUST-LAYERS](trust-layers.md) | Reliability vs adversarial surfaces; complements knowledge boundary. |
 | **MCP capability registry (planned integrations)** | [mcp/governed-mcp-layer.md](mcp/governed-mcp-layer.md) | Policy classes + audit report for hypothetical MCP tools; not live wiring; Record merge stays gated. |
+| **MCP authority bindings** | [mcp/mcp-authority-bindings.md](mcp/mcp-authority-bindings.md) | Join table: `output_lane` → `authority-map.json` surfaces + `mcp_authority_check.py` report. |
 | **Public copy / examples** | [CONTRIBUTING-PUBLIC-COPY](contributing-public-copy.md) | Tone for comparisons; fake tokens in docs. |
 | **Naming convention** | [NAMING-CONVENTION](naming-convention.md) | Lowercase/hyphen preference; reserved `AGENTS.md`; Python `snake_case`; OpenClaw export path. |
 | **Web app** | [WEB-APP-PLAN](web-app-plan.md) | Grace-mar.com development plan; phases, tech, dependencies. See [DESIGN-ROADMAP](design-roadmap.md) for related features. |

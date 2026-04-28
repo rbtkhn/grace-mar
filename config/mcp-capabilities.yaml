@@ -44,6 +44,9 @@ capabilities:
       - read_pr_diff
     prohibited_actions:
       - merge_pr
+      - merge_to_main
+      - force_push
+      - bypass_review
       - push_commit
       - delete_branch
     reads:
@@ -80,6 +83,28 @@ capabilities:
     requires_receipt: true
     gate_required_for_record_change: true
     notes: Companion-record changes still flow through recursion-gate; PR is a carrier only.
+
+  - id: evidence_stub_operator_template
+    name: Evidence stub operator template (pre-canonical)
+    category: policy
+    local_or_cloud: local
+    trust_tier: medium
+    allowed_actions:
+      - emit_stub_markdown
+      - attach_source_hints
+    prohibited_actions:
+      - append_canonical_evidence_without_review
+    reads:
+      - operator_declared_sources
+    writes:
+      - evidence_stub_paths_under_artifacts
+    network_access: none
+    credential_requirements: none
+    durable_state_write: false
+    output_lane: evidence_stub
+    requires_receipt: true
+    gate_required_for_record_change: true
+    notes: Illustrative class for tooling that emits evidence-shaped stubs; canonical EVIDENCE still merges via gate.
 
   - id: web_research
     name: Web research / fetch
@@ -142,7 +167,7 @@ capabilities:
     network_access: none
     credential_requirements: none
     durable_state_write: false
-    output_lane: runtime_only
+    output_lane: prohibited
     requires_receipt: true
     gate_required_for_record_change: true
     notes: Declarative stance for tooling reviews—interactive shells are out of scope for governed MCP.
@@ -163,7 +188,7 @@ capabilities:
     network_access: none
     credential_requirements: none
     durable_state_write: false
-    output_lane: runtime_only
+    output_lane: prohibited
     requires_receipt: true
     gate_required_for_record_change: true
     notes: Aligns with leakage checklist—vector/MCP retrieval is not gate approval.

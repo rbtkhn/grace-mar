@@ -1,10 +1,10 @@
 # MCP capability audit report
 
-- **Generated (UTC):** 2026-04-28T05:02:44Z
-- **Git:** `01768a1d`
+- **Generated (UTC):** 2026-04-28T14:44:02Z
+- **Git:** `a318f05c`
 - **Config:** `config\mcp-capabilities.yaml`
 - **Schema:** `schemas\mcp-capability.v1.json`
-- **Capabilities:** 8
+- **Capabilities:** 9
 
 ## Summary
 
@@ -16,11 +16,12 @@ Planning-only registry classes — not live MCP wiring. Durable Record changes r
 |----|----------|-------------|-------|---------|-------|---------------|-----------------|---------|-------------|
 | `coding_agent_patch_intake` | coding_agent | hybrid | high | read | optional | false | true | true | candidate_proposal |
 | `database_readonly` | database | hybrid | high | read | optional | false | true | true | runtime_only |
+| `evidence_stub_operator_template` | policy | local | medium | none | none | false | true | true | evidence_stub |
 | `filesystem_readonly` | filesystem | local | medium | none | none | false | true | true | runtime_only |
 | `github_patch_proposal` | scm | hybrid | high | full | required | false | true | true | candidate_proposal |
 | `github_readonly` | scm | hybrid | medium | read | optional | false | true | true | runtime_only |
-| `memory_external_prohibited_by_default` | memory | cloud | low | none | none | false | true | true | runtime_only |
-| `shell_execution_prohibited` | policy | local | operator_only | none | none | false | true | true | runtime_only |
+| `memory_external_prohibited_by_default` | memory | cloud | low | none | none | false | true | true | prohibited |
+| `shell_execution_prohibited` | policy | local | operator_only | none | none | false | true | true | prohibited |
 | `web_research` | web | cloud | low | read | none | false | true | true | work_artifact |
 
 ## Danger flags

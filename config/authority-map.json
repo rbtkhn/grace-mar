@@ -13,12 +13,14 @@
     "evidence": "draftable",
     "bridge_packets": "ephemeral_only",
     "harvest_packets": "ephemeral_only",
+    "mcp_operator_scratch": "read_only",
     "offline_tools": "draftable",
     "cloud_escalation": "review_required"
   },
   "notes": [
     "Meaningful durable changes should not bypass review.",
     "Operational surfaces are not equivalent to governed state.",
-    "Keys mix layers, scopes, and packet classes; see docs/authority-map.md."
+    "Keys mix layers, scopes, and packet classes; see docs/authority-map.md.",
+    "mcp_operator_scratch: MCP binding layer read-only scratch plane (policy config); not live MCP wiring."
   ]
 }

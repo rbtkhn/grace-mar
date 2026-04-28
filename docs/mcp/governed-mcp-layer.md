@@ -2,7 +2,7 @@
 
 **Status:** Planning and policy surface only. This document does **not** connect MCP servers or execute external tools.
 
-**Related:** Read-only export adapter — [`integrations/mcp-adapter.md`](../integrations/mcp-adapter.md). Internal worker trust (different domain) — [`schemas/worker-trust-registry.v1.schema.json`](../../schemas/worker-trust-registry.v1.schema.json). Capability registry — [`config/mcp-capabilities.yaml`](../../config/mcp-capabilities.yaml), schema [`schemas/mcp-capability.v1.json`](../../schemas/mcp-capability.v1.json).
+**Related:** Read-only export adapter — [`integrations/mcp-adapter.md`](../integrations/mcp-adapter.md). Internal worker trust (different domain) — [`schemas/worker-trust-registry.v1.schema.json`](../../schemas/worker-trust-registry.v1.schema.json). Capability registry — [`config/mcp-capabilities.yaml`](../../config/mcp-capabilities.yaml), schema [`schemas/mcp-capability.v1.json`](../../schemas/mcp-capability.v1.json). Lane ↔ authority bindings — [`config/mcp-authority-bindings.yaml`](../../config/mcp-authority-bindings.yaml), [`mcp-authority-bindings.md`](mcp-authority-bindings.md).
 
 ---
 
@@ -69,6 +69,20 @@ Durable changes encode **identity and accountability**. Tooling cannot substitut
 
 ---
 
+## Authority binding (lanes ↔ `authority-map.json`)
+
+Each **`output_lane`** in [`config/mcp-capabilities.yaml`](../../config/mcp-capabilities.yaml) must map to exactly one row in [`config/mcp-authority-bindings.yaml`](../../config/mcp-authority-bindings.yaml). Bindings pin lanes to **`authority_surface`** keys from [`config/authority-map.json`](../../config/authority-map.json) so capability posture cannot drift into wider write classes without an explicit policy edit.
+
+Cross-check (writes [`artifacts/mcp-authority-report.md`](../../artifacts/mcp-authority-report.md)):
+
+```bash
+python3 scripts/mcp_authority_check.py
+```
+
+Use **`--strict`** to fail when informational warnings fire (e.g. unused binding lanes). Full rationale and mapping table: **[`mcp-authority-bindings.md`](mcp-authority-bindings.md)**.
+
+---
+
 ## Audit
 
 Regenerate the Markdown report after editing the registry:
@@ -78,3 +92,5 @@ python3 scripts/mcp_capability_audit.py
 ```
 
 Output: [`artifacts/mcp-capability-report.md`](../../artifacts/mcp-capability-report.md). Use `--strict` in CI if you want the process to fail when heuristics flag risk.
+
+After changing bindings or `authority-map.json`, run **`mcp_authority_check.py`** as well (see **Authority binding** above).

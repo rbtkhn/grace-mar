@@ -97,7 +97,8 @@
             "runtime_only",
             "work_artifact",
             "evidence_stub",
-            "candidate_proposal"
+            "candidate_proposal",
+            "prohibited"
           ]
         },
         "requires_receipt": { "type": "boolean" },

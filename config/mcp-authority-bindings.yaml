@@ -1,0 +1,65 @@
+# Maps MCP capability output_lane → authority-map surface + class (planning only).
+# Validate: python3 scripts/mcp_authority_check.py
+#
+# authority_surface keys must exist in config/authority-map.json surfaces.
+
+version: 1
+description: Bind MCP output lanes to Grace-Mar authority surfaces so lanes cannot widen write policy silently.
+
+bindings:
+  - output_lane: runtime_only
+    authority_surface: bridge_packets
+    authority_class: ephemeral_only
+    allowed_outputs:
+      - session_scoped_packets
+      - harness_receipts
+    prohibited_outputs:
+      - silent_self_md_write
+      - silent_evidence_append
+    gate_required_for_record_change: false
+    notes: Ephemeral transit; not canonical Record. Alternative read_only scratch uses surface mcp_operator_scratch in authority-map.
+
+  - output_lane: work_artifact
+    authority_surface: prepared_context
+    authority_class: draftable
+    allowed_outputs:
+      - lane_markdown
+      - operator_scratch_md
+    prohibited_outputs:
+      - merge_without_gate
+    gate_required_for_record_change: true
+    notes: Draft WORK artifacts; promotion to Record still gated.
+
+  - output_lane: evidence_stub
+    authority_surface: evidence
+    authority_class: draftable
+    allowed_outputs:
+      - evidence_stub_md
+      - prepared_context_refs
+    prohibited_outputs:
+      - canonical_evidence_without_review
+    gate_required_for_record_change: true
+    notes: Pre-canonical evidence-shaped drafts.
+
+  - output_lane: candidate_proposal
+    authority_surface: governed_state
+    authority_class: review_required
+    allowed_outputs:
+      - recursion_gate_yaml_blocks
+      - staged_candidate_text
+    prohibited_outputs:
+      - auto_merge_pipeline
+    gate_required_for_record_change: true
+    notes: Candidate proposals remain review_required; companion merge via process_approved_candidates only.
+
+  - output_lane: prohibited
+    authority_surface: safety
+    authority_class: human_only
+    allowed_outputs:
+      - policy_refusal_messages
+    prohibited_outputs:
+      - any_automated_record_write
+      - shell_execution
+      - silent_external_memory_sync
+    gate_required_for_record_change: true
+    notes: Policy-decline lane; human-only posture on safety surface.

@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://grace-mar.local/schemas/mcp-authority-bindings.v1.json",
+  "title": "McpAuthorityBindings",
+  "$comment": "Maps MCP output_lane values to authority-map surfaces. See docs/mcp/mcp-authority-bindings.md.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["version", "bindings"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "version": { "type": "integer", "const": 1 },
+    "description": { "type": "string" },
+    "bindings": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/binding" }
+    }
+  },
+  "$defs": {
+    "binding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "output_lane",
+        "authority_surface",
+        "authority_class",
+        "allowed_outputs",
+        "prohibited_outputs",
+        "gate_required_for_record_change",
+        "notes"
+      ],
+      "properties": {
+        "output_lane": {
+          "type": "string",
+          "enum": [
+            "runtime_only",
+            "work_artifact",
+            "evidence_stub",
+            "candidate_proposal",
+            "prohibited"
+          ]
+        },
+        "authority_surface": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[a-z0-9_]+$"
+        },
+        "authority_class": {
+          "type": "string",
+          "enum": [
+            "read_only",
+            "draftable",
+            "review_required",
+            "human_only",
+            "ephemeral_only"
+          ]
+        },
+        "allowed_outputs": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "prohibited_outputs": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "gate_required_for_record_change": { "type": "boolean" },
+        "notes": { "type": "string" },
+        "authority_class_override": { "type": "boolean", "default": false },
+        "override_reason": { "type": "string" }
+      }
+    }
+  }
+}
