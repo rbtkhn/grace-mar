@@ -2,7 +2,7 @@
 
 **Status:** Planning and policy surface only. This document does **not** connect MCP servers or execute external tools.
 
-**Related:** Read-only export adapter — [`integrations/mcp-adapter.md`](../integrations/mcp-adapter.md). Internal worker trust (different domain) — [`schemas/worker-trust-registry.v1.schema.json`](../../schemas/worker-trust-registry.v1.schema.json). Capability registry — [`config/mcp-capabilities.yaml`](../../config/mcp-capabilities.yaml), schema [`schemas/mcp-capability.v1.json`](../../schemas/mcp-capability.v1.json). Lane ↔ authority bindings — [`config/mcp-authority-bindings.yaml`](../../config/mcp-authority-bindings.yaml), [`mcp-authority-bindings.md`](mcp-authority-bindings.md). Execution receipts — [`schemas/mcp-execution-receipt.v1.json`](../../schemas/mcp-execution-receipt.v1.json), [`mcp-execution-receipts.md`](mcp-execution-receipts.md).
+**Related:** Read-only export adapter — [`integrations/mcp-adapter.md`](../integrations/mcp-adapter.md). Internal worker trust (different domain) — [`schemas/worker-trust-registry.v1.schema.json`](../../schemas/worker-trust-registry.v1.schema.json). Capability registry — [`config/mcp-capabilities.yaml`](../../config/mcp-capabilities.yaml), schema [`schemas/mcp-capability.v1.json`](../../schemas/mcp-capability.v1.json). Lane ↔ authority bindings — [`config/mcp-authority-bindings.yaml`](../../config/mcp-authority-bindings.yaml), [`mcp-authority-bindings.md`](mcp-authority-bindings.md). Execution receipts — [`schemas/mcp-execution-receipt.v1.json`](../../schemas/mcp-execution-receipt.v1.json), [`mcp-execution-receipts.md`](mcp-execution-receipts.md). MCP stack overview — [`mcp-stack-overview.md`](mcp-stack-overview.md). Governance runbook — [`mcp-governance-runbook.md`](mcp-governance-runbook.md).
 
 ---
 
@@ -144,3 +144,11 @@ python3 scripts/mcp_capability_audit.py
 Output: [`artifacts/mcp-capability-report.md`](../../artifacts/mcp-capability-report.md). Use `--strict` in CI if you want the process to fail when heuristics flag risk.
 
 After changing bindings or `authority-map.json`, run **`mcp_authority_check.py`** as well (see **Authority binding** above).
+
+---
+
+## Governance consolidation
+
+The **[`mcp-stack-overview.md`](mcp-stack-overview.md)** table summarizes the full MCP substrate (registry, bindings, receipts, risk, adapters). **[`mcp-governance-runbook.md`](mcp-governance-runbook.md)** documents the operator sequence; **`scripts/run_mcp_governance_checks.py`** runs that sequence against committed examples and writes **`artifacts/mcp-governance-demo-report.md`** (no live MCP servers, **`subprocess`** without shell).
+
+Passing the consolidation run **does not** approve arbitrary **live MCP** integration or canonical Record merges — **live MCP remains a separate operator decision**; merge authority stays with the companion and **[`recursion-gate.md`](../../users/grace-mar/recursion-gate.md)** / **`process_approved_candidates.py`** per **[`AGENTS.md`](../../AGENTS.md)**.

@@ -104,6 +104,10 @@ artifacts/mcp-local-read/*
 artifacts/mcp-local-index/*
 !artifacts/mcp-local-index/.gitkeep
 !artifacts/mcp-local-index/README.md
+artifacts/mcp-governance-demo/*
+!artifacts/mcp-governance-demo/.gitkeep
+!artifacts/mcp-governance-demo/README.md
+artifacts/mcp-governance-demo-report.md
 artifacts/candidate-drafts/*
 !artifacts/candidate-drafts/.gitkeep
 artifacts/shadow-merges/*

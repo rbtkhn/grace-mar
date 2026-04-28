@@ -15,6 +15,8 @@
 | **Implementation** | [AGENTS](../AGENTS.md), [ARCHITECTURE](architecture.md) | Guardrails for AI and developers; system design. |
 | **Trust layers (tools)** | [TRUST-LAYERS](trust-layers.md) | Reliability vs adversarial surfaces; complements knowledge boundary. |
 | **MCP capability registry (planned integrations)** | [mcp/governed-mcp-layer.md](mcp/governed-mcp-layer.md) | Policy classes + audit report for hypothetical MCP tools; not live wiring; Record merge stays gated. |
+| **MCP stack overview** | [mcp/mcp-stack-overview.md](mcp/mcp-stack-overview.md) | Layer table: registry, bindings, receipts, risk, adapters; SSOT pointers; no live MCP implied. |
+| **MCP governance runbook** | [mcp/mcp-governance-runbook.md](mcp/mcp-governance-runbook.md) | Operator sequence + [`scripts/run_mcp_governance_checks.py`](../../scripts/run_mcp_governance_checks.py) demo; isolated demo artifacts under `artifacts/mcp-governance-demo/`. |
 | **MCP authority bindings** | [mcp/mcp-authority-bindings.md](mcp/mcp-authority-bindings.md) | Join table: `output_lane` → `authority-map.json` surfaces + `mcp_authority_check.py` report. |
 | **MCP execution receipts** | [mcp/mcp-execution-receipts.md](mcp/mcp-execution-receipts.md) | Governance receipt schema + generator (`mcp_receipt.py`) / audit (`mcp_receipt_audit.py`); WORK/runtime artifacts; distinct from runtime-worker receipts in `schema-registry/execution-receipt.v1.json`. |
 | **Research-to-evidence stubs** | [mcp/research-to-evidence-stubs.md](mcp/research-to-evidence-stubs.md) | Structured research JSON → pre-canonical stub + MCP receipt (`research_to_evidence_stub.py`); no Record writes. |
