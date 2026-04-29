@@ -60,9 +60,13 @@ def test_neighbors_file_subject(tmp_path: Path) -> None:
     )
     assert report["subject_kind"] == "file"
     assert report["truncated"] is False
-    edges = {n["path_relative"]: n["edge"] for n in report["neighbors"]}
-    assert edges["w/x/sibling.md"] == "same_directory"
-    assert edges["w/cousin.md"] == "parent_directory"
+    assert "likely_family" in report
+    assert "suggested_next_inspection" in report
+    by_path = {n["path_relative"]: n for n in report["neighbors"]}
+    assert by_path["w/x/sibling.md"]["edge"] == "same_directory"
+    assert by_path["w/cousin.md"]["edge"] == "parent_directory"
+    assert "reason" in by_path["w/x/sibling.md"]
+    assert "section" in by_path["w/x/sibling.md"]
 
 
 def test_neighbors_directory_subject(tmp_path: Path) -> None:
@@ -133,3 +137,105 @@ def test_main_writes_json(tmp_path: Path) -> None:
     data = json.loads(jp.read_text(encoding="utf-8"))
     assert data["report_type"] == "external_codex_neighborhood_report"
     assert data["schema_version"] == "v1"
+    assert "likely_family" in data
+
+
+def test_render_companion_markdown_stable_headings(tmp_path: Path) -> None:
+    repo = tmp_path / "repo"
+    ck_rel = "fc"
+    ck = repo / ck_rel / "content" / "civilizations" / "X"
+    ck.mkdir(parents=True)
+    subj = ck / "CIV--STATE--X.md"
+    subj.write_text("# Title One\n\nbody\n", encoding="utf-8")
+    (ck / "MEM--X.md").write_text("x", encoding="utf-8")
+
+    report = becn.build_report(
+        repo,
+        ck_rel,
+        "content/civilizations/X/CIV--STATE--X.md",
+        generated_at=FIXED_TS,
+        include_checkout_absolute=False,
+        neighbor_limit=50,
+    )
+    md = becn.render_companion_markdown(report)
+    assert md.startswith("# External Codex Neighborhood Report\n")
+    assert "## Subject\n" in md
+    assert "## Likely family\n" in md
+    assert "## Structural neighbors\n" in md
+    assert "### Same civilization\n" in md
+    assert "## Suggested next inspection targets\n" in md
+    assert "## Notes\n" in md
+    assert report["subject_title"] == "Title One"
+    sug = report["suggested_next_inspection"]
+    assert isinstance(sug, list) and len(sug) >= 1
+    assert sug[0]["path_relative"] == "content/civilizations/X/MEM--X.md"
+
+
+def test_render_empty_neighborhood(tmp_path: Path) -> None:
+    repo = tmp_path / "repo"
+    ck_rel = "fc"
+    ck = repo / ck_rel
+    ck.mkdir(parents=True)
+    (ck / "only.txt").write_text("x", encoding="utf-8")
+
+    report = becn.build_report(
+        repo,
+        ck_rel,
+        "only.txt",
+        generated_at=FIXED_TS,
+        include_checkout_absolute=False,
+        neighbor_limit=50,
+    )
+    assert report["neighbors"] == []
+    md = becn.render_companion_markdown(report)
+    assert "*No neighbors in this bucket.*" in md
+    assert '*No suggestions (empty neighborhood).*' in md
+
+
+def test_main_write_md_custom_paths(tmp_path: Path) -> None:
+    repo = tmp_path / "repo"
+    ck_rel = "fc"
+    f = repo / ck_rel / "a.txt"
+    f.parent.mkdir(parents=True)
+    f.write_text("x", encoding="utf-8")
+    jp = repo / "custom.json"
+    mp = repo / "custom.md"
+    rc = becn.main(
+        [
+            "--repo-root",
+            str(repo),
+            "--checkout",
+            ck_rel,
+            "--subject",
+            "a.txt",
+            "--write-md",
+            "--output-json",
+            str(jp),
+            "--output-md",
+            str(mp),
+        ]
+    )
+    assert rc == 0
+    assert jp.is_file()
+    assert mp.is_file()
+    assert "# External Codex Neighborhood Report" in mp.read_text(encoding="utf-8")
+
+
+def test_main_output_md_without_write_md_errors(tmp_path: Path) -> None:
+    repo = tmp_path / "repo"
+    ck_rel = "fc"
+    (repo / ck_rel / "a.txt").parent.mkdir(parents=True)
+    (repo / ck_rel / "a.txt").write_text("x", encoding="utf-8")
+    rc = becn.main(
+        [
+            "--repo-root",
+            str(repo),
+            "--checkout",
+            ck_rel,
+            "--subject",
+            "a.txt",
+            "--output-md",
+            str(repo / "o.md"),
+        ]
+    )
+    assert rc == 1

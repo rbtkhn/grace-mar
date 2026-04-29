@@ -139,7 +139,7 @@ Skill-write handoff commonly starts from:
 
 ### External codex neighborhood (optional WORK preflight)
 
-When paste-ready copy **anchors** to paths under [`research/repos/civilization_memory`](../../research/repos/civilization_memory), you **may** run the neighborhood builder first and keep **one receipt line** (artifact path, subject path, date) in session notes — **paste-ready prose stays this hub**; JSON under [`artifacts/external-codex/`](../../artifacts/external-codex/README.md) is **WORK context**, not Voice or Record. SSOT: [`external-codex-explorer.md`](../skill-work/work-dev/external-codex-explorer.md).
+When paste-ready copy **anchors** to paths under [`research/repos/civilization_memory`](../../research/repos/civilization_memory), you **may** run the neighborhood builder first and keep **one receipt line** (artifact path — JSON and optional **`*.neighborhood.md`**, subject path, date) in session notes — **paste-ready prose stays this hub**; those artifacts are **WORK context**, not Voice or Record. SSOT: [`external-codex-explorer.md`](../skill-work/work-dev/external-codex-explorer.md).
 
 ---
 

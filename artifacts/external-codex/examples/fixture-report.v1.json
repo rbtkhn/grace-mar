@@ -7,17 +7,42 @@
   "checkout_absolute": "/path/to/grace-mar/research/repos/civilization_memory",
   "subject_relative": "content/civilizations/ROME/CIV--STATE--ROME.md",
   "subject_kind": "file",
-  "builder_version": "1.0.0",
+  "subject_title": "Example title",
+  "builder_version": "1.1.0",
   "neighbor_limit": 250,
   "truncated": false,
+  "likely_family": {
+    "subject_civilization_guess": "ROME",
+    "subject_file_class_guess": "civ_state",
+    "dominant_edge_among_neighbors": "same_directory",
+    "notes": [
+      "Heuristic labels only — non-authoritative.",
+      "Same civilization cluster when path contains content/civilizations/<ID>/..."
+    ]
+  },
+  "suggested_next_inspection": [
+    {
+      "path_relative": "content/civilizations/ROME/MEM--ROME.md",
+      "reason": "deterministic score=10 (edge weight + civ/class/section bonuses); compare with subject `content/civilizations/ROME/CIV--STATE--ROME.md`.",
+      "score": 10
+    }
+  ],
   "neighbors": [
     {
       "path_relative": "content/civilizations/ROME/MEM--ROME.md",
-      "edge": "same_directory"
+      "edge": "same_directory",
+      "reason": "same inferred filename class as subject; edge=same_directory",
+      "section": "same_civilization",
+      "file_class": "memory_spine",
+      "civilization_token": "ROME"
     },
     {
       "path_relative": "content/civilizations/PERSIA",
-      "edge": "parent_directory"
+      "edge": "parent_directory",
+      "reason": "filesystem structural neighbor; edge=parent_directory",
+      "section": "other_structural",
+      "file_class": "other",
+      "civilization_token": "PERSIA"
     }
   ]
 }

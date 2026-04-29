@@ -11,9 +11,13 @@
     "generated_at",
     "checkout_relative",
     "subject_relative",
+    "subject_kind",
     "builder_version",
+    "neighbor_limit",
     "neighbors",
-    "truncated"
+    "truncated",
+    "likely_family",
+    "suggested_next_inspection"
   ],
   "additionalProperties": true,
   "properties": {
@@ -49,6 +53,10 @@
       "type": "string",
       "enum": ["file", "directory"]
     },
+    "subject_title": {
+      "type": ["string", "null"],
+      "description": "First markdown H1 line from subject file when applicable."
+    },
     "builder_version": {
       "type": "string",
       "description": "Builder script semantic version."
@@ -61,12 +69,30 @@
       "type": "boolean",
       "description": "True if neighbor list was capped by neighbor_limit."
     },
+    "likely_family": {
+      "type": "object",
+      "description": "Heuristic subject-family summary for operators (non-authoritative).",
+      "additionalProperties": true
+    },
+    "suggested_next_inspection": {
+      "type": "array",
+      "description": "Deterministic top-K paths for follow-up reads.",
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "properties": {
+          "path_relative": { "type": "string" },
+          "reason": { "type": "string" },
+          "score": { "type": "integer" }
+        }
+      }
+    },
     "neighbors": {
       "type": "array",
       "items": {
         "type": "object",
         "required": ["path_relative", "edge"],
-        "additionalProperties": false,
+        "additionalProperties": true,
         "properties": {
           "path_relative": {
             "type": "string",
@@ -76,6 +102,20 @@
             "type": "string",
             "enum": ["same_directory", "parent_directory"],
             "description": "Structural relation heuristic only."
+          },
+          "reason": {
+            "type": "string",
+            "description": "Mechanical explanation string."
+          },
+          "section": {
+            "type": "string",
+            "description": "Grouping bucket key for Markdown companion."
+          },
+          "file_class": {
+            "type": "string"
+          },
+          "civilization_token": {
+            "type": ["string", "null"]
           }
         }
       }
