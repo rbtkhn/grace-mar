@@ -1,11 +1,13 @@
 # Strategy raw input (full retention, 7 days)
-<!-- word_count: 1650 -->
+<!-- word_count: 1720 -->
 
 **Purpose:** Store **complete** transcripts and **all** strategy-ingest source material you want kept verbatim — without bloating [daily-strategy-inbox.md](../daily-strategy-inbox.md) or hitting the **~2000 word** per-block budget on [experts/*/transcript.md](../experts/ritter/transcript.md) that **`thread`** triage targets.
 
 **SSOT role:** This tree is the **SSOT for literal text** of each capture. **[`refined-page-template.md`](../refined-page-template.md)** defines the **next layer:** standalone **`experts/…/ *-page-*.md`** files carry **`### Verbatim`** (and analysis) and are the **SSOT for thread / `days.md` / strategy work** — cite those pages for judgment; use **`raw-input/`** when you must verify or edit the **exact words**.
 
 **Expert-agnostic:** This tree is **raw material for analysis**, not only dumps tied to a [strategy-commentator-threads.md](../strategy-commentator-threads.md) **`expert_id`**. Substack essays, wire bundles, institutional statements, screenshot indexes, and mixed paste-bundles belong here even when there is **no** `thread:` lane yet (or ever). The inbox stub may use **`membrane:single`** and omit **`thread:`**; frontmatter **`thread:`** is optional (see § File template).
+
+**Capture-type calibration (essay / transcript / social / wire–PDF):** For **type-specific** defaults — **`kind:`**, **`thread:`**, inbox stub shape, refined-page **`### Verbatim`** expectations — see **[`CAPTURE-TYPES.md`](CAPTURE-TYPES.md)** (grep-friendly **`##`** headings). Operator + assistant ingest should align that doc with this README’s YAML and [refined-page-template.md](../refined-page-template.md).
 
 ## Publication vocabulary (formal pin)
 

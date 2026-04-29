@@ -7,6 +7,8 @@ alwaysApply: true
 
 **SSOT:** [`docs/skill-work/work-strategy/strategy-notebook/raw-input/README.md`](../../docs/skill-work/work-strategy/strategy-notebook/raw-input/README.md) · [`NOTEBOOK-PREFERENCES.md`](../../docs/skill-work/work-strategy/strategy-notebook/NOTEBOOK-PREFERENCES.md) (inbox vs notebook table).
 
+**Capture types:** When material is clearly **essay** (Substack, long web), **transcript** (YouTube, podcast), **social** (X, Locals, threads), or **wire / institutional PDF**, read **[`CAPTURE-TYPES.md`](../../docs/skill-work/work-strategy/strategy-notebook/raw-input/CAPTURE-TYPES.md)** before choosing **`kind:`**, **`thread:`**, and inbox-stub shape — do not default blindly to **`paste-bundle`** / **`mixed`** without checking that calibration.
+
 ## When this applies
 
 Treat as **strategy input** when **any** of the following is true:
@@ -20,7 +22,7 @@ Treat as **strategy input** when **any** of the following is true:
 
 1. **Create** a markdown file under  
    `docs/skill-work/work-strategy/strategy-notebook/raw-input/<pub_date>/`  
-   using the layout and YAML conventions in **`raw-input/README.md`** ( **`pub_date`** folder = source publication day, **`ingest_date`** = day saved if useful, **`source_url`**, **`kind:`** e.g. `paste-bundle` / `mixed`, optional **`thread:`** when a **`strategy-commentator`** lane applies).
+   using the layout and YAML conventions in **`raw-input/README.md`** ( **`pub_date`** folder = source publication day, **`ingest_date`** = day saved if useful, **`source_url`**, **`kind:`** — pick **`transcript`**, **`rss-item`**, **`x-post-text`**, **`paste-bundle`**, **`mixed`**, etc. per **[`CAPTURE-TYPES.md`](../../docs/skill-work/work-strategy/strategy-notebook/raw-input/CAPTURE-TYPES.md)** and README — optional **`thread:`** when a **`strategy-commentator`** lane applies).
 
 2. **Filename:** `kebab-case` slug, unique that day — e.g. `substack-crooke-<short-slug>-YYYY-MM-DD.md` mirroring existing **`substack-*`** captures.
 
