@@ -50,7 +50,7 @@ If the operator says **`coffee`** on a **Sunday** (or legacy **`hey`**), default
 - Run **`operator_daily_warmup.py`** and, when instance state matters, **`harness_warmup.py`**.
 - **Internet intel** (Polymarket, polls, Massie X) is **never** Step 1 — same as full coffee; choose **C — Historian** when you want it (or ask explicitly). **Light** keeps **branch snapshot** compact (one line unless multiple branches).
 - **Daily brief:** **do not** generate in Step 1 — one-line pointer to **menu C** and path pattern `docs/skill-work/work-strategy/daily-brief-YYYY-MM-DD.md` (e.g. `daily-brief-2026-03-29.md`).
-- Deliver a **compact brief** from script outputs + thread context; then the **full Step 2 menu**. On later turns, **A**, **B**, **D**, or **E** re-offer the full menu; **A** uses the [steward follow-up fork](#steward-follow-up-fork-implement-now-vs-later) when reading canonical **A — Steward**; **C** exits to normal workflow by default after the reply. **Engineer (B):** **compact** work-dev/skills focus — **3–5 labeled** next-move options (**B1–B5**), **one per line**; branch/`git status` lives under **A — Steward**, **git/ship** track when chosen. **Not** a full sweep unless the operator asks.
+- Deliver a **compact brief** from script outputs + thread context; then the **full Step 2 menu**. On later turns, **A**, **B**, **D**, or **E** re-offer the full menu; **A** uses the [steward follow-up fork](#steward-follow-up-fork-implement-now-vs-later) when reading canonical **A — Steward**; **C** exits to normal workflow by default after the reply. **Engineer (B):** **compact** work-dev/skills focus — **Engineer menu**: **3–5 options** as **A–E** (fresh letter run), **one option per line**, with explicit **`Engineer menu — reply A–E`** heading; branch/`git status` lives under **A — Steward**, **git/ship** track when chosen. **Not** a full sweep unless the operator asks.
 
 **`coffee minimal`** (or clear equivalent; legacy **`hey minimal`** still works):
 
@@ -109,7 +109,7 @@ Each mind has its own **A–D** prompt menu — see [daily-brief-minds-menu.md](
 
 **Engineer vs G:** **G** is **only** the first **open** line in **workspace.md** § **Next actions**. **B** is broader work-dev + skills in one turn when chosen.
 
-**Coffee `hub B` — Engineer:** When the operator picks **B — Engineer** after **`coffee`**, reply with **3–5 labeled Engineer next moves** (**B1–B5** etc.), **one option per line**, repo-grounded stubs — **then** wait for a pick. **Not** a single prose block as the only prescribed path. *(Same “present menu / execute after pick” shape as Conductor action MCQ.)*
+**Coffee `hub B` — Engineer:** When the operator picks **B — Engineer** after **`coffee`**, reply with **`Engineer menu — reply A–E`** (or **A–D**): **3–5** repo-grounded stubs, **letters A onward, one row per letter**, fresh alphabet for **this** submenu. **Not** a single prose-only path. Same **present vs execute** rhythm as Conductor action MCQ; **label menus** when both **coffee hub** letters and submenu letters appear in proximity.
 
 **When the Steward turn includes template/boundary / companion-self parity**, the reply must end with a **Reconciliation code** block:
 
