@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "receipt_id": "4a5a0c6e-52c0-442d-af82-06a4474b1fe8",
+  "created_at_utc": "2026-04-28T15:21:38Z",
+  "actor": {
+    "kind": "script",
+    "name": "research_to_evidence_stub.py"
+  },
+  "capability": {
+    "id": "evidence_stub_operator_template",
+    "category": "policy",
+    "output_lane": "evidence_stub"
+  },
+  "authority": {
+    "authority_surface": "evidence",
+    "authority_class": "draftable",
+    "gate_required_for_record_change": true
+  },
+  "declared_intent": "Summarize how MCP capability classes connect to authority surfaces so future tooling stays auditable without implying Record merge.",
+  "inputs": {
+    "operator_supplied_refs": [
+      "examples/research-evidence-input.example.json"
+    ]
+  },
+  "access": {
+    "network_access": "none",
+    "credential_use": "none",
+    "resources_read": [
+      "examples/research-evidence-input.example.json"
+    ],
+    "resources_written": [
+      "artifacts/evidence-stubs/mcp-governance-layers.md"
+    ]
+  },
+  "result": {
+    "status": "success",
+    "summary": "Generated pre-canonical evidence stub.",
+    "artifacts": [
+      {
+        "path": "artifacts/evidence-stubs/mcp-governance-layers.md",
+        "kind": "markdown_evidence_stub"
+      },
+      {
+        "path": "artifacts/mcp-receipts/4a5a0c6e-52c0-442d-af82-06a4474b1fe8.json",
+        "kind": "mcp_execution_receipt_json"
+      }
+    ]
+  },
+  "governance": {
+    "durable_state_write_attempted": false,
+    "canonical_record_touched": false,
+    "requires_human_review": false,
+    "requires_gate_review": true,
+    "prohibited_action_attempted": false,
+    "prohibited_action_notes": []
+  },
+  "integrity": {
+    "repo_git_ref": "989dc122"
+  }
+}

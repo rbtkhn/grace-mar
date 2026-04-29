@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "receipt_id": "ca8dedf3-5bff-4564-a660-56c0d7bc258a",
+  "created_at_utc": "2026-04-28T16:02:08Z",
+  "actor": {
+    "kind": "script",
+    "name": "mcp_manifest_admission.py"
+  },
+  "capability": {
+    "id": "mcp_manifest_admission",
+    "category": "policy",
+    "output_lane": "work_artifact"
+  },
+  "authority": {
+    "authority_surface": "prepared_context",
+    "authority_class": "draftable",
+    "gate_required_for_record_change": true
+  },
+  "declared_intent": "Offline admissions workflow — classify proposed GitHub read tooling versus Grace-Mar capability templates before any MCP wiring.",
+  "inputs": {
+    "operator_supplied_refs": [
+      "examples/mcp-server-manifest.example.yaml"
+    ]
+  },
+  "access": {
+    "network_access": "none",
+    "credential_use": "none",
+    "resources_read": [
+      "examples/mcp-server-manifest.example.yaml"
+    ],
+    "resources_written": [
+      "artifacts/mcp-admission/example.md"
+    ]
+  },
+  "result": {
+    "status": "success",
+    "summary": "Generated MCP manifest admission packet.",
+    "artifacts": [
+      {
+        "path": "artifacts/mcp-admission/example.md",
+        "kind": "markdown_mcp_manifest_admission"
+      },
+      {
+        "path": "artifacts/mcp-receipts/ca8dedf3-5bff-4564-a660-56c0d7bc258a.json",
+        "kind": "mcp_execution_receipt_json"
+      }
+    ]
+  },
+  "governance": {
+    "durable_state_write_attempted": false,
+    "canonical_record_touched": false,
+    "requires_human_review": true,
+    "requires_gate_review": true,
+    "prohibited_action_attempted": false,
+    "prohibited_action_notes": []
+  },
+  "integrity": {
+    "repo_git_ref": "051fad36"
+  }
+}

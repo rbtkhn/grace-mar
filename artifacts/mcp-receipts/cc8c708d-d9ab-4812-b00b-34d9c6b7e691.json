@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "receipt_id": "cc8c708d-d9ab-4812-b00b-34d9c6b7e691",
+  "created_at_utc": "2026-04-28T16:10:13Z",
+  "actor": {
+    "kind": "script",
+    "name": "mcp_mock_harness.py"
+  },
+  "capability": {
+    "id": "mcp_mock_harness",
+    "category": "policy",
+    "output_lane": "work_artifact"
+  },
+  "authority": {
+    "authority_surface": "prepared_context",
+    "authority_class": "draftable",
+    "gate_required_for_record_change": true
+  },
+  "declared_intent": "Fixture run: simulate read-only GitHub tree listing for governance chain testing (mock URIs only).",
+  "inputs": {
+    "operator_supplied_refs": [
+      "examples/mcp-mock-run.github-readonly.example.json"
+    ]
+  },
+  "access": {
+    "network_access": "none",
+    "credential_use": "none",
+    "resources_read": [
+      "examples/mcp-mock-run.github-readonly.example.json"
+    ],
+    "resources_written": [
+      "artifacts/mcp-mock-runs/demo.md"
+    ]
+  },
+  "result": {
+    "status": "success",
+    "summary": "Generated MCP mock execution harness packet (fixture-only; no live MCP).",
+    "artifacts": [
+      {
+        "path": "artifacts/mcp-mock-runs/demo.md",
+        "kind": "markdown_mcp_mock_harness"
+      },
+      {
+        "path": "artifacts/mcp-receipts/cc8c708d-d9ab-4812-b00b-34d9c6b7e691.json",
+        "kind": "mcp_execution_receipt_json"
+      }
+    ]
+  },
+  "governance": {
+    "durable_state_write_attempted": false,
+    "canonical_record_touched": false,
+    "requires_human_review": true,
+    "requires_gate_review": true,
+    "prohibited_action_attempted": false,
+    "prohibited_action_notes": [
+      "mock_harness_fixture_ok"
+    ]
+  },
+  "integrity": {
+    "repo_git_ref": "60d09bbf"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "receipt_id": "bb2be8fa-be47-49bc-9d2b-59e1d8422a68",
+  "created_at_utc": "2026-04-28T17:59:15Z",
+  "actor": {
+    "kind": "script",
+    "name": "mcp_local_readonly.py"
+  },
+  "capability": {
+    "id": "filesystem_readonly",
+    "category": "filesystem",
+    "output_lane": "runtime_only"
+  },
+  "authority": {
+    "authority_surface": "bridge_packets",
+    "authority_class": "ephemeral_only",
+    "gate_required_for_record_change": false
+  },
+  "declared_intent": "Verify governed MCP layer doc via bounded local read-only adapter (planning audit).",
+  "inputs": {
+    "operator_supplied_refs": [
+      "examples/mcp-local-read-request.example.json"
+    ]
+  },
+  "access": {
+    "network_access": "none",
+    "credential_use": "none",
+    "resources_read": [
+      "examples/mcp-local-read-request.example.json",
+      "docs/mcp/governed-mcp-layer.md"
+    ],
+    "resources_written": []
+  },
+  "result": {
+    "status": "success",
+    "summary": "Local read-only MCP-shaped adapter completed bounded UTF-8 read; packet + receipt emitted.",
+    "artifacts": [
+      {
+        "path": "artifacts/mcp-local-read/governance-demo-read.md",
+        "kind": "markdown_mcp_local_readonly"
+      },
+      {
+        "path": "artifacts/mcp-receipts/bb2be8fa-be47-49bc-9d2b-59e1d8422a68.json",
+        "kind": "mcp_execution_receipt_json"
+      }
+    ]
+  },
+  "governance": {
+    "durable_state_write_attempted": false,
+    "canonical_record_touched": false,
+    "requires_human_review": true,
+    "requires_gate_review": true,
+    "prohibited_action_attempted": false,
+    "prohibited_action_notes": [
+      "local_read_only_adapter_success"
+    ]
+  },
+  "integrity": {
+    "repo_git_ref": "c620584f"
+  }
+}

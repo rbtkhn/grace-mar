@@ -164,7 +164,7 @@ After **`A — Steward`** (legacy tables below may still say **`B`** or **`E —
 | **B** | **Engineer** carryover from Step 1 when relevant; one concrete work-dev / skills step. |
 | **C** | Brief + strategy carryover only if **C** chosen; optional pointer to the next brief / strategy day. |
 | **D** | **Capitalist** — work-business, grace-gems, bookshelf membrane, commercial cici, skill-write slice as filled on the hub line. |
-| **E** | **Conductor** — continuity pass; resolve slug; **not** a substitute for standalone **`conductor`** when closing without hub picks. |
+| **E** | **Conductor** — continuity pass; **hub line shows last master** (`format_coffee_hub_e_line` / Step 1); resolve slug; **not** a substitute for standalone **`conductor`** when closing without hub picks. |
 
 ---
 

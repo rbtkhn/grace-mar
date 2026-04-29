@@ -1,0 +1,3 @@
+{
+  "body_markdown": "**A.** Run `scripts/check_lane_scope.py` and review `docs/skill-work/work-coffee/CONDUCTOR-PASS.md` for verify tier tags on seams.\n**B.** Open `docs/skill-work/work-strategy/README.md` to falsify a weak claim using explicit claims checks.\n**C.** Tighten a seam in work-strategy `days.md` and trim flourish that outruns the material.\n**D.** Ship a derived JSON snapshot under `artifacts/observability/work-coffee/conductor-eval/` only after checks pass.\n**E.** Read `lanes.yaml` and apply precision fixes in `scripts/run_conductor_eval_harness.py` with falsify-first discipline.\n"
+}

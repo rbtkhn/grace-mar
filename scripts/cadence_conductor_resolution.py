@@ -261,6 +261,28 @@ def last_logged_conductor(events: list[dict[str, Any]]) -> str | None:
     return normalize_conductor_slug(str(c))
 
 
+def format_coffee_hub_e_line(user_id: str) -> str:
+    """One **coffee hub Step 2** line for hub **E — Conductor** with last master display name.
+
+    Uses ``last_logged_conductor`` from cadence ``coffee_pick`` events — same SSOT as MCQ continuity.
+    When no qualifying pick exists, prompts resolution via Masters MCQ after **E**.
+    """
+    try:
+        from audit_cadence_rhythm import parse_events
+    except ImportError:
+        from scripts.audit_cadence_rhythm import parse_events
+
+    events = parse_events(user_id)
+    slug = last_logged_conductor(events)
+    if slug:
+        display = _display_name_for_slug(slug)
+        return f"**E — Conductor** — last master: **{display}** (`{slug}`)"
+    return (
+        "**E — Conductor** — no prior conductor in cadence — resolve master after **E** "
+        "(Masters MCQ or name)."
+    )
+
+
 def focus_for_last_conductor(events: list[dict[str, Any]]) -> str | None:
     """Last ``focus=`` or ``arc=`` on a qualifying ``coffee_pick`` (``focus`` wins)."""
     ev = last_coffee_pick_conductor_event(events)

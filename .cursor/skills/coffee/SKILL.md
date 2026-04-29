@@ -140,8 +140,10 @@ A. Steward
 B. Engineer
 C. Historian
 D. Capitalist — <one short line: work-business / grace-gems / commercial angle / bookshelf membrane when on that angle>
-E. Conductor — <continuity: last conductor / resolved slug — or prompt once for master / conductor / MCQ row>
+E. Conductor — last master: **Bernstein** (`bernstein`)  ← use live text from Step 1 (`format_coffee_hub_e_line`; see below), not a placeholder
 ```
+
+**Hub line E (required wording):** Paste the **`Coffee hub Step 2 — hub **E** continuity`** line from **`operator_coffee.py`** Step 1 output (`format_coffee_hub_e_line` in [cadence_conductor_resolution.py](../../../scripts/cadence_conductor_resolution.py)) — **always** includes **last master display name + slug** when a qualifying `coffee_pick` exists; otherwise the no-prior line. **Do not** emit bare **E — Conductor** without that continuity string when Step 1 printed it.
 
 **Filling D — Capitalist:** **work-business**, **grace-gems**, revenue/offers framing; **work-cici** when business/teaching-commercial; one prescribed next step. **Alternate lens:** match **`Dream → coffee menu`** when it points at a path not already covered by **A–C**.
 
@@ -156,9 +158,11 @@ E. Conductor — <continuity: last conductor / resolved slug — or prompt once 
 
 **Write-shaped** work is **not** an extra letter — it defaults under **D** when skill-write/commercial, or when the operator says **`write`** / **`skill-write`** without **`coffee`**. State it plainly in the angle-bracket line; **do not** add a separate “micro-hints” row.
 
-**Filling E — Conductor:** Resolve **slug** via **`last_logged_conductor`** / `resolve_d_conductor` from [scripts/cadence_conductor_resolution.py](../../../scripts/cadence_conductor_resolution.py) and [work-cadence-events.md](../../../docs/skill-work/work-cadence/work-cadence-events.md). **If slug present:** run **Conductor session** for that master (orientation + **Conductor action MCQ** per [conductor skill](../conductor/SKILL.md)). **If absent:** prompt once: name a master / **`conductor`** / or paste **Conductor MCQ** masters row — **do not** invent a default master.
+**Filling E — Conductor:** Match **`format_coffee_hub_e_line`** (same SSOT as **`last_logged_conductor`** / `coffee_pick` cadence). **If slug present:** hub line names **display + slug**; run **Conductor session** for that streak context (orientation + **Conductor action MCQ** per [conductor skill](../conductor/SKILL.md)). **If absent:** hub line says no prior conductor — prompt once: name a master / **`conductor`** / or paste **Conductor MCQ** masters row — **do not** invent a default master.
 
 **Step 1 context for B / D:** `operator_coffee.py` prints **`Lane context (for hub B / D — Engineer & Capitalist hints)`** — two lines from `scripts/coffee_lane_next_hints.py` (work-cici + work-dev). Use when choosing **B**, **D**, or when wording those lines.
+
+**Step 1 context for hub E:** After lane hints, **`operator_coffee.py`** prints **`Coffee hub Step 2 — hub **E** continuity`** — one line to paste verbatim as hub **E** in Step 2 (last master from cadence).
 
 **Optional load note:** Step 1 may print `Session load: … (recommended: X)` (**A** / **B** / **C**). You may mention that **one** recommended hub letter in prose before or after the menu. For **Conductor** emphasis outside the hub, say **once** that **`conductor`** / master name works **without** opening **`coffee`** ([§ Conductor session](#conductor-only-no-coffee)). **Not** micro-hints under the hub list.
 
@@ -172,7 +176,7 @@ E. Conductor — <continuity: last conductor / resolved slug — or prompt once 
 
 - **D. Capitalist** — **work-business**, **grace-gems**, revenue/offers; **work-cici** when business/teaching-commercial angle; fixed **bookshelf membrane** option on the hub line; **one** prescribed next step.
 
-- **E. Conductor** — Hub continuation for **Conductor session** after **`coffee`** ([§ Conductor session](#conductor-only-no-coffee)); resolve slug then orientation + **Conductor action MCQ**. **Not** a substitute for standalone **`conductor`** when **`coffee`** was not invoked.
+- **E. Conductor** — Hub continuation for **Conductor session** after **`coffee`** ([§ Conductor session](#conductor-only-no-coffee)); **hub line must show last master** via **`format_coffee_hub_e_line`** / Step 1 paste — then resolve slug, orientation + **Conductor action MCQ**. **Not** a substitute for standalone **`conductor`** when **`coffee`** was not invoked.
 
 **Exit / re-offer:** After **A**, **B**, **D**, or **E**, re-offer the full **A–E** menu by default. After **C**, **exit to normal workflow** unless **`stay in coffee`**. After **A** (Steward), see [menu-reference § Steward follow-up fork](../../../docs/skill-work/work-coffee/menu-reference.md#steward-follow-up-fork-implement-now-vs-later) *(legacy docs may still say **B** for Steward — read **A**).* Synonyms **`A+ship`** / **`EXECUTE`** ≈ **Implement now** on steward track.
 

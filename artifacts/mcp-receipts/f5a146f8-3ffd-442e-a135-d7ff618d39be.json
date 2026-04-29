@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "receipt_id": "f5a146f8-3ffd-442e-a135-d7ff618d39be",
+  "created_at_utc": "2026-04-28T16:10:14Z",
+  "actor": {
+    "kind": "script",
+    "name": "mcp_mock_harness.py"
+  },
+  "capability": {
+    "id": "mcp_mock_harness",
+    "category": "policy",
+    "output_lane": "work_artifact"
+  },
+  "authority": {
+    "authority_surface": "prepared_context",
+    "authority_class": "draftable",
+    "gate_required_for_record_change": true
+  },
+  "declared_intent": "Fixture run: blocked interactive shell attempt under prohibition stance.",
+  "inputs": {
+    "operator_supplied_refs": [
+      "examples/mcp-mock-run.shell-blocked.example.json"
+    ]
+  },
+  "access": {
+    "network_access": "none",
+    "credential_use": "none",
+    "resources_read": [
+      "examples/mcp-mock-run.shell-blocked.example.json"
+    ],
+    "resources_written": [
+      "artifacts/mcp-mock-runs/shell-blocked-demo.md"
+    ]
+  },
+  "result": {
+    "status": "blocked",
+    "summary": "Generated MCP mock execution harness packet (fixture-only; no live MCP). Mock outcome blocked.",
+    "artifacts": [
+      {
+        "path": "artifacts/mcp-mock-runs/shell-blocked-demo.md",
+        "kind": "markdown_mcp_mock_harness"
+      },
+      {
+        "path": "artifacts/mcp-receipts/f5a146f8-3ffd-442e-a135-d7ff618d39be.json",
+        "kind": "mcp_execution_receipt_json"
+      }
+    ]
+  },
+  "governance": {
+    "durable_state_write_attempted": false,
+    "canonical_record_touched": false,
+    "requires_human_review": true,
+    "requires_gate_review": true,
+    "prohibited_action_attempted": true,
+    "prohibited_action_notes": [
+      "mock_response.status=blocked",
+      "shell_command_tool_shape_detected"
+    ]
+  },
+  "integrity": {
+    "repo_git_ref": "60d09bbf"
+  }
+}

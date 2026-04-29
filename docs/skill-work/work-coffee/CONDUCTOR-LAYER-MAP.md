@@ -41,6 +41,7 @@ Use the ASCII slug **`furtwangler`** for durable logs unless the repo already us
 | **Coffee hub skill** | [`.cursor/skills/coffee/SKILL.md`](../../../.cursor/skills/coffee/SKILL.md) | Main coffee hub; may route to conductor pass but has its own A–E menu | Runtime/operator skill |
 | **Compiled-view recipe** | [expert-polyphony-synthesis-five-conductors.md](../work-strategy/strategy-notebook/compiled-views/recipes/expert-polyphony-synthesis-five-conductors.md) | Derived Symphony Snapshot output recipe | Derived view recipe only |
 | **Coding proposal lenses** | [conductor-proposal-lenses.md](../work-dev/conductor-proposal-lenses.md) | Translates conductor modes into coding-agent proposal shapes | Prompt convention only |
+| **Derived metrics (offline)** | [conductor-observability.md](conductor-observability.md) | Heuristic scoring + replay harness for Conductor action MCQ text — rebuildable JSON, not Record | Derived WORK observability only |
 
 Clarifications:
 

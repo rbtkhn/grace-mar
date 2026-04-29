@@ -186,6 +186,30 @@ def main() -> int:
             pass
 
     try:
+        from cadence_conductor_resolution import format_coffee_hub_e_line
+
+        print(
+            f"\n{'=' * 60}\n"
+            f"$ Coffee hub Step 2 — hub **E** continuity (paste into reply)\n"
+            f"{'=' * 60}\n",
+            flush=True,
+        )
+        print(format_coffee_hub_e_line(user), flush=True)
+    except Exception:
+        try:
+            from scripts.cadence_conductor_resolution import format_coffee_hub_e_line
+
+            print(
+                f"\n{'=' * 60}\n"
+                f"$ Coffee hub Step 2 — hub **E** continuity (paste into reply)\n"
+                f"{'=' * 60}\n",
+                flush=True,
+            )
+            print(format_coffee_hub_e_line(user), flush=True)
+        except Exception:
+            pass
+
+    try:
         from log_cadence_event import append_cadence_event
         append_cadence_event(
             "coffee",

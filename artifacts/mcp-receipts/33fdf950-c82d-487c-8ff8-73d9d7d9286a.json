@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "receipt_id": "33fdf950-c82d-487c-8ff8-73d9d7d9286a",
+  "created_at_utc": "2026-04-28T17:48:23Z",
+  "actor": {
+    "kind": "script",
+    "name": "mcp_local_index.py"
+  },
+  "capability": {
+    "id": "filesystem_readonly",
+    "category": "filesystem",
+    "output_lane": "runtime_only"
+  },
+  "authority": {
+    "authority_surface": "bridge_packets",
+    "authority_class": "ephemeral_only",
+    "gate_required_for_record_change": false
+  },
+  "declared_intent": "Inventory MCP docs tree metadata for planning cross-links.",
+  "inputs": {
+    "operator_supplied_refs": [
+      "examples/mcp-local-index-request.example.json"
+    ]
+  },
+  "access": {
+    "network_access": "none",
+    "credential_use": "none",
+    "resources_read": [
+      "examples/mcp-local-index-request.example.json",
+      "docs/mcp"
+    ],
+    "resources_written": []
+  },
+  "result": {
+    "status": "success",
+    "summary": "Local read-only directory index emitted metadata-only packet.",
+    "artifacts": [
+      {
+        "path": "artifacts/mcp-local-index/index-mcp-docs.md",
+        "kind": "markdown_mcp_local_index"
+      },
+      {
+        "path": "artifacts/mcp-receipts/33fdf950-c82d-487c-8ff8-73d9d7d9286a.json",
+        "kind": "mcp_execution_receipt_json"
+      }
+    ]
+  },
+  "governance": {
+    "durable_state_write_attempted": false,
+    "canonical_record_touched": false,
+    "requires_human_review": true,
+    "requires_gate_review": true,
+    "prohibited_action_attempted": false,
+    "prohibited_action_notes": [
+      "local_directory_index_adapter_success"
+    ]
+  },
+  "integrity": {
+    "repo_git_ref": "092ba5f6"
+  }
+}

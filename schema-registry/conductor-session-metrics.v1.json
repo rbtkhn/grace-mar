@@ -1,0 +1,101 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schema-registry/conductor-session-metrics.v1.json",
+  "title": "Conductor session metrics (derived WORK observability)",
+  "description": "Heuristic scores over a Conductor action MCQ block — not Record truth, not gate authority.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "created_at",
+    "user",
+    "conductor_slug",
+    "session_origin",
+    "action_mcq_count",
+    "grounding_reference_count",
+    "discrimination_score",
+    "grounding_score",
+    "actionability_score",
+    "fidelity_score",
+    "continuity_signal",
+    "recommendation_signal",
+    "warnings",
+    "evaluation",
+    "score_notes"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "conductor-session-metrics.v1"
+    },
+    "created_at": {
+      "type": "string",
+      "minLength": 1
+    },
+    "user": { "type": "string" },
+    "conductor_slug": {
+      "type": "string",
+      "enum": ["toscanini", "furtwangler", "bernstein", "karajan", "kleiber"]
+    },
+    "session_origin": {
+      "type": "string",
+      "enum": ["coffee", "conductor_only", "inferred"]
+    },
+    "action_mcq_count": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Number of parsed action menu lines (expected up to 5)."
+    },
+    "grounding_reference_count": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Heuristic count of repo/lane/path-like references across lines."
+    },
+    "discrimination_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "grounding_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "actionability_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "fidelity_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "continuity_signal": {
+      "type": ["number", "null"],
+      "description": "Optional operator-supplied continuity stub; null when absent."
+    },
+    "recommendation_signal": {
+      "type": ["number", "null"],
+      "description": "Optional operator-supplied recommendation stub; null when absent."
+    },
+    "warnings": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "evaluation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["method", "deterministic"],
+      "properties": {
+        "method": { "type": "string", "const": "heuristic_v1" },
+        "deterministic": { "type": "boolean", "const": true }
+      }
+    },
+    "score_notes": {
+      "type": "object",
+      "additionalProperties": { "type": "string" },
+      "description": "Short human-readable rationale caps per dimension."
+    }
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "receipt_id": "e700f0c2-2d3f-4a85-9651-9cf1663a39e1",
+  "created_at_utc": "2026-04-28T17:57:37Z",
+  "actor": {
+    "kind": "script",
+    "name": "coding_agent_patch_intake.py"
+  },
+  "capability": {
+    "id": "coding_agent_patch_intake",
+    "category": "coding_agent",
+    "output_lane": "candidate_proposal"
+  },
+  "authority": {
+    "authority_surface": "governed_state",
+    "authority_class": "review_required",
+    "gate_required_for_record_change": true
+  },
+  "declared_intent": "Produce governed Markdown intake packets without implying Record merge.",
+  "inputs": {
+    "operator_supplied_refs": [
+      "examples/coding-agent-patch-intake.example.json"
+    ]
+  },
+  "access": {
+    "network_access": "read",
+    "credential_use": "optional",
+    "resources_read": [
+      "examples/coding-agent-patch-intake.example.json"
+    ],
+    "resources_written": [
+      "artifacts/patch-intake/governance-demo-intake.md"
+    ]
+  },
+  "result": {
+    "status": "success",
+    "summary": "Generated coding-agent patch intake packet.",
+    "artifacts": [
+      {
+        "path": "artifacts/patch-intake/governance-demo-intake.md",
+        "kind": "markdown_candidate_patch_packet"
+      },
+      {
+        "path": "artifacts/mcp-receipts/e700f0c2-2d3f-4a85-9651-9cf1663a39e1.json",
+        "kind": "mcp_execution_receipt_json"
+      }
+    ]
+  },
+  "governance": {
+    "durable_state_write_attempted": false,
+    "canonical_record_touched": false,
+    "requires_human_review": true,
+    "requires_gate_review": true,
+    "prohibited_action_attempted": false,
+    "prohibited_action_notes": []
+  },
+  "integrity": {
+    "repo_git_ref": "c620584f"
+  }
+}
