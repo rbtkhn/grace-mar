@@ -22,6 +22,10 @@ WORK only; not Record.
 
 - Inbox | cold: full text in [`substack-ritter-new-middle-eastern-power-paradigm-2026-04-27.md`](raw-input/2026-04-27/substack-ritter-new-middle-eastern-power-paradigm-2026-04-27.md) (pointer; SSOT raw-input) | thread:ritter
 
+
+
+
+
 ## 2026-04-27
 - Inbox | cold: full text in [`ritter-rant-shorting-america-7pXI52jKcOU.md`](raw-input/2026-04-20/ritter-rant-shorting-america-7pXI52jKcOU.md) (pointer; SSOT raw-input) | thread:ritter
 - JF | cold: **Scott Ritter** × **Judge Andrew Napolitano** (*Judging Freedom* — *Trump and Hegseth Haven’t a Clue*) — **host date 2026-04-20** — **Hormuz / weekend cargo incident:** U.S. **destroyer** **engine-room** **fire** **→** **USMC** **boarding** **/** **Ritter** **“piracy”** **frame** **vs** **Islamabad** **ceasefire** **/** **blockade** **legitimacy** **thesis**; **Islamabad** **room** **emptying** **(Vance** **/** **Witkoff** **/** **Kushner** **vs** **Tehran** **team);** **Trump** **team** **unprepared** **/** **Iran** **brought** **text** **thesis;** **MOU** **near-sign** **then** **pulled** **(Morandi** **cited** **in** **voice);** **“joint** **excavation”** **of** **enriched** **material** **fantasy** **vs** **IAEA** **inspection** **path** **(Geneva** **prior** **round** **referenced);** **CJCS** **Caine** **/** **nuclear** **codes** **anecdote** **(hypothesis** **—** **Larry** **Johnson** **two** **sources,** **NYT** **pattern** **in** **voice);** **Israel** **×** **Turkey** **warning** **track;** **UAE** **/** **GCC** **/** **Israel** **second-round** **infrastructure** **forecast** **(parallel** **04-19** **Substack);** **IRGC** **bridge** **/** **power** **targets** **vs** **IHL** **(Ritter** **cross-exam** **frame);** **Trump** **“ceasefire** **ends** **Wednesday”** **(host** **—** **verify** **wire** **/** **TS);** **Houthis** **Bab** **el-Mandeb** **in** **voice;** **Board** **of** **Peace** **derelict** **thesis** // hook: **`thread:ritter`** **same-week** **stack** **as** **04-19** **essay** **+** **`thread:davis`** **/** **`thread:pape`** **—** **commentator** **tier** **until** **USN** **/** **FM** **/** **shipping** **primaries** | https://www.youtube.com/watch?v=TBD-judging-freedom-ritter-2026-04-20 | verify:full-text+raw-input+aired:2026-04-20+pin-canonical-URL | thread:ritter | grep:Ritter+Napolitano+Judging+Freedom+Hormuz+Hegseth+Caine — **same-day** **JF** **Johnson** **episode** **(Caine** **segment):** https://www.youtube.com/watch?v=geWpX8w7BNU
@@ -32,10 +36,18 @@ WORK only; not Record.
 
 - Inbox | cold: full text in [`substack-ritter-new-middle-eastern-power-paradigm-2026-04-27.md`](raw-input/2026-04-27/substack-ritter-new-middle-eastern-power-paradigm-2026-04-27.md) (pointer; SSOT raw-input) | thread:ritter
 
+
+
+
+
 ## 2026-04-26
 - Inbox | cold: full text in [`ritter-rant-shorting-america-7pXI52jKcOU.md`](raw-input/2026-04-20/ritter-rant-shorting-america-7pXI52jKcOU.md) (pointer; SSOT raw-input) | thread:ritter
 - JF | cold: **Scott Ritter** × **Judge Andrew Napolitano** (*Judging Freedom* — *Trump and Hegseth Haven’t a Clue*) — **host date 2026-04-20** — **Hormuz / weekend cargo incident:** U.S. **destroyer** **engine-room** **fire** **→** **USMC** **boarding** **/** **Ritter** **“piracy”** **frame** **vs** **Islamabad** **ceasefire** **/** **blockade** **legitimacy** **thesis**; **Islamabad** **room** **emptying** **(Vance** **/** **Witkoff** **/** **Kushner** **vs** **Tehran** **team);** **Trump** **team** **unprepared** **/** **Iran** **brought** **text** **thesis;** **MOU** **near-sign** **then** **pulled** **(Morandi** **cited** **in** **voice);** **“joint** **excavation”** **of** **enriched** **material** **fantasy** **vs** **IAEA** **inspection** **path** **(Geneva** **prior** **round** **referenced);** **CJCS** **Caine** **/** **nuclear** **codes** **anecdote** **(hypothesis** **—** **Larry** **Johnson** **two** **sources,** **NYT** **pattern** **in** **voice);** **Israel** **×** **Turkey** **warning** **track;** **UAE** **/** **GCC** **/** **Israel** **second-round** **infrastructure** **forecast** **(parallel** **04-19** **Substack);** **IRGC** **bridge** **/** **power** **targets** **vs** **IHL** **(Ritter** **cross-exam** **frame);** **Trump** **“ceasefire** **ends** **Wednesday”** **(host** **—** **verify** **wire** **/** **TS);** **Houthis** **Bab** **el-Mandeb** **in** **voice;** **Board** **of** **Peace** **derelict** **thesis** // hook: **`thread:ritter`** **same-week** **stack** **as** **04-19** **essay** **+** **`thread:davis`** **/** **`thread:pape`** **—** **commentator** **tier** **until** **USN** **/** **FM** **/** **shipping** **primaries** | https://www.youtube.com/watch?v=TBD-judging-freedom-ritter-2026-04-20 | verify:full-text+raw-input+aired:2026-04-20+pin-canonical-URL | thread:ritter | grep:Ritter+Napolitano+Judging+Freedom+Hormuz+Hegseth+Caine — **same-day** **JF** **Johnson** **episode** **(Caine** **segment):** https://www.youtube.com/watch?v=geWpX8w7BNU
 - batch-analysis | 2026-04-17 | **Barnes × Johnson (YT) — US politics room × Iran week** | **Tension-first:** **`thread:barnes`** **long-form** **domestic-liability** **+** **White** **House** **process** **(C-plane** **hypothesis)** **—** **not** **§1e** **text** **and** **not** **Pentagon** **primary.** **Same** **calendar** **day** **as** **Hormuz** **/** **Islamabad** **expert** **stack** **—** **cross** **`thread:davis`**, **`thread:johnson`** **(Davis** **×** **Johnson** **earlier** **YT),** **`thread:ritter`** **with** **explicit** **plane** **tags** **(room** **vs** **ORBAT** **vs** **FM).** **Falsifiers:** **named** **official** **statements,** **vote** **counts,** **Navy** **press,** **TS** **screenshots.** | crosses:barnes+johnson
+
+
+
+
 
 
 

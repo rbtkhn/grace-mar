@@ -23,6 +23,10 @@ WORK only; not Record.
 
 
 
+
+
+
+
 ## 2026-04-27
 - Inbox | cold: full text in [`transcript-marandi-blockade-trump-nima-2026-04-21.md`](raw-input/2026-04-21/transcript-marandi-blockade-trump-nima-2026-04-21.md) (pointer; SSOT raw-input) | thread:marandi
 - Inbox | cold: full text in [`x-araghchi-april-2026-posts-bundle.md`](raw-input/2026-04-20/x-araghchi-april-2026-posts-bundle.md) (pointer; SSOT raw-input) | thread:marandi
@@ -33,12 +37,20 @@ WORK only; not Record.
 
 
 
+
+
+
+
 ## 2026-04-26
 - Inbox | cold: full text in [`transcript-marandi-blockade-trump-nima-2026-04-21.md`](raw-input/2026-04-21/transcript-marandi-blockade-trump-nima-2026-04-21.md) (pointer; SSOT raw-input) | thread:marandi
 - Inbox | cold: full text in [`x-araghchi-april-2026-posts-bundle.md`](raw-input/2026-04-20/x-araghchi-april-2026-posts-bundle.md) (pointer; SSOT raw-input) | thread:marandi
 - batch-analysis | 2026-04-19 | **Mercouris × Marandi (Islamabad / Miller fork)** | **Tension-first:** **`mercouris`** **rejects** **Miller** **“dual** **10-point**” **story** **and** **defends** **Araghchi** **coordination** **thesis** **—** **uses** **`marandi`** **(Tehran)** **as** **informed** **control** **witness** **for** **Islamabad** **room** **(not** **a** **`thread:marandi`** **line** **unless** **you** **paste** **Mirandi** **speech** **itself).** **Shared** **risk:** **intel** **sourced** **narratives** **about** **IRI** **splits** **—** **tier** **hypothesis** **until** **named** **IRI** **or** **wire** **primary.** **Cross** **`thread:marandi`** **when** **Mirandi** **primary** **ingest** **lands** **same** **arc.** | crosses:mercouris+marandi
 - X | cold: @s_m_marandi (2026-04-17) — **Hormuz opening is not unrestricted** — three conditions: (1) **commercial ships only** — no military vessels or belligerent-party shipments; (2) **Iran** decides which ships may pass; (3) transit **only** on **Iran-designated route** // hook: **tightens** same-day **@araghchi** “completely open” FM line — **elite English** register vs diplomatic **tweet**; screenshot on disk | [assets/marandi/x-2026-04-17-hormuz-three-conditions.png](assets/marandi/x-2026-04-17-hormuz-three-conditions.png) | verify:pin-status-URL+screenshot | thread:marandi | grep:Hormuz+Marandi+conditions
 - X | cold: @s_m_marandi QT @araghchi (2026-04-17) — **Marandi:** “Everything depends on **Netanyahu** and the **Zionist regime**” — if forced to stop killing children and **Lebanon ceasefire** holds, “hope for the **global economy**.” **Quoted @araghchi:** passage for all commercial vessels through Hormuz “**completely open**” for **ceasefire remainder** on **PMO coordinated route**; **in line with** Lebanon ceasefire // hook: **pairs** **04-17** FM primary + **commentator** frame; seam to `parsi` Lebanon | [assets/marandi/x-2026-04-17-marandi-qt-araghchi-hormuz-lebanon.png](assets/marandi/x-2026-04-17-marandi-qt-araghchi-hormuz-lebanon.png) | verify:pin-status-URL | thread:marandi | grep:Marandi+Araghchi+Hormuz+Lebanon
+
+
+
+
 
 
 
