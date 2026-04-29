@@ -1921,6 +1921,21 @@ sources:
     curated_lecture: complete
     analysis: complete
     chapter_mapping: complete
+- source_id: gt-22
+  video_id: txgPfnXgzcE
+  title: 'Game Theory #22: Twilight of the Nation-State'
+  canonical_url: https://www.youtube.com/watch?v=txgPfnXgzcE
+  publication_date: 2026-04-28
+  lecture_path: lectures/game-theory-22-twilight-of-the-nation-state.md
+  analysis_path: analysis/txgPfnXgzcE-game-theory-22-analysis.md
+  series: game-theory
+  episode: 22
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: complete
+    chapter_mapping: complete
 - source_id: gb-01
   video_id: TsD-8FGA84A
   title: 'Great Books #1: Secrets of the Universe'

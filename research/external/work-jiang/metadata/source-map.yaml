@@ -263,6 +263,8 @@ chapter_map:
     source_ids: [gt-19]
   gt-ch20:
     source_ids: [gt-20]
+  gt-ch22:
+    source_ids: [gt-22]
   gb-ch01:
     source_ids: [gb-01]
   gb-ch02:

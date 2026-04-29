@@ -2,6 +2,10 @@
 
 Operator notes on series status and ingest.
 
+## 2026-04-28 — Game Theory #22 ingested
+
+**gt-22** — *Twilight of the Nation-State* (`txgPfnXgzcE`): operator-cleaned lecture transcript under [`lectures/game-theory-22-twilight-of-the-nation-state.md`](lectures/game-theory-22-twilight-of-the-nation-state.md); stub analysis [`analysis/txgPfnXgzcE-game-theory-22-analysis.md`](analysis/txgPfnXgzcE-game-theory-22-analysis.md); registry + `book-architecture.yaml` **`gt-ch22`** row; **`part_2.after_chapter`** → **`gt-ch22`**. **Note:** **`gt-21`** not present in corpus—episode numbering may skip if #21 not published or ingested yet.
+
 ## 2026-03-23 — Series resumed
 
 Jiang has resumed the Geo-Strategy lecture series. Geo-Strategy #12 was previously the finale ("Geo-Strategy END"); new episodes (geo-13, geo-14, …) are expected.
