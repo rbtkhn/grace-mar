@@ -39,7 +39,7 @@ description: >-
 | **Core** | [Modes table](#modes-write-targets-and-required-shapes) | Every pass — Capture / EOD compose / Promote shapes |
 | **Core** | [Default moves](#default-moves-agent) | Every pass — agent step-by-step |
 | **Core** | [Pre-write checklist](#pre-write-checklist) | Before any file write |
-| **Core** | [Page-first write contract](#page-first-write-contract) | Before any file write |
+| **Core** | [Page-first write contract](#page-first-write-contract) (includes [Expert refined pages — craft](#expert-refined-pages--craft)) | Before any file write |
 | **Core** | [Boundaries](#boundaries) | Always — WORK-only, no merge |
 | Ref | [Five primary threads](#five-primary-threads-operator-geopolitical-theory) | When day touches §1d–§1h watch threads |
 | Ref | [Post-entry lens offer](#post-entry-lens-offer) | After substantive notebook entry (optional B/M/M one-liners) |
@@ -261,7 +261,23 @@ When writing **for** `strategy` **into repo files**, generate **one of three sha
 2. **Strategy-page shape** — Use in the **EOD strategy session** (or **breaking glass**). Add or extend a **`strategy-page`** block under **`## YYYY-MM`** in that month’s expert thread file — **`experts/<expert_id>/<expert_id>-thread-YYYY-MM.md`** (canonical; legacy **`thread.md`** if not yet split) per [strategy-page-template.md](../../../docs/skill-work/work-strategy/strategy-notebook/strategy-page-template.md). **No** word-count target or ceiling on a single page. If a fence grows unwieldy, split → `days.md` or a second page **`id`** per [STRATEGY-NOTEBOOK-ARCHITECTURE.md](../../../docs/skill-work/work-strategy/strategy-notebook/STRATEGY-NOTEBOOK-ARCHITECTURE.md). Default **one EOD compose per local day** unless breaking glass.
 3. **Days.md continuity shape** — Use alongside page composition to update the `## YYYY-MM-DD` block in `days.md` with a thin chronology entry (which page **`id`s** were active, what changed, what carries forward).
 
-**Refined pages** (optional standalone **`experts/<expert_id>/<expert_id>-page-*.md`**, Verbatim / Reflection / Foresight, links to **`raw-input/`**): **`raw-input/`** = SSOT for literal capture; **refined page** = SSOT for **`thread` / `days.md`** when citing that capture (see [refined-page-template.md § SSOT hierarchy](../../../docs/skill-work/work-strategy/strategy-notebook/refined-page-template.md)). **Target** **~3000** words per page, **~70–80%** in **`### Verbatim`**; condense long transcripts with [`refined_page_word_budget.py`](../../../scripts/strategy/refined_page_word_budget.py). Scaffold from [refined-page-template.md](../../../docs/skill-work/work-strategy/strategy-notebook/refined-page-template.md) (replace **`{expert_id}`**); each expert’s **`*-page-template.md`** is a **compat stub** to that file. Contract pointer: [PAGE-CONTRACT.md](../../../docs/skill-work/work-strategy/strategy-notebook/PAGE-CONTRACT.md) § *Refined pages*.
+4. **Expert refined page shape** — Optional standalone **`experts/<expert_id>/<expert_id>-page-*.md`** (see subsection below). Distinct from **`strategy-page`** fences: one **primary capture** or lane bundled into Verbatim + judgment without replacing monthly thread compose.
+
+### Expert refined pages — craft
+
+**Boundary:** **[`skill-write`](../skill-write/SKILL.md)** is **out of scope** for refined pages unless the operator explicitly asks to **adapt** notebook material into **Locals / X / PH** paste-ready copy. Refined pages use the **notebook / popular-academic** bar ([NOTEBOOK-PREFERENCES.md](../../../docs/skill-work/work-strategy/strategy-notebook/NOTEBOOK-PREFERENCES.md), § Reflection prose in this skill) — **not** [`write-operator-preferences.md`](../../../docs/skill-write/write-operator-preferences.md) shipping voice by default.
+
+**When to use vs `strategy-page`:** Prefer **refined pages** when you need a **durable handle** for **one ingest** (YouTube transcript, Substack essay) with Verbatim excerpt + Reflection/Foresight **without** folding that day’s whole EOD compose into the monthly **`strategy-page`** fence. Prefer **`strategy-page` + `days.md`** when the session’s primary deliverable is **cross-watch judgment** for that expert month. Both may exist; link between them in **`### Appendix`** or **`### References`** when both get writes.
+
+**Pipeline (disk order):**
+
+1. **`raw-input/<pub_date>/<slug>.md`** exists ([strategy input](../../../docs/skill-work/work-strategy/strategy-notebook/raw-input/README.md); type cues: [CAPTURE-TYPES.md](../../../docs/skill-work/work-strategy/strategy-notebook/raw-input/CAPTURE-TYPES.md)).
+2. **Filename:** **`<expert_id>-page-YYYY-MM-DD-<slug>.md`** with **`<slug>`** aligned to the raw stem when multiple pages share a day ([refined-page-template.md](../../../docs/skill-work/work-strategy/strategy-notebook/refined-page-template.md), [PAGE-CONTRACT.md](../../../docs/skill-work/work-strategy/strategy-notebook/PAGE-CONTRACT.md) § Refined pages).
+3. **`### Verbatim`** — Excerpt or lane-condensed text **from** raw only; if condensed, note omission in **`### Appendix`**. Long transcripts: [`refined_page_word_budget.py`](../../../scripts/strategy/refined_page_word_budget.py) **check** / **condense**.
+4. **`### Reflection` / `### Foresight`** — Operator judgment; may stay stubbed on ingest, filled in EOD or follow-up pass.
+5. **`### Appendix`** — Full verbatim path, inbox grep hook, canonical URL, **`verify:`** reminders — bullet order per template; run **`python3 scripts/strategy/audit_refined_pages.py`** after substantive edits.
+
+**SSOT:** **`raw-input/`** = literal words; refined page = cite target for **`thread` / `days.md`** when that capture is load-bearing ([refined-page-template.md § SSOT hierarchy](../../../docs/skill-work/work-strategy/strategy-notebook/refined-page-template.md)).
 
 **Do not** default to freeform “strategic essay” as the on-disk artifact when the target is the notebook — **shape text for the destination first**.
 

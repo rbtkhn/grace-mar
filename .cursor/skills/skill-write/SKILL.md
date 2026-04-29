@@ -30,6 +30,8 @@ description: >-
 
 After a substantive **`strategy`** pass, the strategy skill **offers once** whether you want **`skill-write`** next — unless you already combined **`strategy write`**. When you **combine** them in one message, **skip the menu** and apply **both** contracts: judgment source of truth from strategy lane; **shipping** shape from this hub.
 
+**Out of scope — expert refined pages:** Standalone **`experts/<expert_id>/<expert_id>-page-*.md`** files (Verbatim / Reflection / Foresight, **`raw-input`** links) are **notebook WORK** artifacts; craft lives under **`skill-strategy`** ([Expert refined pages — craft](../skill-strategy/SKILL.md#expert-refined-pages--craft)). Do **not** apply this hub’s Locals / X / PH shipping defaults to those pages unless the operator explicitly asks to **adapt** notebook material for **publication**.
+
 ## Optional: `civilization_memory` adjacency (WORK)
 
 When drafting copy anchored to [`research/repos/civilization_memory`](../../../research/repos/civilization_memory) paths, optional structural receipts: [`external-codex-explorer.md`](../../../docs/skill-work/work-dev/external-codex-explorer.md). Policy detail stays in **[write-operator-preferences](../../../docs/skill-write/write-operator-preferences.md)** (subsection *External codex neighborhood*).
