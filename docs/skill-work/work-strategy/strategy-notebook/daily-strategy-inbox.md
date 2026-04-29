@@ -1,5 +1,5 @@
 # Daily strategy inbox (accumulator)
-<!-- word_count: 28180 -->
+<!-- word_count: 28850 -->
 
 **Purpose:** **Append-only** scratch surface for the **current local calendar day** while you run **`strategy`**, read briefs, or capture links. Polished prose is **not** required — bullets, paste, URLs, half-sentences.
 
@@ -104,6 +104,10 @@ When the operator captures **two or more** excerpts in one pass, **items stay se
 **grounding_delta:** Grok **2026-04-17** digest under [`daily-brief-2026-04-17.md`](../daily-brief-2026-04-17.md) §1f; **plus** operator **Davis / Araghchi / Trump TS** chain tied to **§1e / §1h** + triage rows (same file — **pin public URLs**); **no** new `MEM–RELEVANCE-*` hook this pass. **2026-04-18:** third-party X/Substack scan **`thread:`** ingests appended (operator batch — Hormuz dual-register + Islamabad + Lebanon seams).
 
 _(Append below this line during the day.)_
+
+- SS | cold: **Scott Ritter** (*Real Scott Ritter* Substack — *A New Middle Eastern Power Paradigm*) — **published** **2026-04-27** — US/Gulf/Israel strategic-defeat frame post–Feb 28 war; **Hormuz** as Iranian leverage + multipolar pivot (RU/CN/BRICS-like); GCC pipeline/contingency vs closed-strait recovery lag; India/Quad × Iran alignment tension // hook: **`thread:ritter`** **×** **§1e** **Hormuz** **+** **GCC** **+** **§1g** **India** **—** **full** [raw-input/2026-04-27/substack-ritter-new-middle-eastern-power-paradigm-2026-04-27.md](raw-input/2026-04-27/substack-ritter-new-middle-eastern-power-paradigm-2026-04-27.md) | https://scottritter.substack.com/p/a-new-middle-eastern-power-paradigm | verify:full-text+Substack+pub_date:2026-04-27+opinion-essay-tier+quant-recovery-claims-hypothesis-tier+not-Record | thread:ritter | IRAN | GCC | HORMUZ | US-MIL | INDIA | grep:Ritter+Middle+Eastern+power+paradigm+2026-04-27
+
+- SS | cold: **Simplicius** (*Simplicius's Garden of Knowledge* Substack — *US Carrier Groups in Position for Next Round as Trump "Dissatisfied" With Iranian Demands*) — **published** **2026-04-28** — OSINT carrier/Tripoli/Lincoln positions + ~300km ASBM envelope read; CENTCOM “largest convergence” line; NBC base-damage / F-5 Camp Buehring framing; Iran three-point offer vs Trump dissatisfaction (NYT-via-WSJ live card); USS Bush join speculation; Kpler Iran storage 12–22 days; Rubio rhetoric block; unverified Mahyar runway / “rescue pilot” narrative // hook: **`thread:simplicius`** **×** **§1e** **Hormuz** **+** **§1d** **US naval posture** **—** **full** [raw-input/2026-04-28/substack-simplicius-us-carrier-groups-trump-dissatisfied-iran-2026-04-28.md](raw-input/2026-04-28/substack-simplicius-us-carrier-groups-trump-dissatisfied-iran-2026-04-28.md) | https://simplicius76.substack.com/p/us-carrier-groups-in-position-for | verify:full-text+operator-transcript+Substack+pub_date:2026-04-28+opinion-narrative-tier+OSINT-claims-verify-tier+hypothesis-tier+not-Record | thread:simplicius | IRAN | HORMUZ | US-MIL | OSINT | grep:Simplicius+carrier+Trump+dissatisfied+Iran+2026-04-28
 
 - notebook | cold: **strategy-state-russia** lane bootstrap — scaffold initialized for institutional routing (**channels / weave / clusters / chapters**) with no substantive ingest folded yet // hook: activate first Russia state-lane seam in next strategy pass (diplomacy/presidency/parliament + material-check split) | [strategy-state-russia README](strategy-state-russia/README.md) | verify:lane-bootstrap+no-claim-ingest+pending-primary-capture | thread:russia-institutional | RU | grep:strategy-state-russia+bootstrap+2026-04-28
 

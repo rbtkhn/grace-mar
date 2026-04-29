@@ -670,20 +670,16 @@ _Auto-generated from `transcript.md` + **on-disk** and **inbox** `raw-input/` (d
 - batch-analysis | 2026-04-17 | **Pape X — 04-14 Lebanon fork × 04-17 truce / NYT power thesis** | **Tension-first:** **04-14** indexed ingest = **downside** / **civil-war** fork + **AP** Washington talks **seam**; **04-17** = **settlement / power-shift** read + **NYT** secondary thesis Pape spotlights — use **dated evolution**, not silent merge. **Homophone risk:** Janssen **04-16** **“fourth center”** (negotiation fork) ≠ NYT headline **“major world power”** / **“4th”** — **do not** equate in Judgment. **Membership:** `thread:pape` only.
 ## 2026-04-24
 - Inbox | cold: full text in [`substack-pape-2-blockades-2-clocks-2026-04-24.md`](raw-input/2026-04-24/substack-pape-2-blockades-2-clocks-2026-04-24.md) (pointer; SSOT raw-input) | thread:pape
-## 2026-04-22
-Verbatim: [`raw-input/2026-04-22/substack-pape-within-10-days-shortages-already-2026-04-22.md`](../../raw-input/2026-04-22/substack-pape-within-10-days-shortages-already-2026-04-22.md).
-Verbatim: [`raw-input/2026-04-22/substack-pape-the-first-move-has-begun-2026-04-22.md`](../../raw-input/2026-04-22/substack-pape-the-first-move-has-begun-2026-04-22.md).
-Refined page: [`pape-page-2026-04-22.md`](pape-page-2026-04-22.md).
 
 ### Recent raw-input (lane)
 
 _Union of **on-disk** `raw-input/…` files tagged with this expert’s `thread:` and **inbox** lines (same paths de-duped; disk line kept first)._
 
-- [substack-pape-the-first-move-has-begun-2026-04-22.md](raw-input/2026-04-22/substack-pape-the-first-move-has-begun-2026-04-22.md) _on-disk_
-- [substack-pape-within-10-days-shortages-already-2026-04-22.md](raw-input/2026-04-22/substack-pape-within-10-days-shortages-already-2026-04-22.md) _on-disk_
 - [substack-pape-2-blockades-2-clocks-2026-04-24.md](raw-input/2026-04-24/substack-pape-2-blockades-2-clocks-2026-04-24.md) _on-disk_
 - [verify-pape-2-blockades-2-clocks-2026-04-24.md](raw-input/2026-04-24/verify-pape-2-blockades-2-clocks-2026-04-24.md)
 - [x-pape-zero-sum-escalation-ladder-2026-04-21.md](raw-input/2026-04-21/x-pape-zero-sum-escalation-ladder-2026-04-21.md)
+- [substack-pape-within-10-days-shortages-already-2026-04-22.md](raw-input/2026-04-22/substack-pape-within-10-days-shortages-already-2026-04-22.md)
+- [substack-pape-the-first-move-has-begun-2026-04-22.md](raw-input/2026-04-22/substack-pape-the-first-move-has-begun-2026-04-22.md)
 - [substack-pape-the-smart-bomb-trap-2026-02-25.md](raw-input/2026-02-25/substack-pape-the-smart-bomb-trap-2026-02-25.md)
 - [substack-pape-from-kosovo-to-iran-the-smart-bomb-2026-02-27.md](raw-input/2026-02-27/substack-pape-from-kosovo-to-iran-the-smart-bomb-2026-02-27.md)
 - [substack-pape-the-illusion-of-control-2026-02-28.md](raw-input/2026-02-28/substack-pape-the-illusion-of-control-2026-02-28.md)
