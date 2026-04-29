@@ -1,6 +1,6 @@
 # Coffee — menu and protocol reference
 
-**Canonical Step 2 menu (grace-mar):** **five** hub lines — **A** Steward, **B** Engineer, **C** Historian, **D** Capitalist, **E — Conductor**. Hub **E** embeds **last master** from cadence (`operator_coffee.py` → **`format_coffee_hub_e_line`**) and **`coffee` hub E** **auto-continues** that master when present ([coffee SKILL § Hub E](../../../.cursor/skills/coffee/SKILL.md#hub-e-auto-continue)). **No** masters MCQ row printed **under** the hub list; the five Symphony masters (**Toscanini … Bernstein**) disambiguate via **Conductor MCQ** only when needed — **hub E** otherwise jumps to orientation + **Conductor action MCQ** after **`coffee`**; **standalone** master name / **`conductor`** / [conductor skill](../../../.cursor/skills/conductor/SKILL.md) without `coffee` — see [CONDUCTOR-PASS.md](CONDUCTOR-PASS.md). **No** micro-hints row under the hub list. Executable contract: [.cursor/skills/coffee/SKILL.md](../../../.cursor/skills/coffee/SKILL.md).
+**Canonical Step 2 menu (grace-mar):** **five** hub lines — **A** Steward, **B** Engineer, **C** Historian, **D** Capitalist, **E — Conductor** (**hub `E` does not preview** last master — label only). **`coffee` hub E** **auto-continues** **`last_logged_conductor`** from cadence when present ([coffee SKILL § Hub E](../../../.cursor/skills/coffee/SKILL.md#hub-e-auto-continue)). **No** masters MCQ row printed **under** the hub list; the five Symphony masters (**Toscanini … Bernstein**) disambiguate via **Conductor MCQ** only when needed — **hub E** otherwise jumps to orientation + **Conductor action MCQ** after **`coffee`**; **standalone** master name / **`conductor`** / [conductor skill](../../../.cursor/skills/conductor/SKILL.md) without `coffee` — see [CONDUCTOR-PASS.md](CONDUCTOR-PASS.md). **No** micro-hints row under the hub list. Executable contract: [.cursor/skills/coffee/SKILL.md](../../../.cursor/skills/coffee/SKILL.md).
 
 **Capitalist D — bookshelf (two modalities):**
 
@@ -169,7 +169,7 @@ After **`A — Steward`** (legacy tables below may still say **`B`** or **`E —
 | **B** | **Engineer** carryover from Step 1 when relevant; one concrete work-dev / skills step. |
 | **C** | Brief + strategy carryover only if **C** chosen; optional pointer to the next brief / strategy day. |
 | **D** | **Capitalist** — work-business, grace-gems, bookshelf membrane, commercial cici, skill-write slice as filled on the hub line. |
-| **E** | **Conductor** — continuity pass; **hub line shows last master** (`format_coffee_hub_e_line` / Step 1); resolve slug; **not** a substitute for standalone **`conductor`** when closing without hub picks. |
+| **E** | **Conductor** — continuity pass via **`last_logged_conductor`** after pick; hub menu line **E** says **Conductor** only (**no last-master preview**); resolve slug **after** selection; **not** a substitute for standalone **`conductor`** when closing without hub picks. |
 
 ---
 

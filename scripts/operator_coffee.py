@@ -190,7 +190,7 @@ def main() -> int:
 
         print(
             f"\n{'=' * 60}\n"
-            f"$ Coffee hub Step 2 — hub **E** continuity (paste into reply)\n"
+            f"$ Coffee hub Step 2 — hub **E** label (paste into reply)\n"
             f"{'=' * 60}\n",
             flush=True,
         )
@@ -201,7 +201,7 @@ def main() -> int:
 
             print(
                 f"\n{'=' * 60}\n"
-                f"$ Coffee hub Step 2 — hub **E** continuity (paste into reply)\n"
+                f"$ Coffee hub Step 2 — hub **E** label (paste into reply)\n"
                 f"{'=' * 60}\n",
                 flush=True,
             )

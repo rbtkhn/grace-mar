@@ -1,4 +1,4 @@
-"""Smoke tests for coffee hub **E** continuity line (cadence SSOT)."""
+"""Smoke tests for coffee hub **E** label line."""
 
 from __future__ import annotations
 
@@ -14,6 +14,4 @@ from cadence_conductor_resolution import format_coffee_hub_e_line  # noqa: E402
 
 
 def test_format_coffee_hub_e_line_shape() -> None:
-    line = format_coffee_hub_e_line("grace-mar")
-    assert line.startswith("**E — Conductor**")
-    assert "last master:" in line or "no prior conductor" in line
+    assert format_coffee_hub_e_line("grace-mar") == "**E — Conductor**"

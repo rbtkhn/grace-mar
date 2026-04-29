@@ -150,7 +150,7 @@ def build_conductor_mcq_for_user(user_id: str) -> str:
     """Load cadence (optional dream + session load) and format the Masters Conductor MCQ.
 
     When ``coffee`` hub E auto-continues ``last_logged_conductor``, skip calling this
-    (see coffee SKILL § Hub E / ``format_coffee_hub_e_line``).
+    (see coffee SKILL § Hub E — auto-continue does not use Masters MCQ when slug exists).
     """
     import json
     from pathlib import Path
@@ -266,25 +266,16 @@ def last_logged_conductor(events: list[dict[str, Any]]) -> str | None:
 
 
 def format_coffee_hub_e_line(user_id: str) -> str:
-    """One **coffee hub Step 2** line for hub **E — Conductor** with last master display name.
+    """One **coffee hub Step 2** line for hub **E — Conductor** (label only).
 
-    Uses ``last_logged_conductor`` from cadence ``coffee_pick`` events — same SSOT as MCQ continuity.
-    When no qualifying pick exists, prompts resolution via Masters MCQ after **E**.
+    Does **not** preview the last logged master in the hub menu. Auto-continue when
+    the operator picks **E** still uses ``last_logged_conductor(parse_events(user_id))``
+    (same SSOT as Conductor resolution); that slug is **not** shown on this line.
+
+    ``user_id`` is retained for API stability; it is unused for the label string.
     """
-    try:
-        from audit_cadence_rhythm import parse_events
-    except ImportError:
-        from scripts.audit_cadence_rhythm import parse_events
-
-    events = parse_events(user_id)
-    slug = last_logged_conductor(events)
-    if slug:
-        display = _display_name_for_slug(slug)
-        return f"**E — Conductor** — last master: **{display}** (`{slug}`)"
-    return (
-        "**E — Conductor** — no prior conductor in cadence — resolve master after **E** "
-        "(Masters MCQ or name)."
-    )
+    _ = user_id
+    return "**E — Conductor**"
 
 
 def focus_for_last_conductor(events: list[dict[str, Any]]) -> str | None:
