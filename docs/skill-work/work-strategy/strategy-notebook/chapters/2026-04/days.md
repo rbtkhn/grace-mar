@@ -890,3 +890,17 @@ Barnes says both sides face material clocks and the question is which clock runs
 - **Pin** **primary:** **canonical** **`watch?v=`** **for** **Carlson** **×** **Kiriakou** **2026-04-27** **episode** **—** **then** **add** **`source_url`** **to** **raw-input** **YAML** **and** **inbox** **URL** **tail.**
 
 - Prior day (notebook): [2026-04-20](#2026-04-20)
+
+## 2026-04-28
+
+### Chronicle
+
+- Ran a focused **48h verify** fill for the daily brief watch channels (**Putin / Vance / PRC / IRI**) and added a chronology-only Hormuz audit to separate bargaining sequence from legal-blame narration.
+
+### Reflection
+
+The verified Hormuz sequence is coherent across Apr 27 to Apr 28: a conditional Iranian reopen signal, same-day U.S. internal discussion, and next-day U.S. public cooling around nuclear terms. In parallel, Tehran's UN line runs as a legal-attribution track rather than a bargaining concession track, which means the day must be read as two simultaneous channels, not one blended headline. Operationally, this is enough for channel-separated judgment, but VP-subchannel certainty remains one tier lower until a direct VP or White House readout artifact surfaces.
+
+### References
+
+- [daily-brief-2026-04-28.md](../../../daily-brief-2026-04-28.md) — §1d/§1e/§1g/§1h fills + §1i triage + Hormuz chronology audit.
