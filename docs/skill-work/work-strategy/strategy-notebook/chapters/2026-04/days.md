@@ -904,3 +904,4 @@ The verified Hormuz sequence is coherent across Apr 27 to Apr 28: a conditional 
 ### References
 
 - [daily-brief-2026-04-28.md](../../../daily-brief-2026-04-28.md) — §1d/§1e/§1g/§1h fills + §1i triage + Hormuz chronology audit.
+- **PH — gt-21:** [game-theory-21-world-war-trump.md](../../../../../../research/external/work-jiang/lectures/game-theory-21-world-war-trump.md) · [YouTube](https://www.youtube.com/watch?v=Ts-AA6LQf6I) — notebook-facing ingest (`thread:jiang`); inbox block: [daily-strategy-inbox.md](../../../daily-strategy-inbox.md) subsection **Strategy ingest — work-jiang PH Volume IV (2026-04-28)**.

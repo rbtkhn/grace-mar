@@ -703,6 +703,12 @@ Islamabad and **Hormuz** coverage this week is carrying **three** **audience** s
 
 `batch-analysis | 2026-04-14 | vi-14 Diesen + vi-15 Sneako/Dugin | **Tension-first:** same week’s **US–Iran** arc read through **petrodollar / chokepoint mechanics** (Diesen session) vs **theological–civilizational** stack (Dugin session), with Jiang bridging **1694→Enlightenment genealogy** and **China materialist** drag on “antichrist” urgency—**do not** merge causal chains in one Judgment. *Weak bridge:* **Islamabad negotiators as visible layer / scapegoat** motif appears in **both**—still verify each factual chain against primaries before folding.`
 
+### Strategy ingest — work-jiang PH Volume IV (2026-04-28)
+
+**Corpus:** [LIB-0149](../../../../users/grace-mar/self-library.md#operator-analytical-books) — **`gt-21`** transcript + analysis stub under `research/external/work-jiang/`.
+
+`YT | cold: Jiang — Game Theory #21 *World War Trump* — Iran-war / Islamabad ceiling vs US “empire maintenance” frame; chokepoints (Hormuz, Malacca, Panama, Gibraltar); Jan 2026 strategy-doc read-through; wartime economy / draft overlay // hook: **gt-21** for §1c Jiang layer + Hormuz–Islamabad continuity; cite transcript not headlines | https://www.youtube.com/watch?v=Ts-AA6LQf6I | verify:work-jiang-gt-21+../../../../research/external/work-jiang/lectures/game-theory-21-world-war-trump.md | thread:jiang`
+
 ### Expert-thread continuity (2026-04-12 → 2026-04-14)
 
 **Join key:** same **`thread:<expert_id>`** on different dates → **accuracy / drift** lane per [strategy-commentator-threads.md](strategy-commentator-threads.md). **This block names carries only** — add new paste-ready **`thread:`** lines when **cold** attributes speech/analysis to a named indexed expert; do **not** mint **`thread:`** from headlines alone.

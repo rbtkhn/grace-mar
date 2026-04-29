@@ -112,6 +112,7 @@ The `jiang` lane’s role (Long-horizon civilizational / game-theory lectures; P
 
 - **2026-04** — Ledger mirror 1 (partial month).  
   _Source:_ web: `https://www.youtube.com/watch?v=n44OF1Y7zgo`
+- **2026-04-28** — **gt-21** Game Theory #21 (*World War Trump*) ingested — [lecture](../../../../../../research/external/work-jiang/lectures/game-theory-21-world-war-trump.md) · [YouTube Ts-AA6LQf6I](https://www.youtube.com/watch?v=Ts-AA6LQf6I) · `thread:jiang` (see [daily-strategy-inbox.md](../../daily-strategy-inbox.md) subsection **Strategy ingest — work-jiang PH Volume IV (2026-04-28)**).
 
 <!-- backfill:jiang:end -->
 ## 2026-04
