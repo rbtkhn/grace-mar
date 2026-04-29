@@ -50,7 +50,7 @@ python3 scripts/log_cadence_event.py --kind coffee_conductor_outcome -u grace-ma
 - [work-cadence-events.md](../../../docs/skill-work/work-cadence/work-cadence-events.md) (`conductor=`)
 - [STRATEGY-NOTEBOOK-ARCHITECTURE](../../../docs/skill-work/work-strategy/strategy-notebook/STRATEGY-NOTEBOOK-ARCHITECTURE.md) (when the object is `days.md` / weave)
 
-**Done when:** Master resolved; orientation delivered; **Conductor action MCQ** (five **A.–E.**) unless operator opted out; `coffee_pick` if applicable; optional close; return to normal workflow (unless **`stay in coffee`** after a prior **`coffee`** hub turn).
+**Done when:** Master resolved; orientation delivered; **Conductor action MCQ** (five **A.–E.**) unless operator opted out; **`coffee_pick`** if applicable; optional **`coffee_conductor_outcome`**. When **`coffee`** hub **`E`** (**Conductor**) produces **orientation + action MCQ**, **omit** **`coffee`** hub **`A–E`** **in that same reply** — wait for **Conductor** **`A.–E.`** **first**. **`stay in coffee`**: **may** re-offer **`coffee`** hub **`A–E`** on the **following turn** after action resolves or closes; else normal workflow.
 
 ## Conductor action MCQ (second **A.–E.** for the resolved slug)
 
