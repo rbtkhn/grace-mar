@@ -20,6 +20,8 @@ WORK only; not Record.
 
 - Inbox | cold: full text in [`substack-simplicius-ukraine-war-untangling-current-disinfo-2026-04-25.md`](raw-input/2026-04-25/substack-simplicius-ukraine-war-untangling-current-disinfo-2026-04-25.md) (pointer; SSOT raw-input) | thread:simplicius
 
+- Inbox | cold: full text in [`substack-simplicius-secretary-navy-third-carrier-iran-2026-04-23.md`](raw-input/2026-04-23/substack-simplicius-secretary-navy-third-carrier-iran-2026-04-23.md) (pointer; SSOT raw-input) | thread:simplicius
+
 ## 2026-04-27
 - Inbox | cold: full text in [`substack-simplicius-gimmicks-trump-iran-bluff-2026-04-21.md`](raw-input/2026-04-21/substack-simplicius-gimmicks-trump-iran-bluff-2026-04-21.md) (pointer; SSOT raw-input) | thread:simplicius
 
@@ -28,8 +30,10 @@ WORK only; not Record.
 
 
 
+
 ## 2026-04-26
 - Inbox | cold: full text in [`substack-simplicius-gimmicks-trump-iran-bluff-2026-04-21.md`](raw-input/2026-04-21/substack-simplicius-gimmicks-trump-iran-bluff-2026-04-21.md) (pointer; SSOT raw-input) | thread:simplicius
+
 
 
 
@@ -51,3 +55,6 @@ WORK only; not Record.
 
 
 - Inbox | cold: full text in [`substack-simplicius-ukraine-war-untangling-current-disinfo-2026-04-25.md`](raw-input/2026-04-25/substack-simplicius-ukraine-war-untangling-current-disinfo-2026-04-25.md) (pointer; SSOT raw-input) | thread:simplicius
+
+## 2026-04-23
+- Inbox | cold: full text in [`substack-simplicius-secretary-navy-third-carrier-iran-2026-04-23.md`](raw-input/2026-04-23/substack-simplicius-secretary-navy-third-carrier-iran-2026-04-23.md) (pointer; SSOT raw-input) | thread:simplicius
