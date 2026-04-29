@@ -111,6 +111,8 @@ Apply **prospectively**; no obligation to backfill older months unless you expli
 
 ### Split ingest model (operator direction — planned)
 
+**Three capture channels** (direct write vs **`populate_strategy_raw_input`** vs Cursor JSONL salvage vs RSS): **[`raw-input/README.md` § Three capture channels](raw-input/README.md#three-capture-channels-normative-vs-recovery)** — normative **`raw-input/`** first; **prune** is optional hygiene, not recovery.
+
 **Problem:** **Durable** long verbatim for **reading and Chronicle** belongs in **[`raw-input/`](raw-input/README.md)**, but **unified discovery** still needs a **grep-friendly registry** and a **single habitual action** (see operator preference: stub + corpus + one command). The **7-day** **`transcript.md`** is the **triage** target for `thread:` lines, **not** the operator’s only bulk store.
 
 ### Publication vocabulary (formal pin)

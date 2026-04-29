@@ -1,5 +1,5 @@
 # Strategy raw input (full retention, 7 days)
-<!-- word_count: 1395 -->
+<!-- word_count: 1650 -->
 
 **Purpose:** Store **complete** transcripts and **all** strategy-ingest source material you want kept verbatim — without bloating [daily-strategy-inbox.md](../daily-strategy-inbox.md) or hitting the **~2000 word** per-block budget on [experts/*/transcript.md](../experts/ritter/transcript.md) that **`thread`** triage targets.
 
@@ -12,6 +12,24 @@
 - **Machine (grep / YAML / cold lines, `verify:` tails):** use **`pub_date`** and the tag **`pub_date:YYYY-MM-DD`**. **Do not** introduce new **`aired:`** tags; **`ingest_date`** remains “when the file entered this tree,” distinct from **publication**.
 - **Human (preambles, spec prose):** use **Published** / “publication day” — not an “aired” block as the norm. Same calendar anchor as **`pub_date`**; see [STRATEGY-NOTEBOOK-ARCHITECTURE.md](../STRATEGY-NOTEBOOK-ARCHITECTURE.md) publication vocabulary and [refined-page-template.md](../refined-page-template.md).
 - **Legacy (until bulk migration):** folder **`_aired-pending/`** and existing **`aired:`** / “aired” in older **daily-strategy-inbox.md** and captures stay on disk; new material and new edits follow this pin.
+
+## Three capture channels (normative vs recovery)
+
+Do **not** conflate **Cursor agent transcript JSONL** (machine-local logs of chat turns, including `<user_query>`) with **`experts/<expert_id>/transcript.md`** (rolling **in-repo** triage corpus). They are different surfaces with different roles.
+
+| Channel | What it is | Role |
+|---------|------------|------|
+| **1 — Direct / assistant write** | Markdown under **`raw-input/<pub_date>/`** with YAML (`kind: paste-bundle`, `rss-item`, etc.), written in-session or by automation | **Normative** for manual strategy inputs — matches [`.cursor/rules/strategy-input-raw-ingest.mdc`](../../../../../.cursor/rules/strategy-input-raw-ingest.mdc). |
+| **2 — Populate** | [`scripts/populate_strategy_raw_input.py`](../../../../scripts/populate_strategy_raw_input.py) copies **`experts/.../transcript.md`** date sections, standalone `*verbatim*.md`, X indexes — **repo artifacts only** | **Mirror / backfill** from material already committed; **does not** read Cursor JSONL. |
+| **3 — Agent JSONL scripts** | Ad hoc parsers (e.g. [`scripts/backfill_crooke_raw_input_from_transcript.py`](../../../../scripts/backfill_crooke_raw_input_from_transcript.py)) | **Salvage** when chat never wrote **`raw-input/`** — regex- and shape-dependent; **not** policy. |
+
+**RSS / Substack API** ([`fetch_strategy_raw_input.py`](../../../../scripts/fetch_strategy_raw_input.py), [`backfill_substack_raw_input.py`](../../../../scripts/backfill_substack_raw_input.py)) write **`raw-input/`** directly — **preferred** when a feed or API path exists (zero chat overhead).
+
+### Pruning vs recovery
+
+**Pruning** ([§ Pruning](#pruning)) is **optional disk reclaim** (`prune_strategy_raw_input.py`), operator-triggered. It is **not** the next step after “recover missed verbatim,” and it is **not** CI-scheduled. Recovery **after** mistaken deletion uses **`git checkout`** on removed paths ([§ Pruning](#pruning) note).
+
+Do **not** bundle “default rolling window ≈ 7 days” with **recovery**: the same **`N`** aligns expert **`transcript.md`** tooling and **`prune_strategy_raw_input.py`**, but **prune** is **hygiene**, not ingest salvage.
 
 ## Automated fetch (RSS → raw-input)
 
@@ -31,7 +49,7 @@
 
 Optional local override file (gitignored): **`fetch-sources.local.json`** — merge story is manual (copy entries into `fetch-sources.json` or swap path via env); the repo does not auto-merge two JSON files.
 
-**Backfill / mirror (no network):** unchanged — [`scripts/populate_strategy_raw_input.py`](../../../../scripts/populate_strategy_raw_input.py) copies existing transcripts and verbatim sidecars into `raw-input/`; run it after local edits when you want a unified archive layout.
+**Backfill / mirror (no network):** [`scripts/populate_strategy_raw_input.py`](../../../../scripts/populate_strategy_raw_input.py) copies **on-disk** **`experts/<id>/transcript.md`** sections and verbatim sidecars into **`raw-input/`** — **not** Cursor agent JSONL (see [§ Three capture channels](#three-capture-channels-normative-vs-recovery)). Run after local edits when you want a unified archive layout.
 
 **Substack year backfill (full post body):** [`scripts/backfill_substack_raw_input.py`](../../../../scripts/backfill_substack_raw_input.py) — paginates `api/v1/archive`, fetches `api/v1/posts/{slug}`, writes `raw-input/<date>/substack-*.md` with optional YAML `thread: simplicius` (or other id). Example:  
 `python3 scripts/backfill_substack_raw_input.py --hostname simplicius76.substack.com --year 2026 --thread simplicius --apply`
@@ -115,6 +133,8 @@ python3 scripts/populate_strategy_raw_input.py --apply
 
 Idempotent: unchanged files are skipped (content hash). See [`scripts/populate_strategy_raw_input.py`](../../../../scripts/populate_strategy_raw_input.py).
 
+**Advisory gap hint:** [`scripts/strategy_raw_input_gap_hint.py`](../../../../scripts/strategy_raw_input_gap_hint.py) — compares **`daily-strategy-inbox.md`** URLs to **`source_url`** in **`raw-input/`** YAML (default: article-ish URLs such as Substack `/p/`, Conflicts Forum, YouTube `watch`; **`--all-urls`** for full inbox scrape — noisy). **Not** CI or policy; operator judgment only.
+
 ## Outlet inventories (tracker docs)
 
 - **Dialogue Works** (Nima Alkhorshid): [dialogue-works-inventory.md](dialogue-works-inventory.md) — which **`raw-input/`** files are confirmed vs lane-stub references; maintenance grep at bottom.
@@ -142,5 +162,9 @@ Default root: `docs/skill-work/work-strategy/strategy-notebook/raw-input`. Overr
 ## Assistant default
 
 When the operator asks for **full transcript on disk**, write **verbatim** under **`raw-input/YYYY-MM-DD/<descriptive-slug>.md`** (or **`YYYY-MM-DD-<expert_id>.md`** when matching RSS merge). Place **refined pages** under **`experts/<expert_id>/<expert_id>-page-YYYY-MM-DD.md`** (and **`…-page-YYYY-MM-DD-<slug>.md`** when splitting multiple primaries on the same date — see [PAGE-CONTRACT.md](../PAGE-CONTRACT.md) § Refined pages). Keep [daily-strategy-inbox.md](../daily-strategy-inbox.md) to **stub lines** pointing at **verbatim** for `verify:` and optionally at the **expert page** for composed judgment, e.g. `verify:full-text+raw-input/2026-04-21/2026-04-21-mercouris-verbatim.md`.
+
+**Provenance:** YAML frontmatter does not record **operator vs assistant** author by default; **git commits** carry **who / when** for audit. Optional YAML (`note:`) may name capture context.
+
+**Paste-bundle starter:** [snippets/new-paste-bundle.md](snippets/new-paste-bundle.md) — copy headers + replace placeholders before pasting body.
 
 Full contract: [STRATEGY-NOTEBOOK-ARCHITECTURE.md § Split ingest model](../STRATEGY-NOTEBOOK-ARCHITECTURE.md#split-ingest-model).

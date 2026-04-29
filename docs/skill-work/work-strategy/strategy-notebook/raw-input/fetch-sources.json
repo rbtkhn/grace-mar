@@ -21,6 +21,13 @@
       "slug_prefix": "rss-greenwald",
       "max_items": 10,
       "thread": "greenwald"
+    },
+    {
+      "enabled": true,
+      "url": "https://conflictsforum.substack.com/feed",
+      "slug_prefix": "rss-conflictsforum",
+      "max_items": 10,
+      "thread": "crooke"
     }
   ]
 }

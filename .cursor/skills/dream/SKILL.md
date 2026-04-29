@@ -140,6 +140,7 @@ Include only what matters this run:
 - Coffee **24h rollup**, **execution paths** + suggested index, **civ-mem echoes** (with **“Analogy candidate only — not evidence, not recommendation, not Record”** when cited)
 - **Capability shift** (sources, REVIEW / monitor alerts)
 - **Strategy notebook** / **Cici notebook** / **Dev journal:** one line each when relevant (strategy-notebook **deferred** unless operator asked **`strategy page`**, **`strategy page compose`**, or **EOD notebook compose** in-thread; Cici notebook per § below)
+- **`raw-input` hygiene (advisory):** If cadence shows pasted **strategy inputs** (long verbatim + URL) today, note whether **`docs/skill-work/work-strategy/strategy-notebook/raw-input/`** already holds matching captures — **WORK only**; not merge authority. When unsure, suggest confirming paths or running [`scripts/strategy_raw_input_gap_hint.py`](../../../scripts/strategy_raw_input_gap_hint.py) (**advisory** heuristic).
 
 If nothing important changed, say so plainly. A quiet run is success.
 
