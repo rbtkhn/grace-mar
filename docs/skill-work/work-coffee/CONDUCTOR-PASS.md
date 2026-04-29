@@ -50,13 +50,17 @@ When you are **not** in **`coffee`**, you do **not** need to call this a “Cond
 
 ## Conductor session (strategy-notebook) — hub **E** vs standalone
 
-**`coffee` Step 2** is **A–E**. **E — Conductor** is the hub slot for **Conductor continuation** after **`coffee`** Step 1. The **five masters** are **not** five hub lines; disambiguation uses the **Conductor MCQ** (masters **A.–E.**). Open **standalone** Conductor (no `coffee`) by **master name**, **`conductor`**, or [`.cursor/skills/conductor/SKILL.md`](../../../.cursor/skills/conductor/SKILL.md) — see [coffee SKILL — Conductor session (outside `coffee` hub menu)](../../../.cursor/skills/coffee/SKILL.md#conductor-only-no-coffee). The **Conductor MCQ** appears when the pick needs disambiguation — `scripts/cadence_conductor_resolution.py` (`build_conductor_mcq_for_user`, `format_conductor_mcq_block`).
+**`coffee` Step 2** is **A–E**. **E — Conductor** continues Conductor after **`coffee`** Step 1. **`last_logged_conductor`** from cadence is the **default master**: **auto-continue** — orientation + **Conductor action MCQ** **without** pasting the **Masters MCQ** (`build_conductor_mcq_for_user`) when a qualifying **`coffee_pick`** with **`conductor=`** exists. Paste the **Masters MCQ** only when **no** prior conductor is logged **or** the operator asks to switch masters in that turn.
 
-**Hub pick logging:** `picked=E conductor=<slug>` when the operator chose **E** from the **`coffee`** hub. **Legacy:** `picked=conductor`, `picked=D` + `conductor=`, etc.
+Open **standalone** Conductor (no `coffee`) by **master name**, **`conductor`**, or [`.cursor/skills/conductor/SKILL.md`](../../../.cursor/skills/conductor/SKILL.md) — see [coffee SKILL — Conductor session (outside `coffee` hub menu)](../../../.cursor/skills/coffee/SKILL.md#conductor-only-no-coffee). **`build_conductor_mcq_for_user`** / `format_conductor_mcq_block` supply the Masters row when disambiguation is needed.
+
+**Hub pick logging:** `picked=E conductor=<slug>` when the operator chose **E** from the **`coffee`** hub — **`<slug>`** is the **resolved** conductor (**auto-continued** **or** chosen after Masters MCQ). **Legacy:** `picked=conductor`, `picked=D` + `conductor=`, etc.
 
 <a id="conductor-mcq"></a>
 
 ### Conductor MCQ — letters **A.–E.** = five masters (not hub letters)
+
+Use this row when the operator needs to **choose or switch** masters (**standalone** Conductor, **`coffee` hub E** with **no** prior `coffee_pick` `conductor=`, **or** explicit request to see the five-master row). **`coffee` hub E** with **`last_logged_conductor`**: **skip** this row — **auto-continue** that master ([coffee SKILL — Hub E](../../../.cursor/skills/coffee/SKILL.md#hub-e-auto-continue)).
 
 | MCQ letter | Master | Movement | What this card does |
 |------------|--------|------------|----------------------|
@@ -76,7 +80,7 @@ Each printed option includes a **continuity** tail: last `coffee_pick` slug, opt
 
 #### Conductor action MCQ (second **A.–E.** — **required**)
 
-**Not** another **A.–E.** that names **Toscanini…Bernstein** — it is a **new** **five-line** list **after** the master is resolved, with **this** pass’s **repo** next moves. Label it **`Conductor action MCQ`** and instruct **Reply A–E** for **this** pass. Each line is a **concrete, repo-grounded** next move (path or explicit refusal for this round), with **verbs and constraints** that match the **active** `conductor` slug (see [`.cursor/skills/conductor/SKILL.md`](../../../.cursor/skills/conductor/SKILL.md) **Conductor action MCQ**). **Omit** only if the operator says **"orientation only"** or **"no action menu"** in the same turn. **Kleiber** is not the only mode that gets a menu; **Bernstein, Toscanini,** etc. all get **their own** five options — same **A.–E.** letters, **third** use of the letter set in one session (after **coffee** hub **A–E** and masters MCQ row when all apply).
+**Not** another **A.–E.** that names **Toscanini…Bernstein** — it is a **new** **five-line** list **after** the master is resolved, with **this** pass’s **repo** next moves. Label it **`Conductor action MCQ`** and instruct **Reply A–E** for **this** pass. Each line is a **concrete, repo-grounded** next move (path or explicit refusal for this round), with **verbs and constraints** that match the **active** `conductor` slug (see [`.cursor/skills/conductor/SKILL.md`](../../../.cursor/skills/conductor/SKILL.md) **Conductor action MCQ**). **Omit** only if the operator says **"orientation only"** or **"no action menu"** in the same turn. **Kleiber** is not the only mode that gets a menu; **Bernstein, Toscanini,** etc. all get **their own** five options — same **A.–E.** letters; letter-set reuse order is **coffee** hub **A–E**, optional **Masters MCQ** row **if** shown, then **Conductor action MCQ**.
 
 **Outside `coffee`:** the operator issues the conductor pick **without** running `coffee` Step 0–1. Resolution, orientation, and **`coffee_pick`** logging match [coffee § Conductor session](../../../.cursor/skills/coffee/SKILL.md#conductor-only-no-coffee); do **not** require Recent rhythm or `operator_coffee.py` for that turn.
 

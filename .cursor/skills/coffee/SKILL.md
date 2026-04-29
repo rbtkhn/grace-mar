@@ -50,15 +50,26 @@ The **five masters** (**Toscanini**, **Furtwängler**, **Karajan**, **Kleiber**,
 
 **Do not** run `operator_coffee.py`, **do not** paste work-start or closeout **Step 1** output, and **do not** lead with **Recent rhythm** — unless the same message also says **`coffee`** or **`hey`**.
 
-**Do** show the **Conductor MCQ** (`build_conductor_mcq_for_user('grace-mar')`) when the pick is not yet disambiguated; **do** resolve the slug via `resolve_d_conductor` + [work-cadence-events.md](../../../docs/skill-work/work-cadence/work-cadence-events.md) for continuation. On success deliver the **short** orientation in [CONDUCTOR-PASS.md](../../../docs/skill-work/work-coffee/CONDUCTOR-PASS.md) and [COFFEE-CADENCE-CONDUCTOR-PROTOCOL.md](../../../docs/skill-work/work-strategy/strategy-notebook/COFFEE-CADENCE-CONDUCTOR-PROTOCOL.md). **Then, always** deliver the **Conductor action MCQ** — **five** **A.–E.** repo-grounded next moves — per [CONDUCTOR-PASS — Conductor action MCQ](../../../docs/skill-work/work-coffee/CONDUCTOR-PASS.md#conductor-action-mcq) and [conductor skill](../conductor/SKILL.md). **Skip** the action menu **only** if the operator said **"orientation only"** / **"no action menu"** in the same turn.
+**Standalone Conductor** (no **`coffee`** in this turn): show **`build_conductor_mcq_for_user('grace-mar')`** when the master is **not** yet disambiguated; resolve via `resolve_d_conductor` + [work-cadence-events.md](../../../docs/skill-work/work-cadence/work-cadence-events.md).
 
-**Logging:** `log_cadence_event.py --kind coffee_pick -u grace-mar --ok --kv picked=conductor conductor=<slug>` (e.g. `karajan`, `toscanini`). **Legacy** lines may still use `picked=D`; both are fine for rollups. **`coffee` hub letter E** uses **`picked=E conductor=<slug>`** when logging the hub pick — see [§ Cadence audit](#cadence-audit). **Do not** append a separate **`coffee`** event unless they actually ran `coffee` Step 1.
+**After `conductor=<slug>` resolves** (standalone pick **or** **`coffee` hub E** auto-continue per [**§ Hub E**](#hub-e-auto-continue)): deliver the **short** orientation in [CONDUCTOR-PASS.md](../../../docs/skill-work/work-coffee/CONDUCTOR-PASS.md) and [COFFEE-CADENCE-CONDUCTOR-PROTOCOL.md](../../../docs/skill-work/work-strategy/strategy-notebook/COFFEE-CADENCE-CONDUCTOR-PROTOCOL.md). **Then, always** deliver the **Conductor action MCQ** — **five** **A.–E.** repo-grounded next moves — per [CONDUCTOR-PASS — Conductor action MCQ](../../../docs/skill-work/work-coffee/CONDUCTOR-PASS.md#conductor-action-mcq) and [conductor skill](../conductor/SKILL.md). **Skip** the action menu **only** if the operator said **"orientation only"** / **"no action menu"** in the same turn.
+
+**Logging:** `log_cadence_event.py --kind coffee_pick -u grace-mar --ok --kv picked=conductor conductor=<slug>` (e.g. `karajan`, `toscanini`). **Legacy** lines may still use `picked=D`; both are fine for rollups. **`coffee` hub letter E** uses **`picked=E conductor=<slug>`** with **`<slug>`** the resolved conductor (**auto-continued** **or** chosen after Masters MCQ) — see [§ Cadence audit](#cadence-audit). **Do not** append a separate **`coffee`** event unless they actually ran `coffee` Step 1.
 
 **Conductor close (optimal loop):** Same as before — [CONDUCTOR-CLOSE-TEMPLATE.md](../../../docs/skill-work/work-strategy/strategy-notebook/CONDUCTOR-CLOSE-TEMPLATE.md) in **`days.md`** / page **Reflection**, or **`coffee_conductor_outcome`** — [CONDUCTOR-IMPROVEMENT-LOOP.md](../../../docs/skill-work/work-strategy/strategy-notebook/CONDUCTOR-IMPROVEMENT-LOOP.md).
 
 **After the reply:** return to **normal workflow** unless the operator says **`stay in coffee`** or **`coffee`**.
 
-**Hub E (`coffee` Step 2):** When the operator chooses **E — Conductor** after **`coffee`** Step 1, resolve the master slug (**`last_logged_conductor`** / `resolve_d_conductor`, same sources as above). Then run the **same** Conductor session shape (orientation + **Conductor action MCQ**). **Letter-collision:** If both the **coffee hub** and a **Conductor action MCQ** appear in one reply, **label** them — e.g. **`Coffee hub — Reply A–E`** vs **`Conductor action MCQ — Reply A–E (this pass)`** — and never use bare “pick **E**” without naming which menu ([CONDUCTOR-PASS.md](../../../docs/skill-work/work-coffee/CONDUCTOR-PASS.md)).
+<a id="hub-e-auto-continue"></a>
+
+**Hub E (`coffee` Step 2) — automatic continuation:** When the operator chooses **E — Conductor** after **`coffee`** Step 1, **`last_logged_conductor`** from cadence (**`coffee_pick`** with **`conductor=`** — same SSOT as **`format_coffee_hub_e_line`**) is the **default resolved slug**.
+
+- **If a slug exists:** **Continue that master immediately** — short orientation + **Conductor action MCQ** for that slug. **Do not** paste the **Masters MCQ** (`build_conductor_mcq_for_user`) row **unless** the operator asks to switch masters in the same turn (e.g. master name / prefix, “masters”, “pick a card”, “switch”) **or** cadence has **no** qualifying prior conductor.
+- **If no slug exists:** Paste **`build_conductor_mcq_for_user('grace-mar')`** **or** prompt once for master name / **`conductor`** — **do not** invent a default.
+
+Optional **one line** after auto-continue prose: *Say a master name or “masters” to open the five-master row instead.*
+
+**Letter-collision:** If both the **coffee hub** and a **Conductor action MCQ** appear in one reply, **label** them — e.g. **`Coffee hub — Reply A–E`** vs **`Conductor action MCQ — Reply A–E (this pass)`** — and never use bare “pick **E**” without naming which menu ([CONDUCTOR-PASS.md](../../../docs/skill-work/work-coffee/CONDUCTOR-PASS.md)).
 
 ---
 
@@ -129,7 +140,7 @@ Immediately **after** Step 1 content, output the **hub** menu — **five lines**
 
 **Letter-collision:** The **Symphony masters** disambiguation row (**masters A.–E.**) and the **Conductor action MCQ** (**five actions A.–E.** for the resolved slug) use **the same letter range** as the hub. When **both** a **coffee hub** menu and a **Conductor action MCQ** could appear in one reply, **label** them explicitly — see [CONDUCTOR-PASS.md](../../../docs/skill-work/work-coffee/CONDUCTOR-PASS.md). **Do not** reuse bare “pick **E**” without naming which menu.
 
-**Do not** append the **masters** **MCQ** row **under** the five hub lines; masters disambiguation belongs to **Conductor** turns ([§ Conductor session (outside `coffee` hub menu)](#conductor-only-no-coffee), [CONDUCTOR-PASS.md](../../../docs/skill-work/work-coffee/CONDUCTOR-PASS.md)).
+**Do not** append the **masters** **MCQ** row **under** the five hub lines; masters disambiguation belongs to **Conductor** turns ([§ Conductor session (outside `coffee` hub menu)](#conductor-only-no-coffee), [CONDUCTOR-PASS.md](../../../docs/skill-work/work-coffee/CONDUCTOR-PASS.md)). **After hub E is chosen:** when **`last_logged_conductor`** resolves, **skip** the **Masters MCQ** — deliver orientation + **Conductor action MCQ** immediately ([**§ Hub E — automatic continuation**](#hub-e-auto-continue)).
 
 **Do not** add micro-hints, fork shorthand, or F/G/Xavier/Dev tags **under** the hub list.
 
@@ -158,7 +169,7 @@ E. Conductor — last master: **Bernstein** (`bernstein`)  ← use live text fro
 
 **Write-shaped** work is **not** an extra letter — it defaults under **D** when skill-write/commercial, or when the operator says **`write`** / **`skill-write`** without **`coffee`**. State it plainly in the angle-bracket line; **do not** add a separate “micro-hints” row.
 
-**Filling E — Conductor:** Match **`format_coffee_hub_e_line`** (same SSOT as **`last_logged_conductor`** / `coffee_pick` cadence). **If slug present:** hub line names **display + slug**; run **Conductor session** for that streak context (orientation + **Conductor action MCQ** per [conductor skill](../conductor/SKILL.md)). **If absent:** hub line says no prior conductor — prompt once: name a master / **`conductor`** / or paste **Conductor MCQ** masters row — **do not** invent a default master.
+**Filling E — Conductor:** Hub line matches **`format_coffee_hub_e_line`**. **When the operator picks hub E:** **[`last_logged_conductor`](#hub-e-auto-continue)** **defaults** the session — **orientation + Conductor action MCQ** for that slug **without** interposing the **Masters MCQ**, unless cadence has **no** prior **`coffee_pick` `conductor=`** **or** the operator asks to switch masters (name / “masters” / “pick a card”). **If no slug:** paste **`build_conductor_mcq_for_user`** **or** prompt once — **do not** invent a default master.
 
 **Step 1 context for B / D:** `operator_coffee.py` prints **`Lane context (for hub B / D — Engineer & Capitalist hints)`** — two lines from `scripts/coffee_lane_next_hints.py` (work-cici + work-dev). Use when choosing **B**, **D**, or when wording those lines.
 
@@ -176,7 +187,7 @@ E. Conductor — last master: **Bernstein** (`bernstein`)  ← use live text fro
 
 - **D. Capitalist** — **work-business**, **grace-gems**, revenue/offers; **work-cici** when business/teaching-commercial angle; fixed **bookshelf membrane** option on the hub line; **one** prescribed next step.
 
-- **E. Conductor** — Hub continuation for **Conductor session** after **`coffee`** ([§ Conductor session](#conductor-only-no-coffee)); **hub line must show last master** via **`format_coffee_hub_e_line`** / Step 1 paste — then resolve slug, orientation + **Conductor action MCQ**. **Not** a substitute for standalone **`conductor`** when **`coffee`** was not invoked.
+- **E. Conductor** — **`coffee` hub E** **[auto-continues](#hub-e-auto-continue)** **`last_logged_conductor`** (orientation + **Conductor action MCQ**); **hub line** shows last master via **`format_coffee_hub_e_line`** / Step 1 paste. **Not** a substitute for standalone **`conductor`** when **`coffee`** was not invoked.
 
 **Exit / re-offer:** After **A**, **B**, **D**, or **E**, re-offer the full **A–E** menu by default. After **C**, **exit to normal workflow** unless **`stay in coffee`**. After **A** (Steward), see [menu-reference § Steward follow-up fork](../../../docs/skill-work/work-coffee/menu-reference.md#steward-follow-up-fork-implement-now-vs-later) *(legacy docs may still say **B** for Steward — read **A**).* Synonyms **`A+ship`** / **`EXECUTE`** ≈ **Implement now** on steward track.
 

@@ -92,15 +92,29 @@ _Operator block per [weak-signal-template.md](weak-signal-template.md) and [weak
 - **Apr 28 (Iran-aligned primary line):** Iran's UN framing assigns responsibility for Strait disruption risk to U.S. military pressure and allied operations.  
   Sources: [PressTV](https://www.presstv.ir/Detail/2026/04/28/767664/Iran--Responsibility-for-any-disruption-in-Strait-of-Hormuz-lies-squarely-with-US-aggression) · [Tasnim](https://www.tasnimnews.ir/en/news/2026/04/28/3577178/iran-urges-unsc-to-condemn-us-naval-blockade-warns-of-threats-to-global-shipping)
 
-## 1i. Verify check — top 3 load-bearing claims (triage)
+## 1i. Verify check — enforceability triage (load-bearing claims)
 
-| Claim | Verdict | Source |
-|---|---|---|
-| Iran offered to reopen Hormuz if U.S. pressure terms are met. | **Supported** | [AP](https://apnews.com/article/us-iran-war-hormuz-april-27-2026-374d81d1aac6d8f19c21e1d1e10ab103) |
-| PRC MFA explicitly objected to U.S. sanctions using "long-arm jurisdiction" language (Apr 27). | **Supported** | [MFA transcript (en)](https://www.fmprc.gov.cn/mfa_eng/xw/fyrbt/202604/t20260427_11900915.html) |
-| A standalone official JD Vance readout exists in the last 48h. | **Unclear / not found in this pass** | [White House Apr 27 briefing video](https://www.whitehouse.gov/videos/press-secretary-karoline-leavitt-briefs-members-of-the-media-apr-27-2026/) |
+Three things matter here: **what reporters say happened**, **what an executive can actually order tomorrow**, and **who absorbs residual risk** when the headline omits mechanics. The Hormuz thread fails the third test until counterparties can price insurance and compliance under a described regime.
 
-_Confidence: medium (two official-primary lines are strong; VP-specific coverage needs a direct VP office or WH readout artifact to lift confidence)._
+### Top claims — fact vs enforceability
+
+| Claim | Fact verdict (this pass) | Enforceability hook (what must exist for it to bite) | Who pays if the hook is missing |
+|---|---|---|---|
+| Iran conditioned reopening Hormuz on U.S. pressure relief and war de-escalation; nuclear terms unsettled. | **Supported at wire** | Bilateral or plurilateral instruments + observable shipping/insurance rules + sequencing that creditors and insurers can model | **Owners of cargoes and hulls** + **underwriters** bear mispriced risk; governments externalize blame via narrative |
+| PRC MFA objected to U.S. sanctions using “long-arm jurisdiction” framing (Apr 27). | **Supported** (MFA primary) | Retaliatory measures, waiver corridors, or diplomatic démarche that changes compliance posture for named actors | **Financial institutions and counterparties** stuck parsing conflicting penalty stacks |
+| Standalone official JD Vance readout in last 48h. | **Unclear / not found** | VP office or WH artifact with attribution line | **Analysts** who treat secondary reporting as executive intent |
+
+_Sources (fact column anchor):_ [AP (Hormuz)](https://apnews.com/article/us-iran-war-hormuz-april-27-2026-374d81d1aac6d8f19c21e1d1e10ab103) · [MFA transcript (en)](https://www.fmprc.gov.cn/mfa_eng/xw/fyrbt/202604/t20260427_11900915.html) · [White House Apr 27 briefing video](https://www.whitehouse.gov/videos/press-secretary-karoline-leavitt-briefs-members-of-the-media-apr-27-2026/)
+
+_Confidence: medium — two rows have primary traction; the Hormuz row is wire-strong on narrative and mechanism-weak on enforcement._
+
+### Hormuz — who binds whom (single-row ledger)
+
+| Dimension | Bargaining lane (shipping / war pressure) | Blame lane (UN / disruption risk) |
+|-----------|---------------------------------------------|-----------------------------------|
+| **What is being optimized** | Partial reopening vs sanctions/blockade relief vs nuclear sequencing | Moral/legal assignment of fault for Strait disruption |
+| **Who must commit** | U.S. executive + coalition operators + Iran’s enforcement of stated conditions | UN member rhetoric; not a substitute for hull-level guarantees |
+| **Who pays first when vague** | Cargo owners, flags of convenience, P&I clubs, charter markets — **before** voters see “deal” | Narrative winners in diplomacy columns — **not** the same as clearance to sail |
 
 ### Hormuz chronology audit (focused)
 
@@ -113,7 +127,7 @@ _Confidence: medium (two official-primary lines are strong; VP-specific coverage
 - **Parallel lane (Apr 28 UN):** Iran's UN framing assigns disruption risk to U.S./allied pressure, which is a legal-blame narrative distinct from bargaining terms.  
   Sources: [Tasnim](https://www.tasnimnews.ir/en/news/2026/04/28/3577178/iran-urges-unsc-to-condemn-us-naval-blockade-warns-of-threats-to-global-shipping) · [Anadolu](https://www.aa.com.tr/en/americas/iran-accuses-us-israel-of-aggression-defends-actions-in-strait-of-hormuz-at-un/3919896)
 
-_Chronology verdict: supported at wire level with coherent Apr 27 → Apr 28 sequencing; remaining uncertainty is exact negotiation-channel detail without a full published U.S. primary readout text._
+_Chronology verdict: supported at wire level with coherent Apr 27 → Apr 28 sequencing; remaining uncertainty is negotiation-channel detail **and** any published mechanism tying Hormuz traffic to named U.S. administrative acts._
 
 _Disconfirm trigger (promote to contradiction if found): any dated U.S. or Iran primary showing the sequence was reversed (nuclear terms tabled first before peace/Hormuz), or proving the Apr 27 "new offer" was not the same proposal family referenced on Apr 28._
 

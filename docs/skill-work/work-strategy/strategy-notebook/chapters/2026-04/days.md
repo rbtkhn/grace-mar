@@ -905,3 +905,38 @@ The verified Hormuz sequence is coherent across Apr 27 to Apr 28: a conditional 
 
 - [daily-brief-2026-04-28.md](../../../daily-brief-2026-04-28.md) — §1d/§1e/§1g/§1h fills + §1i triage + Hormuz chronology audit.
 - **PH — gt-21:** [game-theory-21-world-war-trump.md](../../../../../../research/external/work-jiang/lectures/game-theory-21-world-war-trump.md) · [YouTube](https://www.youtube.com/watch?v=Ts-AA6LQf6I) — notebook-facing ingest (`thread:jiang`); inbox block: [daily-strategy-inbox.md](../../../daily-strategy-inbox.md) subsection **Strategy ingest — work-jiang PH Volume IV (2026-04-28)**.
+
+## 2026-04-29
+
+### Chronicle
+
+- **EXECUTE:** Folded **operator-fed Crooke intake** into this compose-day notebook — **[Gaza Reconstruction; Ukraine Reconstruction — ‘It’s all Business’](https://conflictsforum.substack.com/p/gaza-reconstruction-ukraine-reconstruction)** (Alastair Crooke, Conflicts Forum, **2026-01-28**) — WORK / analyst tier only (mixed attribution chains below).
+
+### References — Crooke (Jan 2026 single-piece EXECUTE)
+
+**Primary**
+
+- [Gaza Reconstruction; Ukraine Reconstruction — ‘It’s all Business’](https://conflictsforum.substack.com/p/gaza-reconstruction-ukraine-reconstruction) — **Conflicts Forum** · Crooke · **2026-01-28**
+
+**Tier ladder (for notebook-grade reuse)**
+
+| Tier | What it draws | Notebook stance |
+|------|----------------|-------------------|
+| **T1** | Named reporters/outlets (**Barsky / Ma’ariv**, **Barnea**) | Anchor Hebrew-media attribution lines once originals are date-checked |
+| **T2** | Alleged US/Israel diplomatic texts + CENTCOM (**Cooper** beat) | Hypothesis until second-source confirmation |
+| **T3** | **Board of Peace / Putin / frozen assets / Gruenbaum** choreography | Verify Kremlin/WH readouts before tier-A judgment |
+| **T4** | Barnea **“money / business”** closure — cynical graft tableau | Judgment color, not operational intelligence |
+
+**Load-bearing seams (single-screen)**
+
+| Crooke lane | **Pape** ([Escalation Trap…](https://substack.com/inbox/post/195865615)) | **`daily-brief-2026-04-28` Hormuz §1i / bargaining** |
+|-------------|----------------|----------------------|
+| **Limited strike vs full-war framing + mediator lanes** | Escalation under coercion / credibility | Bargaining lane vs symbolic reciprocity — enforceability not rhetoric |
+| **Israel non-participation ask vs Iran “strike Israel anyway” reply** | Alliance wedge under escalation pressure | Parallel lanes — third-party basing liability |
+| **Gaza/Ukraine reconstruction as rents + Gulf capital flows** | Market-timing cousin (**capital rounds slower than missiles**) | **Who pays** before headlines stabilize |
+
+**One-line verdict stub**
+
+Treat this essay as **portfolio fusion thesis**: Iran escalation ladder + CENTCOM optics + Gulf/Ukraine/Moscow reconstruction finance — promote dual-sourced lines only; retain Barnea tableau as interpretive glue, not standalone proof.
+
+**Prior day:** [2026-04-28](#2026-04-28)

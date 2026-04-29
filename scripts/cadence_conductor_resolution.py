@@ -147,7 +147,11 @@ def format_conductor_mcq_block(
 
 
 def build_conductor_mcq_for_user(user_id: str) -> str:
-    """Load cadence (and optional dream + session load) and format the Conductor MCQ."""
+    """Load cadence (optional dream + session load) and format the Masters Conductor MCQ.
+
+    When ``coffee`` hub E auto-continues ``last_logged_conductor``, skip calling this
+    (see coffee SKILL § Hub E / ``format_coffee_hub_e_line``).
+    """
     import json
     from pathlib import Path
 
