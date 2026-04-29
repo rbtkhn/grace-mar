@@ -34,9 +34,10 @@ _Auto-generated from `transcript.md` + **on-disk** and **inbox** `raw-input/` (d
 
 ## 2026-04-28
 - Inbox | cold: full text in [`substack-simplicius-gimmicks-trump-iran-bluff-2026-04-21.md`](raw-input/2026-04-21/substack-simplicius-gimmicks-trump-iran-bluff-2026-04-21.md) (pointer; SSOT raw-input) | thread:simplicius
-- Inbox | cold: full text in [`substack-simplicius-us-carrier-groups-trump-dissatisfied-iran-2026-04-28.md`](raw-input/2026-04-28/substack-simplicius-us-carrier-groups-trump-dissatisfied-iran-2026-04-28.md) (pointer; SSOT raw-input) | thread:simplicius
+- Inbox | cold: full text in [`substack-simplicius-us-carrier-groups-trump-dissatisfied-iran-2026-04-27.md`](raw-input/2026-04-27/substack-simplicius-us-carrier-groups-trump-dissatisfied-iran-2026-04-27.md) (pointer; SSOT raw-input) | thread:simplicius
 ## 2026-04-27
 - Inbox | cold: full text in [`substack-simplicius-gimmicks-trump-iran-bluff-2026-04-21.md`](raw-input/2026-04-21/substack-simplicius-gimmicks-trump-iran-bluff-2026-04-21.md) (pointer; SSOT raw-input) | thread:simplicius
+- Inbox | cold: full text in [`substack-simplicius-us-carrier-groups-trump-dissatisfied-iran-2026-04-27.md`](raw-input/2026-04-27/substack-simplicius-us-carrier-groups-trump-dissatisfied-iran-2026-04-27.md) (pointer; SSOT raw-input) | thread:simplicius
 ## 2026-04-26
 - Inbox | cold: full text in [`substack-simplicius-gimmicks-trump-iran-bluff-2026-04-21.md`](raw-input/2026-04-21/substack-simplicius-gimmicks-trump-iran-bluff-2026-04-21.md) (pointer; SSOT raw-input) | thread:simplicius
 ## 2026-04-25
@@ -46,6 +47,6 @@ _Auto-generated from `transcript.md` + **on-disk** and **inbox** `raw-input/` (d
 
 _Union of **on-disk** `raw-input/…` files tagged with this expert’s `thread:` and **inbox** lines (same paths de-duped; disk line kept first)._
 
-- [substack-simplicius-us-carrier-groups-trump-dissatisfied-iran-2026-04-28.md](raw-input/2026-04-28/substack-simplicius-us-carrier-groups-trump-dissatisfied-iran-2026-04-28.md) _on-disk_
+- [substack-simplicius-us-carrier-groups-trump-dissatisfied-iran-2026-04-27.md](raw-input/2026-04-27/substack-simplicius-us-carrier-groups-trump-dissatisfied-iran-2026-04-27.md) _on-disk_
 - [substack-simplicius-gimmicks-trump-iran-bluff-2026-04-21.md](raw-input/2026-04-21/substack-simplicius-gimmicks-trump-iran-bluff-2026-04-21.md)
 <!-- strategy-expert-thread:end -->

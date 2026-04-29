@@ -1,12 +1,12 @@
 ---
 ingest_date: 2026-04-28
-pub_date: 2026-04-28
+pub_date: 2026-04-27
 kind: operator-transcript
 source_url: https://simplicius76.substack.com/p/us-carrier-groups-in-position-for
 publication: simplicius76.substack.com
 slug: us-carrier-groups-in-position-for
 thread: simplicius
-source_note: Operator paste shows Substack byline Apr 27; canonical page date Apr 28 — pub_date follows Substack.
+source_note: Publication Apr 27 per Substack byline / operator confirmation.
 ---
 
 # US Carrier Groups in Position for Next Round as Trump "Dissatisfied" With Iranian Demands
