@@ -345,6 +345,7 @@ _Auto-generated from `transcript.md` + **on-disk** and **inbox** `raw-input/` (d
 - Inbox | cold: full text in [`transcript-diesen-escobar-connectivity-wars-multipolarity-2026-04-23.md`](raw-input/2026-04-23/transcript-diesen-escobar-connectivity-wars-multipolarity-2026-04-23.md) (pointer; SSOT raw-input) | thread:diesen
 - Inbox | cold: full text in [`transcript-macgregor-diesen-total-war-iran-2026-04-21.md`](raw-input/2026-04-21/transcript-macgregor-diesen-total-war-iran-2026-04-21.md) (pointer; SSOT raw-input) | thread:diesen
 - Inbox | cold: full text in [`transcript-diesen-ritter-russia-threatens-strike-finland-baltic-2026-04-17.md`](raw-input/2026-04-17/transcript-diesen-ritter-russia-threatens-strike-finland-baltic-2026-04-17.md) (pointer; SSOT raw-input) | thread:diesen
+- Inbox | cold: full text in [`transcript-diesen-wilkerson-araghchi-putin-russia-iran-2026-04-28.md`](raw-input/2026-04-28/transcript-diesen-wilkerson-araghchi-putin-russia-iran-2026-04-28.md) (pointer; SSOT raw-input) | thread:diesen
 ## 2026-04-27
 - Inbox | cold: full text in [`transcript-diesen-crooke-iran-global-war-world-order-2026-04-27.md`](raw-input/2026-04-27/transcript-diesen-crooke-iran-global-war-world-order-2026-04-27.md) (pointer; SSOT raw-input) | thread:diesen | crosses:crooke
 - Refined | cold: [diesen-page-2026-04-27-diesen-crooke-iran-global-war-world-order.md](diesen-page-2026-04-27-diesen-crooke-iran-global-war-world-order.md) (host lane; same raw) | thread:diesen
@@ -367,6 +368,7 @@ _Auto-generated from `transcript.md` + **on-disk** and **inbox** `raw-input/` (d
 _Union of **on-disk** `raw-input/…` files tagged with this expert’s `thread:` and **inbox** lines (same paths de-duped; disk line kept first)._
 
 - [transcript-diesen-escobar-connectivity-wars-multipolarity-2026-04-23.md](raw-input/2026-04-23/transcript-diesen-escobar-connectivity-wars-multipolarity-2026-04-23.md) _on-disk_
+- [transcript-diesen-wilkerson-araghchi-putin-russia-iran-2026-04-28.md](raw-input/2026-04-28/transcript-diesen-wilkerson-araghchi-putin-russia-iran-2026-04-28.md) _on-disk_
 - [transcript-diesen-crooke-iran-global-war-world-order-2026-04-27.md](raw-input/2026-04-27/transcript-diesen-crooke-iran-global-war-world-order-2026-04-27.md)
 - [transcript-macgregor-diesen-total-war-iran-2026-04-21.md](raw-input/2026-04-21/transcript-macgregor-diesen-total-war-iran-2026-04-21.md)
 - [transcript-diesen-ritter-russia-threatens-strike-finland-baltic-2026-04-17.md](raw-input/2026-04-17/transcript-diesen-ritter-russia-threatens-strike-finland-baltic-2026-04-17.md)
