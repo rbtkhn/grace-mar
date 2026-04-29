@@ -3,17 +3,17 @@
 
 WORK only; not Record.
 
-**Source:** Distilled from [`strategy-expert-crooke-transcript.md`](strategy-expert-crooke-transcript.md) (what the expert said recently) and relevant pages (where that material was used in strategy work).
+**Source:** Distilled from [`transcript.md`](transcript.md) (what the expert said recently) and relevant pages (where that material was used in strategy work).
 **Process:** `python3 scripts/strategy_thread.py` triages inbox → transcript, then fills **only** the **machine layer** between the **strategy-expert-thread** HTML start and end comments. Operator / assistant maintains the **journal layer** above the start marker in **readable prose** (optional **ledger** after the end marker).
 **Updated:** Narrative — when you distill; **machine layer** — when you run **`thread`**.
-**Companion files:** [`strategy-expert-crooke.md`](strategy-expert-crooke.md) (profile) and [`strategy-expert-crooke-transcript.md`](strategy-expert-crooke-transcript.md) (7-day verbatim).
+**Companion files:** [`profile.md`](profile.md) (profile) and [`transcript.md`](transcript.md) (7-day verbatim).
 
 ---
 ## Journal layer — Narrative (operator)
 
 _Write here in full sentences. Dated arcs are welcome (e.g. **2026-04-12 → 04-15**). Cover: what this voice did this week, how it **intersects** named **pages**, convergence/tension with other **`thread:`** experts, and **Open** pins. The **journal layer** is **not** overwritten by the **`thread`** script._
 
-**Layout:** Stay on **one** `strategy-expert-crooke-thread.md` file. Within the **journal layer**, each **`## YYYY-MM`** heading is a **month segment**. For **2026:** **Segment 1** = January (`## 2026-01`), **Segment 2** = February (`## 2026-02`), **Segment 3** = March (`## 2026-03`), **Segment 4** = April (`## 2026-04`, ongoing). The **machine layer** (script-maintained) is **only** the fenced block between the **strategy-expert-thread** HTML start and end comments — do not call that "Segment 2" in the month sense.
+**Layout:** Stay on **one** [`thread.md`](thread.md) file under `experts/crooke/`. Within the **journal layer**, each **`## YYYY-MM`** heading is a **month segment**. For **2026:** **Segment 1** = January (`## 2026-01`), **Segment 2** = February (`## 2026-02`), **Segment 3** = March (`## 2026-03`), **Segment 4** = April (`## 2026-04`, ongoing). The **machine layer** (script-maintained) is **only** the fenced block between the **strategy-expert-thread** HTML start and end comments — do not call that "Segment 2" in the month sense.
 
 _(No narrative distillation yet — add prose above the markers, not inside them.)_
 

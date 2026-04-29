@@ -71,4 +71,4 @@ Where **their** commentary is published and accessible (**no Wikipedia**). Re-ve
 
 ---
 
-**Companion files:** [`strategy-expert-crooke-transcript.md`](strategy-expert-crooke-transcript.md) (7-day rolling verbatim) and [`strategy-expert-crooke-thread.md`](strategy-expert-crooke-thread.md) (distilled analytical thread).
+**Companion files:** [`transcript.md`](transcript.md) (7-day rolling verbatim) and [`thread.md`](thread.md) (distilled analytical thread).
