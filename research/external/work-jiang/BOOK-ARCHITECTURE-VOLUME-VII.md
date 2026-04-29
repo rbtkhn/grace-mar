@@ -32,7 +32,7 @@ End each Part I chapter with a boxed subsection per CHAPTER-DIVERGENCE-BOX.md �
 
 ### Part II — method TBD (Essays)
 
-**Begins after:** `es-ch33`
+**Begins after:** `es-ch35`
 
 Operator locks evaluation mode in book/VOLUME-VII-ESSAYS.md (divergence-first default for Part I boxes).
 
@@ -435,5 +435,29 @@ Operator locks evaluation mode in book/VOLUME-VII-ESSAYS.md (divergence-first de
 - **Outline:** `chapters-volume-vii/es-ch33/outline.md`
 - **Draft:** `chapters-volume-vii/es-ch33/draft.md`
 - **Prediction IDs:** `jiang-ES33-001, jiang-ES33-002, jiang-ES33-003`
+
+### es-ch34 — The US-Iran War, Round Two
+
+- **Purpose:** Book chapter for essay 34 — Volume VII Part I; divergence end-box per CHAPTER-DIVERGENCE-BOX.md (Volume VII default).
+- **Kind:** analysis
+- **Priority:** medium
+- **Target words:** 2800
+- **Status:** outline_pending
+- **Owner:** operator
+- **Sprint:** TBD
+- **Outline:** `chapters-volume-vii/es-ch34/outline.md`
+- **Draft:** `chapters-volume-vii/es-ch34/draft.md`
+
+### es-ch35 — The Trump New Deal
+
+- **Purpose:** Book chapter for essay 35 — Volume VII Part I; divergence end-box per CHAPTER-DIVERGENCE-BOX.md (Volume VII default).
+- **Kind:** analysis
+- **Priority:** medium
+- **Target words:** 2800
+- **Status:** outline_pending
+- **Owner:** operator
+- **Sprint:** TBD
+- **Outline:** `chapters-volume-vii/es-ch35/outline.md`
+- **Draft:** `chapters-volume-vii/es-ch35/draft.md`
 
 *Generated from `metadata/book-architecture.yaml` (`volume_7_essays`) — `python scripts/work_jiang/render_book_architecture.py`.*

@@ -2,9 +2,13 @@
 
 Operator notes on series status and ingest.
 
+## 2026-04-28 — Game Theory #21 ingested (retrofill)
+
+**gt-21** — *World War Trump* (`Ts-AA6LQf6I`): operator-cleaned lecture transcript under [`lectures/game-theory-21-world-war-trump.md`](lectures/game-theory-21-world-war-trump.md); stub analysis [`analysis/Ts-AA6LQf6I-game-theory-21-analysis.md`](analysis/Ts-AA6LQf6I-game-theory-21-analysis.md); registry + `book-architecture.yaml` **`gt-ch21`** row placed **between** **`gt-ch20`** and **`gt-ch22`**.
+
 ## 2026-04-28 — Game Theory #22 ingested
 
-**gt-22** — *Twilight of the Nation-State* (`txgPfnXgzcE`): operator-cleaned lecture transcript under [`lectures/game-theory-22-twilight-of-the-nation-state.md`](lectures/game-theory-22-twilight-of-the-nation-state.md); stub analysis [`analysis/txgPfnXgzcE-game-theory-22-analysis.md`](analysis/txgPfnXgzcE-game-theory-22-analysis.md); registry + `book-architecture.yaml` **`gt-ch22`** row; **`part_2.after_chapter`** → **`gt-ch22`**. **Note:** **`gt-21`** not present in corpus—episode numbering may skip if #21 not published or ingested yet.
+**gt-22** — *Twilight of the Nation-State* (`txgPfnXgzcE`): operator-cleaned lecture transcript under [`lectures/game-theory-22-twilight-of-the-nation-state.md`](lectures/game-theory-22-twilight-of-the-nation-state.md); stub analysis [`analysis/txgPfnXgzcE-game-theory-22-analysis.md`](analysis/txgPfnXgzcE-game-theory-22-analysis.md); registry + `book-architecture.yaml` **`gt-ch22`** row; **`part_2.after_chapter`** → **`gt-ch22`** (last Part I chapter in current corpus).
 
 ## 2026-03-23 — Series resumed
 

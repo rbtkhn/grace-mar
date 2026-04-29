@@ -162,4 +162,20 @@ Nested `volume_4_game_theory.book.chapters` — see `docs/skill-work/work-jiang/
 
 **Next action:** Complete analysis memo for gt-20; then draft chapter outline in chapters-volume-iv/gt-ch20/outline.md
 
+## gt-ch21 — Game Theory #21: World War Trump
+
+- **Status:** outline_pending
+- **Owner:** operator
+- **Sprint:** TBD
+
+**Next action:** Expand analysis memo beyond stub; draft chapter outline in chapters-volume-iv/gt-ch21/outline.md
+
+## gt-ch22 — Game Theory #22: Twilight of the Nation-State
+
+- **Status:** outline_pending
+- **Owner:** operator
+- **Sprint:** TBD
+
+**Next action:** Expand analysis memo beyond stub; draft chapter outline in chapters-volume-iv/gt-ch22/outline.md
+
 *Generated from `metadata/book-architecture.yaml` (`volume_4_game_theory`) — same command as Volume I queue.*

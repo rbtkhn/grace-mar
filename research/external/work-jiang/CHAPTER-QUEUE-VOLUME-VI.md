@@ -96,7 +96,7 @@ Nested `volume_6_interviews.book.chapters` — see `docs/skill-work/work-jiang/v
 - **Owner:** operator
 - **Sprint:** TBD
 
-**Next action:** Complete analysis memo for vi-12; wire video_id and transcript; then draft chapter outline
+**Next action:** Complete analysis memo for vi-12; then draft chapter outline
 
 ## vi-ch13 — Interviews #13: Patrick Bet-David — Jiang Xueqin Finally Breaks His Silence (PBD Podcast #772)
 
@@ -113,5 +113,13 @@ Nested `volume_6_interviews.book.chapters` — see `docs/skill-work/work-jiang/v
 - **Sprint:** TBD
 
 **Next action:** Complete analysis memo for vi-14; then draft chapter outline
+
+## vi-ch15 — Interviews #15: Sneako — Jiang Xueqin & Aleksandr Dugin (Eschatology & Geopolitics)
+
+- **Status:** outline_pending
+- **Owner:** operator
+- **Sprint:** TBD
+
+**Next action:** Complete analysis memo for vi-15; then draft chapter outline
 
 *Generated from `metadata/book-architecture.yaml` (`volume_6_interviews`) — same command as Volume I queue.*

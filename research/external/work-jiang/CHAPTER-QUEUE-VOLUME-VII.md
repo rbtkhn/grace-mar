@@ -266,4 +266,20 @@ Nested `volume_7_essays.book.chapters` — see `docs/skill-work/work-jiang/volum
 
 **Next action:** Draft chapter outline; wire quotes + comparative layer; adjudicate jiang-ES33-* per rubric
 
+## es-ch34 — The US-Iran War, Round Two
+
+- **Status:** outline_pending
+- **Owner:** operator
+- **Sprint:** TBD
+
+**Next action:** Complete analysis memo for es-34; then draft chapter outline
+
+## es-ch35 — The Trump New Deal
+
+- **Status:** outline_pending
+- **Owner:** operator
+- **Sprint:** TBD
+
+**Next action:** Complete analysis memo for es-35; then draft chapter outline
+
 *Generated from `metadata/book-architecture.yaml` (`volume_7_essays`) — same command as Volume I queue.*

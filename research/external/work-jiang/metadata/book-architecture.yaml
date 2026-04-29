@@ -2977,6 +2977,28 @@ volume_4_game_theory:
       analysis_ready: false
       quotes_ready: false
       requires_prediction_review: false
+    - id: gt-ch21
+      title: 'Game Theory #21: World War Trump'
+      purpose: Book chapter for Game Theory lecture 21 — US–Iran ceasefire / empire frame; refinery-shock narrative; NDS (Jan 2026) read-through; choke-point strategy vs China; Iran as Russia–China corridor leverage; draft / surveillance / technate hooks; Volume IV Part I; divergence end-box per CHAPTER-DIVERGENCE-BOX.md.
+      kind: analysis
+      priority: medium
+      target_words: 2800
+      source_ids:
+      - gt-21
+      analysis_ids: []
+      prediction_ids: []
+      divergence_ids: []
+      applications: []
+      status: outline_pending
+      owner: operator
+      sprint: TBD
+      blocking: []
+      next_action: Expand analysis memo beyond stub; draft chapter outline in chapters-volume-iv/gt-ch21/outline.md
+      outline_path: chapters-volume-iv/gt-ch21/outline.md
+      draft_path: chapters-volume-iv/gt-ch21/draft.md
+      analysis_ready: true
+      quotes_ready: false
+      requires_prediction_review: false
     - id: gt-ch22
       title: 'Game Theory #22: Twilight of the Nation-State'
       purpose: Book chapter for Game Theory lecture 22 — warfare typology (nation-state → 21st-c. population-pressure strategy); US–Iran forecast; primary readings (Rousseau, Fichte, Bismarck, Mussolini); eschatology counter; Volume IV Part I; divergence end-box per CHAPTER-DIVERGENCE-BOX.md.

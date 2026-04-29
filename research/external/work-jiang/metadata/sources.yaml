@@ -1921,6 +1921,21 @@ sources:
     curated_lecture: complete
     analysis: complete
     chapter_mapping: complete
+- source_id: gt-21
+  video_id: Ts-AA6LQf6I
+  title: 'Game Theory #21: World War Trump'
+  canonical_url: https://www.youtube.com/watch?v=Ts-AA6LQf6I
+  publication_date: 2026-04-27
+  lecture_path: lectures/game-theory-21-world-war-trump.md
+  analysis_path: analysis/Ts-AA6LQf6I-game-theory-21-analysis.md
+  series: game-theory
+  episode: 21
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: complete
+    chapter_mapping: complete
 - source_id: gt-22
   video_id: txgPfnXgzcE
   title: 'Game Theory #22: Twilight of the Nation-State'

@@ -32,7 +32,7 @@ End each Part I chapter with a boxed subsection per CHAPTER-DIVERGENCE-BOX.md �
 
 ### Part II — method TBD (Game Theory)
 
-**Begins after:** `gt-ch20`
+**Begins after:** `gt-ch22`
 
 Operator locks evaluation mode in book/VOLUME-IV-GAME-THEORY.md (divergence-first default for Part I boxes).
 
@@ -278,5 +278,29 @@ Operator locks evaluation mode in book/VOLUME-IV-GAME-THEORY.md (divergence-firs
 - **Sprint:** TBD
 - **Outline:** `chapters-volume-iv/gt-ch20/outline.md`
 - **Draft:** `chapters-volume-iv/gt-ch20/draft.md`
+
+### gt-ch21 — Game Theory #21: World War Trump
+
+- **Purpose:** Book chapter for Game Theory lecture 21 — US–Iran ceasefire / empire frame; refinery-shock narrative; NDS (Jan 2026) read-through; choke-point strategy vs China; Iran as Russia–China corridor leverage; draft / surveillance / technate hooks; Volume IV Part I; divergence end-box per CHAPTER-DIVERGENCE-BOX.md.
+- **Kind:** analysis
+- **Priority:** medium
+- **Target words:** 2800
+- **Status:** outline_pending
+- **Owner:** operator
+- **Sprint:** TBD
+- **Outline:** `chapters-volume-iv/gt-ch21/outline.md`
+- **Draft:** `chapters-volume-iv/gt-ch21/draft.md`
+
+### gt-ch22 — Game Theory #22: Twilight of the Nation-State
+
+- **Purpose:** Book chapter for Game Theory lecture 22 — warfare typology (nation-state → 21st-c. population-pressure strategy); US–Iran forecast; primary readings (Rousseau, Fichte, Bismarck, Mussolini); eschatology counter; Volume IV Part I; divergence end-box per CHAPTER-DIVERGENCE-BOX.md.
+- **Kind:** analysis
+- **Priority:** medium
+- **Target words:** 2800
+- **Status:** outline_pending
+- **Owner:** operator
+- **Sprint:** TBD
+- **Outline:** `chapters-volume-iv/gt-ch22/outline.md`
+- **Draft:** `chapters-volume-iv/gt-ch22/draft.md`
 
 *Generated from `metadata/book-architecture.yaml` (`volume_4_game_theory`) — `python scripts/work_jiang/render_book_architecture.py`.*
