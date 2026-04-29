@@ -139,6 +139,25 @@
     "result": {
       "type": "string",
       "enum": ["pass", "fail", "needs_review"]
+    },
+    "validation_report_path": {
+      "type": ["string", "null"],
+      "description": "Relative repo path where validation JSON was written when --run-validators wrote a report."
+    },
+    "validation_summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "passed", "failed", "needs_review", "notes"],
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": ["pass", "fail", "needs_review"]
+        },
+        "passed": { "type": "integer", "minimum": 0 },
+        "failed": { "type": "integer", "minimum": 0 },
+        "needs_review": { "type": "integer", "minimum": 0 },
+        "notes": { "type": "string" }
+      }
     }
   }
 }

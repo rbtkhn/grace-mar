@@ -25,6 +25,7 @@ Canonical doctrine for Record vs runtime: [runtime-vs-record.md](../../runtime-v
 | [`scripts/build_strategy_observability.py`](../../../scripts/build_strategy_observability.py) | Lane-wide notebook health metrics → `artifacts/work-strategy/strategy-observability.json`. |
 | [`scripts/build_strategy_run_report.py`](../../../scripts/build_strategy_run_report.py) | Summarizes recent `artifacts/strategy-runs/*/state.json` runs. |
 | **`run_carry_harness.py`** | **Task-scoped**: explicit `--task`, `--source`, `--artifact` paths and a **carry receipt** under `runtime/work-strategy/`. |
+| **`validate_strategy_packet.py`** | Optional **`--run-validators`** companion: writes [`work_strategy_validation_report.schema.json`](../../../schemas/work_strategy_validation_report.schema.json) JSON and embeds **`validation_summary`** (plus **`validation_report_path`** when an `--validation-report` path is allowed). See [validator-contract.md](validator-contract.md). |
 
 These are **different slices**; the carry harness does not replace observability or strategy-run reports.
 
@@ -55,7 +56,7 @@ These are **different slices**; the carry harness does not replace observability
 
 Receipt shape: [`schemas/work_strategy_carry_receipt.schema.json`](../../../schemas/work_strategy_carry_receipt.schema.json).
 
-Top-level fields include `checks`, `summary`, `gate_snippet`, `record_boundary`, and `result`. **`checks`** are authoritative per-condition outcomes; **`summary`** rolls up counts; **`result`** drives exit code behavior with `--fail-on-result`.
+Top-level fields include `checks`, `summary`, `gate_snippet`, `record_boundary`, and `result`. **`checks`** are authoritative per-condition outcomes; **`summary`** rolls up counts; **`result`** drives exit code behavior with `--fail-on-result`. When **`--run-validators`** is used, optional **`validation_summary`** (and **`validation_report_path`** when a validation JSON file is written) is included — see [validator-contract.md](validator-contract.md).
 
 ---
 
@@ -86,6 +87,8 @@ Options:
 | `--repo-root PATH` | Repo root (default: inferred from script location). |
 | `--json` | Print receipt JSON to stdout. |
 | `--fail-on-result fail\|needs_review\|never` | Exit code policy (default `fail`: nonzero only on `result==fail`). |
+| `--run-validators` | Run [`validate_strategy_packet.py`](../../../scripts/work_strategy/validate_strategy_packet.py) with the same path arguments; embed **`validation_summary`** in the receipt (optional **`validation_report_path`** when **`--validation-report`** is set and allowed). |
+| `--validation-report PATH` | Where to write validation JSON when **`--run-validators`** is set (refused under forbidden roots). |
 
 ---
 
@@ -102,3 +105,6 @@ Options:
 - **`record_boundary.canonical_write_violation`** — `true` if `--out` pointed at a forbidden path; no file is written there.
 - **`record_boundary.canonical_paths_written`** — Always empty for this harness (it does not write Record paths).
 - **`gate_snippet.text`** — Copy of snippet content when read successfully (WORK-only paste aid).
+- **`validation_summary`** / **`validation_report_path`** — Present when **`--run-validators`** runs; points at derived validation JSON under allowed roots when **`--validation-report`** is set.
+
+---

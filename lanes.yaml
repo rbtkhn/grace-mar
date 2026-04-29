@@ -169,9 +169,11 @@ lanes:
       - "scripts/emit_work_strategy_gate_paste_snippet.py"
       - "scripts/work_strategy/**"
       - "schemas/work_strategy_carry_receipt.schema.json"
+      - "schemas/work_strategy_validation_report.schema.json"
       - "runtime/work-strategy/**"
       - "examples/work-strategy/**"
       - "tests/test_work_strategy_carry_harness.py"
+      - "tests/test_work_strategy_validators.py"
     allowed_shared_paths:
       - "lanes.yaml"
       - ".github/workflows/lane-scope.yml"

@@ -14,6 +14,9 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 
 
 def _load_carry_module():
+    ws = str(REPO_ROOT / "scripts" / "work_strategy")
+    if ws not in sys.path:
+        sys.path.insert(0, ws)
     path = REPO_ROOT / "scripts" / "work_strategy" / "run_carry_harness.py"
     spec = importlib.util.spec_from_file_location("run_carry_harness", path)
     assert spec and spec.loader

@@ -4,87 +4,40 @@
 from __future__ import annotations
 
 import argparse
+import importlib.util
 import json
-import re
 import sys
 import uuid
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
+from packet_common import (
+    MIN_WORDS_NON_TRIVIAL,
+    inspect_artifact,
+    is_forbidden_record_path,
+    is_text_like,
+    safe_rel as _safe_rel,
+    word_count,
+)
+
 HARNESS_NAME = "run_carry_harness"
 HARNESS_VERSION = "1.0.0"
 SCHEMA_VERSION = "work-strategy-carry-receipt.v1"
-TEXT_SUFFIXES = {".md", ".txt", ".markdown"}
-MIN_WORDS_NON_TRIVIAL = 50
 
 
-def _safe_rel(path: Path, repo_root: Path) -> str:
-    try:
-        return path.resolve().relative_to(repo_root.resolve()).as_posix()
-    except ValueError:
-        return path.as_posix()
-
-
-def word_count(text: str) -> int:
-    parts = re.split(r"\s+", text.strip())
-    return len([p for p in parts if p])
-
-
-def is_forbidden_record_path(path: Path, repo_root: Path) -> bool:
-    """True if path must not be used as harness receipt output."""
-    try:
-        resolved = path.resolve()
-        root = repo_root.resolve()
-    except OSError:
-        return True
-    try:
-        resolved.relative_to(root / "users")
-        return True
-    except ValueError:
-        pass
-    rel = None
-    try:
-        rel = resolved.relative_to(root)
-    except ValueError:
-        return False
-    rel_s = rel.as_posix()
-    forbidden_exact = {"bot/prompt.py", "bot/bot.py", "bot/wechat_bot.py"}
-    if rel_s in forbidden_exact:
-        return True
-    return False
-
-
-def _is_text_like(path: Path) -> bool:
-    return path.suffix.lower() in TEXT_SUFFIXES
-
-
-def inspect_artifact(path: Path, repo_root: Path) -> dict[str, Any]:
-    rel = ""
-    try:
-        rel = path.resolve().relative_to(repo_root.resolve()).as_posix()
-    except ValueError:
-        rel = path.as_posix()
-    out: dict[str, Any] = {"path": rel, "exists": False, "notes": ""}
-    if not path.is_file():
-        out["notes"] = "not a file or missing"
-        return out
-    out["exists"] = True
-    try:
-        st = path.stat()
-        out["size_bytes"] = int(st.st_size)
-    except OSError as e:
-        out["notes"] = f"stat failed: {e}"
-        return out
-    if _is_text_like(path):
-        try:
-            raw = path.read_text(encoding="utf-8", errors="replace")
-            out["word_count"] = word_count(raw)
-        except OSError as e:
-            out["notes"] = f"read failed: {e}"
-    else:
-        out["notes"] = "non-text suffix; word_count not applied"
-    return out
+def _load_validator_module() -> Any:
+    """Load validate_strategy_packet from this directory (supports importlib tests)."""
+    root = Path(__file__).resolve().parent
+    ws = str(root)
+    if ws not in sys.path:
+        sys.path.insert(0, ws)
+    path = root / "validate_strategy_packet.py"
+    spec = importlib.util.spec_from_file_location("validate_strategy_packet", path)
+    assert spec and spec.loader
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    return mod
 
 
 def determine_result(checks: list[dict[str, Any]]) -> str:
@@ -111,6 +64,8 @@ def build_receipt(
     checks: list[dict[str, Any]],
     output_forbidden: bool,
     receipt_out_path: Path | None,
+    validation_report_path: str | None,
+    validation_summary: dict[str, Any] | None,
 ) -> dict[str, Any]:
     summary_counts = {"pass": 0, "fail": 0, "needs_review": 0}
     for c in checks:
@@ -124,7 +79,7 @@ def build_receipt(
 
     gate_ready = bool(gate_snippet_path and gate_snippet_text.strip())
 
-    return {
+    receipt: dict[str, Any] = {
         "schema_version": SCHEMA_VERSION,
         "run_id": run_id,
         "created_at": created_at,
@@ -163,6 +118,10 @@ def build_receipt(
         },
         "result": result,
     }
+    if validation_report_path is not None or validation_summary is not None:
+        receipt["validation_report_path"] = validation_report_path
+        receipt["validation_summary"] = validation_summary
+    return receipt
 
 
 def run_harness(args: argparse.Namespace) -> tuple[dict[str, Any], int]:
@@ -215,6 +174,57 @@ def run_harness(args: argparse.Namespace) -> tuple[dict[str, Any], int]:
     )
 
     output_forbidden = bool(receipt_out and is_forbidden_record_path(receipt_out, repo_root))
+
+    validation_report_path_val: str | None = None
+    validation_summary_val: dict[str, Any] | None = None
+    validation_out_resolved: Path | None = None
+    validation_output_forbidden = False
+
+    if getattr(args, "run_validators", False):
+        vr_arg = getattr(args, "validation_report", None)
+        if vr_arg:
+            validation_out_resolved = (
+                (repo_root / vr_arg).resolve()
+                if not Path(vr_arg).is_absolute()
+                else Path(vr_arg).resolve()
+            )
+            validation_output_forbidden = is_forbidden_record_path(validation_out_resolved, repo_root)
+
+        vmod = _load_validator_module()
+        v_report = vmod.validate_packet(
+            repo_root=repo_root,
+            task_arg=args.task,
+            sources=list(args.source or []),
+            artifacts=list(args.artifact or []),
+            gate_snippet_arg=args.gate_snippet,
+            run_id=run_id,
+            validation_out_path=validation_out_resolved,
+            created_at=created_at,
+        )
+        summ = v_report.get("summary") or {}
+        validation_summary_val = {
+            "status": summ.get("status", "pass"),
+            "passed": summ.get("passed", 0),
+            "failed": summ.get("failed", 0),
+            "needs_review": summ.get("needs_review", 0),
+            "notes": summ.get("notes", ""),
+        }
+        if validation_out_resolved and not validation_output_forbidden:
+            validation_report_path_val = _safe_rel(validation_out_resolved, repo_root)
+            validation_out_resolved.parent.mkdir(parents=True, exist_ok=True)
+            rb = v_report.setdefault("record_boundary", {})
+            if isinstance(rb, dict):
+                rb["canonical_paths_written"] = [validation_report_path_val]
+                rb["canonical_write_violation"] = False
+            validation_out_resolved.write_text(
+                json.dumps(v_report, indent=2, ensure_ascii=False) + "\n",
+                encoding="utf-8",
+            )
+        elif validation_out_resolved and validation_output_forbidden:
+            validation_summary_val["notes"] = (
+                validation_summary_val.get("notes", "")
+                + " Validation report path forbidden; JSON not written."
+            ).strip()
 
     checks: list[dict[str, Any]] = []
 
@@ -300,7 +310,7 @@ def run_harness(args: argparse.Namespace) -> tuple[dict[str, Any], int]:
     for p, o in zip(artifacts_resolved, observed, strict=True):
         if not o.get("exists"):
             continue
-        if _is_text_like(p):
+        if is_text_like(p):
             text_seen = True
             wc = o.get("word_count", 0)
             if isinstance(wc, int) and wc >= MIN_WORDS_NON_TRIVIAL:
@@ -404,6 +414,8 @@ def run_harness(args: argparse.Namespace) -> tuple[dict[str, Any], int]:
         checks=checks,
         output_forbidden=output_forbidden,
         receipt_out_path=receipt_out,
+        validation_report_path=validation_report_path_val,
+        validation_summary=validation_summary_val,
     )
 
     exit_code = 0
@@ -438,6 +450,18 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
         choices=("fail", "needs_review", "never"),
         default="fail",
         help="Exit nonzero policy (default: nonzero only when result is fail).",
+    )
+    p.add_argument(
+        "--run-validators",
+        action="store_true",
+        help="Run validate_strategy_packet and optionally embed validation summary + write JSON report.",
+    )
+    p.add_argument(
+        "--validation-report",
+        type=str,
+        default=None,
+        dest="validation_report",
+        help="Path for validation JSON when --run-validators is set.",
     )
     args = p.parse_args(argv)
     root = args.repo_root or Path(__file__).resolve().parent.parent.parent
