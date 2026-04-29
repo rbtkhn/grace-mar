@@ -48,8 +48,8 @@ CANONICAL_APPROVAL_DENYLIST = (
     "merged into evidence",
     "approved as canonical record",
     "approved record update",
-    "quick merge into self-archive",
-    "merged into self-archive",
+    "quick path to self-archive",
+    "written to self-archive without companion approval",
 )
 
 MERGE_AUTHORITY_DENYLIST = (
