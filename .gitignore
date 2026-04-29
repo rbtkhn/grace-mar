@@ -241,3 +241,5 @@ artifacts/external-codex/*
 !artifacts/external-codex/README.md
 !artifacts/external-codex/examples/
 !artifacts/external-codex/examples/**
+artifacts/external-codex/families/**
+artifacts/external-codex/neighborhood/**

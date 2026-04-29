@@ -1,0 +1,178 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "schema-registry/external-codex-family-report.v1.json",
+  "title": "External Codex Family Report v1",
+  "description": "Grace-mar derived cluster summary for files matching a selector inside a checked-out codex — WORK receipt only; filesystem heuristics, not doctrinal entailment.",
+  "type": "object",
+  "required": [
+    "report_type",
+    "schema_version",
+    "report_id",
+    "generated_at",
+    "checkout_relative",
+    "target_ref",
+    "selector",
+    "builder_version",
+    "member_limit",
+    "truncated",
+    "member_count",
+    "members",
+    "dominant_file_classes",
+    "dominant_civilizations",
+    "suggested_entry_points"
+  ],
+  "additionalProperties": true,
+  "properties": {
+    "report_type": {
+      "type": "string",
+      "const": "external_codex_family_report"
+    },
+    "schema_version": {
+      "type": "string",
+      "const": "v1"
+    },
+    "report_id": {
+      "type": "string",
+      "description": "Stable identifier for this report (e.g. hash of inputs + timestamp)."
+    },
+    "generated_at": {
+      "type": "string",
+      "description": "ISO 8601 UTC timestamp when the report was produced."
+    },
+    "checkout_relative": {
+      "type": "string",
+      "description": "Checkout root path relative to grace-mar repo root when under repo; otherwise absolute path string."
+    },
+    "checkout_absolute": {
+      "type": "string",
+      "description": "Absolute resolved checkout path on the machine that built the report (optional)."
+    },
+    "target_ref": {
+      "type": "string",
+      "description": "Git ref or working-tree marker for Phase 1c.",
+      "enum": ["working_tree"]
+    },
+    "selector": {
+      "type": "object",
+      "required": ["type", "value"],
+      "additionalProperties": true,
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["civilization", "file_class"]
+        },
+        "value": {
+          "type": "string",
+          "description": "Selector argument (e.g. civilization id or inferred file class)."
+        }
+      }
+    },
+    "builder_version": {
+      "type": "string",
+      "description": "Family builder script semantic version."
+    },
+    "member_limit": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Maximum member files enumerated before truncation."
+    },
+    "truncated": {
+      "type": "boolean",
+      "description": "True if member enumeration hit member_limit."
+    },
+    "member_count": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Number of member files after truncation (same as len(members))."
+    },
+    "members": {
+      "type": "array",
+      "description": "Cluster member files with structural connection counts within the cluster.",
+      "items": {
+        "type": "object",
+        "required": ["path", "file_class", "connection_count"],
+        "additionalProperties": true,
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "Path relative to checkout (posix slashes)."
+          },
+          "title": {
+            "type": ["string", "null"],
+            "description": "First markdown H1 line when present."
+          },
+          "civilization": {
+            "type": ["string", "null"],
+            "description": "Path-derived civilization folder token when inferable."
+          },
+          "file_class": {
+            "type": "string",
+            "description": "Filename heuristic class."
+          },
+          "connection_count": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "Count of other cluster members that are structural peers (same-directory / parent-directory sweep)."
+          }
+        }
+      }
+    },
+    "dominant_file_classes": {
+      "type": "array",
+      "description": "Frequency table (non-authoritative); ties broken alphabetically.",
+      "items": {
+        "type": "object",
+        "required": ["class", "count"],
+        "additionalProperties": true,
+        "properties": {
+          "class": { "type": "string" },
+          "count": { "type": "integer", "minimum": 0 }
+        }
+      }
+    },
+    "dominant_civilizations": {
+      "type": "array",
+      "description": "Frequency table for civilization path tokens (non-authoritative).",
+      "items": {
+        "type": "object",
+        "required": ["civilization", "count"],
+        "additionalProperties": true,
+        "properties": {
+          "civilization": { "type": ["string", "null"] },
+          "count": { "type": "integer", "minimum": 0 }
+        }
+      }
+    },
+    "suggested_entry_points": {
+      "type": "array",
+      "description": "Top paths by (-connection_count, path) with mechanical reasons.",
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "properties": {
+          "path": { "type": "string" },
+          "reason": { "type": "string" },
+          "connection_count": { "type": "integer", "minimum": 0 }
+        }
+      }
+    },
+    "most_connected_members": {
+      "type": "array",
+      "description": "Optional duplicate view of highly connected members (same sort as suggested_entry_points when present).",
+      "items": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    "notes": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Including low-link hints when applicable."
+    },
+    "warnings": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Non-fatal notices (e.g. listdir failures)."
+    }
+  }
+}

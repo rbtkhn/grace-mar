@@ -2,7 +2,7 @@
 
 **Status:** Active
 **Scope:** WORK-only (`work-dev`)
-**Purpose:** Produce **derived structural-neighborhood reports** for paths inside a checked-out **`civilization_memory`** tree (default: [`research/repos/civilization_memory`](../../../research/repos/civilization_memory)) — without editing upstream, without expanding Record authority.
+**Purpose:** Produce **derived structural explorer receipts** (neighborhood adjacency + family clusters) for paths inside a checked-out **`civilization_memory`** tree (default: [`research/repos/civilization_memory`](../../../research/repos/civilization_memory)) — without editing upstream, without expanding Record authority.
 
 **Last updated:** 2026-04-28
 
@@ -10,15 +10,20 @@
 
 ## What this is
 
-A small CLI builds **JSON** reports describing **filesystem-adjacent** paths around a **subject** file or directory inside the checkout, plus optional **human-readable Markdown companions**. Reports answer “what sits next to this path in the tree?” — **not** “what does this mean doctrinally?”
+CLIs build **JSON** reports using deterministic filesystem adjacency — plus optional **human-readable Markdown companions**. Reports describe layout-first exploration inside an external checkout — **not** doctrinal entailment.
 
-**Machine-readable artifact:** JSON is the stable, tool-friendly record (`neighbors`, `likely_family`, `suggested_next_inspection`, per-neighbor `reason` / `section`).
+- **Neighborhood (Phase 1b):** Paths adjacent to **one subject** (`neighbors`, group `section`s, `suggested_next_inspection`).
+- **Family (Phase 1c):** All member files matching a **selector**, plus **`connection_count`** among cluster peers (`dominant_*`, `suggested_entry_points`).
 
-**Human-readable derivative:** Markdown (Phase 1b) repeats nothing authoritative — it **summarizes** the same deterministic data with headings, grouped buckets, and “what to open next.” Safe to paste into work-dev flows as **exploration**, not doctrine.
+Detail schemas:
 
-**SSOT artifact schema:** [`schema-registry/external-codex-neighborhood-report.v1.json`](../../../schema-registry/external-codex-neighborhood-report.v1.json)
+**Machine-readable artifact:** JSON is the stable record (`neighbors`, … for neighborhood; `members`, … for family).
 
-**Outputs:** [`artifacts/external-codex/`](../../../artifacts/external-codex/README.md) (rebuildable; default generated `*.json` / `*.neighborhood.md` at that bucket root may be gitignored — see bucket README).
+**Human-readable derivative:** Markdown **summarizes** deterministic facts (`*.neighborhood.md`, `*.family.md`). Safe as WORK exploration, not doctrine.
+
+**SSOT artifact schemas:** [`external-codex-neighborhood-report.v1.json`](../../../schema-registry/external-codex-neighborhood-report.v1.json), [`external-codex-family-report.v1.json`](../../../schema-registry/external-codex-family-report.v1.json)
+
+**Outputs:** [`artifacts/external-codex/`](../../../artifacts/external-codex/README.md) (rebuildable; default generated artifacts may be gitignored — see bucket README).
 
 ---
 
@@ -37,6 +42,29 @@ Intended shape (deterministic, **no** LLM prose):
 | **Notes** | Reminders: derived; does not edit upstream; heuristics only; use upstream governance for canonical answers. |
 
 **Neither JSON nor Markdown** is canonical truth for the external repo **nor** for Grace-Mar Record.
+
+---
+
+## Family-level summary reports (Phase 1c)
+
+Where **neighborhood** answers “what sits beside **this one** path?”, **family** answers “what **cluster** of files shares a **selector**, and how densely do those files link **to each other** using the **same structural sweep** as neighborhood (same-directory + parent-directory peers), restricted to **files** that match the selector?”
+
+**Selectors (implemented):**
+
+| `--selector-type` | `--selector-value` example | Membership rule |
+|-------------------|------------------------------|-----------------|
+| `civilization` | `ROME` | Relative path contains `content/civilizations/<VALUE>/` |
+| `file_class` | `memory_spine` | `infer_file_class(basename)` equals **VALUE** (same strings as neighborhood: `memory_spine`, `civ_state`, …) |
+
+**Future extension:** optional **`path_prefix`** (substring / prefix filter on relative paths) — documented only until shipped in CLI.
+
+**Firewall (same as neighborhood):** receipts are **derived**, **non-authoritative**, **no upstream edits**. Do **not** merge JSON/Markdown into Record or substitute structural graphs for MEM grounding / verify tier.
+
+**SSOT schema:** [`schema-registry/external-codex-family-report.v1.json`](../../../schema-registry/external-codex-family-report.v1.json)
+
+**Builder:** [`scripts/build_external_codex_family_report.py`](../../../scripts/build_external_codex_family_report.py). Default JSON (`--output-json` omitted) lives under **`artifacts/external-codex/families/`** (gitignored).
+
+JSON highlights: **`members[].connection_count`**, **`dominant_file_classes`**, **`dominant_civilizations`**, **`suggested_entry_points`** (top paths by `(-connection_count, path)`).
 
 ---
 
@@ -73,7 +101,7 @@ No embeddings; no semantic “family” beyond path/filename tokens.
 
 ## Governance (WORK)
 
-- Outputs are **structural neighborhood receipts** only: **derived**, **non-canonical**, **no upstream mutation**.
+- Outputs are **structural explorer receipts** only (neighborhood or family): **derived**, **non-canonical**, **no upstream mutation**.
 - **Do not** substitute these reports for MEM grounding scripts (`suggest_civ_mem_from_relevance.py`, etc.), verify tier, strategy notebook **§1d–§1h**, or upstream **`civilization_memory`** editorial governance.
 - **Do not** treat adjacency as semantic entailment ("neighbor list proves X").
 
@@ -134,6 +162,39 @@ python3 scripts/build_external_codex_neighborhood.py \
 
 Exit **non-zero** if checkout missing, subject escapes checkout, subject missing on disk, path traverses `..`, path resolves under `.git`, or **`--output-md`** is given without **`--write-md`**.
 
+### Family cluster CLI (`build_external_codex_family_report.py`)
+
+JSON only:
+
+```bash
+python3 scripts/build_external_codex_family_report.py \
+  --repo-path research/repos/civilization_memory \
+  --selector-type civilization \
+  --selector-value ROME \
+  --output-json artifacts/external-codex/families/civilization__ROME.json
+```
+
+JSON + Markdown companion (default output dir **`artifacts/external-codex/families/`** when `--output-json` is omitted):
+
+```bash
+python3 scripts/build_external_codex_family_report.py \
+  --repo-path research/repos/civilization_memory \
+  --selector-type file_class \
+  --selector-value memory_spine \
+  --write-md
+```
+
+| Flag | Meaning |
+|------|---------|
+| `--repo-path` | Checkout directory (required). Relative to **`--repo-root`** or absolute. |
+| `--selector-type` | `civilization` or `file_class`. |
+| `--selector-value` | Civilization folder id or inferred file-class label. |
+| `--output-json` | Explicit JSON path (optional; default under **`artifacts/external-codex/families/`**). |
+| `--write-md` | Write **`{stem}.family.md`** companion. |
+| `--output-md` | Explicit Markdown path (requires **`--write-md`**). |
+| `--member-limit` | Cap members enumerated (default 5000); sets **`truncated`** when hit. |
+| `--repo-root` | Override grace-mar repo root (default: parent of `scripts/`). |
+
 ---
 
 ## Structural heuristics (deterministic)
@@ -151,6 +212,10 @@ For a **directory** subject:
 - **`parent_directory`:** Sibling directories/files of that directory in its parent.
 
 Hidden entries (names starting with `.`) except when required are skipped; **`.git`** is never traversed or listed.
+
+### Family intra-cluster linkage (`connection_count`)
+
+For each member **file**, neighbors are enumerated with the **same** filesystem sweep as neighborhood (same-directory then parent-directory listings). **`connection_count`** is how many neighbor paths are also **cluster members** (other files matching the selector), excluding self.
 
 ### Companion grouping (Markdown / JSON `section`)
 

@@ -1,0 +1,57 @@
+{
+  "report_type": "external_codex_family_report",
+  "schema_version": "v1",
+  "report_id": "aaaaaaaaaaaaaaaaaaaaaaaa",
+  "generated_at": "2026-04-27T12:00:00Z",
+  "checkout_relative": "artifacts/external-codex/examples/mock-checkout",
+  "checkout_absolute": "/stub/mock-checkout",
+  "target_ref": "working_tree",
+  "selector": {
+    "type": "civilization",
+    "value": "EXAMPLE"
+  },
+  "builder_version": "1.0.0",
+  "member_limit": 5000,
+  "truncated": false,
+  "member_count": 1,
+  "members": [
+    {
+      "path": "content/civilizations/EXAMPLE/README.md",
+      "title": "Example civilization",
+      "civilization": "EXAMPLE",
+      "file_class": "readme",
+      "connection_count": 0
+    }
+  ],
+  "dominant_file_classes": [
+    {
+      "class": "readme",
+      "count": 1
+    }
+  ],
+  "dominant_civilizations": [
+    {
+      "civilization": "EXAMPLE",
+      "count": 1
+    }
+  ],
+  "suggested_entry_points": [
+    {
+      "path": "content/civilizations/EXAMPLE/README.md",
+      "reason": "deterministic rank by (-connection_count, path); connection_count=0; filesystem structural peers intersect cluster members only.",
+      "connection_count": 0
+    }
+  ],
+  "most_connected_members": [
+    {
+      "path": "content/civilizations/EXAMPLE/README.md",
+      "reason": "deterministic rank by (-connection_count, path); connection_count=0; filesystem structural peers intersect cluster members only.",
+      "connection_count": 0
+    }
+  ],
+  "notes": [
+    "Illustrative fixture — not generated from a live checkout.",
+    "Heuristic cluster summary — non-authoritative.",
+    "Connections count structural peers (same_directory / parent_directory) that are also cluster members."
+  ]
+}
