@@ -54,6 +54,20 @@ def _load_classifier_module() -> Any:
     return mod
 
 
+def _load_review_packet_module() -> Any:
+    """Load build_review_packet from this directory."""
+    root = Path(__file__).resolve().parent
+    ws = str(root)
+    if ws not in sys.path:
+        sys.path.insert(0, ws)
+    path = root / "build_review_packet.py"
+    spec = importlib.util.spec_from_file_location("build_review_packet", path)
+    assert spec and spec.loader
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    return mod
+
+
 def determine_result(checks: list[dict[str, Any]]) -> str:
     statuses = [c["status"] for c in checks]
     if "fail" in statuses:
@@ -507,6 +521,58 @@ def run_harness(args: argparse.Namespace) -> tuple[dict[str, Any], int]:
         task_shape_expected_outputs=task_shape_expected_outputs_val,
     )
 
+    if getattr(args, "build_review_packet", False) and args.review_packet:
+        rpm = _load_review_packet_module()
+        rp_resolved = (
+            (repo_root / args.review_packet).resolve()
+            if not Path(args.review_packet).is_absolute()
+            else Path(args.review_packet).resolve()
+        )
+        rp_forbidden = is_forbidden_record_path(rp_resolved, repo_root)
+        rmd_resolved: Path | None = None
+        rmd_forbidden = False
+        rmd_arg = getattr(args, "review_packet_markdown", None)
+        if rmd_arg:
+            rmd_resolved = (
+                (repo_root / rmd_arg).resolve()
+                if not Path(rmd_arg).is_absolute()
+                else Path(rmd_arg).resolve()
+            )
+            rmd_forbidden = is_forbidden_record_path(rmd_resolved, repo_root)
+
+        carry_rel_for_pkt: str | None = None
+        if receipt_out and not output_forbidden:
+            carry_rel_for_pkt = _safe_rel(receipt_out, repo_root)
+
+        pkt = rpm.build_review_packet_dict(
+            repo_root=repo_root,
+            run_id=run_id,
+            created_at=created_at,
+            task_arg=args.task,
+            sources=list(args.source or []),
+            artifacts=list(args.artifact or []),
+            gate_snippet_arg=args.gate_snippet,
+            carry_receipt_arg=carry_rel_for_pkt,
+            carry_receipt_data=receipt,
+            validation_report_arg=validation_report_path_val,
+            task_shape_report_arg=task_shape_report_path_val,
+            title_override=None,
+            json_out=rp_resolved,
+            markdown_out=rmd_resolved,
+        )
+        if not rp_forbidden:
+            rp_resolved.parent.mkdir(parents=True, exist_ok=True)
+            rp_resolved.write_text(json.dumps(pkt, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+        if rmd_resolved and not rmd_forbidden:
+            rmd_resolved.parent.mkdir(parents=True, exist_ok=True)
+            rmd_resolved.write_text(rpm.render_review_packet_markdown(pkt), encoding="utf-8")
+
+        receipt["review_packet_path"] = _safe_rel(rp_resolved, repo_root) if not rp_forbidden else None
+        receipt["review_packet_markdown_path"] = (
+            _safe_rel(rmd_resolved, repo_root) if rmd_resolved and not rmd_forbidden else None
+        )
+        receipt["review_readiness"] = pkt["review_readiness"]
+
     exit_code = 0
     res = receipt["result"]
     mode = args.fail_on_result
@@ -564,6 +630,25 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
         dest="task_shape_report",
         help="Path for task-shape JSON when --classify-task-shape is set.",
     )
+    p.add_argument(
+        "--build-review-packet",
+        action="store_true",
+        help="Write review packet JSON (and optional Markdown) after harness checks; requires --review-packet.",
+    )
+    p.add_argument(
+        "--review-packet",
+        type=str,
+        default=None,
+        dest="review_packet",
+        help="Output path for review packet JSON when --build-review-packet is set.",
+    )
+    p.add_argument(
+        "--review-packet-markdown",
+        type=str,
+        default=None,
+        dest="review_packet_markdown",
+        help="Optional Markdown output when --build-review-packet is set.",
+    )
     args = p.parse_args(argv)
     root = args.repo_root or Path(__file__).resolve().parent.parent.parent
     args.repo_root = str(Path(root).resolve())
@@ -572,6 +657,9 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
 
 def main(argv: list[str] | None = None) -> int:
     args = parse_args(argv)
+    if getattr(args, "build_review_packet", False) and not getattr(args, "review_packet", None):
+        print("--review-packet is required when --build-review-packet is set.", file=sys.stderr)
+        return 2
     receipt, exit_code = run_harness(args)
     if args.json:
         print(json.dumps(receipt, indent=2, ensure_ascii=False))

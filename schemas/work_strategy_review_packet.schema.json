@@ -1,0 +1,169 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://grace-mar.local/schemas/work_strategy_review_packet.schema.json",
+  "title": "WorkStrategyReviewPacket",
+  "description": "Derived review packet from build_review_packet.py — WORK-only; not Record.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "run_id",
+    "created_at",
+    "lane",
+    "task",
+    "inputs",
+    "handoff_summary",
+    "uncertainties",
+    "contradictions",
+    "validation",
+    "gate_prep",
+    "review_readiness",
+    "record_boundary"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "work-strategy-review-packet.v1"
+    },
+    "run_id": { "type": "string", "minLength": 1 },
+    "created_at": { "type": "string", "minLength": 1 },
+    "lane": { "type": "string", "const": "work-strategy" },
+    "task": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["title", "task_path", "task_excerpt"],
+      "properties": {
+        "title": { "type": "string" },
+        "task_path": { "type": ["string", "null"] },
+        "task_excerpt": { "type": "string" }
+      }
+    },
+    "task_shape": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "required": ["primary", "confidence", "secondary_candidates", "notes"],
+      "properties": {
+        "primary": { "type": ["string", "null"] },
+        "confidence": { "type": ["string", "null"] },
+        "secondary_candidates": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": true
+          }
+        },
+        "notes": { "type": "string" }
+      }
+    },
+    "inputs": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "task_path",
+        "source_paths",
+        "artifact_paths",
+        "carry_receipt_path",
+        "validation_report_path",
+        "task_shape_report_path",
+        "existence_notes"
+      ],
+      "properties": {
+        "task_path": { "type": ["string", "null"] },
+        "source_paths": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "artifact_paths": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "carry_receipt_path": { "type": ["string", "null"] },
+        "validation_report_path": { "type": ["string", "null"] },
+        "task_shape_report_path": { "type": ["string", "null"] },
+        "existence_notes": {
+          "type": "object",
+          "additionalProperties": { "type": "string" }
+        }
+      }
+    },
+    "handoff_summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["text"],
+      "properties": {
+        "text": { "type": "string" }
+      }
+    },
+    "uncertainties": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "contradictions": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "validation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "notable_checks", "notes"],
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": ["pass", "fail", "needs_review", "absent"]
+        },
+        "notable_checks": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["id", "status", "details"],
+            "properties": {
+              "id": { "type": "string" },
+              "status": {
+                "type": "string",
+                "enum": ["pass", "fail", "needs_review"]
+              },
+              "details": { "type": "string" }
+            }
+          }
+        },
+        "notes": { "type": "string" }
+      }
+    },
+    "gate_prep": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["snippet_present", "snippet_non_empty", "notes"],
+      "properties": {
+        "snippet_present": { "type": "boolean" },
+        "snippet_non_empty": { "type": "boolean" },
+        "notes": { "type": "string" }
+      }
+    },
+    "review_readiness": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "reason"],
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": ["pass", "needs_review", "fail"]
+        },
+        "reason": { "type": "string" }
+      }
+    },
+    "record_boundary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["canonical_paths_written", "canonical_write_violation", "notes"],
+      "properties": {
+        "canonical_paths_written": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "canonical_write_violation": { "type": "boolean" },
+        "notes": { "type": "string" }
+      }
+    }
+  }
+}

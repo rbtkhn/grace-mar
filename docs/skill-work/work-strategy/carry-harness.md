@@ -24,7 +24,7 @@ Canonical doctrine for Record vs runtime: [runtime-vs-record.md](../../runtime-v
 |------|------|
 | [`scripts/build_strategy_observability.py`](../../../scripts/build_strategy_observability.py) | Lane-wide notebook health metrics → `artifacts/work-strategy/strategy-observability.json`. |
 | [`scripts/build_strategy_run_report.py`](../../../scripts/build_strategy_run_report.py) | Summarizes recent `artifacts/strategy-runs/*/state.json` runs. |
-| **`run_carry_harness.py`** | **Task-scoped**: explicit `--task`, `--source`, `--artifact` paths and a **carry receipt** under `runtime/work-strategy/`. |
+| **`run_carry_harness.py`** | **Task-scoped**: explicit `--task`, `--source`, `--artifact` paths and a **carry receipt** under `runtime/work-strategy/`. Optional **`--build-review-packet`** writes a consolidated **review packet** (see [review-packet-template.md](review-packet-template.md)). |
 | **`validate_strategy_packet.py`** | Optional **`--run-validators`** companion: writes [`work_strategy_validation_report.schema.json`](../../../schemas/work_strategy_validation_report.schema.json) JSON and embeds **`validation_summary`** (plus **`validation_report_path`** when an `--validation-report` path is allowed). See [validator-contract.md](validator-contract.md). |
 | **`classify_task_shape.py`** | Optional **`--classify-task-shape`** companion: writes [`work_strategy_task_shape_report.schema.json`](../../../schemas/work_strategy_task_shape_report.schema.json) JSON and embeds **`task_shape`** fields on the receipt when a **`--task-shape-report`** path is allowed. See [task-shape-routing.md](task-shape-routing.md). |
 
@@ -57,7 +57,7 @@ These are **different slices**; the carry harness does not replace observability
 
 Receipt shape: [`schemas/work_strategy_carry_receipt.schema.json`](../../../schemas/work_strategy_carry_receipt.schema.json).
 
-Top-level fields include `checks`, `summary`, `gate_snippet`, `record_boundary`, and `result`. **`checks`** are authoritative per-condition outcomes; **`summary`** rolls up counts; **`result`** drives exit code behavior with `--fail-on-result`. When **`--run-validators`** is used, optional **`validation_summary`** (and **`validation_report_path`** when a validation JSON file is written) is included — see [validator-contract.md](validator-contract.md).
+Top-level fields include `checks`, `summary`, `gate_snippet`, `record_boundary`, and `result`. **`checks`** are authoritative per-condition outcomes; **`summary`** rolls up counts; **`result`** drives exit code behavior with `--fail-on-result`. When **`--run-validators`** is used, optional **`validation_summary`** (and **`validation_report_path`** when a validation JSON file is written) is included — see [validator-contract.md](validator-contract.md). When **`--build-review-packet`** is used, optional **`review_packet_path`**, **`review_packet_markdown_path`**, and **`review_readiness`** are included after the review packet step.
 
 ---
 
@@ -92,6 +92,9 @@ Options:
 | `--validation-report PATH` | Where to write validation JSON when **`--run-validators`** is set (refused under forbidden roots). |
 | `--classify-task-shape` | Run [`classify_task_shape.py`](../../../scripts/work_strategy/classify_task_shape.py) with the task path; embed **`task_shape`**, **`task_shape_confidence`**, **`task_shape_expected_outputs`** (optional **`task_shape_report_path`** when **`--task-shape-report`** is set and allowed). |
 | `--task-shape-report PATH` | Where to write task-shape JSON when **`--classify-task-shape`** is set (refused under forbidden roots). |
+| `--build-review-packet` | After checks (and optional validation / task-shape writes), emit a **review packet** JSON via **`--review-packet`** (optional Markdown via **`--review-packet-markdown`**). |
+| `--review-packet PATH` | Required when **`--build-review-packet`** is set: output JSON for [`build_review_packet.py`](../../../scripts/work_strategy/build_review_packet.py). |
+| `--review-packet-markdown PATH` | Optional Markdown companion when **`--build-review-packet`** is set. |
 
 ---
 
@@ -110,5 +113,6 @@ Options:
 - **`gate_snippet.text`** — Copy of snippet content when read successfully (WORK-only paste aid).
 - **`validation_summary`** / **`validation_report_path`** — Present when **`--run-validators`** runs; points at derived validation JSON under allowed roots when **`--validation-report`** is set.
 - **`task_shape`** / **`task_shape_confidence`** / **`task_shape_expected_outputs`** / **`task_shape_report_path`** — Present when **`--classify-task-shape`** runs; see [task-shape-routing.md](task-shape-routing.md).
+- **`review_packet_path`** / **`review_packet_markdown_path`** / **`review_readiness`** — Present when **`--build-review-packet`** runs; see [review-packet-template.md](review-packet-template.md).
 
 ---

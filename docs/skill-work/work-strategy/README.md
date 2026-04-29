@@ -14,6 +14,8 @@
 
 **Task-shape routing (optional):** [task-shape-routing.md](task-shape-routing.md) — deterministic classification of strategy job kind (`scripts/work_strategy/classify_task_shape.py`); optional `--classify-task-shape` on the carry harness; not model routing.
 
+**Review packet (optional):** [review-packet-template.md](review-packet-template.md) — derived handoff JSON/Markdown (`scripts/work_strategy/build_review_packet.py`); consolidates task paths, optional validation/task-shape reports, and review readiness; not Record truth.
+
 **Bottom line:** **`skill-strategy`** is not loose “analysis”; it is **governed strategic accumulation** — preserving an operator’s evolving **geopolitical–historical judgment** in a **bounded WORK layer**, with **explicit seams** (notebook, inbox, `crosses:` / `seam:` / PH overlays), **explicit promotion rules** ([STRATEGY.md](STRATEGY.md), month `meta.md` when arcs stabilize), and **explicit distance** from **identity-facing Record** (MEMORY and WORK continuity are not SELF; the companion gate governs merges — [AGENTS.md](../../../AGENTS.md)).
 
 **Purpose:** Cross-territory **operator strategy** — how political consulting ([work-politics](../work-politics/README.md)), integration / portability ([work-dev](../work-dev/README.md)), and other WORK lanes share a single **daily horizon** without mixing into SELF or Voice. The **[strategy-notebook](strategy-notebook/README.md)** is the **primary** artifact where daily cross-territory judgment is captured; other files here support ingest, frameworks, or optional stitch to [STRATEGY.md](STRATEGY.md).

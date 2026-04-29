@@ -167,6 +167,26 @@
     "task_shape_expected_outputs": {
       "type": "array",
       "items": { "type": "string" }
+    },
+    "review_packet_path": {
+      "type": ["string", "null"],
+      "description": "Relative repo path where review packet JSON was written when --build-review-packet wrote a file."
+    },
+    "review_packet_markdown_path": {
+      "type": ["string", "null"],
+      "description": "Relative repo path where review packet Markdown was written when --review-packet-markdown was set and allowed."
+    },
+    "review_readiness": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "reason"],
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": ["pass", "needs_review", "fail"]
+        },
+        "reason": { "type": "string" }
+      }
     }
   }
 }
