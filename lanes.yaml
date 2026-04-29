@@ -167,6 +167,11 @@ lanes:
       - "docs/skill-work/work-strategy/**"
       - "research/prototypes/mind-synthesis.py"
       - "scripts/emit_work_strategy_gate_paste_snippet.py"
+      - "scripts/work_strategy/**"
+      - "schemas/work_strategy_carry_receipt.schema.json"
+      - "runtime/work-strategy/**"
+      - "examples/work-strategy/**"
+      - "tests/test_work_strategy_carry_harness.py"
     allowed_shared_paths:
       - "lanes.yaml"
       - ".github/workflows/lane-scope.yml"

@@ -1,0 +1,144 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://grace-mar.local/schemas/work_strategy_carry_receipt.schema.json",
+  "title": "WorkStrategyCarryReceipt",
+  "description": "Derived receipt from run_carry_harness.py — WORK-only; not Record.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "run_id",
+    "created_at",
+    "lane",
+    "harness",
+    "input",
+    "expected_artifacts",
+    "observed_artifacts",
+    "checks",
+    "summary",
+    "gate_snippet",
+    "record_boundary",
+    "result"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "work-strategy-carry-receipt.v1"
+    },
+    "run_id": { "type": "string", "minLength": 1 },
+    "created_at": { "type": "string", "minLength": 1 },
+    "lane": { "type": "string", "const": "work-strategy" },
+    "harness": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "version"],
+      "properties": {
+        "name": { "type": "string", "const": "run_carry_harness" },
+        "version": { "type": "string", "minLength": 1 }
+      }
+    },
+    "input": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "task_title": { "type": "string" },
+        "task_path": { "type": ["string", "null"] },
+        "task_text_preview": { "type": "string" },
+        "source_paths": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "artifact_paths": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "gate_snippet_path": { "type": ["string", "null"] }
+      }
+    },
+    "expected_artifacts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "required": ["path"],
+        "properties": {
+          "path": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "observed_artifacts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "required": ["path"],
+        "properties": {
+          "path": { "type": "string", "minLength": 1 },
+          "exists": { "type": "boolean" },
+          "size_bytes": { "type": "integer", "minimum": 0 },
+          "word_count": { "type": "integer", "minimum": 0 },
+          "notes": { "type": "string" }
+        }
+      }
+    },
+    "checks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "label", "status", "details"],
+        "properties": {
+          "id": { "type": "string", "minLength": 1 },
+          "label": { "type": "string", "minLength": 1 },
+          "status": {
+            "type": "string",
+            "enum": ["pass", "fail", "needs_review"]
+          },
+          "details": { "type": "string" }
+        }
+      }
+    },
+    "summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "passed", "failed", "needs_review", "notes"],
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": ["pass", "fail", "needs_review"]
+        },
+        "passed": { "type": "integer", "minimum": 0 },
+        "failed": { "type": "integer", "minimum": 0 },
+        "needs_review": { "type": "integer", "minimum": 0 },
+        "notes": { "type": "string" }
+      }
+    },
+    "gate_snippet": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["ready", "text", "notes"],
+      "properties": {
+        "ready": { "type": "boolean" },
+        "text": { "type": "string" },
+        "notes": { "type": "string" }
+      }
+    },
+    "record_boundary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["canonical_paths_written", "canonical_write_violation", "notes"],
+      "properties": {
+        "canonical_paths_written": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "canonical_write_violation": { "type": "boolean" },
+        "notes": { "type": "string" }
+      }
+    },
+    "result": {
+      "type": "string",
+      "enum": ["pass", "fail", "needs_review"]
+    }
+  }
+}
