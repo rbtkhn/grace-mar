@@ -1,0 +1,39 @@
+{
+  "schema_version": "work-strategy-review-packet.v1",
+  "run_id": "r1",
+  "created_at": "2026-03-01T13:00:00+00:00",
+  "lane": "work-strategy",
+  "task": {
+    "title": "t",
+    "task_path": "examples/x.md",
+    "task_excerpt": ""
+  },
+  "inputs": {
+    "task_path": "examples/x.md",
+    "source_paths": [],
+    "artifact_paths": [],
+    "carry_receipt_path": null,
+    "validation_report_path": "runtime/work-strategy/validation-reports/x.json",
+    "task_shape_report_path": "runtime/work-strategy/task-shape-reports/y.json",
+    "existence_notes": {}
+  },
+  "handoff_summary": { "text": "" },
+  "uncertainties": [],
+  "contradictions": [],
+  "validation": {
+    "status": "pass",
+    "notable_checks": [],
+    "notes": ""
+  },
+  "gate_prep": {
+    "snippet_present": true,
+    "snippet_non_empty": true,
+    "notes": ""
+  },
+  "review_readiness": { "status": "pass", "reason": "" },
+  "record_boundary": {
+    "canonical_paths_written": [],
+    "canonical_write_violation": false,
+    "notes": ""
+  }
+}

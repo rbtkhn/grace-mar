@@ -1,6 +1,6 @@
 # work-strategy — health interpretation
 
-**Companion doc** to [observability.md](observability.md) and `artifacts/work-strategy/strategy-observability.json`.
+**Companion doc** to [observability.md](observability.md), `artifacts/work-strategy/strategy-observability.json`, and (when generated) carry-stack aggregates under `runtime/work-strategy/observability/` from [`summarize_carry_receipts.py`](../../../scripts/work_strategy/summarize_carry_receipts.py).
 
 ## Green / yellow / red (heuristic)
 

@@ -1,0 +1,20 @@
+{
+  "schema_version": "work-strategy-task-shape-report.v1",
+  "created_at": "2026-03-01T12:00:00+00:00",
+  "lane": "work-strategy",
+  "classification": {
+    "primary_shape": "watch_update",
+    "confidence": "high",
+    "matched_signals": [],
+    "secondary_candidates": [],
+    "notes": ""
+  },
+  "shape_contract": {
+    "expected_outputs": []
+  },
+  "record_boundary": {
+    "canonical_paths_written": [],
+    "canonical_write_violation": false,
+    "notes": ""
+  }
+}

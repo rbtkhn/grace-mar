@@ -1,0 +1,40 @@
+{
+  "schema_version": "work-strategy-validation-report.v1",
+  "created_at": "2026-03-01T11:00:00+00:00",
+  "lane": "work-strategy",
+  "validators": [
+    {
+      "id": "artifact_substance",
+      "label": "Artifact substance",
+      "status": "fail",
+      "details": "thin",
+      "subject_paths": []
+    },
+    {
+      "id": "unresolved_marker_scan",
+      "label": "Unresolved markers",
+      "status": "needs_review",
+      "details": "TODO present",
+      "subject_paths": []
+    },
+    {
+      "id": "gate_snippet_present",
+      "label": "Gate snippet",
+      "status": "pass",
+      "details": "",
+      "subject_paths": []
+    }
+  ],
+  "summary": {
+    "status": "fail",
+    "passed": 1,
+    "failed": 1,
+    "needs_review": 1,
+    "notes": ""
+  },
+  "record_boundary": {
+    "canonical_paths_written": [],
+    "canonical_write_violation": false,
+    "notes": ""
+  }
+}

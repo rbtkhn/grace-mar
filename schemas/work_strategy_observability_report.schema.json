@@ -1,0 +1,197 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://grace-mar.local/schemas/work_strategy_observability_report.schema.json",
+  "title": "WorkStrategyObservabilityReport",
+  "description": "Derived aggregate over runtime carry-stack JSON artifacts — WORK-only; not Record.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "created_at",
+    "lane",
+    "window",
+    "counts",
+    "task_shapes",
+    "validation",
+    "review_packets",
+    "gate_prep",
+    "files_scanned",
+    "notes"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "work-strategy-observability-report.v1"
+    },
+    "created_at": { "type": "string", "minLength": 1 },
+    "lane": { "type": "string", "const": "work-strategy" },
+    "window": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["mode", "value"],
+      "properties": {
+        "mode": {
+          "type": "string",
+          "enum": ["all", "last_n", "since"]
+        },
+        "value": {
+          "type": ["integer", "string", "null"],
+          "description": "For last_n: max files per artifact class; for since: YYYY-MM-DD string; for all: null."
+        }
+      }
+    },
+    "counts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "carry_receipts_total",
+        "validation_reports_total",
+        "task_shape_reports_total",
+        "review_packets_total",
+        "pass_total",
+        "fail_total",
+        "needs_review_total",
+        "validation_report_pass",
+        "validation_report_fail",
+        "validation_report_needs_review"
+      ],
+      "properties": {
+        "carry_receipts_total": { "type": "integer", "minimum": 0 },
+        "validation_reports_total": { "type": "integer", "minimum": 0 },
+        "task_shape_reports_total": { "type": "integer", "minimum": 0 },
+        "review_packets_total": { "type": "integer", "minimum": 0 },
+        "pass_total": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Carry receipts with result=pass (after window filter)."
+        },
+        "fail_total": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Carry receipts with result=fail."
+        },
+        "needs_review_total": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Carry receipts with result=needs_review."
+        },
+        "validation_report_pass": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Validation JSON reports with summary.status=pass."
+        },
+        "validation_report_fail": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Validation JSON reports with summary.status=fail."
+        },
+        "validation_report_needs_review": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Validation JSON reports with summary.status=needs_review."
+        }
+      }
+    },
+    "task_shapes": {
+      "type": "object",
+      "additionalProperties": { "type": "integer", "minimum": 0 },
+      "description": "primary_shape -> count from task-shape JSON reports."
+    },
+    "validation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["top_failed_checks", "top_needs_review_checks"],
+      "properties": {
+        "top_failed_checks": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["id", "count"],
+            "properties": {
+              "id": { "type": "string" },
+              "count": { "type": "integer", "minimum": 1 }
+            }
+          }
+        },
+        "top_needs_review_checks": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["id", "count"],
+            "properties": {
+              "id": { "type": "string" },
+              "count": { "type": "integer", "minimum": 1 }
+            }
+          }
+        }
+      }
+    },
+    "review_packets": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "with_validation_count",
+        "with_task_shape_count",
+        "with_gate_snippet_count"
+      ],
+      "properties": {
+        "with_validation_count": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Packets with non-null validation_report_path in inputs."
+        },
+        "with_task_shape_count": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Packets with non-null task_shape_report_path in inputs."
+        },
+        "with_gate_snippet_count": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Packets with gate_prep.snippet_present true."
+        }
+      }
+    },
+    "gate_prep": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["snippet_present_count", "snippet_non_empty_count"],
+      "properties": {
+        "snippet_present_count": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Carry receipts with gate_snippet.ready true plus review packets with snippet_present."
+        },
+        "snippet_non_empty_count": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Carry receipts with non-empty gate_snippet.text plus review packets with snippet_non_empty."
+        }
+      }
+    },
+    "files_scanned": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "carry_receipts",
+        "validation_reports",
+        "task_shape_reports",
+        "review_packets",
+        "malformed_skipped"
+      ],
+      "properties": {
+        "carry_receipts": { "type": "integer", "minimum": 0 },
+        "validation_reports": { "type": "integer", "minimum": 0 },
+        "task_shape_reports": { "type": "integer", "minimum": 0 },
+        "review_packets": { "type": "integer", "minimum": 0 },
+        "malformed_skipped": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "notes": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}

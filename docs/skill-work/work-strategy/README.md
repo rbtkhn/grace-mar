@@ -16,6 +16,8 @@
 
 **Review packet (optional):** [review-packet-template.md](review-packet-template.md) — derived handoff JSON/Markdown (`scripts/work_strategy/build_review_packet.py`); consolidates task paths, optional validation/task-shape reports, and review readiness; not Record truth.
 
+**Carry-stack observability (optional):** [observability.md](observability.md#carry-stack-observability-pr-5) — regenerable JSON/Markdown aggregate over runtime receipts/reports (`scripts/work_strategy/summarize_carry_receipts.py`); process metrics only.
+
 **Bottom line:** **`skill-strategy`** is not loose “analysis”; it is **governed strategic accumulation** — preserving an operator’s evolving **geopolitical–historical judgment** in a **bounded WORK layer**, with **explicit seams** (notebook, inbox, `crosses:` / `seam:` / PH overlays), **explicit promotion rules** ([STRATEGY.md](STRATEGY.md), month `meta.md` when arcs stabilize), and **explicit distance** from **identity-facing Record** (MEMORY and WORK continuity are not SELF; the companion gate governs merges — [AGENTS.md](../../../AGENTS.md)).
 
 **Purpose:** Cross-territory **operator strategy** — how political consulting ([work-politics](../work-politics/README.md)), integration / portability ([work-dev](../work-dev/README.md)), and other WORK lanes share a single **daily horizon** without mixing into SELF or Voice. The **[strategy-notebook](strategy-notebook/README.md)** is the **primary** artifact where daily cross-territory judgment is captured; other files here support ingest, frameworks, or optional stitch to [STRATEGY.md](STRATEGY.md).
@@ -107,7 +109,7 @@ Quick index for **Capture**-adjacent surfaces: **narrative register**, **Grok-st
 | **[promotion-policy.json](promotion-policy.json)** | Machine-readable stage ids (v0). |
 | **[authorized-sources.yaml](authorized-sources.yaml)** | Machine-readable source registry: 6 source classes, artifact eligibility per source, trust tiers (1–4), review rules, maintenance policy. 16 sources (primary, data, reporting, analyst, transcript, operator note). Pairs with [brief-source-registry.md](brief-source-registry.md) (human policy) and [work-strategy-sources.md](work-strategy-sources.md) (URL catalog). |
 | **[source-tiers.md](source-tiers.md)** | Trust tier meanings + phased enforcement. |
-| **[observability.md](observability.md)** | Lane metrics artifact (`artifacts/work-strategy/strategy-observability.json`). |
+| **[observability.md](observability.md)** | Notebook hygiene metrics (`build_strategy_observability.py`) **and** carry-stack runtime summaries (`summarize_carry_receipts.py`). |
 | **[strategy-health.md](strategy-health.md)** | How to read observability numbers. |
 | **[../WORK-LAYER-HARDENING-ROADMAP.md](../WORK-LAYER-HARDENING-ROADMAP.md)** | Full work-layer sequencing (strategy → dev → cadence → dashboard). |
 | **[current-events-analysis.md](current-events-analysis.md)** | Standard workflow for converting live events into disciplined strategy judgment: Perceiver (neutral fact summary) → verify seam → event classification → case-index check → energy-chokepoint hook → analyst (structured breakdown) → resonance note or analogy audit → watch-support decision → decision-point trigger → three minds → synthesis → optional deliberation receipt. 11 sections including failure modes and operator checklist. **WORK only**. |

@@ -172,6 +172,7 @@ lanes:
       - "schemas/work_strategy_validation_report.schema.json"
       - "schemas/work_strategy_task_shape_report.schema.json"
       - "schemas/work_strategy_review_packet.schema.json"
+      - "schemas/work_strategy_observability_report.schema.json"
       - "config/work_strategy_task_shapes.yaml"
       - "runtime/work-strategy/**"
       - "examples/work-strategy/**"
@@ -179,6 +180,7 @@ lanes:
       - "tests/test_work_strategy_validators.py"
       - "tests/test_work_strategy_task_shape.py"
       - "tests/test_work_strategy_review_packet.py"
+      - "tests/test_work_strategy_observability.py"
     allowed_shared_paths:
       - "lanes.yaml"
       - ".github/workflows/lane-scope.yml"
