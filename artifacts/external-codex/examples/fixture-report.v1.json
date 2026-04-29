@@ -1,0 +1,23 @@
+{
+  "report_type": "external_codex_neighborhood_report",
+  "schema_version": "v1",
+  "report_id": "example00000000000000000001",
+  "generated_at": "2026-04-27T12:00:00Z",
+  "checkout_relative": "research/repos/civilization_memory",
+  "checkout_absolute": "/path/to/grace-mar/research/repos/civilization_memory",
+  "subject_relative": "content/civilizations/ROME/CIV--STATE--ROME.md",
+  "subject_kind": "file",
+  "builder_version": "1.0.0",
+  "neighbor_limit": 250,
+  "truncated": false,
+  "neighbors": [
+    {
+      "path_relative": "content/civilizations/ROME/MEM--ROME.md",
+      "edge": "same_directory"
+    },
+    {
+      "path_relative": "content/civilizations/PERSIA",
+      "edge": "parent_directory"
+    }
+  ]
+}

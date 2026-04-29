@@ -1,0 +1,89 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "schema-registry/external-codex-neighborhood-report.v1.json",
+  "title": "External Codex Neighborhood Report v1",
+  "description": "Grace-mar derived structural neighborhood of a path inside a checked-out civilization_memory (or similar) repo — WORK receipt only, not semantic truth.",
+  "type": "object",
+  "required": [
+    "report_type",
+    "schema_version",
+    "report_id",
+    "generated_at",
+    "checkout_relative",
+    "subject_relative",
+    "builder_version",
+    "neighbors",
+    "truncated"
+  ],
+  "additionalProperties": true,
+  "properties": {
+    "report_type": {
+      "type": "string",
+      "const": "external_codex_neighborhood_report"
+    },
+    "schema_version": {
+      "type": "string",
+      "const": "v1"
+    },
+    "report_id": {
+      "type": "string",
+      "description": "Stable identifier for this report (e.g. hash of inputs + timestamp)."
+    },
+    "generated_at": {
+      "type": "string",
+      "description": "ISO 8601 UTC timestamp when the report was produced."
+    },
+    "checkout_relative": {
+      "type": "string",
+      "description": "Checkout root path relative to grace-mar repo root (posix slashes)."
+    },
+    "checkout_absolute": {
+      "type": "string",
+      "description": "Absolute resolved checkout path on the machine that built the report (optional)."
+    },
+    "subject_relative": {
+      "type": "string",
+      "description": "Subject path relative to checkout root (posix slashes)."
+    },
+    "subject_kind": {
+      "type": "string",
+      "enum": ["file", "directory"]
+    },
+    "builder_version": {
+      "type": "string",
+      "description": "Builder script semantic version."
+    },
+    "neighbor_limit": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "truncated": {
+      "type": "boolean",
+      "description": "True if neighbor list was capped by neighbor_limit."
+    },
+    "neighbors": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["path_relative", "edge"],
+        "additionalProperties": false,
+        "properties": {
+          "path_relative": {
+            "type": "string",
+            "description": "Path relative to checkout (posix slashes)."
+          },
+          "edge": {
+            "type": "string",
+            "enum": ["same_directory", "parent_directory"],
+            "description": "Structural relation heuristic only."
+          }
+        }
+      }
+    },
+    "warnings": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Non-fatal notices (e.g. skipped .git)."
+    }
+  }
+}

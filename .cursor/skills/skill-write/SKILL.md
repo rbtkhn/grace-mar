@@ -30,6 +30,10 @@ description: >-
 
 After a substantive **`strategy`** pass, the strategy skill **offers once** whether you want **`skill-write`** next — unless you already combined **`strategy write`**. When you **combine** them in one message, **skip the menu** and apply **both** contracts: judgment source of truth from strategy lane; **shipping** shape from this hub.
 
+## Optional: `civilization_memory` adjacency (WORK)
+
+When drafting copy anchored to [`research/repos/civilization_memory`](../../../research/repos/civilization_memory) paths, optional structural receipts: [`external-codex-explorer.md`](../../../docs/skill-work/work-dev/external-codex-explorer.md). Policy detail stays in **[write-operator-preferences](../../../docs/skill-write/write-operator-preferences.md)** (subsection *External codex neighborhood*).
+
 ## Cursor rules (always-on overlays)
 
 - [`.cursor/rules/drafting-topic-lede.mdc`](../../../.cursor/rules/drafting-topic-lede.mdc)

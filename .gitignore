@@ -235,3 +235,9 @@ backups/
 artifacts/classification-reports/*
 !artifacts/classification-reports/.gitkeep
 !artifacts/classification-reports/README.md
+
+# External codex neighborhood reports (derived; see artifacts/external-codex/README.md)
+artifacts/external-codex/*
+!artifacts/external-codex/README.md
+!artifacts/external-codex/examples/
+!artifacts/external-codex/examples/**

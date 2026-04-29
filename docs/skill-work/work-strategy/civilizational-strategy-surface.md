@@ -5,7 +5,7 @@ Scope: WORK-only
 Lane: work-strategy
 Purpose: Thin operator bridge between work-strategy and civilization_memory-derived civilizational reasoning
 Owner: Operator
-Last updated: 2026-04-16
+Last updated: 2026-04-27
 
 ## 1. What this surface is
 
@@ -63,6 +63,10 @@ Typical flow:
 4. If no, create a resonance note or analogy audit rather than forcing a bad parallel.
 5. If the pattern recurs, consider promotion into the local case index.
 6. If it materially shapes judgment, link it into an active watch, strategy note, or decision point.
+
+### 4.1 External Codex Explorer (optional structural receipts)
+
+When work-strategy touches **specific paths** inside the pinned [`civilization_memory`](../../../research/repos/civilization_memory) checkout, you **may** generate a **grace-mar derived** neighborhood report — filesystem adjacency only — via [`docs/skill-work/work-dev/external-codex-explorer.md`](../work-dev/external-codex-explorer.md) and outputs under [`artifacts/external-codex/`](../../../artifacts/external-codex/README.md). Treat this as a **thin structural receipt** next to MEM cite paths in **`days.md` Links** or **`### References`** — **not** a substitute for MEM grounding, verify tier, or upstream doctrine. Same **WORK-only** firewall as the rest of this surface.
 
 ## 5. Allowed imports from civilization_memory
 
