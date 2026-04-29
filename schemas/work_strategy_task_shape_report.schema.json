@@ -1,0 +1,107 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://grace-mar.local/schemas/work_strategy_task_shape_report.schema.json",
+  "title": "WorkStrategyTaskShapeReport",
+  "description": "Derived task-shape classification from classify_task_shape.py — WORK-only; not Record.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "run_id",
+    "created_at",
+    "lane",
+    "input",
+    "classification",
+    "shape_contract",
+    "record_boundary"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "work-strategy-task-shape-report.v1"
+    },
+    "run_id": { "type": "string", "minLength": 1 },
+    "created_at": { "type": "string", "minLength": 1 },
+    "lane": { "type": "string", "const": "work-strategy" },
+    "input": {
+      "type": "object",
+      "additionalProperties": true,
+      "properties": {
+        "task_path": { "type": ["string", "null"] },
+        "inline_text_provided": { "type": "boolean" },
+        "source_paths": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "config_path": { "type": "string" }
+      }
+    },
+    "classification": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "primary_shape",
+        "confidence",
+        "matched_signals",
+        "secondary_candidates",
+        "notes"
+      ],
+      "properties": {
+        "primary_shape": { "type": "string", "minLength": 1 },
+        "confidence": {
+          "type": "string",
+          "enum": ["high", "medium", "low"]
+        },
+        "matched_signals": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "secondary_candidates": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["shape", "score"],
+            "properties": {
+              "shape": { "type": "string" },
+              "score": { "type": "number" }
+            }
+          }
+        },
+        "notes": { "type": "string" }
+      }
+    },
+    "shape_contract": {
+      "type": "object",
+      "additionalProperties": true,
+      "properties": {
+        "required_inputs": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "expected_outputs": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "validator_emphasis": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "review_posture": { "type": "string" }
+      }
+    },
+    "record_boundary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["canonical_paths_written", "canonical_write_violation", "notes"],
+      "properties": {
+        "canonical_paths_written": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "canonical_write_violation": { "type": "boolean" },
+        "notes": { "type": "string" }
+      }
+    }
+  }
+}

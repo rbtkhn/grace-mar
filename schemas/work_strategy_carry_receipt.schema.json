@@ -158,6 +158,15 @@
         "needs_review": { "type": "integer", "minimum": 0 },
         "notes": { "type": "string" }
       }
+    },
+    "task_shape_report_path": { "type": ["string", "null"] },
+    "task_shape": { "type": ["string", "null"] },
+    "task_shape_confidence": {
+      "type": ["string", "null"]
+    },
+    "task_shape_expected_outputs": {
+      "type": "array",
+      "items": { "type": "string" }
     }
   }
 }

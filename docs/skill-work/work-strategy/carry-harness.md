@@ -26,6 +26,7 @@ Canonical doctrine for Record vs runtime: [runtime-vs-record.md](../../runtime-v
 | [`scripts/build_strategy_run_report.py`](../../../scripts/build_strategy_run_report.py) | Summarizes recent `artifacts/strategy-runs/*/state.json` runs. |
 | **`run_carry_harness.py`** | **Task-scoped**: explicit `--task`, `--source`, `--artifact` paths and a **carry receipt** under `runtime/work-strategy/`. |
 | **`validate_strategy_packet.py`** | Optional **`--run-validators`** companion: writes [`work_strategy_validation_report.schema.json`](../../../schemas/work_strategy_validation_report.schema.json) JSON and embeds **`validation_summary`** (plus **`validation_report_path`** when an `--validation-report` path is allowed). See [validator-contract.md](validator-contract.md). |
+| **`classify_task_shape.py`** | Optional **`--classify-task-shape`** companion: writes [`work_strategy_task_shape_report.schema.json`](../../../schemas/work_strategy_task_shape_report.schema.json) JSON and embeds **`task_shape`** fields on the receipt when a **`--task-shape-report`** path is allowed. See [task-shape-routing.md](task-shape-routing.md). |
 
 These are **different slices**; the carry harness does not replace observability or strategy-run reports.
 
@@ -89,6 +90,8 @@ Options:
 | `--fail-on-result fail\|needs_review\|never` | Exit code policy (default `fail`: nonzero only on `result==fail`). |
 | `--run-validators` | Run [`validate_strategy_packet.py`](../../../scripts/work_strategy/validate_strategy_packet.py) with the same path arguments; embed **`validation_summary`** in the receipt (optional **`validation_report_path`** when **`--validation-report`** is set and allowed). |
 | `--validation-report PATH` | Where to write validation JSON when **`--run-validators`** is set (refused under forbidden roots). |
+| `--classify-task-shape` | Run [`classify_task_shape.py`](../../../scripts/work_strategy/classify_task_shape.py) with the task path; embed **`task_shape`**, **`task_shape_confidence`**, **`task_shape_expected_outputs`** (optional **`task_shape_report_path`** when **`--task-shape-report`** is set and allowed). |
+| `--task-shape-report PATH` | Where to write task-shape JSON when **`--classify-task-shape`** is set (refused under forbidden roots). |
 
 ---
 
@@ -106,5 +109,6 @@ Options:
 - **`record_boundary.canonical_paths_written`** — Always empty for this harness (it does not write Record paths).
 - **`gate_snippet.text`** — Copy of snippet content when read successfully (WORK-only paste aid).
 - **`validation_summary`** / **`validation_report_path`** — Present when **`--run-validators`** runs; points at derived validation JSON under allowed roots when **`--validation-report`** is set.
+- **`task_shape`** / **`task_shape_confidence`** / **`task_shape_expected_outputs`** / **`task_shape_report_path`** — Present when **`--classify-task-shape`** runs; see [task-shape-routing.md](task-shape-routing.md).
 
 ---

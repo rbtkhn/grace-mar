@@ -88,6 +88,16 @@
         "canonical_write_violation": { "type": "boolean" },
         "notes": { "type": "string" }
       }
+    },
+    "task_shape": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["primary_shape", "notes"],
+      "properties": {
+        "primary_shape": { "type": "string", "minLength": 1 },
+        "confidence": { "type": ["string", "null"] },
+        "notes": { "type": "string" }
+      }
     }
   }
 }

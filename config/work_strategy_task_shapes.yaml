@@ -1,0 +1,144 @@
+version: 1
+task_shapes:
+  watch_update:
+    description: Update or refresh an active watch, threshold, or ongoing situation scan.
+    required_inputs:
+      - task_intake_or_equivalent
+      - reference_to_watch_or_metric
+    expected_outputs:
+      - watch_delta_note_or_log_entry
+      - optional_threshold_crossing_summary
+    validator_emphasis:
+      - sources_present
+      - artifact_substance
+      - unresolved_marker_scan
+    review_posture: "Confirm deltas against prior watch state; VERIFY tier if claims are factual."
+    keywords:
+      - watch
+      - threshold
+      - monitor
+      - update
+      - latest
+      - ongoing
+      - stale
+      - crossing
+    anti_keywords: []
+    notes: "Not for one-off essays without watch objects."
+
+  notebook_synthesis:
+    description: Synthesize lane material or sources into strategy-notebook-style prose (weave-adjacent).
+    required_inputs:
+      - source_material_or_thread_refs
+    expected_outputs:
+      - notebook_section_or_knot_draft
+      - optional_cross_links
+    validator_emphasis:
+      - artifact_substance
+      - markdown_heading_metadata
+      - contradiction_marker_scan
+    review_posture: "Editorial pass for seams (Chronicle vs Reflection); promotion remains manual."
+    keywords:
+      - synthesize
+      - weave
+      - notebook
+      - summary
+      - arc
+      - thread
+      - knot
+      - chronicle
+      - reflection
+    anti_keywords:
+      - paste-only
+    notes: "Does not auto-edit strategy-notebook files."
+
+  decision_point:
+    description: Frame choices, tradeoffs, risks, and structured recommendation paths.
+    required_inputs:
+      - decision_question_or_scope
+    expected_outputs:
+      - option_matrix_or_branch_list
+      - explicit_risk_notes
+    validator_emphasis:
+      - artifact_substance
+      - contradiction_marker_scan
+      - unresolved_marker_scan
+    review_posture: "Reviewer validates assumptions; numbers may need VERIFY."
+    keywords:
+      - options
+      - recommend
+      - tradeoff
+      - decision
+      - choose
+      - risk
+      - scenario
+      - branch
+    anti_keywords: []
+    notes: "Not a substitute for governance approval."
+
+  gate_candidate_prep:
+    description: Prepare paste-ready gate candidate or bridge artifact without staging.
+    required_inputs:
+      - intended_candidate_stub_or_yaml_outline
+    expected_outputs:
+      - paste_ready_snippet_or_bridge_doc
+    validator_emphasis:
+      - gate_snippet_present
+      - record_boundary_guard
+    review_posture: "Operator-only paste into recursion-gate; companion gate still owns merge."
+    keywords:
+      - gate
+      - paste
+      - candidate
+      - stage
+      - bridge
+      - prep
+      - proposal
+      - snippet
+    anti_keywords:
+      - approve
+      - merge
+    notes: "Never implies automatic staging."
+
+  contradiction_review:
+    description: Surface, compare, or preserve tensions across sources or prior judgments."
+    required_inputs:
+      - at_least_two_claim_sources_or_positions
+    expected_outputs:
+      - tension_map_or_comparison_note
+      - preserved_ambiguity_where_intended
+    validator_emphasis:
+      - contradiction_marker_scan
+      - unresolved_marker_scan
+    review_posture: "Preserve disproportion; avoid premature synthesis."
+    keywords:
+      - contradiction
+      - tension
+      - conflict
+      - reconcile
+      - mismatch
+      - inconsistency
+    anti_keywords: []
+    notes: "Not an erase-conflicts pass."
+
+  source_expansion:
+    description: Broaden source coverage or fill evidence holes before synthesis."
+    required_inputs:
+      - gap_statement_or_search_vector
+    expected_outputs:
+      - bibliography_or_source_log
+      - optional_gap_closure_notes
+    validator_emphasis:
+      - sources_present
+      - artifact_substance
+    review_posture: "Spot-check sources before downstream synthesis claims."
+    keywords:
+      - source
+      - collect
+      - gather
+      - broaden
+      - missing
+      - hole
+      - expand
+      - coverage
+    anti_keywords: []
+    notes: "Stop short of claiming synthesis is complete."

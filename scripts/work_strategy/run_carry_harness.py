@@ -40,6 +40,20 @@ def _load_validator_module() -> Any:
     return mod
 
 
+def _load_classifier_module() -> Any:
+    """Load classify_task_shape from this directory."""
+    root = Path(__file__).resolve().parent
+    ws = str(root)
+    if ws not in sys.path:
+        sys.path.insert(0, ws)
+    path = root / "classify_task_shape.py"
+    spec = importlib.util.spec_from_file_location("classify_task_shape", path)
+    assert spec and spec.loader
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    return mod
+
+
 def determine_result(checks: list[dict[str, Any]]) -> str:
     statuses = [c["status"] for c in checks]
     if "fail" in statuses:
@@ -66,6 +80,10 @@ def build_receipt(
     receipt_out_path: Path | None,
     validation_report_path: str | None,
     validation_summary: dict[str, Any] | None,
+    task_shape_report_path: str | None,
+    task_shape: str | None,
+    task_shape_confidence: str | None,
+    task_shape_expected_outputs: list[str] | None,
 ) -> dict[str, Any]:
     summary_counts = {"pass": 0, "fail": 0, "needs_review": 0}
     for c in checks:
@@ -121,6 +139,16 @@ def build_receipt(
     if validation_report_path is not None or validation_summary is not None:
         receipt["validation_report_path"] = validation_report_path
         receipt["validation_summary"] = validation_summary
+    if (
+        task_shape_report_path is not None
+        or task_shape is not None
+        or task_shape_confidence is not None
+        or task_shape_expected_outputs is not None
+    ):
+        receipt["task_shape_report_path"] = task_shape_report_path
+        receipt["task_shape"] = task_shape
+        receipt["task_shape_confidence"] = task_shape_confidence
+        receipt["task_shape_expected_outputs"] = task_shape_expected_outputs
     return receipt
 
 
@@ -175,6 +203,62 @@ def run_harness(args: argparse.Namespace) -> tuple[dict[str, Any], int]:
 
     output_forbidden = bool(receipt_out and is_forbidden_record_path(receipt_out, repo_root))
 
+    task_shape_report_path_val: str | None = None
+    task_shape_val: str | None = None
+    task_shape_confidence_val: str | None = None
+    task_shape_expected_outputs_val: list[str] | None = None
+    ts_report_dict: dict[str, Any] | None = None
+    task_shape_ctx_for_val: dict[str, Any] | None = None
+
+    if getattr(args, "classify_task_shape", False):
+        cmod = _load_classifier_module()
+        cfg_path = repo_root / "config" / "work_strategy_task_shapes.yaml"
+        config = cmod.load_task_shape_config(cfg_path)
+        ts_out_resolved: Path | None = None
+        ts_arg = getattr(args, "task_shape_report", None)
+        if ts_arg:
+            ts_out_resolved = (
+                (repo_root / ts_arg).resolve()
+                if not Path(ts_arg).is_absolute()
+                else Path(ts_arg).resolve()
+            )
+        ts_output_forbidden = bool(ts_out_resolved and is_forbidden_record_path(ts_out_resolved, repo_root))
+        ts_report_dict = cmod.build_task_shape_report(
+            repo_root=repo_root,
+            task_arg=args.task,
+            inline_text=None,
+            source_paths=list(args.source or []),
+            config=config,
+            config_path=cfg_path,
+            run_id=run_id,
+            created_at=created_at,
+            shape_out_path=ts_out_resolved,
+        )
+        cls_d = ts_report_dict["classification"]
+        sc_d = ts_report_dict["shape_contract"]
+        task_shape_val = cls_d["primary_shape"]
+        task_shape_confidence_val = cls_d["confidence"]
+        task_shape_expected_outputs_val = list(sc_d.get("expected_outputs", []))
+        task_shape_ctx_for_val = {
+            "primary_shape": task_shape_val,
+            "confidence": task_shape_confidence_val,
+            "expected_outputs": task_shape_expected_outputs_val,
+            "notes": cls_d.get("notes", ""),
+        }
+        if ts_out_resolved and not ts_output_forbidden:
+            task_shape_report_path_val = _safe_rel(ts_out_resolved, repo_root)
+            ts_out_resolved.parent.mkdir(parents=True, exist_ok=True)
+            rb_ts = ts_report_dict.setdefault("record_boundary", {})
+            if isinstance(rb_ts, dict):
+                rb_ts["canonical_paths_written"] = [task_shape_report_path_val]
+                rb_ts["canonical_write_violation"] = False
+            ts_out_resolved.write_text(
+                json.dumps(ts_report_dict, indent=2, ensure_ascii=False) + "\n",
+                encoding="utf-8",
+            )
+        elif ts_out_resolved and ts_output_forbidden:
+            task_shape_report_path_val = None
+
     validation_report_path_val: str | None = None
     validation_summary_val: dict[str, Any] | None = None
     validation_out_resolved: Path | None = None
@@ -200,6 +284,7 @@ def run_harness(args: argparse.Namespace) -> tuple[dict[str, Any], int]:
             run_id=run_id,
             validation_out_path=validation_out_resolved,
             created_at=created_at,
+            task_shape_context=task_shape_ctx_for_val,
         )
         summ = v_report.get("summary") or {}
         validation_summary_val = {
@@ -416,6 +501,10 @@ def run_harness(args: argparse.Namespace) -> tuple[dict[str, Any], int]:
         receipt_out_path=receipt_out,
         validation_report_path=validation_report_path_val,
         validation_summary=validation_summary_val,
+        task_shape_report_path=task_shape_report_path_val,
+        task_shape=task_shape_val,
+        task_shape_confidence=task_shape_confidence_val,
+        task_shape_expected_outputs=task_shape_expected_outputs_val,
     )
 
     exit_code = 0
@@ -462,6 +551,18 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
         default=None,
         dest="validation_report",
         help="Path for validation JSON when --run-validators is set.",
+    )
+    p.add_argument(
+        "--classify-task-shape",
+        action="store_true",
+        help="Run classify_task_shape and optionally embed summary + write JSON report.",
+    )
+    p.add_argument(
+        "--task-shape-report",
+        type=str,
+        default=None,
+        dest="task_shape_report",
+        help="Path for task-shape JSON when --classify-task-shape is set.",
     )
     args = p.parse_args(argv)
     root = args.repo_root or Path(__file__).resolve().parent.parent.parent

@@ -12,6 +12,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
+import yaml
+
 from packet_common import (
     MIN_WORDS_NON_TRIVIAL,
     is_forbidden_record_path,
@@ -60,6 +62,43 @@ def summarize_validator_status(validators: list[dict[str, Any]]) -> str:
     return "pass"
 
 
+def load_task_shape_context_from_inputs(
+    repo_root: Path,
+    task_shape_report_arg: str | None,
+    task_shape_cli: str | None,
+) -> dict[str, Any] | None:
+    root = repo_root.resolve()
+    if task_shape_report_arg:
+        p = Path(task_shape_report_arg)
+        rp = (root / p).resolve() if not p.is_absolute() else p.resolve()
+        if not rp.is_file():
+            return None
+        data = json.loads(rp.read_text(encoding="utf-8"))
+        cls = data.get("classification") or {}
+        sc = data.get("shape_contract") or {}
+        return {
+            "primary_shape": cls.get("primary_shape", "decision_point"),
+            "confidence": cls.get("confidence"),
+            "expected_outputs": sc.get("expected_outputs", []),
+            "notes": cls.get("notes", ""),
+        }
+    if task_shape_cli:
+        cfg_path = root / "config" / "work_strategy_task_shapes.yaml"
+        if not cfg_path.is_file():
+            return None
+        cfg = yaml.safe_load(cfg_path.read_text(encoding="utf-8")) or {}
+        meta = (cfg.get("task_shapes") or {}).get(task_shape_cli)
+        if not meta:
+            return None
+        return {
+            "primary_shape": task_shape_cli,
+            "confidence": None,
+            "expected_outputs": meta.get("expected_outputs", []),
+            "notes": "From --task-shape CLI.",
+        }
+    return None
+
+
 def validate_packet(
     *,
     repo_root: Path,
@@ -70,6 +109,7 @@ def validate_packet(
     run_id: str,
     validation_out_path: Path | None,
     created_at: str | None = None,
+    task_shape_context: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
     """Build validation report dict (no file I/O except reading inputs)."""
     root = repo_root.resolve()
@@ -338,6 +378,48 @@ def validate_packet(
             }
         )
 
+    task_shape_payload: dict[str, Any] | None = None
+    if task_shape_context and task_shape_context.get("primary_shape"):
+        task_shape_payload = {
+            "primary_shape": task_shape_context["primary_shape"],
+            "confidence": task_shape_context.get("confidence"),
+            "notes": task_shape_context.get("notes") or "",
+        }
+        exp_out = task_shape_context.get("expected_outputs") or []
+        art_declared = len(artifacts) > 0
+        if exp_out and not art_declared:
+            validators_out.append(
+                {
+                    "id": "task_shape_expectations",
+                    "label": "Task-shape implied outputs vs declared artifacts",
+                    "status": "needs_review",
+                    "details": "Shape expects outputs but no --artifact paths declared: "
+                    + ", ".join(exp_out[:8])
+                    + ("..." if len(exp_out) > 8 else ""),
+                    "subject_paths": [],
+                }
+            )
+        else:
+            validators_out.append(
+                {
+                    "id": "task_shape_expectations",
+                    "label": "Task-shape implied outputs vs declared artifacts",
+                    "status": "pass",
+                    "details": "Task-shape context present; artifact declarations compatible or shape has no expected_outputs.",
+                    "subject_paths": [],
+                }
+            )
+    else:
+        validators_out.append(
+            {
+                "id": "task_shape_expectations",
+                "label": "Task-shape implied outputs vs declared artifacts",
+                "status": "pass",
+                "details": "No task-shape context provided.",
+                "subject_paths": [],
+            }
+        )
+
     summary_status = summarize_validator_status(validators_out)
     passed = sum(1 for v in validators_out if v["status"] == "pass")
     failed = sum(1 for v in validators_out if v["status"] == "fail")
@@ -355,7 +437,7 @@ def validate_packet(
         "validation_out": safe_rel(validation_out_path, root) if validation_out_path else None,
     }
 
-    report = {
+    report: dict[str, Any] = {
         "schema_version": SCHEMA_VERSION,
         "run_id": run_id,
         "created_at": ts,
@@ -375,6 +457,8 @@ def validate_packet(
             "notes": "Validators emit derived JSON only; they do not mutate Record or gate staging.",
         },
     }
+    if task_shape_payload:
+        report["task_shape"] = task_shape_payload
     return report
 
 
@@ -391,6 +475,12 @@ def run_validate_cli(args: argparse.Namespace) -> tuple[dict[str, Any], int]:
             else Path(args.out).resolve()
         )
 
+    ts_ctx = load_task_shape_context_from_inputs(
+        repo_root,
+        getattr(args, "task_shape_report", None),
+        getattr(args, "task_shape", None),
+    )
+
     report = validate_packet(
         repo_root=repo_root,
         task_arg=args.task,
@@ -400,6 +490,7 @@ def run_validate_cli(args: argparse.Namespace) -> tuple[dict[str, Any], int]:
         run_id=run_id,
         validation_out_path=out_resolved,
         created_at=created_at,
+        task_shape_context=ts_ctx,
     )
 
     exit_code = 0
@@ -439,6 +530,20 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
         default="fail",
         dest="fail_on_status",
         help="Exit nonzero policy (default: nonzero when overall status is fail).",
+    )
+    p.add_argument(
+        "--task-shape-report",
+        type=str,
+        default=None,
+        dest="task_shape_report",
+        help="Optional task-shape JSON report (embeds expectations).",
+    )
+    p.add_argument(
+        "--task-shape",
+        type=str,
+        default=None,
+        dest="task_shape",
+        help="Override primary shape key (loads expected_outputs from config).",
     )
     args = p.parse_args(argv)
     root = args.repo_root or Path(__file__).resolve().parent.parent.parent
