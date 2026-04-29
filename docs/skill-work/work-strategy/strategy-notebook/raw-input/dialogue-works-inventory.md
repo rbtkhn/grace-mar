@@ -15,6 +15,7 @@ Full markdown files with **`show: Dialogue Works`** (and host/guest) in YAML; tr
 
 | pub_date | Path (under `raw-input/`) | Guest | `thread` / routing | source_url | Notes |
 |----------|-----------------------------|-------|--------------------|------------|--------|
+| 2026-04-28 | `2026-04-28/transcript-marandi-dialogue-works-trump-plan-dead-after-strike-2026-04-28.md` | Seyed Mohammad Marandi | `thread: marandi` | *(pin canonical `watch?v=` — do not conflate with Judging Freedom same-day row)* | Full cleaned operator transcript; `source_note` in YAML flags prior inbox duplicate URL bug. |
 | 2026-04-27 | `2026-04-27/transcript-baud-dialogue-works-nima-2026-04-27.md` | Col. Jacques Baud | `thread: baud` | https://www.youtube.com/watch?v=iZ5xSBYxxyQ | Operator-cleaned transcript; title in body matches frontmatter. |
 | 2026-04-24 | `2026-04-24/transcript-nima-freeman-israel-agenda-collapsing-2026-04-24.md` | Amb. Chas W. Freeman | `thread: freeman` | *(pin canonical watch URL in frontmatter when known)* | `source_note` asks to pin canonical YouTube URL; `title_slug` present. |
 | 2026-04-21 | `2026-04-21/transcript-marandi-blockade-trump-nima-2026-04-21.md` | Seyed Mohammad Marandi | `thread_expert: marandi` | *(pin canonical watch URL when known)* | Opening voice date in transcript may differ from `pub_date`; see file `source_note`. |
