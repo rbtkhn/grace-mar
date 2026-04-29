@@ -138,6 +138,8 @@ The operator may say **`coffee`** **more than once per calendar day** for reorie
 
 Immediately **after** Step 1 content, output the **hub** menu — **five lines** (**A–E**).
 
+**One option per line:** Each hub letter is **its own line** — **`A.` … `E.`** as **five separate lines**, not multiple letters on one line and not a single paragraph listing A–E. (Sub-menus inside **D** **Capitalist** forks or **Steward** branches are separate from this rule when you open a follow-up.)
+
 **Letter-collision:** The **Symphony masters** disambiguation row (**masters A.–E.**) and the **Conductor action MCQ** (**five actions A.–E.** for the resolved slug) use **the same letter range** as the hub. When **both** a **coffee hub** menu and a **Conductor action MCQ** could appear in one reply, **label** them explicitly — see [CONDUCTOR-PASS.md](../../../docs/skill-work/work-coffee/CONDUCTOR-PASS.md). **Do not** reuse bare “pick **E**” without naming which menu.
 
 **Do not** append the **masters** **MCQ** row **under** the five hub lines; masters disambiguation belongs to **Conductor** turns ([§ Conductor session (outside `coffee` hub menu)](#conductor-only-no-coffee), [CONDUCTOR-PASS.md](../../../docs/skill-work/work-coffee/CONDUCTOR-PASS.md)). **After hub E is chosen:** when **`last_logged_conductor`** resolves, **skip** the **Masters MCQ** — deliver orientation + **Conductor action MCQ** immediately ([**§ Hub E — automatic continuation**](#hub-e-auto-continue)).
