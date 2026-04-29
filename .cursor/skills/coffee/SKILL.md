@@ -150,7 +150,7 @@ Immediately **after** Step 1 content, output the **hub** menu — **five lines**
 A. Steward
 B. Engineer
 C. Historian
-D. Capitalist — <one short line: work-business / grace-gems / commercial angle / bookshelf membrane when on that angle>
+D. Capitalist — <one short line: work-business / grace-gems / commercial angle / bookshelf: knowledge MCQs vs stance membrane per § Capitalist bookshelf>
 E. Conductor — last master: **Bernstein** (`bernstein`)  ← use live text from Step 1 (`format_coffee_hub_e_line`; see below), not a placeholder
 ```
 
@@ -158,9 +158,16 @@ E. Conductor — last master: **Bernstein** (`bernstein`)  ← use live text fro
 
 **Filling D — Capitalist:** **work-business**, **grace-gems**, revenue/offers framing; **work-cici** when business/teaching-commercial; one prescribed next step. **Alternate lens:** match **`Dream → coffee menu`** when it points at a path not already covered by **A–C**.
 
-**Fixed option (Capitalist angle, always eligible on the angle-bracket line):** **Self-knowledge quiz (bookshelf membrane)**.
+**Capitalist — bookshelf / self-knowledge (two branches):**
 
-- Session is **multi-round**: 5–10 MCQs per round about bookshelf subject matter.
+1. **Topic-anchored knowledge MCQs (default for “quiz” / recursion)** — [.cursor/skills/bookshelf-knowledge-mcq-to-gate/SKILL.md](../bookshelf-knowledge-mcq-to-gate/SKILL.md): historical **fact-and-mechanism** probes with evidence anchors toward IX-A `Knows:` lines. **Suggest this liberally** in suitable WORK turns. **Formatting:** **each letter option on its own line**; **at most two date-primary questions per round** (see skill).
+2. **Catalog stance membrane** (subject-tag affiliation: `bookshelf-membrane-round.json` + `build_bookshelf_membrane_candidates.py`) — **secondary** use only — when the operator requests it **or** a **pressing** catalog/membrane issue requires that stance map **not** as a substitute for knowledge MCQs.
+
+**Fixed option (Capitalist angle, hub line wording):** may read **Bookshelf quiz — knowledge MCQs → gate skill** **or** **Bookshelf stance membrane (scripted)** depending on intent.
+
+**Catalog stance membrane (scripted path only — branch 2 above):**
+
+- Session is **multi-round**: 5–10 MCQs per round when using the scripted stance round artifact.
 - After each round, ask continue/stop.
 - On stop, produce:
   - `docs/skill-work/work-strategy/history-notebook/research/BOOKSHELF-MEMBRANE-REPORT.md`
@@ -185,7 +192,7 @@ E. Conductor — last master: **Bernstein** (`bernstein`)  ← use live text fro
 
 - **C. Historian** — **Two-stage flow (default; do not collapse to intel-only):** **(1)** Daily brief path — generator and/or `daily-brief-YYYY-MM-DD.md`, **§1d** / **§1e** / **§1g** / **§1h** (PRC / IRI when load-bearing), optional **KY-4** (Polymarket, polls, Massie X per cadence). **(2)** In the **same turn**, offer **Tri-Frame** minds **Barnes → Mearsheimer → Mercouris**, wait for **which mind**, then [daily-brief-minds-menu.md](../../../docs/skill-work/work-strategy/daily-brief-minds-menu.md). **Do not** end **C** on polls alone unless **`intel only`** / **`no tri-frame`** / survey-only. **Broader spine:** pointers into strategy-notebook, work-jiang / Predictive History, self-library reads — **no** invented `work-history/` lane folder. **Companion survey** when **`coffee survey`**. See [menu-reference — Tri-Frame](../../../docs/skill-work/work-coffee/menu-reference.md#tri-frame-daily-brief). *(Legacy hub **C — Strategy (daily brief)**.)*
 
-- **D. Capitalist** — **work-business**, **grace-gems**, revenue/offers; **work-cici** when business/teaching-commercial angle; fixed **bookshelf membrane** option on the hub line; **one** prescribed next step.
+- **D. Capitalist** — **work-business**, **grace-gems**, revenue/offers; **work-cici** when business/teaching-commercial angle; **bookshelf: knowledge MCQs (default)** vs **catalog stance membrane (secondary)** — see **[Capitalist — bookshelf / self-knowledge]** above; **one** prescribed next step.
 
 - **E. Conductor** — **`coffee` hub E** **[auto-continues](#hub-e-auto-continue)** **`last_logged_conductor`** (orientation + **Conductor action MCQ**); **hub line** shows last master via **`format_coffee_hub_e_line`** / Step 1 paste. **Not** a substitute for standalone **`conductor`** when **`coffee`** was not invoked.
 
@@ -223,3 +230,4 @@ Each successful coffee run appends one line to `docs/skill-work/work-cadence/wor
 - `docs/skill-work/work-politics/polling-and-markets.md` — KY-4 polling (**menu C — Historian** / daily brief)
 - `docs/skill-work/work-strategy/daily-brief-minds-menu.md` — Tri-Frame **three minds** (Barnes / Mearsheimer / Mercouris) for **C — Historian** second stage
 - `docs/skill-work/work-politics/america-first-ky/guardrail-stress-test.md` — messaging discipline
+- `.cursor/skills/bookshelf-knowledge-mcq-to-gate/SKILL.md` — Capitalist-adjacent **bookshelf knowledge** MCQs toward IX-A / gate staging

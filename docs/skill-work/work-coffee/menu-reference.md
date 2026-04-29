@@ -2,7 +2,10 @@
 
 **Canonical Step 2 menu (grace-mar):** **five** hub lines — **A** Steward, **B** Engineer, **C** Historian, **D** Capitalist, **E — Conductor**. Hub **E** embeds **last master** from cadence (`operator_coffee.py` → **`format_coffee_hub_e_line`**) and **`coffee` hub E** **auto-continues** that master when present ([coffee SKILL § Hub E](../../../.cursor/skills/coffee/SKILL.md#hub-e-auto-continue)). **No** masters MCQ row printed **under** the hub list; the five Symphony masters (**Toscanini … Bernstein**) disambiguate via **Conductor MCQ** only when needed — **hub E** otherwise jumps to orientation + **Conductor action MCQ** after **`coffee`**; **standalone** master name / **`conductor`** / [conductor skill](../../../.cursor/skills/conductor/SKILL.md) without `coffee` — see [CONDUCTOR-PASS.md](CONDUCTOR-PASS.md). **No** micro-hints row under the hub list. Executable contract: [.cursor/skills/coffee/SKILL.md](../../../.cursor/skills/coffee/SKILL.md).
 
-**Fixed D option (Capitalist):** The **D** angle-bracket line always may include **Self-knowledge quiz (bookshelf membrane)** as an eligible branch. Quiz sessions run as **multi-round** (5–10 MCQs each), ask continue/stop after each round, and emit report + gate-draft artifacts only (no auto-merge).
+**Capitalist D — bookshelf (two modalities):**
+
+- **Knowledge MCQs (default “quiz”)** toward IX-A recursion: [.cursor/skills/bookshelf-knowledge-mcq-to-gate/SKILL.md](../../.cursor/skills/bookshelf-knowledge-mcq-to-gate/SKILL.md) — **suggest liberally** when appropriate; **each option (`A`–`D`) on its own line**; **≤2 date-primary stems per round**; prefer mechanism / role / sequence / causal stems.
+- **Catalog stance membrane** (script-generated report from `bookshelf-membrane-round.json`): **multi-round**, continue/stop, report + candidate drafts — **draft-only**, no auto-merge — use when **requested** **or** a **pressing** catalog issue applies; **not** the default substitute for knowledge MCQs.
 
 **Symphony / Conductor:** [COFFEE-CADENCE-CONDUCTOR-PROTOCOL.md](../work-strategy/strategy-notebook/COFFEE-CADENCE-CONDUCTOR-PROTOCOL.md) + [CONDUCTOR-PASS.md](CONDUCTOR-PASS.md). **self-skill-write** / PRP / Lexile / prompt proposals → hub **D — Capitalist** or explicit **`write`** / **`skill-write`** without opening **`coffee`**.
 
