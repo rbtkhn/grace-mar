@@ -236,6 +236,11 @@ artifacts/classification-reports/*
 !artifacts/classification-reports/.gitkeep
 !artifacts/classification-reports/README.md
 
+# Route recommendation receipts (advisory; see artifacts/route-recommendations/README.md)
+artifacts/route-recommendations/*
+!artifacts/route-recommendations/.gitkeep
+!artifacts/route-recommendations/README.md
+
 # External codex neighborhood reports (derived; see artifacts/external-codex/README.md)
 artifacts/external-codex/*
 !artifacts/external-codex/README.md

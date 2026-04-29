@@ -1,0 +1,164 @@
+{
+  "version": 1,
+  "lane_hint_bonuses": {
+    "work-strategy": {
+      "research_to_artifact": 2,
+      "recurring_workflow": 1
+    },
+    "work-dev": {
+      "coding": 2,
+      "system_native_action": 1
+    },
+    "governance": {
+      "governance_review": 4
+    }
+  },
+  "task_shapes": {
+    "coding": {
+      "label": "coding",
+      "recommended_path": "work-dev lane: implementations, scripts under `scripts/`, PLAN/EXECUTE per `docs/operator-agent-lanes.md`; run tests locally before ship.",
+      "runner_up_path": "system_native_action lane: if task is purely harness / cadence tooling in existing scripts.",
+      "keywords": [
+        "refactor",
+        "implementation",
+        "python",
+        "pytest",
+        "ci",
+        "module",
+        "script",
+        "bugfix",
+        "feature",
+        "compile",
+        "typecheck",
+        "pull request",
+        "pr ",
+        "fix test",
+        "utility",
+        "architecture options",
+        "compare two architectures"
+      ],
+      "anti_keywords": [],
+      "why_note": "Description centers on code, tests, or repo implementation work."
+    },
+    "research_to_artifact": {
+      "label": "research_to_artifact",
+      "recommended_path": "WORK lanes + docs: synthesize into `docs/skill-work/*`, strategy-notebook `days.md` / inbox, or prepared research artifacts; verify tier for factual claims when needed.",
+      "runner_up_path": "governance_review: if output would promote into SELF/EVIDENCE, stage via `recursion-gate.md` instead of direct profile edits.",
+      "keywords": [
+        "read these",
+        "sources",
+        "synthesize",
+        "memo",
+        "memo.",
+        "market",
+        "bibliography",
+        "compare papers",
+        "literature",
+        "draft a memo",
+        "research",
+        "essay",
+        "verbatim",
+        "ingest",
+        "notebook",
+        "weave"
+      ],
+      "anti_keywords": [],
+      "why_note": "Description reads as synthesis, reading, or turning sources into a durable note or lane artifact."
+    },
+    "recurring_workflow": {
+      "label": "recurring_workflow",
+      "recommended_path": "Document the rhythm in the appropriate skill or `docs/skill-work/*` calendar; wire to existing cadence scripts (`coffee`, `dream`, weekly brief runners) rather than bespoke daemons.",
+      "runner_up_path": "system_native_action: only if recurring run is satisfied by extending an existing Grace-Mar harness script.",
+      "keywords": [
+        "recurring",
+        "weekly",
+        "every week",
+        "cron",
+        "schedule",
+        "automate",
+        "daily",
+        "cadence",
+        "ritual",
+        "checklist",
+        "standing"
+      ],
+      "anti_keywords": [],
+      "why_note": "Task explicitly asks for repeatable process or scheduled rhythm across sessions or tools."
+    },
+    "system_native_action": {
+      "label": "system_native_action",
+      "recommended_path": "Use existing Grace-Mar tooling: `.cursor/skills/*`, `scripts/harness_warmup.py`, `coffee` / gate-review / strategy scripts as named in docs; READ `AGENTS.md` for Record boundaries.",
+      "runner_up_path": "coding: if the intent is primarily new automation code rather than invoking existing rituals.",
+      "keywords": [
+        "warmup",
+        "harness",
+        "coffee",
+        "dream",
+        "bridge",
+        "harvest",
+        "skill",
+        "recursion gate",
+        "gate review",
+        "operator_coffee",
+        "log_cadence_event",
+        "process_approved_candidates",
+        "self-archive",
+        "bot/prompt",
+        "companion approval"
+      ],
+      "anti_keywords": [],
+      "why_note": "Description matches built-in rituals, harnesses, gate queue, or companion-approved merge path."
+    },
+    "governance_review": {
+      "label": "governance_review",
+      "recommended_path": "`users/<id>/recursion-gate.md` staging + companion review; merge only via `scripts/process_approved_candidates.py` per `AGENTS.md`. No ad-hoc `self.md` edits.",
+      "runner_up_path": "research_to_artifact: if the only output is WORK-layer notes that never touch SELF/EVIDENCE.",
+      "keywords": [
+        "recursion-gate",
+        "candidate",
+        "gate",
+        "merge into",
+        "self.md",
+        "evidence",
+        "approve",
+        "companion approval",
+        "durable knowledge",
+        "record ",
+        "ix-a",
+        "promote to self",
+        "process_approved"
+      ],
+      "anti_keywords": [],
+      "why_note": "Task is about staging, approving, or whether something becomes governed Record knowledge."
+    },
+    "unclear": {
+      "label": "unclear",
+      "recommended_path": "(none — clarify first.)",
+      "runner_up_path": "Re-run after one concrete sentence: deliverable, lane, and whether Record must change.",
+      "keywords": [],
+      "anti_keywords": [],
+      "why_note": "Insufficient signal or conflicting cues; abstain rather than forcing a lane."
+    }
+  },
+  "governance_keyword_override": [
+    "recursion-gate",
+    "candidate",
+    "merge candidate",
+    "approve ",
+    " self.md",
+    "self.md",
+    "durable knowledge",
+    "process_approved_candidates",
+    "record truth"
+  ],
+  "suggested_next_steps": {
+    "coding": "Name target files or `scripts/` entrypoints; choose PLAN vs EXECUTE; run the relevant test command before commit.",
+    "research_to_artifact": "List primary sources (URLs or repo paths) and the intended notebook or doc section; add verify tags where claims bite.",
+    "recurring_workflow": "Specify frequency, owner, and which existing skill or cadence runner it resembles (coffee, weekly brief, dream).",
+    "system_native_action": "Pick the nearest named skill/script from docs; if touching Record staging, gate only—no direct merges.",
+    "governance_review": "Stage `CANDIDATE-*` in `users/<id>/recursion-gate.md` with evidence; companion approves before `process_approved_candidates.py`.",
+    "unclear": "Add one sentence each: outcome, lane (strategy vs dev vs gate), and whether anything must enter SELF or EVIDENCE."
+  },
+  "unclear_max_words": 5,
+  "unclear_short_char": 28
+}
