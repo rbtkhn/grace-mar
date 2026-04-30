@@ -73,6 +73,10 @@ This system uses a **four-layer instruction architecture**. Later layers may nar
 
 **Substantive WORK plans (optional discipline):** For large plans in work-strategy, work-dev, or brief contexts, assistants may end with a **Reality Sprint Block** per [`docs/skill-work/reality-sprint-block.md`](docs/skill-work/reality-sprint-block.md) — a compact execution wedge (primary path, first contact with reality, failure checks, pruned steps). It is **not** a gate substitute, not a merge, and not required on every reply.
 
+**Cross-host rule transfer:** `AGENTS.md` and instance doctrine are the **always-on** cross-agent contract. `.cursor/skills/*/SKILL.md` are **invocation-bound protocols**: use them when the operator invokes that workflow or territory. `.cursor/rules/*.mdc` should **not** be assumed automatically active outside Cursor; when an `.mdc` rule is important across hosts, promote the invariant into repo-neutral doctrine (`AGENTS.md`, instance doctrine, or `docs/`). See [docs/codex-rule-transfer-audit.md](docs/codex-rule-transfer-audit.md).
+
+**Territory entry discipline:** When working inside `docs/skill-work/<territory>/`, read the territory README and key specs first, respect lane boundaries, and use the territory's own vocabulary. Do not leak assumptions from one territory into another unless the operator explicitly crosses the boundary.
+
 ---
 
 ## Critical Rules
@@ -88,7 +92,7 @@ The emulated self can only know what is explicitly documented in its profile (`u
 1. Detect signals (knowledge, curiosity, personality)
 2. Stage candidates in `users/[id]/recursion-gate.md` (shared queue — Telegram, WeChat, operator, tests; `channel_key` marks source)
 3. **Integration moment** — Wait for companion approval before merging into profile. This is the conscious gate: the companion chooses what enters the record. Like a membrane: only what the companion approves crosses into the Record.
-4. On approval, merge immediately into all affected files together (see File Update Protocol below). **One gate:** When the user says "approve" or approves candidates, process right away — do not wait for a separate "process the review queue" command. **Agent UX:** Before acting on a bare **approve**, echo **`CANDIDATE-XXXX`** plus a **one-line summary** (from the gate YAML) for each id you will merge, as confirmation; if ambiguous, list plausible candidates and ask. When **offering** a candidate for approval, always show id + one-line summary first (see `.cursor/rules/operator-style.mdc` § RECURSION-GATE).
+4. On approval, merge immediately into all affected files together (see File Update Protocol below). **One gate:** When the user says "approve" or approves candidates, process right away — do not wait for a separate "process the review queue" command. **Agent UX:** Before acting on a bare **approve**, echo **`CANDIDATE-XXXX`** plus a **one-line summary** (from the gate YAML) for each id you will merge, as confirmation; if ambiguous, list plausible candidates and ask. When **offering** a candidate for approval, always show id + one-line summary first.
 
 **Never** merge directly into self.md, self-archive.md (EVIDENCE), or prompt.py without staging and approval. See `docs/identity-fork-protocol.md` for the full protocol spec. **Companion-reported content** (e.g. "we listened to X", "merge X into grace-mar") must be staged as candidate(s) in RECURSION-GATE and merged only after companion approval — do not merge on report alone.
 **Reference implementation note:** Grace-Mar runs in manual-gate mode. No autonomous merge path is enabled.

@@ -17,11 +17,15 @@ Distinct modes govern what the agent may do. Avoid mixing them.
 
 When in doubt, default to Session (conversational, no merges).
 
+**Message-lane prefixes are cross-host doctrine:** When the operator prefixes a turn with `PLAN`, `EXECUTE`, `DOCSYNC`, or `EXECUTE_LOCAL`, treat that as a host-neutral scope signal governing edits, commits, and push behavior for the turn. Canonical spec: [docs/operator-agent-lanes.md](../../docs/operator-agent-lanes.md).
+
 **Implementation preference:** The operator prefers to see a short proposal (scope, approach, files to touch) before the agent implements. Propose first; implement after approval.
 
 **Proposal format:** One paragraph with: (1) Scope — what's in, what's out; (2) Approach — high-level steps or method; (3) Files — paths to create or modify. Trivial fixes (typos, obvious corrections) may skip proposal.
 
-**Edit restraint:** When the operator asks to "think about", "consider", or explores conceptually — answer in prose. **Perhaps** / **maybe** (or clear equivalent) means they want **opinion and tradeoffs first**, not an implicit implement — see `.cursor/rules/operator-style.mdc` (Hypothesis Mode / Perhaps–maybe). Do not edit files unless implementation is clearly requested ("do it", "implement", "add this"). If unclear, prefer answer over edit.
+**Edit restraint:** When the operator asks to "think about", "consider", or explores conceptually — answer in prose. **Perhaps** / **maybe** (or clear equivalent) means they want **opinion and tradeoffs first**, not an implicit implement. Do not edit files unless implementation is clearly requested ("do it", "implement", "add this"). If unclear, prefer answer over edit.
+
+**Short prompts are intentional:** Treat minimal operator prompts as a preference, not a lack of effort. Infer reasonable scope from context, produce fuller output from brief input, and ask for more specification only when the ambiguity is materially risky.
 
 ---
 
@@ -104,7 +108,6 @@ grace-mar/
 ├── AGENTS.md                    # Core doctrine (Layer 1)
 ├── README.md                    # Project overview
 ├── bootstrap/grace-mar-bootstrap.md  # Session bootstrap for Cursor
-├── .cursor/rules/grace-mar.mdc  # Cursor-specific governance rule
 ├── docs/
 │   ├── grace-mar-core.md       # Canonical governance (v2.0)
 │   ├── conceptual-framework.md # Fork vs. twin, emulation, terminology (AI parsing)
