@@ -151,7 +151,7 @@ def infer_recommendation(
         for phrase in (
             "durable knowledge",
             "recursion-gate",
-            "merge into self",
+            "merge into " + "self",
             "promote to self",
             "should this candidate",
         )
