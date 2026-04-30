@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Read-only static smoke test for the Strategy-Notebook Workbench visualizer HTML.
+"""Read-only static smoke test for the Strategy Notebook browser HTML.
 
 Checks structure, Workbench boundary markers, UI affordance strings/ids, dependency
 discipline, and fixture reference. Does not open a browser; does not certify
@@ -128,19 +128,18 @@ def _boundary_markers(t_lo: str) -> tuple[str, list[str]]:
 
 
 def _ui_affordances(t_lo: str) -> tuple[str, list[str]]:
-    # Each: at least one marker must match
+    # Each: at least one marker must match.
     checks: list[tuple[str, list[str]]] = [
-        ("search", ['type="search"', "search and", "id=\"q\"", "id='q'"]),
-        ("kind filter", ["kind-filters", "kind filter", "by kind", "node kind"]),
-        ("relation filter", ["rel-filters", "relation filter", "rel-filters"]),
-        ("reset", ["btn-reset", "reset filter", "reset "]),
-        ("selected node", ["selected node", "panel-detail", "d-label"]),
-        ("detail", ["panel-detail", "detail-empty", "detail content"]),
-        ("adjacency", ["adjacency", "panel-adj", "adj-out", "adj-in"]),
-        ("edge table", ["edges-table", "<th>source", "relation</th>"]),
-        ("summary", ["summary-kinds", "summary-row", "by kind (visible"]),
-        ("warnings", ["summary-warn", "warnings (fixture", "summary-warn-body"]),
-        ("copy path", ["copy path", "btn-copy", "clipboard", "writeText"]),
+        ("raw mode", ["rawmode", "raw inputs", "datelist"]),
+        ("expert mode", ["expertmode", "strategy expert", "expertlist"]),
+        ("date picker", ["id=\"datelist\"", "id='datelist'", "selecteddate", "date-scroll"]),
+        ("expert picker", ["id=\"expertlist\"", "id='expertlist'", "selectedexpert", "selector-scroll"]),
+        ("search", ['type="search"', "rawsearch", "expertsearch"]),
+        ("expert groups", ["expertgroups", "thread files", "pages"]),
+        ("file list", ["filelist", "file-button", "visiblefiles"]),
+        ("reader", ["readerpanel", "rendermarkdown", "selectedtitle"]),
+        ("open markdown", ["openraw", "open markdown", "window.open"]),
+        ("copy path", ["copy path", "copyselectedpath", "clipboard", "writetext"]),
     ]
     err: list[str] = []
     for name, pats in checks:
@@ -154,10 +153,10 @@ def _render_markers(t_lo: str) -> tuple[str, list[str]]:
         "render": "render",
         "filter": "filter",
         "selected": "selected",
-        "incoming": "incoming",
-        "outgoing": "outgoing",
-        "neighbors": "neighbor",
-        "unresolved": "unresolved",
+        "raw-input": "raw-input",
+        "expert": "expert",
+        "markdown": "markdown",
+        "fetch-file": "fileurl",
     }
     err = [f"code marker: {k}" for k, s in need.items() if s not in t_lo]
     return ("fail" if err else "pass"), err

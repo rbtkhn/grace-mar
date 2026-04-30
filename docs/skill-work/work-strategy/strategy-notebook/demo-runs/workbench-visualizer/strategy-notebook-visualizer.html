@@ -3,805 +3,1062 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Strategy Notebook Visualizer</title>
+  <title>Strategy Notebook</title>
   <style>
     :root {
-      --bg: #0f1419;
-      --card: #1a2332;
-      --border: #2a3a52;
-      --text: #e6edf3;
-      --muted: #8b9cb3;
-      --accent: #58a6ff;
-      --warn: #d4a72c;
-      --ok: #3fb950;
+      color-scheme: light;
+      --bg: #f7f8fa;
+      --surface: #ffffff;
+      --surface-2: #eef3f1;
+      --ink: #17202a;
+      --muted: #64707d;
+      --line: #d7dde3;
+      --line-strong: #aeb8c2;
+      --accent: #176f66;
+      --accent-2: #9a4f18;
+      --danger: #9f2f2f;
+      --mark: #fff3c4;
+      --code: #20262d;
+      --shadow: 0 10px 30px rgba(22, 32, 42, 0.08);
     }
+
     * { box-sizing: border-box; }
+
     body {
-      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.5;
       margin: 0;
-      padding: 1rem 1.25rem 3rem;
-      max-width: 1280px;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+      line-height: 1.45;
     }
-    h2 { font-size: 1.05rem; color: var(--muted); font-weight: 600; margin: 1.5rem 0 0.5rem; }
-    h3 { font-size: 0.9rem; margin: 0.75rem 0 0.25rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted); }
-    a { color: var(--accent); }
-    p.lead { color: var(--muted); margin: 0 0 1rem; }
-    .panel {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 1rem 1.1rem;
-      margin: 0.75rem 0;
+
+    button, input {
+      font: inherit;
     }
-    .panel pre, .mono, code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: 0.8rem; }
-    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
-    @media (max-width: 800px) { .grid-2 { grid-template-columns: 1fr; } }
-    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.6rem; }
-    @media (max-width: 900px) { .grid-3 { grid-template-columns: 1fr; } }
-    .alert {
-      background: #2d1f00;
-      border: 1px solid var(--warn);
-      color: #f0d78c;
-      padding: 0.75rem 1rem;
+
+    button {
+      border: 1px solid var(--line);
+      background: var(--surface);
+      color: var(--ink);
+      min-height: 2.25rem;
+      border-radius: 6px;
+      padding: 0.42rem 0.7rem;
+      cursor: pointer;
+    }
+
+    button:hover, button.active {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: #f1faf8;
+    }
+
+    input[type="search"] {
+      width: 100%;
+      min-height: 2.45rem;
+      border: 1px solid var(--line-strong);
+      border-radius: 6px;
+      background: var(--surface);
+      color: var(--ink);
+      padding: 0.45rem 0.65rem;
+    }
+
+    .date-scroll {
+      border: 1px solid var(--line);
       border-radius: 8px;
-      margin: 0.5rem 0 1rem;
+      background: var(--surface);
+      height: 22rem;
+      max-height: calc(100vh - 20rem);
+      min-height: 19rem;
+      overflow-y: auto;
+      overscroll-behavior: contain;
+    }
+
+    .selector-scroll {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--surface);
+      height: 22rem;
+      max-height: calc(100vh - 20rem);
+      min-height: 19rem;
+      overflow-y: auto;
+      overscroll-behavior: contain;
+    }
+
+    .date-button, .expert-button {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 0.55rem;
+      align-items: center;
+      border: 0;
+      border-bottom: 1px solid var(--line);
+      border-radius: 0;
+      background: transparent;
+      min-height: 2.05rem;
+      padding: 0.28rem 0.55rem;
+      text-align: left;
+    }
+
+    .expert-button {
+      min-height: 2.6rem;
+    }
+
+    .date-button:hover, .date-button.active,
+    .expert-button:hover, .expert-button.active {
+      background: #f1faf8;
+      color: var(--accent);
+    }
+
+    .date-button .date, .expert-button .expert-id {
+      font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+      font-size: 0.82rem;
+    }
+
+    .date-button .count, .expert-button .count {
+      color: var(--muted);
+      font-size: 0.76rem;
+    }
+
+    .expert-button .expert-name {
+      display: block;
+      font-weight: 680;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .expert-button .expert-id {
+      display: block;
+      color: var(--muted);
+    }
+
+    .app-shell {
+      min-height: 100vh;
+      display: grid;
+      grid-template-rows: auto 1fr;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(247, 248, 250, 0.95);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(10px);
+    }
+
+    .topbar {
+      max-width: 1500px;
+      margin: 0 auto;
+      padding: 1rem 1.25rem 0.85rem;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 1rem;
+      align-items: end;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(1.65rem, 2vw, 2.2rem);
+      line-height: 1.05;
+      letter-spacing: 0;
+    }
+
+    .status {
+      color: var(--muted);
+      font-size: 0.86rem;
+      margin-top: 0.35rem;
+    }
+
+    .mode-tabs {
+      display: inline-flex;
+      gap: 0.35rem;
+      align-items: center;
+      padding: 0.25rem;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--surface);
+    }
+
+    .mode-tabs button {
+      border-color: transparent;
+      min-width: 7.5rem;
+    }
+
+    main {
+      max-width: 1500px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 1rem 1.25rem 2rem;
+      display: grid;
+      grid-template-columns: minmax(18rem, 23rem) minmax(0, 1fr);
+      gap: 1rem;
+    }
+
+    aside, .reader {
+      min-width: 0;
+    }
+
+    aside {
+      display: grid;
+      align-content: start;
+      gap: 0.75rem;
+    }
+
+    .control-panel, .list-panel, .reader-panel, .meta-strip {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+    }
+
+    .control-panel {
+      padding: 0.85rem;
+      display: grid;
+      gap: 0.8rem;
+    }
+
+    .field label {
+      display: block;
+      margin: 0 0 0.25rem;
+      font-size: 0.78rem;
+      color: var(--muted);
+      text-transform: uppercase;
+    }
+
+    .counts {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 1.6rem;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 0.2rem 0.55rem;
+      color: var(--muted);
+      background: var(--surface-2);
+      font-size: 0.78rem;
+    }
+
+    .list-panel {
+      overflow: hidden;
+    }
+
+    .list-head {
+      padding: 0.7rem 0.8rem;
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+    }
+
+    .list-head h2 {
+      margin: 0;
+      font-size: 0.95rem;
+      letter-spacing: 0;
+    }
+
+    .file-list {
+      max-height: calc(100vh - 23rem);
+      min-height: 14rem;
+      overflow: auto;
+    }
+
+    .file-button {
+      width: 100%;
+      border: 0;
+      border-bottom: 1px solid var(--line);
+      border-radius: 0;
+      background: transparent;
+      color: var(--ink);
+      display: grid;
+      gap: 0.2rem;
+      padding: 0.7rem 0.8rem;
+      text-align: left;
+      min-height: 4.35rem;
+    }
+
+    .file-button:hover, .file-button.active {
+      background: #f2f7f6;
+      color: var(--ink);
+    }
+
+    .file-title {
+      font-weight: 680;
+      overflow-wrap: anywhere;
+    }
+
+    .file-path {
+      color: var(--muted);
+      font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+      font-size: 0.74rem;
+      overflow-wrap: anywhere;
+    }
+
+    .file-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      color: var(--muted);
+      font-size: 0.76rem;
+    }
+
+    .reader {
+      display: grid;
+      grid-template-rows: auto 1fr;
+      gap: 0.75rem;
+      min-height: calc(100vh - 7rem);
+    }
+
+    .meta-strip {
+      padding: 0.8rem 0.95rem;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .selected-title {
+      font-weight: 760;
+      font-size: 1.05rem;
+      overflow-wrap: anywhere;
+    }
+
+    .selected-path {
+      margin-top: 0.2rem;
+      font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+      color: var(--muted);
+      font-size: 0.78rem;
+      overflow-wrap: anywhere;
+    }
+
+    .reader-actions {
+      display: flex;
+      gap: 0.4rem;
+      flex-wrap: wrap;
+      justify-content: end;
+    }
+
+    .reader-panel {
+      overflow: auto;
+      min-height: 24rem;
+      max-height: calc(100vh - 13rem);
+      padding: 1.1rem;
+    }
+
+    .empty {
+      color: var(--muted);
+      padding: 1rem;
+    }
+
+    .markdown {
+      max-width: 72rem;
+    }
+
+    .markdown h1, .markdown h2, .markdown h3 {
+      letter-spacing: 0;
+      line-height: 1.15;
+    }
+
+    .markdown h1 {
+      font-size: 1.55rem;
+      margin: 0 0 0.9rem;
+    }
+
+    .markdown h2 {
+      font-size: 1.22rem;
+      margin: 1.5rem 0 0.5rem;
+      padding-top: 0.6rem;
+      border-top: 1px solid var(--line);
+    }
+
+    .markdown h3 {
+      font-size: 1.02rem;
+      margin: 1.1rem 0 0.35rem;
+    }
+
+    .markdown p {
+      margin: 0.55rem 0;
+    }
+
+    .markdown pre {
+      overflow: auto;
+      background: var(--code);
+      color: #f4f7fb;
+      border-radius: 8px;
+      padding: 0.85rem;
+      line-height: 1.45;
       white-space: pre-wrap;
     }
-    .status-bar h1 { font-size: 1.35rem; margin: 0 0 0.35rem; }
-    .status-bar .meta-line { font-size: 0.8rem; color: var(--muted); margin: 0.2rem 0; word-break: break-all; }
-    .status-bar .boundary-peek { font-size: 0.85rem; color: var(--text); margin: 0.65rem 0 0; }
-    .row-kv { display: flex; flex-wrap: wrap; gap: 0.35rem 1rem; margin: 0.25rem 0; }
-    .row-kv span:first-child { color: var(--muted); min-width: 9rem; }
-    #q {
-      width: 100%;
-      max-width: 36rem;
-      padding: 0.5rem 0.75rem;
-      font-size: 1rem;
-      background: #0d1117;
-      border: 1px solid var(--border);
-      color: var(--text);
-      border-radius: 6px;
+
+    .markdown code {
+      font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+      font-size: 0.88em;
+      background: #eef0f4;
+      padding: 0.08rem 0.25rem;
+      border-radius: 4px;
     }
-    .filter-tools { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 0.75rem; margin: 0.5rem 0; }
-    .filter-tools .group-label { color: var(--muted); font-size: 0.8rem; margin-right: 0.25rem; }
-    .chips { display: flex; flex-wrap: wrap; gap: 0.35rem; }
-    .chips label {
-      display: inline-flex; align-items: center; gap: 0.3rem;
-      background: #131c28; border: 1px solid var(--border);
-      border-radius: 4px; padding: 0.2rem 0.45rem; font-size: 0.8rem; cursor: pointer; user-select: none;
+
+    .markdown pre code {
+      background: transparent;
+      padding: 0;
     }
-    .chips input { margin: 0; cursor: pointer; }
-    .btn {
-      display: inline-block; padding: 0.4rem 0.7rem; font-size: 0.85rem;
-      background: #212a38; border: 1px solid var(--border); color: var(--text);
-      border-radius: 6px; cursor: pointer; font-family: inherit;
-    }
-    .btn:hover { background: #2a3548; }
-    .main-split {
-      display: grid;
-      grid-template-columns: 1fr min(340px, 100%);
-      gap: 1rem;
-      align-items: start;
-    }
-    @media (max-width: 960px) { .main-split { grid-template-columns: 1fr; } }
-    .aside-col { position: sticky; top: 0.5rem; }
-    .kind-section { margin-top: 1.1rem; }
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-      gap: 0.6rem;
-    }
-    .card {
-      background: #131c28;
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      padding: 0.65rem 0.75rem;
-      display: none;
-      cursor: pointer;
-      text-align: left;
-      font: inherit;
-      color: inherit;
-    }
-    .card.visible { display: block; }
-    .card:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
-    .card--selected { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent); }
-    .card .id { font-size: 0.75rem; color: var(--accent); }
-    .card .path { font-size: 0.72rem; color: var(--muted); word-break: break-all; }
-    .summary-panel h3 { margin-top: 0; }
-    .summary-panel .stat { font-size: 0.8rem; margin: 0.15rem 0; }
-    .summary-panel .warn-list { color: #f0d78c; font-size: 0.78rem; margin: 0.25rem 0 0; padding-left: 1.1rem; }
-    .edges-table {
+
+    .markdown table {
       width: 100%;
       border-collapse: collapse;
-      font-size: 0.85rem;
+      margin: 0.8rem 0;
+      font-size: 0.92rem;
     }
-    .edges-table th, .edges-table td {
-      border: 1px solid var(--border);
-      padding: 0.35rem 0.5rem;
+
+    .markdown th, .markdown td {
+      border: 1px solid var(--line);
+      padding: 0.42rem 0.5rem;
+      vertical-align: top;
+    }
+
+    .markdown th {
+      background: var(--surface-2);
       text-align: left;
     }
-    .edges-table th { background: #131c28; color: var(--muted); font-weight: 600; }
-    tr.edge--hl { background: #1a2a3c; }
-    tr.edge--warn { background: #2a2110; }
-    tr.edge--dim { opacity: 0.45; }
-    .bar { height: 2px; background: var(--border); margin: 1.1rem 0; }
-    .detail-block { font-size: 0.86rem; margin: 0.4rem 0; }
-    .detail-block .lbl { color: var(--muted); min-width: 4.5rem; display: inline-block; }
-    .adj-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin-top: 0.5rem; }
-    @media (max-width: 400px) { .adj-wrap { grid-template-columns: 1fr; } }
-    .adj-box {
-      background: #131c28; border: 1px solid var(--border); border-radius: 6px; padding: 0.5rem 0.6rem;
-      font-size: 0.8rem; max-height: 11rem; overflow: auto;
+
+    .markdown blockquote {
+      margin: 0.8rem 0;
+      border-left: 3px solid var(--accent-2);
+      padding: 0.25rem 0 0.25rem 0.8rem;
+      color: #39424e;
+      background: #fffaf0;
     }
-    .adj-box h4 { margin: 0 0 0.35rem; font-size: 0.75rem; color: var(--muted); }
-    .adj-line { margin: 0.15rem 0; }
-    .adj-line button { background: none; border: none; color: var(--accent); padding: 0; cursor: pointer; font: inherit; text-align: left; }
-    .adj-line button:hover { text-decoration: underline; }
+
+    .hidden { display: none !important; }
+
+    .expert-groups {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      padding: 0.65rem 0.8rem;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .thread-note {
+      display: grid;
+      gap: 0.25rem;
+      padding: 0.65rem 0.8rem;
+      border-bottom: 1px solid var(--line);
+      background: #fbfcfd;
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+
+    .thread-note strong {
+      color: var(--ink);
+    }
+
+    .group-button {
+      min-height: 2rem;
+      font-size: 0.82rem;
+    }
+
+    .source-link {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .source-link:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 980px) {
+      .topbar, main {
+        grid-template-columns: 1fr;
+      }
+
+      .mode-tabs {
+        width: 100%;
+      }
+
+      .mode-tabs button {
+        flex: 1;
+        min-width: 0;
+      }
+
+      .meta-strip {
+        grid-template-columns: 1fr;
+      }
+
+      .reader-actions {
+        justify-content: start;
+      }
+
+      .file-list, .reader-panel {
+        max-height: none;
+      }
+    }
   </style>
 </head>
 <body>
-  <div id="load-error" class="alert" style="display:none" role="alert"></div>
+  <div class="app-shell">
+    <header>
+      <div class="topbar">
+        <div>
+          <h1>Strategy Notebook</h1>
+          <div class="status" id="statusLine">Loading local notebook index...</div>
+        </div>
+        <nav class="mode-tabs" aria-label="View mode">
+          <button id="rawMode" class="active" type="button">Raw Inputs</button>
+          <button id="expertMode" type="button">Experts</button>
+        </nav>
+      </div>
+    </header>
 
-  <div class="panel status-bar" id="status-bar" style="display:none">
-    <h1>Strategy Notebook Visualizer</h1>
-    <div class="meta-line" id="status-meta"></div>
-    <p class="boundary-peek">
-      This is a <strong>Workbench structure map</strong> only. It has no Record authority and no gate effect.
-      Full scope: <a href="#workbench-boundary">Workbench boundary</a> below.
-    </p>
-  </div>
-
-  <div class="grid-2">
-    <div class="panel" id="workbench-boundary">
-      <h2>Workbench boundary</h2>
-      <p style="font-size:0.86rem;margin:0 0 0.5rem">
-        <strong>recordAuthority</strong> <code id="wb-auth">—</code><br />
-        <strong>gateEffect</strong> <code id="wb-gate">—</code><br />
-        <strong>truthScope</strong> <span id="wb-truth">—</span>
-      </p>
-      <p style="font-size:0.8rem;color:var(--muted);margin:0">
-        Screenshots or inspection receipts describe artifact behavior only; they do not certify external or strategic truth.
-      </p>
-    </div>
-    <div class="panel" id="panel-launch">
-      <h2>Launch / inspect / receipt</h2>
-      <p class="mono" style="margin:0 0 0.5rem">From repo root:</p>
-      <pre id="http-recipe" style="white-space:pre-wrap;margin:0 0 0.5rem;overflow:auto"></pre>
-      <p class="mono" style="margin:0.25rem 0">Open: <a href="http://localhost:8765/strategy-notebook-visualizer.html">http://localhost:8765/strategy-notebook-visualizer.html</a></p>
-      <p class="mono" style="color:var(--muted);font-size:0.8rem;margin:0.5rem 0 0">
-        Suggested screenshot: <code>artifacts/work-dev/workbench-screenshots/strategy-notebook-visualizer-pilot.png</code><br />
-        Suggested receipt: <code>artifacts/work-dev/workbench-receipts/</code> (use
-        <code>scripts/work_dev/new_workbench_receipt.py</code> after inspection; see
-        <a href="../../../../work-dev/workbench/SCRIPT-USAGE.md">work-dev/workbench/SCRIPT-USAGE.md</a>)
-      </p>
-    </div>
-  </div>
-
-  <p class="lead" id="lead-para" style="display:none">
-    Loads <code>strategy-notebook-visualizer.fixture.json</code> (structure only; not live repo state).
-  </p>
-
-  <div class="grid-3" id="summary-row" style="display:none">
-    <div class="panel summary-panel" id="summary-kinds">
-      <h3>By kind (visible / total)</h3>
-      <div class="stat" id="summary-kinds-body"></div>
-    </div>
-    <div class="panel summary-panel" id="summary-rels">
-      <h3>By relation (visible / total)</h3>
-      <div class="stat" id="summary-rels-body"></div>
-    </div>
-    <div class="panel summary-panel" id="summary-warn-panel">
-      <h3>Warnings (fixture / inspection only)</h3>
-      <div class="stat" id="summary-warn-body"></div>
-    </div>
-  </div>
-
-  <h2>Search and filters</h2>
-  <input type="search" id="q" placeholder="Search id, label, kind, path, description — also narrows the edge list" autocomplete="off" />
-  <div class="filter-tools">
-    <span class="group-label">Kind</span>
-    <div class="chips" id="kind-filters" aria-label="Filter by node kind"></div>
-    <span class="group-label">Relation</span>
-    <div class="chips" id="rel-filters" aria-label="Filter by edge relation"></div>
-  </div>
-  <div class="filter-tools">
-    <label><input type="checkbox" id="conn-only" /> Show only nodes connected to selected</label>
-    <span id="conn-hint" class="mono" style="color:var(--warn);font-size:0.8rem;display:none">Select a node to use this filter.</span>
-  </div>
-  <p><button type="button" class="btn" id="btn-reset">Reset filters and selection</button></p>
-
-  <div class="bar"></div>
-
-  <div class="main-split" id="main-split" style="display:none">
-    <div>
-      <h2>Nodes by kind</h2>
-      <div id="nodes-root"></div>
-    </div>
-    <div class="aside-col">
-      <div class="panel" id="panel-detail">
-        <h2>Selected node</h2>
-        <div id="detail-empty">No node selected. Click a node card.</div>
-        <div id="detail-content" style="display:none">
-          <div class="detail-block"><span class="lbl">label</span> <strong id="d-label"></strong></div>
-          <div class="detail-block"><span class="lbl">id</span> <code id="d-id"></code></div>
-          <div class="detail-block"><span class="lbl">kind</span> <span id="d-kind"></span></div>
-          <div class="detail-block"><span class="lbl">path</span> <code id="d-path" style="word-break:break-all"></code>
-            <button type="button" class="btn" id="btn-copy" style="margin-top:0.35rem">Copy path</button>
-            <span id="copy-toast" class="mono" style="color:var(--ok);font-size:0.75rem;margin-left:0.5rem;display:none">Copied</span>
+    <main>
+      <aside>
+        <section id="rawControls" class="control-panel">
+          <div class="field">
+            <label for="rawSearch">Filter raw inputs</label>
+            <input id="rawSearch" type="search" placeholder="title, path, thread, kind" />
           </div>
-          <div class="detail-block"><span class="lbl">description</span> <span id="d-desc"></span></div>
-          <div class="detail-block"><span class="lbl">authority</span> <code id="d-auth"></code></div>
-          <h3>Relationships</h3>
-          <p class="mono" style="font-size:0.8rem;margin:0" id="d-neigh-count"></p>
-          <div class="detail-block" id="d-out"></div>
-          <div class="detail-block" id="d-in"></div>
-        </div>
-      </div>
-      <div class="panel" id="panel-adj" style="display:none">
-        <h2>Adjacency (hub)</h2>
-        <p class="mono" style="font-size:0.75rem;color:var(--muted);margin:0 0 0.5rem">Deterministic list view — not a force layout.</p>
-        <div class="adj-wrap">
-          <div class="adj-box" id="adj-out"></div>
-          <div class="adj-box" id="adj-in"></div>
-        </div>
-      </div>
-    </div>
-  </div>
+          <div class="field">
+            <label for="dateList">Date</label>
+            <div id="dateList" class="date-scroll" role="listbox" aria-label="Raw input dates"></div>
+          </div>
+          <div id="rawCounts" class="counts"></div>
+        </section>
 
-  <div class="bar" id="bar-edges" style="display:none"></div>
-  <h2 id="h-edges" style="display:none">Edges (relationships)</h2>
-  <div class="panel" style="overflow-x:auto;display:none" id="edges-wrap">
-    <table class="edges-table" id="edges-table" aria-label="edge list">
-      <thead><tr><th>source</th><th>relation</th><th>target</th></tr></thead>
-      <tbody></tbody>
-    </table>
+      <section id="expertControls" class="control-panel hidden">
+          <div class="field">
+            <label for="expertSearch">Filter expert files</label>
+            <input id="expertSearch" type="search" placeholder="page, thread, bio, date" />
+          </div>
+          <div class="field">
+            <label for="expertList">Strategy expert</label>
+            <div id="expertList" class="selector-scroll" role="listbox" aria-label="Strategy experts"></div>
+          </div>
+          <div id="expertCounts" class="counts"></div>
+        </section>
+
+        <section class="list-panel">
+          <div class="list-head">
+            <h2 id="listTitle">Raw inputs</h2>
+            <span id="listCount" class="pill">0 files</span>
+          </div>
+          <div id="threadNote" class="thread-note hidden"></div>
+          <div id="expertGroups" class="expert-groups hidden"></div>
+          <div id="fileList" class="file-list"></div>
+        </section>
+      </aside>
+
+      <section class="reader">
+        <div class="meta-strip">
+          <div>
+            <div id="selectedTitle" class="selected-title">Select a file</div>
+            <div id="selectedPath" class="selected-path">No file loaded</div>
+          </div>
+          <div class="reader-actions">
+            <button id="openRaw" type="button">Open Markdown</button>
+            <button id="copyPath" type="button">Copy path</button>
+          </div>
+        </div>
+
+        <article id="readerPanel" class="reader-panel">
+          <div class="empty">Choose a date or expert from the left.</div>
+        </article>
+      </section>
+    </main>
   </div>
 
   <script>
-(function () {
-  var HTTP_Serve = "python3 -m http.server 8765 --directory docs/skill-work/work-strategy/strategy-notebook/demo-runs/workbench-visualizer";
-  var HTTP_URL = "http://localhost:8765/strategy-notebook-visualizer.html";
-
-  var state = {
-    nodes: [],
-    edges: [],
-    idTo: Object.create(null),
-    meta: {},
-    kinds: [],
-    rels: [],
-    kindOn: Object.create(null),
-    relOn: Object.create(null),
-    selected: null,
-    loadWarnings: [],
-    _edgeVis: null,
-  };
-
-  function setLoadError(msg) {
-    var el = document.getElementById("load-error");
-    el.style.display = "block";
-    el.textContent = msg;
-  }
-
-  function esc(s) {
-    if (s == null) return "";
-    return String(s)
-      .replace(/&/g, "&amp;")
-      .replace(/</g, "&lt;")
-      .replace(/>/g, "&gt;")
-      .replace(/"/g, "&quot;");
-  }
-
-  function fileProtocol() {
-    return window.location.protocol === "file:";
-  }
-
-  function nodeText(n) {
-    return (n.id + " " + n.label + " " + n.kind + " " + n.path + " " + (n.description || "")).toLowerCase();
-  }
-
-  function getQ() {
-    return (document.getElementById("q").value || "").toLowerCase().trim();
-  }
-
-  function textMatchNode(n, q) {
-    if (!q) return true;
-    return nodeText(n).indexOf(q) !== -1;
-  }
-
-  function textMatchEdge(e, q) {
-    if (!q) return true;
-    var t = (e.source + " " + e.relation + " " + e.target).toLowerCase();
-    return t.indexOf(q) !== -1;
-  }
-
-  function kindActive(kind) {
-    if (state.kindOn[kind] === false) return false;
-    return true;
-  }
-
-  function relActive(rel) {
-    if (state.relOn[rel] === false) return false;
-    return true;
-  }
-
-  function neighborIdsFor(selId) {
-    var s = new Set();
-    (state.edges || []).forEach(function (e) {
-      if (e.source === selId) s.add(e.target);
-      if (e.target === selId) s.add(e.source);
-    });
-    return s;
-  }
-
-  function buildVisibility() {
-    var q = getQ();
-    var sel = state.selected;
-    var conn = document.getElementById("conn-only").checked;
-    var nbr = sel ? neighborIdsFor(sel) : new Set();
-    if (conn && !sel) { conn = false; }
-
-    var visN = Object.create(null);
-    state.nodes.forEach(function (n) {
-      var id = n.id;
-      if (!kindActive(n.kind) || !textMatchNode(n, q)) { visN[id] = false; return; }
-      if (conn) {
-        visN[id] = id === sel || nbr.has(id);
-        return;
-      }
-      visN[id] = true;
-    });
-    return { visN: visN, q: q, conn: conn, sel: sel, nbr: nbr };
-  }
-
-  function buildEdgeVisibility(vis) {
-    return function (e) {
-      if (!relActive(e.relation) || !textMatchEdge(e, vis.q)) return false;
-      if (vis.conn && vis.sel) {
-        if (e.source !== vis.sel && e.target !== vis.sel) return false;
-        return true;
-      }
-      var a = state.idTo[e.source];
-      var b = state.idTo[e.target];
-      if (!a || !b) return true;
-      return !!vis.visN[a.id] && !!vis.visN[b.id];
+    const state = {
+      fixture: null,
+      mode: "raw",
+      selectedDate: "",
+      selectedExpert: "",
+    selectedGroup: "threads",
+      selectedFile: null,
+      visibleFiles: []
     };
-  }
 
-  function isUnresolved(e) {
-    return !state.idTo[e.source] || !state.idTo[e.target];
-  }
-
-  function countKindsFiltered(vis) {
-    var tot = Object.create(null);
-    var on = Object.create(null);
-    state.nodes.forEach(function (n) {
-      var k = n.kind;
-      if (!tot[k]) tot[k] = 0;
-      tot[k] += 1;
-      if (vis.visN[n.id]) { if (!on[k]) on[k] = 0; on[k] += 1; }
-    });
-    return { tot: tot, on: on };
-  }
-
-  function countRelsFiltered(vis, edgeVis) {
-    var tot = Object.create(null);
-    var on = Object.create(null);
-    state.edges.forEach(function (e) {
-      var r = e.relation;
-      if (!tot[r]) tot[r] = 0;
-      tot[r] += 1;
-      if (edgeVis(e)) { if (!on[r]) on[r] = 0; on[r] += 1; }
-    });
-    return { tot: tot, on: on };
-  }
-
-  function renderSummary(vis) {
-    var edgeVis = state._edgeVis;
-    if (!edgeVis) return;
-    var ck = countKindsFiltered(vis);
-    var elK = document.getElementById("summary-kinds-body");
-    elK.innerHTML = "";
-    state.kinds.forEach(function (k) {
-      var t = (ck.tot[k] || 0);
-      var o = (ck.on[k] == null ? 0 : ck.on[k]);
-      var row = document.createElement("div");
-      row.className = "stat";
-      row.textContent = k + ": " + o + " / " + t;
-      elK.appendChild(row);
-    });
-
-    var cr = countRelsFiltered(vis, edgeVis);
-    var elR = document.getElementById("summary-rels-body");
-    elR.innerHTML = "";
-    state.rels.forEach(function (r) {
-      var t = (cr.tot[r] || 0);
-      var o = (cr.on[r] == null ? 0 : cr.on[r]);
-      var row = document.createElement("div");
-      row.className = "stat";
-      row.textContent = r + ": " + o + " / " + t;
-      elR.appendChild(row);
-    });
-
-    var wbody = document.getElementById("summary-warn-body");
-    wbody.innerHTML = "";
-    var all = (state.loadWarnings || []).slice();
-    if (document.getElementById("conn-only").checked && !state.selected) {
-      all.push("“Connected to selected” is on but no node is selected; showing all nodes.");
-    }
-    if (all.length === 0) {
-      wbody.textContent = "None. (Warnings are for fixture/inspection, not strategic assessment.)";
-    } else {
-      var ul = document.createElement("ul");
-      ul.className = "warn-list";
-      all.forEach(function (m) {
-        var li = document.createElement("li");
-        li.textContent = m;
-        ul.appendChild(li);
-      });
-      wbody.appendChild(ul);
-    }
-  }
-
-  function selectNode(n) {
-    if (!n) {
-      state.selected = null;
-    } else {
-      state.selected = n.id;
-    }
-    fullRender();
-  }
-
-  function renderNodes(vis) {
-    if (!vis) return;
-    var byKind = {};
-    state.nodes.forEach(function (n) {
-      if (!byKind[n.kind]) byKind[n.kind] = [];
-      byKind[n.kind].push(n);
-    });
-    var root = document.getElementById("nodes-root");
-    root.innerHTML = "";
-    Object.keys(byKind).sort().forEach(function (kind) {
-      if (!kindActive(kind)) return;
-      var section = document.createElement("div");
-      section.className = "kind-section";
-      var h3 = document.createElement("h3");
-      h3.textContent = kind;
-      var cards = document.createElement("div");
-      cards.className = "cards";
-      byKind[kind].forEach(function (n) {
-        var c = document.createElement("button");
-        c.type = "button";
-        c.className = "card" + (vis.visN[n.id] ? " visible" : "");
-        c.className += state.selected === n.id ? " card--selected" : "";
-        c.innerHTML =
-          '<div class="id">' + esc(n.id) + "</div>" +
-          "<strong>" + esc(n.label) + "</strong>" +
-          '<div class="path">' + esc(n.path) + "</div>" +
-          "<p style='font-size:0.85rem;margin:0.35rem 0 0'>" + esc(n.description || "") + "</p>" +
-          '<p style="font-size:0.72rem;color:#8b9cb3;margin:0.25rem 0 0">authority: ' + esc(n.authority) + "</p>";
-        c.addEventListener("click", function () {
-          if (state.selected === n.id) { selectNode(null); return; }
-          selectNode(n);
-        });
-        cards.appendChild(c);
-      });
-      section.appendChild(h3);
-      section.appendChild(cards);
-      var any = false;
-      for (var i = 0; i < cards.children.length; i++) {
-        if (cards.children[i].classList.contains("visible")) { any = true; break; }
-      }
-      if (any) root.appendChild(section);
-    });
-  }
-
-  function renderEdges(vis) {
-    var edgeVis = state._edgeVis;
-    if (!edgeVis) return;
-    var sel = state.selected;
-    var tb = document.querySelector("#edges-table tbody");
-    tb.innerHTML = "";
-    (state.edges || []).forEach(function (e) {
-      if (!edgeVis(e)) return;
-      var tr = document.createElement("tr");
-      var un = isUnresolved(e);
-      var relSel = sel && (e.source === sel || e.target === sel);
-      if (un) { tr.className = "edge--warn"; tr.title = "Unresolved source or target id in fixture (inspection only)."; }
-      else if (relSel) { tr.className = "edge--hl"; tr.title = ""; }
-      tr.innerHTML = "<td><code>" + esc(e.source) + "</code></td><td>" + esc(e.relation) + "</td><td><code>" + esc(e.target) + "</code></td>";
-      tb.appendChild(tr);
-    });
-  }
-
-  function renderDetail() {
-    var n = state.selected ? state.idTo[state.selected] : null;
-    var empty = document.getElementById("detail-empty");
-    var cont = document.getElementById("detail-content");
-    var padj = document.getElementById("panel-adj");
-    if (!n) {
-      empty.style.display = "block";
-      cont.style.display = "none";
-      padj.style.display = "none";
-      return;
-    }
-    empty.style.display = "none";
-    cont.style.display = "block";
-    padj.style.display = "block";
-    document.getElementById("d-label").textContent = n.label;
-    document.getElementById("d-id").textContent = n.id;
-    document.getElementById("d-kind").textContent = n.kind;
-    document.getElementById("d-path").textContent = n.path;
-    document.getElementById("d-desc").textContent = n.description || "—";
-    document.getElementById("d-auth").textContent = n.authority || "—";
-    var out = [];
-    var inn = [];
-    (state.edges || []).forEach(function (e) {
-      if (e.source === n.id) {
-        out.push(e);
-        return;
-      }
-      if (e.target === n.id) inn.push(e);
-    });
-    var nbCount = 0;
-    var seen = Object.create(null);
-    out.forEach(function (e) { if (!seen[e.target]) { seen[e.target] = 1; nbCount++; } });
-    inn.forEach(function (e) { if (!seen[e.source]) { seen[e.source] = 1; nbCount++; } });
-    document.getElementById("d-neigh-count").textContent = "Neighboring nodes (distinct): " + nbCount + " | outgoing: " + out.length + " | incoming: " + inn.length;
-    var outH = "Outgoing: ";
-    if (out.length) {
-      outH = "<p style='font-size:0.8rem;margin:0' class='mono'>";
-      out.forEach(function (e, i) {
-        outH += (i ? "<br />" : "") + esc(e.relation) + " → <code>" + esc(e.target) + "</code>";
-      });
-      outH += "</p>";
-    } else { outH = "<p class='mono' style='font-size:0.8rem;margin:0'>None</p>"; }
-    document.getElementById("d-out").innerHTML = outH;
-    var inH = "Incoming: ";
-    if (inn.length) {
-      inH = "<p style='font-size:0.8rem;margin:0' class='mono'>";
-      inn.forEach(function (e, i) {
-        inH += (i ? "<br />" : "") + "<code>" + esc(e.source) + "</code> — " + esc(e.relation);
-      });
-      inH += "</p>";
-    } else { inH = "<p class='mono' style='font-size:0.8rem;margin:0'>None</p>"; }
-    document.getElementById("d-in").innerHTML = inH;
-    var ao = document.getElementById("adj-out");
-    var ai = document.getElementById("adj-in");
-    ao.innerHTML = "<h4>Outgoing</h4>";
-    if (out.length) {
-      out.forEach(function (e) {
-        var line = document.createElement("div");
-        line.className = "adj-line";
-        var btn = document.createElement("button");
-        var tgt = state.idTo[e.target];
-        btn.type = "button";
-        if (tgt) {
-          btn.textContent = e.relation + " → " + e.target;
-          btn.addEventListener("click", function () { selectNode(tgt); });
-        } else {
-          btn.textContent = e.relation + " → " + e.target + " (missing id)";
-          btn.disabled = true;
-        }
-        line.appendChild(btn);
-        ao.appendChild(line);
-      });
-    } else { ao.appendChild(document.createTextNode("—")); }
-    ai.innerHTML = "<h4>Incoming</h4>";
-    if (inn.length) {
-      inn.forEach(function (e) {
-        var line = document.createElement("div");
-        line.className = "adj-line";
-        var btn = document.createElement("button");
-        var src = state.idTo[e.source];
-        btn.type = "button";
-        if (src) {
-          btn.textContent = e.source + " ← " + e.relation;
-          btn.addEventListener("click", function () { selectNode(src); });
-        } else {
-          btn.textContent = e.source + " ← " + e.relation + " (missing id)";
-          btn.disabled = true;
-        }
-        line.appendChild(btn);
-        ai.appendChild(line);
-      });
-    } else { ai.appendChild(document.createTextNode("—")); }
-  }
-
-  function renderStatusBar() {
-    var m = state.meta;
-    var lines = [
-      "schemaVersion: " + (m.schemaVersion != null ? m.schemaVersion : "—") +
-        "  ·  generatedAt: " + (m.generatedAt != null ? m.generatedAt : "—") +
-        "  ·  sourceRoot: " + (m.sourceRoot != null ? m.sourceRoot : "—") +
-        "  ·  nodes: " + (state.nodes ? state.nodes.length : 0) +
-        "  ·  edges: " + (state.edges ? state.edges.length : 0) +
-        "  ·  recordAuthority: " + (m.recordAuthority != null ? m.recordAuthority : "—") +
-        "  ·  gateEffect: " + (m.gateEffect != null ? m.gateEffect : "—") +
-        "  ·  truthScope: " + (m.truthScope != null ? m.truthScope : "—")
-    ];
-    document.getElementById("status-meta").textContent = lines[0];
-    document.getElementById("wb-auth").textContent = m.recordAuthority != null ? m.recordAuthority : "— (missing in fixture)";
-    document.getElementById("wb-gate").textContent = m.gateEffect != null ? m.gateEffect : "— (missing in fixture)";
-    document.getElementById("wb-truth").textContent = m.truthScope != null ? m.truthScope : "— (missing in fixture)";
-  }
-
-  function fullRender() {
-    var vis = buildVisibility();
-    state._edgeVis = buildEdgeVisibility(vis);
-    document.getElementById("conn-hint").style.display =
-      (document.getElementById("conn-only").checked && !state.selected) ? "inline" : "none";
-    renderStatusBar();
-    renderSummary(vis);
-    renderNodes(vis);
-    renderEdges(vis);
-    renderDetail();
-  }
-
-  function applyFixture(data) {
-    state.loadWarnings = [];
-    if (!data || typeof data !== "object" || Array.isArray(data)) {
-      state.loadWarnings.push("Root JSON is not an object; no nodes/edges loaded.");
-      data = {};
-    }
-    var nodes = data.nodes;
-    var edges = data.edges;
-    if (!Array.isArray(nodes)) { state.loadWarnings.push("nodes is missing or not an array; using []."); nodes = []; }
-    if (!Array.isArray(edges)) { state.loadWarnings.push("edges is missing or not an array; using []."); edges = []; }
-    if (data.recordAuthority == null) state.loadWarnings.push("Top-level recordAuthority is missing in fixture JSON.");
-    if (data.gateEffect == null) state.loadWarnings.push("Top-level gateEffect is missing in fixture JSON.");
-    if (data.truthScope == null) state.loadWarnings.push("Top-level truthScope is missing in fixture JSON.");
-    if (data.schemaVersion == null) state.loadWarnings.push("Top-level schemaVersion is missing in fixture JSON.");
-    state.nodes = nodes;
-    state.edges = edges;
-    state.idTo = Object.create(null);
-    var dup = 0;
-    state.nodes.forEach(function (n) {
-      if (!n || n.id == null) return;
-      if (state.idTo[n.id]) dup++;
-      state.idTo[n.id] = n;
-    });
-    if (dup) state.loadWarnings.push("Duplicate node ids: " + dup + " (last wins; inspection only).");
-    state.meta = {
-      schemaVersion: data.schemaVersion,
-      generatedAt: data.generatedAt,
-      sourceRoot: data.sourceRoot,
-      recordAuthority: data.recordAuthority,
-      gateEffect: data.gateEffect,
-      truthScope: data.truthScope
+    const els = {
+      statusLine: document.getElementById("statusLine"),
+      rawMode: document.getElementById("rawMode"),
+      expertMode: document.getElementById("expertMode"),
+      rawControls: document.getElementById("rawControls"),
+      expertControls: document.getElementById("expertControls"),
+      dateList: document.getElementById("dateList"),
+    expertList: document.getElementById("expertList"),
+      rawSearch: document.getElementById("rawSearch"),
+      expertSearch: document.getElementById("expertSearch"),
+      rawCounts: document.getElementById("rawCounts"),
+    expertCounts: document.getElementById("expertCounts"),
+    listTitle: document.getElementById("listTitle"),
+    listCount: document.getElementById("listCount"),
+    threadNote: document.getElementById("threadNote"),
+    expertGroups: document.getElementById("expertGroups"),
+      fileList: document.getElementById("fileList"),
+      selectedTitle: document.getElementById("selectedTitle"),
+      selectedPath: document.getElementById("selectedPath"),
+      readerPanel: document.getElementById("readerPanel"),
+      openRaw: document.getElementById("openRaw"),
+      copyPath: document.getElementById("copyPath")
     };
-    var kindSet = Object.create(null);
-    var relSet = Object.create(null);
-    state.nodes.forEach(function (n) { if (n && n.kind) kindSet[n.kind] = true; });
-    state.edges.forEach(function (e) { if (e && e.relation) relSet[e.relation] = true; });
-    state.kinds = Object.keys(kindSet).sort();
-    state.rels = Object.keys(relSet).sort();
-    state.kindOn = Object.create(null);
-    state.relOn = Object.create(null);
-    state.rels.forEach(function (r) { state.relOn[r] = true; });
-    state.kinds.forEach(function (k) { state.kindOn[k] = true; });
-    (state.edges || []).forEach(function (e) {
-      if (state.idTo[e.source] && state.idTo[e.target]) return;
-      if (!e.source && !e.target) return;
-      var msg = "Edge references missing node id: " + e.source + " " + e.relation + " " + e.target;
-      if (state.loadWarnings.indexOf("Unresolved edge endpoints present (see edge table).") === -1) {
-        state.loadWarnings.push("Unresolved edge endpoints present (see edge table).");
-      }
-    });
-    showMainUi();
-  }
 
-  function showMainUi() {
-    document.getElementById("status-bar").style.display = "block";
-    document.getElementById("lead-para").style.display = "block";
-    document.getElementById("summary-row").style.display = "grid";
-    document.getElementById("main-split").style.display = "grid";
-    document.getElementById("bar-edges").style.display = "block";
-    document.getElementById("h-edges").style.display = "block";
-    document.getElementById("edges-wrap").style.display = "block";
-    buildFilterChips();
-    fullRender();
-  }
-
-  function buildFilterChips() {
-    var kf = document.getElementById("kind-filters");
-    kf.innerHTML = "";
-    state.kinds.forEach(function (k) {
-      var lab = document.createElement("label");
-      var cb = document.createElement("input");
-      cb.type = "checkbox";
-      cb.checked = state.kindOn[k] !== false;
-      cb.dataset.kind = k;
-      cb.addEventListener("change", function () { state.kindOn[k] = cb.checked; fullRender(); });
-      lab.appendChild(cb);
-      lab.appendChild(document.createTextNode(" " + k));
-      kf.appendChild(lab);
-    });
-    var rf = document.getElementById("rel-filters");
-    rf.innerHTML = "";
-    state.rels.forEach(function (r) {
-      var lab = document.createElement("label");
-      var cb = document.createElement("input");
-      cb.type = "checkbox";
-      cb.checked = state.relOn[r] !== false;
-      cb.addEventListener("change", function () { state.relOn[r] = cb.checked; fullRender(); });
-      lab.appendChild(cb);
-      lab.appendChild(document.createTextNode(" " + r));
-      rf.appendChild(lab);
-    });
-  }
-
-  function initListeners() {
-    var qin = document.getElementById("q");
-    qin.addEventListener("input", function () { fullRender(); });
-    document.getElementById("conn-only").addEventListener("change", function () { fullRender(); });
-    document.getElementById("btn-reset").addEventListener("click", function () {
-      document.getElementById("q").value = "";
-      document.getElementById("conn-only").checked = false;
-      state.kinds.forEach(function (k) { state.kindOn[k] = true; });
-      state.rels.forEach(function (r) { state.relOn[r] = true; });
-      state.selected = null;
-      buildFilterChips();
-      fullRender();
-    });
-    document.getElementById("btn-copy").addEventListener("click", function () {
-      var n = state.selected ? state.idTo[state.selected] : null;
-      if (!n) return;
-      var path = n.path;
-      var toast = document.getElementById("copy-toast");
-      var done = function () {
-        toast.style.display = "inline";
-        setTimeout(function () { toast.style.display = "none"; }, 2000);
-      };
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(path).then(done).catch(function () { fallback(); });
-        return;
-      }
-      function fallback() {
-        var ta = document.createElement("textarea");
-        ta.value = path;
-        document.body.appendChild(ta);
-        ta.select();
-        try { document.execCommand("copy"); done(); } catch (e) { }
-        document.body.removeChild(ta);
-      }
-      fallback();
-    });
-  }
-
-  function preRecipe() {
-    var pre = document.getElementById("http-recipe");
-    if (pre) pre.textContent = HTTP_Serve;
-  }
-
-  function init() {
-    preRecipe();
-    if (fileProtocol()) {
-      setLoadError(
-        "Opened as file:// — browsers block fetch() to local JSON. From repo root run:\n" + HTTP_Serve + "\n…then open " + HTTP_URL
-      );
-      return;
+    function escapeHtml(value) {
+      return String(value ?? "")
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
     }
-    initListeners();
-    fetch("strategy-notebook-visualizer.fixture.json", { cache: "no-store" })
-      .then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
-      .then(function (data) {
-        try {
-          applyFixture(data);
-        } catch (e) {
-          setLoadError("Error applying fixture: " + (e && e.message ? e.message : String(e)) + " — " + HTTP_Serve);
-        }
+
+    function fileUrl(path) {
+      return "../../" + String(path).split("/").map(encodeURIComponent).join("/");
+    }
+
+    function fmtBytes(bytes) {
+      if (!bytes && bytes !== 0) return "";
+      if (bytes < 1024) return `${bytes} B`;
+      if (bytes < 1024 * 1024) return `${Math.round(bytes / 1024)} KB`;
+      return `${(bytes / (1024 * 1024)).toFixed(1)} MB`;
+    }
+
+    function compactTitle(file) {
+      return file.title && file.title !== file.name ? file.title : file.name;
+    }
+
+    function searchable(file) {
+      return [
+        file.name,
+        file.title,
+        file.path,
+        file.kind,
+        file.thread,
+        file.pubDate,
+        file.ingestDate,
+        file.sourceUrl
+      ].filter(Boolean).join(" ").toLowerCase();
+    }
+
+    function setMode(mode) {
+      state.mode = mode;
+      els.rawMode.classList.toggle("active", mode === "raw");
+      els.expertMode.classList.toggle("active", mode === "expert");
+    els.rawControls.classList.toggle("hidden", mode !== "raw");
+    els.expertControls.classList.toggle("hidden", mode !== "expert");
+    els.expertGroups.classList.toggle("hidden", mode !== "expert");
+    els.threadNote.classList.toggle("hidden", mode !== "expert");
+    renderList();
+    }
+
+    function selectedDate() {
+      return state.fixture.dates.find((d) => d.date === state.selectedDate) || state.fixture.dates[0];
+    }
+
+    function selectedExpert() {
+      return state.fixture.experts.find((e) => e.id === state.selectedExpert) || state.fixture.experts[0];
+    }
+
+    function groupLabels(expert) {
+      return [
+      ["threads", "Thread / Continuity"],
+      ["pages", "Pages / Work Product"],
+      ["bio", "Bio / Profile"],
+      ["transcripts", "Transcript / Raw Support"],
+      ["minds", "Mind / Lens"],
+      ["templates", "Templates"],
+      ["manifests", "Manifests"],
+        ["other", "Other"]
+      ].filter(([key]) => (expert.files[key] || []).length > 0);
+    }
+
+    function groupDisplayName(key) {
+      const labels = new Map([
+        ["all", "All"],
+        ["threads", "Thread / Continuity"],
+        ["pages", "Pages / Work Product"],
+        ["bio", "Bio / Profile"],
+        ["transcripts", "Transcript / Raw Support"],
+        ["minds", "Mind / Lens"],
+        ["templates", "Templates"],
+        ["manifests", "Manifests"],
+        ["other", "Other"]
+      ]);
+      return labels.get(key) || key;
+    }
+
+    function renderControls() {
+      els.dateList.innerHTML = state.fixture.dates
+        .slice()
+        .reverse()
+        .map((day) => `
+          <button
+            type="button"
+            class="date-button"
+            role="option"
+            aria-selected="false"
+            data-date="${escapeHtml(day.date)}"
+          >
+            <span class="date">${escapeHtml(day.date)}</span>
+            <span class="count">${day.count}</span>
+          </button>
+        `)
+        .join("");
+      state.selectedDate = state.fixture.dates[state.fixture.dates.length - 1]?.date || "";
+
+    els.expertList.innerHTML = state.fixture.experts
+      .map((expert) => {
+        const total = Object.values(expert.files).flat().length;
+        return `
+          <button
+            type="button"
+            class="expert-button"
+            role="option"
+            aria-selected="false"
+            data-expert="${escapeHtml(expert.id)}"
+            title="${escapeHtml(expert.label)}"
+          >
+            <span>
+              <span class="expert-name">${escapeHtml(expert.label)}</span>
+              <span class="expert-id">${escapeHtml(expert.id)}</span>
+            </span>
+            <span class="count">${total}</span>
+          </button>
+        `;
       })
-      .catch(function (err) {
-        setLoadError(
-          "Could not load strategy-notebook-visualizer.fixture.json. Serve this directory with:\n" + HTTP_Serve
-        );
-      });
+      .join("");
+      state.selectedExpert = state.fixture.experts[0]?.id || "";
+
+      renderRawCounts();
+      renderExpertCounts();
+    }
+
+    function renderRawCounts() {
+      const totalDates = state.fixture.dates.length;
+      const totalFiles = state.fixture.dates.reduce((sum, day) => sum + day.count, 0);
+      const day = selectedDate();
+      els.rawCounts.innerHTML = [
+        `<span class="pill">${totalDates} dates</span>`,
+        `<span class="pill">${totalFiles} raw files</span>`,
+        `<span class="pill">${day ? day.count : 0} on selected date</span>`
+      ].join("");
+    }
+
+    function renderExpertCounts() {
+    const expert = selectedExpert();
+      if (!expert) {
+        els.expertCounts.innerHTML = "";
+        return;
+      }
+    const pageCount = expert.counts.pages || 0;
+    const threadCount = expert.counts.threads || 0;
+    const monthly = (expert.files.threads || []).filter((file) => /-thread-\d{4}-\d{2}\.md$/.test(file.name)).length;
+    els.expertCounts.innerHTML = [
+      `<span class="pill">${state.fixture.experts.length} experts</span>`,
+      `<span class="pill">${threadCount} thread files</span>`,
+      `<span class="pill">${pageCount} pages</span>`,
+      `<span class="pill">${expert.counts.transcripts || 0} transcripts</span>`
+    ].join("");
+    els.threadNote.innerHTML = `
+      <strong>${escapeHtml(expert.id)} expert surface</strong>
+      <span>Thread / Continuity tracks temporal narrative and analytical continuity. Pages / Work Product are focused analytical objects. ${threadCount ? `${threadCount} thread file${threadCount === 1 ? "" : "s"}` : "No thread file found"}${monthly ? `, including ${monthly} monthly segment file${monthly === 1 ? "" : "s"}` : ""}.</span>
+    `;
   }
-  init();
-})();
+
+    function currentFiles() {
+      if (state.mode === "raw") {
+        const day = selectedDate();
+        const q = els.rawSearch.value.trim().toLowerCase();
+        const files = day ? day.files : [];
+        return q ? files.filter((file) => searchable(file).includes(q)) : files;
+      }
+
+      const expert = selectedExpert();
+      if (!expert) return [];
+      const q = els.expertSearch.value.trim().toLowerCase();
+      const groups = state.selectedGroup === "all"
+        ? Object.values(expert.files).flat()
+        : (expert.files[state.selectedGroup] || []);
+      return q ? groups.filter((file) => searchable(file).includes(q)) : groups;
+    }
+
+    function renderExpertGroups() {
+      const expert = selectedExpert();
+      if (!expert) {
+        els.expertGroups.innerHTML = "";
+        return;
+      }
+      const groups = groupLabels(expert);
+      if (!groups.some(([key]) => key === state.selectedGroup)) {
+        state.selectedGroup = groups[0]?.[0] || "all";
+      }
+      const total = Object.values(expert.files).flat().length;
+      els.expertGroups.innerHTML = [
+        `<button type="button" class="group-button ${state.selectedGroup === "all" ? "active" : ""}" data-group="all">All ${total}</button>`,
+        ...groups.map(([key, label]) => {
+          const count = expert.files[key].length;
+          const active = state.selectedGroup === key ? "active" : "";
+          return `<button type="button" class="group-button ${active}" data-group="${escapeHtml(key)}">${escapeHtml(label)} ${count}</button>`;
+        })
+      ].join("");
+    }
+
+    function renderList() {
+      renderRawCounts();
+      renderExpertCounts();
+      renderExpertGroups();
+
+      const files = currentFiles();
+      state.visibleFiles = files;
+    const title = state.mode === "raw"
+    ? `Raw inputs for ${state.selectedDate}`
+    : `${selectedExpert()?.id || "expert"}: ${groupDisplayName(state.selectedGroup)}`;
+      els.listTitle.textContent = title;
+      els.listCount.textContent = `${files.length} ${files.length === 1 ? "file" : "files"}`;
+
+    if (!files.length) {
+      els.fileList.innerHTML = `<div class="empty">No files match the current selection.</div>`;
+      renderDateActiveState();
+      renderExpertActiveState();
+      return;
+    }
+
+      els.fileList.innerHTML = files.map((file, index) => {
+        const active = state.selectedFile && state.selectedFile.path === file.path ? "active" : "";
+        const meta = [
+          file.kind,
+          file.thread ? `thread:${file.thread}` : "",
+          file.pubDate || file.ingestDate || "",
+          fmtBytes(file.bytes)
+        ].filter(Boolean);
+        return `
+          <button type="button" class="file-button ${active}" data-index="${index}">
+            <span class="file-title">${escapeHtml(compactTitle(file))}</span>
+            <span class="file-path">${escapeHtml(file.path)}</span>
+            <span class="file-meta">${meta.map((m) => `<span>${escapeHtml(m)}</span>`).join("")}</span>
+          </button>
+        `;
+    }).join("");
+    renderDateActiveState();
+    renderExpertActiveState();
+  }
+
+  function renderDateActiveState() {
+    els.dateList.querySelectorAll(".date-button").forEach((button) => {
+      const active = button.dataset.date === state.selectedDate;
+      button.classList.toggle("active", active);
+      button.setAttribute("aria-selected", active ? "true" : "false");
+    });
+  }
+
+  function renderExpertActiveState() {
+    els.expertList.querySelectorAll(".expert-button").forEach((button) => {
+      const active = button.dataset.expert === state.selectedExpert;
+      button.classList.toggle("active", active);
+      button.setAttribute("aria-selected", active ? "true" : "false");
+    });
+  }
+
+    async function loadFile(file) {
+      state.selectedFile = file;
+      els.selectedTitle.textContent = compactTitle(file);
+      els.selectedPath.textContent = file.repoPath || file.path;
+      els.readerPanel.innerHTML = `<div class="empty">Loading ${escapeHtml(file.name)}...</div>`;
+      renderList();
+
+      try {
+        const response = await fetch(fileUrl(file.path), { cache: "no-store" });
+        if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
+        const text = await response.text();
+        els.readerPanel.innerHTML = `<div class="markdown">${renderMarkdown(text)}</div>`;
+      } catch (err) {
+        els.readerPanel.innerHTML = `
+          <div class="empty">
+            Could not load <strong>${escapeHtml(file.path)}</strong><br />
+            ${escapeHtml(err.message || err)}
+          </div>
+        `;
+      }
+    }
+
+    function renderMarkdown(markdown) {
+      const lines = markdown.replace(/\r\n/g, "\n").split("\n");
+      const out = [];
+      let inCode = false;
+      let code = [];
+      let inList = false;
+      let inTable = false;
+
+      function closeList() {
+        if (inList) {
+          out.push("</ul>");
+          inList = false;
+        }
+      }
+
+      function closeTable() {
+        if (inTable) {
+          out.push("</tbody></table>");
+          inTable = false;
+        }
+      }
+
+      function inline(text) {
+        return escapeHtml(text)
+          .replace(/`([^`]+)`/g, "<code>$1</code>")
+          .replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>")
+          .replace(/\[([^\]]+)\]\(([^)]+)\)/g, (m, label, href) => {
+            const cleanHref = escapeHtml(href);
+            return `<a class="source-link" href="${cleanHref}" target="_blank" rel="noreferrer">${escapeHtml(label)}</a>`;
+          });
+      }
+
+      function tableCells(line, tag) {
+        return line.trim().replace(/^\|/, "").replace(/\|$/, "").split("|")
+          .map((cell) => `<${tag}>${inline(cell.trim())}</${tag}>`).join("");
+      }
+
+      for (const rawLine of lines) {
+        const line = rawLine.trimEnd();
+        if (line.startsWith("```")) {
+          closeList();
+          closeTable();
+          if (inCode) {
+            out.push(`<pre><code>${escapeHtml(code.join("\n"))}</code></pre>`);
+            code = [];
+            inCode = false;
+          } else {
+            inCode = true;
+          }
+          continue;
+        }
+        if (inCode) {
+          code.push(rawLine);
+          continue;
+        }
+        if (!line.trim()) {
+          closeList();
+          closeTable();
+          continue;
+        }
+        if (/^\|.+\|$/.test(line)) {
+          closeList();
+          if (/^\|\s*-+/.test(line)) continue;
+          if (!inTable) {
+            out.push("<table><tbody>");
+            inTable = true;
+          }
+          out.push(`<tr>${tableCells(line, out[out.length - 1] === "<table><tbody>" ? "th" : "td")}</tr>`);
+          continue;
+        }
+        closeTable();
+        const heading = line.match(/^(#{1,4})\s+(.*)$/);
+        if (heading) {
+          closeList();
+          const level = Math.min(3, heading[1].length);
+          out.push(`<h${level}>${inline(heading[2])}</h${level}>`);
+          continue;
+        }
+        if (line.startsWith(">")) {
+          closeList();
+          out.push(`<blockquote>${inline(line.replace(/^>\s?/, ""))}</blockquote>`);
+          continue;
+        }
+        const bullet = line.match(/^\s*[-*]\s+(.*)$/);
+        if (bullet) {
+          if (!inList) {
+            out.push("<ul>");
+            inList = true;
+          }
+          out.push(`<li>${inline(bullet[1])}</li>`);
+          continue;
+        }
+        closeList();
+        out.push(`<p>${inline(line)}</p>`);
+      }
+      closeList();
+      closeTable();
+      if (inCode) out.push(`<pre><code>${escapeHtml(code.join("\n"))}</code></pre>`);
+      return out.join("\n");
+    }
+
+    function openSelected() {
+      if (!state.selectedFile) return;
+      window.open(fileUrl(state.selectedFile.path), "_blank", "noopener");
+    }
+
+    async function copySelectedPath() {
+      if (!state.selectedFile) return;
+      const path = state.selectedFile.repoPath || state.selectedFile.path;
+      try {
+        await navigator.clipboard.writeText(path);
+        els.copyPath.textContent = "Copied";
+        setTimeout(() => { els.copyPath.textContent = "Copy path"; }, 1000);
+      } catch {
+        els.selectedPath.textContent = path;
+      }
+    }
+
+    function wireEvents() {
+      els.rawMode.addEventListener("click", () => setMode("raw"));
+      els.expertMode.addEventListener("click", () => setMode("expert"));
+      els.dateList.addEventListener("click", (event) => {
+        const button = event.target.closest("button[data-date]");
+        if (!button) return;
+        state.selectedDate = button.dataset.date;
+        renderList();
+        const first = currentFiles()[0];
+        if (first) loadFile(first);
+      });
+    els.expertList.addEventListener("click", (event) => {
+      const button = event.target.closest("button[data-expert]");
+      if (!button) return;
+      state.selectedExpert = button.dataset.expert;
+    state.selectedGroup = "threads";
+      renderList();
+      const first = currentFiles()[0];
+        if (first) loadFile(first);
+      });
+      els.rawSearch.addEventListener("input", renderList);
+      els.expertSearch.addEventListener("input", renderList);
+      els.expertGroups.addEventListener("click", (event) => {
+        const button = event.target.closest("button[data-group]");
+        if (!button) return;
+        state.selectedGroup = button.dataset.group;
+        renderList();
+      });
+      els.fileList.addEventListener("click", (event) => {
+        const button = event.target.closest("button[data-index]");
+        if (!button) return;
+        const file = state.visibleFiles[Number(button.dataset.index)];
+        if (file) loadFile(file);
+      });
+      els.openRaw.addEventListener("click", openSelected);
+      els.copyPath.addEventListener("click", copySelectedPath);
+    }
+
+    async function init() {
+      wireEvents();
+      try {
+        const response = await fetch("strategy-notebook-visualizer.fixture.json", { cache: "no-store" });
+        if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
+        state.fixture = await response.json();
+        renderControls();
+        setMode("raw");
+        const first = currentFiles()[0];
+        if (first) await loadFile(first);
+        els.statusLine.textContent = `${state.fixture.dates.length} raw-input dates, ${state.fixture.experts.length} strategy experts. recordAuthority=${state.fixture.recordAuthority}; gateEffect=${state.fixture.gateEffect}; truthScope=${state.fixture.truthScope}. Workbench index only; no Record authority and no gate effect.`;
+      } catch (err) {
+        els.statusLine.textContent = "Could not load fixture.";
+        els.readerPanel.innerHTML = `<div class="empty">${escapeHtml(err.message || err)}</div>`;
+      }
+    }
+
+    init();
   </script>
 </body>
 </html>
