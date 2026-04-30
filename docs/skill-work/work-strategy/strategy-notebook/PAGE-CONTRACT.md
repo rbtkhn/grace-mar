@@ -11,6 +11,31 @@ WORK only; not Record.
 - **Thread file(s)** are **temporally limited — one file per calendar month:** **`experts/<expert_id>/<expert_id>-thread-YYYY-MM.md`** (journal + machine layer for that month only). **Legacy:** a single **`experts/<expert_id>/thread.md`** may still hold multiple **`## YYYY-MM`** segments until migrated.
 - **Month continuity** in the thread **journal layer** (above the machine markers) is **bookended synthesis** from that month’s thread-embedded pages when you fill it in: **lede** after `## YYYY-MM`, **`strategy-page`** bodies dated in the month, optional **closer** — see [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *Thread* and [strategy-expert-template.md](strategy-expert-template.md#thread-template). Read-only inventory: `python3 scripts/list_strategy_pages_by_month.py --year-month YYYY-MM` (optional `--expert-id`, `--chronicle-snippets`, `--json`).
 
+## Page-thread binding
+
+**Expert surfaces are siblings, not a hierarchy:** **Thread / Continuity** tracks temporal narrative and analytical continuity; **Pages / Work Product** are focused expert-associated analytical objects. Strengthen the bond through a small bidirectional index while preserving different purposes.
+
+**Standalone refined pages** should carry these appendix bullets when adopted:
+
+```markdown
+- **Thread file:** [experts/<expert_id>/<expert_id>-thread-YYYY-MM.md](experts/<expert_id>/<expert_id>-thread-YYYY-MM.md)  <!-- or legacy thread.md -->
+- **Thread month:** `YYYY-MM`
+- **Thread role:** `new-thesis` | `update` | `contradiction` | `falsifier` | `synthesis` | `carry-forward`
+- **Continuity delta:** One sentence naming what this page changes, clarifies, or carries forward in the expert continuity.
+```
+
+**Thread month segments** should carry a compact page index when adopted:
+
+```markdown
+### Pages / Work Product
+
+- YYYY-MM-DD - [Page title](<page path>)
+  role: carry-forward
+  delta: One sentence saying what the page contributes to continuity.
+```
+
+The thread index **does not duplicate** the page. It answers: *why does this page matter to this expert's temporal continuity?*
+
 ## Where the rules live
 
 | Topic | Document / tool |

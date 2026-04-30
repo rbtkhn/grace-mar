@@ -308,6 +308,22 @@
       font-size: 0.76rem;
     }
 
+    .binding-box {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fbfcfd;
+      padding: 0.7rem 0.8rem;
+      margin: 0 0 0.9rem;
+      display: grid;
+      gap: 0.35rem;
+      color: var(--muted);
+      font-size: 0.86rem;
+    }
+
+    .binding-box strong {
+      color: var(--ink);
+    }
+
     .reader {
       display: grid;
       grid-template-rows: auto 1fr;
@@ -874,7 +890,7 @@
         const response = await fetch(fileUrl(file.path), { cache: "no-store" });
         if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
         const text = await response.text();
-        els.readerPanel.innerHTML = `<div class="markdown">${renderMarkdown(text)}</div>`;
+        els.readerPanel.innerHTML = `${renderBinding(file)}<div class="markdown">${renderMarkdown(text)}</div>`;
       } catch (err) {
         els.readerPanel.innerHTML = `
           <div class="empty">
@@ -883,6 +899,24 @@
           </div>
         `;
       }
+    }
+
+    function renderBinding(file) {
+      const binding = file.threadBinding;
+      if (!binding) return "";
+      const rows = [
+        ["Thread file", binding.threadfile],
+        ["Thread month", binding.threadmonth],
+        ["Thread role", binding.threadrole],
+        ["Continuity delta", binding.continuitydelta]
+      ].filter(([, value]) => value);
+      if (!rows.length) return "";
+      return `
+        <div class="binding-box">
+          <strong>Page-thread binding</strong>
+          ${rows.map(([label, value]) => `<div><strong>${escapeHtml(label)}:</strong> ${escapeHtml(value)}</div>`).join("")}
+        </div>
+      `;
     }
 
     function renderMarkdown(markdown) {

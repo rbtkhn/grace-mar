@@ -106,6 +106,12 @@ Monologue or guest spot with canonical `watch?v=` when pinned.
 3. **Inbox / triage:** link to [`daily-strategy-inbox.md`](daily-strategy-inbox.md) with grep hints (`thread:{expert_id}`, date, and for stub modes the `notebook |` / `verify:` / capture tails as used in inbox).
 4. **`thread:{expert_id}`** · **verify:** one line consolidating verify tier for this page (include **`pub_date:YYYY-MM-DD`** grep hint where load-bearing).
 5. **Canonical primary:** pin `source_url`, video ID, article URL, or X permalink when known; for pure stub modes use **Not applicable** unless one URL is pinned.
+6. **Thread file:** link to the expert continuity file for the page month - preferred **`experts/{expert_id}/{expert_id}-thread-YYYY-MM.md`**, or legacy **`experts/{expert_id}/thread.md`** until migrated.
+7. **Thread month:** **`YYYY-MM`** (must match the page publication date month).
+8. **Thread role:** one of **`new-thesis`**, **`update`**, **`contradiction`**, **`falsifier`**, **`synthesis`**, **`carry-forward`**.
+9. **Continuity delta:** one sentence naming what this page changes, clarifies, or carries forward in the expert's **Thread / Continuity** surface.
+
+**Thread binding rule:** **Thread / Continuity** and **Pages / Work Product** are sibling expert surfaces. The page is not subordinate to the thread, and the thread should not duplicate the page. The page contributes a **continuity delta**; the thread month records that contribution in a compact **`### Pages / Work Product`** index. Validator: `python3 scripts/validate_strategy_page_thread_links.py`.
 
 ---
 
@@ -180,6 +186,10 @@ WORK only; not Record.
 - **Inbox / triage:** [daily-strategy-inbox.md](../../daily-strategy-inbox.md) (search `thread:{expert_id}`, YYYY-MM-DD)
 - **`thread:{expert_id}`** · **verify:** full-text + raw-input + pub_date:YYYY-MM-DD
 - **Canonical primary:** pin when known (see raw-input frontmatter / cold line)
+- **Thread file:** [{expert_id}-thread-YYYY-MM.md]({expert_id}-thread-YYYY-MM.md) <!-- or [thread.md](thread.md) until migrated -->
+- **Thread month:** `YYYY-MM`
+- **Thread role:** `new-thesis | update | contradiction | falsifier | synthesis | carry-forward`
+- **Continuity delta:** One sentence naming what this page contributes to the expert's continuity.
 ```
 
 Use **`# {ExpertTitle}`** as a human-facing title case of the expert display name (operator choice); filename stays **`{expert_id}-page-…`**.
@@ -194,7 +204,7 @@ Use **`# {ExpertTitle}`** as a human-facing title case of the expert display nam
 4. `---` before `### Verbatim`.
 5. `### Verbatim`, `### Reflection`, `### Foresight` present; **Verbatim** = transcript text (lightly cleaned, optionally condensed for **§ Length**; never paraphrase as Verbatim)—no `verify:` / path machinery there; **Reflection** / **Foresight** = operator analysis (stubs OK). No decorative bold except lane rules (see Prose emphasis). Prefer **~3000** total words, **~70–80%** in Verbatim (`refined_page_word_budget.py check`).
 6. `---` before `### Appendix`.
-7. Appendix bullets in order: Full verbatim (capture) → Omissions (if pruned) → Inbox / triage → `thread:{expert_id}` · verify → Canonical primary.
+7. Appendix bullets in order: Full verbatim (capture) → Omissions (if pruned) → Inbox / triage → `thread:{expert_id}` · verify → Canonical primary → Thread file → Thread month → Thread role → Continuity delta.
 8. Relative links resolve from **`experts/{expert_id}/`** (typically `../../raw-input/…`, `../../daily-strategy-inbox.md`, `../../chapters/…` when citing `days.md`).
 
 ---

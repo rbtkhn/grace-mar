@@ -27,6 +27,11 @@ DEFAULT_OUT = (
 )
 SCHEMA_VERSION = "strategy-notebook-browser-fixture/v2"
 DATE_RE = re.compile(r"\b(20\d{2}-\d{2}-\d{2})\b")
+THREAD_FIELD_RE = re.compile(
+    r"^-\s+\*\*(?P<field>Thread file|Thread month|Thread role|Continuity delta):\*\*\s*(?P<value>.*)$",
+    re.MULTILINE,
+)
+LINK_RE = re.compile(r"\[[^\]]+\]\((?P<href>[^)]+)\)")
 
 
 def _repo_rel(path: Path) -> str:
@@ -67,6 +72,19 @@ def _heading(text: str) -> str | None:
     return None
 
 
+def _thread_binding_fields(text: str) -> dict[str, str]:
+    fields: dict[str, str] = {}
+    for m in THREAD_FIELD_RE.finditer(text):
+        key = m.group("field").lower().replace(" ", "")
+        value = m.group("value").strip().strip("`")
+        if key == "threadfile":
+            link = LINK_RE.search(value)
+            if link:
+                value = link.group("href")
+        fields[key] = value
+    return fields
+
+
 def _title_for(path: Path) -> str:
     text = _read_head(path, 4000)
     fm = _frontmatter(text)
@@ -77,7 +95,8 @@ def _meta_for(path: Path, notebook: Path) -> dict[str, Any]:
     text = _read_head(path)
     fm = _frontmatter(text)
     dates = sorted(set(DATE_RE.findall(path.name) + DATE_RE.findall(text[:3000])))
-    return {
+    binding = _thread_binding_fields(text)
+    meta = {
         "name": path.name,
         "title": fm.get("title") or _heading(text) or path.name,
         "path": _notebook_rel(path, notebook),
@@ -89,6 +108,9 @@ def _meta_for(path: Path, notebook: Path) -> dict[str, Any]:
         "sourceUrl": fm.get("source_url"),
         "bytes": path.stat().st_size,
     }
+    if binding:
+        meta["threadBinding"] = binding
+    return meta
 
 
 def _kind_from_name(name: str) -> str:
