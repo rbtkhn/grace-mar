@@ -1,49 +1,48 @@
 {
-  "generated_at": "2026-04-29T05:15:14.683099+00:00",
+  "generated_at": "2026-04-30T05:29:35.175099+00:00",
   "user_id": "grace-mar",
   "agent_surface": {
     "cursor_model": "unknown"
   },
   "strict_mode": false,
   "phase": "both",
-  "ok": true,
-  "integrity_ok": true,
-  "governance_ok": true,
-  "self_memory_changed": false,
+  "ok": false,
+  "integrity_ok": false,
+  "governance_ok": false,
+  "self_memory_changed": true,
   "reviewable_count": 0,
   "contradiction_count": 0,
   "artifact_draft_count": 0,
   "promotable_draft_count": 0,
-  "followups": [
-    "In-repo civ-mem index missing \u2014 optional: python3 scripts/build_civmem_inrepo_index.py build"
-  ],
+  "followups": [],
   "phases": {
     "recent": {
-      "self_memory_changed": false,
+      "self_memory_changed": true,
       "entry_count": 0,
       "relation_counts": {}
     },
     "structural": {
-      "integrity": "pass",
-      "governance": "pass",
+      "integrity": "fail",
+      "governance": "fail",
       "entry_count": 0,
       "relation_counts": {}
     }
   },
   "coffee_rollup_24h": {
-    "window_start_utc": "2026-04-28T05:15:09.517608+00:00",
-    "window_end_utc": "2026-04-29T05:15:09.517608+00:00",
+    "window_start_utc": "2026-04-29T05:29:33.791595+00:00",
+    "window_end_utc": "2026-04-30T05:29:33.791595+00:00",
     "window_hours": 24.0,
-    "count": 2,
-    "first_ts": "2026-04-28T14:35:00+00:00",
-    "last_ts": "2026-04-28T15:14:00+00:00",
-    "span_hours": 0.65,
+    "count": 5,
+    "first_ts": "2026-04-29T15:07:00+00:00",
+    "last_ts": "2026-04-30T04:39:00+00:00",
+    "span_hours": 13.53,
     "by_mode": {
-      "work-start": 2
+      "work-start": 4,
+      "minimal": 1
     },
     "runs": [
       {
-        "ts_iso": "2026-04-28T14:35:00+00:00",
+        "ts_iso": "2026-04-29T15:07:00+00:00",
         "ok": true,
         "mode": "work-start",
         "kv": {
@@ -52,7 +51,34 @@
         }
       },
       {
-        "ts_iso": "2026-04-28T15:14:00+00:00",
+        "ts_iso": "2026-04-29T15:10:00+00:00",
+        "ok": true,
+        "mode": "minimal",
+        "kv": {
+          "cursor_model": "unknown",
+          "model_tier": "unknown"
+        }
+      },
+      {
+        "ts_iso": "2026-04-29T15:26:00+00:00",
+        "ok": true,
+        "mode": "work-start",
+        "kv": {
+          "cursor_model": "unknown",
+          "model_tier": "unknown"
+        }
+      },
+      {
+        "ts_iso": "2026-04-29T23:59:00+00:00",
+        "ok": true,
+        "mode": "work-start",
+        "kv": {
+          "cursor_model": "unknown",
+          "model_tier": "unknown"
+        }
+      },
+      {
+        "ts_iso": "2026-04-30T04:39:00+00:00",
         "ok": true,
         "mode": "work-start",
         "kv": {
@@ -63,32 +89,200 @@
     ],
     "picks": [
       {
-        "ts_iso": "2026-04-28T15:05:00+00:00",
-        "picked": "C",
-        "menu_label": "conductor",
+        "ts_iso": "2026-04-29T15:29:00+00:00",
+        "picked": "E",
+        "menu_label": "E",
         "conductor": "bernstein"
       },
       {
-        "ts_iso": "2026-04-28T15:17:00+00:00",
-        "picked": "C",
-        "menu_label": "C"
+        "ts_iso": "2026-04-30T04:40:00+00:00",
+        "picked": "B",
+        "menu_label": "B"
       },
       {
-        "ts_iso": "2026-04-28T15:59:00+00:00",
+        "ts_iso": "2026-04-30T04:53:00+00:00",
         "picked": "C",
         "menu_label": "conductor",
         "conductor": "kleiber"
       },
       {
-        "ts_iso": "2026-04-28T16:02:00+00:00",
+        "ts_iso": "2026-04-30T04:54:00+00:00",
         "picked": "C",
         "menu_label": "conductor",
-        "conductor": "kleiber"
+        "conductor": "karajan"
+      },
+      {
+        "ts_iso": "2026-04-30T05:04:00+00:00",
+        "picked": "C",
+        "menu_label": "conductor",
+        "conductor": "toscanini"
+      },
+      {
+        "ts_iso": "2026-04-30T05:06:00+00:00",
+        "picked": "C",
+        "menu_label": "conductor",
+        "conductor": "furtwangler"
+      },
+      {
+        "ts_iso": "2026-04-30T05:09:00+00:00",
+        "picked": "C",
+        "menu_label": "conductor",
+        "conductor": "bernstein"
       }
     ],
     "by_picked": {
-      "C": 4
+      "E": 1,
+      "B": 1,
+      "C": 5
     }
+  },
+  "conductor_rollup_24h": {
+    "window_start_utc": "2026-04-29T05:29:33.791595+00:00",
+    "window_end_utc": "2026-04-30T05:29:33.791595+00:00",
+    "window_hours": 24.0,
+    "pick_count": 7,
+    "outcome_count": 8,
+    "completed_passes": 8,
+    "orientation_only": 0,
+    "off_menu_refusals": 0,
+    "last_master": "bernstein",
+    "last_outcome": {
+      "ts_iso": "2026-04-30T05:11:00+00:00",
+      "kind": "outcome",
+      "conductor": "bernstein",
+      "commit": "1df4a540"
+    },
+    "by_conductor": {
+      "bernstein": {
+        "picks": 3,
+        "outcomes": 2,
+        "refusals": 0
+      },
+      "kleiber": {
+        "picks": 1,
+        "outcomes": 1,
+        "refusals": 0
+      },
+      "karajan": {
+        "picks": 1,
+        "outcomes": 1,
+        "refusals": 0
+      },
+      "toscanini": {
+        "picks": 1,
+        "outcomes": 2,
+        "refusals": 0
+      },
+      "furtwangler": {
+        "picks": 1,
+        "outcomes": 2,
+        "refusals": 0
+      }
+    },
+    "commits": [
+      "e81a89ce",
+      "6c5e1533",
+      "1df4a540"
+    ],
+    "falsifiers": [
+      "cadence-log-plus-one-substantive-cluster",
+      "sample-has-three-live-options-no-refusal-slot",
+      "no-staging-shape-only",
+      "redesign-not-patch"
+    ],
+    "events": [
+      {
+        "ts_iso": "2026-04-29T15:29:00+00:00",
+        "kind": "pick",
+        "conductor": "bernstein",
+        "menu_label": "E"
+      },
+      {
+        "ts_iso": "2026-04-30T00:38:00+00:00",
+        "kind": "pick",
+        "conductor": "bernstein",
+        "menu_label": null
+      },
+      {
+        "ts_iso": "2026-04-30T04:00:00+00:00",
+        "kind": "outcome",
+        "conductor": "bernstein",
+        "action": "public-stake-batch-analysis"
+      },
+      {
+        "ts_iso": "2026-04-30T04:53:00+00:00",
+        "kind": "pick",
+        "conductor": "kleiber",
+        "menu_label": "conductor"
+      },
+      {
+        "ts_iso": "2026-04-30T04:54:00+00:00",
+        "kind": "outcome",
+        "conductor": "kleiber",
+        "commit": "e81a89ce"
+      },
+      {
+        "ts_iso": "2026-04-30T04:54:00+00:00",
+        "kind": "pick",
+        "conductor": "karajan",
+        "menu_label": "conductor"
+      },
+      {
+        "ts_iso": "2026-04-30T04:55:00+00:00",
+        "kind": "outcome",
+        "conductor": "karajan",
+        "falsify": "cadence-log-plus-one-substantive-cluster"
+      },
+      {
+        "ts_iso": "2026-04-30T05:04:00+00:00",
+        "kind": "pick",
+        "conductor": "toscanini",
+        "menu_label": "conductor"
+      },
+      {
+        "ts_iso": "2026-04-30T05:05:00+00:00",
+        "kind": "outcome",
+        "conductor": "toscanini",
+        "falsify": "sample-has-three-live-options-no-refusal-slot"
+      },
+      {
+        "ts_iso": "2026-04-30T05:06:00+00:00",
+        "kind": "outcome",
+        "conductor": "toscanini",
+        "falsify": "no-staging-shape-only"
+      },
+      {
+        "ts_iso": "2026-04-30T05:06:00+00:00",
+        "kind": "pick",
+        "conductor": "furtwangler",
+        "menu_label": "conductor"
+      },
+      {
+        "ts_iso": "2026-04-30T05:07:00+00:00",
+        "kind": "outcome",
+        "conductor": "furtwangler",
+        "falsify": "redesign-not-patch"
+      },
+      {
+        "ts_iso": "2026-04-30T05:09:00+00:00",
+        "kind": "outcome",
+        "conductor": "furtwangler",
+        "commit": "6c5e1533"
+      },
+      {
+        "ts_iso": "2026-04-30T05:09:00+00:00",
+        "kind": "pick",
+        "conductor": "bernstein",
+        "menu_label": "conductor"
+      },
+      {
+        "ts_iso": "2026-04-30T05:11:00+00:00",
+        "kind": "outcome",
+        "conductor": "bernstein",
+        "commit": "1df4a540"
+      }
+    ],
+    "echo": "bernstein carried the latest conductor line; last close: 1df4a540; 8 closed pass(es)"
   },
   "execution_paths": [
     {
@@ -96,14 +290,19 @@
       "title": "Daily Brief (generator + watch slices; optional KY-4 intel when chosen)",
       "first_move": "python3 scripts/operator_coffee.py -u grace-mar \u2014 then coffee menu C \u2014 Historian",
       "stop_rule": "One slice: daily brief path opened or optional intel pass started \u2014 enough for first block.",
-      "signals_used": []
+      "signals_used": [
+        "reentry_heavy"
+      ]
     },
     {
       "id": "build",
       "title": "Build / integrate (repo + work-dev)",
       "first_move": "python3 scripts/validate-integrity.py --user grace-mar --json",
-      "stop_rule": "Integrity passes; then optional: python3 scripts/refresh_derived_exports.py -u grace-mar",
-      "signals_used": []
+      "stop_rule": "Read governance_checker.py stdout from dream JSON; fix blocking issues.",
+      "signals_used": [
+        "integrity_fail",
+        "governance_fail"
+      ]
     },
     {
       "id": "steward",
@@ -114,53 +313,83 @@
     }
   ],
   "suggested_execution_path_index": 2,
-  "execution_path_suggestion_reason": "calendar_mod3",
-  "tomorrow_inherits": "Tomorrow inherits (hint): **Steward / membrane (gate + template parity)** \u2014 calendar rotation; not policy or Record.",
+  "execution_path_suggestion_reason": "integrity_or_governance_fail",
+  "tomorrow_inherits": "Tomorrow inherits (hint): **Steward / membrane (gate + template parity)** \u2014 integrity or governance did not fully pass this dream; not policy or Record.",
   "civmem_echoes": [],
   "civmem_disclaimer": "Analogical / historical depth from in-repo civ-mem (token overlap); not current truth, not Voice knowledge, not part of the Record.",
-  "civmem_index_missing": true,
+  "civmem_index_missing": false,
+  "civmem_suppressed_reason": "suppressed_integrity_fail",
   "capture_gap": {
     "last_evidence_date": "2026-04-27",
     "last_evidence_id": "ACT-0009",
-    "days_since_evidence": 1,
+    "days_since_evidence": 2,
     "last_merge_date": "2026-04-27",
-    "days_since_merge": 1,
+    "days_since_merge": 2,
     "pending_count": 3,
     "level": "ok",
-    "message": "Record healthy \u2014 last entry 1d ago (ACT-0009, 2026-04-27)"
+    "message": "Record healthy \u2014 last entry 2d ago (ACT-0009, 2026-04-27)"
   },
   "capability_shift": {
     "category": "model",
-    "sources_checked": 6,
+    "sources_checked": 0,
     "sources_total": 6,
-    "alert_count": 11,
+    "alert_count": 0,
     "review_count": 0,
-    "monitor_count": 1,
+    "monitor_count": 0,
     "variant_count": 0,
-    "fetch_errors": []
+    "fetch_errors": [
+      {
+        "name": "Anthropic",
+        "error": "<urlopen error [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions>"
+      },
+      {
+        "name": "OpenAI",
+        "error": "<urlopen error [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions>"
+      },
+      {
+        "name": "xAI",
+        "error": "<urlopen error [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions>"
+      },
+      {
+        "name": "Google",
+        "error": "<urlopen error [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions>"
+      },
+      {
+        "name": "DeepSeek",
+        "error": "<urlopen error [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions>"
+      },
+      {
+        "name": "Qwen",
+        "error": "<urlopen error [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions>"
+      }
+    ]
   },
   "dream_catchup": {
     "semantics": "since_previous_dream",
     "timezone": "UTC",
-    "previous_dream_generated_at": "2026-04-29T05:14:02.838432+00:00",
-    "local_calendar_dates": [],
-    "strategy_notebook_missing_day_headers": []
+    "previous_dream_generated_at": "2026-04-29T05:15:14.683099+00:00",
+    "local_calendar_dates": [
+      "2026-04-30"
+    ],
+    "strategy_notebook_missing_day_headers": [
+      "2026-04-30"
+    ]
   },
   "last_coffee_echo": {
-    "timestamp": "2026-04-28T15:14:00+00:00",
-    "conductor": "kleiber",
+    "timestamp": "2026-04-30T04:39:00+00:00",
+    "conductor": "bernstein",
     "mode": "work-start",
     "menu_letter": "conductor",
-    "highlight": "Yesterday\u2019s work-start coffee is still the thread. Menu pick: conductor. Conductor line: kleiber.",
+    "highlight": "Yesterday\u2019s work-start coffee is still the thread. Menu pick: conductor. Conductor line: bernstein.",
     "source": "coffee_rollup_24h"
   },
   "handoffSchemaVersion": 3,
-  "topActionReason": "calendar_mod3",
+  "topActionReason": "integrity_or_governance_fail",
   "quietRun": false,
   "residueLedger": {
-    "must_resume": "In-repo civ-mem index missing \u2014 optional: python3 scripts/build_civmem_inrepo_index.py build",
+    "must_resume": "",
     "safe_to_drop": "",
-    "blocked": "",
+    "blocked": "Dream reported not ok \u2014 review integrity/governance before new work.",
     "watch_later": ""
   },
   "worktreeState": "risky residue",

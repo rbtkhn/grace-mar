@@ -382,3 +382,7 @@ _(Append below this line.)_
 - **2026-04-30 14:24 UTC** — coffee_pick (grace-mar) ok=true cursor_model=unknown model_tier=unknown picked=A steward=git
 - **2026-04-30 14:34 UTC** — coffee_pick (grace-mar) ok=true cursor_model=unknown model_tier=unknown picked=conductor conductor=karajan
 - **2026-04-30 14:35 UTC** — coffee_conductor_outcome (grace-mar) ok=true cursor_model=unknown model_tier=unknown conductor=karajan action=runtime-residue-classified falsify=commit-trail-vs-regenerate-cache
+- **2026-04-30 14:40 UTC** — coffee_pick (grace-mar) ok=true cursor_model=unknown model_tier=unknown picked=conductor conductor=bernstein
+- **2026-04-30 14:41 UTC** — coffee_conductor_outcome (grace-mar) ok=true cursor_model=unknown model_tier=unknown conductor=bernstein action=thread-index-helper-trust-check falsify=default-pass-strict-migration-fail
+- **2026-04-30 14:44 UTC** — coffee_pick (grace-mar) ok=true cursor_model=unknown model_tier=unknown picked=conductor conductor=kleiber
+- **2026-04-30 14:47 UTC** — coffee_conductor_outcome (grace-mar) ok=true cursor_model=unknown model_tier=unknown conductor=kleiber action=tighten-strategy-inbox-public-stake falsify=commit-only-surviving-content-wedge
