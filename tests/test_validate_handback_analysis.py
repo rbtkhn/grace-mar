@@ -1,4 +1,4 @@
-"""validate_handback_analysis — constitution line vs meta."""
+"""validate_handback_analysis - constitution line vs meta."""
 
 from __future__ import annotations
 
@@ -55,7 +55,7 @@ def test_validate_flagged_without_line_fails() -> None:
 
 def test_staged_risk_low_conflicts_with_high_concern_narrative() -> None:
     payload = {
-        "content": "Summary: high risk — do not merge until reconciled.",
+        "content": "Summary: high risk - do not merge until reconciled.",
         "constitution_check_status": "advisory_clear",
         "staged_risk_tier": "low",
     }
@@ -64,9 +64,43 @@ def test_staged_risk_low_conflicts_with_high_concern_narrative() -> None:
     assert "staged_risk_tier" in err and "high-concern" in err
 
 
+def test_quick_merge_conflicts_with_high_concern_summary() -> None:
+    payload = {
+        "content": "CONSTITUTION_ADVISORY: status=advisory_clear; rule_ids=none",
+        "summary": "Requires manual review before approval.",
+        "constitution_check_status": "advisory_clear",
+        "staged_risk_tier": "quick_merge_eligible",
+    }
+    rc, _, err = _run(json.dumps(payload))
+    assert rc == 1
+    assert "high-concern" in err
+
+
+def test_manual_escalate_conflicts_with_approval_like_narrative() -> None:
+    payload = {
+        "content": "Analysis: safe to merge; low risk after review.",
+        "constitution_check_status": "advisory_clear",
+        "staged_risk_tier": "manual_escalate",
+    }
+    rc, _, err = _run(json.dumps(payload))
+    assert rc == 1
+    assert "approval-like" in err
+
+
+def test_manual_escalate_allows_matching_rejection_narrative() -> None:
+    payload = {
+        "content": "Analysis: cannot approve; requires manual review.",
+        "constitution_check_status": "advisory_clear",
+        "staged_risk_tier": "manual_escalate",
+    }
+    rc, out, err = _run(json.dumps(payload))
+    assert rc == 0
+    assert err == ""
+
+
 def test_staged_risk_tier_omitted_skips_narrative_heuristic() -> None:
     payload = {
-        "content": "high risk — do not merge (no structured tier in payload).",
+        "content": "high risk - do not merge (no structured tier in payload).",
         "constitution_check_status": "",
     }
     rc, out, err = _run(json.dumps(payload))

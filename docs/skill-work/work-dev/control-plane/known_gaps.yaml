@@ -23,7 +23,7 @@ items:
     status: partial
     related_integration_ids: []
     notes:
-      - validate_handback_analysis.py constitution line vs meta; when staged_risk_tier is low/medium, high-concern phrases in content fail validation; full semantic audit still out of scope.
+      - validate_handback_analysis.py constitution line vs meta; when staged_risk_tier is supplied, obvious two-way narrative/risk phrase mismatches fail validation; full semantic audit still out of scope.
 
   - id: BUILD-AI-GAP-007
     area: Progressive autonomy metrics
