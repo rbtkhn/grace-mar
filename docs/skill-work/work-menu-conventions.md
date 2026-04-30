@@ -34,6 +34,14 @@ Optional short tags on each line, **clearly heuristic** (not estimates of wall-c
 
 ---
 
+## 3a. Default acceptance
+
+When a visible menu includes a line like **`Recommended default: X`**, operator replies such as **`go`**, **`default`**, **`yes`**, **`sounds good`**, or equivalent agreement mean **accept the named default** from the current menu. This only applies when the current turn explicitly named the default; otherwise interpret those replies normally.
+
+Keep menu letters as UI conveniences. Durable logs should still use conductor slugs, file paths, lane names, candidate IDs, or script output labels.
+
+---
+
 ## 4. Combo and hybrid options
 
 - The operator may answer **`A+C`** (or similar); the assistant executes both compatible branches.

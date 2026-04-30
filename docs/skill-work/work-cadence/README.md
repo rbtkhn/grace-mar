@@ -93,6 +93,10 @@ The script runs, in order: `export_manifest.py`, `fork_checksum.py --manifest`, 
 
 Signing-off **`coffee`** (closeout mode) is a **lighter** alternative to `bridge` when the operator wants handoff-weighted text without full bridge mechanics — see [.cursor/skills/bridge/SKILL.md](../../../.cursor/skills/bridge/SKILL.md) for the full decision tree.
 
+### Decision-fatigue reduction
+
+[decision-fatigue-reduction.md](decision-fatigue-reduction.md) defines the cadence rule for recommended defaults, menu depth, and default acceptance. In short: menus route attention; once a route is known, recommend one next move when the evidence is strong enough. One real follow-up is enough if the business, lane, or cadence surface is quiet.
+
 ### Data flow between beats (what crosses the boundary)
 
 1. **Dream → morning coffee:** `users/<id>/daily-handoff/night-handoff.json` and, in grace-mar-style instances, `users/<id>/last-dream.json` — collapsed “Last dream” in warmup unless verbose flags are used.

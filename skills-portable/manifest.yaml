@@ -63,3 +63,10 @@ skills:
     verify_forbidden_substrings:
       - users/grace-mar/
       - process_approved_candidates
+  - name: ideation-engine
+    source: ideation-engine/SKILL.md
+    appendix: .cursor/skills/ideation-engine/CURSOR_APPENDIX.md
+    target: .cursor/skills/ideation-engine/SKILL.md
+    verify_forbidden_substrings:
+      - users/grace-mar/
+      - process_approved_candidates

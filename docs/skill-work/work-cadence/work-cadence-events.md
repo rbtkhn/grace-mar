@@ -407,3 +407,4 @@ _(Append below this line.)_
 - **2026-04-30 19:28 UTC** — coffee_conductor_outcome (grace-mar) ok=true cursor_model=unknown model_tier=unknown conductor=bernstein action=grace-gems-live-judgment-close falsify=review-answers-what-mattered-and-next
 - **2026-04-30 22:54 UTC** — coffee (grace-mar) ok=true mode=work-start cursor_model=unknown model_tier=unknown
 - **2026-04-30 22:56 UTC** — coffee_pick (grace-mar) ok=true cursor_model=unknown model_tier=unknown picked=B
+- **2026-04-30 23:51 UTC** — coffee (grace-mar) ok=true mode=minimal cursor_model=unknown model_tier=unknown

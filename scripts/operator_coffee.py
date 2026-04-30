@@ -168,16 +168,26 @@ def main() -> int:
         print(_branch_snapshot())
 
     try:
-        from assess_session_load import assess_load, format_load_one_liner
+        from assess_session_load import (
+            assess_load,
+            format_default_acceptance_line,
+            format_load_one_liner,
+        )
         load_result = assess_load(user)
         print(f"\n{'=' * 60}\n$ session load assessment\n{'=' * 60}\n", flush=True)
         print(format_load_one_liner(load_result))
+        print(format_default_acceptance_line(load_result))
     except Exception:
         try:
-            from scripts.assess_session_load import assess_load, format_load_one_liner
+            from scripts.assess_session_load import (
+                assess_load,
+                format_default_acceptance_line,
+                format_load_one_liner,
+            )
             load_result = assess_load(user)
             print(f"\n{'=' * 60}\n$ session load assessment\n{'=' * 60}\n", flush=True)
             print(format_load_one_liner(load_result))
+            print(format_default_acceptance_line(load_result))
         except Exception:
             pass
 

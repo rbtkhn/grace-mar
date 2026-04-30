@@ -56,7 +56,7 @@ python3 scripts/log_cadence_event.py --kind coffee_conductor_outcome -u grace-ma
 
 **When:** Immediately **after** short orientation, whenever `conductor=<slug>` is **known** — standalone **Conductor session**, or any path that resolved a master **without** a prior “orientation only” opt-out. **SSOT** anchor: [CONDUCTOR-PASS — Conductor action MCQ](../../../docs/skill-work/work-coffee/CONDUCTOR-PASS.md#conductor-action-mcq).
 
-**Operator line:** Conductor offers **three live choices**; off-menu behavior is the refusal / park / no-action signal.
+**Operator line:** Conductor offers **three live choices**; off-menu behavior is the refusal / park / no-action signal. When one action is clearly strongest, add one nearby line: **`Recommended default: <letter> — <one-line reason>`**. This is decision support only; it does not add a fourth option or change refusal handling.
 
 **What:** A **header** (e.g. **Conductor action MCQ** — **Reply A–C** for **this** `bernstein` pass) and **exactly three** lines **A.** ... **C.** Each option is a **discriminating**, affirmative next move: **file path** or **editing target**, **one** main **verb**, and **enough** **constraint** that **A** vs **B** vs **C** are **not** interchangeable. Re-use letters **A-C**; **label** the block so it is not confused with the **`coffee` hub** (**A–E**) or the **masters** disambiguation row when both appeared in the same thread. If the operator does anything other than choose one of the three options, record that as refusal / park / no-action rather than presenting refusal as option **C**.
 

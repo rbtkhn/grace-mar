@@ -80,7 +80,7 @@ Each printed option includes a **continuity** tail: last `coffee_pick` slug, opt
 
 #### Conductor action MCQ (second **A-C** — **required**)
 
-**Operator line:** Conductor offers **three live choices**; off-menu behavior is the refusal / park / no-action signal.
+**Operator line:** Conductor offers **three live choices**; off-menu behavior is the refusal / park / no-action signal. When one action is clearly strongest, add one nearby line: **`Recommended default: <letter> — <one-line reason>`**. This is decision support only; it does not add a fourth option or change refusal handling.
 
 **Not** another **A.–E.** that names **Toscanini…Bernstein** — it is a **new** **three-line** list **after** the master is resolved, with **this** pass’s **repo** next moves. Label it **`Conductor action MCQ`** and instruct **Reply A-C** for **this** pass. Each line is a **concrete, repo-grounded**, affirmative next move with **verbs and constraints** that match the **active** `conductor` slug (see [`.cursor/skills/conductor/SKILL.md`](../../../.cursor/skills/conductor/SKILL.md) **Conductor action MCQ**). Do **not** spend one of the three options on refusal / no-action; if the operator does anything other than choose **A**, **B**, or **C**, record that as refusal / park / no-action in the outcome. **Omit** only if the operator says **"orientation only"** or **"no action menu"** in the same turn. **Kleiber** is not the only mode that gets a menu; **Bernstein, Toscanini,** etc. all get **their own** three options — same **A-C** letters; letter-set reuse order is **coffee** hub **A–E**, optional **Masters MCQ** row **if** shown, then **Conductor action MCQ**.
 

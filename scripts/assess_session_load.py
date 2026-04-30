@@ -306,6 +306,13 @@ def format_load_one_liner(result: dict) -> str:
     )
 
 
+def format_default_acceptance_line(result: dict) -> str:
+    """Format an explicit accept-default hint for the fixed coffee hub."""
+    rec = result.get("recommended") or "?"
+    reason = result.get("recommendation_reason") or "best current fit"
+    return f'Recommended default: {rec} — say "go" to accept, or pick another hub letter. ({reason})'
+
+
 def format_annotated_menu(result: dict) -> str:
     """Format the coffee menu with load annotations (optional; not printed by default)."""
     weights = result.get("option_weights", {})
@@ -346,6 +353,7 @@ def main() -> int:
         print(json.dumps(result, indent=2, default=str))
     else:
         print(format_load_one_liner(result))
+        print(format_default_acceptance_line(result))
         print()
         print("Annotated menu:")
         print(format_annotated_menu(result))
