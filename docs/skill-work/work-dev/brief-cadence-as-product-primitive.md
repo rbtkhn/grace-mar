@@ -29,7 +29,7 @@ Work fails on three clocks. Each needs its own ritual because the failure modes 
 |-------|-------------|--------|-----------|
 | **Framing** (hours) | Orientation degrades under context load | `coffee` | Many per day |
 | **Residue** (day) | Unresolved threads and integrity drift accumulate | `dream` | Once per day |
-| **Context** (session) | Agent memory goes to zero at session boundary | `bridge` | Once per session |
+| **Context** (session) | Session continuity becomes partial and non-guaranteed at the boundary | `bridge` | Once per session |
 
 Reorientation is not consolidation. Consolidation is not transfer. Merging them into one ritual would either make it too heavy for frequent use or too shallow for end-of-day closure.
 

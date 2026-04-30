@@ -35,8 +35,10 @@ ORDER = [
     "boundary_markers",
     "ui_affordances",
     "render_markers",
+    "binding_contract",
     "dependency_discipline",
     "fixture_reference",
+    "fixture_binding_examples",
 ]
 LABEL: dict[str, str] = {
     "file_size": "file-size",
@@ -44,8 +46,10 @@ LABEL: dict[str, str] = {
     "boundary_markers": "boundary-markers",
     "ui_affordances": "ui-affordances",
     "render_markers": "render-markers",
+    "binding_contract": "binding-contract",
     "dependency_discipline": "dependency-discipline",
     "fixture_reference": "fixture-reference",
+    "fixture_binding_examples": "fixture-binding-examples",
 }
 
 # Allowed: localhost and 127.0.0.1 only (e.g. launch line)
@@ -162,6 +166,23 @@ def _render_markers(t_lo: str) -> tuple[str, list[str]]:
     return ("fail" if err else "pass"), err
 
 
+def _binding_contract(text: str, t_lo: str) -> tuple[str, list[str]]:
+    checks: list[tuple[str, str]] = [
+        ("binding renderer", "renderbinding("),
+        ("binding container", "binding-box"),
+        ("binding heading", "page-thread binding"),
+        ("thread file label", "thread file"),
+        ("thread month label", "thread month"),
+        ("thread role label", "thread role"),
+        ("continuity delta label", "continuity delta"),
+        ("reader injection", "renderbinding(file)}<div class=\"markdown\">"),
+    ]
+    err = [f"binding marker: {name}" for name, marker in checks if marker not in t_lo]
+    if "threadBinding" not in text:
+        err.append("binding marker: threadBinding field access")
+    return ("fail" if err else "pass"), err
+
+
 # Spec-forbidden substrings in HTML (lowercase)
 _FORBIDDEN_SUB = [
     "cdn",
@@ -199,6 +220,34 @@ def _fixture(t_lo: str) -> tuple[str, list[str]]:
     return "pass", []
 
 
+def _fixture_binding_examples(path: Path) -> tuple[str, str, list[str]]:
+    if not path.is_file():
+        return "fail", f"missing fixture: {path}", [f"fixture not found: {path}"]
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as exc:
+        return "fail", f"unreadable fixture: {path}", [f"fixture parse error: {exc}"]
+
+    bound_pages = 0
+    total_pages = 0
+    for expert in data.get("experts", []):
+        files = expert.get("files", {})
+        for page in files.get("pages", []):
+            total_pages += 1
+            if isinstance(page.get("threadBinding"), dict) and page["threadBinding"]:
+                bound_pages += 1
+
+    warnings: list[str] = []
+    if total_pages == 0:
+        warnings.append("fixture has no expert pages; binding UI has nothing to exercise")
+    elif bound_pages == 0:
+        warnings.append(
+            "fixture has no bound pages yet; smoke test confirms HTML wiring only"
+        )
+    detail = f"{bound_pages} bound page(s) across {total_pages} expert page(s)"
+    return "pass", detail, warnings
+
+
 def run_checks(path: Path) -> dict[str, Any]:
     st, det, nlines, nbytes, w_sz = _check_size(path)
     r: dict[str, Any] = {
@@ -227,12 +276,23 @@ def run_checks(path: Path) -> dict[str, Any]:
     r["ui_affordances"] = {"status": ui[0], "errors": ui[1]}
     rm0, rm1 = _render_markers(t_lo)
     r["render_markers"] = {"status": rm0, "errors": rm1}
+    bc0, bc1 = _binding_contract(text, t_lo)
+    r["binding_contract"] = {"status": bc0, "errors": bc1}
     dep = _dependency(text, t_lo)
     r["dependency_discipline"] = {"status": dep[0], "errors": dep[1]}
     fx = _fixture(t_lo)
     r["fixture_reference"] = {"status": fx[0], "errors": fx[1]}
+    fixture_path = path.with_name("strategy-notebook-visualizer.fixture.json")
+    fb0, fb1, fbw = _fixture_binding_examples(fixture_path)
+    r["fixture_binding_examples"] = {
+        "status": fb0,
+        "detail": fb1,
+        "errors": [],
+        "warnings": fbw,
+    }
 
     r["all_warnings"] = list(w_sz)
+    r["all_warnings"].extend(fbw)
     keys = [k for k in ORDER if k != "file_size"]
     r["ok"] = all(
         r[k].get("status") == "pass" for k in keys if k in r
@@ -276,7 +336,7 @@ def main() -> int:
     ap.add_argument(
         "--strict",
         action="store_true",
-        help=f"Treat line-count warning (< {SOFT_MAX_LINES} lines) as failure",
+        help="Treat all warnings as failures",
     )
     args = ap.parse_args()
     h = _resolve_html_path(args.html)
@@ -317,9 +377,9 @@ def main() -> int:
         for w in all_w:
             print(f"WARN — {w}")
         if args.strict and all_w:
-            print("FAIL strict — size warning is fatal in strict mode")
+            print("FAIL strict — warnings are fatal in strict mode")
         if all_w and not args.strict:
-            print("NOTE: use --strict to fail on the size warning above.")
+            print("NOTE: use --strict to fail on warnings above.")
 
     return final_exit(r, args.strict, all_w)
 

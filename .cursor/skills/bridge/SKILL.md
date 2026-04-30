@@ -2,16 +2,16 @@
 name: bridge
 preferred_activation: bridge
 requires: [handoff-check]
-description: "Session-scale handoff ritual. Primary trigger: bridge. Before Step 1, synthesizes the previous four events from work-cadence-events.md into **Recent rhythm** prose (no internal ops jargon or timestamps in chat). Assesses grace-mar + companion-self (and asks about other repos if relevant), recommends whether each needs commit/push, then seals and generates a structured transfer prompt for pasting into a fresh Cursor session. Run once when closing a session and carrying context forward."
+description: "Session-scale handoff ritual. Primary trigger: bridge. Before Step 1, synthesizes the previous four events from work-cadence-events.md into **Recent rhythm** prose (no internal ops jargon or timestamps in chat). Assesses grace-mar + companion-self (and asks about other repos if relevant), recommends whether each needs commit/push, then seals and generates a structured transfer prompt for pasting into a fresh session or thread. Run once when closing a session and carrying context forward."
 ---
 
 # Bridge
 
 **Preferred activation:** say **`bridge`**. Also responds to **`session handoff`**, **`close session`**, or **`transfer`**.
 
-`bridge` is the session-scale handoff. It **assesses** whether **grace-mar** and **companion-self** (and optionally other repos) need commit/push, **recommends** actions, **asks** when ambiguous, then seals what the operator agrees to and synthesizes state into a single structured markdown block for the next fresh Cursor session.
+`bridge` is the session-scale handoff. It **assesses** whether **grace-mar** and **companion-self** (and optionally other repos) need commit/push, **recommends** actions, **asks** when ambiguous, then seals what the operator agrees to and synthesizes state into a single structured markdown block for the next fresh session or thread.
 
-Its purpose is **high-fidelity context transfer** across the session boundary where agent memory goes to zero. A good bridge means the next session starts with full orientation instead of spending turns reconstructing what happened.
+Its purpose is **high-fidelity context transfer** across boundaries where continuity becomes non-guaranteed: a fresh session, a new thread, cross-agent handoff, or a compaction boundary. Some runtimes carry part of the prior conversation forward, but that carryover is not a governed substitute for an explicit handoff. A good bridge means the next session starts with full orientation instead of spending turns reconstructing what happened.
 
 ## When to use
 
@@ -183,7 +183,7 @@ This writes `users/grace-mar/daily-handoff/last-bridge-state.json` (gitignored).
 
 ## Step 4 — Generate the transfer prompt
 
-Now that the recommended repos are sealed and pushed (or explicitly skipped with operator consent), synthesize the readings from Step 1 into a single markdown block following this exact format. The canonical section contract lives in companion-self at `docs/skill-work/work-cadence/bridge-packet-contract.md`. Include **`## Agent surface`** with **Cursor model:** copied from the **Cursor UI** (model picker for this composer); in Cursor that label is usually visible — use `unknown` only if it is not.
+Now that the recommended repos are sealed and pushed (or explicitly skipped with operator consent), synthesize the readings from Step 1 into a single markdown block following this exact format. The canonical section contract lives at `docs/skill-work/work-cadence/bridge-packet-contract.md`. Include **`## Agent surface`** with **Cursor model:** copied from the **Cursor UI** (model picker for this composer); in Cursor that label is usually visible — use `unknown` only if it is not. Add **`## Model transition note`** whenever the receiving session may use a different model, thread, or tool posture.
 
 **Closing `coffee` line (required):** The copyable transfer prompt must end with a **final line that is exactly `coffee`** (lowercase, alone on its line, not inside a code fence). That way the operator’s **first message** in the new session is both the bridge packet **and** the `coffee` skill trigger — work-start Step 1 runs immediately on top of this context. Do not tell the operator to send a second message just for `coffee`. (This is **not** the same as Step 0 **Recent rhythm** — it is the packet’s required last line.)
 
@@ -250,6 +250,9 @@ Skip lanes with no recent activity.]
 ## Agent surface
 - **Cursor model:** [Copy the model name from the Cursor chat UI / model picker for this composer. Use `unknown` only if it is not visible.]
 
+## Model transition note
+[Optional. Include when the next session may use a different model, new thread, or different tool posture. One to three bullets on likely differences in verbosity, skepticism, execution style, or tacit assumptions that should be made explicit.]
+
 ## Instructions for next session
 **Operator:** Send everything from `# Session Bridge` through the line below as the **only** first message in a new Cursor session (one paste). **Assistant:** Context is above; run work-start **coffee** Step 1 now (see `.cursor/skills/coffee/SKILL.md`). The next line is the skill trigger.
 
@@ -278,7 +281,7 @@ Bridge is complete. Pushed repos match Step 2 recommendation (or operator overri
 2. **Tail** — Is the final line still exactly **`coffee`** alone (not dropped, not inside a fence)?
 3. **Load** — Was the packet ~one screen, or did the receiver choke on length?
 
-**Recursive tightening:** If the **same failure** happens **twice** (e.g. lost `coffee` line, wrong heading levels, missing dual-repo status), patch **this skill** or [companion-self `bridge-packet-contract.md`](companion-self/docs/skill-work/work-cadence/bridge-packet-contract.md). Optional: save a **gold** bridge packet under `bridge-packets/` as a shape reference.
+**Recursive tightening:** If the **same failure** happens **twice** (e.g. lost `coffee` line, wrong heading levels, missing dual-repo status), patch **this skill** or [bridge-packet-contract.md](../../../docs/skill-work/work-cadence/bridge-packet-contract.md). Optional: save a **gold** bridge packet under `bridge-packets/` as a shape reference.
 
 ---
 
@@ -313,7 +316,7 @@ Bridge is complete. Pushed repos match Step 2 recommendation (or operator overri
 - `.cursor/skills/harvest/SKILL.md` — parallel-session import (separate from bridge paste)
 - `.cursor/skills/repo-hygiene-pass/SKILL.md` — deeper commit-grouping when needed
 - `scripts/bridge_last_state.py` — operational `last-bridge-state.json` + `--print-delta`
-- `companion-self/docs/skill-work/work-cadence/bridge-packet-contract.md` — canonical section contract
+- `docs/skill-work/work-cadence/bridge-packet-contract.md` — canonical section contract
 - `users/grace-mar/self-memory.md` — continuity context
 - `users/grace-mar/recursion-gate.md` — gated pipeline queue
 - `users/grace-mar/last-dream.json` — dream handoff artifact

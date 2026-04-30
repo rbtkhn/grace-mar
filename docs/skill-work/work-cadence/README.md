@@ -66,7 +66,7 @@ The script runs, in order: `export_manifest.py`, `fork_checksum.py --manifest`, 
 
 ## Cadence choreography
 
-**Choreography** means *who runs when*, *what each beat hands to the next*, and *how the operator stays oriented* without collapsing distinct jobs into one overweight ritual. It is not a moral schedule — it is a **failure-mode map**: each ritual answers a different kind of slip (framing decay, day residue, session amnesia, mid-day emphasis/pause, cross-agent handoff).
+**Choreography** means *who runs when*, *what each beat hands to the next*, and *how the operator stays oriented* without collapsing distinct jobs into one overweight ritual. It is not a moral schedule - it is a **failure-mode map**: each ritual answers a different kind of slip (framing decay, day residue, session continuity loss, mid-day emphasis/pause, cross-agent handoff).
 
 ### The beats (roles, not personalities)
 
@@ -172,7 +172,7 @@ Work fails on three clocks:
 
 **The residue clock (day).** By evening, unresolved threads, integrity drift, and unprocessed signals accumulate. `dream` settles them without dramatic mutation.
 
-**The context clock (session).** At session boundaries, agent memory goes to zero. Everything not on disk is lost. `bridge` seals the session and produces a transfer prompt so the next thread starts oriented instead of blank.
+**The context clock (session).** At session boundaries, continuity becomes non-guaranteed. Some harnesses carry part of the prior conversation forward, but that carryover is partial, compressible, and not a durable substitute for explicit handoff. `bridge` seals the session and produces a transfer prompt so the next thread starts oriented instead of reconstructing state from memory residue.
 
 Each clock needs its own ritual because the failure modes are different. Reorientation is not consolidation. Consolidation is not transfer. Merging them into one ritual would either make it too heavy for frequent use or too shallow for end-of-day closure.
 

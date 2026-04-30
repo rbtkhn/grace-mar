@@ -86,12 +86,12 @@ assumptions:
     notes: "Prompt summarization tiers exist because of this constraint. If production windows reach 1M+ reliably, the tier system may be unnecessary overhead."
 
   - id: ASSUME-002
-    assumption: "Models lack persistent cross-session memory"
+    assumption: "Models lack reliable, governed cross-session continuity"
     keywords: ["memory", "persistent memory", "session state", "conversation history", "long-term memory", "recall"]
     affects: ["scripts/harness_warmup.py", "docs/architecture.md", "self-memory.md"]
     gap_ids: []
     last_validated: 2026-04-07
-    notes: "The entire bridge/warmup/self-memory stack exists because agents are disposable and memory goes to zero each session."
+    notes: "The bridge/warmup/self-memory stack exists because agents are disposable and any cross-session carryover is partial, harness-dependent, and not a governed substitute for on-disk continuity."
 
   - id: ASSUME-003
     assumption: "Models cannot reliably maintain a consistent persona across sessions without explicit prompting"

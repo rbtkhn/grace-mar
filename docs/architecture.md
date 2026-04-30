@@ -82,7 +82,7 @@ Companion-self–style instances are **state-governance architectures** for iden
 
 Any future agentic or orchestration layer (e.g. Claw-style) must keep merge authority human-only; orchestration may suggest or stage, not merge.
 
-**Rebuilt around, not bolted onto.** Most personal AI systems bolt memory or continuity onto an existing chat interface. Grace-Mar's architecture was rebuilt around what AI makes possible: disposable agents that read state from disk, structured handoffs across session boundaries where memory goes to zero, and a gated pipeline where the human holds merge authority while the execution layer is commoditized and replaceable. This is a design criterion, not an accident — when evaluating new features, prefer approaches that assume the agent is disposable and continuity lives in artifacts, not approaches that depend on session persistence.
+**Rebuilt around, not bolted onto.** Most personal AI systems bolt memory or continuity onto an existing chat interface. Grace-Mar's architecture was rebuilt around what AI makes possible: disposable agents that read state from disk, structured handoffs across session boundaries where continuity is partial and non-guaranteed, and a gated pipeline where the human holds merge authority while the execution layer is commoditized and replaceable. This is a design criterion, not an accident - when evaluating new features, prefer approaches that assume the agent is disposable and continuity lives in artifacts, not approaches that depend on session persistence alone.
 
 ### Portable harness lanes
 
