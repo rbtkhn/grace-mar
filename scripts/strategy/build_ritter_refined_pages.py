@@ -30,6 +30,19 @@ try:
 except ImportError:  # pragma: no cover
     yaml = None  # type: ignore
 
+try:
+    from .page_context_packet import (
+        build_thread_context_packet,
+        context_packet_path,
+        render_thread_context_packet,
+    )
+except ImportError:  # pragma: no cover
+    from page_context_packet import (  # type: ignore
+        build_thread_context_packet,
+        context_packet_path,
+        render_thread_context_packet,
+    )
+
 REPO_ROOT = Path(__file__).resolve().parents[2]
 NOTEBOOK = REPO_ROOT / "docs/skill-work/work-strategy/strategy-notebook"
 RAW = NOTEBOOK / "raw-input"
@@ -156,6 +169,7 @@ def build_entries(paths: list[Path]) -> list[dict]:
             "C": "Mode C — YouTube (see raw-input source_url)",
         }[mode]
         preamble_val = (fm.get("pub_date") or "").strip() or vd
+        context_rel = f"page-context/{Path(page_name).stem}.context.md"
         entries.append(
             {
                 "raw_input_relative": str(p.relative_to(NOTEBOOK)).replace("\\", "/"),
@@ -170,6 +184,7 @@ def build_entries(paths: list[Path]) -> list[dict]:
                 "display_title": title,
                 "source_url": source_url,
                 "href_verbatim": href,
+                "context_packet_relative": context_rel,
             }
         )
     entries.sort(key=lambda e: (e["voice_date"], e["page_filename"]))
@@ -210,6 +225,7 @@ def render_scaffold(e: dict) -> str:
         "### Appendix",
         "",
         f"- **Full verbatim (capture):** [{e['raw_input_relative']}]({e['href_verbatim']})",
+        f"- **Context packet:** [{e['context_packet_relative']}]({e['context_packet_relative']}) (prior-month thread distillation; draft aid)",
         "- **Inbox / triage:** [daily-strategy-inbox.md](../../daily-strategy-inbox.md) (search `thread:ritter`, "
         + vd
         + ")",
@@ -253,6 +269,22 @@ def main() -> int:
     skipped = 0
     for e in entries:
         out = RITTER / e["page_filename"]
+        packet_path = context_packet_path(RITTER, e["page_filename"])
+        packet_path.parent.mkdir(parents=True, exist_ok=True)
+        packet = build_thread_context_packet(
+            expert_id="ritter",
+            page_date=e["voice_date"],
+            thread_paths=[
+                p
+                for p in (
+                    RITTER / "thread.md",
+                    *sorted(RITTER.glob("ritter-thread-*.md")),
+                )
+                if p.is_file()
+            ],
+            page_title=e["display_title"],
+        )
+        packet_path.write_text(render_thread_context_packet(packet), encoding="utf-8")
         if out.is_file() and not args.force:
             body = out.read_text(encoding="utf-8")
             if SCAFFOLD_MARKER not in body:

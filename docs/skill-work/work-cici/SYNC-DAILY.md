@@ -11,37 +11,36 @@ Use this file during **`coffee`** (work-start or signing-off) to aggregate `work
 
 ## Daily sync snapshot
 
-Date: **2026-04-12**
+Date: **2026-04-30**
 
-- **stale sync state:** `no` — both mirrors have a fresh row in `SYNC-LOG.md` for this date (see [work-dev-mirror/SYNC-LOG.md](work-dev-mirror/SYNC-LOG.md), [work-politics-mirror/SYNC-LOG.md](work-politics-mirror/SYNC-LOG.md)).
+- **stale sync state:** `yes` — latest mirror rows are still 2026-04-12 (see [work-dev-mirror/SYNC-LOG.md](work-dev-mirror/SYNC-LOG.md), [work-politics-mirror/SYNC-LOG.md](work-politics-mirror/SYNC-LOG.md)); run forced relevance scans before treating any mirror recommendation as current.
 
 ### 1) work-dev mirror
-- status: `relevant updates found`
-- score (impact + urgency + cici-readiness): `5/9`
+- status: `stale - forced scan required`
+- score (impact + urgency + cici-readiness): `pending`
 - proposed updates (max 5):
-  - `docs/skill-work/work-dev/workspace.md`
-  - `docs/skill-work/work-dev/implementation-ledger.md`
-  - `docs/skill-work/work-dev/handback-analysis-checklist.md`
-  - `docs/skill-work/work-dev/dev-notebook/work-dev/journal/README.md`, `daily-dev-journal-inbox.md`
-  - _(optional)_ `known-gaps.md` / `work-dev-history.md` if tracking GAP-005/006 alignment
+  - forced scan: `docs/skill-work/work-dev/workspace.md`
+  - forced scan: `docs/skill-work/work-dev/known-gaps.md`
+  - forced scan: `docs/skill-work/work-dev/integration-status.md`
+  - forced scan: changed warmup scripts if Cici-facing handback or beginner-safe guidance changed
 - action today:
-  - Logged 2026-04-12 row; pick a minimal copy set into [work-dev-mirror](work-dev-mirror/) on next advisor pass—skip deep CI/scenario-only churn unless needed.
+  - Add a dated 2026-04-30 [work-dev-mirror/SYNC-LOG.md](work-dev-mirror/SYNC-LOG.md) row after the scan; mirror only Cici-readable deltas, not deep CI churn.
 
 ### 2) work-politics mirror
-- status: `relevant updates found`
-- score (impact + urgency + cici-readiness): `4/9`
+- status: `stale - forced scan required`
+- score (impact + urgency + cici-readiness): `pending`
 - proposed updates (max 5):
-  - `docs/skill-work/work-politics/workspace.md`
-  - `docs/skill-work/work-politics/polling-and-markets.md`
-  - `docs/skill-work/work-politics/brief-source-registry.md`
-  - _(defer)_ campaign-only deltas unless Cici is on KY-4 brief cadence this week
+  - forced scan: `docs/skill-work/work-politics/workspace.md`
+  - forced scan: `docs/skill-work/work-politics/polling-and-markets.md`
+  - forced scan: `docs/skill-work/work-politics/brief-source-registry.md`
+  - defer campaign-only deltas unless Cici is actively on KY-4 brief cadence
 - action today:
-  - Logged 2026-04-12 row; refresh mirror copies when she is actively on Massie/brief workflow.
+  - Add a dated 2026-04-30 [work-politics-mirror/SYNC-LOG.md](work-politics-mirror/SYNC-LOG.md) row after the scan; mirror only material she can actually use.
 
 ### 3) Combined next action
-- top sync task: After grace-mar **04-11** batch, prioritize **work-dev** `workspace.md` + handback checklist if her stack touches agent handback; otherwise next **`coffee`** touch.
+- top sync task: Run forced relevance scans for both mirrors, append 2026-04-30 sync-log rows, then refresh this snapshot with scored update candidates before any optimization work.
 - owner: operator
-- done by: next **`coffee`** or explicit mirror edit session
+- done by: next **`coffee D`** / work-cici mirror edit session
 
 ---
 
@@ -70,9 +69,9 @@ and run a forced relevance scan before any other optimization tasks.
 
 ## Daily Ops handoff
 
-- ops-card status: `drafted`
-- selected top sync action: Both `SYNC-LOG.md` rows + snapshot updated (2026-04-12); relevance = **found** on both lanes—copy set TBD on next mirror pass.
-- selected top execution action: _(see card)_
+- ops-card status: `refreshed-stale`
+- selected top sync action: Forced relevance scans for both mirrors; do not reuse 2026-04-12 recommendations as current.
+- selected top execution action: Update [DAILY-OPS-CARD.md](DAILY-OPS-CARD.md) after the scan with the selected mirror copy set.
 - selected top gate action: _(none — grace-mar gate unchanged this pass)_
 - card path: [DAILY-OPS-CARD.md](DAILY-OPS-CARD.md)
 

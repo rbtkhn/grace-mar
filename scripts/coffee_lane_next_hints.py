@@ -14,6 +14,7 @@ from __future__ import annotations
 import argparse
 import re
 import sys
+from datetime import date, datetime
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
@@ -104,11 +105,31 @@ def _first_filled_after_label(lines: list[str], label_lower: str) -> str | None:
 
 
 def _hint_from_sync_daily(text: str) -> str | None:
+    stale = _sync_daily_stale_reason(text)
+    if stale:
+        return stale
     block = _sync_daily_combined_block(text)
     if not block:
         return None
     lines = block.splitlines()
     return _first_filled_after_label(lines, "top sync task")
+
+
+def _sync_daily_stale_reason(text: str, *, today: date | None = None) -> str | None:
+    """Return a human action line when SYNC-DAILY should not be treated as fresh."""
+    if re.search(r"stale sync state:\*\*\s*`yes`", text, re.I):
+        return "SYNC-DAILY is stale; run forced work-dev/work-politics mirror relevance scans before using mirror recommendations."
+    m = re.search(r"Date:\s*\*\*(\d{4}-\d{2}-\d{2})\*\*", text)
+    if not m:
+        return None
+    try:
+        snapshot_day = datetime.strptime(m.group(1), "%Y-%m-%d").date()
+    except ValueError:
+        return None
+    current = today or date.today()
+    if (current - snapshot_day).days > 3:
+        return "SYNC-DAILY is older than 3 days; mark stale and run forced work-dev/work-politics mirror relevance scans."
+    return None
 
 
 def _first_active_watch(repo: Path) -> str | None:

@@ -6,6 +6,34 @@
 
 ---
 
+## Project role of `cici-ai`
+
+`cici-ai` is the lightweight social front door for Cici's OB1 / companion-self learning cohort.
+
+## Mission statement
+
+`cici-ai` helps AI-curious builders learn by doing: each member is invited to set up their own governed OB1 / Cici-style workspace, ask for help without shame, share visible progress, and gradually become capable of helping the next person. The group exists to turn private curiosity into durable practice - safe setup, real artifacts, repeatable habits, and peer support - while keeping every person's Record, repo, and infrastructure under their own control.
+
+Its job in the work-cici project is to convert interest into visible initiation:
+
+- gather a small group of AI-curious hobbyists around Cici's learning path
+- help members fork or stand up their own OB1 / Cici-style workspace safely
+- normalize questions, stuck states, and screenshot-based troubleshooting in public
+- reduce repeated one-on-one advisor load by making the golden path social and repeatable
+- produce evidence-linked activation signals for the advisor lane: join, goal stated, fork/opened workspace, first task, return within seven days, artifact, and helper behavior
+
+What `cici-ai` is not:
+
+- not Cici's Record and not a place to merge identity truth
+- not the canonical Cici repo; GitHub remains the durable technical spine
+- not a passive announcement channel where joins alone count as success
+- not BrewMind partner-facing marketing copy
+- not a paid program in this lane
+
+The Telegram group is therefore best understood as a **cohort activation surface**: chat supplies warmth, momentum, and help-seeking; GitHub supplies durable artifacts; work-cici supplies advisor evidence, measurement, and coaching.
+
+---
+
 ## Cici’s short-term objective (operator-stated, measurable)
 
 **Target: 10 people** who:

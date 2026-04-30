@@ -412,6 +412,23 @@ Add repeated "diagnostics are not approval" language in the diagnostics map and 
 Do not:
 Grant any diagnostic tool gate or Record authority.
 
+### GAP-WD-021 — Windows-safe warmup stack
+
+Status: addressed
+Type: ergonomics
+Severity: low
+Affected paths:
+- `scripts/operator_coffee.py`
+- `scripts/operator_daily_warmup.py`
+- `scripts/harness_warmup.py`
+- `scripts/operator_handoff_check.py`
+Issue:
+The warmup stack assumed `python3` and inherited console encoding defaults, which caused Windows launch failures and Unicode output errors.
+Resolution:
+The coffee stack now uses the active interpreter and reconfigures stdio to UTF-8 before printing, so the warmup path runs cleanly on Windows without shell-side encoding overrides.
+Do not:
+Treat this as proof that every launcher in the repo is cross-platform hardened; only the warmup entrypoints were updated here.
+
 ## Maintenance rule
 
 - Keep gaps small and actionable.

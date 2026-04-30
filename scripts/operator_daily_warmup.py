@@ -51,6 +51,13 @@ except ImportError:
 LAST_DREAM_FILENAME = "last-dream.json"
 
 
+def _configure_utf8_stdio() -> None:
+    for stream in (sys.stdout, sys.stderr):
+        reconfigure = getattr(stream, "reconfigure", None)
+        if callable(reconfigure):
+            reconfigure(encoding="utf-8", errors="replace")
+
+
 def _compress_lines(lines: list[str], *, max_lines: int) -> list[str]:
     """Truncate body lines; max_lines <= 0 means no compression."""
     if max_lines <= 0 or len(lines) <= max_lines:
@@ -365,7 +372,7 @@ def _git_status_lines() -> list[str]:
 
 def _integrity_errors(user_id: str) -> list[str]:
     proc = subprocess.run(
-        ["python3", "scripts/validate-integrity.py", "--user", user_id, "--json"],
+        [sys.executable, "scripts/validate-integrity.py", "--user", user_id, "--json"],
         cwd=REPO_ROOT,
         check=False,
         capture_output=True,
@@ -595,6 +602,7 @@ def build_operator_daily_warmup(
 
 
 def main() -> int:
+    _configure_utf8_stdio()
     parser = argparse.ArgumentParser(description="Generate a daily operator warmup for Grace-Mar.")
     parser.add_argument("--user", "-u", default="grace-mar", help="User id")
     parser.add_argument(

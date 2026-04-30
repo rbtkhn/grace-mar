@@ -18,6 +18,7 @@ YouTube channels, podcasts, newsletters, and **web reference outlets** the opera
 | Peter H. Diamandis | https://www.youtube.com/@peterdiamandis | Long-horizon exponential and moonshot discourse |
 | The Innermost Loop (Dr. Alex Wissner-Gross) | https://theinnermostloop.substack.com/ | Substack — high-velocity intelligence / event-horizon curation; by Dr. Alex Wissner-Gross |
 | Open Brain (OB1) | https://github.com/NateBJones-Projects/OB1 | Persistent AI memory system — one Supabase + pgvector database, one MCP protocol, any AI client; community extensions, skills, recipes, dashboards; strong contribution scaffolding (metadata schema, automated PR review, skill composition); reference for skill validation and composition recipe patterns borrowed into companion-self |
+| Orchestra Research AI Research Skills | https://github.com/Orchestra-Research/AI-research-SKILLs | AI research skills library and npm installer (`@orchestra-research/ai-research-skills`); reference for WORK-layer research lifecycle scaffolding, Autoresearch orchestration, paper-writing outputs, evaluation/safety discipline, and progressive skill packaging. See [research-orchestra-ai-research-skills.md](research-orchestra-ai-research-skills.md). |
 | 01-MediaMap (ekristof) | https://github.com/ekristof/01-mediamap | ~1,877-link structured political media reference (Left through Right + supporting); curated work-dev subset below |
 
 Add rows above or below as you like.

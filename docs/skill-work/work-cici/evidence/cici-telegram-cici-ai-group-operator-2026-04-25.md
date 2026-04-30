@@ -7,6 +7,12 @@
 
 - **Cici** created a **Telegram group** named **`cici-ai`** to **invite hobbyists** to work together on building **Open Brain (OB1)**-aligned work (self-hosted memory / companion patterns per her public repo positioning).
 
+## Project purpose
+
+Within work-cici, `cici-ai` is the social/cohort layer for moving hobbyists from interest to first governed setup. It exists to make the OB1 / Cici path learnable in public: members can ask for help, show stuck points, share setup artifacts, and eventually help each other. The group is measured by activation evidence, not membership alone.
+
+It is not Cici's Record, not the source-of-truth repo, and not partner-facing BrewMind marketing. GitHub remains the durable technical spine; this Telegram group is the warm onboarding and accountability room.
+
 ## Invite link (operator-confirmed)
 
 **Join:** [https://t.me/+ygaDSQxwXV1mMjA7](https://t.me/+ygaDSQxwXV1mMjA7) — [Telegram join page](https://t.me/+ygaDSQxwXV1mMjA7) for **cici-ai** (t.me `+` hash invite). If the link is rotated in Telegram, update this file and cross-links.

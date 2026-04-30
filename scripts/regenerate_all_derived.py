@@ -97,6 +97,12 @@ def _expand(values: list[str] | None) -> list[str]:
     return out
 
 
+def _runtime_command(cmd: list[str]) -> list[str]:
+    if cmd and cmd[0] == "python3":
+        return [sys.executable, *cmd[1:]]
+    return cmd
+
+
 def _selected_targets(args: argparse.Namespace, changed_paths: list[str]):
     if args.all:
         return topologically_sort_targets(list(TARGETS)), "all"
@@ -189,7 +195,7 @@ def main() -> int:
         for cmd in commands:
             print(f"[run] {' '.join(cmd)}", flush=True)
             proc = subprocess.run(
-                cmd,
+                _runtime_command(cmd),
                 cwd=REPO_ROOT,
                 capture_output=True,
                 text=True,

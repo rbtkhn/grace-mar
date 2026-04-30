@@ -40,6 +40,13 @@ if str(_SCRIPTS) not in sys.path:
 MODES = ("work-start", "light", "minimal", "closeout", "reentry")
 
 
+def _configure_utf8_stdio() -> None:
+    for stream in (sys.stdout, sys.stderr):
+        reconfigure = getattr(stream, "reconfigure", None)
+        if callable(reconfigure):
+            reconfigure(encoding="utf-8", errors="replace")
+
+
 def _run(argv: list[str], *, label: str | None = None) -> int:
     display = label or " ".join(argv)
     print(f"\n{'=' * 60}\n$ {display}\n{'=' * 60}\n", flush=True)
@@ -74,6 +81,7 @@ def _branch_snapshot() -> str:
 
 
 def main() -> int:
+    _configure_utf8_stdio()
     p = argparse.ArgumentParser(
         description="Consolidated coffee Step 1 — single entry point for all warmup modes."
     )

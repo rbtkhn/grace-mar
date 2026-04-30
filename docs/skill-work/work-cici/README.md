@@ -69,6 +69,8 @@ Cici’s **companion** or **chosen instance** repository (Identity Fork Protocol
 
 **Community measurement:** [cici-ai-community-dashboard.md](cici-ai-community-dashboard.md), [cici-ai-first-task-proof-packet.md](cici-ai-first-task-proof-packet.md), and [cici-ai-weekly-governance-review-template.md](cici-ai-weekly-governance-review-template.md). **Weekly review instances** live in [reviews/](reviews/).
 
+**Active `cici-ai` work lanes:** [cici-ai-lanes.md](cici-ai-lanes.md) splits the current operator surface into [cici-ai-telegram](cici-ai-telegram/README.md), [cici-ai-core](cici-ai-core/README.md), and [cici-ai-progress](cici-ai-progress/README.md). These lanes route action; they do not replace evidence, governed-state, or Cici's own repo.
+
 **Portability:** Patterns in this module are intended to be **mirrored or adapted** for other companion-self operator/agent workspaces; the instance Record stays in each companion’s repo. Reusable pattern: see [docs/skill-work/work-template/external-companion-workspace-template.md](../work-template/external-companion-workspace-template.md) (generic advisor-lane template; this folder remains not Cici’s Record).
 
 **Template alignment:** [work-cici-sources.md](work-cici-sources.md) (feeds / pointers), [LANE-CI.md](LANE-CI.md) (PR labels), [WORK-LEDGER.md](WORK-LEDGER.md) (watches + compounding). Concept map: [work-template/MAPPING.md](../work-template/MAPPING.md) (section *work-cici (advisor module)*).

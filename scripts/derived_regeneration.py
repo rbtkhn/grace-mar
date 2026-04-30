@@ -178,6 +178,31 @@ TARGETS: tuple[RebuildTarget, ...] = (
             "artifacts/work-strategy/strategy-notebook/views/expert-convergence.json",
         ),
     ),
+    RebuildTarget(
+        target_id="work-dev-compound-autoresearch",
+        description="Work-dev compound and Autoresearch operator summaries",
+        producer_script="scripts/build_work_dev_compound_dashboard.py",
+        policy_mode="Surface",
+        rationale="Rebuild work-dev compound dashboards and exports when compound notes or Autoresearch run notes change, keeping research scaffolding inspectable without Record authority.",
+        watch_patterns=(
+            "docs/skill-work/work-dev/compound-notes/**",
+            "docs/skill-work/work-dev/autoresearch-runs/**",
+            "scripts/work_dev_compound_refresh.py",
+            "scripts/export_work_dev_compound_gate_candidates.py",
+            "scripts/build_work_dev_compound_dashboard.py",
+            "scripts/work_dev/compound_notes.py",
+        ),
+        command_templates=(
+            ("python3", "scripts/work_dev_compound_refresh.py"),
+            ("python3", "scripts/export_work_dev_compound_gate_candidates.py"),
+            ("python3", "scripts/build_work_dev_compound_dashboard.py"),
+        ),
+        outputs=(
+            "artifacts/work-dev-compound-refresh.md",
+            "artifacts/work-dev-compound-gate-candidates.md",
+            "artifacts/work-dev-compound-dashboard.md",
+        ),
+    ),
 )
 
 TARGETS_BY_ID = {target.target_id: target for target in TARGETS}

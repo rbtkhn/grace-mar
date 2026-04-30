@@ -1,0 +1,149 @@
+{
+  "receiptKind": "derived_rebuild",
+  "receiptId": "drb-20260430-230751",
+  "createdAt": "2026-04-30T23:07:51Z",
+  "mode": "incremental",
+  "user": "grace-mar",
+  "changedPaths": [
+    "artifacts/work-dev/derived-regeneration-manifest.json",
+    "artifacts/work-dev/derived-regeneration-manifest.json.derived-rationale.json",
+    "artifacts/work-dev/rebuild-receipts/derived-rebuild-20260430-230333.json",
+    "artifacts/work-dev/rebuild-receipts/derived-rebuild-20260430-230624.json",
+    "artifacts/work-dev/rebuild-receipts/derived-rebuild-20260430-230743.json",
+    "artifacts/work-dev/rebuild-receipts/derived-rebuild-20260430-230751.json",
+    "codex-audit/cici-ai",
+    "docs/skill-work/work-business/README.md",
+    "docs/skill-work/work-business/grace-gems/README.md",
+    "docs/skill-work/work-business/grace-gems/monthly-operating-review.md",
+    "docs/skill-work/work-business/grace-gems/monthly-reviews/2026-04.md",
+    "docs/skill-work/work-business/work-business-history.md",
+    "docs/skill-work/work-cadence/work-cadence-events.md",
+    "docs/skill-work/work-cici/DAILY-OPS-CARD.md",
+    "docs/skill-work/work-cici/INDEX.md",
+    "docs/skill-work/work-cici/LANE-CI.md",
+    "docs/skill-work/work-cici/README.md",
+    "docs/skill-work/work-cici/SYNC-DAILY.md",
+    "docs/skill-work/work-cici/cici-ai-community-dashboard.md",
+    "docs/skill-work/work-cici/cici-ai-core/README.md",
+    "docs/skill-work/work-cici/cici-ai-lanes.md",
+    "docs/skill-work/work-cici/cici-ai-progress/README.md",
+    "docs/skill-work/work-cici/cici-ai-telegram/README.md",
+    "docs/skill-work/work-cici/cici-ai-telegram/next-ob1-fork-proof-post-2026-04-30.md",
+    "docs/skill-work/work-cici/cici-community-mission-operator.md",
+    "docs/skill-work/work-cici/cici-progress-log.md",
+    "docs/skill-work/work-cici/evidence/cici-ai-first-applicant-wave-2026-04-30.md",
+    "docs/skill-work/work-cici/evidence/cici-ai-first-telegram-message-2026-04-30.md",
+    "docs/skill-work/work-cici/evidence/cici-ai-telegram-avatar-setup-thread-2026-04-30-a.jpg",
+    "docs/skill-work/work-cici/evidence/cici-ai-telegram-avatar-setup-thread-2026-04-30-b.jpg",
+    "docs/skill-work/work-cici/evidence/cici-janitor-safe-transient-purge-thread-2026-04-24.jpg",
+    "docs/skill-work/work-cici/evidence/cici-operator-screenshots-ingest-2026-04-30.md",
+    "docs/skill-work/work-cici/evidence/cici-telegram-cici-ai-group-operator-2026-04-25.md",
+    "docs/skill-work/work-cici/handoffs/cici-ai-work-lanes-implementation-prompt.md",
+    "docs/skill-work/work-cici/work-cici-history.md",
+    "docs/skill-work/work-dev/README.md",
+    "docs/skill-work/work-dev/autoresearch-runs/2026-04-30-derived-regeneration-shallow.md",
+    "docs/skill-work/work-dev/compound-notes/2026-04-30-autoresearch-derived-regeneration-dry-run.md",
+    "docs/skill-work/work-dev/derived-regeneration.md",
+    "docs/skill-work/work-dev/integration-status.md",
+    "docs/skill-work/work-dev/known-gaps.md",
+    "docs/skill-work/work-dev/research-orchestra-ai-research-skills.md",
+    "docs/skill-work/work-dev/templates/autoresearch-gate-candidate-example.md",
+    "docs/skill-work/work-dev/templates/autoresearch-operator-checklist.md",
+    "docs/skill-work/work-dev/templates/autoresearch-run-note.md",
+    "docs/skill-work/work-dev/templates/autoresearch-wrapper.md",
+    "docs/skill-work/work-dev/templates/language-and-tracer-bullet-plan.md",
+    "docs/skill-work/work-dev/ubiquitous-language-and-tracer-bullets.md",
+    "docs/skill-work/work-dev/work-dev-history.md",
+    "docs/skill-work/work-dev/work-dev-sources.md",
+    "docs/skill-work/work-strategy/strategy-notebook/PAGE-CONTRACT.md",
+    "docs/skill-work/work-strategy/strategy-notebook/refined-page-template.md",
+    "scripts/check_work_cici_drift.py",
+    "scripts/coffee_lane_next_hints.py",
+    "scripts/derived_regeneration.py",
+    "scripts/harness_warmup.py",
+    "scripts/operator_coffee.py",
+    "scripts/operator_daily_warmup.py",
+    "scripts/operator_handoff_check.py",
+    "scripts/regenerate_all_derived.py",
+    "scripts/strategy/build_crooke_refined_pages.py",
+    "scripts/strategy/build_ritter_refined_pages.py",
+    "scripts/strategy/page_context_packet.py",
+    "tests/test_coffee_lane_next_hints.py",
+    "tests/test_strategy_page_context_packet.py"
+  ],
+  "targets": [
+    {
+      "targetId": "derived-regeneration-manifest",
+      "description": "Machine-readable manifest of repo-owned derived rebuild targets",
+      "producerScript": "scripts/build_derived_regeneration_manifest.py",
+      "policyMode": "Rebuild",
+      "matchedPaths": [
+        "docs/skill-work/work-dev/derived-regeneration.md",
+        "scripts/derived_regeneration.py"
+      ],
+      "commands": [
+        "python3 scripts/build_derived_regeneration_manifest.py"
+      ],
+      "outputs": [
+        "artifacts/work-dev/derived-regeneration-manifest.json"
+      ],
+      "rationaleSidecars": [
+        "artifacts/work-dev/derived-regeneration-manifest.json.derived-rationale.json"
+      ],
+      "status": "dry_run"
+    },
+    {
+      "targetId": "strategy-notebook-graph",
+      "description": "Strategy-notebook graph and derived views",
+      "producerScript": "scripts/build_strategy_notebook_graph.py",
+      "policyMode": "Strategy",
+      "matchedPaths": [
+        "docs/skill-work/work-strategy/strategy-notebook/PAGE-CONTRACT.md",
+        "docs/skill-work/work-strategy/strategy-notebook/refined-page-template.md"
+      ],
+      "commands": [
+        "python3 scripts/build_strategy_notebook_graph.py"
+      ],
+      "outputs": [
+        "artifacts/work-strategy/strategy-notebook/graph.json",
+        "artifacts/work-strategy/strategy-notebook/views/watch-clusters.json",
+        "artifacts/work-strategy/strategy-notebook/views/expert-convergence.json"
+      ],
+      "rationaleSidecars": [
+        "artifacts/work-strategy/strategy-notebook/graph.json.derived-rationale.json",
+        "artifacts/work-strategy/strategy-notebook/views/watch-clusters.json.derived-rationale.json",
+        "artifacts/work-strategy/strategy-notebook/views/expert-convergence.json.derived-rationale.json"
+      ],
+      "status": "dry_run"
+    },
+    {
+      "targetId": "work-dev-compound-autoresearch",
+      "description": "Work-dev compound and Autoresearch operator summaries",
+      "producerScript": "scripts/build_work_dev_compound_dashboard.py",
+      "policyMode": "Surface",
+      "matchedPaths": [
+        "docs/skill-work/work-dev/autoresearch-runs/2026-04-30-derived-regeneration-shallow.md",
+        "docs/skill-work/work-dev/compound-notes/2026-04-30-autoresearch-derived-regeneration-dry-run.md"
+      ],
+      "commands": [
+        "python3 scripts/work_dev_compound_refresh.py",
+        "python3 scripts/export_work_dev_compound_gate_candidates.py",
+        "python3 scripts/build_work_dev_compound_dashboard.py"
+      ],
+      "outputs": [
+        "artifacts/work-dev-compound-refresh.md",
+        "artifacts/work-dev-compound-gate-candidates.md",
+        "artifacts/work-dev-compound-dashboard.md"
+      ],
+      "rationaleSidecars": [
+        "artifacts/work-dev-compound-refresh.md.derived-rationale.json",
+        "artifacts/work-dev-compound-gate-candidates.md.derived-rationale.json",
+        "artifacts/work-dev-compound-dashboard.md.derived-rationale.json"
+      ],
+      "status": "dry_run"
+    }
+  ],
+  "resultStatus": "dry_run",
+  "recordAuthority": "none",
+  "gateEffect": "none"
+}

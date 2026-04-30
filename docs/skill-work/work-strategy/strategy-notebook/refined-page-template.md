@@ -212,3 +212,7 @@ Use **`# {ExpertTitle}`** as a human-facing title case of the expert display nam
 ## Compat stubs
 
 Each expert keeps **`experts/<expert_id>/<expert_id>-page-template.md`** as a **short stub** linking here so existing `Template:` lines and bookmarks stay valid. Edit policy: **change this file**; change per-expert stubs only when the compat paragraph itself needs revision. Legacy on-disk name [refined-day-page-template.md](refined-day-page-template.md) remains a one-hop redirect to this file.
+
+## Drafting aid
+
+When composing a new refined page, read the bounded thread-context packet built from prior month thread files when available. It is a drafting aid only: use it to choose the best excerpt set and to orient `### Reflection` / `### Foresight`, but keep the raw file as the SSOT for literal wording.

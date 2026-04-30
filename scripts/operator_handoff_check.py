@@ -56,6 +56,13 @@ EXPORT_CHURN_MARKERS = (
 )
 
 
+def _configure_utf8_stdio() -> None:
+    for stream in (sys.stdout, sys.stderr):
+        reconfigure = getattr(stream, "reconfigure", None)
+        if callable(reconfigure):
+            reconfigure(encoding="utf-8", errors="replace")
+
+
 def _run_git(*args: str) -> list[str]:
     proc = subprocess.run(
         ["git", *args],
@@ -325,6 +332,7 @@ def build_handoff_check(user_id: str = "grace-mar") -> str:
 
 
 def main() -> int:
+    _configure_utf8_stdio()
     parser = argparse.ArgumentParser(description="Generate a handoff summary for Grace-Mar.")
     parser.add_argument("--user", "-u", default="grace-mar", help="User id")
     args = parser.parse_args()

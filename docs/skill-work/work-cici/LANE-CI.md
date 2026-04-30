@@ -23,7 +23,7 @@ There is no work-cici–specific gate paste CLI in this repo; use the standard s
 
 ## Drift guard
 
-Run before merging lane copy that touches the **skill-work** hub row, `work-cici` **README** / **INDEX** / **LANES** / **LEAKAGE** active prose, or any change that could reintroduce “Xavier as the *current* lane identity”:
+Run before merging lane copy that touches the **skill-work** hub row, `work-cici` **README** / **INDEX** / **LANES** / **LEAKAGE** active prose, active coffee/sync surfaces (`SYNC-DAILY.md`, `DAILY-OPS-CARD.md`, `GOOD-MORNING.md`), mirror sync contracts, or any change that could reintroduce “Xavier as the *current* lane identity”:
 
 ```bash
 python3 scripts/check_work_cici_drift.py

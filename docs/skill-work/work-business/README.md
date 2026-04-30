@@ -31,6 +31,7 @@
 | **[accounting/](accounting/)** | **Accounting surface** — ledger, chart of accounts, tax prep workflow. Entry: [accounting/README.md](accounting/README.md). |
 | **[marketing/](marketing/)** | **Marketing surface** — per-venture plans, shared principles. Entry: [marketing/README.md](marketing/README.md). |
 | **[grace-gems/](grace-gems/)** | **Grace Gems** (Etsy) — shop context, roadmap, agent-encoding, message-assist, market research, marketing plan, workflow reminders. Entry: [grace-gems/README.md](grace-gems/README.md). |
+| **[grace-gems/monthly-operating-review.md](grace-gems/monthly-operating-review.md)** | Grace Gems monthly review checklist: books, shop health, marketing, and tax/compliance readiness. |
 | **[xavier/](xavier/)** | Xavier business intake workspace (WORK-only starter pack). |
 | **[worldland-decentralized-ai-mainnet-2026-03.md](worldland-decentralized-ai-mainnet-2026-03.md)** | Deep research: WorldLand / LiberVance (March 2026). |
 | **[work-business-history.md](work-business-history.md)** | Append-only operator log. |

@@ -61,6 +61,42 @@ def test_next_work_cici_prefers_sync_daily_top_task(tmp_path: Path) -> None:
     assert "mirror scan" in line.lower()
 
 
+def test_next_work_cici_warns_when_sync_daily_is_stale(tmp_path: Path) -> None:
+    xdir = tmp_path / "docs/skill-work/work-cici"
+    xdir.mkdir(parents=True)
+    (xdir / "SYNC-DAILY.md").write_text(
+        """Date: **2000-01-01**
+
+- **stale sync state:** `no`
+
+### 3) Combined next action
+- top sync task: Reuse an obsolete task
+""",
+        encoding="utf-8",
+    )
+    line = next_work_cici_line(tmp_path)
+    assert "older than 3 days" in line
+    assert "obsolete" not in line
+
+
+def test_next_work_cici_warns_when_sync_daily_marks_stale(tmp_path: Path) -> None:
+    xdir = tmp_path / "docs/skill-work/work-cici"
+    xdir.mkdir(parents=True)
+    (xdir / "SYNC-DAILY.md").write_text(
+        """Date: **2099-01-01**
+
+- **stale sync state:** `yes`
+
+### 3) Combined next action
+- top sync task: Reuse a stale task anyway
+""",
+        encoding="utf-8",
+    )
+    line = next_work_cici_line(tmp_path)
+    assert "SYNC-DAILY is stale" in line
+    assert "stale task anyway" not in line
+
+
 def test_format_lane_next_hints_two_lines(tmp_path: Path) -> None:
     ws = tmp_path / "docs/skill-work/work-dev"
     ws.mkdir(parents=True)

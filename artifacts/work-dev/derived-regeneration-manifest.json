@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0-derived-regeneration-manifest",
-  "generatedAt": "2026-04-24T16:19:05Z",
+  "generatedAt": "2026-04-30T23:07:43Z",
   "recordAuthority": "none",
   "gateEffect": "none",
   "targets": [
@@ -220,6 +220,42 @@
         "artifacts/work-strategy/strategy-notebook/graph.json",
         "artifacts/work-strategy/strategy-notebook/views/watch-clusters.json",
         "artifacts/work-strategy/strategy-notebook/views/expert-convergence.json"
+      ]
+    },
+    {
+      "targetId": "work-dev-compound-autoresearch",
+      "description": "Work-dev compound and Autoresearch operator summaries",
+      "producerScript": "scripts/build_work_dev_compound_dashboard.py",
+      "policyMode": "Surface",
+      "humanReviewRequired": false,
+      "watchPatterns": [
+        "docs/skill-work/work-dev/compound-notes/**",
+        "docs/skill-work/work-dev/autoresearch-runs/**",
+        "scripts/work_dev_compound_refresh.py",
+        "scripts/export_work_dev_compound_gate_candidates.py",
+        "scripts/build_work_dev_compound_dashboard.py",
+        "scripts/work_dev/compound_notes.py"
+      ],
+      "commands": [
+        "python3 scripts/work_dev_compound_refresh.py",
+        "python3 scripts/export_work_dev_compound_gate_candidates.py",
+        "python3 scripts/build_work_dev_compound_dashboard.py"
+      ],
+      "outputs": [
+        "artifacts/work-dev-compound-refresh.md",
+        "artifacts/work-dev-compound-gate-candidates.md",
+        "artifacts/work-dev-compound-dashboard.md"
+      ],
+      "rationaleSidecars": [
+        "artifacts/work-dev-compound-refresh.md.derived-rationale.json",
+        "artifacts/work-dev-compound-gate-candidates.md.derived-rationale.json",
+        "artifacts/work-dev-compound-dashboard.md.derived-rationale.json"
+      ],
+      "dependsOn": [],
+      "ownedOutputPatterns": [
+        "artifacts/work-dev-compound-refresh.md",
+        "artifacts/work-dev-compound-gate-candidates.md",
+        "artifacts/work-dev-compound-dashboard.md"
       ]
     }
   ]

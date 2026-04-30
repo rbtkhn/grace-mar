@@ -387,3 +387,23 @@ _(Append below this line.)_
 - **2026-04-30 14:44 UTC** — coffee_pick (grace-mar) ok=true cursor_model=unknown model_tier=unknown picked=conductor conductor=kleiber
 - **2026-04-30 14:47 UTC** — coffee_conductor_outcome (grace-mar) ok=true cursor_model=unknown model_tier=unknown conductor=kleiber action=tighten-strategy-inbox-public-stake falsify=commit-only-surviving-content-wedge
 - **2026-04-30 15:37 UTC** — bridge (grace-mar) ok=true cursor_model=unknown model_tier=unknown refs=786c49cf
+- **2026-04-30 16:38 UTC** — coffee (grace-mar) ok=true mode=work-start cursor_model=unknown model_tier=unknown
+- **2026-04-30 16:39 UTC** — coffee_pick (grace-mar) ok=true cursor_model=unknown model_tier=unknown picked=A steward=git
+- **2026-04-30 16:43 UTC** — coffee (grace-mar) ok=true mode=work-start cursor_model=unknown model_tier=unknown
+- **2026-04-30 16:44 UTC** — coffee_pick (grace-mar) ok=true cursor_model=unknown model_tier=unknown picked=conductor conductor=furtwangler
+- **2026-04-30 16:46 UTC** — coffee (grace-mar) ok=true mode=work-start cursor_model=unknown model_tier=unknown
+- **2026-04-30 16:48 UTC** — coffee_pick (grace-mar) ok=true cursor_model=unknown model_tier=unknown picked=D capitalist=work-cici-commercial-teaching
+- **2026-04-30 19:01 UTC** — coffee (grace-mar) ok=true mode=work-start cursor_model=unknown model_tier=unknown
+- **2026-04-30 19:02 UTC** — coffee_pick (grace-mar) ok=true cursor_model=unknown model_tier=unknown picked=E conductor=furtwangler
+- **2026-04-30 19:12 UTC** — coffee_conductor_outcome (grace-mar) ok=true cursor_model=unknown model_tier=unknown conductor=furtwangler action=cici-ai-telegram-ob1-fork-proof-post falsify=single-artifact-ask-before-progress-dashboard
+- **2026-04-30 19:15 UTC** — coffee_pick (grace-mar) ok=true cursor_model=unknown model_tier=unknown picked=conductor conductor=toscanini
+- **2026-04-30 19:16 UTC** — coffee_conductor_outcome (grace-mar) ok=true cursor_model=unknown model_tier=unknown conductor=toscanini action=cici-ai-ob1-fork-receipt-path falsify=no-scholarship-readiness-from-fork-proof
+- **2026-04-30 19:16 UTC** — coffee_pick (grace-mar) ok=true cursor_model=unknown model_tier=unknown picked=conductor conductor=karajan
+- **2026-04-30 19:17 UTC** — coffee_conductor_outcome (grace-mar) ok=true cursor_model=unknown model_tier=unknown conductor=karajan action=cici-ai-lanes-monthly-operating-arc falsify=three-lanes-are-sequence-not-equal-buckets
+- **2026-04-30 19:19 UTC** — coffee_conductor_outcome (grace-mar) ok=true cursor_model=unknown model_tier=unknown conductor=karajan action=grace-mar-rhythm-scan falsify=period-rhythm-only-where-existing-cadence-pressure
+- **2026-04-30 19:22 UTC** — coffee_conductor_outcome (grace-mar) ok=true cursor_model=unknown model_tier=unknown conductor=karajan action=grace-gems-monthly-operating-review falsify=monthly-review-is-checklist-not-advice
+- **2026-04-30 19:25 UTC** — coffee_pick (grace-mar) ok=true cursor_model=unknown model_tier=unknown picked=conductor conductor=kleiber
+- **2026-04-30 19:27 UTC** — coffee_pick (grace-mar) ok=true cursor_model=unknown model_tier=unknown picked=conductor conductor=bernstein
+- **2026-04-30 19:28 UTC** — coffee_conductor_outcome (grace-mar) ok=true cursor_model=unknown model_tier=unknown conductor=bernstein action=grace-gems-live-judgment-close falsify=review-answers-what-mattered-and-next
+- **2026-04-30 22:54 UTC** — coffee (grace-mar) ok=true mode=work-start cursor_model=unknown model_tier=unknown
+- **2026-04-30 22:56 UTC** — coffee_pick (grace-mar) ok=true cursor_model=unknown model_tier=unknown picked=B

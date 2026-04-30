@@ -26,6 +26,10 @@ Use [README](README.md) for narrative order; this table is a flat lookup.
 | [handoffs/cici-brewmind-governed-steward.md](handoffs/cici-brewmind-governed-steward.md) | **Cici paste handoff** — `docs/skills/brewmind-governed-steward.md` body + optional `CLAUDE.md` line (canonical skill: [.cursor/skills/brewmind-governed-steward/SKILL.md](../../../.cursor/skills/brewmind-governed-steward/SKILL.md)) |
 | [cici-pilot-propagation-low-cost-operator.md](cici-pilot-propagation-low-cost-operator.md) | **10-pilot reach** — low-cost propagation checklist (referral, FB groups, Telegram, borrowed audiences) + citations |
 | [cici-community-mission-operator.md](cici-community-mission-operator.md) | **Cici / Neural Sandbox** — **10** + **initiation** (OB1) + **7d** active; drop-off focus, funnel (operator WORK) |
+| [cici-ai-lanes.md](cici-ai-lanes.md) | **Lane hub** - three active `cici-ai` work lanes: [telegram](cici-ai-telegram/README.md), [core](cici-ai-core/README.md), and [progress](cici-ai-progress/README.md) |
+| [cici-ai-telegram/README.md](cici-ai-telegram/README.md) | **Work lane** - Telegram group operations, posts, norms, applicant intake prompts, and chat evidence routing |
+| [cici-ai-core/README.md](cici-ai-core/README.md) | **Work lane** - Cici/OB1 repo, governed-state, prompts, identity migration, and technical safety |
+| [cici-ai-progress/README.md](cici-ai-progress/README.md) | **Work lane** - applicants, GitHub evidence, first-task proof, scholarship readiness, and cohort metrics |
 | [cici-ai-community-dashboard.md](cici-ai-community-dashboard.md) | **Operator dashboard** — cici-ai activation funnel, weekly snapshot, qualitative notes, and experiments (WORK-only; not Cici's Record) |
 | [cici-ai-first-task-proof-packet.md](cici-ai-first-task-proof-packet.md) | **Measurement template** — evidence-linked standard for \"first task completed\" with A/B/C confidence and graduation status |
 | [cici-ai-weekly-governance-review-template.md](cici-ai-weekly-governance-review-template.md) | **Review template** — weekly activation + proposal/governance health + drift flags + candidate actions |

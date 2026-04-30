@@ -15,10 +15,15 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 
 FILES: tuple[str, ...] = (
     "docs/skill-work/README.md",
+    "docs/skill-work/work-cici/DAILY-OPS-CARD.md",
+    "docs/skill-work/work-cici/GOOD-MORNING.md",
     "docs/skill-work/work-cici/README.md",
     "docs/skill-work/work-cici/INDEX.md",
     "docs/skill-work/work-cici/LANES.md",
     "docs/skill-work/work-cici/LEAKAGE-CHECKLIST.md",
+    "docs/skill-work/work-cici/SYNC-DAILY.md",
+    "docs/skill-work/work-cici/work-dev-mirror/SYNC-CONTRACT.md",
+    "docs/skill-work/work-cici/work-politics-mirror/SYNC-CONTRACT.md",
 )
 
 ALLOWS: tuple[str, ...] = (
@@ -41,6 +46,8 @@ _APOS = "\u2019"  # Unicode apostrophe (typographic) in "Xavier's" in some docs
 FAILS: tuple[str, ...] = (
     "Advisor/project module for Xavier",
     "Advisor / Xavier",
+    "Daily Ops Card (Xavier)",
+    "Daily Ops Card (xavier)",
     "Not Xavier's Record repo",
     "not Xavier's Record repo",
     f"Not Xavier{_APOS} Record repo",

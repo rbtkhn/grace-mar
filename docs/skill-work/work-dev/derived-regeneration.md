@@ -51,6 +51,10 @@ Current initial target set:
 - governance posture
 - strategy-notebook graph
 
+First target-coverage expansion:
+
+- work-dev compound / Autoresearch operator summaries
+
 This is a **small initial set**, not a claim that all rebuildable surfaces are already orchestrated.
 
 ## What the engine now writes

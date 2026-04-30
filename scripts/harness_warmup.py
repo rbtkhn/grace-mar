@@ -63,6 +63,13 @@ DEFAULT_TAIL = 12
 _REPO_ROOT = _SCRIPTS.parent
 
 
+def _configure_utf8_stdio() -> None:
+    for stream in (sys.stdout, sys.stderr):
+        reconfigure = getattr(stream, "reconfigure", None)
+        if callable(reconfigure):
+            reconfigure(encoding="utf-8", errors="replace")
+
+
 def _git_head_short() -> str:
     """Short git SHA for reentry line; unknown if not a git checkout."""
     try:
@@ -198,6 +205,7 @@ def _last_activity_oneliner(evidence_content: str) -> str:
 
 
 def main() -> int:
+    _configure_utf8_stdio()
     parser = argparse.ArgumentParser(
         description="Paste-ready Grace-Mar continuity for any harness (read-only).",
         epilog="Canonical memory: users/[id]/ + git. This output is a digest for message 1.",

@@ -36,6 +36,8 @@ WORK only; not Record.
 
 The thread index **does not duplicate** the page. It answers: *why does this page matter to this expert's temporal continuity?*
 
+**Drafting flow:** before picking the excerpt body for a refined page, reduce the prior month thread files into a bounded context packet. The packet is a compose aid only: it orients quote selection and synthesis, while `raw-input/` remains the literal SSOT.
+
 ## Where the rules live
 
 | Topic | Document / tool |
