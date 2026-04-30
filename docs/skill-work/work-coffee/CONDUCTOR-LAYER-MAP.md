@@ -70,7 +70,7 @@ The **A–E** menu used to select a **conductor stance**: Toscanini, Furtwängle
 
 ### Conductor Action Menu
 
-The **A–E** menu used **after** a conductor stance is selected to choose the **concrete next actions** for this pass ([CONDUCTOR-PASS.md — Conductor action MCQ](CONDUCTOR-PASS.md#conductor-action-mcq)).
+The **A–C** menu used **after** a conductor stance is selected to choose the **concrete next actions** for this pass ([CONDUCTOR-PASS.md — Conductor action MCQ](CONDUCTOR-PASS.md#conductor-action-mcq)). All three options should be live choices; refusal / park / no-action is inferred from off-menu behavior rather than presented as one of the three.
 
 Rules:
 
