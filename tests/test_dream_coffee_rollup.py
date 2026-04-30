@@ -7,7 +7,12 @@ from pathlib import Path
 
 import pytest
 
-from dream_coffee_rollup import build_last_coffee_echo, parse_coffee_cadence_lines, rollup_coffee_24h
+from dream_coffee_rollup import (
+    build_last_coffee_echo,
+    parse_coffee_cadence_lines,
+    rollup_coffee_24h,
+    rollup_conductor_24h,
+)
 from dream_civmem_echoes import (
     ANALOGY_CANDIDATE_LABEL,
     CIVMEM_DISCLAIMER,
@@ -56,6 +61,26 @@ def test_rollup_missing_file_note() -> None:
     r = rollup_coffee_24h(user_id="grace-mar", events_path=p)
     assert r["count"] == 0
     assert r["note"] == "no cadence file"
+
+
+def test_rollup_conductor_24h_pairs_outcomes_with_active_master(tmp_path: Path) -> None:
+    md = """- **2026-04-02 14:00 UTC** â€” coffee_pick (grace-mar) ok=true picked=conductor conductor=furtwangler
+- **2026-04-02 14:05 UTC** â€” coffee_conductor_outcome (grace-mar) ok=true falsify=redesign-not-patch
+- **2026-04-02 14:10 UTC** â€” coffee_pick (grace-mar) ok=true picked=conductor conductor=bernstein
+- **2026-04-02 14:15 UTC** â€” coffee_conductor_outcome (grace-mar) ok=true verdict=no_action
+"""
+    p = tmp_path / "cadence.md"
+    p.write_text(md, encoding="utf-8")
+    now = datetime(2026, 4, 2, 16, 0, tzinfo=timezone.utc)
+    r = rollup_conductor_24h(user_id="grace-mar", now_utc=now, events_path=p)
+    assert r["pick_count"] == 2
+    assert r["outcome_count"] == 2
+    assert r["completed_passes"] == 1
+    assert r["off_menu_refusals"] == 1
+    assert r["last_master"] == "bernstein"
+    assert r["falsifiers"] == ["redesign-not-patch"]
+    assert r["last_outcome"]["conductor"] == "bernstein"
+    assert "bernstein" in r["echo"]
 
 
 def test_malformed_line_skipped() -> None:

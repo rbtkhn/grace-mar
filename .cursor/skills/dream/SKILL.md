@@ -116,6 +116,8 @@ This is a maintenance pass, not a merge pass.
 
 **Morning handoff:** When `apply=True` (the default), dream writes `users/grace-mar/last-dream.json` — a compact summary that tomorrow's `coffee` Step 1 (`operator_daily_warmup.py`) automatically picks up and displays as **"Last dream (night handoff)"** (or a **one-line quiet handoff** when there is nothing to surface). This closes the choreography gap: coffee knows what dream found without the operator carrying it across threads. The JSON may include optional **`last_coffee_echo`** (derived from the same 24h coffee rollup as `coffee_rollup_24h`—a short narrative hint about the last session, not canonical memory or Record). The JSON includes **`agent_surface.cursor_model`** (same meaning as bridge/harvest **Agent surface** / cadence **`cursor_model=`**): pass **`--cursor-model`** to `auto_dream.py` or set **`CURSOR_MODEL`** in the environment when running from a context that knows the Cursor UI label; otherwise **`unknown`**.
 
+**Conductor compression:** Successful dream handoff may also include **`conductor_rollup_24h`**: a WORK-only compression of recent Conductor picks and outcomes (`last_master`, `completed_passes`, `orientation_only`, `off_menu_refusals`, recent commits/falsifiers, and a one-line echo for coffee). This is compression, not continuation: dream does not generate fresh Conductor options, does not auto-compose notebooks, and treats off-menu/no-action outcomes as parked/refused telemetry rather than as another menu choice.
+
 ## What to return
 
 Use a **short default brief** every time. Add **Details** only when load-bearing (failure, noteworthy counts, operator asked) — do not fill every optional slot on a quiet run.

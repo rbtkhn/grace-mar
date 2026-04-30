@@ -24,7 +24,7 @@ for path in (REPO_ROOT / "scripts",):
 
 from contradiction_digest import default_digest_path, generate_contradiction_digest, write_artifact_drafts
 from dream_civmem_echoes import CIVMEM_DISCLAIMER, compute_civmem_echoes
-from dream_coffee_rollup import build_last_coffee_echo, rollup_coffee_24h
+from dream_coffee_rollup import build_last_coffee_echo, rollup_coffee_24h, rollup_conductor_24h
 from dream_execution_paths import build_execution_paths, format_tomorrow_inherits_line
 from fork_config import load_fork_config
 from emit_pipeline_event import append_pipeline_event
@@ -477,6 +477,9 @@ def _write_last_dream_handoff(
     cr = summary.get("coffee_rollup_24h")
     if cr is not None:
         handoff["coffee_rollup_24h"] = cr
+    conductor_rollup = summary.get("conductor_rollup_24h")
+    if conductor_rollup is not None:
+        handoff["conductor_rollup_24h"] = conductor_rollup
     if summary.get("execution_paths") is not None:
         handoff["execution_paths"] = summary["execution_paths"]
         handoff["suggested_execution_path_index"] = summary.get("suggested_execution_path_index", 0)
@@ -715,6 +718,7 @@ def run_auto_dream(
         extra_followups: list[str] = []
         dream_budget = _load_dream_budget_dict()
         coffee_rollup_raw = rollup_coffee_24h(user_id=user_id, now_utc=now_utc)
+        conductor_rollup = rollup_conductor_24h(user_id=user_id, now_utc=now_utc)
         last_coffee_echo = build_last_coffee_echo(coffee_rollup_raw)
         if last_coffee_echo:
             summary["last_coffee_echo"] = last_coffee_echo
@@ -748,6 +752,7 @@ def run_auto_dream(
         )
         tomorrow_line = format_tomorrow_inherits_line(paths, sugg_idx, sugg_reason)
         summary["coffee_rollup_24h"] = coffee_rollup
+        summary["conductor_rollup_24h"] = conductor_rollup
         summary["execution_paths"] = paths
         summary["suggested_execution_path_index"] = sugg_idx
         summary["execution_path_suggestion_reason"] = sugg_reason
@@ -928,6 +933,14 @@ def format_auto_dream_summary(summary: dict[str, Any]) -> str:
             lines.append(
                 f"coffee rollup 24h: count={cr.get('count')} modes={cr.get('by_mode')}"
             )
+        conductor = summary.get("conductor_rollup_24h") or {}
+        if conductor.get("pick_count", 0) or conductor.get("outcome_count", 0):
+            lines.append(
+                "conductor rollup 24h: "
+                f"master={conductor.get('last_master')} "
+                f"closed={conductor.get('completed_passes', 0)} "
+                f"refused={conductor.get('off_menu_refusals', 0)}"
+            )
         dc = summary.get("dream_catchup") or {}
         if dc.get("error"):
             lines.append(f"dream catch-up: error — {dc['error']}")
@@ -973,6 +986,14 @@ def format_auto_dream_summary(summary: dict[str, Any]) -> str:
     if cr.get("count", 0) > 0:
         lines.append(
             f"coffee rollup 24h: count={cr.get('count')} modes={cr.get('by_mode')}"
+        )
+    conductor = summary.get("conductor_rollup_24h") or {}
+    if conductor.get("pick_count", 0) or conductor.get("outcome_count", 0):
+        lines.append(
+            "conductor rollup 24h: "
+            f"master={conductor.get('last_master')} "
+            f"closed={conductor.get('completed_passes', 0)} "
+            f"refused={conductor.get('off_menu_refusals', 0)}"
         )
     cg = summary.get("capture_gap") or {}
     if cg:

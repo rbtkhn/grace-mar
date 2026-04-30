@@ -80,6 +80,22 @@ def test_quiet_handoff_includes_coffee_echo_line() -> None:
     assert "toscanini" in text
 
 
+def test_quiet_handoff_includes_conductor_echo_line() -> None:
+    d = _quiet_dream()
+    d["conductor_rollup_24h"] = {
+        "pick_count": 1,
+        "outcome_count": 1,
+        "completed_passes": 1,
+        "off_menu_refusals": 0,
+        "last_master": "bernstein",
+        "echo": "bernstein carried the latest conductor line; last close: public-stake",
+    }
+    lines = odu._format_last_dream_block(d, verbose_dream=False)
+    text = "\n".join(lines)
+    assert "Conductor echo" in text
+    assert "bernstein carried" in text
+
+
 def test_signal_handoff_not_collapsed() -> None:
     d = _minimal_dream()
     assert odu.should_collapse_dream_handoff(d, verbose_dream=False) is False

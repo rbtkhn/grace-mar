@@ -136,6 +136,24 @@ def _last_coffee_echo_bullets(dream: dict) -> list[str]:
     return [f"- Dream picked up yesterday’s {label} coffee — {high}"]
 
 
+def _conductor_echo_bullets(dream: dict) -> list[str]:
+    """Compact dream-derived Conductor echo; 0 or 1 line."""
+    rollup = dream.get("conductor_rollup_24h")
+    if not isinstance(rollup, dict):
+        return []
+    if not int(rollup.get("pick_count") or 0) and not int(rollup.get("outcome_count") or 0):
+        return []
+    echo = str(rollup.get("echo") or "").strip()
+    if not echo:
+        master = str(rollup.get("last_master") or "Conductor").strip()
+        closed = int(rollup.get("completed_passes") or 0)
+        refused = int(rollup.get("off_menu_refusals") or 0)
+        echo = f"{master}: {closed} closed pass(es), {refused} parked/refused."
+    if len(echo) > 180:
+        echo = echo[:177] + "..."
+    return [f"- Conductor echo: {echo}"]
+
+
 def _format_last_dream_block(
     dream: dict,
     *,
@@ -238,6 +256,7 @@ def _format_last_dream_block(
             for item in followups:
                 lines.append(f"- {item}")
         lines.extend(_last_coffee_echo_bullets(dream))
+        lines.extend(_conductor_echo_bullets(dream))
         lines.append("")
         return lines
 
@@ -252,6 +271,7 @@ def _format_last_dream_block(
             f"contradictions: {cc}; tomorrow inherits: {short}"
         )
         out.extend(_last_coffee_echo_bullets(dream))
+        out.extend(_conductor_echo_bullets(dream))
         out.append("")
         return out
 
@@ -323,6 +343,7 @@ def _format_last_dream_block(
                     "- Civ-mem: no echoes above overlap threshold — not Record."
                 )
     body.extend(_last_coffee_echo_bullets(dream))
+    body.extend(_conductor_echo_bullets(dream))
     body = _compress_lines(body, max_lines=max_body)
     lines.extend(body)
     lines.append("")

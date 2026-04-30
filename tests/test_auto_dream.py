@@ -189,6 +189,7 @@ Last rotated: 2026-01-01
     handoff = json.loads(handoff_path.read_text(encoding="utf-8"))
     assert handoff.get("agent_surface", {}).get("cursor_model") == "unknown"
     assert handoff.get("handoffSchemaVersion") == 3
+    assert "conductor_rollup_24h" in handoff
     assert summary.get("agent_surface", {}).get("cursor_model") == "unknown"
 
 

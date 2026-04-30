@@ -102,6 +102,7 @@ Cici notebook (work-cici) — `cici_journal_ob1_digest.py --catch-up-from-last-d
 | `promotable_draft_count` | int | Drafts ready for promotion |
 | `followups` | string[] | Human-readable follow-up items for morning |
 | `coffee_rollup_24h` | object | Rolling 24h summary of `coffee` lines from [`work-cadence-events.md`](../work-cadence/work-cadence-events.md) (`count`, `by_mode`, `by_picked`, `picks`, `first_ts`, `last_ts`, `runs`, …) |
+| `conductor_rollup_24h` | object | Rolling 24h summary of Conductor `coffee_pick conductor=...` and `coffee_conductor_outcome` lines. Includes `last_master`, `completed_passes`, `orientation_only`, `off_menu_refusals`, recent `commits`, recent `falsifiers`, and one compact `echo` for morning coffee. WORK telemetry only; not Record. |
 | `execution_paths` | object[] | Three deterministic morning paths (`today_field`, `build`, `steward`) with `first_move`, `stop_rule`, `signals_used` |
 | `suggested_execution_path_index` | int | 0–2; **Steward (2)** if integrity or governance failed this run, else **Steward** if gate pending > `max_pending_candidates` in `config/fork-config.json`, else **calendar** `(tomorrow_tm_yday - 1) % 3` |
 | `execution_path_suggestion_reason` | string | `integrity_or_governance_fail` \| `gate_backlog` \| `calendar_mod3` |
@@ -116,6 +117,8 @@ Cici notebook (work-cici) — `cici_journal_ob1_digest.py --catch-up-from-last-d
 **Context budgets:** Write-path caps and suppress rules live in [`config/context_budgets/dream.json`](../../../config/context_budgets/dream.json); display defaults for the collapsed Last dream block live in [`config/context_budgets/coffee.json`](../../../config/context_budgets/coffee.json). See [`config/context_budgets/README.md`](../../../config/context_budgets/README.md).
 
 **Doctrine:** Dream suggestions (paths, civ-mem, rollup) are **operational hints only** — not truth, not priority, not a substitute for gate review, integrity, companion approval, or operator judgment. Cadence artifacts are not a shadow Record.
+
+**Conductor compression:** Dream may compress the day's Conductor passes into `conductor_rollup_24h`, then coffee may render one **Conductor echo** line. This is deliberately compression, not continuation: dream does not generate fresh Conductor options, does not auto-compose notebooks, and treats off-menu/no-action outcomes as parked/refused telemetry rather than as a fourth choice.
 
 Clients should **ignore unknown keys** on future dream versions.
 
