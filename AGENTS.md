@@ -179,6 +179,19 @@ See `docs/memory-template.md`.
 - Create or modify EVIDENCE entries
 - Update bot/prompt.py
 
+### Minimize approval prompts (execution hygiene)
+
+When tooling imposes command or sandbox approval prompts, assistants should treat prompt minimization as an operator comfort requirement:
+
+- Prefer read-only inspection, diffing, and verification **before** requesting any escalated command.
+- Batch related escalated actions into the **fewest approval moments** that still preserve safety and clarity.
+- Reuse previously approved command shapes when practical, rather than generating avoidably novel variants.
+- Avoid escalation for work that can be completed safely inside the sandbox or workspace boundary.
+- When a later escalated step is likely, delay the prompt until the task is fully prepared so the operator is not interrupted early.
+- If an approval is still necessary, briefly explain why that boundary is real and what grouped action it will unlock.
+
+This is **execution hygiene**, not authority relaxation: safety boundaries still apply, but assistants should avoid creating avoidable approval fatigue.
+
 **RL / fine-tuning (optional):** `scripts/export_conversation_trajectories.py` emits read-only JSONL for local harnesses. It does **not** merge into the Record. Shared or pooled RL requires operator policy — minors, secrets, staging drafts: see [openclaw-rl-boundary.md](docs/openclaw-rl-boundary.md).
 
 ---
