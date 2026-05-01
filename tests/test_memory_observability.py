@@ -1,8 +1,12 @@
 from __future__ import annotations
 
 from datetime import datetime, timezone
+from pathlib import Path
 
 from scripts import build_memory_observability as mbo
+
+
+REPO_ROOT = Path(__file__).resolve().parent.parent
 
 
 def test_parse_cadence_event_timestamps_for_user_only():
@@ -104,3 +108,18 @@ def test_json_report_contains_expected_top_level_keys():
         "deferred_v2",
     }
     assert set(report["surfaces"]) == {"cadence", "last_dream", "night_handoff", "bridge_state"}
+
+
+def test_coffee_and_dream_wiring_is_one_line_and_non_blocking():
+    coffee_script = (REPO_ROOT / "scripts" / "operator_coffee.py").read_text(encoding="utf-8")
+    dream_script = (REPO_ROOT / "scripts" / "auto_dream.py").read_text(encoding="utf-8")
+    coffee_skill = (REPO_ROOT / ".cursor" / "skills" / "coffee" / "SKILL.md").read_text(encoding="utf-8")
+    dream_skill = (REPO_ROOT / ".cursor" / "skills" / "dream" / "SKILL.md").read_text(encoding="utf-8")
+
+    assert "format_observability_one_liner" in coffee_script
+    assert "memory_report.get(\"overall_status\") != \"ok\"" in coffee_script
+    assert "pass" in coffee_script
+    assert "format_observability_one_liner" in dream_script
+    assert "report rebuild failed" in dream_script
+    assert "Do not paste the full dashboard into coffee" in coffee_skill
+    assert "Do not paste the full dashboard into dream" in dream_skill

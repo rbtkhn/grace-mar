@@ -2,7 +2,7 @@
 
 **Status:** derived WORK-layer observability. Not Record truth and not self-memory.
 
-**Generated:** 2026-05-01T00:33:35.640934+00:00
+**Generated:** 2026-05-01T01:59:50.145878+00:00
 **User:** `grace-mar`
 **Overall status:** `missing`
 
@@ -10,10 +10,10 @@
 
 | Surface | Status | Observed | Age (h) | Detail |
 |---------|--------|----------|---------|--------|
-| cadence events | `ok` | 2026-05-01T00:31:00+00:00 | 0.04 | 335 event(s) found for grace-mar |
-| last dream | `ok` | 2026-04-30T05:29:35.175099+00:00 | 19.07 | ok=False |
+| cadence events | `ok` | 2026-05-01T01:57:00+00:00 | 0.05 | 337 event(s) found for grace-mar |
+| last dream | `ok` | 2026-04-30T05:29:35.175099+00:00 | 20.5 | ok=False |
 | night handoff | `missing` | - | - | missing file |
-| bridge state | `ok` | 2026-04-30T15:38:00+00:00 | 8.93 | bridge state present |
+| bridge state | `ok` | 2026-04-30T15:38:00+00:00 | 10.36 | bridge state present |
 
 ## Missing/stale inputs
 
