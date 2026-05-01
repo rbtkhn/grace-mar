@@ -424,3 +424,7 @@ _(Append below this line.)_
 - **2026-05-01 14:24 UTC** — coffee_pick (grace-mar) ok=true cursor_model=unknown model_tier=unknown picked=A steward=gate
 - **2026-05-01 14:25 UTC** — coffee_pick (grace-mar) ok=true cursor_model=unknown model_tier=unknown picked=B
 - **2026-05-01 14:42 UTC** — bridge (grace-mar) ok=true cursor_model=unknown model_tier=unknown refs=de7f5578,8fd1fad5
+- **2026-05-01 14:47 UTC** — coffee (grace-mar) ok=true mode=work-start cursor_model=unknown model_tier=unknown
+- **2026-05-01 14:49 UTC** — coffee_pick (grace-mar) ok=true cursor_model=unknown model_tier=unknown picked=B
+- **2026-05-01 15:09 UTC** — coffee_pick (grace-mar) ok=true cursor_model=unknown model_tier=unknown picked=conductor conductor=furtwangler
+- **2026-05-01 15:10 UTC** — coffee_conductor_outcome (grace-mar) ok=true cursor_model=unknown model_tier=unknown falsify=explicit-export-or-retention-path-added

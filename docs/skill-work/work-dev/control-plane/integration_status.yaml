@@ -101,9 +101,13 @@ items:
     source_of_truth:
       - runtime/observability/continuity_blocks.jsonl
       - scripts/require_continuity_for_handback.py
+      - scripts/work_dev/export_continuity_blocks.py
+      - artifacts/work-dev/continuity-observability/continuity-blocks.md
       - tests/test_handback_requires_continuity.py
+      - tests/test_export_continuity_blocks.py
     notes:
-      - Structured block events append when handback denies /stage; feed is local/gitignored unless exported.
+      - Structured block events append when handback denies /stage; export_continuity_blocks.py can render a WORK-derived review artifact.
+      - Durable retention remains deferred, so the local feed is still observability residue rather than an operational guarantee.
 
   - id: session_continuity_read_log
     title: Session continuity read log (operator)

@@ -1,10 +1,6 @@
 #!/usr/bin/env python3
-"""Backfill Dialogue Works YouTube transcripts into strategy-notebook raw-input/.
+"""Backfill The Duran YouTube transcripts into raw-input/.
 
-This wrapper fetches the public Dialogue Works YouTube channel into a temporary
-transcript corpus, then mirrors the transcript text into raw-input markdown with
-Dialogue Works frontmatter. Host-side capture is the primary goal; guest lanes
-can still be mirrored separately when needed.
 WORK only; not Record.
 """
 
@@ -16,10 +12,9 @@ from pathlib import Path
 from backfill_youtube_channel_raw_input import main as youtube_main
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-DEFAULT_CHANNEL_URL = "https://www.youtube.com/@dialogueworks01/videos"
-DEFAULT_THREAD = "alkorshid"
-DEFAULT_SHOW = "Dialogue Works"
-DEFAULT_HOST = "Nima Alkhorshid"
+DEFAULT_CHANNEL_URL = "https://www.youtube.com/@TheDuran/videos"
+DEFAULT_SHOW = "The Duran"
+DEFAULT_HOST = "Alexander Mercouris / Alex Christoforou"
 
 
 def main() -> int:
@@ -28,19 +23,17 @@ def main() -> int:
             "--channel-url",
             DEFAULT_CHANNEL_URL,
             "--channel-slug",
-            "dialogue-works",
+            "the-duran",
             "--show",
             DEFAULT_SHOW,
             "--host",
             DEFAULT_HOST,
-            "--thread",
-            DEFAULT_THREAD,
             "--file-prefix",
-            "transcript-dialogue-works",
+            "youtube-the-duran",
             "--source-note",
-            "Automated YouTube transcript fetch for Dialogue Works host capture.",
+            "Automated YouTube transcript fetch for The Duran hub capture.",
             "--work-dir",
-            str(REPO_ROOT / ".codex-tmp" / "alkorshid-dialogue-works"),
+            str(REPO_ROOT / ".codex-tmp" / "youtube-the-duran"),
             "--notebook-root",
             str(REPO_ROOT / "docs/skill-work/work-strategy/strategy-notebook"),
             "--limit",

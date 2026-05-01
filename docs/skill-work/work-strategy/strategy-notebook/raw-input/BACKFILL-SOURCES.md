@@ -18,6 +18,7 @@ New backfill work should prefer a generic family first, then add the thinnest so
 | Substack archive / post body | `scripts/backfill_substack_raw_input.py` | `backfill_*_substack_raw_input.py` | Capture substantial posts into `raw-input/<pub_date>/`; source adapters should mostly pin host, thread, and defaults. |
 | Public X profile / status pages | `scripts/backfill_x_profile_raw_input.py` | `backfill_*_x_raw_input.py` | Best-effort public crawl or explicit status URL capture; source adapters should mostly pin handle and thread. |
 | Public author archive pages | `scripts/backfill_author_page_raw_input.py` | `backfill_*_site_raw_input.py`, `backfill_*_grayzone_raw_input.py`, `backfill_*_responsiblestatecraft_raw_input.py` | Discover article URLs and write source captures; source adapters should pin archive URL shape and parser hints. |
+| Public YouTube channel transcripts | `scripts/backfill_youtube_channel_raw_input.py` | `backfill_*_youtube_raw_input.py` | Graph-first transcript capture from channels and hubs; source adapters should mostly pin channel URL, show/host, and thread routing when a lane is clear. |
 | Transcript salvage from local chat/log text | No default generic family yet | `backfill_*_raw_input_from_transcript.py` | Recovery only when a session failed to write `raw-input/` directly. Regex- and shape-dependent; not policy. |
 | Expert thread/profile enrichment | `scripts/backfill_expert_thread.py` and related scoring/refinement helpers | n/a | Separate from raw source capture unless a commit explicitly groups both with a receipt. |
 
@@ -27,6 +28,7 @@ New backfill work should prefer a generic family first, then add the thinnest so
 - Do not duplicate generic fetch, Markdown rendering, YAML writing, duplicate detection, or date parsing in every adapter unless the source forces it.
 - If two wrappers share more than source constants and parser hints, prefer lifting that behavior into the generic family in a later commit.
 - Do not treat archive completeness as mandatory. Backfill substantial items worth preserving; skip low-signal or repetitive items when that is better editorial judgment.
+- For YouTube specifically, prefer the graph-first queue order in `youtube-transcript-queue.md`: direct lanes first, then host hubs, with threadless capture allowed when a single lane is not yet correct.
 - Keep source capture and expert profile enrichment as separate commit arcs unless the profile change is only a pointer to the captured source.
 
 ## Preflight before committing a backfill cluster

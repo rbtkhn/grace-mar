@@ -55,6 +55,7 @@ Promotion and refresh defaults: [strategy-expert-template.md section Voice finge
 ## Automation target
 
 1. `https://www.youtube.com/@dialogueworks01/videos` -> `thread: alkorshid`
+2. Graph-first YouTube queue: [`youtube-transcript-queue.md`](../../raw-input/youtube-transcript-queue.md) and [`scripts/backfill_youtube_channel_raw_input.py`](../../../../../scripts/backfill_youtube_channel_raw_input.py)
 
 ## Published sources (operator web index)
 

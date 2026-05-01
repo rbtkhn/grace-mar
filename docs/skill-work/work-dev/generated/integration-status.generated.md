@@ -79,8 +79,9 @@ Status vocabulary: `implemented`, `partial`, `documented_only`, `needs_verificat
 ### `session_continuity_event_logging`
 
 - **Status:** `partial`
-- **Source of truth:** `runtime/observability/continuity_blocks.jsonl`, `scripts/require_continuity_for_handback.py`, `tests/test_handback_requires_continuity.py`
-- Structured block events append when handback denies /stage; feed is local/gitignored unless exported.
+- **Source of truth:** `runtime/observability/continuity_blocks.jsonl`, `scripts/require_continuity_for_handback.py`, `scripts/work_dev/export_continuity_blocks.py`, `artifacts/work-dev/continuity-observability/continuity-blocks.md`, `tests/test_handback_requires_continuity.py`, `tests/test_export_continuity_blocks.py`
+- Structured block events append when handback denies /stage; export_continuity_blocks.py can render a WORK-derived review artifact.
+- Durable retention remains deferred, so the local feed is still observability residue rather than an operational guarantee.
 
 ### `session_continuity_read_log`
 

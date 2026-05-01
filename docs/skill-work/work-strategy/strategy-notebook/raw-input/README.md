@@ -70,6 +70,8 @@ Optional local override file (gitignored): **`fetch-sources.local.json`** â€�
 **Compose boundary:** Automated capture writes **`raw-input/`** only; new `experts/<expert_id>/*page*.md` files are created later in a separate compose pass.
 **Future extensions (not implemented yet):** authenticated/private X and wire paywall fetchers â€” public X profile crawl and public YouTube transcript fetches are implemented, but authenticated sessions still need their own gate (tokens, ToS, tier tags).
 
+**YouTube transcript queue (graph-first):** [`youtube-transcript-queue.md`](youtube-transcript-queue.md) â€” ranks transcript hubs by graph centrality, then by automation cost. The generic helper is [`scripts/backfill_youtube_channel_raw_input.py`](../../../../scripts/backfill_youtube_channel_raw_input.py); thin wrappers can pin channel URL, show/host, and thread routing when the lane is clear.
+
 **Relation to other surfaces:**
 
 | Surface | Role |
