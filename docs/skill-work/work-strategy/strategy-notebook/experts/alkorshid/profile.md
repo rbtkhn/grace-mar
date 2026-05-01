@@ -1,9 +1,9 @@
-# Strategy expert — `alkorshid`
-<!-- word_count: ~220 -->
+# Strategy expert - `alkorshid`
+<!-- word_count: 310 -->
 
 WORK only; not Record.
 
-**Canonical index:** [strategy-commentator-threads.md](strategy-commentator-threads.md) — **`alkorshid`** lane.
+**Canonical index:** [strategy-commentator-threads.md](strategy-commentator-threads.md) - **`alkorshid`** lane.
 
 ---
 
@@ -13,45 +13,56 @@ WORK only; not Record.
 |-------|-------|
 | **Name** | Nima Alkorshid |
 | **expert_id** | `alkorshid` |
-| **Role** | **Dialogue Works** — host / interviewer for long-form **geopolitical** dialogue; use **`thread:alkorshid`** alongside **`thread:<guest>`** on shared episodes so inbox triage and **`raw-input`** **`thread:`** lists mirror **both** sides. |
+| **Role** | Dialogue Works host / interviewer for long-form geopolitical dialogue; use `thread:alkorshid` alongside `thread:<guest>` on shared episodes so inbox triage and raw-input thread lists mirror both sides. |
 | **Default grep tags** | `Alkorshid`, `Dialogue Works`, or `DialogueWorks` in cold |
-| **Typical pairings** | × `marandi`, × `diesen`, × `mercouris`, × `davis` |
+| **Typical pairings** | x `marandi`, x `diesen`, x `mercouris`, x `davis` |
 | **Notebook-use tags** | `narrate` |
 
 <a id="voice-fingerprint-compact"></a>
 
-## Voice fingerprint (compact) — Tier B
+## Voice fingerprint (compact) - Tier B
 
 | Field | Value |
 |-------|-------|
 | **Voice tier** | `B` |
-| **Voice fingerprint — last reviewed** | `2026-04` |
+| **Voice fingerprint - last reviewed** | `2026-04` |
 
-Promotion and refresh defaults: [strategy-expert-template.md § Voice fingerprint (compact)](strategy-expert-template.md#voice-fingerprint-compact).
+Promotion and refresh defaults: [strategy-expert-template.md section Voice fingerprint (compact)](strategy-expert-template.md#voice-fingerprint-compact).
 
 ## Convergence fingerprint
 
-*Minimal lane — operator extends when upgraded.*
+*Minimal lane - operator extends when upgraded.*
 
 ## Tension fingerprint
 
-*Minimal lane — operator extends when upgraded.*
+*Minimal lane - operator extends when upgraded.*
 
 ## Signature mechanisms
 
-- **Interview framing:** sets agenda and follow-ups; distinguish **host routing** from **guest analytic claims** on the same ingest.
+- Interview framing: sets agenda and follow-ups; distinguish host routing from guest analytic claims on the same ingest.
 
 ## Failure modes / overreads
 
-- Guest **`thread:`** lines **without** **`thread:alkorshid`** on the same episode → asymmetric **`raw-input`** mirroring; fix by adding the host line when host prompts are load-bearing.
+- Guest `thread:` lines without `thread:alkorshid` on the same episode can create asymmetric raw-input mirroring; fix by adding the host line when host prompts are load-bearing.
+
+## Archive / backfill note
+
+- Archive discovery is useful, but it is not a completeness mandate.
+- Treat Dialogue Works as a discovery index; capture only substantial episodes worth preserving.
+- Automation feeds `raw-input/` only. Pages and thread files are composed later in a separate pass.
+- Host prompts matter on shared episodes, so keep `thread:alkorshid` when the host framing is load-bearing.
+
+## Automation target
+
+1. `https://www.youtube.com/@dialogueworks01/videos` -> `thread: alkorshid`
 
 ## Published sources (operator web index)
 
-Where **Dialogue Works** / host content is published (**no Wikipedia**). Re-verify URLs before cite-grade use.
+Where Dialogue Works / host content is published (no Wikipedia). Re-verify URLs before cite-grade use.
 
-1. https://www.youtube.com/@dialogueworks01 — **Dialogue Works** (YouTube)
-2. https://www.podchaser.com/podcasts/dialogue-works-5841625 — podcast index (metadata)
-3. https://shows.acast.com/dialogueworks — Acast show page (when cite-grade episode URLs are needed)
+1. https://www.youtube.com/@dialogueworks01 - Dialogue Works (YouTube)
+2. https://www.podchaser.com/podcasts/dialogue-works-5841625 - podcast index (metadata)
+3. https://shows.acast.com/dialogueworks - Acast show page (when cite-grade episode URLs are needed)
 
 ---
 

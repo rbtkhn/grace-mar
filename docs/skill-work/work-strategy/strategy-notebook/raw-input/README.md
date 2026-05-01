@@ -68,7 +68,7 @@ Optional local override file (gitignored): **`fetch-sources.local.json`** â€�
 **Crooke partial backfill (public archive discovery):** [`scripts/backfill_crooke_substack_raw_input.py`](../../../../scripts/backfill_crooke_substack_raw_input.py) Ã¢â‚¬â€ uses the public Conflicts Forum archive to discover 2026 posts, compares them against existing `thread: crooke` raw-input files, and writes `substack-post` stubs when a post needs a public-preview placeholder. Use this when the public archive proves the post exists but the paid body still needs manual completion.
 
 **Compose boundary:** Automated capture writes **`raw-input/`** only; new `experts/<expert_id>/*page*.md` files are created later in a separate compose pass.
-**Future extensions (not implemented yet):** authenticated/private X, YouTube, and wire paywall fetchers â€” public X profile crawl is implemented, but authenticated sessions still need their own gate (tokens, ToS, tier tags).
+**Future extensions (not implemented yet):** authenticated/private X and wire paywall fetchers â€” public X profile crawl and public YouTube transcript fetches are implemented, but authenticated sessions still need their own gate (tokens, ToS, tier tags).
 
 **Relation to other surfaces:**
 
