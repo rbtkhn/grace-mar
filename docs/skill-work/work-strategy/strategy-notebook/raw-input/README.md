@@ -153,7 +153,7 @@ Idempotent: unchanged files are skipped (content hash). See [`scripts/populate_s
 
 ## Outlet inventories (tracker docs)
 
-- **Dialogue Works** (Nima Alkhorshid): [dialogue-works-inventory.md](dialogue-works-inventory.md) â€” which **`raw-input/`** files are confirmed vs lane-stub references; maintenance grep at bottom.
+- **Dialogue Works** (Nima Alkhorshid): [dialogue-works-inventory.md](dialogue-works-inventory.md) â€” metadata-only YouTube crawl index from `2026-01-01` onward, with `needs capture` markers and maintenance notes at the bottom.
 
 ## Pruning
 
