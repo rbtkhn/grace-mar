@@ -20,7 +20,7 @@ The conductors are **modes of attention**, not actors with independent authority
 
 | Conductor | Slug | Mode | Primary Function | Typical Use |
 |-----------|------|------|------------------|-------------|
-| Toscanini | `toscanini` | Precision | Verify seams, strip unsupported rhetoric, enforce discipline | Citation checks, boundary audits, unsupported claim cleanup |
+| Toscanini | `toscanini` | Precision | Verify a receipt seam, split unsupported claims by tier, enforce discipline | Citation checks, boundary audits, unsupported claim cleanup |
 | Furtwängler | `furtwangler` | Flow | Preserve unresolved tension and organic emergence | Conflicting experts, watch markers, unresolved strategic tension |
 | Bernstein | `bernstein` | Vitality | Make stakes vivid and publicly intelligible | Reflection paragraphs, public-facing synthesis, persuasion |
 | Karajan | `karajan` | Elegance | Shape long arc, balance, polish, total effect | Monthly synthesis, balance checks, architectural polish |
@@ -86,13 +86,13 @@ Rules:
 
 | Problem Type | Default Conductor | Why |
 |--------------|-------------------|-----|
-| Unsupported claim, bad citation, loose seam | Toscanini | Precision and verification are needed first |
+| Unsupported claim, bad citation, loose seam | Toscanini | Verify a concrete receipt seam first, then split what is proven from what is only inferred |
 | Conflicting expert lines | Furtwängler | The tension should be preserved before synthesis |
 | Public-facing paragraph lacks force | Bernstein | Stakes and legibility need amplification |
 | Monthly or long-arc synthesis feels uneven | Karajan | Balance and total shape matter most |
 | Too many possible next actions | Kleiber | Narrowing is the work |
 | PR triage or implementation sequence is bloated | Kleiber | Refuse excess and choose one next move |
-| Boundary or authority ambiguity | Toscanini | Enforcement precedes creativity |
+| Boundary or authority ambiguity | Toscanini | Enforcement precedes creativity, starting with one specific artifact or claim boundary |
 | Strategy thread becoming flattened or over-smoothed | Furtwängler | Polyphony should not be prematurely resolved |
 | Notebook becoming ornate or bloated | Karajan or Kleiber | Shape or narrow depending on the failure mode |
 | Reflection section lacks human energy | Bernstein | The work needs vitality, not more scaffolding |

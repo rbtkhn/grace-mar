@@ -1,20 +1,22 @@
 {
-  "generated_at": "2026-04-30T05:29:35.175099+00:00",
+  "generated_at": "2026-05-01T05:43:16.849146+00:00",
   "user_id": "grace-mar",
   "agent_surface": {
     "cursor_model": "unknown"
   },
   "strict_mode": false,
   "phase": "both",
-  "ok": false,
-  "integrity_ok": false,
-  "governance_ok": false,
+  "ok": true,
+  "integrity_ok": true,
+  "governance_ok": true,
   "self_memory_changed": true,
   "reviewable_count": 0,
   "contradiction_count": 0,
   "artifact_draft_count": 0,
   "promotable_draft_count": 0,
-  "followups": [],
+  "followups": [
+    "In-repo civ-mem index missing \u2014 optional: python3 scripts/build_civmem_inrepo_index.py build"
+  ],
   "phases": {
     "recent": {
       "self_memory_changed": true,
@@ -22,27 +24,27 @@
       "relation_counts": {}
     },
     "structural": {
-      "integrity": "fail",
-      "governance": "fail",
+      "integrity": "pass",
+      "governance": "pass",
       "entry_count": 0,
       "relation_counts": {}
     }
   },
   "coffee_rollup_24h": {
-    "window_start_utc": "2026-04-29T05:29:33.791595+00:00",
-    "window_end_utc": "2026-04-30T05:29:33.791595+00:00",
+    "window_start_utc": "2026-04-30T05:43:15.428851+00:00",
+    "window_end_utc": "2026-05-01T05:43:15.428851+00:00",
     "window_hours": 24.0,
-    "count": 5,
-    "first_ts": "2026-04-29T15:07:00+00:00",
-    "last_ts": "2026-04-30T04:39:00+00:00",
-    "span_hours": 13.53,
+    "count": 11,
+    "first_ts": "2026-04-30T14:20:00+00:00",
+    "last_ts": "2026-05-01T03:47:00+00:00",
+    "span_hours": 13.45,
     "by_mode": {
-      "work-start": 4,
-      "minimal": 1
+      "work-start": 6,
+      "minimal": 5
     },
     "runs": [
       {
-        "ts_iso": "2026-04-29T15:07:00+00:00",
+        "ts_iso": "2026-04-30T14:20:00+00:00",
         "ok": true,
         "mode": "work-start",
         "kv": {
@@ -51,7 +53,52 @@
         }
       },
       {
-        "ts_iso": "2026-04-29T15:10:00+00:00",
+        "ts_iso": "2026-04-30T16:38:00+00:00",
+        "ok": true,
+        "mode": "work-start",
+        "kv": {
+          "cursor_model": "unknown",
+          "model_tier": "unknown"
+        }
+      },
+      {
+        "ts_iso": "2026-04-30T16:43:00+00:00",
+        "ok": true,
+        "mode": "work-start",
+        "kv": {
+          "cursor_model": "unknown",
+          "model_tier": "unknown"
+        }
+      },
+      {
+        "ts_iso": "2026-04-30T16:46:00+00:00",
+        "ok": true,
+        "mode": "work-start",
+        "kv": {
+          "cursor_model": "unknown",
+          "model_tier": "unknown"
+        }
+      },
+      {
+        "ts_iso": "2026-04-30T19:01:00+00:00",
+        "ok": true,
+        "mode": "work-start",
+        "kv": {
+          "cursor_model": "unknown",
+          "model_tier": "unknown"
+        }
+      },
+      {
+        "ts_iso": "2026-04-30T22:54:00+00:00",
+        "ok": true,
+        "mode": "work-start",
+        "kv": {
+          "cursor_model": "unknown",
+          "model_tier": "unknown"
+        }
+      },
+      {
+        "ts_iso": "2026-04-30T23:51:00+00:00",
         "ok": true,
         "mode": "minimal",
         "kv": {
@@ -60,27 +107,36 @@
         }
       },
       {
-        "ts_iso": "2026-04-29T15:26:00+00:00",
+        "ts_iso": "2026-05-01T00:27:00+00:00",
         "ok": true,
-        "mode": "work-start",
+        "mode": "minimal",
         "kv": {
           "cursor_model": "unknown",
           "model_tier": "unknown"
         }
       },
       {
-        "ts_iso": "2026-04-29T23:59:00+00:00",
+        "ts_iso": "2026-05-01T00:31:00+00:00",
         "ok": true,
-        "mode": "work-start",
+        "mode": "minimal",
         "kv": {
           "cursor_model": "unknown",
           "model_tier": "unknown"
         }
       },
       {
-        "ts_iso": "2026-04-30T04:39:00+00:00",
+        "ts_iso": "2026-05-01T01:51:00+00:00",
         "ok": true,
-        "mode": "work-start",
+        "mode": "minimal",
+        "kv": {
+          "cursor_model": "unknown",
+          "model_tier": "unknown"
+        }
+      },
+      {
+        "ts_iso": "2026-05-01T03:47:00+00:00",
+        "ok": true,
+        "mode": "minimal",
         "kv": {
           "cursor_model": "unknown",
           "model_tier": "unknown"
@@ -89,200 +145,308 @@
     ],
     "picks": [
       {
-        "ts_iso": "2026-04-29T15:29:00+00:00",
-        "picked": "E",
-        "menu_label": "E",
-        "conductor": "bernstein"
+        "ts_iso": "2026-04-30T14:21:00+00:00",
+        "picked": "A",
+        "menu_label": "A"
       },
       {
-        "ts_iso": "2026-04-30T04:40:00+00:00",
-        "picked": "B",
-        "menu_label": "B"
+        "ts_iso": "2026-04-30T14:24:00+00:00",
+        "picked": "A",
+        "menu_label": "A"
       },
       {
-        "ts_iso": "2026-04-30T04:53:00+00:00",
-        "picked": "C",
-        "menu_label": "conductor",
-        "conductor": "kleiber"
-      },
-      {
-        "ts_iso": "2026-04-30T04:54:00+00:00",
+        "ts_iso": "2026-04-30T14:34:00+00:00",
         "picked": "C",
         "menu_label": "conductor",
         "conductor": "karajan"
       },
       {
-        "ts_iso": "2026-04-30T05:04:00+00:00",
+        "ts_iso": "2026-04-30T14:40:00+00:00",
         "picked": "C",
         "menu_label": "conductor",
-        "conductor": "toscanini"
+        "conductor": "bernstein"
       },
       {
-        "ts_iso": "2026-04-30T05:06:00+00:00",
+        "ts_iso": "2026-04-30T14:44:00+00:00",
+        "picked": "C",
+        "menu_label": "conductor",
+        "conductor": "kleiber"
+      },
+      {
+        "ts_iso": "2026-04-30T16:39:00+00:00",
+        "picked": "A",
+        "menu_label": "A"
+      },
+      {
+        "ts_iso": "2026-04-30T16:44:00+00:00",
         "picked": "C",
         "menu_label": "conductor",
         "conductor": "furtwangler"
       },
       {
-        "ts_iso": "2026-04-30T05:09:00+00:00",
+        "ts_iso": "2026-04-30T16:48:00+00:00",
+        "picked": "D",
+        "menu_label": "D"
+      },
+      {
+        "ts_iso": "2026-04-30T19:02:00+00:00",
+        "picked": "E",
+        "menu_label": "E",
+        "conductor": "furtwangler"
+      },
+      {
+        "ts_iso": "2026-04-30T19:15:00+00:00",
+        "picked": "C",
+        "menu_label": "conductor",
+        "conductor": "toscanini"
+      },
+      {
+        "ts_iso": "2026-04-30T19:16:00+00:00",
+        "picked": "C",
+        "menu_label": "conductor",
+        "conductor": "karajan"
+      },
+      {
+        "ts_iso": "2026-04-30T19:25:00+00:00",
+        "picked": "C",
+        "menu_label": "conductor",
+        "conductor": "kleiber"
+      },
+      {
+        "ts_iso": "2026-04-30T19:27:00+00:00",
         "picked": "C",
         "menu_label": "conductor",
         "conductor": "bernstein"
+      },
+      {
+        "ts_iso": "2026-04-30T22:56:00+00:00",
+        "picked": "B",
+        "menu_label": "B"
+      },
+      {
+        "ts_iso": "2026-05-01T01:57:00+00:00",
+        "picked": "B",
+        "menu_label": "B"
+      },
+      {
+        "ts_iso": "2026-05-01T03:51:00+00:00",
+        "picked": "C",
+        "menu_label": "C"
       }
     ],
     "by_picked": {
+      "A": 3,
+      "C": 9,
+      "D": 1,
       "E": 1,
-      "B": 1,
-      "C": 5
+      "B": 2
     }
   },
   "conductor_rollup_24h": {
-    "window_start_utc": "2026-04-29T05:29:33.791595+00:00",
-    "window_end_utc": "2026-04-30T05:29:33.791595+00:00",
+    "window_start_utc": "2026-04-30T05:43:15.428851+00:00",
+    "window_end_utc": "2026-05-01T05:43:15.428851+00:00",
     "window_hours": 24.0,
-    "pick_count": 7,
-    "outcome_count": 8,
-    "completed_passes": 8,
-    "orientation_only": 0,
+    "pick_count": 14,
+    "outcome_count": 9,
+    "completed_passes": 9,
+    "orientation_only": 5,
     "off_menu_refusals": 0,
-    "last_master": "bernstein",
+    "last_master": "furtwangler",
     "last_outcome": {
-      "ts_iso": "2026-04-30T05:11:00+00:00",
+      "ts_iso": "2026-04-30T19:28:00+00:00",
       "kind": "outcome",
       "conductor": "bernstein",
-      "commit": "1df4a540"
+      "action": "grace-gems-live-judgment-close",
+      "falsify": "review-answers-what-mattered-and-next"
     },
     "by_conductor": {
+      "karajan": {
+        "picks": 2,
+        "outcomes": 4,
+        "refusals": 0
+      },
       "bernstein": {
-        "picks": 3,
+        "picks": 4,
         "outcomes": 2,
         "refusals": 0
       },
       "kleiber": {
-        "picks": 1,
+        "picks": 3,
         "outcomes": 1,
         "refusals": 0
       },
-      "karajan": {
-        "picks": 1,
+      "furtwangler": {
+        "picks": 3,
         "outcomes": 1,
         "refusals": 0
       },
       "toscanini": {
-        "picks": 1,
-        "outcomes": 2,
-        "refusals": 0
-      },
-      "furtwangler": {
-        "picks": 1,
-        "outcomes": 2,
+        "picks": 2,
+        "outcomes": 1,
         "refusals": 0
       }
     },
-    "commits": [
-      "e81a89ce",
-      "6c5e1533",
-      "1df4a540"
-    ],
+    "commits": [],
     "falsifiers": [
-      "cadence-log-plus-one-substantive-cluster",
-      "sample-has-three-live-options-no-refusal-slot",
-      "no-staging-shape-only",
-      "redesign-not-patch"
+      "default-pass-strict-migration-fail",
+      "commit-only-surviving-content-wedge",
+      "single-artifact-ask-before-progress-dashboard",
+      "no-scholarship-readiness-from-fork-proof",
+      "three-lanes-are-sequence-not-equal-buckets",
+      "period-rhythm-only-where-existing-cadence-pressure",
+      "monthly-review-is-checklist-not-advice",
+      "review-answers-what-mattered-and-next"
     ],
     "events": [
       {
-        "ts_iso": "2026-04-29T15:29:00+00:00",
+        "ts_iso": "2026-04-30T14:34:00+00:00",
+        "kind": "pick",
+        "conductor": "karajan",
+        "menu_label": "conductor"
+      },
+      {
+        "ts_iso": "2026-04-30T14:35:00+00:00",
+        "kind": "outcome",
+        "conductor": "karajan",
+        "action": "runtime-residue-classified",
+        "falsify": "commit-trail-vs-regenerate-cache"
+      },
+      {
+        "ts_iso": "2026-04-30T14:40:00+00:00",
         "kind": "pick",
         "conductor": "bernstein",
+        "menu_label": "conductor"
+      },
+      {
+        "ts_iso": "2026-04-30T14:41:00+00:00",
+        "kind": "outcome",
+        "conductor": "bernstein",
+        "action": "thread-index-helper-trust-check",
+        "falsify": "default-pass-strict-migration-fail"
+      },
+      {
+        "ts_iso": "2026-04-30T14:44:00+00:00",
+        "kind": "pick",
+        "conductor": "kleiber",
+        "menu_label": "conductor"
+      },
+      {
+        "ts_iso": "2026-04-30T14:47:00+00:00",
+        "kind": "outcome",
+        "conductor": "kleiber",
+        "action": "tighten-strategy-inbox-public-stake",
+        "falsify": "commit-only-surviving-content-wedge"
+      },
+      {
+        "ts_iso": "2026-04-30T16:44:00+00:00",
+        "kind": "pick",
+        "conductor": "furtwangler",
+        "menu_label": "conductor"
+      },
+      {
+        "ts_iso": "2026-04-30T19:02:00+00:00",
+        "kind": "pick",
+        "conductor": "furtwangler",
         "menu_label": "E"
       },
       {
-        "ts_iso": "2026-04-30T00:38:00+00:00",
+        "ts_iso": "2026-04-30T19:12:00+00:00",
+        "kind": "outcome",
+        "conductor": "furtwangler",
+        "action": "cici-ai-telegram-ob1-fork-proof-post",
+        "falsify": "single-artifact-ask-before-progress-dashboard"
+      },
+      {
+        "ts_iso": "2026-04-30T19:15:00+00:00",
+        "kind": "pick",
+        "conductor": "toscanini",
+        "menu_label": "conductor"
+      },
+      {
+        "ts_iso": "2026-04-30T19:16:00+00:00",
+        "kind": "outcome",
+        "conductor": "toscanini",
+        "action": "cici-ai-ob1-fork-receipt-path",
+        "falsify": "no-scholarship-readiness-from-fork-proof"
+      },
+      {
+        "ts_iso": "2026-04-30T19:16:00+00:00",
+        "kind": "pick",
+        "conductor": "karajan",
+        "menu_label": "conductor"
+      },
+      {
+        "ts_iso": "2026-04-30T19:17:00+00:00",
+        "kind": "outcome",
+        "conductor": "karajan",
+        "action": "cici-ai-lanes-monthly-operating-arc",
+        "falsify": "three-lanes-are-sequence-not-equal-buckets"
+      },
+      {
+        "ts_iso": "2026-04-30T19:19:00+00:00",
+        "kind": "outcome",
+        "conductor": "karajan",
+        "action": "grace-mar-rhythm-scan",
+        "falsify": "period-rhythm-only-where-existing-cadence-pressure"
+      },
+      {
+        "ts_iso": "2026-04-30T19:22:00+00:00",
+        "kind": "outcome",
+        "conductor": "karajan",
+        "action": "grace-gems-monthly-operating-review",
+        "falsify": "monthly-review-is-checklist-not-advice"
+      },
+      {
+        "ts_iso": "2026-04-30T19:25:00+00:00",
+        "kind": "pick",
+        "conductor": "kleiber",
+        "menu_label": "conductor"
+      },
+      {
+        "ts_iso": "2026-04-30T19:27:00+00:00",
+        "kind": "pick",
+        "conductor": "bernstein",
+        "menu_label": "conductor"
+      },
+      {
+        "ts_iso": "2026-04-30T19:28:00+00:00",
+        "kind": "outcome",
+        "conductor": "bernstein",
+        "action": "grace-gems-live-judgment-close",
+        "falsify": "review-answers-what-mattered-and-next"
+      },
+      {
+        "ts_iso": "2026-05-01T02:00:00+00:00",
         "kind": "pick",
         "conductor": "bernstein",
         "menu_label": null
       },
       {
-        "ts_iso": "2026-04-30T04:00:00+00:00",
-        "kind": "outcome",
-        "conductor": "bernstein",
-        "action": "public-stake-batch-analysis"
+        "ts_iso": "2026-05-01T03:56:00+00:00",
+        "kind": "pick",
+        "conductor": "toscanini",
+        "menu_label": null
       },
       {
-        "ts_iso": "2026-04-30T04:53:00+00:00",
+        "ts_iso": "2026-05-01T04:03:00+00:00",
         "kind": "pick",
         "conductor": "kleiber",
-        "menu_label": "conductor"
+        "menu_label": null
       },
       {
-        "ts_iso": "2026-04-30T04:54:00+00:00",
-        "kind": "outcome",
-        "conductor": "kleiber",
-        "commit": "e81a89ce"
-      },
-      {
-        "ts_iso": "2026-04-30T04:54:00+00:00",
-        "kind": "pick",
-        "conductor": "karajan",
-        "menu_label": "conductor"
-      },
-      {
-        "ts_iso": "2026-04-30T04:55:00+00:00",
-        "kind": "outcome",
-        "conductor": "karajan",
-        "falsify": "cadence-log-plus-one-substantive-cluster"
-      },
-      {
-        "ts_iso": "2026-04-30T05:04:00+00:00",
-        "kind": "pick",
-        "conductor": "toscanini",
-        "menu_label": "conductor"
-      },
-      {
-        "ts_iso": "2026-04-30T05:05:00+00:00",
-        "kind": "outcome",
-        "conductor": "toscanini",
-        "falsify": "sample-has-three-live-options-no-refusal-slot"
-      },
-      {
-        "ts_iso": "2026-04-30T05:06:00+00:00",
-        "kind": "outcome",
-        "conductor": "toscanini",
-        "falsify": "no-staging-shape-only"
-      },
-      {
-        "ts_iso": "2026-04-30T05:06:00+00:00",
-        "kind": "pick",
-        "conductor": "furtwangler",
-        "menu_label": "conductor"
-      },
-      {
-        "ts_iso": "2026-04-30T05:07:00+00:00",
-        "kind": "outcome",
-        "conductor": "furtwangler",
-        "falsify": "redesign-not-patch"
-      },
-      {
-        "ts_iso": "2026-04-30T05:09:00+00:00",
-        "kind": "outcome",
-        "conductor": "furtwangler",
-        "commit": "6c5e1533"
-      },
-      {
-        "ts_iso": "2026-04-30T05:09:00+00:00",
+        "ts_iso": "2026-05-01T04:17:00+00:00",
         "kind": "pick",
         "conductor": "bernstein",
-        "menu_label": "conductor"
+        "menu_label": null
       },
       {
-        "ts_iso": "2026-04-30T05:11:00+00:00",
-        "kind": "outcome",
-        "conductor": "bernstein",
-        "commit": "1df4a540"
+        "ts_iso": "2026-05-01T04:40:00+00:00",
+        "kind": "pick",
+        "conductor": "furtwangler",
+        "menu_label": null
       }
     ],
-    "echo": "bernstein carried the latest conductor line; last close: 1df4a540; 8 closed pass(es)"
+    "echo": "furtwangler carried the latest conductor line; last close: grace-gems-live-judgment-close; 9 closed pass(es)"
   },
   "execution_paths": [
     {
@@ -298,11 +462,8 @@
       "id": "build",
       "title": "Build / integrate (repo + work-dev)",
       "first_move": "python3 scripts/validate-integrity.py --user grace-mar --json",
-      "stop_rule": "Read governance_checker.py stdout from dream JSON; fix blocking issues.",
-      "signals_used": [
-        "integrity_fail",
-        "governance_fail"
-      ]
+      "stop_rule": "Integrity passes; then optional: python3 scripts/refresh_derived_exports.py -u grace-mar",
+      "signals_used": []
     },
     {
       "id": "steward",
@@ -312,22 +473,21 @@
       "signals_used": []
     }
   ],
-  "suggested_execution_path_index": 2,
-  "execution_path_suggestion_reason": "integrity_or_governance_fail",
-  "tomorrow_inherits": "Tomorrow inherits (hint): **Steward / membrane (gate + template parity)** \u2014 integrity or governance did not fully pass this dream; not policy or Record.",
+  "suggested_execution_path_index": 1,
+  "execution_path_suggestion_reason": "calendar_mod3",
+  "tomorrow_inherits": "Tomorrow inherits (hint): **Build / integrate (repo + work-dev)** \u2014 calendar rotation; not policy or Record.",
   "civmem_echoes": [],
   "civmem_disclaimer": "Analogical / historical depth from in-repo civ-mem (token overlap); not current truth, not Voice knowledge, not part of the Record.",
-  "civmem_index_missing": false,
-  "civmem_suppressed_reason": "suppressed_integrity_fail",
+  "civmem_index_missing": true,
   "capture_gap": {
     "last_evidence_date": "2026-04-27",
     "last_evidence_id": "ACT-0009",
-    "days_since_evidence": 2,
+    "days_since_evidence": 3,
     "last_merge_date": "2026-04-27",
-    "days_since_merge": 2,
+    "days_since_merge": 3,
     "pending_count": 3,
     "level": "ok",
-    "message": "Record healthy \u2014 last entry 2d ago (ACT-0009, 2026-04-27)"
+    "message": "Record healthy \u2014 last entry 3d ago (ACT-0009, 2026-04-27)"
   },
   "capability_shift": {
     "category": "model",
@@ -367,29 +527,29 @@
   "dream_catchup": {
     "semantics": "since_previous_dream",
     "timezone": "UTC",
-    "previous_dream_generated_at": "2026-04-29T05:15:14.683099+00:00",
+    "previous_dream_generated_at": "2026-04-30T05:29:35.175099+00:00",
     "local_calendar_dates": [
-      "2026-04-30"
+      "2026-05-01"
     ],
     "strategy_notebook_missing_day_headers": [
-      "2026-04-30"
+      "2026-05-01"
     ]
   },
   "last_coffee_echo": {
-    "timestamp": "2026-04-30T04:39:00+00:00",
-    "conductor": "bernstein",
-    "mode": "work-start",
-    "menu_letter": "conductor",
-    "highlight": "Yesterday\u2019s work-start coffee is still the thread. Menu pick: conductor. Conductor line: bernstein.",
+    "timestamp": "2026-05-01T03:47:00+00:00",
+    "conductor": null,
+    "mode": "minimal",
+    "menu_letter": "C",
+    "highlight": "Yesterday\u2019s minimal coffee is still the thread. Menu pick: C.",
     "source": "coffee_rollup_24h"
   },
   "handoffSchemaVersion": 3,
-  "topActionReason": "integrity_or_governance_fail",
+  "topActionReason": "calendar_mod3",
   "quietRun": false,
   "residueLedger": {
-    "must_resume": "",
+    "must_resume": "In-repo civ-mem index missing \u2014 optional: python3 scripts/build_civmem_inrepo_index.py build",
     "safe_to_drop": "",
-    "blocked": "Dream reported not ok \u2014 review integrity/governance before new work.",
+    "blocked": "",
     "watch_later": ""
   },
   "worktreeState": "risky residue",
