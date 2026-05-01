@@ -24,10 +24,24 @@
     },
     {
       "enabled": true,
+      "url": "https://scottritter.substack.com/feed",
+      "slug_prefix": "rss-ritter",
+      "max_items": 10,
+      "thread": "ritter"
+    },
+    {
+      "enabled": true,
       "url": "https://conflictsforum.substack.com/feed",
       "slug_prefix": "rss-conflictsforum",
       "max_items": 10,
       "thread": "crooke"
+    },
+    {
+      "enabled": true,
+      "url": "https://www.armstrongeconomics.com/feed/",
+      "slug_prefix": "rss-armstrong",
+      "max_items": 10,
+      "thread": "armstrong"
     }
   ]
 }

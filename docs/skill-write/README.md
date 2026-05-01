@@ -23,6 +23,7 @@
 | [`.cursor/skills/skill-write/SKILL.md`](../../.cursor/skills/skill-write/SKILL.md) | **Cursor skill entry** — triggers **`write`**, **`skill-write`**, **`publish`**; compound **`strategy write`** loads **skill-strategy + skill-write** |
 | [write-operator-preferences.md](write-operator-preferences.md) | **SSOT for operator writing preferences** — living list; start here (includes **tri-mind → public copy** handoff, **Chat delivery**, **Locals vs CIV-MIND-BARNES**, **substance-first ledes with images**) |
 | [grace-mar-locals-voice.md](grace-mar-locals-voice.md) | **Grace‑Mar** house style for **Locals** (VivaBarnes / Duran): do / do not, gears, prudence; not default tri-mind Barnes |
+| [brief-vs-spec.md](brief-vs-spec.md) | **Brief vs spec** — when to use a WORK job brief for writing / strategy / delegation vs a system spec for implementation |
 | [write-no-abstract-stacked-closers.md](write-no-abstract-stacked-closers.md) | Craft: avoid bloaty abstract stacked closers in short public copy |
 | [write-memorable-closer.md](write-memorable-closer.md) | Craft: end on one strong sentence that encapsulates the core argument |
 | [write-no-rhetorical-question-closer.md](write-no-rhetorical-question-closer.md) | Craft: do not end on a rhetorical question (prefer declarative closer) |

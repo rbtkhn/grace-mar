@@ -160,15 +160,17 @@ def test_fetch_sources_json_substack_feeds() -> None:
     feeds = cfg.get("rss_feeds") or []
     enabled = [f for f in feeds if f.get("enabled", True) and f.get("url")]
     substack = [f for f in enabled if "substack.com/feed" in str(f.get("url", ""))]
-    assert len(substack) == 3
+    assert len(substack) == 5
     urls = {str(f["url"]) for f in substack}
     assert "https://simplicius76.substack.com/feed" in urls
     assert "https://bigserge.substack.com/feed" in urls
     assert "https://greenwald.substack.com/feed" in urls
+    assert "https://scottritter.substack.com/feed" in urls
+    assert "https://conflictsforum.substack.com/feed" in urls
     prefixes = {str(f.get("slug_prefix") or "") for f in substack}
-    assert prefixes == {"rss-simplicius", "rss-bigserge", "rss-greenwald"}
+    assert prefixes == {"rss-simplicius", "rss-bigserge", "rss-greenwald", "rss-ritter", "rss-conflictsforum"}
     threads = {str(f.get("thread") or "") for f in substack}
-    assert threads == {"simplicius", "bigserge", "greenwald"}
+    assert threads == {"simplicius", "bigserge", "greenwald", "ritter", "crooke"}
 
 
 def test_run_apply_writes_per_expert_daily_file_with_mock_fetch(

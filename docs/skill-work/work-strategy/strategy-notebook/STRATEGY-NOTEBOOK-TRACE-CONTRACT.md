@@ -44,5 +44,5 @@ v1 receipts are **file-local**. Field names are chosen so a future adapter can m
 ## Links
 
 - [STRATEGY-NOTEBOOK-PAGE-UPDATE-CONTRACT.md](STRATEGY-NOTEBOOK-PAGE-UPDATE-CONTRACT.md) — `PageOperation` values
-- [PAGE-CONTRACT.md](PAGE-CONTRACT.md) — page vs thread
+- [NOTEBOOK-CONTRACT.md](NOTEBOOK-CONTRACT.md) — page vs thread
 - [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md) — default operating path

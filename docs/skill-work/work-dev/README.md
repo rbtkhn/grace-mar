@@ -49,6 +49,22 @@ Use this order when actively working on the territory:
 
 ---
 
+## Primitive routing
+
+Use the smallest WORK primitive that clarifies the job. These are advisory discipline surfaces, not Record truth and not gate approval.
+
+| When the work feels like... | Start with | Why |
+|-----------------------------|------------|-----|
+| A non-trivial agent task, public-facing output, strategy synthesis, or delegation handoff | [templates/job-brief.md](templates/job-brief.md) | Clarifies objective, audience, success criteria, evidence, and acceptance check before execution. |
+| A creative, visual, motion, or design artifact | [templates/creative-brief.md](templates/creative-brief.md) and [creative-pipeline.md](creative-pipeline.md) | Keeps taste, references, constraints, and visual proof together. |
+| Code or system behavior with implementation details | [templates/specification-precision.md](templates/specification-precision.md) | Separates what must be built from examples, non-goals, and verification. |
+| Vocabulary drift, hidden scope expansion, or documented-only claims | [ubiquitous-language-and-tracer-bullets.md](ubiquitous-language-and-tracer-bullets.md) | Names canonical terms and proves the thinnest end-to-end path before expanding. |
+| A coding-agent recommendation that needs judgment lenses | [conductor-proposal-lenses.md](conductor-proposal-lenses.md) | Frames proposal quality and tradeoffs without turning the lens into an action menu. |
+
+If two primitives seem to apply, pick one primary owner and link the other as supporting context. Do not stack templates just to feel thorough.
+
+---
+
 ## Contents
 
 **Grouping is navigational only; it does not change authority, ownership, or merge behavior.**
@@ -73,6 +89,7 @@ Use this order when actively working on the territory:
 | **[path-placement-cleanup-investigation.md](path-placement-cleanup-investigation.md)** | **Path placement cleanup investigation** — factual note on the missing placement/path-friction artifacts and the narrower formatting scope confirmed in this checkout. |
 | **[known-gaps.md](known-gaps.md)** | Work-dev small-seams backlog: concise inefficiencies, partials, and hardening follow-ups. |
 | **[three-compounding-loops.md](three-compounding-loops.md)** | Record vs WORK vs CI — how compounding works in each loop and how they must interact (gate, no draft-as-truth). |
+| **[templates/job-brief.md](templates/job-brief.md)** | **WORK job brief** — advisory pre-execution contract for non-trivial agent tasks, public-facing outputs, strategy synthesis, writing work, and drift-prone delegation. |
 | **[ubiquitous-language-and-tracer-bullets.md](ubiquitous-language-and-tracer-bullets.md)** | **Ubiquitous Language + Tracer-Bullet Plans** — WORK-only primitive for shared vocabulary, forbidden claims, and the smallest end-to-end proof path before broader implementation. Template: [templates/language-and-tracer-bullet-plan.md](templates/language-and-tracer-bullet-plan.md). |
 | **[compound-loop.md](compound-loop.md)** | **Compound work loop** — Plan → Execute → Review → Compound → Gate for coding-agent work; compound notes are WORK-only; gate is the only path toward Record candidates. |
 | **[compound-gate-export.md](compound-gate-export.md)** | **Gate candidate export** — read-only `artifacts/work-dev-compound-gate-candidates.md` from `gate_candidate` notes; not approval; `python3 scripts/export_work_dev_compound_gate_candidates.py`. |
@@ -172,6 +189,7 @@ Use this order when actively working on the territory:
 | Doc / file | Purpose |
 |------------|---------|
 | **[workspace.md](workspace.md)** | Canonical operator entrypoint: current state, blockers, next actions, and file map. |
+| **[workspace-hygiene.md](workspace-hygiene.md)** | Local-only temp/cache/audit clutter classes and commit hygiene guidance; docs-only, no cleanup command. |
 | **[WORK-LEDGER.md](WORK-LEDGER.md)** | Optional **judgment / compounding** index (watches, heuristics, framing list) — pointers into workspace + integration docs; scaffold from [work-template/WORK-LEDGER.md](../work-template/WORK-LEDGER.md). |
 | **[work-dev-sources.md](work-dev-sources.md)** | Authorized sources list (channels / podcasts) for operator framing; not integration truth. |
 | **[work-dev-history.md](work-dev-history.md)** | Append-only **operator log** for this lane (ingests, integration milestones); not Record — see [work-modules-history-principle.md](../work-modules-history-principle.md). |

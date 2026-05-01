@@ -72,3 +72,12 @@ Where **their** commentary is published and accessible (**no Wikipedia**). Re-ve
 ---
 
 **Companion files:** [`strategy-expert-mate-transcript.md`](strategy-expert-mate-transcript.md) (7-day rolling verbatim) and [`strategy-expert-mate-thread.md`](strategy-expert-mate-thread.md) (distilled analytical thread).
+
+## Archive / backfill note
+
+- Treat the public author/archive pages as discovery indexes, not completeness mandates; backfill the substantial posts you want preserved and leave light or repetitive archive-visible items out when that is the better editorial call.
+
+## Automation target
+
+- Public Grayzone author-page crawl via [`scripts/backfill_mate_grayzone_raw_input.py`](../../../../../scripts/backfill_mate_grayzone_raw_input.py) or the generic [`scripts/backfill_author_page_raw_input.py`](../../../../../scripts/backfill_author_page_raw_input.py) with `--author-url https://thegrayzone.com/author/aaron-mate/ --domain thegrayzone.com --path-shape date-slug --publication thegrayzone.com --thread mate`.
+- Public X profile crawl via [`scripts/backfill_mate_x_raw_input.py`](../../../../../scripts/backfill_mate_x_raw_input.py) or the generic [`scripts/backfill_x_profile_raw_input.py`](../../../../../scripts/backfill_x_profile_raw_input.py) with `--profile-url https://x.com/aaronjmate --thread mate`.

@@ -72,3 +72,11 @@ Where **their** commentary is published and accessible (**no Wikipedia**). Re-ve
 ---
 
 **Companion files:** [`strategy-expert-freeman-transcript.md`](strategy-expert-freeman-transcript.md) (7-day rolling verbatim) and [`strategy-expert-freeman-thread.md`](strategy-expert-freeman-thread.md) (distilled analytical thread).
+
+## Archive / backfill note
+
+- Treat the public site as a discovery index, not a completeness mandate; backfill the substantial posts you want preserved and leave light or repetitive archive-visible items out when that is the better editorial call.
+
+## Automation target
+
+- Public site crawl via [`scripts/backfill_freeman_site_raw_input.py`](../../../../../scripts/backfill_freeman_site_raw_input.py) or the generic [`scripts/backfill_author_page_raw_input.py`](../../../../../scripts/backfill_author_page_raw_input.py) with `--author-url https://chasfreeman.net/ --domain chasfreeman.net --publication chasfreeman.net --thread freeman`.

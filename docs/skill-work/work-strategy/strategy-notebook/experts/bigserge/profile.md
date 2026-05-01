@@ -71,6 +71,15 @@ Promotion and refresh defaults: [strategy-expert-template.md § Voice fingerprin
 
 - Pull when **`thread:bigserge`** ingests land in the inbox or **`raw-input`** captures anchor a **§1e** week and you need a **single-voice essay seam** beside **`mercouris`** or **`berletic`**.
 
+## Archive / backfill note
+
+- Treat the public Substack archive and feed as a discovery index, not a completeness mandate; backfill the substantial posts you want preserved and leave light or repetitive archive-visible items out when that is the better editorial call.
+
+## Automation target
+
+- Public Substack backfill via [`scripts/backfill_bigserge_substack_raw_input.py`](../../../../../scripts/backfill_bigserge_substack_raw_input.py) or the generic [`scripts/backfill_substack_raw_input.py`](../../../../../scripts/backfill_substack_raw_input.py) with `--hostname bigserge.substack.com --thread bigserge`; treat the archive as a discovery index, not a completeness mandate.
+- Public X profile crawl via [`scripts/backfill_bigserge_x_raw_input.py`](../../../../../scripts/backfill_bigserge_x_raw_input.py) or the generic [`scripts/backfill_x_profile_raw_input.py`](../../../../../scripts/backfill_x_profile_raw_input.py) with `--profile-url https://x.com/witte_sergei --thread bigserge`; treat public posts as selective discovery items, not a completeness target.
+
 ## Published sources (operator web index)
 
 Where **their** commentary is published and accessible (**no Wikipedia**). Re-verify handles before cite-grade use.

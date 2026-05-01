@@ -121,3 +121,12 @@ The block below **Rolling ingest** is replaced on each `strategy_thread.py` / `s
 ---
 
 **Companion files:** [`strategy-expert-davis-transcript.md`](strategy-expert-davis-transcript.md) (7-day rolling verbatim) and [`strategy-expert-davis-thread.md`](strategy-expert-davis-thread.md) (distilled analytical thread).
+
+## Archive / backfill note
+
+- Treat the public author/archive pages as discovery indexes, not completeness mandates; backfill the substantial posts you want preserved and leave light or repetitive archive-visible items out when that is the better editorial call.
+
+## Automation target
+
+- Public X profile crawl via [`scripts/backfill_davis_x_raw_input.py`](../../../../../scripts/backfill_davis_x_raw_input.py) or the generic [`scripts/backfill_x_profile_raw_input.py`](../../../../../scripts/backfill_x_profile_raw_input.py) with `--profile-url https://x.com/DanielLDavis1 --thread davis`.
+- Defense Priorities author-page crawl via [`scripts/backfill_davis_defensepriorities_raw_input.py`](../../../../../scripts/backfill_davis_defensepriorities_raw_input.py) or the generic [`scripts/backfill_author_page_raw_input.py`](../../../../../scripts/backfill_author_page_raw_input.py) with `--author-url https://www.defensepriorities.org/people/daniel-davis/ --domain defensepriorities.org --publication defensepriorities.org --thread davis`.

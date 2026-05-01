@@ -1,4 +1,4 @@
-# Daily strategy inbox (accumulator)
+﻿# Daily strategy inbox (accumulator)
 <!-- word_count: 36300 -->
 
 **Purpose:** **Append-only** scratch surface for the **current local calendar day** while you run **`strategy`**, read briefs, or capture links. Polished prose is **not** required — bullets, paste, URLs, half-sentences.
@@ -21,9 +21,9 @@
 
 **Inbox → raw-input (order of operations):** The **inbox** is the **registry** (stubs, **`thread:`**, links, **`verify:`**). **Durable** full text belongs under **`[raw-input/YYYY-MM-DD/](raw-input/README.md)`** as soon as the capture is **indexed** here (one-line stub + path, or the same run as an ingest script that writes the file e.g. **`python3 scripts/fetch_strategy_raw_input.py --apply`**, which also appends a matching stub). Do **not** treat **`raw-input/`** as a second capture “lane” you use **instead of** the inbox. Full policy: [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *Split ingest model*.
 
-**X post ingest cadence:** Aim for **at least five** strategy ingests from X per local day (claim → why it matters → URL, plus verify tags as needed). **Five is a floor, not a cap** — capturing **more than five** on busy days is **normal**, not exceptional. Same one-line shape scales to 6+ rows without a separate workflow.
+**Post ingest cadence:** Aim for **at least five** strategy ingests from Post per local day (claim → why it matters → URL, plus verify tags as needed). **Five is a floor, not a cap** — capturing **more than five** on busy days is **normal**, not exceptional. Same one-line shape scales to 6+ rows without a separate workflow.
 
-**X and exact post URLs:** **Do not** require a **per-status** permalink for a line to count. Default **`https://x.com/<handle>`** (profile) is enough to anchor attribution. Use **`verify:`** tails like **`X-account+approx-date+optional-pin`** — add a **status URL** when the operator has it; **EOD / Links** promotion can still **`optional-pin`** later. Ingests are **not** blocked for lacking **`pin-exact-status-URL`**.
+**Post and exact URLs:** **Do not** require a **per-post** permalink for a line to count. Default **`https://x.com/<handle>`** (profile) is enough to anchor attribution. Use **`verify:`** tails like **`X-account+approx-date+optional-pin`** — add a **status URL** when the operator has it; **EOD / Links** promotion can still **`optional-pin`** later. Ingests are **not** blocked for lacking **`pin-exact-status-URL`**.
 
 ### Paste-ready one-liner (canonical unit)
 

@@ -93,10 +93,11 @@ Promotion and refresh defaults: [strategy-expert-template.md § Voice fingerprin
 
 1. https://www.tritaparsi.com/
 2. https://quincyinst.org/author/parsi/
-3. https://x.com/tparsi
-4. https://www.losinganenemy.com/
-5. https://quincyinst.org/research/trump-2-0-restraint-foreign-policy-recommendations-for-trumps-second-term/ — example research page (verify current URL)
-6. Yale University Press — book catalogue entries for *Treacherous Alliance*, *A Single Roll of the Dice*, *Losing an Enemy* (publisher as authority for bibliographic facts)
+3. https://responsiblestatecraft.org/author/tparsi/
+4. https://x.com/tparsi
+5. https://www.losinganenemy.com/
+6. https://quincyinst.org/research/trump-2-0-restraint-foreign-policy-recommendations-for-trumps-second-term/ — example research page (verify current URL)
+7. Yale University Press — book catalogue entries for *Treacherous Alliance*, *A Single Roll of the Dice*, *Losing an Enemy* (publisher as authority for bibliographic facts)
 
 ## Seed (index mirror — operator may extend)
 
@@ -117,3 +118,12 @@ The block below **Rolling ingest** is replaced on each `strategy_thread.py` / `s
 ---
 
 **Companion files:** [`strategy-expert-parsi-transcript.md`](strategy-expert-parsi-transcript.md) (7-day rolling verbatim) and [`strategy-expert-parsi-thread.md`](strategy-expert-parsi-thread.md) (distilled analytical thread).
+
+## Archive / backfill note
+
+- Treat the public author/archive pages as discovery indexes, not completeness mandates; backfill the substantial posts you want preserved and leave light or repetitive archive-visible items out when that is the better editorial call.
+
+## Automation target
+
+- Public X profile crawl via [`scripts/backfill_parsi_x_raw_input.py`](../../../../../scripts/backfill_parsi_x_raw_input.py) or the generic [`scripts/backfill_x_profile_raw_input.py`](../../../../../scripts/backfill_x_profile_raw_input.py) with `--profile-url https://x.com/tparsi --thread parsi`.
+- Responsible Statecraft author-page crawl via [`scripts/backfill_parsi_responsiblestatecraft_raw_input.py`](../../../../../scripts/backfill_parsi_responsiblestatecraft_raw_input.py) or the generic [`scripts/backfill_responsiblestatecraft_author_raw_input.py`](../../../../../scripts/backfill_responsiblestatecraft_author_raw_input.py) with `--author-url https://responsiblestatecraft.org/author/tparsi/ --thread parsi`.

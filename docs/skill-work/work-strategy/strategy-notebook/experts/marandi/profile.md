@@ -69,6 +69,8 @@ Where **their** commentary is published and accessible (**no Wikipedia**). Re-ve
 2. https://profile.ut.ac.ir/en/~mmarandi
 3. https://www.middleeasteye.net/users/seyed-mohammad-marandi
 
+**Automation target:** public X profile crawl via [`scripts/backfill_marandi_x_raw_input.py`](../../../../../scripts/backfill_marandi_x_raw_input.py) or the generic [`scripts/backfill_x_profile_raw_input.py`](../../../../../scripts/backfill_x_profile_raw_input.py) with `--profile-url https://x.com/s_m_marandi --thread marandi`.
+
 ---
 
 **Companion files:** [`strategy-expert-marandi-transcript.md`](strategy-expert-marandi-transcript.md) (7-day rolling verbatim) and [`strategy-expert-marandi-thread.md`](strategy-expert-marandi-thread.md) (distilled analytical thread).

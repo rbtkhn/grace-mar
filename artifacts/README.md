@@ -23,6 +23,19 @@ and describe **how to rebuild a derived file**, not why an EVIDENCE artifact was
 
 **Repo root `prepared-context/`** (not under `artifacts/`) may hold operator drafts and `last-budget-builds.json`; see [prepared-context/README.md](../prepared-context/README.md) and [context-budgeting.md](../docs/runtime/context-budgeting.md). **Policy mode defaults** (not Record): [`config/policy_modes/defaults.json`](../config/policy_modes/defaults.json), [docs/policy-modes.md](../docs/policy-modes.md).
 
+## Commit-worthiness rule
+
+Derived artifacts are not all equal. Before committing a changed file under `artifacts/`, classify it:
+
+| Class | Commit posture |
+|-------|----------------|
+| Stable operator surface | Commit when the surface is part of the normal workflow, registered or listed here, and useful for review diffs. |
+| Historical receipt or report | Commit only when the run itself is evidence for a feature, audit, demo, or partner-facing claim. |
+| Rebuildable local snapshot | Prefer regeneration on demand; do not commit just because a script ran. |
+| Scratch / cache / temp output | Keep gitignored or local unless explicitly promoted into a report. |
+
+When in doubt, commit the source doctrine, script, test, or receipt that proves the behavior before committing a refreshed dashboard. A generated Markdown file should say which operator decision it supports and which source it does not replace.
+
 | Path | Produced by | Policy |
 |------|-------------|--------|
 | `artifacts/work-notes/` | `scripts/new_work_note.py` | **Scratch** work notes from `docs/templates/work-note-template.md`. **Default:** `*.md` **gitignored**; `.gitkeep` preserves the directory. Not Record. |

@@ -3,8 +3,8 @@
 _Technical operations summary for this repository instance. **Not** legal, regulatory, or medical compliance advice; for operational visibility and partner conversations only._
 
 - **User id:** `grace-mar`
-- **Generated (UTC):** 2026-04-24T16:19:06Z
-- **Repo `HEAD` (short):** `93db2f2f`
+- **Generated (UTC):** 2026-05-01T01:52:21Z
+- **Repo `HEAD` (short):** `93cf015d`
 
 ## Triad (where authority sits)
 

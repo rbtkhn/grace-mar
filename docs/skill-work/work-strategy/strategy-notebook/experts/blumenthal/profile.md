@@ -72,3 +72,12 @@ Where **their** commentary is published and accessible (**no Wikipedia**). Re-ve
 ---
 
 **Companion files:** [`strategy-expert-blumenthal-transcript.md`](strategy-expert-blumenthal-transcript.md) (7-day rolling verbatim) and [`strategy-expert-blumenthal-thread.md`](strategy-expert-blumenthal-thread.md) (distilled analytical thread).
+
+## Archive / backfill note
+
+- Treat the public author/archive pages as discovery indexes, not completeness mandates; backfill the substantial posts you want preserved and leave light or repetitive archive-visible items out when that is the better editorial call.
+
+## Automation target
+
+- Public Grayzone author-page crawl via [`scripts/backfill_blumenthal_grayzone_raw_input.py`](../../../../../scripts/backfill_blumenthal_grayzone_raw_input.py) or the generic [`scripts/backfill_author_page_raw_input.py`](../../../../../scripts/backfill_author_page_raw_input.py) with `--author-url https://thegrayzone.com/author/max-blumenthal/ --domain thegrayzone.com --path-shape date-slug --publication thegrayzone.com --thread blumenthal`.
+- Public X profile crawl via [`scripts/backfill_blumenthal_x_raw_input.py`](../../../../../scripts/backfill_blumenthal_x_raw_input.py) or the generic [`scripts/backfill_x_profile_raw_input.py`](../../../../../scripts/backfill_x_profile_raw_input.py) with `--profile-url https://x.com/MaxBlumenthal --thread blumenthal`.

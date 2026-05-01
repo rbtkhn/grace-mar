@@ -85,3 +85,12 @@ Where **their** commentary is published and accessible (**no Wikipedia**). Re-ve
 ---
 
 **Companion files:** [`strategy-expert-mearsheimer-transcript.md`](strategy-expert-mearsheimer-transcript.md) (7-day rolling verbatim), [`strategy-expert-mearsheimer-thread.md`](strategy-expert-mearsheimer-thread.md) (distilled analytical thread), [`strategy-expert-mearsheimer-mind.md`](strategy-expert-mearsheimer-mind.md) (long-form mind).
+
+## Archive / backfill note
+
+- Treat the public site and Substack archive as discovery indexes, not completeness mandates; backfill the substantial posts you want preserved and leave light or repetitive archive-visible items out when that is the better editorial call.
+
+## Automation target
+
+- Public site crawl via [`scripts/backfill_mearsheimer_site_raw_input.py`](../../../../../scripts/backfill_mearsheimer_site_raw_input.py) or the generic [`scripts/backfill_author_page_raw_input.py`](../../../../../scripts/backfill_author_page_raw_input.py) with `--author-url https://www.mearsheimer.com/ --domain mearsheimer.com --publication mearsheimer.com --thread mearsheimer`.
+- Public Substack backfill via [`scripts/backfill_mearsheimer_substack_raw_input.py`](../../../../../scripts/backfill_mearsheimer_substack_raw_input.py) or the generic [`scripts/backfill_substack_raw_input.py`](../../../../../scripts/backfill_substack_raw_input.py) with `--hostname mearsheimer.substack.com --thread mearsheimer`.

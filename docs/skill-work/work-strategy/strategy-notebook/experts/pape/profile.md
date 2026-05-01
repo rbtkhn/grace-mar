@@ -69,6 +69,8 @@ Where **their** commentary is published and accessible (**no Wikipedia**). Re-ve
 2. https://cpost.uchicago.edu/people/profile/robert_pape/
 3. https://escalationtrap.substack.com/
 
+**Automation target:** public X profile crawl via [`scripts/backfill_pape_x_raw_input.py`](../../../../../scripts/backfill_pape_x_raw_input.py) or the generic [`scripts/backfill_x_profile_raw_input.py`](../../../../../scripts/backfill_x_profile_raw_input.py) with `--profile-url https://x.com/ProfessorPape --thread pape`; Substack year backfill via [`scripts/backfill_pape_substack_raw_input.py`](../../../../../scripts/backfill_pape_substack_raw_input.py) or the generic [`scripts/backfill_substack_raw_input.py`](../../../../../scripts/backfill_substack_raw_input.py) with `--hostname escalationtrap.substack.com --thread pape`. Treat the archive as a discovery index, not a completeness target: backfill the substantial posts you want preserved, and leave lighter/archive-only items out when that is the better editorial call.
+
 ---
 
 **Companion files:** [`strategy-expert-pape-transcript.md`](strategy-expert-pape-transcript.md) (7-day rolling verbatim) and [`strategy-expert-pape-thread.md`](strategy-expert-pape-thread.md) (distilled analytical thread).

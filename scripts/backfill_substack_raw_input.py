@@ -7,6 +7,8 @@ Uses the public JSON API (no API key):
 
 Writes one markdown file per post with YAML frontmatter (optional ``thread:``),
 body as HTML-stripped plain text (full HTML is large; canonical URL in frontmatter).
+Treat the archive as a discovery index, not a completeness mandate: the caller
+still chooses which substantial posts merit preservation in raw-input/.
 
 WORK only; not Record.
 

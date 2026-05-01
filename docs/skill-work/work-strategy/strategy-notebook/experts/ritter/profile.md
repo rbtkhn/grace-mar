@@ -67,7 +67,17 @@ Where **their** commentary is published and accessible (**no Wikipedia**). Re-ve
 
 1. https://x.com/RealScottRitter
 2. https://scottritter.com/
-3. https://www.youtube.com/@therealscottritter
+3. https://scottritter.substack.com/
+4. https://www.youtube.com/@therealscottritter
+
+## Archive / backfill note
+
+- Treat the public site, Substack, and video surfaces as discovery indexes, not completeness mandates; backfill the substantial items you want preserved and leave lighter archive-visible items out when they do not merit raw-input retention.
+
+## Automation target
+
+- Public X profile crawl via [`scripts/backfill_ritter_x_raw_input.py`](../../../../../scripts/backfill_ritter_x_raw_input.py) or the generic [`scripts/backfill_x_profile_raw_input.py`](../../../../../scripts/backfill_x_profile_raw_input.py) with `--profile-url https://x.com/RealScottRitter --thread ritter`; public Substack backfill via [`scripts/backfill_ritter_substack_raw_input.py`](../../../../../scripts/backfill_ritter_substack_raw_input.py) or the generic [`scripts/backfill_substack_raw_input.py`](../../../../../scripts/backfill_substack_raw_input.py) with `--hostname scottritter.substack.com --thread ritter`. Treat these archives as discovery indexes, not completeness mandates.
+- Site-hosted article alias crawl via [`scripts/backfill_ritter_site_raw_input.py`](../../../../../scripts/backfill_ritter_site_raw_input.py) or the generic [`scripts/backfill_substack_raw_input.py`](../../../../../scripts/backfill_substack_raw_input.py) with `--hostname scottritter.com --thread ritter`; this hostname currently resolves into the same Substack-hosted archive, so it is an alias path, not a separate content universe.
 
 ---
 

@@ -21,6 +21,7 @@ description: "Conductor: work-dev–associated execution — pick → act on dis
 - Operator says **`conductor`**, a **master** name, **`coffee`** hub **E**, or (legacy) **`D` +** fragment — the **`coffee`** hub **never** lists five Symphony masters as separate lines (**hub E** is the Conductor slot). **`coffee` hub E** with **`last_logged_conductor`**: go straight to orientation + **Conductor action MCQ** — **do not** paste the masters row first ([coffee § Hub E](../coffee/SKILL.md#hub-e-auto-continue)).
 - **Conductor** turn may show the **masters** **A.–E.** row for disambiguation — [CONDUCTOR-PASS — Conductor MCQ](../../../docs/skill-work/work-coffee/CONDUCTOR-PASS.md#conductor-mcq).
 - **work-dev** **Engineer** (coffee **B**) often **feeds** the same session: [work-dev workspace Next actions](../../../docs/skill-work/work-dev/workspace.md) can **inform** **action** **MCQ** **options** when the **object** is **ship** / **harness** / **derived** **regeneration**. The three options should all be live, worthwhile paths; refusal is represented by an off-menu reply, no pick, or a different instruction.
+- When the action is ambiguous, public-facing, or delegation-shaped, a first move may be to write or infer a WORK job brief (`docs/skill-work/work-dev/templates/job-brief.md`) before implementation.
 
 ## Do / don’t
 

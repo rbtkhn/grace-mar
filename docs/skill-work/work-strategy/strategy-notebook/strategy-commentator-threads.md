@@ -226,7 +226,7 @@ Run operator **`thread`**: **`bin/thread`** or **`python3 scripts/strategy_threa
 4. **Falsify** — one sentence on what would make the call **wrong** (or what outcome resolves a conditional).
 5. Later: **`resolved:`** + cite (wire / official readout) or **`deferred:`** + reason (still ambiguous, horizon not reached).
 
-**Where to put it:** Same session as the ingest — optional **`batch-analysis`** line comparing two experts’ **testable** forks; or a bullet under **`### Foresight`** on the dated block in [`chapters/YYYY-MM/days.md`](chapters/2026-04/days.md) (replace month); or a running list in a scratch doc the operator names (no default new file). **Optional consolidated ledger (same contract):** [strategy-expert-predictions.md](strategy-expert-predictions.md) — **`pred_id`** rows + **`topic_slug`** registry + resolution receipts. **Optional resolution pass:** [.cursor/skills/fact-check/SKILL.md](../../../../.cursor/skills/fact-check/SKILL.md) for tiered verdicts when wires exist.
+ **Where to put it:** Same session as the ingest — optional **`batch-analysis`** line comparing two experts’ **testable** forks; or a bullet under **`### Predictive Outlook`** on the dated block in [`chapters/YYYY-MM/days.md`](chapters/2026-04/days.md) (replace month); or a running list in a scratch doc the operator names (no default new file). **Optional consolidated ledger (same contract):** [strategy-expert-predictions.md](strategy-expert-predictions.md) — **`pred_id`** rows + **`topic_slug`** registry + resolution receipts. **Optional resolution pass:** [.cursor/skills/fact-check/SKILL.md](../../../../.cursor/skills/fact-check/SKILL.md) for tiered verdicts when wires exist.
 
 **Guardrails:** **WORK only** — not Record, not **Voice** truth. Do **not** turn into **accuracy theater**: unfalsifiable rhetoric (“they are serious”) is **not** a prediction; **base rate** and **topic difficulty** matter; **conditional** forecasts (“if X then Y”) need **both** legs scored. Prefer **sparse** high-quality rows over scorecards full of mush.
 
@@ -241,7 +241,7 @@ Run operator **`thread`**: **`bin/thread`** or **`python3 scripts/strategy_threa
 3. **`thread:<expert_id>`** (same commentator).
 4. **Delta** — label the move: **update** (new information integrated), **scope shift** (topic or audience changed), **emphasis** (same mechanism, different stress), **tension** (two claims need reconciliation — do not assume **contradiction** until you have both texts).
 
-**Where to log:** A single **`batch-analysis | YYYY-MM-DD | …`** line can carry **A vs B** for the same voice; or **`### Foresight`** on the **later** date (“follow-up: compare to 2026-04-01 ingest”); **git log** / **grep** on `thread:<expert_id>` across [`daily-strategy-inbox.md`](daily-strategy-inbox.md) and [`days.md`](chapters/2026-04/days.md) history is the cheap detector.
+ **Where to log:** A single **`batch-analysis | YYYY-MM-DD | …`** line can carry **A vs B** for the same voice; or **`### Predictive Outlook`** on the **later** date (“follow-up: compare to 2026-04-01 ingest”); **git log** / **grep** on `thread:<expert_id>` across [`daily-strategy-inbox.md`](daily-strategy-inbox.md) and [`days.md`](chapters/2026-04/days.md) history is the cheap detector.
 
 **Guardrails:** **New facts** often justify revised judgment — distinguish **flip** from **Bayesian update**. Do **not** use drift tracking as **gotcha** copy unless the operator wants outreach; default is **notebook calibration**, not dunking.
 

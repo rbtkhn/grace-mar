@@ -74,3 +74,11 @@ The block below **Rolling ingest** is replaced on each `strategy_thread.py` / `s
 ---
 
 **Companion files:** [`strategy-expert-baud-transcript.md`](strategy-expert-baud-transcript.md) (7-day rolling verbatim) and [`strategy-expert-baud-thread.md`](strategy-expert-baud-thread.md) (distilled analytical thread).
+
+## Archive / backfill note
+
+- Treat the public author/archive page as a discovery index, not a completeness mandate; backfill the substantial posts you want preserved and leave light or repetitive archive-visible items out when that is the better editorial call.
+
+## Automation target
+
+- Public Postil author-page crawl via [`scripts/backfill_baud_postil_raw_input.py`](../../../../../scripts/backfill_baud_postil_raw_input.py) or the generic [`scripts/backfill_author_page_raw_input.py`](../../../../../scripts/backfill_author_page_raw_input.py) with `--author-url https://www.thepostil.com/author/jacques-baud/ --domain thepostil.com --publication thepostil.com --thread baud`.

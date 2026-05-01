@@ -28,5 +28,5 @@ WORK only; not Record. **Source of truth** is still Markdown (`strategy-page` fe
 ## Links
 
 - [STRATEGY-NOTEBOOK-TRACE-CONTRACT.md](STRATEGY-NOTEBOOK-TRACE-CONTRACT.md) — receipt JSONL fields
-- [PAGE-CONTRACT.md](PAGE-CONTRACT.md) — page vs thread
+- [NOTEBOOK-CONTRACT.md](NOTEBOOK-CONTRACT.md) — page vs thread
 - [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md) — EOD session and `thread` command

@@ -151,6 +151,8 @@ Rows **omit** one-off or rarely used paths; add them via PR when a surface becom
 - **Do not** imply **merge** authority for the gate or Record.
 - **Do not** become a second source of truth for gate contents or `users/<id>/` canonical files.
 
+**Complexity-reduction default:** if a proposed surface would mainly restate an existing dashboard, report, or index, route it through the existing surface first. Add a section, a row, or a receipt before adding a new file family. New files should explain why consolidation was insufficient.
+
 ## 7. Preferred alternatives to new dashboards
 
 Before adding a new dashboard, prefer in order when possible:
