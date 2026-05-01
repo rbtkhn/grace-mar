@@ -1,0 +1,47 @@
+{
+  "deferred_v2": [
+    "learning signals",
+    "hot/warm/cold context priority tiers",
+    "access tracking",
+    "bridge event JSONL",
+    "coffee/dream integration"
+  ],
+  "generated_at": "2026-05-01T00:33:35.640934+00:00",
+  "overall_status": "missing",
+  "recommended_next_action": "Refresh the night handoff with a successful dream pass before treating it as current.",
+  "surfaces": {
+    "bridge_state": {
+      "age_hours": 8.93,
+      "detail": "bridge state present",
+      "name": "bridge state",
+      "observed_at": "2026-04-30T15:38:00+00:00",
+      "path": "users/grace-mar/daily-handoff/last-bridge-state.json",
+      "status": "ok"
+    },
+    "cadence": {
+      "age_hours": 0.04,
+      "detail": "335 event(s) found for grace-mar",
+      "name": "cadence events",
+      "observed_at": "2026-05-01T00:31:00+00:00",
+      "path": "docs/skill-work/work-cadence/work-cadence-events.md",
+      "status": "ok"
+    },
+    "last_dream": {
+      "age_hours": 19.07,
+      "detail": "ok=False",
+      "name": "last dream",
+      "observed_at": "2026-04-30T05:29:35.175099+00:00",
+      "path": "users/grace-mar/last-dream.json",
+      "status": "ok"
+    },
+    "night_handoff": {
+      "age_hours": null,
+      "detail": "missing file",
+      "name": "night handoff",
+      "observed_at": null,
+      "path": "users/grace-mar/daily-handoff/night-handoff.json",
+      "status": "missing"
+    }
+  },
+  "user_id": "grace-mar"
+}

@@ -50,3 +50,4 @@ Only use `go` / `default` / `yes` / `sounds good` as acceptance when the current
 - Keep fixed menu shapes fixed: `coffee` remains A-E; Conductor Action Menu remains A-C.
 - Durable logs should keep using stable identifiers: conductor slugs, file paths, lane names, candidate IDs, or script output labels. Menu letters are UI conveniences.
 - Gate and Record behavior is unchanged. Any Record promotion still requires the normal staged and approved path.
+- Continuity dashboards may surface as a single warning line in `coffee` or `dream`; they should stay silent when `ok` and must not expand into another menu.

@@ -1064,10 +1064,31 @@ def main() -> int:
         cursor_model=(args.cursor_model.strip() if args.cursor_model else None),
         phase=args.phase,
     )
+    memory_observability_line = None
+    if summary.get("ok") and not args.dry_run:
+        try:
+            from build_memory_observability import (
+                build_report,
+                format_observability_one_liner,
+                write_report,
+                DEFAULT_JSON,
+                DEFAULT_MD,
+            )
+
+            memory_report = build_report(args.user)
+            write_report(memory_report, md_output=DEFAULT_MD, json_output=DEFAULT_JSON)
+            if memory_report.get("overall_status") != "ok":
+                memory_observability_line = format_observability_one_liner(memory_report)
+        except Exception as exc:
+            memory_observability_line = f"Memory observability: watch - report rebuild failed ({exc})"
     if args.json:
+        if memory_observability_line:
+            summary["memory_observability"] = memory_observability_line
         print(json.dumps(summary, indent=2))
     else:
         print(format_auto_dream_summary(summary))
+        if memory_observability_line:
+            print(memory_observability_line)
     return 0 if summary.get("ok") else 1
 
 

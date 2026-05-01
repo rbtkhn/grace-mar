@@ -204,6 +204,22 @@ def main() -> int:
             pass
 
     try:
+        from build_memory_observability import build_report, format_observability_one_liner
+        memory_report = build_report(user)
+        if memory_report.get("overall_status") != "ok":
+            print(f"\n{'=' * 60}\n$ memory observability\n{'=' * 60}\n", flush=True)
+            print(format_observability_one_liner(memory_report))
+    except Exception:
+        try:
+            from scripts.build_memory_observability import build_report, format_observability_one_liner
+            memory_report = build_report(user)
+            if memory_report.get("overall_status") != "ok":
+                print(f"\n{'=' * 60}\n$ memory observability\n{'=' * 60}\n", flush=True)
+                print(format_observability_one_liner(memory_report))
+        except Exception:
+            pass
+
+    try:
         from cadence_conductor_resolution import format_coffee_hub_e_line
 
         print(
