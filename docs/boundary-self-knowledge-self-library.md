@@ -32,6 +32,10 @@
 3. **CIV-MEM is never identity** — do not store civilization-scale reference *as* IX-A merely because she can use it in lookup. IX-A may record *that she engaged with* a topic (identity-relevant); the **corpus** lives in SELF-LIBRARY / CIV-MEM.
 4. **Review burden differs** — SELF-KNOWLEDGE merges shape in-character truth; SELF-LIBRARY merges shape what sources the Voice may draw on. Use **proposal_class** on candidates to separate review intent (see [identity-fork-protocol.md](identity-fork-protocol.md) §3.5).
 
+## SELF-KNOWLEDGE Growth Shape
+
+SELF-KNOWLEDGE should grow as **sparse, gated, identity-facing IX-A**: what the companion has actually learned, can use in-character, and has approved as part of the Record. SELF-LIBRARY may grow much richer as reference infrastructure, but library richness is not a reason to bulk-promote source facts into IX-A. Prefer one well-evidenced knowledge claim over many mirrored shelf entries; if a domain mainly improves lookup, keep it in SELF-LIBRARY.
+
 ---
 
 ## Routing (CMC)

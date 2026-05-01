@@ -428,3 +428,9 @@ _(Append below this line.)_
 - **2026-05-01 14:49 UTC** — coffee_pick (grace-mar) ok=true cursor_model=unknown model_tier=unknown picked=B
 - **2026-05-01 15:09 UTC** — coffee_pick (grace-mar) ok=true cursor_model=unknown model_tier=unknown picked=conductor conductor=furtwangler
 - **2026-05-01 15:10 UTC** — coffee_conductor_outcome (grace-mar) ok=true cursor_model=unknown model_tier=unknown falsify=explicit-export-or-retention-path-added
+- **2026-05-01 15:44 UTC** — coffee_pick (grace-mar) ok=true cursor_model=unknown model_tier=unknown picked=conductor conductor=karajan
+- **2026-05-01 15:47 UTC** — coffee_conductor_outcome (grace-mar) ok=true cursor_model=unknown model_tier=unknown falsify=queue-starts-carrying-compose-judgment
+- **2026-05-01 15:48 UTC** — coffee_pick (grace-mar) ok=true cursor_model=unknown model_tier=unknown focus=self-memory+self-library
+- **2026-05-01 15:58 UTC** — coffee_conductor_outcome (grace-mar) ok=true cursor_model=unknown model_tier=unknown falsify=memory-library-collapse-or-shadow-record-drift
+- **2026-05-01 15:59 UTC** — coffee_pick (grace-mar) ok=true cursor_model=unknown model_tier=unknown focus=self-knowledge
+- **2026-05-01 16:01 UTC** — coffee_conductor_outcome (grace-mar) ok=true cursor_model=unknown model_tier=unknown falsify=bulk-library-promotion-to-ix-a

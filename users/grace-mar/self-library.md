@@ -1,5 +1,7 @@
 # LIBRARY — grace-mar
 
+**Continuity boundary:** SELF-LIBRARY is the governed return-to reference layer. It is not the rotatable session/process buffer; that role belongs to [`self-memory.md`](self-memory.md). Add or reroute reference domains here only through the appropriate governed path; leave short-lived continuity, open loops, and session calibration in MEMORY.
+
 A governed retrieval substrate for reference-facing knowledge. Active entries shape runtime lookup order (SELF-LIBRARY → CIV-MEM → full web); `scope` and `lookup_priority` steer which questions match which sources. Also preserves return-to references, canon works, and influential media. Not SELF-KNOWLEDGE — see [boundary](../../docs/boundary-self-knowledge-self-library.md).
 
 **Cloned from companion-self** `users/_template/self-library.md` (2026-02-26). Grace-mar-specific entries (reference works, videos) appended. File renamed from library.md to self-library.md for consistency with self-* taxonomy.

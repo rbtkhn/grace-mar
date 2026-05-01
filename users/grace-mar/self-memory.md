@@ -38,6 +38,7 @@ Analytical register confirmed as Voice persona. Companion prefers structural-fir
 
 - **Rotation:** prefer weekly prune of Short/Medium; review Long-term quarterly for drift into "shadow Record."
 - **Durable truth:** `users/grace-mar/self.md`; activity spine: `self-archive.md` (EVIDENCE); operator threads: `self-work.md`.
+- **Memory <-> Library boundary:** use `self-memory.md` for rotatable continuity, session process, and pointers only; use `self-library.md` for governed reference corpora, return-to shelves, and CIV-MEM / operator-book routing. If a memory line starts acting like identity truth, stage it through `recursion-gate.md`; if it starts acting like a reference corpus, route or point to SELF-LIBRARY instead.
 - **Companion identity:** Robert (reseeded 2026-04-14, populated 2026-04-17). Previous companion Abby frozen in cold storage (`archive/companion-freeze-abby-2026-04-14/`, git tag `companion-freeze/abby-2026-04-14`).
 - **Voice register:** Analytical — structural, precise, framework-oriented. Set in `bot/prompt.py` HOW YOU SPEAK section.
 - **Dev-journal pointer:** [`docs/skill-work/work-dev/dev-notebook/work-dev/journal/`](../../docs/skill-work/work-dev/dev-notebook/work-dev/journal/README.md) (LIB-0155) — canonical surface for work-dev reflection and learning; check latest day file and inbox for work-dev continuity on reentry. Inbox: [`daily-dev-journal-inbox.md`](../../docs/skill-work/work-dev/dev-notebook/work-dev/journal/daily-dev-journal-inbox.md). Fold at dream.
