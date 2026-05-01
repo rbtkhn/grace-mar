@@ -1,50 +1,27 @@
-# Dialogue Works — raw-input inventory
-<!-- word_count: ~420 -->
+# Dialogue Works — metadata index
+<!-- word_count: ~500 -->
 
-**Purpose:** Single tracker for **Dialogue Works** (host **Nima Alkhorshid**) captures already present under **`raw-input/`**, grouped by how strongly the file identifies the show. **WORK only** — not Record.
+**Purpose:** Metadata-only index of **Dialogue Works** (host **Nima Alkhorshid**) from the public YouTube crawl starting at **`2026-01-01`**. Transcript bodies are not backfilled in this pass. **WORK only** — not Record.
 
-**Last audited:** 2026-04-28 — grep for `Dialogue Works`, `show: Dialogue Works`, `Nima Alkhorshid`, `Dialogue Works (Nima)`, and filename `*nima*` / `*dialogue-works*` under `raw-input/`.
+**Last audited:** 2026-05-01 — YouTube index-only crawl with metadata enrichment.
 
 **Routing reminder:** For symmetric expert mirroring, same-episode ingests should carry **`thread:<guest>`** plus **`thread:alkorshid`** where host prompts matter — see [`experts/alkorshid/profile.md`](../experts/alkorshid/profile.md).
 
----
-
-## Tier A — Confirmed (standalone artifact)
-
-Full markdown files with **`show: Dialogue Works`** (and host/guest) in YAML; treat as canonical Dialogue Works corpus rows in this tree.
-
-| pub_date | Path (under `raw-input/`) | Guest | `thread` / routing | source_url | Notes |
-|----------|-----------------------------|-------|--------------------|------------|--------|
-| 2026-04-28 | `2026-04-28/transcript-marandi-dialogue-works-trump-plan-dead-after-strike-2026-04-28.md` | Seyed Mohammad Marandi | `thread: marandi` | *(pin canonical `watch?v=` — do not conflate with Judging Freedom same-day row)* | Full cleaned operator transcript; `source_note` in YAML flags prior inbox duplicate URL bug. |
-| 2026-04-27 | `2026-04-27/transcript-baud-dialogue-works-nima-2026-04-27.md` | Col. Jacques Baud | `thread: baud` | https://www.youtube.com/watch?v=iZ5xSBYxxyQ | Operator-cleaned transcript; title in body matches frontmatter. |
-| 2026-04-24 | `2026-04-24/transcript-nima-freeman-israel-agenda-collapsing-2026-04-24.md` | Amb. Chas W. Freeman | `thread: freeman` | *(pin canonical watch URL in frontmatter when known)* | `source_note` asks to pin canonical YouTube URL; `title_slug` present. |
-| 2026-04-21 | `2026-04-21/transcript-marandi-blockade-trump-nima-2026-04-21.md` | Seyed Mohammad Marandi | `thread_expert: marandi` | *(pin canonical watch URL when known)* | Opening voice date in transcript may differ from `pub_date`; see file `source_note`. |
-
----
-
-## Tier B — Likely (lane transcript stubs, not full standalone SSOT)
-
-These files are **`kind: transcript`** blocks **`source_path` → expert `transcript.md`** routing dumps. They **name** Dialogue Works/Nima in **cold lines** but do **not** carry **`show: Dialogue Works`** in the file-level YAML. Use for grep/registry; prefer **Tier A** files (or pinned **`watch?v=`**) when you need a single canonical verbatim for an episode.
-
-| pub_date | Path (under `raw-input/`) | Expert lane stub | Dialogue Works signal in body | Notes |
-|----------|-----------------------------|------------------|----------------------------------|--------|
-| 2026-04-17 | `2026-04-17/transcript-freeman.md` | `thread: freeman` | `Amb. Charles Freeman (Dialogue Works (Nima), …)` | YouTube URL in line may still be **`TBD-`** placeholder — verify before cite-grade. |
-| 2026-04-18 | `2026-04-18/transcript-freeman.md` | `thread: freeman` | Same pattern + separate **Freeman × Diesen** line (not Dialogue Works — Glenn Diesen show) | Do **not** conflate **Dialogue Works** line with **Diesen** joint episode on same date section. |
-| 2026-04-18 | `2026-04-18/transcript-marandi.md` | `thread: marandi` | `Show \| cold: **Dialogue Works** (**Nima**) + Seyed Mohammad Marandi` | Placeholder **`TBD-pin-`** URL in stub — pin canonical watch URL when known. |
-
----
-
-## Tier C — Not Dialogue Works (disambiguation)
-
-- **The Grayzone**, **Judging Freedom**, **The Duran**, **Deep Dive** (Daniel Davis), etc., are **distinct** outlets — see cold-line tags in inbox and expert threads. Do not merge with Dialogue Works rows without an explicit source line.
-
----
-
-## Maintenance
-
-When adding a new Dialogue Works capture:
-
-1. Prefer **`show: Dialogue Works`**, **`host:`**, **`guest:`**, **`pub_date`**, **`source_url:`**, and **`thread:`** (guest) in frontmatter per [raw-input README](README.md) § File template.
-2. Append a row to **Tier A** (or move a stub from **Tier B** when promoted to standalone file).
-3. In [daily-strategy-inbox.md](../daily-strategy-inbox.md), add a **second** paste-ready line with **`thread:alkorshid`** immediately after the guest **`thread:<guest>`** row (**same** episode URL / raw-input pointer).
-4. Re-run a quick grep: `rg -l "Dialogue Works|show:\\s*Dialogue Works" raw-input` from `strategy-notebook/`.
+| pub_date | Title | Guest | URL | Routing / note | raw-input |
+|----------|-------|-------|-----|----------------|-----------|
+| 2026-01-03 | Max Blumenthal: This Is the Utmost Failure: Trump Creates Absolute Chaos - Iran & Venezuela | Max Blumenthal | [https://www.youtube.com/watch?v=aeT3jwwUE6A](https://www.youtube.com/watch?v=aeT3jwwUE6A) | host-hub | mirrored |
+| 2026-01-04 | Alastair Crooke: The Hidden Signal: How One Answer Could Ignite the Middle East | Alastair Crooke | [https://www.youtube.com/watch?v=5JVKloRggyo](https://www.youtube.com/watch?v=5JVKloRggyo) | thread: crooke | mirrored |
+| 2026-01-09 | Col. Larry Wilkerson: 21st Century Peril: How America’s Power Plays Risk Everything | Col. Larry Wilkerson | [https://www.youtube.com/watch?v=8DpLyv_7IiI](https://www.youtube.com/watch?v=8DpLyv_7IiI) | thread: johnson | mirrored |
+| 2026-01-10 | Scott Ritter: Russia All in to Confront the Worst-Case Scenario | Scott Ritter | [https://www.youtube.com/watch?v=DuS17MeaWgE](https://www.youtube.com/watch?v=DuS17MeaWgE) | thread: ritter | mirrored |
+| 2026-01-11 | Pepe Escobar: Trump, Greenland, NATO Collapse & Global Power Shock | Pepe Escobar | [https://www.youtube.com/watch?v=W7LVpOQnxx0](https://www.youtube.com/watch?v=W7LVpOQnxx0) | host-hub | mirrored |
+| 2026-01-12 | Richard D. Wolff & Michael Hudson: From Oil to Armageddon, Toward Global Conflict | Richard D. Wolff & Michael Hudson | [https://www.youtube.com/watch?v=TyUA89Yh6vA](https://www.youtube.com/watch?v=TyUA89Yh6vA) | host-hub | mirrored |
+| 2026-01-13 | Alex Krainer: Trump, Venezuela & The Hidden Logic Behind U.S. Foreign Moves | Alex Krainer | [https://www.youtube.com/watch?v=TS8BBf2_DsI](https://www.youtube.com/watch?v=TS8BBf2_DsI) | host-hub | mirrored |
+| 2026-01-14 | Iranian Deputy FM Saeed Khatibzadeh: All-Out War? Iran Says It’s Ready for Any Attack | Iranian Deputy FM Saeed Khatibzadeh | [https://www.youtube.com/watch?v=M_IehjFxDW8](https://www.youtube.com/watch?v=M_IehjFxDW8) | host-hub | mirrored |
+| 2026-01-15 | Alastair Crooke: The EU Is Losing Control—And You Can See It | Alastair Crooke | [https://www.youtube.com/watch?v=5rW_GUosll8](https://www.youtube.com/watch?v=5rW_GUosll8) | thread: crooke | mirrored |
+| 2026-01-24 | Larry C. Johnson & Col. Larry Wilkerson: Trump’s War Gamble Just Blew Up in His Face | Larry C. Johnson & Col. Larry Wilkerson | [https://www.youtube.com/watch?v=k2Hx4x9aGro](https://www.youtube.com/watch?v=k2Hx4x9aGro) | thread: johnson | mirrored |
+| 2026-01-25 | Alastair Crooke: Systemic Collapse Explained: Why Two Fronts Matter | Alastair Crooke | [https://www.youtube.com/watch?v=IAKqyzQen04](https://www.youtube.com/watch?v=IAKqyzQen04) | thread: crooke | mirrored |
+| 2026-01-26 | Scott Ritter: This Is the Moment the West Started Losing | Scott Ritter | [https://www.youtube.com/watch?v=x9UQLEviJ2o](https://www.youtube.com/watch?v=x9UQLEviJ2o) | thread: ritter | mirrored |
+| 2026-01-27 | Patrick Henningsen: The EU Is Facing DEVASTATING Realities | Patrick Henningsen | [https://www.youtube.com/watch?v=9RaFBDfKE8w](https://www.youtube.com/watch?v=9RaFBDfKE8w) | host-hub | mirrored |
+| 2026-01-28 | Andrei Martyanov: US-Iran War About to Break Out | Andrei Martyanov | [https://www.youtube.com/watch?v=PB6wU2l1wv8](https://www.youtube.com/watch?v=PB6wU2l1wv8) | host-hub | mirrored |
+| 2026-01-29 | Amb. Chas Freeman: Countdown to War between The US and Iran - History Is Repeating Itself | Amb. Chas Freeman | [https://www.youtube.com/watch?v=mH6pV88ScII](https://www.youtube.com/watch?v=mH6pV88ScII) | thread: freeman | needs capture |
+| 2026-01-30 | Larry C. Johnson & Col. Larry Wilkerson: One Strike Away from Global Chaos, US-Iran War IMMINENT | Larry C. Johnson & Col. Larry Wilkerson | [https://www.youtube.com/watch?v=jyxqTCfydMk](https://www.youtube.com/watch?v=jyxqTCfydMk) | thread: johnson | needs capture |
