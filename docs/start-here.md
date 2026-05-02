@@ -169,7 +169,7 @@ Prefer a quick pick? Use **[Choose your path](#choose-your-path)** (A–F) above
 - **Warmup and handoff** skills in `.cursor/skills/` and `bootstrap/grace-mar-bootstrap.md` orient sessions; they are weather reports, not permission to bypass the gate.
 - Keep **MEMORY** (`self-memory.md`) for continuity notes; treat **EVIDENCE** and **SELF** as heavier, gate-governed surfaces.
 
-**Next:** [AGENTS.md](../AGENTS.md) · [bootstrap/grace-mar-bootstrap.md](../bootstrap/grace-mar-bootstrap.md) · [canonical-paths.md](canonical-paths.md) · **Seed formation:** [seed-phase-survey.md](seed-phase-survey.md) (survey prompts + [calibration](seed-phase-survey.md#calibrate-from-your-start-here-path)) · [seed-phase-wizard.md](seed-phase-wizard.md) (instance wizard) · [Choose your path](#choose-your-path)
+**Next:** [operator-mental-model.md](operator-mental-model.md) · [AGENTS.md](../AGENTS.md) · [bootstrap/grace-mar-bootstrap.md](../bootstrap/grace-mar-bootstrap.md) · [canonical-paths.md](canonical-paths.md) · **Seed formation:** [seed-phase-survey.md](seed-phase-survey.md) (survey prompts + [calibration](seed-phase-survey.md#calibrate-from-your-start-here-path)) · [seed-phase-wizard.md](seed-phase-wizard.md) (instance wizard) · [Choose your path](#choose-your-path)
 
 ---
 

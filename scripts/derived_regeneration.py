@@ -203,6 +203,19 @@ TARGETS: tuple[RebuildTarget, ...] = (
             "artifacts/work-dev-compound-dashboard.md",
         ),
     ),
+    RebuildTarget(
+        target_id="decision-ledger-summary",
+        description="Derived summary of WORK-only operator decisions",
+        producer_script="scripts/build_decision_ledger_summary.py",
+        policy_mode="Surface",
+        rationale="Summarize durable work-dev operator decisions for quick recovery while keeping the decision ledger itself as the non-canonical source.",
+        watch_patterns=(
+            "docs/skill-work/work-dev/decision-ledger.md",
+            "scripts/build_decision_ledger_summary.py",
+        ),
+        command_templates=(("python3", "scripts/build_decision_ledger_summary.py"),),
+        outputs=("artifacts/work-dev/decision-ledger-summary.md",),
+    ),
 )
 
 TARGETS_BY_ID = {target.target_id: target for target in TARGETS}

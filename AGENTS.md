@@ -8,6 +8,8 @@ This file defines rules for any AI coding assistant working on this repository.
 
 **For system design:** Read `docs/architecture.md` (includes forced-absorption risk pattern and convenience-path defenses). For the formal skill modularity model (THINK/WRITE boundaries, separate work/execution layer, Voice and profile as functions of skill-write, invariants), see `docs/skills-modularity.md`.
 
+**For local-first sovereignty:** Read `docs/sovereignty.md` — memory and governance stay local; cloud/frontier models are helpers, not owners of the Record.
+
 **For chat/UI design:** Read `docs/chat-first-design.md` — principles for delivering the full experience within Telegram/chat (bounded sessions, one-tap, Record felt not seen).
 
 **Design alignment:** Grace-Mar aligns with the 5000 Days series framing — abundance, identity beyond productivity, conductor workflow, symbiosis (human holds the reins), interregnum fortification (Part 14). See invariants 5–23 and 36 in conceptual-framework.md.

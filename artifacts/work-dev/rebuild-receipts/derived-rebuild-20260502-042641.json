@@ -1,0 +1,94 @@
+{
+  "receiptKind": "derived_rebuild",
+  "receiptId": "drb-20260502-042641",
+  "createdAt": "2026-05-02T04:26:41Z",
+  "mode": "targeted",
+  "user": "grace-mar",
+  "changedPaths": [
+    "AGENTS.md",
+    "artifacts/work-dev/decision-ledger-summary.md",
+    "artifacts/work-dev/decision-ledger-summary.md.derived-rationale.json",
+    "artifacts/work-dev/derived-regeneration-manifest.json",
+    "artifacts/work-dev/rebuild-receipts/derived-rebuild-20260501-185201.json",
+    "config/conductor-delegation-types.json",
+    "cursor/skills/bridge/SKILL.md",
+    "cursor/skills/conductor/SKILL.md",
+    "docs/operator-mental-model.md",
+    "docs/operator-skills.md",
+    "docs/runtime/local-runtime-notes.md",
+    "docs/runtime/model-portfolio.md",
+    "docs/skill-work/work-cadence/work-cadence-events.md",
+    "docs/skill-work/work-cici/README.md",
+    "docs/skill-work/work-cici/cici-ai-community-dashboard.md",
+    "docs/skill-work/work-cici/cici-ai-group-instruction-block.md",
+    "docs/skill-work/work-cici/cici-ai-lanes.md",
+    "docs/skill-work/work-cici/cici-ai-progress/README.md",
+    "docs/skill-work/work-cici/cici-ai-telegram/README.md",
+    "docs/skill-work/work-cici/cici-community-mission-operator.md",
+    "docs/skill-work/work-cici/evidence/cici-ai-first-applicant-wave-2026-04-30.md",
+    "docs/skill-work/work-cici/evidence/cici-ai-github-telegram-match-report-2026-04-24.md",
+    "docs/skill-work/work-cici/evidence/cici-ai-next-steps-message-2026-05-01.md",
+    "docs/skill-work/work-cici/evidence/cici-ai-telegram-self-claims-2026-05-01.md",
+    "docs/skill-work/work-cici/telegram-cici-ai-pinned-and-welcome-copy.md",
+    "docs/skill-work/work-cici/work-cici-history.md",
+    "docs/skill-work/work-coffee/CONDUCTOR-LAYER-MAP.md",
+    "docs/skill-work/work-coffee/CONDUCTOR-PASS.md",
+    "docs/skill-work/work-coffee/README.md",
+    "docs/skill-work/work-coffee/menu-reference.md",
+    "docs/skill-work/work-dev/conductor-proposal-lenses.md",
+    "docs/skill-work/work-dev/decision-ledger.md",
+    "docs/skill-work/work-dev/templates/conductor-delegation/base-brief.md",
+    "docs/skill-work/work-strategy/daily-brief-2026-05-01.md",
+    "docs/skill-work/work-strategy/strategy-notebook/experts/alkorshid/profile.md",
+    "docs/skill-work/work-strategy/strategy-notebook/experts/diesen/profile.md",
+    "docs/skill-work/work-strategy/strategy-notebook/raw-input/BACKFILL-SOURCES.md",
+    "docs/skill-work/work-strategy/strategy-notebook/raw-input/README.md",
+    "docs/skill-work/work-strategy/strategy-notebook/raw-input/dialogue-works-inventory.md",
+    "docs/skill-work/work-strategy/strategy-notebook/raw-input/youtube-transcript-queue.md",
+    "docs/sovereignty.md",
+    "docs/start-here.md",
+    "scripts/assess_session_load.py",
+    "scripts/build_conductor_delegation_brief.py",
+    "scripts/build_decision_ledger_summary.py",
+    "scripts/build_dialogue_works_metadata_index.py",
+    "scripts/derived_regeneration.py",
+    "scripts/log_cadence_event.py",
+    "scripts/update_diesen_ledger.py",
+    "scripts/youtube_transcripts/cli.py",
+    "scripts/youtube_transcripts/discovery.py",
+    "tests/test_update_diesen_ledger.py",
+    "users/grace-mar/review-queue/boundary-classifications/CANDIDATE-0042.json",
+    "users/grace-mar/review-queue/boundary-classifications/CANDIDATE-0043.json",
+    "users/grace-mar/review-queue/boundary-classifications/CANDIDATE-0044.json",
+    "users/grace-mar/review-queue/boundary-classifications/CANDIDATE-0045.json"
+  ],
+  "targets": [
+    {
+      "targetId": "decision-ledger-summary",
+      "description": "Derived summary of WORK-only operator decisions",
+      "producerScript": "scripts/build_decision_ledger_summary.py",
+      "policyMode": "Surface",
+      "matchedPaths": [
+        "docs/skill-work/work-dev/decision-ledger.md",
+        "scripts/build_decision_ledger_summary.py"
+      ],
+      "commands": [
+        "python3 scripts/build_decision_ledger_summary.py"
+      ],
+      "outputs": [
+        "artifacts/work-dev/decision-ledger-summary.md"
+      ],
+      "rationaleSidecars": [
+        "artifacts/work-dev/decision-ledger-summary.md.derived-rationale.json"
+      ],
+      "status": "ok",
+      "elapsedMs": 250,
+      "writtenRationaleSidecars": [
+        "artifacts/work-dev/decision-ledger-summary.md.derived-rationale.json"
+      ]
+    }
+  ],
+  "resultStatus": "ok",
+  "recordAuthority": "none",
+  "gateEffect": "none"
+}
