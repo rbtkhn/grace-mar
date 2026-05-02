@@ -434,3 +434,23 @@ _(Append below this line.)_
 - **2026-05-01 15:58 UTC** — coffee_conductor_outcome (grace-mar) ok=true cursor_model=unknown model_tier=unknown falsify=memory-library-collapse-or-shadow-record-drift
 - **2026-05-01 15:59 UTC** — coffee_pick (grace-mar) ok=true cursor_model=unknown model_tier=unknown focus=self-knowledge
 - **2026-05-01 16:01 UTC** — coffee_conductor_outcome (grace-mar) ok=true cursor_model=unknown model_tier=unknown falsify=bulk-library-promotion-to-ix-a
+- **2026-05-01 18:16 UTC** — coffee (grace-mar) ok=true mode=work-start cursor_model=unknown model_tier=unknown
+- **2026-05-01 18:16 UTC** — coffee_pick (grace-mar) ok=true cursor_model=unknown model_tier=unknown picked=C
+- **2026-05-01 18:57 UTC** — coffee_pick (grace-mar) ok=true cursor_model=unknown model_tier=unknown cursor-model=codex
+- **2026-05-01 19:01 UTC** — coffee_conductor_outcome (grace-mar) ok=true cursor_model=unknown model_tier=unknown falsify=git-diff-check-clean
+- **2026-05-01 19:18 UTC** — coffee_pick (grace-mar) ok=true cursor_model=unknown model_tier=unknown cursor-model=codex
+- **2026-05-01 19:22 UTC** — coffee_conductor_outcome (grace-mar) ok=true cursor_model=unknown model_tier=unknown notebook_ref=dirty-tree-split
+- **2026-05-01 19:38 UTC** — coffee (grace-mar) ok=true mode=work-start cursor_model=unknown model_tier=unknown
+- **2026-05-01 19:41 UTC** — coffee_pick (grace-mar) ok=true cursor_model=unknown model_tier=unknown cursor-model=codex
+- **2026-05-01 19:44 UTC** — coffee_conductor_outcome (grace-mar) ok=true cursor_model=unknown model_tier=unknown falsify=dialogue-bom-mojibake-before-stage
+- **2026-05-01 22:05 UTC** — coffee_pick (grace-mar) ok=true cursor_model=unknown model_tier=unknown picked=conductor conductor=toscanini cursor-model=codex
+- **2026-05-01 22:06 UTC** — coffee_conductor_outcome (grace-mar) ok=true cursor_model=unknown model_tier=unknown conductor=toscanini verdict=verified falsify=no-spawn-no-gate-no-record-authority-claims
+- **2026-05-01 22:07 UTC** — coffee (grace-mar) ok=true mode=work-start cursor_model=unknown model_tier=unknown
+- **2026-05-01 22:46 UTC** — coffee_pick (grace-mar) ok=true cursor_model=unknown model_tier=unknown picked=conductor conductor=furtwangler cursor-model=codex
+- **2026-05-01 22:48 UTC** — coffee (grace-mar) ok=true mode=work-start cursor_model=unknown model_tier=unknown
+- **2026-05-01 22:49 UTC** — coffee_conductor_outcome (grace-mar) ok=true cursor_model=unknown model_tier=unknown conductor=furtwangler verdict=reflection-brief-created notebook_ref=artifacts/work-dev/conductor-delegations/cdel-20260501-224915-reflection-capture-what-the-ten-point-critique-taught-the-o-brief.md falsify=no-final-verdict-from-critique
+- **2026-05-01 22:52 UTC** — coffee_pick (grace-mar) ok=true cursor_model=unknown model_tier=unknown picked=conductor conductor=karajan cursor-model=codex
+- **2026-05-02 03:02 UTC** — coffee_pick (grace-mar) ok=true cursor_model=unknown model_tier=unknown picked=conductor conductor=toscanini cursor-model=codex
+- **2026-05-02 03:05 UTC** — coffee_conductor_outcome (grace-mar) ok=true cursor_model=unknown model_tier=unknown conductor=toscanini verdict=gate-shape-pass-evidence-boundary-watch falsify=mcq-candidates-pass-readiness-but-lack-hnsrc-or-stem-answer-receipts
+- **2026-05-02 04:03 UTC** — coffee (grace-mar) ok=true mode=work-start cursor_model=unknown model_tier=unknown
+- **2026-05-02 04:30 UTC** — bridge (grace-mar) ok=true cursor_model=unknown model_tier=unknown refs=grace-mar:61651c46 scope=local-first-substrate skipped_dirty_arcs=conductor-cici-strategy
