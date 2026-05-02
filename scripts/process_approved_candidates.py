@@ -625,18 +625,44 @@ def _channel_label(channel_key: str) -> str:
     return channel_key or "Unknown"
 
 
+def _extract_yaml_mapping_block(block: str, key: str) -> str:
+    m = re.search(
+        rf"^{re.escape(key)}:\s*\n(.*?)(?=\n[A-Za-z_]+:|\n```|\Z)",
+        block,
+        re.MULTILINE | re.DOTALL,
+    )
+    return m.group(1).rstrip() if m else ""
+
+
 def _extract_source_exchange_snippet(block: str, max_chars: int = 600) -> str:
     """Extract source_exchange section from candidate block for SELF-ARCHIVE snippet."""
-    m = re.search(r"source_exchange:\s*\n(.*?)(?=\n[A-Za-z_]+:|\n```|\Z)", block, re.DOTALL)
-    if not m:
+    raw = _extract_yaml_mapping_block(block, "source_exchange").strip()
+    if not raw:
         return ""
-    raw = m.group(1).strip()
     # Collapse newlines to space for single-line snippet
     out = " ".join(raw.split()).strip()
     return (out[:max_chars] + "...") if len(out) > max_chars else out
 
 
 # Gated approved log: self-archive.md § VIII (canonical EVIDENCE file; self-evidence.md optional compat pointer).
+def _extract_approval_receipt(block: str) -> str:
+    """Extract full bookshelf quiz receipt when present; fallback to source_exchange."""
+    receipt = _extract_yaml_mapping_block(block, "quiz_receipt").strip()
+    if not receipt:
+        return _extract_source_exchange_snippet(block)
+
+    lines: list[str] = []
+    strength = _yaml_get(block, "source_binding_strength")
+    if strength:
+        lines.append(f"source_binding_strength: {strength}")
+    shelf_refs = _yaml_get(block, "shelf_refs")
+    if shelf_refs:
+        lines.append(f"shelf_refs: {shelf_refs}")
+    lines.append("quiz_receipt:")
+    lines.extend(line.rstrip() for line in receipt.splitlines())
+    return "\n".join(lines)
+
+
 GATED_LOG_SECTION = "## VIII. GATED APPROVED LOG (SELF-ARCHIVE)"
 _END_FILE_LINE = re.compile(r"(?m)^END OF FILE.*$")
 
@@ -1333,7 +1359,7 @@ def main() -> None:
                 act_id,
                 c.get("channel_key") or "telegram",
                 c["summary"],
-                _extract_source_exchange_snippet(c["block"]),
+                _extract_approval_receipt(c["block"]),
                 warrant=c.get("warrant", ""),
             )
         print("self-archive.md § VIII (gated approved log) updated.")

@@ -2,7 +2,7 @@
 name: coffee
 preferred_activation: coffee
 requires: [handoff-check]
-description: "Grace-Mar operator cadence and tempo. Primary trigger: coffee. Step 2 = hub A–E only (Steward / Engineer / Historian / Capitalist / Conductor). Standalone Conductor (master name or conductor skill) remains separate from the hub list. Before Step 1, Recent rhythm. Signing-off: same A–E menu; closeout in Step 1."
+description: "Grace-Mar operator cadence and tempo. Primary trigger: coffee. Step 2 = hub A–E only (Steward / Engineer / Historian / Capitalist / Conductor). Standalone Conductor (master name or conductor skill) remains separate from the hub list. Before Step 1, Recent rhythm. Signing-off: same A–E menu; closeout in Step 1. Coffee also acts as the default checkpointed re-entry ritual."
 ---
 
 # Coffee
@@ -16,6 +16,8 @@ description: "Grace-Mar operator cadence and tempo. Primary trigger: coffee. Ste
 Its purpose is to help the operator become more awake to the actual situation, more coherent about priorities, and more directed about the next move. A coffee session does not need to complete the day's thinking. It only needs to improve orientation enough that action becomes easier.
 
 Multiple `coffee` sessions per day are normal. That is not redundancy; it is the point. Each `coffee` is another sip.
+
+`coffee` is also the default checkpointed re-entry ritual. In a fresh chat, it should resume from the most recent authoritative grace-mar checkpoint on disk, using cadence and handoff state to recover orientation. If more than one plausible checkpoint exists, prefer the latest on-disk authority and surface the ambiguity instead of guessing. This is a checkpoint, not a transfer seal: it restores continuity, but it does not commit, push, or generate a bridge packet.
 
 **Coffee Hub Menu (terminology):** **`coffee` Step 2** fixed **A–E** hub (**Steward / Engineer / Historian / Capitalist / Conductor**) is the **Coffee Hub Menu**. When routing continues into **Conductor**, resolution uses the **Master Selection Menu** (masters **A.–E.** — Toscanini … Bernstein) and then typically the **Conductor Action Menu** (three repo-grounded next moves — [CONDUCTOR-PASS — Conductor action MCQ](../../../docs/skill-work/work-coffee/CONDUCTOR-PASS.md#conductor-action-mcq)). Layer map: [CONDUCTOR-LAYER-MAP.md](../../../docs/skill-work/work-coffee/CONDUCTOR-LAYER-MAP.md).
 
@@ -47,6 +49,8 @@ Use this path when the operator wants **Conductor** **without** going through **
 The **five masters** (**Toscanini**, **Furtwängler**, **Karajan**, **Kleiber**, **Bernstein**) are **not** listed as separate lines on the **`coffee`** hub — hub **E** is the **single** in-`coffee` slot for **Conductor continuation** after **`coffee`** Step 1. Call masters **directly** (this section) when **`coffee`** was not opened or when the operator prefers **`conductor`** / master name **instead** of **`coffee`**.
 
 **Triggers (examples):** master name or prefix (**`toscanini`**, **`karajan`**, **`bernstein`**, **`kleib`**, …), **`conductor`** with optional fragment, or plain language (**"Bernstein pass"**, **"run Kleiber on the notebook"**). If intent is unclear, ask once. **Legacy:** bare **`D`** + fragment still resolves like a conductor turn when the message is clearly conductor-only (no **`coffee`**).
+
+**First-turn activation note:** bare conductor slugs like **`bernstein`** or **`kleiber`** should route straight into Conductor on the first command, not be treated as ambiguity.
 
 **Do not** run `operator_coffee.py`, **do not** paste work-start or closeout **Step 1** output, and **do not** lead with **Recent rhythm** — unless the same message also says **`coffee`** or **`hey`**.
 
@@ -154,20 +158,21 @@ Immediately **after** Step 1 content, output the **hub** menu — **five lines**
 A. Steward
 B. Engineer
 C. Historian
-D. Capitalist — <one short line: work-business / grace-gems / commercial angle / bookshelf: knowledge MCQs vs stance membrane per § Capitalist bookshelf>
+D. Capitalist — <one short line: work-business / grace-gems / commercial angle / bookshelf product or teaching use>
 E. Conductor
 ```
 
 **Hub line E:** **`E — Conductor`** only — **do not** preview **`last_logged_conductor`** in the hub menu copy. **`operator_coffee.py`** Step 1 prints a script section headed like `Coffee hub Step 2 — hub **E**` whose body is **`format_coffee_hub_e_line`** output (label only). Auto-continue behavior is unchanged ([**§ Hub E — automatic continuation**](#hub-e-auto-continue)).
 
-**Filling D — Capitalist:** **work-business**, **grace-gems**, revenue/offers framing; **work-cici** when business/teaching-commercial; one prescribed next step. **Alternate lens:** match **`Dream → coffee menu`** when it points at a path not already covered by **A–C**.
+**Filling D — Capitalist:** **work-business**, **grace-gems**, revenue/offers framing; **work-cici** when business/teaching-commercial; one prescribed next step. Bookshelf belongs here only when the use is **commercial / teaching / product packaging**. **Self-knowledge bookshelf quiz** belongs under **C — Historian**.
 
-**Capitalist — bookshelf / self-knowledge (two branches):**
+**Capitalist — bookshelf / product use:**
 
-1. **Topic-anchored knowledge MCQs (default for “quiz” / recursion)** — [.cursor/skills/bookshelf-knowledge-mcq-to-gate/SKILL.md](../bookshelf-knowledge-mcq-to-gate/SKILL.md): historical **fact-and-mechanism** probes with evidence anchors toward IX-A `Knows:` lines. **Suggest this liberally** in suitable WORK turns. **Formatting:** **each letter option on its own line**; **at most two date-primary questions per round** (see skill).
-2. **Catalog stance membrane** (subject-tag affiliation: `bookshelf-membrane-round.json` + `build_bookshelf_membrane_candidates.py`) — **secondary** use only — when the operator requests it **or** a **pressing** catalog/membrane issue requires that stance map **not** as a substitute for knowledge MCQs.
+- Bookshelf may support offer design, teaching angles, grace-gems packaging, course/product framing, or public copy.
+- Do **not** use D as the default route for IX-A bookshelf recursion; route that to **C — Historian → B. Bookshelf quiz**.
+- **Catalog stance membrane** (`bookshelf-membrane-round.json` + `build_bookshelf_membrane_candidates.py`) remains secondary and scripted: use it only when the operator requests catalog organization or a pressing organizational membrane issue applies.
 
-**Fixed option (Capitalist angle, hub line wording):** may read **Bookshelf quiz — knowledge MCQs → gate skill** **or** **Bookshelf stance membrane (scripted)** depending on intent.
+**Fixed option (Capitalist angle, hub line wording):** may read **Bookshelf product/teaching angle** or **Bookshelf stance membrane (scripted)** when those commercial or catalog intents are live.
 
 **Catalog stance membrane (scripted path only — branch 2 above):**
 
@@ -194,15 +199,21 @@ E. Conductor
 
 - **B. Engineer** — **work-dev + skills/meta** (not git/ship or full membrane audits — those are **A**): `docs/skill-work/work-dev/` + [work-dev-sources.md](../../../docs/skill-work/work-dev/work-dev-sources.md); **skills / meta** when **`skills`** / **`meta`** with **B**. **work-cici** ops when engineering-shaped. **When hub B is chosen:** After **one short orientation line**, deliver **Engineer next moves** — **3–5 options** labeled **A through E** (**or A–D** if four), **each option its own line**, under an explicit heading such as **`Engineer menu — reply A–E`** — **not** `B1`–`B5` and not unlabeled lists. Each new submenu **restarts letters from A**; disambiguate from the **Coffee hub** with the menu title (same idea as **letter-collision** labeling for Conductor action MCQ vs hub). Each line is a **repo-grounded** plausible next step (work-dev wedge, script, CI, **skills** path) — **enumeration only** until the operator picks. Use Step 1 **`Lane context (for hub B / D)`** and [workspace.md](../../../docs/skill-work/work-dev/workspace.md) § **Next actions** when helpful. **Detail:** [menu-reference § Engineer (B) — detailed scope](../../../docs/skill-work/work-coffee/menu-reference.md#build-b--detailed-scope) *(legacy letter **Build** / old hub **A**).*
 
-- **C. Historian** — **Two-stage flow (default; do not collapse to intel-only):** **(1)** Daily brief path — generator and/or `daily-brief-YYYY-MM-DD.md`, **§1d** / **§1e** / **§1g** / **§1h** (PRC / IRI when load-bearing), optional **KY-4** (Polymarket, polls, Massie X per cadence). **(2)** In the **same turn**, offer **Tri-Frame** minds **Barnes → Mearsheimer → Mercouris**, wait for **which mind**, then [daily-brief-minds-menu.md](../../../docs/skill-work/work-strategy/daily-brief-minds-menu.md). **Do not** end **C** on polls alone unless **`intel only`** / **`no tri-frame`** / survey-only. **Broader spine:** pointers into strategy-notebook, work-jiang / Predictive History, self-library reads — **no** invented `work-history/` lane folder. **Companion survey** when **`coffee survey`**. See [menu-reference — Tri-Frame](../../../docs/skill-work/work-coffee/menu-reference.md#tri-frame-daily-brief). *(Legacy hub **C — Strategy (daily brief)**.)*
+- **C. Historian** — Opens exactly three actionable options and nothing else. Do **not** auto-run the daily brief or auto-offer Tri-Frame before this submenu. Output:
+  - `Historian menu — reply A–C`
+  - `A. Intel — daily brief / current-events watch`
+  - `B. Bookshelf quiz — self-knowledge MCQs → IX-A candidates`
+  - `C. Notebook synthesis — History Notebook / Predictive History with Tri-Frame lenses`
 
-- **D. Capitalist** — **work-business**, **grace-gems**, revenue/offers; **work-cici** when business/teaching-commercial angle; **bookshelf: knowledge MCQs (default)** vs **catalog stance membrane (secondary)** — see **[Capitalist — bookshelf / self-knowledge]** above; **one** prescribed next step.
+  **C-A Intel** owns the daily brief path: generator and/or `daily-brief-YYYY-MM-DD.md`, **§1d** / **§1e** / **§1g** / **§1h** (PRC / IRI when load-bearing), and optional **KY-4** (Polymarket, polls, Massie X per cadence). **C-B Bookshelf quiz** uses [.cursor/skills/bookshelf-knowledge-mcq-to-gate/SKILL.md](../bookshelf-knowledge-mcq-to-gate/SKILL.md): default **6** source-bound, topic-anchored MCQs from `bookshelf-quiz-anchors.yaml`, with academic inline citations visible to the operator and hidden `self-library-bookshelf` receipts in the gate, **at most two** date-primary stems, strictness default **top2**, and stage candidates only through `recursion-gate.md`; never merge without approval. **C-C Notebook synthesis** owns History Notebook / Predictive History synthesis; Tri-Frame minds **Barnes → Mearsheimer → Mercouris** live here, using [daily-brief-minds-menu.md](../../../docs/skill-work/work-strategy/daily-brief-minds-menu.md) as the lens menu when useful. **Companion survey** still lives under C when invoked by `coffee survey`. *(Legacy hub **C — Strategy (daily brief)**.)*
+
+- **D. Capitalist** — **work-business**, **grace-gems**, revenue/offers; **work-cici** when business/teaching-commercial angle; bookshelf only for commercial / teaching / product packaging or scripted catalog stance membrane; **not** IX-A bookshelf recursion. **One** prescribed next step.
 
 - **E. Conductor** — **`coffee` hub E** **[auto-continues](#hub-e-auto-continue)** **`last_logged_conductor`** (orientation + **Conductor action MCQ**); hub menu line is **Conductor** only. **Not** a substitute for standalone **`conductor`** when **`coffee`** was not invoked.
 
 **Exit / re-offer:** After **A**, **B**, **D**, or **E**, re-offer the full **coffee** hub **A–E** **after** the **current** branch settles — **except:** when **hub E** yielded **orientation + Conductor action MCQ**, **do not** paste **coffee hub** **A–E** in that **same** reply — wait for **Reply A–C** against **Conductor action MCQ** (**label menus** — [§ Letter-collision](#coffee-step-2-hub)); re-offer **coffee hub** on the following turn (or after Conductor closes) unless the operator exited **`coffee`**. After **C**, **exit** to normal workflow unless **`stay in coffee`**. After **A** (Steward), see [menu-reference § Steward follow-up fork](../../../docs/skill-work/work-coffee/menu-reference.md#steward-follow-up-fork-implement-now-vs-later) *(legacy docs may still say **B** for Steward — read **A**).* Synonyms **`A+ship`** / **`EXECUTE`** ≈ **Implement now** on steward track. **Decision-fatigue rule:** after a hub branch opens one submenu, the next assistant turn should execute the selected item, recommend one default, or report the blocker rather than opening another broad menu.
 
-Legacy **A–G** detail tables in [menu-reference.md](../../../docs/skill-work/work-coffee/menu-reference.md) still describe **workloads**; map letters: old **Daily Brief → C**, **Build → B**, **Steward → A**, **Compass/Book/F/G** → **D** or **C** as appropriate; **Symphony conductors** → **E** on hub after **`coffee`**, or **standalone** **`conductor`** / master name without **`coffee`**.
+Legacy **A–G** detail tables in [menu-reference.md](../../../docs/skill-work/work-coffee/menu-reference.md) still describe **workloads**; map letters: old **Daily Brief → C-A Intel**, old **self-knowledge bookshelf quiz → C-B Bookshelf quiz**, old **Book / Jiang / Predictive History → C-C Notebook synthesis**, **Build → B**, **Steward → A**, commercial / teaching bookshelf uses → **D**, and **Symphony conductors → E** on hub after **`coffee`**, or **standalone** **`conductor`** / master name without **`coffee`**.
 
 **Done when:** The operator has picked **A–E** (or combo), the selected branch has been executed, and the re-offer or exit rule has been applied.
 
@@ -234,4 +245,4 @@ Each successful coffee run appends one line to `docs/skill-work/work-cadence/wor
 - `docs/skill-work/work-politics/polling-and-markets.md` — KY-4 polling (**menu C — Historian** / daily brief)
 - `docs/skill-work/work-strategy/daily-brief-minds-menu.md` — Tri-Frame **three minds** (Barnes / Mearsheimer / Mercouris) for **C — Historian** second stage
 - `docs/skill-work/work-politics/america-first-ky/guardrail-stress-test.md` — messaging discipline
-- `.cursor/skills/bookshelf-knowledge-mcq-to-gate/SKILL.md` — Capitalist-adjacent **bookshelf knowledge** MCQs toward IX-A / gate staging
+- `.cursor/skills/bookshelf-knowledge-mcq-to-gate/SKILL.md` — **C — Historian / Bookshelf quiz** MCQs toward IX-A / gate staging

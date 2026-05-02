@@ -1,0 +1,97 @@
+# Bookshelf quiz anchors
+#
+# Handpicked source layer for self-knowledge MCQs. This is not a second catalog:
+# `bookshelf-catalog.yaml` remains the title-level SSOT. These rows only mark
+# which catalog items are safe, useful anchors for source-bound quiz prompts.
+
+version: 1
+anchors:
+  - id: bq-herodotus-histories
+    shelf_refs: [HNSRC-0001, HNSRC-0002]
+    source_kind: primary
+    citation_label: "Herodotus, The Histories"
+    visible_prompt_label: "Herodotus' account of the Greek-Persian world"
+    quiz_uses:
+      - empire and inquiry
+      - Greek-Persian conflict
+      - ethnographic comparison
+
+  - id: bq-thucydides-peloponnesian-war
+    shelf_refs: [HNSRC-0003]
+    source_kind: primary
+    citation_label: "Thucydides, History of the Peloponnesian War"
+    visible_prompt_label: "Thucydides' account of the Peloponnesian War"
+    quiz_uses:
+      - Melian Dialogue
+      - alliance coercion
+      - power asymmetry and moral argument
+
+  - id: bq-caesar-gallic-war
+    shelf_refs: [HNSRC-0007]
+    source_kind: primary
+    citation_label: "Julius Caesar, The Gallic War"
+    visible_prompt_label: "Caesar's war commentaries"
+    quiz_uses:
+      - Roman command narrative
+      - conquest and political legitimacy
+      - frontier war
+
+  - id: bq-alexiad
+    shelf_refs: [HNSRC-0026]
+    source_kind: primary
+    citation_label: "Anna Comnena, The Alexiad"
+    visible_prompt_label: "Anna Comnena's Byzantine account"
+    quiz_uses:
+      - Byzantine political narrative
+      - First Crusade contact
+      - Komnenian court perspective
+
+  - id: bq-clausewitz-on-war
+    shelf_refs: [HNSRC-0146]
+    source_kind: primary
+    citation_label: "Clausewitz, On War"
+    visible_prompt_label: "Clausewitz's theory of war"
+    quiz_uses:
+      - war as political instrument
+      - friction and uncertainty
+      - strategy and escalation
+
+  - id: bq-venice-maritime-power
+    shelf_refs: [HNSRC-0247]
+    source_kind: secondary
+    citation_label: "Roger Crowley, City of Fortune"
+    visible_prompt_label: "Roger Crowley's account of Venetian sea power"
+    quiz_uses:
+      - maritime commerce
+      - naval bases and trade routes
+      - Mediterranean power projection
+
+  - id: bq-spice-maritime-contest
+    shelf_refs: [HNSRC-0248]
+    source_kind: secondary
+    citation_label: "Roger Crowley, Spice"
+    visible_prompt_label: "Roger Crowley's account of the sixteenth-century spice contest"
+    quiz_uses:
+      - Indian Ocean trade
+      - naval-commercial competition
+      - early modern maritime rivalry
+
+  - id: bq-macarthur-truman-nuclear-crisis
+    shelf_refs: [HNSRC-0256]
+    source_kind: secondary
+    citation_label: "H. W. Brands, The General vs. the President"
+    visible_prompt_label: "H. W. Brands' account of MacArthur, Truman, and nuclear risk"
+    quiz_uses:
+      - Korean War civil-military conflict
+      - nuclear escalation risk
+      - Cold War presidential restraint
+
+  - id: bq-tocqueville-democracy
+    shelf_refs: [HNSRC-0262]
+    source_kind: primary
+    citation_label: "Tocqueville, Democracy in America"
+    visible_prompt_label: "Tocqueville's analysis of American democracy"
+    quiz_uses:
+      - democratic equality
+      - civil society
+      - American political culture
