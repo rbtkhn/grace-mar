@@ -1,8 +1,8 @@
 {
   "format": "grace-mar-runtime-bundle",
   "version": "1.0",
-  "bundle_id": "1f2f2827fc4a",
-  "generated_at": "2026-05-01T16:02:55.577887+00:00",
+  "bundle_id": "ec3cfb59bde4",
+  "generated_at": "2026-05-02T04:55:29.307797+00:00",
   "user_id": "grace-mar",
   "runtime_mode": "adjunct_runtime",
   "runtime_mode_description": "Assistive runtime alongside the canonical repo.",
@@ -63,9 +63,9 @@
       "self": {
         "exists": true,
         "path": "C:\\Users\\rober\\OneDrive\\Documents\\grace-mar\\users\\grace-mar\\self.md",
-        "size_bytes": 9816,
-        "mtime": "2026-04-29T23:57:56.650935+00:00",
-        "sha256": "c42d9a170c7b52367fb0339086c7d252d9871705df68c836d13363892cfc7661"
+        "size_bytes": 13373,
+        "mtime": "2026-05-02T04:55:28.713393+00:00",
+        "sha256": "7947e8a62280ef7ad9b70fa441ee95a10ad818c4249db9eb1b7a2012f4b6fd54"
       },
       "skills": {
         "exists": true,
@@ -105,16 +105,16 @@
       "evidence": {
         "exists": true,
         "path": "C:\\Users\\rober\\OneDrive\\Documents\\grace-mar\\users\\grace-mar\\self-archive.md",
-        "size_bytes": 14333,
-        "mtime": "2026-04-29T23:57:56.640498+00:00",
-        "sha256": "a0848a9223bed058a14c5b0e202301a1262669850fb2a19066c66b3dd70fd905"
+        "size_bytes": 16705,
+        "mtime": "2026-05-02T04:55:28.713393+00:00",
+        "sha256": "532e856c6bb09c392977d92da3c69816c78f01ea1462be3eb148ed6693ca9e7a"
       },
       "self_evidence": {
         "exists": true,
         "path": "C:\\Users\\rober\\OneDrive\\Documents\\grace-mar\\users\\grace-mar\\self-archive.md",
-        "size_bytes": 14333,
-        "mtime": "2026-04-29T23:57:56.640498+00:00",
-        "sha256": "a0848a9223bed058a14c5b0e202301a1262669850fb2a19066c66b3dd70fd905"
+        "size_bytes": 16705,
+        "mtime": "2026-05-02T04:55:28.713393+00:00",
+        "sha256": "532e856c6bb09c392977d92da3c69816c78f01ea1462be3eb148ed6693ca9e7a"
       },
       "library": {
         "exists": true,
@@ -148,7 +148,7 @@
         "exists": true,
         "path": "C:\\Users\\rober\\OneDrive\\Documents\\grace-mar\\bot\\prompt.py",
         "size_bytes": 13788,
-        "mtime": "2026-04-29T23:57:54.672995+00:00",
+        "mtime": "2026-05-02T04:55:28.715147+00:00",
         "sha256": "e01ba88001914c3cf06cf2c2e6cccc4711e5ac20d7086317e0c7cc6348a34250"
       }
     },
@@ -157,119 +157,119 @@
         "exists": true,
         "path": "C:\\Users\\rober\\OneDrive\\Documents\\grace-mar\\users\\grace-mar\\runtime-bundle\\record\\USER.md",
         "size_bytes": 426,
-        "mtime": "2026-05-01T16:02:55.577887+00:00",
+        "mtime": "2026-05-02T04:55:29.310870+00:00",
         "sha256": "33cd5347ffabb3921cf654e53ed3bb81eb496be71683581e0d97251d6b1cff13"
       },
       "record\\fork-export.json": {
         "exists": true,
         "path": "C:\\Users\\rober\\OneDrive\\Documents\\grace-mar\\users\\grace-mar\\runtime-bundle\\record\\fork-export.json",
-        "size_bytes": 237294,
-        "mtime": "2026-05-01T16:02:55.634933+00:00",
-        "sha256": "a2d7ec70b4d6382c796d613b29c7c374b9b5d564645a030d01151c733d264367"
+        "size_bytes": 245661,
+        "mtime": "2026-05-02T04:55:29.360805+00:00",
+        "sha256": "798becabe53bf9034530c5404c5f5e3359f5886485b45c8008d442b1c53d4c7f"
       },
       "record\\grace-mar-llm.txt": {
         "exists": true,
         "path": "C:\\Users\\rober\\OneDrive\\Documents\\grace-mar\\users\\grace-mar\\runtime-bundle\\record\\grace-mar-llm.txt",
-        "size_bytes": 7195,
-        "mtime": "2026-05-01T16:02:55.645003+00:00",
-        "sha256": "7a8904eec57c95f391e93403b1c35cd0d187b1c344109aac89d37867390bc86e"
+        "size_bytes": 8487,
+        "mtime": "2026-05-02T04:55:29.368926+00:00",
+        "sha256": "fd339698a266b74d437a2db645ecd9f86b37bd6e08e4407599fe884fd7c9ad1f"
       },
       "policy\\manifest.json": {
         "exists": true,
         "path": "C:\\Users\\rober\\OneDrive\\Documents\\grace-mar\\users\\grace-mar\\runtime-bundle\\policy\\manifest.json",
         "size_bytes": 6618,
-        "mtime": "2026-05-01T16:02:55.645003+00:00",
-        "sha256": "1b76add639d5223032078dc5491e50cffcddac5a70e48f0808ff352a4bf7d6a9"
+        "mtime": "2026-05-02T04:55:29.368926+00:00",
+        "sha256": "a449ae873339960596ae8a15d3afd45c17791069df37e93bb41d540dc88b7936"
       },
       "policy\\llms.txt": {
         "exists": true,
         "path": "C:\\Users\\rober\\OneDrive\\Documents\\grace-mar\\users\\grace-mar\\runtime-bundle\\policy\\llms.txt",
         "size_bytes": 1378,
-        "mtime": "2026-05-01T16:02:55.645003+00:00",
-        "sha256": "717130798a2a962833ccd1cf9526ee488880e4a58eb00a4c372d394e41cf9e55"
+        "mtime": "2026-05-02T04:55:29.368926+00:00",
+        "sha256": "4e476b7ca6de098ab9c7d4ce52db8caf778fb7d9d4516e4858de43566d6abf65"
       },
       "policy\\intent_snapshot.json": {
         "exists": true,
         "path": "C:\\Users\\rober\\OneDrive\\Documents\\grace-mar\\users\\grace-mar\\runtime-bundle\\policy\\intent_snapshot.json",
         "size_bytes": 2777,
-        "mtime": "2026-05-01T16:02:55.651674+00:00",
-        "sha256": "34ba551f5991b7e8e423b901e828f3ba1a272933d93a1325f2fc12173fa0a90c"
+        "mtime": "2026-05-02T04:55:29.373532+00:00",
+        "sha256": "77fdabf7042ce9b10ccbaa2e88e2dff5ea25796f9c01a39228a16698e5cb0172"
       },
       "runtime\\warmup.md": {
         "exists": true,
         "path": "C:\\Users\\rober\\OneDrive\\Documents\\grace-mar\\users\\grace-mar\\runtime-bundle\\runtime\\warmup.md",
-        "size_bytes": 1631,
-        "mtime": "2026-05-01T16:02:55.659735+00:00",
-        "sha256": "9c23c90a3e291b1625219aa4c6fdf06c5b392ed25ac082590f9c51741328bf16"
+        "size_bytes": 1579,
+        "mtime": "2026-05-02T04:55:29.396663+00:00",
+        "sha256": "02cdffd85e11220266d1db44b05d7ff4b385507fc7376ce3b0f416214c3c3f11"
       },
       "runtime\\session-log-tail.md": {
         "exists": true,
         "path": "C:\\Users\\rober\\OneDrive\\Documents\\grace-mar\\users\\grace-mar\\runtime-bundle\\runtime\\session-log-tail.md",
         "size_bytes": 1282,
-        "mtime": "2026-05-01T16:02:55.662014+00:00",
+        "mtime": "2026-05-02T04:55:29.396663+00:00",
         "sha256": "000b4d19ae98d4643d4892d845b88778d5e13abaa168474ed7d135fe700a8e30"
       },
       "runtime\\self-memory.md": {
         "exists": true,
         "path": "C:\\Users\\rober\\OneDrive\\Documents\\grace-mar\\users\\grace-mar\\runtime-bundle\\runtime\\self-memory.md",
         "size_bytes": 4882,
-        "mtime": "2026-05-01T16:02:55.662014+00:00",
+        "mtime": "2026-05-02T04:55:29.399707+00:00",
         "sha256": "008ee83dfe5ff69a5771c1d93b929930cbf56c1db5c2e08f57420a6fa9a0cbdc"
       },
       "audit\\pipeline-events.jsonl": {
         "exists": true,
         "path": "C:\\Users\\rober\\OneDrive\\Documents\\grace-mar\\users\\grace-mar\\runtime-bundle\\audit\\pipeline-events.jsonl",
-        "size_bytes": 22216,
-        "mtime": "2026-05-01T16:02:55.662014+00:00",
-        "sha256": "9671807f95498ed122d3c1b60f06611acee007686b919f6476c5a12c09225dfc"
+        "size_bytes": 25280,
+        "mtime": "2026-05-02T04:55:29.399707+00:00",
+        "sha256": "3d63781bc3444969e77dd60d3203d116712e4dadc843f900ce202f71411ec98e"
       },
       "audit\\merge-receipts.jsonl": {
         "exists": true,
         "path": "C:\\Users\\rober\\OneDrive\\Documents\\grace-mar\\users\\grace-mar\\runtime-bundle\\audit\\merge-receipts.jsonl",
         "size_bytes": 5855,
-        "mtime": "2026-05-01T16:02:55.664022+00:00",
+        "mtime": "2026-05-02T04:55:29.399707+00:00",
         "sha256": "365d30c76ad8af5375c6c191beebb7261c49e26bb163f43922d9a77f7a5cf63c"
       },
       "audit\\compute-ledger.jsonl": {
         "exists": true,
         "path": "C:\\Users\\rober\\OneDrive\\Documents\\grace-mar\\users\\grace-mar\\runtime-bundle\\audit\\compute-ledger.jsonl",
-        "size_bytes": 58525,
-        "mtime": "2026-05-01T16:02:55.677308+00:00",
-        "sha256": "3a7a0ec888a289f552a7a452dd5a7858f2be0a1f538fc1ba2cfda520ac37f8d4"
+        "size_bytes": 59291,
+        "mtime": "2026-05-02T04:55:29.425285+00:00",
+        "sha256": "a26d0b2ad052d2cc9ee497bd4fe106198d5b94902e114fe32d07764c1cbda647"
       },
       "audit\\fork-manifest.json": {
         "exists": true,
         "path": "C:\\Users\\rober\\OneDrive\\Documents\\grace-mar\\users\\grace-mar\\runtime-bundle\\audit\\fork-manifest.json",
-        "size_bytes": 330,
-        "mtime": "2026-05-01T16:02:55.683834+00:00",
-        "sha256": "23858d247f366a90f0ee5acb06908edd569b2c6267bf9b45f057c89413cb6d5e"
+        "size_bytes": 331,
+        "mtime": "2026-05-02T04:55:29.426326+00:00",
+        "sha256": "1c20ba3845428fa97ebe87a72ddf7db99561ee3fddeaa44b9964d390c8e30ea5"
       },
       "audit\\harness-events.jsonl": {
         "exists": true,
         "path": "C:\\Users\\rober\\OneDrive\\Documents\\grace-mar\\users\\grace-mar\\runtime-bundle\\audit\\harness-events.jsonl",
-        "size_bytes": 395,
-        "mtime": "2026-05-01T16:02:55.700906+00:00",
-        "sha256": "ace013a32556b50b4f84599378ffc4ba1a13064d492be3f0d4c9081608072bcf"
+        "size_bytes": 1185,
+        "mtime": "2026-05-02T04:55:29.446564+00:00",
+        "sha256": "077d12558e81bd1c70b858932c4677d96b10d42600f308977d6e5f7b0273b210"
       },
       "fork-history\\fork_state.json": {
         "exists": true,
         "path": "C:\\Users\\rober\\OneDrive\\Documents\\grace-mar\\users\\grace-mar\\runtime-bundle\\fork-history\\fork_state.json",
         "size_bytes": 203,
-        "mtime": "2026-05-01T16:02:55.700906+00:00",
+        "mtime": "2026-05-02T04:55:29.446564+00:00",
         "sha256": "81f1ca7202cd5a12b0dc1956be7297617a101da45c0ca768089b25882a1965ba"
       },
       "fork-history\\drift-report.json": {
         "exists": true,
         "path": "C:\\Users\\rober\\OneDrive\\Documents\\grace-mar\\users\\grace-mar\\runtime-bundle\\fork-history\\drift-report.json",
         "size_bytes": 2,
-        "mtime": "2026-05-01T16:02:55.700906+00:00",
+        "mtime": "2026-05-02T04:55:29.446564+00:00",
         "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
       },
       "fork-history\\fork-lineage.jsonl": {
         "exists": true,
         "path": "C:\\Users\\rober\\OneDrive\\Documents\\grace-mar\\users\\grace-mar\\runtime-bundle\\fork-history\\fork-lineage.jsonl",
         "size_bytes": 2088,
-        "mtime": "2026-05-01T16:02:55.717607+00:00",
+        "mtime": "2026-05-02T04:55:29.446564+00:00",
         "sha256": "dbbe836ada5f5cda8daf2adce7ccec5a1873a3fc99e4b62a92e28060c3456f07"
       }
     }

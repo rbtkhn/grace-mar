@@ -123,10 +123,12 @@ reflection_ack: heavy
 
 ## Candidates
 
+## Processed
+
 ### CANDIDATE-0042 (IX-A - maritime power as naval-commercial system; bookshelf MCQ)
 
 ```yaml
-status: pending
+status: approved
 timestamp: 2026-05-02
 channel_key: operator:cursor:bookshelf-mcq-self-knowledge
 proposal_class: SELF_KNOWLEDGE_ADD
@@ -161,12 +163,10 @@ prompt_addition: none
 impact_tier: low
 envelope_class: none
 ```
-
-
 ### CANDIDATE-0043 (IX-A - offensive realism regional hegemony; bookshelf MCQ)
 
 ```yaml
-status: pending
+status: approved
 timestamp: 2026-05-02
 channel_key: operator:cursor:bookshelf-mcq-self-knowledge
 proposal_class: SELF_KNOWLEDGE_ADD
@@ -200,11 +200,10 @@ prompt_addition: none
 impact_tier: low
 envelope_class: none
 ```
-
 ### CANDIDATE-0044 (IX-A - Melian Dialogue power asymmetry; bookshelf MCQ)
 
 ```yaml
-status: pending
+status: approved
 timestamp: 2026-05-02
 channel_key: operator:cursor:bookshelf-mcq-self-knowledge
 proposal_class: SELF_KNOWLEDGE_ADD
@@ -238,12 +237,10 @@ prompt_addition: none
 impact_tier: low
 envelope_class: none
 ```
-
-
 ### CANDIDATE-0045 (IX-A - second-strike capability and deterrence; bookshelf MCQ)
 
 ```yaml
-status: pending
+status: approved
 timestamp: 2026-05-02
 channel_key: operator:cursor:bookshelf-mcq-self-knowledge
 proposal_class: SELF_KNOWLEDGE_ADD
@@ -278,8 +275,154 @@ prompt_addition: none
 impact_tier: low
 envelope_class: none
 ```
+### CANDIDATE-0046 (IX-A - Herodotus history as inquiry; bookshelf MCQ)
 
-## Processed
+```yaml
+status: approved
+timestamp: 2026-05-02
+channel_key: operator:cursor:bookshelf-mcq-self-knowledge
+proposal_class: SELF_KNOWLEDGE_ADD
+source: operator - bookshelf MCQ receipt
+source_binding_strength: strong
+review_needed: false
+shelf_refs: [HNSRC-0001, HNSRC-0002]
+quiz_receipt:
+  source_kind: primary
+  citation_label: "Herodotus, The Histories"
+  visible_prompt: "Drawing on Herodotus' account of the Greek-Persian world, what best captures why his history is more than a simple war chronicle?"
+  stem_topic: "Herodotus history as inquiry into empire, customs, and causes"
+  selected_answer: "B - it combines inquiry into causes with comparisons of peoples, customs, empires, and political choices."
+  correct_answer: "B - it combines inquiry into causes with comparisons of peoples, customs, empires, and political choices."
+  validation_note: "Companion selected the concept-level answer matching the Herodotean history-as-inquiry anchor."
+  staged_claim: "Knows: Herodotus' Histories treats history as inquiry into causes, empire, customs, peoples, and political choices, not only as a war chronicle."
+source_exchange:
+  operator: |
+    Bookshelf quiz round. Visible quiz prompt used academic prose and did not expose internal shelf ids.
+    Primary source binding: Herodotus, The Histories.
+mind_category: knowledge
+signal_type: operator_quiz_validated
+priority_score: 5
+summary: "IX-A: Herodotus as history-as-inquiry"
+convergence: first
+profile_target: IX-A. KNOWLEDGE
+suggested_entry: "Knows: Herodotus' Histories treats history as inquiry into causes, empire, customs, peoples, and political choices, not only as a war chronicle."
+warrant: "Revisit if this should be narrowed from general Herodotean inquiry to the Greek-Persian conflict specifically."
+prompt_section: YOUR KNOWLEDGE
+prompt_addition: none
+impact_tier: low
+envelope_class: none
+```
+### CANDIDATE-0047 (IX-A - Thucydides alliance coercion; bookshelf MCQ)
+
+```yaml
+status: approved
+timestamp: 2026-05-02
+channel_key: operator:cursor:bookshelf-mcq-self-knowledge
+proposal_class: SELF_KNOWLEDGE_ADD
+source: operator - bookshelf MCQ receipt
+source_binding_strength: strong
+review_needed: false
+shelf_refs: [HNSRC-0003]
+quiz_receipt:
+  source_kind: primary
+  citation_label: "Thucydides, History of the Peloponnesian War"
+  visible_prompt: "In Thucydides' account of the Peloponnesian War, what is the strategic significance of alliance coercion?"
+  stem_topic: "Thucydides and alliance coercion"
+  selected_answer: "B - it shows that great-power rivalry often pressures smaller poleis into dependence, tribute, or obedience."
+  correct_answer: "B - it shows that great-power rivalry often pressures smaller poleis into dependence, tribute, or obedience."
+  validation_note: "Companion selected the concept-level answer matching the Thucydidean alliance-coercion anchor."
+  staged_claim: "Knows: in Thucydides' account of the Peloponnesian War, great-power rivalry can pressure smaller poleis into dependence, tribute, or obedience."
+source_exchange:
+  operator: |
+    Bookshelf quiz round. Visible quiz prompt used academic prose and did not expose internal shelf ids.
+    Primary source binding: Thucydides, History of the Peloponnesian War.
+mind_category: knowledge
+signal_type: operator_quiz_validated
+priority_score: 5
+summary: "IX-A: Thucydides and alliance coercion"
+convergence: first
+profile_target: IX-A. KNOWLEDGE
+suggested_entry: "Knows: in Thucydides' account of the Peloponnesian War, great-power rivalry can pressure smaller poleis into dependence, tribute, or obedience."
+warrant: "Revisit if this should be merged with the Melian Dialogue power-asymmetry candidate rather than kept as a distinct alliance-coercion claim."
+prompt_section: YOUR KNOWLEDGE
+prompt_addition: none
+impact_tier: low
+envelope_class: none
+```
+### CANDIDATE-0048 (IX-A - Clausewitz friction; bookshelf MCQ)
+
+```yaml
+status: approved
+timestamp: 2026-05-02
+channel_key: operator:cursor:bookshelf-mcq-self-knowledge
+proposal_class: SELF_KNOWLEDGE_ADD
+source: operator - bookshelf MCQ receipt
+source_binding_strength: strong
+review_needed: false
+shelf_refs: [HNSRC-0146]
+quiz_receipt:
+  source_kind: primary
+  citation_label: "Clausewitz, On War"
+  visible_prompt: "Drawing on Clausewitz's On War, what does friction most directly mean?"
+  stem_topic: "Clausewitz and friction"
+  selected_answer: "B - the unpredictable accumulation of practical difficulties that makes real war harder than planned war."
+  correct_answer: "B - the unpredictable accumulation of practical difficulties that makes real war harder than planned war."
+  validation_note: "Companion selected the concept-level answer matching the Clausewitz friction anchor."
+  staged_claim: "Knows: in Clausewitz's On War, friction means the unpredictable accumulation of practical difficulties that makes real war harder than planned war."
+source_exchange:
+  operator: |
+    Bookshelf quiz round. Visible quiz prompt used academic prose and did not expose internal shelf ids.
+    Primary source binding: Clausewitz, On War.
+mind_category: knowledge
+signal_type: operator_quiz_validated
+priority_score: 5
+summary: "IX-A: Clausewitz friction"
+convergence: first
+profile_target: IX-A. KNOWLEDGE
+suggested_entry: "Knows: in Clausewitz's On War, friction means the unpredictable accumulation of practical difficulties that makes real war harder than planned war."
+warrant: "Revisit if the operator wants this framed under strategy vocabulary rather than general IX-A knowledge."
+prompt_section: YOUR KNOWLEDGE
+prompt_addition: none
+impact_tier: low
+envelope_class: none
+```
+### CANDIDATE-0049 (IX-A - Tocqueville associations and self-government; bookshelf MCQ)
+
+```yaml
+status: approved
+timestamp: 2026-05-02
+channel_key: operator:cursor:bookshelf-mcq-self-knowledge
+proposal_class: SELF_KNOWLEDGE_ADD
+source: operator - bookshelf MCQ receipt
+source_binding_strength: strong
+review_needed: false
+shelf_refs: [HNSRC-0262]
+quiz_receipt:
+  source_kind: primary
+  citation_label: "Tocqueville, Democracy in America"
+  visible_prompt: "In Tocqueville's Democracy in America, why are associations and civil society politically important?"
+  stem_topic: "Tocqueville associations and democratic self-government"
+  selected_answer: "B - they help democratic citizens practice self-government outside the state and resist isolated individualism."
+  correct_answer: "B - they help democratic citizens practice self-government outside the state and resist isolated individualism."
+  validation_note: "Companion selected the concept-level answer matching the Tocqueville civil-society anchor."
+  staged_claim: "Knows: in Tocqueville's Democracy in America, associations and civil society help democratic citizens practice self-government outside the state and resist isolated individualism."
+source_exchange:
+  operator: |
+    Bookshelf quiz round. Visible quiz prompt used academic prose and did not expose internal shelf ids.
+    Primary source binding: Tocqueville, Democracy in America.
+mind_category: knowledge
+signal_type: operator_quiz_validated
+priority_score: 5
+summary: "IX-A: Tocqueville associations and democratic self-government"
+convergence: first
+profile_target: IX-A. KNOWLEDGE
+suggested_entry: "Knows: in Tocqueville's Democracy in America, associations and civil society help democratic citizens practice self-government outside the state and resist isolated individualism."
+warrant: "Revisit if this should be narrowed to civil society as a curiosity lens rather than promoted as IX-A knowledge."
+prompt_section: YOUR KNOWLEDGE
+prompt_addition: none
+impact_tier: low
+envelope_class: none
+```
 
 ### CANDIDATE-0038 (IX-A — Washington Commander in Chief June 1775; bookshelf MCQ Washington)
 

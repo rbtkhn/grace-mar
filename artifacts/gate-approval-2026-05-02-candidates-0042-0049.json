@@ -1,0 +1,25 @@
+{
+  "receipt_id": "MR-0010",
+  "user_id": "grace-mar",
+  "approved_by": "operator",
+  "approved_at": "2026-05-01T22:55:21.477510",
+  "min_evidence_tier": 3,
+  "candidate_ids": [
+    "CANDIDATE-0042",
+    "CANDIDATE-0043",
+    "CANDIDATE-0044",
+    "CANDIDATE-0045",
+    "CANDIDATE-0046",
+    "CANDIDATE-0047",
+    "CANDIDATE-0048",
+    "CANDIDATE-0049"
+  ],
+  "session_ids": [],
+  "fork_phase_before": "seed",
+  "fork_phase_after": "seed",
+  "lineage_summary": {
+    "fork_native": 8
+  },
+  "prev_receipt_hash": "7b8a313516db32647db0f3fadd721a111e2906135b99b41d975da7d2009a9070",
+  "receipt_hash": "9a94d9cb193368787952ac6889f708178c2df76add96715b13f61cf826aae0e9"
+}

@@ -211,6 +211,134 @@ entries: []
 > IX-A: Farewell Address warnings on faction and permanent foreign ties
 > warrant: Revisit if I flatten the Address into generic patriotism without faction/alliance tension or stop citing HNSRC-0109 for this speech cluster.
 > operator: | Anchor: Farewell Address, 1796 — faction and foreign-alliance warnings. Companion matched standard pairing (faction spirit / permanent entanglements). Evidence: HNSRC-0109.
+
+**[2026-05-01 22:55:30]** `APPROVED` (Operator)
+> CANDIDATE-0042 → ACT-0013
+> IX-A: maritime power as naval-commercial system
+> warrant: Revisit if a direct Mahan source is added to self-library-bookshelf or if this should be reframed as Venetian maritime-power context rather than Mahan-style theory.
+> source_binding_strength: weak
+> shelf_refs: [HNSRC-0247, HNSRC-0248]
+> quiz_receipt:
+> source_kind: secondary
+>   citation_label: "Roger Crowley, City of Fortune; Roger Crowley, Spice"
+>   visible_prompt: "Drawing on Roger Crowley's accounts of Venetian sea power and the spice contest, which answer best captures the strategic mechanism of maritime power?"
+>   stem_topic: "Maritime power as naval-commercial system"
+>   selected_answer: "B - naval commerce, bases, chokepoints, and fleet concentration make maritime power geopolitically decisive."
+>   correct_answer: "B - naval commerce, bases, chokepoints, and fleet concentration make maritime power geopolitically decisive."
+>   validation_note: "Companion selected the concept-level answer matching the maritime-power mechanism. Binding is weak because the catalog has Crowley secondary context, not a direct Mahan primary/source row."
+>   staged_claim: "Knows: Mahan-style sea-power analysis treats naval commerce, bases, chokepoints, and fleet concentration as mechanisms that make maritime power geopolitically decisive."
+
+**[2026-05-01 22:55:30]** `APPROVED` (Operator)
+> CANDIDATE-0043 → ACT-0014
+> IX-A: offensive realism and regional hegemony
+> warrant: Revisit if a direct Mearsheimer source is added to self-library-bookshelf or if the operator wants only catalog-bound claims approved.
+> source_binding_strength: weak
+> shelf_refs: []
+> quiz_receipt:
+> source_kind: secondary
+>   citation_label: "Mearsheimer, offensive realism"
+>   visible_prompt: "In Mearsheimer's offensive realism, why do great powers seek regional hegemony?"
+>   stem_topic: "Offensive realism and regional hegemony"
+>   selected_answer: "B - anarchy leaves states unable to be fully certain of other states' intentions."
+>   correct_answer: "B - anarchy leaves states unable to be fully certain of other states' intentions."
+>   validation_note: "Companion selected the concept-level answer matching the offensive-realist mechanism. Binding is weak because no direct Mearsheimer shelf row was found in self-library-bookshelf at repair time."
+>   staged_claim: "Knows: in Mearsheimer's offensive realism, great powers seek regional hegemony because anarchy leaves states unable to be fully certain of other states' intentions."
+
+**[2026-05-01 22:55:30]** `APPROVED` (Operator)
+> CANDIDATE-0044 → ACT-0015
+> IX-A: Melian Dialogue as realist lesson on power asymmetry
+> warrant: Revisit if I stop treating the Melian Dialogue as a realist power-asymmetry anchor.
+> source_binding_strength: strong
+> shelf_refs: [HNSRC-0003]
+> quiz_receipt:
+> source_kind: primary
+>   citation_label: "Thucydides, History of the Peloponnesian War"
+>   visible_prompt: "In Thucydides' account of the Melian Dialogue, what realist lesson is usually drawn from Athens' argument to Melos?"
+>   stem_topic: "Melian Dialogue and power asymmetry"
+>   selected_answer: "C - power asymmetry can override moral argument when no higher enforcing authority exists."
+>   correct_answer: "C - power asymmetry can override moral argument when no higher enforcing authority exists."
+>   validation_note: "Companion selected the concept-level answer matching the standard realist reading of the Melian Dialogue."
+>   staged_claim: "Knows: the Melian Dialogue is commonly read as a realist lesson that power asymmetry can override moral argument when no higher enforcing authority exists."
+
+**[2026-05-01 22:55:30]** `APPROVED` (Operator)
+> CANDIDATE-0045 → ACT-0016
+> IX-A: second-strike capability and deterrence
+> warrant: Revisit if a dedicated nuclear-strategy primary source is added to self-library-bookshelf or if this should remain report-only until better anchored.
+> source_binding_strength: weak
+> shelf_refs: [HNSRC-0256]
+> quiz_receipt:
+> source_kind: secondary
+>   citation_label: "H. W. Brands, The General vs. the President"
+>   visible_prompt: "Against the background of Cold War nuclear escalation debates, what does second-strike capability mean?"
+>   stem_topic: "Second-strike capability and deterrence"
+>   selected_answer: "B - a state can absorb a nuclear attack and still retaliate, making a first strike less attractive."
+>   correct_answer: "B - a state can absorb a nuclear attack and still retaliate, making a first strike less attractive."
+>   validation_note: "Companion selected the concept-level answer matching deterrence theory. Binding is weak because the available shelf row is secondary Cold War context rather than a dedicated primary nuclear-strategy source."
+>   staged_claim: "Knows: second-strike capability means a state can absorb a nuclear attack and still retaliate, making a first strike less attractive and stabilizing deterrence."
+
+**[2026-05-01 22:55:30]** `APPROVED` (Operator)
+> CANDIDATE-0046 → ACT-0017
+> IX-A: Herodotus as history-as-inquiry
+> warrant: Revisit if this should be narrowed from general Herodotean inquiry to the Greek-Persian conflict specifically.
+> source_binding_strength: strong
+> shelf_refs: [HNSRC-0001, HNSRC-0002]
+> quiz_receipt:
+> source_kind: primary
+>   citation_label: "Herodotus, The Histories"
+>   visible_prompt: "Drawing on Herodotus' account of the Greek-Persian world, what best captures why his history is more than a simple war chronicle?"
+>   stem_topic: "Herodotus history as inquiry into empire, customs, and causes"
+>   selected_answer: "B - it combines inquiry into causes with comparisons of peoples, customs, empires, and political choices."
+>   correct_answer: "B - it combines inquiry into causes with comparisons of peoples, customs, empires, and political choices."
+>   validation_note: "Companion selected the concept-level answer matching the Herodotean history-as-inquiry anchor."
+>   staged_claim: "Knows: Herodotus' Histories treats history as inquiry into causes, empire, customs, peoples, and political choices, not only as a war chronicle."
+
+**[2026-05-01 22:55:30]** `APPROVED` (Operator)
+> CANDIDATE-0047 → ACT-0018
+> IX-A: Thucydides and alliance coercion
+> warrant: Revisit if this should be merged with the Melian Dialogue power-asymmetry candidate rather than kept as a distinct alliance-coercion claim.
+> source_binding_strength: strong
+> shelf_refs: [HNSRC-0003]
+> quiz_receipt:
+> source_kind: primary
+>   citation_label: "Thucydides, History of the Peloponnesian War"
+>   visible_prompt: "In Thucydides' account of the Peloponnesian War, what is the strategic significance of alliance coercion?"
+>   stem_topic: "Thucydides and alliance coercion"
+>   selected_answer: "B - it shows that great-power rivalry often pressures smaller poleis into dependence, tribute, or obedience."
+>   correct_answer: "B - it shows that great-power rivalry often pressures smaller poleis into dependence, tribute, or obedience."
+>   validation_note: "Companion selected the concept-level answer matching the Thucydidean alliance-coercion anchor."
+>   staged_claim: "Knows: in Thucydides' account of the Peloponnesian War, great-power rivalry can pressure smaller poleis into dependence, tribute, or obedience."
+
+**[2026-05-01 22:55:30]** `APPROVED` (Operator)
+> CANDIDATE-0048 → ACT-0019
+> IX-A: Clausewitz friction
+> warrant: Revisit if the operator wants this framed under strategy vocabulary rather than general IX-A knowledge.
+> source_binding_strength: strong
+> shelf_refs: [HNSRC-0146]
+> quiz_receipt:
+> source_kind: primary
+>   citation_label: "Clausewitz, On War"
+>   visible_prompt: "Drawing on Clausewitz's On War, what does friction most directly mean?"
+>   stem_topic: "Clausewitz and friction"
+>   selected_answer: "B - the unpredictable accumulation of practical difficulties that makes real war harder than planned war."
+>   correct_answer: "B - the unpredictable accumulation of practical difficulties that makes real war harder than planned war."
+>   validation_note: "Companion selected the concept-level answer matching the Clausewitz friction anchor."
+>   staged_claim: "Knows: in Clausewitz's On War, friction means the unpredictable accumulation of practical difficulties that makes real war harder than planned war."
+
+**[2026-05-01 22:55:30]** `APPROVED` (Operator)
+> CANDIDATE-0049 → ACT-0020
+> IX-A: Tocqueville associations and democratic self-government
+> warrant: Revisit if this should be narrowed to civil society as a curiosity lens rather than promoted as IX-A knowledge.
+> source_binding_strength: strong
+> shelf_refs: [HNSRC-0262]
+> quiz_receipt:
+> source_kind: primary
+>   citation_label: "Tocqueville, Democracy in America"
+>   visible_prompt: "In Tocqueville's Democracy in America, why are associations and civil society politically important?"
+>   stem_topic: "Tocqueville associations and democratic self-government"
+>   selected_answer: "B - they help democratic citizens practice self-government outside the state and resist isolated individualism."
+>   correct_answer: "B - they help democratic citizens practice self-government outside the state and resist isolated individualism."
+>   validation_note: "Companion selected the concept-level answer matching the Tocqueville civil-society anchor."
+>   staged_claim: "Knows: in Tocqueville's Democracy in America, associations and civil society help democratic citizens practice self-government outside the state and resist isolated individualism."
 END OF FILE — EVIDENCE grace-mar v0.2 (reseeded)
 
   - id: ACT-0001
@@ -330,5 +458,85 @@ END OF FILE — EVIDENCE grace-mar v0.2 (reseeded)
     mind_category: knowledge
     source: pipeline merge
     summary: "IX-A: Farewell Address warnings on faction and permanent foreign ties"
+    curated_by: user
+    evidence_tier: 3
+
+  - id: ACT-0013
+    date: 2026-05-01
+    modality: text (pipeline merge)
+    activity_type: knowledge — curated observation
+    mind_category: knowledge
+    source: pipeline merge
+    summary: "IX-A: maritime power as naval-commercial system"
+    curated_by: user
+    evidence_tier: 3
+
+  - id: ACT-0014
+    date: 2026-05-01
+    modality: text (pipeline merge)
+    activity_type: knowledge — curated observation
+    mind_category: knowledge
+    source: pipeline merge
+    summary: "IX-A: offensive realism and regional hegemony"
+    curated_by: user
+    evidence_tier: 3
+
+  - id: ACT-0015
+    date: 2026-05-01
+    modality: text (pipeline merge)
+    activity_type: knowledge — curated observation
+    mind_category: knowledge
+    source: pipeline merge
+    summary: "IX-A: Melian Dialogue as realist lesson on power asymmetry"
+    curated_by: user
+    evidence_tier: 3
+
+  - id: ACT-0016
+    date: 2026-05-01
+    modality: text (pipeline merge)
+    activity_type: knowledge — curated observation
+    mind_category: knowledge
+    source: pipeline merge
+    summary: "IX-A: second-strike capability and deterrence"
+    curated_by: user
+    evidence_tier: 3
+
+  - id: ACT-0017
+    date: 2026-05-01
+    modality: text (pipeline merge)
+    activity_type: knowledge — curated observation
+    mind_category: knowledge
+    source: pipeline merge
+    summary: "IX-A: Herodotus as history-as-inquiry"
+    curated_by: user
+    evidence_tier: 3
+
+  - id: ACT-0018
+    date: 2026-05-01
+    modality: text (pipeline merge)
+    activity_type: knowledge — curated observation
+    mind_category: knowledge
+    source: pipeline merge
+    summary: "IX-A: Thucydides and alliance coercion"
+    curated_by: user
+    evidence_tier: 3
+
+  - id: ACT-0019
+    date: 2026-05-01
+    modality: text (pipeline merge)
+    activity_type: knowledge — curated observation
+    mind_category: knowledge
+    source: pipeline merge
+    summary: "IX-A: Clausewitz friction"
+    curated_by: user
+    evidence_tier: 3
+
+  - id: ACT-0020
+    date: 2026-05-01
+    modality: text (pipeline merge)
+    activity_type: knowledge — curated observation
+    mind_category: knowledge
+    source: pipeline merge
+    summary: "IX-A: Tocqueville associations and democratic self-government"
     curated_by: user
     evidence_tier: 3
