@@ -59,6 +59,16 @@ Prioritize existing lanes before new abstractions. An opportunity is stronger wh
    - Recommend approve, refine, or archive.
    - Name the first reversible next step.
 
+## Fatigue and Residue Handling
+
+Use decision-fatigue safeguards to keep creative generation useful rather than sprawling.
+
+- **Default to Top 3.** Do not expand into a long idea list unless the operator asks for a wider portfolio.
+- **Use single-idea mode when load is high.** If recent work shows heavy context, many open lanes, or repeated re-routing, return one best idea plus one reversible next step.
+- **Park residue explicitly.** If useful ideas do not fit the Top 3, name them as parked runners-up or a brief closeout note for the host's normal dream, bridge, or handoff surface.
+- **Do not auto-route.** Dream, bridge, and conductor rollups may carry residue when the host already supports that, but this skill does not trigger them or write handoff manifests by itself.
+- **Keep the gate boundary.** Ideation outputs are WORK approval memos by default. Do not stage them to a Record gate unless the operator explicitly asks for a Record-bearing candidate.
+
 ## Scoring Rubric
 
 Score 1-5:
@@ -113,16 +123,19 @@ Risk scoring convention:
 [same compact shape]
 
 **Recommended operator move:** [one sentence]
+**Residue / parked runners-up:** [optional one-line note; no automatic handoff]
 ```
 
 ## Guardrails
 
 - **Approval-first** - Do not execute, stage, spend, publish, create lanes, or start automations.
+- **Fatigue-aware bounds** - Prefer Top 3 or single-idea mode; do not keep branching after a clear recommended move.
 - **Source discipline** - Do not invent market size, demand, pricing, or competitor facts.
 - **Existing-lane bias** - Prefer leverage from current assets before proposing new surfaces.
 - **Thin-cycle honesty** - If evidence is weak, say "thin cycle" and recommend what to inspect next.
 - **Risk visibility** - Public-facing ideas must flag verification, identity, trust, regulatory, and reputation issues.
 - **No silent proliferation** - New lanes or projects require explicit human approval through the host's decision process.
+- **No automatic residue pipeline** - Do not trigger dream, bridge, conductor, regeneration, or Record staging from an ideation burst.
 
 ## Unresolved Tensions
 
