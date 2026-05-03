@@ -21,7 +21,17 @@ Use this framing for notebook-facing visualizers, console views, graph-derived m
 
 See [../../work-dev/interface-artifacts/README.md](../../work-dev/interface-artifacts/README.md).
 
-- **Four-pillar interview graph:** [artifacts/skill-work/work-strategy/interview-graph/README.md](../../../../artifacts/skill-work/work-strategy/interview-graph/README.md) — notebook-facing graph export for the equal `Dialogue Works` / `Glenn Diesen` / `Daniel Davis` / `Mercouris / The Duran` pillars, with JSON + Markdown outputs in `artifacts/skill-work/work-strategy/interview-graph/` and the one-word axes `Synthesis` / `Order` / `Conflict` / `Statecraft`.
+## Search tooling note
+
+When a strategy-codex session needs file search, prefer `rg` for speed. In this workspace, the WindowsApps `rg.exe` path can be blocked even when it resolves on PATH, so use the workspace-local copy at [`.codex-tmp/rg.exe`](../../../../.codex-tmp/rg.exe) if needed. Treat that local binary as the default search path for future strategy-codex sessions in this repo.
+
+## Python runtime note
+
+When a strategy-codex session needs Python, use the bundled runtime at `C:\Users\rober\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe` rather than assuming `python` or `python3` is on PATH. That runtime is the preferred default for future strategy-codex sessions when you need local validation or script execution.
+
+See also: [tools.md](tools.md) for the compact strategy-codex tool pointer.
+
+- **Octet interview lattice:** [artifacts/skill-work/work-strategy/interview-graph/README.md](../../../../artifacts/skill-work/work-strategy/interview-graph/README.md) — notebook-facing graph export for the equal `Dialogue Works` / `Glenn Diesen` / `Daniel Davis` / `Mercouris / The Duran` / `Crooke` / `Parsi` / `Pape` / `Ritter` streams, with JSON + Markdown outputs in `artifacts/skill-work/work-strategy/interview-graph/` and the one-word axes `Synthesis` / `Order` / `Conflict` / `Statecraft` / `Process` / `Scope` / `Escalation` / `Mechanics`.
 
 ## Volume / book / chapter / page scaffold
 
