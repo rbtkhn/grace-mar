@@ -57,7 +57,7 @@ CONDUCTOR_SUBMENU_LETTER_TO_SLUG: dict[str, str] = {
 CONDUCTOR_TO_MENU_PICK = {slug: pick for pick, slug in MENU_PICK_TO_CONDUCTOR.items()}
 
 # Legacy logs may still contain ``picked=D`` from the older single-line conductor menu.
-_PICKED_CONDUCTOR = frozenset({"D", *MENU_PICK_TO_CONDUCTOR.keys()})
+_PICKED_CONDUCTOR = frozenset({"conductor", "E", "D", *MENU_PICK_TO_CONDUCTOR.keys()})
 
 
 def normalize_conductor_slug(value: str) -> str:

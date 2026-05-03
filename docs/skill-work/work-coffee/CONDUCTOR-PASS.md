@@ -86,6 +86,8 @@ Each printed option includes a **continuity** tail: last `coffee_pick` slug, opt
 
 **Outside `coffee`:** the operator issues the conductor pick **without** running `coffee` Step 0–1. Resolution, orientation, and **`coffee_pick`** logging match [coffee § Conductor session](../../../.cursor/skills/coffee/SKILL.md#conductor-only-no-coffee); do **not** require Recent rhythm or `operator_coffee.py` for that turn.
 
+**`last30days` as one possible action:** When the active object is a current-events / strategy-notebook question and the frontier is stale, one of the three action choices may be a bounded **`last30days`** scan. Keep it master-shaped: **Toscanini** verifies source dates and falsifiers; **Furtwängler** maps live conflicts without closing them; **Bernstein** extracts the one fresh signal that clarifies stakes; **Karajan** checks month-arc fit; **Kleiber** narrows to one query only. It remains non-mutating unless the operator separately asks to append an inbox line or prepare a review artifact.
+
 **Continuity + recommendation helpers:** The assistant may still mention **last picked** conductor and **system recommended** conductor in prose before or after the menu. Those helpers come from [scripts/cadence_conductor_resolution.py](../../../scripts/cadence_conductor_resolution.py) and are **advisory**, not a second menu.
 
 **Persistence (history / continuity):** **New** logs: **`picked=conductor`** with **`conductor=<single-slug>`** (preferred). **Legacy** logs may still show **`picked=D`** + `conductor=` or **`picked=D1`..`D5`**. **Convention:** `conductor=` is `toscanini` \| `furtwangler` \| `karajan` \| `kleiber` \| `bernstein`. **Legacy** `a+b` stacks: normalize to the **first** slug. **New** logs must **not** use `+`. **Example:** `python3 scripts/log_cadence_event.py --kind coffee_pick -u grace-mar --ok --kv picked=conductor conductor=karajan` — [coffee SKILL — Cadence audit](../../../.cursor/skills/coffee/SKILL.md#cadence-audit).
@@ -95,7 +97,7 @@ Each printed option includes a **continuity** tail: last `coffee_pick` slug, opt
 Cadence lines alone are **insufficient** to store *what* improved in the work. **After** orientation and the prescribed notebook actions, the operator (or agent, with the operator’s OK) should **close** the pass with at least one of:
 
 1. A **Conductor close** in **`chapters/YYYY-MM/days.md`** (or a `strategy-page` **Reflection**), using the paste block in [CONDUCTOR-CLOSE-TEMPLATE.md](../work-strategy/strategy-notebook/CONDUCTOR-CLOSE-TEMPLATE.md) — *stance, object, falsify / next test, escalation*; or  
-2. **`coffee_conductor_outcome`** in [work-cadence-events.md](../work-cadence/work-cadence-events.md) with `verdict=` and optional `notebook_ref=` / `falsify=`.
+2. **`coffee_conductor_outcome`** in [work-cadence-events.md](../work-cadence/work-cadence-events.md) with `conductor=<slug>` + `verdict=` and `notebook_ref=` or `falsify=` (both preferred). If the pass closed without that line, add a repair outcome on the next turn rather than leaving attribution implicit.
 
 **SSOT (layer map, mermaid, gate boundary):** [CONDUCTOR-IMPROVEMENT-LOOP.md](../work-strategy/strategy-notebook/CONDUCTOR-IMPROVEMENT-LOOP.md). **Not** Record; **not** a substitute for full **EOD** `strategy page` when the day needs a real compose.
 
@@ -105,7 +107,7 @@ Cadence lines alone are **insufficient** to store *what* improved in the work. *
 
 - **Not** a second **`coffee`** step for every lane; the **`coffee` Step 2** hub is **A–E** in [.cursor/skills/coffee/SKILL.md](../../../.cursor/skills/coffee/SKILL.md).
 - **Not** an instruction to **merge** the Record, auto-promote, or replace **A — Steward** with “conduct the gate.”
-- **Not** a replacement for **C — Historian** (daily brief + Tri-Frame when chosen).
+- **Not** a replacement for **C — Historian** (Intel / Bookshelf quiz / Notebook synthesis submenu).
 
 ---
 

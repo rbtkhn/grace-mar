@@ -35,6 +35,12 @@ _EVENT_LINE_RE = re.compile(
 
 
 _KV_RE = re.compile(r"(\w+)=(\S+)")
+KNOWN_CONDUCTOR_SLUGS = frozenset(
+    {"toscanini", "furtwangler", "karajan", "kleiber", "bernstein"}
+)
+CONDUCTOR_PICKED_VALUES = frozenset(
+    {"conductor", "E", "D", "D1", "D2", "D3", "D4", "D5"}
+)
 
 
 def parse_events(
@@ -62,6 +68,35 @@ def parse_events(
         kv = dict(_KV_RE.findall(line.strip()))
         events.append({"dt": dt, "kind": kind, "user": user, "line": line.strip(), "kv": kv})
     return events
+
+
+def _normalize_conductor_slug(value: str | None) -> str:
+    if value is None:
+        return ""
+    slug = str(value).strip()
+    if "+" in slug:
+        slug = slug.split("+", 1)[0].strip()
+    return slug
+
+
+def _is_explicit_conductor_pick(event: dict) -> bool:
+    if event.get("kind") != "coffee_pick":
+        return False
+    kv = event.get("kv") or {}
+    picked = str(kv.get("picked", "")).strip()
+    conductor = _normalize_conductor_slug(kv.get("conductor"))
+    return picked in CONDUCTOR_PICKED_VALUES and conductor in KNOWN_CONDUCTOR_SLUGS
+
+
+def _is_legacy_partial_conductor_pick(event: dict) -> bool:
+    if event.get("kind") != "coffee_pick":
+        return False
+    kv = event.get("kv") or {}
+    conductor = _normalize_conductor_slug(kv.get("conductor"))
+    if conductor not in KNOWN_CONDUCTOR_SLUGS:
+        return False
+    picked = str(kv.get("picked", "")).strip()
+    return picked not in CONDUCTOR_PICKED_VALUES
 
 
 def compute_rhythm_summary(
@@ -193,6 +228,135 @@ def compute_rhythm_summary(
     }
 
 
+def compute_conductor_audit(
+    user_id: str,
+    days: int = 7,
+    *,
+    events_path: Path = EVENTS_PATH,
+    now: datetime | None = None,
+) -> dict:
+    """Compute a conductor-specific audit for a rolling look-back window."""
+    now = now or datetime.now(timezone.utc)
+    cutoff = now - timedelta(days=days)
+    all_events = parse_events(user_id, events_path=events_path)
+    events = [e for e in all_events if e["dt"] >= cutoff]
+    events.sort(key=lambda e: e["dt"])
+
+    explicit_picks_by_conductor: dict[str, int] = defaultdict(int)
+    explicit_outcomes_by_conductor: dict[str, int] = defaultdict(int)
+    inferred_outcomes_by_conductor: dict[str, int] = defaultdict(int)
+    legacy_partial_picks_by_conductor: dict[str, int] = defaultdict(int)
+    per_day: dict[str, dict[str, dict[str, int]]] = defaultdict(
+        lambda: defaultdict(lambda: {"picks": 0, "explicit_outcomes": 0, "inferred_outcomes": 0})
+    )
+    evidence_richness = {"verdict": 0, "action": 0, "notebook_ref": 0, "falsify": 0}
+    open_picks: list[dict] = []
+    explicit_closed = 0
+    inferred_closed = 0
+    unattributed_outcomes = 0
+    outcomes_without_matching_pick = 0
+
+    for event in events:
+        day = event["dt"].strftime("%Y-%m-%d")
+        kv = event.get("kv") or {}
+
+        if _is_explicit_conductor_pick(event):
+            conductor = _normalize_conductor_slug(kv.get("conductor"))
+            explicit_picks_by_conductor[conductor] += 1
+            per_day[day][conductor]["picks"] += 1
+            open_picks.append(
+                {
+                    "conductor": conductor,
+                    "dt": event["dt"],
+                    "line": event["line"],
+                }
+            )
+            continue
+
+        if _is_legacy_partial_conductor_pick(event):
+            conductor = _normalize_conductor_slug(kv.get("conductor"))
+            legacy_partial_picks_by_conductor[conductor] += 1
+            continue
+
+        if event.get("kind") != "coffee_conductor_outcome":
+            continue
+
+        for key in evidence_richness:
+            if str(kv.get(key, "")).strip():
+                evidence_richness[key] += 1
+
+        explicit_conductor = _normalize_conductor_slug(kv.get("conductor"))
+        if explicit_conductor in KNOWN_CONDUCTOR_SLUGS:
+            explicit_outcomes_by_conductor[explicit_conductor] += 1
+            per_day[day][explicit_conductor]["explicit_outcomes"] += 1
+            match_index = next(
+                (
+                    idx
+                    for idx in range(len(open_picks) - 1, -1, -1)
+                    if open_picks[idx]["conductor"] == explicit_conductor
+                ),
+                None,
+            )
+            if match_index is not None:
+                explicit_closed += 1
+                open_picks.pop(match_index)
+            else:
+                outcomes_without_matching_pick += 1
+            continue
+
+        if open_picks:
+            inferred_conductor = open_picks[-1]["conductor"]
+            inferred_outcomes_by_conductor[inferred_conductor] += 1
+            per_day[day][inferred_conductor]["inferred_outcomes"] += 1
+            inferred_closed += 1
+            open_picks.pop()
+        else:
+            unattributed_outcomes += 1
+
+    explicit_pick_count = sum(explicit_picks_by_conductor.values())
+    explicit_outcome_count = sum(explicit_outcomes_by_conductor.values())
+    inferred_outcome_count = sum(inferred_outcomes_by_conductor.values())
+    total_closed = explicit_closed + inferred_closed
+    closure_rate = round(total_closed / explicit_pick_count, 3) if explicit_pick_count else 0.0
+
+    return {
+        "user_id": user_id,
+        "days": days,
+        "window_start": cutoff.isoformat(),
+        "window_end": now.isoformat(),
+        "event_count": len(events),
+        "explicit_pick_count": explicit_pick_count,
+        "explicit_outcome_count": explicit_outcome_count,
+        "inferred_outcome_count": inferred_outcome_count,
+        "explicit_picks_by_conductor": dict(explicit_picks_by_conductor),
+        "explicit_outcomes_by_conductor": dict(explicit_outcomes_by_conductor),
+        "inferred_outcomes_by_conductor": dict(inferred_outcomes_by_conductor),
+        "legacy_partial_picks_by_conductor": dict(legacy_partial_picks_by_conductor),
+        "closure": {
+            "explicit_closed": explicit_closed,
+            "inferred_closed": inferred_closed,
+            "total_closed": total_closed,
+            "open_pick_count": len(open_picks),
+            "closure_rate": closure_rate,
+            "outcomes_without_matching_pick": outcomes_without_matching_pick,
+            "unattributed_outcomes": unattributed_outcomes,
+        },
+        "evidence_richness": evidence_richness,
+        "open_picks": [
+            {
+                "conductor": row["conductor"],
+                "ts": row["dt"].isoformat(),
+                "line": row["line"],
+            }
+            for row in open_picks
+        ],
+        "per_day": {
+            day: {conductor: counts for conductor, counts in sorted(day_counts.items())}
+            for day, day_counts in sorted(per_day.items())
+        },
+    }
+
+
 def format_summary(s: dict) -> str:
     lines = [f"Cadence rhythm ({s['user_id']}) — last {s['days']} days"]
 
@@ -248,6 +412,55 @@ def format_discipline_one_liner(s: dict) -> str:
         return f"Cadence discipline ({s['days']}d): HEALTHY"
     issues_str = "; ".join(s["issues"][:3])
     return f"Cadence discipline ({s['days']}d): {issues_str} — DRIFT"
+
+
+def format_conductor_audit(summary: dict) -> str:
+    lines = [f"5-conductor audit ({summary['user_id']}) â€” last {summary['days']} days"]
+    if summary["event_count"] == 0:
+        lines.append("  (no cadence events in window)")
+        return "\n".join(lines)
+
+    lines.append(
+        "  explicit picks/outcomes/inferred outcomes: "
+        f"{summary['explicit_pick_count']}/{summary['explicit_outcome_count']}/{summary['inferred_outcome_count']}"
+    )
+    closure = summary["closure"]
+    lines.append(
+        "  closure: "
+        f"{closure['total_closed']} closed, {closure['open_pick_count']} open, "
+        f"rate {closure['closure_rate']:.1%}"
+    )
+    if closure["unattributed_outcomes"] or closure["outcomes_without_matching_pick"]:
+        lines.append(
+            "  audit gaps: "
+            f"{closure['unattributed_outcomes']} unattributed outcomes, "
+            f"{closure['outcomes_without_matching_pick']} outcomes without matching pick"
+        )
+
+    for conductor in sorted(KNOWN_CONDUCTOR_SLUGS):
+        picks = summary["explicit_picks_by_conductor"].get(conductor, 0)
+        outcomes = summary["explicit_outcomes_by_conductor"].get(conductor, 0)
+        inferred = summary["inferred_outcomes_by_conductor"].get(conductor, 0)
+        legacy = summary["legacy_partial_picks_by_conductor"].get(conductor, 0)
+        if picks or outcomes or inferred or legacy:
+            lines.append(
+                f"  {conductor}: picks={picks} explicit_outcomes={outcomes} "
+                f"inferred_outcomes={inferred} legacy_partial={legacy}"
+            )
+
+    ev = summary["evidence_richness"]
+    lines.append(
+        "  evidence richness: "
+        f"verdict={ev['verdict']}, action={ev['action']}, "
+        f"notebook_ref={ev['notebook_ref']}, falsify={ev['falsify']}"
+    )
+
+    if summary["open_picks"]:
+        lines.append("  open picks:")
+        for row in summary["open_picks"][:5]:
+            lines.append(f"    - {row['ts'][:16]} {row['conductor']}")
+
+    return "\n".join(lines)
 
 
 def count_gate_pending_substrings(gate_path: Path) -> int:
@@ -314,6 +527,7 @@ def main() -> int:
     ap.add_argument("--days", type=int, default=14, help="Look-back window in days (default 14)")
     ap.add_argument("--json", action="store_true", help="Output JSON instead of text")
     ap.add_argument("--tier-report", action="store_true", help="Standalone model-tier distribution")
+    ap.add_argument("--conductor-report", action="store_true", help="5-conductor audit for the look-back window")
     ap.add_argument(
         "--pressure-report",
         type=Path,
@@ -339,6 +553,14 @@ def main() -> int:
             json.dumps(rep, indent=2, default=str) + "\n", encoding="utf-8"
         )
         print(f"wrote {args.pressure_report}")
+        return 0
+
+    if args.conductor_report:
+        summary = compute_conductor_audit(args.user, args.days)
+        if args.json:
+            print(json.dumps(summary, indent=2, default=str))
+        else:
+            print(format_conductor_audit(summary))
         return 0
 
     summary = compute_rhythm_summary(args.user, args.days)

@@ -45,6 +45,12 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 EVENTS_PATH = REPO_ROOT / "docs" / "skill-work" / "work-cadence" / "work-cadence-events.md"
 ANCHOR = "_(Append below this line.)_"
 KINDS = ("coffee", "coffee_pick", "coffee_conductor_outcome", "dream", "bridge", "harvest", "thanks")
+KNOWN_CONDUCTOR_SLUGS = frozenset(
+    {"toscanini", "furtwangler", "karajan", "kleiber", "bernstein"}
+)
+CONDUCTOR_PICKED_VALUES = frozenset(
+    {"conductor", "E", "D", "D1", "D2", "D3", "D4", "D5"}
+)
 
 HEADER = (
     "# Cadence events\n"
@@ -174,6 +180,59 @@ def _last_event_ts_kind_user(events_path: Path) -> tuple[datetime, str, str] | N
     return None
 
 
+def _normalize_conductor_slug(value: str | None) -> str:
+    if value is None:
+        return ""
+    slug = str(value).strip()
+    if "+" in slug:
+        slug = slug.split("+", 1)[0].strip()
+    return slug
+
+
+def _conductor_shape_warnings(kind: str, kv: dict[str, str]) -> list[str]:
+    warnings: list[str] = []
+    if kind == "coffee_pick":
+        picked = str(kv.get("picked", "")).strip()
+        if picked in CONDUCTOR_PICKED_VALUES:
+            conductor = _normalize_conductor_slug(kv.get("conductor"))
+            if not conductor:
+                warnings.append(
+                    "cadence soft-gate: conductor pick is missing conductor=<slug>. "
+                    "Repair shape: --kv picked=conductor conductor=karajan"
+                )
+            elif conductor not in KNOWN_CONDUCTOR_SLUGS:
+                warnings.append(
+                    "cadence soft-gate: conductor pick uses an unknown conductor slug. "
+                    "Expected one of: toscanini, furtwangler, karajan, kleiber, bernstein."
+                )
+    if kind == "coffee_conductor_outcome":
+        conductor = _normalize_conductor_slug(kv.get("conductor"))
+        verdict = str(kv.get("verdict", "")).strip()
+        has_notebook_ref = bool(str(kv.get("notebook_ref", "")).strip())
+        has_falsify = bool(str(kv.get("falsify", "")).strip())
+        if not conductor:
+            warnings.append(
+                "cadence soft-gate: coffee_conductor_outcome is missing conductor=<slug>. "
+                "Repair shape: --kv verdict=watch conductor=kleiber notebook_ref=docs/path.md"
+            )
+        elif conductor not in KNOWN_CONDUCTOR_SLUGS:
+            warnings.append(
+                "cadence soft-gate: coffee_conductor_outcome uses an unknown conductor slug. "
+                "Expected one of: toscanini, furtwangler, karajan, kleiber, bernstein."
+            )
+        if not verdict:
+            warnings.append(
+                "cadence soft-gate: coffee_conductor_outcome is missing verdict=. "
+                "Repair shape: --kv verdict=watch conductor=kleiber falsify=one-test-line"
+            )
+        if not has_notebook_ref and not has_falsify:
+            warnings.append(
+                "cadence soft-gate: coffee_conductor_outcome should include notebook_ref= or falsify= "
+                "(both preferred) so the pass stays auditably grounded."
+            )
+    return warnings
+
+
 def append_cadence_event(
     kind: str,
     user_id: str,
@@ -214,6 +273,9 @@ def append_cadence_event(
         if k in ("cursor_model", "model_tier"):
             continue
         merged[k] = v
+
+    for warning in _conductor_shape_warnings(kind, merged):
+        print(warning, file=sys.stderr)
 
     if dedupe_seconds is not None and dedupe_seconds > 0:
         prev = _last_event_ts_kind_user(events_path)
@@ -268,7 +330,14 @@ def main() -> int:
         choices=["frontier", "fast", "unknown"],
         help="Capability tier (overrides auto-inference from cursor_model; default: inferred)",
     )
-    ap.add_argument("--kv", nargs="*", default=[], metavar="KEY=VALUE", help="Extra key=value pairs")
+    ap.add_argument(
+        "--kv",
+        nargs="*",
+        action="append",
+        default=[],
+        metavar="KEY=VALUE",
+        help="Extra key=value pairs. May be passed once with many pairs or repeated.",
+    )
     ap.add_argument(
         "--no-auto-park",
         action="store_true",
@@ -278,7 +347,7 @@ def main() -> int:
     args = ap.parse_args()
 
     kv_dict: dict[str, str] = {}
-    for item in args.kv:
+    for item in [entry for group in args.kv for entry in group]:
         if "=" in item:
             k, v = item.split("=", 1)
             kv_dict[k] = v

@@ -13,7 +13,7 @@
 
 | Layer | What it is | Where in this repo |
 |-------|------------|----------------------|
-| **Signal / stance** | Which conductor; continuity | [work-cadence-events.md](../../work-cadence/work-cadence-events.md) — `coffee_pick` with `picked=D` `conductor=<slug>`; optional `focus=` / `arc=` |
+| **Signal / stance** | Which conductor; continuity | [work-cadence-events.md](../../work-cadence/work-cadence-events.md) — `coffee_pick` with `picked=E` `conductor=<slug>` or `picked=conductor` `conductor=<slug>`; optional `focus=` / `arc=` |
 | **Machine / extraction** | Ingest, transcript echoes, page refs | Expert `thread.md` **machine layer**; `raw-input/`; [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md) |
 | **Journal / judgment** | Synthesis, stakes, open seams | `strategy-page` in `experts/<id>/thread.md`, **`chapters/YYYY-MM/days.md`**, journal layer prose |
 | **Test / falsify** | What would change your mind next | **`days.md` Judgment** or a line on the page; optional **expert prediction** / falsifier rows where you already run that discipline |
@@ -45,7 +45,7 @@ flowchart TD
   promote --> gate
 ```
 
-**Minimum “closed” pass:** **pick** + **at least one** of: (a) a **Conductor close** in `chapters/YYYY-MM/days.md` for that day (use [CONDUCTOR-CLOSE-TEMPLATE.md](CONDUCTOR-CLOSE-TEMPLATE.md)), or (b) a **`coffee_conductor_outcome`** line with `verdict=` (§ 3).
+**Minimum “closed” pass:** **pick** + **at least one** of: (a) a **Conductor close** in `chapters/YYYY-MM/days.md` for that day (use [CONDUCTOR-CLOSE-TEMPLATE.md](CONDUCTOR-CLOSE-TEMPLATE.md)), or (b) a **`coffee_conductor_outcome`** line with `conductor=<slug>` + `verdict=` (§ 3).
 
 **Full pass:** the same, plus an explicit **test** line and, when the arc deserves it, **ladder** / **STRATEGY**; **gate** only when the update is **governed** behavior.
 
@@ -57,10 +57,10 @@ After the conductor **orientation** and **notebook** touch (or explicit choice t
 
 ```bash
 python3 scripts/log_cadence_event.py --kind coffee_conductor_outcome -u grace-mar --ok \
-  --kv verdict=watch
+  --kv verdict=watch conductor=kleiber notebook_ref=chapters/2026-04/days.md
 ```
 
-**`verdict=`** (examples): `watch` · `promote` · `shelf` · `no_action` — see [work-cadence-events.md header](../../work-cadence/work-cadence-events.md).
+**`verdict=`** (examples): `watch` · `promote` · `shelf` · `no_action` — see [work-cadence-events.md header](../../work-cadence/work-cadence-events.md). For new logs, include **`conductor=<slug>`** every time, plus **`notebook_ref=`** or **`falsify=`** so the close stays attributable from the ledger alone. If the session ended without that shape, add a repair outcome on the next turn instead of leaving the close implicit.
 
 **Documented optional `kv` (no script schema required; keep values short, token-safe):**
 
