@@ -2,24 +2,24 @@
 
 ## Purpose
 
-Coordinate the `cici-ai` Telegram group as the social/cohort activation surface: announcements, pinned messages, welcome copy, applicant intake prompts, group norms, and chat-derived evidence pointers.
+Coordinate the `cici-ai` Telegram team as the social/cohort activation surface: announcements, pinned messages, welcome copy, applicant intake prompts, team norms, and chat-derived evidence pointers.
 
 This lane helps the operator decide what to say next in Telegram and what needs to be recorded from Telegram. It is not the source of truth for member progress; hand progress facts to [cici-ai-progress](../cici-ai-progress/README.md).
 
 ## Current scope
 
-- Maintain paste-ready group posts and short replies.
-- Track pinned/welcome/group-description state.
+- Maintain paste-ready team posts and short replies.
+- Track pinned/welcome/team-description state.
 - Route applicant introductions and GitHub links into evidence files or the progress dashboard.
 - Keep scholarship/employment/equity language cautious and clearly operator-reviewed.
 - Preserve Telegram evidence as pointers, screenshots, or operator-supplied transcripts.
 
 ## Open loops
 
-- Decide whether to add a one-line group description.
+- Decide whether to add a one-line team description.
 - Create the next Telegram post after the first applicant wave.
 - Define a simple moderation/norms note for beginners asking basic questions.
-- Decide how often the group should receive a progress summary.
+- Decide how often the team should receive a progress summary.
 
 ## Next action
 

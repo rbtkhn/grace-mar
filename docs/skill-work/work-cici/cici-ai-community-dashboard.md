@@ -1,7 +1,7 @@
 # cici-ai Community Dashboard
 
 **Status:** WORK / operator dashboard  
-**Scope:** cici-ai Telegram / Neural Sandbox / GitHub activation loop  
+**Scope:** cici-ai team / Neural Sandbox / GitHub activation loop
 **Boundary:** This dashboard is not Cici's Record. It tracks community activation signals for the Grace-Mar advisor lane only.
 
 ### Owner / cadence
@@ -21,19 +21,20 @@
 
 Track whether the cici-ai community is producing real companion / OB1 / coding / learning activation, not passive joins alone. This dashboard is a WORK surface for operator decisions, coaching focus, and next experiments.
 
-In this project, the Telegram group is a cohort activation surface: it should move people from curiosity into safe first setup, visible troubleshooting, repeatable check-ins, and eventually peer help. Telegram provides the social room; GitHub provides durable artifacts; work-cici records evidence and coaching signals for the operator.
+In this project, the `cici-ai` team is a cohort activation surface: it should move people from curiosity into safe first setup, visible troubleshooting, repeatable check-ins, and eventually peer help. Telegram provides the social room; GitHub provides durable artifacts; work-cici records evidence and coaching signals for the operator.
 
 Do not treat `cici-ai` as Cici's Record, as the canonical repository, or as a vanity audience metric. A member has not "activated" merely by joining.
 
-The first group message frames the cohort as a 10-scholarship opportunity for AI-curious aspiring entrepreneurs. Treat scholarship, employment, equity, and crypto-payment language as offer-sensitive: track it for operator follow-up, but do not convert it into legal or HR commitments inside work-cici.
+The first team message frames the cohort as a 10-scholarship opportunity for AI-curious aspiring entrepreneurs. Treat scholarship, employment, equity, and crypto-payment language as offer-sensitive: track it for operator follow-up, but do not convert it into legal or HR commitments inside work-cici.
 
 ## 2. Source pointers
 
 - [cici-ai-first-task-proof-packet.md](cici-ai-first-task-proof-packet.md)  
 - [cici-ai-weekly-governance-review-template.md](cici-ai-weekly-governance-review-template.md)  
 - [evidence/cici-ai-first-telegram-message-2026-04-30.md](evidence/cici-ai-first-telegram-message-2026-04-30.md)
+- [evidence/cici-ai-next-steps-message-2026-05-01.md](evidence/cici-ai-next-steps-message-2026-05-01.md)
 - [evidence/cici-ai-first-applicant-wave-2026-04-30.md](evidence/cici-ai-first-applicant-wave-2026-04-30.md)
-- [evidence/cici-telegram-cici-ai-group-operator-2026-04-25.md](evidence/cici-telegram-cici-ai-group-operator-2026-04-25.md)  
+- [evidence/cici-telegram-cici-ai-group-operator-2026-04-25.md](evidence/cici-telegram-cici-ai-group-operator-2026-04-25.md)
 - [evidence/cici-telegram-cici-ai-members-snapshot-2026-04-27.md](evidence/cici-telegram-cici-ai-members-snapshot-2026-04-27.md)  
 - [evidence/cici-ai-github-telegram-match-report-2026-04-24.md](evidence/cici-ai-github-telegram-match-report-2026-04-24.md)  
 - [evidence/github-neural-sandbox-cohort-2026-04-24.md](evidence/github-neural-sandbox-cohort-2026-04-24.md)  
@@ -62,6 +63,7 @@ invited
 | Week of | Evidence links reviewed | Invited | Joined | Introduced | Goal stated | First task completed | Returned within 7d | Issue / PR / artifact | Helper behavior | Notes |
 | :--- | :--- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | :--- |
 | 2026-04-30 | [first message](evidence/cici-ai-first-telegram-message-2026-04-30.md); [first applicant wave](evidence/cici-ai-first-applicant-wave-2026-04-30.md) | 10 | 5 | 5 | 0 | 0 | 0 | 0 | 0 | Confidence B from operator-supplied Telegram text. Five applicants introduced themselves and shared GitHub accounts; OB1 fork / first task not yet evidenced. |
+| 2026-05-01 | [Telegram self-claims](evidence/cici-ai-telegram-self-claims-2026-05-01.md); [GitHub match report](evidence/cici-ai-github-telegram-match-report-2026-04-24.md) | 0 | 4 | 4 | 0 | 0 | 0 | 0 | 0 | Confidence B from operator-supplied Telegram text. Four direct self-claims confirm existing GitHub mappings; two messages include fork signals, but first task is still not evidenced. |
 | YYYY-MM-DD |  |  |  |  |  |  |  |  |  |  |
 |  |  |  |  |  |  |  |  |  |  |  |
 |  |  |  |  |  |  |  |  |  |  |  |
@@ -112,7 +114,7 @@ Each completed weekly dashboard row should either link to a weekly governance re
 
 ### What worked
 
-- Operator screenshot evidence indicates the `cici-ai` launch sequence successfully moved from copy to live setup: pinned message, welcome, join-link evidence, group avatar, and repo-committed brand assets.
+- Operator screenshot evidence indicates the `cici-ai` launch sequence successfully moved from copy to live setup: pinned message, welcome, join-link evidence, team avatar, and repo-committed brand assets.
 
 ### What confused people
 
@@ -121,6 +123,7 @@ Each completed weekly dashboard row should either link to a weekly governance re
 ### What produced action
 
 - The first scholarship message produced five visible applicant introductions with GitHub accounts shared: Jon, Jayr, Xavier, Pango, and Troy. Treat this as early funnel activation, not proof of OB1 fork or first task completion.
+- The new next-steps message clarifies the roles of OB1 and Cici: member-owned workspace versus community guide/reference path.
 
 ### What needs a simpler prompt
 
@@ -128,7 +131,7 @@ Each completed weekly dashboard row should either link to a weekly governance re
 
 ### What should be retired or simplified
 
-- Treat the optional one-line group description as a parked polish item, not a blocker for the launch being live.
+- Treat the optional one-line team description as a parked polish item, not a blocker for the launch being live.
 
 ## 7. Next experiment
 

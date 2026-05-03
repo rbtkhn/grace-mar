@@ -17,13 +17,18 @@
 - **`cici-ai` next Telegram post drafted:** [cici-ai-telegram/next-ob1-fork-proof-post-2026-04-30.md](cici-ai-telegram/next-ob1-fork-proof-post-2026-04-30.md) - paste-ready ask for first-wave applicants to share an OB1 fork URL or screenshot, with no-shame beginner support and no-secrets warning.
 - **`cici-ai` work lanes created:** [cici-ai-lanes.md](cici-ai-lanes.md) plus [cici-ai-telegram](cici-ai-telegram/README.md), [cici-ai-core](cici-ai-core/README.md), and [cici-ai-progress](cici-ai-progress/README.md) - three operator lanes for Telegram communication, Cici repo/governance core, and applicant/cohort progress.
 - **`cici-ai` first applicant wave recorded:** [evidence/cici-ai-first-applicant-wave-2026-04-30.md](evidence/cici-ai-first-applicant-wave-2026-04-30.md) - five introductions with GitHub accounts shared (Jon, Jayr, Xavier, Pango, Troy); dashboard updated as introduced/GitHub-shared, not first-task complete.
-- **`cici-ai` first Telegram message recorded:** [evidence/cici-ai-first-telegram-message-2026-04-30.md](evidence/cici-ai-first-telegram-message-2026-04-30.md) - first group post frames the cohort as 10 scholarships for AI-curious aspiring entrepreneurs, with subscription sponsorship, possible August employment/equity, crypto payment, and initial application steps (intro, GitHub/experience, upstream OB1 fork).
-- **Operator screenshots ingest:** [evidence/cici-operator-screenshots-ingest-2026-04-30.md](evidence/cici-operator-screenshots-ingest-2026-04-30.md) + JPGs - Cici janitor safety thread (explicit transient metadata + dry-run delete) and `cici-ai` Telegram launch closeout (pin/welcome/join-link/avatar/brand assets; group description optional).
-- **`cici-ai` project role clarified:** [cici-community-mission-operator.md](cici-community-mission-operator.md) now defines the Telegram group as the social/cohort activation surface for OB1 / Cici setup - not Cici's Record, not the source-of-truth repo, and not a vanity join metric.
+- **`cici-ai` first Telegram message recorded:** [evidence/cici-ai-first-telegram-message-2026-04-30.md](evidence/cici-ai-first-telegram-message-2026-04-30.md) - first team post frames the cohort as 10 scholarships for AI-curious aspiring entrepreneurs, with subscription sponsorship, possible August employment/equity, crypto payment, and initial application steps (intro, GitHub/experience, upstream OB1 fork).
+- **Operator screenshots ingest:** [evidence/cici-operator-screenshots-ingest-2026-04-30.md](evidence/cici-operator-screenshots-ingest-2026-04-30.md) + JPGs - Cici janitor safety thread (explicit transient metadata + dry-run delete) and `cici-ai` Telegram launch closeout (pin/welcome/join-link/avatar/brand assets; team description optional).
+- **`cici-ai` project role clarified:** [cici-community-mission-operator.md](cici-community-mission-operator.md) now defines the Telegram team as the social/cohort activation surface for OB1 / Cici setup - not Cici's Record, not the source-of-truth repo, and not a vanity join metric.
+
+### 2026-05-01
+
+- **`cici-ai` Telegram self-claims:** [evidence/cici-ai-telegram-self-claims-2026-05-01.md](evidence/cici-ai-telegram-self-claims-2026-05-01.md) - four direct self-introductions with GitHub accounts shared (Ka Kyle, Ell, Kekerv, Hannah); direct confirmation for several existing GitHub↔Telegram mappings and two fork signals.
+- **`cici-ai` next steps message:** [evidence/cici-ai-next-steps-message-2026-05-01.md](evidence/cici-ai-next-steps-message-2026-05-01.md) - framing post splits OB1 as personal workspace and Cici as community guide/reference path; emphasizes visible evidence over mystery judgment.
 
 ### 2026-04-28
 
-- **cici-ai Telegram copy (operator):** [telegram-cici-ai-pinned-and-welcome-copy.md](telegram-cici-ai-pinned-and-welcome-copy.md) — one **pinned** block (group info + rules/norms) + one **@all** intro (purpose, next steps, gratitude, encouragement) + optional Bisaya closer.
+- **cici-ai Telegram copy (operator):** [telegram-cici-ai-pinned-and-welcome-copy.md](telegram-cici-ai-pinned-and-welcome-copy.md) — one **pinned** block (team info + rules/norms) + one **@all** intro (purpose, next steps, gratitude, encouragement) + optional Bisaya closer.
 
 ### 2026-04-27
 
@@ -33,7 +38,7 @@
 ### 2026-04-25
 
 - **Thanks park closure (`pr8-preflight-review-pause`):** [PR #8](https://github.com/Xavier-x01/Cici/pull/8) (janitor transient purge + spec) already **merged** to `main` (`f8676b9`); no further preflight action on grace-mar. Operator note only.
-- **Telegram group `cici-ai` (operator):** [evidence/cici-telegram-cici-ai-group-operator-2026-04-25.md](evidence/cici-telegram-cici-ai-group-operator-2026-04-25.md) — Cici **created** the group; hobbyists, OB1 build collaboration; operator **invite** [https://t.me/+ygaDSQxwXV1mMjA7](https://t.me/+ygaDSQxwXV1mMjA7) recorded. [cici-work-profile.md](cici-work-profile.md) role snapshot; [cici-community-mission-operator.md](cici-community-mission-operator.md) named-channel line.
+- **Telegram group `cici-ai` (operator):** [evidence/cici-telegram-cici-ai-group-operator-2026-04-25.md](evidence/cici-telegram-cici-ai-group-operator-2026-04-25.md) — Cici **created** the team; hobbyists, OB1 build collaboration; operator **invite** [https://t.me/+ygaDSQxwXV1mMjA7](https://t.me/+ygaDSQxwXV1mMjA7) recorded. [cici-work-profile.md](cici-work-profile.md) role snapshot; [cici-community-mission-operator.md](cici-community-mission-operator.md) named-channel line.
 
 ### 2026-04-26
 

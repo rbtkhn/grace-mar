@@ -14,7 +14,7 @@ In short: **Telegram creates motion; Core keeps the path safe; Progress proves w
 
 | Sequence | Lane | Purpose | Primary questions |
 |---:|---|---|---|
-| 1 | [cici-ai-telegram](cici-ai-telegram/README.md) | Telegram group operations, posts, norms, applicant intake, and community communication. | What should be posted? Who needs a reply? What needs to be recorded from chat? |
+| 1 | [cici-ai-telegram](cici-ai-telegram/README.md) | Telegram team operations, posts, norms, applicant intake, and community communication. | What should be posted? Who needs a reply? What needs to be recorded from chat? |
 | 2 | [cici-ai-core](cici-ai-core/README.md) | Cici/OB1 instance architecture, prompts, governed-state, repo migration, safety, and technical implementation. | What should change in the repo? What needs proposal/approval? What is safe to automate? |
 | 3 | [cici-ai-progress](cici-ai-progress/README.md) | Member progress, applicant table, task completion, proof packets, scholarships, and cohort metrics. | Who has done what? What is the next task? What evidence supports the status? |
 

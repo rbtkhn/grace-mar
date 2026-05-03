@@ -12,8 +12,8 @@
 ## Aggregate summary
 
 - GitHub accounts assessed: **10**
-- High-confidence matches: **6**
-- Probable (needs confirmation): **3**
+- High-confidence matches: **10**
+- Probable (needs confirmation): **2**
 - Unmatched: **1**
 
 ## Match table (confidence-tiered)
@@ -21,13 +21,13 @@
 | GitHub account | Repo | Telegram display name (snapshot) | Confidence | Notes |
 |---|---|---|---|---|
 | [Troy2171](https://github.com/Troy2171) | [Xyber](https://github.com/Troy2171/Xyber) | `Troy` | High | Direct name match. |
-| [Ka-kyle](https://github.com/Ka-kyle) | [Namei](https://github.com/Ka-kyle/Namei) | `Ka Kyle` | High | Direct handle-to-display-name match. |
+| [Ka-kyle](https://github.com/Ka-kyle) | [Namei](https://github.com/Ka-kyle/Namei) | `Ka Kyle` | High | Direct self-claim on 2026-05-01 confirms the mapping. |
 | [diWitty00](https://github.com/diWitty00) | [Witty](https://github.com/diWitty00/Witty) | `Diwitty` | High | Case/spacing variant only. |
 | [PenguinPH739](https://github.com/PenguinPH739) | [Pango](https://github.com/PenguinPH739/Pango) | `Penguin` | High | Direct nickname stem match. |
-| [jhon-ell16](https://github.com/jhon-ell16) | [ell](https://github.com/jhon-ell16/ell) | `Ell` | High | Repo/user stem match. |
-| [Adelle-sims](https://github.com/Adelle-sims) | [Kerv](https://github.com/Adelle-sims/Kerv) | `Kekervs` | High | Display name contains `kerv` stem. |
+| [jhon-ell16](https://github.com/jhon-ell16) | [ell](https://github.com/jhon-ell16/ell) | `Ell` | High | Direct self-claim on 2026-05-01 confirms the mapping. |
+| [Adelle-sims](https://github.com/Adelle-sims) | [Kerv](https://github.com/Adelle-sims/Kerv) | `Kekervs` | High | Direct self-claim on 2026-05-01 confirms the mapping. |
 | [jiaj259](https://github.com/jiaj259) | [Gabeljah](https://github.com/jiaj259/Gabeljah) | `Jiyah` | Probable | Phonetic resemblance; not directly proven. |
-| [nana-rpix](https://github.com/nana-rpix) | [Orion](https://github.com/nana-rpix/Orion) | `Han nah` | Probable | Possible `nana`/name overlap; weak evidence. |
+| [nana-rpix](https://github.com/nana-rpix) | [Orion](https://github.com/nana-rpix/Orion) | `Han nah` | High | Direct self-claim on 2026-05-01 confirms the mapping and adds a fork signal. |
 | [Mia-yana](https://github.com/Mia-yana) | [Yana](https://github.com/Mia-yana/Yana) | `Y` | Probable | Could be shorthand for Yana; ambiguous. |
 | [Chloe05688](https://github.com/Chloe05688) | [Cattylou](https://github.com/Chloe05688/Cattylou) | — | Unmatched | No clear Telegram display-name correlate in snapshot. |
 
@@ -53,3 +53,4 @@ Not in the [2026-04-27 member list](cici-telegram-cici-ai-members-snapshot-2026-
 |---|---|
 | 2026-04-24 | First aggregate tiered match report (10 GitHub accounts vs Telegram snapshot). |
 | 2026-04-28 | Add post-snapshot row: `Jonathan` ↔ [JK3303](https://github.com/JK3303) (operator, confidence B). |
+| 2026-05-01 | Four direct Telegram self-claims confirm `Ka Kyle` ↔ `Ka-kyle`, `Ell` ↔ `jhon-ell16`, `Kekervs` ↔ `Adelle-sims`, and `Han nah` ↔ `nana-rpix`; counts updated. |

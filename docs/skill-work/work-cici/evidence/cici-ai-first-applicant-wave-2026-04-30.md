@@ -12,13 +12,13 @@ This evidence supports the dashboard stages **introduced self** and **GitHub acc
 
 ## Applicant table
 
-| # | Display name / alias | Country | Coding experience self-report | GitHub account shared | Notes |
-|---|---|---|---|---|---|
-| 1 | Jon | US | "a little basic experience with coding" | <https://github.com/JK3303> | Created a GitHub account. |
-| 2 | Jayr | Philippines | no coding experience; willing to learn | <https://github.com/salajosefinojr-sys> | Says GitHub account already made. |
-| 3 | Xavier | Philippines | zero coding experience; "now having fun because of Claude" | <https://github.com/Xavier-x01> | Cici/Xavier also participates in the group. |
-| 4 | Pango | Philippines | little coding experience | <https://github.com/PenguinPH739> |  |
-| 5 | Troy | Philippines | no coding knowledge | <https://github.com/Troy2171> |  |
+| # | Display name / alias | Country | Platform | Coding experience self-report | GitHub account shared | Notes |
+|---|---|---|---|---|---|---|
+| 1 | Jon | US |  | "a little basic experience with coding" | <https://github.com/JK3303> | Created a GitHub account. |
+| 2 | Jayr | Philippines |  | no coding experience; willing to learn | <https://github.com/salajosefinojr-sys> | Says GitHub account already made. |
+| 3 | Xavier | Philippines | Claude | zero coding experience; "now having fun because of Claude" | <https://github.com/Xavier-x01> | Cici/Xavier also participates in the group. |
+| 4 | Pango | Philippines |  | little coding experience | <https://github.com/PenguinPH739> |  |
+| 5 | Troy | Philippines |  | no coding knowledge | <https://github.com/Troy2171> |  |
 
 ## Raw introductions
 
