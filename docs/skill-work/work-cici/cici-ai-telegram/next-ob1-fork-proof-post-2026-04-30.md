@@ -1,13 +1,13 @@
-# Next Telegram post - OB1 fork proof
+# Next Telegram post - OB1 fork proof and step two
 
 **Date drafted:** 2026-04-30
 **Lane:** [cici-ai-telegram](README.md)
-**Purpose:** Move first-wave applicants from introduction + GitHub account shared into the next visible setup artifact: an OB1 fork URL or screenshot.
+**Purpose:** Congratulate members who completed step one, then move first-wave applicants from introduction + GitHub account shared into the next visible setup artifact: an OB1 fork URL or screenshot, and then into step two.
 **Boundary:** WORK-layer operator copy. This is not Cici's Record and not a scholarship qualification decision.
 
 ## Operator note
 
-Use this after the first applicant wave. Keep the ask narrow: one artifact only. Do not ask beginners to explain the whole system yet; the point is to convert interest into visible setup progress without shame.
+Use this after the first applicant wave or after a fork-confirmation batch. Keep the ask narrow: one artifact for step one, then one personal goal for step two. Do not ask beginners to explain the whole system yet; the point is to convert interest into visible setup progress without shame.
 
 Related progress lane: [cici-ai-progress](../cici-ai-progress/README.md).
 Evidence: [first applicant wave](../evidence/cici-ai-first-applicant-wave-2026-04-30.md), [community dashboard](../cici-ai-community-dashboard.md).
@@ -28,26 +28,30 @@ Do not mark scholarship readiness, first-task completion, or helper behavior fro
 ```text
 @all
 
-Great first step, everyone. Thank you for introducing yourselves and sharing your GitHub accounts.
+Great first step, everyone. Thank you for introducing yourselves, sharing your GitHub accounts, and forking OB1.
 
-Now we move to the next simple step: **fork OB1 into your own GitHub account**.
+That was step one.
 
-Please reply in this group with **one** of these:
+Now we move to **step two**: choose **one personal goal** for your own OB1 instance.
 
-1. Your OB1 fork URL
-2. A screenshot showing the OB1 fork in your GitHub account
+Your goal should be something real from your work, school, or personal life that OB1 can help solve or automate.
 
-Upstream repo to fork:
-https://github.com/NateBJones-Projects/OB1
+Optional: rename your OB1 instance to a name you choose, so your repo feels like your own. For example, `cici-ai` is the group name we use here, but your instance can have its own name.
 
-This is not a test of coding skill. This is just proof that your workspace exists. If you are new and get stuck, post a screenshot of where you are stuck and we will help.
+Please reply in this group with **one short sentence** for your goal.
+
+Examples:
+- track my class deadlines
+- organize my client follow-ups
+- turn my notes into a weekly review
+- build a study plan for my exams
+
+This is not a test of coding skill. It is the first step toward making your OB1 instance useful in real life. If you are stuck, post a screenshot or a short question and we will help.
 
 Important:
 - Do not post passwords, API keys, tokens, or private Supabase details.
 - Do not worry about being beginner level. Beginners are welcome here.
 - One clear update is better than staying silent.
-
-Once your fork is visible, we can give the next small task.
 ```
 
 ## Optional shorter version
@@ -55,9 +59,13 @@ Once your fork is visible, we can give the next small task.
 ```text
 @all
 
-Next step: please fork OB1 and reply here with your fork URL or a screenshot.
+Great first step, everyone. That was step one.
 
-Repo: https://github.com/NateBJones-Projects/OB1
+Now for step two: please reply with one personal goal for your OB1 instance.
+
+Keep it short and real: something from school, work, or personal life that OB1 can help solve or automate.
+
+Optional: rename your OB1 instance to a name you choose, so your repo feels like your own. For example, `cici-ai` is the group name we use here, but your instance can have its own name.
 
 No shame if you are stuck. Post the screenshot/error and we will help. Do not share passwords, API keys, or tokens.
 ```

@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Track member progress, applicant status, first-task proof, scholarship readiness, and cohort health for the `cici-ai` group.
+Track member progress, applicant status, first-task proof, scholarship readiness, and cohort health for the `cici-ai` team.
 
 This lane turns Telegram introductions and GitHub activity into a clear operator dashboard without overstating skill, eligibility, employment, or payment commitments.
 
@@ -28,7 +28,9 @@ Update the community dashboard with a lane-owned applicant table: name, country,
 ## Key references
 
 - [cici-ai-community-dashboard.md](../cici-ai-community-dashboard.md)
+- [cici-ai-lane-roster-format.md](../cici-ai-lane-roster-format.md)
 - [cici-ai-first-task-proof-packet.md](../cici-ai-first-task-proof-packet.md)
+- [cici-ai-daily-report-template.md](../cici-ai-daily-report-template.md)
 - [cici-ai-weekly-governance-review-template.md](../cici-ai-weekly-governance-review-template.md)
 - [reviews/README.md](../reviews/README.md)
 - [evidence/cici-ai-first-applicant-wave-2026-04-30.md](../evidence/cici-ai-first-applicant-wave-2026-04-30.md)
