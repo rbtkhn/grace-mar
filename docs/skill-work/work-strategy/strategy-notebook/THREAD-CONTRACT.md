@@ -1,4 +1,4 @@
-# Thread contract — strategy notebook
+﻿# Thread contract â€” strategy-codex
 <!-- word_count: 392 -->
 
 WORK only; not Record.
@@ -9,11 +9,11 @@ WORK only; not Record.
 
 - **Threads** are the month-bounded continuity surface; **pages** are the portable analytical objects; **raw-input** is the literal SSOT.
 - The canonical thread shape lives in [strategy-expert-template.md](strategy-expert-template.md#thread-template).
-- Month continuity in the journal layer is a short bookended synthesis of that month’s `strategy-page` set.
+- Month continuity in the journal layer is a short bookended synthesis of that monthâ€™s `strategy-page` set.
 
 ## Thread-page binding
 
-**Expert surfaces are siblings, not a hierarchy:** **Thread / Continuity** tracks temporal narrative and analytical continuity; **Pages / Work Product** are focused expert-associated analytical objects. Keep a small bidirectional index, but do not duplicate the page.
+**Author surfaces are siblings, not a hierarchy:** **Thread / Continuity** tracks temporal narrative and analytical continuity; **Pages / Work Product** are focused author-associated analytical objects. Keep a small bidirectional index, but do not duplicate the page.
 
 **Monthly thread files** use these continuity bullets in the machine index:
 
@@ -34,9 +34,9 @@ WORK only; not Record.
 
 **Thread-embedded `strategy-page` blocks** are the main analytical pages for the month. Use the fence shape in [strategy-expert-template.md](strategy-expert-template.md#strategy-page-template), and keep the month file as the continuity container.
 
-**Drafting flow:** thread composition should be driven by that month’s page set, with a compact continuity summary and lifted quotes only when they support the month narrative.
+**Drafting flow:** thread composition should be driven by that monthâ€™s page set, with a compact continuity summary and lifted quotes only when they support the month narrative.
 
-**Machine extraction:** keep the script-managed block between the `<!-- strategy-expert-thread:start -->` and `<!-- strategy-expert-thread:end -->` comments.
+**Machine extraction:** keep the script-managed block between the `<!-- strategy-author-thread:start -->` and `<!-- strategy-author-thread:end -->` comments.
 
 ## Where the rules live
 
@@ -44,17 +44,17 @@ WORK only; not Record.
 |-------|-----------------|
 | Thread scaffold | [strategy-expert-template.md#thread-template](strategy-expert-template.md#thread-template) |
 | Thread-embedded page fence | [strategy-expert-template.md#strategy-page-template](strategy-expert-template.md#strategy-page-template) |
-| Month-to-month continuity rules | [STRATEGY-NOTEBOOK-ARCHITECTURE.md § Thread](STRATEGY-NOTEBOOK-ARCHITECTURE.md#thread-terminology) |
+| Month-to-month continuity rules | [STRATEGY-NOTEBOOK-ARCHITECTURE.md Â§ Thread](STRATEGY-NOTEBOOK-ARCHITECTURE.md#thread-terminology) |
 | Page vs thread hub | [NOTEBOOK-CONTRACT.md](NOTEBOOK-CONTRACT.md) |
-| Validation | From repo root: `python3 scripts/validate_strategy_pages.py` — [validate_strategy_pages.py](../../../../scripts/validate_strategy_pages.py) |
+| Validation | From repo root: `python3 scripts/validate_strategy_pages.py` â€” [validate_strategy_pages.py](../../../../scripts/validate_strategy_pages.py) |
 | Machine **`### Page references`** | [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md#thread-terminology) (machine layer) |
 | Trace and receipts (script runs) | [STRATEGY-NOTEBOOK-TRACE-CONTRACT.md](STRATEGY-NOTEBOOK-TRACE-CONTRACT.md) |
 | Page update operations (script / propose) | [STRATEGY-NOTEBOOK-PAGE-UPDATE-CONTRACT.md](STRATEGY-NOTEBOOK-PAGE-UPDATE-CONTRACT.md) |
 
-## Multi-expert pages
+## Multi-author pages
 
-When several experts address the same page, the **same `id=`** appears in each expert’s **thread file for that month** (see [watches/README.md](watches/README.md)). This is intentional duplication for per-lane reading, not multiple competing sources of truth.
+When several authors address the same page, the **same `id=`** appears in each authorâ€™s **thread file for that month** (see [watches/README.md](watches/README.md)). This is intentional duplication for per-lane reading, not multiple competing sources of truth.
 
 ## Thread month segments
 
-**Canonical layout:** one month file per expert when possible; legacy `thread.md` only while migrating.
+**Canonical layout:** one month file per author when possible; legacy `thread.md` only while migrating.

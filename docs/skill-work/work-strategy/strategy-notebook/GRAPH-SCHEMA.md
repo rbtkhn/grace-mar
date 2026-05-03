@@ -1,4 +1,4 @@
-# Strategy notebook — derived graph schema (v1)
+﻿# strategy-codex â€” derived graph schema (v1)
 <!-- word_count: 213 -->
 
 WORK only; not Record. The graph is **rebuilt** from expert `thread.md` content via [strategy_page_reader.py](../../../../scripts/strategy_page_reader.py); do not hand-edit [graph.json](../../../../artifacts/work-strategy/strategy-notebook/graph.json).
@@ -18,20 +18,20 @@ WORK only; not Record. The graph is **rebuilt** from expert `thread.md` content 
 | `type` | `id` pattern | Other fields |
 |--------|----------------|-------------|
 | `page` | Unique per **appearance**: `{expert_id}::{page_id}` | `page_id`, `expert_id`, `date`, `watch` (may be empty) |
-| `expert` | `expert:{expert_id}` | — |
-| `watch` | `watch:{watch_id}` | — |
+| `expert` | `expert:{expert_id}` | â€” |
+| `watch` | `watch:{watch_id}` | â€” |
 
 ## Edge types (v1)
 
 | `type` | `from` | `to` |
 |--------|--------|------|
-| `belongs_to_expert` | page id | `expert:…` |
-| `belongs_to_watch` | page id (only if `watch` non-empty) | `watch:…` |
+| `belongs_to_expert` | page id | `expert:â€¦` |
+| `belongs_to_watch` | page id (only if `watch` non-empty) | `watch:â€¦` |
 
 ## Generated views (same builder)
 
-- **`views/watch-clusters.json`**: `Record<string, string[]>` — watch id → list of `page_id` (deduped) appearing under that watch.
-- **`views/expert-convergence.json`**: `Record<string, string[]>` — `page_id` **→** expert ids when the same `page_id` appears in more than one expert thread (polyphony / duplicate blocks).
+- **`views/watch-clusters.json`**: `Record<string, string[]>` â€” watch id â†’ list of `page_id` (deduped) appearing under that watch.
+- **`views/expert-convergence.json`**: `Record<string, string[]>` â€” `page_id` **â†’** expert ids when the same `page_id` appears in more than one expert thread (polyphony / duplicate blocks).
 
 ## Rebuild
 

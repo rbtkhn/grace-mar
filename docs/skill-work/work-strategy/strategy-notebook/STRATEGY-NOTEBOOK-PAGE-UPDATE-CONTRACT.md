@@ -1,4 +1,4 @@
-# Strategy notebook — page update operations contract
+﻿# strategy-codex — page update operations contract
 <!-- word_count: 271 -->
 
 WORK only; not Record. **Source of truth** is still Markdown (`strategy-page` fences, `days.md`, etc.). This document names **governed operation labels** for scripted or proposed changes so evolution is testable and inspectable — not a license for silent bulk rewrites.
@@ -19,7 +19,7 @@ WORK only; not Record. **Source of truth** is still Markdown (`strategy-page` fe
 
 ## Default for `strategy_page.py`
 
-- Default **`APPEND`**: inserts a new `strategy-page` block (scaffold) per expert thread.
+- Default **`APPEND`**: inserts a new `strategy-page` block (scaffold) per author thread.
 
 ## Proposals (future MCP / agents)
 

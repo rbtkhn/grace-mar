@@ -1,4 +1,4 @@
-# Notebook contract - strategy notebook
+﻿# Notebook contract - strategy-codex
 <!-- word_count: 372 -->
 
 WORK only; not Record.
@@ -8,7 +8,7 @@ WORK only; not Record.
 ## Center of gravity
 
 - **Pages** are the primary analytical unit; **threads** are the month-bounded continuity surface; **raw-input** is the literal SSOT.
-- The canonical page shapes live in [strategy-expert-template.md](strategy-expert-template.md): [refined page](strategy-expert-template.md#refined-page-template) and [strategy page](strategy-expert-template.md#strategy-page-template).
+- The canonical page shapes live in the legacy-named [strategy-expert-template.md](strategy-expert-template.md): [refined page](strategy-expert-template.md#refined-page-template) and [strategy page](strategy-expert-template.md#strategy-page-template).
 - Month continuity in the thread journal layer is a short bookended synthesis of that month's `strategy-page` set. See [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md#thread-terminology) and the thread section of [strategy-expert-template.md](strategy-expert-template.md#thread-template).
 
 **Why this matters:** Future agents need one clean distinction before they write: use raw-input and refined pages to preserve and cite what was said; use thread-embedded `strategy-page` blocks to compose what the notebook thinks. That split keeps evidence, continuity, and judgment from collapsing into one ambiguous file.
@@ -19,7 +19,7 @@ WORK only; not Record.
 
 ## Page-thread binding
 
-**Expert surfaces are siblings, not a hierarchy:** **Thread / Continuity** tracks temporal narrative and analytical continuity; **Pages / Work Product** are focused expert-associated analytical objects. Keep a small bidirectional index, but do not duplicate the page.
+**Author surfaces are siblings, not a hierarchy:** **Thread / Continuity** tracks temporal narrative and analytical continuity; **Pages / Work Product** are focused author-associated analytical objects. Keep a small bidirectional index, but do not duplicate the page.
 
 **Standalone refined pages** use these continuity bullets in `### Appendix`:
 
@@ -27,7 +27,7 @@ WORK only; not Record.
 - **Thread file:** [experts/<expert_id>/<expert_id>-thread-YYYY-MM.md](experts/<expert_id>/<expert_id>-thread-YYYY-MM.md)  <!-- or legacy thread.md -->
 - **Thread month:** `YYYY-MM`
 - **Thread role:** `new-thesis` | `update` | `contradiction` | `falsifier` | `synthesis` | `carry-forward`
-- **Continuity delta:** One sentence naming what this page changes, clarifies, or carries forward in the expert continuity.
+- **Continuity delta:** One sentence naming what this page changes, clarifies, or carries forward in the author continuity.
 ```
 
 **Thread month segments** should carry a compact page index when adopted:
@@ -40,11 +40,11 @@ WORK only; not Record.
   delta: One sentence saying what the page contributes to continuity.
 ```
 
-The thread index **does not duplicate** the page. It answers: *why does this page matter to this expert's temporal continuity?*
+The thread index **does not duplicate** the page. It answers: *why does this page matter to this author's temporal continuity?*
 
 **Drafting flow:** before picking the excerpt body for a refined page, reduce the prior month thread files into a bounded context packet. The packet is a compose aid only: it orients quote selection and synthesis, while `raw-input/` remains the literal SSOT.
 
-**Source-first ingest:** `raw-input/` may hold transcripts, essays, posts, bundles, or other captures even when the speaker or outlet does **not** map to an existing expert folder. Keep it unthreaded unless later routing assigns it to an existing lane.
+**Source-first ingest:** `raw-input/` may hold transcripts, essays, posts, bundles, or other captures even when the speaker or outlet does **not** map to an existing author folder. Keep it unthreaded unless later routing assigns it to an existing lane.
 
 **Selective backfill rule:** When using archive or feed discovery to populate `raw-input/`, treat the archive as a discovery index, not a completeness mandate. Backfill the substantial items you want preserved; leave light, repetitive, or low-signal archive-visible items out when that is the better editorial choice.
 
@@ -58,17 +58,17 @@ Use this file as the routing hub. If another notebook document appears to duplic
 | Refined page scaffold | [strategy-expert-template.md#refined-page-template](strategy-expert-template.md#refined-page-template) |
 | Thread layers (journal vs machine), parse contract | [STRATEGY-NOTEBOOK-ARCHITECTURE.md § Thread](STRATEGY-NOTEBOOK-ARCHITECTURE.md#thread-terminology) |
 | Backfill source-family routing | [raw-input/BACKFILL-SOURCES.md](raw-input/BACKFILL-SOURCES.md) |
-| `watch=` and multi-expert duplicate pages | [watches/README.md](watches/README.md) (page format) |
+| `watch=` and multi-author duplicate pages | [watches/README.md](watches/README.md) (page format) |
 | Validation | From repo root: `python3 scripts/validate_strategy_pages.py` - [validate_strategy_pages.py](../../../../scripts/validate_strategy_pages.py) |
 | Machine **`### Page references`** | [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md#thread-terminology) (machine layer) |
-| Bundled read-only multi-expert snapshots | [compiled-views/README.md](compiled-views/README.md) - **derived**, not SSOT |
+| Bundled read-only multi-author snapshots | [compiled-views/README.md](compiled-views/README.md) - **derived**, not SSOT |
 | Trace and receipts (script runs) | [STRATEGY-NOTEBOOK-TRACE-CONTRACT.md](STRATEGY-NOTEBOOK-TRACE-CONTRACT.md) |
 | Page update operations (script / propose) | [STRATEGY-NOTEBOOK-PAGE-UPDATE-CONTRACT.md](STRATEGY-NOTEBOOK-PAGE-UPDATE-CONTRACT.md) |
 | Derived graph (rebuild) | [GRAPH-SCHEMA.md](GRAPH-SCHEMA.md), `build_strategy_notebook_graph.py` |
 
-## Multi-expert pages
+## Multi-author pages
 
-When several experts address the same page, the **same `id=`** appears in each expert's **thread file for that month** (see [watches/README.md](watches/README.md)). This is **intentional** duplication for per-lane reading; **not** multiple competing sources of truth.
+When several authors address the same page, the **same `id=`** appears in each author's **thread file for that month** (see [watches/README.md](watches/README.md)). This is **intentional** duplication for per-lane reading; **not** multiple competing sources of truth.
 
 ## Refined pages (standalone `*-page-*.md`)
 

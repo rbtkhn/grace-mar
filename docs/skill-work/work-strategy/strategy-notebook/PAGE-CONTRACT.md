@@ -1,4 +1,4 @@
-# Page contract — strategy notebook
+﻿# Page contract — strategy-codex
 <!-- legacy redirect stub; canonical hub is NOTEBOOK-CONTRACT.md -->
 
 WORK only; not Record.

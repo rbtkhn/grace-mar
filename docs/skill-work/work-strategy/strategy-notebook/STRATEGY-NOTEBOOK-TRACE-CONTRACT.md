@@ -1,4 +1,4 @@
-# Strategy notebook — trace and receipts contract (v1)
+﻿# strategy-codex — trace and receipts contract (v1)
 <!-- word_count: 350 -->
 
 WORK only; not Record. **Canonical** judgment lives in Git Markdown (expert `thread.md`, `strategy-page` fences, `chapters/…/days.md`). This contract describes **append-only machine receipts** for notebook-affecting commands so runs are **inspectable** and **separate** from [FOLD-LEARNING.md](FOLD-LEARNING.md) / `strategy-fold-events.jsonl` and [artifacts/work-strategy/strategy-observability.json](../../../../artifacts/work-strategy/strategy-observability.json) (separate channels; optional timestamp cross-link only).
@@ -30,7 +30,7 @@ WORK only; not Record. **Canonical** judgment lives in Git Markdown (expert `thr
 | `token_count` | number or null | If available. |
 | `cost_usd` | number or null | If available. |
 | `warning_flags` | array of string | e.g. `["missing_thread_file"]` |
-| `details` | object | Free-form: `page_id`, `expert_ids`, `recipe_id`, etc. |
+| `details` | object | Free-form: `page_id`, `author_ids`, `recipe_id`, etc. |
 | `error` | string or null | Set when `status` is `failed`. |
 
 ## OpenTelemetry / GenAI alignment (non-blocking)

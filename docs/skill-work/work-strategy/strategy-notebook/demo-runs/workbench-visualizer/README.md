@@ -1,12 +1,12 @@
-# Workbench — Strategy notebook visualizer (pilot)
+﻿# Workbench â€” strategy-codex visualizer (pilot)
 <!-- word_count: 389 -->
 
 **Status:** **Workbench pilot artifact** (WORK / demo). **Not** the Record, **not** EVIDENCE, **not** a merge path, **not** a gate effect.
 
-**Purpose:** A **static, dependency-free** map of how major strategy-notebook surfaces relate (experts, minds, knots / graph, state threads, watches, compiled views, demo runs, inbox, and key contracts). The browser loads a **pre-built JSON fixture**; it does not walk the tree at runtime. The fixture is **generated** from the live notebook tree (see [GENERATED-FIXTURE.md](GENERATED-FIXTURE.md)). Use it to **see structure** and to practice the Workbench loop: generate → run → inspect → revise → [workbench receipt](../../../../work-dev/workbench/WORKBENCH-RECEIPT-SPEC.md) → operator review.
+**Purpose:** A **static, dependency-free** map of how major strategy-notebook surfaces relate (experts, minds, knots / graph, state threads, watches, compiled views, demo runs, inbox, and key contracts). The browser loads a **pre-built JSON fixture**; it does not walk the tree at runtime. The fixture is **generated** from the live notebook tree (see [GENERATED-FIXTURE.md](GENERATED-FIXTURE.md)). Use it to **see structure** and to practice the Workbench loop: generate â†’ run â†’ inspect â†’ revise â†’ [workbench receipt](../../../../work-dev/workbench/WORKBENCH-RECEIPT-SPEC.md) â†’ operator review.
 
-- **`recordAuthority`:** `none` — the HTML does not assert SELF, EVIDENCE, or external truth.
-- **`gateEffect`:** `none` — nothing here stages candidates or merges to the Record.
+- **`recordAuthority`:** `none` â€” the HTML does not assert SELF, EVIDENCE, or external truth.
+- **`gateEffect`:** `none` â€” nothing here stages candidates or merges to the Record.
 - **Truth scope:** **Notebook structure and paths only** (plus labels from the fixture). It does not validate strategic claims, wires, or production readiness. Before using this as an **operator demo**, run the [Workbench preflight](../../../../work-dev/workbench/PREFLIGHT.md) (`python3 scripts/work_dev/preflight_workbench.py` from repo root).
 
 **Inspection:** Use [VISUAL-INSPECTION-PROTOCOL.md](../../../../work-dev/workbench/VISUAL-INSPECTION-PROTOCOL.md) in spirit (browser, screenshots optional). For machine validation of receipt JSON, use `scripts/work_dev/validate_workbench_receipt.py`. To author a new receipt: [SCRIPT-USAGE.md](../../../../work-dev/workbench/SCRIPT-USAGE.md) and `new_workbench_receipt.py`.
@@ -45,9 +45,9 @@ Open:
 
 ## Suggested Workbench follow-up (operator)
 
-1. Screenshot (optional) under `artifacts/work-dev/workbench-screenshots/` (see that folder’s README).
+1. Screenshot (optional) under `artifacts/work-dev/workbench-screenshots/` (see that folderâ€™s README).
 2. Write a workbench receipt under `artifacts/work-dev/workbench-receipts/` (see [examples](../../../../work-dev/workbench/examples/strategy-notebook-visualizer-workbench-receipt.example.json)) or generate one with the CLI.
 
 ---
 
-*Pilot only — derived structure map; not canonical doctrine.*
+*Pilot only â€” derived structure map; not canonical doctrine.*

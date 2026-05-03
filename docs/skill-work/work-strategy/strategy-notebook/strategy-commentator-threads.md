@@ -1,20 +1,20 @@
-# Strategy commentator threads (index)
+﻿# Strategy commentator / author threads (index)
 <!-- word_count: 5754 -->
 
-**Purpose:** Stable **expert lanes** for recurring **expert / commentator** ingests so `batch-analysis` lines can name **divergence and correlation** without re-deriving the roster each session. The same **`thread:<expert_id>`** on **different dates** is the **join key** for **accuracy** checks and **opinion drift** (see **Expert threads: predictive accuracy and opinion drift**). **WORK only** — not Record.
+**Purpose:** Stable **author lanes** for recurring **author / commentator** ingests so `batch-analysis` lines can name **divergence and correlation** without re-deriving the roster each session. The same **`thread:<expert_id>`** on **different dates** is the **join key** for **accuracy** checks and **opinion drift** (see **Author threads: predictive accuracy and opinion drift**). **WORK only** — not Record.
 
 **Choreography (vs tri-mind):** Threads track **each commentator over time** (accuracy, narrative, compare–contrast). **Tri-mind** is a separate **analysis** pattern — usually **outboard** from `days.md`; see [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md) § **Expert choreography**.
 
-**Terminology — `expert_id`:** The **first column** in the table below — **one canonical slug per named expert** (e.g. `marandi`, `ritter`). **Inbox `verify:`** tails use **`thread:<expert_id>`** — the token after **`thread:`** is the **`expert_id`**. **Legacy synonym:** **`thread_id`** (same column / value). **Legacy prose:** Older notes may say “analyst_id” / “analyst threads” — same field and lanes as **`expert_id`** / **expert threads**.
+**Terminology — `expert_id`:** The **first column** in the table below — **one canonical slug per named author** (e.g. `marandi`, `ritter`). **Inbox `verify:`** tails use **`thread:<expert_id>`** — the token after **`thread:`** is the **`expert_id`**. **Legacy synonym:** **`thread_id`** (same column / value). **Legacy prose:** Older notes may say “analyst_id” / “analyst threads” — same field and lanes as **`expert_id`** / **author threads**.
 
 **Lane discipline (no hybrid slugs):** Each **`expert_id`** identifies **exactly one** **named commentator** (one **Name** in the roster). **Topic** framing (Islamabad process, Hormuz domestic politics, escalation trap, etc.) lives in the **Role** column, **cold** text, and **grep tags** — **not** in the slug. **Verbatim quotes** and **attributed analysis** belong on a line whose **`thread:`** matches **that speaker’s** row; putting another expert’s words under the wrong **`thread:`** is a **routing error**. **`batch-analysis`** is where **topic** tension (same crisis, different mechanisms) meets **expert** tension (same week, different predictions or registers).
 
 **Metaphor — Symphony of Civilization:** Indexed commentators are **parts** in a **polyphonic** score; each daily **`## YYYY-MM-DD`** block in the active month’s `chapters/YYYY-MM/days.md` is a **movement**; **`batch-analysis`** states **harmony vs tension** between parts. Full gloss: [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md) § **Symphony of Civilization**.
 
-**Topic tags vs expert threads (mental model):** Two layers — not mutually exclusive.
+**Topic tags vs author threads (mental model):** Two layers — not mutually exclusive.
 
 - **Topic tags** — *what* the material is about: recurring **substantive** lanes (Islamabad arc, Hormuz, Lebanon vs nuclear, U.S. domestic liability, Rome / legitimacy, …). These show up as **grep tags** (`IRAN`, `JDVance`, `ROME`, `narrative-escalation`, …) or linked docs ([rome-persia-legitimacy-signal-check.md](rome-persia-legitimacy-signal-check.md), [trump-religion-papacy-arc.md](trump-religion-papacy-arc.md)).
-- **Expert threads** — *who* is speaking: one **`thread:<expert_id>`** per **named** indexed voice. Reusing the same **`expert_id`** across weeks **diffs** that **person** over time (drift / pivot).
+- **Author threads** — *who* is speaking: one **`thread:<expert_id>`** per **named** indexed voice. Reusing the same **`expert_id`** across weeks **diffs** that **person** over time (drift / pivot).
 
 **How to use:** When appending a paste-ready line in [daily-strategy-inbox.md](daily-strategy-inbox.md), add **`thread:<expert_id>`** to the **`verify:`** tail **only** when the **cold** line attributes speech or analysis to the **Name** in that commentator’s row. Pair ingests in **`batch-analysis | YYYY-MM-DD | …`** using **Typical pairings**.
 
@@ -29,11 +29,11 @@ Run operator **`thread`**: **`bin/thread`** or **`python3 scripts/strategy_threa
 
 **Published outlets (starter list):** Each **`experts/<expert_id>/profile.md`** **Seed** includes **`### Published sources (operator web index)`** — at least three **content** URLs (X / Substack / outlet / institutional host; **no Wikipedia**); re-verify handles and media URLs before cite-grade use.
 
-**Wires and outlets (no expert `thread:`):** A **wire**, **pool paragraph**, or **outlet summary** is **not** an indexed expert unless the cold line names **that person** as the speaker or author. Use **`verify:wire-RSS`** (and topic grep tags) **without** **`thread:<expert_id>`**; optional **`membrane:single`** when the line must **not** imply **`batch-analysis`** membership for expert threads.
+**Wires and outlets (no author `thread:`):** A **wire**, **pool paragraph**, or **outlet summary** is **not** an indexed author unless the cold line names **that person** as the speaker or author. Use **`verify:wire-RSS`** (and topic grep tags) **without** **`thread:<expert_id>`**; optional **`membrane:single`** when the line must **not** imply **`batch-analysis`** membership for author threads.
 
 **Official IRI / MFA voices (no `thread:`):** The **Iranian foreign minister** and **MFA** spokespeople are **state primaries**, not **`expert_id`** rows. Capture with **`verify:IRI-primary`** (and **`fa`** triangulation when load-bearing) plus **`IRAN`** / **`IRI`** / **`TEHRAN`** grep tags — **no** **`thread:`** on the FM line itself. **Continuity** to indexed threads is via **`batch-analysis`** and **`daily-brief` §1h** — e.g. **2026-04-17** **Araghchi** (Hormuz + **Lebanon** opener) **crosses** **`parsi`** (Lebanon vs nuclear scope), **`marandi`** (elite register), **`davis`** (U.S.-side packaging of the **X** post), **`mercouris`** (institutional **Lebanon**/**Hormuz** surface) — see [daily-brief-2026-04-17.md](../daily-brief-2026-04-17.md) **§1h** + [daily-strategy-inbox.md](daily-strategy-inbox.md).
 
-**Ephemeral / one-shot ingests (no persistent expert thread):** Not every line needs a **`thread:<expert_id>`**. The index exists so the **same** voice can be **joined across dates** (drift, accuracy). If the capture is **tactical** — one article, a stray clip, a **verify** pass, or material you **do not** want to treat as a standing **expert** lane — **omit** **`thread:`**. Use **cold** + **URL** + **`verify:`** and **topic** grep tags (`IRAN`, `ROME`, …) as usual. Optional **`verify:… | membrane:single`** signals that this line is **not** inviting a same-day **`batch-analysis`** membership claim for indexed threads (see **Crossing filters**). You are **not** required to mint a table row for every name that appears once.
+**Ephemeral / one-shot ingests (no persistent author thread):** Not every line needs a **`thread:<expert_id>`**. The index exists so the **same** voice can be **joined across dates** (drift, accuracy). If the capture is **tactical** — one article, a stray clip, a **verify** pass, or material you **do not** want to treat as a standing **expert** lane — **omit** **`thread:`**. Use **cold** + **URL** + **`verify:`** and **topic** grep tags (`IRAN`, `ROME`, …) as usual. Optional **`verify:… | membrane:single`** signals that this line is **not** inviting a same-day **`batch-analysis`** membership claim for indexed threads (see **Crossing filters**). You are **not** required to mint a table row for every name that appears once.
 
 **Maintenance:** Add rows when a new **Name** appears **repeatedly** in `days.md` or inbox; **deprecate** with a line in **Notes** — do not delete history without operator say-so.
 
@@ -120,7 +120,7 @@ Run operator **`thread`**: **`bin/thread`** or **`python3 scripts/strategy_threa
 
 ### Civ-China — strategy (primary commentator)
 
-**Purpose:** Single **default** **`thread:`** for **People’s Republic** / **U.S.–China** **relations** **as** **civilizational–strategic** **speech** in the **strategy notebook** (order talk, **détente** memory, **strait** **mirrors**, **BRI** **spillovers** **when** **Freeman** **is** **the** **speaker**). **Not** a substitute for **`jiang`** **Predictive** **History** **corpus** **or** **wire** **primaries** — **weave** **with** **explicit** **tier** **tags**.
+**Purpose:** Single **default** **`thread:`** for **People’s Republic** / **U.S.–China** **relations** **as** **civilizational–strategic** **speech** in the **strategy-codex** (order talk, **détente** memory, **strait** **mirrors**, **BRI** **spillovers** **when** **Freeman** **is** **the** **speaker**). **Not** a substitute for **`jiang`** **Predictive** **History** **corpus** **or** **wire** **primaries** — **weave** **with** **explicit** **tier** **tags**.
 
 - `freeman`
 
@@ -154,7 +154,7 @@ Run operator **`thread`**: **`bin/thread`** or **`python3 scripts/strategy_threa
 | `simplicius` | Simplicius (pseudonym; *Garden of Knowledge* / [`@simpatico771`](https://x.com/simpatico771)) | **Substack** long-form **conflict analysis** — U.S.–Iran **ceasefire/blockade** narratives, **media/wire** synthesis, polemical register; **not** a wire primary — pair **`mercouris`**, **`parsi`**, **`davis`**, **`marandi`** with **tier seams** | `Simplicius`, `simplicius76`, or `simpatico771` in cold | × `mercouris`, × `parsi`, × `davis`, × `marandi`, × `blumenthal` |
 | `alkorshid` | Nima Alkorshid (*Dialogue Works*) | **Host / interviewer** lane — long-form **geopolitical dialogue**; symmetric **`thread:`** routing with **`thread:<guest>`** on **same-episode** ingests so **`raw-input`** mirroring lands **host** and **guest** rows (**host prompts / framing** on **`alkorshid`**, guest analysis on the guest **`expert_id`**) | `Alkorshid`, `Dialogue Works`, or `DialogueWorks` in cold | × `marandi`, × `diesen`, × `mercouris`, × `davis` |
 
-**Special routing rule — Predictive History:** PH-derived notebook-facing ingest must use `thread:jiang`. Do not route PH directly into other expert lanes or directly into ad-hoc page stubs. See [strategy-notebook/README.md](README.md) § **Predictive History routing rule**.
+**Special routing rule — Predictive History:** PH-derived notebook-facing ingest must use `thread:jiang`. Do not route PH directly into other author lanes or directly into ad-hoc page stubs. See [strategy-notebook/README.md](README.md) § **Predictive History routing rule**.
 
 ### Distinctive lane shorthands (recommended sentences)
 
@@ -214,7 +214,7 @@ Run operator **`thread`**: **`bin/thread`** or **`python3 scripts/strategy_threa
 
 ---
 
-## Expert threads: predictive accuracy and opinion drift
+## Author threads: predictive accuracy and opinion drift
 
 **Intent:** **`expert_id` rows** are the right **bucket** for (1) **checkable** calls vs outcomes and (2) **same voice, different week** — how emphasis, mechanism, or verdict **moves** as facts and audiences shift. **Topic** tags organize *substance*; **expert** threads keep **who** stable so you can grep **time series** without mixing voices.
 
@@ -260,7 +260,7 @@ Threads are **semi-permeable** by design; “optimization” here means **explic
 
 **Slow lane or block (do not merge without a seam):**
 
-- **One** ingest line that **smuggles** two named experts’ claims **without** two cold attributions.
+- **One** ingest line that **smuggles** two named authors’ claims **without** two cold attributions.
 - **Cross-thread synthesis** promoted to **strong** public copy when **`verify:`** is still **OSINT / expert-commentary-only** — raise tier or narrow the claim.
 - **Legitimacy plane** vs **hard security** plane — keep the **seam** from [rome-persia-legitimacy-signal-check.md](rome-persia-legitimacy-signal-check.md); do not “solve” in one breath without naming both registers.
 
@@ -290,7 +290,7 @@ You do **not** get a special “joint thread.” You **populate** each expert’
 2. **Line B** — **cold** names **Speaker B** + claim; **`thread:<expert_id_B>`**; **same URL**.
 3. **`batch-analysis | YYYY-MM-DD | …`** — **immediately after** the **last** ingest in the set (placement defines membership). Name **tension** or **convergence** between the two **threads**; optional **`membrane:pair`** on the first line only if you want grep to show “invites synthesis.”
 
-**Default workflow (operator canon): assistant draft + explicit approval before append** — Upload the transcript in-session; have the assistant **draft** the full bundle (**one line per named expert** + shared URL + **`thread:<expert_id>`**s + **`batch-analysis`**) **in chat** (or a scratch file). Treat the draft as **provisional** until you **approve**. **Append** to [daily-strategy-inbox.md](daily-strategy-inbox.md) **only after** approval, or say **`EXECUTE`** / **explicit append** so the edit is deliberate. The assistant must **not** merge unreviewed bundles into the inbox by default.
+**Default workflow (operator canon): assistant draft + explicit approval before append** — Upload the transcript in-session; have the assistant **draft** the full bundle (**one line per named author** + shared URL + **`thread:<expert_id>`**s + **`batch-analysis`**) **in chat** (or a scratch file). Treat the draft as **provisional** until you **approve**. **Append** to [daily-strategy-inbox.md](daily-strategy-inbox.md) **only after** approval, or say **`EXECUTE`** / **explicit append** so the edit is deliberate. The assistant must **not** merge unreviewed bundles into the inbox by default.
 
 **Host-only** segments (no separate expert row) — **omit** **`thread:`** until a **named indexed expert** speaks; or tag **`thread:`** only when the **cold** attributes quoted/analysis material to that **commentator’s Name**. Keep **`verify:operator-transcript`** when the clip is still provisional.
 
@@ -340,4 +340,4 @@ Removed from the table **2026-04-14** — **`hormuz-story-fork`** (commentators 
 
 ## Quality report
 
-`python3 scripts/report_strategy_thread_quality.py` is a read-only diagnostic that examines the 21-expert thread ecosystem and flags: **coverage gaps** (transcript content but empty machine layer), **roster drift** (table vs `CANONICAL_EXPERT_IDS`), **stale threads** (no transcript content in the lookback window), **extraction density** outliers, **missing companion files**, and **batch-analysis alignment** issues (misspelled `thread:` tags). Output is markdown by default; `--json` for structured data. Optional `--log-miss` records gaps to the retrieval-miss ledger (`runtime/retrieval-misses/index.jsonl`). Run after `python3 scripts/strategy_thread.py` or standalone.
+`python3 scripts/report_strategy_thread_quality.py` is a read-only diagnostic that examines the 21-author thread ecosystem and flags: **coverage gaps** (transcript content but empty machine layer), **roster drift** (table vs `CANONICAL_EXPERT_IDS`), **stale threads** (no transcript content in the lookback window), **extraction density** outliers, **missing companion files**, and **batch-analysis alignment** issues (misspelled `thread:` tags). Output is markdown by default; `--json` for structured data. Optional `--log-miss` records gaps to the retrieval-miss ledger (`runtime/retrieval-misses/index.jsonl`). Run after `python3 scripts/strategy_thread.py` or standalone.

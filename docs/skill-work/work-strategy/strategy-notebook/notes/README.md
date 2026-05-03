@@ -1,4 +1,4 @@
-# Strategy notebook — notes (teaching & demos)
+﻿# strategy-codex â€” notes (teaching & demos)
 <!-- word_count: 78 -->
 
 WORK only; not Record.
