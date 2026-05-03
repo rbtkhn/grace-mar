@@ -73,6 +73,34 @@ These are deliberately separate:
 - rebuild receipts are about **what happened during a run**
 - the manifest is about **declared target coverage**
 
+## Strategy-codex boundary
+
+The strategy-codex depends on regeneration through a strict downstream boundary:
+
+```mermaid
+flowchart TD
+    A["Canonical strategy-codex writing<br/>days.md, thread.md, strategy-page, inbox, chapter/meta files"] --> B["Derived strategy-codex interfaces<br/>graph.json, watch-clusters.json, expert-convergence.json"]
+    C["Work-dev regeneration infrastructure<br/>canonical_change_detector.py<br/>regenerate_all_derived.py<br/>derived_regeneration.py<br/>manifest + receipts"] --> B
+    C --> D["Rebuild-health observability<br/>summary.json, rebuild receipts, manifest-derived telemetry"]
+
+    A:::canon
+    B:::derived
+    C:::infra
+    D:::health
+
+    classDef canon fill:#e8f1ff,stroke:#4a78c2,color:#1f2d3d;
+    classDef derived fill:#eef8ea,stroke:#5f9b55,color:#223322;
+    classDef infra fill:#fff4e6,stroke:#c58a2b,color:#4a3514;
+    classDef health fill:#f6ecff,stroke:#8b5fbf,color:#35214a;
+```
+
+- **Canonical strategy-codex writing** stays markdown-canonical under `docs/skill-work/work-strategy/strategy-notebook/`.
+- **Derived strategy-codex interfaces** are rebuilt orientation surfaces under `artifacts/work-strategy/strategy-notebook/`.
+- **Work-dev regeneration infrastructure** owns the rebuild contract and target registry.
+- **Rebuild-health** stays strictly downstream of regeneration: it reports on the engine and the receipts, not on canonical notebook truth.
+
+This boundary is the reason rebuild-health changes belong entirely in the regeneration layer. Strategy-codex benefits indirectly through fresher derived artifacts and better observability, but canonical notebook writing rules do not change.
+
 ## Canonical commands
 
 Inspect changed paths and impacted rebuild targets:

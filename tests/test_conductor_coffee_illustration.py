@@ -194,7 +194,6 @@ def test_illustration_outcome_parsed_from_snippet(tmp_path):
     outcomes = [e for e in events if e["kind"] == "coffee_conductor_outcome"]
     assert outcomes[-1]["kv"].get("verdict") == "promote"
 
-
 def test_last_logged_conductor_accepts_new_conductor_pick_shape() -> None:
     events = [_pick(_ts(), picked="conductor", conductor="karajan")]
     assert last_logged_conductor(events) == "karajan"
@@ -203,3 +202,4 @@ def test_last_logged_conductor_accepts_new_conductor_pick_shape() -> None:
 def test_last_logged_conductor_accepts_hub_e_with_conductor() -> None:
     events = [_pick(_ts(), picked="E", conductor="bernstein")]
     assert last_logged_conductor(events) == "bernstein"
+

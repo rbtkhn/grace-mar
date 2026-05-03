@@ -1,4 +1,4 @@
-﻿# strategy-codex
+# strategy-codex
 <!-- word_count: 1347 -->
 
 **Discoverability:** The same tree is linked from **`users/grace-mar/SELF-LIBRARY/strategy-notebook`** (repo-relative symlink) for agents and tools that prioritize the companion tree. **LIB:** [LIB-0153](../../../../users/grace-mar/self-library.md#operator-analytical-books) in [`self-library.md`](../../../../users/grace-mar/self-library.md) (Operator analytical books).
@@ -18,6 +18,34 @@ Many notebook markdown files carry a **`word_count: <integer>`** field in YAML f
 `strategy-notebook is markdown-canonical, with a growing family of derived interface artifacts for orientation, inspection, and navigation; those artifacts are WORK-only and non-canonical unless separately promoted through existing governed paths.`
 
 Use this framing for notebook-facing visualizers, console views, graph-derived maps, or other operator-facing surfaces that help with orientation before judgment. Workbench remains the inspection layer for those artifacts; canonical notebook judgment remains in `strategy-page` blocks and `days.md`.
+
+## Boundary map
+
+The strategy-codex sits inside a three-layer, one-way authority model:
+
+```mermaid
+flowchart TD
+    A["Canonical strategy-codex writing<br/>days.md, thread.md, strategy-page, inbox, chapter/meta files"] --> B["Derived strategy-codex interfaces<br/>graph.json, watch-clusters.json, expert-convergence.json"]
+    C["Work-dev regeneration infrastructure<br/>canonical_change_detector.py<br/>regenerate_all_derived.py<br/>derived_regeneration.py<br/>manifest + receipts"] --> B
+    C --> D["Rebuild-health observability<br/>summary.json, rebuild receipts, manifest-derived telemetry"]
+
+    A:::canon
+    B:::derived
+    C:::infra
+    D:::health
+
+    classDef canon fill:#e8f1ff,stroke:#4a78c2,color:#1f2d3d;
+    classDef derived fill:#eef8ea,stroke:#5f9b55,color:#223322;
+    classDef infra fill:#fff4e6,stroke:#c58a2b,color:#4a3514;
+    classDef health fill:#f6ecff,stroke:#8b5fbf,color:#35214a;
+```
+
+- **Canonical strategy-codex writing** is the source of truth.
+- **Derived strategy-codex interfaces** are rebuilt views for orientation and inspection.
+- **Work-dev regeneration infrastructure** is the rebuild engine that refreshes those views.
+- **Rebuild-health** is observability about that engine, not a strategy-writing surface.
+
+This means canonical notebook content can produce derived interfaces, and the regeneration layer can rebuild those interfaces, but neither derived artifacts nor rebuild-health telemetry write back into notebook truth.
 
 See [../../work-dev/interface-artifacts/README.md](../../work-dev/interface-artifacts/README.md).
 
@@ -90,3 +118,4 @@ The **primary written unit** of [work-strategy](../README.md) is a **`strategy-p
 - **Demo / calibration:** [notes/DEMO-SKILL-STRATEGY-TRANSCRIPTS.md](notes/DEMO-SKILL-STRATEGY-TRANSCRIPTS.md) â€” step-by-step `skill-strategy` exercise using three ingested transcripts + explicit tri-frame; run `bash scripts/demo_skill_strategy_transcripts_check.sh` from repo root first Â· [Executive report (implementation & readiness)](notes/DEMO-SKILL-STRATEGY-EXECUTIVE-REPORT.md) Â· [notes/README.md](notes/README.md)
 
 WORK only; not Record unless promoted through RECURSION-GATE.
+
