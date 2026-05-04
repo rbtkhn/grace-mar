@@ -58,23 +58,28 @@ _Product / integration context: [work-dev/workspace.md](../work-dev/workspace.md
 
 ## 1d. Putin — last 48 hours
 
-_Filled at **good morning** per [daily-brief-putin-watch.md](daily-brief-putin-watch.md): web scan (Kremlin schedule/transcripts, Reuters, BBC, TASS/RIA as needed), **48h** rolling window, **bullets + URLs**. RSS §2 does not replace this pass. If blank, paste after generate or re-run morning assembly._
+- **Signal:** No fresh Kremlin-primary Putin transcript surfaced in the quick pass. The live strategy signal is indirect: Russia's Victory Day parade is being scaled back without armored vehicles / missile systems, with the Kremlin attributing changes to Ukrainian activity and reporting framing it as drone-risk adaptation. Source: [Guardian, 2026-04-29](https://www.theguardian.com/world/2026/apr/29/russia-to-scale-back-victory-day-parade-as-ukraine-extends-its-drone-attacks).
+- **Operator read:** Treat this as a legitimacy / security-stage signal, not as a new Putin doctrine line. Use Kremlin-primary wording before quoting Putin personally.
 
 ## 1e. JD Vance — last 48 hours
 
-_Filled at **good morning** per [daily-brief-jd-vance-watch.md](daily-brief-jd-vance-watch.md): web scan (VP office / White House readouts, Congress if relevant, major wires), **48h** rolling window, **bullets + URLs**. RSS §2 may surface Vance-adjacent headlines; it does not replace this pass. If blank, paste after generate or re-run morning assembly._
+- **Signal:** No VP-specific official readout appeared in the visible White House briefings list for the quick Apr 28-30 pass. Recent official posts were bill signings, presidential messages, and First Lady / state-dinner items rather than Vance-channel remarks. Source: [White House Briefings & Statements](https://www.whitehouse.gov/briefings-statements/).
+- **Operator read:** Leave the Vance channel quiet today unless a separate VP remarks / travel page or transcript is found. Do not infer delegation posture from general White House posts.
 
 ## 1f. Weak signal worth watching
 
-_Operator block per [weak-signal-template.md](weak-signal-template.md) and [weak-signals.md](weak-signals.md). One compact weak signal when a credible candidate exists (low/medium confidence only). If nothing clears the bar, use: **No credible weak signal exceeded the threshold today.** When a historical parallel is in play, summarize a short analogy audit ([analogy-audit-template.md](analogy-audit-template.md)) here._
+- **Watch:** Maritime chokepoint diplomacy is moving from battlefield narrative into institutional bargaining language: Pakistan is publicly framing Hormuz as a free-passage / energy-security issue while still preserving a mediator role between Iran and the United States. Source: [Pakistan MOFA briefing, 2026-04-30](https://mofa.gov.pk/press-releases/office-of-the-spokesperson-transcript-of-the-press-briefing-by-the-spokesperson-on-thursday-30th-april-2026).
+- **Confidence:** Medium as a diplomatic-framing signal; low as a prediction. Watch whether future statements keep separating blame assignment from reopening / passage guarantees.
 
 ## 1g. PRC — last 48 hours (People’s Republic of China)
 
-_Filled per [daily-brief-prc-watch.md](daily-brief-prc-watch.md) + [daily-brief-native-international-pass.md](daily-brief-native-international-pass.md): web scan (MFA, major state wires, cross-check Reuters), **48h** rolling window, **bullets + URLs**; add **Mandarin-primary** line when PRC is load-bearing. RSS §2 does not replace this pass. If blank, paste after generate or re-run morning assembly._
+- **Primary line:** PRC MFA emphasized zero-tariff treatment for 53 African diplomatic partners starting May 1, positioning it as unilateral opening, China-Africa all-weather community building, and Global South solidarity under protectionism / Middle East spillover pressure. Source: [PRC MFA regular press conference, 2026-04-29](https://www.mfa.gov.cn/eng/xw/fyrbt/202604/t20260429_11902761.html).
+- **Secondary lines:** Same briefing pushed back on Japan's Indo-Pacific framing, Panama Canal security claims, and U.S. accusations tied to Cuba. Use as a sovereignty / anti-coercion narrative cluster, not as one undifferentiated "China says" item.
 
 ## 1h. IRI — last 48 hours (Islamic Republic of Iran)
 
-_Filled per [daily-brief-iran-watch.md](daily-brief-iran-watch.md) + [daily-brief-native-international-pass.md](daily-brief-native-international-pass.md): web scan (MFA, IRNA/Tasnim as needed, cross-check Reuters), **48h** rolling window, **bullets + URLs**; add **Persian-primary** line when Iran / Islamabad is load-bearing. Complements [islamabad-operator-index.md](islamabad-operator-index.md) (bargaining framework)—this block is **Tehran state voice**. RSS §2 does not replace this pass. If blank, paste after generate or re-run morning assembly._
+- **Iran-facing line:** Iranian Foreign Ministry spokesperson Esmail Baghaei condemned U.S. seizure of Iran-linked tankers as piracy / armed robbery and framed it as a maritime-security and international-law violation. Source: [Guardian live summary of Baghaei X post, 2026-04-27](https://www.theguardian.com/world/live/2026/apr/27/middle-east-crisis-iran-us-israel-lebanon-trump-araghchi-putin-hormuz-oil-latest-news-updates).
+- **Islamabad mediation line:** Pakistan says channels with Tehran and Washington remain active, proposals are still moving through diplomatic conduits, and Hormuz reopening is being framed as a commerce / energy passage issue rather than a blame-allocation exercise. Source: [Pakistan MOFA briefing, 2026-04-30](https://mofa.gov.pk/press-releases/office-of-the-spokesperson-transcript-of-the-press-briefing-by-the-spokesperson-on-thursday-30th-april-2026).
 
 ## 2. Headlines (ingested RSS)
 

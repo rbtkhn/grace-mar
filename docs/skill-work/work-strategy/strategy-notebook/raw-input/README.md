@@ -70,7 +70,7 @@ Optional local override file (gitignored): **`fetch-sources.local.json`** â€�
 **Compose boundary:** Automated capture writes **`raw-input/`** only; new `experts/<expert_id>/*page*.md` files are created later in a separate compose pass.
 **Future extensions (not implemented yet):** authenticated/private X and wire paywall fetchers â€” public X profile crawl and public YouTube transcript fetches are implemented, but authenticated sessions still need their own gate (tokens, ToS, tier tags).
 
-**YouTube transcript queue (graph-first):** [`youtube-transcript-queue.md`](youtube-transcript-queue.md) â€” ranks transcript hubs by graph centrality, then by automation cost. The generic helper is [`scripts/backfill_youtube_channel_raw_input.py`](../../../../scripts/backfill_youtube_channel_raw_input.py); thin wrappers can pin channel URL, show/host, and thread routing when the lane is clear. This queue belongs with the expert-profile backfill arc as a corpus-indexing layer; compose judgment still happens later in expert pages / `days.md`, not in the queue itself.
+**YouTube transcript queue:** [`youtube-transcript-queue.md`](youtube-transcript-queue.md) â€” lists the canonical input channels for strategy-notebook. The generic helper is [`scripts/backfill_youtube_channel_raw_input.py`](../../../../scripts/backfill_youtube_channel_raw_input.py); thin wrappers can pin channel URL, show/host, and thread routing when needed. For Alkorshid specifically, the metadata-only playlist scaffold helper is [`scripts/backfill_dialogue_works_playlist_raw_input.py`](../../../../scripts/backfill_dialogue_works_playlist_raw_input.py); it reads the playlist, checks the inventory ledger, and writes only missing raw-input page stubs. This queue belongs with the expert-profile backfill arc as a corpus-indexing layer; compose judgment still happens later in expert pages / `days.md`, not in the queue itself.
 
 **Relation to other surfaces:**
 
@@ -153,7 +153,38 @@ Idempotent: unchanged files are skipped (content hash). See [`scripts/populate_s
 
 ## Outlet inventories (tracker docs)
 
-- **Dialogue Works** (Nima Alkhorshid): [dialogue-works-inventory.md](dialogue-works-inventory.md) â€” metadata-only YouTube crawl index from `2026-01-01` onward, with `needs capture` markers and maintenance notes at the bottom.
+- **Alkorshid** (Nima Alkhorshid): [dialogue-works-inventory.md](dialogue-works-inventory.md) â€” metadata-only YouTube crawl index from `2026-01-01` through the latest upload returned by the crawl, with `needs capture` markers and maintenance notes at the bottom. For playlist-driven stub generation, use [`scripts/backfill_dialogue_works_playlist_raw_input.py`](../../../../scripts/backfill_dialogue_works_playlist_raw_input.py).
+- **Dense channel monthly ledgers:** generated annual/monthly views for Mercouris, Glenn Diesen, Alkorshid, and Daniel Davis live under the year folders directly above this tree, e.g. `../2026/<channel>/README.md` and `../2026/<channel>/book-YYYY-MM.md`. Use [`scripts/build_channel_year_ledgers.py`](../../../../scripts/build_channel_year_ledgers.py) to regenerate them from `raw-input/`.
+- **Current ledger volume index:** [../2026/README.md](../2026/README.md) points to the live dense-channel year index.
+- **April 2026 channel scaffolds** â€” month-scoped handoff docs for transcript completion and canonical URL pinning:
+  - [dialogue-works-april-2026-scaffold.md](dialogue-works-april-2026-scaffold.md)
+  - [glenn-diesen-april-2026-scaffold.md](glenn-diesen-april-2026-scaffold.md)
+  - [daniel-davis-april-2026-scaffold.md](daniel-davis-april-2026-scaffold.md)
+  - [mercouris-duran-2026-scaffold.md](mercouris-duran-2026-scaffold.md)
+
+## Volume / Book / Chapter convention
+
+Use the following naming ladder for scaffold work:
+
+- **Volume** = year
+- **Book** = month
+- **Chapter** = day
+
+Example:
+
+- `Vol. 2026, Book IV, Chapter XXVIII` = the daily slice for `2026-04-28`
+
+How to apply it here:
+
+- the **daily Chapter files** are the substantive units of work for Cici-AI completion
+- the **month scaffold files** summarize and coordinate those chapter files for a single channel
+- the **volume** is the annual wrapper used when you want to speak about the full year as a whole
+- keep the file system date folders unchanged; this is a naming and coordination layer, not a directory migration
+
+Suggested scaffold file wording:
+
+> This scaffold covers `Vol. 2026`, `Book IV` and organizes the daily Chapter files for April 2026.
+
 
 ## Pruning
 

@@ -1,5 +1,6 @@
 # Mearsheimer page — 2026-03-27 (legacy pointer; lane-split)
 
+
 WORK only; not Record.
 
 **Superseded (lane split):** This file previously duplicated the full line-by-line transcript. **SSOT** is [raw-input/2026-03-27/transcript-diesen-mearsheimer-iran-holds-all-the-cards-2026-03-27.md](../../raw-input/2026-03-27/transcript-diesen-mearsheimer-iran-holds-all-the-cards-2026-03-27.md) only.

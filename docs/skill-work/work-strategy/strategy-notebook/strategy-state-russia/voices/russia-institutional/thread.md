@@ -1,5 +1,6 @@
 # strategy-state-russia — institutional thread (legacy-compatible surface)
 
+
 Migration note:
 - Preferred new work lands in `weave/` + `channels/`.
 - Keep this file for compatibility and inbound links.

@@ -1,6 +1,5 @@
 # strategy-codex
 <!-- word_count: 1347 -->
-
 **Discoverability:** The same tree is linked from **`users/grace-mar/SELF-LIBRARY/strategy-notebook`** (repo-relative symlink) for agents and tools that prioritize the companion tree. **LIB:** [LIB-0153](../../../../users/grace-mar/self-library.md#operator-analytical-books) in [`self-library.md`](../../../../users/grace-mar/self-library.md) (Operator analytical books).
 
 ## Word counts (script-maintained)
@@ -59,11 +58,12 @@ When a strategy-codex session needs Python, use the bundled runtime at `C:\Users
 
 See also: [tools.md](tools.md) for the compact strategy-codex tool pointer.
 
-- **Octet interview lattice:** [artifacts/skill-work/work-strategy/interview-graph/README.md](../../../../artifacts/skill-work/work-strategy/interview-graph/README.md) — notebook-facing graph export for the equal `Dialogue Works` / `Glenn Diesen` / `Daniel Davis` / `Mercouris / The Duran` / `Crooke` / `Parsi` / `Pape` / `Ritter` streams, with JSON + Markdown outputs in `artifacts/skill-work/work-strategy/interview-graph/` and the one-word axes `Synthesis` / `Order` / `Conflict` / `Statecraft` / `Process` / `Scope` / `Escalation` / `Mechanics`.
+- **Octet interview lattice:** [artifacts/skill-work/work-strategy/interview-graph/README.md](../../../../artifacts/skill-work/work-strategy/interview-graph/README.md) — notebook-facing graph export for the equal `Alkorshid` / `Glenn Diesen` / `Daniel Davis` / `Mercouris` / `Crooke` / `Parsi` / `Pape` / `Ritter` streams, with JSON + Markdown outputs in `artifacts/skill-work/work-strategy/interview-graph/` and the one-word axes `Synthesis` / `Order` / `Conflict` / `Statecraft` / `Process` / `Scope` / `Escalation` / `Mechanics`.
+- **Crooke essay lane:** [raw-input/crooke-essay-index.md](raw-input/crooke-essay-index.md) — date-grouped index of the pure Crooke essay raw-input files; transcript mirrors and inventory rows are excluded from the essay count.
 
 ## Volume / book / chapter / page scaffold
 
-For the separate book-like scaffold, the strategy-codex is organized like this:
+For the separate book-like scaffold, the strategy-codex is organized like this. This is distinct from the older month-folder `chapters/YYYY-MM/days.md` chronology layer used for strategy-page work:
 
 ```text
 strategy-notebook/
@@ -78,9 +78,64 @@ strategy-notebook/
 
 **Doctrine:** the volume is the year folder directly under `strategy-notebook/`; books are month files at the volume root; chapters are daily composition files in `chapters/`; pages are raw-source files in `pages/`. The daily chapter files are the core scaffold; the book files provide month-level synthesis and index; the page files preserve the source layer.
 
+**Template quartet:** [templates/strategy-codex-template-volume.md](templates/strategy-codex-template-volume.md), [templates/strategy-codex-template-book.md](templates/strategy-codex-template-book.md), [templates/strategy-codex-template-chapter.md](templates/strategy-codex-template-chapter.md), [templates/strategy-codex-template-page.md](templates/strategy-codex-template-page.md).
+
+## Dense channel monthly ledgers
+
+For the dense YouTube channels, the monthly-ledger scaffold lives in year folders directly under `strategy-notebook/`:
+
+```text
+strategy-notebook/
+  2025/
+    README.md
+    dialogue-works/
+      README.md
+      book-2025-05.md
+  2026/
+    README.md
+    mercouris/
+      README.md
+      book-2026-02.md
+      book-2026-03.md
+      book-2026-04.md
+    diesen/
+      README.md
+      book-2026-01.md
+      book-2026-02.md
+      book-2026-03.md
+      book-2026-04.md
+    dialogue-works/
+      README.md
+      book-2026-01.md
+      book-2026-02.md
+      book-2026-03.md
+      book-2026-04.md
+      book-2026-05.md
+    davis/
+      README.md
+      book-2026-04.md
+```
+
+**Doctrine:** each channel has one annual index README for the year folder, and each `book-YYYY-MM.md` file inside the channel folder is the canonical monthly ledger. Dates may repeat when the channel genuinely published multiple valid episodes on the same day. These ledger files are source-of-truth views derived from `raw-input/`, not a replacement for the capture tree.
+
+Current ledger volume index: [2026/README.md](2026/README.md).
+
+## Civilizational-memory doctrine
+
+The strategy-codex borrows a strict doctrine from the broader memory design:
+
+- **Do not invent or assume structured IDs, references, lanes, or files.**
+- **Verify against the canonical index and the file system before naming something as real.**
+- **Treat hub and index files as authoritative registers, not decorative summaries.**
+- **Think in a linked graph:** volumes, books, chapters, pages, and lanes all point at one another.
+- **Keep recency explicit:** recent material, carry-forward, and consolidation should be visible in the scaffold.
+- **Route by task type:** factual, temporal, and interpretive work may use different paths when needed.
+
+Applied here, that means the octet stream model, the template quartet, and the volume/book/chapter/page scaffold are all registered surfaces, not free-form metaphors. The notebook should read like an indexed graph with explicit provenance. The volume-root scaffold is separate from the older month-folder `chapters/YYYY-MM/days.md` chronology layer used for strategy-page work.
+
 ---
 
-**Current canonical model (one line):** **authors** = who; **watches** = what (evolving situation); **days** = when (chronology and continuity in `chapters/YYYY-MM/days.md`); **minds** = interpretive lens; **pages** = primary analytical unit (`strategy-page` in author **thread** files). **Page-in-thread contract (links):** [NOTEBOOK-CONTRACT.md](NOTEBOOK-CONTRACT.md) / [THREAD-CONTRACT.md](THREAD-CONTRACT.md). Full spec: [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md#current-canonical-model).
+**Current canonical model (one line):** **authors** = who; **watches** = what (evolving situation); **days** = when (legacy chronology and continuity in `chapters/YYYY-MM/days.md`); **minds** = interpretive lens; **pages** = primary analytical unit (`strategy-page` in author **thread** files). **Page-in-thread contract (links):** [NOTEBOOK-CONTRACT.md](NOTEBOOK-CONTRACT.md) / [THREAD-CONTRACT.md](THREAD-CONTRACT.md). Full spec: [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md#current-canonical-model).
 
 **Contract ownership:** [NOTEBOOK-CONTRACT.md](NOTEBOOK-CONTRACT.md) is the short routing hub. It points to the narrower owners for template shape, thread mechanics, traces, page updates, raw-input capture, and backfill families. Prefer adding pointers there before adding another broad contract document.
 
@@ -112,7 +167,7 @@ The **primary written unit** of [work-strategy](../README.md) is a **`strategy-p
 - **Ensemble metaphor:** [STRATEGY-NOTEBOOK-ARCHITECTURE.md Â§ Ensemble metaphor](STRATEGY-NOTEBOOK-ARCHITECTURE.md#ensemble-metaphor-chamber-group-gloss) â€” score, parts, conductor, dissonance (chamber-group gloss under month **Polyphony**)
 - **Cursor:** Say **`strategy`** to run the strategy pass â€” [`.cursor/skills/skill-strategy/SKILL.md`](../../../../.cursor/skills/skill-strategy/SKILL.md)
 - **Dashboard:** [STATUS.md](STATUS.md)
-- **Chapters:** `chapters/YYYY-MM/` â€” `meta.md` (month) + `days.md` (chronology / continuity â€” names page **`id`s** and weaves). **Substance** lives in **author thread files under `experts/<id>/thread.md`** (`strategy-page` blocks), not under `chapters/â€¦/knots/` (removed; see git history). **Terminology:** [STRATEGY-NOTEBOOK-ARCHITECTURE.md Â§ Terminology (chapter / day block / page)](STRATEGY-NOTEBOOK-ARCHITECTURE.md#terminology-chapter-day-page) â€” one month = one chapter, one committed `days.md` day = one **day block** (vs **`strategy-page`** in author threads). **Sparse-capture months** may be **meta-led retro syntheses** (single episodic `days.md` block; long arc in `meta.md`) â€” exemplar: [chapters/2026-01/meta.md](chapters/2026-01/meta.md). **Book-style scaffold:** see the `Volume / book / chapter / page scaffold` doctrine above.
+- **Legacy chronology layer:** `chapters/YYYY-MM/` â€” `meta.md` (month) + `days.md` (chronology / continuity â€” names page **`id`s** and weaves). **Substance** lives in **author thread files under `experts/<id>/thread.md`** (`strategy-page` blocks), not under `chapters/â€¦/knots/` (removed; see git history). **Terminology:** [STRATEGY-NOTEBOOK-ARCHITECTURE.md Â§ Terminology (chapter / day block / page)](STRATEGY-NOTEBOOK-ARCHITECTURE.md#terminology-chapter-day-page) â€” one month = one chapter, one committed `days.md` day = one **day block** (vs **`strategy-page`** in author threads). **Sparse-capture months** may be **meta-led retro syntheses** (single episodic `days.md` block; long arc in `meta.md`) â€” exemplar: [chapters/2026-01/meta.md](chapters/2026-01/meta.md). **This is separate from the volume-root book-style scaffold above.**
 - **Minds:** [`minds/`](minds/) â€” trimmed CIV-MIND files (Barnes, Mearsheimer, Mercouris) for analytical lens work; see [MINDS-SKILL-STRATEGY-PATTERNS.md](../minds/MINDS-SKILL-STRATEGY-PATTERNS.md) for recipes
 - **History notebook (parallel, LIB-0156):** [../history-notebook/README.md](../history-notebook/README.md) â€” operator mechanism chapters; [STATUS â€” distillation queue](../history-notebook/STATUS.md) (single SSOT for next `hn-*`); per-arc **Reusable Resonance Lines** in [../history-notebook/threads/history-civ-*.md](../history-notebook/threads/); optional [cross-arc pattern lines](../history-notebook/threads/cross-arc-resonance-lines.md) (analogy-audit when load-bearing); **`### History resonance`** tiers + optional **`HN gap:`** (see [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md) Â§ *Parallel to History notebook*); `python3 scripts/validate_strategy_hn_citations.py` warns on unknown `hn-*` tokens
 - **Demo / calibration:** [notes/DEMO-SKILL-STRATEGY-TRANSCRIPTS.md](notes/DEMO-SKILL-STRATEGY-TRANSCRIPTS.md) â€” step-by-step `skill-strategy` exercise using three ingested transcripts + explicit tri-frame; run `bash scripts/demo_skill_strategy_transcripts_check.sh` from repo root first Â· [Executive report (implementation & readiness)](notes/DEMO-SKILL-STRATEGY-EXECUTIVE-REPORT.md) Â· [notes/README.md](notes/README.md)

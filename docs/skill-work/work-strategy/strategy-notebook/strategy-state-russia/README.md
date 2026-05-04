@@ -1,5 +1,6 @@
 # strategy-state-russia (institutional signaling notebook)
 
+
 **Purpose:** A parallel WORK lane for Russian institutional and elite-authored signaling (Kremlin, MFA, parliamentary/state-adjacent amplification, and material-check lanes) that complements commentator `experts/` without reusing commentator routing as a substitute for state-channel evidence.
 
 | Layer | What it is |

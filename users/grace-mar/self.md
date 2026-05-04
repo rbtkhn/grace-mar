@@ -204,6 +204,70 @@ entries:
     warrant: "Revisit if this should be narrowed to civil society as a curiosity lens rather than promoted as IX-A knowledge."
     provenance: human_approved
 
+  - id: LEARN-0015
+    date: 2026-05-02
+    topic: "Knows: Peter the Great's modernization project forced Russia toward European military, technical, maritime, and administrative forms in service of stronger state power."
+    source: pipeline merge
+    evidence_id: ACT-0021
+    warrant: "Revisit if this should be narrowed to Petrine military-administrative reform rather than modernization as a whole; source is now formally anchored as high-credibility secondary, not primary."
+    provenance: human_approved
+
+  - id: LEARN-0016
+    date: 2026-05-02
+    topic: "Knows: Peter the Great pursued Baltic access because Russia needed a western maritime outlet for trade, diplomacy, and naval power."
+    source: pipeline merge
+    evidence_id: ACT-0022
+    warrant: "Revisit if this should be merged into a broader Russian sea-access / warm-water-port pattern rather than kept as a Petrine Baltic claim."
+    provenance: human_approved
+
+  - id: LEARN-0017
+    date: 2026-05-02
+    topic: "Knows: Peter the Great's reforms strengthened the Russian state while relying on coercion, elite compulsion, and social strain."
+    source: pipeline merge
+    evidence_id: ACT-0023
+    warrant: "Revisit if the operator wants the claim framed as reform cost rather than Russian state-capacity pattern."
+    provenance: human_approved
+
+  - id: LEARN-0018
+    date: 2026-05-02
+    topic: "Knows: Peter the Great is a hinge figure in Russian state development, intensifying the pattern of modernization from above under geopolitical pressure."
+    source: pipeline merge
+    evidence_id: ACT-0024
+    warrant: "Revisit if this should be folded into the existing Russian center-periphery and reform-era constraints claim rather than kept as a Peter-specific IX-A entry."
+    provenance: human_approved
+
+  - id: LEARN-0019
+    date: 2026-05-02
+    topic: "Knows: Catherine the Great came to power through a palace coup against Peter III, relying on elite, military, and court support."
+    source: pipeline merge
+    evidence_id: ACT-0025
+    warrant: "Revisit if this should be folded into a broader Russian court-politics succession pattern; source is now formally anchored as high-credibility secondary, not primary."
+    provenance: human_approved
+
+  - id: LEARN-0020
+    date: 2026-05-02
+    topic: "Knows: Catherine the Great's enlightened absolutism combined admiration for Enlightenment law, education, and rational reform with preservation of autocratic power."
+    source: pipeline merge
+    evidence_id: ACT-0026
+    warrant: "Revisit if this should be framed as Enlightenment court culture rather than state-development pattern."
+    provenance: human_approved
+
+  - id: LEARN-0021
+    date: 2026-05-02
+    topic: "Knows: the Pugachev Rebellion showed that peasant, Cossack, and frontier unrest could threaten Catherine the Great's imperial authority from below."
+    source: pipeline merge
+    evidence_id: ACT-0027
+    warrant: "Revisit if this should be merged into a broader Russian frontier, serfdom, and state-coercion pattern."
+    provenance: human_approved
+
+  - id: LEARN-0022
+    date: 2026-05-02
+    topic: "Knows: Catherine the Great's southern policy expanded Russia toward the Black Sea and Crimea, weakening Ottoman control and increasing imperial reach."
+    source: pipeline merge
+    evidence_id: ACT-0028
+    warrant: "Revisit if this should be folded into a broader Russian warm-water access and Ottoman frontier pattern."
+    provenance: human_approved
+
 ```
 
 ---

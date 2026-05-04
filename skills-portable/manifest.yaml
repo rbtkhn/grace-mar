@@ -70,3 +70,10 @@ skills:
     verify_forbidden_substrings:
       - users/grace-mar/
       - process_approved_candidates
+  - name: last30days
+    source: last30days/SKILL.md
+    appendix: .cursor/skills/last30days/CURSOR_APPENDIX.md
+    target: .cursor/skills/last30days/SKILL.md
+    verify_forbidden_substrings:
+      - users/grace-mar/
+      - process_approved_candidates

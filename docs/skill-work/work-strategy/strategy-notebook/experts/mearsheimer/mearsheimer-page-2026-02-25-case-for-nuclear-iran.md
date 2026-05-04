@@ -1,5 +1,6 @@
 # Mearsheimer page — 2026-02-25 (legacy pointer; lane-split)
 
+
 WORK only; not Record.
 
 **Superseded (lane split):** This file previously duplicated the full line-by-line transcript. **SSOT** is [raw-input/2026-02-25/transcript-diesen-mearsheimer-case-for-nuclear-iran-2026-02-25.md](../../raw-input/2026-02-25/transcript-diesen-mearsheimer-case-for-nuclear-iran-2026-02-25.md) only.

@@ -5,6 +5,28 @@
 
 **Relation to `skill-strategy`:** [`.cursor/skills/skill-strategy/SKILL.md`](../../../../.cursor/skills/skill-strategy/SKILL.md) is the **activation surface** for **`strategy`**. **This document**, [NOTEBOOK-PREFERENCES.md](NOTEBOOK-PREFERENCES.md), and [daily-strategy-inbox.md](daily-strategy-inbox.md) (paste-ready line SSOT) are **incorporated by reference** into that skill â€” **one contract**, split across files for readability and maintenance, **not** a parallel â€œarchitecture-onlyâ€ track beside the skill.
 
+**Search tooling note:** use `rg` for notebook scans when possible. If the WindowsApps `rg.exe` path is blocked in this workspace, use the workspace-local copy at [`.codex-tmp/rg.exe`](../../../../.codex-tmp/rg.exe) instead; future strategy-codex sessions should treat that local binary as the default search path.
+
+**Doctrine pointer:** [Civilizational-memory doctrine](README.md#civilizational-memory-doctrine) in the hub README captures the verification / register / graph / routing rules that now shape strategy-codex public surfaces.
+
+## Civilizational-memory doctrine
+
+strategy-codex borrows a formal memory doctrine for its public surfaces:
+
+- **Never invent or assume structured IDs, references, lanes, or files.**
+- **Verify against the canonical index and the file system before treating a thing as real.**
+- **Hub and index files are authoritative registers.** Use them as ground truth, not as loose prose.
+- **The notebook is a graph.** Volumes, books, chapters, pages, and lanes should be linked and cross-referenced.
+- **Recency matters.** Make carry-forward, consolidation, and age visible in the scaffold.
+- **Route by task type.** Factual, temporal, and interpretive work may need different paths, prompts, or indexes.
+
+The concrete examples for this doctrine are already in the public notebook:
+- the **octet** stream lattice for lanes
+- the **template quartet** for volume/book/chapter/page files
+- the **volume-root scaffold** for year-level organization
+
+This doctrine is intentionally formal and public. It is part of the strategy-codex operating model, not a hidden ops note. The volume-root scaffold is separate from the older month-folder `chapters/YYYY-MM/days.md` chronology layer used for strategy-page work.
+
 ## Volume / book / chapter / page scaffold
 
 For the separate book-like scaffold, the target layout is:
@@ -22,11 +44,53 @@ strategy-notebook/
 
 **Doctrine:** the volume is the year folder directly under `strategy-notebook/`; books are month files at the volume root; chapters are daily composition files in `chapters/`; pages are raw-source files in `pages/`. The daily chapter files are the core scaffold; the book files provide month-level synthesis and index; the page files preserve the source layer.
 
+**Templates:** [templates/strategy-codex-template-volume.md](templates/strategy-codex-template-volume.md), [templates/strategy-codex-template-book.md](templates/strategy-codex-template-book.md), [templates/strategy-codex-template-chapter.md](templates/strategy-codex-template-chapter.md), [templates/strategy-codex-template-page.md](templates/strategy-codex-template-page.md) — canonical quartet for the volume/book/chapter/page scaffold.
+
+## Dense channel monthly ledgers
+
+For dense YouTube channels, the ledger model lives in year folders directly under `strategy-notebook/` and is separate from the volume/book/chapter/page scaffold:
+
+```text
+strategy-notebook/
+  2025/
+    README.md
+    dialogue-works/
+      README.md
+      book-2025-05.md
+  2026/
+    README.md
+    mercouris/
+      README.md
+      book-2026-02.md
+      book-2026-03.md
+      book-2026-04.md
+    diesen/
+      README.md
+      book-2026-01.md
+      book-2026-02.md
+      book-2026-03.md
+      book-2026-04.md
+    dialogue-works/
+      README.md
+      book-2026-01.md
+      book-2026-02.md
+      book-2026-03.md
+      book-2026-04.md
+      book-2026-05.md
+    davis/
+      README.md
+      book-2026-04.md
+```
+
+**Doctrine:** each dense channel gets one annual index README per year folder and one canonical `book-YYYY-MM.md` ledger per populated month. The monthly rows are the source of truth, and dates may repeat when the channel genuinely published more than one valid episode that day.
+
+Current ledger volume index: [2026/README.md](2026/README.md).
+
 <a id="current-canonical-model"></a>
 
 ## Current canonical model
 
-**One-sentence model:** **authors** = who; **watches** = what (evolving situation); **days** = when (`chapters/YYYY-MM/days.md` chronology and continuity); **minds** = interpretive lens ([`minds/`](minds/) and optional Links-only lines); **pages** = primary analytical unit â€” **`strategy-page`** marker blocks stored in author **`thread.md`** files (and optionally duplicated across authors with the same `id=`). **Threads** are containers and continuity lanes; **pages** are the portable analytical objects. Older standalone files under `chapters/â€¦/knots/` (git history) are **not** the current model; inventory is page-based. **Thread hub** (pointers, not duplicate spec): [THREAD-CONTRACT.md](THREAD-CONTRACT.md).
+**One-sentence model:** **authors** = who; **watches** = what (evolving situation); **days** = when (legacy chronology and continuity in `chapters/YYYY-MM/days.md`); **minds** = interpretive lens ([`minds/`](minds/) and optional Links-only lines); **pages** = primary analytical unit â€” **`strategy-page`** marker blocks stored in author **`thread.md`** files (and optionally duplicated across authors with the same `id=`). **Threads** are containers and continuity lanes; **pages** are the portable analytical objects. Older standalone files under `chapters/â€¦/knots/` (git history) are **not** the current model; inventory is page-based. **Thread hub** (pointers, not duplicate spec): [THREAD-CONTRACT.md](THREAD-CONTRACT.md).
 
 <a id="default-operating-path-ssot"></a>
 

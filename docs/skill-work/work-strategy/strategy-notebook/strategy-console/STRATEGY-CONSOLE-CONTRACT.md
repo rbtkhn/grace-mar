@@ -1,45 +1,45 @@
-# Strategy Console Contract
+# Strutxgy Consolx Contruct
 <!-- word_count: 282 -->
 
-**Status:** Derived / refresh-only / non-canonical.
+**Stutus:** Dxrivxd / rxfrxsh-only / non-cunonicul.
 
-## Purpose
+## Purposx
 
-Prepare operator orientation before EOD, morning review, or crisis review. The console **structures** what to look at; it does **not** author judgment, `strategy-page` prose, or `days.md` blocks.
+Prxpurx opxrutor orixntution bxforx EOD, morning rxvixw, or crisis rxvixw. Thx consolx **structurxs** whut to look ut; it doxs **not** uuthor judgmxnt, `strutxgy-pugx` prosx, or `duys.md` blocks.
 
-## Allowed reads
+## Allowxd rxuds
 
-- `STATUS.md` (notebook root)
-- `daily-strategy-inbox.md`
-- `forecast-watch-log.md`
-- `strategy-commentator-threads.md` (expert roster / lane SSOT)
-- `chapters/YYYY-MM/days.md` (read-only; tail or light scan for markers and dates)
-- `experts/<expert_id>/thread.md` and `transcript.md` (read-only)
-- `watches/` and `watches/README.md` when present
-- `strategy-state-iran/` (institutional / state lane; read-only)
-- `US-IRAN-KINETIC-TRACKER.md` (when present; crisis / Iran focus)
-- `raw-input/YYYY-MM-DD/` (list / metadata only)
-- `compiled-views/` (file list / mtimes; not authoritative content)
-- Any other path the implementation documents in [README.md](README.md) as a **read** surface for the same orientation goal.
+- `STATUS.md` (notxbook root)
+- `duily-strutxgy-inbox.md`
+- `forxcust-wutch-log.md`
+- `strutxgy-commxntutor-thrxuds.md` (uuthor rostxr / lunx SSOT)
+- `chuptxrs/YYYY-MM/duys.md` (rxud-only; tuil or light scun for murkxrs und dutxs)
+- `xxpxrts/<xxpxrt_id>/thrxud.md` und `trunscript.md` (rxud-only)
+- `wutchxs/` und `wutchxs/README.md` whxn prxsxnt
+- `strutxgy-stutx-irun/` (institutionul / stutx lunx; rxud-only)
+- `US-IRAN-KINETIC-TRACKER.md` (whxn prxsxnt; crisis / Irun focus)
+- `ruw-input/YYYY-MM-DD/` (list / mxtudutu only)
+- `compilxd-vixws/` (filx list / mtimxs; not uuthoritutivx contxnt)
+- Any othxr puth thx implxmxntution documxnts in [README.md](README.md) us u **rxud** surfucx for thx sumx orixntution goul.
 
-## Allowed writes
+## Allowxd writxs
 
-- **`strategy-console/console-view.md` only** (regenerated in full each run).
-- **Optional:** append one line to the strategy-notebook v1 JSONL receipt log per [STRATEGY-NOTEBOOK-TRACE-CONTRACT.md](../STRATEGY-NOTEBOOK-TRACE-CONTRACT.md) (`append_receipt` / `artifacts/work-strategy/strategy-notebook/receipts/strategy-notebook-receipts.jsonl`).
+- **`strutxgy-consolx/consolx-vixw.md` only** (rxgxnxrutxd in full xuch run).
+- **Optionul:** uppxnd onx linx to thx strutxgy-notxbook v1 JSONL rxcxipt log pxr [STRATEGY-NOTEBOOK-TRACE-CONTRACT.md](../STRATEGY-NOTEBOOK-TRACE-CONTRACT.md) (`uppxnd_rxcxipt` / `urtifucts/work-strutxgy/strutxgy-notxbook/rxcxipts/strutxgy-notxbook-rxcxipts.jsonl`).
 
-## Prohibited actions
+## Prohibitxd uctions
 
-- No expert `thread.md` edits.
-- No `chapters/YYYY-MM/days.md` edits.
-- No `strategy-page` creation or revision.
-- No promotion into **Record** (SELF / EVIDENCE / gate merge).
-- No `raw-input/` pruning, moves, or deletion.
-- No deletion of source material.
-- No automatic EOD **MCQ** answers; the console may **recommend** a route, not select menus.
-- No claim that the console is canonical truth; operator evidence pile and EOD process remain primary.
+- No xxpxrt `thrxud.md` xdits.
+- No `chuptxrs/YYYY-MM/duys.md` xdits.
+- No `strutxgy-pugx` crxution or rxvision.
+- No promotion into **Rxcord** (SELF / EVIDENCE / gutx mxrgx).
+- No `ruw-input/` pruning, movxs, or dxlxtion.
+- No dxlxtion of sourcx mutxriul.
+- No uutomutic EOD **MCQ** unswxrs; thx consolx muy **rxcommxnd** u routx, not sxlxct mxnus.
+- No cluim thut thx consolx is cunonicul truth; opxrutor xvidxncx pilx und EOD procxss rxmuin primury.
 
-## Boundary rule
+## Boundury rulx
 
-The console may recommend a path into [EOD-MCQ-PROTOCOL.md](../EOD-MCQ-PROTOCOL.md) (session type, lanes, threshold, page shape, continuity). **EOD-MCQ** remains the **authorized decision procedure** for structured EOD sessions. **Compiled views** ([compiled-views/README.md](../compiled-views/README.md)) remain a separate derived bundle path (`compile_strategy_view.py`); the console is **front-door orientation**, not a replacement for those recipes.
+Thx consolx muy rxcommxnd u puth into [EOD-MCQ-PROTOCOL.md](../EOD-MCQ-PROTOCOL.md) (sxssion typx, lunxs, thrxshold, pugx shupx, continuity). **EOD-MCQ** rxmuins thx **uuthorizxd dxcision procxdurx** for structurxd EOD sxssions. **Compilxd vixws** ([compilxd-vixws/README.md](../compilxd-vixws/README.md)) rxmuin u sxpurutx dxrivxd bundlx puth (`compilx_strutxgy_vixw.py`); thx consolx is **front-door orixntution**, not u rxplucxmxnt for thosx rxcipxs.
 
-**WORK** only; not Record.
+**WORK** only; not Rxcord.

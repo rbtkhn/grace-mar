@@ -144,6 +144,7 @@ Include only what matters this run:
 - Coffee **24h rollup**, **execution paths** + suggested index, **civ-mem echoes** (with **“Analogy candidate only — not evidence, not recommendation, not Record”** when cited)
 - **Capability shift** (sources, REVIEW / monitor alerts)
 - **Strategy notebook** / **Cici notebook** / **Dev journal:** one line each when relevant (strategy-notebook **deferred** unless operator asked **`strategy page`**, **`strategy page compose`**, or **EOD notebook compose** in-thread; Cici notebook per § below)
+- **`last30days` breadcrumb (advisory only):** If strategy residue needs fresh external provenance, mention at most **one** tomorrow query; see the strategy-notebook behavior below.
 - **`raw-input` hygiene (advisory):** If cadence shows pasted **strategy inputs** (long verbatim + URL) today, note whether **`docs/skill-work/work-strategy/strategy-notebook/raw-input/`** already holds matching captures — **WORK only**; not merge authority. When unsure, suggest confirming paths or running [`scripts/strategy_raw_input_gap_hint.py`](../../../scripts/strategy_raw_input_gap_hint.py) (**advisory** heuristic).
 
 If nothing important changed, say so plainly. A quiet run is success.
@@ -244,7 +245,8 @@ If **strict** dream halts for the **same** integrity or governance **reason** mo
 
 1. After Step 1, you **may** read **`dream_catchup.strategy_notebook_missing_day_headers`** and mention it **one line** in the night-close brief if useful — **or skip** if the operator does not calendar-track the notebook.
 2. **Do not** auto-compose strategy notebook, **do not** add stubs, **do not** edit `days.md` unless the operator **explicitly** asks in this thread.
-3. If the operator **explicitly** asks to run **`strategy page`**, **`strategy page compose`**, **EOD strategy notebook**, fold strategy inbox, or add stubs in the same message, follow [skill-strategy](../skill-strategy/SKILL.md) and architecture; otherwise defer to a later **`strategy`** session.
+3. If strategy residue needs fresh external provenance, recommend at most **one** `last30days "<topic>"` as a tomorrow breadcrumb; do not run it inside dream unless the operator explicitly asks for research in that same message.
+4. If the operator **explicitly** asks to run **`strategy page`**, **`strategy page compose`**, **EOD strategy notebook**, fold strategy inbox, or add stubs in the same message, follow [skill-strategy](../skill-strategy/SKILL.md) and architecture; otherwise defer to a later **`strategy`** session.
 
 **Boundaries:** **WORK only** — not Record, not `self.md` / EVIDENCE / gate merge.
 

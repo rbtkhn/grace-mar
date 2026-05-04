@@ -11,6 +11,8 @@
 
 **Metaphor — Symphony of Civilization:** Indexed commentators are **parts** in a **polyphonic** score; each daily **`## YYYY-MM-DD`** block in the active month’s `chapters/YYYY-MM/days.md` is a **movement**; **`batch-analysis`** states **harmony vs tension** between parts. Full gloss: [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md) § **Symphony of Civilization**.
 
+**Public stream lattice (octet):** The notebook’s visible stream model is a flat **octet** of equal lanes. The video quartet is `Dialogue Works` → `Synthesis`, `Glenn Diesen` → `Order`, `Daniel Davis` → `Conflict`, and `Mercouris / The Duran` → `Statecraft`. The essay quartet is `Crooke` → `Process`, `Parsi` → `Scope`, `Pape` → `Escalation`, and `Ritter` → `Mechanics`. Use these labels in notebook prose and `batch-analysis` framing when you want the public stream model to be explicit; keep `thread:<expert_id>` routing unchanged.
+
 **Topic tags vs author threads (mental model):** Two layers — not mutually exclusive.
 
 - **Topic tags** — *what* the material is about: recurring **substantive** lanes (Islamabad arc, Hormuz, Lebanon vs nuclear, U.S. domestic liability, Rome / legitimacy, …). These show up as **grep tags** (`IRAN`, `JDVance`, `ROME`, `narrative-escalation`, …) or linked docs ([rome-persia-legitimacy-signal-check.md](rome-persia-legitimacy-signal-check.md), [trump-religion-papacy-arc.md](trump-religion-papacy-arc.md)).

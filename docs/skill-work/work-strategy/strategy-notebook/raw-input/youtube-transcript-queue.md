@@ -1,25 +1,27 @@
 # YouTube transcript queue
-<!-- word_count: ~920 -->
+<!-- word_count: ~780 -->
 
 WORK only; not Record.
 
 ## Purpose
 
-This queue is the graph-first source registry for YouTube transcript automation. The goal is not to ingest every upload on every channel. The goal is to capture substantial episodes from the channels that sit at the center of the interview network, then route the resulting `raw-input/` files into expert lanes only when that routing is meaningful.
+These are the canonical input channels for strategy-notebook. The queue is a rollout list for YouTube transcript automation and metadata capture, not a taxonomy of different roles.
 
-## Queue order
+## Canonical input channels
 
-Priority balances graph centrality, transcript volume, and ease of automation.
+- Dialogue Works
+- Daniel Davis Deep Dive
+- Glenn Diesen
+- Alex Mercouris
+- The Duran / Mercouris
+- Judging Freedom / Judge Napolitano
 
-| Rank | Channel | Primary graph role | Default routing | Automation posture | Compute posture |
-|---:|---|---|---|---|---|
-| 1 | Dialogue Works | Host hub | `thread:alkorshid` | Existing direct lane; thin wrapper over the generic helper | Cheap, caption-first |
-| 2 | Judging Freedom | Host hub | threadless until guest routing is clear | Discovery hub; capture substantial episodes, route later | Cheap to moderate |
-| 3 | The Duran | Host hub | threadless until speaker routing is clear | Discovery hub with recurring Mercouris-centered episodes | Cheap to moderate |
-| 4 | Daniel Davis Deep Dive | Direct expert lane | `thread:davis` | Direct lane; easiest expert endpoint after Dialogue Works | Cheap, caption-first |
-| 5 | Glenn Diesen | Direct expert lane | `thread:diesen` | Direct lane; useful both as speaker and bridge node | Cheap, caption-first |
-| 6 | The Grayzone | Shared hub | threadless until guest routing is clear | Shared Blumenthal / Maté network; good graph node, not a single lane | Cheap to moderate |
-| 7 | Breaking Points | Shared hub | threadless until guest routing is clear | High-volume hub; selective capture only, because many clips are not worth preserving | Moderate |
+## Additional channels
+
+Other channels can be added when useful, but they are not part of the canonical five above.
+
+- The Grayzone
+- Breaking Points
 
 ## Resource estimate
 
@@ -34,14 +36,12 @@ The transcript pipeline is efficient as long as the common path stays caption-fi
 Rule of thumb:
 - Tier 1 and Tier 2 should make the queue feel lightweight.
 - Whisper should remain the exception path, not the default path.
-- Throughput is typically gated by network latency and transcript availability, not local compute, unless a hub falls back to Whisper often.
+- Throughput is typically gated by network latency and transcript availability, not local compute, unless a channel falls back to Whisper often.
 
 ## Routing rules
 
 - Automated capture writes `raw-input/` only.
 - Pages and thread files are composed later in a separate pass.
-- Host hubs may omit `thread:` when a single expert lane is not the right routing target yet.
-- Direct expert lanes should use `thread:` by default.
 - Keep the queue selective: substantial episodes only, not completeness-by-default.
 
 ## Runner suggestions
@@ -50,9 +50,10 @@ Use the generic helper for the majority of cases:
 
 - `scripts/backfill_youtube_channel_raw_input.py`
 
-Thin wrappers exist for the first direct lanes and the major hubs:
+Thin wrappers exist for the common rollout targets:
 
 - `scripts/backfill_alkorshid_youtube_raw_input.py`
+- `scripts/backfill_alexmercouris_youtube_raw_input.py`
 - `scripts/backfill_davis_youtube_raw_input.py`
 - `scripts/backfill_diesen_youtube_raw_input.py`
 - `scripts/backfill_judgingfreedom_youtube_raw_input.py`
@@ -62,4 +63,4 @@ Thin wrappers exist for the first direct lanes and the major hubs:
 
 ## Rollout note
 
-Roll out one hub at a time so fallback rates and transcript quality can be observed before the queue expands. The queue order above is the default graph-first ordering, not a mandate to run every channel at once.
+Roll out one channel at a time so fallback rates and transcript quality can be observed before the queue expands. The list above is the default canonical set, not a mandate to run every channel at once.

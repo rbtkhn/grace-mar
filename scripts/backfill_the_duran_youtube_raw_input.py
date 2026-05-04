@@ -37,7 +37,7 @@ def main() -> int:
             "--notebook-root",
             str(REPO_ROOT / "docs/skill-work/work-strategy/strategy-notebook"),
             "--limit",
-            "20",
+            "150",
             "--sleep",
             "0.25",
             "--infer-guest",

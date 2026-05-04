@@ -2,7 +2,7 @@
 
 > Not part of the Record. SELF is authoritative. "Ephemeral" = non-gated and rotatable, not "only short-term." See docs/memory-template.md v2.0 (three horizons).
 
-Last rotated: 2026-04-30
+Last rotated: 2026-05-02
 
 ## Short-term
 
@@ -39,6 +39,7 @@ Analytical register confirmed as Voice persona. Companion prefers structural-fir
 - **Rotation:** prefer weekly prune of Short/Medium; review Long-term quarterly for drift into "shadow Record."
 - **Durable truth:** `users/grace-mar/self.md`; activity spine: `self-archive.md` (EVIDENCE); operator threads: `self-work.md`.
 - **Memory <-> Library boundary:** use `self-memory.md` for rotatable continuity, session process, and pointers only; use `self-library.md` for governed reference corpora, return-to shelves, and CIV-MEM / operator-book routing. If a memory line starts acting like identity truth, stage it through `recursion-gate.md`; if it starts acting like a reference corpus, route or point to SELF-LIBRARY instead.
+- **Agent substrate lens:** When evaluating agent/MCP/runtime ideas, treat Grace-Mar as a governed personal agent substrate: agents may read approved surfaces and stage proposals, but canonical truth still lives in the gated Record. Keep full doctrine in docs such as architecture/runtime/MCP; self-memory only carries this as a reentry lens, not as Record truth.
 - **Companion identity:** Robert (reseeded 2026-04-14, populated 2026-04-17). Previous companion Abby frozen in cold storage (`archive/companion-freeze-abby-2026-04-14/`, git tag `companion-freeze/abby-2026-04-14`).
 - **Voice register:** Analytical — structural, precise, framework-oriented. Set in `bot/prompt.py` HOW YOU SPEAK section.
 - **Dev-journal pointer:** [`docs/skill-work/work-dev/dev-notebook/work-dev/journal/`](../../docs/skill-work/work-dev/dev-notebook/work-dev/journal/README.md) (LIB-0155) — canonical surface for work-dev reflection and learning; check latest day file and inbox for work-dev continuity on reentry. Inbox: [`daily-dev-journal-inbox.md`](../../docs/skill-work/work-dev/dev-notebook/work-dev/journal/daily-dev-journal-inbox.md). Fold at dream.

@@ -24,6 +24,7 @@ Use this skill when the operator wants to test historical knowledge from `self-l
 
 - **Formatting:** Present **each letter option (`A`-`D`) on its own line** under the question stem (readable in chat paste).
 - **Visible citation:** Write prompts in academic prose with inline citations, e.g. `In Thucydides' account of the Melian Dialogue...` or `Drawing on Tocqueville's Democracy in America...`. Do **not** show `HNSRC`, `LIB`, or other internal acronyms in the operator-facing question.
+- **Answer-key balance:** Vary the correct-letter positions across the round; avoid clustering the answer key disproportionately in `A` or `B`. Keep distractors plausible, but rotate correct answers so the operator is tested on content rather than answer-position pattern.
 - **Date primary (cap):** In each round, **at most two** items may be **date-answer-primary** - i.e., the intended skill tested is recall of **year** or **calendar date** alone. Prefer roles, factions, causal links, diplomatic or institutional mechanisms, ordering/sequence, compare/contrast stems; use dates sparingly inside distractors **or** where one date settles a materially disputed storyline.
 - **Round size:** **6-10** questions remains the usual bracket; honour the date-primary cap regardless.
 

@@ -1,4 +1,5 @@
 # Mercouris refined page — 2026-04-27
+
 <!-- word_count: ~620 -->
 
 WORK only; not Record.

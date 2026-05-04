@@ -1,5 +1,6 @@
 # Institutional ledger — signal-class headings
 
+
 Default signal classes:
 
 - negotiation posture

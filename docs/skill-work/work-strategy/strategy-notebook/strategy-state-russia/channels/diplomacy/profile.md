@@ -1,5 +1,6 @@
 # Channel — diplomacy (MFA / diplomatic register)
 
+
 High-value: official diplomatic posture, negotiation framing, multilateral language.
 
 Weak without corroboration: material effects, force posture, field outcomes.

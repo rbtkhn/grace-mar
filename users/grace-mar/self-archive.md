@@ -339,6 +339,142 @@ entries: []
 >   correct_answer: "B - they help democratic citizens practice self-government outside the state and resist isolated individualism."
 >   validation_note: "Companion selected the concept-level answer matching the Tocqueville civil-society anchor."
 >   staged_claim: "Knows: in Tocqueville's Democracy in America, associations and civil society help democratic citizens practice self-government outside the state and resist isolated individualism."
+
+**[2026-05-02 08:31:18]** `APPROVED` (Operator)
+> CANDIDATE-0050 → ACT-0021
+> IX-A: Peter the Great's modernization project
+> warrant: Revisit if this should be narrowed to Petrine military-administrative reform rather than modernization as a whole; source is now formally anchored as high-credibility secondary, not primary.
+> source_binding_strength: strong
+> shelf_refs: [HNSRC-0123]
+> quiz_receipt:
+> source_kind: secondary
+>   citation_label: "Robert K. Massie, Peter the Great: His Life and World"
+>   source_credibility_note: "Operator declared all Robert K. Massie books high-credibility secondary sources and the best available shelf sources at this time; credibility means good-faith/reputable, not infallible."
+>   visible_prompt: "Drawing on Massie's biography of Peter the Great, what best captures Peter's core modernization project?"
+>   stem_topic: "Peter the Great modernization project"
+>   selected_answer: "B - forcing Russia into European military, technical, maritime, and administrative forms to strengthen state power."
+>   correct_answer: "B - forcing Russia into European military, technical, maritime, and administrative forms to strengthen state power."
+>   validation_note: "Companion selected the intended answer. Binding is strong to a formal secondary bookshelf-quiz anchor; operator declares all Massie books high-credibility secondary sources and best available shelf sources at this time, with credibility meaning good-faith/reputable rather than infallible."
+>   staged_claim: "Knows: Peter the Great's modernization project forced Russia toward European military, technical, maritime, and administrative forms in service of stronger state power."
+
+**[2026-05-02 08:31:18]** `APPROVED` (Operator)
+> CANDIDATE-0051 → ACT-0022
+> IX-A: Baltic access as Russian western maritime outlet
+> warrant: Revisit if this should be merged into a broader Russian sea-access / warm-water-port pattern rather than kept as a Petrine Baltic claim.
+> source_binding_strength: strong
+> shelf_refs: [HNSRC-0123]
+> quiz_receipt:
+> source_kind: secondary
+>   citation_label: "Robert K. Massie, Peter the Great: His Life and World"
+>   source_credibility_note: "Operator declared all Robert K. Massie books high-credibility secondary sources and the best available shelf sources at this time; credibility means good-faith/reputable, not infallible."
+>   visible_prompt: "Why was access to the Baltic Sea strategically important for Peter?"
+>   stem_topic: "Peter the Great and Baltic access"
+>   selected_answer: "A - it gave Russia a western maritime outlet for trade, diplomacy, and naval power."
+>   correct_answer: "A - it gave Russia a western maritime outlet for trade, diplomacy, and naval power."
+>   validation_note: "Companion selected the intended answer. Binding is strong to a formal secondary bookshelf-quiz anchor; operator declares all Massie books high-credibility secondary sources and best available shelf sources at this time, with credibility meaning good-faith/reputable rather than infallible."
+>   staged_claim: "Knows: Peter the Great pursued Baltic access because Russia needed a western maritime outlet for trade, diplomacy, and naval power."
+
+**[2026-05-02 08:31:18]** `APPROVED` (Operator)
+> CANDIDATE-0052 → ACT-0023
+> IX-A: Petrine modernization through coercive reform
+> warrant: Revisit if the operator wants the claim framed as reform cost rather than Russian state-capacity pattern.
+> source_binding_strength: strong
+> shelf_refs: [HNSRC-0123]
+> quiz_receipt:
+> source_kind: secondary
+>   citation_label: "Robert K. Massie, Peter the Great: His Life and World"
+>   source_credibility_note: "Operator declared all Robert K. Massie books high-credibility secondary sources and the best available shelf sources at this time; credibility means good-faith/reputable, not infallible."
+>   visible_prompt: "What tension sits at the center of Peter's reforms?"
+>   stem_topic: "Peter the Great reform tension"
+>   selected_answer: "A - modernization strengthened the state, but often through coercion, elite compulsion, and social strain."
+>   correct_answer: "A - modernization strengthened the state, but often through coercion, elite compulsion, and social strain."
+>   validation_note: "Companion selected the intended answer. Binding is strong to a formal secondary bookshelf-quiz anchor; operator declares all Massie books high-credibility secondary sources and best available shelf sources at this time, with credibility meaning good-faith/reputable rather than infallible."
+>   staged_claim: "Knows: Peter the Great's reforms strengthened the Russian state while relying on coercion, elite compulsion, and social strain."
+
+**[2026-05-02 08:31:18]** `APPROVED` (Operator)
+> CANDIDATE-0053 → ACT-0024
+> IX-A: Peter as modernization-from-above hinge in Russian state development
+> warrant: Revisit if this should be folded into the existing Russian center-periphery and reform-era constraints claim rather than kept as a Peter-specific IX-A entry.
+> source_binding_strength: strong
+> shelf_refs: [HNSRC-0123]
+> quiz_receipt:
+> source_kind: secondary
+>   citation_label: "Robert K. Massie, Peter the Great: His Life and World"
+>   source_credibility_note: "Operator declared all Robert K. Massie books high-credibility secondary sources and the best available shelf sources at this time; credibility means good-faith/reputable, not infallible."
+>   visible_prompt: "How does Peter the Great fit into the long arc of Russian state development?"
+>   stem_topic: "Peter the Great in Russian state development"
+>   selected_answer: "B - as a hinge figure who intensified the recurring Russian pattern of modernization from above under geopolitical pressure."
+>   correct_answer: "B - as a hinge figure who intensified the recurring Russian pattern of modernization from above under geopolitical pressure."
+>   validation_note: "Companion selected the intended answer. Binding is strong to a formal secondary bookshelf-quiz anchor; operator declares all Massie books high-credibility secondary sources and best available shelf sources at this time, with credibility meaning good-faith/reputable rather than infallible."
+>   staged_claim: "Knows: Peter the Great is a hinge figure in Russian state development, intensifying the pattern of modernization from above under geopolitical pressure."
+
+**[2026-05-02 08:31:18]** `APPROVED` (Operator)
+> CANDIDATE-0054 → ACT-0025
+> IX-A: Catherine the Great's palace-coup route to power
+> warrant: Revisit if this should be folded into a broader Russian court-politics succession pattern; source is now formally anchored as high-credibility secondary, not primary.
+> source_binding_strength: strong
+> shelf_refs: [HNSRC-0124]
+> quiz_receipt:
+> source_kind: secondary
+>   citation_label: "Robert K. Massie, Catherine the Great"
+>   source_credibility_note: "Operator declared all Robert K. Massie books high-credibility secondary sources and the best available shelf sources at this time; credibility means good-faith/reputable, not infallible."
+>   visible_prompt: "Drawing on Massie's biography of Catherine the Great, what best captures Catherine's route to power in Russia?"
+>   stem_topic: "Catherine the Great route to power"
+>   selected_answer: "B - she came to power through a palace coup against Peter III, relying on elite, military, and court support."
+>   correct_answer: "B - she came to power through a palace coup against Peter III, relying on elite, military, and court support."
+>   validation_note: "Companion selected the intended answer. Binding is strong to a formal secondary bookshelf-quiz anchor; operator declares all Massie books high-credibility secondary sources and best available shelf sources at this time, with credibility meaning good-faith/reputable rather than infallible."
+>   staged_claim: "Knows: Catherine the Great came to power through a palace coup against Peter III, relying on elite, military, and court support."
+
+**[2026-05-02 08:31:18]** `APPROVED` (Operator)
+> CANDIDATE-0055 → ACT-0026
+> IX-A: Catherine's enlightened absolutism
+> warrant: Revisit if this should be framed as Enlightenment court culture rather than state-development pattern.
+> source_binding_strength: strong
+> shelf_refs: [HNSRC-0124]
+> quiz_receipt:
+> source_kind: secondary
+>   citation_label: "Robert K. Massie, Catherine the Great"
+>   source_credibility_note: "Operator declared all Robert K. Massie books high-credibility secondary sources and the best available shelf sources at this time; credibility means good-faith/reputable, not infallible."
+>   visible_prompt: "What tension best defines Catherine's enlightened absolutism?"
+>   stem_topic: "Catherine the Great and enlightened absolutism"
+>   selected_answer: "B - she admired Enlightenment law, education, and rational reform while preserving autocratic power."
+>   correct_answer: "B - she admired Enlightenment law, education, and rational reform while preserving autocratic power."
+>   validation_note: "Companion selected the intended answer. Binding is strong to a formal secondary bookshelf-quiz anchor; operator declares all Massie books high-credibility secondary sources and best available shelf sources at this time, with credibility meaning good-faith/reputable rather than infallible."
+>   staged_claim: "Knows: Catherine the Great's enlightened absolutism combined admiration for Enlightenment law, education, and rational reform with preservation of autocratic power."
+
+**[2026-05-02 08:31:18]** `APPROVED` (Operator)
+> CANDIDATE-0056 → ACT-0027
+> IX-A: Pugachev Rebellion as threat from below
+> warrant: Revisit if this should be merged into a broader Russian frontier, serfdom, and state-coercion pattern.
+> source_binding_strength: strong
+> shelf_refs: [HNSRC-0124]
+> quiz_receipt:
+> source_kind: secondary
+>   citation_label: "Robert K. Massie, Catherine the Great"
+>   source_credibility_note: "Operator declared all Robert K. Massie books high-credibility secondary sources and the best available shelf sources at this time; credibility means good-faith/reputable, not infallible."
+>   visible_prompt: "Why was the Pugachev Rebellion politically important for Catherine's reign?"
+>   stem_topic: "Pugachev Rebellion under Catherine the Great"
+>   selected_answer: "A - it showed that peasant, Cossack, and frontier unrest could threaten imperial authority from below."
+>   correct_answer: "A - it showed that peasant, Cossack, and frontier unrest could threaten imperial authority from below."
+>   validation_note: "Companion selected the intended answer. Binding is strong to a formal secondary bookshelf-quiz anchor; operator declares all Massie books high-credibility secondary sources and best available shelf sources at this time, with credibility meaning good-faith/reputable rather than infallible."
+>   staged_claim: "Knows: the Pugachev Rebellion showed that peasant, Cossack, and frontier unrest could threaten Catherine the Great's imperial authority from below."
+
+**[2026-05-02 08:31:18]** `APPROVED` (Operator)
+> CANDIDATE-0057 → ACT-0028
+> IX-A: Catherine's Black Sea and Crimea expansion
+> warrant: Revisit if this should be folded into a broader Russian warm-water access and Ottoman frontier pattern.
+> source_binding_strength: strong
+> shelf_refs: [HNSRC-0124]
+> quiz_receipt:
+> source_kind: secondary
+>   citation_label: "Robert K. Massie, Catherine the Great"
+>   source_credibility_note: "Operator declared all Robert K. Massie books high-credibility secondary sources and the best available shelf sources at this time; credibility means good-faith/reputable, not infallible."
+>   visible_prompt: "What was a major geopolitical achievement of Catherine's southern policy?"
+>   stem_topic: "Catherine the Great, the Black Sea, and Crimea"
+>   selected_answer: "B - Russia expanded toward the Black Sea and Crimea, weakening Ottoman control and increasing imperial reach."
+>   correct_answer: "B - Russia expanded toward the Black Sea and Crimea, weakening Ottoman control and increasing imperial reach."
+>   validation_note: "Companion selected the intended answer. Binding is strong to a formal secondary bookshelf-quiz anchor; operator declares all Massie books high-credibility secondary sources and best available shelf sources at this time, with credibility meaning good-faith/reputable rather than infallible."
+>   staged_claim: "Knows: Catherine the Great's southern policy expanded Russia toward the Black Sea and Crimea, weakening Ottoman control and increasing imperial reach."
 END OF FILE — EVIDENCE grace-mar v0.2 (reseeded)
 
   - id: ACT-0001
@@ -538,5 +674,85 @@ END OF FILE — EVIDENCE grace-mar v0.2 (reseeded)
     mind_category: knowledge
     source: pipeline merge
     summary: "IX-A: Tocqueville associations and democratic self-government"
+    curated_by: user
+    evidence_tier: 3
+
+  - id: ACT-0021
+    date: 2026-05-02
+    modality: text (pipeline merge)
+    activity_type: knowledge — curated observation
+    mind_category: knowledge
+    source: pipeline merge
+    summary: "IX-A: Peter the Great's modernization project"
+    curated_by: user
+    evidence_tier: 3
+
+  - id: ACT-0022
+    date: 2026-05-02
+    modality: text (pipeline merge)
+    activity_type: knowledge — curated observation
+    mind_category: knowledge
+    source: pipeline merge
+    summary: "IX-A: Baltic access as Russian western maritime outlet"
+    curated_by: user
+    evidence_tier: 3
+
+  - id: ACT-0023
+    date: 2026-05-02
+    modality: text (pipeline merge)
+    activity_type: knowledge — curated observation
+    mind_category: knowledge
+    source: pipeline merge
+    summary: "IX-A: Petrine modernization through coercive reform"
+    curated_by: user
+    evidence_tier: 3
+
+  - id: ACT-0024
+    date: 2026-05-02
+    modality: text (pipeline merge)
+    activity_type: knowledge — curated observation
+    mind_category: knowledge
+    source: pipeline merge
+    summary: "IX-A: Peter as modernization-from-above hinge in Russian state development"
+    curated_by: user
+    evidence_tier: 3
+
+  - id: ACT-0025
+    date: 2026-05-02
+    modality: text (pipeline merge)
+    activity_type: knowledge — curated observation
+    mind_category: knowledge
+    source: pipeline merge
+    summary: "IX-A: Catherine the Great's palace-coup route to power"
+    curated_by: user
+    evidence_tier: 3
+
+  - id: ACT-0026
+    date: 2026-05-02
+    modality: text (pipeline merge)
+    activity_type: knowledge — curated observation
+    mind_category: knowledge
+    source: pipeline merge
+    summary: "IX-A: Catherine's enlightened absolutism"
+    curated_by: user
+    evidence_tier: 3
+
+  - id: ACT-0027
+    date: 2026-05-02
+    modality: text (pipeline merge)
+    activity_type: knowledge — curated observation
+    mind_category: knowledge
+    source: pipeline merge
+    summary: "IX-A: Pugachev Rebellion as threat from below"
+    curated_by: user
+    evidence_tier: 3
+
+  - id: ACT-0028
+    date: 2026-05-02
+    modality: text (pipeline merge)
+    activity_type: knowledge — curated observation
+    mind_category: knowledge
+    source: pipeline merge
+    summary: "IX-A: Catherine's Black Sea and Crimea expansion"
     curated_by: user
     evidence_tier: 3

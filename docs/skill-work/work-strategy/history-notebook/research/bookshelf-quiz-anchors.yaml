@@ -76,6 +76,39 @@ anchors:
       - naval-commercial competition
       - early modern maritime rivalry
 
+  - id: bq-massie-peter-great
+    shelf_refs: [HNSRC-0123]
+    source_kind: secondary
+    citation_label: "Robert K. Massie, Peter the Great: His Life and World"
+    visible_prompt_label: "Massie's biography of Peter the Great"
+    source_credibility_note: "Operator declaration 2026-05-02: high-credibility secondary source and best-available shelf source when no primary anchor is present; credibility means good-faith/reputable, not infallible."
+    quiz_uses:
+      - Petrine modernization
+      - Baltic access and naval power
+      - Russian state development
+
+  - id: bq-massie-catherine-great
+    shelf_refs: [HNSRC-0124]
+    source_kind: secondary
+    citation_label: "Robert K. Massie, Catherine the Great"
+    visible_prompt_label: "Massie's biography of Catherine the Great"
+    source_credibility_note: "Operator declaration 2026-05-02: high-credibility secondary source and best-available shelf source when no primary anchor is present; credibility means good-faith/reputable, not infallible."
+    quiz_uses:
+      - Catherine's route to power
+      - enlightened absolutism
+      - Russian imperial expansion
+
+  - id: bq-massie-nicholas-alexandra
+    shelf_refs: [HNSRC-0125]
+    source_kind: secondary
+    citation_label: "Robert K. Massie, Nicholas and Alexandra"
+    visible_prompt_label: "Massie's biography of Nicholas and Alexandra"
+    source_credibility_note: "Operator declaration 2026-05-02: high-credibility secondary source and best-available shelf source when no primary anchor is present; credibility means good-faith/reputable, not infallible."
+    quiz_uses:
+      - Romanov collapse
+      - Nicholas II and Alexandra
+      - late imperial Russia
+
   - id: bq-macarthur-truman-nuclear-crisis
     shelf_refs: [HNSRC-0256]
     source_kind: secondary

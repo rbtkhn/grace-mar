@@ -1,5 +1,6 @@
 # strategy-state-russia — chapter 2026-04 — meta
 
+
 **Kind:** month  
 **Status:** open
 

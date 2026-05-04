@@ -1,5 +1,6 @@
 # Johnson refined page — 2026-04-29 (Iran War Global Economic Shockwave)
 
+
 WORK only; not Record.
 
 **Expert:** `johnson` · **Published:** 2026-04-29 · **Capture:** Mode E — YouTube (see raw-input `source_url`; guest lane **Larry Johnson**, host **Daniel Davis**) · **Artifact:** refined page (standalone file under `experts/johnson/`). Not a `strategy-page` HTML fence in `thread.md` unless you duplicate the same judgment there during EOD compose.

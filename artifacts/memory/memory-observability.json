@@ -6,23 +6,23 @@
     "bridge event JSONL",
     "coffee/dream integration"
   ],
-  "generated_at": "2026-05-01T05:43:17.000277+00:00",
+  "generated_at": "2026-05-02T06:19:14.410464+00:00",
   "overall_status": "missing",
   "recommended_next_action": "Refresh the night handoff with a successful dream pass before treating it as current.",
   "surfaces": {
     "bridge_state": {
-      "age_hours": 14.09,
+      "age_hours": 1.77,
       "detail": "bridge state present",
       "name": "bridge state",
-      "observed_at": "2026-04-30T15:38:00+00:00",
+      "observed_at": "2026-05-02T04:33:00+00:00",
       "path": "users/grace-mar/daily-handoff/last-bridge-state.json",
       "status": "ok"
     },
     "cadence": {
       "age_hours": 0.0,
-      "detail": "345 event(s) found for grace-mar",
+      "detail": "389 event(s) found for grace-mar",
       "name": "cadence events",
-      "observed_at": "2026-05-01T05:43:00+00:00",
+      "observed_at": "2026-05-02T06:19:00+00:00",
       "path": "docs/skill-work/work-cadence/work-cadence-events.md",
       "status": "ok"
     },
@@ -30,7 +30,7 @@
       "age_hours": 0.0,
       "detail": "ok=True",
       "name": "last dream",
-      "observed_at": "2026-05-01T05:43:16.849146+00:00",
+      "observed_at": "2026-05-02T06:19:14.039442+00:00",
       "path": "users/grace-mar/last-dream.json",
       "status": "ok"
     },

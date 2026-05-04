@@ -1,5 +1,6 @@
 # Crooke refined page — 2026-01-28 (*gaza reconstruction ukraine reconstruction*)
 
+
 WORK only; not Record.
 
 **Expert:** `crooke` · **Published:** 2026-01-28 · **Capture:** Mode C — Substack · **Artifact:** refined page (standalone file under `experts/crooke/`). Not a `strategy-page` HTML fence in `thread.md` unless you duplicate judgment there during EOD compose.

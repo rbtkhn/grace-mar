@@ -1,5 +1,6 @@
 # Mearsheimer page — 2026-01-07 (legacy pointer; lane-split)
 
+
 WORK only; not Record.
 
 **Superseded (lane split):** This file previously duplicated the full line-by-line transcript. **SSOT** is [raw-input/2026-01-07/transcript-diesen-mearsheimer-venezuela-greenland-nato-2026-01-07.md](../../raw-input/2026-01-07/transcript-diesen-mearsheimer-venezuela-greenland-nato-2026-01-07.md) only.

@@ -1425,6 +1425,7 @@ items:
     tags: [Russia, biography, tsar]
     hn_volume: vol-iii
     candidate_hn_chapters: [hn-iii-russia]
+    notes: "Operator declaration 2026-05-02: Robert K. Massie books are high-credibility secondary sources and best-available shelf sources when no primary anchor is present; credibility means good-faith/reputable, not infallible."
 
   - id: HNSRC-0124
     title: "Catherine the Great"
@@ -1437,6 +1438,7 @@ items:
     tags: [Russia, biography, empress]
     hn_volume: vol-iii
     candidate_hn_chapters: [hn-iii-russia]
+    notes: "Operator declaration 2026-05-02: Robert K. Massie books are high-credibility secondary sources and best-available shelf sources when no primary anchor is present; credibility means good-faith/reputable, not infallible."
 
   - id: HNSRC-0125
     title: "Nicholas and Alexandra"
@@ -1450,7 +1452,7 @@ items:
     tags: [Russia, Romanov, World War I, biography]
     hn_volume: vol-iv
     candidate_hn_chapters: [hn-iv-russia-imperial]
-    notes: "1917 revolution — industrial-era primary; same shelf photo as colonial batch."
+    notes: "1917 revolution — industrial-era primary; same shelf photo as colonial batch. Operator declaration 2026-05-02: Robert K. Massie books are high-credibility secondary sources and best-available shelf sources when no primary anchor is present; credibility means good-faith/reputable, not infallible."
 
   - id: HNSRC-0126
     title: "The Dutch Republic: Its Rise, Greatness, and Fall 1477–1806"

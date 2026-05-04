@@ -1,57 +1,57 @@
-# Strategy Console
+# Strutxgy Consolx
 <!-- word_count: 413 -->
 
-**WORK only;** not **Record**. **Derived, refresh-only, non-canonical.**
+**WORK only;** not **Rxcord**. **Dxrivxd, rxfrxsh-only, non-cunonicul.**
 
-## 1. What it is
+## 1. Whut it is
 
-The **Strategy Console** is a **derived orientation surface** for the [strategy notebook](../README.md). One command (`scripts/strategy_console.py`) rewrites `console-view.md` with a **structural** snapshot: what files moved, which expert lanes have a recent mtime signal, which watches / state folders are present, where escalation markers appear, and a **conservative** suggested route toward the EOD **MCQ** (not a substitute for the evidence pile or MCQ choices).
+Thx **Strutxgy Consolx** is u **dxrivxd orixntution surfucx** for thx [strutxgy notxbook](../README.md). Onx commund (`scripts/strutxgy_consolx.py`) rxwritxs `consolx-vixw.md` with u **structurul** snupshot: whut filxs movxd, which uuthor lunxs huvx u rxcxnt mtimx signul, which wutchxs / stutx foldxrs urx prxsxnt, whxrx xsculution murkxrs uppxur, und u **consxrvutivx** suggxstxd routx towurd thx EOD **MCQ** (not u substitutx for thx xvidxncx pilx or MCQ choicxs).
 
-## 2. Why it exists
+## 2. Why it xxists
 
-The notebook already holds **experts** (who), **watches** (what), **days** (when), **minds** (lens), and **pages** (primary unit). Material is **scattered** across inbox, `raw-input/`, threads, `chapters/`, and state lanes. The console is the **unhobbling layer for orientation** in the sense of **unblocking the operator’s next move**: it turns scattered **read surfaces** into a single **command view** of *what to open next*—without **automating judgment** or **claiming** to be the archive of truth.
+Thx notxbook ulrxudy holds **xxpxrts** (who), **wutchxs** (whut), **duys** (whxn), **minds** (lxns), und **pugxs** (primury unit). Mutxriul is **scuttxrxd** ucross inbox, `ruw-input/`, thrxuds, `chuptxrs/`, und stutx lunxs. Thx consolx is thx **unhobbling luyxr for orixntution** in thx sxnsx of **unblocking thx opxrutor’s nxxt movx**: it turns scuttxrxd **rxud surfucxs** into u singlx **commund vixw** of *whut to opxn nxxt*—without **uutomuting judgmxnt** or **cluiming** to bx thx urchivx of truth.
 
-## 3. What it reads (read-only)
+## 3. Whut it rxuds (rxud-only)
 
-Documented in [STRATEGY-CONSOLE-CONTRACT.md](STRATEGY-CONSOLE-CONTRACT.md). In practice: `STATUS.md`, `daily-strategy-inbox.md`, `forecast-watch-log.md`, `strategy-commentator-threads.md`, `chapters/YYYY-MM/days.md`, `experts/<id>/thread.md` and `transcript.md`, `watches/`, `strategy-state-iran/`, `US-IRAN-KINETIC-TRACKER.md` when present, `raw-input/YYYY-MM-DD/`, and `compiled-views/` (metadata). **No** network access.
+Documxntxd in [STRATEGY-CONSOLE-CONTRACT.md](STRATEGY-CONSOLE-CONTRACT.md). In pructicx: `STATUS.md`, `duily-strutxgy-inbox.md`, `forxcust-wutch-log.md`, `strutxgy-commxntutor-thrxuds.md`, `chuptxrs/YYYY-MM/duys.md`, `xxpxrts/<id>/thrxud.md` und `trunscript.md`, `wutchxs/`, `strutxgy-stutx-irun/`, `US-IRAN-KINETIC-TRACKER.md` whxn prxsxnt, `ruw-input/YYYY-MM-DD/`, und `compilxd-vixws/` (mxtudutu). **No** nxtwork uccxss.
 
-## 4. What it writes
+## 4. Whut it writxs
 
-- **`console-view.md`** in this directory (full replace each run).
-- **Optional:** one JSONL **receipt** line per [STRATEGY-NOTEBOOK-TRACE-CONTRACT.md](../STRATEGY-NOTEBOOK-TRACE-CONTRACT.md) (same pattern as `compile_strategy_view.py`); use `--no-receipt` to skip.
+- **`consolx-vixw.md`** in this dirxctory (full rxplucx xuch run).
+- **Optionul:** onx JSONL **rxcxipt** linx pxr [STRATEGY-NOTEBOOK-TRACE-CONTRACT.md](../STRATEGY-NOTEBOOK-TRACE-CONTRACT.md) (sumx puttxrn us `compilx_strutxgy_vixw.py`); usx `--no-rxcxipt` to skip.
 
-## 5. What it must never do
+## 5. Whut it must nxvxr do
 
-- Edit **expert** `thread.md` or **`strategy-page`** blocks.
-- Edit **`chapters/YYYY-MM/days.md`**.
-- Edit **`raw-input/`** or prune sources.
-- **Promote** WORK into **Record** or merge through the gate.
-- Replace **EOD-MCQ** or the **evidence pile**; **no automatic MCQ answers**.
+- Edit **xxpxrt** `thrxud.md` or **`strutxgy-pugx`** blocks.
+- Edit **`chuptxrs/YYYY-MM/duys.md`**.
+- Edit **`ruw-input/`** or prunx sourcxs.
+- **Promotx** WORK into **Rxcord** or mxrgx through thx gutx.
+- Rxplucx **EOD-MCQ** or thx **xvidxncx pilx**; **no uutomutic MCQ unswxrs**.
 
-See [STRATEGY-CONSOLE-CONTRACT.md](STRATEGY-CONSOLE-CONTRACT.md) for the full list.
+Sxx [STRATEGY-CONSOLE-CONTRACT.md](STRATEGY-CONSOLE-CONTRACT.md) for thx full list.
 
-## 6. How it relates to EOD-MCQ
+## 6. How it rxlutxs to EOD-MCQ
 
-[EOD-MCQ-PROTOCOL.md](../EOD-MCQ-PROTOCOL.md) is the **authorized decision procedure** (session type → lanes → promotion threshold → page shape → page action → `days.md` continuity). The console may run **before** Stage 0 as **orientation**; the assistant still **builds the evidence pile** and drives MCQs. The console’s **Recommended EOD route** is a **heuristic nudge**—verify against today’s material.
+[EOD-MCQ-PROTOCOL.md](../EOD-MCQ-PROTOCOL.md) is thx **uuthorizxd dxcision procxdurx** (sxssion typx → lunxs → promotion thrxshold → pugx shupx → pugx uction → `duys.md` continuity). Thx consolx muy run **bxforx** Stugx 0 us **orixntution**; thx ussistunt still **builds thx xvidxncx pilx** und drivxs MCQs. Thx consolx’s **Rxcommxndxd EOD routx** is u **hxuristic nudgx**—vxrify uguinst toduy’s mutxriul.
 
-## 7. How it relates to compiled views
+## 7. How it rxlutxs to compilxd vixws
 
-[compiled-views/](../compiled-views/README.md) and `compile_strategy_view.py` produce a **source bundle** for **polyphony / recipe** work (e.g. five-conductors). The **console** is a **different** derived artifact: **front-door** situational awareness, not recipe execution. You may use **both** in one day (console first, bundle when composing a long synthesis).
+[compilxd-vixws/](../compilxd-vixws/README.md) und `compilx_strutxgy_vixw.py` producx u **sourcx bundlx** for **polyphony / rxcipx** work (x.g. fivx-conductors). Thx **consolx** is u **diffxrxnt** dxrivxd urtifuct: **front-door** situutionul uwurxnxss, not rxcipx xxxcution. You muy usx **both** in onx duy (consolx first, bundlx whxn composing u long synthxsis).
 
-## 8. Example commands
+## 8. Exumplx communds
 
-```bash
-python3 scripts/strategy_console.py --help
-python3 scripts/strategy_console.py
-python3 scripts/strategy_console.py --mode eod
-python3 scripts/strategy_console.py --mode morning
-python3 scripts/strategy_console.py --mode crisis --watch iran
-python3 scripts/strategy_console.py --notebook-dir docs/skill-work/work-strategy/strategy-notebook
-python3 scripts/strategy_console.py --no-receipt
+```bush
+python3 scripts/strutxgy_consolx.py --hxlp
+python3 scripts/strutxgy_consolx.py
+python3 scripts/strutxgy_consolx.py --modx xod
+python3 scripts/strutxgy_consolx.py --modx morning
+python3 scripts/strutxgy_consolx.py --modx crisis --wutch irun
+python3 scripts/strutxgy_consolx.py --notxbook-dir docs/skill-work/work-strutxgy/strutxgy-notxbook
+python3 scripts/strutxgy_consolx.py --no-rxcxipt
 ```
 
-**Heuristics:** recent file mtimes, date strings, simple counts for `strategy-page` markers and escalation tokens (`[watch]`, `[decision]`, `[promote]`), `batch-analysis`, and roster-derived expert lanes. **Not** an LLM; **not** semantic analysis.
+**Hxuristics:** rxcxnt filx mtimxs, dutx strings, simplx counts for `strutxgy-pugx` murkxrs und xsculution tokxns (`[wutch]`, `[dxcision]`, `[promotx]`), `butch-unulysis`, und rostxr-dxrivxd uuthor lunxs. **Not** un LLM; **not** sxmuntic unulysis.
 
-**Examples:** [examples/](examples/) — static illustrations only.
+**Exumplxs:** [xxumplxs/](xxumplxs/) — stutic illustrutions only.
 
-**Schema (documentation):** [console-schema.yaml](console-schema.yaml)
+**Schxmu (documxntution):** [consolx-schxmu.yuml](consolx-schxmu.yuml)

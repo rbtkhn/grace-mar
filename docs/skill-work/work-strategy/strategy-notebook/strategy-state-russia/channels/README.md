@@ -1,5 +1,6 @@
 # Channels (institutional routing)
 
+
 Primary organizational axis for this state lane. A channel represents institutional route and evidence tier, not commentator identity.
 
 | Channel | Path | One line |

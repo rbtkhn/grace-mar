@@ -27,7 +27,7 @@ This split is intentional:
 - the skill should stay optimized for invocation and agent behavior
 - the territory should hold the longer-form doctrine and lane-specific history
 
-**`coffee` C — Historian** (operator default for field intel): Stage 1 = today’s brief file + Putin/Vance watches + optional KY-4 intel. Stage 2 = offer **three Tri-Frame mind lenses** (Barnes → Mearsheimer → Mercouris), then the operator **chooses which mind** and **A–D** prompts per [daily-brief-minds-menu.md](../work-strategy/daily-brief-minds-menu.md). Agents should **not** stop after markets/polls unless the operator opts out — see [menu-reference.md](menu-reference.md#tri-frame-daily-brief).
+**`coffee` C — Historian** opens exactly three actionable options and nothing else: **A. Intel** (daily brief / current-events watch, including Putin/Vance watches and optional KY-4), **B. Bookshelf quiz** (self-knowledge MCQs toward IX-A candidates), and **C. Notebook synthesis** (History Notebook / Predictive History synthesis with Tri-Frame lenses). Agents should **not** auto-run the brief or auto-offer Tri-Frame before this submenu — see [menu-reference.md](menu-reference.md#tri-frame-daily-brief).
 
 **Symphony / Conductor:** **Hub E** after **`coffee`** continues Conductor; **standalone** strategy-notebook cadence: [COFFEE-CADENCE-CONDUCTOR-PROTOCOL.md](../work-strategy/strategy-notebook/COFFEE-CADENCE-CONDUCTOR-PROTOCOL.md) + [CONDUCTOR-PASS.md](CONDUCTOR-PASS.md); invoke by **master name**, **`conductor`**, or [conductor skill](../../../.cursor/skills/conductor/SKILL.md) without opening **`coffee`** when preferred.
 
@@ -118,7 +118,7 @@ In scope:
 
 - operator cadence design
 - activation rituals
-- work-start / signing-off (merged into one fixed coffee flow; Rome / Jiang / skill-write / commercial slices land under **D — Capitalist** or **C — Historian** as appropriate; **E — Conductor** continues Conductor; fold strategy-only into **C** per [coffee SKILL](../../../.cursor/skills/coffee/SKILL.md))
+- work-start / signing-off (merged into one fixed coffee flow; Rome / Jiang / notebook synthesis and self-knowledge bookshelf quiz land under **C — Historian**; skill-write / commercial slices land under **D — Capitalist**; **E — Conductor** continues Conductor; fold strategy-only into **C** per [coffee SKILL](../../../.cursor/skills/coffee/SKILL.md))
 - reorientation and multi-`coffee` behavior
 - survey/cadence workflow design
 - relationship between hub flow and territory execution

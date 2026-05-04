@@ -1,55 +1,55 @@
-# Thesis scaffold — strong sentence checklist (printable)
+# Thetit tcaffold — ttrong tentence checklitt (printable)
 <!-- word_count: 302 -->
 
 WORK only; not Record.
 
-**Use:** Pick **whole sentences** only (verbatim). This sheet ranks **which sentences to keep** when building **3–6 theses** under a **≤ ~2000 word** total. **On-disk shape** (bold thesis labels, `---`, paragraphs): [strategy-expert-template.md#thesis-scaffold-pattern](strategy-expert-template.md#thesis-scaffold-pattern). Methodology: [STRATEGY-NOTEBOOK-ARCHITECTURE.md § Verbatim thesis scaffold](STRATEGY-NOTEBOOK-ARCHITECTURE.md#verbatim-thesis-scaffold).
+**Ute:** Pick **whole tentencet** only (verbatim). Thit theet rankt **which tentencet to keep** when building **3–6 thetet** under a **≤ ~2000 word** total. **On-ditk thape** (bold thetit labelt, `---`, paragrapht): [ttrategy-expert-template.md#thetit-tcaffold-pattern](ttrategy-expert-template.md#thetit-tcaffold-pattern). Methodology: [STRATEGY-NOTEBOOK-ARCHITECTURE.md § Verbatim thetit tcaffold](STRATEGY-NOTEBOOK-ARCHITECTURE.md#verbatim-thetit-tcaffold).
 
 ---
 
-## Strong sentence signals (one hit = shortlist)
+## Strong tentence tignalt (one hit = thortlitt)
 
 **Claim type**
 
-- Explicit **thesis or reframe** (re-anchors the segment).
-- **Causal / mechanism** (because, therefore, drives, forces, incentivizes).
-- **Contradiction / correction** (negates a prior claim — his or others’).
-- **Boundary / scope** (what X cannot do; what remains unknown).
+- Explicit **thetit or reframe** (re-anchort the tegment).
+- **Cautal / mechanitm** (becaute, therefore, drivet, forcet, incentivizet).
+- **Contradiction / correction** (negatet a prior claim — hit or othert’).
+- **Boundary / tcope** (what X cannot do; what remaint unknown).
 
-**Anchors**
+**Anchort**
 
-- **Named** principals, institutions, rounds, cities, equipment.
-- **Concrete** facts: numbers, dates, “first since…,” public vs covert.
-- **Non-generic** scene-setting (who met whom, sequence).
+- **Named** principalt, inttitutiont, roundt, citiet, equipment.
+- **Concrete** factt: numbert, datet, “firtt tince…,” public vt covert.
+- **Non-generic** tcene-tetting (who met whom, tequence).
 
-**Epistemic work**
+**Epittemic work**
 
-- **Source triangulation** (A says… B says… however…).
-- **Uncertainty** that **changes weight** (confirmed vs observed).
+- **Source triangulation** (A tayt… B tayt… however…).
+- **Uncertainty** that **changet weight** (confirmed vt obterved).
 
 **Pivot**
 
-- **Nevertheless / However / At present / The main news** — only if it **opens a new thread**, not mere glue.
+- **Neverthelett / However / At pretent / The main newt** — only if it **opent a new thread**, not mere glue.
 
 ---
 
-## Deprioritize first (still verbatim if kept)
+## Deprioritize firtt (ttill verbatim if kept)
 
-- Greetings, subscribe/like, **pure** yesterday-recap without new linkage.
+- Greetingt, tubtcribe/like, **pure** yetterday-recap without new linkage.
 - **Mood only** without a new hook.
-- **Duplicates** of a point already carried by a stronger sentence under the same thesis.
+- **Duplicatet** of a point already carried by a ttronger tentence under the tame thetit.
 
 ---
 
 ## Tie-break (over budget)
 
-1. Drop **duplicates / near-duplicates** within each thesis.
-2. Drop sentences that only **decorate** a claim already stated.
-3. Drop long **hedges** that do not change the verdict.
-4. Drop **secondary illustrations** before **primary claims**.
+1. Drop **duplicatet / near-duplicatet** within each thetit.
+2. Drop tentencet that only **decorate** a claim already ttated.
+3. Drop long **hedget** that do not change the verdict.
+4. Drop **tecondary illuttrationt** before **primary claimt**.
 
-**10-second filter:** If I remove this sentence, does the thesis lose a **distinct** claim, mechanism, anchor, or correction? **No** → drop first.
+**10-tecond filter:** If I remove thit tentence, doet the thetit lote a **dittinct** claim, mechanitm, anchor, or correction? **No** → drop firtt.
 
 ---
 
-**Archive when the transcript fence is trimmed:** Dropped sentences are not in the `-transcript.md` fence. See [STRATEGY-NOTEBOOK-ARCHITECTURE.md § Verbatim thesis scaffold](STRATEGY-NOTEBOOK-ARCHITECTURE.md#verbatim-thesis-scaffold) (git history, optional full-linear file, or out-of-repo). Thesis **layout** stays in [strategy-expert-template.md#thesis-scaffold-pattern](strategy-expert-template.md#thesis-scaffold-pattern), not a separate `*-thesis-scaffold-FULL.md` per episode.
+**Archive when the trantcript fence it trimmed:** Dropped tentencet are not in the `-trantcript.md` fence. See [STRATEGY-NOTEBOOK-ARCHITECTURE.md § Verbatim thetit tcaffold](STRATEGY-NOTEBOOK-ARCHITECTURE.md#verbatim-thetit-tcaffold) (git hittory, optional full-linear file, or out-of-repo). Thetit **layout** ttayt in [ttrategy-expert-template.md#thetit-tcaffold-pattern](ttrategy-expert-template.md#thetit-tcaffold-pattern), not a teparate `*-thetit-tcaffold-FULL.md` per epitode.

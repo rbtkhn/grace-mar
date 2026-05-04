@@ -454,3 +454,32 @@ _(Append below this line.)_
 - **2026-05-02 03:05 UTC** — coffee_conductor_outcome (grace-mar) ok=true cursor_model=unknown model_tier=unknown conductor=toscanini verdict=gate-shape-pass-evidence-boundary-watch falsify=mcq-candidates-pass-readiness-but-lack-hnsrc-or-stem-answer-receipts
 - **2026-05-02 04:03 UTC** — coffee (grace-mar) ok=true mode=work-start cursor_model=unknown model_tier=unknown
 - **2026-05-02 04:30 UTC** — bridge (grace-mar) ok=true cursor_model=unknown model_tier=unknown refs=grace-mar:61651c46 scope=local-first-substrate skipped_dirty_arcs=conductor-cici-strategy
+- **2026-05-02 04:48 UTC** — coffee (grace-mar) ok=true mode=work-start cursor_model=unknown model_tier=unknown
+- **2026-05-02 04:49 UTC** — coffee_pick (grace-mar) ok=true cursor_model=unknown model_tier=unknown picked=C cursor-model=codex
+- **2026-05-02 04:56 UTC** — coffee_pick (grace-mar) ok=true cursor_model=unknown model_tier=unknown picked=conductor conductor=karajan cursor-model=codex
+- **2026-05-02 04:58 UTC** — coffee_conductor_outcome (grace-mar) ok=true cursor_model=unknown model_tier=unknown conductor=karajan verdict=stage-set-ready falsify=record-merge-files-only-cici-strategy-conductor-residue-excluded
+- **2026-05-02 05:32 UTC** — coffee_pick (grace-mar) ok=true cursor_model=unknown model_tier=unknown picked=conductor conductor=toscanini cursor-model=codex
+- **2026-05-02 05:33 UTC** — coffee_conductor_outcome (grace-mar) ok=true cursor_model=unknown model_tier=unknown conductor=toscanini verdict=verified falsify=manifest-and-recursion-gate-untouched-skill-sync-verify-pass
+- **2026-05-02 05:42 UTC** — coffee_pick (grace-mar) ok=true cursor_model=unknown model_tier=unknown picked=conductor conductor=kleiber cursor-model=codex
+- **2026-05-02 06:17 UTC** — dream (grace-mar) ok=false mode=default cursor_model=unknown model_tier=unknown phase=both integrity=fail governance=pass mem_changed=true reviewable=4 contradictions=0 civmem_echo_count=0 civmem_suppressed=true handoff_written=true
+- **2026-05-02 06:18 UTC** — dream (grace-mar) ok=false mode=default cursor_model=unknown model_tier=unknown phase=both integrity=fail governance=pass mem_changed=false reviewable=4 contradictions=0 civmem_echo_count=0 civmem_suppressed=true handoff_written=true
+- **2026-05-02 06:19 UTC** — dream (grace-mar) ok=true mode=default cursor_model=unknown model_tier=unknown phase=both integrity=pass governance=pass mem_changed=false reviewable=4 contradictions=0 civmem_echo_count=0 civmem_suppressed=false handoff_written=true
+- **2026-05-02 14:21 UTC** — coffee (grace-mar) ok=true mode=work-start cursor_model=unknown model_tier=unknown
+- **2026-05-02 14:25 UTC** — coffee_pick (grace-mar) ok=true cursor_model=unknown model_tier=unknown picked=conductor conductor=furtwangler cursor-model=codex
+- **2026-05-02 14:28 UTC** — coffee_conductor_outcome (grace-mar) ok=true cursor_model=unknown model_tier=unknown conductor=furtwangler verdict=source-boundary-tension-held falsify=massie-anchors-secondary-not-primary-gate-readiness-clean
+- **2026-05-02 14:29 UTC** — coffee (grace-mar) ok=true mode=work-start cursor_model=unknown model_tier=unknown
+- **2026-05-03 02:32 UTC** — coffee_pick (grace-mar) ok=true cursor_model=unknown model_tier=unknown picked=conductor conductor=toscanini
+- **2026-05-03 02:33 UTC** — coffee_conductor_outcome (grace-mar) ok=true cursor_model=unknown model_tier=unknown verdict=seam-clean notebook_ref=docs/agent-substrate.md falsify=would fail if doc implied external agents can approve or merge canonical truth
+- **2026-05-03 02:33 UTC** — coffee_pick (grace-mar) ok=true cursor_model=unknown model_tier=unknown picked=conductor conductor=furtwangler
+- **2026-05-03 03:42 UTC** — coffee_pick (grace-mar) ok=true cursor_model=unknown model_tier=unknown picked=conductor conductor=karajan
+- **2026-05-03 03:44 UTC** — coffee_conductor_outcome (grace-mar) ok=true cursor_model=unknown model_tier=unknown verdict=coherence-trimmed notebook_ref=docs/skills/research/last30days.md falsify=would fail if last30days became a new hub line or automatic dream runner
+- **2026-05-03 03:44 UTC** — coffee_pick (grace-mar) ok=true cursor_model=unknown model_tier=unknown picked=conductor conductor=kleiber
+- **2026-05-03 03:46 UTC** — coffee_conductor_outcome (grace-mar) ok=true cursor_model=unknown model_tier=unknown verdict=sync-drift-clean notebook_ref=.cursor/skills/last30days/SKILL.md falsify=would fail if generated skill diverged from portable core plus appendix
+- **2026-05-03 03:54 UTC** — coffee (grace-mar) ok=true mode=work-start cursor_model=unknown model_tier=unknown
+- **2026-05-03 04:01 UTC** — coffee_pick (grace-mar) ok=true cursor_model=unknown model_tier=unknown picked=A steward=integrity
+- **2026-05-03 04:04 UTC** — coffee_pick (grace-mar) ok=true cursor_model=unknown model_tier=unknown picked=B
+- **2026-05-03 04:07 UTC** — coffee_pick (grace-mar) ok=true cursor_model=unknown model_tier=unknown picked=conductor conductor=bernstein
+- **2026-05-03 04:08 UTC** — coffee_conductor_outcome (grace-mar) ok=true cursor_model=unknown model_tier=unknown conductor=bernstein verdict=public-legibility-tightened notebook_ref=docs/agent-substrate.md
+- **2026-05-03 13:51 UTC** — coffee (grace-mar) ok=true mode=work-start cursor_model=unknown model_tier=unknown
+- **2026-05-03 14:20 UTC** — coffee_pick (grace-mar) ok=true cursor_model=unknown model_tier=unknown picked=A steward=gate cursor-model=codex
+- **2026-05-03 14:42 UTC** — coffee_pick (grace-mar) ok=true cursor_model=unknown model_tier=unknown picked=conductor conductor=karajan cursor-model=codex

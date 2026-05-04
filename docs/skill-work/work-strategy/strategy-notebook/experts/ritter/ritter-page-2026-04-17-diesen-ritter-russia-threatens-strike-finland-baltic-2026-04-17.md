@@ -1,4 +1,5 @@
 # Ritter refined page — 2026-04-17 (guest lane)
+
 <!-- word_count: ~240 -->
 
 WORK only; not Record.

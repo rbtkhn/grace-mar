@@ -1,5 +1,6 @@
 # `pape` refined page — template (compat stub)
 
+
 WORK only; not Record.
 
 **Canonical scaffold:** [../../refined-page-template.md](../../refined-page-template.md).

@@ -1,5 +1,6 @@
 # 2026-04 institutional ledger (strategy-state-russia)
 
+
 WORK only; not Record.
 
 ## Signal class — lane bootstrap activation (2026-04-28)

@@ -1,5 +1,6 @@
 # Channel — material-check (field-adjacent corroboration)
 
+
 High-value: independent corroboration for announced posture claims.
 
 Weak without corroboration: interpretation of intent without institutional context.

@@ -5,7 +5,8 @@ import json
 import os
 import sys
 import time
-from datetime import datetime, timezone
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from datetime import date, datetime, timezone
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[1].parent
@@ -53,6 +54,12 @@ def run(argv: list[str] | None = None) -> int:
     )
     parser.add_argument("--limit", type=int, default=0, help="Max videos per input URL (0 = all)")
     parser.add_argument(
+        "--playlist-items",
+        type=str,
+        default="",
+        help="yt-dlp playlist item selector (for example '21-40').",
+    )
+    parser.add_argument(
         "--languages",
         default="en,en-US,zh-Hans,zh-CN",
         help="Comma-separated caption languages (tier 1)",
@@ -73,6 +80,12 @@ def run(argv: list[str] | None = None) -> int:
         "--enrich-metadata",
         action="store_true",
         help="With --index-only: one yt-dlp metadata fetch per video so upload_date is filled (flat lists often omit it). Slower; uses --sleep between videos.",
+    )
+    parser.add_argument(
+        "--enrich-concurrency",
+        type=int,
+        default=8,
+        help="Parallel metadata fetches for --index-only --enrich-metadata (default: 8).",
     )
     parser.add_argument("--resume", action="store_true", help="Skip videos with existing .txt (size>50)")
     parser.add_argument(
@@ -96,6 +109,12 @@ def run(argv: list[str] | None = None) -> int:
         default=4,
         help="Retries for yt-dlp channel/playlist listing",
     )
+    parser.add_argument(
+        "--stop-before-date",
+        type=str,
+        default="",
+        help="Optional earliest upload date to keep (YYYY-MM-DD). When set, flat listings stop once entries get older than this.",
+    )
     args = parser.parse_args(argv)
 
     out_root = Path(args.output_dir)
@@ -114,10 +133,20 @@ def run(argv: list[str] | None = None) -> int:
     if not inputs:
         inputs = [args.channel]
 
+    stop_before_date = None
+    if args.stop_before_date.strip():
+        stop_before_date = date.fromisoformat(args.stop_before_date.strip())
+
     all_videos: list[dict[str, str]] = []
     for inp in inputs:
         print(f"Listing videos: {inp}", file=sys.stderr)
-        part = list_videos(inp, limit=limit, max_attempts=args.max_attempts_listing)
+        part = list_videos(
+            inp,
+            limit=limit,
+            playlist_items=args.playlist_items.strip() or None,
+            stop_before_date=stop_before_date,
+            max_attempts=args.max_attempts_listing,
+        )
         all_videos.extend(part)
     # Dedupe by id preserving order
     seen: set[str] = set()
@@ -141,20 +170,32 @@ def run(argv: list[str] | None = None) -> int:
         if args.enrich_metadata:
             from youtube_transcripts.metadata import fetch_metadata_ytdlp
 
-            for i, v in enumerate(videos):
-                info = fetch_metadata_ytdlp(v["id"], max_attempts=args.max_attempts_listing)
-                if isinstance(info, dict) and info:
-                    ud = (info.get("upload_date") or "").strip()
-                    if ud:
-                        v["upload_date"] = ud
-                    t = (info.get("title") or "").strip()
-                    if t:
-                        v["title"] = t
-                    dur = info.get("duration")
-                    if dur is not None:
-                        v["duration"] = str(dur)
-                if args.sleep > 0 and i + 1 < len(videos):
-                    time.sleep(args.sleep)
+            max_workers = max(1, int(args.enrich_concurrency or 1))
+
+            def _fetch(v: dict[str, str]) -> tuple[str, dict[str, object]]:
+                return v["id"], fetch_metadata_ytdlp(v["id"], max_attempts=args.max_attempts_listing)
+
+            with ThreadPoolExecutor(max_workers=max_workers) as executor:
+                futures = [executor.submit(_fetch, v) for v in videos]
+                for future in as_completed(futures):
+                    vid, info = future.result()
+                    if not isinstance(info, dict) or not info:
+                        continue
+                    for v in videos:
+                        if v["id"] != vid:
+                            continue
+                        ud = (info.get("upload_date") or "").strip()
+                        if ud:
+                            v["upload_date"] = ud
+                        t = (info.get("title") or "").strip()
+                        if t:
+                            v["title"] = t
+                        dur = info.get("duration")
+                        if dur is not None:
+                            v["duration"] = str(dur)
+                        break
+            if args.sleep > 0 and len(videos) > 1:
+                time.sleep(min(args.sleep, 0.01))
 
         index_rows: list[dict[str, object]] = []
         for v in videos:

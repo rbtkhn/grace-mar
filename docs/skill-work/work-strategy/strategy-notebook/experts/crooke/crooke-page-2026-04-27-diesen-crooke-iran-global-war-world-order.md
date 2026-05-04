@@ -1,4 +1,5 @@
 # Crooke refined page — 2026-04-27 (guest lane)
+
 <!-- word_count: guest lines from raw; see Reflection for tier notes -->
 
 WORK only; not Record.

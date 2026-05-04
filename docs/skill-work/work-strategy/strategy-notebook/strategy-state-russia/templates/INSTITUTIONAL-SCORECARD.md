@@ -1,5 +1,6 @@
 # Institutional scorecard (state lane)
 
+
 | Dimension | Short prompt |
 |---|---|
 | **Institutional alignment** | Which channel / office does this read as? |

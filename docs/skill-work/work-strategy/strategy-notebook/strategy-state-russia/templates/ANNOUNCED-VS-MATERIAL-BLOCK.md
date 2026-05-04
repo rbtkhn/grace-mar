@@ -1,5 +1,6 @@
 # Announced vs material (reusable block)
 
+
 Use when an official or amplified line states posture, while your judgment object depends on material state.
 
 ```markdown

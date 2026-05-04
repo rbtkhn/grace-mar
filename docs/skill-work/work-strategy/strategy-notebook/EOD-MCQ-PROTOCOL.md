@@ -33,15 +33,15 @@ The EOD session is where **capture is promoted into judgment**. It should **synt
 
 ## Stage 0 — Build the evidence pile
 
-**Operator read path (canonical):** **[`raw-input/`](raw-input/README.md)** (dated bulk verbatim) **+** expert **`strategy-page`** blocks in **`thread`**. The **7-day** **`transcript.md`** is **optional pipeline context** (inbox triage + machine echo); do **not** treat it as a second place the operator must **open** for long verbatim when **`raw-input/`** and pages already hold the work.
+**Operator read path (canonical):** **[`raw-input/`](raw-input/README.md)** (dated bulk verbatim) **+** author **`strategy-page`** blocks in **`thread`**. The **7-day** **`transcript.md`** is **optional pipeline context** (inbox triage + machine echo); do **not** treat it as a second place the operator must **open** for long verbatim when **`raw-input/`** and pages already hold the work.
 
 The assistant gathers:
 
 - Today’s **`raw-input/YYYY-MM-DD/`** files (if any) — **primary bulk**
-- Current **`experts/<expert_id>/thread.md`** (journal + existing **`strategy-page`** markers) — **judgment locus**
+- Current **`authors/<author_id>/thread.md`** (journal + existing **`strategy-page`** markers) — **judgment locus**
 - Today’s lines in [daily-strategy-inbox.md](daily-strategy-inbox.md)
 - Relevant **`batch-analysis`** rows
-- Relevant **`experts/<expert_id>/transcript.md`** and **machine** block **only when** you need the rolling/triage view after **`thread`** (e.g. **`thread:`** ingests this session); **pointer-only** or **thin** transcript is normal when full text is under **`raw-input/`**
+- Relevant **`authors/<author_id>/transcript.md`** and **machine** block **only when** you need the rolling/triage view after **`thread`** (e.g. **`thread:`** ingests this session); **pointer-only** or **thin** transcript is normal when full text is under **`raw-input/`**
 - Current **`chapters/YYYY-MM/days.md`** context (tail + target **`## YYYY-MM-DD`** if composing)
 
 The assistant then says:
@@ -59,12 +59,12 @@ The assistant then says:
 
 | Letter | Type | Summary |
 |--------|------|---------|
-| **A** | **Single-lane synthesis** | One expert owns the main analytical movement tonight. |
-| **B** | **Dual-lane contrast** | Two experts need parallel treatment or contrast. |
+| **A** | **Single-lane synthesis** | One author owns the main analytical movement tonight. |
+| **B** | **Dual-lane contrast** | Two authors need parallel treatment or contrast. |
 | **C** | **Tri-mind pass** | Barnes / Mearsheimer / Mercouris get a coordinated pass — see [Optional tri-mind variant](#optional-tri-mind-variant) and [.cursor/skills/tri-mind/SKILL.md](../../../../.cursor/skills/tri-mind/SKILL.md). |
 | **D** | **Continuity-only close** | Update `days.md` and preserve transcript context; **no** new **`strategy-page`** unless forced (breaking glass). |
 | **E** | **Triage-and-defer** | Preserve material, route it, **defer** page composition. |
-| **F** | **Bridge session** | One expert lane plus one **bridge** lane (often **Jiang** / history / civilizational framing). |
+| **F** | **Bridge session** | One author lane plus one **bridge** lane (often **Jiang** / history / civilizational framing). |
 
 **Assistant output after selection:** Names the session type, proposes default **lane count**, moves to Menu 2.
 
@@ -72,19 +72,19 @@ The assistant then says:
 
 ## Menu 2 — Active lane selection
 
-**Question:** Which expert lanes are active for tonight’s synthesis?
+**Question:** Which author lanes are active for tonight’s synthesis?
 
 Present **4–8** options **tailored to today’s evidence pile** — example letters:
 
 | Letter | Lane |
 |--------|------|
-| **A–G** | Named experts (e.g. Mercouris, Barnes, Mearsheimer, Ritter, Jiang, Pape) — **canonical `expert_id` slugs** only ([strategy-commentator-threads.md](strategy-commentator-threads.md)). |
+| **A–G** | Named authors (e.g. Mercouris, Barnes, Mearsheimer, Ritter, Jiang, Pape) — **canonical `author_id` slugs** only ([strategy-commentator-threads.md](strategy-commentator-threads.md)). |
 | **H** | **Keep material cold / unresolved** — do not force promotion. |
 | **(other)** | **Other named lane:** operator fills blank. |
 
 **Rules:**
 
-- Use **canonical expert slugs** only.
+- Use **canonical author slugs** only.
 - Do **not** mix commentators into the wrong lane.
 - If ownership is unclear, choose **cold / unresolved** rather than forcing promotion.
 
@@ -108,7 +108,7 @@ Present **4–8** options **tailored to today’s evidence pile** — example le
 | **A** | **Transcript only** | Preserve in transcript / machine context; **do not** promote into **`strategy-page`** judgment. |
 | **B** | **Revise existing strategy-page** | Today **changes or sharpens** an existing page (`id=`). |
 | **C** | **Start new strategy-page** | Today deserves a **fresh** fenced page in this thread. |
-| **D** | **days.md continuity only** | Record notebook continuity; **do not** change expert-thread **substance** (no new/revised **`strategy-page`** body for this lane). |
+| **D** | **days.md continuity only** | Record notebook continuity; **do not** change author-thread **substance** (no new/revised **`strategy-page`** body for this lane). |
 | **E** | **Hold unresolved** | Keep in inbox / **`raw-input/`** / transcript orbit for tomorrow. |
 
 **Decision rule:** Choose **B** or **C** only if today’s material **changes the lane’s interpretation**, **extends a recurring frame**, or **deserves durable analytical prose**. The EOD session is for **synthesis**, not copying.
@@ -158,7 +158,7 @@ Present **4–6** options max, **tailored to the day’s evidence** (architectur
 | **D** | Add a short **bridge note**, not a full page. |
 | **E** | **No thread write**; carry forward only. |
 
-This menu reduces accidental page sprawl. **Alignment with architecture:** **Multi-pick** sessions may still produce **one logical page per non-mergeable shape**, duplicated across experts with the same **`id=`** — see [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *Multi-pick EOD options*. **Same-day** default: **one** consolidated **`## YYYY-MM-DD`** block in `days.md` unless episodic heading is justified.
+This menu reduces accidental page sprawl. **Alignment with architecture:** **Multi-pick** sessions may still produce **one logical page per non-mergeable shape**, duplicated across authors with the same **`id=`** — see [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *Multi-pick EOD options*. **Same-day** default: **one** consolidated **`## YYYY-MM-DD`** block in `days.md` unless episodic heading is justified.
 
 ---
 
@@ -174,7 +174,7 @@ This menu reduces accidental page sprawl. **Alignment with architecture:** **Mul
 | **D** | **Open-questions emphasis** — what remains unresolved tomorrow. |
 | **E** | **Cross-lane continuity** — how multiple lanes interacted. |
 
-**Rule:** `days.md` preserves **chronology and continuity**, not a duplicate of full expert prose ([NOTEBOOK-PREFERENCES.md](NOTEBOOK-PREFERENCES.md) — inbox vs notebook).
+**Rule:** `days.md` preserves **chronology and continuity**, not a duplicate of full author prose ([NOTEBOOK-PREFERENCES.md](NOTEBOOK-PREFERENCES.md) — inbox vs notebook).
 
 **Assistant output after selection:** Confirms day-entry mode, **then** drafts authorized artifacts.
 
@@ -184,7 +184,7 @@ This menu reduces accidental page sprawl. **Alignment with architecture:** **Mul
 
 Only after Menus **1–6** are complete (or the **fast path** below) should the assistant draft:
 
-1. **`strategy-page`** block(s) inside **`experts/<expert_id>/thread.md`** (when B/C + authorized by Menu 5)
+1. **`strategy-page`** block(s) inside **`authors/<author_id>/thread.md`** (when B/C + authorized by Menu 5)
 2. Matching **`days.md`** continuity update
 3. Optional short **tomorrow start point** (in chat or under **`### Foresight`**)
 
@@ -217,7 +217,7 @@ Fastest path — use when the operator wants fewer forks:
 1. **Decision-first, prose-second.**  
 2. **Never** write the page before **lane ownership** and **promotion threshold** are chosen (for MCQ sessions).  
 3. If evidence is weak, recommend **transcript-only** or **defer**.  
-4. If routing is ambiguous, keep it **cold** rather than forcing the wrong expert lane.  
+4. If routing is ambiguous, keep it **cold** rather than forcing the wrong author lane.  
 5. Keep menus **short and tailored**; do not show giant universal menus every time.  
 6. Favor **one strong page** over many shallow ones.  
 7. End with a clean **recovery point** for tomorrow (`### Foresight` or one-line chat stub).
@@ -265,7 +265,7 @@ Tri-mind chat mechanics remain per [.cursor/skills/tri-mind/SKILL.md](../../../.
 
 ## One-sentence doctrine
 
-The EOD strategy session should decide **what the notebook now believes**, which **expert lane** owns that belief, and whether it deserves a **new page**, a **revision**, or **only continuity**.
+The EOD strategy session should decide **what the notebook now believes**, which **author lane** owns that belief, and whether it deserves a **new page**, a **revision**, or **only continuity**.
 
 ---
 

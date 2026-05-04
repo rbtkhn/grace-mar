@@ -1,4 +1,5 @@
 # Mearsheimer refined page — 2026-01-07 (guest lane)
+
 <!-- word_count: ~200 -->
 
 WORK only; not Record.

@@ -21,6 +21,7 @@ New backfill work should prefer a generic family first, then add the thinnest so
 | Public YouTube channel transcripts | `scripts/backfill_youtube_channel_raw_input.py` | `backfill_*_youtube_raw_input.py` | Graph-first transcript capture from channels and hubs; source adapters should mostly pin channel URL, show/host, and thread routing when a lane is clear. |
 | Transcript salvage from local chat/log text | No default generic family yet | `backfill_*_raw_input_from_transcript.py` | Recovery only when a session failed to write `raw-input/` directly. Regex- and shape-dependent; not policy. |
 | Expert thread/profile enrichment | `scripts/backfill_expert_thread.py` and related scoring/refinement helpers | n/a | Separate from raw source capture unless a commit explicitly groups both with a receipt. |
+| Diesen guest-stream ledger input | `scripts/update_diesen_ledger.py` | n/a | Rebuilds the Mearsheimer / Sachs / Ritter / Macgregor / Daniel Davis / Max Blumenthal ledger tables in `experts/diesen/profile.md` from URL batches; canonicalizes watch URLs, fetches exact metadata, dedupes by video ID, and refreshes mirror status from `raw-input/`. |
 
 ## Wrapper policy
 

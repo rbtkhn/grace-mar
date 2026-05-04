@@ -1,4 +1,4 @@
-# Strategy expert — templates (WORK only)
+# Strategy author — templates (WORK only)
 <!-- word_count: concise bundle -->
 
 **Single source** for the six on-disk surfaces each commentator uses:
@@ -15,7 +15,8 @@ profile, thread, transcript, refined page, strategy page, and mind.
 
 ## Profile → `strategy-expert-<expert_id>.md`
 
-# Strategy expert — <Full name> (`<expert_id>`)
+# Strategy author — <Full name> (`<expert_id>`)
+
 
 WORK only; not Record.
 
@@ -38,7 +39,7 @@ Companion files: thread, transcript, refined page, strategy page, mind.
 
 ## Thread → `experts/<expert_id>/<expert_id>-thread-YYYY-MM.md`
 
-# Expert thread — `<expert_id>`
+# Author thread — `<expert_id>`
 
 WORK only; not Record.
 
@@ -73,7 +74,7 @@ Machine extraction lives between the `<!-- strategy-expert-thread:start -->` and
 
 ## Transcript → `experts/<expert_id>/transcript.md`
 
-# Expert transcript — `<expert_id>`
+# Author transcript — `<expert_id>`
 
 WORK only; not Record.
 
@@ -94,7 +95,7 @@ Companion files: profile, thread, mind, and refined pages.
 
 ## Refined page → `experts/<expert_id>/<expert_id>-page-YYYY-MM-DD.md`
 
-# Expert refined page — `<expert_id>`
+# Author refined page — `<expert_id>`
 
 WORK only; not Record.
 
@@ -106,7 +107,7 @@ This is the standalone analytical page shape.
 
 - `### Verbatim` is the curated quote body from `raw-input/`
 - `### Reflection` is operator analysis
-- `### Predictive Outlook` is the expert's tracked predictions, status, and brief notes tied to the thread
+- `### Predictive Outlook` is the author's tracked predictions, status, and brief notes tied to the thread
 - `### Appendix` is machinery only
 
 Use this when the page should stand on its own outside the thread.
@@ -114,10 +115,10 @@ Use this when the page should stand on its own outside the thread.
 **Skeleton:**
 
 ```markdown
-# <Expert> refined page — YYYY-MM-DD
+# <Author> refined page — YYYY-MM-DD
 WORK only; not Record.
 
-**Expert:** `<expert_id>` · **Published:** YYYY-MM-DD · **Artifact:** refined page.
+**Author:** `<expert_id>` · **Published:** YYYY-MM-DD · **Artifact:** refined page.
 
 ---
 
@@ -138,7 +139,7 @@ WORK only; not Record.
 
 ## Strategy page → thread-fence page
 
-# Expert strategy page — `<expert_id>`
+# Author strategy page — `<expert_id>`
 
 WORK only; not Record.
 
@@ -150,7 +151,7 @@ This is the thread-embedded analytical page shape.
 
 - `### Chronicle` is the curated quote body
 - `### Reflection` is operator analysis
-- `### Predictive Outlook` is the expert's tracked predictions, status, and brief notes tied to the thread
+- `### Predictive Outlook` is the author's tracked predictions, status, and brief notes tied to the thread
 - `### Appendix` is machinery only
 
 Use this inside `experts/<expert_id>/<expert_id>-thread-YYYY-MM.md` or legacy `thread.md`.
@@ -179,7 +180,7 @@ Use this inside `experts/<expert_id>/<expert_id>-thread-YYYY-MM.md` or legacy `t
 
 ## Mind → `strategy-expert-<expert_id>-mind.md`
 
-# Expert mind — `<expert_id>`
+# Author mind — `<expert_id>`
 
 WORK only; not Record.
 

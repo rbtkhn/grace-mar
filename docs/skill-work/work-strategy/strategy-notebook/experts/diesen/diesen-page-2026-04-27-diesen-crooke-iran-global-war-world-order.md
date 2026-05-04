@@ -1,4 +1,5 @@
 # Diesen refined page — 2026-04-27 (host lane)
+
 <!-- word_count: host lines from raw; see Reflection for analysis -->
 
 WORK only; not Record.

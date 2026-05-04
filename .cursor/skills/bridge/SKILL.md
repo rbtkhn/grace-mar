@@ -13,6 +13,8 @@ description: "Session-scale handoff ritual. Primary trigger: bridge. Before Step
 
 Its purpose is **high-fidelity context transfer** across boundaries where continuity becomes non-guaranteed: a fresh session, a new thread, cross-agent handoff, or a compaction boundary. Some runtimes carry part of the prior conversation forward, but that carryover is not a governed substitute for an explicit handoff. A good bridge means the next session starts with full orientation instead of spending turns reconstructing what happened.
 
+`coffee` may resume from the latest authoritative checkpoint, but `bridge` remains the explicit seal-and-transfer ritual. `coffee` recovers orientation from on-disk checkpoint state; `bridge` commits, pushes when needed, and produces the carry-forward packet.
+
 ## When to use
 
 | Scenario | Path | Why |

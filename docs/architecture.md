@@ -6,6 +6,8 @@ Terminology primer: see [glossary.md](glossary.md) for canonical definitions of 
 
 **Runtime complements** (membrane v1) are adjunct harness components: they live under `runtime/runtime-complements/`, support export/import of bounded context for external runtimes, and do **not** change Record sovereignty or merge authority. Staging and promotion follow the same human gate as any other candidate. See [docs/runtime/runtime-complements.md](runtime/runtime-complements.md).
 
+**Agent substrate framing:** Grace-Mar can also be read as a governed personal agent substrate: durable Record state plus stage-only WORK/runtime surfaces for external agents. This is conceptual framing, not new authority; see [agent-substrate.md](agent-substrate.md).
+
 ---
 
 ## Guarantees at a glance

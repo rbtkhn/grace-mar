@@ -41,5 +41,7 @@ Grace-Mar separates **tool-shaped capabilities** (registry classes, lanes, recei
 
 ## Related docs
 
+- **[`agent-substrate.md`](../agent-substrate.md)** - broader architecture framing for Grace-Mar as a governed personal agent substrate.
+
 - **[`mcp-governance-runbook.md`](mcp-governance-runbook.md)** — operator sequence and one-shot **`scripts/run_mcp_governance_checks.py`** demo.
 - Per-topic docs linked from **[`governed-mcp-layer.md`](governed-mcp-layer.md)** (execution receipts, manifest admission, mock harness, local adapters, risk scanner).

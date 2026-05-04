@@ -1,5 +1,6 @@
 # Mearsheimer page — 2026-01-31 (legacy pointer; lane-split)
 
+
 WORK only; not Record.
 
 **Superseded (lane split):** This file previously duplicated the full line-by-line transcript. **SSOT** is [raw-input/2026-01-31/transcript-diesen-mearsheimer-cold-war-nato-ukraine-2026-01-31.md](../../raw-input/2026-01-31/transcript-diesen-mearsheimer-cold-war-nato-ukraine-2026-01-31.md) only.

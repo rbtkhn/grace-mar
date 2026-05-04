@@ -1,5 +1,6 @@
 # Weave (institutional ledger + interpretation)
 
+
 Month-scoped synthesis surface for this state lane.
 
 - `YYYY-MM-institutional-ledger.md` = what channels/signals said

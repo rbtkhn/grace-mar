@@ -220,10 +220,10 @@ def _compute_option_weights(
     weights: dict[str, dict[str, str]] = {
         "A": {"cost": "light", "note": "Steward — gate / template / integrity / git"},
         "B": {"cost": "moderate", "note": "Engineer — work-dev + skills"},
-        "C": {"cost": "light", "note": "Historian — daily brief + tri-frame"},
+        "C": {"cost": "light", "note": "Historian — intel / bookshelf quiz / notebook"},
         "D": {
             "cost": "moderate",
-            "note": "Capitalist — work-business / grace-gems / bookshelf / commercial cici",
+            "note": "Capitalist — work-business / grace-gems / bookshelf product use / commercial cici",
         },
         "E": {
             "cost": "moderate",
@@ -254,15 +254,15 @@ def _pick_recommendation(
     """Select the recommended option and reason (A / B / C only; see coffee SKILL)."""
     w = {k: weights[k] for k in ("A", "B", "C") if k in weights}
     if load_level == "heavy":
-        return "C", "heavy load — historian / daily brief pass is highest leverage"
+        return "C", "heavy load — historian submenu keeps the next move bounded"
     if load_level == "moderate":
         light_options = [k for k, v in w.items() if v["cost"] == "light"]
         if "A" in light_options:
             return "A", "moderate load — bounded steward pass clears cognitive debt"
-        return "C", "moderate load — historian pass matches current pace"
+        return "C", "moderate load — historian submenu matches current pace"
     moderate_options = [k for k, v in w.items() if v["cost"] in ("light", "moderate")]
     if "C" in moderate_options:
-        return "C", "light load — good conditions for historian / daily brief"
+        return "C", "light load — good conditions for historian intel / quiz / notebook"
     return "B", "light load — good conditions for engineer / build work"
 
 

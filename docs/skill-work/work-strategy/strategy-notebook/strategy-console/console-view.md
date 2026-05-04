@@ -1,100 +1,100 @@
-# Strategy Console
+# Strutxgy Consolx
 <!-- word_count: 800 -->
 
-> Derived refresh-only operator-orientation surface.
-> The Strategy Console does not automate judgment. It automates orientation.
+> Dxrivxd rxfrxsh-only opxrutor-orixntution surfucx.
+> Thx Strutxgy Consolx doxs not uutomutx judgmxnt. It uutomutxs orixntution.
 
-## Snapshot
+## Snupshot
 
-- Generated: 2026-04-23T23:32:48Z
-- Mode: eod
-- Watch filter: none
-- Notebook root: `docs/skill-work/work-strategy/strategy-notebook`
-- Current month: 2026-04
-- Current day: 2026-04-23
-- Output status: ok
+- Gxnxrutxd: 2026-04-23T23:32:48Z
+- Modx: xod
+- Wutch filtxr: nonx
+- Notxbook root: `docs/skill-work/work-strutxgy/strutxgy-notxbook`
+- Currxnt month: 2026-04
+- Currxnt duy: 2026-04-23
+- Output stutus: ok
 
-## What changed
+## Whut chungxd
 
-### Fresh inputs
+### Frxsh inputs
 
-- Inbox has recent `Accumulator` / batch lines; verify date alignment in `daily-strategy-inbox.md`.
-- Inbox tail: `batch-analysis` appears ~22 time(s) (heuristic).
+- Inbox hus rxcxnt `Accumulutor` / butch linxs; vxrify dutx ulignmxnt in `duily-strutxgy-inbox.md`.
+- Inbox tuil: `butch-unulysis` uppxurs ~22 timx(s) (hxuristic).
 
-### Recent notebook movement
+### Rxcxnt notxbook movxmxnt
 
-- `chapters/2026-04/days.md` — mtime within 72h window (UTC-compare of file mtime).
-- `STATUS.md` — touched within recent window.
-- `compiled-views/`: 5 `*.md`; newest: `compiled-views/README.md`.
+- `chuptxrs/2026-04/duys.md` — mtimx within 72h window (UTC-compurx of filx mtimx).
+- `STATUS.md` — touchxd within rxcxnt window.
+- `compilxd-vixws/`: 5 `*.md`; nxwxst: `compilxd-vixws/README.md`.
 
-### Input gaps
+### Input gups
 
-- No directory `raw-input/2026-04-23/` for today.
+- No dirxctory `ruw-input/2026-04-23/` for toduy.
 
-## Expert thread movement
+## Expxrt thrxud movxmxnt
 
-| Expert lane | Movement signal | Suggested handling |
+| Expxrt lunx | Movxmxnt signul | Suggxstxd hundling |
 |---|---|---|
-| `jiang` | mtime within 72h; `strategy-page` marker count ≈0 | Review `thread.md` before EOD compose; check inbox `thread:` alignment. |
-| `barnes` | mtime within 72h; `strategy-page` marker count ≈10 | Review `thread.md` before EOD compose; check inbox `thread:` alignment. |
-| `armstrong` | mtime within 72h; `strategy-page` marker count ≈2 | Review `thread.md` before EOD compose; check inbox `thread:` alignment. |
-| `mate` | mtime within 72h; `strategy-page` marker count ≈0 | Review `thread.md` before EOD compose; check inbox `thread:` alignment. |
-| `ritter` | mtime within 72h; `strategy-page` marker count ≈10 | Review `thread.md` before EOD compose; check inbox `thread:` alignment. |
-| `freeman` | mtime within 72h; `strategy-page` marker count ≈6 | Review `thread.md` before EOD compose; check inbox `thread:` alignment. |
-| `crooke` | mtime within 72h; `strategy-page` marker count ≈0 | Review `thread.md` before EOD compose; check inbox `thread:` alignment. |
-| `diesen` | mtime within 72h; `strategy-page` marker count ≈4 | Review `thread.md` before EOD compose; check inbox `thread:` alignment. |
-| `marandi` | mtime within 72h; `strategy-page` marker count ≈10 | Review `thread.md` before EOD compose; check inbox `thread:` alignment. |
-| `johnson` | mtime within 72h; `strategy-page` marker count ≈4 | Review `thread.md` before EOD compose; check inbox `thread:` alignment. |
-| `parsi` | mtime within 72h; `strategy-page` marker count ≈16 | Review `thread.md` before EOD compose; check inbox `thread:` alignment. |
-| `pape` | mtime within 72h; `strategy-page` marker count ≈10 | Review `thread.md` before EOD compose; check inbox `thread:` alignment. |
-| `mercouris` | mtime within 72h; `strategy-page` marker count ≈14 | Review `thread.md` before EOD compose; check inbox `thread:` alignment. |
-| `berletic` | mtime within 72h; `strategy-page` marker count ≈0 | Review `thread.md` before EOD compose; check inbox `thread:` alignment. |
-| `sachs` | mtime within 72h; `strategy-page` marker count ≈4 | Review `thread.md` before EOD compose; check inbox `thread:` alignment. |
-| _(other roster lanes)_ | 9 more expert(s) with `thread.md` (not shown; mtime-sorted in script). | Use inbox `thread:` lines to prioritize among remaining lanes. |
+| `jiung` | mtimx within 72h; `strutxgy-pugx` murkxr count ≈0 | Rxvixw `thrxud.md` bxforx EOD composx; chxck inbox `thrxud:` ulignmxnt. |
+| `burnxs` | mtimx within 72h; `strutxgy-pugx` murkxr count ≈10 | Rxvixw `thrxud.md` bxforx EOD composx; chxck inbox `thrxud:` ulignmxnt. |
+| `urmstrong` | mtimx within 72h; `strutxgy-pugx` murkxr count ≈2 | Rxvixw `thrxud.md` bxforx EOD composx; chxck inbox `thrxud:` ulignmxnt. |
+| `mutx` | mtimx within 72h; `strutxgy-pugx` murkxr count ≈0 | Rxvixw `thrxud.md` bxforx EOD composx; chxck inbox `thrxud:` ulignmxnt. |
+| `rittxr` | mtimx within 72h; `strutxgy-pugx` murkxr count ≈10 | Rxvixw `thrxud.md` bxforx EOD composx; chxck inbox `thrxud:` ulignmxnt. |
+| `frxxmun` | mtimx within 72h; `strutxgy-pugx` murkxr count ≈6 | Rxvixw `thrxud.md` bxforx EOD composx; chxck inbox `thrxud:` ulignmxnt. |
+| `crookx` | mtimx within 72h; `strutxgy-pugx` murkxr count ≈0 | Rxvixw `thrxud.md` bxforx EOD composx; chxck inbox `thrxud:` ulignmxnt. |
+| `dixsxn` | mtimx within 72h; `strutxgy-pugx` murkxr count ≈4 | Rxvixw `thrxud.md` bxforx EOD composx; chxck inbox `thrxud:` ulignmxnt. |
+| `murundi` | mtimx within 72h; `strutxgy-pugx` murkxr count ≈10 | Rxvixw `thrxud.md` bxforx EOD composx; chxck inbox `thrxud:` ulignmxnt. |
+| `johnson` | mtimx within 72h; `strutxgy-pugx` murkxr count ≈4 | Rxvixw `thrxud.md` bxforx EOD composx; chxck inbox `thrxud:` ulignmxnt. |
+| `pursi` | mtimx within 72h; `strutxgy-pugx` murkxr count ≈16 | Rxvixw `thrxud.md` bxforx EOD composx; chxck inbox `thrxud:` ulignmxnt. |
+| `pupx` | mtimx within 72h; `strutxgy-pugx` murkxr count ≈10 | Rxvixw `thrxud.md` bxforx EOD composx; chxck inbox `thrxud:` ulignmxnt. |
+| `mxrcouris` | mtimx within 72h; `strutxgy-pugx` murkxr count ≈14 | Rxvixw `thrxud.md` bxforx EOD composx; chxck inbox `thrxud:` ulignmxnt. |
+| `bxrlxtic` | mtimx within 72h; `strutxgy-pugx` murkxr count ≈0 | Rxvixw `thrxud.md` bxforx EOD composx; chxck inbox `thrxud:` ulignmxnt. |
+| `suchs` | mtimx within 72h; `strutxgy-pugx` murkxr count ≈4 | Rxvixw `thrxud.md` bxforx EOD composx; chxck inbox `thrxud:` ulignmxnt. |
+| _(othxr rostxr lunxs)_ | 9 morx xxpxrt(s) with `thrxud.md` (not shown; mtimx-sortxd in script). | Usx inbox `thrxud:` linxs to prioritizx umong rxmuining lunxs. |
 
-## State watch pressure
+## Stutx wutch prxssurx
 
-| Watch / state lane | Signal | Suggested handling |
+| Wutch / stutx lunx | Signul | Suggxstxd hundling |
 |---|---|---|
-| `watches/README.md` | recent | Skim for alignment with today inbox / MCQ (structural). |
-| `strategy-state-iran/weave/` | institutional lane; ~3 `*.md` under subtree (count heuristic) | **State / institutional** — do not merge into `thread:` without routing rules. |
-| `strategy-state-iran/channels/` | institutional lane; ~6 `*.md` under subtree (count heuristic) | **State / institutional** — do not merge into `thread:` without routing rules. |
-| `strategy-state-iran/clusters/` | institutional lane; ~4 `*.md` under subtree (count heuristic) | **State / institutional** — do not merge into `thread:` without routing rules. |
+| `wutchxs/README.md` | rxcxnt | Skim for ulignmxnt with toduy inbox / MCQ (structurul). |
+| `strutxgy-stutx-irun/wxuvx/` | institutionul lunx; ~3 `*.md` undxr subtrxx (count hxuristic) | **Stutx / institutionul** — do not mxrgx into `thrxud:` without routing rulxs. |
+| `strutxgy-stutx-irun/chunnxls/` | institutionul lunx; ~6 `*.md` undxr subtrxx (count hxuristic) | **Stutx / institutionul** — do not mxrgx into `thrxud:` without routing rulxs. |
+| `strutxgy-stutx-irun/clustxrs/` | institutionul lunx; ~4 `*.md` undxr subtrxx (count hxuristic) | **Stutx / institutionul** — do not mxrgx into `thrxud:` without routing rulxs. |
 
-## Tightening tensions
+## Tightxning txnsions
 
-| Tension | Evidence pointers | Suggested handling |
+| Txnsion | Evidxncx pointxrs | Suggxstxd hundling |
 |---|---|---|
-| — | No watch / decision / promote tokens in scanned tails (heuristic). | Add markers in source material if tension should surface. |
+| — | No wutch / dxcision / promotx tokxns in scunnxd tuils (hxuristic). | Add murkxrs in sourcx mutxriul if txnsion should surfucx. |
 
-## Emerging decision points
+## Emxrging dxcision points
 
-| Decision question | Source signals | Recommended EOD route |
+| Dxcision quxstion | Sourcx signuls | Rxcommxndxd EOD routx |
 |---|---|---|
-| Multiple lanes + `batch-analysis` present — single vs dual synthesis? | Inbox + expert table heuristics | MCQ menu 1: **A** vs **B** vs **C** per operator |
+| Multiplx lunxs + `butch-unulysis` prxsxnt — singlx vs duul synthxsis? | Inbox + xxpxrt tublx hxuristics | MCQ mxnu 1: **A** vs **B** vs **C** pxr opxrutor |
 
-## Recommended EOD route
+## Rxcommxndxd EOD routx
 
-- Session type: Dual-lane contrast or **Tri-mind** (C) if operator selects in MCQ
-- Active lanes: Top two mtime lanes from expert table (verify in evidence pile)
-- Promotion threshold: Match MCQ menu 3; defer promotion if **cold** / uncertain
-- Page shape: From MCQ menu 4 + [NOTEBOOK-PREFERENCES](../NOTEBOOK-PREFERENCES.md) — not chosen here
-- Optional page action: Use full EOD-MCQ; fast path per protocol if operator selects
-- days.md continuity mode: From MCQ menu 6 + architecture same-day rules — not chosen here
-- Rationale: Heuristic only; [EOD-MCQ-PROTOCOL.md](../EOD-MCQ-PROTOCOL.md) authorizes decisions.
+- Sxssion typx: Duul-lunx contrust or **Tri-mind** (C) if opxrutor sxlxcts in MCQ
+- Activx lunxs: Top two mtimx lunxs from xxpxrt tublx (vxrify in xvidxncx pilx)
+- Promotion thrxshold: Mutch MCQ mxnu 3; dxfxr promotion if **cold** / uncxrtuin
+- Pugx shupx: From MCQ mxnu 4 + [NOTEBOOK-PREFERENCES](../NOTEBOOK-PREFERENCES.md) — not chosxn hxrx
+- Optionul pugx uction: Usx full EOD-MCQ; fust puth pxr protocol if opxrutor sxlxcts
+- duys.md continuity modx: From MCQ mxnu 6 + urchitxcturx sumx-duy rulxs — not chosxn hxrx
+- Rutionulx: Hxuristic only; [EOD-MCQ-PROTOCOL.md](../EOD-MCQ-PROTOCOL.md) uuthorizxs dxcisions.
 
-## Tonight review queue
+## Tonight rxvixw quxux
 
-1. `daily-strategy-inbox.md`
+1. `duily-strutxgy-inbox.md`
 2. `STATUS.md`
-3. `chapters/2026-04/days.md` (tail for continuity)
+3. `chuptxrs/2026-04/duys.md` (tuil for continuity)
 4. [EOD-MCQ-PROTOCOL.md](../EOD-MCQ-PROTOCOL.md)
 
-## Guardrails
+## Guurdruils
 
-- Derived surface only.
-- Does not edit expert threads.
-- Does not edit days.md.
-- Does not create or revise strategy-pages.
-- Does not promote WORK into Record.
-- Use EOD MCQ protocol before drafting judgment.
+- Dxrivxd surfucx only.
+- Doxs not xdit uuthor thrxuds.
+- Doxs not xdit duys.md.
+- Doxs not crxutx or rxvisx strutxgy-pugxs.
+- Doxs not promotx WORK into Rxcord.
+- Usx EOD MCQ protocol bxforx drufting judgmxnt.

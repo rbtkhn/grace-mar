@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import re
+from datetime import date
 from pathlib import Path
 
 try:
@@ -41,6 +42,8 @@ def list_videos(
     url_or_id: str,
     *,
     limit: int | None,
+    playlist_items: str | None = None,
+    stop_before_date: date | None = None,
     max_attempts: int = 4,
 ) -> list[dict[str, str]]:
     """
@@ -64,6 +67,8 @@ def list_videos(
             "skip_download": True,
             "ignoreerrors": True,
         }
+        if playlist_items:
+            opts["playlist_items"] = playlist_items
         if limit is not None and limit > 0:
             opts["playlistend"] = limit
         with yt_dlp.YoutubeDL(opts) as ydl:
@@ -75,18 +80,28 @@ def list_videos(
         if not entries and isinstance(info, dict) and info.get("id"):
             entries = [info]
         out: list[dict[str, str]] = []
+        cutoff = stop_before_date.isoformat() if stop_before_date else None
         for e in entries:
             if not e:
                 continue
             eid = e.get("id") or ""
             if not eid:
                 continue
+            upload_date = (e.get("upload_date") or "").strip()
+            if cutoff and upload_date and len(upload_date) >= 8:
+                normalized_date = (
+                    f"{upload_date[:4]}-{upload_date[4:6]}-{upload_date[6:8]}"
+                    if re.fullmatch(r"\d{8}", upload_date)
+                    else upload_date
+                )
+                if normalized_date < cutoff:
+                    break
             dur = e.get("duration")
             out.append(
                 {
                     "id": eid,
                     "title": (e.get("title") or "").strip() or eid,
-                    "upload_date": (e.get("upload_date") or "").strip(),
+                    "upload_date": upload_date,
                     "duration": str(dur) if dur is not None else "",
                     "url": f"https://www.youtube.com/watch?v={eid}",
                 }

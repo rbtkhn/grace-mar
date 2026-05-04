@@ -28,6 +28,12 @@ The conductors are **modes of attention**, not actors with independent authority
 
 Use the ASCII slug **`furtwangler`** for durable logs unless the repo already uses a different canonical slug. Display name may remain **Furtwängler**.
 
+**Activation regression checklist**
+
+- A bare master slug like `bernstein` or `kleiber` should open Conductor immediately on the first command.
+- A resolved slug should still produce the short orientation plus the three-line action menu.
+- `coffee` hub E should continue the last logged conductor when one exists.
+
 ---
 
 ## 4. Layer Map
