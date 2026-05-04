@@ -14,6 +14,12 @@ WORK only; not Record.
 
 <!-- Triage appends new date sections below. Do not add content above this line. -->
 
+## 2026-05-03
+- Inbox | cold: full text in [`substack-pape-what-the-first-60-days-actually-changed-and-why-the-next-30-will-be-worse-2026-05-03.md`](raw-input/2026-05-03/substack-pape-what-the-first-60-days-actually-changed-and-why-the-next-30-will-be-worse-2026-05-03.md) (pointer; SSOT raw-input) | thread:pape
+
+## 2026-04-29
+- Inbox | cold: full text in [`substack-pape-what-the-smart-questions-reveal-about-where-this-war-is-going-2026-04-29.md`](raw-input/2026-04-29/substack-pape-what-the-smart-questions-reveal-about-where-this-war-is-going-2026-04-29.md) (pointer; SSOT raw-input) | thread:pape
+
 ## 2026-04-28
 - Inbox | cold: full text in [`substack-pape-2-blockades-2-clocks-2026-04-24.md`](raw-input/2026-04-24/substack-pape-2-blockades-2-clocks-2026-04-24.md) (pointer; SSOT raw-input) | thread:pape
 - Inbox | cold: full text in [`x-pape-zero-sum-escalation-ladder-2026-04-21.md`](raw-input/2026-04-21/x-pape-zero-sum-escalation-ladder-2026-04-21.md) (pointer; SSOT raw-input) | thread:pape
@@ -38,6 +44,9 @@ WORK only; not Record.
 - Inbox | cold: full text in [`substack-pape-answers-to-questions-our-community-2026-03-09.md`](raw-input/2026-03-09/substack-pape-answers-to-questions-our-community-2026-03-09.md) (pointer; SSOT raw-input) | thread:pape
 - Inbox | cold: full text in [`substack-pape-four-strategic-patterns-now-visible-2026-03-12.md`](raw-input/2026-03-12/substack-pape-four-strategic-patterns-now-visible-2026-03-12.md) (pointer; SSOT raw-input) | thread:pape
 - Inbox | cold: full text in [`substack-pape-strategic-briefings-iran-war-and-2026-03-13.md`](raw-input/2026-03-13/substack-pape-strategic-briefings-iran-war-and-2026-03-13.md) (pointer; SSOT raw-input) | thread:pape
+
+## 2026-04-27
+- Inbox | cold: full text in [`substack-pape-after-the-briefing-the-3-indicators-that-will-decide-the-next-phase-of-the-iran-war-2026-04-27.md`](raw-input/2026-04-27/substack-pape-after-the-briefing-the-3-indicators-that-will-decide-the-next-phase-of-the-iran-war-2026-04-27.md) (pointer; SSOT raw-input) | thread:pape
 - Inbox | cold: full text in [`substack-pape-irans-new-battlefield-the-global-2026-03-16.md`](raw-input/2026-03-16/substack-pape-irans-new-battlefield-the-global-2026-03-16.md) (pointer; SSOT raw-input) | thread:pape
 - Inbox | cold: full text in [`substack-pape-the-questions-that-matter-now-2026-03-23.md`](raw-input/2026-03-23/substack-pape-the-questions-that-matter-now-2026-03-23.md) (pointer; SSOT raw-input) | thread:pape
 - Inbox | cold: full text in [`substack-pape-trumps-words-dont-predict-war-his-2026-03-24.md`](raw-input/2026-03-24/substack-pape-trumps-words-dont-predict-war-his-2026-03-24.md) (pointer; SSOT raw-input) | thread:pape

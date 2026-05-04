@@ -14,6 +14,8 @@
 | **Typical pairings** | × `davis`, × `barnes`, × `mearsheimer` |
 | **Notebook-use tags** | `validate`, `authorize` |
 
+**Capture note:** This lane commonly mixes `substack-post`, `transcript`, and `x-post-text` captures. Same-day multiple captures are normal; keep `raw-input/` as the SSOT and use slugged refined-page filenames when more than one item shares the same publication date.
+
 <a id="voice-fingerprint-compact"></a>
 
 ## Voice fingerprint (compact) — Tier B
